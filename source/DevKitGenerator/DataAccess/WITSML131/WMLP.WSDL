@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="WMLP" targetNamespace="http://www.witsml.org/wsdl/120" xmlns:wsdlns="http://www.witsml.org/wsdl/120" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+	<documentation>WITSML Version 1.2.0 PUBLISH interface WSDL file
+</documentation>
+	<!-- Abstract Definitions Section - <types>, <message> and <portType> elements -->
+	<!-- <types> element declares user-defined machine and language independent data types, and is not needed for the WITSML PUBLISH interface, which uses only W3C-defined data types  -->
+	<!-- <message> elements define request/response messages and their parameters-->
+	<message name="Publish.WMLP_GetBaseMsg">
+		<part name="ReturnValueIn" type="xsd:short"/>
+	</message>
+	<message name="Publish.WMLP_GetBaseMsgResponse">
+		<part name="Result" type="xsd:string"/>
+	</message>
+	<message name="Publish.WMLP_GetCap">
+		<part name="OptionsIn" type="xsd:string"/>
+	</message>
+	<message name="Publish.WMLP_GetCapResponse">
+		<part name="CapabilitiesOut" type="xsd:string"/>
+		<part name="SuppMsgOut" type="xsd:string"/>
+		<part name="Result" type="xsd:short"/>
+	</message>
+	<message name="Publish.WMLP_GetVersion">
+</message>
+	<message name="Publish.WMLP_GetVersionResponse">
+		<part name="Result" type="xsd:string"/>
+	</message>
+	<message name="Publish.WMLP_Subscribe">
+		<part name="SubscriptionIn" type="xsd:string"/>
+		<part name="OptionsIn" type="xsd:string"/>
+		<part name="CapabilitiesIn" type="xsd:string"/>
+	</message>
+	<message name="Publish.WMLP_SubscribeResponse">
+		<part name="Result" type="xsd:short"/>
+		<part name="SubscriptionOut" type="xsd:string"/>
+		<part name="SuppMsgOut" type="xsd:string"/>
+	</message>
+	<!-- <portType> element groups the functions (operations) into an interface  -->
+	<portType name="PublishSoapPort">
+		<!-- <operation> elements define the function signatures (operation name and parameters) and associate the input and output messages  -->
+		<!-- parameterOrder attribute values must be separated by a single space  -->
+		<operation name="WMLP_GetBaseMsg" parameterOrder="ReturnValueIn">
+			<input message="wsdlns:Publish.WMLP_GetBaseMsg"/>
+			<output message="wsdlns:Publish.WMLP_GetBaseMsgResponse"/>
+		</operation>
+		<operation name="WMLP_GetCap" parameterOrder="OptionsIn CapabilitiesOut SuppMsgOut">
+			<input message="wsdlns:Publish.WMLP_GetCap"/>
+			<output message="wsdlns:Publish.WMLP_GetCapResponse"/>
+		</operation>
+		<operation name="WMLP_GetVersion" >
+			<input message="wsdlns:Publish.WMLP_GetVersion"/>
+			<output message="wsdlns:Publish.WMLP_GetVersionResponse"/>
+		</operation>
+		<operation name="WMLP_Subscribe" parameterOrder="SubscriptionIn OptionsIn CapabilitiesIn SubscriptionOut SuppMsgOut">
+			<input message="wsdlns:Publish.WMLP_Subscribe"/>
+			<output message="wsdlns:Publish.WMLP_SubscribeResponse"/>
+		</operation>
+	</portType>
+	<!-- Concrete Definitions Section - <binding> and <service> elements -->
+	<!-- <binding> specifies the protocol binding for each operation in the <portType> section -->
+	<binding name="PublishSoapBinding" type="wsdlns:PublishSoapPort">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="WMLP_GetBaseMsg">
+			<soap:operation soapAction="http://www.witsml.org/action/120/Publish.WMLP_GetBaseMsg"/>
+			<input>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="WMLP_GetCap">
+			<soap:operation soapAction="http://www.witsml.org/action/120/Publish.WMLP_GetCap"/>
+			<input>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="WMLP_GetVersion">
+			<soap:operation soapAction="http://www.witsml.org/action/120/Publish.WMLP_GetVersion"/>
+			<input>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="WMLP_Subscribe">
+			<soap:operation soapAction="http://www.witsml.org/action/120/Publish.WMLP_Subscribe"/>
+			<input>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="http://www.witsml.org/message/120" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+	</binding>
+	<!-- <service> specifies the portType for each binding and the URL of the service -->
+	<service name="WMLP">
+		<port name="PublishSoapPort" binding="wsdlns:PublishSoapBinding">
+			<soap:address location="http://yourorg.com/yourwebservice"/>
+		</port>
+	</service>
+</definitions>
