@@ -1,0 +1,54 @@
+﻿<Window x:Class="ResqmlPropertyKindBrowserSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RESQML PropertyKind Browser" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="2*"/>            
+        </Grid.ColumnDefinitions>
+        <TreeView Grid.Column="0" x:Name="tree" SelectedItemChanged="TreeSelectionChanged"></TreeView>
+        <GridSplitter Width="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+        <ScrollViewer Grid.Column="2">
+            <StackPanel x:Name="propView" Margin="5,5,5,5">
+                <GroupBox Header="General">
+                    <StackPanel Margin="3,3,3,3">
+                        <TextBlock FontWeight="Bold">Name</TextBlock>
+                        <TextBlock Text="{Binding Name}" TextWrapping="Wrap"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Category</TextBlock>
+                        <TextBlock Text="{Binding Category}" TextWrapping="Wrap"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Description</TextBlock>
+                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Dimensional Class</TextBlock>
+                        <TextBlock Text="{Binding DimensionalClass}"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Unit of Measure</TextBlock>
+                        <TextBlock Text="{Binding UnitOfMeasure}"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Is Abstract?</TextBlock>
+                        <TextBlock Text="{Binding IsAbstract}"/>                        
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Values">
+                    <StackPanel Margin="3,3,3,3">
+                        <TextBlock FontWeight="Bold">Minimum Value</TextBlock>
+                        <TextBlock Text="{Binding MinimumValue}"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Maximum Value</TextBlock>
+                        <TextBlock Text="{Binding MaximumValue}"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Enum Value</TextBlock>
+                        <TextBlock Text="{Binding EnumValue}"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Versioning">
+                    <StackPanel Margin="3,3,3,3">
+                        <TextBlock FontWeight="Bold">Deprecated?</TextBlock>
+                        <TextBlock Text="{Binding Deprecated}"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Replaced By</TextBlock>
+                        <TextBlock Text="{Binding ReplacedBy}"/>
+                        <TextBlock FontWeight="Bold" Margin="0,7,0,0">Version</TextBlock>
+                        <TextBlock Text="{Binding Version}"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

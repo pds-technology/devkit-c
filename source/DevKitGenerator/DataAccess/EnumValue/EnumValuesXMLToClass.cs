@@ -1,31 +1,77 @@
-﻿// 
-// License notice 
-// Standards DevKit, version 1.0 
-// Copyright 2011 ExxonMobil Upstream Research Company
+// 
+// License notice
 //  
+// Standards DevKit, version 2.0
+// Copyright 2012 ExxonMobil Upstream Research Company
+// 
+// Third Party Software
+// 
+// Energistics 
 // The following Energistics (c) products were used in the creation of this work: 
 // 
-// •	WITSML Data Schema Specifications, Version 1.4.1 
-// •	WITSML API Specifications, version 1.4.1 
-// •	WITSML Data Schema Specifications, Version 1.3.1.1 
-// •	WITSML API Specifications, version 1.3.1 
-// •	PRODML Data Schema Specifications, Version 1.2 
-// •	PRODML Web Service Specifications, Version 2.0
+// •             WITSML Data Schema Specifications, Version 1.4.1.1 
+// •             WITSML API Specifications, version 1.4.1.1 
+// •             WITSML Data Schema Specifications, Version 1.3.1.1 
+// •             WITSML API Specifications, version 1.3.1 
+// •             PRODML Data Schema Specifications, Version 1.2.2 
+// •             PRODML Web Service Specifications, Version 2.1.0.1
+// •             RESQML Data Schema Specifications, Version 1.1 
 // 
-// All rights in the WITSML™ Standard and the PRODML™ Standard, or any portion thereof, which remain in the 
-// Standards DevKitshall remain with Energistics or its suppliers and shall remain subject to the terms of 
-// the Product License Agreement available at http://www.energistics.org/product-license-agreement. 
+// All rights in the WITSML™ Standard, the PRODML™ Standard, and the RESQML™ Standard, or
+// any portion thereof, which remain in the Standards DevKit shall remain with Energistics
+// or its suppliers and shall remain subject to the terms of the Product License Agreement
+// available at http://www.energistics.org/product-license-agreement. 
 // 
-// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in 
-// compliance with the License. 
+// Apache
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+// except in compliance with the License. 
 // 
-// You may obtain a copy of the License at 
-// http://www.apache.org/licenses/LICENSE-2.0
+// You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 // 
-// Unless required by applicable law or agreed to in writing, software distributed under the License is 
-// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+// Unless required by applicable law or agreed to in writing, software distributed under the
+// License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+// either express or implied. 
 // 
-// See the License for the specific language governing permissions and limitations under the License. 
+// See the License for the specific language governing permissions and limitations under the
+// License.
+// 
+// HDF5
+// HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 2006-2012 by
+// The HDF Group. 
+// 
+// NCSA HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 1998-2006
+// by the Board of Trustees of the University of Illinois. 
+// 
+// All rights reserved. 
+// 
+// Redistribution and use in source and binary forms, with or without modification, are
+// permitted for any purpose (including commercial purposes) provided that the following
+// conditions are met: 
+//    1. Redistributions of source code must retain the above copyright notice, this list
+//       of conditions, and the following disclaimer. 
+//    2. Redistributions in binary form must reproduce the above copyright notice, this
+//       list of conditions, and the following disclaimer in the documentation and/or
+// 	  materials provided with the distribution. 
+//    3. In addition, redistributions of modified forms of the source or binary code must
+//       carry prominent notices stating that the original code was changed and the date of
+// 	  the change. 
+//    4. All publications or advertising materials mentioning features or use of this
+//       software are asked, but not required, to acknowledge that it was developed by The
+// 	  HDF Group and by the National Center for Supercomputing Applications at the 
+// 	  University of Illinois at Urbana-Champaign and credit the contributors. 
+//    5. Neither the name of The HDF Group, the name of the University, nor the name of any
+//       Contributor may be used to endorse or promote products derived from this software
+// 	  without specific prior written permission from The HDF Group, the University, or
+// 	  the Contributor, respectively. 
+// 
+// DISCLAIMER: THIS SOFTWARE IS PROVIDED BY THE HDF GROUP AND THE CONTRIBUTORS "AS IS" WITH
+// NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED. In no event shall The HDF Group or
+// the Contributors be liable for any damages suffered by the users arising out of the use
+// of this software, even if advised of the possibility of such damage. 
+// 
+// Contributors: National Center for Supercomputing Applications (NCSA) at the University of
+// Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
+// (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 using System;
 using System.Collections.Generic;
@@ -38,8 +84,20 @@ using System.Xml;
 
 namespace Energistics.DataAccess.EnumValue
 {
+    /// <summary>
+    /// Converts enumValues XML file to a Class
+    /// </summary>
     public static class EnumValuesXMLToClass
     {
+        /// <summary>
+        /// Converts enumValues XML file to a Class. To be used via EnumValuesExtensionGenerator.exe
+        /// </summary>
+        /// <param name="filename">Name of the XML file</param>
+        /// <param name="nameSpace">Namespace to use</param>
+        /// <param name="enumClassNames">enumClassNames</param>
+        /// <param name="extensionClass">extensionClass</param>
+        /// <param name="setName">setName</param>
+        /// <returns></returns>
         public static string Convert(string filename, string nameSpace, List<string> enumClassNames, bool extensionClass, string setName)
         {
             StringBuilder sb = new StringBuilder();
@@ -67,7 +125,9 @@ namespace Energistics.DataAccess.EnumValue
                 if (dataObj.InnerXml.Contains("<lithoType>")) inheritsFrom = "Energistics.DataAccess.EnumValue.LithoTypeEnumValue";
                 if (dataObj.InnerXml.Contains("<extensionDataType>")) inheritsFrom = "Energistics.DataAccess.EnumValue.ExtensionDataEnumValue";
                 if (dataObj.InnerXml.Contains("<measureUom>")) inheritsFrom = "Energistics.DataAccess.EnumValue.MeasureUOMEnumValue";
+                if (dataObj.InnerXml.Contains("<measureBaseForConversion>")) inheritsFrom = "Energistics.DataAccess.EnumValue.MeasureUOMEnumValue";
                 if (dataObj.InnerXml.Contains("<realtimeDataType>")) inheritsFrom = "Energistics.DataAccess.EnumValue.RealtimeEnumValue";
+                if (dataObj.InnerXml.Contains("<dimensionalClass>")) inheritsFrom = "Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue";
 
                 string name = GetElementInnerText(dataObj, "name");
                 string description = GetElementInnerText(dataObj, "description");
@@ -98,6 +158,8 @@ namespace Energistics.DataAccess.EnumValue
                 sb.AppendLine("        public " + name + ((extensionClass) ? "Extension" : String.Empty) + "(string name) : base(name) {}");
                 sb.AppendLine();
 
+                
+
                 sb.AppendLine("        /// <summary>");
                 sb.AppendLine("        /// Retrieves the complete list of " + name + "s");
                 sb.AppendLine("        /// </summary>");
@@ -108,7 +170,7 @@ namespace Energistics.DataAccess.EnumValue
                 sb.AppendLine("        }");
                 sb.AppendLine();
 
-                List<string> usedValues = new List<string>();
+                Dictionary<string, XmlElement> usedValues = new Dictionary<string, XmlElement>();
 
                 foreach (XmlElement valueElement in dataObj.GetElementsByTagName("value"))
                 {
@@ -116,13 +178,13 @@ namespace Energistics.DataAccess.EnumValue
                     string privPropName = RenameProperty(valueName, false);
                     
                     // We shouldn't have to check for this, but there are duplicates in enumValuesProdml.xml
-                    if (usedValues.Contains(privPropName))
+                    if (usedValues.ContainsKey(privPropName))
                     {
                         continue;
                     }
                     else
                     {
-                        usedValues.Add(privPropName);
+                        usedValues.Add(privPropName, valueElement);
                     }
 
                     string valueDescription = GetElementInnerText(valueElement, "description");
@@ -131,7 +193,8 @@ namespace Energistics.DataAccess.EnumValue
                     valueDescription = valueDescription.Replace("<", "&lt;");
                     valueDescription = valueDescription.Replace("<", "&gt;");
 
-                    sb.AppendLine("        private static " + name + " " + privPropName + ";");
+                    sb.AppendLine("        private readonly static " + name + " " + privPropName + ";");
+                    
                     sb.AppendLine("        /// <summary>");
                     sb.AppendLine("        /// " + valueDescription);
                     sb.AppendLine("        /// </summary>");
@@ -140,11 +203,31 @@ namespace Energistics.DataAccess.EnumValue
                     sb.AppendLine("        {");
                     sb.AppendLine("            get ");                    
                     sb.AppendLine("            {");
-                    sb.AppendLine("                if (" + privPropName + " == null)");
-                    sb.AppendLine("                {");
-                    sb.AppendLine("                    " + privPropName + " = new " + name + "(\"" + GetElementInnerText(valueElement, "name") + "\");");
+                    //sb.AppendLine("                if (" + privPropName + " == null)");
+                    //sb.AppendLine("                {");
+                    //sb.AppendLine("                    " + privPropName + " = new " + name + "(\"" + GetElementInnerText(valueElement, "name") + "\");");
 
+                    
+
+
+                    //sb.AppendLine("                }");
+                    sb.AppendLine("                return " + privPropName + ";");
+                    sb.AppendLine("            }");
+                    sb.AppendLine("        }");
+                    sb.AppendLine();
+                }
+
+                sb.AppendLine("        static " + name + "()");
+                sb.AppendLine("        {");
+
+                foreach (string usedValue in usedValues.Keys)
+                {
+                    XmlElement valueElement = usedValues[usedValue];
+                    sb.AppendLine("            " + usedValue + " = ");
+                    sb.AppendLine("                new " + name + "(\"" + GetElementInnerText(valueElement, "name") + "\")");
+                    sb.AppendLine("                {");
                     Type t = Assembly.GetExecutingAssembly().GetType(inheritsFrom);
+                    string comma = "";
                     foreach (PropertyInfo pi in t.GetProperties())
                     {
                         object[] enumValNameAttrs = pi.GetCustomAttributes(typeof(EnumValueNameAttribute), false);
@@ -159,50 +242,70 @@ namespace Energistics.DataAccess.EnumValue
                             propValue = Regex.Replace(propValue, @"\s+", " ");
                             //propValue = propValue.Replace(Environment.NewLine, String.Empty);
                             propValue = propValue.Replace(@"\", @"\\");
-                            propValue = propValue.Replace("\"", "\\\"");                            
+                            propValue = propValue.Replace("\"", "\\\"");
 
                             if (!String.IsNullOrEmpty(propValue))
                             {
                                 if (pi.PropertyType == typeof(string))
                                 {
-                                    sb.AppendLine(String.Format("                    {0}.{1} = \"{2}\";", privPropName, pi.Name, propValue));
+                                    sb.AppendLine(String.Format("                    {0}{1} = \"{2}\"", comma, pi.Name, propValue));
                                 }
-                                else if (pi.PropertyType == typeof(int) || pi.PropertyType == typeof(Boolean))
+                                else if (pi.PropertyType == typeof(int) || pi.PropertyType == typeof(Boolean) || pi.PropertyType == typeof(Boolean?))
                                 {
-                                    sb.AppendLine(String.Format("                    {0}.{1} = {2};", privPropName, pi.Name, propValue));
+                                    sb.AppendLine(String.Format("                    {0}{1} = {2}", comma, pi.Name, propValue));
                                 }
                                 else if (pi.PropertyType == typeof(Type))
                                 {
-                                    sb.AppendLine(String.Format("                    {0}.{1} = typeof({2});", privPropName, pi.Name, CapitalizeFirstLetter(propValue)));
+                                    sb.AppendLine(String.Format("                    {0}{1} = typeof({2})", comma, pi.Name, CapitalizeFirstLetter(propValue)));
                                 }
                                 else if (pi.PropertyType == typeof(EnumValue))
                                 {
-                                    sb.AppendLine(String.Format("                    {0}.{1} = {2};", privPropName, pi.Name, RenameProperty(propValue, true)));
-                                }                                
+                                    sb.AppendLine(String.Format("                    {0}{1} = {2}", comma, pi.Name, RenameProperty(propValue, true)));
+                                }
                                 else if (pi.PropertyType == typeof(EnumValueLithoType))
                                 {
-                                    sb.AppendLine(String.Format("                    {0}.{1} = EnumValueLithoType.{2};", privPropName, pi.Name, propValue));
+                                    sb.AppendLine(String.Format("                    {0}{1} = EnumValueLithoType.{2}", comma, pi.Name, propValue));
                                 }
                                 else if (pi.PropertyType == typeof(EnumValueRealtimeType))
                                 {
                                     propValue = CapitalizeFirstLetter(propValue);
-                                    sb.AppendLine(String.Format("                    {0}.{1} = EnumValueRealtimeType.Realtime{2};", privPropName, pi.Name, propValue));
+                                    sb.AppendLine(String.Format("                    {0}{1} = EnumValueRealtimeType.Realtime{2}", comma, pi.Name, propValue));
                                 }
                                 else
                                 {
-                                    sb.AppendLine(String.Format("                    //UNK {0}.{1} = \"{2}\";", privPropName, pi.Name, propValue));
+                                    sb.AppendLine(String.Format("                    //UNK {0}{1} = \"{2}\"", comma, pi.Name, propValue));
                                 }
+                                comma = ",";
                             }
                         }
                     }
-
-
-                    sb.AppendLine("                }");
-                    sb.AppendLine("                return " + privPropName + ";");
-                    sb.AppendLine("            }");
-                    sb.AppendLine("        }");
-                    sb.AppendLine();
+                    sb.AppendLine("            };");
                 }
+                
+                sb.AppendLine("        }");
+                sb.AppendLine();
+                sb.AppendLine("        /// <summary>");
+                sb.AppendLine("        /// Gets a " + name + " by name");
+                sb.AppendLine("        /// </summary>");
+                sb.AppendLine("        /// <param name=\"name\">The name of the " + name + " to return</param>");
+                sb.AppendLine("        /// <returns>The " + name + " represented by 'name'</returns>");
+                sb.AppendLine("        public static " + name + " GetByName(string name)");
+                sb.AppendLine("        {");
+                sb.AppendLine("            if (enumValuesRegistry.ContainsKey(typeof(" + name + ")))");
+                sb.AppendLine("            {");
+                sb.AppendLine("                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(" + name + ")];");
+                sb.AppendLine("            ");
+                sb.AppendLine("                foreach (EnumValue.EnumValue ev in myList)");
+                sb.AppendLine("                {");
+                sb.AppendLine("                    if (ev.Name == name)");
+                sb.AppendLine("                    {");
+                sb.AppendLine("                        return (" + name + ")ev;");
+                sb.AppendLine("                    }");
+                sb.AppendLine("                }");
+                sb.AppendLine("            }");
+                sb.AppendLine("            ");
+                sb.AppendLine("            return null;");
+                sb.AppendLine("        }");
 
                 sb.AppendLine("    }");
                 sb.AppendLine();
@@ -274,6 +377,13 @@ namespace Energistics.DataAccess.EnumValue
                 string nextChar = name[locSpac + 1].ToString().ToUpper();
                 name = name.Remove(locSpac, 2);
                 name = name.Insert(locSpac, nextChar);
+            }
+
+            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed" };
+
+            if (keywords.Contains(name))
+            {
+                return "@" + name;
             }
 
             return name;

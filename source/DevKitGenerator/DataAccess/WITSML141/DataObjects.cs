@@ -1,31 +1,78 @@
 // 
-// License notice 
-// Standards DevKit, version 1.0 
-// Copyright 2011 ExxonMobil Upstream Research Company
+// 
+// License notice
 //  
+// Standards DevKit, version 2.0
+// Copyright 2012 ExxonMobil Upstream Research Company
+// 
+// Third Party Software
+// 
+// Energistics 
 // The following Energistics (c) products were used in the creation of this work: 
 // 
-// •	WITSML Data Schema Specifications, Version 1.4.1 
-// •	WITSML API Specifications, version 1.4.1 
-// •	WITSML Data Schema Specifications, Version 1.3.1.1 
-// •	WITSML API Specifications, version 1.3.1 
-// •	PRODML Data Schema Specifications, Version 1.2 
-// •	PRODML Web Service Specifications, Version 2.0
+// •             WITSML Data Schema Specifications, Version 1.4.1.1 
+// •             WITSML API Specifications, version 1.4.1.1 
+// •             WITSML Data Schema Specifications, Version 1.3.1.1 
+// •             WITSML API Specifications, version 1.3.1 
+// •             PRODML Data Schema Specifications, Version 1.2.2 
+// •             PRODML Web Service Specifications, Version 2.1.0.1
+// •             RESQML Data Schema Specifications, Version 1.1 
 // 
-// All rights in the WITSML™ Standard and the PRODML™ Standard, or any portion thereof, which remain in the 
-// Standards DevKitshall remain with Energistics or its suppliers and shall remain subject to the terms of 
-// the Product License Agreement available at http://www.energistics.org/product-license-agreement. 
+// All rights in the WITSML™ Standard, the PRODML™ Standard, and the RESQML™ Standard, or
+// any portion thereof, which remain in the Standards DevKit shall remain with Energistics
+// or its suppliers and shall remain subject to the terms of the Product License Agreement
+// available at http://www.energistics.org/product-license-agreement. 
 // 
-// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in 
-// compliance with the License. 
+// Apache
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+// except in compliance with the License. 
 // 
-// You may obtain a copy of the License at 
-// http://www.apache.org/licenses/LICENSE-2.0
+// You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 // 
-// Unless required by applicable law or agreed to in writing, software distributed under the License is 
-// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+// Unless required by applicable law or agreed to in writing, software distributed under the
+// License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+// either express or implied. 
 // 
-// See the License for the specific language governing permissions and limitations under the License. 
+// See the License for the specific language governing permissions and limitations under the
+// License.
+// 
+// HDF5
+// HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 2006-2012 by
+// The HDF Group. 
+// 
+// NCSA HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 1998-2006
+// by the Board of Trustees of the University of Illinois. 
+// 
+// All rights reserved. 
+// 
+// Redistribution and use in source and binary forms, with or without modification, are
+// permitted for any purpose (including commercial purposes) provided that the following
+// conditions are met: 
+//    1. Redistributions of source code must retain the above copyright notice, this list
+//       of conditions, and the following disclaimer. 
+//    2. Redistributions in binary form must reproduce the above copyright notice, this
+//       list of conditions, and the following disclaimer in the documentation and/or
+// 	  materials provided with the distribution. 
+//    3. In addition, redistributions of modified forms of the source or binary code must
+//       carry prominent notices stating that the original code was changed and the date of
+// 	  the change. 
+//    4. All publications or advertising materials mentioning features or use of this
+//       software are asked, but not required, to acknowledge that it was developed by The
+// 	  HDF Group and by the National Center for Supercomputing Applications at the 
+// 	  University of Illinois at Urbana-Champaign and credit the contributors. 
+//    5. Neither the name of The HDF Group, the name of the University, nor the name of any
+//       Contributor may be used to endorse or promote products derived from this software
+// 	  without specific prior written permission from The HDF Group, the University, or
+// 	  the Contributor, respectively. 
+// 
+// DISCLAIMER: THIS SOFTWARE IS PROVIDED BY THE HDF GROUP AND THE CONTRIBUTORS "AS IS" WITH
+// NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED. In no event shall The HDF Group or
+// the Contributors be liable for any damages suffered by the users arising out of the use
+// of this software, even if advised of the possibility of such damage. 
+// 
+// Contributors: National Center for Supercomputing Applications (NCSA) at the University of
+// Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
+// (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 
 //This code was generated using the Energistics Generator tool.  Direct changes to this code will be lost
@@ -47,12 +94,11 @@ namespace Energistics.DataAccess.WITSML141
     /// <summary>
     /// This class represents the abstractObject xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TubularList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConvCoreList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttachmentList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FormationMarkerList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReportList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LogList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeometryList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TubularList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrajectoryList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSetList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorModelList))]
@@ -66,13 +112,14 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectGroupList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MessageList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LogList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FormationMarkerList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReportList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReportList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConvCoreList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChangeLogList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRunList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreList))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -81,6 +128,7 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the abstractObject xsd type.")]
     public abstract partial class AbstractObject : Object , INotifyPropertyChanged
     {
+
 
         
 		#region INotifyPropertyChanged Members
@@ -101,7 +149,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     /// <summary>
@@ -174,27 +221,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -391,6 +419,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String commentField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -410,7 +439,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -427,12 +455,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the nameStruct xsd type.")]
     public partial class NameStruct : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the NameStruct class.
+        /// </summary>
         public NameStruct() {}
+
+        /// <summary>
+        /// Initializes a new instance of the NameStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public NameStruct(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -470,6 +509,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -489,7 +529,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -1079,6 +1118,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -1098,7 +1138,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -1114,12 +1153,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the refNameString xsd type.")]
     public partial class RefNameString : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the RefNameString class.
+        /// </summary>
         public RefNameString() {}
+
+        /// <summary>
+        /// Initializes a new instance of the RefNameString class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public RefNameString(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -1157,6 +1207,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -1176,7 +1227,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -1185,21 +1235,23 @@ namespace Energistics.DataAccess.WITSML141
     /// <summary>
     /// This class represents the abstractMeasure xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
@@ -1218,23 +1270,21 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -1262,6 +1312,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private Double ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -1281,7 +1332,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -1298,13 +1348,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the measuredDepthCoord xsd type.")]
     public partial class MeasuredDepthCoord : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the MeasuredDepthCoord class.
+        /// </summary>
         public MeasuredDepthCoord() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MeasuredDepthCoord class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public MeasuredDepthCoord(Double value, MeasuredDepthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1342,25 +1404,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private String datumField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1378,13 +1421,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the footageEastWest xsd type.")]
     public partial class FootageEastWest : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the FootageEastWest class.
+        /// </summary>
         public FootageEastWest() {}
+
+        /// <summary>
+        /// Initializes a new instance of the FootageEastWest class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public FootageEastWest(Double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1422,25 +1477,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private EastOrWest refField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1458,13 +1494,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the footageNorthSouth xsd type.")]
     public partial class FootageNorthSouth : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the FootageNorthSouth class.
+        /// </summary>
         public FootageNorthSouth() {}
+
+        /// <summary>
+        /// Initializes a new instance of the FootageNorthSouth class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public FootageNorthSouth(Double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1502,25 +1550,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private NorthOrSouth refField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1538,13 +1567,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the wellElevationCoord xsd type.")]
     public partial class WellElevationCoord : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the WellElevationCoord class.
+        /// </summary>
         public WellElevationCoord() {}
+
+        /// <summary>
+        /// Initializes a new instance of the WellElevationCoord class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public WellElevationCoord(Double value, WellVerticalCoordinateUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1582,25 +1623,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private String datumField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1618,13 +1640,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the wellVerticalDepthCoord xsd type.")]
     public partial class WellVerticalDepthCoord : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the WellVerticalDepthCoord class.
+        /// </summary>
         public WellVerticalDepthCoord() {}
+
+        /// <summary>
+        /// Initializes a new instance of the WellVerticalDepthCoord class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public WellVerticalDepthCoord(Double value, WellVerticalCoordinateUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1662,25 +1696,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private String datumField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1698,13 +1713,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the ratioGenericMeasure xsd type.")]
     public partial class RatioGenericMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the RatioGenericMeasure class.
+        /// </summary>
         public RatioGenericMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the RatioGenericMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public RatioGenericMeasure(Double value, String uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1794,25 +1821,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private Boolean denominatorSpecifiedField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1830,13 +1838,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the genericMeasure xsd type.")]
     public partial class GenericMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the GenericMeasure class.
+        /// </summary>
         public GenericMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the GenericMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public GenericMeasure(Double value, String uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1858,25 +1878,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1894,13 +1895,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the measureOrQuantity xsd type.")]
     public partial class MeasureOrQuantity : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the MeasureOrQuantity class.
+        /// </summary>
         public MeasureOrQuantity() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MeasureOrQuantity class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public MeasureOrQuantity(Double value, String uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1922,25 +1935,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -1958,13 +1952,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the volumePerVolumeMeasurePercent xsd type.")]
     public partial class VolumePerVolumeMeasurePercent : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the VolumePerVolumeMeasurePercent class.
+        /// </summary>
         public VolumePerVolumeMeasurePercent() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VolumePerVolumeMeasurePercent class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public VolumePerVolumeMeasurePercent(Double value, PercentUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -1986,25 +1992,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private PercentUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2022,13 +2009,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the yAxisAzimuth xsd type.")]
     public partial class YAxisAzimuth : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the YAxisAzimuth class.
+        /// </summary>
         public YAxisAzimuth() {}
+
+        /// <summary>
+        /// Initializes a new instance of the YAxisAzimuth class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public YAxisAzimuth(Double value, PlaneAngleUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2084,25 +2083,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private Boolean northDirectionSpecifiedField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2120,13 +2100,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the volumePerVolumeMeasure xsd type.")]
     public partial class VolumePerVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the VolumePerVolumeMeasure class.
+        /// </summary>
         public VolumePerVolumeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VolumePerVolumeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public VolumePerVolumeMeasure(Double value, VolumePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2148,25 +2140,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumePerVolumeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2184,13 +2157,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the volumePerLengthMeasure xsd type.")]
     public partial class VolumePerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the VolumePerLengthMeasure class.
+        /// </summary>
         public VolumePerLengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VolumePerLengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public VolumePerLengthMeasure(Double value, VolumePerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2212,25 +2197,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumePerLengthUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2248,13 +2214,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the volumeFlowRateMeasure xsd type.")]
     public partial class VolumeFlowRateMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the VolumeFlowRateMeasure class.
+        /// </summary>
         public VolumeFlowRateMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VolumeFlowRateMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public VolumeFlowRateMeasure(Double value, VolumeFlowRateUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2276,25 +2254,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumeFlowRateUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2312,13 +2271,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the volumeMeasure xsd type.")]
     public partial class VolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the VolumeMeasure class.
+        /// </summary>
         public VolumeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VolumeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public VolumeMeasure(Double value, VolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2340,25 +2311,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2376,13 +2328,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the velocityMeasure xsd type.")]
     public partial class VelocityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the VelocityMeasure class.
+        /// </summary>
         public VelocityMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VelocityMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public VelocityMeasure(Double value, VelocityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2404,25 +2368,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private VelocityUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2440,13 +2385,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the timeMeasure xsd type.")]
     public partial class TimeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the TimeMeasure class.
+        /// </summary>
         public TimeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the TimeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public TimeMeasure(Double value, TimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2468,25 +2425,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private TimeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2504,13 +2442,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the thermodynamicTemperatureMeasure xsd type.")]
     public partial class ThermodynamicTemperatureMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ThermodynamicTemperatureMeasure class.
+        /// </summary>
         public ThermodynamicTemperatureMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ThermodynamicTemperatureMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ThermodynamicTemperatureMeasure(Double value, ThermodynamicTemperatureUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2532,25 +2482,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ThermodynamicTemperatureUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2568,13 +2499,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the thermalVolumetricExpansionMeasure xsd type.")]
     public partial class ThermalVolumetricExpansionMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ThermalVolumetricExpansionMeasure class.
+        /// </summary>
         public ThermalVolumetricExpansionMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ThermalVolumetricExpansionMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ThermalVolumetricExpansionMeasure(Double value, ThermalVolumetricExpansionUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2596,25 +2539,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ThermalVolumetricExpansionUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2632,13 +2556,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the thermalConductivityMeasure xsd type.")]
     public partial class ThermalConductivityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ThermalConductivityMeasure class.
+        /// </summary>
         public ThermalConductivityMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ThermalConductivityMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ThermalConductivityMeasure(Double value, ThermalConductivityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2660,25 +2596,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ThermalConductivityUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2696,13 +2613,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the standardVolumePerTimeMeasure xsd type.")]
     public partial class StandardVolumePerTimeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the StandardVolumePerTimeMeasure class.
+        /// </summary>
         public StandardVolumePerTimeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the StandardVolumePerTimeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public StandardVolumePerTimeMeasure(Double value, StandardVolumePerTimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2724,25 +2653,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private StandardVolumePerTimeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2760,13 +2670,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the standardVolumeMeasure xsd type.")]
     public partial class StandardVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the StandardVolumeMeasure class.
+        /// </summary>
         public StandardVolumeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the StandardVolumeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public StandardVolumeMeasure(Double value, StandardVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2788,25 +2710,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private StandardVolumeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2824,13 +2727,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the specificVolumeMeasure xsd type.")]
     public partial class SpecificVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the SpecificVolumeMeasure class.
+        /// </summary>
         public SpecificVolumeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the SpecificVolumeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public SpecificVolumeMeasure(Double value, SpecificVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2852,25 +2767,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private SpecificVolumeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2888,13 +2784,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the specificHeatCapacityMeasure xsd type.")]
     public partial class SpecificHeatCapacityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the SpecificHeatCapacityMeasure class.
+        /// </summary>
         public SpecificHeatCapacityMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the SpecificHeatCapacityMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public SpecificHeatCapacityMeasure(Double value, SpecificHeatCapacityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2916,25 +2824,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private SpecificHeatCapacityUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -2952,13 +2841,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the relativePowerMeasure xsd type.")]
     public partial class RelativePowerMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the RelativePowerMeasure class.
+        /// </summary>
         public RelativePowerMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the RelativePowerMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public RelativePowerMeasure(Double value, RelativePowerUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -2980,25 +2881,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private RelativePowerUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3016,13 +2898,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the pressureMeasure xsd type.")]
     public partial class PressureMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the PressureMeasure class.
+        /// </summary>
         public PressureMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PressureMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public PressureMeasure(Double value, PressureUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3044,25 +2938,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private PressureUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3080,13 +2955,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the powerMeasure xsd type.")]
     public partial class PowerMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the PowerMeasure class.
+        /// </summary>
         public PowerMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PowerMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public PowerMeasure(Double value, PowerUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3108,25 +2995,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private PowerUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3144,13 +3012,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the planeAngleMeasure xsd type.")]
     public partial class PlaneAngleMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the PlaneAngleMeasure class.
+        /// </summary>
         public PlaneAngleMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PlaneAngleMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public PlaneAngleMeasure(Double value, PlaneAngleUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3172,25 +3052,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private PlaneAngleUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3208,13 +3069,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the permeabilityRockMeasure xsd type.")]
     public partial class PermeabilityRockMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the PermeabilityRockMeasure class.
+        /// </summary>
         public PermeabilityRockMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PermeabilityRockMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public PermeabilityRockMeasure(Double value, PermeabilityRockUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3236,25 +3109,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private PermeabilityRockUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3272,13 +3126,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the perLengthMeasure xsd type.")]
     public partial class PerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the PerLengthMeasure class.
+        /// </summary>
         public PerLengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PerLengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public PerLengthMeasure(Double value, PerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3300,25 +3166,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private PerLengthUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3336,13 +3183,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the momentOfForceMeasure xsd type.")]
     public partial class MomentOfForceMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the MomentOfForceMeasure class.
+        /// </summary>
         public MomentOfForceMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MomentOfForceMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public MomentOfForceMeasure(Double value, MomentOfForceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3364,25 +3223,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private MomentOfForceUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3400,13 +3240,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the massPerLengthMeasure xsd type.")]
     public partial class MassPerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the MassPerLengthMeasure class.
+        /// </summary>
         public MassPerLengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MassPerLengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public MassPerLengthMeasure(Double value, MassPerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3428,25 +3280,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private MassPerLengthUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3464,13 +3297,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the massMeasure xsd type.")]
     public partial class MassMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the MassMeasure class.
+        /// </summary>
         public MassMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MassMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public MassMeasure(Double value, MassUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3492,25 +3337,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private MassUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3528,13 +3354,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the massConcentrationMeasure xsd type.")]
     public partial class MassConcentrationMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the MassConcentrationMeasure class.
+        /// </summary>
         public MassConcentrationMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MassConcentrationMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public MassConcentrationMeasure(Double value, MassConcentrationUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3556,25 +3394,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private MassConcentrationUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3592,13 +3411,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the magneticInductionMeasure xsd type.")]
     public partial class MagneticInductionMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the MagneticInductionMeasure class.
+        /// </summary>
         public MagneticInductionMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MagneticInductionMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public MagneticInductionMeasure(Double value, MagneticInductionUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3620,25 +3451,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private MagneticInductionUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3656,13 +3468,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the lengthPerLengthMeasure xsd type.")]
     public partial class LengthPerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the LengthPerLengthMeasure class.
+        /// </summary>
         public LengthPerLengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the LengthPerLengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public LengthPerLengthMeasure(Double value, LengthPerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3684,25 +3508,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private LengthPerLengthUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3720,13 +3525,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the lengthMeasure xsd type.")]
     public partial class LengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the LengthMeasure class.
+        /// </summary>
         public LengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the LengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public LengthMeasure(Double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3748,25 +3565,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private LengthUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3784,13 +3582,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the illuminanceMeasure xsd type.")]
     public partial class IlluminanceMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the IlluminanceMeasure class.
+        /// </summary>
         public IlluminanceMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the IlluminanceMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public IlluminanceMeasure(Double value, IlluminanceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3812,25 +3622,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private IlluminanceUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3848,13 +3639,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the forcePerVolumeMeasure xsd type.")]
     public partial class ForcePerVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ForcePerVolumeMeasure class.
+        /// </summary>
         public ForcePerVolumeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ForcePerVolumeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ForcePerVolumeMeasure(Double value, ForcePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3876,25 +3679,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ForcePerVolumeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3912,13 +3696,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the forcePerLengthMeasure xsd type.")]
     public partial class ForcePerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ForcePerLengthMeasure class.
+        /// </summary>
         public ForcePerLengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ForcePerLengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ForcePerLengthMeasure(Double value, ForcePerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -3940,25 +3736,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ForcePerLengthUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -3976,13 +3753,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the forceMeasure xsd type.")]
     public partial class ForceMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ForceMeasure class.
+        /// </summary>
         public ForceMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ForceMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ForceMeasure(Double value, ForceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4004,25 +3793,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ForceUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4040,13 +3810,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the equivalentPerMassMeasure xsd type.")]
     public partial class EquivalentPerMassMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the EquivalentPerMassMeasure class.
+        /// </summary>
         public EquivalentPerMassMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the EquivalentPerMassMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public EquivalentPerMassMeasure(Double value, EquivalentPerMassUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4068,25 +3850,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private EquivalentPerMassUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4104,13 +3867,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the electricPotentialMeasure xsd type.")]
     public partial class ElectricPotentialMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ElectricPotentialMeasure class.
+        /// </summary>
         public ElectricPotentialMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ElectricPotentialMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ElectricPotentialMeasure(Double value, ElectricPotentialUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4132,25 +3907,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ElectricPotentialUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4168,13 +3924,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the electricCurrentMeasure xsd type.")]
     public partial class ElectricCurrentMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ElectricCurrentMeasure class.
+        /// </summary>
         public ElectricCurrentMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ElectricCurrentMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public ElectricCurrentMeasure(Double value, ElectricCurrentUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4196,25 +3964,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private ElectricCurrentUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4232,13 +3981,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the dynamicViscosityMeasure xsd type.")]
     public partial class DynamicViscosityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the DynamicViscosityMeasure class.
+        /// </summary>
         public DynamicViscosityMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the DynamicViscosityMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public DynamicViscosityMeasure(Double value, DynamicViscosityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4260,25 +4021,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private DynamicViscosityUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4296,13 +4038,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the dimensionlessMeasure xsd type.")]
     public partial class DimensionlessMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the DimensionlessMeasure class.
+        /// </summary>
         public DimensionlessMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the DimensionlessMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public DimensionlessMeasure(Double value, DimensionlessUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4324,25 +4078,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private DimensionlessUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4360,13 +4095,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the densityMeasure xsd type.")]
     public partial class DensityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the DensityMeasure class.
+        /// </summary>
         public DensityMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the DensityMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public DensityMeasure(Double value, DensityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4388,25 +4135,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private DensityUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4424,13 +4152,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the compressibilityMeasure xsd type.")]
     public partial class CompressibilityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the CompressibilityMeasure class.
+        /// </summary>
         public CompressibilityMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the CompressibilityMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public CompressibilityMeasure(Double value, CompressibilityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4452,25 +4192,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private CompressibilityUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4488,13 +4209,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the areaPerAreaMeasure xsd type.")]
     public partial class AreaPerAreaMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the AreaPerAreaMeasure class.
+        /// </summary>
         public AreaPerAreaMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AreaPerAreaMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public AreaPerAreaMeasure(Double value, AreaPerAreaUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4516,25 +4249,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private AreaPerAreaUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4552,13 +4266,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the areaMeasure xsd type.")]
     public partial class AreaMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the AreaMeasure class.
+        /// </summary>
         public AreaMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AreaMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public AreaMeasure(Double value, AreaUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4580,25 +4306,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private AreaUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4616,13 +4323,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the anglePerTimeMeasure xsd type.")]
     public partial class AnglePerTimeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the AnglePerTimeMeasure class.
+        /// </summary>
         public AnglePerTimeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AnglePerTimeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public AnglePerTimeMeasure(Double value, AnglePerTimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4644,25 +4363,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private AnglePerTimeUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4680,13 +4380,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the anglePerLengthMeasure xsd type.")]
     public partial class AnglePerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the AnglePerLengthMeasure class.
+        /// </summary>
         public AnglePerLengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AnglePerLengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public AnglePerLengthMeasure(Double value, AnglePerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4708,25 +4420,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private AnglePerLengthUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -4744,13 +4437,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the accelerationLinearMeasure xsd type.")]
     public partial class AccelerationLinearMeasure : AbstractMeasure , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the AccelerationLinearMeasure class.
+        /// </summary>
         public AccelerationLinearMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AccelerationLinearMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public AccelerationLinearMeasure(Double value, AccelerationLinearUom uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -4772,25 +4477,6 @@ namespace Energistics.DataAccess.WITSML141
 
         private AccelerationLinearUom uomField; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
     }
@@ -5057,6 +4743,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5076,7 +4763,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -5093,12 +4779,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the timestampedTimeZone xsd type.")]
     public partial class TimestampedTimeZone : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the TimestampedTimeZone class.
+        /// </summary>
         public TimestampedTimeZone() {}
+
+        /// <summary>
+        /// Initializes a new instance of the TimestampedTimeZone class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public TimestampedTimeZone(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -5154,6 +4851,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5173,7 +4871,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -5207,6 +4904,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<XmlElement> AnyField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5226,7 +4924,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -5442,6 +5139,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5461,7 +5159,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -5478,13 +5175,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the extensionvalue xsd type.")]
     public partial class Extensionvalue : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the Extensionvalue class.
+        /// </summary>
         public Extensionvalue() {}
+
+        /// <summary>
+        /// Initializes a new instance of the Extensionvalue class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public Extensionvalue(String value, String uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -5522,6 +5231,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5541,7 +5251,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -5575,6 +5284,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<XmlElement> AnyField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5594,7 +5304,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -5740,6 +5449,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5759,7 +5469,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -5802,14 +5511,14 @@ namespace Energistics.DataAccess.WITSML141
                 return latitudeField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Latitude when property LocalY is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Latitude when property ProjectedX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Latitude when property Easting is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Latitude when property LocalX is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Latitude when property Northing is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Latitude when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Latitude when property ProjectedY is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Latitude when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Latitude when property Westing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Latitude when property ProjectedX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Latitude when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Latitude when property LocalX is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Latitude when property Easting is already set");
                 latitudeField = value;
                 LatitudeSpecified = (value!=null);
                 NotifyPropertyChanged("Latitude");
@@ -5817,6 +5526,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private PlaneAngleMeasure latitudeField; 
+        /// <summary>
+        /// Boolean to indicate if Latitude has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool LatitudeSpecified = false; 
 
@@ -5829,14 +5541,14 @@ namespace Energistics.DataAccess.WITSML141
                 return longitudeField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Longitude when property LocalY is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Longitude when property ProjectedX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Longitude when property Easting is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Longitude when property LocalX is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Longitude when property Northing is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Longitude when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Longitude when property ProjectedY is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Longitude when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Longitude when property Westing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Longitude when property ProjectedX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Longitude when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Longitude when property LocalX is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Longitude when property Easting is already set");
                 longitudeField = value;
                 LongitudeSpecified = (value!=null);
                 NotifyPropertyChanged("Longitude");
@@ -5844,6 +5556,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private PlaneAngleMeasure longitudeField; 
+        /// <summary>
+        /// Boolean to indicate if Longitude has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool LongitudeSpecified = false; 
 
@@ -5856,14 +5571,14 @@ namespace Energistics.DataAccess.WITSML141
                 return eastingField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Easting when property LocalY is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Easting when property Latitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Easting when property LocalX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Easting when property ProjectedY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Easting when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Easting when property Southing is already set");
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Easting when property ProjectedY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Easting when property Westing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Easting when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Easting when property LocalX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Easting when property Latitude is already set");
                 eastingField = value;
                 EastingSpecified = (value!=null);
                 NotifyPropertyChanged("Easting");
@@ -5871,6 +5586,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure eastingField; 
+        /// <summary>
+        /// Boolean to indicate if Easting has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool EastingSpecified = false; 
 
@@ -5883,14 +5601,14 @@ namespace Energistics.DataAccess.WITSML141
                 return northingField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Northing when property LocalY is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Northing when property Latitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Northing when property LocalX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Northing when property ProjectedY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Northing when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Northing when property Southing is already set");
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Northing when property ProjectedY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Northing when property Westing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Northing when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Northing when property LocalX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Northing when property Latitude is already set");
                 northingField = value;
                 NorthingSpecified = (value!=null);
                 NotifyPropertyChanged("Northing");
@@ -5898,6 +5616,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure northingField; 
+        /// <summary>
+        /// Boolean to indicate if Northing has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool NorthingSpecified = false; 
 
@@ -5910,14 +5631,14 @@ namespace Energistics.DataAccess.WITSML141
                 return westingField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Westing when property LocalY is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Westing when property ProjectedX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Westing when property Easting is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Westing when property Latitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Westing when property LocalX is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Westing when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Westing when property Northing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Westing when property ProjectedY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Westing when property Longitude is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Westing when property ProjectedX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Westing when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Westing when property LocalX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Westing when property Latitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Westing when property Easting is already set");
                 westingField = value;
                 WestingSpecified = (value!=null);
                 NotifyPropertyChanged("Westing");
@@ -5925,6 +5646,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure westingField; 
+        /// <summary>
+        /// Boolean to indicate if Westing has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool WestingSpecified = false; 
 
@@ -5937,14 +5661,14 @@ namespace Energistics.DataAccess.WITSML141
                 return southingField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Southing when property LocalY is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Southing when property ProjectedX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Southing when property Easting is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Southing when property Latitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Southing when property LocalX is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Southing when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Southing when property Northing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Southing when property ProjectedY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Southing when property Longitude is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Southing when property ProjectedX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Southing when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Southing when property LocalX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Southing when property Latitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Southing when property Easting is already set");
                 southingField = value;
                 SouthingSpecified = (value!=null);
                 NotifyPropertyChanged("Southing");
@@ -5952,6 +5676,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure southingField; 
+        /// <summary>
+        /// Boolean to indicate if Southing has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool SouthingSpecified = false; 
 
@@ -5964,14 +5691,14 @@ namespace Energistics.DataAccess.WITSML141
                 return projectedXField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedX when property LocalY is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedX when property Easting is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Latitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedX when property LocalX is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedX when property Northing is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedX when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedX when property Westing is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedX when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedX when property LocalX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Latitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedX when property Easting is already set");
                 projectedXField = value;
                 ProjectedXSpecified = (value!=null);
                 NotifyPropertyChanged("ProjectedX");
@@ -5979,6 +5706,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure projectedXField; 
+        /// <summary>
+        /// Boolean to indicate if ProjectedX has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ProjectedXSpecified = false; 
 
@@ -5991,14 +5721,14 @@ namespace Energistics.DataAccess.WITSML141
                 return projectedYField;
             } 
             set {
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedY when property LocalY is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedY when property Easting is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Latitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedY when property LocalX is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedY when property Northing is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedY when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedY when property Westing is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedY when property LocalY is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedY when property LocalX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Latitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedY when property Easting is already set");
                 projectedYField = value;
                 ProjectedYSpecified = (value!=null);
                 NotifyPropertyChanged("ProjectedY");
@@ -6006,6 +5736,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure projectedYField; 
+        /// <summary>
+        /// Boolean to indicate if ProjectedY has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ProjectedYSpecified = false; 
 
@@ -6018,14 +5751,14 @@ namespace Energistics.DataAccess.WITSML141
                 return localXField;
             } 
             set {
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalX when property ProjectedX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalX when property Easting is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalX when property Latitude is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalX when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalX when property Northing is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalX when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalX when property ProjectedY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalX when property Longitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalX when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalX when property Westing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalX when property ProjectedX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalX when property Latitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalX when property Easting is already set");
                 localXField = value;
                 LocalXSpecified = (value!=null);
                 NotifyPropertyChanged("LocalX");
@@ -6033,6 +5766,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure localXField; 
+        /// <summary>
+        /// Boolean to indicate if LocalX has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool LocalXSpecified = false; 
 
@@ -6045,14 +5781,14 @@ namespace Energistics.DataAccess.WITSML141
                 return localYField;
             } 
             set {
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalY when property ProjectedX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalY when property Easting is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalY when property Latitude is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalY when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalY when property Northing is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalY when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalY when property ProjectedY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalY when property Longitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalY when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalY when property Westing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalY when property ProjectedX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalY when property Latitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalY when property Easting is already set");
                 localYField = value;
                 LocalYSpecified = (value!=null);
                 NotifyPropertyChanged("LocalY");
@@ -6060,6 +5796,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure localYField; 
+        /// <summary>
+        /// Boolean to indicate if LocalY has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool LocalYSpecified = false; 
 
@@ -6163,6 +5902,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -6182,7 +5922,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -6450,6 +6189,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private FootageEastWest footageEWField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -6469,7 +6209,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -7155,6 +6894,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7174,7 +6914,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -7258,6 +6997,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private WellKnownNameStruct datumNameField; 
+        /// <summary>
+        /// Boolean to indicate if DatumName has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool DatumNameSpecified = false; 
 
@@ -7278,6 +7020,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private RefNameString datumCRSField; 
+        /// <summary>
+        /// Boolean to indicate if DatumCRS has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool DatumCRSSpecified = false; 
 
@@ -7426,6 +7171,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7445,7 +7191,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -7462,12 +7207,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the wellKnownNameStruct xsd type.")]
     public partial class WellKnownNameStruct : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the WellKnownNameStruct class.
+        /// </summary>
         public WellKnownNameStruct() {}
+
+        /// <summary>
+        /// Initializes a new instance of the WellKnownNameStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public WellKnownNameStruct(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -7521,6 +7277,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7540,7 +7297,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -7590,6 +7346,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private RefNameString wellParentField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7609,7 +7366,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -7675,6 +7431,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private RefNameString wellParentField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7694,7 +7451,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -7737,10 +7493,10 @@ namespace Energistics.DataAccess.WITSML141
                 return mapProjectionField;
             } 
             set {
-                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property MapProjection when property GeodeticCRS is already set");
+                if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property MapProjection when property LocalCRS is already set");
                 if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property MapProjection when property MapProjectionCRS is already set");
                 if (value != null && GeographicSpecified) throw new Exception("Cannot set property MapProjection when property Geographic is already set");
-                if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property MapProjection when property LocalCRS is already set");
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property MapProjection when property GeodeticCRS is already set");
                 mapProjectionField = value;
                 MapProjectionSpecified = (value!=null);
                 NotifyPropertyChanged("MapProjection");
@@ -7748,6 +7504,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private Projectionx mapProjectionField; 
+        /// <summary>
+        /// Boolean to indicate if MapProjection has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool MapProjectionSpecified = false; 
 
@@ -7760,10 +7519,10 @@ namespace Energistics.DataAccess.WITSML141
                 return geographicField;
             } 
             set {
-                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property Geographic when property GeodeticCRS is already set");
-                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property Geographic when property MapProjectionCRS is already set");
                 if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property Geographic when property LocalCRS is already set");
                 if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property Geographic when property MapProjection is already set");
+                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property Geographic when property MapProjectionCRS is already set");
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property Geographic when property GeodeticCRS is already set");
                 geographicField = value;
                 GeographicSpecified = (value!=null);
                 NotifyPropertyChanged("Geographic");
@@ -7771,6 +7530,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private GeodeticModel geographicField; 
+        /// <summary>
+        /// Boolean to indicate if Geographic has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool GeographicSpecified = false; 
 
@@ -7783,10 +7545,10 @@ namespace Energistics.DataAccess.WITSML141
                 return mapProjectionCRSField;
             } 
             set {
-                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property MapProjectionCRS when property GeodeticCRS is already set");
-                if (value != null && GeographicSpecified) throw new Exception("Cannot set property MapProjectionCRS when property Geographic is already set");
                 if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property MapProjectionCRS when property LocalCRS is already set");
                 if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property MapProjectionCRS when property MapProjection is already set");
+                if (value != null && GeographicSpecified) throw new Exception("Cannot set property MapProjectionCRS when property Geographic is already set");
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property MapProjectionCRS when property GeodeticCRS is already set");
                 mapProjectionCRSField = value;
                 MapProjectionCRSSpecified = (value!=null);
                 NotifyPropertyChanged("MapProjectionCRS");
@@ -7794,6 +7556,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private RefNameString mapProjectionCRSField; 
+        /// <summary>
+        /// Boolean to indicate if MapProjectionCRS has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool MapProjectionCRSSpecified = false; 
 
@@ -7806,10 +7571,10 @@ namespace Energistics.DataAccess.WITSML141
                 return geodeticCRSField;
             } 
             set {
-                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property MapProjectionCRS is already set");
-                if (value != null && GeographicSpecified) throw new Exception("Cannot set property GeodeticCRS when property Geographic is already set");
                 if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property LocalCRS is already set");
                 if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property GeodeticCRS when property MapProjection is already set");
+                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property MapProjectionCRS is already set");
+                if (value != null && GeographicSpecified) throw new Exception("Cannot set property GeodeticCRS when property Geographic is already set");
                 geodeticCRSField = value;
                 GeodeticCRSSpecified = (value!=null);
                 NotifyPropertyChanged("GeodeticCRS");
@@ -7817,6 +7582,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private RefNameString geodeticCRSField; 
+        /// <summary>
+        /// Boolean to indicate if GeodeticCRS has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool GeodeticCRSSpecified = false; 
 
@@ -7829,10 +7597,10 @@ namespace Energistics.DataAccess.WITSML141
                 return localCRSField;
             } 
             set {
-                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property LocalCRS when property GeodeticCRS is already set");
+                if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property LocalCRS when property MapProjection is already set");
                 if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property LocalCRS when property MapProjectionCRS is already set");
                 if (value != null && GeographicSpecified) throw new Exception("Cannot set property LocalCRS when property Geographic is already set");
-                if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property LocalCRS when property MapProjection is already set");
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property LocalCRS when property GeodeticCRS is already set");
                 localCRSField = value;
                 LocalCRSSpecified = (value!=null);
                 NotifyPropertyChanged("LocalCRS");
@@ -7840,6 +7608,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LocalCRS localCRSField; 
+        /// <summary>
+        /// Boolean to indicate if LocalCRS has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool LocalCRSSpecified = false; 
 
@@ -7909,6 +7680,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7928,7 +7700,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -8221,6 +7992,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private Boolean ellipsoidInverseFlatteningSpecifiedField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -8240,7 +8012,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -8276,6 +8047,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private Boolean? usesWellAsOriginField; 
+        /// <summary>
+        /// Boolean to indicate if UsesWellAsOrigin has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool UsesWellAsOriginSpecified = false; 
 
@@ -8288,8 +8062,8 @@ namespace Energistics.DataAccess.WITSML141
                 return originField;
             } 
             set {
-                if (value != null && OriginDescriptionSpecified) throw new Exception("Cannot set property Origin when property OriginDescription is already set");
                 if (value != null && UsesWellAsOriginSpecified) throw new Exception("Cannot set property Origin when property UsesWellAsOrigin is already set");
+                if (value != null && OriginDescriptionSpecified) throw new Exception("Cannot set property Origin when property OriginDescription is already set");
                 originField = value;
                 OriginSpecified = (value!=null);
                 NotifyPropertyChanged("Origin");
@@ -8297,6 +8071,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private RefNameString originField; 
+        /// <summary>
+        /// Boolean to indicate if Origin has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool OriginSpecified = false; 
 
@@ -8309,8 +8086,8 @@ namespace Energistics.DataAccess.WITSML141
                 return originDescriptionField;
             } 
             set {
-                if (value != null && OriginSpecified) throw new Exception("Cannot set property OriginDescription when property Origin is already set");
                 if (value != null && UsesWellAsOriginSpecified) throw new Exception("Cannot set property OriginDescription when property UsesWellAsOrigin is already set");
+                if (value != null && OriginSpecified) throw new Exception("Cannot set property OriginDescription when property Origin is already set");
                 originDescriptionField = value;
                 OriginDescriptionSpecified = (value!=null);
                 NotifyPropertyChanged("OriginDescription");
@@ -8318,6 +8095,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String originDescriptionField; 
+        /// <summary>
+        /// Boolean to indicate if OriginDescription has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool OriginDescriptionSpecified = false; 
 
@@ -8420,6 +8200,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private Boolean xRotationCounterClockwiseSpecifiedField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -8439,7 +8220,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -9005,6 +8785,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<IndexedObject> parameterField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -9024,7 +8805,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -9041,13 +8821,25 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the indexedObject xsd type.")]
     public partial class IndexedObject : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the IndexedObject class.
+        /// </summary>
         public IndexedObject() {}
+
+        /// <summary>
+        /// Initializes a new instance of the IndexedObject class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
         public IndexedObject(String value, String uom)
         {
             this.Uom = uom;
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value + " " + Uom;
@@ -9149,6 +8941,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -9168,7 +8961,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -9392,6 +9184,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -9411,7 +9204,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -9706,6 +9498,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -9725,7 +9518,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -9776,6 +9568,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private PlaneAngleMeasure bendAngleField; 
+        /// <summary>
+        /// Boolean to indicate if BendAngle has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool BendAngleSpecified = false; 
 
@@ -9796,6 +9591,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private LengthMeasure bendOffsetField; 
+        /// <summary>
+        /// Boolean to indicate if BendOffset has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool BendOffsetSpecified = false; 
 
@@ -10140,6 +9938,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private ExtensionAny extensionAnyField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10159,7 +9958,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -10307,6 +10105,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10326,7 +10125,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -10476,6 +10274,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private ExtensionAny extensionAnyField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10495,7 +10294,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -10609,6 +10407,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10628,7 +10427,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -10892,6 +10690,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10911,7 +10710,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -11343,6 +11141,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private ExtensionAny extensionAnyField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -11362,7 +11161,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -11492,6 +11290,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private ExtensionAny extensionAnyField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -11511,7 +11310,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -11725,6 +11523,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private ExtensionAny extensionAnyField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -11744,7 +11543,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -12020,6 +11818,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -12039,7 +11838,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -12237,6 +12035,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -12256,7 +12055,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -13096,6 +12894,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -13115,7 +12914,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -13347,6 +13145,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -13366,7 +13165,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -14042,6 +13840,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -14061,7 +13860,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -14078,12 +13876,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the cost xsd type.")]
     public partial class Cost : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the Cost class.
+        /// </summary>
         public Cost() {}
+
+        /// <summary>
+        /// Initializes a new instance of the Cost class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public Cost(Double value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -14121,6 +13930,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private Double ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -14140,7 +13950,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -14400,6 +14209,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -14419,7 +14229,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -14468,6 +14277,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private RefNameString wellboreParentField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -14487,7 +14297,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -15045,6 +14854,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -15064,7 +14874,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -16098,6 +15907,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -16117,7 +15927,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -16231,6 +16040,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private MagneticInductionMeasure magTran2RawField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -16250,7 +16060,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -16508,6 +16317,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private LengthMeasure dirSensorOffsetField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -16527,7 +16337,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -16593,6 +16402,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private AccelerationLinearMeasure gravTotalFieldCalcField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -16612,7 +16422,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -16774,6 +16583,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private LengthMeasure biasVertField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -16793,7 +16603,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -16859,6 +16668,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private RefNameString wellboreParentField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -16878,7 +16688,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -16905,9 +16714,9 @@ namespace Energistics.DataAccess.WITSML141
                 return aziField;
             } 
             set {
-                if (value != null && IncSpecified) throw new Exception("Cannot set property Azi when property Inc is already set");
-                if (value != null && DepthSpecified) throw new Exception("Cannot set property Azi when property Depth is already set");
                 if (value != null && TvdSpecified) throw new Exception("Cannot set property Azi when property Tvd is already set");
+                if (value != null && DepthSpecified) throw new Exception("Cannot set property Azi when property Depth is already set");
+                if (value != null && IncSpecified) throw new Exception("Cannot set property Azi when property Inc is already set");
                 aziField = value;
                 AziSpecified = (value!=null);
                 NotifyPropertyChanged("Azi");
@@ -16915,6 +16724,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String aziField; 
+        /// <summary>
+        /// Boolean to indicate if Azi has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool AziSpecified = false; 
 
@@ -16927,9 +16739,9 @@ namespace Energistics.DataAccess.WITSML141
                 return incField;
             } 
             set {
+                if (value != null && TvdSpecified) throw new Exception("Cannot set property Inc when property Tvd is already set");
                 if (value != null && AziSpecified) throw new Exception("Cannot set property Inc when property Azi is already set");
                 if (value != null && DepthSpecified) throw new Exception("Cannot set property Inc when property Depth is already set");
-                if (value != null && TvdSpecified) throw new Exception("Cannot set property Inc when property Tvd is already set");
                 incField = value;
                 IncSpecified = (value!=null);
                 NotifyPropertyChanged("Inc");
@@ -16937,6 +16749,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String incField; 
+        /// <summary>
+        /// Boolean to indicate if Inc has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool IncSpecified = false; 
 
@@ -16949,9 +16764,9 @@ namespace Energistics.DataAccess.WITSML141
                 return depthField;
             } 
             set {
+                if (value != null && TvdSpecified) throw new Exception("Cannot set property Depth when property Tvd is already set");
                 if (value != null && AziSpecified) throw new Exception("Cannot set property Depth when property Azi is already set");
                 if (value != null && IncSpecified) throw new Exception("Cannot set property Depth when property Inc is already set");
-                if (value != null && TvdSpecified) throw new Exception("Cannot set property Depth when property Tvd is already set");
                 depthField = value;
                 DepthSpecified = (value!=null);
                 NotifyPropertyChanged("Depth");
@@ -16959,6 +16774,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String depthField; 
+        /// <summary>
+        /// Boolean to indicate if Depth has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool DepthSpecified = false; 
 
@@ -16972,8 +16790,8 @@ namespace Energistics.DataAccess.WITSML141
             } 
             set {
                 if (value != null && AziSpecified) throw new Exception("Cannot set property Tvd when property Azi is already set");
-                if (value != null && IncSpecified) throw new Exception("Cannot set property Tvd when property Inc is already set");
                 if (value != null && DepthSpecified) throw new Exception("Cannot set property Tvd when property Depth is already set");
+                if (value != null && IncSpecified) throw new Exception("Cannot set property Tvd when property Inc is already set");
                 tvdField = value;
                 TvdSpecified = (value!=null);
                 NotifyPropertyChanged("Tvd");
@@ -16981,6 +16799,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String tvdField; 
+        /// <summary>
+        /// Boolean to indicate if Tvd has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool TvdSpecified = false; 
 
@@ -17034,6 +16855,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17053,7 +16875,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -17251,6 +17072,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17270,7 +17092,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -17384,6 +17205,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17403,7 +17225,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -17485,6 +17306,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17504,7 +17326,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -17570,6 +17391,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<IscwsaNomenclatureConstant> constantField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17589,7 +17411,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -17717,6 +17538,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17736,7 +17558,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -17831,7 +17652,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
         /// <summary>
         /// A comment about the object. This should include information regarding the derivation of the information.
@@ -17848,6 +17669,7 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String commentField; 
+
 
         
 		#region INotifyPropertyChanged Members
@@ -17868,7 +17690,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -18016,6 +17837,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -18035,7 +17857,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -18185,6 +18006,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private VelocityMeasure gyroRunningSpeedField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -18204,7 +18026,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -18334,6 +18155,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -18353,7 +18175,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -18467,6 +18288,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -18486,7 +18308,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -18678,6 +18499,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -18697,7 +18519,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -18858,6 +18679,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -18877,7 +18699,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -19395,6 +19216,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -19414,7 +19236,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -19691,6 +19512,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -19710,7 +19532,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -19952,6 +19773,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -19971,7 +19793,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -20266,6 +20087,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -20285,7 +20107,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -20384,7 +20205,7 @@ namespace Energistics.DataAccess.WITSML141
         private PressureMeasure lithPorePresField; 
 
         /// <summary>
-        /// Net pay is computed. It is the thickness of rock that can deliver hydrocarbons to the well bore formation.
+        /// Net pay is computed. It is the thickness of rock that can deliver hydrocarbons to the wellbore formation.
         /// </summary>
 		[XmlElement("lithNetPayThickness")]
         public LengthMeasure LithNetPayThickness {
@@ -20671,6 +20492,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -20690,7 +20512,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -20868,6 +20689,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -20887,7 +20709,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -21103,6 +20924,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -21122,7 +20944,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -21204,6 +21025,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -21223,7 +21045,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -21240,6 +21061,22 @@ namespace Energistics.DataAccess.WITSML141
     [Description("A diagnostic test determining fluid efficiency.")]
     public partial class StimFetTest : Object , INotifyPropertyChanged
     {
+
+        /// <summary>
+        /// An analysis method used for this FET test.
+        /// </summary>
+		[XmlElement("analysisMethod")]
+        public List<StimAnalysisMethod> AnalysisMethod {
+            get {
+                return analysisMethodField;
+            } 
+            set {
+                analysisMethodField = value;
+                NotifyPropertyChanged("AnalysisMethod");
+            }
+        }
+
+        private List<StimAnalysisMethod> analysisMethodField; 
 
         /// <summary>
         /// Start time for the fluid efficiency test (FET).
@@ -21551,6 +21388,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -21570,7 +21408,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -21652,6 +21489,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -21671,7 +21509,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -21753,6 +21590,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -21772,7 +21610,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -22656,6 +22493,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -22675,7 +22513,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -22825,6 +22662,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -22844,7 +22682,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -22944,6 +22781,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String sieveSizeField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -22963,7 +22801,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -23095,6 +22932,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -23114,7 +22952,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -23212,6 +23049,173 @@ namespace Energistics.DataAccess.WITSML141
 
         private StimProppant proppantField; 
 
+        /// <summary>
+        /// The density of the fluid.
+        /// </summary>
+		[XmlElement("density")]
+        public DensityMeasure Density {
+            get {
+                return densityField;
+            } 
+            set {
+                densityField = value;
+                NotifyPropertyChanged("Density");
+            }
+        }
+
+        private DensityMeasure densityField; 
+
+        /// <summary>
+        /// The pH of the fluid.
+        /// </summary>
+		[XmlElement("pH")]
+        public Double? PH {
+            get {
+                return pHField;
+            } 
+            set {
+                pHField = value;
+                this.PHSpecified = true;
+                NotifyPropertyChanged("PH");
+            }
+        }
+
+        private Double? pHField; 
+
+		/// <summary>
+        /// pHSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+        public Boolean PHSpecified {
+            get {
+                return pHSpecifiedField;
+            } 
+            set {
+                pHSpecifiedField = value;
+                NotifyPropertyChanged("PHSpecified");
+            }
+        }
+
+        private Boolean pHSpecifiedField; 
+
+        /// <summary>
+        /// The purpose of the fluid.
+        /// </summary>
+		[XmlElement("purpose")]
+        public String Purpose {
+            get {
+                return purposeField;
+            } 
+            set {
+                purposeField = value;
+                NotifyPropertyChanged("Purpose");
+            }
+        }
+
+        private String purposeField; 
+
+        /// <summary>
+        /// The description of the fluid.
+        /// </summary>
+		[XmlElement("description")]
+        public String Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String descriptionField; 
+
+        /// <summary>
+        /// The supplier of the fluid.
+        /// </summary>
+		[XmlElement("supplier")]
+        public String Supplier {
+            get {
+                return supplierField;
+            } 
+            set {
+                supplierField = value;
+                NotifyPropertyChanged("Supplier");
+            }
+        }
+
+        private String supplierField; 
+
+        /// <summary>
+        /// The fluid types.
+        /// </summary>
+		[XmlElement("fluidType")]
+        public StimFluidType? FluidType {
+            get {
+                return fluidTypeField;
+            } 
+            set {
+                fluidTypeField = value;
+                this.FluidTypeSpecified = true;
+                NotifyPropertyChanged("FluidType");
+            }
+        }
+
+        private StimFluidType? fluidTypeField; 
+
+		/// <summary>
+        /// fluidTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+        public Boolean FluidTypeSpecified {
+            get {
+                return fluidTypeSpecifiedField;
+            } 
+            set {
+                fluidTypeSpecifiedField = value;
+                NotifyPropertyChanged("FluidTypeSpecified");
+            }
+        }
+
+        private Boolean fluidTypeSpecifiedField; 
+
+        /// <summary>
+        /// The fluid subtypes.
+        /// </summary>
+		[XmlElement("fluidSubtype")]
+        public StimFluidSubtype? FluidSubtype {
+            get {
+                return fluidSubtypeField;
+            } 
+            set {
+                fluidSubtypeField = value;
+                this.FluidSubtypeSpecified = true;
+                NotifyPropertyChanged("FluidSubtype");
+            }
+        }
+
+        private StimFluidSubtype? fluidSubtypeField; 
+
+		/// <summary>
+        /// fluidSubtypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+        public Boolean FluidSubtypeSpecified {
+            get {
+                return fluidSubtypeSpecifiedField;
+            } 
+            set {
+                fluidSubtypeSpecifiedField = value;
+                NotifyPropertyChanged("FluidSubtypeSpecified");
+            }
+        }
+
+        private Boolean fluidSubtypeSpecifiedField; 
+
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -23231,7 +23235,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -24583,6 +24586,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -24602,7 +24606,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -24796,6 +24799,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -24815,7 +24819,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -25799,6 +25802,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -25818,7 +25822,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -25900,6 +25903,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -25919,7 +25923,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -26001,6 +26004,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -26020,7 +26024,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -27199,6 +27202,54 @@ namespace Energistics.DataAccess.WITSML141
         private List<StimPerforationSet> perforationIntervalField; 
 
         /// <summary>
+        /// The average static temperature of the wellbore injection point(s) or formation at equilibrium (steady state) with no fluid or tool movement, allowing for equilibrium conditions at the wellbore injection point; (BHST: bottom hole static temperature). 
+        /// </summary>
+		[XmlElement("avgBHStaticTemperature")]
+        public ThermodynamicTemperatureMeasure AvgBHStaticTemperature {
+            get {
+                return avgBHStaticTemperatureField;
+            } 
+            set {
+                avgBHStaticTemperatureField = value;
+                NotifyPropertyChanged("AvgBHStaticTemperature");
+            }
+        }
+
+        private ThermodynamicTemperatureMeasure avgBHStaticTemperatureField; 
+
+        /// <summary>
+        /// The average measured or calculated temperature of the wellbore during the treating with well fluid injection or circulation of the wellbore at the point of interest. Point of interest is generally the injection point or region of interest for the test or treatment.
+        /// </summary>
+		[XmlElement("avgBHTreatingTemperature")]
+        public ThermodynamicTemperatureMeasure AvgBHTreatingTemperature {
+            get {
+                return avgBHTreatingTemperatureField;
+            } 
+            set {
+                avgBHTreatingTemperatureField = value;
+                NotifyPropertyChanged("AvgBHTreatingTemperature");
+            }
+        }
+
+        private ThermodynamicTemperatureMeasure avgBHTreatingTemperatureField; 
+
+        /// <summary>
+        /// Additives used in the fluid.
+        /// </summary>
+		[XmlElement("additive")]
+        public List<StimAdditive> Additive {
+            get {
+                return additiveField;
+            } 
+            set {
+                additiveField = value;
+                NotifyPropertyChanged("Additive");
+            }
+        }
+
+        private List<StimAdditive> additiveField; 
+
+        /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[XmlElement("extensionNameValue")]
@@ -27230,6 +27281,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -27249,7 +27301,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -27999,6 +28050,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -28018,7 +28070,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -28147,6 +28198,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -28166,7 +28218,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -28574,6 +28625,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -28593,7 +28645,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -28740,6 +28791,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -28759,7 +28811,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -29255,6 +29306,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String odorField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -29274,7 +29326,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -29850,6 +29901,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -29869,7 +29921,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     /// <summary>
@@ -30454,6 +30505,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -30473,7 +30525,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -30489,12 +30540,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the refObjectString xsd type.")]
     public partial class RefObjectString : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the RefObjectString class.
+        /// </summary>
         public RefObjectString() {}
+
+        /// <summary>
+        /// Initializes a new instance of the RefObjectString class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public RefObjectString(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -30548,6 +30610,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -30567,7 +30630,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -31357,6 +31419,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private LengthMeasure htFlangeField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -31376,7 +31439,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -31782,6 +31844,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -31801,7 +31864,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -32015,6 +32077,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -32034,7 +32097,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -32248,6 +32310,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -32267,7 +32330,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -32631,6 +32693,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -32650,7 +32713,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -33126,6 +33188,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -33145,7 +33208,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -33395,6 +33457,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -33414,7 +33477,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -33628,6 +33690,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -33647,7 +33710,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -34279,6 +34341,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private PressureMeasure presChokeManifoldField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -34298,7 +34361,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -36014,6 +36076,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -36033,7 +36096,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -36468,6 +36530,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -36487,7 +36550,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -36671,6 +36733,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -36690,7 +36753,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -36822,6 +36884,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -36841,7 +36904,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -37171,6 +37233,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -37190,7 +37253,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -37924,6 +37986,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String commentsField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -37943,7 +38006,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -38143,6 +38205,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private LengthMeasure cutPointField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -38162,7 +38225,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -38326,6 +38388,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -38345,7 +38408,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -38591,6 +38653,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -38610,7 +38673,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -38627,12 +38689,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the refPositiveCount xsd type.")]
     public partial class RefPositiveCount : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the RefPositiveCount class.
+        /// </summary>
         public RefPositiveCount() {}
+
+        /// <summary>
+        /// Initializes a new instance of the RefPositiveCount class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public RefPositiveCount(Int16 value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -38670,6 +38743,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private Int16 ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -38689,7 +38763,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -39107,6 +39180,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private LengthMeasure meanDraftField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -39126,7 +39200,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -39177,6 +39250,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private MassMeasure itemWtPerUnitField; 
+        /// <summary>
+        /// Boolean to indicate if ItemWeightPerUnit has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ItemWeightPerUnitSpecified = false; 
 
@@ -39197,6 +39273,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private VolumeMeasure itemVolPerUnitField; 
+        /// <summary>
+        /// Boolean to indicate if ItemVolPerUnit has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ItemVolPerUnitSpecified = false; 
 
@@ -39469,6 +39548,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -39488,7 +39568,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -39714,6 +39793,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumeMeasure volTotMudLostHoleField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -39733,7 +39813,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -39927,6 +40006,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumeMeasure volTotMudEndField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -39946,7 +40026,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -40110,6 +40189,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -40129,7 +40209,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -40275,6 +40354,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -40294,7 +40374,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -40786,6 +40865,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -40805,7 +40885,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -42093,6 +42172,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -42112,7 +42192,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -42689,6 +42768,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -42708,7 +42788,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -43591,6 +43670,74 @@ namespace Energistics.DataAccess.WITSML141
         private VolumeFlowRateMeasure flowrateBitField; 
 
         /// <summary>
+        /// The class of the drilling fluid.
+        /// </summary>
+		[XmlElement("mudClass")]
+        public MudClass? MudClass {
+            get {
+                return mudClassField;
+            } 
+            set {
+                mudClassField = value;
+                this.MudClassSpecified = true;
+                NotifyPropertyChanged("MudClass");
+            }
+        }
+
+        private MudClass? mudClassField; 
+
+		/// <summary>
+        /// mudClassSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+        public Boolean MudClassSpecified {
+            get {
+                return mudClassSpecifiedField;
+            } 
+            set {
+                mudClassSpecifiedField = value;
+                NotifyPropertyChanged("MudClassSpecified");
+            }
+        }
+
+        private Boolean mudClassSpecifiedField; 
+
+        /// <summary>
+        /// Mud Subtype at event occurrence.
+        /// </summary>
+		[XmlElement("mudSubClass")]
+        public MudSubClass MudSubClass {
+            get {
+                return mudSubClassField;
+            } 
+            set {
+                mudSubClassField = value;
+                this.MudSubClassSpecified = true;
+                NotifyPropertyChanged("MudSubClass");
+            }
+        }
+
+        private MudSubClass mudSubClassField; 
+
+		/// <summary>
+        /// mudSubClassSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+        public Boolean MudSubClassSpecified {
+            get {
+                return mudSubClassSpecifiedField;
+            } 
+            set {
+                mudSubClassSpecifiedField = value;
+                NotifyPropertyChanged("MudSubClassSpecified");
+            }
+        }
+
+        private Boolean mudSubClassSpecifiedField; 
+
+        /// <summary>
         /// Comments and remarks. 
         /// </summary>
 		[XmlElement("comments")]
@@ -43638,6 +43785,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -43657,7 +43805,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -43755,6 +43902,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<WellboreGeometrySection> wbGeometrySectionField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -43774,7 +43922,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -44808,6 +44955,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -44827,7 +44975,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -45113,6 +45260,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -45132,7 +45280,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -45149,12 +45296,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the objectSequence xsd type.")]
     public partial class ObjectSequence : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ObjectSequence class.
+        /// </summary>
         public ObjectSequence() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ObjectSequence class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public ObjectSequence(Int16 value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -45192,6 +45350,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private Int16 ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -45211,7 +45370,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -45541,6 +45699,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -45560,7 +45719,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -45628,7 +45786,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines the type of group.
         /// </summary>
 		[XmlElement("groupType")]
-        public ObjectGroupKind GroupType {
+        public String GroupType {
             get {
                 return groupTypeField;
             } 
@@ -45638,7 +45796,23 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private ObjectGroupKind groupTypeField; 
+        private String groupTypeField; 
+
+        /// <summary>
+        /// This is a free-form text field to extend groupType for custom implementations.
+        /// </summary>
+		[XmlElement("groupSubtype")]
+        public String GroupSubtype {
+            get {
+                return groupSubtypeField;
+            } 
+            set {
+                groupSubtypeField = value;
+                NotifyPropertyChanged("GroupSubtype");
+            }
+        }
+
+        private String groupSubtypeField; 
 
         /// <summary>
         /// The sequence number related to the group. The meaning of the sequence is defined by the groupType.
@@ -45802,6 +45976,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -45821,7 +45996,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -45930,8 +46104,8 @@ namespace Energistics.DataAccess.WITSML141
             } 
             set {
                 if (value != null && PressureGradientSpecified) throw new Exception("Cannot set property Force when property PressureGradient is already set");
-                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Force when property EquivalentMudWeight is already set");
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property Force when property Concentration is already set");
+                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Force when property EquivalentMudWeight is already set");
                 forceField = value;
                 ForceSpecified = (value!=null);
                 NotifyPropertyChanged("Force");
@@ -45939,6 +46113,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private ForceMeasure forceField; 
+        /// <summary>
+        /// Boolean to indicate if Force has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ForceSpecified = false; 
 
@@ -45951,8 +46128,8 @@ namespace Energistics.DataAccess.WITSML141
                 return concentrationField;
             } 
             set {
-                if (value != null && ForceSpecified) throw new Exception("Cannot set property Concentration when property Force is already set");
                 if (value != null && PressureGradientSpecified) throw new Exception("Cannot set property Concentration when property PressureGradient is already set");
+                if (value != null && ForceSpecified) throw new Exception("Cannot set property Concentration when property Force is already set");
                 if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Concentration when property EquivalentMudWeight is already set");
                 concentrationField = value;
                 ConcentrationSpecified = (value!=null);
@@ -45961,6 +46138,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private VolumePerVolumeMeasure concentrationField; 
+        /// <summary>
+        /// Boolean to indicate if Concentration has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ConcentrationSpecified = false; 
 
@@ -45973,8 +46153,8 @@ namespace Energistics.DataAccess.WITSML141
                 return equivalentMudWeightField;
             } 
             set {
-                if (value != null && ForceSpecified) throw new Exception("Cannot set property EquivalentMudWeight when property Force is already set");
                 if (value != null && PressureGradientSpecified) throw new Exception("Cannot set property EquivalentMudWeight when property PressureGradient is already set");
+                if (value != null && ForceSpecified) throw new Exception("Cannot set property EquivalentMudWeight when property Force is already set");
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property EquivalentMudWeight when property Concentration is already set");
                 equivalentMudWeightField = value;
                 EquivalentMudWeightSpecified = (value!=null);
@@ -45983,6 +46163,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private DensityMeasure equivalentMudWeightField; 
+        /// <summary>
+        /// Boolean to indicate if EquivalentMudWeight has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool EquivalentMudWeightSpecified = false; 
 
@@ -45996,8 +46179,8 @@ namespace Energistics.DataAccess.WITSML141
             } 
             set {
                 if (value != null && ForceSpecified) throw new Exception("Cannot set property PressureGradient when property Force is already set");
-                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property PressureGradient when property EquivalentMudWeight is already set");
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property PressureGradient when property Concentration is already set");
+                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property PressureGradient when property EquivalentMudWeight is already set");
                 pressureGradientField = value;
                 PressureGradientSpecified = (value!=null);
                 NotifyPropertyChanged("PressureGradient");
@@ -46005,6 +46188,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private ForcePerVolumeMeasure pressureGradientField; 
+        /// <summary>
+        /// Boolean to indicate if PressureGradient has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool PressureGradientSpecified = false; 
 
@@ -46073,6 +46259,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -46092,7 +46279,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -46178,6 +46364,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private Boolean dTimLastChangeSpecifiedField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -46197,7 +46384,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -46521,6 +46707,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -46540,7 +46727,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -47250,6 +47436,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -47269,7 +47456,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -48043,6 +48229,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumePerVolumeMeasure acetyleneField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -48062,7 +48249,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -48210,6 +48396,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumePerVolumeMeasure gasTripField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -48229,7 +48416,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -48246,12 +48432,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the lithostratigraphyStruct xsd type.")]
     public partial class LithostratigraphyStruct : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the LithostratigraphyStruct class.
+        /// </summary>
         public LithostratigraphyStruct() {}
+
+        /// <summary>
+        /// Initializes a new instance of the LithostratigraphyStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public LithostratigraphyStruct(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -48307,6 +48504,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -48326,7 +48524,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -48343,12 +48540,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the chronostratigraphyStruct xsd type.")]
     public partial class ChronostratigraphyStruct : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ChronostratigraphyStruct class.
+        /// </summary>
         public ChronostratigraphyStruct() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ChronostratigraphyStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public ChronostratigraphyStruct(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -48404,6 +48612,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -48423,7 +48632,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -48813,6 +49021,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -48832,7 +49041,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -48897,6 +49105,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<String> dataField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -48916,7 +49125,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -49031,6 +49239,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String doubleValuesField; 
+        /// <summary>
+        /// Boolean to indicate if DoubleValues has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool DoubleValuesSpecified = false; 
 
@@ -49051,6 +49262,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String stringValuesField; 
+        /// <summary>
+        /// Boolean to indicate if StringValues has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool StringValuesSpecified = false; 
 
@@ -49104,6 +49318,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -49123,7 +49338,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -49140,12 +49354,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the shortNameStruct xsd type.")]
     public partial class ShortNameStruct : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the ShortNameStruct class.
+        /// </summary>
         public ShortNameStruct() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ShortNameStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public ShortNameStruct(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -49183,6 +49408,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -49202,7 +49428,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -49680,6 +49905,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -49699,7 +49925,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -49830,40 +50055,6 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private Boolean dataUpateRateSpecifiedField; 
-
-        /// <summary>
-        /// Requests that only the latest N values be returned from the end of each curve. This is an API server parameter releted to the "Special Handling Systematically Growing Objects" within a server. See the relevant API specification for the behavior related to this element.
-        /// </summary>
-		[XmlElement("requestLatestValue")]
-        public Int32? RequestLatestValue {
-            get {
-                return requestLatestValueField;
-            } 
-            set {
-                requestLatestValueField = value;
-                this.RequestLatestValueSpecified = true;
-                NotifyPropertyChanged("RequestLatestValue");
-            }
-        }
-
-        private Int32? requestLatestValueField; 
-
-		/// <summary>
-        /// requestLatestValueSpecified property
-        /// </summary>
-        [XmlIgnore]
-		[Browsable(false)]
-        public Boolean RequestLatestValueSpecified {
-            get {
-                return requestLatestValueSpecifiedField;
-            } 
-            set {
-                requestLatestValueSpecifiedField = value;
-                NotifyPropertyChanged("RequestLatestValueSpecified");
-            }
-        }
-
-        private Boolean requestLatestValueSpecifiedField; 
 
         /// <summary>
         /// This value is only relevant within the context of a server. True ("true" or "1") indicates that all curves have the same sensor offset from the downhole equipment vertical reference. False ("false" or 0") or not given indicates otherwise. For a growing log, a value of true will allow a query to use the the endIndex from the previous query as the startIndex of the next query.
@@ -50389,6 +50580,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -50408,7 +50600,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     /// <summary>
@@ -50536,7 +50727,7 @@ namespace Energistics.DataAccess.WITSML141
         private WellVerticalDepthCoord tvdTopSampleField; 
 
         /// <summary>
-        /// Bed Thickness. 
+        /// Vertical thickness.
         /// </summary>
 		[XmlElement("thicknessBed")]
         public LengthMeasure ThicknessBed {
@@ -50568,7 +50759,7 @@ namespace Energistics.DataAccess.WITSML141
         private LengthMeasure thicknessApparentField; 
 
         /// <summary>
-        /// Perpendicular thickness. 
+        /// True Stratigraphic thickness.
         /// </summary>
 		[XmlElement("thicknessPerpen")]
         public LengthMeasure ThicknessPerpen {
@@ -50648,10 +50839,26 @@ namespace Energistics.DataAccess.WITSML141
         private PlaneAngleMeasure dipDirectionField; 
 
         /// <summary>
+        /// Lithostratigraphic classification. 
+        /// </summary>
+		[XmlElement("lithostratigraphic")]
+        public LithostratigraphyStruct Lithostratigraphic {
+            get {
+                return lithostratigraphicField;
+            } 
+            set {
+                lithostratigraphicField = value;
+                NotifyPropertyChanged("Lithostratigraphic");
+            }
+        }
+
+        private LithostratigraphyStruct lithostratigraphicField; 
+
+        /// <summary>
         /// Chronostratigraphic classification. 
         /// </summary>
 		[XmlElement("chronostratigraphic")]
-        public String Chronostratigraphic {
+        public ChronostratigraphyStruct Chronostratigraphic {
             get {
                 return chronostratigraphicField;
             } 
@@ -50661,11 +50868,12 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String chronostratigraphicField; 
+        private ChronostratigraphyStruct chronostratigraphicField; 
 
         /// <summary>
-        /// Formation name. 
+        /// DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation. 
         /// </summary>
+        [Obsolete()]
 		[XmlElement("nameFormation")]
         public String NameFormation {
             get {
@@ -50775,6 +50983,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -50794,7 +51003,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     /// <summary>
@@ -51035,6 +51243,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -51054,7 +51263,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -51363,6 +51571,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -51382,7 +51591,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -51564,6 +51772,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -51583,7 +51792,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -51715,6 +51923,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -51734,7 +51943,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -52258,6 +52466,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -52277,7 +52486,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -52475,6 +52683,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -52494,7 +52703,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -52674,6 +52882,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -52693,7 +52902,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -52939,6 +53147,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -52958,7 +53167,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -53478,6 +53686,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -53497,7 +53706,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -53759,6 +53967,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -53778,7 +53987,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -53951,8 +54159,8 @@ namespace Energistics.DataAccess.WITSML141
                 return tempBHCTField;
             } 
             set {
-                if (value != null && ETimeStaticSpecified) throw new Exception("Cannot set property TempBHCT when property ETimeStatic is already set");
                 if (value != null && TempBHSTSpecified) throw new Exception("Cannot set property TempBHCT when property TempBHST is already set");
+                if (value != null && ETimeStaticSpecified) throw new Exception("Cannot set property TempBHCT when property ETimeStatic is already set");
                 tempBHCTField = value;
                 TempBHCTSpecified = (value!=null);
                 NotifyPropertyChanged("TempBHCT");
@@ -53960,6 +54168,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private ThermodynamicTemperatureMeasure tempBHCTField; 
+        /// <summary>
+        /// Boolean to indicate if TempBHCT has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool TempBHCTSpecified = false; 
 
@@ -53980,6 +54191,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private ThermodynamicTemperatureMeasure tempBHSTField; 
+        /// <summary>
+        /// Boolean to indicate if TempBHST has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool TempBHSTSpecified = false; 
 
@@ -54000,6 +54214,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private TimeMeasure eTimStaticField; 
+        /// <summary>
+        /// Boolean to indicate if ETimeStatic has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ETimeStaticSpecified = false; 
 
@@ -54085,6 +54302,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -54104,7 +54322,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -54282,6 +54499,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -54301,7 +54519,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -54318,12 +54535,23 @@ namespace Energistics.DataAccess.WITSML141
     [Description("This class represents the timestampedCommentString xsd type.")]
     public partial class TimestampedCommentString : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the TimestampedCommentString class.
+        /// </summary>
         public TimestampedCommentString() {}
+
+        /// <summary>
+        /// Initializes a new instance of the TimestampedCommentString class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
         public TimestampedCommentString(String value)
         {
             this.Value = value;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
         public override string ToString()
         {
             return Value.ToString();
@@ -54361,6 +54589,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String ValueField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -54380,7 +54609,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -54528,6 +54756,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -54547,7 +54776,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -55683,6 +55911,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -55702,7 +55931,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -55784,6 +56012,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -55803,7 +56032,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -55885,6 +56113,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -55904,21 +56133,20 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
     namespace ComponentSchemas 
     {
     /// <summary>
-    ///  General information about a well bore for a drill operations report. 
+    ///  General information about a wellbore for a drill operations report. 
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportWellboreInfo", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description(" General information about a well bore for a drill operations report. ")]
+    [Description(" General information about a wellbore for a drill operations report. ")]
     public partial class DrillReportWellboreInfo : Object , INotifyPropertyChanged
     {
 
@@ -56072,6 +56300,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private List<Alias> rigAliasField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -56091,7 +56320,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -56687,6 +56915,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -56706,7 +56935,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     /// <summary>
@@ -57321,6 +57549,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -57340,7 +57569,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -57621,6 +57849,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -57640,7 +57869,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -57880,6 +58108,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -57899,7 +58128,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -58560,6 +58788,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private MeasuredDepthCoord mdDVToolField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -58579,7 +58808,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -58679,6 +58907,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private String typeConcField; 
+        /// <summary>
+        /// Boolean to indicate if TypeConc has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool TypeConcSpecified = false; 
 
@@ -58700,6 +58931,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private MassConcentrationMeasure concentrationField; 
+        /// <summary>
+        /// Boolean to indicate if Concentration has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool ConcentrationSpecified = false; 
 
@@ -58722,6 +58956,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private MassMeasure wtSackField; 
+        /// <summary>
+        /// Boolean to indicate if WeightSack has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool WeightSackSpecified = false; 
 
@@ -58744,6 +58981,9 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private VolumeMeasure volSackField; 
+        /// <summary>
+        /// Boolean to indicate if VolSack has been set. Used for serialization.
+        /// </summary>
         [XmlIgnore]
         public bool VolSackSpecified = false; 
 
@@ -58796,6 +59036,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -58815,7 +59056,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -58963,6 +59203,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String commentsField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -58982,7 +59223,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -60092,6 +60332,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private VolumeMeasure volTotSlurryField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -60111,7 +60352,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -61683,6 +61923,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -61702,7 +61943,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -62818,6 +63058,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -62837,7 +63078,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     /// <summary>
@@ -63312,6 +63552,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -63331,7 +63572,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     /// <summary>
@@ -63618,6 +63858,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -63637,7 +63878,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
 
     namespace ComponentSchemas 
@@ -63750,6 +63990,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -63769,7 +64010,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -63901,6 +64141,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -63920,7 +64161,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -64002,6 +64242,7 @@ namespace Energistics.DataAccess.WITSML141
 
         private String commentField; 
 
+
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -64021,7 +64262,6 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
     }
 
@@ -64095,27 +64335,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64189,27 +64410,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64283,27 +64485,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64377,27 +64560,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64471,27 +64635,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64565,27 +64710,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64659,27 +64785,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64753,27 +64860,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64847,27 +64935,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -64941,27 +65010,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65035,27 +65085,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65129,27 +65160,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65223,27 +65235,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65317,27 +65310,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65411,27 +65385,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65505,27 +65460,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65599,27 +65535,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65693,27 +65610,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65787,27 +65685,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65881,27 +65760,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -65975,27 +65835,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -66069,27 +65910,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -66163,27 +65985,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -66257,27 +66060,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -66351,27 +66135,8 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private String versionField; 
+        private String versionField = "1.4.1.1"; 
 
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -74767,6 +74532,90 @@ namespace Energistics.DataAccess.WITSML141
           unknown
         }
         /// <summary>
+        /// This class represents the StimAnalysisMethod xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the StimAnalysisMethod xsd enumeration.")]
+        public enum StimAnalysisMethod 
+        {
+        /// <summary>
+        /// Refers to the numeric average of the investigated variable of interest. In this case a diagnostic variable is produced by various methods and averaged to facilitate a diagnostic decision. 
+        /// </summary>
+          average,
+        /// <summary>
+        /// deltapressureovergtime property
+        /// </summary>
+          [XmlEnum("delta pressure over g-time")]
+          deltapressureovergtime,
+        /// <summary>
+        /// deltapressureoverlineartime property
+        /// </summary>
+          [XmlEnum("delta pressure over linear time")]
+          deltapressureoverlineartime,
+        /// <summary>
+        /// deltapressureoverradialtime property
+        /// </summary>
+          [XmlEnum("delta pressure over radial time")]
+          deltapressureoverradialtime,
+        /// <summary>
+        /// gdk2d property
+        /// </summary>
+          [XmlEnum("gdk 2-d")]
+          gdk2d,
+        /// <summary>
+        ///  A plot of bottomhole pressure over the log of a time ratio (Horner Time) to provide a first estimate of closure pressure and an extrapolated reservoir pressure. The Horner plot is used to determine if pseudo-radial flow developed during pressure decline. If a semi-log straight line is observed and the line can be extrapolated to a reasonable value of reservoir pressure, radial or pseudo-radial flow may be affecting the decline behavior. This suggests that the fracture is already closed and that data beyond the point of influence need not be considered in the evaluation of closure. The Horner plot provides a lower bound, first estimate of closure pressure. 
+        /// </summary>
+          horner,
+        /// <summary>
+        ///  A diagnostic plot of the change in pressure over the change in time to determine the pressure and time at which a fracture closed. 
+        /// </summary>
+          linear,
+        /// <summary>
+        /// loglog property
+        /// </summary>
+          [XmlEnum("log-log")]
+          loglog,
+        /// <summary>
+        ///  Nolte analysis diagnostic derivative method is one of the methodologies for determining inflection points (i.e. fracture closure). Analyzing the derivative, dP/dt, as a function of time is a method of determining closure. The resulting trend represents the rate-of-change of pressure with respect to time. Depending on the type of data (i.e., flowback or natural decline), the derivative plot can be used to identify the closure by observing a characteristic change in the shape of this relationship. It accounts for mass conservation and fracture compliance and inherently assumes that the rate of pressure decline is proportional to the leakoff rate. Nolte was the first to implement this concept. In simple terms, if one can find a time function where the rate of pressure decline with respect to a time function is a constant during fracture closure, the closure time would be indicated by a deviation from the measured and theoretical pressure declines. 
+        /// </summary>
+          nolte,
+        /// <summary>
+        /// pdlcoefficient property
+        /// </summary>
+          [XmlEnum("pdl coefficient")]
+          pdlcoefficient,
+        /// <summary>
+        /// perkinsandkern2d property
+        /// </summary>
+          [XmlEnum("perkins and kern 2-d")]
+          perkinsandkern2d,
+        /// <summary>
+        /// radial2d property
+        /// </summary>
+          [XmlEnum("radial 2-d")]
+          radial2d,
+        /// <summary>
+        /// squareroot property
+        /// </summary>
+          [XmlEnum("square root")]
+          squareroot,
+        /// <summary>
+        /// thirdpartysoftware property
+        /// </summary>
+          [XmlEnum("third-party software")]
+          thirdpartysoftware,
+        /// <summary>
+        /// A known method not one of the above. 
+        /// </summary>
+          other,
+        /// <summary>
+        /// Unknown
+        /// </summary>
+          unknown
+        }
+        /// <summary>
         /// This class represents the StimProppantType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -75203,6 +75052,191 @@ namespace Energistics.DataAccess.WITSML141
           unknown
         }
         /// <summary>
+        /// This class represents the StimFluidType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the StimFluidType xsd enumeration.")]
+        public enum StimFluidType 
+        {
+        /// <summary>
+        /// acidbased property
+        /// </summary>
+          [XmlEnum("acid-based")]
+          acidbased,
+        /// <summary>
+        /// A carrier medium in which gas is the primary medium of mixing and transport. 
+        /// </summary>
+          gas,
+        /// <summary>
+        /// oilbased property
+        /// </summary>
+          [XmlEnum("oil-based")]
+          oilbased,
+        /// <summary>
+        /// waterbased property
+        /// </summary>
+          [XmlEnum("water-based")]
+          waterbased
+        }
+        /// <summary>
+        /// This class represents the StimFluidSubtype xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the StimFluidSubtype xsd enumeration.")]
+        public enum StimFluidSubtype 
+        {
+        /// <summary>
+        /// Chemical substance with a pH less than 7.
+        /// </summary>
+          acid,
+        /// <summary>
+        /// Chemical substance with a pH greater than 7.
+        /// </summary>
+          baseStimFluidSubtype,
+        /// <summary>
+        /// carbondioxide property
+        /// </summary>
+          [XmlEnum("carbon dioxide")]
+          carbondioxide,
+        /// <summary>
+        /// carbondioxideandnitrogen property
+        /// </summary>
+          [XmlEnum("carbon dioxide and nitrogen")]
+          carbondioxideandnitrogen,
+        /// <summary>
+        /// carbondioxideandwater property
+        /// </summary>
+          [XmlEnum("carbon dioxide and water")]
+          carbondioxideandwater,
+        /// <summary>
+        /// Lightweight hydrocarbon condensed from wet natural gas.
+        /// </summary>
+          condensate,
+        /// <summary>
+        /// crosslinkedgel property
+        /// </summary>
+          [XmlEnum("cross-linked gel")]
+          crosslinkedgel,
+        /// <summary>
+        /// crudeoil property
+        /// </summary>
+          [XmlEnum("crude oil")]
+          crudeoil,
+        /// <summary>
+        /// A specific fractional distillate of petroleum fuel oil.
+        /// </summary>
+          diesel,
+        /// <summary>
+        /// Fluid pumped with a gas such as air, carbon dioxide or nitrogen.
+        /// </summary>
+          foam,
+        /// <summary>
+        /// fracturingoil property
+        /// </summary>
+          [XmlEnum("fracturing oil")]
+          fracturingoil,
+        /// <summary>
+        /// freshwater property
+        /// </summary>
+          [XmlEnum("fresh water")]
+          freshwater,
+        /// <summary>
+        /// gelledacid property
+        /// </summary>
+          [XmlEnum("gelled acid")]
+          gelledacid,
+        /// <summary>
+        /// gelledcondensate property
+        /// </summary>
+          [XmlEnum("gelled condensate")]
+          gelledcondensate,
+        /// <summary>
+        /// gelledcrude property
+        /// </summary>
+          [XmlEnum("gelled crude")]
+          gelledcrude,
+        /// <summary>
+        /// gelleddiesel property
+        /// </summary>
+          [XmlEnum("gelled diesel")]
+          gelleddiesel,
+        /// <summary>
+        /// gelledoil property
+        /// </summary>
+          [XmlEnum("gelled oil")]
+          gelledoil,
+        /// <summary>
+        /// gelledsaltwater property
+        /// </summary>
+          [XmlEnum("gelled salt water")]
+          gelledsaltwater,
+        /// <summary>
+        /// hotcondensate property
+        /// </summary>
+          [XmlEnum("hot condensate")]
+          hotcondensate,
+        /// <summary>
+        /// hotfreshwater property
+        /// </summary>
+          [XmlEnum("hot fresh water")]
+          hotfreshwater,
+        /// <summary>
+        /// hotoil property
+        /// </summary>
+          [XmlEnum("hot oil")]
+          hotoil,
+        /// <summary>
+        /// hotsaltwater property
+        /// </summary>
+          [XmlEnum("hot salt water")]
+          hotsaltwater,
+        /// <summary>
+        /// A fluid system with two or more fluid types pumped during the same treatment.
+        /// </summary>
+          hybrid,
+        /// <summary>
+        /// lineargel property
+        /// </summary>
+          [XmlEnum("linear gel")]
+          lineargel,
+        /// <summary>
+        /// liquefiedpetroleumgas property
+        /// </summary>
+          [XmlEnum("liquefied petroleum gas")]
+          liquefiedpetroleumgas,
+        /// <summary>
+        /// nitrogen gas
+        /// </summary>
+          nitrogen,
+        /// <summary>
+        /// Any substance that is liquid at ambient temperatures and does not mix with water but may mix with other oils and organic solvents. This general definition includes vegetable oils, volatile essential oils, petrochemical oils, and synthetic oils.
+        /// </summary>
+          oil,
+        /// <summary>
+        /// producedwater property
+        /// </summary>
+          [XmlEnum("produced water")]
+          producedwater,
+        /// <summary>
+        /// saltwater property
+        /// </summary>
+          [XmlEnum("salt water")]
+          saltwater,
+        /// <summary>
+        /// slickwater property
+        /// </summary>
+          [XmlEnum("slick water")]
+          slickwater,
+        /// <summary>
+        /// Other stimulation fluid.
+        /// </summary>
+          other
+        }
+        /// <summary>
         /// This class represents the StimStageType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -75385,6 +75419,11 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
           casing,
         /// <summary>
+        /// coiledtubing property
+        /// </summary>
+          [XmlEnum("coiled tubing")]
+          coiledtubing,
+        /// <summary>
         /// drillpipe property
         /// </summary>
           [XmlEnum("drill pipe")]
@@ -75398,6 +75437,11 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluid is conducted through the tubing.
         /// </summary>
           tubing,
+        /// <summary>
+        /// tubingandannulus property
+        /// </summary>
+          [XmlEnum("tubing and annulus")]
+          tubingandannulus,
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
@@ -76858,7 +76902,7 @@ namespace Energistics.DataAccess.WITSML141
           [XmlEnum("operation failed")]
           operationfailed,
         /// <summary>
-        /// Formation fluid invading the well bore.
+        /// Formation fluid invading the wellbore.
         /// </summary>
           kick,
         /// <summary>
@@ -76918,6 +76962,10 @@ namespace Energistics.DataAccess.WITSML141
         /// A drilling fluid in which neither water nor oil is the continous phase.
         /// </summary>
           other,
+        /// <summary>
+        /// A drilling fluid which is gas-based.
+        /// </summary>
+          pneumatic,
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>

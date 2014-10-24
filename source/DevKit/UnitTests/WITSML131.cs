@@ -1,31 +1,77 @@
-﻿// 
-// License notice 
-// Standards DevKit, version 1.0 
-// Copyright 2011 ExxonMobil Upstream Research Company
+// 
+// License notice
 //  
+// Standards DevKit, version 2.0
+// Copyright 2012 ExxonMobil Upstream Research Company
+// 
+// Third Party Software
+// 
+// Energistics 
 // The following Energistics (c) products were used in the creation of this work: 
 // 
-// •	WITSML Data Schema Specifications, Version 1.4.1 
-// •	WITSML API Specifications, version 1.4.1 
-// •	WITSML Data Schema Specifications, Version 1.3.1.1 
-// •	WITSML API Specifications, version 1.3.1 
-// •	PRODML Data Schema Specifications, Version 1.2 
-// •	PRODML Web Service Specifications, Version 2.0
+// •             WITSML Data Schema Specifications, Version 1.4.1.1 
+// •             WITSML API Specifications, version 1.4.1.1 
+// •             WITSML Data Schema Specifications, Version 1.3.1.1 
+// •             WITSML API Specifications, version 1.3.1 
+// •             PRODML Data Schema Specifications, Version 1.2.2 
+// •             PRODML Web Service Specifications, Version 2.1.0.1
+// •             RESQML Data Schema Specifications, Version 1.1 
 // 
-// All rights in the WITSML™ Standard and the PRODML™ Standard, or any portion thereof, which remain in the 
-// Standards DevKitshall remain with Energistics or its suppliers and shall remain subject to the terms of 
-// the Product License Agreement available at http://www.energistics.org/product-license-agreement. 
+// All rights in the WITSML™ Standard, the PRODML™ Standard, and the RESQML™ Standard, or
+// any portion thereof, which remain in the Standards DevKit shall remain with Energistics
+// or its suppliers and shall remain subject to the terms of the Product License Agreement
+// available at http://www.energistics.org/product-license-agreement. 
 // 
-// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in 
-// compliance with the License. 
+// Apache
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+// except in compliance with the License. 
 // 
-// You may obtain a copy of the License at 
-// http://www.apache.org/licenses/LICENSE-2.0
+// You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 // 
-// Unless required by applicable law or agreed to in writing, software distributed under the License is 
-// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+// Unless required by applicable law or agreed to in writing, software distributed under the
+// License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+// either express or implied. 
 // 
-// See the License for the specific language governing permissions and limitations under the License. 
+// See the License for the specific language governing permissions and limitations under the
+// License.
+// 
+// HDF5
+// HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 2006-2012 by
+// The HDF Group. 
+// 
+// NCSA HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 1998-2006
+// by the Board of Trustees of the University of Illinois. 
+// 
+// All rights reserved. 
+// 
+// Redistribution and use in source and binary forms, with or without modification, are
+// permitted for any purpose (including commercial purposes) provided that the following
+// conditions are met: 
+//    1. Redistributions of source code must retain the above copyright notice, this list
+//       of conditions, and the following disclaimer. 
+//    2. Redistributions in binary form must reproduce the above copyright notice, this
+//       list of conditions, and the following disclaimer in the documentation and/or
+// 	  materials provided with the distribution. 
+//    3. In addition, redistributions of modified forms of the source or binary code must
+//       carry prominent notices stating that the original code was changed and the date of
+// 	  the change. 
+//    4. All publications or advertising materials mentioning features or use of this
+//       software are asked, but not required, to acknowledge that it was developed by The
+// 	  HDF Group and by the National Center for Supercomputing Applications at the 
+// 	  University of Illinois at Urbana-Champaign and credit the contributors. 
+//    5. Neither the name of The HDF Group, the name of the University, nor the name of any
+//       Contributor may be used to endorse or promote products derived from this software
+// 	  without specific prior written permission from The HDF Group, the University, or
+// 	  the Contributor, respectively. 
+// 
+// DISCLAIMER: THIS SOFTWARE IS PROVIDED BY THE HDF GROUP AND THE CONTRIBUTORS "AS IS" WITH
+// NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED. In no event shall The HDF Group or
+// the Contributors be liable for any damages suffered by the users arising out of the use
+// of this software, even if advised of the possibility of such damage. 
+// 
+// Contributors: National Center for Supercomputing Applications (NCSA) at the University of
+// Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
+// (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 using System;
 using System.Collections.Generic;
@@ -43,9 +89,9 @@ namespace Energistics.UnitTests
     /// Summary description for UnitTest1
     /// </summary>
     [TestClass]
-    public class UnitTest_131
+    public class UnitTest131
     {
-        private string rootFolder = @"C:\Projects\StandardsDevkit";
+        private const string RootFolder = @"C:\Projects\StandardsDevkit";
 
         private TestContext testContextInstance;
 
@@ -68,8 +114,8 @@ namespace Energistics.UnitTests
         private WITSMLWebServiceConnection CreateConnection()
         {
             WITSMLWebServiceConnection conn = new WITSMLWebServiceConnection("http://sitecom.intellifield.no/Store/WITSML", WMLSVersion.WITSML131);
-            conn.Username = Environment.GetEnvironmentVariable("WITSMLUSER");
-            conn.SetPassword(Environment.GetEnvironmentVariable("WITSMLPW"));
+            conn.Username = "yourusername"; //Environment.GetEnvironmentVariable("WITSMLUSER");
+            conn.SetPassword("yourpassword"); // (Environment.GetEnvironmentVariable("WITSMLPW"));
             conn.Proxy = new WebProxy();
             conn.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
             return conn;
@@ -88,7 +134,6 @@ namespace Energistics.UnitTests
             optionsIn.Add("returnElements", "all");
 
             WellList readWells = conn.Read<WellList>(queryList, optionsIn);
-            string xml = EnergisticsConverter.ObjectToXml<WellList>(readWells);
         }
 
         [TestMethod]
@@ -141,9 +186,13 @@ namespace Energistics.UnitTests
         public void WITSML131_BackAndForth()
         {
             WellList wellList = CreateTestWellList();
+            //! [Converting XML]
+            // Convert the wellList object to a xml string
             string xml = EnergisticsConverter.ObjectToXml<WellList>(wellList);
 
+            // Convert the xml string back to a well list object
             WellList wellList2 = EnergisticsConverter.XmlToObject<WellList>(xml);
+            //! [Converting XML]
             AssertWellListsEqual(wellList, wellList2);
         }
 
@@ -161,8 +210,6 @@ namespace Energistics.UnitTests
                 Assert.AreEqual(wellList.Well[i].NumAPI, wellList2.Well[i].NumAPI);
                 Assert.AreEqual(wellList.Well[i].DirectionWell, wellList2.Well[i].DirectionWell);
                 Assert.AreEqual(wellList.Well[i].DateTimeSpud, wellList2.Well[i].DateTimeSpud);
-                Assert.AreEqual(wellList.Well[i].CommonData.Comments, wellList2.Well[i].CommonData.Comments);
-                Assert.AreEqual(wellList.Well[i].CommonData.SourceName, wellList2.Well[i].CommonData.SourceName);
                 Assert.AreEqual(wellList.Well[i].WellLocation.Count, wellList2.Well[i].WellLocation.Count);
                 for (int j = 0; j < wellList.Well[i].WellLocation.Count; j++)
                 {
@@ -176,67 +223,81 @@ namespace Energistics.UnitTests
 
         private WellList CreateTestWellList()
         {
+            //! [Creating Object]
+            Well well = new Well()                        // Create a new well
+            {
+                Uid = Guid.NewGuid().ToString("N"),       // Generates a new random GUID and assigns it to the well
+                Name = "Test 12345",                      // Set a well name
+                Field = "Field Name",                     // Set a field name
+                DirectionWell = WellDirection.uncertain,  // Sets the direction well to uncertain
+                DateTimeSpud = new DateTime(1977, 3, 23), // Sets the DateTimeSpud date to March 23, 1977 @ 4:55:44
+                Country = "Mexico",                       // Sets the country to Mexico
+                WellLocation = new List<Location>()       // Creates an empty list of well locations
+            };
+
+            well.WellLocation.Add(new Location()                              // Adds a new location to the list of well locations
+            {
+                Uid = "MBHAFN123",                                            // Sets the UID on the new well location
+                Latitude = new PlaneAngleMeasure(29.97, PlaneAngleUom.dega),  // Sets the latitude of the well locatoin
+                Longitude = new PlaneAngleMeasure(95.35, PlaneAngleUom.dega), // Sets the longitude of the well location
+            });
+            //! [Creating Object]
+
+            //! [Creating Collection]                     
+            // Create new WellList
             WellList wellList = new WellList();
-            Well well = new Well();
-            well.Uid = "7138675309";
-            well.Name = "Test 12345";
-            well.Field = "Field Name";
-            well.DirectionWell = WellDirection.uncertain;
-            well.DateTimeSpud = new DateTime(1977, 3, 23, 4, 55, 44);
-            well.Country = "Mexico";
-            well.NumAPI = "12345";
-            well.CommonData = new CommonData();
-            well.CommonData.Comments = "Comments here";
-            well.CommonData.SourceName = "Source Name";
-            well.CommonData.DateTimeCreation = new DateTime(1987, 5, 2, 12, 55, 44);
-            well.WellLocation = new List<Location>();
 
-            Location loc = new Location();
-            loc.Uid = "MBHAFN123";
-            loc.Latitude = new PlaneAngleMeasure(29.97, PlaneAngleUom.dega);
-            loc.Longitude = new PlaneAngleMeasure(95.35, PlaneAngleUom.dega);
-            well.WellLocation.Add(loc);
+            // Initialize it's collections of wells
+            wellList.Well = new List<Well>();
 
-
-            wellList.Well = new System.Collections.Generic.List<Well>();
-            wellList.Version = "1.3.1.1";
+            // Add the previously created well to the collection
             wellList.Well.Add(well);
+            //! [Creating Collection]
+
             return wellList;
         }
 
         [TestMethod]
         public void WITSML131_WriteWellboreList()
         {
-            string outputFolder = Path.Combine(rootFolder, "temp");
+            string outputFolder = Path.Combine(RootFolder, "temp");
             if (!Directory.Exists(outputFolder))
             {
                 Directory.CreateDirectory(outputFolder);
             }
             WellList wellList = CreateTestWellList();
 
-            EnergisticsFile.WriteFile(Path.Combine(outputFolder, "welltest2.xml"), wellList);
+            EnergisticsFile.WriteFile(Path.Combine(outputFolder, "welltest2.xml"), wellList, true);
         }
 
         [TestMethod]
         public void WITSML131_FileReaderWriterTest()
         {
-            string outputFolder = Path.Combine(rootFolder, "temp");
+            string outputFolder = Path.Combine(RootFolder, "temp");
             if (!Directory.Exists(outputFolder))
             {
                 Directory.CreateDirectory(outputFolder);
             }
 
-            WellboreList wellbores = EnergisticsFile.ReadFile<WellboreList>(Path.Combine(rootFolder, @"Standards\DataSchema\witsml_v1.3.1.1\XML_Examples\wellbore_no_xsl.xml"));
+            string originalFileName = Path.Combine(RootFolder, @"Standards\DataSchema\witsml_v1.3.1.1\XML_Examples\wellbore_no_xsl.xml");
+            string newFilename = Path.Combine(outputFolder, "wells.xml");
+            
+            //! [Converting File]
+            // Read in original XML file
+            WellboreList wellbores = EnergisticsFile.ReadFile<WellboreList>(originalFileName);
 
+            // Change the well name
             wellbores.Wellbore[0].Name = "New name for wellbore 0";
 
-            EnergisticsFile.WriteFile(Path.Combine(outputFolder, "wells.xml"), wellbores);
+            // Write to a new file
+            EnergisticsFile.WriteFile(newFilename, wellbores, true);
+            //! [Converting File]
         }
 
         [TestMethod]
         public void WITSML131_TestSampleData()
         {
-            string pathToXml = Path.Combine(rootFolder, @"Standards\DataSchema\witsml_v1.3.1.1\XML_Examples");
+            string pathToXml = Path.Combine(RootFolder, @"Standards\DataSchema\witsml_v1.3.1.1\XML_Examples");
 
             BhaRunList obj1 = EnergisticsFile.ReadFile<BhaRunList>(Path.Combine(pathToXml, "bhaRun_no_xsl.xml"));
             CementJobList obj2 = EnergisticsFile.ReadFile<CementJobList>(Path.Combine(pathToXml, "cementJob_no_xsl.xml"));

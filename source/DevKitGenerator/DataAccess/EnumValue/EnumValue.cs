@@ -1,31 +1,77 @@
-﻿// 
-// License notice 
-// Standards DevKit, version 1.0 
-// Copyright 2011 ExxonMobil Upstream Research Company
+// 
+// License notice
 //  
+// Standards DevKit, version 2.0
+// Copyright 2012 ExxonMobil Upstream Research Company
+// 
+// Third Party Software
+// 
+// Energistics 
 // The following Energistics (c) products were used in the creation of this work: 
 // 
-// •	WITSML Data Schema Specifications, Version 1.4.1 
-// •	WITSML API Specifications, version 1.4.1 
-// •	WITSML Data Schema Specifications, Version 1.3.1.1 
-// •	WITSML API Specifications, version 1.3.1 
-// •	PRODML Data Schema Specifications, Version 1.2 
-// •	PRODML Web Service Specifications, Version 2.0
+// •             WITSML Data Schema Specifications, Version 1.4.1.1 
+// •             WITSML API Specifications, version 1.4.1.1 
+// •             WITSML Data Schema Specifications, Version 1.3.1.1 
+// •             WITSML API Specifications, version 1.3.1 
+// •             PRODML Data Schema Specifications, Version 1.2.2 
+// •             PRODML Web Service Specifications, Version 2.1.0.1
+// •             RESQML Data Schema Specifications, Version 1.1 
 // 
-// All rights in the WITSML™ Standard and the PRODML™ Standard, or any portion thereof, which remain in the 
-// Standards DevKitshall remain with Energistics or its suppliers and shall remain subject to the terms of 
-// the Product License Agreement available at http://www.energistics.org/product-license-agreement. 
+// All rights in the WITSML™ Standard, the PRODML™ Standard, and the RESQML™ Standard, or
+// any portion thereof, which remain in the Standards DevKit shall remain with Energistics
+// or its suppliers and shall remain subject to the terms of the Product License Agreement
+// available at http://www.energistics.org/product-license-agreement. 
 // 
-// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in 
-// compliance with the License. 
+// Apache
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+// except in compliance with the License. 
 // 
-// You may obtain a copy of the License at 
-// http://www.apache.org/licenses/LICENSE-2.0
+// You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 // 
-// Unless required by applicable law or agreed to in writing, software distributed under the License is 
-// distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+// Unless required by applicable law or agreed to in writing, software distributed under the
+// License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+// either express or implied. 
 // 
-// See the License for the specific language governing permissions and limitations under the License. 
+// See the License for the specific language governing permissions and limitations under the
+// License.
+// 
+// HDF5
+// HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 2006-2012 by
+// The HDF Group. 
+// 
+// NCSA HDF5 (Hierarchical Data Format 5) Software Library and Utilities Copyright 1998-2006
+// by the Board of Trustees of the University of Illinois. 
+// 
+// All rights reserved. 
+// 
+// Redistribution and use in source and binary forms, with or without modification, are
+// permitted for any purpose (including commercial purposes) provided that the following
+// conditions are met: 
+//    1. Redistributions of source code must retain the above copyright notice, this list
+//       of conditions, and the following disclaimer. 
+//    2. Redistributions in binary form must reproduce the above copyright notice, this
+//       list of conditions, and the following disclaimer in the documentation and/or
+// 	  materials provided with the distribution. 
+//    3. In addition, redistributions of modified forms of the source or binary code must
+//       carry prominent notices stating that the original code was changed and the date of
+// 	  the change. 
+//    4. All publications or advertising materials mentioning features or use of this
+//       software are asked, but not required, to acknowledge that it was developed by The
+// 	  HDF Group and by the National Center for Supercomputing Applications at the 
+// 	  University of Illinois at Urbana-Champaign and credit the contributors. 
+//    5. Neither the name of The HDF Group, the name of the University, nor the name of any
+//       Contributor may be used to endorse or promote products derived from this software
+// 	  without specific prior written permission from The HDF Group, the University, or
+// 	  the Contributor, respectively. 
+// 
+// DISCLAIMER: THIS SOFTWARE IS PROVIDED BY THE HDF GROUP AND THE CONTRIBUTORS "AS IS" WITH
+// NO WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED. In no event shall The HDF Group or
+// the Contributors be liable for any damages suffered by the users arising out of the use
+// of this software, even if advised of the possibility of such damage. 
+// 
+// Contributors: National Center for Supercomputing Applications (NCSA) at the University of
+// Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
+// (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 using System;
 using System.Collections;
@@ -40,7 +86,10 @@ namespace Energistics.DataAccess.EnumValue
     /// </summary>
     public abstract class EnumValue
     {
-        private static Dictionary<Type, List<EnumValue>> enumValuesRegistry = new Dictionary<Type, List<EnumValue>>();
+        /// <summary>
+        /// Collection to keep track of registered EnumValues
+        /// </summary>
+        protected static Dictionary<Type, List<EnumValue>> enumValuesRegistry = new Dictionary<Type, List<EnumValue>>();
         private string name;
 
         /// <summary>
@@ -61,8 +110,7 @@ namespace Energistics.DataAccess.EnumValue
         /// <summary>
         /// Register a new EnumValue
         /// </summary>
-        /// <param name="value">The EnumValue to register</param>
-        protected void Register(EnumValue value)
+        protected void Register()
         {
             Type key = this.GetType();
             if (!enumValuesRegistry.ContainsKey(key))
@@ -71,12 +119,25 @@ namespace Energistics.DataAccess.EnumValue
             }
 
             List<EnumValue> myList = enumValuesRegistry[key];
-  
-            if (!myList.Contains(value))
+
+            foreach (EnumValue ev in myList)
             {
-                myList.Add(value);
+                if (ev.Name == this.Name)
+                {
+                    foreach (PropertyInfo pi in key.GetProperties())
+                    {
+                        if (pi.CanWrite && pi.Name != "Name")
+                        {
+                            pi.SetValue(this, pi.GetValue(ev, new object[] {}), new object[] {});
+                        }
+                    }
+                    return;
+                }
             }
+            myList.Add(this);
         }
+
+        
 
         /// <summary>
         /// Retrieves the list of pre-compiled EnumValues
@@ -134,7 +195,7 @@ namespace Energistics.DataAccess.EnumValue
                 if (name == null)
                 {
                     name = value;
-                    Register(this);
+                    Register();
                 }
                 else
                 {
@@ -238,12 +299,19 @@ namespace Energistics.DataAccess.EnumValue
             return !(a == b);
         }
 
+        /// <summary>
+        /// Serves as a hash function for a particular type. 
+        /// </summary>
+        /// <returns>A hash code for the current Object</returns>
         public override int GetHashCode()
         {
             return Name.GetHashCode();
         }
     }
 
+    /// <summary>
+    /// These values represent the type of qualifier in lithology.
+    /// </summary>
     public abstract class LithoTypeEnumValue : EnumValue
     {
         /// <summary>
@@ -294,6 +362,14 @@ namespace Energistics.DataAccess.EnumValue
         public bool IsMatrixCement { get; set; }
     }
 
+    /// <summary>
+    /// The names of agreed extensions to WITSML.
+    /// This list may be locally extended but it is recommended that new names be
+    /// approved by the WITSML SIG before use.
+    /// Each standard name must define its data type.
+    /// For string types, the maximum length must be defined in number of characters.
+    /// For measures, the expected measure class must be defined.
+    /// </summary>
     public abstract class ExtensionDataEnumValue : EnumValue
     {
         /// <summary>
@@ -343,6 +419,13 @@ namespace Energistics.DataAccess.EnumValue
         public string ExtensionPath { get; set; }
     }
 
+    /// <summary>
+    /// Defines classes of measures and their allowed units of measures.
+    /// For a value whose underlying meaning conforms to one of these classes, 
+    /// any specified unit of measure must conform to the defined list.
+    /// These are copied from the Energistics (POSC) Units Classes v2.2.
+    /// The units of measure map to the POSC Units of Measure Dictionary v2.2.
+    /// </summary>
     public abstract class MeasureUOMEnumValue : EnumValue
     {
         /// <summary>
@@ -378,35 +461,112 @@ namespace Energistics.DataAccess.EnumValue
         public string MeasureUom { get; set; }
     }
 
-    public abstract class RealtimeEnumValue : EnumValue
+    /// <summary>
+    /// Defines classes of properties. A property inherents the underlying characteristis of its parent but specializes its meaning.
+    /// </summary>
+    public abstract class ResqmlPropertyKindEnumValue : EnumValue
     {
         /// <summary>
         /// Protected constructor, should always pass in "name"
         /// </summary>
-        protected RealtimeEnumValue(): base() {}
+        protected ResqmlPropertyKindEnumValue() : base() { }
 
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="name">Name of the RealtimeEnumValue</param>
-        protected RealtimeEnumValue(string name) : base(name) { }
+        /// <param name="name">Name of the MeasureUOMEnumValue</param>
+        protected ResqmlPropertyKindEnumValue(string name) : base(name) { }
 
         /// <summary>
-        /// For realtime data, defines the underlying type data associated with this term.
+        /// True ("1" or "true") indicates that the property is abstract and cannot be used to characterize a value.
+		///	False ("0" or "false") or not given indicates a non-abstract property that can be instantiated.
         /// </summary>
-        [EnumValueNameAttribute("realtimeDataType")]
+        [EnumValueNameAttribute("isAbstract")]
         [XmlIgnore]
-        public EnumValueRealtimeType RealtimeDataType { get; set; }
+        public bool? IsAbstract { get; set; }
 
         /// <summary>
-        /// For realtime data, defines the measure class associated with the term.
-        /// This controls the allowed units of measure. 
-		///	If this is specified then the value must be defined with a unit of measure.
-		///	All measure values inherently have a numeric data type.
+        /// Points to a parent property kind
         /// </summary>
-        [EnumValueNameAttribute("realtimeMeasureClass")]
+        [EnumValueNameAttribute("parentKind")]
         [XmlIgnore]
-        public string RealtimeMeasureClass { get; set; }
+        public string ParentKind { get; set; }
+
+        /// <summary>
+        /// A property classification.
+        /// </summary>
+        [EnumValueNameAttribute("category")]
+        [XmlIgnore]
+        public string Category { get; set; }
+
+        /// <summary>
+        /// The allowed unit of measure for the continuous property.
+        /// </summary>
+        [EnumValueNameAttribute("unitOfMeasure")]
+        [XmlIgnore]
+        public string UnitOfMeasure { get; set; }
+
+        /// <summary>
+        /// The dimensional analysis of the unit of measure. 
+        /// For example, a meter (m) would be of class "L", which represents length. 
+        /// A foot (ft) would also be in this dimension.
+        /// Note that angle       is considered to be dimensionless ratio of length.
+        /// Note that solid angle is considered to be dimensionless ratio of area.
+        /// The following nomenclature is used: 
+        /// 	A = angle 			(SI unit = radian) 
+        /// 	B = luminous intensity 		(SI unit = candela)
+        /// 	C = electrical current 		(SI unit = ampere)
+        /// 	K = thermodynamic temperature 	(SI unit = kelvin)
+        /// 	L = length 			(SI unit = metre)
+        /// 	M = mass 			(SI unit = kilogram)
+        /// 	N = amount of substance 	(SI unit = mole)
+        /// 	S = solid angle 		(SI unit = steradian)
+        /// 	T = time 			(SI unit = second)
+        /// 	1 = dimensionless
+        /// 	2 = squared			(e.g., "M2")
+        /// 	3 = cubed
+        /// 	4 = 4th power
+        /// 	5 = 5th power
+        /// 	6 = 6th power
+        /// 	7 = 7th power
+        /// 	8 = 8th power
+        /// 	/ = division
+        /// 	ratio(X) = A dimensionless ratio of another dimension. 
+        /// 	        For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the equivalent of "L2/L2".
+        /// 		This is only used when the underlying dimension would otherwise be "1".
+        /// The values may be broken into numerator and denominator separated by a slash "/" but multiple slashes must not be used. 
+        /// A slash must not terminate the string.
+        /// For example, length per time would be indicated by "L/T"
+        /// A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component.
+        /// The number "1" will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). 
+        /// The number "1" must not be used as a denominator because it is implied (e.g., "M" impiles "M/1").
+        /// For consistency, the items within a numerator or denominator are listed in alphabetical order (i.e., LM - not ML).
+        /// </summary>
+        [EnumValueNameAttribute("dimensionalClass")]
+        [XmlIgnore]
+        public string DimensionalClass { get; set; }
+
+        /// <summary>
+        /// The minimum value allowed for the discrete property.
+        /// </summary>
+        [EnumValueNameAttribute("minimumValue")]
+        [XmlIgnore]
+        public long? MinimumValue { get; set; }
+
+        /// <summary>
+        /// The maximum value allowed for the discrete property.
+        /// </summary>
+        [EnumValueNameAttribute("maximumValue")]
+        [XmlIgnore]
+        public long? MaximumValue { get; set; }
+
+        /// <summary>
+        /// A value allowed for the categorical property.
+        /// </summary>
+        [EnumValueNameAttribute("enumValue")]
+        [XmlIgnore]
+        public string EnumValue { get; set; }
+        
     }
 
     /// <summary>
@@ -477,3 +637,5 @@ namespace Energistics.DataAccess.EnumValue
         unknown
     }
 }
+
+

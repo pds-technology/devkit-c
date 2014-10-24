@@ -11,7 +11,8 @@
     <RootNamespace>Energistics.Generator</RootNamespace>
     <AssemblyName>Energistics.Generator</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
     </SccProjectName>
@@ -59,8 +60,13 @@
       <DependentUpon>EnergisticsTextTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Generator.cs" />
-    <Compile Include="PRODML120\DataObject.cs" />
-    <Compile Include="PRODML121\DataObject.cs" />
+    <Compile Include="PRODML122\DataObject.cs" />
+    <Compile Include="RESQML110\DataObject.cs" />
+    <Compile Include="ResqmlHD5Template.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResqmlHD5Template.tt</DependentUpon>
+    </Compile>
     <Compile Include="SchemaSetClassCreator.cs" />
     <Compile Include="WITSML131\DataObject.cs" />
     <Compile Include="WITSML141\DataObject.cs" />
@@ -80,6 +86,10 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>EnergisticsTextTemplate.cs</LastGenOutput>
     </None>
+    <None Include="ResqmlHD5Template.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ResqmlHD5Template.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -93,6 +103,7 @@
       <Name>SchemaGatherer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>"$(SolutionDir)\SchemaGatherer\$(OutDir)\Energistics.SchemaGatherer.exe"</PreBuildEvent>

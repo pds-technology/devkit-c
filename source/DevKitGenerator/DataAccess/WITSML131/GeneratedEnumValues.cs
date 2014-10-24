@@ -29,7 +29,7 @@ namespace Energistics.DataAccess.WITSML131
             return GetList<ActivityCode>();
         }
 
-        private static ActivityCode abandonment;
+        private readonly static ActivityCode abandonment;
         /// <summary>
         /// abandonment
         /// </summary>
@@ -38,16 +38,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (abandonment == null)
-                {
-                    abandonment = new ActivityCode("abandonment");
-                    abandonment.Description = "abandonment";
-                }
                 return abandonment;
             }
         }
 
-        private static ActivityCode abandonmentLogPlugs;
+        private readonly static ActivityCode abandonmentLogPlugs;
         /// <summary>
         /// A specialization of 'abandonment'.
         /// </summary>
@@ -56,16 +51,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (abandonmentLogPlugs == null)
-                {
-                    abandonmentLogPlugs = new ActivityCode("abandonment -- log plugs");
-                    abandonmentLogPlugs.Description = "A specialization of 'abandonment'.";
-                }
                 return abandonmentLogPlugs;
             }
         }
 
-        private static ActivityCode abandonmentRunPlugs;
+        private readonly static ActivityCode abandonmentRunPlugs;
         /// <summary>
         /// A specialization of 'abandonment'.
         /// </summary>
@@ -74,16 +64,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (abandonmentRunPlugs == null)
-                {
-                    abandonmentRunPlugs = new ActivityCode("abandonment -- run plugs");
-                    abandonmentRunPlugs.Description = "A specialization of 'abandonment'.";
-                }
                 return abandonmentRunPlugs;
             }
         }
 
-        private static ActivityCode abandonmentWaitOnCement;
+        private readonly static ActivityCode abandonmentWaitOnCement;
         /// <summary>
         /// A specialization of 'abandonment'.
         /// </summary>
@@ -92,16 +77,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (abandonmentWaitOnCement == null)
-                {
-                    abandonmentWaitOnCement = new ActivityCode("abandonment -- wait on cement");
-                    abandonmentWaitOnCement.Description = "A specialization of 'abandonment'.";
-                }
                 return abandonmentWaitOnCement;
             }
         }
 
-        private static ActivityCode casingCement;
+        private readonly static ActivityCode casingCement;
         /// <summary>
         /// casing and cement
         /// </summary>
@@ -110,16 +90,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (casingCement == null)
-                {
-                    casingCement = new ActivityCode("casing, cement");
-                    casingCement.Description = "casing and cement";
-                }
                 return casingCement;
             }
         }
 
-        private static ActivityCode casingCementCirculateCement;
+        private readonly static ActivityCode casingCementCirculateCement;
         /// <summary>
         /// A specialization of 'casing, cement': circulate and cement
         /// </summary>
@@ -128,16 +103,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (casingCementCirculateCement == null)
-                {
-                    casingCementCirculateCement = new ActivityCode("casing, cement -- circulate, cement");
-                    casingCementCirculateCement.Description = "A specialization of 'casing, cement': circulate and cement";
-                }
                 return casingCementCirculateCement;
             }
         }
 
-        private static ActivityCode casingCementOther;
+        private readonly static ActivityCode casingCementOther;
         /// <summary>
         /// A specialization of 'casing, cement'.
         /// </summary>
@@ -146,16 +116,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (casingCementOther == null)
-                {
-                    casingCementOther = new ActivityCode("casing, cement -- other");
-                    casingCementOther.Description = "A specialization of 'casing, cement'.";
-                }
                 return casingCementOther;
             }
         }
 
-        private static ActivityCode casingCementRigUpRunCasing;
+        private readonly static ActivityCode casingCementRigUpRunCasing;
         /// <summary>
         /// A specialization of 'casing, cement': rig up and run casing
         /// </summary>
@@ -164,16 +129,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (casingCementRigUpRunCasing == null)
-                {
-                    casingCementRigUpRunCasing = new ActivityCode("casing, cement -- rig up, run casing");
-                    casingCementRigUpRunCasing.Description = "A specialization of 'casing, cement': rig up and run casing";
-                }
                 return casingCementRigUpRunCasing;
             }
         }
 
-        private static ActivityCode casingCementRigUpRunLiner;
+        private readonly static ActivityCode casingCementRigUpRunLiner;
         /// <summary>
         /// A specialization of 'casing, cement': rig up and run liner
         /// </summary>
@@ -182,16 +142,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (casingCementRigUpRunLiner == null)
-                {
-                    casingCementRigUpRunLiner = new ActivityCode("casing, cement -- rig up, run liner");
-                    casingCementRigUpRunLiner.Description = "A specialization of 'casing, cement': rig up and run liner";
-                }
                 return casingCementRigUpRunLiner;
             }
         }
 
-        private static ActivityCode casingCementWaitOnCement;
+        private readonly static ActivityCode casingCementWaitOnCement;
         /// <summary>
         /// A specialization of 'casing, cement'.
         /// </summary>
@@ -200,16 +155,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (casingCementWaitOnCement == null)
-                {
-                    casingCementWaitOnCement = new ActivityCode("casing, cement -- wait on cement");
-                    casingCementWaitOnCement.Description = "A specialization of 'casing, cement'.";
-                }
                 return casingCementWaitOnCement;
             }
         }
 
-        private static ActivityCode completionOperations;
+        private readonly static ActivityCode completionOperations;
         /// <summary>
         /// After reaching total depth, any operations for completing the well and bringing it on production - no further detail is known.
         /// </summary>
@@ -218,16 +168,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (completionOperations == null)
-                {
-                    completionOperations = new ActivityCode("completion operations");
-                    completionOperations.Description = "After reaching total depth, any operations for completing the well and bringing it on production - no further detail is known.";
-                }
                 return completionOperations;
             }
         }
 
-        private static ActivityCode completionOperationsRigUp;
+        private readonly static ActivityCode completionOperationsRigUp;
         /// <summary>
         /// Rig up completion equipment.
         /// </summary>
@@ -236,16 +181,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (completionOperationsRigUp == null)
-                {
-                    completionOperationsRigUp = new ActivityCode("completion operations -- rig up");
-                    completionOperationsRigUp.Description = "Rig up completion equipment.";
-                }
                 return completionOperationsRigUp;
             }
         }
 
-        private static ActivityCode completionOperationsTearDown;
+        private readonly static ActivityCode completionOperationsTearDown;
         /// <summary>
         /// Tear down completion equipment.
         /// </summary>
@@ -254,16 +194,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (completionOperationsTearDown == null)
-                {
-                    completionOperationsTearDown = new ActivityCode("completion operations -- tear down");
-                    completionOperationsTearDown.Description = "Tear down completion equipment.";
-                }
                 return completionOperationsTearDown;
             }
         }
 
-        private static ActivityCode completionOperationsTesting;
+        private readonly static ActivityCode completionOperationsTesting;
         /// <summary>
         /// Pre-production flow testing in the well completion phase.
         /// </summary>
@@ -272,16 +207,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (completionOperationsTesting == null)
-                {
-                    completionOperationsTesting = new ActivityCode("completion operations -- testing ");
-                    completionOperationsTesting.Description = "Pre-production flow testing in the well completion phase.";
-                }
                 return completionOperationsTesting;
             }
         }
 
-        private static ActivityCode completionOperationsRunningLiner;
+        private readonly static ActivityCode completionOperationsRunningLiner;
         /// <summary>
         /// Running the production liner.
         /// </summary>
@@ -290,16 +220,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (completionOperationsRunningLiner == null)
-                {
-                    completionOperationsRunningLiner = new ActivityCode("completion operations -- running liner");
-                    completionOperationsRunningLiner.Description = "Running the production liner.";
-                }
                 return completionOperationsRunningLiner;
             }
         }
 
-        private static ActivityCode completionOperationsGravelPacking;
+        private readonly static ActivityCode completionOperationsGravelPacking;
         /// <summary>
         /// Completion operation for producing zones.
         /// </summary>
@@ -308,16 +233,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (completionOperationsGravelPacking == null)
-                {
-                    completionOperationsGravelPacking = new ActivityCode("completion operations -- gravel packing");
-                    completionOperationsGravelPacking.Description = "Completion operation for producing zones.";
-                }
                 return completionOperationsGravelPacking;
             }
         }
 
-        private static ActivityCode completionOperationsLogging;
+        private readonly static ActivityCode completionOperationsLogging;
         /// <summary>
         /// Production logging tool runs.
         /// </summary>
@@ -326,16 +246,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (completionOperationsLogging == null)
-                {
-                    completionOperationsLogging = new ActivityCode("completion operations -- logging");
-                    completionOperationsLogging.Description = "Production logging tool runs.";
-                }
                 return completionOperationsLogging;
             }
         }
 
-        private static ActivityCode condMudCirculate;
+        private readonly static ActivityCode condMudCirculate;
         /// <summary>
         /// condition mud and circulate
         /// </summary>
@@ -344,16 +259,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculate == null)
-                {
-                    condMudCirculate = new ActivityCode("cond mud, circulate");
-                    condMudCirculate.Description = "condition mud and circulate";
-                }
                 return condMudCirculate;
             }
         }
 
-        private static ActivityCode condMudCirculateBoulderOrGravel;
+        private readonly static ActivityCode condMudCirculateBoulderOrGravel;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -362,16 +272,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateBoulderOrGravel == null)
-                {
-                    condMudCirculateBoulderOrGravel = new ActivityCode("cond mud, circulate -- boulder or gravel");
-                    condMudCirculateBoulderOrGravel.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateBoulderOrGravel;
             }
         }
 
-        private static ActivityCode condMudCirculateCasing;
+        private readonly static ActivityCode condMudCirculateCasing;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -380,16 +285,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateCasing == null)
-                {
-                    condMudCirculateCasing = new ActivityCode("cond mud, circulate -- casing");
-                    condMudCirculateCasing.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateCasing;
             }
         }
 
-        private static ActivityCode condMudCirculateCementing;
+        private readonly static ActivityCode condMudCirculateCementing;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -398,16 +298,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateCementing == null)
-                {
-                    condMudCirculateCementing = new ActivityCode("cond mud, circulate -- cementing");
-                    condMudCirculateCementing.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateCementing;
             }
         }
 
-        private static ActivityCode condMudCirculateCirculateSamples;
+        private readonly static ActivityCode condMudCirculateCirculateSamples;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -416,16 +311,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateCirculateSamples == null)
-                {
-                    condMudCirculateCirculateSamples = new ActivityCode("cond mud, circulate -- circulate samples");
-                    condMudCirculateCirculateSamples.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateCirculateSamples;
             }
         }
 
-        private static ActivityCode condMudCirculateCoring;
+        private readonly static ActivityCode condMudCirculateCoring;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -434,16 +324,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateCoring == null)
-                {
-                    condMudCirculateCoring = new ActivityCode("cond mud, circulate -- coring");
-                    condMudCirculateCoring.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateCoring;
             }
         }
 
-        private static ActivityCode condMudCirculateDrilling;
+        private readonly static ActivityCode condMudCirculateDrilling;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -452,16 +337,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateDrilling == null)
-                {
-                    condMudCirculateDrilling = new ActivityCode("cond mud, circulate -- drilling");
-                    condMudCirculateDrilling.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateDrilling;
             }
         }
 
-        private static ActivityCode condMudCirculateFishing;
+        private readonly static ActivityCode condMudCirculateFishing;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -470,16 +350,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateFishing == null)
-                {
-                    condMudCirculateFishing = new ActivityCode("cond mud, circulate -- fishing");
-                    condMudCirculateFishing.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateFishing;
             }
         }
 
-        private static ActivityCode condMudCirculateGumboAttack;
+        private readonly static ActivityCode condMudCirculateGumboAttack;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -488,16 +363,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateGumboAttack == null)
-                {
-                    condMudCirculateGumboAttack = new ActivityCode("cond mud, circulate -- gumbo attack");
-                    condMudCirculateGumboAttack.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateGumboAttack;
             }
         }
 
-        private static ActivityCode condMudCirculateLogging;
+        private readonly static ActivityCode condMudCirculateLogging;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -506,16 +376,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateLogging == null)
-                {
-                    condMudCirculateLogging = new ActivityCode("cond mud, circulate -- logging");
-                    condMudCirculateLogging.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateLogging;
             }
         }
 
-        private static ActivityCode condMudCirculateLostCirculation;
+        private readonly static ActivityCode condMudCirculateLostCirculation;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -524,16 +389,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateLostCirculation == null)
-                {
-                    condMudCirculateLostCirculation = new ActivityCode("cond mud, circulate -- lost circulation");
-                    condMudCirculateLostCirculation.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateLostCirculation;
             }
         }
 
-        private static ActivityCode condMudCirculateWellControl;
+        private readonly static ActivityCode condMudCirculateWellControl;
         /// <summary>
         /// A specialization of 'cond mud, circulate'.
         /// </summary>
@@ -542,16 +402,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (condMudCirculateWellControl == null)
-                {
-                    condMudCirculateWellControl = new ActivityCode("cond mud, circulate -- well control");
-                    condMudCirculateWellControl.Description = "A specialization of 'cond mud, circulate'.";
-                }
                 return condMudCirculateWellControl;
             }
         }
 
-        private static ActivityCode coring;
+        private readonly static ActivityCode coring;
         /// <summary>
         /// coring
         /// </summary>
@@ -560,16 +415,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coring == null)
-                {
-                    coring = new ActivityCode("coring");
-                    coring.Description = "coring";
-                }
                 return coring;
             }
         }
 
-        private static ActivityCode coringConventional;
+        private readonly static ActivityCode coringConventional;
         /// <summary>
         /// A specialization of 'coring'.
         /// </summary>
@@ -578,16 +428,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coringConventional == null)
-                {
-                    coringConventional = new ActivityCode("coring -- conventional");
-                    coringConventional.Description = "A specialization of 'coring'.";
-                }
                 return coringConventional;
             }
         }
 
-        private static ActivityCode coringFlowCheck;
+        private readonly static ActivityCode coringFlowCheck;
         /// <summary>
         /// A specialization of 'coring'.
         /// </summary>
@@ -596,16 +441,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coringFlowCheck == null)
-                {
-                    coringFlowCheck = new ActivityCode("coring -- flow check");
-                    coringFlowCheck.Description = "A specialization of 'coring'.";
-                }
                 return coringFlowCheck;
             }
         }
 
-        private static ActivityCode coringLaydownBarrel;
+        private readonly static ActivityCode coringLaydownBarrel;
         /// <summary>
         /// A specialization of 'coring'.
         /// </summary>
@@ -614,16 +454,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coringLaydownBarrel == null)
-                {
-                    coringLaydownBarrel = new ActivityCode("coring -- laydown barrel");
-                    coringLaydownBarrel.Description = "A specialization of 'coring'.";
-                }
                 return coringLaydownBarrel;
             }
         }
 
-        private static ActivityCode coringOriented;
+        private readonly static ActivityCode coringOriented;
         /// <summary>
         /// A specialization of 'coring'.
         /// </summary>
@@ -632,16 +467,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coringOriented == null)
-                {
-                    coringOriented = new ActivityCode("coring -- oriented");
-                    coringOriented.Description = "A specialization of 'coring'.";
-                }
                 return coringOriented;
             }
         }
 
-        private static ActivityCode coringPlasticSleeve;
+        private readonly static ActivityCode coringPlasticSleeve;
         /// <summary>
         /// A specialization of 'coring'.
         /// </summary>
@@ -650,16 +480,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coringPlasticSleeve == null)
-                {
-                    coringPlasticSleeve = new ActivityCode("coring -- plastic sleeve");
-                    coringPlasticSleeve.Description = "A specialization of 'coring'.";
-                }
                 return coringPlasticSleeve;
             }
         }
 
-        private static ActivityCode coringRigUpCoreBarrel;
+        private readonly static ActivityCode coringRigUpCoreBarrel;
         /// <summary>
         /// A specialization of 'coring'.
         /// </summary>
@@ -668,16 +493,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coringRigUpCoreBarrel == null)
-                {
-                    coringRigUpCoreBarrel = new ActivityCode("coring -- rig up core barrel");
-                    coringRigUpCoreBarrel.Description = "A specialization of 'coring'.";
-                }
                 return coringRigUpCoreBarrel;
             }
         }
 
-        private static ActivityCode coringSponge;
+        private readonly static ActivityCode coringSponge;
         /// <summary>
         /// A specialization of 'coring'.
         /// </summary>
@@ -686,16 +506,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coringSponge == null)
-                {
-                    coringSponge = new ActivityCode("coring -- sponge");
-                    coringSponge.Description = "A specialization of 'coring'.";
-                }
                 return coringSponge;
             }
         }
 
-        private static ActivityCode cutSlipDrillingLine;
+        private readonly static ActivityCode cutSlipDrillingLine;
         /// <summary>
         /// cut and slip drilling line
         /// </summary>
@@ -704,16 +519,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cutSlipDrillingLine == null)
-                {
-                    cutSlipDrillingLine = new ActivityCode("cut, slip drilling line");
-                    cutSlipDrillingLine.Description = "cut and slip drilling line";
-                }
                 return cutSlipDrillingLine;
             }
         }
 
-        private static ActivityCode deviationSurvey;
+        private readonly static ActivityCode deviationSurvey;
         /// <summary>
         /// deviation survey
         /// </summary>
@@ -722,16 +532,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (deviationSurvey == null)
-                {
-                    deviationSurvey = new ActivityCode("deviation survey");
-                    deviationSurvey.Description = "deviation survey";
-                }
                 return deviationSurvey;
             }
         }
 
-        private static ActivityCode deviationSurveyDirMultishot;
+        private readonly static ActivityCode deviationSurveyDirMultishot;
         /// <summary>
         /// A specialization of 'deviation survey': directional multi-shot
         /// </summary>
@@ -740,16 +545,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (deviationSurveyDirMultishot == null)
-                {
-                    deviationSurveyDirMultishot = new ActivityCode("deviation survey -- dir multi-shot");
-                    deviationSurveyDirMultishot.Description = "A specialization of 'deviation survey': directional multi-shot";
-                }
                 return deviationSurveyDirMultishot;
             }
         }
 
-        private static ActivityCode deviationSurveyDirSingleShot;
+        private readonly static ActivityCode deviationSurveyDirSingleShot;
         /// <summary>
         /// A specialization of 'deviation survey': directional single shot
         /// </summary>
@@ -758,16 +558,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (deviationSurveyDirSingleShot == null)
-                {
-                    deviationSurveyDirSingleShot = new ActivityCode("deviation survey -- dir single shot");
-                    deviationSurveyDirSingleShot.Description = "A specialization of 'deviation survey': directional single shot";
-                }
                 return deviationSurveyDirSingleShot;
             }
         }
 
-        private static ActivityCode deviationSurveyDrift;
+        private readonly static ActivityCode deviationSurveyDrift;
         /// <summary>
         /// A specialization of 'deviation survey'.
         /// </summary>
@@ -776,16 +571,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (deviationSurveyDrift == null)
-                {
-                    deviationSurveyDrift = new ActivityCode("deviation survey -- drift");
-                    deviationSurveyDrift.Description = "A specialization of 'deviation survey'.";
-                }
                 return deviationSurveyDrift;
             }
         }
 
-        private static ActivityCode deviationSurveyGyro;
+        private readonly static ActivityCode deviationSurveyGyro;
         /// <summary>
         /// A specialization of 'deviation survey'.
         /// </summary>
@@ -794,16 +584,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (deviationSurveyGyro == null)
-                {
-                    deviationSurveyGyro = new ActivityCode("deviation survey -- gyro");
-                    deviationSurveyGyro.Description = "A specialization of 'deviation survey'.";
-                }
                 return deviationSurveyGyro;
             }
         }
 
-        private static ActivityCode deviationSurveyMwd;
+        private readonly static ActivityCode deviationSurveyMwd;
         /// <summary>
         /// A specialization of 'deviation survey'.
         /// </summary>
@@ -812,16 +597,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (deviationSurveyMwd == null)
-                {
-                    deviationSurveyMwd = new ActivityCode("deviation survey -- MWD");
-                    deviationSurveyMwd.Description = "A specialization of 'deviation survey'.";
-                }
                 return deviationSurveyMwd;
             }
         }
 
-        private static ActivityCode dirWork;
+        private readonly static ActivityCode dirWork;
         /// <summary>
         /// directional work
         /// </summary>
@@ -830,16 +610,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dirWork == null)
-                {
-                    dirWork = new ActivityCode("dir work");
-                    dirWork.Description = "directional work";
-                }
                 return dirWork;
             }
         }
 
-        private static ActivityCode dirWorkHorizontalDrilling;
+        private readonly static ActivityCode dirWorkHorizontalDrilling;
         /// <summary>
         /// A specialization of 'dir work'.
         /// </summary>
@@ -848,16 +623,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dirWorkHorizontalDrilling == null)
-                {
-                    dirWorkHorizontalDrilling = new ActivityCode("dir work -- horizontal drilling");
-                    dirWorkHorizontalDrilling.Description = "A specialization of 'dir work'.";
-                }
                 return dirWorkHorizontalDrilling;
             }
         }
 
-        private static ActivityCode dirWorkMotorDrilling;
+        private readonly static ActivityCode dirWorkMotorDrilling;
         /// <summary>
         /// A specialization of 'dir work'.
         /// </summary>
@@ -866,16 +636,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dirWorkMotorDrilling == null)
-                {
-                    dirWorkMotorDrilling = new ActivityCode("dir work -- motor drilling");
-                    dirWorkMotorDrilling.Description = "A specialization of 'dir work'.";
-                }
                 return dirWorkMotorDrilling;
             }
         }
 
-        private static ActivityCode dirWorkOrient;
+        private readonly static ActivityCode dirWorkOrient;
         /// <summary>
         /// A specialization of 'dir work'.
         /// </summary>
@@ -884,16 +649,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dirWorkOrient == null)
-                {
-                    dirWorkOrient = new ActivityCode("dir work -- orient");
-                    dirWorkOrient.Description = "A specialization of 'dir work'.";
-                }
                 return dirWorkOrient;
             }
         }
 
-        private static ActivityCode dirWorkRotaryDrilling;
+        private readonly static ActivityCode dirWorkRotaryDrilling;
         /// <summary>
         /// A specialization of 'dir work'.
         /// </summary>
@@ -902,16 +662,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dirWorkRotaryDrilling == null)
-                {
-                    dirWorkRotaryDrilling = new ActivityCode("dir work -- rotary drilling");
-                    dirWorkRotaryDrilling.Description = "A specialization of 'dir work'.";
-                }
                 return dirWorkRotaryDrilling;
             }
         }
 
-        private static ActivityCode dirWorkSlantDrilling;
+        private readonly static ActivityCode dirWorkSlantDrilling;
         /// <summary>
         /// A specialization of 'dir work'.
         /// </summary>
@@ -920,16 +675,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dirWorkSlantDrilling == null)
-                {
-                    dirWorkSlantDrilling = new ActivityCode("dir work -- slant drilling");
-                    dirWorkSlantDrilling.Description = "A specialization of 'dir work'.";
-                }
                 return dirWorkSlantDrilling;
             }
         }
 
-        private static ActivityCode dst;
+        private readonly static ActivityCode dst;
         /// <summary>
         /// drill stem test
         /// </summary>
@@ -938,16 +688,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dst == null)
-                {
-                    dst = new ActivityCode("DST");
-                    dst.Description = "drill stem test";
-                }
                 return dst;
             }
         }
 
-        private static ActivityCode dstCasedHole;
+        private readonly static ActivityCode dstCasedHole;
         /// <summary>
         /// A specialization of 'DST'.
         /// </summary>
@@ -956,16 +701,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstCasedHole == null)
-                {
-                    dstCasedHole = new ActivityCode("DST -- cased hole");
-                    dstCasedHole.Description = "A specialization of 'DST'.";
-                }
                 return dstCasedHole;
             }
         }
 
-        private static ActivityCode dstLayDownTools;
+        private readonly static ActivityCode dstLayDownTools;
         /// <summary>
         /// A specialization of 'DST'.
         /// </summary>
@@ -974,16 +714,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstLayDownTools == null)
-                {
-                    dstLayDownTools = new ActivityCode("DST -- lay down tools");
-                    dstLayDownTools.Description = "A specialization of 'DST'.";
-                }
                 return dstLayDownTools;
             }
         }
 
-        private static ActivityCode dstOpenHole;
+        private readonly static ActivityCode dstOpenHole;
         /// <summary>
         /// A specialization of 'DST'.
         /// </summary>
@@ -992,16 +727,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstOpenHole == null)
-                {
-                    dstOpenHole = new ActivityCode("DST -- open hole");
-                    dstOpenHole.Description = "A specialization of 'DST'.";
-                }
                 return dstOpenHole;
             }
         }
 
-        private static ActivityCode dstOpenHoleClosedChamber;
+        private readonly static ActivityCode dstOpenHoleClosedChamber;
         /// <summary>
         /// A specialization of 'DST'.
         /// </summary>
@@ -1010,16 +740,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstOpenHoleClosedChamber == null)
-                {
-                    dstOpenHoleClosedChamber = new ActivityCode("DST -- open hole closed chamber");
-                    dstOpenHoleClosedChamber.Description = "A specialization of 'DST'.";
-                }
                 return dstOpenHoleClosedChamber;
             }
         }
 
-        private static ActivityCode dstRigUpTools;
+        private readonly static ActivityCode dstRigUpTools;
         /// <summary>
         /// A specialization of 'DST'.
         /// </summary>
@@ -1028,16 +753,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstRigUpTools == null)
-                {
-                    dstRigUpTools = new ActivityCode("DST -- rig up tools");
-                    dstRigUpTools.Description = "A specialization of 'DST'.";
-                }
                 return dstRigUpTools;
             }
         }
 
-        private static ActivityCode drilling;
+        private readonly static ActivityCode drilling;
         /// <summary>
         /// drilling
         /// </summary>
@@ -1046,16 +766,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drilling == null)
-                {
-                    drilling = new ActivityCode("drilling");
-                    drilling.Description = "drilling";
-                }
                 return drilling;
             }
         }
 
-        private static ActivityCode drillingCasing;
+        private readonly static ActivityCode drillingCasing;
         /// <summary>
         /// A specialization of 'drilling'.
         /// </summary>
@@ -1064,16 +779,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingCasing == null)
-                {
-                    drillingCasing = new ActivityCode("drilling -- casing");
-                    drillingCasing.Description = "A specialization of 'drilling'.";
-                }
                 return drillingCasing;
             }
         }
 
-        private static ActivityCode drillingConnection;
+        private readonly static ActivityCode drillingConnection;
         /// <summary>
         /// A specialization of 'drilling'.
         /// </summary>
@@ -1082,16 +792,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingConnection == null)
-                {
-                    drillingConnection = new ActivityCode("drilling -- connection");
-                    drillingConnection.Description = "A specialization of 'drilling'.";
-                }
                 return drillingConnection;
             }
         }
 
-        private static ActivityCode drillingDrillCementFloatEquip;
+        private readonly static ActivityCode drillingDrillCementFloatEquip;
         /// <summary>
         /// A specialization of 'drilling': drill out cement and/or float equipment
         /// </summary>
@@ -1100,16 +805,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingDrillCementFloatEquip == null)
-                {
-                    drillingDrillCementFloatEquip = new ActivityCode("drilling -- drill cement, float equip");
-                    drillingDrillCementFloatEquip.Description = "A specialization of 'drilling': drill out cement and/or float equipment";
-                }
                 return drillingDrillCementFloatEquip;
             }
         }
 
-        private static ActivityCode drillingFlowCheck;
+        private readonly static ActivityCode drillingFlowCheck;
         /// <summary>
         /// A specialization of 'drilling'.
         /// </summary>
@@ -1118,16 +818,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingFlowCheck == null)
-                {
-                    drillingFlowCheck = new ActivityCode("drilling -- flow check");
-                    drillingFlowCheck.Description = "A specialization of 'drilling'.";
-                }
                 return drillingFlowCheck;
             }
         }
 
-        private static ActivityCode drillingHoleOpening;
+        private readonly static ActivityCode drillingHoleOpening;
         /// <summary>
         /// A specialization of 'drilling'.
         /// </summary>
@@ -1136,16 +831,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingHoleOpening == null)
-                {
-                    drillingHoleOpening = new ActivityCode("drilling -- hole opening");
-                    drillingHoleOpening.Description = "A specialization of 'drilling'.";
-                }
                 return drillingHoleOpening;
             }
         }
 
-        private static ActivityCode drillingNewHole;
+        private readonly static ActivityCode drillingNewHole;
         /// <summary>
         /// A specialization of 'drilling'.
         /// </summary>
@@ -1154,16 +844,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingNewHole == null)
-                {
-                    drillingNewHole = new ActivityCode("drilling -- new hole");
-                    drillingNewHole.Description = "A specialization of 'drilling'.";
-                }
                 return drillingNewHole;
             }
         }
 
-        private static ActivityCode drillingSidetracking;
+        private readonly static ActivityCode drillingSidetracking;
         /// <summary>
         /// A specialization of 'drilling'.
         /// </summary>
@@ -1172,16 +857,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingSidetracking == null)
-                {
-                    drillingSidetracking = new ActivityCode("drilling -- sidetracking");
-                    drillingSidetracking.Description = "A specialization of 'drilling'.";
-                }
                 return drillingSidetracking;
             }
         }
 
-        private static ActivityCode drillingUnderreaming;
+        private readonly static ActivityCode drillingUnderreaming;
         /// <summary>
         /// A specialization of 'drilling'.
         /// </summary>
@@ -1190,16 +870,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingUnderreaming == null)
-                {
-                    drillingUnderreaming = new ActivityCode("drilling -- under-reaming");
-                    drillingUnderreaming.Description = "A specialization of 'drilling'.";
-                }
                 return drillingUnderreaming;
             }
         }
 
-        private static ActivityCode fishing;
+        private readonly static ActivityCode fishing;
         /// <summary>
         /// fishing
         /// </summary>
@@ -1208,16 +883,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fishing == null)
-                {
-                    fishing = new ActivityCode("fishing");
-                    fishing.Description = "fishing";
-                }
                 return fishing;
             }
         }
 
-        private static ActivityCode fishingBha;
+        private readonly static ActivityCode fishingBha;
         /// <summary>
         /// A specialization of 'fishing'.
         /// </summary>
@@ -1226,16 +896,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fishingBha == null)
-                {
-                    fishingBha = new ActivityCode("fishing -- BHA");
-                    fishingBha.Description = "A specialization of 'fishing'.";
-                }
                 return fishingBha;
             }
         }
 
-        private static ActivityCode fishingCasing;
+        private readonly static ActivityCode fishingCasing;
         /// <summary>
         /// A specialization of 'fishing'.
         /// </summary>
@@ -1244,16 +909,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fishingCasing == null)
-                {
-                    fishingCasing = new ActivityCode("fishing -- casing");
-                    fishingCasing.Description = "A specialization of 'fishing'.";
-                }
                 return fishingCasing;
             }
         }
 
-        private static ActivityCode fishingCones;
+        private readonly static ActivityCode fishingCones;
         /// <summary>
         /// >A specialization of 'fishing'.
         /// </summary>
@@ -1262,16 +922,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fishingCones == null)
-                {
-                    fishingCones = new ActivityCode("fishing -- cones");
-                    fishingCones.Description = ">A specialization of 'fishing'.";
-                }
                 return fishingCones;
             }
         }
 
-        private static ActivityCode fishingOther;
+        private readonly static ActivityCode fishingOther;
         /// <summary>
         /// A specialization of 'fishing'.
         /// </summary>
@@ -1280,16 +935,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fishingOther == null)
-                {
-                    fishingOther = new ActivityCode("fishing -- other");
-                    fishingOther.Description = "A specialization of 'fishing'.";
-                }
                 return fishingOther;
             }
         }
 
-        private static ActivityCode fishingStuckPipe;
+        private readonly static ActivityCode fishingStuckPipe;
         /// <summary>
         /// A specialization of 'fishing'.
         /// </summary>
@@ -1298,16 +948,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fishingStuckPipe == null)
-                {
-                    fishingStuckPipe = new ActivityCode("fishing -- stuck pipe");
-                    fishingStuckPipe.Description = "A specialization of 'fishing'.";
-                }
                 return fishingStuckPipe;
             }
         }
 
-        private static ActivityCode fishingWirelineTools;
+        private readonly static ActivityCode fishingWirelineTools;
         /// <summary>
         /// A specialization of 'fishing'.
         /// </summary>
@@ -1316,16 +961,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fishingWirelineTools == null)
-                {
-                    fishingWirelineTools = new ActivityCode("fishing -- wireline tools");
-                    fishingWirelineTools.Description = "A specialization of 'fishing'.";
-                }
                 return fishingWirelineTools;
             }
         }
 
-        private static ActivityCode hse;
+        private readonly static ActivityCode hse;
         /// <summary>
         /// Health, Safety and Environmental
         /// </summary>
@@ -1334,16 +974,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hse == null)
-                {
-                    hse = new ActivityCode("HSE");
-                    hse.Description = "Health, Safety and Environmental";
-                }
                 return hse;
             }
         }
 
-        private static ActivityCode hseHoldDrill;
+        private readonly static ActivityCode hseHoldDrill;
         /// <summary>
         /// A specialization of 'HSE'.
         /// </summary>
@@ -1352,16 +987,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hseHoldDrill == null)
-                {
-                    hseHoldDrill = new ActivityCode("HSE -- hold drill");
-                    hseHoldDrill.Description = "A specialization of 'HSE'.";
-                }
                 return hseHoldDrill;
             }
         }
 
-        private static ActivityCode hseIncident;
+        private readonly static ActivityCode hseIncident;
         /// <summary>
         /// A specialization of 'HSE'.
         /// </summary>
@@ -1370,16 +1000,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hseIncident == null)
-                {
-                    hseIncident = new ActivityCode("HSE -- incident");
-                    hseIncident.Description = "A specialization of 'HSE'.";
-                }
                 return hseIncident;
             }
         }
 
-        private static ActivityCode hseSafetyMeeting;
+        private readonly static ActivityCode hseSafetyMeeting;
         /// <summary>
         /// A specialization of 'HSE'.
         /// </summary>
@@ -1388,16 +1013,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hseSafetyMeeting == null)
-                {
-                    hseSafetyMeeting = new ActivityCode("HSE -- safety meeting");
-                    hseSafetyMeeting.Description = "A specialization of 'HSE'.";
-                }
                 return hseSafetyMeeting;
             }
         }
 
-        private static ActivityCode mill;
+        private readonly static ActivityCode mill;
         /// <summary>
         /// mill
         /// </summary>
@@ -1406,16 +1026,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mill == null)
-                {
-                    mill = new ActivityCode("mill");
-                    mill.Description = "mill";
-                }
                 return mill;
             }
         }
 
-        private static ActivityCode millCutCasingOrTubing;
+        private readonly static ActivityCode millCutCasingOrTubing;
         /// <summary>
         /// A specialization of 'mill'.
         /// </summary>
@@ -1424,16 +1039,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (millCutCasingOrTubing == null)
-                {
-                    millCutCasingOrTubing = new ActivityCode("mill -- cut casing or tubing");
-                    millCutCasingOrTubing.Description = "A specialization of 'mill'.";
-                }
                 return millCutCasingOrTubing;
             }
         }
 
-        private static ActivityCode millMilling;
+        private readonly static ActivityCode millMilling;
         /// <summary>
         /// A specialization of 'mill'.
         /// </summary>
@@ -1442,16 +1052,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (millMilling == null)
-                {
-                    millMilling = new ActivityCode("mill -- milling");
-                    millMilling.Description = "A specialization of 'mill'.";
-                }
                 return millMilling;
             }
         }
 
-        private static ActivityCode miscellaneous;
+        private readonly static ActivityCode miscellaneous;
         /// <summary>
         /// miscellaneous
         /// </summary>
@@ -1460,16 +1065,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (miscellaneous == null)
-                {
-                    miscellaneous = new ActivityCode("miscellaneous");
-                    miscellaneous.Description = "miscellaneous";
-                }
                 return miscellaneous;
             }
         }
 
-        private static ActivityCode nippleUpBop;
+        private readonly static ActivityCode nippleUpBop;
         /// <summary>
         /// nipple up blowout preventer
         /// </summary>
@@ -1478,16 +1078,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (nippleUpBop == null)
-                {
-                    nippleUpBop = new ActivityCode("nipple up BOP");
-                    nippleUpBop.Description = "nipple up blowout preventer";
-                }
                 return nippleUpBop;
             }
         }
 
-        private static ActivityCode nippleUpBopDiverter;
+        private readonly static ActivityCode nippleUpBopDiverter;
         /// <summary>
         /// A specialization of 'nipple up BOP'.
         /// </summary>
@@ -1496,16 +1091,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (nippleUpBopDiverter == null)
-                {
-                    nippleUpBopDiverter = new ActivityCode("nipple up BOP -- diverter");
-                    nippleUpBopDiverter.Description = "A specialization of 'nipple up BOP'.";
-                }
                 return nippleUpBopDiverter;
             }
         }
 
-        private static ActivityCode nippleUpBopManifold;
+        private readonly static ActivityCode nippleUpBopManifold;
         /// <summary>
         /// A specialization of 'nipple up BOP'.
         /// </summary>
@@ -1514,16 +1104,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (nippleUpBopManifold == null)
-                {
-                    nippleUpBopManifold = new ActivityCode("nipple up BOP -- manifold");
-                    nippleUpBopManifold.Description = "A specialization of 'nipple up BOP'.";
-                }
                 return nippleUpBopManifold;
             }
         }
 
-        private static ActivityCode nippleUpBopOther;
+        private readonly static ActivityCode nippleUpBopOther;
         /// <summary>
         /// A specialization of 'nipple up BOP'.
         /// </summary>
@@ -1532,16 +1117,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (nippleUpBopOther == null)
-                {
-                    nippleUpBopOther = new ActivityCode("nipple up BOP -- other");
-                    nippleUpBopOther.Description = "A specialization of 'nipple up BOP'.";
-                }
                 return nippleUpBopOther;
             }
         }
 
-        private static ActivityCode nippleUpBopPvtSystem;
+        private readonly static ActivityCode nippleUpBopPvtSystem;
         /// <summary>
         /// A specialization of 'nipple up BOP'.
         /// </summary>
@@ -1550,16 +1130,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (nippleUpBopPvtSystem == null)
-                {
-                    nippleUpBopPvtSystem = new ActivityCode("nipple up BOP -- PVT system");
-                    nippleUpBopPvtSystem.Description = "A specialization of 'nipple up BOP'.";
-                }
                 return nippleUpBopPvtSystem;
             }
         }
 
-        private static ActivityCode nippleUpBopStack;
+        private readonly static ActivityCode nippleUpBopStack;
         /// <summary>
         /// A specialization of 'nipple up BOP'.
         /// </summary>
@@ -1568,16 +1143,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (nippleUpBopStack == null)
-                {
-                    nippleUpBopStack = new ActivityCode("nipple up BOP -- stack");
-                    nippleUpBopStack.Description = "A specialization of 'nipple up BOP'.";
-                }
                 return nippleUpBopStack;
             }
         }
 
-        private static ActivityCode plugBack;
+        private readonly static ActivityCode plugBack;
         /// <summary>
         /// plug back
         /// </summary>
@@ -1586,16 +1156,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plugBack == null)
-                {
-                    plugBack = new ActivityCode("plug back");
-                    plugBack.Description = "plug back";
-                }
                 return plugBack;
             }
         }
 
-        private static ActivityCode plugBackAbandonment;
+        private readonly static ActivityCode plugBackAbandonment;
         /// <summary>
         /// A specialization of 'plug back'.
         /// </summary>
@@ -1604,16 +1169,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plugBackAbandonment == null)
-                {
-                    plugBackAbandonment = new ActivityCode("plug back -- abandonment");
-                    plugBackAbandonment.Description = "A specialization of 'plug back'.";
-                }
                 return plugBackAbandonment;
             }
         }
 
-        private static ActivityCode plugBackKickOffPlug;
+        private readonly static ActivityCode plugBackKickOffPlug;
         /// <summary>
         /// A specialization of 'plug back'.
         /// </summary>
@@ -1622,16 +1182,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plugBackKickOffPlug == null)
-                {
-                    plugBackKickOffPlug = new ActivityCode("plug back -- kick off plug");
-                    plugBackKickOffPlug.Description = "A specialization of 'plug back'.";
-                }
                 return plugBackKickOffPlug;
             }
         }
 
-        private static ActivityCode plugBackLostCirculation;
+        private readonly static ActivityCode plugBackLostCirculation;
         /// <summary>
         /// A specialization of 'plug back'.
         /// </summary>
@@ -1640,16 +1195,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plugBackLostCirculation == null)
-                {
-                    plugBackLostCirculation = new ActivityCode("plug back -- lost circulation");
-                    plugBackLostCirculation.Description = "A specialization of 'plug back'.";
-                }
                 return plugBackLostCirculation;
             }
         }
 
-        private static ActivityCode plugBackWaitOnCement;
+        private readonly static ActivityCode plugBackWaitOnCement;
         /// <summary>
         /// A specialization of 'plug back'.
         /// </summary>
@@ -1658,16 +1208,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plugBackWaitOnCement == null)
-                {
-                    plugBackWaitOnCement = new ActivityCode("plug back -- wait on cement");
-                    plugBackWaitOnCement.Description = "A specialization of 'plug back'.";
-                }
                 return plugBackWaitOnCement;
             }
         }
 
-        private static ActivityCode plugBackWellControl;
+        private readonly static ActivityCode plugBackWellControl;
         /// <summary>
         /// A specialization of 'plug back'.
         /// </summary>
@@ -1676,16 +1221,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plugBackWellControl == null)
-                {
-                    plugBackWellControl = new ActivityCode("plug back -- well control");
-                    plugBackWellControl.Description = "A specialization of 'plug back'.";
-                }
                 return plugBackWellControl;
             }
         }
 
-        private static ActivityCode pressureTest;
+        private readonly static ActivityCode pressureTest;
         /// <summary>
         /// pressure test
         /// </summary>
@@ -1694,16 +1234,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureTest == null)
-                {
-                    pressureTest = new ActivityCode("pressure test");
-                    pressureTest.Description = "pressure test";
-                }
                 return pressureTest;
             }
         }
 
-        private static ActivityCode pressureTestBopManifold;
+        private readonly static ActivityCode pressureTestBopManifold;
         /// <summary>
         /// A specialization of 'pressure test'.
         /// </summary>
@@ -1712,16 +1247,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureTestBopManifold == null)
-                {
-                    pressureTestBopManifold = new ActivityCode("pressure test -- BOP manifold");
-                    pressureTestBopManifold.Description = "A specialization of 'pressure test'.";
-                }
                 return pressureTestBopManifold;
             }
         }
 
-        private static ActivityCode pressureTestBopStack;
+        private readonly static ActivityCode pressureTestBopStack;
         /// <summary>
         /// A specialization of 'pressure test'.
         /// </summary>
@@ -1730,16 +1260,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureTestBopStack == null)
-                {
-                    pressureTestBopStack = new ActivityCode("pressure test -- BOP stack");
-                    pressureTestBopStack.Description = "A specialization of 'pressure test'.";
-                }
                 return pressureTestBopStack;
             }
         }
 
-        private static ActivityCode pressureTestFormIntegrityTest;
+        private readonly static ActivityCode pressureTestFormIntegrityTest;
         /// <summary>
         /// A specialization of 'pressure test': formation integrity test
         /// </summary>
@@ -1748,16 +1273,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureTestFormIntegrityTest == null)
-                {
-                    pressureTestFormIntegrityTest = new ActivityCode("pressure test -- form integrity test");
-                    pressureTestFormIntegrityTest.Description = "A specialization of 'pressure test': formation integrity test";
-                }
                 return pressureTestFormIntegrityTest;
             }
         }
 
-        private static ActivityCode pressureTestFormLeakOffTest;
+        private readonly static ActivityCode pressureTestFormLeakOffTest;
         /// <summary>
         /// A specialization of 'pressure test': formation leak off test
         /// </summary>
@@ -1766,16 +1286,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureTestFormLeakOffTest == null)
-                {
-                    pressureTestFormLeakOffTest = new ActivityCode("pressure test -- form leak off test");
-                    pressureTestFormLeakOffTest.Description = "A specialization of 'pressure test': formation leak off test";
-                }
                 return pressureTestFormLeakOffTest;
             }
         }
 
-        private static ActivityCode pressureTestPacker;
+        private readonly static ActivityCode pressureTestPacker;
         /// <summary>
         /// A specialization of 'pressure test'.
         /// </summary>
@@ -1784,16 +1299,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureTestPacker == null)
-                {
-                    pressureTestPacker = new ActivityCode("pressure test -- packer");
-                    pressureTestPacker.Description = "A specialization of 'pressure test'.";
-                }
                 return pressureTestPacker;
             }
         }
 
-        private static ActivityCode pressureTestPit;
+        private readonly static ActivityCode pressureTestPit;
         /// <summary>
         /// A specialization of 'pressure test'.
         /// </summary>
@@ -1802,16 +1312,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureTestPit == null)
-                {
-                    pressureTestPit = new ActivityCode("pressure test -- PIT");
-                    pressureTestPit.Description = "A specialization of 'pressure test'.";
-                }
                 return pressureTestPit;
             }
         }
 
-        private static ActivityCode reaming;
+        private readonly static ActivityCode reaming;
         /// <summary>
         /// reaming
         /// </summary>
@@ -1820,16 +1325,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (reaming == null)
-                {
-                    reaming = new ActivityCode("reaming");
-                    reaming.Description = "reaming";
-                }
                 return reaming;
             }
         }
 
-        private static ActivityCode reamingBackReaming;
+        private readonly static ActivityCode reamingBackReaming;
         /// <summary>
         /// A specialization of 'reaming'.
         /// </summary>
@@ -1838,16 +1338,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (reamingBackReaming == null)
-                {
-                    reamingBackReaming = new ActivityCode("reaming -- back reaming");
-                    reamingBackReaming.Description = "A specialization of 'reaming'.";
-                }
                 return reamingBackReaming;
             }
         }
 
-        private static ActivityCode reamingCoring;
+        private readonly static ActivityCode reamingCoring;
         /// <summary>
         /// A specialization of 'reaming'.
         /// </summary>
@@ -1856,16 +1351,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (reamingCoring == null)
-                {
-                    reamingCoring = new ActivityCode("reaming -- coring");
-                    reamingCoring.Description = "A specialization of 'reaming'.";
-                }
                 return reamingCoring;
             }
         }
 
-        private static ActivityCode reamingDrill;
+        private readonly static ActivityCode reamingDrill;
         /// <summary>
         /// A specialization of 'reaming'.
         /// </summary>
@@ -1874,16 +1364,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (reamingDrill == null)
-                {
-                    reamingDrill = new ActivityCode("reaming -- drill");
-                    reamingDrill.Description = "A specialization of 'reaming'.";
-                }
                 return reamingDrill;
             }
         }
 
-        private static ActivityCode reamingLogging;
+        private readonly static ActivityCode reamingLogging;
         /// <summary>
         /// A specialization of 'reaming'.
         /// </summary>
@@ -1892,16 +1377,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (reamingLogging == null)
-                {
-                    reamingLogging = new ActivityCode("reaming -- logging");
-                    reamingLogging.Description = "A specialization of 'reaming'.";
-                }
                 return reamingLogging;
             }
         }
 
-        private static ActivityCode reamingUnderreaming;
+        private readonly static ActivityCode reamingUnderreaming;
         /// <summary>
         /// A specialization of 'reaming'.
         /// </summary>
@@ -1910,16 +1390,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (reamingUnderreaming == null)
-                {
-                    reamingUnderreaming = new ActivityCode("reaming -- under-reaming");
-                    reamingUnderreaming.Description = "A specialization of 'reaming'.";
-                }
                 return reamingUnderreaming;
             }
         }
 
-        private static ActivityCode rigMove;
+        private readonly static ActivityCode rigMove;
         /// <summary>
         /// rig move
         /// </summary>
@@ -1928,16 +1403,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMove == null)
-                {
-                    rigMove = new ActivityCode("rig move");
-                    rigMove.Description = "rig move";
-                }
                 return rigMove;
             }
         }
 
-        private static ActivityCode rigMoveAnchorHandling;
+        private readonly static ActivityCode rigMoveAnchorHandling;
         /// <summary>
         /// A specialization of 'rig move'.
         /// </summary>
@@ -1946,16 +1416,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMoveAnchorHandling == null)
-                {
-                    rigMoveAnchorHandling = new ActivityCode("rig move -- anchor handling");
-                    rigMoveAnchorHandling.Description = "A specialization of 'rig move'.";
-                }
                 return rigMoveAnchorHandling;
             }
         }
 
-        private static ActivityCode rigMoveInterpadMove;
+        private readonly static ActivityCode rigMoveInterpadMove;
         /// <summary>
         /// A specialization of 'rig move'.
         /// </summary>
@@ -1964,16 +1429,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMoveInterpadMove == null)
-                {
-                    rigMoveInterpadMove = new ActivityCode("rig move -- inter-pad move");
-                    rigMoveInterpadMove.Description = "A specialization of 'rig move'.";
-                }
                 return rigMoveInterpadMove;
             }
         }
 
-        private static ActivityCode rigMoveInterwellMove;
+        private readonly static ActivityCode rigMoveInterwellMove;
         /// <summary>
         /// A specialization of 'rig move'.
         /// </summary>
@@ -1982,16 +1442,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMoveInterwellMove == null)
-                {
-                    rigMoveInterwellMove = new ActivityCode("rig move -- inter-well move");
-                    rigMoveInterwellMove.Description = "A specialization of 'rig move'.";
-                }
                 return rigMoveInterwellMove;
             }
         }
 
-        private static ActivityCode rigMoveJackUpOrDown;
+        private readonly static ActivityCode rigMoveJackUpOrDown;
         /// <summary>
         /// A specialization of 'rig move'.
         /// </summary>
@@ -2000,16 +1455,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMoveJackUpOrDown == null)
-                {
-                    rigMoveJackUpOrDown = new ActivityCode("rig move -- jack up or down");
-                    rigMoveJackUpOrDown.Description = "A specialization of 'rig move'.";
-                }
                 return rigMoveJackUpOrDown;
             }
         }
 
-        private static ActivityCode rigMoveOther;
+        private readonly static ActivityCode rigMoveOther;
         /// <summary>
         /// A specialization of 'rig move'.
         /// </summary>
@@ -2018,16 +1468,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMoveOther == null)
-                {
-                    rigMoveOther = new ActivityCode("rig move -- other");
-                    rigMoveOther.Description = "A specialization of 'rig move'.";
-                }
                 return rigMoveOther;
             }
         }
 
-        private static ActivityCode rigMovePositionRig;
+        private readonly static ActivityCode rigMovePositionRig;
         /// <summary>
         /// A specialization of 'rig move'.
         /// </summary>
@@ -2036,16 +1481,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMovePositionRig == null)
-                {
-                    rigMovePositionRig = new ActivityCode("rig move -- position rig");
-                    rigMovePositionRig.Description = "A specialization of 'rig move'.";
-                }
                 return rigMovePositionRig;
             }
         }
 
-        private static ActivityCode rigMoveSkidRig;
+        private readonly static ActivityCode rigMoveSkidRig;
         /// <summary>
         /// A specialization of 'rig move'.
         /// </summary>
@@ -2054,16 +1494,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigMoveSkidRig == null)
-                {
-                    rigMoveSkidRig = new ActivityCode("rig move -- skid rig");
-                    rigMoveSkidRig.Description = "A specialization of 'rig move'.";
-                }
                 return rigMoveSkidRig;
             }
         }
 
-        private static ActivityCode rigRelease;
+        private readonly static ActivityCode rigRelease;
         /// <summary>
         /// rig release
         /// </summary>
@@ -2072,16 +1507,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRelease == null)
-                {
-                    rigRelease = new ActivityCode("rig release");
-                    rigRelease.Description = "rig release";
-                }
                 return rigRelease;
             }
         }
 
-        private static ActivityCode rigReleaseCutCasing;
+        private readonly static ActivityCode rigReleaseCutCasing;
         /// <summary>
         /// A specialization of 'rig release'.
         /// </summary>
@@ -2090,16 +1520,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigReleaseCutCasing == null)
-                {
-                    rigReleaseCutCasing = new ActivityCode("rig release -- cut casing");
-                    rigReleaseCutCasing.Description = "A specialization of 'rig release'.";
-                }
                 return rigReleaseCutCasing;
             }
         }
 
-        private static ActivityCode rigReleaseInstallCappingAssembly;
+        private readonly static ActivityCode rigReleaseInstallCappingAssembly;
         /// <summary>
         /// A specialization of 'rig release'.
         /// </summary>
@@ -2108,16 +1533,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigReleaseInstallCappingAssembly == null)
-                {
-                    rigReleaseInstallCappingAssembly = new ActivityCode("rig release -- install capping assembly");
-                    rigReleaseInstallCappingAssembly.Description = "A specialization of 'rig release'.";
-                }
                 return rigReleaseInstallCappingAssembly;
             }
         }
 
-        private static ActivityCode rigReleaseMobOrDemob;
+        private readonly static ActivityCode rigReleaseMobOrDemob;
         /// <summary>
         /// A specialization of 'rig release'.
         /// </summary>
@@ -2126,16 +1546,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigReleaseMobOrDemob == null)
-                {
-                    rigReleaseMobOrDemob = new ActivityCode("rig release -- MOB or DE-MOB");
-                    rigReleaseMobOrDemob.Description = "A specialization of 'rig release'.";
-                }
                 return rigReleaseMobOrDemob;
             }
         }
 
-        private static ActivityCode rigRepairs;
+        private readonly static ActivityCode rigRepairs;
         /// <summary>
         /// rig repairs
         /// </summary>
@@ -2144,16 +1559,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairs == null)
-                {
-                    rigRepairs = new ActivityCode("rig repairs");
-                    rigRepairs.Description = "rig repairs";
-                }
                 return rigRepairs;
             }
         }
 
-        private static ActivityCode rigRepairsDrawworks;
+        private readonly static ActivityCode rigRepairsDrawworks;
         /// <summary>
         /// A specialization of 'rig repairs'.
         /// </summary>
@@ -2162,16 +1572,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairsDrawworks == null)
-                {
-                    rigRepairsDrawworks = new ActivityCode("rig repairs -- drawworks");
-                    rigRepairsDrawworks.Description = "A specialization of 'rig repairs'.";
-                }
                 return rigRepairsDrawworks;
             }
         }
 
-        private static ActivityCode rigRepairsElectrical;
+        private readonly static ActivityCode rigRepairsElectrical;
         /// <summary>
         /// A specialization of 'rig repairs'.
         /// </summary>
@@ -2180,16 +1585,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairsElectrical == null)
-                {
-                    rigRepairsElectrical = new ActivityCode("rig repairs -- electrical");
-                    rigRepairsElectrical.Description = "A specialization of 'rig repairs'.";
-                }
                 return rigRepairsElectrical;
             }
         }
 
-        private static ActivityCode rigRepairsMudSystem;
+        private readonly static ActivityCode rigRepairsMudSystem;
         /// <summary>
         /// A specialization of 'rig repairs'.
         /// </summary>
@@ -2198,16 +1598,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairsMudSystem == null)
-                {
-                    rigRepairsMudSystem = new ActivityCode("rig repairs -- mud system");
-                    rigRepairsMudSystem.Description = "A specialization of 'rig repairs'.";
-                }
                 return rigRepairsMudSystem;
             }
         }
 
-        private static ActivityCode rigRepairsOther;
+        private readonly static ActivityCode rigRepairsOther;
         /// <summary>
         /// A specialization of 'rig repairs'.
         /// </summary>
@@ -2216,16 +1611,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairsOther == null)
-                {
-                    rigRepairsOther = new ActivityCode("rig repairs -- other");
-                    rigRepairsOther.Description = "A specialization of 'rig repairs'.";
-                }
                 return rigRepairsOther;
             }
         }
 
-        private static ActivityCode rigRepairsRotary;
+        private readonly static ActivityCode rigRepairsRotary;
         /// <summary>
         /// A specialization of 'rig repairs'.
         /// </summary>
@@ -2234,16 +1624,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairsRotary == null)
-                {
-                    rigRepairsRotary = new ActivityCode("rig repairs -- rotary");
-                    rigRepairsRotary.Description = "A specialization of 'rig repairs'.";
-                }
                 return rigRepairsRotary;
             }
         }
 
-        private static ActivityCode rigRepairsSubseaEquipment;
+        private readonly static ActivityCode rigRepairsSubseaEquipment;
         /// <summary>
         /// A specialization of 'rig repairs'.
         /// </summary>
@@ -2252,16 +1637,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairsSubseaEquipment == null)
-                {
-                    rigRepairsSubseaEquipment = new ActivityCode("rig repairs -- subsea equipment");
-                    rigRepairsSubseaEquipment.Description = "A specialization of 'rig repairs'.";
-                }
                 return rigRepairsSubseaEquipment;
             }
         }
 
-        private static ActivityCode rigRepairsWellControlEquipment;
+        private readonly static ActivityCode rigRepairsWellControlEquipment;
         /// <summary>
         /// A specialization of 'rig repairs'.
         /// </summary>
@@ -2270,16 +1650,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigRepairsWellControlEquipment == null)
-                {
-                    rigRepairsWellControlEquipment = new ActivityCode("rig repairs -- well control equipment");
-                    rigRepairsWellControlEquipment.Description = "A specialization of 'rig repairs'.";
-                }
                 return rigRepairsWellControlEquipment;
             }
         }
 
-        private static ActivityCode rigService;
+        private readonly static ActivityCode rigService;
         /// <summary>
         /// rig service
         /// </summary>
@@ -2288,16 +1663,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigService == null)
-                {
-                    rigService = new ActivityCode("rig service");
-                    rigService.Description = "rig service";
-                }
                 return rigService;
             }
         }
 
-        private static ActivityCode rigServiceLubricateRig;
+        private readonly static ActivityCode rigServiceLubricateRig;
         /// <summary>
         /// A specialization of 'rig service'.
         /// </summary>
@@ -2306,16 +1676,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigServiceLubricateRig == null)
-                {
-                    rigServiceLubricateRig = new ActivityCode("rig service -- lubricate rig");
-                    rigServiceLubricateRig.Description = "A specialization of 'rig service'.";
-                }
                 return rigServiceLubricateRig;
             }
         }
 
-        private static ActivityCode rigServiceTestEquipment;
+        private readonly static ActivityCode rigServiceTestEquipment;
         /// <summary>
         /// A specialization of 'rig service'.
         /// </summary>
@@ -2324,16 +1689,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigServiceTestEquipment == null)
-                {
-                    rigServiceTestEquipment = new ActivityCode("rig service -- test equipment");
-                    rigServiceTestEquipment.Description = "A specialization of 'rig service'.";
-                }
                 return rigServiceTestEquipment;
             }
         }
 
-        private static ActivityCode rigUpOrTearDown;
+        private readonly static ActivityCode rigUpOrTearDown;
         /// <summary>
         /// rig up or tear down
         /// </summary>
@@ -2342,16 +1702,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigUpOrTearDown == null)
-                {
-                    rigUpOrTearDown = new ActivityCode("rig up or tear down");
-                    rigUpOrTearDown.Description = "rig up or tear down";
-                }
                 return rigUpOrTearDown;
             }
         }
 
-        private static ActivityCode rigUpOrTearDownRigUp;
+        private readonly static ActivityCode rigUpOrTearDownRigUp;
         /// <summary>
         /// A specialization of 'rig up or tear down'.
         /// </summary>
@@ -2360,16 +1715,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigUpOrTearDownRigUp == null)
-                {
-                    rigUpOrTearDownRigUp = new ActivityCode("rig up or tear down -- rig up");
-                    rigUpOrTearDownRigUp.Description = "A specialization of 'rig up or tear down'.";
-                }
                 return rigUpOrTearDownRigUp;
             }
         }
 
-        private static ActivityCode rigUpOrTearDownSiteWork;
+        private readonly static ActivityCode rigUpOrTearDownSiteWork;
         /// <summary>
         /// A specialization of 'rig up or tear down'.
         /// </summary>
@@ -2378,16 +1728,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigUpOrTearDownSiteWork == null)
-                {
-                    rigUpOrTearDownSiteWork = new ActivityCode("rig up or tear down -- site work");
-                    rigUpOrTearDownSiteWork.Description = "A specialization of 'rig up or tear down'.";
-                }
                 return rigUpOrTearDownSiteWork;
             }
         }
 
-        private static ActivityCode rigUpOrTearDownTearDown;
+        private readonly static ActivityCode rigUpOrTearDownTearDown;
         /// <summary>
         /// A specialization of 'rig up or tear down'.v
         /// </summary>
@@ -2396,16 +1741,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rigUpOrTearDownTearDown == null)
-                {
-                    rigUpOrTearDownTearDown = new ActivityCode("rig up or tear down -- tear down");
-                    rigUpOrTearDownTearDown.Description = "A specialization of 'rig up or tear down'.v";
-                }
                 return rigUpOrTearDownTearDown;
             }
         }
 
-        private static ActivityCode runOrPullRiser;
+        private readonly static ActivityCode runOrPullRiser;
         /// <summary>
         /// run or pull riser
         /// </summary>
@@ -2414,16 +1754,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (runOrPullRiser == null)
-                {
-                    runOrPullRiser = new ActivityCode("run or pull riser");
-                    runOrPullRiser.Description = "run or pull riser";
-                }
                 return runOrPullRiser;
             }
         }
 
-        private static ActivityCode runOrPullRiserOther;
+        private readonly static ActivityCode runOrPullRiserOther;
         /// <summary>
         /// A specialization of 'run or pull riser'.
         /// </summary>
@@ -2432,16 +1767,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (runOrPullRiserOther == null)
-                {
-                    runOrPullRiserOther = new ActivityCode("run or pull riser -- other");
-                    runOrPullRiserOther.Description = "A specialization of 'run or pull riser'.";
-                }
                 return runOrPullRiserOther;
             }
         }
 
-        private static ActivityCode runOrPullRiserRunOrPullRiser;
+        private readonly static ActivityCode runOrPullRiserRunOrPullRiser;
         /// <summary>
         /// A specialization of 'run or pull riser'.
         /// </summary>
@@ -2450,16 +1780,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (runOrPullRiserRunOrPullRiser == null)
-                {
-                    runOrPullRiserRunOrPullRiser = new ActivityCode("run or pull riser -- run or pull riser");
-                    runOrPullRiserRunOrPullRiser.Description = "A specialization of 'run or pull riser'.";
-                }
                 return runOrPullRiserRunOrPullRiser;
             }
         }
 
-        private static ActivityCode squeezeCement;
+        private readonly static ActivityCode squeezeCement;
         /// <summary>
         /// squeeze cement
         /// </summary>
@@ -2468,16 +1793,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (squeezeCement == null)
-                {
-                    squeezeCement = new ActivityCode("squeeze cement");
-                    squeezeCement.Description = "squeeze cement";
-                }
                 return squeezeCement;
             }
         }
 
-        private static ActivityCode squeezeCementCasingRepair;
+        private readonly static ActivityCode squeezeCementCasingRepair;
         /// <summary>
         /// A specialization of 'squeeze cement'.
         /// </summary>
@@ -2486,16 +1806,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (squeezeCementCasingRepair == null)
-                {
-                    squeezeCementCasingRepair = new ActivityCode("squeeze cement -- casing repair");
-                    squeezeCementCasingRepair.Description = "A specialization of 'squeeze cement'.";
-                }
                 return squeezeCementCasingRepair;
             }
         }
 
-        private static ActivityCode squeezeCementCasingShoe;
+        private readonly static ActivityCode squeezeCementCasingShoe;
         /// <summary>
         /// A specialization of 'squeeze cement'.
         /// </summary>
@@ -2504,16 +1819,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (squeezeCementCasingShoe == null)
-                {
-                    squeezeCementCasingShoe = new ActivityCode("squeeze cement -- casing shoe");
-                    squeezeCementCasingShoe.Description = "A specialization of 'squeeze cement'.";
-                }
                 return squeezeCementCasingShoe;
             }
         }
 
-        private static ActivityCode squeezeCementPartedCasing;
+        private readonly static ActivityCode squeezeCementPartedCasing;
         /// <summary>
         /// A specialization of 'squeeze cement'.
         /// </summary>
@@ -2522,16 +1832,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (squeezeCementPartedCasing == null)
-                {
-                    squeezeCementPartedCasing = new ActivityCode("squeeze cement -- parted casing");
-                    squeezeCementPartedCasing.Description = "A specialization of 'squeeze cement'.";
-                }
                 return squeezeCementPartedCasing;
             }
         }
 
-        private static ActivityCode squeezeCementPerforationsDst;
+        private readonly static ActivityCode squeezeCementPerforationsDst;
         /// <summary>
         /// A specialization of 'squeeze cement'.
         /// </summary>
@@ -2540,16 +1845,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (squeezeCementPerforationsDst == null)
-                {
-                    squeezeCementPerforationsDst = new ActivityCode("squeeze cement -- perforations DST");
-                    squeezeCementPerforationsDst.Description = "A specialization of 'squeeze cement'.";
-                }
                 return squeezeCementPerforationsDst;
             }
         }
 
-        private static ActivityCode stuckPipe;
+        private readonly static ActivityCode stuckPipe;
         /// <summary>
         /// stuck pipe
         /// </summary>
@@ -2558,16 +1858,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (stuckPipe == null)
-                {
-                    stuckPipe = new ActivityCode("stuck pipe");
-                    stuckPipe.Description = "stuck pipe";
-                }
                 return stuckPipe;
             }
         }
 
-        private static ActivityCode surfaceStringHandling;
+        private readonly static ActivityCode surfaceStringHandling;
         /// <summary>
         /// surface string handling
         /// </summary>
@@ -2576,16 +1871,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (surfaceStringHandling == null)
-                {
-                    surfaceStringHandling = new ActivityCode("surface string handling");
-                    surfaceStringHandling.Description = "surface string handling";
-                }
                 return surfaceStringHandling;
             }
         }
 
-        private static ActivityCode testingGeneral;
+        private readonly static ActivityCode testingGeneral;
         /// <summary>
         /// Testing of any nature, if more detail is not known.
         /// </summary>
@@ -2594,16 +1884,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (testingGeneral == null)
-                {
-                    testingGeneral = new ActivityCode("testing general");
-                    testingGeneral.Description = "Testing of any nature, if more detail is not known.";
-                }
                 return testingGeneral;
             }
         }
 
-        private static ActivityCode testingGeneralEquipment;
+        private readonly static ActivityCode testingGeneralEquipment;
         /// <summary>
         /// A specialization of 'testing general'. Testing of surface equipment, or downhole equipment tested at surface.
         /// </summary>
@@ -2612,16 +1897,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (testingGeneralEquipment == null)
-                {
-                    testingGeneralEquipment = new ActivityCode("testing general -- equipment");
-                    testingGeneralEquipment.Description = "A specialization of 'testing general'. Testing of surface equipment, or downhole equipment tested at surface.";
-                }
                 return testingGeneralEquipment;
             }
         }
 
-        private static ActivityCode testingGeneralFlow;
+        private readonly static ActivityCode testingGeneralFlow;
         /// <summary>
         /// A specialization of 'testing general'. Well Flow testing, in the pre-production phase of the well.
         /// </summary>
@@ -2630,16 +1910,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (testingGeneralFlow == null)
-                {
-                    testingGeneralFlow = new ActivityCode("testing general -- flow");
-                    testingGeneralFlow.Description = "A specialization of 'testing general'. Well Flow testing, in the pre-production phase of the well.";
-                }
                 return testingGeneralFlow;
             }
         }
 
-        private static ActivityCode tripping;
+        private readonly static ActivityCode tripping;
         /// <summary>
         /// tripping
         /// </summary>
@@ -2648,16 +1923,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tripping == null)
-                {
-                    tripping = new ActivityCode("tripping");
-                    tripping.Description = "tripping";
-                }
                 return tripping;
             }
         }
 
-        private static ActivityCode trippingBackreaming;
+        private readonly static ActivityCode trippingBackreaming;
         /// <summary>
         /// A specialization of 'tripping'.
         /// </summary>
@@ -2666,16 +1936,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (trippingBackreaming == null)
-                {
-                    trippingBackreaming = new ActivityCode("tripping -- back-reaming");
-                    trippingBackreaming.Description = "A specialization of 'tripping'.";
-                }
                 return trippingBackreaming;
             }
         }
 
-        private static ActivityCode trippingFlowCheck;
+        private readonly static ActivityCode trippingFlowCheck;
         /// <summary>
         /// A specialization of 'tripping'.
         /// </summary>
@@ -2684,16 +1949,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (trippingFlowCheck == null)
-                {
-                    trippingFlowCheck = new ActivityCode("tripping -- flow check");
-                    trippingFlowCheck.Description = "A specialization of 'tripping'.";
-                }
                 return trippingFlowCheck;
             }
         }
 
-        private static ActivityCode trippingShortTripIn;
+        private readonly static ActivityCode trippingShortTripIn;
         /// <summary>
         /// A specialization of 'tripping'.
         /// </summary>
@@ -2702,16 +1962,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (trippingShortTripIn == null)
-                {
-                    trippingShortTripIn = new ActivityCode("tripping -- short trip in");
-                    trippingShortTripIn.Description = "A specialization of 'tripping'.";
-                }
                 return trippingShortTripIn;
             }
         }
 
-        private static ActivityCode trippingShortTripOut;
+        private readonly static ActivityCode trippingShortTripOut;
         /// <summary>
         /// A specialization of 'tripping'.
         /// </summary>
@@ -2720,16 +1975,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (trippingShortTripOut == null)
-                {
-                    trippingShortTripOut = new ActivityCode("tripping -- short trip out");
-                    trippingShortTripOut.Description = "A specialization of 'tripping'.";
-                }
                 return trippingShortTripOut;
             }
         }
 
-        private static ActivityCode trippingTripInFromSurface;
+        private readonly static ActivityCode trippingTripInFromSurface;
         /// <summary>
         /// A specialization of 'tripping'.
         /// </summary>
@@ -2738,16 +1988,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (trippingTripInFromSurface == null)
-                {
-                    trippingTripInFromSurface = new ActivityCode("tripping -- trip in (from surface)");
-                    trippingTripInFromSurface.Description = "A specialization of 'tripping'.";
-                }
                 return trippingTripInFromSurface;
             }
         }
 
-        private static ActivityCode trippingTripOutToSurface;
+        private readonly static ActivityCode trippingTripOutToSurface;
         /// <summary>
         /// A specialization of 'tripping'.
         /// </summary>
@@ -2756,16 +2001,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (trippingTripOutToSurface == null)
-                {
-                    trippingTripOutToSurface = new ActivityCode("tripping -- trip out (to surface)");
-                    trippingTripOutToSurface.Description = "A specialization of 'tripping'.";
-                }
                 return trippingTripOutToSurface;
             }
         }
 
-        private static ActivityCode wait;
+        private readonly static ActivityCode wait;
         /// <summary>
         /// wait
         /// </summary>
@@ -2774,16 +2014,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wait == null)
-                {
-                    wait = new ActivityCode("wait");
-                    wait.Description = "wait";
-                }
                 return wait;
             }
         }
 
-        private static ActivityCode waitDaylight;
+        private readonly static ActivityCode waitDaylight;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2792,16 +2027,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitDaylight == null)
-                {
-                    waitDaylight = new ActivityCode("wait -- daylight");
-                    waitDaylight.Description = "A specialization of 'wait'.";
-                }
                 return waitDaylight;
             }
         }
 
-        private static ActivityCode waitEnvironmentalOrRegulatory;
+        private readonly static ActivityCode waitEnvironmentalOrRegulatory;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2810,16 +2040,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitEnvironmentalOrRegulatory == null)
-                {
-                    waitEnvironmentalOrRegulatory = new ActivityCode("wait -- environmental or regulatory");
-                    waitEnvironmentalOrRegulatory.Description = "A specialization of 'wait'.";
-                }
                 return waitEnvironmentalOrRegulatory;
             }
         }
 
-        private static ActivityCode waitEquipment;
+        private readonly static ActivityCode waitEquipment;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2828,16 +2053,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitEquipment == null)
-                {
-                    waitEquipment = new ActivityCode("wait -- equipment");
-                    waitEquipment.Description = "A specialization of 'wait'.";
-                }
                 return waitEquipment;
             }
         }
 
-        private static ActivityCode waitHoliday;
+        private readonly static ActivityCode waitHoliday;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2846,16 +2066,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitHoliday == null)
-                {
-                    waitHoliday = new ActivityCode("wait -- holiday");
-                    waitHoliday.Description = "A specialization of 'wait'.";
-                }
                 return waitHoliday;
             }
         }
 
-        private static ActivityCode waitIce;
+        private readonly static ActivityCode waitIce;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2864,16 +2079,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitIce == null)
-                {
-                    waitIce = new ActivityCode("wait -- ice");
-                    waitIce.Description = "A specialization of 'wait'.";
-                }
                 return waitIce;
             }
         }
 
-        private static ActivityCode waitOnOrders;
+        private readonly static ActivityCode waitOnOrders;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2882,16 +2092,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitOnOrders == null)
-                {
-                    waitOnOrders = new ActivityCode("wait -- on orders");
-                    waitOnOrders.Description = "A specialization of 'wait'.";
-                }
                 return waitOnOrders;
             }
         }
 
-        private static ActivityCode waitOperator;
+        private readonly static ActivityCode waitOperator;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2900,16 +2105,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitOperator == null)
-                {
-                    waitOperator = new ActivityCode("wait -- operator");
-                    waitOperator.Description = "A specialization of 'wait'.";
-                }
                 return waitOperator;
             }
         }
 
-        private static ActivityCode waitOther;
+        private readonly static ActivityCode waitOther;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2918,16 +2118,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitOther == null)
-                {
-                    waitOther = new ActivityCode("wait -- other");
-                    waitOther.Description = "A specialization of 'wait'.";
-                }
                 return waitOther;
             }
         }
 
-        private static ActivityCode waitPartners;
+        private readonly static ActivityCode waitPartners;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2936,16 +2131,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitPartners == null)
-                {
-                    waitPartners = new ActivityCode("wait -- partners");
-                    waitPartners.Description = "A specialization of 'wait'.";
-                }
                 return waitPartners;
             }
         }
 
-        private static ActivityCode waitServiceCompany;
+        private readonly static ActivityCode waitServiceCompany;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2954,16 +2144,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitServiceCompany == null)
-                {
-                    waitServiceCompany = new ActivityCode("wait -- service company");
-                    waitServiceCompany.Description = "A specialization of 'wait'.";
-                }
                 return waitServiceCompany;
             }
         }
 
-        private static ActivityCode waitWeather;
+        private readonly static ActivityCode waitWeather;
         /// <summary>
         /// A specialization of 'wait'.
         /// </summary>
@@ -2972,16 +2157,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (waitWeather == null)
-                {
-                    waitWeather = new ActivityCode("wait -- weather");
-                    waitWeather.Description = "A specialization of 'wait'.";
-                }
                 return waitWeather;
             }
         }
 
-        private static ActivityCode wellControl;
+        private readonly static ActivityCode wellControl;
         /// <summary>
         /// well control
         /// </summary>
@@ -2990,16 +2170,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellControl == null)
-                {
-                    wellControl = new ActivityCode("well control");
-                    wellControl.Description = "well control";
-                }
                 return wellControl;
             }
         }
 
-        private static ActivityCode wellControlMix;
+        private readonly static ActivityCode wellControlMix;
         /// <summary>
         /// A specialization of 'well control'.
         /// </summary>
@@ -3008,16 +2183,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellControlMix == null)
-                {
-                    wellControlMix = new ActivityCode("well control -- mix");
-                    wellControlMix.Description = "A specialization of 'well control'.";
-                }
                 return wellControlMix;
             }
         }
 
-        private static ActivityCode wellControlShutIn;
+        private readonly static ActivityCode wellControlShutIn;
         /// <summary>
         /// A specialization of 'well control'.
         /// </summary>
@@ -3026,16 +2196,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellControlShutIn == null)
-                {
-                    wellControlShutIn = new ActivityCode("well control -- shut in");
-                    wellControlShutIn.Description = "A specialization of 'well control'.";
-                }
                 return wellControlShutIn;
             }
         }
 
-        private static ActivityCode wellControlStrip;
+        private readonly static ActivityCode wellControlStrip;
         /// <summary>
         /// A specialization of 'well control'.
         /// </summary>
@@ -3044,16 +2209,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellControlStrip == null)
-                {
-                    wellControlStrip = new ActivityCode("well control -- strip");
-                    wellControlStrip.Description = "A specialization of 'well control'.";
-                }
                 return wellControlStrip;
             }
         }
 
-        private static ActivityCode wellControlWellKill;
+        private readonly static ActivityCode wellControlWellKill;
         /// <summary>
         /// A specialization of 'well control'.
         /// </summary>
@@ -3062,16 +2222,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellControlWellKill == null)
-                {
-                    wellControlWellKill = new ActivityCode("well control -- well kill");
-                    wellControlWellKill.Description = "A specialization of 'well control'.";
-                }
                 return wellControlWellKill;
             }
         }
 
-        private static ActivityCode wellSrvc;
+        private readonly static ActivityCode wellSrvc;
         /// <summary>
         /// well services
         /// </summary>
@@ -3080,16 +2235,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvc == null)
-                {
-                    wellSrvc = new ActivityCode("well srvc");
-                    wellSrvc.Description = "well services";
-                }
                 return wellSrvc;
             }
         }
 
-        private static ActivityCode wellSrvcCasingRepair;
+        private readonly static ActivityCode wellSrvcCasingRepair;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3098,16 +2248,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcCasingRepair == null)
-                {
-                    wellSrvcCasingRepair = new ActivityCode("well srvc -- casing repair");
-                    wellSrvcCasingRepair.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcCasingRepair;
             }
         }
 
-        private static ActivityCode wellSrvcCleanWellToComplFluid;
+        private readonly static ActivityCode wellSrvcCleanWellToComplFluid;
         /// <summary>
         /// cleanout well to completion fluid
         /// </summary>
@@ -3116,16 +2261,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcCleanWellToComplFluid == null)
-                {
-                    wellSrvcCleanWellToComplFluid = new ActivityCode("well srvc -- clean well to compl fluid");
-                    wellSrvcCleanWellToComplFluid.Description = "cleanout well to completion fluid";
-                }
                 return wellSrvcCleanWellToComplFluid;
             }
         }
 
-        private static ActivityCode wellSrvcCoiledTubingWork;
+        private readonly static ActivityCode wellSrvcCoiledTubingWork;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3134,16 +2274,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcCoiledTubingWork == null)
-                {
-                    wellSrvcCoiledTubingWork = new ActivityCode("well srvc -- coiled tubing work");
-                    wellSrvcCoiledTubingWork.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcCoiledTubingWork;
             }
         }
 
-        private static ActivityCode wellSrvcGravelPack;
+        private readonly static ActivityCode wellSrvcGravelPack;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3152,16 +2287,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcGravelPack == null)
-                {
-                    wellSrvcGravelPack = new ActivityCode("well srvc -- gravel pack");
-                    wellSrvcGravelPack.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcGravelPack;
             }
         }
 
-        private static ActivityCode wellSrvcInstallOrTestXmasTree;
+        private readonly static ActivityCode wellSrvcInstallOrTestXmasTree;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3170,16 +2300,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcInstallOrTestXmasTree == null)
-                {
-                    wellSrvcInstallOrTestXmasTree = new ActivityCode("well srvc -- install or test xmas tree");
-                    wellSrvcInstallOrTestXmasTree.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcInstallOrTestXmasTree;
             }
         }
 
-        private static ActivityCode wellSrvcKillWell;
+        private readonly static ActivityCode wellSrvcKillWell;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3188,16 +2313,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcKillWell == null)
-                {
-                    wellSrvcKillWell = new ActivityCode("well srvc -- kill well");
-                    wellSrvcKillWell.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcKillWell;
             }
         }
 
-        private static ActivityCode wellSrvcLandSetTestCompletion;
+        private readonly static ActivityCode wellSrvcLandSetTestCompletion;
         /// <summary>
         /// A specialization of 'well srvc': land, set and test completion
         /// </summary>
@@ -3206,16 +2326,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcLandSetTestCompletion == null)
-                {
-                    wellSrvcLandSetTestCompletion = new ActivityCode("well srvc -- land, set, test completion");
-                    wellSrvcLandSetTestCompletion.Description = "A specialization of 'well srvc': land, set and test completion";
-                }
                 return wellSrvcLandSetTestCompletion;
             }
         }
 
-        private static ActivityCode wellSrvcPerforate;
+        private readonly static ActivityCode wellSrvcPerforate;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3224,16 +2339,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcPerforate == null)
-                {
-                    wellSrvcPerforate = new ActivityCode("well srvc -- perforate");
-                    wellSrvcPerforate.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcPerforate;
             }
         }
 
-        private static ActivityCode wellSrvcPullCompletion;
+        private readonly static ActivityCode wellSrvcPullCompletion;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3242,16 +2352,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcPullCompletion == null)
-                {
-                    wellSrvcPullCompletion = new ActivityCode("well srvc -- pull completion");
-                    wellSrvcPullCompletion.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcPullCompletion;
             }
         }
 
-        private static ActivityCode wellSrvcPullSuspensionPlugs;
+        private readonly static ActivityCode wellSrvcPullSuspensionPlugs;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3260,16 +2365,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcPullSuspensionPlugs == null)
-                {
-                    wellSrvcPullSuspensionPlugs = new ActivityCode("well srvc -- pull suspension plugs");
-                    wellSrvcPullSuspensionPlugs.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcPullSuspensionPlugs;
             }
         }
 
-        private static ActivityCode wellSrvcRunCompletion;
+        private readonly static ActivityCode wellSrvcRunCompletion;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3278,16 +2378,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcRunCompletion == null)
-                {
-                    wellSrvcRunCompletion = new ActivityCode("well srvc -- run completion");
-                    wellSrvcRunCompletion.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcRunCompletion;
             }
         }
 
-        private static ActivityCode wellSrvcRunScreens;
+        private readonly static ActivityCode wellSrvcRunScreens;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3296,16 +2391,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcRunScreens == null)
-                {
-                    wellSrvcRunScreens = new ActivityCode("well srvc -- run screens");
-                    wellSrvcRunScreens.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcRunScreens;
             }
         }
 
-        private static ActivityCode wellSrvcSandControl;
+        private readonly static ActivityCode wellSrvcSandControl;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3314,16 +2404,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcSandControl == null)
-                {
-                    wellSrvcSandControl = new ActivityCode("well srvc -- sand control");
-                    wellSrvcSandControl.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcSandControl;
             }
         }
 
-        private static ActivityCode wellSrvcStimulation;
+        private readonly static ActivityCode wellSrvcStimulation;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3332,16 +2417,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcStimulation == null)
-                {
-                    wellSrvcStimulation = new ActivityCode("well srvc -- stimulation");
-                    wellSrvcStimulation.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcStimulation;
             }
         }
 
-        private static ActivityCode wellSrvcSubseaWork;
+        private readonly static ActivityCode wellSrvcSubseaWork;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3350,16 +2430,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcSubseaWork == null)
-                {
-                    wellSrvcSubseaWork = new ActivityCode("well srvc -- subsea work");
-                    wellSrvcSubseaWork.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcSubseaWork;
             }
         }
 
-        private static ActivityCode wellSrvcSurfaceLineWork;
+        private readonly static ActivityCode wellSrvcSurfaceLineWork;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3368,16 +2443,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcSurfaceLineWork == null)
-                {
-                    wellSrvcSurfaceLineWork = new ActivityCode("well srvc -- surface line work");
-                    wellSrvcSurfaceLineWork.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcSurfaceLineWork;
             }
         }
 
-        private static ActivityCode wellSrvcSuspendWellOrPullBops;
+        private readonly static ActivityCode wellSrvcSuspendWellOrPullBops;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3386,16 +2456,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcSuspendWellOrPullBops == null)
-                {
-                    wellSrvcSuspendWellOrPullBops = new ActivityCode("well srvc -- suspend well or pull BOPs");
-                    wellSrvcSuspendWellOrPullBops.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcSuspendWellOrPullBops;
             }
         }
 
-        private static ActivityCode wellSrvcTestWell;
+        private readonly static ActivityCode wellSrvcTestWell;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3404,16 +2469,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcTestWell == null)
-                {
-                    wellSrvcTestWell = new ActivityCode("well srvc -- test well");
-                    wellSrvcTestWell.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcTestWell;
             }
         }
 
-        private static ActivityCode wellSrvcWash;
+        private readonly static ActivityCode wellSrvcWash;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3422,16 +2482,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcWash == null)
-                {
-                    wellSrvcWash = new ActivityCode("well srvc -- wash");
-                    wellSrvcWash.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcWash;
             }
         }
 
-        private static ActivityCode wellSrvcWirelineWork;
+        private readonly static ActivityCode wellSrvcWirelineWork;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3440,16 +2495,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcWirelineWork == null)
-                {
-                    wellSrvcWirelineWork = new ActivityCode("well srvc -- wireline work");
-                    wellSrvcWirelineWork.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcWirelineWork;
             }
         }
 
-        private static ActivityCode wellSrvcWorkTubulars;
+        private readonly static ActivityCode wellSrvcWorkTubulars;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3458,16 +2508,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcWorkTubulars == null)
-                {
-                    wellSrvcWorkTubulars = new ActivityCode("well srvc -- work tubulars");
-                    wellSrvcWorkTubulars.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcWorkTubulars;
             }
         }
 
-        private static ActivityCode wellSrvcWorkstringRun;
+        private readonly static ActivityCode wellSrvcWorkstringRun;
         /// <summary>
         /// A specialization of 'well srvc'.
         /// </summary>
@@ -3476,16 +2521,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wellSrvcWorkstringRun == null)
-                {
-                    wellSrvcWorkstringRun = new ActivityCode("well srvc -- workstring run");
-                    wellSrvcWorkstringRun.Description = "A specialization of 'well srvc'.";
-                }
                 return wellSrvcWorkstringRun;
             }
         }
 
-        private static ActivityCode wirelineLogs;
+        private readonly static ActivityCode wirelineLogs;
         /// <summary>
         /// wireline logs
         /// </summary>
@@ -3494,16 +2534,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wirelineLogs == null)
-                {
-                    wirelineLogs = new ActivityCode("wireline logs");
-                    wirelineLogs.Description = "wireline logs";
-                }
                 return wirelineLogs;
             }
         }
 
-        private static ActivityCode wirelineLogsAbandonment;
+        private readonly static ActivityCode wirelineLogsAbandonment;
         /// <summary>
         /// A specialization of 'wireline logs'.
         /// </summary>
@@ -3512,16 +2547,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wirelineLogsAbandonment == null)
-                {
-                    wirelineLogsAbandonment = new ActivityCode("wireline logs -- abandonment");
-                    wirelineLogsAbandonment.Description = "A specialization of 'wireline logs'.";
-                }
                 return wirelineLogsAbandonment;
             }
         }
 
-        private static ActivityCode wirelineLogsEvaluation;
+        private readonly static ActivityCode wirelineLogsEvaluation;
         /// <summary>
         /// A specialization of 'wireline logs'.
         /// </summary>
@@ -3530,16 +2560,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wirelineLogsEvaluation == null)
-                {
-                    wirelineLogsEvaluation = new ActivityCode("wireline logs -- evaluation");
-                    wirelineLogsEvaluation.Description = "A specialization of 'wireline logs'.";
-                }
                 return wirelineLogsEvaluation;
             }
         }
 
-        private static ActivityCode wirelineLogsFormTester;
+        private readonly static ActivityCode wirelineLogsFormTester;
         /// <summary>
         /// A specialization of 'wireline logs': formation tester
         /// </summary>
@@ -3548,16 +2573,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wirelineLogsFormTester == null)
-                {
-                    wirelineLogsFormTester = new ActivityCode("wireline logs -- form tester");
-                    wirelineLogsFormTester.Description = "A specialization of 'wireline logs': formation tester";
-                }
                 return wirelineLogsFormTester;
             }
         }
 
-        private static ActivityCode wirelineLogsOther;
+        private readonly static ActivityCode wirelineLogsOther;
         /// <summary>
         /// A specialization of 'wireline logs'.
         /// </summary>
@@ -3566,16 +2586,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wirelineLogsOther == null)
-                {
-                    wirelineLogsOther = new ActivityCode("wireline logs -- other");
-                    wirelineLogsOther.Description = "A specialization of 'wireline logs'.";
-                }
                 return wirelineLogsOther;
             }
         }
 
-        private static ActivityCode wirelineLogsSideWallCores;
+        private readonly static ActivityCode wirelineLogsSideWallCores;
         /// <summary>
         /// A specialization of 'wireline logs'.
         /// </summary>
@@ -3584,16 +2599,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wirelineLogsSideWallCores == null)
-                {
-                    wirelineLogsSideWallCores = new ActivityCode("wireline logs -- side wall cores");
-                    wirelineLogsSideWallCores.Description = "A specialization of 'wireline logs'.";
-                }
                 return wirelineLogsSideWallCores;
             }
         }
 
-        private static ActivityCode wirelineLogsVelocity;
+        private readonly static ActivityCode wirelineLogsVelocity;
         /// <summary>
         /// A specialization of 'wireline logs'.
         /// </summary>
@@ -3602,15 +2612,1031 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (wirelineLogsVelocity == null)
-                {
-                    wirelineLogsVelocity = new ActivityCode("wireline logs -- velocity");
-                    wirelineLogsVelocity.Description = "A specialization of 'wireline logs'.";
-                }
                 return wirelineLogsVelocity;
             }
         }
 
+        static ActivityCode()
+        {
+            abandonment = 
+                new ActivityCode("abandonment")
+                {
+                    Description = "abandonment"
+            };
+            abandonmentLogPlugs = 
+                new ActivityCode("abandonment -- log plugs")
+                {
+                    Description = "A specialization of 'abandonment'."
+            };
+            abandonmentRunPlugs = 
+                new ActivityCode("abandonment -- run plugs")
+                {
+                    Description = "A specialization of 'abandonment'."
+            };
+            abandonmentWaitOnCement = 
+                new ActivityCode("abandonment -- wait on cement")
+                {
+                    Description = "A specialization of 'abandonment'."
+            };
+            casingCement = 
+                new ActivityCode("casing, cement")
+                {
+                    Description = "casing and cement"
+            };
+            casingCementCirculateCement = 
+                new ActivityCode("casing, cement -- circulate, cement")
+                {
+                    Description = "A specialization of 'casing, cement': circulate and cement"
+            };
+            casingCementOther = 
+                new ActivityCode("casing, cement -- other")
+                {
+                    Description = "A specialization of 'casing, cement'."
+            };
+            casingCementRigUpRunCasing = 
+                new ActivityCode("casing, cement -- rig up, run casing")
+                {
+                    Description = "A specialization of 'casing, cement': rig up and run casing"
+            };
+            casingCementRigUpRunLiner = 
+                new ActivityCode("casing, cement -- rig up, run liner")
+                {
+                    Description = "A specialization of 'casing, cement': rig up and run liner"
+            };
+            casingCementWaitOnCement = 
+                new ActivityCode("casing, cement -- wait on cement")
+                {
+                    Description = "A specialization of 'casing, cement'."
+            };
+            completionOperations = 
+                new ActivityCode("completion operations")
+                {
+                    Description = "After reaching total depth, any operations for completing the well and bringing it on production - no further detail is known."
+            };
+            completionOperationsRigUp = 
+                new ActivityCode("completion operations -- rig up")
+                {
+                    Description = "Rig up completion equipment."
+            };
+            completionOperationsTearDown = 
+                new ActivityCode("completion operations -- tear down")
+                {
+                    Description = "Tear down completion equipment."
+            };
+            completionOperationsTesting = 
+                new ActivityCode("completion operations -- testing ")
+                {
+                    Description = "Pre-production flow testing in the well completion phase."
+            };
+            completionOperationsRunningLiner = 
+                new ActivityCode("completion operations -- running liner")
+                {
+                    Description = "Running the production liner."
+            };
+            completionOperationsGravelPacking = 
+                new ActivityCode("completion operations -- gravel packing")
+                {
+                    Description = "Completion operation for producing zones."
+            };
+            completionOperationsLogging = 
+                new ActivityCode("completion operations -- logging")
+                {
+                    Description = "Production logging tool runs."
+            };
+            condMudCirculate = 
+                new ActivityCode("cond mud, circulate")
+                {
+                    Description = "condition mud and circulate"
+            };
+            condMudCirculateBoulderOrGravel = 
+                new ActivityCode("cond mud, circulate -- boulder or gravel")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateCasing = 
+                new ActivityCode("cond mud, circulate -- casing")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateCementing = 
+                new ActivityCode("cond mud, circulate -- cementing")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateCirculateSamples = 
+                new ActivityCode("cond mud, circulate -- circulate samples")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateCoring = 
+                new ActivityCode("cond mud, circulate -- coring")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateDrilling = 
+                new ActivityCode("cond mud, circulate -- drilling")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateFishing = 
+                new ActivityCode("cond mud, circulate -- fishing")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateGumboAttack = 
+                new ActivityCode("cond mud, circulate -- gumbo attack")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateLogging = 
+                new ActivityCode("cond mud, circulate -- logging")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateLostCirculation = 
+                new ActivityCode("cond mud, circulate -- lost circulation")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            condMudCirculateWellControl = 
+                new ActivityCode("cond mud, circulate -- well control")
+                {
+                    Description = "A specialization of 'cond mud, circulate'."
+            };
+            coring = 
+                new ActivityCode("coring")
+                {
+                    Description = "coring"
+            };
+            coringConventional = 
+                new ActivityCode("coring -- conventional")
+                {
+                    Description = "A specialization of 'coring'."
+            };
+            coringFlowCheck = 
+                new ActivityCode("coring -- flow check")
+                {
+                    Description = "A specialization of 'coring'."
+            };
+            coringLaydownBarrel = 
+                new ActivityCode("coring -- laydown barrel")
+                {
+                    Description = "A specialization of 'coring'."
+            };
+            coringOriented = 
+                new ActivityCode("coring -- oriented")
+                {
+                    Description = "A specialization of 'coring'."
+            };
+            coringPlasticSleeve = 
+                new ActivityCode("coring -- plastic sleeve")
+                {
+                    Description = "A specialization of 'coring'."
+            };
+            coringRigUpCoreBarrel = 
+                new ActivityCode("coring -- rig up core barrel")
+                {
+                    Description = "A specialization of 'coring'."
+            };
+            coringSponge = 
+                new ActivityCode("coring -- sponge")
+                {
+                    Description = "A specialization of 'coring'."
+            };
+            cutSlipDrillingLine = 
+                new ActivityCode("cut, slip drilling line")
+                {
+                    Description = "cut and slip drilling line"
+            };
+            deviationSurvey = 
+                new ActivityCode("deviation survey")
+                {
+                    Description = "deviation survey"
+            };
+            deviationSurveyDirMultishot = 
+                new ActivityCode("deviation survey -- dir multi-shot")
+                {
+                    Description = "A specialization of 'deviation survey': directional multi-shot"
+            };
+            deviationSurveyDirSingleShot = 
+                new ActivityCode("deviation survey -- dir single shot")
+                {
+                    Description = "A specialization of 'deviation survey': directional single shot"
+            };
+            deviationSurveyDrift = 
+                new ActivityCode("deviation survey -- drift")
+                {
+                    Description = "A specialization of 'deviation survey'."
+            };
+            deviationSurveyGyro = 
+                new ActivityCode("deviation survey -- gyro")
+                {
+                    Description = "A specialization of 'deviation survey'."
+            };
+            deviationSurveyMwd = 
+                new ActivityCode("deviation survey -- MWD")
+                {
+                    Description = "A specialization of 'deviation survey'."
+            };
+            dirWork = 
+                new ActivityCode("dir work")
+                {
+                    Description = "directional work"
+            };
+            dirWorkHorizontalDrilling = 
+                new ActivityCode("dir work -- horizontal drilling")
+                {
+                    Description = "A specialization of 'dir work'."
+            };
+            dirWorkMotorDrilling = 
+                new ActivityCode("dir work -- motor drilling")
+                {
+                    Description = "A specialization of 'dir work'."
+            };
+            dirWorkOrient = 
+                new ActivityCode("dir work -- orient")
+                {
+                    Description = "A specialization of 'dir work'."
+            };
+            dirWorkRotaryDrilling = 
+                new ActivityCode("dir work -- rotary drilling")
+                {
+                    Description = "A specialization of 'dir work'."
+            };
+            dirWorkSlantDrilling = 
+                new ActivityCode("dir work -- slant drilling")
+                {
+                    Description = "A specialization of 'dir work'."
+            };
+            dst = 
+                new ActivityCode("DST")
+                {
+                    Description = "drill stem test"
+            };
+            dstCasedHole = 
+                new ActivityCode("DST -- cased hole")
+                {
+                    Description = "A specialization of 'DST'."
+            };
+            dstLayDownTools = 
+                new ActivityCode("DST -- lay down tools")
+                {
+                    Description = "A specialization of 'DST'."
+            };
+            dstOpenHole = 
+                new ActivityCode("DST -- open hole")
+                {
+                    Description = "A specialization of 'DST'."
+            };
+            dstOpenHoleClosedChamber = 
+                new ActivityCode("DST -- open hole closed chamber")
+                {
+                    Description = "A specialization of 'DST'."
+            };
+            dstRigUpTools = 
+                new ActivityCode("DST -- rig up tools")
+                {
+                    Description = "A specialization of 'DST'."
+            };
+            drilling = 
+                new ActivityCode("drilling")
+                {
+                    Description = "drilling"
+            };
+            drillingCasing = 
+                new ActivityCode("drilling -- casing")
+                {
+                    Description = "A specialization of 'drilling'."
+            };
+            drillingConnection = 
+                new ActivityCode("drilling -- connection")
+                {
+                    Description = "A specialization of 'drilling'."
+            };
+            drillingDrillCementFloatEquip = 
+                new ActivityCode("drilling -- drill cement, float equip")
+                {
+                    Description = "A specialization of 'drilling': drill out cement and/or float equipment"
+            };
+            drillingFlowCheck = 
+                new ActivityCode("drilling -- flow check")
+                {
+                    Description = "A specialization of 'drilling'."
+            };
+            drillingHoleOpening = 
+                new ActivityCode("drilling -- hole opening")
+                {
+                    Description = "A specialization of 'drilling'."
+            };
+            drillingNewHole = 
+                new ActivityCode("drilling -- new hole")
+                {
+                    Description = "A specialization of 'drilling'."
+            };
+            drillingSidetracking = 
+                new ActivityCode("drilling -- sidetracking")
+                {
+                    Description = "A specialization of 'drilling'."
+            };
+            drillingUnderreaming = 
+                new ActivityCode("drilling -- under-reaming")
+                {
+                    Description = "A specialization of 'drilling'."
+            };
+            fishing = 
+                new ActivityCode("fishing")
+                {
+                    Description = "fishing"
+            };
+            fishingBha = 
+                new ActivityCode("fishing -- BHA")
+                {
+                    Description = "A specialization of 'fishing'."
+            };
+            fishingCasing = 
+                new ActivityCode("fishing -- casing")
+                {
+                    Description = "A specialization of 'fishing'."
+            };
+            fishingCones = 
+                new ActivityCode("fishing -- cones")
+                {
+                    Description = ">A specialization of 'fishing'."
+            };
+            fishingOther = 
+                new ActivityCode("fishing -- other")
+                {
+                    Description = "A specialization of 'fishing'."
+            };
+            fishingStuckPipe = 
+                new ActivityCode("fishing -- stuck pipe")
+                {
+                    Description = "A specialization of 'fishing'."
+            };
+            fishingWirelineTools = 
+                new ActivityCode("fishing -- wireline tools")
+                {
+                    Description = "A specialization of 'fishing'."
+            };
+            hse = 
+                new ActivityCode("HSE")
+                {
+                    Description = "Health, Safety and Environmental"
+            };
+            hseHoldDrill = 
+                new ActivityCode("HSE -- hold drill")
+                {
+                    Description = "A specialization of 'HSE'."
+            };
+            hseIncident = 
+                new ActivityCode("HSE -- incident")
+                {
+                    Description = "A specialization of 'HSE'."
+            };
+            hseSafetyMeeting = 
+                new ActivityCode("HSE -- safety meeting")
+                {
+                    Description = "A specialization of 'HSE'."
+            };
+            mill = 
+                new ActivityCode("mill")
+                {
+                    Description = "mill"
+            };
+            millCutCasingOrTubing = 
+                new ActivityCode("mill -- cut casing or tubing")
+                {
+                    Description = "A specialization of 'mill'."
+            };
+            millMilling = 
+                new ActivityCode("mill -- milling")
+                {
+                    Description = "A specialization of 'mill'."
+            };
+            miscellaneous = 
+                new ActivityCode("miscellaneous")
+                {
+                    Description = "miscellaneous"
+            };
+            nippleUpBop = 
+                new ActivityCode("nipple up BOP")
+                {
+                    Description = "nipple up blowout preventer"
+            };
+            nippleUpBopDiverter = 
+                new ActivityCode("nipple up BOP -- diverter")
+                {
+                    Description = "A specialization of 'nipple up BOP'."
+            };
+            nippleUpBopManifold = 
+                new ActivityCode("nipple up BOP -- manifold")
+                {
+                    Description = "A specialization of 'nipple up BOP'."
+            };
+            nippleUpBopOther = 
+                new ActivityCode("nipple up BOP -- other")
+                {
+                    Description = "A specialization of 'nipple up BOP'."
+            };
+            nippleUpBopPvtSystem = 
+                new ActivityCode("nipple up BOP -- PVT system")
+                {
+                    Description = "A specialization of 'nipple up BOP'."
+            };
+            nippleUpBopStack = 
+                new ActivityCode("nipple up BOP -- stack")
+                {
+                    Description = "A specialization of 'nipple up BOP'."
+            };
+            plugBack = 
+                new ActivityCode("plug back")
+                {
+                    Description = "plug back"
+            };
+            plugBackAbandonment = 
+                new ActivityCode("plug back -- abandonment")
+                {
+                    Description = "A specialization of 'plug back'."
+            };
+            plugBackKickOffPlug = 
+                new ActivityCode("plug back -- kick off plug")
+                {
+                    Description = "A specialization of 'plug back'."
+            };
+            plugBackLostCirculation = 
+                new ActivityCode("plug back -- lost circulation")
+                {
+                    Description = "A specialization of 'plug back'."
+            };
+            plugBackWaitOnCement = 
+                new ActivityCode("plug back -- wait on cement")
+                {
+                    Description = "A specialization of 'plug back'."
+            };
+            plugBackWellControl = 
+                new ActivityCode("plug back -- well control")
+                {
+                    Description = "A specialization of 'plug back'."
+            };
+            pressureTest = 
+                new ActivityCode("pressure test")
+                {
+                    Description = "pressure test"
+            };
+            pressureTestBopManifold = 
+                new ActivityCode("pressure test -- BOP manifold")
+                {
+                    Description = "A specialization of 'pressure test'."
+            };
+            pressureTestBopStack = 
+                new ActivityCode("pressure test -- BOP stack")
+                {
+                    Description = "A specialization of 'pressure test'."
+            };
+            pressureTestFormIntegrityTest = 
+                new ActivityCode("pressure test -- form integrity test")
+                {
+                    Description = "A specialization of 'pressure test': formation integrity test"
+            };
+            pressureTestFormLeakOffTest = 
+                new ActivityCode("pressure test -- form leak off test")
+                {
+                    Description = "A specialization of 'pressure test': formation leak off test"
+            };
+            pressureTestPacker = 
+                new ActivityCode("pressure test -- packer")
+                {
+                    Description = "A specialization of 'pressure test'."
+            };
+            pressureTestPit = 
+                new ActivityCode("pressure test -- PIT")
+                {
+                    Description = "A specialization of 'pressure test'."
+            };
+            reaming = 
+                new ActivityCode("reaming")
+                {
+                    Description = "reaming"
+            };
+            reamingBackReaming = 
+                new ActivityCode("reaming -- back reaming")
+                {
+                    Description = "A specialization of 'reaming'."
+            };
+            reamingCoring = 
+                new ActivityCode("reaming -- coring")
+                {
+                    Description = "A specialization of 'reaming'."
+            };
+            reamingDrill = 
+                new ActivityCode("reaming -- drill")
+                {
+                    Description = "A specialization of 'reaming'."
+            };
+            reamingLogging = 
+                new ActivityCode("reaming -- logging")
+                {
+                    Description = "A specialization of 'reaming'."
+            };
+            reamingUnderreaming = 
+                new ActivityCode("reaming -- under-reaming")
+                {
+                    Description = "A specialization of 'reaming'."
+            };
+            rigMove = 
+                new ActivityCode("rig move")
+                {
+                    Description = "rig move"
+            };
+            rigMoveAnchorHandling = 
+                new ActivityCode("rig move -- anchor handling")
+                {
+                    Description = "A specialization of 'rig move'."
+            };
+            rigMoveInterpadMove = 
+                new ActivityCode("rig move -- inter-pad move")
+                {
+                    Description = "A specialization of 'rig move'."
+            };
+            rigMoveInterwellMove = 
+                new ActivityCode("rig move -- inter-well move")
+                {
+                    Description = "A specialization of 'rig move'."
+            };
+            rigMoveJackUpOrDown = 
+                new ActivityCode("rig move -- jack up or down")
+                {
+                    Description = "A specialization of 'rig move'."
+            };
+            rigMoveOther = 
+                new ActivityCode("rig move -- other")
+                {
+                    Description = "A specialization of 'rig move'."
+            };
+            rigMovePositionRig = 
+                new ActivityCode("rig move -- position rig")
+                {
+                    Description = "A specialization of 'rig move'."
+            };
+            rigMoveSkidRig = 
+                new ActivityCode("rig move -- skid rig")
+                {
+                    Description = "A specialization of 'rig move'."
+            };
+            rigRelease = 
+                new ActivityCode("rig release")
+                {
+                    Description = "rig release"
+            };
+            rigReleaseCutCasing = 
+                new ActivityCode("rig release -- cut casing")
+                {
+                    Description = "A specialization of 'rig release'."
+            };
+            rigReleaseInstallCappingAssembly = 
+                new ActivityCode("rig release -- install capping assembly")
+                {
+                    Description = "A specialization of 'rig release'."
+            };
+            rigReleaseMobOrDemob = 
+                new ActivityCode("rig release -- MOB or DE-MOB")
+                {
+                    Description = "A specialization of 'rig release'."
+            };
+            rigRepairs = 
+                new ActivityCode("rig repairs")
+                {
+                    Description = "rig repairs"
+            };
+            rigRepairsDrawworks = 
+                new ActivityCode("rig repairs -- drawworks")
+                {
+                    Description = "A specialization of 'rig repairs'."
+            };
+            rigRepairsElectrical = 
+                new ActivityCode("rig repairs -- electrical")
+                {
+                    Description = "A specialization of 'rig repairs'."
+            };
+            rigRepairsMudSystem = 
+                new ActivityCode("rig repairs -- mud system")
+                {
+                    Description = "A specialization of 'rig repairs'."
+            };
+            rigRepairsOther = 
+                new ActivityCode("rig repairs -- other")
+                {
+                    Description = "A specialization of 'rig repairs'."
+            };
+            rigRepairsRotary = 
+                new ActivityCode("rig repairs -- rotary")
+                {
+                    Description = "A specialization of 'rig repairs'."
+            };
+            rigRepairsSubseaEquipment = 
+                new ActivityCode("rig repairs -- subsea equipment")
+                {
+                    Description = "A specialization of 'rig repairs'."
+            };
+            rigRepairsWellControlEquipment = 
+                new ActivityCode("rig repairs -- well control equipment")
+                {
+                    Description = "A specialization of 'rig repairs'."
+            };
+            rigService = 
+                new ActivityCode("rig service")
+                {
+                    Description = "rig service"
+            };
+            rigServiceLubricateRig = 
+                new ActivityCode("rig service -- lubricate rig")
+                {
+                    Description = "A specialization of 'rig service'."
+            };
+            rigServiceTestEquipment = 
+                new ActivityCode("rig service -- test equipment")
+                {
+                    Description = "A specialization of 'rig service'."
+            };
+            rigUpOrTearDown = 
+                new ActivityCode("rig up or tear down")
+                {
+                    Description = "rig up or tear down"
+            };
+            rigUpOrTearDownRigUp = 
+                new ActivityCode("rig up or tear down -- rig up")
+                {
+                    Description = "A specialization of 'rig up or tear down'."
+            };
+            rigUpOrTearDownSiteWork = 
+                new ActivityCode("rig up or tear down -- site work")
+                {
+                    Description = "A specialization of 'rig up or tear down'."
+            };
+            rigUpOrTearDownTearDown = 
+                new ActivityCode("rig up or tear down -- tear down")
+                {
+                    Description = "A specialization of 'rig up or tear down'.v"
+            };
+            runOrPullRiser = 
+                new ActivityCode("run or pull riser")
+                {
+                    Description = "run or pull riser"
+            };
+            runOrPullRiserOther = 
+                new ActivityCode("run or pull riser -- other")
+                {
+                    Description = "A specialization of 'run or pull riser'."
+            };
+            runOrPullRiserRunOrPullRiser = 
+                new ActivityCode("run or pull riser -- run or pull riser")
+                {
+                    Description = "A specialization of 'run or pull riser'."
+            };
+            squeezeCement = 
+                new ActivityCode("squeeze cement")
+                {
+                    Description = "squeeze cement"
+            };
+            squeezeCementCasingRepair = 
+                new ActivityCode("squeeze cement -- casing repair")
+                {
+                    Description = "A specialization of 'squeeze cement'."
+            };
+            squeezeCementCasingShoe = 
+                new ActivityCode("squeeze cement -- casing shoe")
+                {
+                    Description = "A specialization of 'squeeze cement'."
+            };
+            squeezeCementPartedCasing = 
+                new ActivityCode("squeeze cement -- parted casing")
+                {
+                    Description = "A specialization of 'squeeze cement'."
+            };
+            squeezeCementPerforationsDst = 
+                new ActivityCode("squeeze cement -- perforations DST")
+                {
+                    Description = "A specialization of 'squeeze cement'."
+            };
+            stuckPipe = 
+                new ActivityCode("stuck pipe")
+                {
+                    Description = "stuck pipe"
+            };
+            surfaceStringHandling = 
+                new ActivityCode("surface string handling")
+                {
+                    Description = "surface string handling"
+            };
+            testingGeneral = 
+                new ActivityCode("testing general")
+                {
+                    Description = "Testing of any nature, if more detail is not known."
+            };
+            testingGeneralEquipment = 
+                new ActivityCode("testing general -- equipment")
+                {
+                    Description = "A specialization of 'testing general'. Testing of surface equipment, or downhole equipment tested at surface."
+            };
+            testingGeneralFlow = 
+                new ActivityCode("testing general -- flow")
+                {
+                    Description = "A specialization of 'testing general'. Well Flow testing, in the pre-production phase of the well."
+            };
+            tripping = 
+                new ActivityCode("tripping")
+                {
+                    Description = "tripping"
+            };
+            trippingBackreaming = 
+                new ActivityCode("tripping -- back-reaming")
+                {
+                    Description = "A specialization of 'tripping'."
+            };
+            trippingFlowCheck = 
+                new ActivityCode("tripping -- flow check")
+                {
+                    Description = "A specialization of 'tripping'."
+            };
+            trippingShortTripIn = 
+                new ActivityCode("tripping -- short trip in")
+                {
+                    Description = "A specialization of 'tripping'."
+            };
+            trippingShortTripOut = 
+                new ActivityCode("tripping -- short trip out")
+                {
+                    Description = "A specialization of 'tripping'."
+            };
+            trippingTripInFromSurface = 
+                new ActivityCode("tripping -- trip in (from surface)")
+                {
+                    Description = "A specialization of 'tripping'."
+            };
+            trippingTripOutToSurface = 
+                new ActivityCode("tripping -- trip out (to surface)")
+                {
+                    Description = "A specialization of 'tripping'."
+            };
+            wait = 
+                new ActivityCode("wait")
+                {
+                    Description = "wait"
+            };
+            waitDaylight = 
+                new ActivityCode("wait -- daylight")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitEnvironmentalOrRegulatory = 
+                new ActivityCode("wait -- environmental or regulatory")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitEquipment = 
+                new ActivityCode("wait -- equipment")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitHoliday = 
+                new ActivityCode("wait -- holiday")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitIce = 
+                new ActivityCode("wait -- ice")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitOnOrders = 
+                new ActivityCode("wait -- on orders")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitOperator = 
+                new ActivityCode("wait -- operator")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitOther = 
+                new ActivityCode("wait -- other")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitPartners = 
+                new ActivityCode("wait -- partners")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitServiceCompany = 
+                new ActivityCode("wait -- service company")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            waitWeather = 
+                new ActivityCode("wait -- weather")
+                {
+                    Description = "A specialization of 'wait'."
+            };
+            wellControl = 
+                new ActivityCode("well control")
+                {
+                    Description = "well control"
+            };
+            wellControlMix = 
+                new ActivityCode("well control -- mix")
+                {
+                    Description = "A specialization of 'well control'."
+            };
+            wellControlShutIn = 
+                new ActivityCode("well control -- shut in")
+                {
+                    Description = "A specialization of 'well control'."
+            };
+            wellControlStrip = 
+                new ActivityCode("well control -- strip")
+                {
+                    Description = "A specialization of 'well control'."
+            };
+            wellControlWellKill = 
+                new ActivityCode("well control -- well kill")
+                {
+                    Description = "A specialization of 'well control'."
+            };
+            wellSrvc = 
+                new ActivityCode("well srvc")
+                {
+                    Description = "well services"
+            };
+            wellSrvcCasingRepair = 
+                new ActivityCode("well srvc -- casing repair")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcCleanWellToComplFluid = 
+                new ActivityCode("well srvc -- clean well to compl fluid")
+                {
+                    Description = "cleanout well to completion fluid"
+            };
+            wellSrvcCoiledTubingWork = 
+                new ActivityCode("well srvc -- coiled tubing work")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcGravelPack = 
+                new ActivityCode("well srvc -- gravel pack")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcInstallOrTestXmasTree = 
+                new ActivityCode("well srvc -- install or test xmas tree")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcKillWell = 
+                new ActivityCode("well srvc -- kill well")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcLandSetTestCompletion = 
+                new ActivityCode("well srvc -- land, set, test completion")
+                {
+                    Description = "A specialization of 'well srvc': land, set and test completion"
+            };
+            wellSrvcPerforate = 
+                new ActivityCode("well srvc -- perforate")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcPullCompletion = 
+                new ActivityCode("well srvc -- pull completion")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcPullSuspensionPlugs = 
+                new ActivityCode("well srvc -- pull suspension plugs")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcRunCompletion = 
+                new ActivityCode("well srvc -- run completion")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcRunScreens = 
+                new ActivityCode("well srvc -- run screens")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcSandControl = 
+                new ActivityCode("well srvc -- sand control")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcStimulation = 
+                new ActivityCode("well srvc -- stimulation")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcSubseaWork = 
+                new ActivityCode("well srvc -- subsea work")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcSurfaceLineWork = 
+                new ActivityCode("well srvc -- surface line work")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcSuspendWellOrPullBops = 
+                new ActivityCode("well srvc -- suspend well or pull BOPs")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcTestWell = 
+                new ActivityCode("well srvc -- test well")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcWash = 
+                new ActivityCode("well srvc -- wash")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcWirelineWork = 
+                new ActivityCode("well srvc -- wireline work")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcWorkTubulars = 
+                new ActivityCode("well srvc -- work tubulars")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wellSrvcWorkstringRun = 
+                new ActivityCode("well srvc -- workstring run")
+                {
+                    Description = "A specialization of 'well srvc'."
+            };
+            wirelineLogs = 
+                new ActivityCode("wireline logs")
+                {
+                    Description = "wireline logs"
+            };
+            wirelineLogsAbandonment = 
+                new ActivityCode("wireline logs -- abandonment")
+                {
+                    Description = "A specialization of 'wireline logs'."
+            };
+            wirelineLogsEvaluation = 
+                new ActivityCode("wireline logs -- evaluation")
+                {
+                    Description = "A specialization of 'wireline logs'."
+            };
+            wirelineLogsFormTester = 
+                new ActivityCode("wireline logs -- form tester")
+                {
+                    Description = "A specialization of 'wireline logs': formation tester"
+            };
+            wirelineLogsOther = 
+                new ActivityCode("wireline logs -- other")
+                {
+                    Description = "A specialization of 'wireline logs'."
+            };
+            wirelineLogsSideWallCores = 
+                new ActivityCode("wireline logs -- side wall cores")
+                {
+                    Description = "A specialization of 'wireline logs'."
+            };
+            wirelineLogsVelocity = 
+                new ActivityCode("wireline logs -- velocity")
+                {
+                    Description = "A specialization of 'wireline logs'."
+            };
+        }
+
+        /// <summary>
+        /// Gets a ActivityCode by name
+        /// </summary>
+        /// <param name="name">The name of the ActivityCode to return</param>
+        /// <returns>The ActivityCode represented by 'name'</returns>
+        public static ActivityCode GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(ActivityCode)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(ActivityCode)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (ActivityCode)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
     }
 
     /// <summary>
@@ -3639,7 +3665,7 @@ namespace Energistics.DataAccess.WITSML131
             return GetList<LithologyType>();
         }
 
-        private static LithologyType andesite;
+        private readonly static LithologyType andesite;
         /// <summary>
         /// Intermediate porphyritic volcanic rock consisting of plagioclase, pyroxene, hornblende and bitotite.
         /// </summary>
@@ -3648,16 +3674,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (andesite == null)
-                {
-                    andesite = new LithologyType("andesite");
-                    andesite.Description = "Intermediate porphyritic volcanic rock consisting of plagioclase, pyroxene, hornblende and bitotite.";
-                }
                 return andesite;
             }
         }
 
-        private static LithologyType anhydrite;
+        private readonly static LithologyType anhydrite;
         /// <summary>
         /// The mineral form of anhydrous calcium sulfate, commonly massive in evaporite beds.
         /// </summary>
@@ -3666,16 +3687,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (anhydrite == null)
-                {
-                    anhydrite = new LithologyType("anhydrite");
-                    anhydrite.Description = "The mineral form of anhydrous calcium sulfate, commonly massive in evaporite beds.";
-                }
                 return anhydrite;
             }
         }
 
-        private static LithologyType arkose;
+        private readonly static LithologyType arkose;
         /// <summary>
         /// An indurated arenaceous deposit consisting chiefly of quartz and feldspar (>25%).
         /// </summary>
@@ -3684,16 +3700,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (arkose == null)
-                {
-                    arkose = new LithologyType("arkose");
-                    arkose.Description = "An indurated arenaceous deposit consisting chiefly of quartz and feldspar (>25%).";
-                }
                 return arkose;
             }
         }
 
-        private static LithologyType basalt;
+        private readonly static LithologyType basalt;
         /// <summary>
         /// Volcanic rock consisting essentially of plagioclase feldspar and pyroxene.
         /// </summary>
@@ -3702,16 +3713,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (basalt == null)
-                {
-                    basalt = new LithologyType("basalt");
-                    basalt.Description = "Volcanic rock consisting essentially of plagioclase feldspar and pyroxene.";
-                }
                 return basalt;
             }
         }
 
-        private static LithologyType breccia;
+        private readonly static LithologyType breccia;
         /// <summary>
         /// A lithified rock rich in angular fragments of size greater than 2mm.
         /// </summary>
@@ -3720,16 +3726,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (breccia == null)
-                {
-                    breccia = new LithologyType("breccia");
-                    breccia.Description = "A lithified rock rich in angular fragments of size greater than 2mm.";
-                }
                 return breccia;
             }
         }
 
-        private static LithologyType calcarenite;
+        private readonly static LithologyType calcarenite;
         /// <summary>
         /// A limestone more than half of which consists of cemented sand-size grains of calcium carbonate: a consolidated calcareous sand.
         /// </summary>
@@ -3738,16 +3739,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (calcarenite == null)
-                {
-                    calcarenite = new LithologyType("calcarenite");
-                    calcarenite.Description = "A limestone more than half of which consists of cemented sand-size grains of calcium carbonate: a consolidated calcareous sand.";
-                }
                 return calcarenite;
             }
         }
 
-        private static LithologyType calcilutite;
+        private readonly static LithologyType calcilutite;
         /// <summary>
         /// A limestone more than half of which consists of detrital calcite particles of silt and/or clay size: a consolidated calcareous mud.
         /// </summary>
@@ -3756,16 +3752,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (calcilutite == null)
-                {
-                    calcilutite = new LithologyType("calcilutite");
-                    calcilutite.Description = "A limestone more than half of which consists of detrital calcite particles of silt and/or clay size: a consolidated calcareous mud.";
-                }
                 return calcilutite;
             }
         }
 
-        private static LithologyType calcisiltite;
+        private readonly static LithologyType calcisiltite;
         /// <summary>
         /// A limestone more than half of which consists of detrital calcite particles of silt size: a consolidated calcareous silt.
         /// </summary>
@@ -3774,16 +3765,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (calcisiltite == null)
-                {
-                    calcisiltite = new LithologyType("calcisiltite");
-                    calcisiltite.Description = "A limestone more than half of which consists of detrital calcite particles of silt size: a consolidated calcareous silt.";
-                }
                 return calcisiltite;
             }
         }
 
-        private static LithologyType chalk;
+        private readonly static LithologyType chalk;
         /// <summary>
         /// A fine-grained limestone composed largely of coccolith fragments.
         /// </summary>
@@ -3792,16 +3778,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (chalk == null)
-                {
-                    chalk = new LithologyType("chalk");
-                    chalk.Description = "A fine-grained limestone composed largely of coccolith fragments.";
-                }
                 return chalk;
             }
         }
 
-        private static LithologyType chert;
+        private readonly static LithologyType chert;
         /// <summary>
         /// Siliceous sedimentary rock containing finely crystalline snd fibrous quartz.
         /// </summary>
@@ -3810,16 +3791,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (chert == null)
-                {
-                    chert = new LithologyType("chert");
-                    chert.Description = "Siliceous sedimentary rock containing finely crystalline snd fibrous quartz.";
-                }
                 return chert;
             }
         }
 
-        private static LithologyType clay;
+        private readonly static LithologyType clay;
         /// <summary>
         /// Unconsolidated deposit of very fine particles of size generally less than 1/256mm and composed of clay minerals.
         /// </summary>
@@ -3828,16 +3804,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (clay == null)
-                {
-                    clay = new LithologyType("clay");
-                    clay.Description = "Unconsolidated deposit of very fine particles of size generally less than 1/256mm and composed of clay minerals.";
-                }
                 return clay;
             }
         }
 
-        private static LithologyType claystone;
+        private readonly static LithologyType claystone;
         /// <summary>
         /// An indurated clay, lacking the fissility of shale.
         /// </summary>
@@ -3846,16 +3817,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (claystone == null)
-                {
-                    claystone = new LithologyType("claystone");
-                    claystone.Description = "An indurated clay, lacking the fissility of shale.";
-                }
                 return claystone;
             }
         }
 
-        private static LithologyType coal;
+        private readonly static LithologyType coal;
         /// <summary>
         /// A combustible organic sedimentary rock with less than 40% of mineral matter (based on dry material) composed of polymers of cyclic hydrocarbons.
         /// </summary>
@@ -3864,16 +3830,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coal == null)
-                {
-                    coal = new LithologyType("coal");
-                    coal.Description = "A combustible organic sedimentary rock with less than 40% of mineral matter (based on dry material) composed of polymers of cyclic hydrocarbons.";
-                }
                 return coal;
             }
         }
 
-        private static LithologyType conglomerate;
+        private readonly static LithologyType conglomerate;
         /// <summary>
         /// An indurated sedimentary rock containing an essential quantity of rounded rock fragments larger than 2mm, and normally having a matrix of sand.
         /// </summary>
@@ -3882,16 +3843,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (conglomerate == null)
-                {
-                    conglomerate = new LithologyType("conglomerate");
-                    conglomerate.Description = "An indurated sedimentary rock containing an essential quantity of rounded rock fragments larger than 2mm, and normally having a matrix of sand.";
-                }
                 return conglomerate;
             }
         }
 
-        private static LithologyType diabase;
+        private readonly static LithologyType diabase;
         /// <summary>
         /// Igneous rock of grain size intermediate between basalt and gabbro composed of plagioclase feldspar, pyroxene and opaque minerals. Synonym: dolerite.
         /// </summary>
@@ -3900,16 +3856,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (diabase == null)
-                {
-                    diabase = new LithologyType("diabase");
-                    diabase.Description = "Igneous rock of grain size intermediate between basalt and gabbro composed of plagioclase feldspar, pyroxene and opaque minerals. Synonym: dolerite.";
-                }
                 return diabase;
             }
         }
 
-        private static LithologyType diorite;
+        private readonly static LithologyType diorite;
         /// <summary>
         /// Plutonic igneous rock consisting of plagioclase feldspar, commonly with hornblende and biotite.
         /// </summary>
@@ -3918,16 +3869,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (diorite == null)
-                {
-                    diorite = new LithologyType("diorite");
-                    diorite.Description = "Plutonic igneous rock consisting of plagioclase feldspar, commonly with hornblende and biotite.";
-                }
                 return diorite;
             }
         }
 
-        private static LithologyType dolomite;
+        private readonly static LithologyType dolomite;
         /// <summary>
         /// Sedimentary rock containing more than 90% dolomite (mineral) and less than 10% calcite.
         /// </summary>
@@ -3936,16 +3882,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dolomite == null)
-                {
-                    dolomite = new LithologyType("dolomite");
-                    dolomite.Description = "Sedimentary rock containing more than 90% dolomite (mineral) and less than 10% calcite.";
-                }
                 return dolomite;
             }
         }
 
-        private static LithologyType dolomiteCalcareous;
+        private readonly static LithologyType dolomiteCalcareous;
         /// <summary>
         /// A dolomite rock containing more than 10% calcite.
         /// </summary>
@@ -3954,16 +3895,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dolomiteCalcareous == null)
-                {
-                    dolomiteCalcareous = new LithologyType("dolomite, calcareous");
-                    dolomiteCalcareous.Description = "A dolomite rock containing more than 10% calcite.";
-                }
                 return dolomiteCalcareous;
             }
         }
 
-        private static LithologyType extrusiveRockVolcanic;
+        private readonly static LithologyType extrusiveRockVolcanic;
         /// <summary>
         /// Igneous rocks formed by solidification of material erupted sub-aerially or sub-aqueously onto the earth's surface, as either lava flows or pyroclastic material.
         /// </summary>
@@ -3972,16 +3908,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (extrusiveRockVolcanic == null)
-                {
-                    extrusiveRockVolcanic = new LithologyType("extrusive rock (volcanic)");
-                    extrusiveRockVolcanic.Description = "Igneous rocks formed by solidification of material erupted sub-aerially or sub-aqueously onto the earth's surface, as either lava flows or pyroclastic material.";
-                }
                 return extrusiveRockVolcanic;
             }
         }
 
-        private static LithologyType feldspar;
+        private readonly static LithologyType feldspar;
         /// <summary>
         /// The family of aluminium silicates of sodium, potassium, calcium and other metals which comprise over 60% of the earth's crust, are the most abundant mineral group, and occur in all types of rocks.
         /// </summary>
@@ -3990,16 +3921,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (feldspar == null)
-                {
-                    feldspar = new LithologyType("feldspar");
-                    feldspar.Description = "The family of aluminium silicates of sodium, potassium, calcium and other metals which comprise over 60% of the earth's crust, are the most abundant mineral group, and occur in all types of rocks.";
-                }
                 return feldspar;
             }
         }
 
-        private static LithologyType gabbro;
+        private readonly static LithologyType gabbro;
         /// <summary>
         /// Coarse grained plutonic igneous rock composed essentially of calcic plagioclase feldspar, pyroxenes and iron oxide.
         /// </summary>
@@ -4008,16 +3934,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gabbro == null)
-                {
-                    gabbro = new LithologyType("gabbro");
-                    gabbro.Description = "Coarse grained plutonic igneous rock composed essentially of calcic plagioclase feldspar, pyroxenes and iron oxide.";
-                }
                 return gabbro;
             }
         }
 
-        private static LithologyType glauconite;
+        private readonly static LithologyType glauconite;
         /// <summary>
         /// A mineral composed of ferrous potassium silicates related to mica which commonly imparts a green color to its sedimentary host rock.
         /// </summary>
@@ -4026,16 +3947,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (glauconite == null)
-                {
-                    glauconite = new LithologyType("glauconite");
-                    glauconite.Description = "A mineral composed of ferrous potassium silicates related to mica which commonly imparts a green color to its sedimentary host rock.";
-                }
                 return glauconite;
             }
         }
 
-        private static LithologyType gneiss;
+        private readonly static LithologyType gneiss;
         /// <summary>
         /// A metamorphic rock, commonly foliated and crystalline, whose mineral content can range from quartz and feldspars to amphiboles and pyroxenes.
         /// </summary>
@@ -4044,16 +3960,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gneiss == null)
-                {
-                    gneiss = new LithologyType("gneiss");
-                    gneiss.Description = "A metamorphic rock, commonly foliated and crystalline, whose mineral content can range from quartz and feldspars to amphiboles and pyroxenes.";
-                }
                 return gneiss;
             }
         }
 
-        private static LithologyType granite;
+        private readonly static LithologyType granite;
         /// <summary>
         /// Coarse grained plutonic rock typically containing free quartz, alkali feldspar and biotite mica.
         /// </summary>
@@ -4062,16 +3973,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (granite == null)
-                {
-                    granite = new LithologyType("granite");
-                    granite.Description = "Coarse grained plutonic rock typically containing free quartz, alkali feldspar and biotite mica.";
-                }
                 return granite;
             }
         }
 
-        private static LithologyType gravel;
+        private readonly static LithologyType gravel;
         /// <summary>
         /// An unconsolidated deposit of coarse clastics. The diameters on the Wenworth scale are generally greater than 2mm.
         /// </summary>
@@ -4080,16 +3986,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravel == null)
-                {
-                    gravel = new LithologyType("gravel");
-                    gravel.Description = "An unconsolidated deposit of coarse clastics. The diameters on the Wenworth scale are generally greater than 2mm.";
-                }
                 return gravel;
             }
         }
 
-        private static LithologyType greenstones;
+        private readonly static LithologyType greenstones;
         /// <summary>
         /// A field term for any dark fine grained altered or metamorphosed basic igneous rock.
         /// </summary>
@@ -4098,16 +3999,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (greenstones == null)
-                {
-                    greenstones = new LithologyType("greenstones");
-                    greenstones.Description = "A field term for any dark fine grained altered or metamorphosed basic igneous rock.";
-                }
                 return greenstones;
             }
         }
 
-        private static LithologyType greywacke;
+        private readonly static LithologyType greywacke;
         /// <summary>
         /// A dark grey consolidated deposit containing feldspar, rock fragments and a dark chloritic matrix.
         /// </summary>
@@ -4116,16 +4012,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (greywacke == null)
-                {
-                    greywacke = new LithologyType("greywacke");
-                    greywacke.Description = "A dark grey consolidated deposit containing feldspar, rock fragments and a dark chloritic matrix.";
-                }
                 return greywacke;
             }
         }
 
-        private static LithologyType gumbo;
+        private readonly static LithologyType gumbo;
         /// <summary>
         /// A term used in the U.S. for clay soils that become sticky, impervious, and plastic when wet.
         /// </summary>
@@ -4134,16 +4025,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gumbo == null)
-                {
-                    gumbo = new LithologyType("gumbo");
-                    gumbo.Description = "A term used in the U.S. for clay soils that become sticky, impervious, and plastic when wet.";
-                }
                 return gumbo;
             }
         }
 
-        private static LithologyType gypsum;
+        private readonly static LithologyType gypsum;
         /// <summary>
         /// A mineral composed of hydrous calcium sulphate, commonly forming thick extensive evaporite beds.
         /// </summary>
@@ -4152,16 +4038,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gypsum == null)
-                {
-                    gypsum = new LithologyType("gypsum");
-                    gypsum.Description = "A mineral composed of hydrous calcium sulphate, commonly forming thick extensive evaporite beds.";
-                }
                 return gypsum;
             }
         }
 
-        private static LithologyType halite;
+        private readonly static LithologyType halite;
         /// <summary>
         /// A mineral composed of sodium chloride common in evaporite rocks.
         /// </summary>
@@ -4170,16 +4051,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (halite == null)
-                {
-                    halite = new LithologyType("halite");
-                    halite.Description = "A mineral composed of sodium chloride common in evaporite rocks.";
-                }
                 return halite;
             }
         }
 
-        private static LithologyType igneous;
+        private readonly static LithologyType igneous;
         /// <summary>
         /// Term applied to rock or mineral formed by solidification of molten or partly molten material (magma).
         /// </summary>
@@ -4188,16 +4064,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (igneous == null)
-                {
-                    igneous = new LithologyType("igneous");
-                    igneous.Description = "Term applied to rock or mineral formed by solidification of molten or partly molten material (magma).";
-                }
                 return igneous;
             }
         }
 
-        private static LithologyType intrusvieRockPlutonic;
+        private readonly static LithologyType intrusvieRockPlutonic;
         /// <summary>
         /// Igneous rock formed by cooling and solidification of magma within the earth's crust.
         /// </summary>
@@ -4206,16 +4077,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (intrusvieRockPlutonic == null)
-                {
-                    intrusvieRockPlutonic = new LithologyType("intrusvie rock (plutonic)");
-                    intrusvieRockPlutonic.Description = "Igneous rock formed by cooling and solidification of magma within the earth's crust.";
-                }
                 return intrusvieRockPlutonic;
             }
         }
 
-        private static LithologyType lignite;
+        private readonly static LithologyType lignite;
         /// <summary>
         /// A low-rank humic coal.
         /// </summary>
@@ -4224,16 +4090,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (lignite == null)
-                {
-                    lignite = new LithologyType("lignite");
-                    lignite.Description = "A low-rank humic coal.";
-                }
                 return lignite;
             }
         }
 
-        private static LithologyType limestone;
+        private readonly static LithologyType limestone;
         /// <summary>
         /// A sedimentary rock composed mostly of the mineral calcite (calcium carbonate) which is the consolidated equivalent of lime mud, calcareous sand, and/or shell fragments.
         /// </summary>
@@ -4242,16 +4103,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (limestone == null)
-                {
-                    limestone = new LithologyType("limestone");
-                    limestone.Description = "A sedimentary rock composed mostly of the mineral calcite (calcium carbonate) which is the consolidated equivalent of lime mud, calcareous sand, and/or shell fragments.";
-                }
                 return limestone;
             }
         }
 
-        private static LithologyType limestoneArgillaceous;
+        private readonly static LithologyType limestoneArgillaceous;
         /// <summary>
         /// A limestone homogeneously mixed with 10-50% clay minerals.
         /// </summary>
@@ -4260,16 +4116,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (limestoneArgillaceous == null)
-                {
-                    limestoneArgillaceous = new LithologyType("limestone, argillaceous");
-                    limestoneArgillaceous.Description = "A limestone homogeneously mixed with 10-50% clay minerals.";
-                }
                 return limestoneArgillaceous;
             }
         }
 
-        private static LithologyType limestoneDolomitic;
+        private readonly static LithologyType limestoneDolomitic;
         /// <summary>
         /// A limestone containing 10-50% dolomite and 50-90% calcite.
         /// </summary>
@@ -4278,16 +4129,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (limestoneDolomitic == null)
-                {
-                    limestoneDolomitic = new LithologyType("limestone, dolomitic");
-                    limestoneDolomitic.Description = "A limestone containing 10-50% dolomite and 50-90% calcite.";
-                }
                 return limestoneDolomitic;
             }
         }
 
-        private static LithologyType limestoneSandy;
+        private readonly static LithologyType limestoneSandy;
         /// <summary>
         /// A limestone homogeneously mixed with 10-50% quartz grains.
         /// </summary>
@@ -4296,16 +4142,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (limestoneSandy == null)
-                {
-                    limestoneSandy = new LithologyType("limestone, sandy");
-                    limestoneSandy.Description = "A limestone homogeneously mixed with 10-50% quartz grains.";
-                }
                 return limestoneSandy;
             }
         }
 
-        private static LithologyType marble;
+        private readonly static LithologyType marble;
         /// <summary>
         /// A metamorphic rock composed of calcite.
         /// </summary>
@@ -4314,16 +4155,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (marble == null)
-                {
-                    marble = new LithologyType("marble");
-                    marble.Description = "A metamorphic rock composed of calcite.";
-                }
                 return marble;
             }
         }
 
-        private static LithologyType marl;
+        private readonly static LithologyType marl;
         /// <summary>
         /// A consolidated or semi-consolidated mixture of clay and generally fine grained carbonate material.
         /// </summary>
@@ -4332,16 +4168,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (marl == null)
-                {
-                    marl = new LithologyType("marl");
-                    marl.Description = "A consolidated or semi-consolidated mixture of clay and generally fine grained carbonate material.";
-                }
                 return marl;
             }
         }
 
-        private static LithologyType metamorphicRocks;
+        private readonly static LithologyType metamorphicRocks;
         /// <summary>
         /// Rocks formed by mineralogical, chemical and structural alteration of pre-existing rocks under conditions of temperature and pressure at depth in the earth.
         /// </summary>
@@ -4350,16 +4181,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (metamorphicRocks == null)
-                {
-                    metamorphicRocks = new LithologyType("metamorphic rocks");
-                    metamorphicRocks.Description = "Rocks formed by mineralogical, chemical and structural alteration of pre-existing rocks under conditions of temperature and pressure at depth in the earth.";
-                }
                 return metamorphicRocks;
             }
         }
 
-        private static LithologyType mudstone;
+        private readonly static LithologyType mudstone;
         /// <summary>
         /// Consolidated and indurated mud.
         /// </summary>
@@ -4368,16 +4194,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mudstone == null)
-                {
-                    mudstone = new LithologyType("mudstone");
-                    mudstone.Description = "Consolidated and indurated mud.";
-                }
                 return mudstone;
             }
         }
 
-        private static LithologyType noDescription;
+        private readonly static LithologyType noDescription;
         /// <summary>
         /// No description is provided.
         /// </summary>
@@ -4386,16 +4207,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (noDescription == null)
-                {
-                    noDescription = new LithologyType("no description");
-                    noDescription.Description = "No description is provided.";
-                }
                 return noDescription;
             }
         }
 
-        private static LithologyType noSample;
+        private readonly static LithologyType noSample;
         /// <summary>
         /// No sample is provided.
         /// </summary>
@@ -4404,16 +4220,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (noSample == null)
-                {
-                    noSample = new LithologyType("no sample");
-                    noSample.Description = "No sample is provided.";
-                }
                 return noSample;
             }
         }
 
-        private static LithologyType ophiolite;
+        private readonly static LithologyType ophiolite;
         /// <summary>
         /// Basic and ultra-basic igneous rocks and their metamorposed, often hydrated, derivatives, believed to represent former oceanic crust.
         /// </summary>
@@ -4422,16 +4233,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ophiolite == null)
-                {
-                    ophiolite = new LithologyType("ophiolite");
-                    ophiolite.Description = "Basic and ultra-basic igneous rocks and their metamorposed, often hydrated, derivatives, believed to represent former oceanic crust.";
-                }
                 return ophiolite;
             }
         }
 
-        private static LithologyType peat;
+        private readonly static LithologyType peat;
         /// <summary>
         /// Unconsolidated, semi-carbonised plant remains which are a precursor of humic coal.
         /// </summary>
@@ -4440,16 +4246,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (peat == null)
-                {
-                    peat = new LithologyType("peat");
-                    peat.Description = "Unconsolidated, semi-carbonised plant remains which are a precursor of humic coal.";
-                }
                 return peat;
             }
         }
 
-        private static LithologyType phosphate;
+        private readonly static LithologyType phosphate;
         /// <summary>
         /// Any mineral compound containing the ((PO4)3) radical.
         /// </summary>
@@ -4458,16 +4259,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (phosphate == null)
-                {
-                    phosphate = new LithologyType("phosphate");
-                    phosphate.Description = "Any mineral compound containing the ((PO4)3) radical.";
-                }
                 return phosphate;
             }
         }
 
-        private static LithologyType phosphateRock;
+        private readonly static LithologyType phosphateRock;
         /// <summary>
         /// Any rock containing phosphate minerals such as apatite of sufficient purity and abundance to be an economic resource.
         /// </summary>
@@ -4476,16 +4272,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (phosphateRock == null)
-                {
-                    phosphateRock = new LithologyType("phosphate rock");
-                    phosphateRock.Description = "Any rock containing phosphate minerals such as apatite of sufficient purity and abundance to be an economic resource.";
-                }
                 return phosphateRock;
             }
         }
 
-        private static LithologyType potassiumAndMagnesiumSalts;
+        private readonly static LithologyType potassiumAndMagnesiumSalts;
         /// <summary>
         /// Salts such as sylvinite, carnalite, keiserite with swelling properties that can severely obstruct drilling operations.
         /// </summary>
@@ -4494,16 +4285,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (potassiumAndMagnesiumSalts == null)
-                {
-                    potassiumAndMagnesiumSalts = new LithologyType("potassium and magnesium salts");
-                    potassiumAndMagnesiumSalts.Description = "Salts such as sylvinite, carnalite, keiserite with swelling properties that can severely obstruct drilling operations.";
-                }
                 return potassiumAndMagnesiumSalts;
             }
         }
 
-        private static LithologyType quartzite;
+        private readonly static LithologyType quartzite;
         /// <summary>
         /// A sedimentary rock composed of more than 95% of quartz.
         /// </summary>
@@ -4512,16 +4298,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (quartzite == null)
-                {
-                    quartzite = new LithologyType("quartzite");
-                    quartzite.Description = "A sedimentary rock composed of more than 95% of quartz.";
-                }
                 return quartzite;
             }
         }
 
-        private static LithologyType rhyolite;
+        private readonly static LithologyType rhyolite;
         /// <summary>
         /// Silica rich volcanic rock consisting of quartz and alkali feldspar with minor plagioclase and biotite.
         /// </summary>
@@ -4530,16 +4311,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rhyolite == null)
-                {
-                    rhyolite = new LithologyType("rhyolite");
-                    rhyolite.Description = "Silica rich volcanic rock consisting of quartz and alkali feldspar with minor plagioclase and biotite.";
-                }
                 return rhyolite;
             }
         }
 
-        private static LithologyType salt;
+        private readonly static LithologyType salt;
         /// <summary>
         /// Common term for naturally occurring sodium chloride.
         /// </summary>
@@ -4548,16 +4324,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (salt == null)
-                {
-                    salt = new LithologyType("salt");
-                    salt.Description = "Common term for naturally occurring sodium chloride.";
-                }
                 return salt;
             }
         }
 
-        private static LithologyType sand;
+        private readonly static LithologyType sand;
         /// <summary>
         /// An aggregation of particles having diameters in the range 1/16mm to 2mm usually consisting of quartz.
         /// </summary>
@@ -4566,16 +4337,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sand == null)
-                {
-                    sand = new LithologyType("sand");
-                    sand.Description = "An aggregation of particles having diameters in the range 1/16mm to 2mm usually consisting of quartz.";
-                }
                 return sand;
             }
         }
 
-        private static LithologyType sandstone;
+        private readonly static LithologyType sandstone;
         /// <summary>
         /// A sedimentary rock composed of indurated sand.
         /// </summary>
@@ -4584,16 +4350,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sandstone == null)
-                {
-                    sandstone = new LithologyType("sandstone");
-                    sandstone.Description = "A sedimentary rock composed of indurated sand.";
-                }
                 return sandstone;
             }
         }
 
-        private static LithologyType schist;
+        private readonly static LithologyType schist;
         /// <summary>
         /// A strongly foliated crystalline metamorphic rock.
         /// </summary>
@@ -4602,16 +4363,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (schist == null)
-                {
-                    schist = new LithologyType("schist");
-                    schist.Description = "A strongly foliated crystalline metamorphic rock.";
-                }
                 return schist;
             }
         }
 
-        private static LithologyType serpentine;
+        private readonly static LithologyType serpentine;
         /// <summary>
         /// A rock forming mineral of hydrous iron and magnesium silicates, often resulting from metamorhism of amphiboles and pyroxenes.
         /// </summary>
@@ -4620,16 +4376,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (serpentine == null)
-                {
-                    serpentine = new LithologyType("serpentine");
-                    serpentine.Description = "A rock forming mineral of hydrous iron and magnesium silicates, often resulting from metamorhism of amphiboles and pyroxenes.";
-                }
                 return serpentine;
             }
         }
 
-        private static LithologyType shale;
+        private readonly static LithologyType shale;
         /// <summary>
         /// A fine-grained sedimentary rock formed by the compaction of clay, silt or mud.
         /// </summary>
@@ -4638,16 +4389,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (shale == null)
-                {
-                    shale = new LithologyType("shale");
-                    shale.Description = "A fine-grained sedimentary rock formed by the compaction of clay, silt or mud.";
-                }
                 return shale;
             }
         }
 
-        private static LithologyType silt;
+        private readonly static LithologyType silt;
         /// <summary>
         /// Unconsolidated sedimentary material with grain sizes between 1/16mm and 1/256mm.
         /// </summary>
@@ -4656,16 +4402,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (silt == null)
-                {
-                    silt = new LithologyType("silt");
-                    silt.Description = "Unconsolidated sedimentary material with grain sizes between 1/16mm and 1/256mm.";
-                }
                 return silt;
             }
         }
 
-        private static LithologyType siltstone;
+        private readonly static LithologyType siltstone;
         /// <summary>
         /// Consolidated silt.
         /// </summary>
@@ -4674,16 +4415,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (siltstone == null)
-                {
-                    siltstone = new LithologyType("siltstone");
-                    siltstone.Description = "Consolidated silt.";
-                }
                 return siltstone;
             }
         }
 
-        private static LithologyType slate;
+        private readonly static LithologyType slate;
         /// <summary>
         /// A compact fine-grained metamorphic rock displaying slaty cleavage along which the rock may be cut into sheets.
         /// </summary>
@@ -4692,16 +4428,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (slate == null)
-                {
-                    slate = new LithologyType("slate");
-                    slate.Description = "A compact fine-grained metamorphic rock displaying slaty cleavage along which the rock may be cut into sheets.";
-                }
                 return slate;
             }
         }
 
-        private static LithologyType syenite;
+        private readonly static LithologyType syenite;
         /// <summary>
         /// Plutonic igneous rock composed essentially of alkali feldspar, with lesser sodic plagioclase, biotite and hornblende, and minor quartz.
         /// </summary>
@@ -4710,16 +4441,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (syenite == null)
-                {
-                    syenite = new LithologyType("syenite");
-                    syenite.Description = "Plutonic igneous rock composed essentially of alkali feldspar, with lesser sodic plagioclase, biotite and hornblende, and minor quartz.";
-                }
                 return syenite;
             }
         }
 
-        private static LithologyType tilliteDiamictite;
+        private readonly static LithologyType tilliteDiamictite;
         /// <summary>
         /// Consolidated unsorted glacial deposits with particles ranging from boulder to mud in grain size and of highly variable composition.
         /// </summary>
@@ -4728,16 +4454,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tilliteDiamictite == null)
-                {
-                    tilliteDiamictite = new LithologyType("tillite (diamictite)");
-                    tilliteDiamictite.Description = "Consolidated unsorted glacial deposits with particles ranging from boulder to mud in grain size and of highly variable composition.";
-                }
                 return tilliteDiamictite;
             }
         }
 
-        private static LithologyType trachyte;
+        private readonly static LithologyType trachyte;
         /// <summary>
         /// A group of fine-grained often porphyritic volcanic rocks containing alkali feldspar and minor mafic minerals.
         /// </summary>
@@ -4746,16 +4467,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (trachyte == null)
-                {
-                    trachyte = new LithologyType("trachyte");
-                    trachyte.Description = "A group of fine-grained often porphyritic volcanic rocks containing alkali feldspar and minor mafic minerals.";
-                }
                 return trachyte;
             }
         }
 
-        private static LithologyType tuff;
+        private readonly static LithologyType tuff;
         /// <summary>
         /// An indurated pyroclastic deposit, predominantly consisting of fine-grained volcanic rocks: sedimentary particles may be present. Tuff may be deposited sub-aerially or sub-aqueously, and may be well sorted or heterogeneous.
         /// </summary>
@@ -4764,16 +4480,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tuff == null)
-                {
-                    tuff = new LithologyType("tuff");
-                    tuff.Description = "An indurated pyroclastic deposit, predominantly consisting of fine-grained volcanic rocks: sedimentary particles may be present. Tuff may be deposited sub-aerially or sub-aqueously, and may be well sorted or heterogeneous.";
-                }
                 return tuff;
             }
         }
 
-        private static LithologyType ultrabasic;
+        private readonly static LithologyType ultrabasic;
         /// <summary>
         /// A class of igneous rocks composed mostly of mafic minerals such as pyroxenes along with calcic feldspar, with no free silica and a total silica content less than about 45%.
         /// </summary>
@@ -4782,16 +4493,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ultrabasic == null)
-                {
-                    ultrabasic = new LithologyType("ultrabasic");
-                    ultrabasic.Description = "A class of igneous rocks composed mostly of mafic minerals such as pyroxenes along with calcic feldspar, with no free silica and a total silica content less than about 45%.";
-                }
                 return ultrabasic;
             }
         }
 
-        private static LithologyType undifferentiated;
+        private readonly static LithologyType undifferentiated;
         /// <summary>
         /// The lithology is not differentiated. This is typically used to fill out a lithology description to 100 percent.
         /// </summary>
@@ -4800,16 +4506,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (undifferentiated == null)
-                {
-                    undifferentiated = new LithologyType("undifferentiated");
-                    undifferentiated.Description = "The lithology is not differentiated. This is typically used to fill out a lithology description to 100 percent.";
-                }
                 return undifferentiated;
             }
         }
 
-        private static LithologyType unknown;
+        private readonly static LithologyType unknown;
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
@@ -4818,15 +4519,366 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (unknown == null)
-                {
-                    unknown = new LithologyType("unknown");
-                    unknown.Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.";
-                }
                 return unknown;
             }
         }
 
+        static LithologyType()
+        {
+            andesite = 
+                new LithologyType("andesite")
+                {
+                    Description = "Intermediate porphyritic volcanic rock consisting of plagioclase, pyroxene, hornblende and bitotite."
+            };
+            anhydrite = 
+                new LithologyType("anhydrite")
+                {
+                    Description = "The mineral form of anhydrous calcium sulfate, commonly massive in evaporite beds."
+            };
+            arkose = 
+                new LithologyType("arkose")
+                {
+                    Description = "An indurated arenaceous deposit consisting chiefly of quartz and feldspar (>25%)."
+            };
+            basalt = 
+                new LithologyType("basalt")
+                {
+                    Description = "Volcanic rock consisting essentially of plagioclase feldspar and pyroxene."
+            };
+            breccia = 
+                new LithologyType("breccia")
+                {
+                    Description = "A lithified rock rich in angular fragments of size greater than 2mm."
+            };
+            calcarenite = 
+                new LithologyType("calcarenite")
+                {
+                    Description = "A limestone more than half of which consists of cemented sand-size grains of calcium carbonate: a consolidated calcareous sand."
+            };
+            calcilutite = 
+                new LithologyType("calcilutite")
+                {
+                    Description = "A limestone more than half of which consists of detrital calcite particles of silt and/or clay size: a consolidated calcareous mud."
+            };
+            calcisiltite = 
+                new LithologyType("calcisiltite")
+                {
+                    Description = "A limestone more than half of which consists of detrital calcite particles of silt size: a consolidated calcareous silt."
+            };
+            chalk = 
+                new LithologyType("chalk")
+                {
+                    Description = "A fine-grained limestone composed largely of coccolith fragments."
+            };
+            chert = 
+                new LithologyType("chert")
+                {
+                    Description = "Siliceous sedimentary rock containing finely crystalline snd fibrous quartz."
+            };
+            clay = 
+                new LithologyType("clay")
+                {
+                    Description = "Unconsolidated deposit of very fine particles of size generally less than 1/256mm and composed of clay minerals."
+            };
+            claystone = 
+                new LithologyType("claystone")
+                {
+                    Description = "An indurated clay, lacking the fissility of shale."
+            };
+            coal = 
+                new LithologyType("coal")
+                {
+                    Description = "A combustible organic sedimentary rock with less than 40% of mineral matter (based on dry material) composed of polymers of cyclic hydrocarbons."
+            };
+            conglomerate = 
+                new LithologyType("conglomerate")
+                {
+                    Description = "An indurated sedimentary rock containing an essential quantity of rounded rock fragments larger than 2mm, and normally having a matrix of sand."
+            };
+            diabase = 
+                new LithologyType("diabase")
+                {
+                    Description = "Igneous rock of grain size intermediate between basalt and gabbro composed of plagioclase feldspar, pyroxene and opaque minerals. Synonym: dolerite."
+            };
+            diorite = 
+                new LithologyType("diorite")
+                {
+                    Description = "Plutonic igneous rock consisting of plagioclase feldspar, commonly with hornblende and biotite."
+            };
+            dolomite = 
+                new LithologyType("dolomite")
+                {
+                    Description = "Sedimentary rock containing more than 90% dolomite (mineral) and less than 10% calcite."
+            };
+            dolomiteCalcareous = 
+                new LithologyType("dolomite, calcareous")
+                {
+                    Description = "A dolomite rock containing more than 10% calcite."
+            };
+            extrusiveRockVolcanic = 
+                new LithologyType("extrusive rock (volcanic)")
+                {
+                    Description = "Igneous rocks formed by solidification of material erupted sub-aerially or sub-aqueously onto the earth's surface, as either lava flows or pyroclastic material."
+            };
+            feldspar = 
+                new LithologyType("feldspar")
+                {
+                    Description = "The family of aluminium silicates of sodium, potassium, calcium and other metals which comprise over 60% of the earth's crust, are the most abundant mineral group, and occur in all types of rocks."
+            };
+            gabbro = 
+                new LithologyType("gabbro")
+                {
+                    Description = "Coarse grained plutonic igneous rock composed essentially of calcic plagioclase feldspar, pyroxenes and iron oxide."
+            };
+            glauconite = 
+                new LithologyType("glauconite")
+                {
+                    Description = "A mineral composed of ferrous potassium silicates related to mica which commonly imparts a green color to its sedimentary host rock."
+            };
+            gneiss = 
+                new LithologyType("gneiss")
+                {
+                    Description = "A metamorphic rock, commonly foliated and crystalline, whose mineral content can range from quartz and feldspars to amphiboles and pyroxenes."
+            };
+            granite = 
+                new LithologyType("granite")
+                {
+                    Description = "Coarse grained plutonic rock typically containing free quartz, alkali feldspar and biotite mica."
+            };
+            gravel = 
+                new LithologyType("gravel")
+                {
+                    Description = "An unconsolidated deposit of coarse clastics. The diameters on the Wenworth scale are generally greater than 2mm."
+            };
+            greenstones = 
+                new LithologyType("greenstones")
+                {
+                    Description = "A field term for any dark fine grained altered or metamorphosed basic igneous rock."
+            };
+            greywacke = 
+                new LithologyType("greywacke")
+                {
+                    Description = "A dark grey consolidated deposit containing feldspar, rock fragments and a dark chloritic matrix."
+            };
+            gumbo = 
+                new LithologyType("gumbo")
+                {
+                    Description = "A term used in the U.S. for clay soils that become sticky, impervious, and plastic when wet."
+            };
+            gypsum = 
+                new LithologyType("gypsum")
+                {
+                    Description = "A mineral composed of hydrous calcium sulphate, commonly forming thick extensive evaporite beds."
+            };
+            halite = 
+                new LithologyType("halite")
+                {
+                    Description = "A mineral composed of sodium chloride common in evaporite rocks."
+            };
+            igneous = 
+                new LithologyType("igneous")
+                {
+                    Description = "Term applied to rock or mineral formed by solidification of molten or partly molten material (magma)."
+            };
+            intrusvieRockPlutonic = 
+                new LithologyType("intrusvie rock (plutonic)")
+                {
+                    Description = "Igneous rock formed by cooling and solidification of magma within the earth's crust."
+            };
+            lignite = 
+                new LithologyType("lignite")
+                {
+                    Description = "A low-rank humic coal."
+            };
+            limestone = 
+                new LithologyType("limestone")
+                {
+                    Description = "A sedimentary rock composed mostly of the mineral calcite (calcium carbonate) which is the consolidated equivalent of lime mud, calcareous sand, and/or shell fragments."
+            };
+            limestoneArgillaceous = 
+                new LithologyType("limestone, argillaceous")
+                {
+                    Description = "A limestone homogeneously mixed with 10-50% clay minerals."
+            };
+            limestoneDolomitic = 
+                new LithologyType("limestone, dolomitic")
+                {
+                    Description = "A limestone containing 10-50% dolomite and 50-90% calcite."
+            };
+            limestoneSandy = 
+                new LithologyType("limestone, sandy")
+                {
+                    Description = "A limestone homogeneously mixed with 10-50% quartz grains."
+            };
+            marble = 
+                new LithologyType("marble")
+                {
+                    Description = "A metamorphic rock composed of calcite."
+            };
+            marl = 
+                new LithologyType("marl")
+                {
+                    Description = "A consolidated or semi-consolidated mixture of clay and generally fine grained carbonate material."
+            };
+            metamorphicRocks = 
+                new LithologyType("metamorphic rocks")
+                {
+                    Description = "Rocks formed by mineralogical, chemical and structural alteration of pre-existing rocks under conditions of temperature and pressure at depth in the earth."
+            };
+            mudstone = 
+                new LithologyType("mudstone")
+                {
+                    Description = "Consolidated and indurated mud."
+            };
+            noDescription = 
+                new LithologyType("no description")
+                {
+                    Description = "No description is provided."
+            };
+            noSample = 
+                new LithologyType("no sample")
+                {
+                    Description = "No sample is provided."
+            };
+            ophiolite = 
+                new LithologyType("ophiolite")
+                {
+                    Description = "Basic and ultra-basic igneous rocks and their metamorposed, often hydrated, derivatives, believed to represent former oceanic crust."
+            };
+            peat = 
+                new LithologyType("peat")
+                {
+                    Description = "Unconsolidated, semi-carbonised plant remains which are a precursor of humic coal."
+            };
+            phosphate = 
+                new LithologyType("phosphate")
+                {
+                    Description = "Any mineral compound containing the ((PO4)3) radical."
+            };
+            phosphateRock = 
+                new LithologyType("phosphate rock")
+                {
+                    Description = "Any rock containing phosphate minerals such as apatite of sufficient purity and abundance to be an economic resource."
+            };
+            potassiumAndMagnesiumSalts = 
+                new LithologyType("potassium and magnesium salts")
+                {
+                    Description = "Salts such as sylvinite, carnalite, keiserite with swelling properties that can severely obstruct drilling operations."
+            };
+            quartzite = 
+                new LithologyType("quartzite")
+                {
+                    Description = "A sedimentary rock composed of more than 95% of quartz."
+            };
+            rhyolite = 
+                new LithologyType("rhyolite")
+                {
+                    Description = "Silica rich volcanic rock consisting of quartz and alkali feldspar with minor plagioclase and biotite."
+            };
+            salt = 
+                new LithologyType("salt")
+                {
+                    Description = "Common term for naturally occurring sodium chloride."
+            };
+            sand = 
+                new LithologyType("sand")
+                {
+                    Description = "An aggregation of particles having diameters in the range 1/16mm to 2mm usually consisting of quartz."
+            };
+            sandstone = 
+                new LithologyType("sandstone")
+                {
+                    Description = "A sedimentary rock composed of indurated sand."
+            };
+            schist = 
+                new LithologyType("schist")
+                {
+                    Description = "A strongly foliated crystalline metamorphic rock."
+            };
+            serpentine = 
+                new LithologyType("serpentine")
+                {
+                    Description = "A rock forming mineral of hydrous iron and magnesium silicates, often resulting from metamorhism of amphiboles and pyroxenes."
+            };
+            shale = 
+                new LithologyType("shale")
+                {
+                    Description = "A fine-grained sedimentary rock formed by the compaction of clay, silt or mud."
+            };
+            silt = 
+                new LithologyType("silt")
+                {
+                    Description = "Unconsolidated sedimentary material with grain sizes between 1/16mm and 1/256mm."
+            };
+            siltstone = 
+                new LithologyType("siltstone")
+                {
+                    Description = "Consolidated silt."
+            };
+            slate = 
+                new LithologyType("slate")
+                {
+                    Description = "A compact fine-grained metamorphic rock displaying slaty cleavage along which the rock may be cut into sheets."
+            };
+            syenite = 
+                new LithologyType("syenite")
+                {
+                    Description = "Plutonic igneous rock composed essentially of alkali feldspar, with lesser sodic plagioclase, biotite and hornblende, and minor quartz."
+            };
+            tilliteDiamictite = 
+                new LithologyType("tillite (diamictite)")
+                {
+                    Description = "Consolidated unsorted glacial deposits with particles ranging from boulder to mud in grain size and of highly variable composition."
+            };
+            trachyte = 
+                new LithologyType("trachyte")
+                {
+                    Description = "A group of fine-grained often porphyritic volcanic rocks containing alkali feldspar and minor mafic minerals."
+            };
+            tuff = 
+                new LithologyType("tuff")
+                {
+                    Description = "An indurated pyroclastic deposit, predominantly consisting of fine-grained volcanic rocks: sedimentary particles may be present. Tuff may be deposited sub-aerially or sub-aqueously, and may be well sorted or heterogeneous."
+            };
+            ultrabasic = 
+                new LithologyType("ultrabasic")
+                {
+                    Description = "A class of igneous rocks composed mostly of mafic minerals such as pyroxenes along with calcic feldspar, with no free silica and a total silica content less than about 45%."
+            };
+            undifferentiated = 
+                new LithologyType("undifferentiated")
+                {
+                    Description = "The lithology is not differentiated. This is typically used to fill out a lithology description to 100 percent."
+            };
+            unknown = 
+                new LithologyType("unknown")
+                {
+                    Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations."
+            };
+        }
+
+        /// <summary>
+        /// Gets a LithologyType by name
+        /// </summary>
+        /// <param name="name">The name of the LithologyType to return</param>
+        /// <returns>The LithologyType represented by 'name'</returns>
+        public static LithologyType GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(LithologyType)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(LithologyType)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (LithologyType)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
     }
 
     /// <summary>
@@ -4854,7 +4906,7 @@ namespace Energistics.DataAccess.WITSML131
             return GetList<QualifierType>();
         }
 
-        private static QualifierType anhydritic;
+        private readonly static QualifierType anhydritic;
         /// <summary>
         /// Indicates that the associated lithology contains anhydrite
         /// </summary>
@@ -4863,16 +4915,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (anhydritic == null)
-                {
-                    anhydritic = new QualifierType("anhydritic");
-                    anhydritic.Description = "Indicates that the associated lithology contains anhydrite";
-                }
                 return anhydritic;
             }
         }
 
-        private static QualifierType argillaceous;
+        private readonly static QualifierType argillaceous;
         /// <summary>
         /// Indicates that the associated lithology has a clay content
         /// </summary>
@@ -4881,16 +4928,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (argillaceous == null)
-                {
-                    argillaceous = new QualifierType("argillaceous");
-                    argillaceous.Description = "Indicates that the associated lithology has a clay content";
-                }
                 return argillaceous;
             }
         }
 
-        private static QualifierType barite;
+        private readonly static QualifierType barite;
         /// <summary>
         /// The mineral form of Barium sulphate.
         /// </summary>
@@ -4899,16 +4941,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (barite == null)
-                {
-                    barite = new QualifierType("barite");
-                    barite.Description = "The mineral form of Barium sulphate.";
-                }
                 return barite;
             }
         }
 
-        private static QualifierType belemnitic;
+        private readonly static QualifierType belemnitic;
         /// <summary>
         /// Indicates that the associated lithology contains belemnite fossils or fragments thereof.
         /// </summary>
@@ -4917,16 +4954,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (belemnitic == null)
-                {
-                    belemnitic = new QualifierType("belemnitic");
-                    belemnitic.Description = "Indicates that the associated lithology contains belemnite fossils or fragments thereof.";
-                }
                 return belemnitic;
             }
         }
 
-        private static QualifierType bioturbated;
+        private readonly static QualifierType bioturbated;
         /// <summary>
         /// Indicates that the associated lithology has been disturbed by organisms before consolidation.
         /// </summary>
@@ -4935,16 +4967,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (bioturbated == null)
-                {
-                    bioturbated = new QualifierType("bioturbated");
-                    bioturbated.Description = "Indicates that the associated lithology has been disturbed by organisms before consolidation.";
-                }
                 return bioturbated;
             }
         }
 
-        private static QualifierType bituminous;
+        private readonly static QualifierType bituminous;
         /// <summary>
         /// Indicates that the associated lithology contains bituminous material
         /// </summary>
@@ -4953,16 +4980,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (bituminous == null)
-                {
-                    bituminous = new QualifierType("bituminous");
-                    bituminous.Description = "Indicates that the associated lithology contains bituminous material";
-                }
                 return bituminous;
             }
         }
 
-        private static QualifierType bryozoans;
+        private readonly static QualifierType bryozoans;
         /// <summary>
         /// Indicates that the associated lithology contains bryozoan fossils or fragments thereof.
         /// </summary>
@@ -4971,16 +4993,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (bryozoans == null)
-                {
-                    bryozoans = new QualifierType("bryozoans");
-                    bryozoans.Description = "Indicates that the associated lithology contains bryozoan fossils or fragments thereof.";
-                }
                 return bryozoans;
             }
         }
 
-        private static QualifierType burrowed;
+        private readonly static QualifierType burrowed;
         /// <summary>
         /// Indicates that the associated lithology has been disturbed by burrowing organisms before consolidation
         /// </summary>
@@ -4989,16 +5006,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (burrowed == null)
-                {
-                    burrowed = new QualifierType("burrowed");
-                    burrowed.Description = "Indicates that the associated lithology has been disturbed by burrowing organisms before consolidation";
-                }
                 return burrowed;
             }
         }
 
-        private static QualifierType calcareous;
+        private readonly static QualifierType calcareous;
         /// <summary>
         /// Indicates that the associated lithology has a calcite content
         /// </summary>
@@ -5007,16 +5019,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (calcareous == null)
-                {
-                    calcareous = new QualifierType("calcareous");
-                    calcareous.Description = "Indicates that the associated lithology has a calcite content";
-                }
                 return calcareous;
             }
         }
 
-        private static QualifierType calciteConcr;
+        private readonly static QualifierType calciteConcr;
         /// <summary>
         /// Indicates that the associated lithology has calcite concretions
         /// </summary>
@@ -5025,16 +5032,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (calciteConcr == null)
-                {
-                    calciteConcr = new QualifierType("calcite concr");
-                    calciteConcr.Description = "Indicates that the associated lithology has calcite concretions";
-                }
                 return calciteConcr;
             }
         }
 
-        private static QualifierType carbonaceous;
+        private readonly static QualifierType carbonaceous;
         /// <summary>
         /// Indicates that the associated lithology contains carbonaceous material
         /// </summary>
@@ -5043,16 +5045,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (carbonaceous == null)
-                {
-                    carbonaceous = new QualifierType("carbonaceous");
-                    carbonaceous.Description = "Indicates that the associated lithology contains carbonaceous material";
-                }
                 return carbonaceous;
             }
         }
 
-        private static QualifierType chalky;
+        private readonly static QualifierType chalky;
         /// <summary>
         /// Indicates that the associated lithology has a chalk content
         /// </summary>
@@ -5061,16 +5058,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (chalky == null)
-                {
-                    chalky = new QualifierType("chalky");
-                    chalky.Description = "Indicates that the associated lithology has a chalk content";
-                }
                 return chalky;
             }
         }
 
-        private static QualifierType chamosite;
+        private readonly static QualifierType chamosite;
         /// <summary>
         /// Indicates that the associated lithology contains chamosite
         /// </summary>
@@ -5079,16 +5071,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (chamosite == null)
-                {
-                    chamosite = new QualifierType("chamosite");
-                    chamosite.Description = "Indicates that the associated lithology contains chamosite";
-                }
                 return chamosite;
             }
         }
 
-        private static QualifierType chert;
+        private readonly static QualifierType chert;
         /// <summary>
         /// Indicates that the associated lithology contains chert fragments
         /// </summary>
@@ -5097,16 +5084,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (chert == null)
-                {
-                    chert = new QualifierType("chert");
-                    chert.Description = "Indicates that the associated lithology contains chert fragments";
-                }
                 return chert;
             }
         }
 
-        private static QualifierType chlorite;
+        private readonly static QualifierType chlorite;
         /// <summary>
         /// Indicates that the associated lithology contains chlorite
         /// </summary>
@@ -5115,16 +5097,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (chlorite == null)
-                {
-                    chlorite = new QualifierType("chlorite");
-                    chlorite.Description = "Indicates that the associated lithology contains chlorite";
-                }
                 return chlorite;
             }
         }
 
-        private static QualifierType concretions;
+        private readonly static QualifierType concretions;
         /// <summary>
         /// Indicates that the associated lithology contains concretions
         /// </summary>
@@ -5133,16 +5110,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (concretions == null)
-                {
-                    concretions = new QualifierType("concretions");
-                    concretions.Description = "Indicates that the associated lithology contains concretions";
-                }
                 return concretions;
             }
         }
 
-        private static QualifierType conglomeratic;
+        private readonly static QualifierType conglomeratic;
         /// <summary>
         /// Indicates that the associated lithology contains conglomerate rock material.
         /// </summary>
@@ -5151,16 +5123,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (conglomeratic == null)
-                {
-                    conglomeratic = new QualifierType("conglomeratic");
-                    conglomeratic.Description = "Indicates that the associated lithology contains conglomerate rock material.";
-                }
                 return conglomeratic;
             }
         }
 
-        private static QualifierType coral;
+        private readonly static QualifierType coral;
         /// <summary>
         /// Indicates that the associated lithology contains corals and/or coral fragments
         /// </summary>
@@ -5169,16 +5136,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (coral == null)
-                {
-                    coral = new QualifierType("coral");
-                    coral.Description = "Indicates that the associated lithology contains corals and/or coral fragments";
-                }
                 return coral;
             }
         }
 
-        private static QualifierType crinoids;
+        private readonly static QualifierType crinoids;
         /// <summary>
         /// Indicates that the associated lithology contains crinoids and/or crinoid fragments
         /// </summary>
@@ -5187,16 +5149,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (crinoids == null)
-                {
-                    crinoids = new QualifierType("crinoids");
-                    crinoids.Description = "Indicates that the associated lithology contains crinoids and/or crinoid fragments";
-                }
                 return crinoids;
             }
         }
 
-        private static QualifierType diatoms;
+        private readonly static QualifierType diatoms;
         /// <summary>
         /// Indicates that the associated lithology contains diatoms and/or diatom fragments
         /// </summary>
@@ -5205,16 +5162,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (diatoms == null)
-                {
-                    diatoms = new QualifierType("diatoms");
-                    diatoms.Description = "Indicates that the associated lithology contains diatoms and/or diatom fragments";
-                }
                 return diatoms;
             }
         }
 
-        private static QualifierType dolomiteConcretion;
+        private readonly static QualifierType dolomiteConcretion;
         /// <summary>
         /// Indicates that the associated lithology has dolomite concretions
         /// </summary>
@@ -5223,16 +5175,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dolomiteConcretion == null)
-                {
-                    dolomiteConcretion = new QualifierType("dolomite concretion");
-                    dolomiteConcretion.Description = "Indicates that the associated lithology has dolomite concretions";
-                }
                 return dolomiteConcretion;
             }
         }
 
-        private static QualifierType dolomiteStringer;
+        private readonly static QualifierType dolomiteStringer;
         /// <summary>
         /// Indicates that the associated lithology contains thin beds or veins of dolomite
         /// </summary>
@@ -5241,16 +5188,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dolomiteStringer == null)
-                {
-                    dolomiteStringer = new QualifierType("dolomite stringer");
-                    dolomiteStringer.Description = "Indicates that the associated lithology contains thin beds or veins of dolomite";
-                }
                 return dolomiteStringer;
             }
         }
 
-        private static QualifierType dolomitic;
+        private readonly static QualifierType dolomitic;
         /// <summary>
         /// Indicates that the associated lithology has a dolomite content
         /// </summary>
@@ -5259,16 +5201,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dolomitic == null)
-                {
-                    dolomitic = new QualifierType("dolomitic");
-                    dolomitic.Description = "Indicates that the associated lithology has a dolomite content";
-                }
                 return dolomitic;
             }
         }
 
-        private static QualifierType dolomite;
+        private readonly static QualifierType dolomite;
         /// <summary>
         /// A rock forming mineral composed of calcium-magnesium carbonate (CaMg(CO3)2).
         /// </summary>
@@ -5277,16 +5214,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dolomite == null)
-                {
-                    dolomite = new QualifierType("dolomite");
-                    dolomite.Description = "A rock forming mineral composed of calcium-magnesium carbonate (CaMg(CO3)2).";
-                }
                 return dolomite;
             }
         }
 
-        private static QualifierType feldspar;
+        private readonly static QualifierType feldspar;
         /// <summary>
         /// Indicates that the associated lithology contains feldspar
         /// </summary>
@@ -5295,16 +5227,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (feldspar == null)
-                {
-                    feldspar = new QualifierType("feldspar");
-                    feldspar.Description = "Indicates that the associated lithology contains feldspar";
-                }
                 return feldspar;
             }
         }
 
-        private static QualifierType ferruginous;
+        private readonly static QualifierType ferruginous;
         /// <summary>
         /// Indicates that the associated lithology contains minerals rich in iron oxide or iron hydroxide
         /// </summary>
@@ -5313,16 +5240,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ferruginous == null)
-                {
-                    ferruginous = new QualifierType("ferruginous");
-                    ferruginous.Description = "Indicates that the associated lithology contains minerals rich in iron oxide or iron hydroxide";
-                }
                 return ferruginous;
             }
         }
 
-        private static QualifierType fissile;
+        private readonly static QualifierType fissile;
         /// <summary>
         /// Indicates that the associated lithology is fissile
         /// </summary>
@@ -5331,16 +5253,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fissile == null)
-                {
-                    fissile = new QualifierType("fissile");
-                    fissile.Description = "Indicates that the associated lithology is fissile";
-                }
                 return fissile;
             }
         }
 
-        private static QualifierType foramsUndifferentiated;
+        private readonly static QualifierType foramsUndifferentiated;
         /// <summary>
         /// Indicates that the associated lithology contains foraminifera
         /// </summary>
@@ -5349,16 +5266,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (foramsUndifferentiated == null)
-                {
-                    foramsUndifferentiated = new QualifierType("forams undifferentiated");
-                    foramsUndifferentiated.Description = "Indicates that the associated lithology contains foraminifera";
-                }
                 return foramsUndifferentiated;
             }
         }
 
-        private static QualifierType fossilFragment;
+        private readonly static QualifierType fossilFragment;
         /// <summary>
         /// Indicates that the associated lithology contains fossil fragments
         /// </summary>
@@ -5367,16 +5279,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fossilFragment == null)
-                {
-                    fossilFragment = new QualifierType("fossil fragment");
-                    fossilFragment.Description = "Indicates that the associated lithology contains fossil fragments";
-                }
                 return fossilFragment;
             }
         }
 
-        private static QualifierType fossilsUndifferentiated;
+        private readonly static QualifierType fossilsUndifferentiated;
         /// <summary>
         /// Indicates that the associated lithology contains fossils
         /// </summary>
@@ -5385,16 +5292,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fossilsUndifferentiated == null)
-                {
-                    fossilsUndifferentiated = new QualifierType("fossils undifferentiated");
-                    fossilsUndifferentiated.Description = "Indicates that the associated lithology contains fossils";
-                }
                 return fossilsUndifferentiated;
             }
         }
 
-        private static QualifierType glauconite;
+        private readonly static QualifierType glauconite;
         /// <summary>
         /// Indicates that the associated lithology contains glauconite granules
         /// </summary>
@@ -5403,16 +5305,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (glauconite == null)
-                {
-                    glauconite = new QualifierType("glauconite");
-                    glauconite.Description = "Indicates that the associated lithology contains glauconite granules";
-                }
                 return glauconite;
             }
         }
 
-        private static QualifierType glauconitic;
+        private readonly static QualifierType glauconitic;
         /// <summary>
         /// Indicates that the associated lithology is glauconitic
         /// </summary>
@@ -5421,16 +5318,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (glauconitic == null)
-                {
-                    glauconitic = new QualifierType("glauconitic");
-                    glauconitic.Description = "Indicates that the associated lithology is glauconitic";
-                }
                 return glauconitic;
             }
         }
 
-        private static QualifierType gravelly;
+        private readonly static QualifierType gravelly;
         /// <summary>
         /// Indicates that the associated lithology contains gravel sized particles.
         /// </summary>
@@ -5439,16 +5331,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravelly == null)
-                {
-                    gravelly = new QualifierType("gravelly");
-                    gravelly.Description = "Indicates that the associated lithology contains gravel sized particles.";
-                }
                 return gravelly;
             }
         }
 
-        private static QualifierType gypsiferous;
+        private readonly static QualifierType gypsiferous;
         /// <summary>
         /// Indicates that the associated lithology contains significant gypsum content.
         /// </summary>
@@ -5457,16 +5344,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gypsiferous == null)
-                {
-                    gypsiferous = new QualifierType("gypsiferous");
-                    gypsiferous.Description = "Indicates that the associated lithology contains significant gypsum content.";
-                }
                 return gypsiferous;
             }
         }
 
-        private static QualifierType halite;
+        private readonly static QualifierType halite;
         /// <summary>
         /// Indicates that the associated lithology contains halite
         /// </summary>
@@ -5475,16 +5357,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (halite == null)
-                {
-                    halite = new QualifierType("halite");
-                    halite.Description = "Indicates that the associated lithology contains halite";
-                }
                 return halite;
             }
         }
 
-        private static QualifierType illite;
+        private readonly static QualifierType illite;
         /// <summary>
         /// Indicates that the associated lithology contains the clay mineral illite
         /// </summary>
@@ -5493,16 +5370,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (illite == null)
-                {
-                    illite = new QualifierType("illite");
-                    illite.Description = "Indicates that the associated lithology contains the clay mineral illite";
-                }
                 return illite;
             }
         }
 
-        private static QualifierType kaolinite;
+        private readonly static QualifierType kaolinite;
         /// <summary>
         /// Indicates that the associated lithology contains kaolinite
         /// </summary>
@@ -5511,16 +5383,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (kaolinite == null)
-                {
-                    kaolinite = new QualifierType("kaolinite");
-                    kaolinite.Description = "Indicates that the associated lithology contains kaolinite";
-                }
                 return kaolinite;
             }
         }
 
-        private static QualifierType lignite;
+        private readonly static QualifierType lignite;
         /// <summary>
         /// Indicates that the associated lithology contains lignite
         /// </summary>
@@ -5529,16 +5396,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (lignite == null)
-                {
-                    lignite = new QualifierType("lignite");
-                    lignite.Description = "Indicates that the associated lithology contains lignite";
-                }
                 return lignite;
             }
         }
 
-        private static QualifierType limestoneStringer;
+        private readonly static QualifierType limestoneStringer;
         /// <summary>
         /// Indicates that the associated lithology contains thin beds or veins of limestone
         /// </summary>
@@ -5547,16 +5409,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (limestoneStringer == null)
-                {
-                    limestoneStringer = new QualifierType("limestone stringer");
-                    limestoneStringer.Description = "Indicates that the associated lithology contains thin beds or veins of limestone";
-                }
                 return limestoneStringer;
             }
         }
 
-        private static QualifierType lithicFragment;
+        private readonly static QualifierType lithicFragment;
         /// <summary>
         /// Indicates that the associated lithology contains other rock fragments
         /// </summary>
@@ -5565,16 +5422,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (lithicFragment == null)
-                {
-                    lithicFragment = new QualifierType("lithic fragment");
-                    lithicFragment.Description = "Indicates that the associated lithology contains other rock fragments";
-                }
                 return lithicFragment;
             }
         }
 
-        private static QualifierType marly;
+        private readonly static QualifierType marly;
         /// <summary>
         /// Indicates that the associated lithology contains marl
         /// </summary>
@@ -5583,16 +5435,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (marly == null)
-                {
-                    marly = new QualifierType("marly");
-                    marly.Description = "Indicates that the associated lithology contains marl";
-                }
                 return marly;
             }
         }
 
-        private static QualifierType mica;
+        private readonly static QualifierType mica;
         /// <summary>
         /// Indicates that the associated lithology contains mica
         /// </summary>
@@ -5601,16 +5448,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mica == null)
-                {
-                    mica = new QualifierType("mica");
-                    mica.Description = "Indicates that the associated lithology contains mica";
-                }
                 return mica;
             }
         }
 
-        private static QualifierType microfossil;
+        private readonly static QualifierType microfossil;
         /// <summary>
         /// Indicates that the associated lithology contains undifferentiated microfossils
         /// </summary>
@@ -5619,16 +5461,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (microfossil == null)
-                {
-                    microfossil = new QualifierType("microfossil");
-                    microfossil.Description = "Indicates that the associated lithology contains undifferentiated microfossils";
-                }
                 return microfossil;
             }
         }
 
-        private static QualifierType noDescription;
+        private readonly static QualifierType noDescription;
         /// <summary>
         /// No description is provided
         /// </summary>
@@ -5637,16 +5474,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (noDescription == null)
-                {
-                    noDescription = new QualifierType("no description");
-                    noDescription.Description = "No description is provided";
-                }
                 return noDescription;
             }
         }
 
-        private static QualifierType none;
+        private readonly static QualifierType none;
         /// <summary>
         /// No qualifiers specified
         /// </summary>
@@ -5655,16 +5487,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (none == null)
-                {
-                    none = new QualifierType("none");
-                    none.Description = "No qualifiers specified";
-                }
                 return none;
             }
         }
 
-        private static QualifierType oncolite;
+        private readonly static QualifierType oncolite;
         /// <summary>
         /// A rock composed of stacked oncoliths
         /// </summary>
@@ -5673,16 +5500,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (oncolite == null)
-                {
-                    oncolite = new QualifierType("oncolite");
-                    oncolite.Description = "A rock composed of stacked oncoliths";
-                }
                 return oncolite;
             }
         }
 
-        private static QualifierType oncolith;
+        private readonly static QualifierType oncolith;
         /// <summary>
         /// A hemispheroidal mass of calcified algal laminae surrounding a mud fragment
         /// </summary>
@@ -5691,16 +5513,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (oncolith == null)
-                {
-                    oncolith = new QualifierType("oncolith");
-                    oncolith.Description = "A hemispheroidal mass of calcified algal laminae surrounding a mud fragment";
-                }
                 return oncolith;
             }
         }
 
-        private static QualifierType oncolithic;
+        private readonly static QualifierType oncolithic;
         /// <summary>
         /// Indicates that the associated lithology contains oncolites
         /// </summary>
@@ -5709,16 +5526,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (oncolithic == null)
-                {
-                    oncolithic = new QualifierType("oncolithic");
-                    oncolithic.Description = "Indicates that the associated lithology contains oncolites";
-                }
                 return oncolithic;
             }
         }
 
-        private static QualifierType ooidOrOolith;
+        private readonly static QualifierType ooidOrOolith;
         /// <summary>
         /// Indicates that the associated lithology contains ooids (synonym: ooliths)
         /// </summary>
@@ -5727,16 +5539,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ooidOrOolith == null)
-                {
-                    ooidOrOolith = new QualifierType("ooid or oolith");
-                    ooidOrOolith.Description = "Indicates that the associated lithology contains ooids (synonym: ooliths)";
-                }
                 return ooidOrOolith;
             }
         }
 
-        private static QualifierType ostracods;
+        private readonly static QualifierType ostracods;
         /// <summary>
         /// Indicates that the associated lithology contains ostracod fossils
         /// </summary>
@@ -5745,16 +5552,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ostracods == null)
-                {
-                    ostracods = new QualifierType("ostracods");
-                    ostracods.Description = "Indicates that the associated lithology contains ostracod fossils";
-                }
                 return ostracods;
             }
         }
 
-        private static QualifierType pebbly;
+        private readonly static QualifierType pebbly;
         /// <summary>
         /// Indicates that the associated material contains pebble sized particles.
         /// </summary>
@@ -5763,16 +5565,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pebbly == null)
-                {
-                    pebbly = new QualifierType("pebbly");
-                    pebbly.Description = "Indicates that the associated material contains pebble sized particles.";
-                }
                 return pebbly;
             }
         }
 
-        private static QualifierType pelletal;
+        private readonly static QualifierType pelletal;
         /// <summary>
         /// Indicates that the associated lithology contains pellets or fragments of pellets.
         /// </summary>
@@ -5781,16 +5578,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pelletal == null)
-                {
-                    pelletal = new QualifierType("pelletal");
-                    pelletal.Description = "Indicates that the associated lithology contains pellets or fragments of pellets.";
-                }
                 return pelletal;
             }
         }
 
-        private static QualifierType pellet;
+        private readonly static QualifierType pellet;
         /// <summary>
         /// A round or rounded particle generally less than 10mm in diameter, not formed by rounding of detrital material.
         /// </summary>
@@ -5799,16 +5591,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pellet == null)
-                {
-                    pellet = new QualifierType("pellet");
-                    pellet.Description = "A round or rounded particle generally less than 10mm in diameter, not formed by rounding of detrital material.";
-                }
                 return pellet;
             }
         }
 
-        private static QualifierType peloid;
+        private readonly static QualifierType peloid;
         /// <summary>
         /// A small particle of carbonate mineral in which individual crystals are too small to be distinguished either by the naked eye or under a polarizing microscope (less than 0.001mm).
         /// </summary>
@@ -5817,16 +5604,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (peloid == null)
-                {
-                    peloid = new QualifierType("peloid");
-                    peloid.Description = "A small particle of carbonate mineral in which individual crystals are too small to be distinguished either by the naked eye or under a polarizing microscope (less than 0.001mm).";
-                }
                 return peloid;
             }
         }
 
-        private static QualifierType peloidal;
+        private readonly static QualifierType peloidal;
         /// <summary>
         /// Indicates that the associated lithology contains peloids.
         /// </summary>
@@ -5835,16 +5617,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (peloidal == null)
-                {
-                    peloidal = new QualifierType("peloidal");
-                    peloidal.Description = "Indicates that the associated lithology contains peloids.";
-                }
                 return peloidal;
             }
         }
 
-        private static QualifierType phosphate;
+        private readonly static QualifierType phosphate;
         /// <summary>
         /// Indicates that the associated lithology contains phosphates
         /// </summary>
@@ -5853,16 +5630,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (phosphate == null)
-                {
-                    phosphate = new QualifierType("phosphate");
-                    phosphate.Description = "Indicates that the associated lithology contains phosphates";
-                }
                 return phosphate;
             }
         }
 
-        private static QualifierType pisolite;
+        private readonly static QualifierType pisolite;
         /// <summary>
         /// A sedimentary rock mainly consisting of pisoliths
         /// </summary>
@@ -5871,16 +5643,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pisolite == null)
-                {
-                    pisolite = new QualifierType("pisolite");
-                    pisolite.Description = "A sedimentary rock mainly consisting of pisoliths";
-                }
                 return pisolite;
             }
         }
 
-        private static QualifierType pisolith;
+        private readonly static QualifierType pisolith;
         /// <summary>
         /// A sub-spherical body usually consisting of calcium carbonate, generally of length greater than 2mm
         /// </summary>
@@ -5889,16 +5656,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pisolith == null)
-                {
-                    pisolith = new QualifierType("pisolith");
-                    pisolith.Description = "A sub-spherical body usually consisting of calcium carbonate, generally of length greater than 2mm";
-                }
                 return pisolith;
             }
         }
 
-        private static QualifierType plantRemains;
+        private readonly static QualifierType plantRemains;
         /// <summary>
         /// Indicates that the associated lithology contains plant remains
         /// </summary>
@@ -5907,16 +5669,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plantRemains == null)
-                {
-                    plantRemains = new QualifierType("plant remains");
-                    plantRemains.Description = "Indicates that the associated lithology contains plant remains";
-                }
                 return plantRemains;
             }
         }
 
-        private static QualifierType pyrite;
+        private readonly static QualifierType pyrite;
         /// <summary>
         /// Indicates that the associated lithology contains pyrite
         /// </summary>
@@ -5925,16 +5682,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pyrite == null)
-                {
-                    pyrite = new QualifierType("pyrite");
-                    pyrite.Description = "Indicates that the associated lithology contains pyrite";
-                }
                 return pyrite;
             }
         }
 
-        private static QualifierType quartz;
+        private readonly static QualifierType quartz;
         /// <summary>
         /// Indicates that the associated lithology contains quartz
         /// </summary>
@@ -5943,16 +5695,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (quartz == null)
-                {
-                    quartz = new QualifierType("quartz");
-                    quartz.Description = "Indicates that the associated lithology contains quartz";
-                }
                 return quartz;
             }
         }
 
-        private static QualifierType radiolaria;
+        private readonly static QualifierType radiolaria;
         /// <summary>
         /// Indicates that the associated lithology contains radiolaria
         /// </summary>
@@ -5961,16 +5708,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (radiolaria == null)
-                {
-                    radiolaria = new QualifierType("radiolaria");
-                    radiolaria.Description = "Indicates that the associated lithology contains radiolaria";
-                }
                 return radiolaria;
             }
         }
 
-        private static QualifierType salty;
+        private readonly static QualifierType salty;
         /// <summary>
         /// Indicates that the associated lithology contains rock salt or halite
         /// </summary>
@@ -5979,16 +5721,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (salty == null)
-                {
-                    salty = new QualifierType("salty");
-                    salty.Description = "Indicates that the associated lithology contains rock salt or halite";
-                }
                 return salty;
             }
         }
 
-        private static QualifierType sandy;
+        private readonly static QualifierType sandy;
         /// <summary>
         /// Indicates that the associated lithology has a sand content
         /// </summary>
@@ -5997,16 +5734,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sandy == null)
-                {
-                    sandy = new QualifierType("sandy");
-                    sandy.Description = "Indicates that the associated lithology has a sand content";
-                }
                 return sandy;
             }
         }
 
-        private static QualifierType shell;
+        private readonly static QualifierType shell;
         /// <summary>
         /// Indicates that the associated lithology contains shell fragments
         /// </summary>
@@ -6015,16 +5747,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (shell == null)
-                {
-                    shell = new QualifierType("shell");
-                    shell.Description = "Indicates that the associated lithology contains shell fragments";
-                }
                 return shell;
             }
         }
 
-        private static QualifierType siderite;
+        private readonly static QualifierType siderite;
         /// <summary>
         /// Indicates that the associated lithology contains siderite
         /// </summary>
@@ -6033,16 +5760,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (siderite == null)
-                {
-                    siderite = new QualifierType("siderite");
-                    siderite.Description = "Indicates that the associated lithology contains siderite";
-                }
                 return siderite;
             }
         }
 
-        private static QualifierType sideriteConcretion;
+        private readonly static QualifierType sideriteConcretion;
         /// <summary>
         /// Indicates that the associated lithology contains siderite concretions
         /// </summary>
@@ -6051,16 +5773,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sideriteConcretion == null)
-                {
-                    sideriteConcretion = new QualifierType("siderite concretion");
-                    sideriteConcretion.Description = "Indicates that the associated lithology contains siderite concretions";
-                }
                 return sideriteConcretion;
             }
         }
 
-        private static QualifierType silty;
+        private readonly static QualifierType silty;
         /// <summary>
         /// Indicates that the associated lithology has a silt content
         /// </summary>
@@ -6069,16 +5786,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (silty == null)
-                {
-                    silty = new QualifierType("silty");
-                    silty.Description = "Indicates that the associated lithology has a silt content";
-                }
                 return silty;
             }
         }
 
-        private static QualifierType spicule;
+        private readonly static QualifierType spicule;
         /// <summary>
         /// A minute needle-like body of quartz or carbonate that forms part of skeletons of animals such as sponges, corals and radiolarians.
         /// </summary>
@@ -6087,16 +5799,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (spicule == null)
-                {
-                    spicule = new QualifierType("spicule");
-                    spicule.Description = "A minute needle-like body of quartz or carbonate that forms part of skeletons of animals such as sponges, corals and radiolarians.";
-                }
                 return spicule;
             }
         }
 
-        private static QualifierType spicular;
+        private readonly static QualifierType spicular;
         /// <summary>
         /// Indicates that the associated lithology contains spicules.
         /// </summary>
@@ -6105,16 +5812,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (spicular == null)
-                {
-                    spicular = new QualifierType("spicular");
-                    spicular.Description = "Indicates that the associated lithology contains spicules.";
-                }
                 return spicular;
             }
         }
 
-        private static QualifierType stylolite;
+        private readonly static QualifierType stylolite;
         /// <summary>
         /// A small, more or less columnar, striated extension of a rock body that fits into a corresponding surface, common in carbonate rocks.
         /// </summary>
@@ -6123,16 +5825,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (stylolite == null)
-                {
-                    stylolite = new QualifierType("stylolite");
-                    stylolite.Description = "A small, more or less columnar, striated extension of a rock body that fits into a corresponding surface, common in carbonate rocks.";
-                }
                 return stylolite;
             }
         }
 
-        private static QualifierType stylolitic;
+        private readonly static QualifierType stylolitic;
         /// <summary>
         /// Indicates that the associated lithology contains stylolites.
         /// </summary>
@@ -6141,16 +5838,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (stylolitic == null)
-                {
-                    stylolitic = new QualifierType("stylolitic");
-                    stylolitic.Description = "Indicates that the associated lithology contains stylolites.";
-                }
                 return stylolitic;
             }
         }
 
-        private static QualifierType tuffaceous;
+        private readonly static QualifierType tuffaceous;
         /// <summary>
         /// Indicates that the associated lithology contains pyroclastic detrital material (tuff).
         /// </summary>
@@ -6159,16 +5851,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tuffaceous == null)
-                {
-                    tuffaceous = new QualifierType("tuffaceous");
-                    tuffaceous.Description = "Indicates that the associated lithology contains pyroclastic detrital material (tuff).";
-                }
                 return tuffaceous;
             }
         }
 
-        private static QualifierType tuffite;
+        private readonly static QualifierType tuffite;
         /// <summary>
         /// Indicates that the associated lithology contains both pyroclastic and other detrital material.
         /// </summary>
@@ -6177,16 +5864,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tuffite == null)
-                {
-                    tuffite = new QualifierType("tuffite");
-                    tuffite.Description = "Indicates that the associated lithology contains both pyroclastic and other detrital material.";
-                }
                 return tuffite;
             }
         }
 
-        private static QualifierType unknown;
+        private readonly static QualifierType unknown;
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
@@ -6195,15 +5877,411 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (unknown == null)
-                {
-                    unknown = new QualifierType("unknown");
-                    unknown.Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.";
-                }
                 return unknown;
             }
         }
 
+        static QualifierType()
+        {
+            anhydritic = 
+                new QualifierType("anhydritic")
+                {
+                    Description = "Indicates that the associated lithology contains anhydrite"
+            };
+            argillaceous = 
+                new QualifierType("argillaceous")
+                {
+                    Description = "Indicates that the associated lithology has a clay content"
+            };
+            barite = 
+                new QualifierType("barite")
+                {
+                    Description = "The mineral form of Barium sulphate."
+            };
+            belemnitic = 
+                new QualifierType("belemnitic")
+                {
+                    Description = "Indicates that the associated lithology contains belemnite fossils or fragments thereof."
+            };
+            bioturbated = 
+                new QualifierType("bioturbated")
+                {
+                    Description = "Indicates that the associated lithology has been disturbed by organisms before consolidation."
+            };
+            bituminous = 
+                new QualifierType("bituminous")
+                {
+                    Description = "Indicates that the associated lithology contains bituminous material"
+            };
+            bryozoans = 
+                new QualifierType("bryozoans")
+                {
+                    Description = "Indicates that the associated lithology contains bryozoan fossils or fragments thereof."
+            };
+            burrowed = 
+                new QualifierType("burrowed")
+                {
+                    Description = "Indicates that the associated lithology has been disturbed by burrowing organisms before consolidation"
+            };
+            calcareous = 
+                new QualifierType("calcareous")
+                {
+                    Description = "Indicates that the associated lithology has a calcite content"
+            };
+            calciteConcr = 
+                new QualifierType("calcite concr")
+                {
+                    Description = "Indicates that the associated lithology has calcite concretions"
+            };
+            carbonaceous = 
+                new QualifierType("carbonaceous")
+                {
+                    Description = "Indicates that the associated lithology contains carbonaceous material"
+            };
+            chalky = 
+                new QualifierType("chalky")
+                {
+                    Description = "Indicates that the associated lithology has a chalk content"
+            };
+            chamosite = 
+                new QualifierType("chamosite")
+                {
+                    Description = "Indicates that the associated lithology contains chamosite"
+            };
+            chert = 
+                new QualifierType("chert")
+                {
+                    Description = "Indicates that the associated lithology contains chert fragments"
+            };
+            chlorite = 
+                new QualifierType("chlorite")
+                {
+                    Description = "Indicates that the associated lithology contains chlorite"
+            };
+            concretions = 
+                new QualifierType("concretions")
+                {
+                    Description = "Indicates that the associated lithology contains concretions"
+            };
+            conglomeratic = 
+                new QualifierType("conglomeratic")
+                {
+                    Description = "Indicates that the associated lithology contains conglomerate rock material."
+            };
+            coral = 
+                new QualifierType("coral")
+                {
+                    Description = "Indicates that the associated lithology contains corals and/or coral fragments"
+            };
+            crinoids = 
+                new QualifierType("crinoids")
+                {
+                    Description = "Indicates that the associated lithology contains crinoids and/or crinoid fragments"
+            };
+            diatoms = 
+                new QualifierType("diatoms")
+                {
+                    Description = "Indicates that the associated lithology contains diatoms and/or diatom fragments"
+            };
+            dolomiteConcretion = 
+                new QualifierType("dolomite concretion")
+                {
+                    Description = "Indicates that the associated lithology has dolomite concretions"
+            };
+            dolomiteStringer = 
+                new QualifierType("dolomite stringer")
+                {
+                    Description = "Indicates that the associated lithology contains thin beds or veins of dolomite"
+            };
+            dolomitic = 
+                new QualifierType("dolomitic")
+                {
+                    Description = "Indicates that the associated lithology has a dolomite content"
+            };
+            dolomite = 
+                new QualifierType("dolomite")
+                {
+                    Description = "A rock forming mineral composed of calcium-magnesium carbonate (CaMg(CO3)2)."
+            };
+            feldspar = 
+                new QualifierType("feldspar")
+                {
+                    Description = "Indicates that the associated lithology contains feldspar"
+            };
+            ferruginous = 
+                new QualifierType("ferruginous")
+                {
+                    Description = "Indicates that the associated lithology contains minerals rich in iron oxide or iron hydroxide"
+            };
+            fissile = 
+                new QualifierType("fissile")
+                {
+                    Description = "Indicates that the associated lithology is fissile"
+            };
+            foramsUndifferentiated = 
+                new QualifierType("forams undifferentiated")
+                {
+                    Description = "Indicates that the associated lithology contains foraminifera"
+            };
+            fossilFragment = 
+                new QualifierType("fossil fragment")
+                {
+                    Description = "Indicates that the associated lithology contains fossil fragments"
+            };
+            fossilsUndifferentiated = 
+                new QualifierType("fossils undifferentiated")
+                {
+                    Description = "Indicates that the associated lithology contains fossils"
+            };
+            glauconite = 
+                new QualifierType("glauconite")
+                {
+                    Description = "Indicates that the associated lithology contains glauconite granules"
+            };
+            glauconitic = 
+                new QualifierType("glauconitic")
+                {
+                    Description = "Indicates that the associated lithology is glauconitic"
+            };
+            gravelly = 
+                new QualifierType("gravelly")
+                {
+                    Description = "Indicates that the associated lithology contains gravel sized particles."
+            };
+            gypsiferous = 
+                new QualifierType("gypsiferous")
+                {
+                    Description = "Indicates that the associated lithology contains significant gypsum content."
+            };
+            halite = 
+                new QualifierType("halite")
+                {
+                    Description = "Indicates that the associated lithology contains halite"
+            };
+            illite = 
+                new QualifierType("illite")
+                {
+                    Description = "Indicates that the associated lithology contains the clay mineral illite"
+            };
+            kaolinite = 
+                new QualifierType("kaolinite")
+                {
+                    Description = "Indicates that the associated lithology contains kaolinite"
+            };
+            lignite = 
+                new QualifierType("lignite")
+                {
+                    Description = "Indicates that the associated lithology contains lignite"
+            };
+            limestoneStringer = 
+                new QualifierType("limestone stringer")
+                {
+                    Description = "Indicates that the associated lithology contains thin beds or veins of limestone"
+            };
+            lithicFragment = 
+                new QualifierType("lithic fragment")
+                {
+                    Description = "Indicates that the associated lithology contains other rock fragments"
+            };
+            marly = 
+                new QualifierType("marly")
+                {
+                    Description = "Indicates that the associated lithology contains marl"
+            };
+            mica = 
+                new QualifierType("mica")
+                {
+                    Description = "Indicates that the associated lithology contains mica"
+            };
+            microfossil = 
+                new QualifierType("microfossil")
+                {
+                    Description = "Indicates that the associated lithology contains undifferentiated microfossils"
+            };
+            noDescription = 
+                new QualifierType("no description")
+                {
+                    Description = "No description is provided"
+            };
+            none = 
+                new QualifierType("none")
+                {
+                    Description = "No qualifiers specified"
+            };
+            oncolite = 
+                new QualifierType("oncolite")
+                {
+                    Description = "A rock composed of stacked oncoliths"
+            };
+            oncolith = 
+                new QualifierType("oncolith")
+                {
+                    Description = "A hemispheroidal mass of calcified algal laminae surrounding a mud fragment"
+            };
+            oncolithic = 
+                new QualifierType("oncolithic")
+                {
+                    Description = "Indicates that the associated lithology contains oncolites"
+            };
+            ooidOrOolith = 
+                new QualifierType("ooid or oolith")
+                {
+                    Description = "Indicates that the associated lithology contains ooids (synonym: ooliths)"
+            };
+            ostracods = 
+                new QualifierType("ostracods")
+                {
+                    Description = "Indicates that the associated lithology contains ostracod fossils"
+            };
+            pebbly = 
+                new QualifierType("pebbly")
+                {
+                    Description = "Indicates that the associated material contains pebble sized particles."
+            };
+            pelletal = 
+                new QualifierType("pelletal")
+                {
+                    Description = "Indicates that the associated lithology contains pellets or fragments of pellets."
+            };
+            pellet = 
+                new QualifierType("pellet")
+                {
+                    Description = "A round or rounded particle generally less than 10mm in diameter, not formed by rounding of detrital material."
+            };
+            peloid = 
+                new QualifierType("peloid")
+                {
+                    Description = "A small particle of carbonate mineral in which individual crystals are too small to be distinguished either by the naked eye or under a polarizing microscope (less than 0.001mm)."
+            };
+            peloidal = 
+                new QualifierType("peloidal")
+                {
+                    Description = "Indicates that the associated lithology contains peloids."
+            };
+            phosphate = 
+                new QualifierType("phosphate")
+                {
+                    Description = "Indicates that the associated lithology contains phosphates"
+            };
+            pisolite = 
+                new QualifierType("pisolite")
+                {
+                    Description = "A sedimentary rock mainly consisting of pisoliths"
+            };
+            pisolith = 
+                new QualifierType("pisolith")
+                {
+                    Description = "A sub-spherical body usually consisting of calcium carbonate, generally of length greater than 2mm"
+            };
+            plantRemains = 
+                new QualifierType("plant remains")
+                {
+                    Description = "Indicates that the associated lithology contains plant remains"
+            };
+            pyrite = 
+                new QualifierType("pyrite")
+                {
+                    Description = "Indicates that the associated lithology contains pyrite"
+            };
+            quartz = 
+                new QualifierType("quartz")
+                {
+                    Description = "Indicates that the associated lithology contains quartz"
+            };
+            radiolaria = 
+                new QualifierType("radiolaria")
+                {
+                    Description = "Indicates that the associated lithology contains radiolaria"
+            };
+            salty = 
+                new QualifierType("salty")
+                {
+                    Description = "Indicates that the associated lithology contains rock salt or halite"
+            };
+            sandy = 
+                new QualifierType("sandy")
+                {
+                    Description = "Indicates that the associated lithology has a sand content"
+            };
+            shell = 
+                new QualifierType("shell")
+                {
+                    Description = "Indicates that the associated lithology contains shell fragments"
+            };
+            siderite = 
+                new QualifierType("siderite")
+                {
+                    Description = "Indicates that the associated lithology contains siderite"
+            };
+            sideriteConcretion = 
+                new QualifierType("siderite concretion")
+                {
+                    Description = "Indicates that the associated lithology contains siderite concretions"
+            };
+            silty = 
+                new QualifierType("silty")
+                {
+                    Description = "Indicates that the associated lithology has a silt content"
+            };
+            spicule = 
+                new QualifierType("spicule")
+                {
+                    Description = "A minute needle-like body of quartz or carbonate that forms part of skeletons of animals such as sponges, corals and radiolarians."
+            };
+            spicular = 
+                new QualifierType("spicular")
+                {
+                    Description = "Indicates that the associated lithology contains spicules."
+            };
+            stylolite = 
+                new QualifierType("stylolite")
+                {
+                    Description = "A small, more or less columnar, striated extension of a rock body that fits into a corresponding surface, common in carbonate rocks."
+            };
+            stylolitic = 
+                new QualifierType("stylolitic")
+                {
+                    Description = "Indicates that the associated lithology contains stylolites."
+            };
+            tuffaceous = 
+                new QualifierType("tuffaceous")
+                {
+                    Description = "Indicates that the associated lithology contains pyroclastic detrital material (tuff)."
+            };
+            tuffite = 
+                new QualifierType("tuffite")
+                {
+                    Description = "Indicates that the associated lithology contains both pyroclastic and other detrital material."
+            };
+            unknown = 
+                new QualifierType("unknown")
+                {
+                    Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations."
+            };
+        }
+
+        /// <summary>
+        /// Gets a QualifierType by name
+        /// </summary>
+        /// <param name="name">The name of the QualifierType to return</param>
+        /// <returns>The QualifierType represented by 'name'</returns>
+        public static QualifierType GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(QualifierType)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(QualifierType)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (QualifierType)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
     }
 
     /// <summary>
@@ -6231,7 +6309,7 @@ namespace Energistics.DataAccess.WITSML131
             return GetList<RealtimeData>();
         }
 
-        private static RealtimeData lengthAlongFiber;
+        private readonly static RealtimeData lengthAlongFiber;
         /// <summary>
         /// The position along the length of a DTS fiber.
         /// </summary>
@@ -6240,16 +6318,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (lengthAlongFiber == null)
-                {
-                    lengthAlongFiber = new RealtimeData("length along fiber");
-                    lengthAlongFiber.Description = "The position along the length of a DTS fiber.";
-                }
                 return lengthAlongFiber;
             }
         }
 
-        private static RealtimeData dtsTemperature;
+        private readonly static RealtimeData dtsTemperature;
         /// <summary>
         /// The temperature that was calculated from Distributed Temperature Survey data.
         /// </summary>
@@ -6258,16 +6331,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dtsTemperature == null)
-                {
-                    dtsTemperature = new RealtimeData("DTS temperature");
-                    dtsTemperature.Description = "The temperature that was calculated from Distributed Temperature Survey data.";
-                }
                 return dtsTemperature;
             }
         }
 
-        private static RealtimeData stokesIntensity;
+        private readonly static RealtimeData stokesIntensity;
         /// <summary>
         /// Stokes intensity values from a Distributed Temperature Survey.
         /// </summary>
@@ -6276,16 +6344,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (stokesIntensity == null)
-                {
-                    stokesIntensity = new RealtimeData("Stokes intensity");
-                    stokesIntensity.Description = "Stokes intensity values from a Distributed Temperature Survey.";
-                }
                 return stokesIntensity;
             }
         }
 
-        private static RealtimeData antistokesIntensity;
+        private readonly static RealtimeData antistokesIntensity;
         /// <summary>
         /// Anti-Stokes intensity values from a Distributed Temperature Survey.
         /// </summary>
@@ -6294,16 +6357,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (antistokesIntensity == null)
-                {
-                    antistokesIntensity = new RealtimeData("anti-Stokes intensity");
-                    antistokesIntensity.Description = "Anti-Stokes intensity values from a Distributed Temperature Survey.";
-                }
                 return antistokesIntensity;
             }
         }
 
-        private static RealtimeData acetylene;
+        private readonly static RealtimeData acetylene;
         /// <summary>
         /// Acetylene ppm (cycle-based)
         /// </summary>
@@ -6312,16 +6370,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (acetylene == null)
-                {
-                    acetylene = new RealtimeData("acetylene");
-                    acetylene.Description = "Acetylene ppm (cycle-based)";
-                }
                 return acetylene;
             }
         }
 
-        private static RealtimeData azimuthCorrected;
+        private readonly static RealtimeData azimuthCorrected;
         /// <summary>
         /// MWD azimuth (corrected)
         /// </summary>
@@ -6330,16 +6383,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (azimuthCorrected == null)
-                {
-                    azimuthCorrected = new RealtimeData("azimuth corrected");
-                    azimuthCorrected.Description = "MWD azimuth (corrected)";
-                }
                 return azimuthCorrected;
             }
         }
 
-        private static RealtimeData azimuthUncorrected;
+        private readonly static RealtimeData azimuthUncorrected;
         /// <summary>
         /// MWD azimuth (uncorrected)
         /// </summary>
@@ -6348,16 +6396,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (azimuthUncorrected == null)
-                {
-                    azimuthUncorrected = new RealtimeData("azimuth uncorrected");
-                    azimuthUncorrected.Description = "MWD azimuth (uncorrected)";
-                }
                 return azimuthUncorrected;
             }
         }
 
-        private static RealtimeData bitRevolutionsCumulative;
+        private readonly static RealtimeData bitRevolutionsCumulative;
         /// <summary>
         /// Bit revolutions, cumulative
         /// </summary>
@@ -6366,16 +6409,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (bitRevolutionsCumulative == null)
-                {
-                    bitRevolutionsCumulative = new RealtimeData("bit revolutions, cumulative");
-                    bitRevolutionsCumulative.Description = "Bit revolutions, cumulative";
-                }
                 return bitRevolutionsCumulative;
             }
         }
 
-        private static RealtimeData buildRate;
+        private readonly static RealtimeData buildRate;
         /// <summary>
         /// MWD build rate
         /// </summary>
@@ -6384,16 +6422,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (buildRate == null)
-                {
-                    buildRate = new RealtimeData("build rate");
-                    buildRate.Description = "MWD build rate";
-                }
                 return buildRate;
             }
         }
 
-        private static RealtimeData caliper;
+        private readonly static RealtimeData caliper;
         /// <summary>
         /// Caliper measurement
         /// </summary>
@@ -6402,16 +6435,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (caliper == null)
-                {
-                    caliper = new RealtimeData("caliper");
-                    caliper.Description = "Caliper measurement";
-                }
                 return caliper;
             }
         }
 
-        private static RealtimeData cavings;
+        private readonly static RealtimeData cavings;
         /// <summary>
         /// Cavings percentage
         /// </summary>
@@ -6420,16 +6448,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cavings == null)
-                {
-                    cavings = new RealtimeData("cavings");
-                    cavings.Description = "Cavings percentage";
-                }
                 return cavings;
             }
         }
 
-        private static RealtimeData cationExchangeCapacity;
+        private readonly static RealtimeData cationExchangeCapacity;
         /// <summary>
         /// Cation exchange capacity
         /// </summary>
@@ -6438,16 +6461,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cationExchangeCapacity == null)
-                {
-                    cationExchangeCapacity = new RealtimeData("cation exchange capacity");
-                    cationExchangeCapacity.Description = "Cation exchange capacity";
-                }
                 return cationExchangeCapacity;
             }
         }
 
-        private static RealtimeData cementingCumulativeReturns;
+        private readonly static RealtimeData cementingCumulativeReturns;
         /// <summary>
         /// Cementing cumulative returns
         /// </summary>
@@ -6456,16 +6474,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingCumulativeReturns == null)
-                {
-                    cementingCumulativeReturns = new RealtimeData("cementing cumulative returns");
-                    cementingCumulativeReturns.Description = "Cementing cumulative returns";
-                }
                 return cementingCumulativeReturns;
             }
         }
 
-        private static RealtimeData cementingDensityInAverage;
+        private readonly static RealtimeData cementingDensityInAverage;
         /// <summary>
         /// Cementing fluid density in (average)
         /// </summary>
@@ -6474,16 +6487,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingDensityInAverage == null)
-                {
-                    cementingDensityInAverage = new RealtimeData("cementing density in (average)");
-                    cementingDensityInAverage.Description = "Cementing fluid density in (average)";
-                }
                 return cementingDensityInAverage;
             }
         }
 
-        private static RealtimeData cementingDensityOutAverage;
+        private readonly static RealtimeData cementingDensityOutAverage;
         /// <summary>
         /// Cementing fluid density out (average)
         /// </summary>
@@ -6492,16 +6500,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingDensityOutAverage == null)
-                {
-                    cementingDensityOutAverage = new RealtimeData("cementing density out (average)");
-                    cementingDensityOutAverage.Description = "Cementing fluid density out (average)";
-                }
                 return cementingDensityOutAverage;
             }
         }
 
-        private static RealtimeData cementingEcdAtCasingShoe;
+        private readonly static RealtimeData cementingEcdAtCasingShoe;
         /// <summary>
         /// Cementing effective circulating density at casing shoe
         /// </summary>
@@ -6510,16 +6513,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingEcdAtCasingShoe == null)
-                {
-                    cementingEcdAtCasingShoe = new RealtimeData("cementing ECD at casing shoe");
-                    cementingEcdAtCasingShoe.Description = "Cementing effective circulating density at casing shoe";
-                }
                 return cementingEcdAtCasingShoe;
             }
         }
 
-        private static RealtimeData cementingFlowRateInAverage;
+        private readonly static RealtimeData cementingFlowRateInAverage;
         /// <summary>
         /// Cementing flow rate in (average)
         /// </summary>
@@ -6528,16 +6526,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingFlowRateInAverage == null)
-                {
-                    cementingFlowRateInAverage = new RealtimeData("cementing flow rate in (average)");
-                    cementingFlowRateInAverage.Description = "Cementing flow rate in (average)";
-                }
                 return cementingFlowRateInAverage;
             }
         }
 
-        private static RealtimeData cementingFlowRateInCalculated;
+        private readonly static RealtimeData cementingFlowRateInCalculated;
         /// <summary>
         /// Cementing flow rate in (calculated)
         /// </summary>
@@ -6546,16 +6539,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingFlowRateInCalculated == null)
-                {
-                    cementingFlowRateInCalculated = new RealtimeData("cementing flow rate in (calculated)");
-                    cementingFlowRateInCalculated.Description = "Cementing flow rate in (calculated)";
-                }
                 return cementingFlowRateInCalculated;
             }
         }
 
-        private static RealtimeData cementingFlowRateOutAverage;
+        private readonly static RealtimeData cementingFlowRateOutAverage;
         /// <summary>
         /// Cementing flow rate out (average)
         /// </summary>
@@ -6564,16 +6552,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingFlowRateOutAverage == null)
-                {
-                    cementingFlowRateOutAverage = new RealtimeData("cementing flow rate out (average)");
-                    cementingFlowRateOutAverage.Description = "Cementing flow rate out (average)";
-                }
                 return cementingFlowRateOutAverage;
             }
         }
 
-        private static RealtimeData cementingFlowRateOutCalculated;
+        private readonly static RealtimeData cementingFlowRateOutCalculated;
         /// <summary>
         /// Cementing flow rate out (calculated)
         /// </summary>
@@ -6582,16 +6565,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingFlowRateOutCalculated == null)
-                {
-                    cementingFlowRateOutCalculated = new RealtimeData("cementing flow rate out (calculated)");
-                    cementingFlowRateOutCalculated.Description = "Cementing flow rate out (calculated)";
-                }
                 return cementingFlowRateOutCalculated;
             }
         }
 
-        private static RealtimeData cementingFlowRateOutRelative;
+        private readonly static RealtimeData cementingFlowRateOutRelative;
         /// <summary>
         /// Cementing flow rate out (percentage)
         /// </summary>
@@ -6600,16 +6578,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingFlowRateOutRelative == null)
-                {
-                    cementingFlowRateOutRelative = new RealtimeData("cementing flow rate out (relative)");
-                    cementingFlowRateOutRelative.Description = "Cementing flow rate out (percentage)";
-                }
                 return cementingFlowRateOutRelative;
             }
         }
 
-        private static RealtimeData cementingFluidType;
+        private readonly static RealtimeData cementingFluidType;
         /// <summary>
         /// Cementing fluid type/batch
         /// </summary>
@@ -6618,16 +6591,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingFluidType == null)
-                {
-                    cementingFluidType = new RealtimeData("cementing fluid type");
-                    cementingFluidType.Description = "Cementing fluid type/batch";
-                }
                 return cementingFluidType;
             }
         }
 
-        private static RealtimeData cementingJobType;
+        private readonly static RealtimeData cementingJobType;
         /// <summary>
         /// Cementing job type
         /// </summary>
@@ -6636,16 +6604,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingJobType == null)
-                {
-                    cementingJobType = new RealtimeData("cementing job type");
-                    cementingJobType.Description = "Cementing job type";
-                }
                 return cementingJobType;
             }
         }
 
-        private static RealtimeData cementingPlugs;
+        private readonly static RealtimeData cementingPlugs;
         /// <summary>
         /// Cementing number and status of plugs
         /// </summary>
@@ -6654,16 +6617,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingPlugs == null)
-                {
-                    cementingPlugs = new RealtimeData("cementing plugs");
-                    cementingPlugs.Description = "Cementing number and status of plugs";
-                }
                 return cementingPlugs;
             }
         }
 
-        private static RealtimeData cementingPumpPressureAverage;
+        private readonly static RealtimeData cementingPumpPressureAverage;
         /// <summary>
         /// Cementing pump pressure (average)
         /// </summary>
@@ -6672,16 +6630,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingPumpPressureAverage == null)
-                {
-                    cementingPumpPressureAverage = new RealtimeData("cementing pump pressure (average)");
-                    cementingPumpPressureAverage.Description = "Cementing pump pressure (average)";
-                }
                 return cementingPumpPressureAverage;
             }
         }
 
-        private static RealtimeData cementingStage;
+        private readonly static RealtimeData cementingStage;
         /// <summary>
         /// Cementing stage number
         /// </summary>
@@ -6690,16 +6643,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingStage == null)
-                {
-                    cementingStage = new RealtimeData("cementing stage");
-                    cementingStage.Description = "Cementing stage number";
-                }
                 return cementingStage;
             }
         }
 
-        private static RealtimeData cementingTemperatureInAverage;
+        private readonly static RealtimeData cementingTemperatureInAverage;
         /// <summary>
         /// Cementing fluid temperature in (average)
         /// </summary>
@@ -6708,16 +6656,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingTemperatureInAverage == null)
-                {
-                    cementingTemperatureInAverage = new RealtimeData("cementing temperature in (average)");
-                    cementingTemperatureInAverage.Description = "Cementing fluid temperature in (average)";
-                }
                 return cementingTemperatureInAverage;
             }
         }
 
-        private static RealtimeData cementingTemperatureOutAverage;
+        private readonly static RealtimeData cementingTemperatureOutAverage;
         /// <summary>
         /// Cementing fluid temperature out (average)
         /// </summary>
@@ -6726,16 +6669,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingTemperatureOutAverage == null)
-                {
-                    cementingTemperatureOutAverage = new RealtimeData("cementing temperature out (average)");
-                    cementingTemperatureOutAverage.Description = "Cementing fluid temperature out (average)";
-                }
                 return cementingTemperatureOutAverage;
             }
         }
 
-        private static RealtimeData cementingVolumeToBumpPlug;
+        private readonly static RealtimeData cementingVolumeToBumpPlug;
         /// <summary>
         /// Cementing volume to bump plug
         /// </summary>
@@ -6744,16 +6682,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingVolumeToBumpPlug == null)
-                {
-                    cementingVolumeToBumpPlug = new RealtimeData("cementing volume to bump plug");
-                    cementingVolumeToBumpPlug.Description = "Cementing volume to bump plug";
-                }
                 return cementingVolumeToBumpPlug;
             }
         }
 
-        private static RealtimeData cementingCementVolume;
+        private readonly static RealtimeData cementingCementVolume;
         /// <summary>
         /// Cementing cement volume pumped
         /// </summary>
@@ -6762,16 +6695,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingCementVolume == null)
-                {
-                    cementingCementVolume = new RealtimeData("cementing cement volume");
-                    cementingCementVolume.Description = "Cementing cement volume pumped";
-                }
                 return cementingCementVolume;
             }
         }
 
-        private static RealtimeData cementingIndividualVolume;
+        private readonly static RealtimeData cementingIndividualVolume;
         /// <summary>
         /// Cementing individual volume pumped
         /// </summary>
@@ -6780,16 +6708,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingIndividualVolume == null)
-                {
-                    cementingIndividualVolume = new RealtimeData("cementing individual volume");
-                    cementingIndividualVolume.Description = "Cementing individual volume pumped";
-                }
                 return cementingIndividualVolume;
             }
         }
 
-        private static RealtimeData cementingTotalVolume;
+        private readonly static RealtimeData cementingTotalVolume;
         /// <summary>
         /// Cementing total volume pumped
         /// </summary>
@@ -6798,16 +6721,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cementingTotalVolume == null)
-                {
-                    cementingTotalVolume = new RealtimeData("cementing total volume");
-                    cementingTotalVolume.Description = "Cementing total volume pumped";
-                }
                 return cementingTotalVolume;
             }
         }
 
-        private static RealtimeData chkprav;
+        private readonly static RealtimeData chkprav;
         /// <summary>
         /// Casing pressure (average), measured at surface
         /// </summary>
@@ -6816,16 +6734,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (chkprav == null)
-                {
-                    chkprav = new RealtimeData("chkPrAv");
-                    chkprav.Description = "Casing pressure (average), measured at surface";
-                }
                 return chkprav;
             }
         }
 
-        private static RealtimeData carbonDioxideCyclebased;
+        private readonly static RealtimeData carbonDioxideCyclebased;
         /// <summary>
         /// Carbon Dioxide ppm (cycle-based)
         /// </summary>
@@ -6834,16 +6747,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (carbonDioxideCyclebased == null)
-                {
-                    carbonDioxideCyclebased = new RealtimeData("carbon dioxide (cycle-based)");
-                    carbonDioxideCyclebased.Description = "Carbon Dioxide ppm (cycle-based)";
-                }
                 return carbonDioxideCyclebased;
             }
         }
 
-        private static RealtimeData carbonDioxideAverage;
+        private readonly static RealtimeData carbonDioxideAverage;
         /// <summary>
         /// Carbon Dioxide ppm (average)
         /// </summary>
@@ -6852,16 +6760,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (carbonDioxideAverage == null)
-                {
-                    carbonDioxideAverage = new RealtimeData("carbon dioxide (average)");
-                    carbonDioxideAverage.Description = "Carbon Dioxide ppm (average)";
-                }
                 return carbonDioxideAverage;
             }
         }
 
-        private static RealtimeData carbonDioxideMinimum;
+        private readonly static RealtimeData carbonDioxideMinimum;
         /// <summary>
         /// Carbon Dioxide ppm (min)
         /// </summary>
@@ -6870,16 +6773,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (carbonDioxideMinimum == null)
-                {
-                    carbonDioxideMinimum = new RealtimeData("carbon dioxide (minimum)");
-                    carbonDioxideMinimum.Description = "Carbon Dioxide ppm (min)";
-                }
                 return carbonDioxideMinimum;
             }
         }
 
-        private static RealtimeData carbonDioxideMaximum;
+        private readonly static RealtimeData carbonDioxideMaximum;
         /// <summary>
         /// Carbon Dioxide ppm (max)
         /// </summary>
@@ -6888,16 +6786,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (carbonDioxideMaximum == null)
-                {
-                    carbonDioxideMaximum = new RealtimeData("carbon dioxide (maximum)");
-                    carbonDioxideMaximum.Description = "Carbon Dioxide ppm (max)";
-                }
                 return carbonDioxideMaximum;
             }
         }
 
-        private static RealtimeData conductivity;
+        private readonly static RealtimeData conductivity;
         /// <summary>
         /// Conductivity reading (corrected)
         /// </summary>
@@ -6906,16 +6799,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (conductivity == null)
-                {
-                    conductivity = new RealtimeData("conductivity");
-                    conductivity.Description = "Conductivity reading (corrected)";
-                }
                 return conductivity;
             }
         }
 
-        private static RealtimeData conductivityOfMudInAverage;
+        private readonly static RealtimeData conductivityOfMudInAverage;
         /// <summary>
         /// Mud conductivity going into hole
         /// </summary>
@@ -6924,16 +6812,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (conductivityOfMudInAverage == null)
-                {
-                    conductivityOfMudInAverage = new RealtimeData("conductivity of mud in (average)");
-                    conductivityOfMudInAverage.Description = "Mud conductivity going into hole";
-                }
                 return conductivityOfMudInAverage;
             }
         }
 
-        private static RealtimeData conductivityOfMudOutAverage;
+        private readonly static RealtimeData conductivityOfMudOutAverage;
         /// <summary>
         /// Mud conductivity coming out of the hole
         /// </summary>
@@ -6942,16 +6825,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (conductivityOfMudOutAverage == null)
-                {
-                    conductivityOfMudOutAverage = new RealtimeData("conductivity of mud out (average)");
-                    conductivityOfMudOutAverage.Description = "Mud conductivity coming out of the hole";
-                }
                 return conductivityOfMudOutAverage;
             }
         }
 
-        private static RealtimeData connectionsDone;
+        private readonly static RealtimeData connectionsDone;
         /// <summary>
         /// Connections done
         /// </summary>
@@ -6960,16 +6838,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (connectionsDone == null)
-                {
-                    connectionsDone = new RealtimeData("connections done");
-                    connectionsDone.Description = "Connections done";
-                }
                 return connectionsDone;
             }
         }
 
-        private static RealtimeData connectionsRemaining;
+        private readonly static RealtimeData connectionsRemaining;
         /// <summary>
         /// Connections to go
         /// </summary>
@@ -6978,16 +6851,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (connectionsRemaining == null)
-                {
-                    connectionsRemaining = new RealtimeData("connections remaining");
-                    connectionsRemaining.Description = "Connections to go";
-                }
                 return connectionsRemaining;
             }
         }
 
-        private static RealtimeData costPerDistance;
+        private readonly static RealtimeData costPerDistance;
         /// <summary>
         /// Instantaneous cost per distance
         /// </summary>
@@ -6996,16 +6864,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (costPerDistance == null)
-                {
-                    costPerDistance = new RealtimeData("cost per distance");
-                    costPerDistance.Description = "Instantaneous cost per distance";
-                }
                 return costPerDistance;
             }
         }
 
-        private static RealtimeData costPerDistanceAverage;
+        private readonly static RealtimeData costPerDistanceAverage;
         /// <summary>
         /// Cost per distance averaged over the bit run
         /// </summary>
@@ -7014,16 +6877,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (costPerDistanceAverage == null)
-                {
-                    costPerDistanceAverage = new RealtimeData("cost per distance (average)");
-                    costPerDistanceAverage.Description = "Cost per distance averaged over the bit run";
-                }
                 return costPerDistanceAverage;
             }
         }
 
-        private static RealtimeData cumulativeTimeOnBit;
+        private readonly static RealtimeData cumulativeTimeOnBit;
         /// <summary>
         /// Number of drilling hours on the bit
         /// </summary>
@@ -7032,16 +6890,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (cumulativeTimeOnBit == null)
-                {
-                    cumulativeTimeOnBit = new RealtimeData("cumulative time on bit");
-                    cumulativeTimeOnBit.Description = "Number of drilling hours on the bit";
-                }
                 return cumulativeTimeOnBit;
             }
         }
 
-        private static RealtimeData density;
+        private readonly static RealtimeData density;
         /// <summary>
         /// Density value
         /// </summary>
@@ -7050,16 +6903,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (density == null)
-                {
-                    density = new RealtimeData("density");
-                    density.Description = "Density value";
-                }
                 return density;
             }
         }
 
-        private static RealtimeData densityShale;
+        private readonly static RealtimeData densityShale;
         /// <summary>
         /// Shale density
         /// </summary>
@@ -7068,16 +6916,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (densityShale == null)
-                {
-                    densityShale = new RealtimeData("density shale");
-                    densityShale.Description = "Shale density";
-                }
                 return densityShale;
             }
         }
 
-        private static RealtimeData diameterOfBit;
+        private readonly static RealtimeData diameterOfBit;
         /// <summary>
         /// Bit diameter
         /// </summary>
@@ -7086,16 +6929,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (diameterOfBit == null)
-                {
-                    diameterOfBit = new RealtimeData("diameter of bit");
-                    diameterOfBit.Description = "Bit diameter";
-                }
                 return diameterOfBit;
             }
         }
 
-        private static RealtimeData distanceDrilledByBit;
+        private readonly static RealtimeData distanceDrilledByBit;
         /// <summary>
         /// Distance drilled by the bit
         /// </summary>
@@ -7104,16 +6942,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (distanceDrilledByBit == null)
-                {
-                    distanceDrilledByBit = new RealtimeData("distance drilled by bit");
-                    distanceDrilledByBit.Description = "Distance drilled by the bit";
-                }
                 return distanceDrilledByBit;
             }
         }
 
-        private static RealtimeData doglegSeverity;
+        private readonly static RealtimeData doglegSeverity;
         /// <summary>
         /// MWD dogleg severity
         /// </summary>
@@ -7122,16 +6955,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (doglegSeverity == null)
-                {
-                    doglegSeverity = new RealtimeData("dogleg severity");
-                    doglegSeverity.Description = "MWD dogleg severity";
-                }
                 return doglegSeverity;
             }
         }
 
-        private static RealtimeData dstBottomHolePressure;
+        private readonly static RealtimeData dstBottomHolePressure;
         /// <summary>
         /// DST bottom hole pressure
         /// </summary>
@@ -7140,16 +6968,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstBottomHolePressure == null)
-                {
-                    dstBottomHolePressure = new RealtimeData("DST bottom hole pressure");
-                    dstBottomHolePressure.Description = "DST bottom hole pressure";
-                }
                 return dstBottomHolePressure;
             }
         }
 
-        private static RealtimeData dstBottomHoleTemperature;
+        private readonly static RealtimeData dstBottomHoleTemperature;
         /// <summary>
         /// DST Bottom hole temperature
         /// </summary>
@@ -7158,16 +6981,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstBottomHoleTemperature == null)
-                {
-                    dstBottomHoleTemperature = new RealtimeData("DST bottom hole temperature");
-                    dstBottomHoleTemperature.Description = "DST Bottom hole temperature";
-                }
                 return dstBottomHoleTemperature;
             }
         }
 
-        private static RealtimeData dstCumulativeGasProduction;
+        private readonly static RealtimeData dstCumulativeGasProduction;
         /// <summary>
         /// DST cumulative gas production
         /// </summary>
@@ -7176,16 +6994,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstCumulativeGasProduction == null)
-                {
-                    dstCumulativeGasProduction = new RealtimeData("DST cumulative gas production");
-                    dstCumulativeGasProduction.Description = "DST cumulative gas production";
-                }
                 return dstCumulativeGasProduction;
             }
         }
 
-        private static RealtimeData dstCumulativeLiquidProduction;
+        private readonly static RealtimeData dstCumulativeLiquidProduction;
         /// <summary>
         /// DST cumulative liquid production
         /// </summary>
@@ -7194,16 +7007,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstCumulativeLiquidProduction == null)
-                {
-                    dstCumulativeLiquidProduction = new RealtimeData("DST cumulative liquid production");
-                    dstCumulativeLiquidProduction.Description = "DST cumulative liquid production";
-                }
                 return dstCumulativeLiquidProduction;
             }
         }
 
-        private static RealtimeData dstCumulativeTotalProduction;
+        private readonly static RealtimeData dstCumulativeTotalProduction;
         /// <summary>
         /// DST cumulative total production
         /// </summary>
@@ -7212,16 +7020,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstCumulativeTotalProduction == null)
-                {
-                    dstCumulativeTotalProduction = new RealtimeData("DST cumulative total production");
-                    dstCumulativeTotalProduction.Description = "DST cumulative total production";
-                }
                 return dstCumulativeTotalProduction;
             }
         }
 
-        private static RealtimeData dstGasFlowRate;
+        private readonly static RealtimeData dstGasFlowRate;
         /// <summary>
         /// DST gas flow rate
         /// </summary>
@@ -7230,16 +7033,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstGasFlowRate == null)
-                {
-                    dstGasFlowRate = new RealtimeData("DST gas flow rate");
-                    dstGasFlowRate.Description = "DST gas flow rate";
-                }
                 return dstGasFlowRate;
             }
         }
 
-        private static RealtimeData dstHydrogenSulfideAverage;
+        private readonly static RealtimeData dstHydrogenSulfideAverage;
         /// <summary>
         /// Hydrogen Sulfide (average) ppm
         /// </summary>
@@ -7248,16 +7046,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstHydrogenSulfideAverage == null)
-                {
-                    dstHydrogenSulfideAverage = new RealtimeData("DST hydrogen sulfide (average)");
-                    dstHydrogenSulfideAverage.Description = "Hydrogen Sulfide (average) ppm";
-                }
                 return dstHydrogenSulfideAverage;
             }
         }
 
-        private static RealtimeData dstIdentifier;
+        private readonly static RealtimeData dstIdentifier;
         /// <summary>
         /// Drill stem test identifier
         /// </summary>
@@ -7266,16 +7059,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstIdentifier == null)
-                {
-                    dstIdentifier = new RealtimeData("DST identifier");
-                    dstIdentifier.Description = "Drill stem test identifier";
-                }
                 return dstIdentifier;
             }
         }
 
-        private static RealtimeData dstLiquidFlowRate;
+        private readonly static RealtimeData dstLiquidFlowRate;
         /// <summary>
         /// DST liquid flow rate
         /// </summary>
@@ -7284,16 +7072,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstLiquidFlowRate == null)
-                {
-                    dstLiquidFlowRate = new RealtimeData("DST liquid flow rate");
-                    dstLiquidFlowRate.Description = "DST liquid flow rate";
-                }
                 return dstLiquidFlowRate;
             }
         }
 
-        private static RealtimeData dstSurfacePressureInCasing;
+        private readonly static RealtimeData dstSurfacePressureInCasing;
         /// <summary>
         /// DST surface pressure in casing
         /// </summary>
@@ -7302,16 +7085,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstSurfacePressureInCasing == null)
-                {
-                    dstSurfacePressureInCasing = new RealtimeData("DST surface pressure in casing");
-                    dstSurfacePressureInCasing.Description = "DST surface pressure in casing";
-                }
                 return dstSurfacePressureInCasing;
             }
         }
 
-        private static RealtimeData dstSurfacePressureInTubing;
+        private readonly static RealtimeData dstSurfacePressureInTubing;
         /// <summary>
         /// DST surface pressure in tubing
         /// </summary>
@@ -7320,16 +7098,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstSurfacePressureInTubing == null)
-                {
-                    dstSurfacePressureInTubing = new RealtimeData("DST surface pressure in tubing");
-                    dstSurfacePressureInTubing.Description = "DST surface pressure in tubing";
-                }
                 return dstSurfacePressureInTubing;
             }
         }
 
-        private static RealtimeData dstSurfaceTemperatureInTubing;
+        private readonly static RealtimeData dstSurfaceTemperatureInTubing;
         /// <summary>
         /// DST Surface temperature in tubing
         /// </summary>
@@ -7338,16 +7111,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstSurfaceTemperatureInTubing == null)
-                {
-                    dstSurfaceTemperatureInTubing = new RealtimeData("DST surface temperature in tubing");
-                    dstSurfaceTemperatureInTubing.Description = "DST Surface temperature in tubing";
-                }
                 return dstSurfaceTemperatureInTubing;
             }
         }
 
-        private static RealtimeData dstTotalFlowRate;
+        private readonly static RealtimeData dstTotalFlowRate;
         /// <summary>
         /// DST Total flow rate
         /// </summary>
@@ -7356,16 +7124,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstTotalFlowRate == null)
-                {
-                    dstTotalFlowRate = new RealtimeData("DST total flow rate");
-                    dstTotalFlowRate.Description = "DST Total flow rate";
-                }
                 return dstTotalFlowRate;
             }
         }
 
-        private static RealtimeData dstToolTime;
+        private readonly static RealtimeData dstToolTime;
         /// <summary>
         /// DST tool time (seconds)
         /// </summary>
@@ -7374,16 +7137,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (dstToolTime == null)
-                {
-                    dstToolTime = new RealtimeData("DST tool time");
-                    dstToolTime.Description = "DST tool time (seconds)";
-                }
                 return dstToolTime;
             }
         }
 
-        private static RealtimeData drillingExponentCorrected;
+        private readonly static RealtimeData drillingExponentCorrected;
         /// <summary>
         /// Corrected drilling exponent
         /// </summary>
@@ -7392,16 +7150,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (drillingExponentCorrected == null)
-                {
-                    drillingExponentCorrected = new RealtimeData("drilling exponent (corrected)");
-                    drillingExponentCorrected.Description = "Corrected drilling exponent";
-                }
                 return drillingExponentCorrected;
             }
         }
 
-        private static RealtimeData ecdAtBitDepth;
+        private readonly static RealtimeData ecdAtBitDepth;
         /// <summary>
         /// Effective circulating density at bit depth
         /// </summary>
@@ -7410,16 +7163,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ecdAtBitDepth == null)
-                {
-                    ecdAtBitDepth = new RealtimeData("ECD at bit depth");
-                    ecdAtBitDepth.Description = "Effective circulating density at bit depth";
-                }
                 return ecdAtBitDepth;
             }
         }
 
-        private static RealtimeData ecdAtCasingShoeDepth;
+        private readonly static RealtimeData ecdAtCasingShoeDepth;
         /// <summary>
         /// ECD at casing shoe depth
         /// </summary>
@@ -7428,16 +7176,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ecdAtCasingShoeDepth == null)
-                {
-                    ecdAtCasingShoeDepth = new RealtimeData("ECD at casing shoe depth");
-                    ecdAtCasingShoeDepth.Description = "ECD at casing shoe depth";
-                }
                 return ecdAtCasingShoeDepth;
             }
         }
 
-        private static RealtimeData ecdFromMwdTool;
+        private readonly static RealtimeData ecdFromMwdTool;
         /// <summary>
         /// ECD from MWD tool
         /// </summary>
@@ -7446,16 +7189,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ecdFromMwdTool == null)
-                {
-                    ecdFromMwdTool = new RealtimeData("ECD from MWD tool");
-                    ecdFromMwdTool.Description = "ECD from MWD tool";
-                }
                 return ecdFromMwdTool;
             }
         }
 
-        private static RealtimeData ecdAtTotalDepth;
+        private readonly static RealtimeData ecdAtTotalDepth;
         /// <summary>
         /// Equivalent circulating density at total depth
         /// </summary>
@@ -7464,16 +7202,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ecdAtTotalDepth == null)
-                {
-                    ecdAtTotalDepth = new RealtimeData("ECD at total depth");
-                    ecdAtTotalDepth.Description = "Equivalent circulating density at total depth";
-                }
                 return ecdAtTotalDepth;
             }
         }
 
-        private static RealtimeData neopentane;
+        private readonly static RealtimeData neopentane;
         /// <summary>
         /// neo-Pentane (eC5) ppm (cycle-based)
         /// </summary>
@@ -7482,16 +7215,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neopentane == null)
-                {
-                    neopentane = new RealtimeData("neo-pentane");
-                    neopentane.Description = "neo-Pentane (eC5) ppm (cycle-based)";
-                }
                 return neopentane;
             }
         }
 
-        private static RealtimeData neopentaneAverage;
+        private readonly static RealtimeData neopentaneAverage;
         /// <summary>
         /// neo-Pentane (eC5) ppm (average)
         /// </summary>
@@ -7500,16 +7228,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neopentaneAverage == null)
-                {
-                    neopentaneAverage = new RealtimeData("neo-pentane (average)");
-                    neopentaneAverage.Description = "neo-Pentane (eC5) ppm (average)";
-                }
                 return neopentaneAverage;
             }
         }
 
-        private static RealtimeData neopentaneMinimum;
+        private readonly static RealtimeData neopentaneMinimum;
         /// <summary>
         /// neo-Pentane (eC5) ppm (min)
         /// </summary>
@@ -7518,16 +7241,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neopentaneMinimum == null)
-                {
-                    neopentaneMinimum = new RealtimeData("neo-pentane (minimum)");
-                    neopentaneMinimum.Description = "neo-Pentane (eC5) ppm (min)";
-                }
                 return neopentaneMinimum;
             }
         }
 
-        private static RealtimeData neopentaneMaximum;
+        private readonly static RealtimeData neopentaneMaximum;
         /// <summary>
         /// neo-Pentane (eC5) ppm (max)
         /// </summary>
@@ -7536,16 +7254,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neopentaneMaximum == null)
-                {
-                    neopentaneMaximum = new RealtimeData("neo-pentane (maximum)");
-                    neopentaneMaximum.Description = "neo-Pentane (eC5) ppm (max)";
-                }
                 return neopentaneMaximum;
             }
         }
 
-        private static RealtimeData ethane;
+        private readonly static RealtimeData ethane;
         /// <summary>
         /// Ethane (C2) ppm (cycle-based)
         /// </summary>
@@ -7554,16 +7267,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ethane == null)
-                {
-                    ethane = new RealtimeData("ethane");
-                    ethane.Description = "Ethane (C2) ppm (cycle-based)";
-                }
                 return ethane;
             }
         }
 
-        private static RealtimeData ethaneAverage;
+        private readonly static RealtimeData ethaneAverage;
         /// <summary>
         /// Ethane (C2) ppm (average)
         /// </summary>
@@ -7572,16 +7280,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ethaneAverage == null)
-                {
-                    ethaneAverage = new RealtimeData("ethane (average)");
-                    ethaneAverage.Description = "Ethane (C2) ppm (average)";
-                }
                 return ethaneAverage;
             }
         }
 
-        private static RealtimeData ethaneMinimum;
+        private readonly static RealtimeData ethaneMinimum;
         /// <summary>
         /// Ethane (C2) ppm (min)
         /// </summary>
@@ -7590,16 +7293,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ethaneMinimum == null)
-                {
-                    ethaneMinimum = new RealtimeData("ethane (minimum)");
-                    ethaneMinimum.Description = "Ethane (C2) ppm (min)";
-                }
                 return ethaneMinimum;
             }
         }
 
-        private static RealtimeData ethaneMaximum;
+        private readonly static RealtimeData ethaneMaximum;
         /// <summary>
         /// Ethane (C2) ppm (max)
         /// </summary>
@@ -7608,16 +7306,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ethaneMaximum == null)
-                {
-                    ethaneMaximum = new RealtimeData("ethane (maximum)");
-                    ethaneMaximum.Description = "Ethane (C2) ppm (max)";
-                }
                 return ethaneMaximum;
             }
         }
 
-        private static RealtimeData formationFracturePressureGradient;
+        private readonly static RealtimeData formationFracturePressureGradient;
         /// <summary>
         /// Formation fracture pressure gradient
         /// </summary>
@@ -7626,16 +7319,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (formationFracturePressureGradient == null)
-                {
-                    formationFracturePressureGradient = new RealtimeData("formation fracture pressure gradient");
-                    formationFracturePressureGradient.Description = "Formation fracture pressure gradient";
-                }
                 return formationFracturePressureGradient;
             }
         }
 
-        private static RealtimeData flowRateInAverage;
+        private readonly static RealtimeData flowRateInAverage;
         /// <summary>
         /// Mud flow into the hole
         /// </summary>
@@ -7644,16 +7332,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (flowRateInAverage == null)
-                {
-                    flowRateInAverage = new RealtimeData("flow rate in (average)");
-                    flowRateInAverage.Description = "Mud flow into the hole";
-                }
                 return flowRateInAverage;
             }
         }
 
-        private static RealtimeData flowInRelative;
+        private readonly static RealtimeData flowInRelative;
         /// <summary>
         /// Flow into the hole measured as a percentage
         /// </summary>
@@ -7662,16 +7345,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (flowInRelative == null)
-                {
-                    flowInRelative = new RealtimeData("flow in (relative)");
-                    flowInRelative.Description = "Flow into the hole measured as a percentage";
-                }
                 return flowInRelative;
             }
         }
 
-        private static RealtimeData flowRateOutAverage;
+        private readonly static RealtimeData flowRateOutAverage;
         /// <summary>
         /// Mud flow out of the hole
         /// </summary>
@@ -7680,16 +7358,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (flowRateOutAverage == null)
-                {
-                    flowRateOutAverage = new RealtimeData("flow rate out (average)");
-                    flowRateOutAverage.Description = "Mud flow out of the hole";
-                }
                 return flowRateOutAverage;
             }
         }
 
-        private static RealtimeData flowOutRelative;
+        private readonly static RealtimeData flowOutRelative;
         /// <summary>
         /// Flow out of hole measured as a percentage
         /// </summary>
@@ -7698,16 +7371,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (flowOutRelative == null)
-                {
-                    flowOutRelative = new RealtimeData("flow out (relative)");
-                    flowOutRelative.Description = "Flow out of hole measured as a percentage";
-                }
                 return flowOutRelative;
             }
         }
 
-        private static RealtimeData overburdenPressureGradient;
+        private readonly static RealtimeData overburdenPressureGradient;
         /// <summary>
         /// Formation overburden pressure gradient
         /// </summary>
@@ -7716,16 +7384,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (overburdenPressureGradient == null)
-                {
-                    overburdenPressureGradient = new RealtimeData("overburden pressure gradient");
-                    overburdenPressureGradient.Description = "Formation overburden pressure gradient";
-                }
                 return overburdenPressureGradient;
             }
         }
 
-        private static RealtimeData bitJetImpactForce;
+        private readonly static RealtimeData bitJetImpactForce;
         /// <summary>
         /// Bit jet impact force
         /// </summary>
@@ -7734,16 +7397,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (bitJetImpactForce == null)
-                {
-                    bitJetImpactForce = new RealtimeData("bit jet impact force");
-                    bitJetImpactForce.Description = "Bit jet impact force";
-                }
                 return bitJetImpactForce;
             }
         }
 
-        private static RealtimeData formationPorePressureGradient;
+        private readonly static RealtimeData formationPorePressureGradient;
         /// <summary>
         /// Formation pore pressure gradient
         /// </summary>
@@ -7752,16 +7410,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (formationPorePressureGradient == null)
-                {
-                    formationPorePressureGradient = new RealtimeData("formation pore pressure gradient");
-                    formationPorePressureGradient.Description = "Formation pore pressure gradient";
-                }
                 return formationPorePressureGradient;
             }
         }
 
-        private static RealtimeData gasTotalAverage;
+        private readonly static RealtimeData gasTotalAverage;
         /// <summary>
         /// Total gas %
         /// </summary>
@@ -7770,16 +7423,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gasTotalAverage == null)
-                {
-                    gasTotalAverage = new RealtimeData("gas total (average)");
-                    gasTotalAverage.Description = "Total gas %";
-                }
                 return gasTotalAverage;
             }
         }
 
-        private static RealtimeData connectionGasAverage;
+        private readonly static RealtimeData connectionGasAverage;
         /// <summary>
         /// Connection gas (average) %
         /// </summary>
@@ -7788,16 +7436,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (connectionGasAverage == null)
-                {
-                    connectionGasAverage = new RealtimeData("connection gas (average)");
-                    connectionGasAverage.Description = "Connection gas (average) %";
-                }
                 return connectionGasAverage;
             }
         }
 
-        private static RealtimeData connectionGasLast;
+        private readonly static RealtimeData connectionGasLast;
         /// <summary>
         /// Connection gas (last reading) %
         /// </summary>
@@ -7806,16 +7449,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (connectionGasLast == null)
-                {
-                    connectionGasLast = new RealtimeData("connection gas (last)");
-                    connectionGasLast.Description = "Connection gas (last reading) %";
-                }
                 return connectionGasLast;
             }
         }
 
-        private static RealtimeData connectionGasMaximum;
+        private readonly static RealtimeData connectionGasMaximum;
         /// <summary>
         /// Connection gas (maximum) %
         /// </summary>
@@ -7824,16 +7462,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (connectionGasMaximum == null)
-                {
-                    connectionGasMaximum = new RealtimeData("connection gas (maximum)");
-                    connectionGasMaximum.Description = "Connection gas (maximum) %";
-                }
                 return connectionGasMaximum;
             }
         }
 
-        private static RealtimeData tripGasLast;
+        private readonly static RealtimeData tripGasLast;
         /// <summary>
         /// Trip gas last reading %
         /// </summary>
@@ -7842,16 +7475,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tripGasLast == null)
-                {
-                    tripGasLast = new RealtimeData("trip gas (last)");
-                    tripGasLast.Description = "Trip gas last reading %";
-                }
                 return tripGasLast;
             }
         }
 
-        private static RealtimeData gammaRay;
+        private readonly static RealtimeData gammaRay;
         /// <summary>
         /// Gamma ray reading (uncorrected)
         /// </summary>
@@ -7860,16 +7488,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gammaRay == null)
-                {
-                    gammaRay = new RealtimeData("gamma ray");
-                    gammaRay.Description = "Gamma ray reading (uncorrected)";
-                }
                 return gammaRay;
             }
         }
 
-        private static RealtimeData gammaRayCorrected;
+        private readonly static RealtimeData gammaRayCorrected;
         /// <summary>
         /// Gamma ray reading (corrected)
         /// </summary>
@@ -7878,16 +7501,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gammaRayCorrected == null)
-                {
-                    gammaRayCorrected = new RealtimeData("gamma ray (corrected)");
-                    gammaRayCorrected.Description = "Gamma ray reading (corrected)";
-                }
                 return gammaRayCorrected;
             }
         }
 
-        private static RealtimeData gravityToolFace;
+        private readonly static RealtimeData gravityToolFace;
         /// <summary>
         /// MWD gravity tool face
         /// </summary>
@@ -7896,16 +7514,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravityToolFace == null)
-                {
-                    gravityToolFace = new RealtimeData("gravity tool face");
-                    gravityToolFace.Description = "MWD gravity tool face";
-                }
                 return gravityToolFace;
             }
         }
 
-        private static RealtimeData gravityXaxisCorrected;
+        private readonly static RealtimeData gravityXaxisCorrected;
         /// <summary>
         /// X axis gravity corrected
         /// </summary>
@@ -7914,16 +7527,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravityXaxisCorrected == null)
-                {
-                    gravityXaxisCorrected = new RealtimeData("gravity X-axis (corrected)");
-                    gravityXaxisCorrected.Description = "X axis gravity corrected";
-                }
                 return gravityXaxisCorrected;
             }
         }
 
-        private static RealtimeData gravityXaxisUncorrected;
+        private readonly static RealtimeData gravityXaxisUncorrected;
         /// <summary>
         /// X axis gravity uncorrected
         /// </summary>
@@ -7932,16 +7540,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravityXaxisUncorrected == null)
-                {
-                    gravityXaxisUncorrected = new RealtimeData("gravity X-axis (uncorrected)");
-                    gravityXaxisUncorrected.Description = "X axis gravity uncorrected";
-                }
                 return gravityXaxisUncorrected;
             }
         }
 
-        private static RealtimeData gravityYaxisCorrected;
+        private readonly static RealtimeData gravityYaxisCorrected;
         /// <summary>
         /// Y axis gravity corrected
         /// </summary>
@@ -7950,16 +7553,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravityYaxisCorrected == null)
-                {
-                    gravityYaxisCorrected = new RealtimeData("gravity Y-axis (corrected)");
-                    gravityYaxisCorrected.Description = "Y axis gravity corrected";
-                }
                 return gravityYaxisCorrected;
             }
         }
 
-        private static RealtimeData gravityYaxisUncorrected;
+        private readonly static RealtimeData gravityYaxisUncorrected;
         /// <summary>
         /// Y axis gravity uncorrected
         /// </summary>
@@ -7968,16 +7566,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravityYaxisUncorrected == null)
-                {
-                    gravityYaxisUncorrected = new RealtimeData("gravity Y-axis (uncorrected)");
-                    gravityYaxisUncorrected.Description = "Y axis gravity uncorrected";
-                }
                 return gravityYaxisUncorrected;
             }
         }
 
-        private static RealtimeData gravityZaxisCorrected;
+        private readonly static RealtimeData gravityZaxisCorrected;
         /// <summary>
         /// Z axis gravity corrected
         /// </summary>
@@ -7986,16 +7579,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravityZaxisCorrected == null)
-                {
-                    gravityZaxisCorrected = new RealtimeData("gravity Z-axis (corrected)");
-                    gravityZaxisCorrected.Description = "Z axis gravity corrected";
-                }
                 return gravityZaxisCorrected;
             }
         }
 
-        private static RealtimeData gravityZaxisUncorrected;
+        private readonly static RealtimeData gravityZaxisUncorrected;
         /// <summary>
         /// Z axis gravity uncorrected
         /// </summary>
@@ -8004,16 +7592,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (gravityZaxisUncorrected == null)
-                {
-                    gravityZaxisUncorrected = new RealtimeData("gravity Z-axis (uncorrected)");
-                    gravityZaxisUncorrected.Description = "Z axis gravity uncorrected";
-                }
                 return gravityZaxisUncorrected;
             }
         }
 
-        private static RealtimeData hydrogenSulfide;
+        private readonly static RealtimeData hydrogenSulfide;
         /// <summary>
         /// Hydrogen Sulfide ppm
         /// </summary>
@@ -8022,16 +7605,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hydrogenSulfide == null)
-                {
-                    hydrogenSulfide = new RealtimeData("hydrogen sulfide");
-                    hydrogenSulfide.Description = "Hydrogen Sulfide ppm";
-                }
                 return hydrogenSulfide;
             }
         }
 
-        private static RealtimeData hydrogenSulfideAverage;
+        private readonly static RealtimeData hydrogenSulfideAverage;
         /// <summary>
         /// Hydrogen Sulfide (average) ppm
         /// </summary>
@@ -8040,16 +7618,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hydrogenSulfideAverage == null)
-                {
-                    hydrogenSulfideAverage = new RealtimeData("hydrogen sulfide (average)");
-                    hydrogenSulfideAverage.Description = "Hydrogen Sulfide (average) ppm";
-                }
                 return hydrogenSulfideAverage;
             }
         }
 
-        private static RealtimeData hydrogenSulfideMinimum;
+        private readonly static RealtimeData hydrogenSulfideMinimum;
         /// <summary>
         /// Hydrogen Sulfide (min) ppm
         /// </summary>
@@ -8058,16 +7631,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hydrogenSulfideMinimum == null)
-                {
-                    hydrogenSulfideMinimum = new RealtimeData("hydrogen sulfide (minimum)");
-                    hydrogenSulfideMinimum.Description = "Hydrogen Sulfide (min) ppm";
-                }
                 return hydrogenSulfideMinimum;
             }
         }
 
-        private static RealtimeData hydrogenSulfideMaximum;
+        private readonly static RealtimeData hydrogenSulfideMaximum;
         /// <summary>
         /// Hydrogen Sulfide (max) ppm
         /// </summary>
@@ -8076,16 +7644,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hydrogenSulfideMaximum == null)
-                {
-                    hydrogenSulfideMaximum = new RealtimeData("hydrogen sulfide (maximum)");
-                    hydrogenSulfideMaximum.Description = "Hydrogen Sulfide (max) ppm";
-                }
                 return hydrogenSulfideMaximum;
             }
         }
 
-        private static RealtimeData hookloadAverage;
+        private readonly static RealtimeData hookloadAverage;
         /// <summary>
         /// Hookload, average, measured at surface
         /// </summary>
@@ -8094,16 +7657,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hookloadAverage == null)
-                {
-                    hookloadAverage = new RealtimeData("hookload (average)");
-                    hookloadAverage.Description = "Hookload, average, measured at surface";
-                }
                 return hookloadAverage;
             }
         }
 
-        private static RealtimeData hookloadMinimum;
+        private readonly static RealtimeData hookloadMinimum;
         /// <summary>
         /// Minimum hookload while running the stand
         /// </summary>
@@ -8112,16 +7670,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hookloadMinimum == null)
-                {
-                    hookloadMinimum = new RealtimeData("hookload (minimum)");
-                    hookloadMinimum.Description = "Minimum hookload while running the stand";
-                }
                 return hookloadMinimum;
             }
         }
 
-        private static RealtimeData hookloadMaximum;
+        private readonly static RealtimeData hookloadMaximum;
         /// <summary>
         /// Hookload, maximum measured at surface
         /// </summary>
@@ -8130,16 +7683,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hookloadMaximum == null)
-                {
-                    hookloadMaximum = new RealtimeData("hookload (maximum)");
-                    hookloadMaximum.Description = "Hookload, maximum measured at surface";
-                }
                 return hookloadMaximum;
             }
         }
 
-        private static RealtimeData mwdMagnetometerXCorrected;
+        private readonly static RealtimeData mwdMagnetometerXCorrected;
         /// <summary>
         /// X axis magnetic corrected
         /// </summary>
@@ -8148,16 +7696,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdMagnetometerXCorrected == null)
-                {
-                    mwdMagnetometerXCorrected = new RealtimeData("MWD magnetometer X (corrected)");
-                    mwdMagnetometerXCorrected.Description = "X axis magnetic corrected";
-                }
                 return mwdMagnetometerXCorrected;
             }
         }
 
-        private static RealtimeData mwdMagnetometerXRaw;
+        private readonly static RealtimeData mwdMagnetometerXRaw;
         /// <summary>
         /// X axis magnetic uncorrected
         /// </summary>
@@ -8166,16 +7709,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdMagnetometerXRaw == null)
-                {
-                    mwdMagnetometerXRaw = new RealtimeData("MWD magnetometer X (raw)");
-                    mwdMagnetometerXRaw.Description = "X axis magnetic uncorrected";
-                }
                 return mwdMagnetometerXRaw;
             }
         }
 
-        private static RealtimeData mwdMagnetometerYCorrected;
+        private readonly static RealtimeData mwdMagnetometerYCorrected;
         /// <summary>
         /// Y axis magnetic corrected
         /// </summary>
@@ -8184,16 +7722,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdMagnetometerYCorrected == null)
-                {
-                    mwdMagnetometerYCorrected = new RealtimeData("MWD magnetometer Y (corrected)");
-                    mwdMagnetometerYCorrected.Description = "Y axis magnetic corrected";
-                }
                 return mwdMagnetometerYCorrected;
             }
         }
 
-        private static RealtimeData mwdMagnetometerYRaw;
+        private readonly static RealtimeData mwdMagnetometerYRaw;
         /// <summary>
         /// Y axis magnetic uncorrected
         /// </summary>
@@ -8202,16 +7735,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdMagnetometerYRaw == null)
-                {
-                    mwdMagnetometerYRaw = new RealtimeData("MWD magnetometer Y (raw)");
-                    mwdMagnetometerYRaw.Description = "Y axis magnetic uncorrected";
-                }
                 return mwdMagnetometerYRaw;
             }
         }
 
-        private static RealtimeData mwdMagnetometerZCorrected;
+        private readonly static RealtimeData mwdMagnetometerZCorrected;
         /// <summary>
         /// Z axis magnetic corrected
         /// </summary>
@@ -8220,16 +7748,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdMagnetometerZCorrected == null)
-                {
-                    mwdMagnetometerZCorrected = new RealtimeData("MWD magnetometer Z (corrected)");
-                    mwdMagnetometerZCorrected.Description = "Z axis magnetic corrected";
-                }
                 return mwdMagnetometerZCorrected;
             }
         }
 
-        private static RealtimeData mwdMagnetometerZRaw;
+        private readonly static RealtimeData mwdMagnetometerZRaw;
         /// <summary>
         /// Z axis magnetic uncorrected
         /// </summary>
@@ -8238,16 +7761,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdMagnetometerZRaw == null)
-                {
-                    mwdMagnetometerZRaw = new RealtimeData("MWD magnetometer Z (raw)");
-                    mwdMagnetometerZRaw.Description = "Z axis magnetic uncorrected";
-                }
                 return mwdMagnetometerZRaw;
             }
         }
 
-        private static RealtimeData isobutane;
+        private readonly static RealtimeData isobutane;
         /// <summary>
         /// iso-Butane (iC4) ppm (cycle-based)
         /// </summary>
@@ -8256,16 +7774,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isobutane == null)
-                {
-                    isobutane = new RealtimeData("iso-butane");
-                    isobutane.Description = "iso-Butane (iC4) ppm (cycle-based)";
-                }
                 return isobutane;
             }
         }
 
-        private static RealtimeData isobutaneAverage;
+        private readonly static RealtimeData isobutaneAverage;
         /// <summary>
         /// iso-Butane (iC4) ppm (average)
         /// </summary>
@@ -8274,16 +7787,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isobutaneAverage == null)
-                {
-                    isobutaneAverage = new RealtimeData("iso-butane (average)");
-                    isobutaneAverage.Description = "iso-Butane (iC4) ppm (average)";
-                }
                 return isobutaneAverage;
             }
         }
 
-        private static RealtimeData isobutaneMinimum;
+        private readonly static RealtimeData isobutaneMinimum;
         /// <summary>
         /// iso-Butane (iC4) ppm (min)
         /// </summary>
@@ -8292,16 +7800,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isobutaneMinimum == null)
-                {
-                    isobutaneMinimum = new RealtimeData("iso-butane (minimum)");
-                    isobutaneMinimum.Description = "iso-Butane (iC4) ppm (min)";
-                }
                 return isobutaneMinimum;
             }
         }
 
-        private static RealtimeData isobutaneMaximum;
+        private readonly static RealtimeData isobutaneMaximum;
         /// <summary>
         /// iso-Butane (iC4) ppm (max)
         /// </summary>
@@ -8310,16 +7813,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isobutaneMaximum == null)
-                {
-                    isobutaneMaximum = new RealtimeData("iso-butane (maximum)");
-                    isobutaneMaximum.Description = "iso-Butane (iC4) ppm (max)";
-                }
                 return isobutaneMaximum;
             }
         }
 
-        private static RealtimeData isohexane;
+        private readonly static RealtimeData isohexane;
         /// <summary>
         /// iso-Hexane (iC6) ppm (cycle-based)
         /// </summary>
@@ -8328,16 +7826,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isohexane == null)
-                {
-                    isohexane = new RealtimeData("iso-hexane");
-                    isohexane.Description = "iso-Hexane (iC6) ppm (cycle-based)";
-                }
                 return isohexane;
             }
         }
 
-        private static RealtimeData isohexaneAverage;
+        private readonly static RealtimeData isohexaneAverage;
         /// <summary>
         /// iso-Hexane (iC6) ppm (average)
         /// </summary>
@@ -8346,16 +7839,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isohexaneAverage == null)
-                {
-                    isohexaneAverage = new RealtimeData("iso-hexane (average)");
-                    isohexaneAverage.Description = "iso-Hexane (iC6) ppm (average)";
-                }
                 return isohexaneAverage;
             }
         }
 
-        private static RealtimeData isohexaneMinimum;
+        private readonly static RealtimeData isohexaneMinimum;
         /// <summary>
         /// iso-Hexane (iC6) ppm (min)
         /// </summary>
@@ -8364,16 +7852,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isohexaneMinimum == null)
-                {
-                    isohexaneMinimum = new RealtimeData("iso-hexane (minimum)");
-                    isohexaneMinimum.Description = "iso-Hexane (iC6) ppm (min)";
-                }
                 return isohexaneMinimum;
             }
         }
 
-        private static RealtimeData isohexaneMaximum;
+        private readonly static RealtimeData isohexaneMaximum;
         /// <summary>
         /// iso-Hexane (iC6) ppm (max)
         /// </summary>
@@ -8382,16 +7865,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isohexaneMaximum == null)
-                {
-                    isohexaneMaximum = new RealtimeData("iso-hexane (maximum)");
-                    isohexaneMaximum.Description = "iso-Hexane (iC6) ppm (max)";
-                }
                 return isohexaneMaximum;
             }
         }
 
-        private static RealtimeData inclinationCorrected;
+        private readonly static RealtimeData inclinationCorrected;
         /// <summary>
         /// MWD inclination (corrected)
         /// </summary>
@@ -8400,16 +7878,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (inclinationCorrected == null)
-                {
-                    inclinationCorrected = new RealtimeData("inclination (corrected)");
-                    inclinationCorrected.Description = "MWD inclination (corrected)";
-                }
                 return inclinationCorrected;
             }
         }
 
-        private static RealtimeData inclinationNearBit;
+        private readonly static RealtimeData inclinationNearBit;
         /// <summary>
         /// Near-bit inclination
         /// </summary>
@@ -8418,16 +7891,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (inclinationNearBit == null)
-                {
-                    inclinationNearBit = new RealtimeData("inclination near bit");
-                    inclinationNearBit.Description = "Near-bit inclination";
-                }
                 return inclinationNearBit;
             }
         }
 
-        private static RealtimeData inclinationUncorrected;
+        private readonly static RealtimeData inclinationUncorrected;
         /// <summary>
         /// MWD inclination (uncorrected)
         /// </summary>
@@ -8436,16 +7904,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (inclinationUncorrected == null)
-                {
-                    inclinationUncorrected = new RealtimeData("inclination (uncorrected)");
-                    inclinationUncorrected.Description = "MWD inclination (uncorrected)";
-                }
                 return inclinationUncorrected;
             }
         }
 
-        private static RealtimeData isopentane;
+        private readonly static RealtimeData isopentane;
         /// <summary>
         /// iso-Pentane (iC5) ppm (cycle-based)
         /// </summary>
@@ -8454,16 +7917,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isopentane == null)
-                {
-                    isopentane = new RealtimeData("iso-pentane");
-                    isopentane.Description = "iso-Pentane (iC5) ppm (cycle-based)";
-                }
                 return isopentane;
             }
         }
 
-        private static RealtimeData isopentaneAverage;
+        private readonly static RealtimeData isopentaneAverage;
         /// <summary>
         /// iso-Pentane (iC5) ppm (average)
         /// </summary>
@@ -8472,16 +7930,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isopentaneAverage == null)
-                {
-                    isopentaneAverage = new RealtimeData("iso-pentane (average)");
-                    isopentaneAverage.Description = "iso-Pentane (iC5) ppm (average)";
-                }
                 return isopentaneAverage;
             }
         }
 
-        private static RealtimeData isopentaneMinimum;
+        private readonly static RealtimeData isopentaneMinimum;
         /// <summary>
         /// iso-Pentane (iC5) ppm (min)
         /// </summary>
@@ -8490,16 +7943,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isopentaneMinimum == null)
-                {
-                    isopentaneMinimum = new RealtimeData("iso-pentane (minimum)");
-                    isopentaneMinimum.Description = "iso-Pentane (iC5) ppm (min)";
-                }
                 return isopentaneMinimum;
             }
         }
 
-        private static RealtimeData isopentaneMaximum;
+        private readonly static RealtimeData isopentaneMaximum;
         /// <summary>
         /// iso-Pentane (iC5) ppm (max)
         /// </summary>
@@ -8508,16 +7956,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (isopentaneMaximum == null)
-                {
-                    isopentaneMaximum = new RealtimeData("iso-pentane (maximum)");
-                    isopentaneMaximum.Description = "iso-Pentane (iC5) ppm (max)";
-                }
                 return isopentaneMaximum;
             }
         }
 
-        private static RealtimeData kickTolerance;
+        private readonly static RealtimeData kickTolerance;
         /// <summary>
         /// Kick tolerance
         /// </summary>
@@ -8526,16 +7969,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (kickTolerance == null)
-                {
-                    kickTolerance = new RealtimeData("kick tolerance");
-                    kickTolerance.Description = "Kick tolerance";
-                }
                 return kickTolerance;
             }
         }
 
-        private static RealtimeData lithologyFlag;
+        private readonly static RealtimeData lithologyFlag;
         /// <summary>
         /// Lithology flag
         /// </summary>
@@ -8544,16 +7982,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (lithologyFlag == null)
-                {
-                    lithologyFlag = new RealtimeData("lithology flag");
-                    lithologyFlag.Description = "Lithology flag";
-                }
                 return lithologyFlag;
             }
         }
 
-        private static RealtimeData mwdAlternatorVoltage;
+        private readonly static RealtimeData mwdAlternatorVoltage;
         /// <summary>
         /// Downhole tool alternator voltage
         /// </summary>
@@ -8562,16 +7995,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdAlternatorVoltage == null)
-                {
-                    mwdAlternatorVoltage = new RealtimeData("MWD alternator voltage");
-                    mwdAlternatorVoltage.Description = "Downhole tool alternator voltage";
-                }
                 return mwdAlternatorVoltage;
             }
         }
 
-        private static RealtimeData mwdBottomHoleAnnulusPressure;
+        private readonly static RealtimeData mwdBottomHoleAnnulusPressure;
         /// <summary>
         /// Bottom hole annulus pressure
         /// </summary>
@@ -8580,16 +8008,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdBottomHoleAnnulusPressure == null)
-                {
-                    mwdBottomHoleAnnulusPressure = new RealtimeData("MWD bottom hole annulus pressure");
-                    mwdBottomHoleAnnulusPressure.Description = "Bottom hole annulus pressure";
-                }
                 return mwdBottomHoleAnnulusPressure;
             }
         }
 
-        private static RealtimeData mwdBottomHoleInternalPressure;
+        private readonly static RealtimeData mwdBottomHoleInternalPressure;
         /// <summary>
         /// Bottom hole internal pressure
         /// </summary>
@@ -8598,16 +8021,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdBottomHoleInternalPressure == null)
-                {
-                    mwdBottomHoleInternalPressure = new RealtimeData("MWD bottom hole internal pressure");
-                    mwdBottomHoleInternalPressure.Description = "Bottom hole internal pressure";
-                }
                 return mwdBottomHoleInternalPressure;
             }
         }
 
-        private static RealtimeData bitTotalMeasuredDepth;
+        private readonly static RealtimeData bitTotalMeasuredDepth;
         /// <summary>
         /// Total (measured) depth of bit
         /// </summary>
@@ -8616,16 +8034,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (bitTotalMeasuredDepth == null)
-                {
-                    bitTotalMeasuredDepth = new RealtimeData("bit total measured depth");
-                    bitTotalMeasuredDepth.Description = "Total (measured) depth of bit";
-                }
                 return bitTotalMeasuredDepth;
             }
         }
 
-        private static RealtimeData mwdConductivity;
+        private readonly static RealtimeData mwdConductivity;
         /// <summary>
         /// Mud conductivity
         /// </summary>
@@ -8634,16 +8047,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdConductivity == null)
-                {
-                    mwdConductivity = new RealtimeData("MWD conductivity");
-                    mwdConductivity.Description = "Mud conductivity";
-                }
                 return mwdConductivity;
             }
         }
 
-        private static RealtimeData measuredDepthOfCasing;
+        private readonly static RealtimeData measuredDepthOfCasing;
         /// <summary>
         /// Measured depth of casing in the cementing 
         /// </summary>
@@ -8652,16 +8060,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (measuredDepthOfCasing == null)
-                {
-                    measuredDepthOfCasing = new RealtimeData("measured depth of casing");
-                    measuredDepthOfCasing.Description = "Measured depth of casing in the cementing ";
-                }
                 return measuredDepthOfCasing;
             }
         }
 
-        private static RealtimeData measuredDepthOfDstBottom;
+        private readonly static RealtimeData measuredDepthOfDstBottom;
         /// <summary>
         /// Depth (measured) of bottom of DST interval
         /// </summary>
@@ -8670,16 +8073,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (measuredDepthOfDstBottom == null)
-                {
-                    measuredDepthOfDstBottom = new RealtimeData("measured depth of DST bottom");
-                    measuredDepthOfDstBottom.Description = "Depth (measured) of bottom of DST interval";
-                }
                 return measuredDepthOfDstBottom;
             }
         }
 
-        private static RealtimeData measuredDepthOfDstTop;
+        private readonly static RealtimeData measuredDepthOfDstTop;
         /// <summary>
         /// Depth (measured) of top of DST interval
         /// </summary>
@@ -8688,16 +8086,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (measuredDepthOfDstTop == null)
-                {
-                    measuredDepthOfDstTop = new RealtimeData("measured depth of DST top");
-                    measuredDepthOfDstTop.Description = "Depth (measured) of top of DST interval";
-                }
                 return measuredDepthOfDstTop;
             }
         }
 
-        private static RealtimeData measuredDepthOfDiverterTool;
+        private readonly static RealtimeData measuredDepthOfDiverterTool;
         /// <summary>
         /// Cementing depth to DV tool
         /// </summary>
@@ -8706,16 +8099,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (measuredDepthOfDiverterTool == null)
-                {
-                    measuredDepthOfDiverterTool = new RealtimeData("measured depth of diverter tool");
-                    measuredDepthOfDiverterTool.Description = "Cementing depth to DV tool";
-                }
                 return measuredDepthOfDiverterTool;
             }
         }
 
-        private static RealtimeData measuredDepthOfHole;
+        private readonly static RealtimeData measuredDepthOfHole;
         /// <summary>
         /// Total (measured) depth of hole
         /// </summary>
@@ -8724,16 +8112,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (measuredDepthOfHole == null)
-                {
-                    measuredDepthOfHole = new RealtimeData("measured depth of hole");
-                    measuredDepthOfHole.Description = "Total (measured) depth of hole";
-                }
                 return measuredDepthOfHole;
             }
         }
 
-        private static RealtimeData measuredDepthOfReturns;
+        private readonly static RealtimeData measuredDepthOfReturns;
         /// <summary>
         /// Depth of cuttings returns
         /// </summary>
@@ -8742,16 +8125,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (measuredDepthOfReturns == null)
-                {
-                    measuredDepthOfReturns = new RealtimeData("measured depth of returns");
-                    measuredDepthOfReturns.Description = "Depth of cuttings returns";
-                }
                 return measuredDepthOfReturns;
             }
         }
 
-        private static RealtimeData methane;
+        private readonly static RealtimeData methane;
         /// <summary>
         /// Methane (C1) ppm (cycle-based)
         /// </summary>
@@ -8760,16 +8138,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (methane == null)
-                {
-                    methane = new RealtimeData("methane");
-                    methane.Description = "Methane (C1) ppm (cycle-based)";
-                }
                 return methane;
             }
         }
 
-        private static RealtimeData methaneAverage;
+        private readonly static RealtimeData methaneAverage;
         /// <summary>
         /// Methane (C1) ppm (average)
         /// </summary>
@@ -8778,16 +8151,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (methaneAverage == null)
-                {
-                    methaneAverage = new RealtimeData("methane (average)");
-                    methaneAverage.Description = "Methane (C1) ppm (average)";
-                }
                 return methaneAverage;
             }
         }
 
-        private static RealtimeData methaneMinimum;
+        private readonly static RealtimeData methaneMinimum;
         /// <summary>
         /// Methane (C1) ppm (min)
         /// </summary>
@@ -8796,16 +8164,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (methaneMinimum == null)
-                {
-                    methaneMinimum = new RealtimeData("methane (minimum)");
-                    methaneMinimum.Description = "Methane (C1) ppm (min)";
-                }
                 return methaneMinimum;
             }
         }
 
-        private static RealtimeData methaneMaximum;
+        private readonly static RealtimeData methaneMaximum;
         /// <summary>
         /// Methane (C1) ppm (max)
         /// </summary>
@@ -8814,16 +8177,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (methaneMaximum == null)
-                {
-                    methaneMaximum = new RealtimeData("methane (maximum)");
-                    methaneMaximum.Description = "Methane (C1) ppm (max)";
-                }
                 return methaneMaximum;
             }
         }
 
-        private static RealtimeData mwdDerivedFracturePressureGradient;
+        private readonly static RealtimeData mwdDerivedFracturePressureGradient;
         /// <summary>
         /// Fracture pressure gradient from MWD
         /// </summary>
@@ -8832,16 +8190,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdDerivedFracturePressureGradient == null)
-                {
-                    mwdDerivedFracturePressureGradient = new RealtimeData("MWD derived fracture pressure gradient");
-                    mwdDerivedFracturePressureGradient.Description = "Fracture pressure gradient from MWD";
-                }
                 return mwdDerivedFracturePressureGradient;
             }
         }
 
-        private static RealtimeData mwdDerivedPorePressureGradient;
+        private readonly static RealtimeData mwdDerivedPorePressureGradient;
         /// <summary>
         /// Pore Pressure gradient from MWD
         /// </summary>
@@ -8850,16 +8203,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdDerivedPorePressureGradient == null)
-                {
-                    mwdDerivedPorePressureGradient = new RealtimeData("MWD derived pore pressure gradient");
-                    mwdDerivedPorePressureGradient.Description = "Pore Pressure gradient from MWD";
-                }
                 return mwdDerivedPorePressureGradient;
             }
         }
 
-        private static RealtimeData mwdFluidResistivityInAnnulus;
+        private readonly static RealtimeData mwdFluidResistivityInAnnulus;
         /// <summary>
         /// Downhole fluid resistivity in annulus
         /// </summary>
@@ -8868,16 +8216,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdFluidResistivityInAnnulus == null)
-                {
-                    mwdFluidResistivityInAnnulus = new RealtimeData("MWD fluid resistivity in annulus");
-                    mwdFluidResistivityInAnnulus.Description = "Downhole fluid resistivity in annulus";
-                }
                 return mwdFluidResistivityInAnnulus;
             }
         }
 
-        private static RealtimeData mwdFluidResistivityInPipe;
+        private readonly static RealtimeData mwdFluidResistivityInPipe;
         /// <summary>
         /// Downhole fluid resistivity in pipe
         /// </summary>
@@ -8886,16 +8229,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdFluidResistivityInPipe == null)
-                {
-                    mwdFluidResistivityInPipe = new RealtimeData("MWD fluid resistivity in pipe");
-                    mwdFluidResistivityInPipe.Description = "Downhole fluid resistivity in pipe";
-                }
                 return mwdFluidResistivityInPipe;
             }
         }
 
-        private static RealtimeData mwdFluidTemperatureInAnnulus;
+        private readonly static RealtimeData mwdFluidTemperatureInAnnulus;
         /// <summary>
         /// Downhole fluid temperature in annulus
         /// </summary>
@@ -8904,16 +8242,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdFluidTemperatureInAnnulus == null)
-                {
-                    mwdFluidTemperatureInAnnulus = new RealtimeData("MWD fluid temperature in annulus");
-                    mwdFluidTemperatureInAnnulus.Description = "Downhole fluid temperature in annulus";
-                }
                 return mwdFluidTemperatureInAnnulus;
             }
         }
 
-        private static RealtimeData mwdFluidTemperatureInPipe;
+        private readonly static RealtimeData mwdFluidTemperatureInPipe;
         /// <summary>
         /// Downhole fluid temperature in pipe
         /// </summary>
@@ -8922,16 +8255,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdFluidTemperatureInPipe == null)
-                {
-                    mwdFluidTemperatureInPipe = new RealtimeData("MWD fluid temperature in pipe");
-                    mwdFluidTemperatureInPipe.Description = "Downhole fluid temperature in pipe";
-                }
                 return mwdFluidTemperatureInPipe;
             }
         }
 
-        private static RealtimeData mwdGammaRay;
+        private readonly static RealtimeData mwdGammaRay;
         /// <summary>
         /// Measured gamma ray value
         /// </summary>
@@ -8940,16 +8268,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdGammaRay == null)
-                {
-                    mwdGammaRay = new RealtimeData("MWD gamma ray");
-                    mwdGammaRay.Description = "Measured gamma ray value";
-                }
                 return mwdGammaRay;
             }
         }
 
-        private static RealtimeData mwdGammaRayCorrected;
+        private readonly static RealtimeData mwdGammaRayCorrected;
         /// <summary>
         /// Borehole corrected gamma ray value
         /// </summary>
@@ -8958,16 +8281,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdGammaRayCorrected == null)
-                {
-                    mwdGammaRayCorrected = new RealtimeData("MWD gamma ray (corrected)");
-                    mwdGammaRayCorrected.Description = "Borehole corrected gamma ray value";
-                }
                 return mwdGammaRayCorrected;
             }
         }
 
-        private static RealtimeData mwdMotorSpeed;
+        private readonly static RealtimeData mwdMotorSpeed;
         /// <summary>
         /// Downhole motor RPM
         /// </summary>
@@ -8976,16 +8294,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdMotorSpeed == null)
-                {
-                    mwdMotorSpeed = new RealtimeData("MWD motor speed");
-                    mwdMotorSpeed.Description = "Downhole motor RPM";
-                }
                 return mwdMotorSpeed;
             }
         }
 
-        private static RealtimeData mwdResistivity;
+        private readonly static RealtimeData mwdResistivity;
         /// <summary>
         /// Measured resistivity value
         /// </summary>
@@ -8994,16 +8307,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdResistivity == null)
-                {
-                    mwdResistivity = new RealtimeData("MWD resistivity");
-                    mwdResistivity.Description = "Measured resistivity value";
-                }
                 return mwdResistivity;
             }
         }
 
-        private static RealtimeData mwdResistivityCorrected;
+        private readonly static RealtimeData mwdResistivityCorrected;
         /// <summary>
         /// Borehole corrected resistivity value
         /// </summary>
@@ -9012,16 +8320,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdResistivityCorrected == null)
-                {
-                    mwdResistivityCorrected = new RealtimeData("MWD resistivity (corrected)");
-                    mwdResistivityCorrected.Description = "Borehole corrected resistivity value";
-                }
                 return mwdResistivityCorrected;
             }
         }
 
-        private static RealtimeData magneticToolFace;
+        private readonly static RealtimeData magneticToolFace;
         /// <summary>
         /// MWD magnetic tool face
         /// </summary>
@@ -9030,16 +8333,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (magneticToolFace == null)
-                {
-                    magneticToolFace = new RealtimeData("magnetic tool face");
-                    magneticToolFace.Description = "MWD magnetic tool face";
-                }
                 return magneticToolFace;
             }
         }
 
-        private static RealtimeData mwdTorqueAverage;
+        private readonly static RealtimeData mwdTorqueAverage;
         /// <summary>
         /// Downhole torque (average)
         /// </summary>
@@ -9048,16 +8346,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdTorqueAverage == null)
-                {
-                    mwdTorqueAverage = new RealtimeData("MWD torque (average)");
-                    mwdTorqueAverage.Description = "Downhole torque (average)";
-                }
                 return mwdTorqueAverage;
             }
         }
 
-        private static RealtimeData mwdTorqueMaximum;
+        private readonly static RealtimeData mwdTorqueMaximum;
         /// <summary>
         /// Downhole torque (maximum)
         /// </summary>
@@ -9066,16 +8359,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdTorqueMaximum == null)
-                {
-                    mwdTorqueMaximum = new RealtimeData("MWD torque (maximum)");
-                    mwdTorqueMaximum.Description = "Downhole torque (maximum)";
-                }
                 return mwdTorqueMaximum;
             }
         }
 
-        private static RealtimeData mwdAxialVibration;
+        private readonly static RealtimeData mwdAxialVibration;
         /// <summary>
         /// Downhole vibration in axial direction
         /// </summary>
@@ -9084,16 +8372,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdAxialVibration == null)
-                {
-                    mwdAxialVibration = new RealtimeData("MWD axial vibration");
-                    mwdAxialVibration.Description = "Downhole vibration in axial direction";
-                }
                 return mwdAxialVibration;
             }
         }
 
-        private static RealtimeData mwdLateralVibration;
+        private readonly static RealtimeData mwdLateralVibration;
         /// <summary>
         /// Downhole vibration in lateral direction
         /// </summary>
@@ -9102,16 +8385,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdLateralVibration == null)
-                {
-                    mwdLateralVibration = new RealtimeData("MWD lateral vibration");
-                    mwdLateralVibration.Description = "Downhole vibration in lateral direction";
-                }
                 return mwdLateralVibration;
             }
         }
 
-        private static RealtimeData mwdTorsionalVibration;
+        private readonly static RealtimeData mwdTorsionalVibration;
         /// <summary>
         /// Downhole vibration in torsional direction
         /// </summary>
@@ -9120,16 +8398,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdTorsionalVibration == null)
-                {
-                    mwdTorsionalVibration = new RealtimeData("MWD torsional vibration");
-                    mwdTorsionalVibration.Description = "Downhole vibration in torsional direction";
-                }
                 return mwdTorsionalVibration;
             }
         }
 
-        private static RealtimeData mwdWeightOnBitAverage;
+        private readonly static RealtimeData mwdWeightOnBitAverage;
         /// <summary>
         /// Downhole weight on bit (average)
         /// </summary>
@@ -9138,16 +8411,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdWeightOnBitAverage == null)
-                {
-                    mwdWeightOnBitAverage = new RealtimeData("MWD weight on bit (average)");
-                    mwdWeightOnBitAverage.Description = "Downhole weight on bit (average)";
-                }
                 return mwdWeightOnBitAverage;
             }
         }
 
-        private static RealtimeData mwdWeightOnBitMaximum;
+        private readonly static RealtimeData mwdWeightOnBitMaximum;
         /// <summary>
         /// Downhole weight on bit (maximum)
         /// </summary>
@@ -9156,16 +8424,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mwdWeightOnBitMaximum == null)
-                {
-                    mwdWeightOnBitMaximum = new RealtimeData("MWD weight on bit (maximum)");
-                    mwdWeightOnBitMaximum.Description = "Downhole weight on bit (maximum)";
-                }
                 return mwdWeightOnBitMaximum;
             }
         }
 
-        private static RealtimeData norbutane;
+        private readonly static RealtimeData norbutane;
         /// <summary>
         /// nor-Butane (nC4) ppm (cycle-based)
         /// </summary>
@@ -9174,16 +8437,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norbutane == null)
-                {
-                    norbutane = new RealtimeData("nor-butane");
-                    norbutane.Description = "nor-Butane (nC4) ppm (cycle-based)";
-                }
                 return norbutane;
             }
         }
 
-        private static RealtimeData norbutaneAverage;
+        private readonly static RealtimeData norbutaneAverage;
         /// <summary>
         /// nor-Butane (nC4) ppm (average)
         /// </summary>
@@ -9192,16 +8450,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norbutaneAverage == null)
-                {
-                    norbutaneAverage = new RealtimeData("nor-butane (average)");
-                    norbutaneAverage.Description = "nor-Butane (nC4) ppm (average)";
-                }
                 return norbutaneAverage;
             }
         }
 
-        private static RealtimeData norbutaneMinimum;
+        private readonly static RealtimeData norbutaneMinimum;
         /// <summary>
         /// nor-Butane (nC4) ppm (min)
         /// </summary>
@@ -9210,16 +8463,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norbutaneMinimum == null)
-                {
-                    norbutaneMinimum = new RealtimeData("nor-butane (minimum)");
-                    norbutaneMinimum.Description = "nor-Butane (nC4) ppm (min)";
-                }
                 return norbutaneMinimum;
             }
         }
 
-        private static RealtimeData norbutaneMaximum;
+        private readonly static RealtimeData norbutaneMaximum;
         /// <summary>
         /// nor-Butane (nC4) ppm (max)
         /// </summary>
@@ -9228,16 +8476,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norbutaneMaximum == null)
-                {
-                    norbutaneMaximum = new RealtimeData("nor-butane (maximum)");
-                    norbutaneMaximum.Description = "nor-Butane (nC4) ppm (max)";
-                }
                 return norbutaneMaximum;
             }
         }
 
-        private static RealtimeData neutronDensity;
+        private readonly static RealtimeData neutronDensity;
         /// <summary>
         /// Neutron density
         /// </summary>
@@ -9246,16 +8489,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neutronDensity == null)
-                {
-                    neutronDensity = new RealtimeData("neutron density");
-                    neutronDensity.Description = "Neutron density";
-                }
                 return neutronDensity;
             }
         }
 
-        private static RealtimeData norhexane;
+        private readonly static RealtimeData norhexane;
         /// <summary>
         /// nor-Hexane (nC6) ppm (cycle-based)
         /// </summary>
@@ -9264,16 +8502,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norhexane == null)
-                {
-                    norhexane = new RealtimeData("nor-hexane");
-                    norhexane.Description = "nor-Hexane (nC6) ppm (cycle-based)";
-                }
                 return norhexane;
             }
         }
 
-        private static RealtimeData norhexaneAverage;
+        private readonly static RealtimeData norhexaneAverage;
         /// <summary>
         /// nor-Hexane (nC6) ppm (average)
         /// </summary>
@@ -9282,16 +8515,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norhexaneAverage == null)
-                {
-                    norhexaneAverage = new RealtimeData("nor-hexane (average)");
-                    norhexaneAverage.Description = "nor-Hexane (nC6) ppm (average)";
-                }
                 return norhexaneAverage;
             }
         }
 
-        private static RealtimeData norhexaneMinimum;
+        private readonly static RealtimeData norhexaneMinimum;
         /// <summary>
         /// nor-Hexane (nC6) ppm (min)
         /// </summary>
@@ -9300,16 +8528,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norhexaneMinimum == null)
-                {
-                    norhexaneMinimum = new RealtimeData("nor-hexane (minimum)");
-                    norhexaneMinimum.Description = "nor-Hexane (nC6) ppm (min)";
-                }
                 return norhexaneMinimum;
             }
         }
 
-        private static RealtimeData norhexaneMaximum;
+        private readonly static RealtimeData norhexaneMaximum;
         /// <summary>
         /// nor-Hexane (nC6) ppm (max)
         /// </summary>
@@ -9318,16 +8541,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norhexaneMaximum == null)
-                {
-                    norhexaneMaximum = new RealtimeData("nor-hexane (maximum)");
-                    norhexaneMaximum.Description = "nor-Hexane (nC6) ppm (max)";
-                }
                 return norhexaneMaximum;
             }
         }
 
-        private static RealtimeData norpentane;
+        private readonly static RealtimeData norpentane;
         /// <summary>
         /// nor-Pentane (nC5) ppm (cycle-based)
         /// </summary>
@@ -9336,16 +8554,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norpentane == null)
-                {
-                    norpentane = new RealtimeData("nor-pentane");
-                    norpentane.Description = "nor-Pentane (nC5) ppm (cycle-based)";
-                }
                 return norpentane;
             }
         }
 
-        private static RealtimeData norpentaneAverage;
+        private readonly static RealtimeData norpentaneAverage;
         /// <summary>
         /// nor-Pentane (nC5) ppm (average)
         /// </summary>
@@ -9354,16 +8567,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norpentaneAverage == null)
-                {
-                    norpentaneAverage = new RealtimeData("nor-pentane (average)");
-                    norpentaneAverage.Description = "nor-Pentane (nC5) ppm (average)";
-                }
                 return norpentaneAverage;
             }
         }
 
-        private static RealtimeData norpentaneMinimum;
+        private readonly static RealtimeData norpentaneMinimum;
         /// <summary>
         /// nor-Pentane (nC5) ppm (min)
         /// </summary>
@@ -9372,16 +8580,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norpentaneMinimum == null)
-                {
-                    norpentaneMinimum = new RealtimeData("nor-pentane (minimum)");
-                    norpentaneMinimum.Description = "nor-Pentane (nC5) ppm (min)";
-                }
                 return norpentaneMinimum;
             }
         }
 
-        private static RealtimeData norpentaneMaximum;
+        private readonly static RealtimeData norpentaneMaximum;
         /// <summary>
         /// nor-Pentane (nC5) ppm (max)
         /// </summary>
@@ -9390,16 +8593,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (norpentaneMaximum == null)
-                {
-                    norpentaneMaximum = new RealtimeData("nor-pentane (maximum)");
-                    norpentaneMaximum.Description = "nor-Pentane (nC5) ppm (max)";
-                }
                 return norpentaneMaximum;
             }
         }
 
-        private static RealtimeData neutronPorosity;
+        private readonly static RealtimeData neutronPorosity;
         /// <summary>
         /// Neutron porosity
         /// </summary>
@@ -9408,16 +8606,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neutronPorosity == null)
-                {
-                    neutronPorosity = new RealtimeData("neutron porosity");
-                    neutronPorosity.Description = "Neutron porosity";
-                }
                 return neutronPorosity;
             }
         }
 
-        private static RealtimeData neutronPorosityCorrected;
+        private readonly static RealtimeData neutronPorosityCorrected;
         /// <summary>
         /// Neutron porosity corrected
         /// </summary>
@@ -9426,16 +8619,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neutronPorosityCorrected == null)
-                {
-                    neutronPorosityCorrected = new RealtimeData("neutron porosity (corrected)");
-                    neutronPorosityCorrected.Description = "Neutron porosity corrected";
-                }
                 return neutronPorosityCorrected;
             }
         }
 
-        private static RealtimeData neutronPorosityRatio;
+        private readonly static RealtimeData neutronPorosityRatio;
         /// <summary>
         /// Neutron porosity ratio
         /// </summary>
@@ -9444,16 +8632,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (neutronPorosityRatio == null)
-                {
-                    neutronPorosityRatio = new RealtimeData("neutron porosity ratio");
-                    neutronPorosityRatio.Description = "Neutron porosity ratio";
-                }
                 return neutronPorosityRatio;
             }
         }
 
-        private static RealtimeData passNumber;
+        private readonly static RealtimeData passNumber;
         /// <summary>
         /// MWD pass number
         /// </summary>
@@ -9462,16 +8645,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (passNumber == null)
-                {
-                    passNumber = new RealtimeData("pass number");
-                    passNumber.Description = "MWD pass number";
-                }
                 return passNumber;
             }
         }
 
-        private static RealtimeData tripNumber;
+        private readonly static RealtimeData tripNumber;
         /// <summary>
         /// Trip number
         /// </summary>
@@ -9480,16 +8658,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tripNumber == null)
-                {
-                    tripNumber = new RealtimeData("trip number");
-                    tripNumber.Description = "Trip number";
-                }
                 return tripNumber;
             }
         }
 
-        private static RealtimeData photoelectricEffect;
+        private readonly static RealtimeData photoelectricEffect;
         /// <summary>
         /// Photoelectric effect
         /// </summary>
@@ -9498,16 +8671,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (photoelectricEffect == null)
-                {
-                    photoelectricEffect = new RealtimeData("photoelectric effect");
-                    photoelectricEffect.Description = "Photoelectric effect";
-                }
                 return photoelectricEffect;
             }
         }
 
-        private static RealtimeData bitPressureLoss;
+        private readonly static RealtimeData bitPressureLoss;
         /// <summary>
         /// Bit pressure loss
         /// </summary>
@@ -9516,16 +8684,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (bitPressureLoss == null)
-                {
-                    bitPressureLoss = new RealtimeData("bit pressure loss");
-                    bitPressureLoss.Description = "Bit pressure loss";
-                }
                 return bitPressureLoss;
             }
         }
 
-        private static RealtimeData blockPosition;
+        private readonly static RealtimeData blockPosition;
         /// <summary>
         /// Block position
         /// </summary>
@@ -9534,16 +8697,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (blockPosition == null)
-                {
-                    blockPosition = new RealtimeData("block position");
-                    blockPosition.Description = "Block position";
-                }
                 return blockPosition;
             }
         }
 
-        private static RealtimeData hydraulicPowerOfBit;
+        private readonly static RealtimeData hydraulicPowerOfBit;
         /// <summary>
         /// Bit hydraulic power
         /// </summary>
@@ -9552,16 +8710,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hydraulicPowerOfBit == null)
-                {
-                    hydraulicPowerOfBit = new RealtimeData("hydraulic power of bit");
-                    hydraulicPowerOfBit.Description = "Bit hydraulic power";
-                }
                 return hydraulicPowerOfBit;
             }
         }
 
-        private static RealtimeData hydraulicPowerPerAreaOfBit;
+        private readonly static RealtimeData hydraulicPowerPerAreaOfBit;
         /// <summary>
         /// Bit hydraulic power per area
         /// </summary>
@@ -9570,16 +8723,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hydraulicPowerPerAreaOfBit == null)
-                {
-                    hydraulicPowerPerAreaOfBit = new RealtimeData("hydraulic power per area of bit");
-                    hydraulicPowerPerAreaOfBit.Description = "Bit hydraulic power per area";
-                }
                 return hydraulicPowerPerAreaOfBit;
             }
         }
 
-        private static RealtimeData hydraulicPowerOfPump;
+        private readonly static RealtimeData hydraulicPowerOfPump;
         /// <summary>
         /// Pump hydraulic power
         /// </summary>
@@ -9588,16 +8736,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (hydraulicPowerOfPump == null)
-                {
-                    hydraulicPowerOfPump = new RealtimeData("hydraulic power of pump");
-                    hydraulicPowerOfPump.Description = "Pump hydraulic power";
-                }
                 return hydraulicPowerOfPump;
             }
         }
 
-        private static RealtimeData pressureLossAtAnnulus;
+        private readonly static RealtimeData pressureLossAtAnnulus;
         /// <summary>
         /// Annulus pressure loss
         /// </summary>
@@ -9606,16 +8749,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureLossAtAnnulus == null)
-                {
-                    pressureLossAtAnnulus = new RealtimeData("pressure loss at annulus");
-                    pressureLossAtAnnulus.Description = "Annulus pressure loss";
-                }
                 return pressureLossAtAnnulus;
             }
         }
 
-        private static RealtimeData pressureDropAtBit;
+        private readonly static RealtimeData pressureDropAtBit;
         /// <summary>
         /// pressure drop at the bit
         /// </summary>
@@ -9624,16 +8762,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureDropAtBit == null)
-                {
-                    pressureDropAtBit = new RealtimeData("pressure drop at bit");
-                    pressureDropAtBit.Description = "pressure drop at the bit";
-                }
                 return pressureDropAtBit;
             }
         }
 
-        private static RealtimeData pressureLossAtBit;
+        private readonly static RealtimeData pressureLossAtBit;
         /// <summary>
         /// Bit pressure loss percentage
         /// </summary>
@@ -9642,16 +8775,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureLossAtBit == null)
-                {
-                    pressureLossAtBit = new RealtimeData("pressure loss at bit");
-                    pressureLossAtBit.Description = "Bit pressure loss percentage";
-                }
                 return pressureLossAtBit;
             }
         }
 
-        private static RealtimeData pressureDropCalculatedOrObserved;
+        private readonly static RealtimeData pressureDropCalculatedOrObserved;
         /// <summary>
         /// Calculated/observed pressure loss ratio (%)
         /// </summary>
@@ -9660,16 +8788,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureDropCalculatedOrObserved == null)
-                {
-                    pressureDropCalculatedOrObserved = new RealtimeData("pressure drop (calculated or observed)");
-                    pressureDropCalculatedOrObserved.Description = "Calculated/observed pressure loss ratio (%)";
-                }
                 return pressureDropCalculatedOrObserved;
             }
         }
 
-        private static RealtimeData pressureDropAtMotor;
+        private readonly static RealtimeData pressureDropAtMotor;
         /// <summary>
         /// Mud motor pressure loss
         /// </summary>
@@ -9678,16 +8801,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureDropAtMotor == null)
-                {
-                    pressureDropAtMotor = new RealtimeData("pressure drop at motor");
-                    pressureDropAtMotor.Description = "Mud motor pressure loss";
-                }
                 return pressureDropAtMotor;
             }
         }
 
-        private static RealtimeData pressureDropAtMwdTool;
+        private readonly static RealtimeData pressureDropAtMwdTool;
         /// <summary>
         /// MWD tool pressure loss
         /// </summary>
@@ -9696,16 +8814,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureDropAtMwdTool == null)
-                {
-                    pressureDropAtMwdTool = new RealtimeData("pressure drop at MWD tool");
-                    pressureDropAtMwdTool.Description = "MWD tool pressure loss";
-                }
                 return pressureDropAtMwdTool;
             }
         }
 
-        private static RealtimeData pressureDropAtString;
+        private readonly static RealtimeData pressureDropAtString;
         /// <summary>
         /// Pipe (drillstring) pressure loss
         /// </summary>
@@ -9714,16 +8827,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureDropAtString == null)
-                {
-                    pressureDropAtString = new RealtimeData("pressure drop at string");
-                    pressureDropAtString.Description = "Pipe (drillstring) pressure loss";
-                }
                 return pressureDropAtString;
             }
         }
 
-        private static RealtimeData pressureDropAtSurface;
+        private readonly static RealtimeData pressureDropAtSurface;
         /// <summary>
         /// Surface pressure loss
         /// </summary>
@@ -9732,16 +8840,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureDropAtSurface == null)
-                {
-                    pressureDropAtSurface = new RealtimeData("pressure drop at surface");
-                    pressureDropAtSurface.Description = "Surface pressure loss";
-                }
                 return pressureDropAtSurface;
             }
         }
 
-        private static RealtimeData pressureAtMwdTool;
+        private readonly static RealtimeData pressureAtMwdTool;
         /// <summary>
         /// Downhole pressure from MWD tool
         /// </summary>
@@ -9750,16 +8853,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureAtMwdTool == null)
-                {
-                    pressureAtMwdTool = new RealtimeData("pressure at MWD tool");
-                    pressureAtMwdTool.Description = "Downhole pressure from MWD tool";
-                }
                 return pressureAtMwdTool;
             }
         }
 
-        private static RealtimeData pressureAtPumpAverage;
+        private readonly static RealtimeData pressureAtPumpAverage;
         /// <summary>
         /// Pump (standpipe) pressure, measured at surface
         /// </summary>
@@ -9768,16 +8866,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pressureAtPumpAverage == null)
-                {
-                    pressureAtPumpAverage = new RealtimeData("pressure at pump (average)");
-                    pressureAtPumpAverage.Description = "Pump (standpipe) pressure, measured at surface";
-                }
                 return pressureAtPumpAverage;
             }
         }
 
-        private static RealtimeData shutinPressureMaximum;
+        private readonly static RealtimeData shutinPressureMaximum;
         /// <summary>
         /// Maximum permitted shut-in pressure
         /// </summary>
@@ -9786,16 +8879,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (shutinPressureMaximum == null)
-                {
-                    shutinPressureMaximum = new RealtimeData("shut-in pressure (maximum)");
-                    shutinPressureMaximum.Description = "Maximum permitted shut-in pressure";
-                }
                 return shutinPressureMaximum;
             }
         }
 
-        private static RealtimeData propane;
+        private readonly static RealtimeData propane;
         /// <summary>
         /// Propane (C3) ppm (cycle-based)
         /// </summary>
@@ -9804,16 +8892,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (propane == null)
-                {
-                    propane = new RealtimeData("propane");
-                    propane.Description = "Propane (C3) ppm (cycle-based)";
-                }
                 return propane;
             }
         }
 
-        private static RealtimeData propaneAverage;
+        private readonly static RealtimeData propaneAverage;
         /// <summary>
         /// Propane (C3) ppm (average)
         /// </summary>
@@ -9822,16 +8905,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (propaneAverage == null)
-                {
-                    propaneAverage = new RealtimeData("propane (average)");
-                    propaneAverage.Description = "Propane (C3) ppm (average)";
-                }
                 return propaneAverage;
             }
         }
 
-        private static RealtimeData propaneMinimum;
+        private readonly static RealtimeData propaneMinimum;
         /// <summary>
         /// Propane (C3) ppm (min)
         /// </summary>
@@ -9840,16 +8918,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (propaneMinimum == null)
-                {
-                    propaneMinimum = new RealtimeData("propane (minimum)");
-                    propaneMinimum.Description = "Propane (C3) ppm (min)";
-                }
                 return propaneMinimum;
             }
         }
 
-        private static RealtimeData propaneMaximum;
+        private readonly static RealtimeData propaneMaximum;
         /// <summary>
         /// Propane (C3) ppm (max)
         /// </summary>
@@ -9858,16 +8931,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (propaneMaximum == null)
-                {
-                    propaneMaximum = new RealtimeData("propane (maximum)");
-                    propaneMaximum.Description = "Propane (C3) ppm (max)";
-                }
                 return propaneMaximum;
             }
         }
 
-        private static RealtimeData plasticViscosity;
+        private readonly static RealtimeData plasticViscosity;
         /// <summary>
         /// Mud plastic viscosity
         /// </summary>
@@ -9876,16 +8944,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (plasticViscosity == null)
-                {
-                    plasticViscosity = new RealtimeData("plastic viscosity");
-                    plasticViscosity.Description = "Mud plastic viscosity";
-                }
                 return plasticViscosity;
             }
         }
 
-        private static RealtimeData resistivity;
+        private readonly static RealtimeData resistivity;
         /// <summary>
         /// Resistivity reading
         /// </summary>
@@ -9894,16 +8957,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (resistivity == null)
-                {
-                    resistivity = new RealtimeData("resistivity");
-                    resistivity.Description = "Resistivity reading";
-                }
                 return resistivity;
             }
         }
 
-        private static RealtimeData resistivityCorrected;
+        private readonly static RealtimeData resistivityCorrected;
         /// <summary>
         /// Resistivity reading (corrected)
         /// </summary>
@@ -9912,16 +8970,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (resistivityCorrected == null)
-                {
-                    resistivityCorrected = new RealtimeData("resistivity (corrected)");
-                    resistivityCorrected.Description = "Resistivity reading (corrected)";
-                }
                 return resistivityCorrected;
             }
         }
 
-        private static RealtimeData rateOfPenetrationAverage;
+        private readonly static RealtimeData rateOfPenetrationAverage;
         /// <summary>
         /// Drill Rate
         /// </summary>
@@ -9930,16 +8983,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rateOfPenetrationAverage == null)
-                {
-                    rateOfPenetrationAverage = new RealtimeData("rate of penetration (average)");
-                    rateOfPenetrationAverage.Description = "Drill Rate";
-                }
                 return rateOfPenetrationAverage;
             }
         }
 
-        private static RealtimeData rateOfPenetrationIntantaneous;
+        private readonly static RealtimeData rateOfPenetrationIntantaneous;
         /// <summary>
         /// Rate of Penetration (intantaneous)
         /// </summary>
@@ -9948,16 +8996,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rateOfPenetrationIntantaneous == null)
-                {
-                    rateOfPenetrationIntantaneous = new RealtimeData("rate of penetration (intantaneous)");
-                    rateOfPenetrationIntantaneous.Description = "Rate of Penetration (intantaneous)";
-                }
                 return rateOfPenetrationIntantaneous;
             }
         }
 
-        private static RealtimeData rotationFlag;
+        private readonly static RealtimeData rotationFlag;
         /// <summary>
         /// Rotation flag = 1 if pipe is rotating, else = 0
         /// </summary>
@@ -9966,16 +9009,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rotationFlag == null)
-                {
-                    rotationFlag = new RealtimeData("rotation flag");
-                    rotationFlag.Description = "Rotation flag = 1 if pipe is rotating, else = 0";
-                }
                 return rotationFlag;
             }
         }
 
-        private static RealtimeData rotarySpeedAverage;
+        private readonly static RealtimeData rotarySpeedAverage;
         /// <summary>
         /// Rotary speed, measured at surface (revs per minute)
         /// </summary>
@@ -9984,16 +9022,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (rotarySpeedAverage == null)
-                {
-                    rotarySpeedAverage = new RealtimeData("rotary speed (average)");
-                    rotarySpeedAverage.Description = "Rotary speed, measured at surface (revs per minute)";
-                }
                 return rotarySpeedAverage;
             }
         }
 
-        private static RealtimeData runningSpeedDownAverage;
+        private readonly static RealtimeData runningSpeedDownAverage;
         /// <summary>
         /// Trip average running speed, down
         /// </summary>
@@ -10002,16 +9035,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (runningSpeedDownAverage == null)
-                {
-                    runningSpeedDownAverage = new RealtimeData("running speed down (average)");
-                    runningSpeedDownAverage.Description = "Trip average running speed, down";
-                }
                 return runningSpeedDownAverage;
             }
         }
 
-        private static RealtimeData runningSpeedDownMaximum;
+        private readonly static RealtimeData runningSpeedDownMaximum;
         /// <summary>
         /// Trip maximum running speed, down
         /// </summary>
@@ -10020,16 +9048,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (runningSpeedDownMaximum == null)
-                {
-                    runningSpeedDownMaximum = new RealtimeData("running speed down (maximum)");
-                    runningSpeedDownMaximum.Description = "Trip maximum running speed, down";
-                }
                 return runningSpeedDownMaximum;
             }
         }
 
-        private static RealtimeData runningSpeedUpAverage;
+        private readonly static RealtimeData runningSpeedUpAverage;
         /// <summary>
         /// Trip average running speed, up
         /// </summary>
@@ -10038,16 +9061,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (runningSpeedUpAverage == null)
-                {
-                    runningSpeedUpAverage = new RealtimeData("running speed up (average)");
-                    runningSpeedUpAverage.Description = "Trip average running speed, up";
-                }
                 return runningSpeedUpAverage;
             }
         }
 
-        private static RealtimeData runningSpeedUpMaximum;
+        private readonly static RealtimeData runningSpeedUpMaximum;
         /// <summary>
         /// Trip maximum running speed, up
         /// </summary>
@@ -10056,16 +9074,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (runningSpeedUpMaximum == null)
-                {
-                    runningSpeedUpMaximum = new RealtimeData("running speed up (maximum)");
-                    runningSpeedUpMaximum.Description = "Trip maximum running speed, up";
-                }
                 return runningSpeedUpMaximum;
             }
         }
 
-        private static RealtimeData sonicCoherence;
+        private readonly static RealtimeData sonicCoherence;
         /// <summary>
         /// Coherence
         /// </summary>
@@ -10074,16 +9087,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sonicCoherence == null)
-                {
-                    sonicCoherence = new RealtimeData("sonic coherence");
-                    sonicCoherence.Description = "Coherence";
-                }
                 return sonicCoherence;
             }
         }
 
-        private static RealtimeData sonicDensity;
+        private readonly static RealtimeData sonicDensity;
         /// <summary>
         /// Sonic density
         /// </summary>
@@ -10092,16 +9100,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sonicDensity == null)
-                {
-                    sonicDensity = new RealtimeData("sonic density");
-                    sonicDensity.Description = "Sonic density";
-                }
                 return sonicDensity;
             }
         }
 
-        private static RealtimeData sonicDeltatimeCorrected;
+        private readonly static RealtimeData sonicDeltatimeCorrected;
         /// <summary>
         /// Sonic delta T corrected
         /// </summary>
@@ -10110,16 +9113,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sonicDeltatimeCorrected == null)
-                {
-                    sonicDeltatimeCorrected = new RealtimeData("sonic delta-time (corrected)");
-                    sonicDeltatimeCorrected.Description = "Sonic delta T corrected";
-                }
                 return sonicDeltatimeCorrected;
             }
         }
 
-        private static RealtimeData sonicDeltatimeUncorrected;
+        private readonly static RealtimeData sonicDeltatimeUncorrected;
         /// <summary>
         /// Sonic delta T raw reading 
         /// </summary>
@@ -10128,16 +9126,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sonicDeltatimeUncorrected == null)
-                {
-                    sonicDeltatimeUncorrected = new RealtimeData("sonic delta-time (uncorrected)");
-                    sonicDeltatimeUncorrected.Description = "Sonic delta T raw reading ";
-                }
                 return sonicDeltatimeUncorrected;
             }
         }
 
-        private static RealtimeData sonicPorosity;
+        private readonly static RealtimeData sonicPorosity;
         /// <summary>
         /// Sonic porosity
         /// </summary>
@@ -10146,16 +9139,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sonicPorosity == null)
-                {
-                    sonicPorosity = new RealtimeData("sonic porosity");
-                    sonicPorosity.Description = "Sonic porosity";
-                }
                 return sonicPorosity;
             }
         }
 
-        private static RealtimeData sonicPorosityCorrected;
+        private readonly static RealtimeData sonicPorosityCorrected;
         /// <summary>
         /// Sonic porosity corrected
         /// </summary>
@@ -10164,16 +9152,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (sonicPorosityCorrected == null)
-                {
-                    sonicPorosityCorrected = new RealtimeData("sonic porosity (corrected)");
-                    sonicPorosityCorrected.Description = "Sonic porosity corrected";
-                }
                 return sonicPorosityCorrected;
             }
         }
 
-        private static RealtimeData strokeRate;
+        private readonly static RealtimeData strokeRate;
         /// <summary>
         /// Pump stroke rate (strokes/minute)
         /// </summary>
@@ -10182,16 +9165,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (strokeRate == null)
-                {
-                    strokeRate = new RealtimeData("stroke rate");
-                    strokeRate.Description = "Pump stroke rate (strokes/minute)";
-                }
                 return strokeRate;
             }
         }
 
-        private static RealtimeData strokeRateTotal;
+        private readonly static RealtimeData strokeRateTotal;
         /// <summary>
         /// Cumulative pump stroke rate (strokes/minute)
         /// </summary>
@@ -10200,16 +9178,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (strokeRateTotal == null)
-                {
-                    strokeRateTotal = new RealtimeData("stroke rate total");
-                    strokeRateTotal.Description = "Cumulative pump stroke rate (strokes/minute)";
-                }
                 return strokeRateTotal;
             }
         }
 
-        private static RealtimeData stateOfWell;
+        private readonly static RealtimeData stateOfWell;
         /// <summary>
         /// State of well during DST (SHUT-IN or FLOWING)
         /// </summary>
@@ -10218,16 +9191,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (stateOfWell == null)
-                {
-                    stateOfWell = new RealtimeData("state of well");
-                    stateOfWell.Description = "State of well during DST (SHUT-IN or FLOWING)";
-                }
                 return stateOfWell;
             }
         }
 
-        private static RealtimeData inslipsStatus;
+        private readonly static RealtimeData inslipsStatus;
         /// <summary>
         /// In-slips status (In or out)
         /// </summary>
@@ -10236,16 +9204,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (inslipsStatus == null)
-                {
-                    inslipsStatus = new RealtimeData("in-slips status");
-                    inslipsStatus.Description = "In-slips status (In or out)";
-                }
                 return inslipsStatus;
             }
         }
 
-        private static RealtimeData lagStrokes;
+        private readonly static RealtimeData lagStrokes;
         /// <summary>
         /// Lag strokes
         /// </summary>
@@ -10254,16 +9217,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (lagStrokes == null)
-                {
-                    lagStrokes = new RealtimeData("lag strokes");
-                    lagStrokes.Description = "Lag strokes";
-                }
                 return lagStrokes;
             }
         }
 
-        private static RealtimeData strokeCountTotal;
+        private readonly static RealtimeData strokeCountTotal;
         /// <summary>
         /// Cumulative total pump strokes
         /// </summary>
@@ -10272,16 +9230,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (strokeCountTotal == null)
-                {
-                    strokeCountTotal = new RealtimeData("stroke count (total)");
-                    strokeCountTotal.Description = "Cumulative total pump strokes";
-                }
                 return strokeCountTotal;
             }
         }
 
-        private static RealtimeData strokeCount;
+        private readonly static RealtimeData strokeCount;
         /// <summary>
         /// Pump strokes for each pump
         /// </summary>
@@ -10290,16 +9243,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (strokeCount == null)
-                {
-                    strokeCount = new RealtimeData("stroke count");
-                    strokeCount.Description = "Pump strokes for each pump";
-                }
                 return strokeCount;
             }
         }
 
-        private static RealtimeData mudTemperatureInAverage;
+        private readonly static RealtimeData mudTemperatureInAverage;
         /// <summary>
         /// Mud temperature going into hole
         /// </summary>
@@ -10308,16 +9256,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mudTemperatureInAverage == null)
-                {
-                    mudTemperatureInAverage = new RealtimeData("mud temperature in (average)");
-                    mudTemperatureInAverage.Description = "Mud temperature going into hole";
-                }
                 return mudTemperatureInAverage;
             }
         }
 
-        private static RealtimeData mudTemperatureOutAverage;
+        private readonly static RealtimeData mudTemperatureOutAverage;
         /// <summary>
         /// Mud temperature coming out of the hole
         /// </summary>
@@ -10326,16 +9269,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mudTemperatureOutAverage == null)
-                {
-                    mudTemperatureOutAverage = new RealtimeData("mud temperature out (average)");
-                    mudTemperatureOutAverage.Description = "Mud temperature coming out of the hole";
-                }
                 return mudTemperatureOutAverage;
             }
         }
 
-        private static RealtimeData timeInSlips;
+        private readonly static RealtimeData timeInSlips;
         /// <summary>
         /// Time in slips (seconds)
         /// </summary>
@@ -10344,16 +9282,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (timeInSlips == null)
-                {
-                    timeInSlips = new RealtimeData("time in slips");
-                    timeInSlips.Description = "Time in slips (seconds)";
-                }
                 return timeInSlips;
             }
         }
 
-        private static RealtimeData timeOutOfSlips;
+        private readonly static RealtimeData timeOutOfSlips;
         /// <summary>
         /// Time out of slips (seconds)
         /// </summary>
@@ -10362,16 +9295,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (timeOutOfSlips == null)
-                {
-                    timeOutOfSlips = new RealtimeData("time out of slips");
-                    timeOutOfSlips.Description = "Time out of slips (seconds)";
-                }
                 return timeOutOfSlips;
             }
         }
 
-        private static RealtimeData torqueAverage;
+        private readonly static RealtimeData torqueAverage;
         /// <summary>
         /// Rotary torque, average, measured at surface
         /// </summary>
@@ -10380,16 +9308,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (torqueAverage == null)
-                {
-                    torqueAverage = new RealtimeData("torque (average)");
-                    torqueAverage.Description = "Rotary torque, average, measured at surface";
-                }
                 return torqueAverage;
             }
         }
 
-        private static RealtimeData torqueForBreakoutMaximum;
+        private readonly static RealtimeData torqueForBreakoutMaximum;
         /// <summary>
         /// Break-out torque
         /// </summary>
@@ -10398,16 +9321,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (torqueForBreakoutMaximum == null)
-                {
-                    torqueForBreakoutMaximum = new RealtimeData("torque for break-out (maximum)");
-                    torqueForBreakoutMaximum.Description = "Break-out torque";
-                }
                 return torqueForBreakoutMaximum;
             }
         }
 
-        private static RealtimeData torqueForMakeupMaximum;
+        private readonly static RealtimeData torqueForMakeupMaximum;
         /// <summary>
         /// Make-up torque
         /// </summary>
@@ -10416,16 +9334,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (torqueForMakeupMaximum == null)
-                {
-                    torqueForMakeupMaximum = new RealtimeData("torque for make-up (maximum)");
-                    torqueForMakeupMaximum.Description = "Make-up torque";
-                }
                 return torqueForMakeupMaximum;
             }
         }
 
-        private static RealtimeData torqueMaximum;
+        private readonly static RealtimeData torqueMaximum;
         /// <summary>
         /// Rotary torque, maximum, measured at surface
         /// </summary>
@@ -10434,16 +9347,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (torqueMaximum == null)
-                {
-                    torqueMaximum = new RealtimeData("torque (maximum)");
-                    torqueMaximum.Description = "Rotary torque, maximum, measured at surface";
-                }
                 return torqueMaximum;
             }
         }
 
-        private static RealtimeData tripTankVolume;
+        private readonly static RealtimeData tripTankVolume;
         /// <summary>
         /// Trip tank volume
         /// </summary>
@@ -10452,16 +9360,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tripTankVolume == null)
-                {
-                    tripTankVolume = new RealtimeData("trip tank volume");
-                    tripTankVolume.Description = "Trip tank volume";
-                }
                 return tripTankVolume;
             }
         }
 
-        private static RealtimeData turnRate;
+        private readonly static RealtimeData turnRate;
         /// <summary>
         /// MWD walk/turn rate
         /// </summary>
@@ -10470,16 +9373,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (turnRate == null)
-                {
-                    turnRate = new RealtimeData("turn rate");
-                    turnRate.Description = "MWD walk/turn rate";
-                }
                 return turnRate;
             }
         }
 
-        private static RealtimeData tvdOfBit;
+        private readonly static RealtimeData tvdOfBit;
         /// <summary>
         /// Total (vertical) depth of bit
         /// </summary>
@@ -10488,16 +9386,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tvdOfBit == null)
-                {
-                    tvdOfBit = new RealtimeData("TVD of Bit");
-                    tvdOfBit.Description = "Total (vertical) depth of bit";
-                }
                 return tvdOfBit;
             }
         }
 
-        private static RealtimeData tvdOfCasing;
+        private readonly static RealtimeData tvdOfCasing;
         /// <summary>
         /// TVD of casing in the cementing context
         /// </summary>
@@ -10506,16 +9399,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tvdOfCasing == null)
-                {
-                    tvdOfCasing = new RealtimeData("TVD of casing");
-                    tvdOfCasing.Description = "TVD of casing in the cementing context";
-                }
                 return tvdOfCasing;
             }
         }
 
-        private static RealtimeData tvdOfDstBottom;
+        private readonly static RealtimeData tvdOfDstBottom;
         /// <summary>
         /// Depth (vertical) of bottom of DST interval
         /// </summary>
@@ -10524,16 +9412,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tvdOfDstBottom == null)
-                {
-                    tvdOfDstBottom = new RealtimeData("TVD of DST bottom");
-                    tvdOfDstBottom.Description = "Depth (vertical) of bottom of DST interval";
-                }
                 return tvdOfDstBottom;
             }
         }
 
-        private static RealtimeData tvdOfDstTop;
+        private readonly static RealtimeData tvdOfDstTop;
         /// <summary>
         /// Depth (vertical) of top of DST interval
         /// </summary>
@@ -10542,16 +9425,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tvdOfDstTop == null)
-                {
-                    tvdOfDstTop = new RealtimeData("TVD of DST top");
-                    tvdOfDstTop.Description = "Depth (vertical) of top of DST interval";
-                }
                 return tvdOfDstTop;
             }
         }
 
-        private static RealtimeData tvdOfHole;
+        private readonly static RealtimeData tvdOfHole;
         /// <summary>
         /// Total (vertical) depth of hole
         /// </summary>
@@ -10560,16 +9438,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tvdOfHole == null)
-                {
-                    tvdOfHole = new RealtimeData("TVD of hole");
-                    tvdOfHole.Description = "Total (vertical) depth of hole";
-                }
                 return tvdOfHole;
             }
         }
 
-        private static RealtimeData tankVolume;
+        private readonly static RealtimeData tankVolume;
         /// <summary>
         /// Tank volume
         /// </summary>
@@ -10578,16 +9451,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tankVolume == null)
-                {
-                    tankVolume = new RealtimeData("tank volume");
-                    tankVolume.Description = "Tank volume";
-                }
                 return tankVolume;
             }
         }
 
-        private static RealtimeData tankVolumeActive;
+        private readonly static RealtimeData tankVolumeActive;
         /// <summary>
         /// Tank volume (active)
         /// </summary>
@@ -10596,16 +9464,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tankVolumeActive == null)
-                {
-                    tankVolumeActive = new RealtimeData("tank volume (active)");
-                    tankVolumeActive.Description = "Tank volume (active)";
-                }
                 return tankVolumeActive;
             }
         }
 
-        private static RealtimeData tankVolumeChange;
+        private readonly static RealtimeData tankVolumeChange;
         /// <summary>
         /// Mud Tank Volume change
         /// </summary>
@@ -10614,16 +9477,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tankVolumeChange == null)
-                {
-                    tankVolumeChange = new RealtimeData("tank volume change");
-                    tankVolumeChange.Description = "Mud Tank Volume change";
-                }
                 return tankVolumeChange;
             }
         }
 
-        private static RealtimeData tankVolumeChangeActive;
+        private readonly static RealtimeData tankVolumeChangeActive;
         /// <summary>
         /// Tank volume change (active)
         /// </summary>
@@ -10632,16 +9490,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tankVolumeChangeActive == null)
-                {
-                    tankVolumeChangeActive = new RealtimeData("tank volume change (active)");
-                    tankVolumeChangeActive.Description = "Tank volume change (active)";
-                }
                 return tankVolumeChangeActive;
             }
         }
 
-        private static RealtimeData tankVolumeChangeTotal;
+        private readonly static RealtimeData tankVolumeChangeTotal;
         /// <summary>
         /// Tank volume change (total)
         /// </summary>
@@ -10650,16 +9503,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tankVolumeChangeTotal == null)
-                {
-                    tankVolumeChangeTotal = new RealtimeData("tank volume change total");
-                    tankVolumeChangeTotal.Description = "Tank volume change (total)";
-                }
                 return tankVolumeChangeTotal;
             }
         }
 
-        private static RealtimeData tankVolumeTotal;
+        private readonly static RealtimeData tankVolumeTotal;
         /// <summary>
         /// Tank volume (total)
         /// </summary>
@@ -10668,16 +9516,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tankVolumeTotal == null)
-                {
-                    tankVolumeTotal = new RealtimeData("tank volume (total)");
-                    tankVolumeTotal.Description = "Tank volume (total)";
-                }
                 return tankVolumeTotal;
             }
         }
 
-        private static RealtimeData annularVelocityMinimum;
+        private readonly static RealtimeData annularVelocityMinimum;
         /// <summary>
         /// Annular velocity (minimum)
         /// </summary>
@@ -10686,16 +9529,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (annularVelocityMinimum == null)
-                {
-                    annularVelocityMinimum = new RealtimeData("annular velocity (minimum)");
-                    annularVelocityMinimum.Description = "Annular velocity (minimum)";
-                }
                 return annularVelocityMinimum;
             }
         }
 
-        private static RealtimeData annularVelocityMaximum;
+        private readonly static RealtimeData annularVelocityMaximum;
         /// <summary>
         /// Annular velocity (maximum)
         /// </summary>
@@ -10704,16 +9542,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (annularVelocityMaximum == null)
-                {
-                    annularVelocityMaximum = new RealtimeData("annular velocity (maximum)");
-                    annularVelocityMaximum.Description = "Annular velocity (maximum)";
-                }
                 return annularVelocityMaximum;
             }
         }
 
-        private static RealtimeData velocityOfJet;
+        private readonly static RealtimeData velocityOfJet;
         /// <summary>
         /// Bit jet velocity
         /// </summary>
@@ -10722,16 +9555,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (velocityOfJet == null)
-                {
-                    velocityOfJet = new RealtimeData("velocity of jet");
-                    velocityOfJet.Description = "Bit jet velocity";
-                }
                 return velocityOfJet;
             }
         }
 
-        private static RealtimeData fillVolumeExpected;
+        private readonly static RealtimeData fillVolumeExpected;
         /// <summary>
         /// Fill/gain volume, expected
         /// </summary>
@@ -10740,16 +9568,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fillVolumeExpected == null)
-                {
-                    fillVolumeExpected = new RealtimeData("fill volume (expected)");
-                    fillVolumeExpected.Description = "Fill/gain volume, expected";
-                }
                 return fillVolumeExpected;
             }
         }
 
-        private static RealtimeData fillVolumeTotalExpected;
+        private readonly static RealtimeData fillVolumeTotalExpected;
         /// <summary>
         /// Fill/gain volume, expected, cumulative
         /// </summary>
@@ -10758,16 +9581,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fillVolumeTotalExpected == null)
-                {
-                    fillVolumeTotalExpected = new RealtimeData("fill volume total (expected)");
-                    fillVolumeTotalExpected.Description = "Fill/gain volume, expected, cumulative";
-                }
                 return fillVolumeTotalExpected;
             }
         }
 
-        private static RealtimeData fillVolumeObserved;
+        private readonly static RealtimeData fillVolumeObserved;
         /// <summary>
         /// Fill/gain volume, observed
         /// </summary>
@@ -10776,16 +9594,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fillVolumeObserved == null)
-                {
-                    fillVolumeObserved = new RealtimeData("fill volume (observed)");
-                    fillVolumeObserved.Description = "Fill/gain volume, observed";
-                }
                 return fillVolumeObserved;
             }
         }
 
-        private static RealtimeData fillVolumeTotalObserved;
+        private readonly static RealtimeData fillVolumeTotalObserved;
         /// <summary>
         /// Fill/gain volume, observed, cumulative
         /// </summary>
@@ -10794,16 +9607,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fillVolumeTotalObserved == null)
-                {
-                    fillVolumeTotalObserved = new RealtimeData("fill volume total (observed)");
-                    fillVolumeTotalObserved.Description = "Fill/gain volume, observed, cumulative";
-                }
                 return fillVolumeTotalObserved;
             }
         }
 
-        private static RealtimeData weightOnBitAverage;
+        private readonly static RealtimeData weightOnBitAverage;
         /// <summary>
         /// Weight on bit, measured at surface
         /// </summary>
@@ -10812,16 +9620,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (weightOnBitAverage == null)
-                {
-                    weightOnBitAverage = new RealtimeData("weight on bit (average)");
-                    weightOnBitAverage.Description = "Weight on bit, measured at surface";
-                }
                 return weightOnBitAverage;
             }
         }
 
-        private static RealtimeData weightOnBitMaximum;
+        private readonly static RealtimeData weightOnBitMaximum;
         /// <summary>
         /// Weight on bit, maximum, measured at surface
         /// </summary>
@@ -10830,16 +9633,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (weightOnBitMaximum == null)
-                {
-                    weightOnBitMaximum = new RealtimeData("weight on bit (maximum)");
-                    weightOnBitMaximum.Description = "Weight on bit, maximum, measured at surface";
-                }
                 return weightOnBitMaximum;
             }
         }
 
-        private static RealtimeData mudDensityInAverage;
+        private readonly static RealtimeData mudDensityInAverage;
         /// <summary>
         /// Mud density going into the hole
         /// </summary>
@@ -10848,16 +9646,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mudDensityInAverage == null)
-                {
-                    mudDensityInAverage = new RealtimeData("mud density in (average)");
-                    mudDensityInAverage.Description = "Mud density going into the hole";
-                }
                 return mudDensityInAverage;
             }
         }
 
-        private static RealtimeData mudDensityOutAverage;
+        private readonly static RealtimeData mudDensityOutAverage;
         /// <summary>
         /// Mud density coming out of the hole
         /// </summary>
@@ -10866,16 +9659,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mudDensityOutAverage == null)
-                {
-                    mudDensityOutAverage = new RealtimeData("mud density out (average)");
-                    mudDensityOutAverage.Description = "Mud density coming out of the hole";
-                }
                 return mudDensityOutAverage;
             }
         }
 
-        private static RealtimeData yieldPoint;
+        private readonly static RealtimeData yieldPoint;
         /// <summary>
         /// Mud yield point
         /// </summary>
@@ -10884,16 +9672,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (yieldPoint == null)
-                {
-                    yieldPoint = new RealtimeData("yield point");
-                    yieldPoint.Description = "Mud yield point";
-                }
                 return yieldPoint;
             }
         }
 
-        private static RealtimeData unknown;
+        private readonly static RealtimeData unknown;
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
@@ -10902,15 +9685,1336 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (unknown == null)
-                {
-                    unknown = new RealtimeData("unknown");
-                    unknown.Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.";
-                }
                 return unknown;
             }
         }
 
+        static RealtimeData()
+        {
+            lengthAlongFiber = 
+                new RealtimeData("length along fiber")
+                {
+                    Description = "The position along the length of a DTS fiber."
+            };
+            dtsTemperature = 
+                new RealtimeData("DTS temperature")
+                {
+                    Description = "The temperature that was calculated from Distributed Temperature Survey data."
+            };
+            stokesIntensity = 
+                new RealtimeData("Stokes intensity")
+                {
+                    Description = "Stokes intensity values from a Distributed Temperature Survey."
+            };
+            antistokesIntensity = 
+                new RealtimeData("anti-Stokes intensity")
+                {
+                    Description = "Anti-Stokes intensity values from a Distributed Temperature Survey."
+            };
+            acetylene = 
+                new RealtimeData("acetylene")
+                {
+                    Description = "Acetylene ppm (cycle-based)"
+            };
+            azimuthCorrected = 
+                new RealtimeData("azimuth corrected")
+                {
+                    Description = "MWD azimuth (corrected)"
+            };
+            azimuthUncorrected = 
+                new RealtimeData("azimuth uncorrected")
+                {
+                    Description = "MWD azimuth (uncorrected)"
+            };
+            bitRevolutionsCumulative = 
+                new RealtimeData("bit revolutions, cumulative")
+                {
+                    Description = "Bit revolutions, cumulative"
+            };
+            buildRate = 
+                new RealtimeData("build rate")
+                {
+                    Description = "MWD build rate"
+            };
+            caliper = 
+                new RealtimeData("caliper")
+                {
+                    Description = "Caliper measurement"
+            };
+            cavings = 
+                new RealtimeData("cavings")
+                {
+                    Description = "Cavings percentage"
+            };
+            cationExchangeCapacity = 
+                new RealtimeData("cation exchange capacity")
+                {
+                    Description = "Cation exchange capacity"
+            };
+            cementingCumulativeReturns = 
+                new RealtimeData("cementing cumulative returns")
+                {
+                    Description = "Cementing cumulative returns"
+            };
+            cementingDensityInAverage = 
+                new RealtimeData("cementing density in (average)")
+                {
+                    Description = "Cementing fluid density in (average)"
+            };
+            cementingDensityOutAverage = 
+                new RealtimeData("cementing density out (average)")
+                {
+                    Description = "Cementing fluid density out (average)"
+            };
+            cementingEcdAtCasingShoe = 
+                new RealtimeData("cementing ECD at casing shoe")
+                {
+                    Description = "Cementing effective circulating density at casing shoe"
+            };
+            cementingFlowRateInAverage = 
+                new RealtimeData("cementing flow rate in (average)")
+                {
+                    Description = "Cementing flow rate in (average)"
+            };
+            cementingFlowRateInCalculated = 
+                new RealtimeData("cementing flow rate in (calculated)")
+                {
+                    Description = "Cementing flow rate in (calculated)"
+            };
+            cementingFlowRateOutAverage = 
+                new RealtimeData("cementing flow rate out (average)")
+                {
+                    Description = "Cementing flow rate out (average)"
+            };
+            cementingFlowRateOutCalculated = 
+                new RealtimeData("cementing flow rate out (calculated)")
+                {
+                    Description = "Cementing flow rate out (calculated)"
+            };
+            cementingFlowRateOutRelative = 
+                new RealtimeData("cementing flow rate out (relative)")
+                {
+                    Description = "Cementing flow rate out (percentage)"
+            };
+            cementingFluidType = 
+                new RealtimeData("cementing fluid type")
+                {
+                    Description = "Cementing fluid type/batch"
+            };
+            cementingJobType = 
+                new RealtimeData("cementing job type")
+                {
+                    Description = "Cementing job type"
+            };
+            cementingPlugs = 
+                new RealtimeData("cementing plugs")
+                {
+                    Description = "Cementing number and status of plugs"
+            };
+            cementingPumpPressureAverage = 
+                new RealtimeData("cementing pump pressure (average)")
+                {
+                    Description = "Cementing pump pressure (average)"
+            };
+            cementingStage = 
+                new RealtimeData("cementing stage")
+                {
+                    Description = "Cementing stage number"
+            };
+            cementingTemperatureInAverage = 
+                new RealtimeData("cementing temperature in (average)")
+                {
+                    Description = "Cementing fluid temperature in (average)"
+            };
+            cementingTemperatureOutAverage = 
+                new RealtimeData("cementing temperature out (average)")
+                {
+                    Description = "Cementing fluid temperature out (average)"
+            };
+            cementingVolumeToBumpPlug = 
+                new RealtimeData("cementing volume to bump plug")
+                {
+                    Description = "Cementing volume to bump plug"
+            };
+            cementingCementVolume = 
+                new RealtimeData("cementing cement volume")
+                {
+                    Description = "Cementing cement volume pumped"
+            };
+            cementingIndividualVolume = 
+                new RealtimeData("cementing individual volume")
+                {
+                    Description = "Cementing individual volume pumped"
+            };
+            cementingTotalVolume = 
+                new RealtimeData("cementing total volume")
+                {
+                    Description = "Cementing total volume pumped"
+            };
+            chkprav = 
+                new RealtimeData("chkPrAv")
+                {
+                    Description = "Casing pressure (average), measured at surface"
+            };
+            carbonDioxideCyclebased = 
+                new RealtimeData("carbon dioxide (cycle-based)")
+                {
+                    Description = "Carbon Dioxide ppm (cycle-based)"
+            };
+            carbonDioxideAverage = 
+                new RealtimeData("carbon dioxide (average)")
+                {
+                    Description = "Carbon Dioxide ppm (average)"
+            };
+            carbonDioxideMinimum = 
+                new RealtimeData("carbon dioxide (minimum)")
+                {
+                    Description = "Carbon Dioxide ppm (min)"
+            };
+            carbonDioxideMaximum = 
+                new RealtimeData("carbon dioxide (maximum)")
+                {
+                    Description = "Carbon Dioxide ppm (max)"
+            };
+            conductivity = 
+                new RealtimeData("conductivity")
+                {
+                    Description = "Conductivity reading (corrected)"
+            };
+            conductivityOfMudInAverage = 
+                new RealtimeData("conductivity of mud in (average)")
+                {
+                    Description = "Mud conductivity going into hole"
+            };
+            conductivityOfMudOutAverage = 
+                new RealtimeData("conductivity of mud out (average)")
+                {
+                    Description = "Mud conductivity coming out of the hole"
+            };
+            connectionsDone = 
+                new RealtimeData("connections done")
+                {
+                    Description = "Connections done"
+            };
+            connectionsRemaining = 
+                new RealtimeData("connections remaining")
+                {
+                    Description = "Connections to go"
+            };
+            costPerDistance = 
+                new RealtimeData("cost per distance")
+                {
+                    Description = "Instantaneous cost per distance"
+            };
+            costPerDistanceAverage = 
+                new RealtimeData("cost per distance (average)")
+                {
+                    Description = "Cost per distance averaged over the bit run"
+            };
+            cumulativeTimeOnBit = 
+                new RealtimeData("cumulative time on bit")
+                {
+                    Description = "Number of drilling hours on the bit"
+            };
+            density = 
+                new RealtimeData("density")
+                {
+                    Description = "Density value"
+            };
+            densityShale = 
+                new RealtimeData("density shale")
+                {
+                    Description = "Shale density"
+            };
+            diameterOfBit = 
+                new RealtimeData("diameter of bit")
+                {
+                    Description = "Bit diameter"
+            };
+            distanceDrilledByBit = 
+                new RealtimeData("distance drilled by bit")
+                {
+                    Description = "Distance drilled by the bit"
+            };
+            doglegSeverity = 
+                new RealtimeData("dogleg severity")
+                {
+                    Description = "MWD dogleg severity"
+            };
+            dstBottomHolePressure = 
+                new RealtimeData("DST bottom hole pressure")
+                {
+                    Description = "DST bottom hole pressure"
+            };
+            dstBottomHoleTemperature = 
+                new RealtimeData("DST bottom hole temperature")
+                {
+                    Description = "DST Bottom hole temperature"
+            };
+            dstCumulativeGasProduction = 
+                new RealtimeData("DST cumulative gas production")
+                {
+                    Description = "DST cumulative gas production"
+            };
+            dstCumulativeLiquidProduction = 
+                new RealtimeData("DST cumulative liquid production")
+                {
+                    Description = "DST cumulative liquid production"
+            };
+            dstCumulativeTotalProduction = 
+                new RealtimeData("DST cumulative total production")
+                {
+                    Description = "DST cumulative total production"
+            };
+            dstGasFlowRate = 
+                new RealtimeData("DST gas flow rate")
+                {
+                    Description = "DST gas flow rate"
+            };
+            dstHydrogenSulfideAverage = 
+                new RealtimeData("DST hydrogen sulfide (average)")
+                {
+                    Description = "Hydrogen Sulfide (average) ppm"
+            };
+            dstIdentifier = 
+                new RealtimeData("DST identifier")
+                {
+                    Description = "Drill stem test identifier"
+            };
+            dstLiquidFlowRate = 
+                new RealtimeData("DST liquid flow rate")
+                {
+                    Description = "DST liquid flow rate"
+            };
+            dstSurfacePressureInCasing = 
+                new RealtimeData("DST surface pressure in casing")
+                {
+                    Description = "DST surface pressure in casing"
+            };
+            dstSurfacePressureInTubing = 
+                new RealtimeData("DST surface pressure in tubing")
+                {
+                    Description = "DST surface pressure in tubing"
+            };
+            dstSurfaceTemperatureInTubing = 
+                new RealtimeData("DST surface temperature in tubing")
+                {
+                    Description = "DST Surface temperature in tubing"
+            };
+            dstTotalFlowRate = 
+                new RealtimeData("DST total flow rate")
+                {
+                    Description = "DST Total flow rate"
+            };
+            dstToolTime = 
+                new RealtimeData("DST tool time")
+                {
+                    Description = "DST tool time (seconds)"
+            };
+            drillingExponentCorrected = 
+                new RealtimeData("drilling exponent (corrected)")
+                {
+                    Description = "Corrected drilling exponent"
+            };
+            ecdAtBitDepth = 
+                new RealtimeData("ECD at bit depth")
+                {
+                    Description = "Effective circulating density at bit depth"
+            };
+            ecdAtCasingShoeDepth = 
+                new RealtimeData("ECD at casing shoe depth")
+                {
+                    Description = "ECD at casing shoe depth"
+            };
+            ecdFromMwdTool = 
+                new RealtimeData("ECD from MWD tool")
+                {
+                    Description = "ECD from MWD tool"
+            };
+            ecdAtTotalDepth = 
+                new RealtimeData("ECD at total depth")
+                {
+                    Description = "Equivalent circulating density at total depth"
+            };
+            neopentane = 
+                new RealtimeData("neo-pentane")
+                {
+                    Description = "neo-Pentane (eC5) ppm (cycle-based)"
+            };
+            neopentaneAverage = 
+                new RealtimeData("neo-pentane (average)")
+                {
+                    Description = "neo-Pentane (eC5) ppm (average)"
+            };
+            neopentaneMinimum = 
+                new RealtimeData("neo-pentane (minimum)")
+                {
+                    Description = "neo-Pentane (eC5) ppm (min)"
+            };
+            neopentaneMaximum = 
+                new RealtimeData("neo-pentane (maximum)")
+                {
+                    Description = "neo-Pentane (eC5) ppm (max)"
+            };
+            ethane = 
+                new RealtimeData("ethane")
+                {
+                    Description = "Ethane (C2) ppm (cycle-based)"
+            };
+            ethaneAverage = 
+                new RealtimeData("ethane (average)")
+                {
+                    Description = "Ethane (C2) ppm (average)"
+            };
+            ethaneMinimum = 
+                new RealtimeData("ethane (minimum)")
+                {
+                    Description = "Ethane (C2) ppm (min)"
+            };
+            ethaneMaximum = 
+                new RealtimeData("ethane (maximum)")
+                {
+                    Description = "Ethane (C2) ppm (max)"
+            };
+            formationFracturePressureGradient = 
+                new RealtimeData("formation fracture pressure gradient")
+                {
+                    Description = "Formation fracture pressure gradient"
+            };
+            flowRateInAverage = 
+                new RealtimeData("flow rate in (average)")
+                {
+                    Description = "Mud flow into the hole"
+            };
+            flowInRelative = 
+                new RealtimeData("flow in (relative)")
+                {
+                    Description = "Flow into the hole measured as a percentage"
+            };
+            flowRateOutAverage = 
+                new RealtimeData("flow rate out (average)")
+                {
+                    Description = "Mud flow out of the hole"
+            };
+            flowOutRelative = 
+                new RealtimeData("flow out (relative)")
+                {
+                    Description = "Flow out of hole measured as a percentage"
+            };
+            overburdenPressureGradient = 
+                new RealtimeData("overburden pressure gradient")
+                {
+                    Description = "Formation overburden pressure gradient"
+            };
+            bitJetImpactForce = 
+                new RealtimeData("bit jet impact force")
+                {
+                    Description = "Bit jet impact force"
+            };
+            formationPorePressureGradient = 
+                new RealtimeData("formation pore pressure gradient")
+                {
+                    Description = "Formation pore pressure gradient"
+            };
+            gasTotalAverage = 
+                new RealtimeData("gas total (average)")
+                {
+                    Description = "Total gas %"
+            };
+            connectionGasAverage = 
+                new RealtimeData("connection gas (average)")
+                {
+                    Description = "Connection gas (average) %"
+            };
+            connectionGasLast = 
+                new RealtimeData("connection gas (last)")
+                {
+                    Description = "Connection gas (last reading) %"
+            };
+            connectionGasMaximum = 
+                new RealtimeData("connection gas (maximum)")
+                {
+                    Description = "Connection gas (maximum) %"
+            };
+            tripGasLast = 
+                new RealtimeData("trip gas (last)")
+                {
+                    Description = "Trip gas last reading %"
+            };
+            gammaRay = 
+                new RealtimeData("gamma ray")
+                {
+                    Description = "Gamma ray reading (uncorrected)"
+            };
+            gammaRayCorrected = 
+                new RealtimeData("gamma ray (corrected)")
+                {
+                    Description = "Gamma ray reading (corrected)"
+            };
+            gravityToolFace = 
+                new RealtimeData("gravity tool face")
+                {
+                    Description = "MWD gravity tool face"
+            };
+            gravityXaxisCorrected = 
+                new RealtimeData("gravity X-axis (corrected)")
+                {
+                    Description = "X axis gravity corrected"
+            };
+            gravityXaxisUncorrected = 
+                new RealtimeData("gravity X-axis (uncorrected)")
+                {
+                    Description = "X axis gravity uncorrected"
+            };
+            gravityYaxisCorrected = 
+                new RealtimeData("gravity Y-axis (corrected)")
+                {
+                    Description = "Y axis gravity corrected"
+            };
+            gravityYaxisUncorrected = 
+                new RealtimeData("gravity Y-axis (uncorrected)")
+                {
+                    Description = "Y axis gravity uncorrected"
+            };
+            gravityZaxisCorrected = 
+                new RealtimeData("gravity Z-axis (corrected)")
+                {
+                    Description = "Z axis gravity corrected"
+            };
+            gravityZaxisUncorrected = 
+                new RealtimeData("gravity Z-axis (uncorrected)")
+                {
+                    Description = "Z axis gravity uncorrected"
+            };
+            hydrogenSulfide = 
+                new RealtimeData("hydrogen sulfide")
+                {
+                    Description = "Hydrogen Sulfide ppm"
+            };
+            hydrogenSulfideAverage = 
+                new RealtimeData("hydrogen sulfide (average)")
+                {
+                    Description = "Hydrogen Sulfide (average) ppm"
+            };
+            hydrogenSulfideMinimum = 
+                new RealtimeData("hydrogen sulfide (minimum)")
+                {
+                    Description = "Hydrogen Sulfide (min) ppm"
+            };
+            hydrogenSulfideMaximum = 
+                new RealtimeData("hydrogen sulfide (maximum)")
+                {
+                    Description = "Hydrogen Sulfide (max) ppm"
+            };
+            hookloadAverage = 
+                new RealtimeData("hookload (average)")
+                {
+                    Description = "Hookload, average, measured at surface"
+            };
+            hookloadMinimum = 
+                new RealtimeData("hookload (minimum)")
+                {
+                    Description = "Minimum hookload while running the stand"
+            };
+            hookloadMaximum = 
+                new RealtimeData("hookload (maximum)")
+                {
+                    Description = "Hookload, maximum measured at surface"
+            };
+            mwdMagnetometerXCorrected = 
+                new RealtimeData("MWD magnetometer X (corrected)")
+                {
+                    Description = "X axis magnetic corrected"
+            };
+            mwdMagnetometerXRaw = 
+                new RealtimeData("MWD magnetometer X (raw)")
+                {
+                    Description = "X axis magnetic uncorrected"
+            };
+            mwdMagnetometerYCorrected = 
+                new RealtimeData("MWD magnetometer Y (corrected)")
+                {
+                    Description = "Y axis magnetic corrected"
+            };
+            mwdMagnetometerYRaw = 
+                new RealtimeData("MWD magnetometer Y (raw)")
+                {
+                    Description = "Y axis magnetic uncorrected"
+            };
+            mwdMagnetometerZCorrected = 
+                new RealtimeData("MWD magnetometer Z (corrected)")
+                {
+                    Description = "Z axis magnetic corrected"
+            };
+            mwdMagnetometerZRaw = 
+                new RealtimeData("MWD magnetometer Z (raw)")
+                {
+                    Description = "Z axis magnetic uncorrected"
+            };
+            isobutane = 
+                new RealtimeData("iso-butane")
+                {
+                    Description = "iso-Butane (iC4) ppm (cycle-based)"
+            };
+            isobutaneAverage = 
+                new RealtimeData("iso-butane (average)")
+                {
+                    Description = "iso-Butane (iC4) ppm (average)"
+            };
+            isobutaneMinimum = 
+                new RealtimeData("iso-butane (minimum)")
+                {
+                    Description = "iso-Butane (iC4) ppm (min)"
+            };
+            isobutaneMaximum = 
+                new RealtimeData("iso-butane (maximum)")
+                {
+                    Description = "iso-Butane (iC4) ppm (max)"
+            };
+            isohexane = 
+                new RealtimeData("iso-hexane")
+                {
+                    Description = "iso-Hexane (iC6) ppm (cycle-based)"
+            };
+            isohexaneAverage = 
+                new RealtimeData("iso-hexane (average)")
+                {
+                    Description = "iso-Hexane (iC6) ppm (average)"
+            };
+            isohexaneMinimum = 
+                new RealtimeData("iso-hexane (minimum)")
+                {
+                    Description = "iso-Hexane (iC6) ppm (min)"
+            };
+            isohexaneMaximum = 
+                new RealtimeData("iso-hexane (maximum)")
+                {
+                    Description = "iso-Hexane (iC6) ppm (max)"
+            };
+            inclinationCorrected = 
+                new RealtimeData("inclination (corrected)")
+                {
+                    Description = "MWD inclination (corrected)"
+            };
+            inclinationNearBit = 
+                new RealtimeData("inclination near bit")
+                {
+                    Description = "Near-bit inclination"
+            };
+            inclinationUncorrected = 
+                new RealtimeData("inclination (uncorrected)")
+                {
+                    Description = "MWD inclination (uncorrected)"
+            };
+            isopentane = 
+                new RealtimeData("iso-pentane")
+                {
+                    Description = "iso-Pentane (iC5) ppm (cycle-based)"
+            };
+            isopentaneAverage = 
+                new RealtimeData("iso-pentane (average)")
+                {
+                    Description = "iso-Pentane (iC5) ppm (average)"
+            };
+            isopentaneMinimum = 
+                new RealtimeData("iso-pentane (minimum)")
+                {
+                    Description = "iso-Pentane (iC5) ppm (min)"
+            };
+            isopentaneMaximum = 
+                new RealtimeData("iso-pentane (maximum)")
+                {
+                    Description = "iso-Pentane (iC5) ppm (max)"
+            };
+            kickTolerance = 
+                new RealtimeData("kick tolerance")
+                {
+                    Description = "Kick tolerance"
+            };
+            lithologyFlag = 
+                new RealtimeData("lithology flag")
+                {
+                    Description = "Lithology flag"
+            };
+            mwdAlternatorVoltage = 
+                new RealtimeData("MWD alternator voltage")
+                {
+                    Description = "Downhole tool alternator voltage"
+            };
+            mwdBottomHoleAnnulusPressure = 
+                new RealtimeData("MWD bottom hole annulus pressure")
+                {
+                    Description = "Bottom hole annulus pressure"
+            };
+            mwdBottomHoleInternalPressure = 
+                new RealtimeData("MWD bottom hole internal pressure")
+                {
+                    Description = "Bottom hole internal pressure"
+            };
+            bitTotalMeasuredDepth = 
+                new RealtimeData("bit total measured depth")
+                {
+                    Description = "Total (measured) depth of bit"
+            };
+            mwdConductivity = 
+                new RealtimeData("MWD conductivity")
+                {
+                    Description = "Mud conductivity"
+            };
+            measuredDepthOfCasing = 
+                new RealtimeData("measured depth of casing")
+                {
+                    Description = "Measured depth of casing in the cementing "
+            };
+            measuredDepthOfDstBottom = 
+                new RealtimeData("measured depth of DST bottom")
+                {
+                    Description = "Depth (measured) of bottom of DST interval"
+            };
+            measuredDepthOfDstTop = 
+                new RealtimeData("measured depth of DST top")
+                {
+                    Description = "Depth (measured) of top of DST interval"
+            };
+            measuredDepthOfDiverterTool = 
+                new RealtimeData("measured depth of diverter tool")
+                {
+                    Description = "Cementing depth to DV tool"
+            };
+            measuredDepthOfHole = 
+                new RealtimeData("measured depth of hole")
+                {
+                    Description = "Total (measured) depth of hole"
+            };
+            measuredDepthOfReturns = 
+                new RealtimeData("measured depth of returns")
+                {
+                    Description = "Depth of cuttings returns"
+            };
+            methane = 
+                new RealtimeData("methane")
+                {
+                    Description = "Methane (C1) ppm (cycle-based)"
+            };
+            methaneAverage = 
+                new RealtimeData("methane (average)")
+                {
+                    Description = "Methane (C1) ppm (average)"
+            };
+            methaneMinimum = 
+                new RealtimeData("methane (minimum)")
+                {
+                    Description = "Methane (C1) ppm (min)"
+            };
+            methaneMaximum = 
+                new RealtimeData("methane (maximum)")
+                {
+                    Description = "Methane (C1) ppm (max)"
+            };
+            mwdDerivedFracturePressureGradient = 
+                new RealtimeData("MWD derived fracture pressure gradient")
+                {
+                    Description = "Fracture pressure gradient from MWD"
+            };
+            mwdDerivedPorePressureGradient = 
+                new RealtimeData("MWD derived pore pressure gradient")
+                {
+                    Description = "Pore Pressure gradient from MWD"
+            };
+            mwdFluidResistivityInAnnulus = 
+                new RealtimeData("MWD fluid resistivity in annulus")
+                {
+                    Description = "Downhole fluid resistivity in annulus"
+            };
+            mwdFluidResistivityInPipe = 
+                new RealtimeData("MWD fluid resistivity in pipe")
+                {
+                    Description = "Downhole fluid resistivity in pipe"
+            };
+            mwdFluidTemperatureInAnnulus = 
+                new RealtimeData("MWD fluid temperature in annulus")
+                {
+                    Description = "Downhole fluid temperature in annulus"
+            };
+            mwdFluidTemperatureInPipe = 
+                new RealtimeData("MWD fluid temperature in pipe")
+                {
+                    Description = "Downhole fluid temperature in pipe"
+            };
+            mwdGammaRay = 
+                new RealtimeData("MWD gamma ray")
+                {
+                    Description = "Measured gamma ray value"
+            };
+            mwdGammaRayCorrected = 
+                new RealtimeData("MWD gamma ray (corrected)")
+                {
+                    Description = "Borehole corrected gamma ray value"
+            };
+            mwdMotorSpeed = 
+                new RealtimeData("MWD motor speed")
+                {
+                    Description = "Downhole motor RPM"
+            };
+            mwdResistivity = 
+                new RealtimeData("MWD resistivity")
+                {
+                    Description = "Measured resistivity value"
+            };
+            mwdResistivityCorrected = 
+                new RealtimeData("MWD resistivity (corrected)")
+                {
+                    Description = "Borehole corrected resistivity value"
+            };
+            magneticToolFace = 
+                new RealtimeData("magnetic tool face")
+                {
+                    Description = "MWD magnetic tool face"
+            };
+            mwdTorqueAverage = 
+                new RealtimeData("MWD torque (average)")
+                {
+                    Description = "Downhole torque (average)"
+            };
+            mwdTorqueMaximum = 
+                new RealtimeData("MWD torque (maximum)")
+                {
+                    Description = "Downhole torque (maximum)"
+            };
+            mwdAxialVibration = 
+                new RealtimeData("MWD axial vibration")
+                {
+                    Description = "Downhole vibration in axial direction"
+            };
+            mwdLateralVibration = 
+                new RealtimeData("MWD lateral vibration")
+                {
+                    Description = "Downhole vibration in lateral direction"
+            };
+            mwdTorsionalVibration = 
+                new RealtimeData("MWD torsional vibration")
+                {
+                    Description = "Downhole vibration in torsional direction"
+            };
+            mwdWeightOnBitAverage = 
+                new RealtimeData("MWD weight on bit (average)")
+                {
+                    Description = "Downhole weight on bit (average)"
+            };
+            mwdWeightOnBitMaximum = 
+                new RealtimeData("MWD weight on bit (maximum)")
+                {
+                    Description = "Downhole weight on bit (maximum)"
+            };
+            norbutane = 
+                new RealtimeData("nor-butane")
+                {
+                    Description = "nor-Butane (nC4) ppm (cycle-based)"
+            };
+            norbutaneAverage = 
+                new RealtimeData("nor-butane (average)")
+                {
+                    Description = "nor-Butane (nC4) ppm (average)"
+            };
+            norbutaneMinimum = 
+                new RealtimeData("nor-butane (minimum)")
+                {
+                    Description = "nor-Butane (nC4) ppm (min)"
+            };
+            norbutaneMaximum = 
+                new RealtimeData("nor-butane (maximum)")
+                {
+                    Description = "nor-Butane (nC4) ppm (max)"
+            };
+            neutronDensity = 
+                new RealtimeData("neutron density")
+                {
+                    Description = "Neutron density"
+            };
+            norhexane = 
+                new RealtimeData("nor-hexane")
+                {
+                    Description = "nor-Hexane (nC6) ppm (cycle-based)"
+            };
+            norhexaneAverage = 
+                new RealtimeData("nor-hexane (average)")
+                {
+                    Description = "nor-Hexane (nC6) ppm (average)"
+            };
+            norhexaneMinimum = 
+                new RealtimeData("nor-hexane (minimum)")
+                {
+                    Description = "nor-Hexane (nC6) ppm (min)"
+            };
+            norhexaneMaximum = 
+                new RealtimeData("nor-hexane (maximum)")
+                {
+                    Description = "nor-Hexane (nC6) ppm (max)"
+            };
+            norpentane = 
+                new RealtimeData("nor-pentane")
+                {
+                    Description = "nor-Pentane (nC5) ppm (cycle-based)"
+            };
+            norpentaneAverage = 
+                new RealtimeData("nor-pentane (average)")
+                {
+                    Description = "nor-Pentane (nC5) ppm (average)"
+            };
+            norpentaneMinimum = 
+                new RealtimeData("nor-pentane (minimum)")
+                {
+                    Description = "nor-Pentane (nC5) ppm (min)"
+            };
+            norpentaneMaximum = 
+                new RealtimeData("nor-pentane (maximum)")
+                {
+                    Description = "nor-Pentane (nC5) ppm (max)"
+            };
+            neutronPorosity = 
+                new RealtimeData("neutron porosity")
+                {
+                    Description = "Neutron porosity"
+            };
+            neutronPorosityCorrected = 
+                new RealtimeData("neutron porosity (corrected)")
+                {
+                    Description = "Neutron porosity corrected"
+            };
+            neutronPorosityRatio = 
+                new RealtimeData("neutron porosity ratio")
+                {
+                    Description = "Neutron porosity ratio"
+            };
+            passNumber = 
+                new RealtimeData("pass number")
+                {
+                    Description = "MWD pass number"
+            };
+            tripNumber = 
+                new RealtimeData("trip number")
+                {
+                    Description = "Trip number"
+            };
+            photoelectricEffect = 
+                new RealtimeData("photoelectric effect")
+                {
+                    Description = "Photoelectric effect"
+            };
+            bitPressureLoss = 
+                new RealtimeData("bit pressure loss")
+                {
+                    Description = "Bit pressure loss"
+            };
+            blockPosition = 
+                new RealtimeData("block position")
+                {
+                    Description = "Block position"
+            };
+            hydraulicPowerOfBit = 
+                new RealtimeData("hydraulic power of bit")
+                {
+                    Description = "Bit hydraulic power"
+            };
+            hydraulicPowerPerAreaOfBit = 
+                new RealtimeData("hydraulic power per area of bit")
+                {
+                    Description = "Bit hydraulic power per area"
+            };
+            hydraulicPowerOfPump = 
+                new RealtimeData("hydraulic power of pump")
+                {
+                    Description = "Pump hydraulic power"
+            };
+            pressureLossAtAnnulus = 
+                new RealtimeData("pressure loss at annulus")
+                {
+                    Description = "Annulus pressure loss"
+            };
+            pressureDropAtBit = 
+                new RealtimeData("pressure drop at bit")
+                {
+                    Description = "pressure drop at the bit"
+            };
+            pressureLossAtBit = 
+                new RealtimeData("pressure loss at bit")
+                {
+                    Description = "Bit pressure loss percentage"
+            };
+            pressureDropCalculatedOrObserved = 
+                new RealtimeData("pressure drop (calculated or observed)")
+                {
+                    Description = "Calculated/observed pressure loss ratio (%)"
+            };
+            pressureDropAtMotor = 
+                new RealtimeData("pressure drop at motor")
+                {
+                    Description = "Mud motor pressure loss"
+            };
+            pressureDropAtMwdTool = 
+                new RealtimeData("pressure drop at MWD tool")
+                {
+                    Description = "MWD tool pressure loss"
+            };
+            pressureDropAtString = 
+                new RealtimeData("pressure drop at string")
+                {
+                    Description = "Pipe (drillstring) pressure loss"
+            };
+            pressureDropAtSurface = 
+                new RealtimeData("pressure drop at surface")
+                {
+                    Description = "Surface pressure loss"
+            };
+            pressureAtMwdTool = 
+                new RealtimeData("pressure at MWD tool")
+                {
+                    Description = "Downhole pressure from MWD tool"
+            };
+            pressureAtPumpAverage = 
+                new RealtimeData("pressure at pump (average)")
+                {
+                    Description = "Pump (standpipe) pressure, measured at surface"
+            };
+            shutinPressureMaximum = 
+                new RealtimeData("shut-in pressure (maximum)")
+                {
+                    Description = "Maximum permitted shut-in pressure"
+            };
+            propane = 
+                new RealtimeData("propane")
+                {
+                    Description = "Propane (C3) ppm (cycle-based)"
+            };
+            propaneAverage = 
+                new RealtimeData("propane (average)")
+                {
+                    Description = "Propane (C3) ppm (average)"
+            };
+            propaneMinimum = 
+                new RealtimeData("propane (minimum)")
+                {
+                    Description = "Propane (C3) ppm (min)"
+            };
+            propaneMaximum = 
+                new RealtimeData("propane (maximum)")
+                {
+                    Description = "Propane (C3) ppm (max)"
+            };
+            plasticViscosity = 
+                new RealtimeData("plastic viscosity")
+                {
+                    Description = "Mud plastic viscosity"
+            };
+            resistivity = 
+                new RealtimeData("resistivity")
+                {
+                    Description = "Resistivity reading"
+            };
+            resistivityCorrected = 
+                new RealtimeData("resistivity (corrected)")
+                {
+                    Description = "Resistivity reading (corrected)"
+            };
+            rateOfPenetrationAverage = 
+                new RealtimeData("rate of penetration (average)")
+                {
+                    Description = "Drill Rate"
+            };
+            rateOfPenetrationIntantaneous = 
+                new RealtimeData("rate of penetration (intantaneous)")
+                {
+                    Description = "Rate of Penetration (intantaneous)"
+            };
+            rotationFlag = 
+                new RealtimeData("rotation flag")
+                {
+                    Description = "Rotation flag = 1 if pipe is rotating, else = 0"
+            };
+            rotarySpeedAverage = 
+                new RealtimeData("rotary speed (average)")
+                {
+                    Description = "Rotary speed, measured at surface (revs per minute)"
+            };
+            runningSpeedDownAverage = 
+                new RealtimeData("running speed down (average)")
+                {
+                    Description = "Trip average running speed, down"
+            };
+            runningSpeedDownMaximum = 
+                new RealtimeData("running speed down (maximum)")
+                {
+                    Description = "Trip maximum running speed, down"
+            };
+            runningSpeedUpAverage = 
+                new RealtimeData("running speed up (average)")
+                {
+                    Description = "Trip average running speed, up"
+            };
+            runningSpeedUpMaximum = 
+                new RealtimeData("running speed up (maximum)")
+                {
+                    Description = "Trip maximum running speed, up"
+            };
+            sonicCoherence = 
+                new RealtimeData("sonic coherence")
+                {
+                    Description = "Coherence"
+            };
+            sonicDensity = 
+                new RealtimeData("sonic density")
+                {
+                    Description = "Sonic density"
+            };
+            sonicDeltatimeCorrected = 
+                new RealtimeData("sonic delta-time (corrected)")
+                {
+                    Description = "Sonic delta T corrected"
+            };
+            sonicDeltatimeUncorrected = 
+                new RealtimeData("sonic delta-time (uncorrected)")
+                {
+                    Description = "Sonic delta T raw reading "
+            };
+            sonicPorosity = 
+                new RealtimeData("sonic porosity")
+                {
+                    Description = "Sonic porosity"
+            };
+            sonicPorosityCorrected = 
+                new RealtimeData("sonic porosity (corrected)")
+                {
+                    Description = "Sonic porosity corrected"
+            };
+            strokeRate = 
+                new RealtimeData("stroke rate")
+                {
+                    Description = "Pump stroke rate (strokes/minute)"
+            };
+            strokeRateTotal = 
+                new RealtimeData("stroke rate total")
+                {
+                    Description = "Cumulative pump stroke rate (strokes/minute)"
+            };
+            stateOfWell = 
+                new RealtimeData("state of well")
+                {
+                    Description = "State of well during DST (SHUT-IN or FLOWING)"
+            };
+            inslipsStatus = 
+                new RealtimeData("in-slips status")
+                {
+                    Description = "In-slips status (In or out)"
+            };
+            lagStrokes = 
+                new RealtimeData("lag strokes")
+                {
+                    Description = "Lag strokes"
+            };
+            strokeCountTotal = 
+                new RealtimeData("stroke count (total)")
+                {
+                    Description = "Cumulative total pump strokes"
+            };
+            strokeCount = 
+                new RealtimeData("stroke count")
+                {
+                    Description = "Pump strokes for each pump"
+            };
+            mudTemperatureInAverage = 
+                new RealtimeData("mud temperature in (average)")
+                {
+                    Description = "Mud temperature going into hole"
+            };
+            mudTemperatureOutAverage = 
+                new RealtimeData("mud temperature out (average)")
+                {
+                    Description = "Mud temperature coming out of the hole"
+            };
+            timeInSlips = 
+                new RealtimeData("time in slips")
+                {
+                    Description = "Time in slips (seconds)"
+            };
+            timeOutOfSlips = 
+                new RealtimeData("time out of slips")
+                {
+                    Description = "Time out of slips (seconds)"
+            };
+            torqueAverage = 
+                new RealtimeData("torque (average)")
+                {
+                    Description = "Rotary torque, average, measured at surface"
+            };
+            torqueForBreakoutMaximum = 
+                new RealtimeData("torque for break-out (maximum)")
+                {
+                    Description = "Break-out torque"
+            };
+            torqueForMakeupMaximum = 
+                new RealtimeData("torque for make-up (maximum)")
+                {
+                    Description = "Make-up torque"
+            };
+            torqueMaximum = 
+                new RealtimeData("torque (maximum)")
+                {
+                    Description = "Rotary torque, maximum, measured at surface"
+            };
+            tripTankVolume = 
+                new RealtimeData("trip tank volume")
+                {
+                    Description = "Trip tank volume"
+            };
+            turnRate = 
+                new RealtimeData("turn rate")
+                {
+                    Description = "MWD walk/turn rate"
+            };
+            tvdOfBit = 
+                new RealtimeData("TVD of Bit")
+                {
+                    Description = "Total (vertical) depth of bit"
+            };
+            tvdOfCasing = 
+                new RealtimeData("TVD of casing")
+                {
+                    Description = "TVD of casing in the cementing context"
+            };
+            tvdOfDstBottom = 
+                new RealtimeData("TVD of DST bottom")
+                {
+                    Description = "Depth (vertical) of bottom of DST interval"
+            };
+            tvdOfDstTop = 
+                new RealtimeData("TVD of DST top")
+                {
+                    Description = "Depth (vertical) of top of DST interval"
+            };
+            tvdOfHole = 
+                new RealtimeData("TVD of hole")
+                {
+                    Description = "Total (vertical) depth of hole"
+            };
+            tankVolume = 
+                new RealtimeData("tank volume")
+                {
+                    Description = "Tank volume"
+            };
+            tankVolumeActive = 
+                new RealtimeData("tank volume (active)")
+                {
+                    Description = "Tank volume (active)"
+            };
+            tankVolumeChange = 
+                new RealtimeData("tank volume change")
+                {
+                    Description = "Mud Tank Volume change"
+            };
+            tankVolumeChangeActive = 
+                new RealtimeData("tank volume change (active)")
+                {
+                    Description = "Tank volume change (active)"
+            };
+            tankVolumeChangeTotal = 
+                new RealtimeData("tank volume change total")
+                {
+                    Description = "Tank volume change (total)"
+            };
+            tankVolumeTotal = 
+                new RealtimeData("tank volume (total)")
+                {
+                    Description = "Tank volume (total)"
+            };
+            annularVelocityMinimum = 
+                new RealtimeData("annular velocity (minimum)")
+                {
+                    Description = "Annular velocity (minimum)"
+            };
+            annularVelocityMaximum = 
+                new RealtimeData("annular velocity (maximum)")
+                {
+                    Description = "Annular velocity (maximum)"
+            };
+            velocityOfJet = 
+                new RealtimeData("velocity of jet")
+                {
+                    Description = "Bit jet velocity"
+            };
+            fillVolumeExpected = 
+                new RealtimeData("fill volume (expected)")
+                {
+                    Description = "Fill/gain volume, expected"
+            };
+            fillVolumeTotalExpected = 
+                new RealtimeData("fill volume total (expected)")
+                {
+                    Description = "Fill/gain volume, expected, cumulative"
+            };
+            fillVolumeObserved = 
+                new RealtimeData("fill volume (observed)")
+                {
+                    Description = "Fill/gain volume, observed"
+            };
+            fillVolumeTotalObserved = 
+                new RealtimeData("fill volume total (observed)")
+                {
+                    Description = "Fill/gain volume, observed, cumulative"
+            };
+            weightOnBitAverage = 
+                new RealtimeData("weight on bit (average)")
+                {
+                    Description = "Weight on bit, measured at surface"
+            };
+            weightOnBitMaximum = 
+                new RealtimeData("weight on bit (maximum)")
+                {
+                    Description = "Weight on bit, maximum, measured at surface"
+            };
+            mudDensityInAverage = 
+                new RealtimeData("mud density in (average)")
+                {
+                    Description = "Mud density going into the hole"
+            };
+            mudDensityOutAverage = 
+                new RealtimeData("mud density out (average)")
+                {
+                    Description = "Mud density coming out of the hole"
+            };
+            yieldPoint = 
+                new RealtimeData("yield point")
+                {
+                    Description = "Mud yield point"
+            };
+            unknown = 
+                new RealtimeData("unknown")
+                {
+                    Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations."
+            };
+        }
+
+        /// <summary>
+        /// Gets a RealtimeData by name
+        /// </summary>
+        /// <param name="name">The name of the RealtimeData to return</param>
+        /// <returns>The RealtimeData represented by 'name'</returns>
+        public static RealtimeData GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(RealtimeData)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(RealtimeData)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (RealtimeData)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
     }
 
     /// <summary>
@@ -10938,7 +11042,7 @@ namespace Energistics.DataAccess.WITSML131
             return GetList<NameTagLocation>();
         }
 
-        private static NameTagLocation body;
+        private readonly static NameTagLocation body;
         /// <summary>
         /// The body of the equipment. For tubular components this specifies a location toward the middle of the component. 
         /// </summary>
@@ -10947,16 +11051,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (body == null)
-                {
-                    body = new NameTagLocation("body");
-                    body.Description = "The body of the equipment. For tubular components this specifies a location toward the middle of the component. ";
-                }
                 return body;
             }
         }
 
-        private static NameTagLocation box;
+        private readonly static NameTagLocation box;
         /// <summary>
         /// The female threaded end of a device.
         /// </summary>
@@ -10965,16 +11064,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (box == null)
-                {
-                    box = new NameTagLocation("box");
-                    box.Description = "The female threaded end of a device.";
-                }
                 return box;
             }
         }
 
-        private static NameTagLocation pin;
+        private readonly static NameTagLocation pin;
         /// <summary>
         /// The male threaded end of a device.
         /// </summary>
@@ -10983,16 +11077,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (pin == null)
-                {
-                    pin = new NameTagLocation("pin");
-                    pin.Description = "The male threaded end of a device.";
-                }
                 return pin;
             }
         }
 
-        private static NameTagLocation other;
+        private readonly static NameTagLocation other;
         /// <summary>
         /// This, by exclusion, tells a user to look elsewhere than on the body or near the ends of a component.
         /// </summary>
@@ -11001,16 +11090,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (other == null)
-                {
-                    other = new NameTagLocation("other");
-                    other.Description = "This, by exclusion, tells a user to look elsewhere than on the body or near the ends of a component.";
-                }
                 return other;
             }
         }
 
-        private static NameTagLocation unknown;
+        private readonly static NameTagLocation unknown;
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
@@ -11019,15 +11103,61 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (unknown == null)
-                {
-                    unknown = new NameTagLocation("unknown");
-                    unknown.Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. ";
-                }
                 return unknown;
             }
         }
 
+        static NameTagLocation()
+        {
+            body = 
+                new NameTagLocation("body")
+                {
+                    Description = "The body of the equipment. For tubular components this specifies a location toward the middle of the component. "
+            };
+            box = 
+                new NameTagLocation("box")
+                {
+                    Description = "The female threaded end of a device."
+            };
+            pin = 
+                new NameTagLocation("pin")
+                {
+                    Description = "The male threaded end of a device."
+            };
+            other = 
+                new NameTagLocation("other")
+                {
+                    Description = "This, by exclusion, tells a user to look elsewhere than on the body or near the ends of a component."
+            };
+            unknown = 
+                new NameTagLocation("unknown")
+                {
+                    Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. "
+            };
+        }
+
+        /// <summary>
+        /// Gets a NameTagLocation by name
+        /// </summary>
+        /// <param name="name">The name of the NameTagLocation to return</param>
+        /// <returns>The NameTagLocation represented by 'name'</returns>
+        public static NameTagLocation GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(NameTagLocation)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(NameTagLocation)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (NameTagLocation)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
     }
 
     /// <summary>
@@ -11055,7 +11185,7 @@ namespace Energistics.DataAccess.WITSML131
             return GetList<NameTagNumberingScheme>();
         }
 
-        private static NameTagNumberingScheme epcSixFour;
+        private readonly static NameTagNumberingScheme epcSixFour;
         /// <summary>
         /// RFID - Electronic Product Code, 64 bit.
         /// </summary>
@@ -11064,16 +11194,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (epcSixFour == null)
-                {
-                    epcSixFour = new NameTagNumberingScheme("EPC64");
-                    epcSixFour.Description = "RFID - Electronic Product Code, 64 bit.";
-                }
                 return epcSixFour;
             }
         }
 
-        private static NameTagNumberingScheme epcNineSix;
+        private readonly static NameTagNumberingScheme epcNineSix;
         /// <summary>
         /// RFID - Electronic Product Code, 96 bit.
         /// </summary>
@@ -11082,16 +11207,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (epcNineSix == null)
-                {
-                    epcNineSix = new NameTagNumberingScheme("EPC96");
-                    epcNineSix.Description = "RFID - Electronic Product Code, 96 bit.";
-                }
                 return epcNineSix;
             }
         }
 
-        private static NameTagNumberingScheme msrcid;
+        private readonly static NameTagNumberingScheme msrcid;
         /// <summary>
         /// RFID - Merrick Systems Rapid Component Identification.
         /// </summary>
@@ -11100,16 +11220,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (msrcid == null)
-                {
-                    msrcid = new NameTagNumberingScheme("MSRCID");
-                    msrcid.Description = "RFID - Merrick Systems Rapid Component Identification.";
-                }
                 return msrcid;
             }
         }
 
-        private static NameTagNumberingScheme ansiaimbcTwo;
+        private readonly static NameTagNumberingScheme ansiaimbcTwo;
         /// <summary>
         /// Barcode - 1995, Uniform Symbology Specification 
         /// </summary>
@@ -11118,16 +11233,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ansiaimbcTwo == null)
-                {
-                    ansiaimbcTwo = new NameTagNumberingScheme("ANSI/AIM-BC2");
-                    ansiaimbcTwo.Description = "Barcode - 1995, Uniform Symbology Specification ";
-                }
                 return ansiaimbcTwo;
             }
         }
 
-        private static NameTagNumberingScheme ansiaimbcSix;
+        private readonly static NameTagNumberingScheme ansiaimbcSix;
         /// <summary>
         /// Barcode - 1995, Uniform Symbology Multi Row Specification 
         /// </summary>
@@ -11136,16 +11246,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ansiaimbcSix == null)
-                {
-                    ansiaimbcSix = new NameTagNumberingScheme("ANSI/AIM-BC6");
-                    ansiaimbcSix.Description = "Barcode - 1995, Uniform Symbology Multi Row Specification ";
-                }
                 return ansiaimbcSix;
             }
         }
 
-        private static NameTagNumberingScheme ansiaimbcOneZero;
+        private readonly static NameTagNumberingScheme ansiaimbcOneZero;
         /// <summary>
         /// Barcode - 1996, International Symbology Specification - MaxiCode
         /// </summary>
@@ -11154,16 +11259,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (ansiaimbcOneZero == null)
-                {
-                    ansiaimbcOneZero = new NameTagNumberingScheme("ANSI/AIM-BC10");
-                    ansiaimbcOneZero.Description = "Barcode - 1996, International Symbology Specification - MaxiCode";
-                }
                 return ansiaimbcOneZero;
             }
         }
 
-        private static NameTagNumberingScheme eanucc;
+        private readonly static NameTagNumberingScheme eanucc;
         /// <summary>
         /// Barcode - Composite Symbology
         /// </summary>
@@ -11172,16 +11272,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (eanucc == null)
-                {
-                    eanucc = new NameTagNumberingScheme("EAN.UCC");
-                    eanucc.Description = "Barcode - Composite Symbology";
-                }
                 return eanucc;
             }
         }
 
-        private static NameTagNumberingScheme fTwof;
+        private readonly static NameTagNumberingScheme fTwof;
         /// <summary>
         /// Magnetic - ISO/IEC 7811
         /// </summary>
@@ -11190,16 +11285,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (fTwof == null)
-                {
-                    fTwof = new NameTagNumberingScheme("F2F");
-                    fTwof.Description = "Magnetic - ISO/IEC 7811";
-                }
                 return fTwof;
             }
         }
 
-        private static NameTagNumberingScheme mfm;
+        private readonly static NameTagNumberingScheme mfm;
         /// <summary>
         /// Magnetic - "Modified Frequency Modulation for Magnetic Stripes" standard developed by AIM Inc.
         /// </summary>
@@ -11208,16 +11298,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (mfm == null)
-                {
-                    mfm = new NameTagNumberingScheme("MFM");
-                    mfm.Description = "Magnetic - \"Modified Frequency Modulation for Magnetic Stripes\" standard developed by AIM Inc.";
-                }
                 return mfm;
             }
         }
 
-        private static NameTagNumberingScheme serialNumber;
+        private readonly static NameTagNumberingScheme serialNumber;
         /// <summary>
         /// Serial number contains a code which does not require any further knowledge of an encoding scheme to manipulate or process. The identifier is the only information in the "tag". 
         /// </summary>
@@ -11226,16 +11311,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (serialNumber == null)
-                {
-                    serialNumber = new NameTagNumberingScheme("serial number");
-                    serialNumber.Description = "Serial number contains a code which does not require any further knowledge of an encoding scheme to manipulate or process. The identifier is the only information in the \"tag\". ";
-                }
                 return serialNumber;
             }
         }
 
-        private static NameTagNumberingScheme unknown;
+        private readonly static NameTagNumberingScheme unknown;
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
@@ -11244,15 +11324,91 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (unknown == null)
-                {
-                    unknown = new NameTagNumberingScheme("unknown");
-                    unknown.Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. ";
-                }
                 return unknown;
             }
         }
 
+        static NameTagNumberingScheme()
+        {
+            epcSixFour = 
+                new NameTagNumberingScheme("EPC64")
+                {
+                    Description = "RFID - Electronic Product Code, 64 bit."
+            };
+            epcNineSix = 
+                new NameTagNumberingScheme("EPC96")
+                {
+                    Description = "RFID - Electronic Product Code, 96 bit."
+            };
+            msrcid = 
+                new NameTagNumberingScheme("MSRCID")
+                {
+                    Description = "RFID - Merrick Systems Rapid Component Identification."
+            };
+            ansiaimbcTwo = 
+                new NameTagNumberingScheme("ANSI/AIM-BC2")
+                {
+                    Description = "Barcode - 1995, Uniform Symbology Specification "
+            };
+            ansiaimbcSix = 
+                new NameTagNumberingScheme("ANSI/AIM-BC6")
+                {
+                    Description = "Barcode - 1995, Uniform Symbology Multi Row Specification "
+            };
+            ansiaimbcOneZero = 
+                new NameTagNumberingScheme("ANSI/AIM-BC10")
+                {
+                    Description = "Barcode - 1996, International Symbology Specification - MaxiCode"
+            };
+            eanucc = 
+                new NameTagNumberingScheme("EAN.UCC")
+                {
+                    Description = "Barcode - Composite Symbology"
+            };
+            fTwof = 
+                new NameTagNumberingScheme("F2F")
+                {
+                    Description = "Magnetic - ISO/IEC 7811"
+            };
+            mfm = 
+                new NameTagNumberingScheme("MFM")
+                {
+                    Description = "Magnetic - \"Modified Frequency Modulation for Magnetic Stripes\" standard developed by AIM Inc."
+            };
+            serialNumber = 
+                new NameTagNumberingScheme("serial number")
+                {
+                    Description = "Serial number contains a code which does not require any further knowledge of an encoding scheme to manipulate or process. The identifier is the only information in the \"tag\". "
+            };
+            unknown = 
+                new NameTagNumberingScheme("unknown")
+                {
+                    Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. "
+            };
+        }
+
+        /// <summary>
+        /// Gets a NameTagNumberingScheme by name
+        /// </summary>
+        /// <param name="name">The name of the NameTagNumberingScheme to return</param>
+        /// <returns>The NameTagNumberingScheme represented by 'name'</returns>
+        public static NameTagNumberingScheme GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(NameTagNumberingScheme)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(NameTagNumberingScheme)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (NameTagNumberingScheme)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
     }
 
     /// <summary>
@@ -11280,7 +11436,7 @@ namespace Energistics.DataAccess.WITSML131
             return GetList<NameTagTechnology>();
         }
 
-        private static NameTagTechnology tagged;
+        private readonly static NameTagTechnology tagged;
         /// <summary>
         /// Independent identification components attached or embedded to a larger component for purposes of identification of the larger component. Tags typically use electronic, radio or sound based technologies and that require a special non-optical device to read them. Radio Frequency Identification (RFID tags) are of this type, as are some magnetic and sound based identification technologies. 
         /// </summary>
@@ -11289,16 +11445,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (tagged == null)
-                {
-                    tagged = new NameTagTechnology("tagged");
-                    tagged.Description = "Independent identification components attached or embedded to a larger component for purposes of identification of the larger component. Tags typically use electronic, radio or sound based technologies and that require a special non-optical device to read them. Radio Frequency Identification (RFID tags) are of this type, as are some magnetic and sound based identification technologies. ";
-                }
                 return tagged;
             }
         }
 
-        private static NameTagTechnology labeled;
+        private readonly static NameTagTechnology labeled;
         /// <summary>
         /// An optical label attached to a component. The label may be glued, riveted or attached by some other method and may contain a serial number, barcode or other optically recognized information. Note that a label may possibly have a combination of identifiers associated with it, such as a serial number, a barcode and an embedded RFID identifier. This would generate three nameTags for the one physical label, two of type 'label' for the barcode and serial number and one of type 'tagged' for the RFID identifier. 
         /// </summary>
@@ -11307,16 +11458,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (labeled == null)
-                {
-                    labeled = new NameTagTechnology("labeled");
-                    labeled.Description = "An optical label attached to a component. The label may be glued, riveted or attached by some other method and may contain a serial number, barcode or other optically recognized information. Note that a label may possibly have a combination of identifiers associated with it, such as a serial number, a barcode and an embedded RFID identifier. This would generate three nameTags for the one physical label, two of type 'label' for the barcode and serial number and one of type 'tagged' for the RFID identifier. ";
-                }
                 return labeled;
             }
         }
 
-        private static NameTagTechnology intrinsic;
+        private readonly static NameTagTechnology intrinsic;
         /// <summary>
         /// Identification technologies where the intrinsic properties of the component to be identified contain the identification information and no other unique code has been added. For example, some magnetic identification technologies use grooves machined into a component. Some components may also be identified, for example, by their individual sonic signature or optical profile. 
         /// </summary>
@@ -11325,16 +11471,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (intrinsic == null)
-                {
-                    intrinsic = new NameTagTechnology("intrinsic");
-                    intrinsic.Description = "Identification technologies where the intrinsic properties of the component to be identified contain the identification information and no other unique code has been added. For example, some magnetic identification technologies use grooves machined into a component. Some components may also be identified, for example, by their individual sonic signature or optical profile. ";
-                }
                 return intrinsic;
             }
         }
 
-        private static NameTagTechnology stamped;
+        private readonly static NameTagTechnology stamped;
         /// <summary>
         /// An identification code physically stamped into the base material of the component to be identified. Note that if a serial number is stamped into a label attached to a component, 'labeled' should be used and not 'stamped'. Stamped identifiers can wear off but can not fall off. 
         /// </summary>
@@ -11343,16 +11484,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (stamped == null)
-                {
-                    stamped = new NameTagTechnology("stamped");
-                    stamped.Description = "An identification code physically stamped into the base material of the component to be identified. Note that if a serial number is stamped into a label attached to a component, 'labeled' should be used and not 'stamped'. Stamped identifiers can wear off but can not fall off. ";
-                }
                 return stamped;
             }
         }
 
-        private static NameTagTechnology painted;
+        private readonly static NameTagTechnology painted;
         /// <summary>
         /// Painted or stenciled on the material. 
         /// </summary>
@@ -11361,16 +11497,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (painted == null)
-                {
-                    painted = new NameTagTechnology("painted");
-                    painted.Description = "Painted or stenciled on the material. ";
-                }
                 return painted;
             }
         }
 
-        private static NameTagTechnology temporary;
+        private readonly static NameTagTechnology temporary;
         /// <summary>
         /// Temporary identification codes marked with grease pencil, chalk, or such.
         /// </summary>
@@ -11379,16 +11510,11 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (temporary == null)
-                {
-                    temporary = new NameTagTechnology("temporary");
-                    temporary.Description = "Temporary identification codes marked with grease pencil, chalk, or such.";
-                }
                 return temporary;
             }
         }
 
-        private static NameTagTechnology unknown;
+        private readonly static NameTagTechnology unknown;
         /// <summary>
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
@@ -11397,15 +11523,71 @@ namespace Energistics.DataAccess.WITSML131
         {
             get 
             {
-                if (unknown == null)
-                {
-                    unknown = new NameTagTechnology("unknown");
-                    unknown.Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. ";
-                }
                 return unknown;
             }
         }
 
+        static NameTagTechnology()
+        {
+            tagged = 
+                new NameTagTechnology("tagged")
+                {
+                    Description = "Independent identification components attached or embedded to a larger component for purposes of identification of the larger component. Tags typically use electronic, radio or sound based technologies and that require a special non-optical device to read them. Radio Frequency Identification (RFID tags) are of this type, as are some magnetic and sound based identification technologies. "
+            };
+            labeled = 
+                new NameTagTechnology("labeled")
+                {
+                    Description = "An optical label attached to a component. The label may be glued, riveted or attached by some other method and may contain a serial number, barcode or other optically recognized information. Note that a label may possibly have a combination of identifiers associated with it, such as a serial number, a barcode and an embedded RFID identifier. This would generate three nameTags for the one physical label, two of type 'label' for the barcode and serial number and one of type 'tagged' for the RFID identifier. "
+            };
+            intrinsic = 
+                new NameTagTechnology("intrinsic")
+                {
+                    Description = "Identification technologies where the intrinsic properties of the component to be identified contain the identification information and no other unique code has been added. For example, some magnetic identification technologies use grooves machined into a component. Some components may also be identified, for example, by their individual sonic signature or optical profile. "
+            };
+            stamped = 
+                new NameTagTechnology("stamped")
+                {
+                    Description = "An identification code physically stamped into the base material of the component to be identified. Note that if a serial number is stamped into a label attached to a component, 'labeled' should be used and not 'stamped'. Stamped identifiers can wear off but can not fall off. "
+            };
+            painted = 
+                new NameTagTechnology("painted")
+                {
+                    Description = "Painted or stenciled on the material. "
+            };
+            temporary = 
+                new NameTagTechnology("temporary")
+                {
+                    Description = "Temporary identification codes marked with grease pencil, chalk, or such."
+            };
+            unknown = 
+                new NameTagTechnology("unknown")
+                {
+                    Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. "
+            };
+        }
+
+        /// <summary>
+        /// Gets a NameTagTechnology by name
+        /// </summary>
+        /// <param name="name">The name of the NameTagTechnology to return</param>
+        /// <returns>The NameTagTechnology represented by 'name'</returns>
+        public static NameTagTechnology GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(NameTagTechnology)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(NameTagTechnology)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (NameTagTechnology)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
     }
 
 }
