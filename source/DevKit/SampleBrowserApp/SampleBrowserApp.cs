@@ -30,6 +30,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
@@ -94,6 +95,7 @@ namespace Energistics.SampleBrowserApp
             AddSupportedTypesToListbox("WITSML131", witsml13ListBox);
             AddSupportedTypesToListbox("WITSML141", witsml14ListBox);
             AddSupportedTypesToListbox("PRODML120", prodml12ListBox);
+            AddSupportedTypesToListbox("PRODML121", prodml121ListBox);
 
             // Bind the connection properties to the GUI controls
             ((TextBox)urlTextBox.Control).DataBindings.Add("Text", conn, "Url");
@@ -149,7 +151,7 @@ namespace Energistics.SampleBrowserApp
             msg.AppendLine("Vendor: \t\t" + cap.CapServer.Vendor);
             msg.AppendLine("Contact name: \t" + cap.CapServer.Contact.Name);
             msg.AppendLine("Contact email: \t" + cap.CapServer.Contact.Email);
-            msg.AppendLine("Contact phone: \t" + cap.CapServer.Contact.PHone);
+            msg.AppendLine("Contact phone: \t" + cap.CapServer.Contact.Phone);
             msg.AppendLine("Version: \t\t" + cap.CapServer.Version);
             msg.AppendLine("Schema version: \t" + cap.CapServer.SchemaVersion);
             msg.AppendLine("Api version: \t" + cap.CapServer.ApiVers);
@@ -188,6 +190,8 @@ namespace Energistics.SampleBrowserApp
                     witsml14ListBox.SelectedItem = null;
                 if (prodml12ListBox != listbox)
                     prodml12ListBox.SelectedItem = null;
+                if (prodml121ListBox != listbox)
+                    prodml121ListBox.SelectedItem = null;
 
                 // Find out if the web service supports this data type
                 bool connSupport = serverSupportedTypes.Contains(energyObject);
@@ -224,7 +228,7 @@ namespace Energistics.SampleBrowserApp
 
             // Since the call to Read uses generics (i.e. Read<Wellbore>), we don't know at compile time what
             // datatype we want to read, we have to use reflection to get the proper Read method at runtime
-            MethodInfo readMethodInfo = typeof(WITSMLWebServiceConnection).GetMethod("Read").MakeGenericMethod(new Type[] { t });
+            MethodInfo readMethodInfo = typeof(WITSMLWebServiceConnection).GetMethods().First(m => m.Name == "Read" && m.GetParameters().Count() == 1).MakeGenericMethod(t);
 
             // Call the read method and put the results into the data grid view. Once again, this call uses reflection.
             // If you knew what datatype ahead of time you could call it directly
@@ -238,7 +242,9 @@ namespace Energistics.SampleBrowserApp
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     // Get a File Reader for the selected type
-                    MethodInfo readMethodInfo = typeof(EnergisticsFile).GetMethod("ReadFile").MakeGenericMethod(new Type[] { energyObject });
+                    Type[] types = {typeof(String)};
+                    
+                    MethodInfo readMethodInfo = typeof(EnergisticsFile).GetMethod("ReadFile", types).MakeGenericMethod(new Type[] { energyObject });
 
                     // Call the ReadFile method and append the results into the data grid view
                     AddToGrid((IEnergisticsCollection)readMethodInfo.Invoke(null, new object[] { dialog.FileName }), "File");

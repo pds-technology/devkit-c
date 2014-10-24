@@ -75,7 +75,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
     }
 #>
     [Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
-    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#> <#=generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : String.Empty#>
+    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#> <#=generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : String.Empty#>, INotifyPropertyChanged
     {
 <#=generator.GetConstructor(type)#>
 <#        
@@ -112,9 +112,10 @@ namespace Energistics.DataAccess.<#=mlVersion#>
                     object[] elementAttribute = property.GetCustomAttributes(typeof(XmlElementAttribute), false);
                     if(elementAttribute.Length > 0)
                     {
+					   XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
 #>
-		<#=generator.GetDescription(type, property.Name)#>
-        [XmlElement("<#=(elementAttribute[0] as XmlElementAttribute).ElementName#>")]
+        <#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetXmlElementAttrTag(xmlElemAttr, property)#>
 <#
                     }
                     else
@@ -132,7 +133,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
                         {
 #>
         <#=generator.GetDescription(type, property.Name)#>
-        [XmlElement("<#=property.Name#>")]
+		<#=generator.GetXmlElementOrXmlArray(type, property)#>
 <#						}
                     }
                 }
@@ -141,8 +142,9 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 #>
         public <#=generator.RenameClass(property.PropertyType)#><#=generator.MakePropertyNullable(property)#> <#=generator.RenameProperty(property)#> <#=generator.GetGetterSetter(null, type, property)#>
 <#
-                if (generator.RenameClass(type).EndsWith("List") && property.PropertyType.IsArray) {
+                if (generator.IsItemsList(type, property)) {
 #>
+        <#=generator.GetDescription(type, property.Name)#>
         [XmlIgnore]		
         public IList Items
         {
@@ -156,7 +158,27 @@ namespace Energistics.DataAccess.<#=mlVersion#>
             }
         }
 #>
-    }
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
 <#
         if(!type.Name.StartsWith("obj_") && !type.Name.Equals("abstractObject"))
         {

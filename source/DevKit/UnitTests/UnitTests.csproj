@@ -56,6 +56,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PRODML121.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WITSML131.cs" />
     <Compile Include="WITSML141.cs" />

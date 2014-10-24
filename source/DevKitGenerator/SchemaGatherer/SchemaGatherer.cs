@@ -33,18 +33,75 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace Energistics.SchemaGatherer
 {
     public class SchemaGatherer
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
+            try
+            {
+                VerifyAppConfig();
+            }
+            catch (Exception e)
+            {
+                return 1;
+            }
+
             foreach (string set in GetAppSetting("SETS").Split(new Char[] { ',' }))
             {
                 ProcessEnergisticsSchemas(set);
             }
+
+            return 0;
+        }
+
+        private static void VerifyAppConfig()
+        {
+            VerifySetting("SETS");
+            VerifyPath("ROOT_FOLDER");
+            VerifyPath("ENERGISTICS_FOLDER");
+            VerifyPath("SOLUTION_FOLDER");
+            VerifyPath("ENERGY_ML_GENERATOR_PROJ_PATH");
+            VerifyPath("ENERGY_ML_DATA_ACCESS_PROJ_PATH");
+            VerifyPath("MS_SDK");
+
+            foreach (string set in GetAppSetting("SETS").Split(new Char[] { ',' }))
+            {
+                VerifyPath(set + "_XSD_PATH");
+                VerifyPath(set + "_ABSTRACTXSD_PATH");
+                VerifyPath(set + "_ENUMVAL_PATH");
+                VerifyPath(set + "_ENUMVALPRODML_PATH");
+                VerifyPath(set + "_WSDL");
+            }
+        }
+
+        private static void VerifyPath(string settingName)
+        {
+            string value = VerifySetting(settingName);
+
+            if (!String.IsNullOrEmpty(value) && !Directory.Exists(value) && !File.Exists(value))
+            {
+                String message = String.Format("Path '{0}' defined by setting '{1}' in app.config does not exist. Please edit your app.config file.", value, settingName);
+                MessageBox.Show(message, "BUILD ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception(message);
+            }
+        }
+
+        private static string VerifySetting(string settingName)
+        {
+            string value = GetAppSetting(settingName);
+
+            if (value == null)
+            {
+                String message = String.Format("Setting '{0}' not defined in app.config. Please edit your app.config file.", settingName);
+                MessageBox.Show(message, "BUILD ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception(message);
+            }
+            return value;
         }
 
         /// <summary>
@@ -56,12 +113,15 @@ namespace Energistics.SchemaGatherer
         {
             string value = ConfigurationManager.AppSettings[key];
 
-            string pattern = "{(.*?)}";
-
-            while (Regex.IsMatch(value, pattern))
+            if (value != null)
             {
-                GroupCollection groups = Regex.Matches(value, pattern)[0].Groups;
-                value = value.Replace(groups[0].Value, ConfigurationManager.AppSettings[groups[1].Value]);
+                string pattern = "{(.*?)}";
+
+                while (Regex.IsMatch(value, pattern))
+                {
+                    GroupCollection groups = Regex.Matches(value, pattern)[0].Groups;
+                    value = value.Replace(groups[0].Value, ConfigurationManager.AppSettings[groups[1].Value]);
+                }
             }
 
             return value;
@@ -125,7 +185,7 @@ namespace Energistics.SchemaGatherer
                 using (Process p = new Process())
                 {
                     p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";
-                    p.StartInfo.Arguments = String.Format(@"/parameters:{0} /out:{1}", targetXmlFile, targetFolder);
+                    p.StartInfo.Arguments = String.Format("/parameters:\"{0}\" /out:\"{1}\"", targetXmlFile, targetFolder);
                     p.StartInfo.RedirectStandardError = true;
                     p.StartInfo.RedirectStandardOutput = true;
                     p.StartInfo.UseShellExecute = false;

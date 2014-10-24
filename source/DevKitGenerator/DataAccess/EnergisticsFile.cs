@@ -47,15 +47,36 @@ namespace Energistics.DataAccess
         /// <returns>The object representation of the XML file</returns>
         public static T ReadFile<T>(string fileName)
         {
+            return ReadFile<T>(fileName, null);
+        }
+
+        /// <summary>
+        /// Reads an Energistics XML file
+        /// </summary>
+        /// <typeparam name="T">Type of the object that the file contains</typeparam>
+        /// <param name="fileName">Name of the XML file</param>
+        /// <param name="xRoot">The XmlRootAttribute to deserialize when reading an XML file whose root is not the plural object</param>
+        /// <returns>The object representation of the XML file</returns>
+        public static T ReadFile<T>(string fileName, XmlRootAttribute xRoot)
+        {
             if (File.Exists(fileName))
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(T));
+                if (xRoot == null)
+                {
+                    foreach (XmlRootAttribute xra in typeof(T).GetCustomAttributes(typeof(XmlRootAttribute), false))
+                    {
+                        xRoot = xra;
+                        break;
+                    }
+                }
+
+                XmlSerializer serializer = new XmlSerializer(typeof(T), xRoot);
 
                 using (XmlReader reader = XmlReader.Create(fileName))
                 {
                     object xmlobject = serializer.Deserialize(reader);
                     if (xmlobject is T)
-                    {
+                    {                        
                         return (T)xmlobject;
                     }
                     else
@@ -77,15 +98,63 @@ namespace Energistics.DataAccess
         /// <param name="energisticsObject">The object to write</param>
         public static void WriteFile(string fileName, object energisticsObject)
         {
+            WriteFile(fileName, energisticsObject, null, false);
+        }
+
+        /// <summary>
+        /// Writes an Energistics object to an XML file
+        /// </summary>
+        /// <param name="fileName">The name of the XML file</param>
+        /// <param name="energisticsObject">The object to write</param>
+        /// <param name="allowOverwrites">Overwrite existing file</param>
+        public static void WriteFile(string fileName, object energisticsObject, bool allowOverwrites)
+        {
+            WriteFile(fileName, energisticsObject, null, allowOverwrites);
+        }
+
+        /// <summary>
+        /// Writes an Energistics object to an XML file
+        /// </summary>
+        /// <param name="fileName">The name of the XML file</param>
+        /// <param name="xRoot">The XmlRootAttribute to deserialize when reading an XML file whose root is not the plural object</param>
+        /// <param name="energisticsObject">The object to write</param>
+        public static void WriteFile(string fileName, object energisticsObject, XmlRootAttribute xRoot)
+        {
+            WriteFile(fileName, energisticsObject, xRoot, false);
+        }
+
+        /// <summary>
+        /// Writes an Energistics object to an XML file
+        /// </summary>
+        /// <param name="fileName">The name of the XML file</param>
+        /// <param name="xRoot">The XmlRootAttribute to deserialize when reading an XML file whose root is not the plural object</param>
+        /// <param name="allowOverwrites">Overwrite existing file</param>
+        /// <param name="energisticsObject">The object to write</param>
+        public static void WriteFile(string fileName, object energisticsObject, XmlRootAttribute xRoot, bool allowOverwrites)
+        {
             if (energisticsObject != null)
             {
-                XmlSerializer serializer = new XmlSerializer(energisticsObject.GetType());
+                if (!allowOverwrites && File.Exists(fileName))
+                {
+                    throw new Exception("File already exists.");
+                }
+
+                if (xRoot == null)
+                {
+                    foreach (XmlRootAttribute xra in energisticsObject.GetType().GetCustomAttributes(typeof(XmlRootAttribute), false))
+                    {
+                        xRoot = xra;
+                        break;
+                    }
+                }
+
+                XmlSerializer serializer = new XmlSerializer(energisticsObject.GetType(), xRoot);
 
                 using (XmlWriter writer = XmlWriter.Create(fileName))
                 {
                     serializer.Serialize(writer, energisticsObject);
                 }
             }
-        }   
+        }
     }
 }

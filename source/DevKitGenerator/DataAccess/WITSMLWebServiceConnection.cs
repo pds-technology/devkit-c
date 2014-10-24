@@ -37,6 +37,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Security;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace Energistics.DataAccess
 {
@@ -127,8 +128,23 @@ namespace Energistics.DataAccess
         /// <returns>The Energistics object of type T returned from the call to the WITSML web service</returns>
         public T Read<T>(T queryObject)
         {
+            Dictionary<string, string> optionsIn = new Dictionary<string, string>();
+            optionsIn.Add("returnElements", "all");
+
+            return Read<T>(queryObject, optionsIn);
+        }
+
+        /// <summary>
+        /// Reads an object of type T from the WITSML web service
+        /// </summary>
+        /// <typeparam name="T">The type of the Energistic object to read</typeparam>
+        /// <param name="queryObject">An Energistics object of type T that contains the parameters of the query</param>
+        /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
+        /// <returns>The Energistics object of type T returned from the call to the WITSML web service</returns>
+        public T Read<T>(T queryObject, Dictionary<string, string> optionsInDictionary)
+        {
             string queryXml = EnergisticsConverter.ObjectToXml<T>(queryObject);
-            string optionsIn = "returnElements = all"; 
+            string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string responseXml = String.Empty;
             string message = String.Empty;            
 
@@ -150,8 +166,20 @@ namespace Energistics.DataAccess
         /// <param name="energisticsObject">The Energistics object to write</param>
         public void Write<T>(T energisticsObject)
         {
+            Dictionary<string, string> optionsIn = new Dictionary<string, string>();
+            Write<T>(energisticsObject, optionsIn);
+        }
+
+        /// <summary>
+        /// Writes an object of type T from the WITSML web service
+        /// </summary>
+        /// <typeparam name="T">The type of the Energistic object to write</typeparam>
+        /// <param name="energisticsObject">The Energistics object to write</param>
+        /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
+        public void Write<T>(T energisticsObject, Dictionary<string, string> optionsInDictionary)
+        {
             string xmlIn = EnergisticsConverter.ObjectToXml<T>(energisticsObject);
-            string optionsIn = String.Empty;
+            string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;            
 
             string[] methodParms = new string[] { GetWmlTypeIn(typeof(T)), xmlIn, optionsIn, capabilitiesIn, message };
@@ -165,8 +193,20 @@ namespace Energistics.DataAccess
         /// <param name="queryObject">An Energistics object of type T that contains the parameters of the query</param>
         public void Delete<T>(T queryObject)
         {
+            Dictionary<string, string> optionsIn = new Dictionary<string, string>();
+            Delete<T>(queryObject, optionsIn);
+        }
+
+        /// <summary>
+        /// Deletes an object of type T from the WITSML web service
+        /// </summary>
+        /// <typeparam name="T">The type of the Energistic object to delete</typeparam>
+        /// <param name="queryObject">An Energistics object of type T that contains the parameters of the query</param>
+        /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
+        public void Delete<T>(T queryObject, Dictionary<string, string> optionsInDictionary)
+        {
             string queryXml = EnergisticsConverter.ObjectToXml<T>(queryObject);
-            string optionsIn = String.Empty;
+            string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;            
 
             string[] methodParms = new string[] { GetWmlTypeIn(typeof(T)), queryXml, optionsIn, capabilitiesIn, message };
@@ -180,8 +220,20 @@ namespace Energistics.DataAccess
         /// <param name="energisticsObject">The Energistics object to update</param>
         public void Update<T>(T energisticsObject)
         {
+            Dictionary<string, string> optionsIn = new Dictionary<string, string>();
+            Update<T>(energisticsObject, optionsIn);
+        }
+
+        /// <summary>
+        /// Updates an object of type T on the WITSML web service
+        /// </summary>
+        /// <typeparam name="T">The type of the Energistic object to update</typeparam>
+        /// <param name="energisticsObject">The Energistics object to update</param>
+        /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
+        public void Update<T>(T energisticsObject, Dictionary<string, string> optionsInDictionary)
+        {
             string xmlIn = EnergisticsConverter.ObjectToXml<T>(energisticsObject);
-            string optionsIn = String.Empty;
+            string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;            
 
             string[] methodParms = new string[] { GetWmlTypeIn(typeof(T)), xmlIn, optionsIn, capabilitiesIn, message };
@@ -204,8 +256,20 @@ namespace Energistics.DataAccess
         /// <returns>A CapServer object</returns>
         public T GetCap<T>()
         {
+            Dictionary<string, string> optionsIn = new Dictionary<string, string>();
+            return GetCap<T>(optionsIn);
+        }
+
+        /// <summary>
+        /// Gets the capabilities of the WITSML server
+        /// </summary>
+        /// <typeparam name="T">A CapServers type from the appropriate namespace</typeparam>
+        /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
+        /// <returns>A CapServer object</returns>
+        public T GetCap<T>(Dictionary<string, string> optionsInDictionary)
+        {
             string capOut = String.Empty;
-            string optionsIn = String.Empty;
+            string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;
 
             string[] methodParms = new string[] { optionsIn, capOut, message };
@@ -374,6 +438,22 @@ namespace Energistics.DataAccess
             }
 
             return supportedTypes;
+        }
+
+        private static string OptionsInDictionaryToString(Dictionary<string, string> readOptions)
+        {
+            StringBuilder optionsBuilder = new StringBuilder(String.Empty);
+            foreach (string key in readOptions.Keys)
+            {
+                if (optionsBuilder.Length > 0)
+                {
+                    optionsBuilder.Append(";");
+                }
+                optionsBuilder.Append(key);
+                optionsBuilder.Append("=");
+                optionsBuilder.Append(readOptions[key]);
+            }
+            return optionsBuilder.ToString();
         }
     }
 

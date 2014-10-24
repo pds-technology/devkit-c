@@ -1,6 +1,6 @@
 License notice 
-Standards DevKit, version 1.0 
-Copyright 2011 ExxonMobil Upstream Research Company
+Standards DevKit, version 1.1 
+Copyright 2012 ExxonMobil Upstream Research Company
  
 The following Energistics (c) products were used in the creation of this work: 
 
@@ -12,7 +12,7 @@ The following Energistics (c) products were used in the creation of this work:
 •	PRODML Web Service Specifications, Version 2.0
 
 All rights in the WITSML™ Standard and the PRODML™ Standard, or any portion thereof, which remain in the 
-Standards DevKitshall remain with Energistics or its suppliers and shall remain subject to the terms of 
+Standards DevKit shall remain with Energistics or its suppliers and shall remain subject to the terms of 
 the Product License Agreement available at http://www.energistics.org/product-license-agreement. 
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in 

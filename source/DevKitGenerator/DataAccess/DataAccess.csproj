@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoxMainPage.cs" />
     <Compile Include="EnergisticsFile.cs" />
     <Compile Include="EnumValue\EnumValue.cs" />
     <Compile Include="EnumValue\EnumValueNameAttribute.cs" />

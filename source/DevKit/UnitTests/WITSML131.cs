@@ -45,7 +45,7 @@ namespace Energistics.UnitTests
     [TestClass]
     public class UnitTest_131
     {
-        private string rootFolder = @"C:\StandardsDevkit\";
+        private string rootFolder = @"C:\Projects\StandardsDevkit";
 
         private TestContext testContextInstance;
 
@@ -76,7 +76,23 @@ namespace Energistics.UnitTests
         }
 
         [TestMethod]
-        public void WebService_Full()
+        public void WITSML131_WebService_OptionsIn()
+        {
+            WITSMLWebServiceConnection conn = CreateConnection();
+            WellList queryList = WITSMLWebServiceConnection.BuildEmptyQuery<WellList>();
+            queryList.Well[0].Name = "Radius Well";
+
+            // This is how you set the optionsIn parameter for web methods
+            Dictionary<string, string> optionsIn = new Dictionary<string, string>();
+            optionsIn.Add("maxReturnNodes", "1");
+            optionsIn.Add("returnElements", "all");
+
+            WellList readWells = conn.Read<WellList>(queryList, optionsIn);
+            string xml = EnergisticsConverter.ObjectToXml<WellList>(readWells);
+        }
+
+        [TestMethod]
+        public void WITSML131_WebService_Full()
         {
             WITSMLWebServiceConnection conn = CreateConnection();
 
@@ -122,15 +138,7 @@ namespace Energistics.UnitTests
         }
 
         [TestMethod]
-        public void WebService_Read()
-        {
-            WellList queryList = WITSMLWebServiceConnection.BuildEmptyQuery<WellList>();
-
-            WellList wells = CreateConnection().Read<WellList>(queryList);
-        }
-
-        [TestMethod]
-        public void BackAndForth()
+        public void WITSML131_BackAndForth()
         {
             WellList wellList = CreateTestWellList();
             string xml = EnergisticsConverter.ObjectToXml<WellList>(wellList);
@@ -197,7 +205,7 @@ namespace Energistics.UnitTests
         }
 
         [TestMethod]
-        public void WriteWellboreList()
+        public void WITSML131_WriteWellboreList()
         {
             string outputFolder = Path.Combine(rootFolder, "temp");
             if (!Directory.Exists(outputFolder))
@@ -210,7 +218,7 @@ namespace Energistics.UnitTests
         }
 
         [TestMethod]
-        public void FileReaderWriterTest()
+        public void WITSML131_FileReaderWriterTest()
         {
             string outputFolder = Path.Combine(rootFolder, "temp");
             if (!Directory.Exists(outputFolder))
@@ -226,7 +234,7 @@ namespace Energistics.UnitTests
         }
 
         [TestMethod]
-        public void TestSampleData()
+        public void WITSML131_TestSampleData()
         {
             string pathToXml = Path.Combine(rootFolder, @"Standards\DataSchema\witsml_v1.3.1.1\XML_Examples");
 
@@ -255,7 +263,7 @@ namespace Energistics.UnitTests
         }
 
         [TestMethod]
-        public void TestChoice()
+        public void WITSML131_TestChoice()
         {
             Location loc = new Location();
             loc.Latitude = new PlaneAngleMeasure(29.97, PlaneAngleUom.dega);
@@ -269,6 +277,29 @@ namespace Energistics.UnitTests
             catch (Exception)
             {
             }
+        }
+
+        [TestMethod]
+        public void WITSML131_TestArray()
+        {
+            
+            
+            PumpActivity pump = new PumpActivity();
+            pump.OTDRPerformed = new RefNameString[2];
+            pump.OTDRPerformed[0] = new RefNameString("abc");
+            pump.OTDRPerformed[1] = new RefNameString("xyz");
+
+            DtsInstalledSystem dts = new DtsInstalledSystem();
+            dts.PumpActivity = pump;
+
+            DtsInstalledSystemList dtsList = new DtsInstalledSystemList();
+            dtsList.DtsInstalledSystem = new List<DtsInstalledSystem>();
+            dtsList.DtsInstalledSystem.Add(dts);
+
+            string xml = EnergisticsConverter.ObjectToXml<DtsInstalledSystemList>(dtsList);
+
+            DtsInstalledSystemList dtsList2 = EnergisticsConverter.XmlToObject<DtsInstalledSystemList>(xml);
+            
         }
     }
 }

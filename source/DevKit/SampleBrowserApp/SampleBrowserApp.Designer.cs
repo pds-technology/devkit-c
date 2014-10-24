@@ -67,12 +67,15 @@ namespace Energistics.SampleBrowserApp
             this.witsml14ListBox = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.prodml12ListBox = new System.Windows.Forms.ListBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.prodml121ListBox = new System.Windows.Forms.ListBox();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importXMLFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runQueryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.importXMLFileToolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -83,7 +86,6 @@ namespace Energistics.SampleBrowserApp
             this.useridTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.passwordTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -97,6 +99,7 @@ namespace Energistics.SampleBrowserApp
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -109,7 +112,7 @@ namespace Energistics.SampleBrowserApp
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 551);
+            this.dataGridView1.Size = new System.Drawing.Size(676, 551);
             this.dataGridView1.TabIndex = 0;
             // 
             // splitContainer1
@@ -126,7 +129,7 @@ namespace Energistics.SampleBrowserApp
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Size = new System.Drawing.Size(1020, 551);
-            this.splitContainer1.SplitterDistance = 268;
+            this.splitContainer1.SplitterDistance = 340;
             this.splitContainer1.TabIndex = 1;
             // 
             // splitContainer2
@@ -143,7 +146,7 @@ namespace Energistics.SampleBrowserApp
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.propertyGrid1);
-            this.splitContainer2.Size = new System.Drawing.Size(268, 551);
+            this.splitContainer2.Size = new System.Drawing.Size(340, 551);
             this.splitContainer2.SplitterDistance = 252;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -152,11 +155,12 @@ namespace Energistics.SampleBrowserApp
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(268, 252);
+            this.tabControl1.Size = new System.Drawing.Size(340, 252);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -165,7 +169,7 @@ namespace Energistics.SampleBrowserApp
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(260, 226);
+            this.tabPage1.Size = new System.Drawing.Size(332, 226);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "WITSML 1.3";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -176,7 +180,7 @@ namespace Energistics.SampleBrowserApp
             this.witsml13ListBox.FormattingEnabled = true;
             this.witsml13ListBox.Location = new System.Drawing.Point(3, 3);
             this.witsml13ListBox.Name = "witsml13ListBox";
-            this.witsml13ListBox.Size = new System.Drawing.Size(254, 220);
+            this.witsml13ListBox.Size = new System.Drawing.Size(326, 220);
             this.witsml13ListBox.TabIndex = 0;
             this.witsml13ListBox.SelectedValueChanged += new System.EventHandler(this.listBox_SelectedValueChanged);
             // 
@@ -186,7 +190,7 @@ namespace Energistics.SampleBrowserApp
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(260, 226);
+            this.tabPage2.Size = new System.Drawing.Size(332, 226);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "WITSML 1.4";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -197,7 +201,7 @@ namespace Energistics.SampleBrowserApp
             this.witsml14ListBox.FormattingEnabled = true;
             this.witsml14ListBox.Location = new System.Drawing.Point(3, 3);
             this.witsml14ListBox.Name = "witsml14ListBox";
-            this.witsml14ListBox.Size = new System.Drawing.Size(254, 220);
+            this.witsml14ListBox.Size = new System.Drawing.Size(326, 220);
             this.witsml14ListBox.TabIndex = 0;
             this.witsml14ListBox.SelectedValueChanged += new System.EventHandler(this.listBox_SelectedValueChanged);
             // 
@@ -207,9 +211,9 @@ namespace Energistics.SampleBrowserApp
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(260, 226);
+            this.tabPage3.Size = new System.Drawing.Size(332, 226);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "PRODML 1.2";
+            this.tabPage3.Text = "PRODML 1.2.0";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // prodml12ListBox
@@ -218,16 +222,37 @@ namespace Energistics.SampleBrowserApp
             this.prodml12ListBox.FormattingEnabled = true;
             this.prodml12ListBox.Location = new System.Drawing.Point(3, 3);
             this.prodml12ListBox.Name = "prodml12ListBox";
-            this.prodml12ListBox.Size = new System.Drawing.Size(254, 220);
+            this.prodml12ListBox.Size = new System.Drawing.Size(326, 220);
             this.prodml12ListBox.TabIndex = 0;
             this.prodml12ListBox.SelectedValueChanged += new System.EventHandler(this.listBox_SelectedValueChanged);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.prodml121ListBox);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(332, 226);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "PRODML 1.2.1";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // prodml121ListBox
+            // 
+            this.prodml121ListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prodml121ListBox.FormattingEnabled = true;
+            this.prodml121ListBox.Location = new System.Drawing.Point(3, 3);
+            this.prodml121ListBox.Name = "prodml121ListBox";
+            this.prodml121ListBox.Size = new System.Drawing.Size(326, 220);
+            this.prodml121ListBox.TabIndex = 0;
+            this.prodml121ListBox.SelectedValueChanged += new System.EventHandler(this.listBox_SelectedValueChanged);
             // 
             // propertyGrid1
             // 
             this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(268, 295);
+            this.propertyGrid1.Size = new System.Drawing.Size(340, 295);
             this.propertyGrid1.TabIndex = 0;
             // 
             // menuStrip2
@@ -275,12 +300,19 @@ namespace Energistics.SampleBrowserApp
             this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.dataToolStripMenuItem.Text = "Data";
             // 
+            // connectToolStripMenuItem
+            // 
+            this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.connectToolStripMenuItem.Text = "Connect";
+            this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectToolStripMenuItem_Click);
+            // 
             // runQueryToolStripMenuItem
             // 
             this.runQueryToolStripMenuItem.Enabled = false;
             this.runQueryToolStripMenuItem.Image = global::Energistics.SampleBrowserApp.Properties.Resources.Start;
             this.runQueryToolStripMenuItem.Name = "runQueryToolStripMenuItem";
-            this.runQueryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.runQueryToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.runQueryToolStripMenuItem.Text = "Run Query";
             this.runQueryToolStripMenuItem.Click += new System.EventHandler(this.runQueryToolStripMenuItem_Click);
             // 
@@ -356,13 +388,6 @@ namespace Energistics.SampleBrowserApp
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 25);
             // 
-            // connectToolStripMenuItem
-            // 
-            this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.connectToolStripMenuItem.Text = "Connect";
-            this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectToolStripMenuItem_Click);
-            // 
             // SampleBrowserApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +412,7 @@ namespace Energistics.SampleBrowserApp
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -425,6 +451,8 @@ namespace Energistics.SampleBrowserApp
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ListBox prodml12ListBox;
         private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.ListBox prodml121ListBox;
     }
 }
 

@@ -39,14 +39,161 @@ using System.Xml.Serialization;
 
 namespace Energistics.Generator
 {
+    public class ChoiceElement
+    {
+        public string Name { get; set; }
+    }
+
+    public class Sequence : ChoiceElement
+    {
+        public List<ChoiceElement> Sequences { get; set; }
+
+        public override string ToString()
+        {
+            if (Sequences == null)
+            {
+                return String.Empty;
+            }
+            else
+            {
+                string retval = String.Empty;
+
+                foreach (ChoiceElement elem in Sequences)
+                {
+                    if (!String.IsNullOrEmpty(retval))
+                    {
+                        retval += ", ";
+                    }
+                    retval += elem.ToString();
+                }
+
+                return retval;
+            }
+        }
+
+        public List<string> Flatten()
+        {
+            List<string> retStrings = new List<string>();
+            foreach (ChoiceElement elem in Sequences)
+            {
+                if (elem is Sequence)
+                {
+                    retStrings.AddRange(((Sequence)elem).Flatten());
+                }
+                else
+                {
+                    retStrings.Add(elem.Name);
+                }
+            }
+            return retStrings;
+        }
+
+        public bool IsSameSequence(string one, string two)
+        {
+            foreach (ChoiceElement elem in Sequences)
+            {
+                if (elem is Sequence)
+                {
+                    if (((Sequence)elem).Contains(one))
+                    {
+                        if (((Sequence)elem).Contains(two))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    if (elem.Name == one)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            throw new Exception("Element not found in sequence");
+        }
+
+        public bool Contains(string val)
+        {
+            foreach (ChoiceElement elem in Sequences)
+            {
+                if (elem is Sequence)
+                {
+                    if (((Sequence)elem).Contains(val))
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    if (elem.Name == val)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public NormalElement Get(string val)
+        {
+            foreach (ChoiceElement elem in Sequences)
+            {
+                if (elem is Sequence)
+                {
+                    if (((Sequence)elem).Contains(val))
+                    {
+                        return ((Sequence)elem).Get(val);
+                    }
+                }
+                else
+                {
+                    if (elem.Name == val)
+                    {
+                        return (NormalElement)elem;
+                    }
+                }
+            }
+
+            return null;
+        }
+    }
+
+    public class NormalElement : ChoiceElement
+    {
+        public bool Unbounded { get; set; }
+
+        public override string ToString()
+        {
+            if (Unbounded)
+            {
+                return Name + "[]";
+            }
+            else
+            {
+                return Name;
+            }
+        }
+    }
+
+
+
+
+
     /// <summary>
     /// This is the helper class used by the EnergisticsTextTemplate.tt TextTemplate
     /// It is used to help generated the devkit
     /// </summary>
     public class SchemaSetClassCreator
-    {   
+    {
         private Dictionary<string, string> xmlSchemas = new Dictionary<string, string>();
-        private List<List<string>> choiceSequences = new List<List<string>>();
+        private List<Sequence> choices = new List<Sequence>();
         private List<string> enumClassNames;
         private string mlPath;
         private string mlVersion;
@@ -55,13 +202,51 @@ namespace Energistics.Generator
         /// Constructor
         /// </summary>
         public SchemaSetClassCreator(string mlPath, string mlVersion, List<string> enumClassNames)
-        {            
+        {
             this.mlPath = mlPath;
             this.mlVersion = mlVersion;
             this.enumClassNames = enumClassNames;
 
             CacheAnnotations(mlPath);
         }
+
+        private ChoiceElement ParseElement(XmlElement element)
+        {
+            if (element.Name == "xsd:sequence")
+            {
+                Sequence seq = new Sequence();
+                seq.Sequences = new List<ChoiceElement>();
+
+                foreach (XmlNode elem in element)
+                {
+                    if (elem is XmlElement)
+                    {
+                        if (elem.Name != "xsd:annotation")
+                        {
+                            seq.Sequences.Add(ParseElement((XmlElement)elem));
+                        }
+                    }
+                }
+
+                return seq;
+            }
+            else if (element.Name == "xsd:element")
+            {
+                NormalElement normalElement = new NormalElement();
+                if (element.Attributes["name"] != null)
+                {
+                    normalElement.Name = element.Attributes["name"].Value;
+                }
+
+                normalElement.Unbounded = (element.Attributes["maxOccurs"].Value == "unbounded") ? true : false;
+                return normalElement;
+            }
+            else
+            {
+                throw new Exception("Unexpected value!");
+            }
+        }
+
 
         /// <summary>
         /// Reads in XSD files so they can later be parsed for annotations
@@ -76,7 +261,6 @@ namespace Energistics.Generator
                 ExtractXML(xmlText, "group");
                 ExtractXML(xmlText, "simpleType");
             }
-            
 
             foreach (string file in Directory.GetFiles(mlPath, "*.xsd"))
             {
@@ -84,15 +268,26 @@ namespace Energistics.Generator
                 xmlDoc.Load(file);
                 foreach (XmlElement choiceElements in xmlDoc.GetElementsByTagName("xsd:choice"))
                 {
-                    foreach (XmlElement sequenceElements in choiceElements.GetElementsByTagName("xsd:sequence"))
-                    {
-                        List<string> singleSequence = new List<string>();
-                        choiceSequences.Add(singleSequence);
+                    XmlNode parent = choiceElements;
 
-                        foreach (XmlElement elementElement in sequenceElements.GetElementsByTagName("xsd:element"))
+                    do
+                    {
+                        parent = parent.ParentNode;
+                    } while (parent.Name == "xsd:sequence");
+
+                    Sequence choice = new Sequence();
+                    choice.Sequences = new List<ChoiceElement>();
+                    if (parent.Attributes["name"] != null)
+                    {
+                        choice.Name = parent.Attributes["name"].Value;
+                    }
+                    choices.Add(choice);
+
+                    foreach (XmlElement element in choiceElements)
+                    {
+                        if (element.Name != "xsd:annotation")
                         {
-                            string name = elementElement.Attributes["name"].Value;
-                            singleSequence.Add(name);
+                            choice.Sequences.Add(ParseElement(element));
                         }
                     }
                 }
@@ -157,17 +352,17 @@ namespace Energistics.Generator
 
         public string RenameClass(Type t)
         {
-            if (t.IsArray)
-            {
-                Type elementType = t.GetElementType();
+            Type elementType = t.GetElementType();
 
+            if (t.IsArray && elementType != typeof(byte))
+            {
                 string elementTypeName = RenameClass(elementType);
 
                 return string.Format("List<{0}>", elementTypeName);
             }
 
             //If the type referred to isn't one of the xsd.exe generated types, don't rename it.
-            if(!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
+            if (!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
             {
                 return t.Name;
             }
@@ -191,7 +386,7 @@ namespace Energistics.Generator
 
             //The type listed below have both a class with the given name and an enumeration describing the "type" of that object.  Append "Type" to the name
             //of the enumeration to give them unique names.
-            if ( t.IsEnum && (newName.Equals("SupportCraft") || newName.Equals("TubularComponent")))
+            if (t.IsEnum && (newName.Equals("SupportCraft") || newName.Equals("TubularComponent")))
             {
                 newName = string.Format("{0}Type", newName);
             }
@@ -222,7 +417,7 @@ namespace Energistics.Generator
         /// Rename property name to be more .net compliant
         /// </summary>
         public string RenameProperty(PropertyInfo property)
-        {            
+        {
 
             string newName = property.Name;
 
@@ -249,55 +444,52 @@ namespace Energistics.Generator
         {
             newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
 
-            newName = newName.Replace("Md", "MD").
-                        Replace("Div", "Division").
-                        Replace("Dls", "DoglegSeverity").
-                        Replace("DTim", "DateTime").
-                        Replace("Pc", "Percent").
-                        Replace("Pa", "PluggedAndAbandoned").
-                        Replace("Sg", "SG").
-                        Replace("Hc", "HC").
-                        Replace("Ph", "PH").
-                        Replace("Ht", "Height").
-                        Replace("Mn", "Min").
-                        Replace("Mx", "Max").
-                        Replace("Pv", "PV").
-                        Replace("Yp", "YP").
-                        Replace("Dl", "DL").
-                        Replace("De", "De").
-                        Replace("Ul", "UpperLeft").
-                        Replace("Ur", "UpperRight").
-                        Replace("Ll", "LowerLeft").
-                        Replace("Lr", "LowerRight").
-                        Replace("Wb", "Wellbore").
-                        Replace("IdSection", "InnerDiameterSection").
-                        Replace("Od", "OuterDiameter").
-                        Replace("Wt", "Weight").
-                        Replace("Tq", "Torque").
-                        Replace("Av", "Average").
-                        Replace("IdFishneck", "InnerDiameterFishneck").
-                        Replace("Ns", "NS").
-                        Replace("Ew", "EW").
-                        Replace("Ht", "Height").
-                        Replace("Ct", "CT").
-                        Replace("Hkld", "Hookload").
-                        Replace("Ld", "Load").
-                        Replace("IdLiner", "LinerSize").
-                        Replace("Dn", "Down").
-                        Replace("ETim", "ETime").
-                        Replace("Dh", "Downhole");
+            newName = ReplaceSubstringIfNotPartial(newName, "Md", "MD");
+            newName = ReplaceSubstringIfNotPartial(newName, "Div", "Division");
+            newName = ReplaceSubstringIfNotPartial(newName, "Dls", "DoglegSeverity");
+            newName = ReplaceSubstringIfNotPartial(newName, "DTim", "DateTime");
+            newName = ReplaceSubstringIfNotPartial(newName, "Pc", "Percent");
+            newName = ReplaceSubstringIfNotPartial(newName, "Pa", "PluggedAndAbandoned");
+            newName = ReplaceSubstringIfNotPartial(newName, "Sg", "SG");
+            newName = ReplaceSubstringIfNotPartial(newName, "Hc", "HC");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ph", "PH");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ht", "Height");
+            newName = ReplaceSubstringIfNotPartial(newName, "Mn", "Min");
+            newName = ReplaceSubstringIfNotPartial(newName, "Mx", "Max");
+            newName = ReplaceSubstringIfNotPartial(newName, "Pv", "PV");
+            newName = ReplaceSubstringIfNotPartial(newName, "Yp", "YP");
+            newName = ReplaceSubstringIfNotPartial(newName, "Dl", "DL");
+            newName = ReplaceSubstringIfNotPartial(newName, "De", "De");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ul", "UpperLeft");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ur", "UpperRight");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ll", "LowerLeft");
+            newName = ReplaceSubstringIfNotPartial(newName, "Lr", "LowerRight");
+            newName = ReplaceSubstringIfNotPartial(newName, "Wb", "Wellbore");
+            newName = ReplaceSubstringIfNotPartial(newName, "IdSection", "InnerDiameterSection");
+            newName = ReplaceSubstringIfNotPartial(newName, "Od", "OuterDiameter");
+            newName = ReplaceSubstringIfNotPartial(newName, "Wt", "Weight");
+            newName = ReplaceSubstringIfNotPartial(newName, "Tq", "Torque");
+            newName = ReplaceSubstringIfNotPartial(newName, "Av", "Average");
+            newName = ReplaceSubstringIfNotPartial(newName, "IdFishneck", "InnerDiameterFishneck");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ns", "NS");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ew", "EW");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ht", "Height");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ct", "CT");
+            newName = ReplaceSubstringIfNotPartial(newName, "Hkld", "Hookload");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ld", "Load");
+            newName = ReplaceSubstringIfNotPartial(newName, "IdLiner", "LinerSize");
+            newName = ReplaceSubstringIfNotPartial(newName, "Dn", "Down");
+            newName = ReplaceSubstringIfNotPartial(newName, "ETim", "ETime");
+            newName = ReplaceSubstringIfNotPartial(newName, "Dh", "Downhole");
+            newName = ReplaceSubstringIfNotPartial(newName, "Ca", "CA");
+            newName = ReplaceSubstringIfNotPartial(newName, "Op", "Operating");
 
-            if (newName.Contains("Ca") && !(newName.Contains("Cap") || newName.Contains("Calibrate") || newName.Contains("Carry") ||
-                newName.Contains("Cat")))
-            {
-                newName = newName.Replace("Ca", "CA");
-            }
-
-            if (newName.Contains("Op") && !(newName.Contains("Operating") || newName.Contains("Open") || newName.Contains("Operator")))
-            {
-                newName = newName.Replace("Op", "Operating");
-            }
             return newName;
+        }
+
+        private string ReplaceSubstringIfNotPartial(string original, string substring, string replacement)
+        {
+            return Regex.Replace(original, substring + "([A-Z]|$)", replacement + "$1");
         }
 
         /// <summary>
@@ -361,7 +553,7 @@ namespace Energistics.Generator
 
                     sb.Insert(0, "/// <summary>\n        /// ");
                     if (!String.IsNullOrEmpty(extraDesc))
-                    {                        
+                    {
                         if (!sb.ToString().EndsWith("."))
                         {
                             sb.Append(".");
@@ -380,14 +572,14 @@ namespace Energistics.Generator
                 }
             }
 
-            return String.Empty;
+            return "/// <summary>\n        /// " + name + " property\n        /// </summary>";
         }
 
         /// <summary>
         /// Gets the description for use in "summary" tags
         /// </summary>
         public string GetDescription(Type t)
-        { 
+        {
             string typeName = t.Name;
 
             if (typeName.Contains("_"))
@@ -415,9 +607,9 @@ namespace Energistics.Generator
                     sb.Replace("  ", " ");
                     return sb.ToString();
                 }
-            }            
+            }
 
-            return string.Format("This class represents the {0} xsd {1}.", t.Name, t.IsEnum ? "enumeration" : "type" );
+            return string.Format("This class represents the {0} xsd {1}.", t.Name, t.IsEnum ? "enumeration" : "type");
         }
 
         public string GetEnumName(string originalName)
@@ -490,74 +682,78 @@ namespace Energistics.Generator
         public string GetGetterSetter(XmlElementAttribute attr, Type type, PropertyInfo property)
         {
             if (attr != null)
-            {   
+            {
                 string privateFieldName = attr.ElementName + "Field";
+                string publicPropName = RenamePropertyByName(attr.ElementName);
 
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("{");
                 sb.AppendLine("            get {");
                 sb.AppendLine("                return " + privateFieldName + ";");
                 sb.AppendLine("            } ");
-                sb.AppendLine("            set { ");
-                
-                // If this attribute is part of a sequence, find that sequence
-                List<string> mySequence = new List<string>();
-                foreach (List<string> seq in choiceSequences)
-                {
-                    if (seq.Contains(attr.ElementName))
-                    {
-                        mySequence = seq;
-                        break;
-                    }
-                }
+                sb.AppendLine("            set {");
 
-                // Throw exceptions if any other attribute from this choice is set (that is not in my sequence)
-                foreach (XmlElementAttribute otherAttr in property.GetCustomAttributes(typeof(XmlElementAttribute), false))
+                string array = GetArrayString(type, attr);
+
+                foreach (Sequence choice in choices)
                 {
-                    if (otherAttr.ElementName != attr.ElementName)
+                    if (choice.Name == type.Name)
                     {
-                        if (!mySequence.Contains(otherAttr.ElementName))
+                        foreach (XmlElementAttribute otherAttr in property.GetCustomAttributes(typeof(XmlElementAttribute), false))
                         {
-                            sb.AppendLine("                if (" + otherAttr.ElementName + "FieldSpecified" + ") throw new Exception(\"Cannot set property " + RenamePropertyByName(attr.ElementName) + " when property " + RenamePropertyByName(otherAttr.ElementName) + " is already set\");");
+                            if (attr.ElementName != otherAttr.ElementName)
+                            {
+                                if (choice.Contains(attr.ElementName))
+                                {
+                                    if (!choice.IsSameSequence(attr.ElementName, otherAttr.ElementName))
+                                    {
+                                        sb.AppendLine("                if (value != null && " + RenamePropertyByName(otherAttr.ElementName) + "Specified" + ") throw new Exception(\"Cannot set property " + publicPropName + " when property " + RenamePropertyByName(otherAttr.ElementName) + " is already set\");");
+                                    }
+                                }
+                            }
                         }
                     }
                 }
+
+                string wrapperClassName = RenameClass(attr.Type);
+
                 sb.AppendLine("                " + privateFieldName + " = value;");
-                sb.AppendLine("                " + privateFieldName + "Specified = true;");
+                sb.AppendLine("                " + publicPropName + "Specified = (value!=null);");
+                sb.AppendLine("                NotifyPropertyChanged(\"" + publicPropName + "\");");
                 sb.AppendLine("            }");
                 sb.AppendLine("        }");
                 sb.AppendLine();
-                sb.AppendLine("        private " + RenameClass(attr.Type) + " " + privateFieldName + "; ");
-                sb.AppendLine("        private bool " + privateFieldName + "Specified = false; ");
+                sb.AppendLine("        private " + wrapperClassName + (IsNullable(attr.Type) ? "?" : String.Empty) + array + " " + privateFieldName + "; ");
+                sb.AppendLine("        [XmlIgnore]");
+                sb.AppendLine("        public bool " + publicPropName + "Specified = false; ");
+
+                string realClassName = RenameClass(attr.Type);
 
                 return sb.ToString();
             }
             else
             {
-                // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
+                string specifiedBool = RenameProperty(property) + "Specified";
+                string privateFieldName = property.Name + "Field";
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("{");
+                sb.AppendLine("            get {");
+                sb.AppendLine("                return " + privateFieldName + ";");
+                sb.AppendLine("            } ");
+                sb.AppendLine("            set {");
+                sb.AppendLine("                " + privateFieldName + " = value;");
                 if (type.GetProperty(property.Name + "Specified") != null)
                 {
-                    string specifiedBool = RenameProperty(property) + "Specified";
-                    string privateFieldName = property.Name + "Field";
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendLine("{");
-                    sb.AppendLine("            get {");
-                    sb.AppendLine("                return " + privateFieldName + ";");
-                    sb.AppendLine("            } ");
-                    sb.AppendLine("            set { ");
-                    sb.AppendLine("                " + privateFieldName + " = value;");
+                    // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
                     sb.AppendLine("                this." + specifiedBool + " = true;");
-                    sb.AppendLine("            }");
-                    sb.AppendLine("        }");
-                    sb.AppendLine();
-                    sb.AppendLine("        private " + RenameClass(property.PropertyType) + MakePropertyNullable(property) + " " + privateFieldName + "; ");
+                }
+                sb.AppendLine("                NotifyPropertyChanged(\"" + RenameProperty(property) + "\");");
+                sb.AppendLine("            }");
+                sb.AppendLine("        }");
+                sb.AppendLine();
+                sb.AppendLine("        private " + RenameClass(property.PropertyType) + MakePropertyNullable(property) + " " + privateFieldName + "; ");
 
-                    return sb.ToString();
-                }
-                else
-                {
-                    return "{ get; set; }";
-                }
+                return sb.ToString();
             }
         }
 
@@ -568,7 +764,7 @@ namespace Energistics.Generator
         {
             if (property.GetCustomAttributes(typeof(XmlAttributeAttribute), false).Length == 0 &&
                 property.GetCustomAttributes(typeof(XmlTextAttribute), false).Length == 0 &&
-                property.PropertyType.IsValueType && 
+                property.PropertyType.IsValueType &&
                 !property.Name.EndsWith("Specified") &&
                 !enumClassNames.Contains(property.PropertyType.Name)
                 )
@@ -596,15 +792,19 @@ namespace Energistics.Generator
                 attrIndex.Add(attr.ElementName, attr);
             }
 
-            // If our attributes are part of sequences, do them in the correct order
-            foreach (List<string> sequence in choiceSequences)
+
+
+            foreach (Sequence choice in choices)
             {
-                foreach (string sequenceElement in sequence)
+                if (choice.Name == type.Name)
                 {
-                    if (attrIndex.ContainsKey(sequenceElement))
+                    foreach (string sequenceElement in choice.Flatten())
                     {
-                        ExpandSingleChoiceAttributes(sb, type, property, attrIndex[sequenceElement], sequence);
-                        attrIndex.Remove(sequenceElement);
+                        if (sequenceElement != null && attrIndex.ContainsKey(sequenceElement))
+                        {
+                            ExpandSingleChoiceAttributes(sb, type, property, attrIndex[sequenceElement], choice);
+                            attrIndex.Remove(sequenceElement);
+                        }
                     }
                 }
             }
@@ -618,19 +818,36 @@ namespace Energistics.Generator
             return sb.ToString();
         }
 
+
+        public string GetXmlElementOrXmlArray(Type type, PropertyInfo property)
+        {
+            object[] elementAttribute = property.GetCustomAttributes(typeof(XmlArrayItemAttribute), false);
+            if (elementAttribute.Length > 0)
+            {
+                XmlArrayItemAttribute xaia = (XmlArrayItemAttribute)elementAttribute[0];
+                string returnString = String.Format("[XmlArrayItem(\"{0}\")]\n        ", xaia.ElementName);
+                returnString += String.Format("[XmlArray(\"{0}\")]", property.Name);
+                return returnString;
+            }
+            else
+            {
+                return String.Format("[XmlElement(\"{0}\")]", property.Name);
+            }
+        }
+
         /// <summary>
         /// Used by ExpandChoiceAttributes
         /// </summary>
-        private void ExpandSingleChoiceAttributes(StringBuilder sb, Type type, PropertyInfo property, XmlElementAttribute attr, List<string> sequence)
+        private void ExpandSingleChoiceAttributes(StringBuilder sb, Type type, PropertyInfo property, XmlElementAttribute attr, Sequence sequence)
         {
             string extraDesc = String.Empty;
 
             if (sequence != null)
             {
                 string others = String.Empty;
-                foreach (string s in sequence)
+                foreach (string s in sequence.Flatten())
                 {
-                    if (s != attr.ElementName)
+                    if (s != attr.ElementName && sequence.IsSameSequence(s, attr.ElementName))
                     {
                         if (others.Length != 0)
                         {
@@ -640,14 +857,100 @@ namespace Energistics.Generator
                     }
                 }
 
-                extraDesc = String.Format("If you set this property, you must also set {0}.", others);
+                if (!String.IsNullOrEmpty(others))
+                {
+                    extraDesc = String.Format("If you set this property, you must also set {0}.", others);
+                }
             }
 
-            
+            string array = GetArrayString(type, attr);
+
+
 
             sb.AppendLine("        " + GetDescription(type, attr.ElementName, extraDesc));
             sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
-            sb.AppendLine("        public " + RenameClass(attr.Type) + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property)); 
+            sb.AppendLine("        public " + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property));
+        }
+
+        bool IsNullable(Type type)
+        {
+            if (type.IsValueType && !enumClassNames.Contains(type.Name))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private string GetArrayString(Type type, XmlElementAttribute attr)
+        {
+            string array = String.Empty;
+
+            foreach (Sequence choice in choices)
+            {
+                if (choice.Name == type.Name)
+                {
+                    if (choice.Contains(attr.ElementName))
+                    {
+                        if (choice.Get(attr.ElementName).Unbounded)
+                        {
+                            array = "[]";
+                        }
+                    }
+                }
+            }
+            return array;
+        }
+
+        public bool IsItemsList(Type type, PropertyInfo property)
+        {
+            string className = RenameClass(type);
+            if (className.EndsWith("List") && property.PropertyType.IsArray)
+            {
+                if (className.Contains(RenameProperty(property)))
+                {
+                    return true;
+                }
+
+                string classes = RenameClass(property.PropertyType);
+                Regex regex = new Regex(@"List<(\w*)>");
+                if (regex.IsMatch(classes))
+                {
+                    string listType = regex.Match(classes).Groups[1].Value;
+
+                    if (className.StartsWith(listType))
+                    {
+                        return true;
+                    }
+                    else if (listType == "Single" && className.StartsWith("FloatValue"))
+                    {
+                        return true;
+                    }
+                    else if (listType == "Int64" && className.StartsWith("LongValue"))
+                    {
+                        return true;
+                    }
+                    else if (listType == "Int16" && className.StartsWith("ShortValue"))
+                    {
+                        return true;
+                    }
+                    else if (listType == "Int32" && className.StartsWith("IntValue"))
+                    {
+                        return true;
+                    }
+                    else if (listType == "SByte" && className.StartsWith("ByteValue"))
+                    {
+                        return true;
+                    }
+
+
+
+                }
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -667,7 +970,6 @@ namespace Energistics.Generator
                 sb.AppendLine("            get { return " + propertyName + ".Name; }");
                 sb.AppendLine("            set { " + propertyName + ".Name = value; }");
                 sb.AppendLine("        }");
-                sb.AppendLine();
                 sb.AppendLine("        [XmlIgnore]");
             }
             return sb.ToString();
@@ -695,6 +997,26 @@ namespace Energistics.Generator
 
             return sb.ToString();
         }
-    
+
+        public string GetXmlElementAttrTag(XmlElementAttribute xmlElemAttr, PropertyInfo property)
+        {
+            string elementName = String.IsNullOrEmpty(xmlElemAttr.ElementName) ? property.Name : xmlElemAttr.ElementName;
+
+            string xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", elementName);
+
+            if (!String.IsNullOrEmpty(xmlElemAttr.Namespace))
+            {
+                xmlElementAttrTag += String.Format(", Namespace=\"{0}\"", xmlElemAttr.Namespace);
+            }
+
+            if (!String.IsNullOrEmpty(xmlElemAttr.DataType))
+            {
+                xmlElementAttrTag += String.Format(", DataType=\"{0}\"", xmlElemAttr.DataType);
+            }
+
+            xmlElementAttrTag += ")]";
+
+            return xmlElementAttrTag;
+        }
     }
 }

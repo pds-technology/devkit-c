@@ -20,21 +20,21 @@ namespace Energistics.Generator
     using System;
     
     
-    #line 1 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+    #line 1 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "10.0.0.0")]
     public partial class EnergisticsTextTemplate : EnergisticsTextTemplateBase
     {
         public virtual string TransformText()
         {
             
-            #line 2 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 2 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(SchemaSetClassCreator.GetLicenseText()));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 17 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 17 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     SchemaSetClassCreator generator = new SchemaSetClassCreator(mlPath, mlVersion, enumClassNames);
 
@@ -53,28 +53,28 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.");
             
-            #line 30 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 30 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mlVersion));
             
             #line default
             #line hidden
             this.Write(".ComponentSchemas;\r\nusing Energistics.DataAccess.");
             
-            #line 31 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 31 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mlVersion));
             
             #line default
             #line hidden
             this.Write(".ReferenceData;\r\n\r\nnamespace Energistics.DataAccess.");
             
-            #line 33 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 33 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mlVersion));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n    #region Classes\r\n");
             
-            #line 36 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 36 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     foreach (Type type in generator.Classes)
     {
@@ -86,7 +86,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    namespace ComponentSchemas \r\n    {\r\n");
             
-            #line 44 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 44 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -95,14 +95,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    /// <summary>\r\n    /// ");
             
-            #line 48 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 48 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type)));
             
             #line default
             #line hidden
             this.Write("\r\n    /// </summary>\r\n");
             
-            #line 50 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 50 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         foreach (XmlIncludeAttribute include in type.GetCustomAttributes(typeof(XmlIncludeAttribute), false))
         {
@@ -112,14 +112,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.Xml.Serialization.XmlIncludeAttribute(typeof(");
             
-            #line 54 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 54 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(include.Type)));
             
             #line default
             #line hidden
             this.Write("))]\r\n");
             
-            #line 55 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 55 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -128,14 +128,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.CodeDom.Compiler.GeneratedCodeAttribute(\"");
             
-            #line 58 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 58 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Assembly.GetExecutingAssembly().GetName().Name));
             
             #line default
             #line hidden
             this.Write("\", \"");
             
-            #line 58 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 58 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Assembly.GetExecutingAssembly().GetName().Version));
             
             #line default
@@ -144,7 +144,7 @@ using Energistics.DataAccess.");
                     "roughAttribute()]\r\n    [System.ComponentModel.DesignerCategoryAttribute(\"code\")]" +
                     "\r\n");
             
-            #line 62 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 62 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     if(generator.GetXmlRootName(type) != null)
     {
@@ -154,28 +154,28 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.Xml.Serialization.XmlTypeAttribute(Namespace=\"");
             
-            #line 66 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 66 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\")]\r\n    [System.Xml.Serialization.XmlRootAttribute(\"");
             
-            #line 67 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 67 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlRootName(type)));
             
             #line default
             #line hidden
             this.Write("\", Namespace=\"");
             
-            #line 67 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 67 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\", IsNullable=false)]\r\n");
             
-            #line 68 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 68 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     }
     else
@@ -186,21 +186,21 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.Xml.Serialization.XmlTypeAttribute(TypeName=\"");
             
-            #line 73 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 73 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.Name));
             
             #line default
             #line hidden
             this.Write("\", Namespace=\"");
             
-            #line 73 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 73 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\")]\r\n");
             
-            #line 74 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 74 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     }
 
@@ -209,49 +209,49 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [Description(\"");
             
-            #line 77 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 77 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type).Replace("\"", "")));
             
             #line default
             #line hidden
             this.Write("\")]\r\n    public");
             
-            #line 78 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 78 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.IsAbstract ? " abstract" : string.Empty));
             
             #line default
             #line hidden
             this.Write(" partial class ");
             
-            #line 78 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 78 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type)));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 78 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 78 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 78 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 78 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : String.Empty));
             
             #line default
             #line hidden
-            this.Write("\r\n    {\r\n");
+            this.Write(", INotifyPropertyChanged\r\n    {\r\n");
             
-            #line 80 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 80 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetConstructor(type)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 81 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 81 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
         
         foreach (var property in type.GetProperties())
         {
@@ -265,14 +265,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("\t\t");
             
-            #line 89 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 89 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n        [XmlIgnore]\r\n\t\t[Browsable(false)]\r\n");
             
-            #line 92 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 92 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
                 }
                 else
@@ -284,14 +284,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("\t\t");
             
-            #line 98 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 98 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n        [XmlText]\r\n");
             
-            #line 100 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 100 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
                 }
 				else if (property.GetCustomAttributes(typeof(XmlElementAttribute), false).Length > 1)
@@ -301,14 +301,14 @@ using Energistics.DataAccess.");
             #line default
             #line hidden
             
-            #line 105 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 105 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.ExpandChoiceAttributes(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 106 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 106 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 				    
 					continue;
 				}
@@ -318,27 +318,28 @@ using Energistics.DataAccess.");
                     object[] elementAttribute = property.GetCustomAttributes(typeof(XmlElementAttribute), false);
                     if(elementAttribute.Length > 0)
                     {
+					   XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
 
             
             #line default
             #line hidden
-            this.Write("\t\t");
+            this.Write("        ");
             
-            #line 116 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 117 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
-            this.Write("\r\n        [XmlElement(\"");
+            this.Write("\r\n\t\t");
             
-            #line 117 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture((elementAttribute[0] as XmlElementAttribute).ElementName));
+            #line 118 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlElementAttrTag(xmlElemAttr, property)));
             
             #line default
             #line hidden
-            this.Write("\")]\r\n");
+            this.Write("\r\n");
             
-            #line 118 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 119 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
                     }
                     else
@@ -353,27 +354,27 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("\t\t");
             
-            #line 127 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 128 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n        [XmlAttribute(\"");
             
-            #line 128 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 129 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.IsNullOrEmpty(attribute.AttributeName) ? property.Name : attribute.AttributeName));
             
             #line default
             #line hidden
             this.Write("\")]\r\n");
             
-            #line 129 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 130 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetSurrogate(property)));
             
             #line default
             #line hidden
             
-            #line 129 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 130 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
                       
                         }
                         else
@@ -384,21 +385,21 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        ");
             
-            #line 134 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 135 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
-            this.Write("\r\n        [XmlElement(\"");
+            this.Write("\r\n\t\t");
             
-            #line 135 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(property.Name));
+            #line 136 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlElementOrXmlArray(type, property)));
             
             #line default
             #line hidden
-            this.Write("\")]\r\n");
+            this.Write("\r\n");
             
-            #line 136 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 137 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 						}
                     }
                 }
@@ -410,51 +411,58 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        public ");
             
-            #line 142 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 143 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(property.PropertyType)));
             
             #line default
             #line hidden
             
-            #line 142 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 143 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.MakePropertyNullable(property)));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 142 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 143 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameProperty(property)));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 142 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 143 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetGetterSetter(null, type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 143 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 144 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
-                if (generator.RenameClass(type).EndsWith("List") && property.PropertyType.IsArray) {
+                if (generator.IsItemsList(type, property)) {
 
             
             #line default
             #line hidden
-            this.Write("        [XmlIgnore]\t\t\r\n        public IList Items\r\n        {\r\n\t\t    get\r\n\t\t\t{\r\n\t\t" +
-                    "\t    return ");
+            this.Write("        ");
             
-            #line 151 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 147 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n        [XmlIgnore]\t\t\r\n        public IList Items\r\n        {\r\n\t\t    get\r\n\t\t\t{\r\n" +
+                    "\t\t\t    return ");
+            
+            #line 153 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameProperty(property)));
             
             #line default
             #line hidden
             this.Write(";\r\n\t\t\t}\r\n        }\r\n");
             
-            #line 154 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 156 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
 				}
             }
@@ -463,9 +471,30 @@ using Energistics.DataAccess.");
             
             #line default
             #line hidden
-            this.Write("    }\r\n");
+            this.Write(@"        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name=""info"">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+");
             
-            #line 160 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 182 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         if(!type.Name.StartsWith("obj_") && !type.Name.Equals("abstractObject"))
         {
@@ -475,7 +504,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    }\r\n");
             
-            #line 165 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 187 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -484,7 +513,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("\r\n");
             
-            #line 169 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 191 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     }
 
@@ -493,7 +522,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    #endregion\r\n\r\n    #region Enumerations\r\n    namespace ReferenceData {\r\n");
             
-            #line 176 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 198 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     foreach (Type type in generator.Enums)
     {
@@ -505,7 +534,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        /// <summary>\r\n        /// ");
             
-            #line 183 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 205 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type)));
             
             #line default
@@ -514,28 +543,28 @@ using Energistics.DataAccess.");
                     "(\"xsd\", \"4.0.30319.1\")]\r\n        [System.SerializableAttribute()]\r\n        [Syst" +
                     "em.Xml.Serialization.XmlTypeAttribute(Namespace=\"");
             
-            #line 187 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 209 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\")]\r\n        [Description(\"");
             
-            #line 188 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 210 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type).Replace("\"", "")));
             
             #line default
             #line hidden
             this.Write("\")]\r\n        public enum ");
             
-            #line 189 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 211 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type)));
             
             #line default
             #line hidden
             this.Write(" \r\n        {\r\n");
             
-            #line 191 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 213 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         FieldInfo[] fields = type.GetFields(BindingFlags.Static | BindingFlags.GetField | BindingFlags.Public);
 
@@ -549,14 +578,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        ");
             
-            #line 198 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 220 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, field.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 199 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 221 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
             if(enumAttributes.Length > 0)
             {
@@ -567,14 +596,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("          [XmlEnum(\"");
             
-            #line 203 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 225 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.IsNullOrEmpty(field.Name) ? field.Name : attribute.Name));
             
             #line default
             #line hidden
             this.Write("\")]\r\n");
             
-            #line 204 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 226 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
             }
 
@@ -583,20 +612,20 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("          ");
             
-            #line 206 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 228 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetEnumName(field.Name)));
             
             #line default
             #line hidden
             
-            #line 206 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 228 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(i == fields.Length - 1 ? string.Empty : ","));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 207 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 229 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -605,7 +634,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        }\r\n");
             
-            #line 211 "C:\TFS\ADI_COMMON\EnergisticsDataAccess\Generator\EnergisticsTextTemplate.tt"
+            #line 233 "C:\Projects\StandardsDevkit\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         } // end if
     } // end for

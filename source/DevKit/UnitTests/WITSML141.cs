@@ -37,10 +37,10 @@ namespace Energistics.UnitTests
     [TestClass]
     public class UnitTest_141
     {
-        private string rootFolder = @"C:\StandardsDevkit\";
+        private string rootFolder = @"C:\Projects\StandardsDevkit";
 
         [TestMethod]
-        public void Test141SampleData()
+        public void WITSML141_SampleData()
         {
             object[] objs = new object[30];
             string pathToXml = Path.Combine(rootFolder, @"Standards\DataSchema\witsml_v1.4.1\witsml_v1.4.1_data\xml_examples");
