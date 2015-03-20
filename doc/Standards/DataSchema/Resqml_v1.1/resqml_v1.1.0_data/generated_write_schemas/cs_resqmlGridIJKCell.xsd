@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlGridIJKCell">
+      <xsd:annotation>
+         <xsd:documentation>A grid cell traversed by a wellbore.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="gridID" type="resqml:nonNegativeInt" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A zero-based pointer to the grid that contains the traversed cell. A value of zero represents the first grid in the grid3dGUID aggregate of the
+               parent.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="i" type="xsd:int" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The I index of the cell.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="j" type="xsd:int" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The J index of the cell.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="k" type="xsd:int" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The K index of the cell.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

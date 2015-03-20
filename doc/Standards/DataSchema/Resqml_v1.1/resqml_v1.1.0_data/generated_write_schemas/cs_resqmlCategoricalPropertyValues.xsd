@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlAbstractPropertyValues.xsd" />
+   <xsd:include schemaLocation="cs_resqmlStringLookup.xsd" />
+   <xsd:include schemaLocation="cs_resqmlDiscreteValues.xsd" />
+   <xsd:include schemaLocation="cs_resqmlHdfGroup.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlCategoricalPropertyValues">
+      <xsd:annotation>
+         <xsd:documentation>Information specific to one categorical (i.e., string) property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind
+         localKind propertyAttachment timestamp timeStep attgrp_uidGlobal</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="resqml:cs_resqmlAbstractPropertyValues">
+            <xsd:sequence>
+               <xsd:element name="stringLookup" type="resqml:cs_resqmlStringLookup" minOccurs="1" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Defines an integer equivalent for a string. The integer value must be used in the array.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:choice>
+                  <xsd:element name="xmlRepresentation" type="resqml:cs_resqmlDiscreteValues" minOccurs="1" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Captures the array of values in an XML representation.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="hdfRepresentation" type="resqml:cs_resqmlHdfGroup" minOccurs="1" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Defines information related to capturing the array data in an HDF5 formatted file.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+               </xsd:choice>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

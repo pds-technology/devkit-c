@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_catalogProdml.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_instrument.xsd" />
+   <xsd:include schemaLocation="cs_dtsPatchCord.xsd" />
+   <xsd:include schemaLocation="cs_dtsCalibration.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:complexType name="grp_dtsInstrumentBox">
+      <xsd:annotation>
+         <xsd:documentation>The group of elements corresponding to a DTS instrument box.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="prodml:cs_instrument">
+            <xsd:sequence>
+               <xsd:element name="serial_number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of
+                     information. This structure just identifies the tag and does not describe the contents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="internalOvenLocationNear" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Near distance of the oven from the beginning of the fiber.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="internalOvenLocationFar" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Far distance of the oven from the beginning of the fiber.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="referenceCoilTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The temperature of the oven.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="parameter" type="prodml:indexedObject" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Additional parameters to define the instrument box as a piece of equipment. These should not be parameters to define the installation or
+                     use of the box in the wellbore, or other system. This element should be used only if an appropriate parameter is not available as an element, or in the
+                     calibration operation.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="warmupTime" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The duration of time starting from the initiation of the first temperature measurement until the unit complies with the stated values of
+                     the main measurement specifications.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="startupTime" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The start-up time is the duration of time from the initial powering on the instrument until the first temperature measurement is
+                     permitted.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="instrumentCalibration" type="prodml:cs_dtsCalibration" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is a general type that allows a
+                     calibration date, business associate, and many name/value pairs.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="cs_dtsPatchCord" type="prodml:cs_dtsPatchCord" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Information regarding the patch cord used to connect the instrument box to the start of the optical fiber path.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

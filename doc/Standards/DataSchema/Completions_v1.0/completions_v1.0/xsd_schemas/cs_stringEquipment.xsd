@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:abs="http://www.energistics.org/schemas/abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--	<xsd:include schemaLocation="cs_equipmentConnection.xsd"/>
+	<xsd:include schemaLocation="cs_equipmentCatalog.xsd"/> -->
+	<xsd:include schemaLocation="cs_eventInfo.xsd"/>
+	<xsd:include schemaLocation="grp_stringEquipment.xsd"/>
+	<xsd:include schemaLocation="cs_commonData.xsd"/>
+	<xsd:include schemaLocation="cs_customData.xsd"/>
+	<xsd:complexType name="cs_stringEquipment">
+		<xsd:sequence>
+			<xsd:element name="equipmentType" type="witsml:EquipmentType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of the equipment.  Enumeration is defined in cs_equipmentCatalog.xsd. "Optional" is for expansion purpose, strong suggest that only ignore it if the equipment type could not found from equipmentType definition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="name" type="witsml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the equipment.  Length of this element is 256 characters.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="equipmentEventHistory" type="witsml:cs_eventInfo" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>History of event tied to this equipment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_stringEquipment">
+				<xsd:annotation>
+					<xsd:documentation>String equipment non-normative data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data objects.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the stringEquipment.
+                </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+		<xsd:attribute name="equipmentRefUID" type="witsml:refString">
+			<xsd:annotation>
+				<xsd:documentation>Unique reference for the equipment.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>

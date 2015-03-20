@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_resqmlHdfGroup.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlPropertySet.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<xsd:include schemaLocation="typ_dataTypesResqml.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_resqmlGrid2dPatch">
+		<xsd:annotation>
+			<xsd:documentation>A gemetrical representation of a surface using a 
+			subset of a 2d binset grid.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ni" type="resqml:positiveInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The number of patch nodes in the I dimension of the bin grid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nj" type="resqml:positiveInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The number of patch nodes in the J dimension of the bin grid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="iStart" type="resqml:nonNegativeInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The location of the patch grid origin on the I dimension of the the binGrid/survey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="jStart" type="resqml:nonNegativeInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The location of the patch grid origin on the J dimension of the the binGrid/survey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="iIncrement" type="resqml:positiveInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The constant increment between nodes along the I axis of the binGrid.
+					An increment that is not equal to one represents a grid coarsening where a patch cell 
+					exactly overlays iIncrement*jIncrement of the binGrid cells.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="jIncrement" type="resqml:positiveInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The constant increment between nodes along the J axis of the binGrid.
+					An increment that is not equal to one represents a grid coarsening where a patch cell 
+					exactly overlays iIncrement*jIncrement of the binGrid cells.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="binGrid" type="resqml:refGlobalNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Points to the bin grid for which this patch is a subset.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="zValueDataset" type="resqml:doubleValues" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>A space delimited list of ni*nj space delimited vertical coordinates 
+						which defines the vertical coordinate at each node of the grid. 
+						The order of the items in the list is I varies fastest. 
+						I=1,J=1 represents the first value while I=2,J=1 represents the second value, etc.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="grid2dHdfGroup" type="resqml:cs_resqmlHdfGroup" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Defines information related to capturing the array data 
+						in an HDF5 formatted file.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="propertyValues" type="resqml:cs_resqmlPropertySet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Properties for this patch.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="resqml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

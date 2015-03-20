@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                     -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                     -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                     -->
+   <xsd:complexType name="cs_resqmlStringLookup">
+      <xsd:annotation>
+         <xsd:documentation>Defines a string to integer lookup table.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="stringValue" type="resqml:kindString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A string value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="integerValue" type="xsd:long" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The corresponding integer value. This value will be used in HDF instead of the string value. The value of nullIntegerValue must be reserved for
+               NULL. The size of this value is constrained by the size of the format used within HDF.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                     -->
+</xsd:schema>

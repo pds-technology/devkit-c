@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="typ_dataTypesCompletion.xsd" />
+   <xsd:include schemaLocation="typ_catalogCompletion.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:complexType name="cs_intervalStatusHistory">
+      <xsd:annotation>
+         <xsd:documentation>Information on the status history in the interval</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="physicalStatus" type="witsml:PhysicalStatus" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The physical status of an interval (e.g., open, closed, proposed)</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="startDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The start date of status and allocation factor</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="endDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The end date of status and allocation factor</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The measured top depth of the interval</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The measured bottom depth of the interval</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="allocationFactor" type="witsml:nonNegativeFraction" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>defines the proportional amount of fluid from the well completion that is flowing through this interval whithin a wellbore</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A remark about the interval over this period of time</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="witsml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the interval status.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

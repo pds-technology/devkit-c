@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+Data is based on example well from WFT.
+They are totally artificial and are not intended to demonstrate best practices. 
+NOTE: Different equipment may share common properties.  String equipment may reference the same equipmentUID as itself.
+-->
+<downholeComponents xmlns="http://www.witsml.org/schemas/1series" version="1.4.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.witsml.org/schemas/1series ../xsd_schemas/obj_downholeComponent.xsd" >
+	<documentInfo>
+		<documentName>downholeComponents</documentName>
+		<fileCreationInformation>
+			<fileCreationDate>2012-04-17T09:00:00.000Z</fileCreationDate>
+			<fileCreator>Energistics</fileCreator>
+		</fileCreationInformation>
+	</documentInfo>
+	<downholeComponent uid="downholecomp_1" uidWell="VGASAU029">
+		<!-- The wellhead contains the wellhead information, the reason it has own section because the tubingHeader 
+			and casingHeader is the starting part of all casing , tubing string, the stringEquipmentUID is reference by 
+			multiple strings
+		-->
+		<nameWell>VGASAU029</nameWell>
+		<name>downholecomp_Job1</name>
+		<wellHead>
+			<stringType>Wellhead</stringType>
+			<name>wellhead</name>
+			<stringEquipmentSet>
+				<!-- tubing head-->
+				<stringEquipment uid="wellheadString_1" equipmentRefUID="tubingHead_1">
+					<equipmentType>Tubing Head (Spool)</equipmentType>
+					<name>Tubing Head  3000# Bottom Flange 13.375"/Top Flange  9.625"</name>
+				 
+					<count>1</count>
+					<length uom="ft">2</length>
+					<mdTop uom="ft">8</mdTop>
+					<mdBottom uom="ft">10</mdBottom>
+					<tvdTop uom="ft">8</tvdTop>
+					<tvdBottom uom="ft">10</tvdBottom>
+					<tvdBase uom="ft">0</tvdBase>
+					<connectionNext uid="whcon_top">
+						<sizeThread uom="in">13.375</sizeThread>
+						<position>top</position>
+						<connectionForm>Flange</connectionForm>
+					</connectionNext>
+					<connectionNext uid="whcon_bottom" stringEquipmentRefUID="wellheadString_2">
+						<sizeThread uom="in">9.625</sizeThread>
+						<position>bottom</position>
+						<connectionForm>Flange</connectionForm>
+						<!--in doc connectionType vs connectionForm-->
+					</connectionNext>
+				</stringEquipment>
+				<!-- Casing header , all casing hang on this casing head -->
+				<stringEquipment uid="wellheadString_2" equipmentRefUID="casingHead_1">
+					<equipmentType>Casing Head</equipmentType>
+					<name>Casing Head 3000# Top Flange 16.750"/Bottom Thread 16.000"</name>
+					 
+					<count>1</count>
+					<length uom="ft">3</length>
+					<mdTop uom="ft">10</mdTop>
+					<mdBottom uom="ft">13</mdBottom>
+					<tvdTop uom="ft">10</tvdTop>
+					<tvdBottom uom="ft">13</tvdBottom>
+					<connectionNext uid="whcon_top">
+						<sizeThread uom="in">16.75</sizeThread>
+						<position>top</position>
+						<connectionForm>Flange</connectionForm>
+					</connectionNext>
+					<connectionNext uid="whcon_bottom" stringEquipmentRefUID="wellheadString_2">
+						<typeThread>API Long</typeThread>
+						<sizeThread uom="in">16</sizeThread>
+						<position>bottom</position>
+						<connectionForm>Flange</connectionForm>
+						<connectionUpset>NUE</connectionUpset>
+						<!--no upset-->
+						<!--in doc connectionType vs connectionForm-->
+					</connectionNext>
+				</stringEquipment>
+			</stringEquipmentSet>
+		</wellHead>
+		<boreholeStringSet>
+			<boreholeString uid="borehole-1">
+				<name>Wellbore Hole 1</name>
+				<borehole>
+					<name>Wellbore Hole OD-20.0000</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<mdTop uom="ft">12</mdTop>
+					<mdBottom uom="ft">450</mdBottom>
+					<tvdTop uom="ft">12</tvdTop>
+					<tvdBottom uom="ft">450</tvdBottom>
+					<diaBorehole uom="in">20</diaBorehole>
+				</borehole>
+				<borehole>
+					<name>Wellbore Hole OD-13.0000</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<mdTop uom="ft">450</mdTop>
+					<mdBottom uom="ft">1250</mdBottom>
+					<tvdTop uom="ft">450</tvdTop>
+					<tvdBottom uom="ft">1250</tvdBottom>
+					<diaBorehole uom="in">13</diaBorehole>
+				</borehole>
+				<borehole>
+					<name>Wellbore Hole OD-10.1250</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<mdTop uom="ft">1250</mdTop>
+					<mdBottom uom="ft">4800</mdBottom>
+					<tvdTop uom="ft">1250</tvdTop>
+					<tvdBottom uom="ft">4800</tvdBottom>
+					<diaBorehole uom="in">10.1250</diaBorehole>
+				</borehole>
+			</boreholeString>
+		</boreholeStringSet>
+		<downholeStringSet>
+			<!-- Describe the surfacecasing -->
+			<downholeString uid="surfacecasing_1" uidWellbore="primaryWellbore">
+				<stringType>Casing</stringType>
+				<subStringType>Surface Casing</subStringType>
+				<name>surfacecasing_1</name>
+				<stringEquipmentSet>
+					<!-- surfacecasing 's casing and casingliner -->
+					<stringEquipment uid="surfacecasingString_1" equipmentRefUID="surfacecasing_casingliner_1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<name>K-55 18.625 OD/ 96.50# Round Long 17.655 ID 17.468 Drift</name>
+						<count>15</count>
+						<length uom="ft">437</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">449</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">449</tvdBottom>
+						<tvdBase uom="ft">0</tvdBase>
+						<!-- Top connect to wellheader tubing head wellheaderString2 ; positiontop -->
+						<connectionNext uid="surfacecasingCon_1" stringEquipmentRefUID="wellheadString_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">18.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+						<!-- Bottom Connect to the next surfacecasing casing shoe-->
+						<connectionNext uid="surfacecasingCon_2" stringEquipmentRefUID="surfacecasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">18.625</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- end of string : casingshoe -->
+					<stringEquipment uid="surfacecasingString_2" equipmentRefUID="surfacecasingshoe_1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<name>Casing Shoe (18.625 OD Casing)</name>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">449</mdTop>
+						<mdBottom uom="ft">450</mdBottom>
+						<tvdTop uom="ft">449</tvdTop>
+						<tvdBottom uom="ft">450</tvdBottom>
+						<connectionNext uid="surfacecasingshoeCon_1" stringEquipmentRefUID="surfacecasing_casingliner_1">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">18.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<!-- cement behind the casing as accessory contain in surfacecasing -->
+					<accessory uid="surfaccessory_1" equipmentRefUID="cementbehind_surfacecasing_1">
+						<equipmentType>Cement (behind Casing)</equipmentType>
+						<name>cementbehind_surfacecasing_1</name>
+						<count>1</count>
+						<length uom="ft">438</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">450</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">450</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!-- Section for intermediate casing, start from the wellhead 's casing head -->
+			<downholeString uid="intermediatecasing_1" uidWellbore="primaryWellbore">
+				<stringType>Casing</stringType>
+				<subStringType>Intermediate Casing</subStringType>
+				<name>intermediatecasing_1</name>
+				<stringEquipmentSet>
+					<!--intermediate casing, top of casing connect from the casinghead of wellhead -->
+					<stringEquipment uid="intercasing_1" equipmentRefUID="intercasing_casingliner_!">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<name>Casing/Casing Liner OD 11.750</name>
+						<count>42</count>
+						<length uom="ft">1236</length>
+						<mdTop uom="ft">13</mdTop>
+						<mdBottom uom="ft">1249</mdBottom>
+						<tvdTop uom="ft">13</tvdTop>
+						<tvdBottom uom="ft">1249</tvdBottom>
+						<!-- Top connect to wellhead casing head -->
+						<connectionNext uid="intercasingCon_1" stringEquipmentRefUID="wellheadString_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">11.75</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+						<!-- Bottom connect to next string: casing shoe-->
+						<connectionNext uid="intercasingCon_2" stringEquipmentRefUID="intercasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">11.75</sizeThread>
+							<position>bottom</position>
+							<tubingConnectionType>SelfSealing-Threaded</tubingConnectionType>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- end of string: casing shoe -->
+					<stringEquipment uid="intercasing_2" equipmentRefUID="intercasingshoe_1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<name>Casing Shoe (11.750 OD Casing)</name>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">1249</mdTop>
+						<mdBottom uom="ft">1250</mdBottom>
+						<tvdTop uom="ft">1249</tvdTop>
+						<tvdBottom uom="ft">1250</tvdBottom>
+						<connectionNext uid="intercasingCon_2" stringEquipmentRefUID="intercasing_1">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">11.75</sizeThread>
+							<position>top</position>
+							<tubingConnectionType>SelfSealing-Threaded</tubingConnectionType>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<!-- cement behind intercasing as accessory -->
+					<accessory uid="intercaseAssory_1" equipmentRefUID="cementbehind_intercasing_1">
+						<equipmentType>Cement (behind Casing)</equipmentType>
+						<name>cementbehind_intercasing_1</name>
+						<count>1</count>
+						<length uom="ft">1238</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">1250</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">1250</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!-- Section of production casing, connect from the casinghead of wellhead -->
+			<downholeString uid="prodcasing_1" uidWellbore="primaryWellbore">
+				<stringType>Casing</stringType>
+				<subStringType>Production Casing</subStringType>
+				<name>productioncasing</name>
+				<stringEquipmentSet>
+					<!-- casingliner and casing, top connect to casinghead count(160)-->
+					<stringEquipment uid="prodcasing_1" equipmentRefUID="prod_casingliner_1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<name>Casing/Casing Liner OD  9.625</name>
+						<count>160</count>
+						<length uom="ft">4787</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">4799</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">4799</tvdBottom>
+						<!-- Top connect to well header casing header -->
+						<connectionNext uid="prodCon_1" stringEquipmentRefUID="wellheadString_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">9.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+						<!-- Bottom connect to casing shoe-->
+						<connectionNext uid="prodCon_2" stringEquipmentRefUID="prodcasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">9.625</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- end of string: casing shoe-->
+					<stringEquipment uid="prodcasing_2" equipmentRefUID="prodcasingshoe_1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<name>Casing Shoe ( 9.625 OD Casing)</name>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">4799</mdTop>
+						<mdBottom uom="ft">4800</mdBottom>
+						<tvdTop uom="ft">4799</tvdTop>
+						<tvdBottom uom="ft">4800</tvdBottom>
+						<connectionNext uid="prodcasing2Con_1" stringEquipmentRefUID="prodcasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">9.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<!-- cement behind production casing -->
+					<accessory uid="prodAccessory_1" equipmentRefUID="cementbehind_prod_1">
+						<equipmentType>Cement (behind Casing)</equipmentType>
+						<name>cementbehind_prod_1</name>
+						<count>1</count>
+						<length uom="ft">4788</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">4800</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">4800</tvdBottom>
+					</accessory>
+					 
+						<accessory uid="gpack_1" equipmentRefUID="topgppack_1">
+							<equipmentType>Packer</equipmentType>
+							<name>Top packer</name>
+							<count>1</count>
+							<length uom="ft">10</length>
+							<mdTop uom="ft">4500</mdTop>
+							<mdBottom uom="ft">4510</mdBottom>
+							<tvdTop uom="ft">4500</tvdTop>
+							<tvdBottom uom="ft">4510</tvdBottom>
+						</accessory>
+						<accessory uid="gpack_2" equipmentRefUID="bottomgpack_2">
+							<equipmentType>Packer</equipmentType>
+							<name>bottom packer</name> 
+							<count>1</count>
+							<length uom="ft">6</length>
+							<mdTop uom="ft">4609</mdTop>
+							<mdBottom uom="ft">4615</mdBottom>
+							<tvdTop uom="ft">4609</tvdTop>
+							<tvdBottom uom="ft">4615</tvdBottom>						
+						</accessory> 
+					<!--if it is not the part then the fillin can be in accessory-->
+					<accessory uid="fillinWellbore_1" equipmentRefUID="fillinWellbore_1">
+						<equipmentType>Fill</equipmentType>
+						<name>Gravel behind screen</name> 
+						<count>1</count>
+						<length uom="ft">90</length>
+						<mdTop uom="ft">4624</mdTop>
+						<mdBottom uom="ft">4714</mdBottom>
+						<tvdTop uom="ft">4624</tvdTop>
+						<tvdBottom uom="ft">4714</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			
+			<downholeString uid="gravelpackString" uidWellbore="primaryWellbore">
+			<stringType>Tubing</stringType>
+			<stringEquipmentSet>
+					<stringEquipment  uid="gpString_1" equipmentRefUID="topGPPcker_1">
+								<equipmentType>Packer</equipmentType>
+								<name>GPS-II Frac Pack Packer</name> 
+								<count>1</count>
+								<length uom="ft">8</length>
+								<mdTop uom="ft">4616</mdTop>
+								<mdBottom uom="ft">4624</mdBottom>
+								<tvdTop uom="ft">4616</tvdTop>
+								<tvdBottom uom="ft">4624</tvdBottom>
+								<connectionNext uid="gpCon_1" stringEquipmentRefUID="gpString_2">
+									<position>bottom</position>
+									<connectionForm>Mandrel</connectionForm>
+								</connectionNext>
+							</stringEquipment>
+							<stringEquipment uid="gpString_2" equipmentRefUID="tubingOD3.5_1">
+								<equipmentType>Tubing</equipmentType>
+								<name>Tubing OD3.5</name> 
+								<count>1</count>
+								<length uom="ft">90</length>
+								<mdTop uom="ft">4624</mdTop>
+								<mdBottom uom="ft">4714</mdBottom>
+								<tvdTop uom="ft">4624</tvdTop>
+								<tvdBottom uom="ft">4714</tvdBottom>
+								<connectionNext uid="gpCon_4" stringEquipmentRefUID="gpString_4">
+									<position>bottom</position>
+									<connectionForm>Mandrel</connectionForm>
+								</connectionNext> 
+							</stringEquipment>
+							<stringEquipment uid="gpString_3" equipmentRefUID="GravelPackerScreen_1">
+								<equipmentType>Gravel Pack Screen</equipmentType>
+								<name>Screen Mesh 8 gauge micro pack</name> 
+								<count>1</count>
+								<length uom="ft">90</length>
+								<mdTop uom="ft">4624</mdTop>
+								<mdBottom uom="ft">4714</mdBottom>
+								<tvdTop uom="ft">4624</tvdTop>
+								<tvdBottom uom="ft">4714</tvdBottom>
+							</stringEquipment>
+							<stringEquipment uid="gpString_4" equipmentRefUID="bottomGPPacker_1">
+								<equipmentType>Packer</equipmentType>
+								<name>Wesdrill Sump Packer</name> 
+								<count>1</count>
+								<length uom="ft">8</length>
+								<mdTop uom="ft">4714</mdTop>
+								<mdBottom uom="ft">4722</mdBottom>
+								<tvdTop uom="ft">4714</tvdTop>
+								<tvdBottom uom="ft">4722</tvdBottom>
+							</stringEquipment>
+							</stringEquipmentSet>
+			</downholeString>
+			<!-- Section of tubing string 2, start from the wellhead 's tubing head-->
+			<downholeString uid="tubingstring_2" uidWellbore="primaryWellbore">
+				<stringType>Tubing</stringType>
+				<name>tubingString2</name> 
+				<stringEquipmentSet>
+					<stringEquipment uid="tubingstring_20" equipmentRefUID="tubingHanger_2">
+						<equipmentType>Tubing Hanger</equipmentType>
+						<name>Tubing Hanger-Double Box Bushing (DBB) (2.875")</name> 
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">13</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">13</tvdBottom>
+						<!--top of tubing connect to the tubing head -->
+						<connectionNext uid="tubingcon_20" stringEquipmentRefUID="wellheadString_1">
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Mandrel</connectionForm>
+						</connectionNext>
+						<!-- bottom of hanger connect to the tubing-->
+						<connectionNext uid="tubingcon_201" stringEquipmentRefUID="tubingstring_21">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Box</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- tubing, connect from the tubing head from wellhead. count(143)-->
+					<stringEquipment uid="tubingstring_2a" equipmentRefUID="tubingOD2.875_a">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubing_OD_2.875</name> 
+						<count>45</count>
+						<length uom="ft">1417.5</length>
+						<mdTop uom="ft">13</mdTop>
+						<mdBottom uom="ft">1430.5</mdBottom>
+						<tvdTop uom="ft">13</tvdTop>
+						<tvdBottom uom="ft">1417.5</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="tubingCon_21" stringEquipmentRefUID="tubingstring_20">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="tubingCon_22" stringEquipmentRefUID="tubingstring_22">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_gasLift" equipmentRefUID="tubingstring_gasLift">
+						<equipmentType>Gas Lift Mandrel</equipmentType>
+						<name>Gas Lift Mandrel (2.875")</name> 
+						<count>1</count>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">1430.5</mdTop>
+						<mdBottom uom="ft">1434.5</mdBottom>
+						<tvdTop uom="ft">1430.5</tvdTop>
+						<tvdBottom uom="ft">1434.5</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_1" stringEquipmentRefUID="tubingstring_2a">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="gasLiftCon_2" stringEquipmentRefUID="tubingstring_2b">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- tubing, connect from the tubing head from wellhead. count(143)-->
+					<stringEquipment uid="tubingstring_2b" equipmentRefUID="tubingOD2.875_b">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubing_OD_2.875</name> 
+						<count>25</count>
+						<length uom="ft">787.5</length>
+						<mdTop uom="ft">1434.5</mdTop>
+						<mdBottom uom="ft">2222</mdBottom>
+						<tvdTop uom="ft">1434.5</tvdTop>
+						<tvdBottom uom="ft">2222</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="tubingCon_21" stringEquipmentRefUID="tubingstring_gasLift">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="tubingCon_22" stringEquipmentRefUID="tubingstring_22">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_gasLift2" equipmentRefUID="tubingstring_gasLift2">
+						<equipmentType>Gas Lift Mandrel</equipmentType>
+						<name>Gas Lift Mandrel (2.875")</name> 
+						<count>1</count>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">2222</mdTop>
+						<mdBottom uom="ft">2226</mdBottom>
+						<tvdTop uom="ft">2222</tvdTop>
+						<tvdBottom uom="ft">2226</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_21" stringEquipmentRefUID="tubingstring_2b">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="gasLiftCon_22" stringEquipmentRefUID="tubingstring_21">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_21" equipmentRefUID="tubingOD2.875_1">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubing_OD_2.875</name> 
+						<count>25</count>
+						<length uom="ft">691</length>
+						<mdTop uom="ft">2226</mdTop>
+						<mdBottom uom="ft">3013.5</mdBottom>
+						<tvdTop uom="ft">2226</tvdTop>
+						<tvdBottom uom="ft">3013.5</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="tubingCon_23" stringEquipmentRefUID="tubingstring_gasLift2">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="tubingCon_24" stringEquipmentRefUID="tubingstring_gasLift3">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_gasLift3" equipmentRefUID="tubingstring_gasLift3">
+						<equipmentType>Gas Lift Mandrel</equipmentType>
+						<name>Gas Lift Mandrel (2.875")</name> 
+						<count>1</count>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">3013.5</mdTop>
+						<mdBottom uom="ft">3017.5</mdBottom>
+						<tvdTop uom="ft">3013.5</tvdTop>
+						<tvdBottom uom="ft">3017.5</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_21" stringEquipmentRefUID="tubingstring_2b">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="gasLiftCon_22" stringEquipmentRefUID="tubingstring_21">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_2c" equipmentRefUID="tubingOD2.875_c">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubing_OD_2.875</name>
+						
+						<count>25</count>
+						<length uom="ft">787.5</length>
+						<mdTop uom="ft">3017.5</mdTop>
+						<mdBottom uom="ft">3805</mdBottom>
+						<tvdTop uom="ft">3017.5</tvdTop>
+						<tvdBottom uom="ft">3805</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="tubingCon_23" stringEquipmentRefUID="tubingstring_gasLift3">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="tubingCon_24" stringEquipmentRefUID="tubingstring_gasLift4">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_gasLift4" equipmentRefUID="tubingstring_gasLift4">
+						<equipmentType>Gas Lift Mandrel</equipmentType>
+						<name>Gas Lift Mandrel (2.875")</name>
+						
+						<count>1</count>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">3805</mdTop>
+						<mdBottom uom="ft">3809</mdBottom>
+						<tvdTop uom="ft">3805</tvdTop>
+						<tvdBottom uom="ft">3809</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_21" stringEquipmentRefUID="tubingstring_2c">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="gasLiftCon_22" stringEquipmentRefUID="tubingOD2.875_d">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_2d" equipmentRefUID="tubingOD2.875_d">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubing_OD_2.875</name>
+						
+						<count>22</count>
+						<length uom="ft">691</length>
+						<mdTop uom="ft">3809</mdTop>
+						<mdBottom uom="ft">4500</mdBottom>
+						<tvdTop uom="ft">3809</tvdTop>
+						<tvdBottom uom="ft">4500</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="tubingCon_23" stringEquipmentRefUID="tubingstring_gasLift4">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="tubingCon_24" stringEquipmentRefUID="tubingstring_22">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- sealassembly, end of the tubing string, dualpacker in accessory references /connects to this seal assembly  -->
+					 <stringEquipment uid="tubingstring_22" equipmentRefUID="sealAssembly_1">
+						<equipmentType>Seal Assembly</equipmentType>
+						<name>Seal Assembly  2.875" OD</name>
+						
+						<count>1</count>
+						<length uom="ft">20</length>
+						<mdTop uom="ft">4500</mdTop>
+						<mdBottom uom="ft">4520</mdBottom>
+						<tvdTop uom="ft">4500</tvdTop>
+						<tvdBottom uom="ft">4520</tvdBottom>
+						<connectionNext uid="pmCon_21" stringEquipmentRefUID="tubingstring_21">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- which equipment it connects to at bottom ?? --> 
+						<connectionNext uid="pmCon_22">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment> 
+					<stringEquipment uid="tubingstring_21" equipmentRefUID="tubingOD2.875_1">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubing_OD_2.875</name>
+						
+						<count>25</count>
+						<length uom="ft">691</length>
+						<mdTop uom="ft">3809</mdTop>
+						<mdBottom uom="ft">4500</mdBottom>
+						<tvdTop uom="ft">3809</tvdTop>
+						<tvdBottom uom="ft">4500</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="tubingCon_21" stringEquipmentRefUID="tubingcon_20">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of tubing connect to seal assembly -->
+						<connectionNext uid="tubingCon_22" stringEquipmentRefUID="tubingstring_22">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<accessory uid="tubingstring_gasValve" equipmentRefUID="tubingstring_gasValve">
+						<equipmentType>Gas Lift Valve</equipmentType>
+						<name>Gas Lift Valve RF-2 1.5"</name>
+						
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">1430.5</mdTop>
+						<mdBottom uom="ft">1431.5</mdBottom>
+						<tvdTop uom="ft">1430.5</tvdTop>
+						<tvdBottom uom="ft">1431.5</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_1" stringEquipmentRefUID="tubingstring_gasLift">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</accessory>
+					<accessory uid="tubingstring_gasValve2" equipmentRefUID="tubingstring_gasValve">
+						<equipmentType>Gas Lift Valve</equipmentType>
+						<name>Gas Lift Valve RF-2 1.5"</name>
+						
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">2222</mdTop>
+						<mdBottom uom="ft">2223</mdBottom>
+						<tvdTop uom="ft">2222</tvdTop>
+						<tvdBottom uom="ft">2223</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_1" stringEquipmentRefUID="tubingstring_gasLift2">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</accessory>
+					<accessory uid="tubingstring_gasValve3" equipmentRefUID="tubingstring_gasValve3">
+						<equipmentType>Gas Lift Valve</equipmentType>
+						<name>Gas Lift Valve RF-2 1.5"</name>
+						
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">3013.5</mdTop>
+						<mdBottom uom="ft">3014.5</mdBottom>
+						<tvdTop uom="ft">2222</tvdTop>
+						<tvdBottom uom="ft">2223</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_3" stringEquipmentRefUID="tubingstring_gasLift3">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</accessory>
+					<accessory uid="tubingstring_gasValve4" equipmentRefUID="tubingstring_gasValve4">
+						<equipmentType>Gas Lift Valve</equipmentType>
+						<name>Gas Lift Valve RF-2 1.5"</name>
+						
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">3805</mdTop>
+						<mdBottom uom="ft">3806</mdBottom>
+						<tvdTop uom="ft">3805</tvdTop>
+						<tvdBottom uom="ft">3806</tvdBottom>
+						<!--top of tubing connect to tubing head from tubinghanger -->
+						<connectionNext uid="gasLiftCon_1" stringEquipmentRefUID="tubingstring_gasLift4">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</accessory>
+					<!-- describe the dualpacker that connect to this seal assembly
+					 the same dualpacker also connect to another tubingstring's sealassembly.
+					 if the same dualpacker connect to casing, we might add another connection to describe it.
+				-->
+					<accessory uid="accessory_1" equipmentRefUID="dualPacker_1">
+						<equipmentType>Packer-Multiple Strings</equipmentType>
+						<name>dualPacker_1</name>
+						
+						<count>1</count>
+						<length uom="ft">10</length>
+						<mdTop uom="ft">4500</mdTop>
+						<mdBottom uom="ft">4510</mdBottom>
+						<tvdTop uom="ft">10</tvdTop>
+						<tvdBottom uom="ft">4510</tvdBottom>
+						<!-- dualpacker connect to the tubingstring2' sealassembly -->
+						<connectionNext uid="daulpackCon_1" stringEquipmentRefUID="tubingstring_22">
+							<position>top</position>
+							<tubingConnectionType>SelfSealing-Threaded</tubingConnectionType>
+						</connectionNext>
+						<!--  dualpacker connect to the tubingstring1' sealassembly-->
+						<connectionNext uid="daulpackCon_2" stringEquipmentRefUID="tubingstring_13">
+							<position>bottom</position>
+							<tubingConnectionType>SelfSealing-Threaded</tubingConnectionType>
+						</connectionNext>
+						<!--  dualpacker connect to the production-->
+						<connectionNext uid="daulpackCon_3" stringEquipmentRefUID="prodcasing_1">
+							<tubingConnectionType>Radial</tubingConnectionType>
+						</connectionNext>
+						<permanentRemarks>
+					2 JSPI@4528,53,60,64,68,83,92,95,4604
+					</permanentRemarks>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!-- tubing string 1, connect from tubinghead -->
+			<downholeString uid="tubingstring_1" uidWellbore="primaryWellbore">
+				<stringType>Tubing</stringType>
+				<name>tubingString1</name>
+				<stringEquipmentSet>
+					<!--Section of tubingHanger, top connect to tubingHead, bottom connect to sealAssebmly. count(1)-->
+					<stringEquipment uid="tubingstring_11" equipmentRefUID="tubingHanger_1">
+						<equipmentType>Tubing Hanger</equipmentType>
+						<name>Tubing Hanger-Double Box Bushing (DBB) (2.875")</name>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">13</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">13</tvdBottom>
+						<!--top of tubing connect to the tubing head -->
+						<connectionNext uid="tubingcon_1" stringEquipmentRefUID="wellheadString_1">
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Mandrel</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- bottom of hanger connect to the tubing-->
+						<connectionNext uid="tubingcon_2" stringEquipmentRefUID="tubingstring_12">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Box</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!--Section of tubing, bottom connect to tubing. count(143)-->
+					<stringEquipment uid="tubingstring_12" equipmentRefUID="tubingOD2.875_2">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubing_OD_2.875</name>
+						
+						<count>143</count>
+						<length uom="ft">4487</length>
+						<mdTop uom="ft">13</mdTop>
+						<mdBottom uom="ft">4500</mdBottom>
+						<tvdTop uom="ft">13</tvdTop>
+						<tvdBottom uom="ft">4500</tvdBottom>
+						<connectionNext uid="tubingcon_3" stringEquipmentRefUID="tubingstring_11">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<!-- connect to the sealAssembly -->
+						<connectionNext uid="tubingcon_31" stringEquipmentRefUID="tubingstring_13">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					 <stringEquipment uid="tubingstring_13" equipmentRefUID="packMandrel_1">
+						<equipmentType>Seal Assembly</equipmentType>
+						<name>packMandrel_1</name>
+						
+						<count>1</count>
+						<length uom="ft">10</length>
+						<mdTop uom="ft">4500</mdTop>
+						<mdBottom uom="ft">4510</mdBottom>
+						<tvdTop uom="ft">4500</tvdTop>
+						<tvdBottom uom="ft">4510</tvdBottom>
+						<connectionNext uid="tubingCon_41">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						 <!--connect to the tubing --> 
+						<connectionNext uid="tubingCon_4" stringEquipmentRefUID="espPump_1">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					 <!--esp pump-->
+					<stringEquipment uid="tubingstring_ESPPump" equipmentRefUID="espPump_1">
+						<equipmentType>ESP Pump</equipmentType>
+						<name>ESP Pump (Non-Serialized/Generic)</name>
+						
+						<count>1</count>
+						<length uom="ft">7</length>
+						<mdTop uom="ft">4577</mdTop>
+						<mdBottom uom="ft">4584</mdBottom>
+						<tvdTop uom="ft">4577</tvdTop>
+						<tvdBottom uom="ft">4584</tvdBottom>
+						<!-- connect to tubing-->
+						<connectionNext uid="tubingpump_1" stringEquipmentRefUID="tubingstring_13">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<connectionNext uid="tubingpump_2" stringEquipmentRefUID="espMotor_1">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_ESPSeal" equipmentRefUID="espSeal_1">
+						<equipmentType>ESP Pump</equipmentType>
+						<name>ESP Pump (Non-Serialized/Generic)</name>
+						
+						<count>1</count>
+						<length uom="ft">6</length>
+						<mdTop uom="ft">4584</mdTop>
+						<mdBottom uom="ft">4590</mdBottom>
+						<tvdTop uom="ft">4584</tvdTop>
+						<tvdBottom uom="ft">4590</tvdBottom>
+						<!-- connect to tubing-->
+						<connectionNext uid="tubingESPSeal_1" stringEquipmentRefUID="tubingstring_ESPPump">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<connectionNext uid="tubingESPSeal_2" stringEquipmentRefUID="tubingstring_ESPMotor">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_ESPMotor" equipmentRefUID="espMotor_1">
+						<equipmentType>ESP Motor</equipmentType>
+						<name>ESP Pump (Non-Serialized/Generic)</name>
+						
+						<count>1</count>
+						<length uom="ft">10</length>
+						<mdTop uom="ft">4590</mdTop>
+						<mdBottom uom="ft">4600</mdBottom>
+						<tvdTop uom="ft">4590</tvdTop>
+						<tvdBottom uom="ft">4600</tvdBottom>
+						<!-- connect to tubing-->
+						<connectionNext uid="tubingEspMotor_1" stringEquipmentRefUID="tubingstring_13">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<connectionNext uid="tubingEspMotor_2" stringEquipmentRefUID="tubingstring_14">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<stringEquipment uid="tubingstring_14" equipmentRefUID="tubingOD2.87_1">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubingOD2.875</name>
+						
+						<count>3</count>
+						<length uom="ft">99</length>
+						<mdTop uom="ft">4510</mdTop>
+						<mdBottom uom="ft">4577</mdBottom>
+						<tvdTop uom="ft">4510</tvdTop>
+						<tvdBottom uom="ft">4577</tvdBottom>
+						<!--connection , connect to the packer -->
+						<connectionNext uid="tubingCon_5" stringEquipmentRefUID="tubingEspMotor_1">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<connectionNext uid="tubingCon_5" stringEquipmentRefUID="tubingstring_15">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!--packer count(1)-->
+					 <stringEquipment uid="tubingstring_15" equipmentRefUID="packMandrel_2">
+						<equipmentType>Seal Assembly</equipmentType>
+						<name>packMandrel_2</name>
+						
+						<count>1</count>
+						<length uom="ft">6</length>
+						<mdTop uom="ft">4609</mdTop>
+						<mdBottom uom="ft">4615</mdBottom>
+						<tvdTop uom="ft">4609</tvdTop>
+						<tvdBottom uom="ft">4615</tvdBottom>
+						 <!-- connect to tubing--> 
+						<connectionNext uid="tubingCon_71" stringEquipmentRefUID="tubingstring_14">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<connectionNext uid="tubingCon_7" stringEquipmentRefUID="tubingstring_16">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<permanentRemarks>
+					2 JSPI@4616,26,33,37,64,69,74,87,94,4704,4712;
+					</permanentRemarks>
+					</stringEquipment> 
+					<!--tubing count(1)-->
+					<stringEquipment uid="tubingstring_16" equipmentRefUID="tubingOD2.87_3">
+						<equipmentType>Tubing</equipmentType>
+						<name>tubingOD2.87-8</name>
+						
+						<count>1</count>
+						<length uom="ft">25</length>
+						<mdTop uom="ft">4615</mdTop>
+						<mdBottom uom="ft">4640</mdBottom>
+						<tvdTop uom="ft">4615</tvdTop>
+						<tvdBottom uom="ft">4640</tvdBottom>
+						<!-- connect to tubing-->
+						<connectionNext uid="tubingCon_81" stringEquipmentRefUID="tubingstring_15">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<connectionNext uid="tubingCon_8">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<accessory uid="tubingstring_ESPCable" equipmentRefUID="espCable_1">
+						<equipmentType>ESP Cable</equipmentType>
+						<name>ESPCable</name>
+						
+						<count>4580</count>
+						<length uom="ft">4580</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">4592</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">4592</tvdBottom>
+						<!-- connect to tubing-->
+						<connectionNext uid="tubingCable_1" stringEquipmentRefUID="tubingstring_13">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+						<connectionNext uid="tubingCable_2" stringEquipmentRefUID="tubingstring_14">
+							<typeThread>APILong</typeThread>
+							<sizeThread uom="in">2.875</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext> 
+					</accessory>
+				</accessories>
+			</downholeString>
+		</downholeStringSet>
+		<equipmentSet>
+			<equipment uid="tubingHead_1">
+				<equipmentName>tubing Head</equipmentName>
+				<equipmentType>Tubing Head (Spool)</equipmentType>
+				<model>API 3000#</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="casingHead_1">
+				<equipmentName>casing Head</equipmentName>
+				<equipmentType>Casing Head</equipmentType>
+				<model>API 3000#</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="surfacecasing_casingliner_1">
+				<equipmentName>surfacecasing casingliner</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+				<unitWeight uom="lbm/ft">9.65</unitWeight>
+				<OD uom="in">18.625</OD>
+				<ID uom="in">17.655</ID>
+				<drift uom="in">17.468</drift>
+			</equipment>
+			<equipment uid="tubingHanger_1">
+				<equipmentName> tubing Hanger</equipmentName>
+				<equipmentType>Tubing Hanger</equipmentType>
+				<model>Double Box Bushing</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="surfacecasingshoe_1">
+				<equipmentName>surface casing shoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+				<material>Steel</material>
+			</equipment>
+				<equipment uid="cementbehind_surfacecasing_1">
+				<equipmentName>Cement</equipmentName>
+				<equipmentType>Cement (behind Casing)</equipmentType> 
+			</equipment>
+			<equipment uid="intercasing_casingliner_1">
+				<equipmentName>intercasing casingliner</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+				<unitWeight uom="lbm/ft">7.9</unitWeight>
+				<OD uom="in">11.75</OD>
+				<ID uom="in">10.438</ID>
+				<drift uom="in">10.282</drift>
+			</equipment>
+				<equipment uid="cementbehind_intercasing_1">
+				<equipmentName>Cement</equipmentName>
+				<equipmentType>Cement (behind Casing)</equipmentType> 
+			</equipment>
+			<equipment uid="prod_casingliner_1">
+				<equipmentName>prod_casingliner</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+				<unitWeight uom="lbm/ft">4.35</unitWeight>
+				<OD uom="in">9.625</OD>
+				<ID uom="in">8.755</ID>
+				<drift uom="in">8.599</drift>
+			</equipment>
+			<equipment uid="prodcasingshoe_1">
+				<equipmentName>prodcasingshoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+				<material>Steel</material>
+			</equipment>	
+			<equipment uid="cementbehind_prod_1">
+				<equipmentName>Cement</equipmentName>
+				<equipmentType>Cement (behind Casing)</equipmentType> 
+			</equipment>
+			<equipment uid="tubingHanger_1">
+				<equipmentName> tubing Hanger</equipmentName>
+				<equipmentType>Tubing Hanger</equipmentType>
+				<model>Double Box Bushing</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubingHanger_2">
+				<equipmentName> tubing Hanger</equipmentName>
+				<equipmentType>Tubing Hanger</equipmentType>
+				<model>Double Box Bushing</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubingOD2.875_1">
+				<equipmentName> tubing</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+				<unitWeight uom="lbm/ft">6.5</unitWeight>
+				<OD uom="in">2.875</OD>
+				<ID uom="in">2.441</ID>
+				<drift uom="in">2.347</drift>
+			</equipment>
+			<equipment uid="tubingOD2.875_2">
+				<equipmentName> tubing</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+				<unitWeight uom="lbm/ft">6.5</unitWeight>
+				<OD uom="in">2.875</OD>
+				<ID uom="in">2.441</ID>
+				<drift uom="in">2.347</drift>
+			</equipment>
+			<equipment uid="tubingOD2.875_3">
+				<equipmentName> tubing</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+				<unitWeight uom="lbm/ft">6.5</unitWeight>
+				<OD uom="in">2.875</OD>
+				<ID uom="in">2.441</ID>
+				<drift uom="in">2.347</drift>
+			</equipment>
+			<equipment uid="tubingOD2.875_a">
+				<equipmentName> tubing</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+				<unitWeight uom="lbm/ft">6.5</unitWeight>
+				<OD uom="in">2.875</OD>
+				<ID uom="in">2.441</ID>
+				<drift uom="in">2.347</drift>
+			</equipment>
+			<equipment uid="tubingOD2.875_b">
+				<equipmentName> tubing</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+				<unitWeight uom="lbm/ft">6.5</unitWeight>
+				<OD uom="in">2.875</OD>
+				<ID uom="in">2.441</ID>
+				<drift uom="in">2.347</drift>
+			</equipment>
+			<equipment uid="topgppack_1">
+				<equipmentName>Packer Dual (Retrievable)</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Dual Packer</model>
+				<modelType>XR</modelType>
+				<material>Steel</material>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.8</MaxOD>
+				<MinOD uom="in">9.44</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechanical</value>
+				</property>
+			</equipment>
+			<equipment uid="bottomgppack_1">
+				<equipmentName> Packer Isolation -  9.625"</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Single</model>
+				<modelType>IP</modelType>
+				<material>Steel</material>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.8</MaxOD>
+				<MinOD uom="in">9.44</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechanical</value>
+				</property>
+			</equipment>
+			<equipment uid="packer_1">
+				<equipmentName> packer_1</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Single</model>
+				<modelType>IP</modelType>
+				<material>Steel</material>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.8</MaxOD>
+				<MinOD uom="in">9.44</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechanical</value>
+				</property>
+			</equipment>
+			<equipment uid="daulPacker_1">
+				<equipmentName> daulPacker_1</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Dual</model>
+				<modelType>XR</modelType>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.75</MaxOD>
+				<MinOD uom="in">9.47</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechnanical</value>
+				</property>
+			</equipment>
+			<equipment uid="topGPPcker_1">
+				<equipmentName> topGPPcker_1</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Single</model>
+				<modelType>GPSII</modelType>
+				<material>Steel</material>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.8</MaxOD>
+				<MinOD uom="in">9.44</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechanical</value>
+				</property>
+			</equipment>
+			<equipment uid="tubingOD3.5_1">
+				<equipmentName> tubing</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+				<unitWeight uom="lbm/ft">1.27</unitWeight>
+				<OD uom="in">3.5</OD>
+				<ID uom="in">2.75</ID>
+				<drift uom="in">2.625</drift>
+			</equipment>
+			<equipment uid="GravelPackScreen_1">
+				<equipmentName> GravelPackScreen_1</equipmentName>
+				<equipmentType>Gravel Pack Screen</equipmentType>
+				<property>
+					<name>ScreenGaug</name>
+					<value uom="in">8</value>
+				</property>
+			</equipment>
+			<equipment uid="bottomGPPcker_1">
+				<equipmentName> bottomGPPcker_1</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Single</model>
+				<modelType>GPSII</modelType>
+				<material>Steel</material>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.9</MaxOD>
+				<MinOD uom="in">9.3</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechanical</value>
+				</property>
+			</equipment>
+			<equipment uid="espPump_1">
+				<equipmentName> ESP Pump (Non-Serialized/Generic)</equipmentName>
+				<equipmentType>ESP Pump</equipmentType>
+				<model>A342</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="espSeal_1">
+				<equipmentName>ESP Seal (Non-Serialized/Generic)</equipmentName>
+				<equipmentType>ESP Seal</equipmentType>
+				<model>B3119</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="espMotor_1">
+				<equipmentName> ESP Motor (Non-Serialized/Generic)</equipmentName>
+				<equipmentType>ESP Motor</equipmentType>
+				<model>D2788</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="espCable_1">
+				<equipmentName> espCable_1</equipmentName>
+				<equipmentType>ESP Cable</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+				<unitWeight uom="lbm/ft">6.5</unitWeight>
+				<OD uom="in">2.875</OD>
+				<ID uom="in">2.441</ID>
+				<drift uom="in">2.347</drift>
+			</equipment>
+			<equipment uid="fillinWellbore_1">
+				<equipmentName> fillinWellbore_1</equipmentName>
+				<equipmentType>Fill</equipmentType>
+			</equipment>
+		</equipmentSet>
+		<perforationSets>
+			<perforationSet uid="perf_Garyburg">
+				<mdTop uom="ft">4512</mdTop>
+				<mdBottom uom="ft">4604</mdBottom>
+				<tvdTop uom="ft">4512</tvdTop>
+				<tvdBottom uom="ft">4604</tvdBottom>
+				<perforationTool> TCP Gun</perforationTool>
+				<perforationPenetration uom="ft">1.7</perforationPenetration>
+				<crushZoneDiameter uom="in">0.72</crushZoneDiameter>
+				<crushDamageRatio>0.31</crushDamageRatio>
+				<permanentRemarks>2 JSPI @ 4528, 53, 60, 64, 68, 83, 92, 95, 4604</permanentRemarks>
+			</perforationSet>
+			<perforationSet uid="perf_Mckee">
+				<mdTop uom="ft">4616</mdTop>
+				<mdBottom uom="ft">4698</mdBottom>
+				<tvdTop uom="ft">4616</tvdTop>
+				<tvdBottom uom="ft">4698</tvdBottom>
+				<perforationTool> TCP Gun</perforationTool>
+				<perforationPenetration uom="ft">1.7</perforationPenetration>
+				<crushZoneDiameter uom="in">0.69</crushZoneDiameter>
+				<crushDamageRatio>0.28</crushDamageRatio>
+				<permanentRemarks>2 JSPI @ 4616, 26, 33, 37, 64, 69, 74, 87, 94, 4704 &amp; 4712'.</permanentRemarks>
+			</perforationSet>
+			<perforationSet uid="perf_MckeeLower">
+				<mdTop uom="ft">4700</mdTop>
+				<mdBottom uom="ft">4712</mdBottom>
+				<tvdTop uom="ft">4616</tvdTop>
+				<tvdBottom uom="ft">4712</tvdBottom>
+				<perforationTool> TCP Gun</perforationTool>
+				<perforationPenetration uom="ft">1.7</perforationPenetration>
+				<crushZoneDiameter uom="in">0.69</crushZoneDiameter>
+				<crushDamageRatio>0.28</crushDamageRatio>
+				<permanentRemarks> 4704 &amp; 4712'.</permanentRemarks>
+			</perforationSet>
+		</perforationSets>
+	</downholeComponent>
+</downholeComponents>

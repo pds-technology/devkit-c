@@ -1,0 +1,86 @@
+<HTML>
+<HED>
+  <TITLE>Schema Changes for PRODML Data Schema</TITLE>
+<STYLE>
+<!--
+ /* Style Definitions */
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Times New Roman;
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-top:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+ul
+	{margin-top:.0001pt;}
+-->
+</STYLE>
+</HEAD>
+
+<BODY>
+<H1 align='center'>PRODML <BR>
+		 Version 1.2.2 Data Schema  <BR>
+		 Change Summary</H1>
+
+<BR>
+
+<P>This document is intended to sumarize the semantic changes
+between version 1.2.1 and version 1.2.2. </P>
+
+<P>
+	In typ_dataTypesProdml.xsd:
+<UL>
+<LI>		Modified pattern value of schemaVersionStringProdml
+<LI>		Added siteKind to facilityIdentifierStruct.</LI>
+<LI>		Updated dTim annotation in timeSeriesDoubleSample.</LI>
+<LI>		Updated dTim annotation in timeSeriesStringSample.</LI>
+</UL>
+<P>
+	In cs_enumValues.xsd:
+		Added the following to enumValue:
+<UL>
+<LI>			isAbstract</LI>
+<LI>			parentKind</LI>
+<LI>			facilityParameter</LI>
+<LI>			quantityMeasureClass</LI>
+<LI>			minimumValue</LI>
+<LI>			maximumValue</LI>
+<LI>			enumValue</LI>
+</UL>
+<P>
+	In cs_productFlowExpectedPortProperty.xsd:
+<UL>
+<LI>		Added deadband.</LI>
+<LI>		Added maximumFrequency.</LI>
+</UL>
+<P>
+	In cs_productFlowExpectedUnitProperty.xsd:
+<UL>
+<LI>		Added childFacilityIdentifier.</LI>
+<LI>		Added expectedFlowProduct.</LI>
+<LI>		Added tagAlias.</LI>
+<LI>		Added deadband.</LI>
+<LI>		Added maximumFrequency.</LI>
+</UL>
+<P>
+	In cs_productVolumeParameterSet.xsd:
+<UL>
+<LI>		Added coordinateReferenceSystem.</LI>
+</UL>
+<P>
+	In grp_commonPropertiesProductVolume.xsd:
+<UL>
+<LI>		Added gasLiquidRatio.</LI>
+</UL>
+<P>
+
+</BODY>
+</HTML>			

@@ -9,10 +9,12 @@
 // Energistics 
 // The following Energistics (c) products were used in the creation of this work: 
 // 
+//.             Completion Data schema specification, Version 1.0
 // •             WITSML Data Schema Specifications, Version 1.4.1.1 
 // •             WITSML API Specifications, version 1.4.1.1 
 // •             WITSML Data Schema Specifications, Version 1.3.1.1 
 // •             WITSML API Specifications, version 1.3.1 
+// *             Completion , version 1.0.0
 // •             PRODML Data Schema Specifications, Version 1.2.2 
 // •             PRODML Web Service Specifications, Version 2.1.0.1
 // •             RESQML Data Schema Specifications, Version 1.1 
@@ -80,7 +82,7 @@ using System.Reflection;
 using Energistics.DataAccess.EnumValue;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
+using System.Security.AccessControl;
 namespace Energistics.Generator
 {   
     partial class EnergisticsTextTemplate
@@ -109,7 +111,6 @@ namespace Energistics.Generator
             {
                 GenerateClasses(set, currentPath);
             }
-            string sets = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting("SETS");
         }
 
         private static void GenerateClasses(string setName, string currentPath)
@@ -119,6 +120,14 @@ namespace Energistics.Generator
             List<string> enumClassNames = new List<string>();
             string targetFilename = String.Format(@"{0}\{1}\GeneratedEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
             string csCode = EnumValuesXMLToClass.Convert(Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVAL_PATH"), "Energistics.DataAccess." + setName, enumClassNames, false, null);
+            
+            if(targetFilename.Contains(".cs"))
+            {
+                DirectorySecurity securityRules = new DirectorySecurity();
+                String targetPath = targetFilename.Remove(targetFilename.LastIndexOf("\\"));
+                if (!Directory.Exists(targetPath)) 
+                    Directory.CreateDirectory(targetPath);
+            }
             File.WriteAllText(targetFilename, csCode);
 
             string prodMLPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVALPRODML_PATH");

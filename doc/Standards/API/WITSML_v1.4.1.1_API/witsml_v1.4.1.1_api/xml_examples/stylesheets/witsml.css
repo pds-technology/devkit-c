@@ -1,0 +1,52 @@
+BODY, TR {
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	}
+	
+BODY {
+	background: white;
+	color: black;
+	border: 0px none white;
+	}
+
+TH {
+	font-size: 110%;
+	font-weight: normal;
+	background: #6699FF;
+	color: white;
+	padding: 1px 5px;
+	}
+	
+.mainheader {
+	font-size: 200%;
+	font-weight: bold;
+	background: #6699FF;
+	color: white;
+}
+
+/* Display format for item labels */
+.label {
+	text-align: left;
+	font-size: 100%;
+	font-weight: normal;
+	color: black;
+	}
+	
+/* Display format for data values */
+.dataval {
+	text-align: right;
+	font-size: 100%;
+	font-weight: bold;
+	color: black;
+	}
+	
+/* General HTML table formatting */	
+table {
+	border: 1px solid #000000;
+    background-color: #FFFFFF;
+ 	font-weight: normal;
+ 	color: black;
+   }
+    
+.listtable {
+	background-color: #CCE3FF;
+    }

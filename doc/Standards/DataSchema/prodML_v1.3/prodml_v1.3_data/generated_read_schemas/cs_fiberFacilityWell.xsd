@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:complexType name="cs_fiberFacilityWell">
+      <xsd:annotation>
+         <xsd:documentation>IF facility mapping is to a wellbore, this element shows what optical path distances map to wellbore measured depths.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0" maxOccurs="1">
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of this facilityMapping instance.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nameWell" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Human recognizable context for the well that contains the well.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nameWellbore" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Human recognizable context for the wellbore that contains the optical path being mapped to the wellbore.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellDatum" type="prodml:refWellDatum" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A reference to the wellDatum from which the facilityLength (ie, depth in this case of a wellbore being mapped) is measured
+               from.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="uidWell" type="prodml:uidParentString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="uidWellbore" type="prodml:uidParentString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

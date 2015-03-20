@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_commonPropertiesProductVolume.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumeComponentContent">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Volume Component Content Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="kind" type="prodml:ReportingProduct" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of product whose relative content is being described. This should be a specific component (e.g., water) rather than a phase (e.g.,
+               aqueous).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="referenceKind" type="prodml:ReportingProduct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of product to which the product is being compared. If not given then the product is being compared against the overall flow
+               stream.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:group ref="prodml:grp_commonPropertiesProductVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The properties whose existance is independent of a specific location in the hierarchy.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

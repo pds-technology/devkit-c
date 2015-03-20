@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_errorReport.xsd"/>
+	<xsd:include schemaLocation="cs_singleInstalledPoint.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>DTS Measurement Type</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:group name="grp_dtsMeasurement">
+		<xsd:annotation>
+			<xsd:documentation>The information content of a DTS temperature run is captured in the 
+			following elements, and in the referenced dtsInstalledFiber (for context) and the 
+			reference well log (captures the table of data).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="runDuration" type="witsml:timeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The length of time that the instrument box was operating 
+					while collecting DTS data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="installedSystemUsed" type="witsml:refNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the installed system that was used to make the measurements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataInWellLog" type="witsml:refNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the well log used to record the table of data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="connectedToFiber" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the fiber used to record the table of data. 
+					This is necessary only in the cases in which a dtsInstalledSystem has a multi-fiber 
+					installation. If there is only a single installed fiber, this element is unnecessary.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberEndConnected" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the fiber connection node. If more than one node 
+					is available for a well/wellbore, this element is used to specify which node 
+					is connected to the instrument box. This name should correspond to the 
+					fiberEndPoint/name that is recorded in the installed system object.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberDefinedPoint" type="witsml:cs_singleInstalledPoint" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A known point of the fiber. This point should correspond 
+					to one that is given in the wellboreFiberSchematic, so that the relationship 
+					between the length of fiber values in the wellboreFiberSchematic can be related 
+					to the values in the measurement table.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="errorReport" type="witsml:cs_errorReport" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An error that occurred during the measurement.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!--                                                         -->
+</xsd:schema>

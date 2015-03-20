@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:simpleType name="absractAnyURI">
+      <xsd:annotation>
+         <xsd:documentation>The intended abstract supertype of all Uniform Resource Identifiers. This abstract type allows the control over whitespace for all strings to be
+         defined at a high level. This type should not be used directly except to derive another type.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:anyURI">
+         <xsd:whiteSpace value="collapse">
+            <xsd:annotation>
+               <xsd:documentation>Replace tab, line feed and carriage return with a space, collapse contiguous sequences of spaces to a single space and then remove leading and
+               trailing spaces.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:whiteSpace>
+         <xsd:minLength value="1">
+            <xsd:annotation>
+               <xsd:documentation>The empty string is not allowed. This constraint conbined with the whiteSpace collapse constraint means that a blank value is not
+               allowed.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minLength>
+         <xsd:maxLength value="4000">
+            <xsd:annotation>
+               <xsd:documentation>This value should be the smallest "maximum size of a variable length character type" in commonly used DBMSs. This is the maximum size of a
+               VARCHAR2 in Oracle 8.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:maxLength>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

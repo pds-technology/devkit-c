@@ -284,9 +284,14 @@ namespace Energistics.Generator
                 if (element.Attributes["name"] != null)
                 {
                     normalElement.Name = element.Attributes["name"].Value;
-                }                
-                
-                normalElement.Unbounded = (element.Attributes["maxOccurs"].Value == "unbounded") ? true : false;
+                }
+                try
+                {
+                    normalElement.Unbounded = (element.Attributes["maxOccurs"].Value == "unbounded") ? true : false;
+                }catch(Exception)
+                {
+                    normalElement.Unbounded = false;
+                }
                 return normalElement;
             }
             else
@@ -327,7 +332,12 @@ namespace Energistics.Generator
                     choice.Sequences = new List<ChoiceElement>();
                     if (parent.Attributes["name"] != null)
                     {
-                        choice.Name = parent.Attributes["name"].Value;
+                        if (parent.Attributes["name"].Value.StartsWith("grp_"))
+                        {
+                            choice.Name = parent.Attributes["name"].Value.Replace("grp_", "obj_");
+                        }
+                        else
+                            choice.Name = parent.Attributes["name"].Value;
                     }
                     choices.Add(choice);
 
@@ -397,6 +407,7 @@ namespace Energistics.Generator
             }
         }
 
+     
 
         public string RenameClass(Type t)
         {
@@ -470,7 +481,6 @@ namespace Energistics.Generator
             string newName = property.Name;
 
             newName = RenamePropertyByName(newName);
-
             if (property.DeclaringType.Name.Equals("cs_pump") ||
                 property.DeclaringType.Name.Equals("cs_bop") ||
                 property.DeclaringType.Name.Equals("cs_bopComponent") ||
@@ -491,7 +501,10 @@ namespace Energistics.Generator
         public string RenamePropertyByName(string newName)
         {
             newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
-
+            if (newName.CompareTo("Participant") == 0)
+            {
+                newName = ReplaceSubstringIfNotPartial(newName, "Participant", "Participants");
+            }
             newName = ReplaceSubstringIfNotPartial(newName, "Md", "MD");
             newName = ReplaceSubstringIfNotPartial(newName, "Div", "Division");
             newName = ReplaceSubstringIfNotPartial(newName, "Dls", "DoglegSeverity");
@@ -758,7 +771,7 @@ namespace Energistics.Generator
             {
                 string privateFieldName = attr.ElementName + "Field";
                 string publicPropName = RenamePropertyByName(attr.ElementName);
-
+                
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("{");
                 sb.AppendLine("            get {");
@@ -767,7 +780,7 @@ namespace Energistics.Generator
                 sb.AppendLine("            set {");
 
                 string array = GetArrayString(type, attr);
-
+                
                 foreach (Sequence choice in choices)
                 {
                     if (choice.Name == type.Name)
@@ -791,11 +804,13 @@ namespace Energistics.Generator
                 string wrapperClassName = RenameClass(attr.Type);
 
                 sb.AppendLine("                " + privateFieldName + " = value;");
+             
                 sb.AppendLine("                " + publicPropName + "Specified = (value!=null);");
                 sb.AppendLine("                NotifyPropertyChanged(\"" + publicPropName + "\");");
                 sb.AppendLine("            }");
                 sb.AppendLine("        }");
                 sb.AppendLine();
+             
                 sb.AppendLine("        private " + wrapperClassName + (IsNullable(attr.Type) ? "?" : String.Empty) + array + " " + privateFieldName + "; ");
                 sb.AppendLine("        /// <summary>");
                 sb.AppendLine("        /// Boolean to indicate if " + publicPropName + " has been set. Used for serialization.");
@@ -811,6 +826,7 @@ namespace Energistics.Generator
             {
                 string specifiedBool = RenameProperty(property) + "Specified";
                 string privateFieldName = property.Name + "Field";
+                
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("{");
                 sb.AppendLine("            get {");
@@ -885,11 +901,16 @@ namespace Energistics.Generator
                 }
             }
            
+            // this cause the object[]items wrong, it shoudl depends on the property type: array or single then create the correspondent properties.
+            // if property is array create the choiceAttribute as array.
+            // if property is single, then create signle choiceAttribute.
+            
             // Write out the remaining attributes. Since they are not in sequences, order does not matter
             foreach (XmlElementAttribute attr in attrIndex.Values)
             {
                 ExpandSingleChoiceAttributes(sb, type, property, attr, null);
             }
+            
 
             return sb.ToString();
         }
@@ -910,6 +931,8 @@ namespace Energistics.Generator
                 return String.Format("[XmlElement(\"{0}\")]", property.Name);
             }
         }
+        
+        
 
         /// <summary>
         /// Used by ExpandChoiceAttributes
@@ -940,12 +963,11 @@ namespace Energistics.Generator
             }
 
             string array = GetArrayString(type, attr);
-            
-            
-            
-            sb.AppendLine("        " + GetDescription(type, attr.ElementName, extraDesc));            
+           
+            sb.AppendLine("        " + GetDescription(type, attr.ElementName, extraDesc));
             sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
-            sb.AppendLine("        public " + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property)); 
+            sb.AppendLine("        public " + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property));
+            
         }
 
         bool IsNullable(Type type)
@@ -973,6 +995,7 @@ namespace Energistics.Generator
                         if (choice.Get(attr.ElementName).Unbounded)
                         {
                             array = "[]";
+                            break;
                         }
                     }
                 }
@@ -1034,17 +1057,23 @@ namespace Energistics.Generator
         /// This is needed because you cannot serialize a complex type as an XmlAttribute
         /// </summary>
         public string GetSurrogate(Type type, PropertyInfo property)
-        {
+        { 
             StringBuilder sb = new StringBuilder();
             string propertyName = RenameProperty(property);
             string surrogateName = propertyName + "Surrogate";
 
             if (enumClassNames.Contains(property.PropertyType.Name))
             {
-                sb.AppendLine("        private string " + surrogateName);
-                sb.AppendLine("        {");
-                sb.AppendLine("            get { return " + propertyName + ".Name; }");
-                sb.AppendLine("            set { " + propertyName + ".Name = value; }");
+                sb.AppendLine("        public string " + surrogateName);
+                sb.AppendLine("        {");   
+                sb.AppendLine("            get {");
+                sb.AppendLine("                     if(" + propertyName + "==null)  return null;");
+                sb.AppendLine("                     else return " + propertyName + ".Name; }");  
+                sb.AppendLine("            set { \n");
+                sb.AppendLine("                 if(this." + propertyName + "== null)");
+                sb.AppendLine("                 "+ propertyName + "= new " + property.PropertyType.Name + "(value);");
+                sb.AppendLine("                 else");
+                sb.AppendLine("                   "+propertyName + ".Name = value; }");
                 sb.AppendLine("        }");
                 sb.AppendLine("        " + GetDescription(type, property.Name));
                 sb.AppendLine("        [XmlIgnore]");
@@ -1062,6 +1091,12 @@ namespace Energistics.Generator
             sb.AppendLine("// ");
 
             string solutionFolder = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting("SOLUTION_FOLDER");
+            if (Directory.Exists(solutionFolder))
+            {
+                if (!File.Exists("license.txt")) return "";
+            }
+            else
+                return "";
             using (StreamReader sr = new StreamReader(Path.Combine(solutionFolder, "License.txt"), Encoding.Default))
             {
                 while (!sr.EndOfStream)

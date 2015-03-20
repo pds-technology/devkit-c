@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>WITSML- Catalog of Value Constrainted Types.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type ActivityClassType.-->
+   <!--NOT-USED: Deleted type ActivityCode.-->
+   <!--NOT-USED: Deleted type ArrayElementDataType.-->
+   <!--NOT-USED: Deleted type AziRef.-->
+   <!--NOT-USED: Deleted type BearingType.-->
+   <!--NOT-USED: Deleted type BitDullCode.-->
+   <!--NOT-USED: Deleted type BitReasonPulled.-->
+   <!--NOT-USED: Deleted type BitType.-->
+   <!--NOT-USED: Deleted type BhaStatus.-->
+   <!--NOT-USED: Deleted type BladeShapeType.-->
+   <!--NOT-USED: Deleted type BladeType.-->
+   <!--NOT-USED: Deleted type BopType.-->
+   <!--NOT-USED: Deleted type BoxPinConfig.-->
+   <!--NOT-USED: Deleted type CalibrationPointRole.-->
+   <!--NOT-USED: Deleted type CementJobType.-->
+   <!--NOT-USED: Deleted type ChangeInfoType.-->
+   <!--NOT-USED: Deleted type ConnectionPosition.-->
+   <!--NOT-USED: Deleted type DeflectionMethod.-->
+   <!--NOT-USED: Deleted type DerrickType.-->
+   <!--NOT-USED: Deleted type DrawWorksType.-->
+   <!--NOT-USED: Deleted type DriveType.-->
+   <!--NOT-USED: Deleted type EastOrWest.-->
+   <!--                                                     -->
+   <xsd:simpleType name="ElevCodeEnum" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The type of local or permanent reference datum for vertical gravity based (i.e., elevation and vertical depth) and measured depth coordinates within
+         the context of a well. This list includes local points (e.g., kelly bushing) used as a datum and vertical reference datums (e.g., mean sea level).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="CF">
+            <xsd:annotation>
+               <xsd:documentation>casing flange: A flange affixed to the top of the casing string used to attach production equipment.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CV">
+            <xsd:annotation>
+               <xsd:documentation>crown valve</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DF">
+            <xsd:annotation>
+               <xsd:documentation>derrick floor</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GL">
+            <xsd:annotation>
+               <xsd:documentation>ground level</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="KB">
+            <xsd:annotation>
+               <xsd:documentation>kelly bushing</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RB">
+            <xsd:annotation>
+               <xsd:documentation>rotary bushing</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RT">
+            <xsd:annotation>
+               <xsd:documentation>rotary table</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SF">
+            <xsd:annotation>
+               <xsd:documentation>sea floor</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LAT">
+            <xsd:annotation>
+               <xsd:documentation>Lowest Astronomical Tide. The lowest tide level over the duration of the National Tidal Datum Epoch (19 years).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SL">
+            <xsd:annotation>
+               <xsd:documentation>Mean Sea Level - A tidal datum. The arithmetic mean of hourly heights observed over the National Tidal Datum Epoch (19
+               years).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MHHW">
+            <xsd:annotation>
+               <xsd:documentation>Mean Higher High Water - A tidal datum. The average of the higher high water height of each tidal day observed over the National Tidal Datum
+               Epoch (19 years).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MHW">
+            <xsd:annotation>
+               <xsd:documentation>Mean High Water - A tidal datum. The average of all the high water heights observed over the National Tidal Datum Epoch (19
+               years).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MLLW">
+            <xsd:annotation>
+               <xsd:documentation>Mean Lower Low Water - A tidal datum. The average of the lower low water height of each tidal day observed over the National Tidal Datum Epoch
+               (19 years ).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MLW">
+            <xsd:annotation>
+               <xsd:documentation>Mean Low Water - A tidal datum. The average of all the low water heights observed over the National Tidal Datum Epoch (19
+               years).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MTL">
+            <xsd:annotation>
+               <xsd:documentation>Mean Tide Level - A tidal datum. The arithmetic mean of mean high water and mean low water. Same as half-tide level.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="KO">
+            <xsd:annotation>
+               <xsd:documentation>kickoff point</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type Ellipsoid.-->
+   <!--                                                         -->
+   <xsd:simpleType name="ExtensionName" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The name of a data extension. The list of standard values is contained in the WITSML enumValues.xml file.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-71, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type FileNameType.-->
+   <!--NOT-USED: Deleted type GasPeakType.-->
+   <!--NOT-USED: Deleted type GeodeticDatum.-->
+   <!--NOT-USED: Deleted type Hemispheres.-->
+   <!--NOT-USED: Deleted type HoleCasingType.-->
+   <!--NOT-USED: Deleted type HoleOpenerType.-->
+   <!--NOT-USED: Deleted type InnerBarrelType.-->
+   <!--NOT-USED: Deleted type IntervalMethod.-->
+   <!--NOT-USED: Deleted type IntervalType.-->
+   <!--                                                         -->
+   <xsd:simpleType name="ItemState" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>These values represent the state of a WITSML object.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="actual">
+            <xsd:annotation>
+               <xsd:documentation>Actual data measured or entered at the well site.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="model">
+            <xsd:annotation>
+               <xsd:documentation>Model data used for "what if" calculations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="plan">
+            <xsd:annotation>
+               <xsd:documentation>A planned object. That is, one which is expected to be executed in the future.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--NOT-USED: Deleted type JarType.-->
+   <!--NOT-USED: Deleted type JarAction.-->
+   <!--NOT-USED: Deleted type LithologySource.-->
+   <!--NOT-USED: Deleted type LithologyType.-->
+   <!--NOT-USED: Deleted type LogDataType.-->
+   <!--NOT-USED: Deleted type LogIndexDirection.-->
+   <!--NOT-USED: Deleted type LogIndexType.-->
+   <!--NOT-USED: Deleted type LogRectangularType.-->
+   <!--NOT-USED: Deleted type LogSectionType.-->
+   <!--NOT-USED: Deleted type LogTraceOrigin.-->
+   <!--NOT-USED: Deleted type LogTraceState.-->
+   <!--NOT-USED: Deleted type LogTrackType.-->
+   <!--NOT-USED: Deleted type MaterialType.-->
+   <!--                                                         -->
+   <xsd:simpleType name="MeasureClass" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Measure class values. The list of standard values is contained in the WITSML enumValues.xml file.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-78, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--NOT-USED: Deleted type MeasurementType.-->
+   <!--NOT-USED: Deleted type MessageDigestType.-->
+   <!--NOT-USED: Deleted type MessageProbability.-->
+   <!--NOT-USED: Deleted type MessageSeverity.-->
+   <!--NOT-USED: Deleted type MessageType.-->
+   <!--NOT-USED: Deleted type MimeType.-->
+   <!--NOT-USED: Deleted type MudClass.-->
+   <!--NOT-USED: Deleted type MudLogParameterType.-->
+   <!--NOT-USED: Deleted type NADTypes.-->
+   <!--                                                         -->
+   <xsd:simpleType name="NameTagLocation" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Defines the locations where an equipment tag might be found.. The list of standard values is contained in the WITSML enumValues.xml
+         file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="NameTagNumberingScheme" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Defines the specifications for creating equipment tags.. The list of standard values is contained in the WITSML enumValues.xml
+         file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="NameTagTechnology" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Defines the mechanisms for attaching an equipment tag to an item.. The list of standard values is contained in the WITSML enumValues.xml
+         file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--NOT-USED: Deleted type NorthOrSouth.-->
+   <!--NOT-USED: Deleted type NozzleType.-->
+   <!--NOT-USED: Deleted type ObjectGrowingState.-->
+   <!--NOT-USED: Deleted type OpsReportVersion.-->
+   <!--NOT-USED: Deleted type PitType.-->
+   <!--                                                         -->
+   <xsd:simpleType name="PrimitiveType" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The underlying XML Schema primitve type Does NOT support "decimal", "QName" or "NOTATION".</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-71, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="string" />
+         <xsd:enumeration value="boolean" />
+         <xsd:enumeration value="float" />
+         <xsd:enumeration value="double" />
+         <xsd:enumeration value="duration" />
+         <xsd:enumeration value="dateTime" />
+         <xsd:enumeration value="time" />
+         <xsd:enumeration value="date" />
+         <xsd:enumeration value="gYearMonth" />
+         <xsd:enumeration value="gYear" />
+         <xsd:enumeration value="gMonthDay" />
+         <xsd:enumeration value="gDay" />
+         <xsd:enumeration value="gMonth" />
+         <xsd:enumeration value="base64Binary" />
+         <xsd:enumeration value="anyURI" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type Projection.-->
+   <!--NOT-USED: Deleted type ProjectionVariantsObliqueMercator.-->
+   <!--NOT-USED: Deleted type PresTestType.-->
+   <!--NOT-USED: Deleted type PrincipalMeridian.-->
+   <!--NOT-USED: Deleted type PumpType.-->
+   <!--NOT-USED: Deleted type PumpOpType.-->
+   <!--NOT-USED: Deleted type QualifierType.-->
+   <!--NOT-USED: Deleted type ReadingKind.-->
+   <!--NOT-USED: Deleted type RealtimeData.-->
+   <!--NOT-USED: Deleted type RigType.-->
+   <!--NOT-USED: Deleted type RiskAffectedPersonnel.-->
+   <!--NOT-USED: Deleted type RiskCategory.-->
+   <!--NOT-USED: Deleted type RiskSubCategory.-->
+   <!--NOT-USED: Deleted type RiskType.-->
+   <!--NOT-USED: Deleted type ScrType.-->
+   <!--NOT-USED: Deleted type ShowFluorescence.-->
+   <!--NOT-USED: Deleted type ShowLevel.-->
+   <!--NOT-USED: Deleted type ShowRating.-->
+   <!--NOT-USED: Deleted type ShowSpeed.-->
+   <!--NOT-USED: Deleted type StateDetailActivity.-->
+   <!--NOT-USED: Deleted type SupportCraft.-->
+   <!--NOT-USED: Deleted type SurfEquipType.-->
+   <!--NOT-USED: Deleted type TargetCategory.-->
+   <!--NOT-USED: Deleted type TargetScope.-->
+   <!--NOT-USED: Deleted type TargetSectionScope.-->
+   <!--NOT-USED: Deleted type TrajStnCalcAlgorithm.-->
+   <!--NOT-USED: Deleted type TrajStationStatus.-->
+   <!--NOT-USED: Deleted type TrajStationType.-->
+   <!--NOT-USED: Deleted type TubularAssembly.-->
+   <!--NOT-USED: Deleted type TubularComponent.-->
+   <!--NOT-USED: Deleted type TypeSurveyTool.-->
+   <!--NOT-USED: Deleted type WellControlIncidentType.-->
+   <!--                                                         -->
+   <xsd:simpleType name="WellDirection" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The direction of flow of the fluids in a well facility (generally, injected or produced, or some combination).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="huff-n-puff">
+            <xsd:annotation>
+               <xsd:documentation>The well facility alternately injects (usually a steam or hot fluid) and produces.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="injector">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is injecting fluids into the subsurface.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="producer">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is producing fluids from the subsurface.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="uncertain">
+            <xsd:annotation>
+               <xsd:documentation>The flow direction of the fluids is variable, but not on a regular basis as is the case with the huff-n-puff flow.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="WellFluid" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The type of fluid being produced from or injected into a well facility.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="air">
+            <xsd:annotation>
+               <xsd:documentation>This is generally an injected fluid.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="condensate">
+            <xsd:annotation>
+               <xsd:documentation>Liquid hydrocarbons produced with natural gas that are separated from the gas by cooling and various other means. Condensate generally has an API
+               gravity of 50 degrees to 120 degrees and is water white, straw, or bluish in color. It is the liquid recovery from a well classified as a gas well. It is generally
+               dissolved in the gaseous state under reservoir conditions but separates as a liquid either in passing up the hole or at the surface. These hydrocarbons, from
+               associated and nonassociated gas well gas, normally are recovered from lease separators or field facilities by mechanical separation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="dry">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is classified as a dry well. It has not been, nor will it be used to produce or inject any fluids.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="gas">
+            <xsd:annotation>
+               <xsd:documentation>The well is classified as a gas well, producing or injecting a hydrocarbon gas. The gas is generally methane, but may have a mixture of other
+               gases also.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="gas-water">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is classified as producing both gas and water. This classification is to be used when the produced stream flow is a mixture of
+               gas and water. When a facility produces gas and water in separate streams, it should be classified twice as gas and as water.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="non HC gas">
+            <xsd:annotation>
+               <xsd:documentation>The well produces or injects non hydrocarbon gases. Typical other gases would be helium and carbon dioxide.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="non HC gas -- CO2">
+            <xsd:annotation>
+               <xsd:documentation>Carbon Dioxide gas.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="oil">
+            <xsd:annotation>
+               <xsd:documentation>The liquid hydrocarbon, generally referred to as crude oil.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="oil-gas">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is classified as producing both gas and oil. This classification is to be used when the produced stream flow is a mixture of
+               oil and gas. When a facility produces oil and gas in separate streams, it should be classified twice as oil and as gas.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="oil-water">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is classified as producing both oil and water. This classification is to be used when the produced stream flow is a mixture of
+               oil and water. When a facility produces oil and water in separate streams, it should be classified twice as oil and as water.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="steam">
+            <xsd:annotation>
+               <xsd:documentation>The gaseous state of water. This is generally an injected fluid, but it is possible that some hydrothermal wells produce
+               steam.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="water">
+            <xsd:annotation>
+               <xsd:documentation>The well is classified as a water well without distinguishing between brine or fresh water.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="water -- brine">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is classified as producing or injecting salt water.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="water -- fresh water">
+            <xsd:annotation>
+               <xsd:documentation>The well facility is classified as producing fresh water that is capable of use for drinking or crop irrigation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type WellKillingProcedureType.-->
+   <!--NOT-USED: Deleted type WellNamingSystem.-->
+   <!--NOT-USED: Deleted type WellTestType.-->
+   <!--NOT-USED: Deleted type WellboreShape.-->
+   <!--NOT-USED: Deleted type WellboreType.-->
+   <!--NOT-USED: Deleted type WellPurpose.-->
+   <!--                                                         -->
+   <xsd:simpleType name="WellStatus" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>These values represent the status of a well or wellbore.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="abandoned">
+            <xsd:annotation>
+               <xsd:documentation>The status of a facility in which drilling, completion, and production operations have been permanently terminated.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="active">
+            <xsd:annotation>
+               <xsd:documentation>For a well to be active, at least one of its wellbores must be active. For a wellbore to be active, at least one of its completions must be
+               actively producing or injecting fluids.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="active -- injecting">
+            <xsd:annotation>
+               <xsd:documentation>Fluids are actively being injected into the facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="active -- producing">
+            <xsd:annotation>
+               <xsd:documentation>Fluids are actively being produced from the facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="completed">
+            <xsd:annotation>
+               <xsd:documentation>The completion has been installed, but the facility is not yet active. This status is appropriate only before the initial producing or injecting
+               activity.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="drilling">
+            <xsd:annotation>
+               <xsd:documentation>The status of a well or wellbore in which drilling operations have begun, but are not yet completed. The status ends when another status becomes
+               appropriate.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="partially plugged">
+            <xsd:annotation>
+               <xsd:documentation>The wellbore has been plugged from the bottom, but only partially to the point where it intersects another wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="permitted">
+            <xsd:annotation>
+               <xsd:documentation>The facility has received regulatory approvel, but drilling has not yet commenced. For a well, it has been spudded. For a subsequent wellbore,
+               the whipstock or similar device has not yet been set.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="plugged and abandoned">
+            <xsd:annotation>
+               <xsd:documentation>An abandoned well (or wellbore) whose wellbores have been plugged in such a manner as to prevent the migration of oil, gas, salt water, or other
+               substance from one stratum to another. Generally the criteria for this status is controlled by regulatory authorities.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="proposed">
+            <xsd:annotation>
+               <xsd:documentation>The status of a well or wellbore from conception to either regulatory approval or commencement of drilling.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="sold">
+            <xsd:annotation>
+               <xsd:documentation>The facility has been sold, so it is no longer appropriate to keep a close internal status value. Status values may be added at later times
+               without changing the sold status.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="suspended">
+            <xsd:annotation>
+               <xsd:documentation>Production or injection has been temporarily suspended in a manner that will allow immediate resumption of activities.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="temporarily abandoned">
+            <xsd:annotation>
+               <xsd:documentation>Production or injection has been temporarily suspended in a manner that will not allow immediate resumption of activities.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="testing">
+            <xsd:annotation>
+               <xsd:documentation>The facility operations are suspended while tests are being conducted to determine formation and/or reservoir properties. For example, a
+               drillstem test. This status also includes extended testing.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="tight">
+            <xsd:annotation>
+               <xsd:documentation>Information about the status of the well is confidential. This is more explicit than unknown, since it gives the reason that the status value is
+               unknown.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="working over">
+            <xsd:annotation>
+               <xsd:documentation>Maintenance or data acquisition on a well during the production phase. This includes any relevant job which can be done while the well is shut
+               in. This includes many jobs that occur when a well is re-entered.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>The collection of information items for a fluid sample. 
+		Note that a fluid sample can come from many sources, not just from a well/wellbore.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_fluidSample">
+		<xsd:sequence>
+			<xsd:element name="sampleBottle" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sampleType" type="prodml:FluidSampleKind" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="facility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the facility from which the sample was acquired. 
+					The name can be qualified by a naming system. 
+					This also defines the kind of facility.
+					Common facilities are wells, wellbores within a well, completions within a well.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="facilityParent1" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>For facilities whose name is unique within the context of another 
+					facility, the name of the parent facility. For example, if name represents a completion,
+					then facilityParent1 would represent the name of the well within which name was unique.
+					The name can be qualified by a naming system.
+					This also defines the kind of facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="facilityParent2" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>For facilities whose name is unique within the context of another 
+					facility, the name of the parent facility of parent1. 
+					The name can be qualified by a naming system.
+					This also defines the kind of facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="facilityAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An alternatative name of a facility. This is generally
+					unique within a naming system. The above contextually unique name (that is, within 
+					the context of a parent) should also be
+					listed as an alias.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+<!-- ======================================================= -->
+<!-- DO WE NEED A RESERVOIR ELEMENT INDEPENDENT OF FACILITY? -->
+<!-- ======================================================= -->
+			<xsd:element name="testKind" type="prodml:FluidSampleTestAcquisition" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The kind of test which acquired the sample.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testMD" type="prodml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The measured depth of the test in a wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testId" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The test identifier.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testRun" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The test run number (e.g., for an RFT)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testProvider" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the company which ran the test.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="reservoirFluidType" type="prodml:ReservoirFluidKind" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="acquisitionDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="acquisitionMD" type="prodml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="acquisitionPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="acquisitionTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="acquisitionGORStd" type="prodml:standardVolumePerStandardVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sampleDisposition" type="prodml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="representative" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_fiberPumpActivity.xsd" />
+   <xsd:complexType name="cs_fiberControlLine">
+      <xsd:annotation>
+         <xsd:documentation>Information regarding the control line into which a fiber cable may be pumped in order to measure a facility.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="size" type="prodml:ControlLineSize" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Enum of the common sizes of control line. The enum list gives diameters and weight per length values. A fiber may be installed inside the control
+               line.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="material" type="prodml:ControlLineMaterial" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Enum of the common materials from which control line may be made. A fiber may be installed inside the control line.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="encapsulationType" type="prodml:ControlLineEncapsulationType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Enum of square or round encapsulation for a control line. A fiber may be installed inside the control line.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="encapsulationSize" type="prodml:ControlLineEncapsulationSize" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Enum of the size of encapsulation of a fiber within a control line.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark about the fiber control line</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pumpActivity" type="prodml:cs_fiberPumpActivity" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The activity of pumping the fiber downhole into a control line (small diameter tube).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="downholeControlLineRefUID" type="prodml:refString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>A reference to the control line string in a Completion data-object which represents this control line containing a fiber.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

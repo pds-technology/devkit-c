@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_localCRS">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="1">
+				<xsd:element name="usesWellAsOrigin" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>True ("true" or "1") indicates that the well surface
+						point is the origin of this CRS.  
+						False ("false" or "0") or not given indicates otherwise.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="origin" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>A pointer to the reference point that is the origin
+						of this CRS.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="originDescription" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>A textual description of the origin.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="yAxisAzimuth" type="witsml:yAxisAzimuth" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The angle of the Y axis from North (as described 
+					in attribute northDirection). Defaults to zero. Positive clockwise.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="yAxisDescription" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A free-form description of the Y axis. 
+					Examples would be 'parallel to the west side of the platform', or 
+					'along the main entry road'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="xRotationCounterClockwise" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True ("true" or "1") indicates that the X axis is rotated 
+					counter-clockwise from the Y axis when viewed from above the earth looking down.
+					False ("false" or "0") or not given indicates a clockwise rotation. 
+					Generally the X axis is rotated clockwise.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

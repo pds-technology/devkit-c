@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+These examples are only intended to demonstrate the type of data that can be exchanged.
+Data is based on example well from WFT.
+They totally artificial and are not intended to demonstrate best practices. 
+NOTE: Different equipment may share common properties.  String equipment may reference the same equipmentUID as itself.
+-->
+<wellCMLedgers xmlns="http://www.witsml.org/schemas/1series"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.witsml.org/schemas/1series   ../../doc/Standards/DataSchema/Completions_v1.0/completions_v1.0/xsd_schemas/obj_wellCMLedger.xsd" version="1.4.1.1">
+	<wellCMLedger uid="E00" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<dTimStart>1990-11-11T00:00:00Z</dTimStart>
+		<dTimEnd>1990-11-22T00:00:00Z</dTimEnd>
+		<duration uom="h">47</duration>
+		<type class="Job">Drilling &amp; Complete Well </type>
+		<isPlan>true</isPlan>
+		<eventExtension>
+			<jobExtension>
+				<jobReason>drilling init</jobReason>
+			</jobExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E01" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<dTimStart>1990-11-11T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-11T09:00:00Z</dTimEnd>
+		<duration uom="h">1</duration>
+		<type>Drilling plan</type>
+		<isPlan>true</isPlan>
+	</wellCMLedger>
+	<wellCMLedger uid="E02" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-11T09:00:00Z</dTimStart>
+		<dTimEnd>1990-11-11T10:00:00Z</dTimEnd>
+		<duration uom="h">2</duration>
+		<type>permit</type>
+		<isPlan>true</isPlan>
+	</wellCMLedger>
+	<wellCMLedger uid="E03" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-11T10:00:00Z</dTimStart>
+		<dTimEnd>1990-11-11T14:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<type>sit work</type>
+		<isPlan>true</isPlan>
+	</wellCMLedger>
+	<wellCMLedger uid="E04" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-11T14:00:00Z</dTimStart>
+		<dTimEnd>1990-11-11T18:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<type>Environment Survey</type>
+		<isPlan>true</isPlan>
+	</wellCMLedger>
+	<wellCMLedger uid="E05" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-12T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-11T10:00:00Z</dTimEnd>
+		<duration uom="h">2</duration>
+		<type>Rig up</type>
+		<isPlan>true</isPlan>
+	</wellCMLedger>
+	<wellCMLedger uid="E06" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-11T10:00:00Z</dTimStart>
+		<dTimEnd>1990-11-11T11:00:00Z</dTimEnd>
+		<duration uom="h">1</duration>
+		<type>Safety Meeting</type>
+		<isPlan>true</isPlan>
+	</wellCMLedger>
+	<wellCMLedger uid="E07" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-11T11:00:00Z</dTimStart>
+		<dTimEnd>1990-11-11T17:00:00Z</dTimEnd>
+		<duration uom="h">6</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">200</mdBottom>
+		<type>Drill spud</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			 <downholeStringsRef downholeStringRefID="boreholeString_1" />
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E08" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-12T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-12T14:00:00Z</dTimEnd>
+		<duration uom="h">6</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">450</mdBottom>
+		<type>drill - day 1</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			 <downholeStringsRef downholeStringRefID="surfacecasing_1" />
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E09" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-12T14:00:00Z</dTimStart>
+		<dTimEnd>1990-11-12T18:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">450</mdBottom>
+		<type>Cement</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="surfacecasing_1">
+				<stringEquipmentRefID>cementbehind_surfacecasing_1</stringEquipmentRefID>
+			</downholeStringsRef>
+		</downholeComponentRef>
+		<eventExtension>
+			<cementExtension>
+				<cementJobRefID>cement_job1</cementJobRefID>
+			</cementExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E10" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-13T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-13T18:00:00Z</dTimEnd>
+		<duration uom="h">10</duration>
+		<mdTop uom="ft">450</mdTop>
+		<mdBottom uom="ft">798</mdBottom>
+		<type>drill - day 2</type>
+		<isPlan>true</isPlan>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E11" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-14T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-14T18:00:00Z</dTimEnd>
+		<duration uom="h">10</duration>
+		<mdTop uom="ft">450</mdTop>
+		<mdBottom uom="ft">927</mdBottom>
+		<type>drill - day 3</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			 <downholeStringsRef downholeStringRefID="boreholeString_2" />
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E12" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-15T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-15T14:00:00Z</dTimEnd>
+		<duration uom="h">6</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">1250</mdBottom>
+		<type>drill - day 4</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			 <downholeStringsRef downholeStringRefID="intermediacasing_1" />
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E13" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-15T14:00:00Z</dTimStart>
+		<dTimEnd>1990-11-15T18:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">1250</mdBottom>
+		<type>cement</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="intermediacasing_1">
+				<stringEquipmentRefID>cementbehind_intermediacasing_1</stringEquipmentRefID>
+			</downholeStringsRef>
+		</downholeComponentRef>
+		<eventExtension>
+			<cementExtension>
+				<cementJobRefID>cement_job2</cementJobRefID>
+			</cementExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E14" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-16T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-16T10:00:00Z</dTimEnd>
+		<duration uom="h">2</duration>
+		<mdTop uom="ft">1238</mdTop>
+		<mdBottom uom="ft">1242</mdBottom>
+		<type>set bridge plug</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="productioncasing_1">
+				<stringEquipmentRefID>bridgeplug_1</stringEquipmentRefID>
+			</downholeStringsRef>
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E15" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-16T10:00:00Z</dTimStart>
+		<dTimEnd>1990-11-16T16:00:00Z</dTimEnd>
+		<duration uom="h">6</duration>
+		<type>pressure test</type>
+		<isPlan>true</isPlan>
+		<eventExtension/>
+	</wellCMLedger>
+	<wellCMLedger uid="E16" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-16T16:00:00Z</dTimStart>
+		<dTimEnd>1990-11-16T18:00:00Z</dTimEnd>
+		<duration uom="h">2</duration>
+		<mdTop uom="ft">1238</mdTop>
+		<mdBottom uom="ft">1242</mdBottom>
+		<type>mill bridge plug</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="productioncasing_1">
+				<stringEquipmentRefID>bridgeplug_1</stringEquipmentRefID>
+			</downholeStringsRef>
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E17" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-17T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-17T14:00:00Z</dTimEnd>
+		<duration uom="h">6</duration>
+		<type>drill- day 5</type>
+		<isPlan>true</isPlan>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E18" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-17T14:00:00Z</dTimStart>
+		<dTimEnd>1990-11-17T18:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">4480</mdBottom>
+		<type>Run casing -production</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			 <downholeStringsRef downholeStringRefID="productioncasing_1" />
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E19" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-18T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-18T10:00:00Z</dTimEnd>
+		<duration uom="h">2</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">4480</mdBottom>
+		<type>cement</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="productioncasing_1">
+				<stringEquipmentRefID>cementbehind_productioncasing_1</stringEquipmentRefID>
+			</downholeStringsRef>
+		</downholeComponentRef>
+		<eventExtension>
+			<cementExtension>
+				<cementJobRefID>cement_job3</cementJobRefID>
+			</cementExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E20" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-18T10:00:00Z</dTimStart>
+		<dTimEnd>1990-11-18T12:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<type>wireline Operation</type>
+		<isPlan>true</isPlan>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E21" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-18T12:00:00Z</dTimStart>
+		<dTimEnd>1990-11-18T18:00:00Z</dTimEnd>
+		<duration uom="h">6</duration>
+		<mdTop uom="ft">4512</mdTop>
+		<mdBottom uom="ft">4604</mdBottom>
+		<type>perforate</type>
+		<isPlan>true</isPlan>
+		<eventExtension>
+			<perforationExtension>
+				<perforationSetRefID>perf_Garyburg</perforationSetRefID>
+				<perforating>
+					<stageNumber>1</stageNumber>
+					<reservoirPressure uom="psi">210</reservoirPressure>
+					<conveyanceMethod>Wireline</conveyanceMethod>
+					<shotsPlanned>2</shotsPlanned>
+					<shotsDensity uom="1/ft">2</shotsDensity>
+					<perforationCompany>weatherford</perforationCompany>
+					<gunLeftInHole>true</gunLeftInHole>
+				</perforating>
+			</perforationExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E22" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-19T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-19T18:00:00Z</dTimEnd>
+		<duration uom="h">8</duration>
+		<mdTop uom="ft">4616</mdTop>
+		<mdBottom uom="ft">4712</mdBottom>
+		<type>perforate</type>
+		<isPlan>true</isPlan>
+		<eventExtension>
+			<perforationExtension>
+				<perforationSetRefID>perf_Mckee</perforationSetRefID>
+			</perforationExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E23" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-20T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-20T18:00:00Z</dTimEnd>
+		<duration uom="h">8</duration>
+		<type>Acid Frac</type>
+		<isPlan>true</isPlan>
+		<eventExtension>
+			<acidizeFracExtension>
+				<stimJobID>Stim_jobAcidFrac</stimJobID>
+			</acidizeFracExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E24" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-21T08:00:00Z</dTimStart>
+		<dTimEnd>1990-11-21T18:00:00Z</dTimEnd>
+		<duration uom="h">8</duration>
+		<mdTop uom="ft">4616</mdTop>
+		<mdBottom uom="ft">4714</mdBottom>
+		<type>Install Gravel pack</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="productionCasing_1">
+				<stringEquipmentRefID>gravelpack_1</stringEquipmentRefID>
+			</downholeStringsRef>
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E25" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-12-22T08:00:00Z</dTimStart>
+		<dTimEnd>1990-12-22T10:00:00Z</dTimEnd>
+		<duration uom="h">2</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">13</mdBottom>
+		<type>Install Tubing Head</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<stringEquipmentRefID>tubingHead_1 </stringEquipmentRefID>
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E26" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-12-22T10:00:00Z</dTimStart>
+		<dTimEnd>1990-11-22T14:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">4640</mdBottom>
+		<type>Run tubing String1</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			<stringEquipmentRefID>tubingstring_1</stringEquipmentRefID>
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+	<wellCMLedger uid="E27" uidWell="VGASAU029" uidWellbore="primaryWellbore">
+		<nameWellbore>primaryWellbore</nameWellbore>
+		<parentEventID>E00</parentEventID>
+		<dTimStart>1990-11-22T14:00:00Z</dTimStart>
+		<dTimEnd>1990-11-22T18:00:00Z</dTimEnd>
+		<duration uom="h">4</duration>
+		<mdTop uom="ft">12</mdTop>
+		<mdBottom uom="ft">4640</mdBottom>
+		<type>Run tubing String2</type>
+		<isPlan>true</isPlan>
+		<downholeComponentRef>
+			 <downholeStringsRef downholeStringRefID="tubingstring_2" />
+		</downholeComponentRef>
+		<eventExtension>
+			<downholeExtension>
+				<downholeComponentRefID>downholecomp_Job1</downholeComponentRefID>
+			</downholeExtension>
+		</eventExtension>
+	</wellCMLedger>
+</wellCMLedgers>

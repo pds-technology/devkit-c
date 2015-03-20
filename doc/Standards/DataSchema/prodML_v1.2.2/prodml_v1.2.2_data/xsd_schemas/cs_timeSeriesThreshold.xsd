@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_timeSeriesThreshold">
+		<xsd:annotation>
+			<xsd:documentation>Defines a value threshold window and the cumulative time duration that the data was within that window.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="thresholdMinimum" type="prodml:endpointQuantity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The lower bound of the threshold for testing whether values are within a specific range.
+					Element "unit" defines the unit of measure of this value.
+					At least one of minimumValue and maximumValue must be specified.
+					The thresholdMinimum must be less than thresholdMaximum.
+					If thresholdMinimum is not specified then the minimum shall be 
+					assumed to be minus infinity.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="thresholdMaximum" type="prodml:endpointQuantity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The upper bound of the threshold for testing whether values are within a specific range.
+					Element "unit" defines the unit of measure of this value.
+					At least one of minimumValue and maximumValue must be specified.
+					The thresholdMaximum must be greater than thresholdMinimum.
+					If thresholdMaximum is not specified then the maximum shall be 
+					assumed to be plus infinity.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="duration" type="prodml:timeMeasure" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The sum of the time intervals over the range of dTimMin to dTimMax 
+					during which the values were within the specified threshold range.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

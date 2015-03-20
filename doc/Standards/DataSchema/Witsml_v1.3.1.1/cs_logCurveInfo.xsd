@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="cs_axisDefinition.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_logCurveInfo">
+		<xsd:annotation>
+			<xsd:documentation>WITSML Log - Curve Information</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="mnemonic" type="witsml:str32" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The curve name.  
+					This must be unique for all curves in a log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="classWitsml" type="witsml:RealtimeData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The curve classification obtained from a lookup in the vendors 
+				mnemonic catalog.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="unit" type="witsml:uomString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Unit of measurement of the data values. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mnemAlias" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Name alias for this trace.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nullValue" type="witsml:encodedValueString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An empty string is the default representation of a null value for a 
+					curve (i.e. when the null value representation is not explicitly defined). 
+					If a null value is defined in the logCurveInfo, it overrides any null value specified at the 
+					logHeader level. An empty string is always a valid null value representation in the comma delimited list.
+					An empty string is not a valid null value representation within a space delimited array.
+					Specifying a null value also makes it easier to transform data back to a 
+					legacy format without having to scan the data to insure that the null pattern 
+					does not exist in the data. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="alternateIndex" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True (true or 1) if this curve is a candidate to be a primary index.
+					False (false or 0) or not given, indicates otherwise.
+					An index curve should monotonically change when sorted on its own values (i.e., no duplicates). </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellDatum" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the wellDatum that represents the values of this trace.
+					This is only relevant for measured depths, vertical depths or elevations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minIndex" type="witsml:genericMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minimum index value at which the first valid data point is located. 
+					This value will be properly set by the server to reflect data in the returned document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxIndex" type="witsml:genericMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The maximum index value at which the last valid data point is located.
+					This value will be properly set by the server to reflect data in the returned document. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minDateTimeIndex" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minimum index value at which the first valid data point
+					is located. This value will be properly set by the server to reflect data 
+					in the returned document. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxDateTimeIndex" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The maximum index value at which the last valid data point 
+					is located. This value will be properly set by the server to reflect data 
+					in the returned document. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="columnIndex" type="witsml:nonNegativeCount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A 1-based index of data in the LOGDATA.DATA section.
+					A value of zero indicates an implied curve with no values in the data record.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveDescription" type="witsml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Description of the curve.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sensorOffset" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Offset of sensor from drill bit.  
+					This element is only informative. The measured depth values
+					are at the actual depth (not bit depth from which you must 
+					subtract the offset).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataSource" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Data source, could be tool name/id.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="densData" type="witsml:perLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Data density of sample in samples per length unit.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="traceState" type="witsml:LogTraceState" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>State of trace data.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="traceOrigin" type="witsml:LogTraceOrigin" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Origin of trace data.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="typeLogData" type="witsml:LogDataType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Log data type. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="axisDefinition" type="witsml:cs_axisDefinition" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Indicates that the curve is an array curve (i.e., multi-valued samples), 
+					and provides meta data by which an axis of the array can be understood.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the curve information.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

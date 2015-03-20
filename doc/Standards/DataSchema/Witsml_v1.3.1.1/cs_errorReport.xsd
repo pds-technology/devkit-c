@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_errorReport">
+		<xsd:annotation>
+			<xsd:documentation>A simple structure that allows an error report to be exchanged. 
+			The strucutre will allow for an error name, error id (generally a numerical code), 
+			and a description.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A name of the error.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="id" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A code, or other id, for the error.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the error.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the error report.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

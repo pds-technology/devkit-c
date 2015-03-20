@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumeBusinessOwnershipShare">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Volume component schema for defining ownership shares.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="share" type="prodml:volumePerVolumeMeasurePercent" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The percent ownership of the sub-unit in the unit during the specified time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="startDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date on which the ownership became valid.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="endDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The final date on which the ownership was valid. If no end date is specified, the share is considered to still be valid.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the business unit.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

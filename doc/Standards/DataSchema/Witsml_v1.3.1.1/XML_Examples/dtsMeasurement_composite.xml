@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/dtsMeasurement_composite.xsl"?>
+
+<WITSMLComposite
+    xmlns="http://www.witsml.org/schemas/131" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.witsml.org/schemas/131  ../WITSML_composite.xsd"
+    version="1.3.1.1">
+	<wellSet>
+		<well uid="1FO19">
+			<name>1FO19</name>
+			<wellboreSet>
+				<wellbore uid="1FO19-1">
+					<name>1FO19-1</name>
+					<dtsInstalledSystemSet>
+						<dtsInstalledSystem uid="1FO19-1-1">
+							<name>Wellbore 1FO19-1 installation 1</name>
+						</dtsInstalledSystem>
+					</dtsInstalledSystemSet>
+					<dtsMeasurementSet>
+						<dtsMeasurement uid="1FO19-120050603-1">
+							<name>Wellbore 1FO19-1 measurement 3Jun2005</name>
+							<installedSystemUsed uidRef="1FO19-1-1">Wellbore 1FO19-1 installation 1</installedSystemUsed>
+							<dataInWellLog uidRef="1FO19-dts1">DT001</dataInWellLog>
+						</dtsMeasurement>
+					</dtsMeasurementSet>
+					<wellLogSet>
+	 					<wellLog uid="1FO19-dts1">
+							<name>DT001</name>
+							<serviceCompany>DTS Company X</serviceCompany>
+							<creationDate>2004-06-11T20:12:15</creationDate>
+							<indexType>length</indexType>
+							<logParam index="1" name="first parameter">YYYY</logParam>
+							<logParam index="1" name="third parameter">true</logParam>
+							<logParam index="1" name="fourth parameter">492.2</logParam>
+							<logParam index="1" name="fifth parameter">0.2497</logParam>
+							<logParam index="1" name="sixth parameter">0.8445</logParam>
+							<logParam index="1" name="seventh parameter" uom="ddegC">19.02</logParam>
+							<logParam index="1" name="eighth parameter" uom="db/km">0.269</logParam>
+							<logParam index="1" name="ninth parameter">6.99</logParam>
+							<logParam index="1" name="tenth parameter" uom="degC">12.2</logParam>
+							<logParam index="2" name="tenth parameter" uom="degC">13.3</logParam>
+							<logParam index="1" name="calculation method">DTS Company X internal</logParam>
+							<logParam index="1" name="calculation method version">1.1</logParam>
+							<logCurveInfo uid="LAF">
+								<mnemonic>LAF</mnemonic>
+								<classWitsml>length along fiber</classWitsml>
+								<unit>m</unit>
+								<curveDescription>length along the fiber, with zero point where the fiber emerges from the instrument box.</curveDescription>
+							</logCurveInfo>
+							<logCurveInfo uid="TEMP">
+								<mnemonic>TEMP</mnemonic>
+								<classWitsml>DTS temperature</classWitsml>
+								<unit>degC</unit>
+								<curveDescription>Calculated temperature value, after corrections.</curveDescription>
+							</logCurveInfo>
+							<logCurveInfo uid="ST">
+								<mnemonic>ST</mnemonic>
+								<classWitsml>Stokes intensity</classWitsml>
+								<curveDescription>Summed value of the stokes frequency</curveDescription>
+							</logCurveInfo>
+							<logCurveInfo uid="AST">
+								<mnemonic>AST</mnemonic>
+								<classWitsml>anti-Stokes intensity</classWitsml>
+								<curveDescription>Summed value of the anti-stokes frequency</curveDescription>
+							</logCurveInfo>
+							<blockInfo uid="1">
+								<indexType>length</indexType>
+								<direction>increasing</direction>
+								<indexCurve columnIndex="1">LAF</indexCurve>
+								<blockCurveInfo>
+									<curveId>LAF</curveId>
+									<columnIndex>1</columnIndex>
+								</blockCurveInfo>
+								<blockCurveInfo>
+									<curveId>TEMP</curveId>
+									<columnIndex>2</columnIndex>
+								</blockCurveInfo>
+								<blockCurveInfo>
+									<curveId>ST</curveId>
+									<columnIndex>3</columnIndex>
+								</blockCurveInfo>
+								<blockCurveInfo>
+									<curveId>AST</curveId>
+									<columnIndex>4</columnIndex>
+								</blockCurveInfo>
+							</blockInfo>
+							<logData>
+								<data id="1">8.776,27.51,2469381.354,1901640.98</data>
+								<data id="1">9.278,27.005,2320534.5,1782170.336</data>
+								<data id="1">9.78,26.505,2192484.861,1679296.566</data>
+								<data id="1">10.281,25.102,2122306.103,1613174.898</data>
+								<data id="1">10.783,24.529,2094591.895,1587087.951</data>
+								<data id="1">11.285,24.295,2085332.057,1578006.606</data>
+								<data id="1">11.787,24.322,2082312.362,1575909.093</data>
+								<data id="1">12.289,24.304,2082709.971,1576001.859</data>
+								<data id="1">12.791,24.358,2082038.717,1575914.364</data>
+								<data id="1">13.293,24.332,2077303.063,1572056.944</data>
+								<data id="1">13.795,24.307,2066563.314,1563676.817</data>
+								<data id="1">14.296,24.076,2053080.526,1551465.609</data>
+								<data id="1">14.798,23.936,2039563.062,1540018.394</data>
+								<data id="1">6376.116,70.727,5973.90778,5605.81108</data>
+								<data id="1">6376.618,71.786,5977.08585,5610.6533</data>
+								<data id="1">6377.12,64.281,5968.97841,5585.38395</data>
+								<data id="1">6377.621,67.287,5954.98627,5584.6577</data>
+								<data id="1">6378.123,68.591,5961.34656,5592.0862</data>
+								<data id="1">6378.625,75.835,5953.70309,5606.19371</data>
+								<data id="1">6379.127,69.746,5949.50744,5587.60835</data>
+								<data id="1">6379.629,75.285,5944.90094,5599.01836</data>
+								<data id="1">6380.131,72.074,5947.53536,5592.38251</data>
+								<data id="1">6380.633,73.313,5949.20449,5596.65452</data>
+								<data id="1">6381.135,69.899,5928.76325,5574.78153</data>
+								<data id="1">6381.636,82.491,5902.46968,5589.11148</data>
+								<data id="1">6382.138,76.609,5887.53466,5564.95765</data>
+								<data id="1">6382.64,62.487,5889.53994,5531.55928</data>
+								<data id="1">6383.142,64.094,5887.22507,5534.09908</data>
+							</logData>
+						</wellLog>
+					</wellLogSet>	
+				</wellbore>
+			</wellboreSet>
+		</well>
+	</wellSet>
+</WITSMLComposite>

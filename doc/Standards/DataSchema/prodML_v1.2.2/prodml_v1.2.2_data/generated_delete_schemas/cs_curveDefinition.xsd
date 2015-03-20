@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_curveDefinition">
+      <xsd:annotation>
+         <xsd:documentation>The definition of a curve.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="order" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The order of the value in the index or data tuple. If isIndex is true this is the order of the (independent) index element. If isIndex is false,
+               this is the order of the (dependent) value element.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parameter" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the variable in this curve.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="isIndex" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True (equal "1" or "true") indicates that this is an independent variable in this curve. At least one column column should be flagged as
+               independent.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="measureClass" type="prodml:MeasureClass" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The measure class of the variable. This defines which units of measure are valid for the value.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="unit" type="prodml:uomString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The unit of measure of the variable. The unit of measure must match a unit allowed by the measure class.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the port.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

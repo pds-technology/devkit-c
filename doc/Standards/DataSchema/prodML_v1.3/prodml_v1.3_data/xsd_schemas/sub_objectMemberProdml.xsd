@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="obj_dtsInstalledSystem.xsd"/>
+	<xsd:include schemaLocation="obj_dtsInstrumentBox.xsd"/>
+	<xsd:include schemaLocation="obj_dtsMeasurement.xsd"/>
+	<xsd:include schemaLocation="obj_fiberOpticalPath.xsd"/>
+	<xsd:include schemaLocation="obj_fluidAnalysis.xsd"/>
+	<xsd:include schemaLocation="obj_fluidAnalysisResult.xsd"/>
+	<xsd:include schemaLocation="obj_fluidSample.xsd"/>
+	<xsd:include schemaLocation="obj_productFlowModel.xsd"/>
+	<xsd:include schemaLocation="obj_productionOperation.xsd"/>
+	<xsd:include schemaLocation="obj_productVolume.xsd"/>
+	<xsd:include schemaLocation="obj_timeSeriesData.xsd"/>
+	<xsd:include schemaLocation="obj_timeSeriesStatistic.xsd"/>
+	<xsd:include schemaLocation="obj_wellTest.xsd"/>
+	<xsd:include schemaLocation="obj_wftRun.xsd"/>
+	<!--                                                         -->
+	<!-- The following schema is only used for context of an aggregate. -->
+	<xsd:include schemaLocation="obj_report.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>WITSML Object Substitution Group Members.
+		This file is only an example.
+		It defines the available object substitution group members in this release.
+		This is only relevant to the Energistics aggregate object.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<!--                                                         -->
+</xsd:schema>

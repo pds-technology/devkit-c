@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>A description of a contaminant in a fluid sample. Used in fluid report.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_fluidResultContaminant">
+      <xsd:sequence>
+         <xsd:element name="contaminantKind" type="prodml:FluidContaminant" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="weightPercent" type="prodml:massConcentrationMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="volumePercent" type="prodml:volumePerVolumeMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="description" type="prodml:descriptionString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

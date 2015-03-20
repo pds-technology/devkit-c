@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumePortDifference" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Product Volume Port Differential characteristics.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="port" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A port on the other end of an internal connection. This should always be specified if a Product Flow Network is being referenced by this report.
+               If this is not specified then there is an assumption that there is only one other port for the unit. For example, if this end of the connection represents an inlet
+               port then the implied other end is the outlet port for the unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="presDiff" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The differential pressure between the ports.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tempDiff" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The differential temperature between the ports.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="chokeSize" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The size of the choke. This characterizes the overall unit with respect to the flow restriction between the ports. The restriction might be
+               implemented using a valve or an actual choke.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="chokeRelative" type="prodml:lengthPerLengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The relative size of the choke restriction. This characterizes the overall unit with respect to the flow restriction between the ports. The
+               restriction might be implemented using a valve or an actual choke.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

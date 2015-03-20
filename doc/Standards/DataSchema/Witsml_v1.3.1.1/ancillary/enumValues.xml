@@ -1,0 +1,2595 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../stylesheets/WitsmlEnumList.xsl" type="text/xsl" media="screen"?>
+
+<!--
+This file is distributed under the POSC License Agreement at
+http://www.posc.org/about/license.shtml.
+Use of this file constitutes agreement with the POSC License Agreement.
+-->
+
+<enumListSet 
+	xmlns="http://www.witsml.org/schemas/131" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.witsml.org/schemas/131 
+			   ../cs_enumValues.xsd" 
+	version="1.3.1.1">
+	<enumList>
+		<name>ActivityCode</name>
+		<description>Activity codes.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>abandonment</name>
+			<description>abandonment</description>
+		</value>
+		<value>
+			<name>abandonment -- log plugs</name>
+			<description>A specialization of 'abandonment'.</description>
+		</value>
+		<value>
+			<name>abandonment -- run plugs</name>
+			<description>A specialization of 'abandonment'.</description>
+		</value>
+		<value>
+			<name>abandonment -- wait on cement</name>
+			<description>A specialization of 'abandonment'.</description>
+		</value>
+		<value>
+			<name>casing, cement</name>
+			<description>casing and cement</description>
+		</value>
+		<value>
+			<name>casing, cement -- circulate, cement</name>
+			<description>A specialization of 'casing, cement': circulate and cement</description>
+		</value>
+		<value>
+			<name>casing, cement -- other</name>
+			<description>A specialization of 'casing, cement'.</description>
+		</value>
+		<value>
+			<name>casing, cement -- rig up, run casing</name>
+			<description>A specialization of 'casing, cement': rig up and run casing</description>
+		</value>
+		<value>
+			<name>casing, cement -- rig up, run liner</name>
+			<description>A specialization of 'casing, cement': rig up and run liner</description>
+		</value>
+		<value>
+			<name>casing, cement -- wait on cement</name>
+			<description>A specialization of 'casing, cement'.</description>
+		</value>
+		<value>
+			<name>completion operations</name>
+			<description>After reaching total depth, any operations for completing the well and bringing it on production - no further detail is known.</description>
+		</value>
+		<value>
+			<name>completion operations -- rig up</name>
+			<description>Rig up completion equipment.</description>
+		</value>
+		<value>
+			<name>completion operations -- tear down</name>
+			<description>Tear down completion equipment.</description>
+		</value>
+		<value>
+			<name>completion operations -- testing </name>
+			<description>Pre-production flow testing in the well completion phase.</description>
+		</value>
+		<value>
+			<name>completion operations -- running liner</name>
+			<description>Running the production liner.</description>
+		</value>
+		<value>
+			<name>completion operations -- gravel packing</name>
+			<description>Completion operation for producing zones.</description>
+		</value>
+		<value>
+			<name>completion operations -- logging</name>
+			<description>Production logging tool runs.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate</name>
+			<description>condition mud and circulate</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- boulder or gravel</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- casing</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- cementing</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- circulate samples</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- coring</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- drilling</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- fishing</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- gumbo attack</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- logging</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- lost circulation</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>cond mud, circulate -- well control</name>
+			<description>A specialization of 'cond mud, circulate'.</description>
+		</value>
+		<value>
+			<name>coring</name>
+			<description>coring</description>
+		</value>
+		<value>
+			<name>coring -- conventional</name>
+			<description>A specialization of 'coring'.</description>
+		</value>
+		<value>
+			<name>coring -- flow check</name>
+			<description>A specialization of 'coring'.</description>
+		</value>
+		<value>
+			<name>coring -- laydown barrel</name>
+			<description>A specialization of 'coring'.</description>
+		</value>
+		<value>
+			<name>coring -- oriented</name>
+			<description>A specialization of 'coring'.</description>
+		</value>
+		<value>
+			<name>coring -- plastic sleeve</name>
+			<description>A specialization of 'coring'.</description>
+		</value>
+		<value>
+			<name>coring -- rig up core barrel</name>
+			<description>A specialization of 'coring'.</description>
+		</value>
+		<value>
+			<name>coring -- sponge</name>
+			<description>A specialization of 'coring'.</description>
+		</value>
+		<value>
+			<name>cut, slip drilling line</name>
+			<description>cut and slip drilling line</description>
+		</value>
+		<value>
+			<name>deviation survey</name>
+			<description>deviation survey</description>
+		</value>
+		<value>
+			<name>deviation survey -- dir multi-shot</name>
+			<description>A specialization of 'deviation survey': directional multi-shot</description>
+		</value>
+		<value>
+			<name>deviation survey -- dir single shot</name>
+			<description>A specialization of 'deviation survey': directional single shot</description>
+		</value>
+		<value>
+			<name>deviation survey -- drift</name>
+			<description>A specialization of 'deviation survey'.</description>
+		</value>
+		<value>
+			<name>deviation survey -- gyro</name>
+			<description>A specialization of 'deviation survey'.</description>
+		</value>
+		<value>
+			<name>deviation survey -- MWD</name>
+			<description>A specialization of 'deviation survey'.</description>
+		</value>
+		<value>
+			<name>dir work</name>
+			<description>directional work</description>
+		</value>
+		<value>
+			<name>dir work -- horizontal drilling</name>
+			<description>A specialization of 'dir work'.</description>
+		</value>
+		<value>
+			<name>dir work -- motor drilling</name>
+			<description>A specialization of 'dir work'.</description>
+		</value>
+		<value>
+			<name>dir work -- orient</name>
+			<description>A specialization of 'dir work'.</description>
+		</value>
+		<value>
+			<name>dir work -- rotary drilling</name>
+			<description>A specialization of 'dir work'.</description>
+		</value>
+		<value>
+			<name>dir work -- slant drilling</name>
+			<description>A specialization of 'dir work'.</description>
+		</value>
+		<value>
+			<name>DST</name>
+			<description>drill stem test</description>
+		</value>
+		<value>
+			<name>DST -- cased hole</name>
+			<description>A specialization of 'DST'.</description>
+		</value>
+		<value>
+			<name>DST -- lay down tools</name>
+			<description>A specialization of 'DST'.</description>
+		</value>
+		<value>
+			<name>DST -- open hole</name>
+			<description>A specialization of 'DST'.</description>
+		</value>
+		<value>
+			<name>DST -- open hole closed chamber</name>
+			<description>A specialization of 'DST'.</description>
+		</value>
+		<value>
+			<name>DST -- rig up tools</name>
+			<description>A specialization of 'DST'.</description>
+		</value>
+		<value>
+			<name>drilling</name>
+			<description>drilling</description>
+		</value>
+		<value>
+			<name>drilling -- casing</name>
+			<description>A specialization of 'drilling'.</description>
+		</value>
+		<value>
+			<name>drilling -- connection</name>
+			<description>A specialization of 'drilling'.</description>
+		</value>
+		<value>
+			<name>drilling -- drill cement, float equip</name>
+			<description>A specialization of 'drilling': drill out cement and/or float equipment</description>
+		</value>
+		<value>
+			<name>drilling -- flow check</name>
+			<description>A specialization of 'drilling'.</description>
+		</value>
+		<value>
+			<name>drilling -- hole opening</name>
+			<description>A specialization of 'drilling'.</description>
+		</value>
+		<value>
+			<name>drilling -- new hole</name>
+			<description>A specialization of 'drilling'.</description>
+		</value>
+		<value>
+			<name>drilling -- sidetracking</name>
+			<description>A specialization of 'drilling'.</description>
+		</value>
+		<value>
+			<name>drilling -- under-reaming</name>
+			<description>A specialization of 'drilling'.</description>
+		</value>
+		<value>
+			<name>fishing</name>
+			<description>fishing</description>
+		</value>
+		<value>
+			<name>fishing -- BHA</name>
+			<description>A specialization of 'fishing'.</description>
+		</value>
+		<value>
+			<name>fishing -- casing</name>
+			<description>A specialization of 'fishing'.</description>
+		</value>
+		<value>
+			<name>fishing -- cones</name>
+			<description>>A specialization of 'fishing'.</description>
+		</value>
+		<value>
+			<name>fishing -- other</name>
+			<description>A specialization of 'fishing'.</description>
+		</value>
+		<value>
+			<name>fishing -- stuck pipe</name>
+			<description>A specialization of 'fishing'.</description>
+		</value>
+		<value>
+			<name>fishing -- wireline tools</name>
+			<description>A specialization of 'fishing'.</description>
+		</value>
+		<value>
+			<name>HSE</name>
+			<description>Health, Safety and Environmental</description>
+		</value>
+		<value>
+			<name>HSE -- hold drill</name>
+			<description>A specialization of 'HSE'.</description>
+		</value>
+		<value>
+			<name>HSE -- incident</name>
+			<description>A specialization of 'HSE'.</description>
+		</value>
+		<value>
+			<name>HSE -- safety meeting</name>
+			<description>A specialization of 'HSE'.</description>
+		</value>
+		<value>
+			<name>mill</name>
+			<description>mill</description>
+		</value>
+		<value>
+			<name>mill -- cut casing or tubing</name>
+			<description>A specialization of 'mill'.</description>
+		</value>
+		<value>
+			<name>mill -- milling</name>
+			<description>A specialization of 'mill'.</description>
+		</value>
+		<value>
+			<name>miscellaneous</name>
+			<description>miscellaneous</description>
+		</value>
+		<value>
+			<name>nipple up BOP</name>
+			<description>nipple up blowout preventer</description>
+		</value>
+		<value>
+			<name>nipple up BOP -- diverter</name>
+			<description>A specialization of 'nipple up BOP'.</description>
+		</value>
+		<value>
+			<name>nipple up BOP -- manifold</name>
+			<description>A specialization of 'nipple up BOP'.</description>
+		</value>
+		<value>
+			<name>nipple up BOP -- other</name>
+			<description>A specialization of 'nipple up BOP'.</description>
+		</value>
+		<value>
+			<name>nipple up BOP -- PVT system</name>
+			<description>A specialization of 'nipple up BOP'.</description>
+		</value>
+		<value>
+			<name>nipple up BOP -- stack</name>
+			<description>A specialization of 'nipple up BOP'.</description>
+		</value>
+		<value>
+			<name>plug back</name>
+			<description>plug back</description>
+		</value>
+		<value>
+			<name>plug back -- abandonment</name>
+			<description>A specialization of 'plug back'.</description>
+		</value>
+		<value>
+			<name>plug back -- kick off plug</name>
+			<description>A specialization of 'plug back'.</description>
+		</value>
+		<value>
+			<name>plug back -- lost circulation</name>
+			<description>A specialization of 'plug back'.</description>
+		</value>
+		<value>
+			<name>plug back -- wait on cement</name>
+			<description>A specialization of 'plug back'.</description>
+		</value>
+		<value>
+			<name>plug back -- well control</name>
+			<description>A specialization of 'plug back'.</description>
+		</value>
+		<value>
+			<name>pressure test</name>
+			<description>pressure test</description>
+		</value>
+		<value>
+			<name>pressure test -- BOP manifold</name>
+			<description>A specialization of 'pressure test'.</description>
+		</value>
+		<value>
+			<name>pressure test -- BOP stack</name>
+			<description>A specialization of 'pressure test'.</description>
+		</value>
+		<value>
+			<name>pressure test -- form integrity test</name>
+			<description>A specialization of 'pressure test': formation integrity test</description>
+		</value>
+		<value>
+			<name>pressure test -- form leak off test</name>
+			<description>A specialization of 'pressure test': formation leak off test</description>
+		</value>
+		<value>
+			<name>pressure test -- packer</name>
+			<description>A specialization of 'pressure test'.</description>
+		</value>
+		<value>
+			<name>pressure test -- PIT</name>
+			<description>A specialization of 'pressure test'.</description>
+		</value>
+		<value>
+			<name>reaming</name>
+			<description>reaming</description>
+		</value>
+		<value>
+			<name>reaming -- back reaming</name>
+			<description>A specialization of 'reaming'.</description>
+		</value>
+		<value>
+			<name>reaming -- coring</name>
+			<description>A specialization of 'reaming'.</description>
+		</value>
+		<value>
+			<name>reaming -- drill</name>
+			<description>A specialization of 'reaming'.</description>
+		</value>
+		<value>
+			<name>reaming -- logging</name>
+			<description>A specialization of 'reaming'.</description>
+		</value>
+		<value>
+			<name>reaming -- under-reaming</name>
+			<description>A specialization of 'reaming'.</description>
+		</value>
+		<value>
+			<name>rig move</name>
+			<description>rig move</description>
+		</value>
+		<value>
+			<name>rig move -- anchor handling</name>
+			<description>A specialization of 'rig move'.</description>
+		</value>
+		<value>
+			<name>rig move -- inter-pad move</name>
+			<description>A specialization of 'rig move'.</description>
+		</value>
+		<value>
+			<name>rig move -- inter-well move</name>
+			<description>A specialization of 'rig move'.</description>
+		</value>
+		<value>
+			<name>rig move -- jack up or down</name>
+			<description>A specialization of 'rig move'.</description>
+		</value>
+		<value>
+			<name>rig move -- other</name>
+			<description>A specialization of 'rig move'.</description>
+		</value>
+		<value>
+			<name>rig move -- position rig</name>
+			<description>A specialization of 'rig move'.</description>
+		</value>
+		<value>
+			<name>rig move -- skid rig</name>
+			<description>A specialization of 'rig move'.</description>
+		</value>
+		<value>
+			<name>rig release</name>
+			<description>rig release</description>
+		</value>
+		<value>
+			<name>rig release -- cut casing</name>
+			<description>A specialization of 'rig release'.</description>
+		</value>
+		<value>
+			<name>rig release -- install capping assembly</name>
+			<description>A specialization of 'rig release'.</description>
+		</value>
+		<value>
+			<name>rig release -- MOB or DE-MOB</name>
+			<description>A specialization of 'rig release'.</description>
+		</value>
+		<value>
+			<name>rig repairs</name>
+			<description>rig repairs</description>
+		</value>
+		<value>
+			<name>rig repairs -- drawworks</name>
+			<description>A specialization of 'rig repairs'.</description>
+		</value>
+		<value>
+			<name>rig repairs -- electrical</name>
+			<description>A specialization of 'rig repairs'.</description>
+		</value>
+		<value>
+			<name>rig repairs -- mud system</name>
+			<description>A specialization of 'rig repairs'.</description>
+		</value>
+		<value>
+			<name>rig repairs -- other</name>
+			<description>A specialization of 'rig repairs'.</description>
+		</value>
+		<value>
+			<name>rig repairs -- rotary</name>
+			<description>A specialization of 'rig repairs'.</description>
+		</value>
+		<value>
+			<name>rig repairs -- subsea equipment</name>
+			<description>A specialization of 'rig repairs'.</description>
+		</value>
+		<value>
+			<name>rig repairs -- well control equipment</name>
+			<description>A specialization of 'rig repairs'.</description>
+		</value>
+		<value>
+			<name>rig service</name>
+			<description>rig service</description>
+		</value>
+		<value>
+			<name>rig service -- lubricate rig</name>
+			<description>A specialization of 'rig service'.</description>
+		</value>
+		<value>
+			<name>rig service -- test equipment</name>
+			<description>A specialization of 'rig service'.</description>
+		</value>
+		<value>
+			<name>rig up or tear down</name>
+			<description>rig up or tear down</description>
+		</value>
+		<value>
+			<name>rig up or tear down -- rig up</name>
+			<description>A specialization of 'rig up or tear down'.</description>
+		</value>
+		<value>
+			<name>rig up or tear down -- site work</name>
+			<description>A specialization of 'rig up or tear down'.</description>
+		</value>
+		<value>
+			<name>rig up or tear down -- tear down</name>
+			<description>A specialization of 'rig up or tear down'.v</description>
+		</value>
+		<value>
+			<name>run or pull riser</name>
+			<description>run or pull riser</description>
+		</value>
+		<value>
+			<name>run or pull riser -- other</name>
+			<description>A specialization of 'run or pull riser'.</description>
+		</value>
+		<value>
+			<name>run or pull riser -- run or pull riser</name>
+			<description>A specialization of 'run or pull riser'.</description>
+		</value>
+		<value>
+			<name>squeeze cement</name>
+			<description>squeeze cement</description>
+		</value>
+		<value>
+			<name>squeeze cement -- casing repair</name>
+			<description>A specialization of 'squeeze cement'.</description>
+		</value>
+		<value>
+			<name>squeeze cement -- casing shoe</name>
+			<description>A specialization of 'squeeze cement'.</description>
+		</value>
+		<value>
+			<name>squeeze cement -- parted casing</name>
+			<description>A specialization of 'squeeze cement'.</description>
+		</value>
+		<value>
+			<name>squeeze cement -- perforations DST</name>
+			<description>A specialization of 'squeeze cement'.</description>
+		</value>
+		<value>
+			<name>stuck pipe</name>
+			<description>stuck pipe</description>
+		</value>
+		<value>
+			<name>surface string handling</name>
+			<description>surface string handling</description>
+		</value>
+		<value>
+			<name>testing general</name>
+			<description>Testing of any nature, if more detail is not known.</description>
+		</value>
+		<value>
+			<name>testing general -- equipment</name>
+			<description>A specialization of 'testing general'. Testing of surface equipment, or downhole equipment tested at surface.</description>
+		</value>
+		<value>
+			<name>testing general -- flow</name>
+			<description>A specialization of 'testing general'. Well Flow testing, in the pre-production phase of the well.</description>
+		</value>
+		<value>
+			<name>tripping</name>
+			<description>tripping</description>
+		</value>
+		<value>
+			<name>tripping -- back-reaming</name>
+			<description>A specialization of 'tripping'.</description>
+		</value>
+		<value>
+			<name>tripping -- flow check</name>
+			<description>A specialization of 'tripping'.</description>
+		</value>
+		<value>
+			<name>tripping -- short trip in</name>
+			<description>A specialization of 'tripping'.</description>
+		</value>
+		<value>
+			<name>tripping -- short trip out</name>
+			<description>A specialization of 'tripping'.</description>
+		</value>
+		<value>
+			<name>tripping -- trip in (from surface)</name>
+			<description>A specialization of 'tripping'.</description>
+		</value>
+		<value>
+			<name>tripping -- trip out (to surface)</name>
+			<description>A specialization of 'tripping'.</description>
+		</value>
+		<value>
+			<name>wait</name>
+			<description>wait</description>
+		</value>
+		<value>
+			<name>wait -- daylight</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- environmental or regulatory</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- equipment</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- holiday</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- ice</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- on orders</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- operator</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- other</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- partners</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- service company</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>wait -- weather</name>
+			<description>A specialization of 'wait'.</description>
+		</value>
+		<value>
+			<name>well control</name>
+			<description>well control</description>
+		</value>
+		<value>
+			<name>well control -- mix</name>
+			<description>A specialization of 'well control'.</description>
+		</value>
+		<value>
+			<name>well control -- shut in</name>
+			<description>A specialization of 'well control'.</description>
+		</value>
+		<value>
+			<name>well control -- strip</name>
+			<description>A specialization of 'well control'.</description>
+		</value>
+		<value>
+			<name>well control -- well kill</name>
+			<description>A specialization of 'well control'.</description>
+		</value>
+		<value>
+			<name>well srvc</name>
+			<description>well services</description>
+		</value>
+		<value>
+			<name>well srvc -- casing repair</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- clean well to compl fluid</name>
+			<description>cleanout well to completion fluid</description>
+		</value>
+		<value>
+			<name>well srvc -- coiled tubing work</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- gravel pack</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- install or test xmas tree</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- kill well</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- land, set, test completion</name>
+			<description>A specialization of 'well srvc': land, set and test completion</description>
+		</value>
+		<value>
+			<name>well srvc -- perforate</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- pull completion</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- pull suspension plugs</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- run completion</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- run screens</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- sand control</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- stimulation</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- subsea work</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- surface line work</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- suspend well or pull BOPs</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- test well</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- wash</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- wireline work</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- work tubulars</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>well srvc -- workstring run</name>
+			<description>A specialization of 'well srvc'.</description>
+		</value>
+		<value>
+			<name>wireline logs</name>
+			<description>wireline logs</description>
+		</value>
+		<value>
+			<name>wireline logs -- abandonment</name>
+			<description>A specialization of 'wireline logs'.</description>
+		</value>
+		<value>
+			<name>wireline logs -- evaluation</name>
+			<description>A specialization of 'wireline logs'.</description>
+		</value>
+		<value>
+			<name>wireline logs -- form tester</name>
+			<description>A specialization of 'wireline logs': formation tester</description>
+		</value>
+		<value>
+			<name>wireline logs -- other</name>
+			<description>A specialization of 'wireline logs'.</description>
+		</value>
+		<value>
+			<name>wireline logs -- side wall cores</name>
+			<description>A specialization of 'wireline logs'.</description>
+		</value>
+		<value>
+			<name>wireline logs -- velocity</name>
+			<description>A specialization of 'wireline logs'.</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>LithologyType</name>
+		<description>These values represent the lithological terminology used 
+		in descriptions of rock cuttings in mud logs.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>andesite</name>
+			<description>Intermediate porphyritic volcanic rock consisting of plagioclase, pyroxene, hornblende and bitotite.</description>
+		</value>
+		<value>
+			<name>anhydrite</name>
+			<description>The mineral form of anhydrous calcium sulfate, commonly massive in evaporite beds.</description>
+		</value>
+		<value>
+			<name>arkose</name>
+			<description>An indurated arenaceous deposit consisting chiefly of quartz and feldspar (>25%).</description>
+		</value>
+		<value>
+			<name>basalt</name>
+			<description>Volcanic rock consisting essentially of plagioclase feldspar and pyroxene.</description>
+		</value>
+		<value>
+			<name>breccia</name>
+			<description>A lithified rock rich in angular fragments of size greater than 2mm.</description>
+		</value>
+		<value>
+			<name>calcarenite</name>
+			<description>A limestone more than half of which consists of cemented sand-size grains of calcium carbonate: a consolidated calcareous sand.</description>
+		</value>
+		<value>
+			<name>calcilutite</name>
+			<description>A limestone more than half of which consists of detrital calcite particles of silt and/or clay size: a consolidated calcareous mud.</description>
+		</value>
+		<value>
+			<name>calcisiltite</name>
+			<description>A limestone more than half of which consists of detrital calcite particles of silt size: a consolidated calcareous silt.</description>
+		</value>
+		<value>
+			<name>chalk</name>
+			<description>A fine-grained limestone composed largely of coccolith fragments.</description>
+		</value>
+		<value>
+			<name>chert</name>
+			<description>Siliceous sedimentary rock containing finely crystalline snd fibrous quartz.</description>
+		</value>
+		<value>
+			<name>clay</name>
+		<description>Unconsolidated deposit of very fine particles of size generally less than 1/256mm and composed of clay minerals.</description>
+		</value>
+		<value>
+			<name>claystone</name>
+			<description>An indurated clay, lacking the fissility of shale.</description>
+		</value>
+		<value>
+			<name>coal</name>
+			<description>A combustible organic sedimentary rock with less than 40% of mineral matter (based on dry material) composed of polymers of cyclic hydrocarbons.</description>
+		</value>
+		<value>
+			<name>conglomerate</name>
+			<description>An indurated sedimentary rock containing an essential quantity of rounded rock fragments larger than 2mm, and normally having a matrix of sand.</description>
+		</value>
+		<value>
+			<name>diabase</name>
+			<description>Igneous rock of grain size intermediate between basalt and gabbro composed of plagioclase feldspar, pyroxene and opaque minerals. Synonym: dolerite.</description>
+		</value>
+		<value>
+			<name>diorite</name>
+			<description>Plutonic igneous rock consisting of plagioclase feldspar, commonly with hornblende and biotite.</description>
+		</value>
+		<value>
+			<name>dolomite</name>
+			<description>Sedimentary rock containing more than 90% dolomite (mineral) and less than 10% calcite.</description>
+		</value>
+		<value>
+			<name>dolomite, calcareous</name>
+			<description>A dolomite rock containing more than 10% calcite.</description>
+		</value>
+		<value>
+			<name>extrusive rock (volcanic)</name>
+			<description>Igneous rocks formed by solidification of material erupted sub-aerially or sub-aqueously onto the earth's surface, as either lava flows or pyroclastic material.</description>
+		</value>
+		<value>
+			<name>feldspar</name>
+			<description>The family of aluminium silicates of sodium, potassium, calcium and other metals which comprise over 60% of the earth's crust, are the most abundant mineral group, and occur in all types of rocks.</description>
+		</value>
+		<value>
+			<name>gabbro</name>
+			<description>Coarse grained plutonic igneous rock composed essentially of calcic plagioclase feldspar, pyroxenes and iron oxide.</description>
+		</value>
+		<value>
+			<name>glauconite</name>
+			<description>A mineral composed of ferrous potassium silicates related to mica which commonly imparts a green color to its sedimentary host rock.</description>
+		</value>
+		<value>
+			<name>gneiss</name>
+			<description>A metamorphic rock, commonly foliated and crystalline, whose mineral content can range from quartz and feldspars to amphiboles and pyroxenes.</description>
+		</value>
+		<value>
+			<name>granite</name>
+			<description>Coarse grained plutonic rock typically containing free quartz, alkali feldspar and biotite mica.</description>
+		</value>
+		<value>
+			<name>gravel</name>
+			<description>An unconsolidated deposit of coarse clastics. The diameters on the Wenworth scale are generally greater than 2mm.</description>
+		</value>
+		<value>
+			<name>greenstones</name>
+			<description>A field term for any dark fine grained altered or metamorphosed basic igneous rock.</description>
+		</value>
+		<value>
+			<name>greywacke</name>
+			<description>A dark grey consolidated deposit containing feldspar, rock fragments and a dark chloritic matrix.</description>
+		</value>
+		<value>
+			<name>gumbo</name>
+			<description>A term used in the U.S. for clay soils that become sticky, impervious, and plastic when wet.</description>
+		</value>
+		<value>
+			<name>gypsum</name>
+			<description>A mineral composed of hydrous calcium sulphate, commonly forming thick extensive evaporite beds.</description>
+		</value>
+		<value>
+			<name>halite</name>
+			<description>A mineral composed of sodium chloride common in evaporite rocks.</description>
+		</value>
+		<value>
+			<name>igneous</name>
+			<description>Term applied to rock or mineral formed by solidification of molten or partly molten material (magma).</description>
+		</value>
+		<value>
+			<name>intrusvie rock (plutonic)</name>
+			<description>Igneous rock formed by cooling and solidification of magma within the earth's crust.</description>
+		</value>
+		<value>
+			<name>lignite</name>
+			<description>A low-rank humic coal.</description>
+		</value>
+		<value>
+			<name>limestone</name>
+			<description>A sedimentary rock composed mostly of the mineral calcite (calcium carbonate) which is the consolidated equivalent of lime mud, calcareous sand, and/or shell fragments.</description>
+		</value>
+		<value>
+			<name>limestone, argillaceous</name>
+		<description>A limestone homogeneously mixed with 10-50% clay minerals.</description>
+		</value>
+		<value>
+			<name>limestone, dolomitic</name>
+			<description>A limestone containing 10-50% dolomite and 50-90% calcite.</description>
+		</value>
+		<value>
+			<name>limestone, sandy</name>
+			<description>A limestone homogeneously mixed with 10-50% quartz grains.</description>
+		</value>
+		<value>
+			<name>marble</name>
+			<description>A metamorphic rock composed of calcite.</description>
+		</value>
+		<value>
+			<name>marl</name>
+			<description>A consolidated or semi-consolidated mixture of clay and generally fine grained carbonate material.</description>
+		</value>
+		<value>
+			<name>metamorphic rocks</name>
+			<description>Rocks formed by mineralogical, chemical and structural alteration of pre-existing rocks under conditions of temperature and pressure at depth in the earth.</description>
+		</value>
+		<value>
+			<name>mudstone</name>
+			<description>Consolidated and indurated mud.</description>
+		</value>
+		<value>
+			<name>no description</name>
+			<description>No description is provided.</description>
+		</value>
+		<value>
+			<name>no sample</name>
+			<description>No sample is provided.</description>
+		</value>
+		<value>
+			<name>ophiolite</name>
+			<description>Basic and ultra-basic igneous rocks and their metamorposed, often hydrated, derivatives, believed to represent former oceanic crust.</description>
+		</value>
+		<value>
+			<name>peat</name>
+			<description>Unconsolidated, semi-carbonised plant remains which are a precursor of humic coal.</description>
+		</value>
+		<value>
+			<name>phosphate</name>
+			<description>Any mineral compound containing the ((PO4)3) radical.</description>
+		</value>
+		<value>
+			<name>phosphate rock</name>
+			<description>Any rock containing phosphate minerals such as apatite of sufficient purity and abundance to be an economic resource.</description>
+		</value>
+		<value>
+			<name>potassium and magnesium salts</name>
+			<description>Salts such as sylvinite, carnalite, keiserite with swelling properties that can severely obstruct drilling operations.</description>
+		</value>
+		<value>
+			<name>quartzite</name>
+			<description>A sedimentary rock composed of more than 95% of quartz.</description>
+		</value>
+		<value>
+			<name>rhyolite</name>
+			<description>Silica rich volcanic rock consisting of quartz and alkali feldspar with minor plagioclase and biotite.</description>
+		</value>
+		<value>
+			<name>salt</name>
+			<description>Common term for naturally occurring sodium chloride.</description>
+		</value>
+		<value>
+			<name>sand</name>
+			<description>An aggregation of particles having diameters in the range 1/16mm to 2mm usually consisting of quartz.</description>
+		</value>
+		<value>
+			<name>sandstone</name>
+			<description>A sedimentary rock composed of indurated sand.</description>
+		</value>
+		<value>
+			<name>schist</name>
+			<description>A strongly foliated crystalline metamorphic rock.</description>
+		</value>
+		<value>
+			<name>serpentine</name>
+			<description>A rock forming mineral of hydrous iron and magnesium silicates, often resulting from metamorhism of amphiboles and pyroxenes.</description>
+		</value>
+		<value>
+			<name>shale</name>
+			<description>A fine-grained sedimentary rock formed by the compaction of clay, silt or mud.</description>
+		</value>
+		<value>
+			<name>silt</name>
+			<description>Unconsolidated sedimentary material with grain sizes between 1/16mm and 1/256mm.</description>
+		</value>
+		<value>
+			<name>siltstone</name>
+			<description>Consolidated silt.</description>
+		</value>
+		<value>
+			<name>slate</name>
+			<description>A compact fine-grained metamorphic rock displaying slaty cleavage along which the rock may be cut into sheets.</description>
+		</value>
+		<value>
+			<name>syenite</name>
+			<description>Plutonic igneous rock composed essentially of alkali feldspar, with lesser sodic plagioclase, biotite and hornblende, and minor quartz.</description>
+		</value>
+		<value>
+			<name>tillite (diamictite)</name>
+			<description>Consolidated unsorted glacial deposits with particles ranging from boulder to mud in grain size and of highly variable composition.</description>
+		</value>
+		<value>
+			<name>trachyte</name>
+			<description>A group of fine-grained often porphyritic volcanic rocks containing alkali feldspar and minor mafic minerals.</description>
+		</value>
+		<value>
+			<name>tuff</name>
+			<description>An indurated pyroclastic deposit, predominantly consisting of fine-grained volcanic rocks: sedimentary particles may be present. Tuff may be deposited sub-aerially or sub-aqueously, and may be well sorted or heterogeneous.</description>
+		</value>
+		<value>
+			<name>ultrabasic</name>
+			<description>A class of igneous rocks composed mostly of mafic minerals such as pyroxenes along with calcic feldspar, with no free silica and a total silica content less than about 45%.</description>
+		</value>
+		<value>
+			<name>undifferentiated</name>
+			<description>The lithology is not differentiated. This is typically used to fill 
+			out a lithology description to 100 percent.</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in 
+			some situations.</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>QualifierType</name>
+		<description>These values represent the type of qualifier in lithology.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>anhydritic</name>
+			<description>Indicates that the associated lithology contains anhydrite</description>
+		</value>
+		<value>
+			<name>argillaceous</name>
+			<description>Indicates that the associated lithology has a clay content</description>
+		</value>
+		<value>
+			<name>barite</name>
+			<description>The mineral form of Barium sulphate.</description>
+		</value>
+		<value>
+			<name>belemnitic</name>
+			<description>Indicates that the associated lithology contains belemnite fossils or fragments thereof.</description>
+		</value>
+		<value>
+			<name>bioturbated</name>
+			<description>Indicates that the associated lithology has been disturbed by organisms before consolidation.</description>
+		</value>
+		<value>
+			<name>bituminous</name>
+			<description>Indicates that the associated lithology contains bituminous material</description>
+		</value>
+		<value>
+			<name>bryozoans</name>
+			<description>Indicates that the associated lithology contains bryozoan fossils or fragments thereof.</description>
+		</value>
+		<value>
+			<name>burrowed</name>
+			<description>Indicates that the associated lithology has been disturbed by burrowing organisms before consolidation</description>
+		</value>
+		<value>
+			<name>calcareous</name>
+			<description>Indicates that the associated lithology has a calcite content</description>
+		</value>
+		<value>
+			<name>calcite concr</name>
+			<description>Indicates that the associated lithology has calcite concretions</description>
+		</value>
+		<value>
+			<name>carbonaceous</name>
+			<description>Indicates that the associated lithology contains carbonaceous material</description>
+		</value>
+		<value>
+			<name>chalky</name>
+			<description>Indicates that the associated lithology has a chalk content</description>
+		</value>
+		<value>
+			<name>chamosite</name>
+			<description>Indicates that the associated lithology contains chamosite</description>
+		</value>
+		<value>
+			<name>chert</name>
+			<description>Indicates that the associated lithology contains chert fragments</description>
+		</value>
+		<value>
+			<name>chlorite</name>
+			<description>Indicates that the associated lithology contains chlorite</description>
+		</value>
+		<value>
+			<name>concretions</name>
+			<description>Indicates that the associated lithology contains concretions</description>
+		</value>
+		<value>
+			<name>conglomeratic</name>
+			<description>Indicates that the associated lithology contains conglomerate rock material.</description>
+		</value>
+		<value>
+			<name>coral</name>
+			<description>Indicates that the associated lithology contains corals and/or coral fragments</description>
+		</value>
+		<value>
+			<name>crinoids</name>
+			<description>Indicates that the associated lithology contains crinoids and/or crinoid fragments</description>
+		</value>
+		<value>
+			<name>diatoms</name>
+			<description>Indicates that the associated lithology contains diatoms and/or diatom fragments</description>
+		</value>
+		<value>
+			<name>dolomite concretion</name>
+			<description>Indicates that the associated lithology has dolomite concretions</description>
+		</value>
+		<value>
+			<name>dolomite stringer</name>
+			<description>Indicates that the associated lithology contains thin beds or veins of dolomite</description>
+		</value>
+		<value>
+			<name>dolomitic</name>
+			<description>Indicates that the associated lithology has a dolomite content</description>
+		</value>
+		<value>
+			<name>dolomite</name>
+			<description>A rock forming mineral composed of calcium-magnesium carbonate (CaMg(CO3)2).</description>
+		</value>
+		<value>
+			<name>feldspar</name>
+			<description>Indicates that the associated lithology contains feldspar</description>
+		</value>
+		<value>
+			<name>ferruginous</name>
+			<description>Indicates that the associated lithology contains minerals rich in iron oxide or iron hydroxide</description>
+		</value>
+			<value>
+			<name>fissile</name>
+			<description>Indicates that the associated lithology is fissile</description>
+		</value>
+		<value>
+			<name>forams undifferentiated</name>
+			<description>Indicates that the associated lithology contains foraminifera</description>
+		</value>
+		<value>
+			<name>fossil fragment</name>
+			<description>Indicates that the associated lithology contains fossil fragments</description>
+		</value>
+		<value>
+			<name>fossils undifferentiated</name>
+			<description>Indicates that the associated lithology contains fossils</description>
+		</value>
+		<value>
+			<name>glauconite</name>
+			<description>Indicates that the associated lithology contains glauconite granules</description>
+		</value>
+		<value>
+			<name>glauconitic</name>
+			<description>Indicates that the associated lithology is glauconitic</description>
+		</value>
+		<value>
+			<name>gravelly</name>
+			<description>Indicates that the associated lithology contains gravel sized particles.</description>
+		</value>
+		<value>
+			<name>gypsiferous</name>
+			<description>Indicates that the associated lithology contains significant gypsum content.</description>
+		</value>
+		<value>
+			<name>halite</name>
+			<description>Indicates that the associated lithology contains halite</description>
+		</value>
+		<value>
+			<name>illite</name>
+			<description>Indicates that the associated lithology contains the clay mineral illite</description>
+		</value>
+		<value>
+			<name>kaolinite</name>
+			<description>Indicates that the associated lithology contains kaolinite</description>
+		</value>
+		<value>
+			<name>lignite</name>
+			<description>Indicates that the associated lithology contains lignite</description>
+		</value>
+		<value>
+			<name>limestone stringer</name>
+			<description>Indicates that the associated lithology contains thin beds or veins of limestone</description>
+		</value>
+		<value>
+			<name>lithic fragment</name>
+			<description>Indicates that the associated lithology contains other rock fragments</description>
+		</value>
+		<value>
+			<name>marly</name>
+			<description>Indicates that the associated lithology contains marl</description>
+		</value>
+		<value>
+			<name>mica</name>
+			<description>Indicates that the associated lithology contains mica</description>
+		</value>
+		<value>
+			<name>microfossil</name>
+			<description>Indicates that the associated lithology contains undifferentiated microfossils</description>
+		</value>
+		<value>
+			<name>no description</name>
+			<description>No description is provided</description>
+		</value>
+		<value>
+			<name>none</name>
+			<description>No qualifiers specified</description>
+		</value>
+		<value>
+			<name>oncolite</name>
+			<description>A rock composed of stacked oncoliths</description>
+		</value>
+		<value>
+			<name>oncolith</name>
+			<description>A hemispheroidal mass of calcified algal laminae surrounding a mud fragment</description>
+		</value>
+		<value>
+			<name>oncolithic</name>
+			<description>Indicates that the associated lithology contains oncolites</description>
+		</value>
+		<value>
+			<name>ooid or oolith</name>
+			<description>Indicates that the associated lithology contains ooids (synonym: ooliths)</description>
+		</value>
+		<value>
+			<name>ostracods</name>
+			<description>Indicates that the associated lithology contains ostracod fossils</description>
+		</value>
+		<value>
+			<name>pebbly</name>
+			<description>Indicates that the associated material contains pebble sized particles.</description>
+		</value>
+		<value>
+			<name>pelletal</name>
+			<description>Indicates that the associated lithology contains pellets or fragments of pellets.</description>
+		</value>
+		<value>
+			<name>pellet</name>
+			<description>A round or rounded particle generally less than 10mm in diameter, not formed by rounding of detrital material.</description>
+		</value>
+			<value>
+			<name>peloid</name>
+			<description>A small particle of carbonate mineral in which individual crystals are too small to be distinguished either by the naked eye or under a polarizing microscope (less than 0.001mm).</description>
+		</value>
+		<value>
+			<name>peloidal</name>
+			<description>Indicates that the associated lithology contains peloids.</description>
+		</value>
+		<value>
+			<name>phosphate</name>
+			<description>Indicates that the associated lithology contains phosphates</description>
+		</value>
+		<value>
+			<name>pisolite</name>
+			<description>A sedimentary rock mainly consisting of pisoliths</description>
+		</value>
+		<value>
+			<name>pisolith</name>
+			<description>A sub-spherical body usually consisting of calcium carbonate, generally of length greater than 2mm</description>
+		</value>
+		<value>
+			<name>plant remains</name>
+			<description>Indicates that the associated lithology contains plant remains</description>
+		</value>
+	
+		<value>
+			<name>pyrite</name>
+			<description>Indicates that the associated lithology contains pyrite</description>
+		</value>
+		<value>
+			<name>quartz</name>
+			<description>Indicates that the associated lithology contains quartz</description>
+		</value>
+		<value>
+			<name>radiolaria</name>
+			<description>Indicates that the associated lithology contains radiolaria</description>
+		</value>
+		<value>
+			<name>salty</name>
+			<description>Indicates that the associated lithology contains rock salt or halite</description>
+		</value>
+		<value>
+			<name>sandy</name>
+			<description>Indicates that the associated lithology has a sand content</description>
+		</value>
+		<value>
+			<name>shell</name>
+			<description>Indicates that the associated lithology contains shell fragments</description>
+		</value>
+		<value>
+			<name>siderite</name>
+			<description>Indicates that the associated lithology contains siderite</description>
+		</value>
+		<value>
+			<name>siderite concretion</name>
+			<description>Indicates that the associated lithology contains siderite concretions</description>
+		</value>
+		<value>
+			<name>silty</name>
+			<description>Indicates that the associated lithology has a silt content</description>
+		</value>
+		<value>
+			<name>spicule</name>
+			<description>A minute needle-like body of quartz or carbonate that forms part of skeletons of animals such as sponges, corals and radiolarians.</description>
+		</value>
+		<value>
+			<name>spicular</name>
+			<description>Indicates that the associated lithology contains spicules.</description>
+		</value>
+		<value>
+			<name>stylolite</name>
+			<description>A small, more or less columnar, striated extension of a rock body that fits into a corresponding surface, common in carbonate rocks.</description>
+		</value>
+			<value>
+			<name>stylolitic</name>
+			<description>Indicates that the associated lithology contains stylolites.</description>
+		</value>
+		<value>
+			<name>tuffaceous</name>
+			<description>Indicates that the associated lithology contains pyroclastic detrital material (tuff).</description>
+		</value>
+		<value>
+			<name>tuffite</name>
+			<description>Indicates that the associated lithology contains both pyroclastic and other detrital material.</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in 
+			some situations.</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>RealtimeData</name>
+		<description>These values represent the name of a recording channel.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>length along fiber</name>
+			<description>The position along the length of a DTS fiber.</description>
+		</value>
+		<value>
+			<name>DTS temperature</name>
+			<description>The temperature that was calculated from Distributed Temperature Survey data.</description>
+		</value>
+		<value>
+			<name>Stokes intensity</name>
+			<description>Stokes intensity values from a Distributed Temperature Survey.</description>
+		</value>
+		<value>
+			<name>anti-Stokes intensity</name>
+			<description>Anti-Stokes intensity values from a Distributed Temperature Survey.</description>
+		</value>
+		<value>
+			<name>acetylene</name>
+			<description>Acetylene ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>azimuth corrected</name>
+			<description>MWD azimuth (corrected)</description>
+		</value>
+		<value>
+			<name>azimuth uncorrected</name>
+			<description>MWD azimuth (uncorrected)</description>
+		</value>
+		<value>
+			<name>bit revolutions, cumulative</name>
+			<description>Bit revolutions, cumulative</description>
+		</value>
+		<value>
+			<name>build rate</name>
+			<description>MWD build rate</description>
+		</value>
+		<value>
+			<name>caliper</name>
+			<description>Caliper measurement</description>
+		</value>
+		<value>
+			<name>cavings</name>
+			<description>Cavings percentage</description>
+		</value>
+		<value>
+			<name>cation exchange capacity</name>
+			<description>Cation exchange capacity</description>
+		</value>
+		<value>
+			<name>cementing cumulative returns</name>
+			<description>Cementing cumulative returns</description>
+		</value>
+		<value>
+			<name>cementing density in (average)</name>
+			<description>Cementing fluid density in (average)</description>
+		</value>
+		<value>
+			<name>cementing density out (average)</name>
+			<description>Cementing fluid density out (average)</description>
+		</value>
+		<value>
+			<name>cementing ECD at casing shoe</name>
+			<description>Cementing effective circulating density at casing shoe</description>
+		</value>
+		<value>
+			<name>cementing flow rate in (average)</name>
+			<description>Cementing flow rate in (average)</description>
+		</value>
+		<value>
+			<name>cementing flow rate in (calculated)</name>
+			<description>Cementing flow rate in (calculated)</description>
+		</value>
+		<value>
+			<name>cementing flow rate out (average)</name>
+			<description>Cementing flow rate out (average)</description>
+		</value>
+		<value>
+			<name>cementing flow rate out (calculated)</name>
+			<description>Cementing flow rate out (calculated)</description>
+		</value>
+		<value>
+			<name>cementing flow rate out (relative)</name>
+			<description>Cementing flow rate out (percentage)</description>
+		</value>
+		<value>
+			<name>cementing fluid type</name>
+			<description>Cementing fluid type/batch</description>
+		</value>
+		<value>
+			<name>cementing job type</name>
+			<description>Cementing job type</description>
+		</value>
+		<value>
+			<name>cementing plugs</name>
+			<description>Cementing number and status of plugs</description>
+		</value>
+		<value>
+			<name>cementing pump pressure (average)</name>
+			<description>Cementing pump pressure (average)</description>
+		</value>
+		<value>
+			<name>cementing stage</name>
+			<description>Cementing stage number</description>
+		</value>
+		<value>
+			<name>cementing temperature in (average)</name>
+			<description>Cementing fluid temperature in (average)</description>
+		</value>
+		<value>
+			<name>cementing temperature out (average)</name>
+			<description>Cementing fluid temperature out (average)</description>
+		</value>
+		<value>
+			<name>cementing volume to bump plug</name>
+			<description>Cementing volume to bump plug</description>
+		</value>
+		<value>
+			<name>cementing cement volume</name>
+			<description>Cementing cement volume pumped</description>
+		</value>
+		<value>
+			<name>cementing individual volume</name>
+			<description>Cementing individual volume pumped</description>
+		</value>
+		<value>
+			<name>cementing total volume</name>
+			<description>Cementing total volume pumped</description>
+		</value>
+		<value>
+			<name>chkPrAv</name>
+			<description>Casing pressure (average), measured at surface</description>
+		</value>
+		<value>
+			<name>carbon dioxide (cycle-based)</name>
+			<description>Carbon Dioxide ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>carbon dioxide (average)</name>
+			<description>Carbon Dioxide ppm (average)</description>
+		</value>
+		<value>
+			<name>carbon dioxide (minimum)</name>
+			<description>Carbon Dioxide ppm (min)</description>
+		</value>
+		<value>
+			<name>carbon dioxide (maximum)</name>
+			<description>Carbon Dioxide ppm (max)</description>
+		</value>
+		<value>
+			<name>conductivity</name>
+			<description>Conductivity reading (corrected)</description>
+		</value>
+		<value>
+			<name>conductivity of mud in (average)</name>
+			<description>Mud conductivity going into hole</description>
+		</value>
+		<value>
+			<name>conductivity of mud out (average)</name>
+			<description>Mud conductivity coming out of the hole</description>
+		</value>
+		<value>
+			<name>connections done</name>
+			<description>Connections done</description>
+		</value>
+		<value>
+			<name>connections remaining</name>
+			<description>Connections to go</description>
+		</value>
+		<value>
+			<name>cost per distance</name>
+			<description>Instantaneous cost per distance</description>
+		</value>
+		<value>
+			<name>cost per distance (average)</name>
+			<description>Cost per distance averaged over the bit run</description>
+		</value>
+		<value>
+			<name>cumulative time on bit</name>
+			<description>Number of drilling hours on the bit</description>
+		</value>
+		<value>
+			<name>density</name>
+			<description>Density value</description>
+		</value>
+		<value>
+			<name>density shale</name>
+			<description>Shale density</description>
+		</value>
+		<value>
+			<name>diameter of bit</name>
+			<description>Bit diameter</description>
+		</value>
+		<value>
+			<name>distance drilled by bit</name>
+			<description>Distance drilled by the bit</description>
+		</value>
+		<value>
+			<name>dogleg severity</name>
+			<description>MWD dogleg severity</description>
+		</value>
+		<value>
+			<name>DST bottom hole pressure</name>
+			<description>DST bottom hole pressure</description>
+		</value>
+		<value>
+			<name>DST bottom hole temperature</name>
+			<description>DST Bottom hole temperature</description>
+		</value>
+		<value>
+			<name>DST cumulative gas production</name>
+			<description>DST cumulative gas production</description>
+		</value>
+		<value>
+			<name>DST cumulative liquid production</name>
+			<description>DST cumulative liquid production</description>
+		</value>
+		<value>
+			<name>DST cumulative total production</name>
+			<description>DST cumulative total production</description>
+		</value>
+		<value>
+			<name>DST gas flow rate</name>
+			<description>DST gas flow rate</description>
+		</value>
+		<value>
+			<name>DST hydrogen sulfide (average)</name>
+			<description>Hydrogen Sulfide (average) ppm</description>
+		</value>
+		<value>
+			<name>DST identifier</name>
+			<description>Drill stem test identifier</description>
+		</value>
+		<value>
+			<name>DST liquid flow rate</name>
+			<description>DST liquid flow rate</description>
+		</value>
+		<value>
+			<name>DST surface pressure in casing</name>
+			<description>DST surface pressure in casing</description>
+		</value>
+		<value>
+			<name>DST surface pressure in tubing</name>
+			<description>DST surface pressure in tubing</description>
+		</value>
+		<value>
+			<name>DST surface temperature in tubing</name>
+			<description>DST Surface temperature in tubing</description>
+		</value>
+		<value>
+			<name>DST total flow rate</name>
+			<description>DST Total flow rate</description>
+		</value>
+		<value>
+			<name>DST tool time</name>
+			<description>DST tool time (seconds)</description>
+		</value>
+		<value>
+			<name>drilling exponent (corrected)</name>
+			<description>Corrected drilling exponent</description>
+		</value>
+		<value>
+			<name>ECD at bit depth</name>
+			<description>Effective circulating density at bit depth</description>
+		</value>
+		<value>
+			<name>ECD at casing shoe depth</name>
+			<description>ECD at casing shoe depth</description>
+		</value>
+		<value>
+			<name>ECD from MWD tool</name>
+			<description>ECD from MWD tool</description>
+		</value>
+		<value>
+			<name>ECD at total depth</name>
+			<description>Equivalent circulating density at total depth</description>
+		</value>
+		<value>
+			<name>neo-pentane</name>
+			<description>neo-Pentane (eC5) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>neo-pentane (average)</name>
+			<description>neo-Pentane (eC5) ppm (average)</description>
+		</value>
+		<value>
+			<name>neo-pentane (minimum)</name>
+			<description>neo-Pentane (eC5) ppm (min)</description>
+		</value>
+		<value>
+			<name>neo-pentane (maximum)</name>
+			<description>neo-Pentane (eC5) ppm (max)</description>
+		</value>
+		<value>
+			<name>ethane</name>
+			<description>Ethane (C2) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>ethane (average)</name>
+			<description>Ethane (C2) ppm (average)</description>
+		</value>
+		<value>
+			<name>ethane (minimum)</name>
+			<description>Ethane (C2) ppm (min)</description>
+		</value>
+		<value>
+			<name>ethane (maximum)</name>
+			<description>Ethane (C2) ppm (max)</description>
+		</value>
+		<value>
+			<name>formation fracture pressure gradient</name>
+			<description>Formation fracture pressure gradient</description>
+		</value>
+		<value>
+			<name>flow rate in (average)</name>
+			<description>Mud flow into the hole</description>
+		</value>
+		<value>
+			<name>flow in (relative)</name>
+			<description>Flow into the hole measured as a percentage</description>
+		</value>
+		<value>
+			<name>flow rate out (average)</name>
+			<description>Mud flow out of the hole</description>
+		</value>
+		<value>
+			<name>flow out (relative)</name>
+			<description>Flow out of hole measured as a percentage</description>
+		</value>
+		<value>
+			<name>overburden pressure gradient</name>
+			<description>Formation overburden pressure gradient</description>
+		</value>
+		<value>
+			<name>bit jet impact force</name>
+			<description>Bit jet impact force</description>
+		</value>
+		<value>
+			<name>formation pore pressure gradient</name>
+			<description>Formation pore pressure gradient</description>
+		</value>
+		<value>
+			<name>gas total (average)</name>
+			<description>Total gas %</description>
+		</value>
+		<value>
+			<name>connection gas (average)</name>
+			<description>Connection gas (average) %</description>
+		</value>
+		<value>
+			<name>connection gas (last)</name>
+			<description>Connection gas (last reading) %</description>
+		</value>
+		<value>
+			<name>connection gas (maximum)</name>
+			<description>Connection gas (maximum) %</description>
+		</value>
+		<value>
+			<name>trip gas (last)</name>
+			<description>Trip gas last reading %</description>
+		</value>
+		<value>
+			<name>gamma ray</name>
+			<description>Gamma ray reading (uncorrected)</description>
+		</value>
+		<value>
+			<name>gamma ray (corrected)</name>
+			<description>Gamma ray reading (corrected)</description>
+		</value>
+		<value>
+			<name>gravity tool face</name>
+			<description>MWD gravity tool face</description>
+		</value>
+		<value>
+			<name>gravity X-axis (corrected)</name>
+			<description>X axis gravity corrected</description>
+		</value>
+		<value>
+			<name>gravity X-axis (uncorrected)</name>
+			<description>X axis gravity uncorrected</description>
+		</value>
+		<value>
+			<name>gravity Y-axis (corrected)</name>
+			<description>Y axis gravity corrected</description>
+		</value>
+		<value>
+			<name>gravity Y-axis (uncorrected)</name>
+			<description>Y axis gravity uncorrected</description>
+		</value>
+		<value>
+			<name>gravity Z-axis (corrected)</name>
+			<description>Z axis gravity corrected</description>
+		</value>
+		<value>
+			<name>gravity Z-axis (uncorrected)</name>
+			<description>Z axis gravity uncorrected</description>
+		</value>
+		<value>
+			<name>hydrogen sulfide</name>
+			<description>Hydrogen Sulfide ppm</description>
+		</value>
+		<value>
+			<name>hydrogen sulfide (average)</name>
+			<description>Hydrogen Sulfide (average) ppm</description>
+		</value>
+		<value>
+			<name>hydrogen sulfide (minimum)</name>
+			<description>Hydrogen Sulfide (min) ppm</description>
+		</value>
+		<value>
+			<name>hydrogen sulfide (maximum)</name>
+			<description>Hydrogen Sulfide (max) ppm</description>
+		</value>
+		<value>
+			<name>hookload (average)</name>
+			<description>Hookload, average, measured at surface</description>
+		</value>
+		<value>
+			<name>hookload (minimum)</name>
+			<description>Minimum hookload while running the stand</description>
+		</value>
+		<value>
+			<name>hookload (maximum)</name>
+			<description>Hookload, maximum measured at surface</description>
+		</value>
+		<value>
+			<name>MWD magnetometer X (corrected)</name>
+			<description>X axis magnetic corrected</description>
+		</value>
+		<value>
+			<name>MWD magnetometer X (raw)</name>
+			<description>X axis magnetic uncorrected</description>
+		</value>
+		<value>
+			<name>MWD magnetometer Y (corrected)</name>
+			<description>Y axis magnetic corrected</description>
+		</value>
+		<value>
+			<name>MWD magnetometer Y (raw)</name>
+			<description>Y axis magnetic uncorrected</description>
+		</value>
+		<value>
+			<name>MWD magnetometer Z (corrected)</name>
+			<description>Z axis magnetic corrected</description>
+		</value>
+		<value>
+			<name>MWD magnetometer Z (raw)</name>
+			<description>Z axis magnetic uncorrected</description>
+		</value>
+		<value>
+			<name>iso-butane</name>
+			<description>iso-Butane (iC4) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>iso-butane (average)</name>
+			<description>iso-Butane (iC4) ppm (average)</description>
+		</value>
+		<value>
+			<name>iso-butane (minimum)</name>
+			<description>iso-Butane (iC4) ppm (min)</description>
+		</value>
+		<value>
+			<name>iso-butane (maximum)</name>
+			<description>iso-Butane (iC4) ppm (max)</description>
+		</value>
+		<value>
+			<name>iso-hexane</name>
+			<description>iso-Hexane (iC6) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>iso-hexane (average)</name>
+			<description>iso-Hexane (iC6) ppm (average)</description>
+		</value>
+		<value>
+			<name>iso-hexane (minimum)</name>
+			<description>iso-Hexane (iC6) ppm (min)</description>
+		</value>
+		<value>
+			<name>iso-hexane (maximum)</name>
+			<description>iso-Hexane (iC6) ppm (max)</description>
+		</value>
+		<value>
+			<name>inclination (corrected)</name>
+			<description>MWD inclination (corrected)</description>
+		</value>
+		<value>
+			<name>inclination near bit</name>
+			<description>Near-bit inclination</description>
+		</value>
+		<value>
+			<name>inclination (uncorrected)</name>
+			<description>MWD inclination (uncorrected)</description>
+		</value>
+		<value>
+			<name>iso-pentane</name>
+			<description>iso-Pentane (iC5) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>iso-pentane (average)</name>
+			<description>iso-Pentane (iC5) ppm (average)</description>
+		</value>
+		<value>
+			<name>iso-pentane (minimum)</name>
+			<description>iso-Pentane (iC5) ppm (min)</description>
+		</value>
+		<value>
+			<name>iso-pentane (maximum)</name>
+			<description>iso-Pentane (iC5) ppm (max)</description>
+		</value>
+		<value>
+			<name>kick tolerance</name>
+			<description>Kick tolerance</description>
+		</value>
+		<value>
+			<name>lithology flag</name>
+			<description>Lithology flag</description>
+		</value>
+		<value>
+			<name>MWD alternator voltage</name>
+			<description>Downhole tool alternator voltage</description>
+		</value>
+		<value>
+			<name>MWD bottom hole annulus pressure</name>
+			<description>Bottom hole annulus pressure</description>
+		</value>
+		<value>
+			<name>MWD bottom hole internal pressure</name>
+			<description>Bottom hole internal pressure</description>
+		</value>
+		<value>
+			<name>bit total measured depth</name>
+			<description>Total (measured) depth of bit</description>
+		</value>
+		<value>
+			<name>MWD conductivity</name>
+			<description>Mud conductivity</description>
+		</value>
+		<value>
+			<name>measured depth of casing</name>
+			<description>Measured depth of casing in the cementing </description>
+		</value>
+		<value>
+			<name>measured depth of DST bottom</name>
+			<description>Depth (measured) of bottom of DST interval</description>
+		</value>
+		<value>
+			<name>measured depth of DST top</name>
+			<description>Depth (measured) of top of DST interval</description>
+		</value>
+		<value>
+			<name>measured depth of diverter tool</name>
+			<description>Cementing depth to DV tool</description>
+		</value>
+		<value>
+			<name>measured depth of hole</name>
+			<description>Total (measured) depth of hole</description>
+		</value>
+		<value>
+			<name>measured depth of returns</name>
+			<description>Depth of cuttings returns</description>
+		</value>
+		<value>
+			<name>methane</name>
+			<description>Methane (C1) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>methane (average)</name>
+			<description>Methane (C1) ppm (average)</description>
+		</value>
+		<value>
+			<name>methane (minimum)</name>
+			<description>Methane (C1) ppm (min)</description>
+		</value>
+		<value>
+			<name>methane (maximum)</name>
+			<description>Methane (C1) ppm (max)</description>
+		</value>
+		<value>
+			<name>MWD derived fracture pressure gradient</name>
+			<description>Fracture pressure gradient from MWD</description>
+		</value>
+		<value>
+			<name>MWD derived pore pressure gradient</name>
+			<description>Pore Pressure gradient from MWD</description>
+		</value>
+		<value>
+			<name>MWD fluid resistivity in annulus</name>
+			<description>Downhole fluid resistivity in annulus</description>
+		</value>
+		<value>
+			<name>MWD fluid resistivity in pipe</name>
+			<description>Downhole fluid resistivity in pipe</description>
+		</value>
+		<value>
+			<name>MWD fluid temperature in annulus</name>
+			<description>Downhole fluid temperature in annulus</description>
+		</value>
+		<value>
+			<name>MWD fluid temperature in pipe</name>
+			<description>Downhole fluid temperature in pipe</description>
+		</value>
+		<value>
+			<name>MWD gamma ray</name>
+			<description>Measured gamma ray value</description>
+		</value>
+		<value>
+			<name>MWD gamma ray (corrected)</name>
+			<description>Borehole corrected gamma ray value</description>
+		</value>
+		<value>
+			<name>MWD motor speed</name>
+			<description>Downhole motor RPM</description>
+		</value>
+		<value>
+			<name>MWD resistivity</name>
+			<description>Measured resistivity value</description>
+		</value>
+		<value>
+			<name>MWD resistivity (corrected)</name>
+			<description>Borehole corrected resistivity value</description>
+		</value>
+		<value>
+			<name>magnetic tool face</name>
+			<description>MWD magnetic tool face</description>
+		</value>
+		<value>
+			<name>MWD torque (average)</name>
+			<description>Downhole torque (average)</description>
+		</value>
+		<value>
+			<name>MWD torque (maximum)</name>
+			<description>Downhole torque (maximum)</description>
+		</value>
+		<value>
+			<name>MWD axial vibration</name>
+			<description>Downhole vibration in axial direction</description>
+		</value>
+		<value>
+			<name>MWD lateral vibration</name>
+			<description>Downhole vibration in lateral direction</description>
+		</value>
+		<value>
+			<name>MWD torsional vibration</name>
+			<description>Downhole vibration in torsional direction</description>
+		</value>
+		<value>
+			<name>MWD weight on bit (average)</name>
+			<description>Downhole weight on bit (average)</description>
+		</value>
+		<value>
+			<name>MWD weight on bit (maximum)</name>
+			<description>Downhole weight on bit (maximum)</description>
+		</value>
+		<value>
+			<name>nor-butane</name>
+			<description>nor-Butane (nC4) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>nor-butane (average)</name>
+			<description>nor-Butane (nC4) ppm (average)</description>
+		</value>
+		<value>
+			<name>nor-butane (minimum)</name>
+			<description>nor-Butane (nC4) ppm (min)</description>
+		</value>
+		<value>
+			<name>nor-butane (maximum)</name>
+			<description>nor-Butane (nC4) ppm (max)</description>
+		</value>
+		<value>
+			<name>neutron density</name>
+			<description>Neutron density</description>
+		</value>
+		<value>
+			<name>nor-hexane</name>
+			<description>nor-Hexane (nC6) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>nor-hexane (average)</name>
+			<description>nor-Hexane (nC6) ppm (average)</description>
+		</value>
+		<value>
+			<name>nor-hexane (minimum)</name>
+			<description>nor-Hexane (nC6) ppm (min)</description>
+		</value>
+		<value>
+			<name>nor-hexane (maximum)</name>
+			<description>nor-Hexane (nC6) ppm (max)</description>
+		</value>
+		<value>
+			<name>nor-pentane</name>
+			<description>nor-Pentane (nC5) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>nor-pentane (average)</name>
+			<description>nor-Pentane (nC5) ppm (average)</description>
+		</value>
+		<value>
+			<name>nor-pentane (minimum)</name>
+			<description>nor-Pentane (nC5) ppm (min)</description>
+		</value>
+		<value>
+			<name>nor-pentane (maximum)</name>
+			<description>nor-Pentane (nC5) ppm (max)</description>
+		</value>
+		<value>
+			<name>neutron porosity</name>
+			<description>Neutron porosity</description>
+		</value>
+		<value>
+			<name>neutron porosity (corrected)</name>
+			<description>Neutron porosity corrected</description>
+		</value>
+		<value>
+			<name>neutron porosity ratio</name>
+			<description>Neutron porosity ratio</description>
+		</value>
+		<value>
+			<name>pass number</name>
+			<description>MWD pass number</description>
+		</value>
+		<value>
+			<name>trip number</name>
+			<description>Trip number</description>
+		</value>
+		<value>
+			<name>photoelectric effect</name>
+			<description>Photoelectric effect</description>
+		</value>
+		<value>
+			<name>bit pressure loss</name>
+			<description>Bit pressure loss</description>
+		</value>
+		<value>
+			<name>block position</name>
+			<description>Block position</description>
+		</value>
+		<value>
+			<name>hydraulic power of bit</name>
+			<description>Bit hydraulic power</description>
+		</value>
+		<value>
+			<name>hydraulic power per area of bit</name>
+			<description>Bit hydraulic power per area</description>
+		</value>
+		<value>
+			<name>hydraulic power of pump</name>
+			<description>Pump hydraulic power</description>
+		</value>
+		<value>
+			<name>pressure loss at annulus</name>
+			<description>Annulus pressure loss</description>
+		</value>
+		<value>
+			<name>pressure drop at bit</name>
+			<description>pressure drop at the bit</description>
+		</value>
+		<value>
+			<name>pressure loss at bit</name>
+			<description>Bit pressure loss percentage</description>
+		</value>
+		<value>
+			<name>pressure drop (calculated or observed)</name>
+			<description>Calculated/observed pressure loss ratio (%)</description>
+		</value>
+		<value>
+			<name>pressure drop at motor</name>
+			<description>Mud motor pressure loss</description>
+		</value>
+		<value>
+			<name>pressure drop at MWD tool</name>
+			<description>MWD tool pressure loss</description>
+		</value>
+		<value>
+			<name>pressure drop at string</name>
+			<description>Pipe (drillstring) pressure loss</description>
+		</value>
+		<value>
+			<name>pressure drop at surface</name>
+			<description>Surface pressure loss</description>
+		</value>
+		<value>
+			<name>pressure at MWD tool</name>
+			<description>Downhole pressure from MWD tool</description>
+		</value>
+		<value>
+			<name>pressure at pump (average)</name>
+			<description>Pump (standpipe) pressure, measured at surface</description>
+		</value>
+		<value>
+			<name>shut-in pressure (maximum)</name>
+			<description>Maximum permitted shut-in pressure</description>
+		</value>
+		<value>
+			<name>propane</name>
+			<description>Propane (C3) ppm (cycle-based)</description>
+		</value>
+		<value>
+			<name>propane (average)</name>
+			<description>Propane (C3) ppm (average)</description>
+		</value>
+		<value>
+			<name>propane (minimum)</name>
+			<description>Propane (C3) ppm (min)</description>
+		</value>
+		<value>
+			<name>propane (maximum)</name>
+			<description>Propane (C3) ppm (max)</description>
+		</value>
+		<value>
+			<name>plastic viscosity</name>
+			<description>Mud plastic viscosity</description>
+		</value>
+		<value>
+			<name>resistivity</name>
+			<description>Resistivity reading</description>
+		</value>
+		<value>
+			<name>resistivity (corrected)</name>
+			<description>Resistivity reading (corrected)</description>
+		</value>
+		<value>
+			<name>rate of penetration (average)</name>
+			<description>Drill Rate</description>
+		</value>
+		<value>
+			<name>rate of penetration (intantaneous)</name>
+			<description>Rate of Penetration (intantaneous)</description>
+		</value>
+		<value>
+			<name>rotation flag</name>
+			<description>Rotation flag = 1 if pipe is rotating, else = 0</description>
+		</value>
+		<value>
+			<name>rotary speed (average)</name>
+			<description>Rotary speed, measured at surface (revs per minute)</description>
+		</value>
+		<value>
+			<name>running speed down (average)</name>
+			<description>Trip average running speed, down</description>
+		</value>
+		<value>
+			<name>running speed down (maximum)</name>
+			<description>Trip maximum running speed, down</description>
+		</value>
+		<value>
+			<name>running speed up (average)</name>
+			<description>Trip average running speed, up</description>
+		</value>
+		<value>
+			<name>running speed up (maximum)</name>
+			<description>Trip maximum running speed, up</description>
+		</value>
+		<value>
+			<name>sonic coherence</name>
+			<description>Coherence</description>
+		</value>
+		<value>
+			<name>sonic density</name>
+			<description>Sonic density</description>
+		</value>
+		<value>
+			<name>sonic delta-time (corrected)</name>
+			<description>Sonic delta T corrected</description>
+		</value>
+		<value>
+			<name>sonic delta-time (uncorrected)</name>
+			<description>Sonic delta T raw reading </description>
+		</value>
+		<value>
+			<name>sonic porosity</name>
+			<description>Sonic porosity</description>
+		</value>
+		<value>
+			<name>sonic porosity (corrected)</name>
+			<description>Sonic porosity corrected</description>
+		</value>
+		<value>
+			<name>stroke rate</name>
+			<description>Pump stroke rate (strokes/minute)</description>
+		</value>
+		<value>
+			<name>stroke rate total</name>
+			<description>Cumulative pump stroke rate (strokes/minute)</description>
+		</value>
+		<value>
+			<name>state of well</name>
+			<description>State of well during DST (SHUT-IN or FLOWING)</description>
+		</value>
+		<value>
+			<name>in-slips status</name>
+			<description>In-slips status (In or out)</description>
+		</value>
+		<value>
+			<name>lag strokes</name>
+			<description>Lag strokes</description>
+		</value>
+		<value>
+			<name>stroke count (total)</name>
+			<description>Cumulative total pump strokes</description>
+		</value>
+		<value>
+			<name>stroke count</name>
+			<description>Pump strokes for each pump</description>
+		</value>
+		<value>
+			<name>mud temperature in (average)</name>
+			<description>Mud temperature going into hole</description>
+		</value>
+		<value>
+			<name>mud temperature out (average)</name>
+			<description>Mud temperature coming out of the hole</description>
+		</value>
+		<value>
+			<name>time in slips</name>
+			<description>Time in slips (seconds)</description>
+		</value>
+		<value>
+			<name>time out of slips</name>
+			<description>Time out of slips (seconds)</description>
+		</value>
+		<value>
+			<name>torque (average)</name>
+			<description>Rotary torque, average, measured at surface</description>
+		</value>
+		<value>
+			<name>torque for break-out (maximum)</name>
+			<description>Break-out torque</description>
+		</value>
+		<value>
+			<name>torque for make-up (maximum)</name>
+			<description>Make-up torque</description>
+		</value>
+		<value>
+			<name>torque (maximum)</name>
+			<description>Rotary torque, maximum, measured at surface</description>
+		</value>
+		<value>
+			<name>trip tank volume</name>
+			<description>Trip tank volume</description>
+		</value>
+		<value>
+			<name>turn rate</name>
+			<description>MWD walk/turn rate</description>
+		</value>
+		<value>
+			<name>TVD of Bit</name>
+			<description>Total (vertical) depth of bit</description>
+		</value>
+		<value>
+			<name>TVD of casing</name>
+			<description>TVD of casing in the cementing context</description>
+		</value>
+		<value>
+			<name>TVD of DST bottom</name>
+			<description>Depth (vertical) of bottom of DST interval</description>
+		</value>
+		<value>
+			<name>TVD of DST top</name>
+			<description>Depth (vertical) of top of DST interval</description>
+		</value>
+		<value>
+			<name>TVD of hole</name>
+			<description>Total (vertical) depth of hole</description>
+		</value>
+		<value>
+			<name>tank volume</name>
+			<description>Tank volume</description>
+		</value>
+		<value>
+			<name>tank volume (active)</name>
+			<description>Tank volume (active)</description>
+		</value>
+		<value>
+			<name>tank volume change</name>
+			<description>Mud Tank Volume change</description>
+		</value>
+		<value>
+			<name>tank volume change (active)</name>
+			<description>Tank volume change (active)</description>
+		</value>
+		<value>
+			<name>tank volume change total</name>
+			<description>Tank volume change (total)</description>
+		</value>
+		<value>
+			<name>tank volume (total)</name>
+			<description>Tank volume (total)</description>
+		</value>
+		<value>
+			<name>annular velocity (minimum)</name>
+			<description>Annular velocity (minimum)</description>
+		</value>
+		<value>
+			<name>annular velocity (maximum)</name>
+			<description>Annular velocity (maximum)</description>
+		</value>
+		<value>
+			<name>velocity of jet</name>
+			<description>Bit jet velocity</description>
+		</value>
+		<value>
+			<name>fill volume (expected)</name>
+			<description>Fill/gain volume, expected</description>
+		</value>
+		<value>
+			<name>fill volume total (expected)</name>
+			<description>Fill/gain volume, expected, cumulative</description>
+		</value>
+		<value>
+			<name>fill volume (observed)</name>
+			<description>Fill/gain volume, observed</description>
+		</value>
+		<value>
+			<name>fill volume total (observed)</name>
+			<description>Fill/gain volume, observed, cumulative</description>
+		</value>
+		<value>
+			<name>weight on bit (average)</name>
+			<description>Weight on bit, measured at surface</description>
+		</value>
+		<value>
+			<name>weight on bit (maximum)</name>
+			<description>Weight on bit, maximum, measured at surface</description>
+		</value>
+		<value>
+			<name>mud density in (average)</name>
+			<description>Mud density going into the hole</description>
+		</value>
+		<value>
+			<name>mud density out (average)</name>
+			<description>Mud density coming out of the hole</description>
+		</value>
+		<value>
+			<name>yield point</name>
+			<description>Mud yield point</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in 
+			some situations.</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>NameTagLocation</name>
+		<description>Defines the locations where an equipment tag might be found.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>body</name>
+			<description>The body of the equipment. For tubular components this 
+			specifies a location toward the middle of the component.
+			</description>
+		</value>
+		<value>
+			<name>box</name>
+			<description>The female threaded end of a device.</description>
+		</value>
+		<value>
+			<name>pin</name>
+			<description>The male threaded end of a device.</description>
+		</value>
+		<value>
+			<name>other</name>
+			<description>This, by exclusion, tells a user to
+			look elsewhere than on the body or near the ends of a component.</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.
+			</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>NameTagNumberingScheme</name>
+		<description>Defines the specifications for creating equipment tags.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>EPC64</name>
+			<description>RFID - Electronic Product Code, 64 bit.</description>
+		</value>
+		<value>
+			<name>EPC96</name>
+			<description>RFID - Electronic Product Code, 96 bit.</description>
+		</value>
+		<value>
+			<name>MSRCID</name>
+			<description>RFID - Merrick Systems Rapid Component Identification.</description>
+		</value>
+		<value>
+			<name>ANSI/AIM-BC2</name>
+			<description>Barcode - 1995, Uniform Symbology Specification </description>
+		</value>
+		<value>
+			<name>ANSI/AIM-BC6</name>
+			<description>Barcode - 1995, Uniform Symbology Multi Row Specification </description>
+		</value>
+		<value>
+			<name>ANSI/AIM-BC10</name>
+			<description>Barcode - 1996, International Symbology Specification - MaxiCode</description>
+		</value>
+		<value>
+			<name>EAN.UCC</name>
+			<description>Barcode - Composite Symbology</description>
+		</value>
+		<value>
+			<name>F2F</name>
+			<description>Magnetic - ISO/IEC 7811</description>
+		</value>
+		<value>
+			<name>MFM</name>
+			<description>Magnetic - "Modified Frequency Modulation for Magnetic Stripes" 
+			standard developed by AIM Inc.</description>
+		</value>
+		<value>
+			<name>serial number</name>
+			<description>Serial number contains a code which does not require any further 
+			knowledge of an encoding scheme to manipulate or process. 
+			The identifier is the only information in the "tag".
+			</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.
+			</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>NameTagTechnology</name>
+		<description>Defines the mechanisms for attaching an equipment tag to an item.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>tagged</name>
+			<description>Independent identification components attached or embedded to a 
+			larger component for purposes of identification of the larger component. 
+			Tags typically use electronic, radio or sound based technologies and that 
+			require a special non-optical device to read them.   Radio Frequency 
+			Identification (RFID tags) are of this type, as are some magnetic and sound 
+			based identification technologies.
+			</description>
+		</value>
+		<value>
+			<name>labeled</name>
+			<description>An optical label attached to a component.  The label
+			may be glued, riveted or attached by some other method and may contain a
+			serial number, barcode or other optically recognized information. Note that
+			a label may possibly have a combination of identifiers associated with it,
+			such as a serial number, a barcode and an embedded RFID identifier.  This
+			would generate three nameTags for the one physical label, two of
+			type 'label' for the barcode and serial number and one of type 'tagged' for
+			the RFID identifier.
+			</description>
+		</value>
+		<value>
+			<name>intrinsic</name>
+			<description>Identification technologies where the intrinsic
+			properties of the component to be identified contain the identification
+			information and no other unique code has been added.  For example, some
+			magnetic identification technologies use grooves machined into a component.
+			Some components may also be identified, for example, by their individual
+			sonic signature or optical profile.
+			</description>
+		</value>
+		<value>
+			<name>stamped</name>
+			<description>An identification code physically stamped into the base
+			material of the component to be identified.  Note that if a serial number is
+			stamped into a label attached to a component, 'labeled' should be used and
+			not 'stamped'. Stamped identifiers can wear off but can not fall off.
+			</description>
+		</value>
+		<value>
+			<name>painted</name>
+			<description>Painted or stenciled on the material.	</description>
+		</value>
+		<value>
+			<name>temporary</name>
+			<description>Temporary identification codes marked with grease pencil, chalk, or such.</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.
+			</description>
+		</value>
+	</enumList>
+</enumListSet>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_resqmlTraceabilityDublinCore.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <xsd:include schemaLocation="cs_extensionAny.xsd" />
+   <xsd:include schemaLocation="cs_resqmlExtensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uidGlobal.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlPropertyKind">
+      <xsd:annotation>
+         <xsd:documentation>A description of property name relative to a standard definition.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:group ref="resqml:grp_resqmlTraceabilityDublinCore" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Dublin Core elements used for traceability.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="namingSystem" type="resqml:anyURI" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the dictionary within which the property is unique. This also defines the name of the controlling authority. A URN of the form
+               "urn:x-resqml:domainOrEmail:dictionaryName" should be used for the namingSystem value. An example public dictionary, "urn:resqml:energistics.org:RESQML" assigned to
+               values defined by ResqmlPropertyKind. An example corporate dictionary, "urn:resqml:slb.com:product-x". An example personal dictionary,
+               "urn:resqml:first.last@mycompany.com:my.first.dictionary". The purpose of this scheme is to generate a unique name. Parsing for semantics is not
+               intended.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="isAbstract" type="xsd:boolean" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A value of True ("true" or "1") indicates that the property kind is abstract and an instance of property values must not represent this kind. A
+               value of False ("false" or "0") indicates otherise (i.e., that an instance of property values may represent this kind).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice>
+            <xsd:element name="resqmlKind" type="resqml:ResqmlPropertyKind" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The name of the RESQML standard property that this represents. For properties which have a unit of measure, the standard kind will directly or
+                  indirectly specify the single unit of measure which must be utilized for the property values.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="parentResqmlKind" type="resqml:ResqmlPropertyKind" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The parent RESQML standard property which this specializes. The semantics of this property is a specialization of the specified standard
+                  property. For properties which have a unit of measure, the parent kind will indirectly specify the single unit of measure which must be utilized for the property
+                  values.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="parentLocalKind" type="resqml:refGlobalNameString" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>A pointer to parent locally defined property. The semantics of this property is a specialization of the specified local property. Note that
+                  all local kinds must directly or indirectly be related to a standard RESQML standard kind.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:choice minOccurs="0">
+            <xsd:sequence>
+               <xsd:element name="unitOfMeasure" type="resqml:ResqmlUnitOfMeasure" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The allowed unit of measure for the continuous property. For a locally defined property, this must match the unit of the parent kind (and
+                     of its parent kind, etc).</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="dimensionalClass" type="xsd:string" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The dimensional analysis of the unit of measure. For example, a meter (m) would be of class "L", which represents length. Note that angle
+                     is considered to be dimensionless ratio of length. Note that solid angle is considered to be dimensionless ratio of area. The following nomenclature is used:
+                     A = angle (SI unit = radian) B = luminous intensity (SI unit = candela) C = electrical current (SI unit = ampere) K = thermodynamic temperature (SI unit =
+                     kelvin) L = length (SI unit = metre) M = mass (SI unit = kilogram) N = amount of substance (SI unit = mole) S = solid angle (SI unit = steradian) T = time (SI
+                     unit = second) 1 = dimensionless 2 = squared (e.g., "M2") 3 = cubed 4 = 4th power 5 = 5th power 6 = 6th power 7 = 7th power 8 = 8th power / = division
+                     ratio(X) = A dimensionless ratio of another dimension. For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the
+                     equivalent of "L2/L2". This is only used when the underlying dimension would otherwise be "1". The values may be broken into numerator and denominator
+                     separated by a slash "/" but multiple slashes must not be used. A slash must not terminate the string. For example, length per time would be indicated by
+                     "L/T" A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component. The number "1"
+                     will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). The number "1" must not be used as a denominator because it is implied (e.g., "M"
+                     impiles "M/1"). For consistency, the items within a numerator or denominator are listed in alphabetical order (e.g., LM - not ML).</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:sequence>
+               <xsd:element name="minimumValue" type="xsd:long" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The minimum value allowed for the discrete property.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="maximumValue" type="xsd:long" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The maximum value allowed for the discrete property.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:sequence>
+               <xsd:element name="enumValue" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>A value allowed for the categorical property.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:choice>
+         <xsd:element name="extensionAny" type="resqml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="resqml:cs_resqmlExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uidGlobal">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node. This must be a globally unique identifier.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

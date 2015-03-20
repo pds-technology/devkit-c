@@ -11923,6 +11923,230 @@ namespace Energistics.DataAccess.WITSML141
     }
 
     /// <summary>
+    /// Defines the kind of objectGroup.
+    /// </summary>
+    public class ObjectGroupKind : Energistics.DataAccess.EnumValue.EnumValue
+    {
+        /// <summary>
+        /// Protected constructor, should always pass in "name"
+        /// </summary>
+        protected ObjectGroupKind(): base() {}
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        ///<param name="name">Name of the ObjectGroupKind</param>
+        public ObjectGroupKind(string name) : base(name) {}
+
+        /// <summary>
+        /// Retrieves the complete list of ObjectGroupKinds
+        /// </summary>
+        /// <returns>The complete list of ObjectGroupKinds</returns>
+        public static List<ObjectGroupKind> GetList()
+        {
+            return GetList<ObjectGroupKind>();
+        }
+
+        private readonly static ObjectGroupKind drilling;
+        /// <summary>
+        /// Run of BHA tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the BHA run number. The sequence1 element represents the BHA pass number within the run. The range elements represent the portion of the wellbore traversed by the BHA for that run. 
+        /// </summary>
+        [EnumValueNameAttribute("drilling")]
+        public static ObjectGroupKind Drilling
+        {
+            get 
+            {
+                return drilling;
+            }
+        }
+
+        private readonly static ObjectGroupKind wireline;
+        /// <summary>
+        /// Run of wirelilne tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the wireline run (trip) number. The sequence1 element represents the pass number within the run. The range elements represent the portion of the wellbore traversed by the tool for that run. 
+        /// </summary>
+        [EnumValueNameAttribute("wireline")]
+        public static ObjectGroupKind Wireline
+        {
+            get 
+            {
+                return wireline;
+            }
+        }
+
+        private readonly static ObjectGroupKind pressureTest;
+        /// <summary>
+        /// Run of pressure test tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the pressure test run number. The sequence1 element represents the pass number within the run. The sequence2 element represents the test number within the pass. The range elements represent the portion of the wellbore traversed by the tool for that run. The reference elements represent the time and depth of the test. 
+        /// </summary>
+        [EnumValueNameAttribute("pressure test")]
+        public static ObjectGroupKind PressureTest
+        {
+            get 
+            {
+                return pressureTest;
+            }
+        }
+
+        private readonly static ObjectGroupKind flowTest;
+        /// <summary>
+        /// Run of flow test tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the flow test run number. The sequence1 element represents the pass number within the run. The sequence2 element represents the test number within the pass. The range elements represent the portion of the wellbore traversed by the tool for that run. The reference elements represent the time and depth of the test. 
+        /// </summary>
+        [EnumValueNameAttribute("flow test")]
+        public static ObjectGroupKind FlowTest
+        {
+            get 
+            {
+                return flowTest;
+            }
+        }
+
+        private readonly static ObjectGroupKind holeSection;
+        /// <summary>
+        /// The group collects the data-objects which operate within a portion of the wellbore with the same hole size. The sequence element represents the ordered sequence of the hole size within the wellbore. A sequence number of one represents the shallowest section. The range elements represent the portion of the wellbore with the same hole size. The parameter with the name "holeSize" represents the numeric size of the hole and MUST be specified with a "length" unit of measure. 
+        /// </summary>
+        [EnumValueNameAttribute("hole section")]
+        public static ObjectGroupKind HoleSection
+        {
+            get 
+            {
+                return holeSection;
+            }
+        }
+
+        private readonly static ObjectGroupKind coring;
+        /// <summary>
+        /// The group collects the data-objects which relate to a cored interval. The sequence element represents the BHA run within which the core was taken. The range elements represent the portion of the wellbore from which the core was taken. The reference elements represent the time and depth of the core. The parameter with the name "coreLength" represents the numeric length of the core and MUST be specified with a "length" unit of measure. 
+        /// </summary>
+        [EnumValueNameAttribute("coring")]
+        public static ObjectGroupKind Coring
+        {
+            get 
+            {
+                return coring;
+            }
+        }
+
+        private readonly static ObjectGroupKind drillReport;
+        /// <summary>
+        /// The group collects the data-objects which relate to a reporting period. The sequence element represents the Nth report. The range elements represent the portion of the wellbore which was drilled during the period. The reference date-time element represents the time of the end of the reporting period. 
+        /// </summary>
+        [EnumValueNameAttribute("drill report")]
+        public static ObjectGroupKind DrillReport
+        {
+            get 
+            {
+                return drillReport;
+            }
+        }
+
+        private readonly static ObjectGroupKind other;
+        /// <summary>
+        /// Primarily allows objectGroup.groupType not be constrained to enum values. 
+        /// </summary>
+        [EnumValueNameAttribute("other")]
+        public static ObjectGroupKind Other
+        {
+            get 
+            {
+                return other;
+            }
+        }
+
+        private readonly static ObjectGroupKind unknown;
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
+        /// </summary>
+        [EnumValueNameAttribute("unknown")]
+        public static ObjectGroupKind Unknown
+        {
+            get 
+            {
+                return unknown;
+            }
+        }
+
+        static ObjectGroupKind()
+        {
+            drilling = 
+                new ObjectGroupKind("drilling")
+                {
+                    Description = "Run of BHA tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the BHA run number. The sequence1 element represents the BHA pass number within the run. The range elements represent the portion of the wellbore traversed by the BHA for that run. "
+                    ,Version = "1.4.1.0"
+            };
+            wireline = 
+                new ObjectGroupKind("wireline")
+                {
+                    Description = "Run of wirelilne tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the wireline run (trip) number. The sequence1 element represents the pass number within the run. The range elements represent the portion of the wellbore traversed by the tool for that run. "
+                    ,Version = "1.4.1.0"
+            };
+            pressureTest = 
+                new ObjectGroupKind("pressure test")
+                {
+                    Description = "Run of pressure test tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the pressure test run number. The sequence1 element represents the pass number within the run. The sequence2 element represents the test number within the pass. The range elements represent the portion of the wellbore traversed by the tool for that run. The reference elements represent the time and depth of the test. "
+                    ,Version = "1.4.1.0"
+            };
+            flowTest = 
+                new ObjectGroupKind("flow test")
+                {
+                    Description = "Run of flow test tools from the time they go below the rotary table, to the time they come back up. The sequence element represents the flow test run number. The sequence1 element represents the pass number within the run. The sequence2 element represents the test number within the pass. The range elements represent the portion of the wellbore traversed by the tool for that run. The reference elements represent the time and depth of the test. "
+                    ,Version = "1.4.1.0"
+            };
+            holeSection = 
+                new ObjectGroupKind("hole section")
+                {
+                    Description = "The group collects the data-objects which operate within a portion of the wellbore with the same hole size. The sequence element represents the ordered sequence of the hole size within the wellbore. A sequence number of one represents the shallowest section. The range elements represent the portion of the wellbore with the same hole size. The parameter with the name \"holeSize\" represents the numeric size of the hole and MUST be specified with a \"length\" unit of measure. "
+                    ,Version = "1.4.1.0"
+            };
+            coring = 
+                new ObjectGroupKind("coring")
+                {
+                    Description = "The group collects the data-objects which relate to a cored interval. The sequence element represents the BHA run within which the core was taken. The range elements represent the portion of the wellbore from which the core was taken. The reference elements represent the time and depth of the core. The parameter with the name \"coreLength\" represents the numeric length of the core and MUST be specified with a \"length\" unit of measure. "
+                    ,Version = "1.4.1.0"
+            };
+            drillReport = 
+                new ObjectGroupKind("drill report")
+                {
+                    Description = "The group collects the data-objects which relate to a reporting period. The sequence element represents the Nth report. The range elements represent the portion of the wellbore which was drilled during the period. The reference date-time element represents the time of the end of the reporting period. "
+                    ,Version = "1.4.1.0"
+            };
+            other = 
+                new ObjectGroupKind("other")
+                {
+                    Description = "Primarily allows objectGroup.groupType not be constrained to enum values. "
+                    ,Version = "1.4.1.1"
+            };
+            unknown = 
+                new ObjectGroupKind("unknown")
+                {
+                    Description = "The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. "
+                    ,Version = "1.4.1.0"
+            };
+        }
+
+        /// <summary>
+        /// Gets a ObjectGroupKind by name
+        /// </summary>
+        /// <param name="name">The name of the ObjectGroupKind to return</param>
+        /// <returns>The ObjectGroupKind represented by 'name'</returns>
+        public static ObjectGroupKind GetByName(string name)
+        {
+            if (enumValuesRegistry.ContainsKey(typeof(ObjectGroupKind)))
+            {
+                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(ObjectGroupKind)];
+            
+                foreach (EnumValue.EnumValue ev in myList)
+                {
+                    if (ev.Name == name)
+                    {
+                        return (ObjectGroupKind)ev;
+                    }
+                }
+            }
+            
+            return null;
+        }
+    }
+
+    /// <summary>
     /// These values represent the type of qualifier in lithology.
     /// </summary>
     public class QualifierType : Energistics.DataAccess.EnumValue.LithoTypeEnumValue

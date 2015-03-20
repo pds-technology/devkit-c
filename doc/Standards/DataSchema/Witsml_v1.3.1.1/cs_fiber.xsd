@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_refractiveIndex.xsd"/>
+	<xsd:include schemaLocation="cs_oneWayLoss.xsd"/>
+	<xsd:include schemaLocation="cs_calibration.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>DTS Fiber Object</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:complexType name="cs_fiber">
+		<xsd:annotation>
+			<xsd:documentation>The optical fiber used for distributed temperature surveys</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A human understandable name for the fiber. This is used for 
+					identification of the instance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mode" type="witsml:FiberMode" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The mode of fiber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="type" type="witsml:typeOptionalClassString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Zero or more instances that allow other classifications 
+					to be assigned to the fiber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="coating" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of coating on the fiber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="jacket" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of jacket covering the fiber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="coreDiameter" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The inner diameter of the core, generally measured in microns (um).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="claddedDiameter" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The diameter of the core plus the cladding, generally measured in microns (um).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="outsideDiameter" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The diameter of the cable and all its sheathing, generally 
+					measured in microns (um). This is intended to be the diameter of the cable on the spool.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="refractiveIndex" type="witsml:cs_refractiveIndex" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The refractive index of the fiber. Also included is the frequency 
+					in Hz for which this refractive index is valid. There may be multiple instances of this element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="oneWayLoss" type="witsml:cs_oneWayLoss" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The power loss (usually in decibels) per unit of length of 
+					the fiber. Also included is the frequency for which this loss is measured. 
+					There ay be multiple instances of this element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parameter" type="witsml:indexedObject" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Additional parameters to define the fiber as a material. 
+					These should not be parameters to define the installation of the fiber in a 
+					well, or other system. This element should be used only if an appropriate 
+					parameter is not available as an element, or in the calibration operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="spoolNumberTag" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The spool number located on the particular spool. 
+					The spool number may contain alphanumeric characters.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="spoolLength" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The length of the fiber on the spool when purchased.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="supplyDate" type="witsml:anyDate" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A fiber may go through several manufacturers for its various 
+					parts. The supplier is the final company in the chain that supplies the fiber 
+					to the end user.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="supplier" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A fiber may go through several manufacturers for its various 
+					parts. The supplier is the final company in the chain that supplies the fiber 
+					to the end user.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="supplierModelNumber" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The model number (alphanumeric) that is used by the supplier 
+					to reference the type of fiber that is supplied to the user.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="factoryCalibration" type="witsml:cs_calibration" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about calibrations and quality checks that were 
+					performed on the cable at the factory. This is not to include calibrations that 
+					are run at installation time and at measurement time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="installationHistory" type="witsml:refNameString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A reference to a dtsInstalledSytem object that previously 
+					used the fiber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the fiber.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

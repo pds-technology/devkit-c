@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_wftEvent">
+		<xsd:annotation>
+			<xsd:documentation>Captures information about an event that occurred.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="kind" type="prodml:WftEventKind" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The kind of event.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTim" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Date and time of the start of the event.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="duration" type="prodml:timeMeasure" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The time duration of the event.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment about the event.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

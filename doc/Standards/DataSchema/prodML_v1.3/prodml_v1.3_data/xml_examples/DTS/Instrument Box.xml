@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<prodml:dtsInstrumentBoxes xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../xsd_schemas/obj_dtsInstrumentBox.xsd" 
+                            xmlns:prodml="http://www.prodml.org/schemas/1series" 
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<prodml:documentInfo>
+		<prodml:documentName>Sample Instrument Box</prodml:documentName>
+	</prodml:documentInfo>
+	<prodml:facilityIdentifier>
+		<prodml:name>Well 1</prodml:name>
+		<prodml:installation>my platform</prodml:installation>
+		<prodml:kind>well</prodml:kind>
+		<prodml:contextFacility>my facility</prodml:contextFacility>
+		<prodml:operator>
+			<prodml:name>smooth</prodml:name>
+		</prodml:operator>
+	</prodml:facilityIdentifier>
+	<prodml:fiberInstrumentBox uid="IB1">
+		<prodml:grp_dtsInstrumentBox>
+			<prodml:name>Nimbus 2000</prodml:name>
+			<prodml:manufacturer>ACME</prodml:manufacturer>
+			<prodml:manufacturingDate>2001-07-22Z</prodml:manufacturingDate>
+			<prodml:type>Turbo</prodml:type>
+			<prodml:instrumentCalibration>
+				<prodml:dTimCalibration>2002-05-30Z</prodml:dTimCalibration>
+			</prodml:instrumentCalibration>
+		</prodml:grp_dtsInstrumentBox>
+	</prodml:fiberInstrumentBox>
+</prodml:dtsInstrumentBoxes>

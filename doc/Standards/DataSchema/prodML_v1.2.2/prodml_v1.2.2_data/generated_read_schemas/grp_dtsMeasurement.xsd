@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_dtsErrorReport.xsd" />
+   <xsd:include schemaLocation="cs_dtsSingleInstalledPoint.xsd" />
+   <xsd:include schemaLocation="cs_dtsProcessedWellLog.xsd" />
+   <xsd:include schemaLocation="cs_wellContext.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>DTS Measurement Type</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:group name="grp_dtsMeasurement">
+      <xsd:annotation>
+         <xsd:documentation>The information content of a DTS temperature run is captured in the following elements, and in the referenced dtsInstalledFiber (for context) and the
+         reference well log (captures the table of data).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="dTimMin" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special
+               Handling" of growing objects for a description of the behavior related to this parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimMax" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimCurrent" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The definition of the "current time" index for this object. The current time index is a server query parameter which requests the selection of a
+               single node from a recurring set (e.g., the data related to one point in a time series). That is, the "most recent" (at or before the specified time) measurement
+               for a well. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellContext" type="prodml:cs_wellContext" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Contextual data about the well that was tested.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTim" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time associated with the measurement. This will normally be the start of the run.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="runDuration" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The length of time that the instrument box was operating while collecting DTS data.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="installedSystemUsed" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A reference to the installed system that was used to make the measurements.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dataInWellLog" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A reference to the well log used to record the table of data.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="connectedToFiber" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A reference to the fiber used to record the table of data. This is necessary only in the cases in which a dtsInstalledSystem has a multi-fiber
+               installation. If there is only a single installed fiber, this element is unnecessary.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberEndConnected" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to the fiber connection node. If more than one node is available for a well/wellbore, this element is used to specify which node is
+               connected to the instrument box. This name should correspond to the fiberEndPoint/name that is recorded in the installed system object.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberDefinedPoint" type="prodml:cs_dtsSingleInstalledPoint" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A known point of the fiber. This point should correspond to one that is given in the wellboreFiberSchematic, so that the relationship between the
+               length of fiber values in the wellboreFiberSchematic can be related to the values in the measurement table.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="errorReport" type="prodml:cs_dtsErrorReport" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An error that occurred during the measurement.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="processedLog" type="prodml:cs_dtsProcessedWellLog" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A reference to a processed wellLog that represents this measurement.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+   <!--                                                         -->
+</xsd:schema>

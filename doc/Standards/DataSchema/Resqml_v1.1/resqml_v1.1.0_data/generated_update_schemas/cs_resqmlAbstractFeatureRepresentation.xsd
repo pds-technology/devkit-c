@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.0">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_resqmlTraceabilityDublinCore.xsd" />
+   <xsd:include schemaLocation="cs_extensionAny.xsd" />
+   <xsd:include schemaLocation="cs_resqmlExtensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uidGlobal.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlAbstractFeatureRepresentation" abstract="true">
+      <xsd:sequence minOccurs="0">
+         <xsd:group ref="resqml:grp_resqmlTraceabilityDublinCore" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Dublin Core elements used for traceability.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="local3dCRS" type="resqml:refGlobalNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to the local 3D CRS which represents the coordinates in all patchs. This must point to a child of
+               spatialReferenceSet.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionAny" type="resqml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="resqml:cs_resqmlExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uidGlobal">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node. This must be a globally unique identifier.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

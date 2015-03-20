@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_catalogResqml.xsd" />
+   <!--                                                         -->
+   <!--                                                         -->
+   <xsd:simpleType name="anyURI" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A URI.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:absractAnyURI" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="byteValues" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An empty element with attributes that define an array of byte values. A value which equals nullValue will be interpreted as a null
+         value.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="nullValue" type="xsd:byte" use="optional" />
+      <xsd:attribute name="array" type="resqml:listOfByte" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="doubleValues" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An empty element with attributes that define an array of double values. A value of NaN will be interpreted as a null value.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="array" type="resqml:listOfDouble" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="faceIndex" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An integer face index with values of 0 to 5.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:short">
+         <xsd:minInclusive value="0">
+            <xsd:annotation>
+               <xsd:documentation>This value can be zero but cannot be negative.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+         <xsd:maxInclusive value="5">
+            <xsd:annotation>
+               <xsd:documentation>This value can not be greater than 5.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:maxInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="floatValues" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An empty element with attributes that define an array of float values. A value of NaN will be interpreted as a null value.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="array" type="resqml:listOfFloat" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="intValues" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An empty element with attributes that define an array of int values. A value which equals nullValue will be interpreted as a null
+         value.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="nullValue" type="xsd:int" use="optional" />
+      <xsd:attribute name="array" type="resqml:listOfInt" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="listOfByte" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A space delimited list of xsd:byte.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:list itemType="xsd:byte" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="listOfDouble" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A space delimited list of doubles.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:list itemType="xsd:double" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="listOfFloat" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A space delimited list of floats.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:list itemType="xsd:float" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="listOfInt" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A space delimited list of xsd:int.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:list itemType="xsd:int" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="listOfLong" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A space delimited list of xsd:long.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:list itemType="xsd:long" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="listOfShort" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A space delimited list of xsd:short.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:list itemType="xsd:short" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="longValues" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An empty element with attributes that define an array of long values. A value which equals nullValue will be interpreted as a null
+         value.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="nullValue" type="xsd:long" use="optional" />
+      <xsd:attribute name="array" type="resqml:listOfLong" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="nonNegativeInt" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A large non-negative integer (zero based count or index) with a maximum value of 2,147,483,647 (4-bytes).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:int">
+         <xsd:minInclusive value="0">
+            <xsd:annotation>
+               <xsd:documentation>This value cannot be negative.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="nonNegativeShort" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A non-negative integer (zero based count or index) with a maximum value of 32767 (2-bytes). For items that represent "number of" something or a
+         "sequential" count or index.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:short">
+         <xsd:minInclusive value="0">
+            <xsd:annotation>
+               <xsd:documentation>This value can be zero but cannot be negative.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="point3d" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Defines a point using coordinates in 3D space.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="x" type="xsd:double" use="required" />
+      <xsd:attribute name="y" type="xsd:double" use="required" />
+      <xsd:attribute name="z" type="xsd:double" use="required" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="positiveInt" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A large positive integer (one based count or index) with a maximum value of 2,147,483,647 (4-bytes).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:int">
+         <xsd:minInclusive value="1">
+            <xsd:annotation>
+               <xsd:documentation>This value cannot be negative or zero.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="positiveShort" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A positive integer (one based count or index).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:short">
+         <xsd:minInclusive value="1">
+            <xsd:annotation>
+               <xsd:documentation>This value cannot be negative or zero.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                     -->
+   <xsd:complexType name="refGlobalNameString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A reference to a name in another node of the xml hierachy. This value represents a foreign key from one element to another.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="resqml:abstractNameString">
+            <xsd:attribute name="uidRef" type="resqml:refGlobalString" use="required">
+               <xsd:annotation>
+                  <xsd:documentation>A reference to the globally unique identifier (uid attribute) in the node referenced by the name value. This attribute is required within the
+                  context of a WITSML server.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                     -->
+   <xsd:simpleType name="refGlobalString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A reference to the globaly unique identifier of another element. This value represents a foreign key from one element to another. The value should
+         match the value of an attribute of type uuidString.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractUidString">
+         <xsd:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="schemaVersionStringResqml" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The version of the schema. The first three levels are fixed. The fourth level can vary to represent on the constraints defined in enumerations and XML
+         loader files.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractString">
+         <xsd:maxLength value="16" />
+         <xsd:pattern value="1\.([1-9][0-9]|[1-9])\.[1-9]?[0-9]\.[1-9]?[0-9]\(RESQML\)" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="shortValues" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An empty element with attributes that define an array of short values. A value which equals nullValue will be interpreted as a null
+         value.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="nullValue" type="xsd:short" use="optional" />
+      <xsd:attribute name="array" type="resqml:listOfShort" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="splitEdge" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Defines an edge using the zero-based vertex index of its two corners.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="ix1" type="resqml:nonNegativeInt" use="required" />
+      <xsd:attribute name="ix2" type="resqml:nonNegativeInt" use="required" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="triangle" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Defines a triangle using the zero-based vertex index of its three corners.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="ix1" type="resqml:nonNegativeInt" use="required" />
+      <xsd:attribute name="ix2" type="resqml:nonNegativeInt" use="required" />
+      <xsd:attribute name="ix3" type="resqml:nonNegativeInt" use="required" />
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="uuidString">
+      <xsd:annotation>
+         <xsd:documentation>A globally unique identifier generated according to UUID algorithm of rfc 4122 (http://www.faqs.org/rfcs/rfc4122.html).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractUidString">
+         <xsd:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="zeroOrOneShort" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An integer value of zero or one.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:short">
+         <xsd:minInclusive value="0" />
+         <xsd:maxInclusive value="1" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

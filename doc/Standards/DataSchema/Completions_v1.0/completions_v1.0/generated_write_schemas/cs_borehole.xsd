@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="cs_equipmentCatalog.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:include schemaLocation="cs_eventInfo.xsd" />
+   <xsd:complexType name="cs_borehole">
+      <xsd:annotation>
+         <xsd:documentation>Information on the borehole</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="name" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of borehole</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="typeBorehole" type="witsml:BoreholeType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="equipmentEventHistory" type="witsml:cs_eventInfo" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Event reference pointing to the eventledger.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth at Top of Interval</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth at bottom of the section</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tvdTop" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True vertical depth at top of the section</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tvdBottom" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True vertical depth at bottom of the section</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="diaBorehole" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Borehole diameter</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="descriptionPermanent" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The description of this equipment to be permanently kept.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="witsml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the borehole.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+Data is based on example well from WFT.
+They totally artificial and are not intended to demonstrate best practices. 
+NOTE: Different equipment may share common properties.  String equipment may reference the same equipmentUID as itself.
+-->
+<!--<downholeComponents xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.witsml.org/schemas/1series  ../completions/obj_downholeComponent.xsd" version="1.4.1.1">-->
+<downholeComponents xmlns="http://www.witsml.org/schemas/1series" version="1.4.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.witsml.org/schemas/1series ../xsd_schemas/obj_downholeComponent.xsd" >
+	<documentInfo>
+		<documentName>downholeComponents</documentName>
+		<fileCreationInformation>
+			<fileCreationDate>2012-04-17T09:00:00.000Z</fileCreationDate>
+			<fileCreator>Energistics</fileCreator>
+		</fileCreationInformation>
+	</documentInfo>
+	<downholeComponent uid="downholecomp_1" uidWell="VGASAU029">
+		<!-- The wellhead contains the wellhead information, the reason it has own section because the tubingHeader 
+			and casingHeader is the starting part of all casing , tubing string, the stringEquipmentUID is reference by 
+			multiple strings
+		-->
+		<nameWell>VGASAU029</nameWell>
+		<name>downholecomp_Job1</name>
+		<wellHead>
+			<stringType>Wellhead</stringType>
+			<name>wellhead</name>
+			<stringEquipmentSet>
+				<!-- tubing head install at 2005-->
+				<stringEquipment uid="wellheadString_1" equipmentRefUID="tubingHead_1">
+					<equipmentType>Tubing Head (Spool)</equipmentType>
+					<name>Tubing Head  3000# Bottom Flange 13.375"/Top Flange  9.625"</name>
+					<equipmentEventHistory>
+						<beginEvent>
+							<eventRefID>E08</eventRefID>
+							<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+						</beginEvent>
+						<endEvent/>
+					</equipmentEventHistory>
+					<count>1</count>
+					<length uom="ft">1</length>
+					<mdTop uom="ft">10</mdTop>
+					<mdBottom uom="ft">11</mdBottom>
+					<tvdTop uom="ft">10</tvdTop>
+					<tvdBottom uom="ft">11</tvdBottom>
+					<tvdBase uom="ft">0</tvdBase>
+					<connectionNext uid="whcon_bottom" stringEquipmentRefUID="wellheadString_2">
+						<sizeThread uom="in">9.625</sizeThread>
+						<position>bottom</position>
+						<connectionForm>Flange</connectionForm>
+						<!--in doc connectionType vs connectionForm-->
+					</connectionNext>
+				</stringEquipment>
+				<!-- Casing header , all casing hang on this casing head install at 1990-->
+				<stringEquipment uid="wellheadString_2" equipmentRefUID="casingHead_1">
+					<equipmentType>Casing Head</equipmentType>
+					<name>Casing Head 3000# Top Flange 16.750"/Bottom Thread 16.000"</name>
+					<equipmentEventHistory>
+						<beginEvent>
+							<eventRefID>E08</eventRefID>
+							<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+						</beginEvent>
+						<endEvent/>
+					</equipmentEventHistory>
+					<count>1</count>
+					<length uom="ft">1</length>
+					<mdTop uom="ft">11</mdTop>
+					<mdBottom uom="ft">12</mdBottom>
+					<tvdTop uom="ft">11</tvdTop>
+					<tvdBottom uom="ft">12</tvdBottom>
+					<connectionNext uid="whcon_top">
+						<sizeThread uom="in">16.75</sizeThread>
+						<position>top</position>
+						<connectionForm>Flange</connectionForm>
+					</connectionNext>
+					<connectionNext uid="whcon_bottom" stringEquipmentRefUID="wellheadString_2">
+						<typeThread>API Long</typeThread>
+						<sizeThread uom="in">16</sizeThread>
+						<position>bottom</position>
+						<connectionForm>Flange</connectionForm>
+						<connectionUpset>NUE</connectionUpset>
+						<!--no upset-->
+						<!--in doc connectionType vs connectionForm-->
+					</connectionNext>
+				</stringEquipment>
+			</stringEquipmentSet>
+		</wellHead>
+		<boreholeStringSet>
+			<boreholeString uid="primaryWellbore">
+				<name>Wellbore Hole 1</name>
+				<borehole>
+					<name>Wellbore Hole OD-20.0000</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<equipmentEventHistory>
+						<beginEvent>
+							<eventRefID>E08</eventRefID>
+							<eventDate>1990-11-11T14:00:00Z</eventDate>
+						</beginEvent>
+						<endEvent/>
+					</equipmentEventHistory>
+					<mdTop uom="ft">11</mdTop>
+					<mdBottom uom="ft">450</mdBottom>
+					<tvdTop uom="ft">11</tvdTop>
+					<tvdBottom uom="ft">450</tvdBottom>
+					<diaBorehole uom="in">20</diaBorehole>
+				</borehole>
+				<borehole>
+					<name>Wellbore Hole OD-13.0000</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<equipmentEventHistory>
+						<beginEvent>
+							<eventRefID>E12</eventRefID>
+							<eventDate>1990-11-15T08:00:00Z</eventDate>
+						</beginEvent>
+						<endEvent/>
+					</equipmentEventHistory>
+					<mdTop uom="ft">450</mdTop>
+					<mdBottom uom="ft">1250</mdBottom>
+					<tvdTop uom="ft">450</tvdTop>
+					<tvdBottom uom="ft">1250</tvdBottom>
+					<diaBorehole uom="in">13</diaBorehole>
+				</borehole>
+				<borehole>
+					<name>Wellbore Hole OD-10.1250</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<equipmentEventHistory>
+						<beginEvent>
+							<eventRefID>E08</eventRefID>
+							<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+						</beginEvent>
+						<endEvent/>
+					</equipmentEventHistory>
+					<mdTop uom="ft">1250</mdTop>
+					<mdBottom uom="ft">4800</mdBottom>
+					<tvdTop uom="ft">1250</tvdTop>
+					<tvdBottom uom="ft">4800</tvdBottom>
+					<diaBorehole uom="in">10.1250</diaBorehole>
+				</borehole>
+				<borehole>
+					<name>Wellbore Hole OD-10.1250</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<equipmentEventHistory>
+						<beginEvent>
+							<eventRefID>E08</eventRefID>
+							<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+						</beginEvent>
+						<endEvent/>
+					</equipmentEventHistory>
+					<mdTop uom="ft">4800</mdTop>
+					<mdBottom uom="ft">9903</mdBottom>
+					<tvdTop uom="ft">1250</tvdTop>
+					<tvdBottom uom="ft">4800</tvdBottom>
+					<diaBorehole uom="in">10.1250</diaBorehole>
+				</borehole>
+				<borehole>
+					<name>Wellbore Hole OD-10.1250</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<equipmentEventHistory>
+						<beginEvent>
+							<eventRefID>E08</eventRefID>
+							<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+						</beginEvent>
+						<endEvent/>
+					</equipmentEventHistory>
+					<mdTop uom="ft">9903</mdTop>
+					<mdBottom uom="ft">11615</mdBottom>
+					<tvdTop uom="ft">1250</tvdTop>
+					<tvdBottom uom="ft">4800</tvdBottom>
+					<diaBorehole uom="in">10.1250</diaBorehole>
+				</borehole>
+				<geologyFeature  uid="Aquifer_1"> 
+						<name>Ogalala</name>
+						<geologyType>Aquifer</geologyType>
+					 
+						<mdTop uom="ft">78</mdTop>
+						<mdBottom uom="ft">101</mdBottom>
+					</geologyFeature>
+					<geologyFeature  uid="Reservoir_1" >
+						<name>Mckee_Reservoir</name>
+						<geologyType>Reservoir</geologyType>
+						  
+						<mdTop uom="ft">4511</mdTop>
+						<mdBottom uom="ft">4602</mdBottom>
+					</geologyFeature>
+					<geologyFeature uid="Reservoir_2"  >
+						<name>Grayburg_Reservoir</name>
+						<geologyType>Reservoir</geologyType>
+					 
+						<mdTop uom="ft">4614</mdTop>
+						<mdBottom uom="ft">4720</mdBottom>
+					</geologyFeature> 
+			</boreholeString>
+			<boreholeString uid="boreholelateral_1">
+				<name>boreholelateral_1</name>
+				<borehole>
+					<name>boreholelateral_1</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<mdTop uom="ft">8668</mdTop>
+					<mdBottom uom="ft">10819</mdBottom>
+					<tvdTop uom="ft">8668</tvdTop>
+					<tvdBottom uom="ft">10819</tvdBottom>
+					<diaBorehole uom="in">20</diaBorehole>
+				</borehole>
+				<geologyFeature  uid="Reservoir_5" >
+						<name>reservoir_montaya</name>
+						<geologyType>Reservoir</geologyType>
+						<mdTop uom="ft">8668</mdTop>
+						<mdBottom uom="ft">10819</mdBottom>
+					</geologyFeature> 
+			</boreholeString>
+			<boreholeString uid="boreholeString_2">
+				<name>boreholeString_2</name>
+				<borehole>
+					<name>lateralBorehole-2</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<mdTop uom="ft">9064</mdTop>
+					<mdBottom uom="ft">11612</mdBottom>
+					<tvdTop uom="ft">9064</tvdTop>
+					<tvdBottom uom="ft">11612</tvdBottom>
+					<diaBorehole uom="in">20</diaBorehole>
+				</borehole>
+				<geologyFeature uid="Reservoir_4" >
+					<name>Reservoir - Hare</name>
+					<geologyType>Reservoir</geologyType>
+					 
+					<mdTop uom="ft">2612</mdTop>
+					<mdBottom uom="ft">9000</mdBottom>
+				</geologyFeature> 
+			</boreholeString>
+			<boreholeString uid="lateralBorehole-3">
+				<name>lateralBorehole-3</name>
+				<borehole>
+					<name>lateralBorehole-3</name>
+					<typeBorehole>NormalBorehole</typeBorehole>
+					<mdTop uom="ft">9680</mdTop>
+					<mdBottom uom="ft">11469</mdBottom>
+					<tvdTop uom="ft">9680</tvdTop>
+					<tvdBottom uom="ft">11469</tvdBottom>
+					<diaBorehole uom="in">20</diaBorehole>
+				</borehole>
+				<geologyFeature uid="Reservoir_3"  >
+					<name>Reservoir - Morrow</name>
+					<geologyType>Reservoir</geologyType>
+	 
+					<mdTop uom="ft">9500</mdTop>
+					<mdBottom uom="ft">11469</mdBottom>
+				</geologyFeature> 
+			</boreholeString>
+ 		</boreholeStringSet>
+		<downholeStringSet>
+			<!-- surfacecasing: casing, casingshoe and cement behind casing(accessory) -->
+			<downholeString uid="surfacecasing_1" uidWellbore="primaryWellbore">
+				<stringType>Casing</stringType>
+				<subStringType>Surface Casing</subStringType>
+				<name>surfacecasing_1</name>
+				<stringEquipmentSet>
+					<!-- surfacecasing 's casing and casingliner -->
+					<stringEquipment uid="surfacecasingString_1" equipmentRefUID="surfacecasing_casingliner_1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<name>K-55 18.625 OD/ 96.50# Round Long 17.655 ID 17.468 Drift</name>
+						<count>15</count>
+						<length uom="ft">437</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">449</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">449</tvdBottom>
+						<tvdBase uom="ft">0</tvdBase>
+						<!-- Top connect to wellheader tubing head wellheaderString2 ; positiontop -->
+						<connectionNext uid="surfacecasingCon_1" stringEquipmentRefUID="wellheadString_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">18.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+						<!-- Bottom Connect to the next surfacecasing casing shoe-->
+						<connectionNext uid="surfacecasingCon_2" stringEquipmentRefUID="surfacecasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">18.625</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>EUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- end of string : casingshoe -->
+					<stringEquipment uid="surfacecasingString_2" equipmentRefUID="surfacecasingshoe_1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<name>Casing Shoe (18.625 OD Casing)</name>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">449</mdTop>
+						<mdBottom uom="ft">450</mdBottom>
+						<tvdTop uom="ft">449</tvdTop>
+						<tvdBottom uom="ft">450</tvdBottom>
+						<connectionNext uid="surfacecasingshoeCon_1" stringEquipmentRefUID="surfacecasing_casingliner_1">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">18.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<!-- cement behind the casing as accessory contain in surfacecasing -->
+					<accessory uid="surfaccessory_1" equipmentRefUID="cementbehind_surfacecasing_1">
+						<equipmentType>Cement (behind Casing)</equipmentType>
+						<name>cementbehind_surfacecasing_1</name>
+						<count>1</count>
+						<length uom="ft">438</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">450</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">450</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!--intermediate casing, start from the wellhead 's casing head: casing, casingshoe and cement behind casing(accessory) -->
+			<downholeString uid="intermediatecasing_1" uidWellbore="primaryWellbore">
+				<stringType>Casing</stringType>
+				<subStringType>Intermediate Casing</subStringType>
+				<name>intermediatecasing_1</name>
+				<stringEquipmentSet>
+					<!--intermediate casing, top of casing connect from the casinghead of wellhead -->
+					<stringEquipment uid="intercasing_1" equipmentRefUID="intercasing_casingliner_!">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<name>Casing/Casing Liner OD 11.750</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E12</eventRefID>
+								<eventDate>1990-11-16T18:00:00Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>42</count>
+						<length uom="ft">1236</length>
+						<mdTop uom="ft">13</mdTop>
+						<mdBottom uom="ft">1249</mdBottom>
+						<tvdTop uom="ft">13</tvdTop>
+						<tvdBottom uom="ft">1249</tvdBottom>
+						<!-- Top connect to wellhead casing head -->
+						<connectionNext uid="intercasingCon_1" stringEquipmentRefUID="wellheadString_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">11.75</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+						<!-- Bottom connect to next string: casing shoe-->
+						<connectionNext uid="intercasingCon_2" stringEquipmentRefUID="intercasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">11.75</sizeThread>
+							<position>bottom</position>
+							<tubingConnectionType>SelfSealing-Threaded</tubingConnectionType>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- end of string: casing shoe -->
+					<stringEquipment uid="intercasing_2" equipmentRefUID="intercasingshoe_1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<name>Casing Shoe (11.750 OD Casing)</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E12</eventRefID>
+								<eventDate>1990-11-16T18:00:00Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">1249</mdTop>
+						<mdBottom uom="ft">1250</mdBottom>
+						<tvdTop uom="ft">1249</tvdTop>
+						<tvdBottom uom="ft">1250</tvdBottom>
+						<connectionNext uid="intercasingCon_2" stringEquipmentRefUID="intercasing_1">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">11.75</sizeThread>
+							<position>top</position>
+							<tubingConnectionType>SelfSealing-Threaded</tubingConnectionType>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<!-- cement behind intercasing as accessory -->
+					<accessory uid="intercaseAssory_1" equipmentRefUID="cementbehind_intercasing_1">
+						<equipmentType>Cement (behind Casing)</equipmentType>
+						<name>cementbehind_intercasing_1</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E13</eventRefID>
+								<eventDate>1990-11-16T18:00:00Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">1238</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">1250</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">1250</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!--production casing, connect from the wellhead's casinghead: casing, casingshoe and cement behind casing(accessory) -->
+			<downholeString uid="prodcasing_1" uidWellbore="primaryWellbore">
+				<stringType>Casing</stringType>
+				<subStringType>Production Casing</subStringType>
+				<name>productioncasing</name>
+				<stringEquipmentSet>
+					<!-- casingliner and casing, top connect to casinghead count(160)-->
+					<stringEquipment uid="prodcasing_1" equipmentRefUID="prod_casingliner_1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<name>Casing/Casing Liner OD  9.625</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>160</count>
+						<length uom="ft">4787</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">4799</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">4799</tvdBottom>
+						<!-- Top connect to well header casing header -->
+						<connectionNext uid="prodCon_1" stringEquipmentRefUID="wellheadString_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">9.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+						<!-- Bottom connect to casing shoe-->
+						<connectionNext uid="prodCon_2" stringEquipmentRefUID="prodcasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">9.625</sizeThread>
+							<position>bottom</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+					<!-- end of string: casing shoe-->
+					<stringEquipment uid="prodcasing_2" equipmentRefUID="prodcasingshoe_1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<name>Casing Shoe ( 9.625 OD Casing)</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">4799</mdTop>
+						<mdBottom uom="ft">4800</mdBottom>
+						<tvdTop uom="ft">4799</tvdTop>
+						<tvdBottom uom="ft">4800</tvdBottom>
+						<connectionNext uid="prodcasing2Con_1" stringEquipmentRefUID="prodcasing_2">
+							<typeThread>8RD</typeThread>
+							<sizeThread uom="in">9.625</sizeThread>
+							<position>top</position>
+							<connectionForm>Pin</connectionForm>
+							<connectionUpset>NUE</connectionUpset>
+						</connectionNext>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<!-- cement behind production casing -->
+					<accessory uid="prodAccessory_1" equipmentRefUID="cementbehind_prod_1">
+						<equipmentType>Cement (behind Casing)</equipmentType>
+						<name>cementbehind_prod_1</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">4788</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">4800</mdBottom>
+						<tvdTop uom="ft">12</tvdTop>
+						<tvdBottom uom="ft">4800</tvdBottom>
+					</accessory>
+					<!--dual packer -->
+					<accessory uid="accessory_2005" equipmentRefUID="dualPacker_1">
+						<equipmentType>Packer-Multiple Strings</equipmentType>
+						<name>dualPacker_1</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">8</length>
+						<mdTop uom="ft">4500</mdTop>
+						<mdBottom uom="ft">4508</mdBottom>
+						<tvdTop uom="ft">8</tvdTop>
+						<tvdBottom uom="ft">4508</tvdBottom>
+					</accessory>
+					<!-- cement squeeze -->
+					<accessory uid="cementSqueeze_1" equipmentRefUID="cementSqueeze_1">
+						<equipmentType>Cement Squeeze</equipmentType>
+						<name>Cement Squeeze - Perforations</name>
+						<count>1</count>
+						<length uom="ft">200</length>
+						<mdTop uom="ft">4512</mdTop>
+						<mdBottom uom="ft">4712</mdBottom>
+						<tvdTop uom="ft">4512</tvdTop>
+						<tvdBottom uom="ft">4712</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!--production liner continues from production casing, it includes three case windowings-->
+			<downholeString uid="productionLiner_1" uidWellbore="primaryWellbore">
+				<stringType>Casing</stringType>
+				<stringEquipmentSet>
+					<!--liner hanger-->
+					<stringEquipment uid="liner_1" equipmentRefUID="linerHanger_1">
+						<equipmentType>Liner Hanger</equipmentType>
+						<name>Casing Liner Hanger (Packer) -  8.000" OD</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">4795</mdTop>
+						<mdBottom uom="ft">4799</mdBottom>
+						<tvdTop uom="ft">4795</tvdTop>
+						<tvdBottom uom="ft">4799</tvdBottom>
+					</stringEquipment>
+					<!--casing /casingliner-->
+					<stringEquipment uid="liner_2" equipmentRefUID="linercasing_1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<name>Casing/Casing Liner OD  8.000</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">5103</length>
+						<mdTop uom="ft">4799</mdTop>
+						<mdBottom uom="ft">9902</mdBottom>
+						<tvdTop uom="ft">4799</tvdTop>
+						<tvdBottom uom="ft">9902</tvdBottom>
+						<assembly>
+							<part uid="prodLiner_casingWindow_1" equipmentRefUID="casingWindow_1">
+								<equipmentType>Casing/Casing Liner</equipmentType>
+								<count>1</count>
+								<length uom="ft">15</length>
+								<mdTop uom="ft">8668</mdTop>
+								<mdBottom uom="ft">8683</mdBottom>
+								<tvdTop uom="ft">8668</tvdTop>
+								<tvdBottom uom="ft">8683</tvdBottom>
+							</part>
+							<part uid="prodLiner_casingWindow_2" equipmentRefUID="casingWindow_2">
+								<equipmentType>Casing/Casing Liner</equipmentType>
+								<count>1</count>
+								<length uom="ft">15</length>
+								<mdTop uom="ft">9064</mdTop>
+								<mdBottom uom="ft">9079</mdBottom>
+								<tvdTop uom="ft">9064</tvdTop>
+								<tvdBottom uom="ft">9079</tvdBottom>
+							</part>
+							<part uid="prodLiner_casingWindow_3" equipmentRefUID="casingWindow_3">
+								<equipmentType>Casing/Casing Liner</equipmentType>
+								<count>1</count>
+								<length uom="ft">15</length>
+								<mdTop uom="ft">9680</mdTop>
+								<mdBottom uom="ft">9695</mdBottom>
+								<tvdTop uom="ft">9680</tvdTop>
+								<tvdBottom uom="ft">9695</tvdBottom>
+							</part>
+						</assembly>
+					</stringEquipment>
+					<!--casing shoe-->
+					<stringEquipment uid="liner_3" equipmentRefUID="liner_shoe_1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">9902</mdTop>
+						<mdBottom uom="ft">9903</mdBottom>
+						<tvdTop uom="ft">9902</tvdTop>
+						<tvdBottom uom="ft">9903</tvdBottom>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<accessory uid="prdLinerAccs_1" equipmentRefUID="cement_prodliner_1">
+						<equipmentType>Cement (behind Casing)</equipmentType>
+						<name>cement_prodliner_1</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">5103</length>
+						<mdTop uom="ft">4799</mdTop>
+						<mdBottom uom="ft">9902</mdBottom>
+						<tvdTop uom="ft">4799</tvdTop>
+						<tvdBottom uom="ft">9902</tvdBottom>
+					</accessory>
+					<!--dual packer -->
+					<accessory uid="prdLinerAccs_1" equipmentRefUID="packer_prodliner_1">
+						<equipmentType>Packer</equipmentType>
+						<name>packer_prodliner_1</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">6</length>
+						<mdTop uom="ft">8978</mdTop>
+						<mdBottom uom="ft">8984</mdBottom>
+						<tvdTop uom="ft">8978</tvdTop>
+						<tvdBottom uom="ft">8984</tvdBottom>
+					</accessory>
+					<accessory uid="prdLinerAccs_2" equipmentRefUID="packer_prodliner_2">
+						<equipmentType>Packer</equipmentType>
+						<name>packer_prodliner_2</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">6</length>
+						<mdTop uom="ft">9630</mdTop>
+						<mdBottom uom="ft">9636</mdBottom>
+						<tvdTop uom="ft">9630</tvdTop>
+						<tvdBottom uom="ft">9636</tvdBottom>
+					</accessory>
+					<accessory uid="brigePlug_2005" equipmentRefUID="brigePlug_2005">
+						<equipmentType>Bridge Plug</equipmentType>
+						<name>Bridge Plug unknown  5.500"</name>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<count>1</count>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">9800</mdTop>
+						<mdBottom uom="ft">9804</mdBottom>
+						<tvdTop uom="ft">9800</tvdTop>
+						<tvdBottom uom="ft">9804</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!--lateral 1 sub wellbore -->
+			<downholeString uid="productioncasing_lateral1" uidParentString="productionLiner_1" uidWellbore="wellbore_1">
+				<stringType>Casing</stringType>
+				<stringEquipmentSet>
+					<stringEquipment uid="lateralString1_casing1" equipmentRefUID="lateral1_casing1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">150</length>
+						<mdTop uom="ft">8668</mdTop>
+						<mdBottom uom="ft">8818</mdBottom>
+						<tvdTop uom="ft">8668</tvdTop>
+						<tvdBottom uom="ft">8818</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString1_mandrel1" equipmentRefUID="lateral1_mandrel1">
+						<equipmentType>Seal Assembly</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">8818</mdTop>
+						<mdBottom uom="ft">8822</mdBottom>
+						<tvdTop uom="ft">8818</tvdTop>
+						<tvdBottom uom="ft">8822</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString1_casing2" equipmentRefUID="lateral1_casing2">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">90</length>
+						<mdTop uom="ft">8822</mdTop>
+						<mdBottom uom="ft">8912</mdBottom>
+						<tvdTop uom="ft">8822</tvdTop>
+						<tvdBottom uom="ft">8912</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString1_casingShoe1" equipmentRefUID="lateral1_casingShoe1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">8912</mdTop>
+						<mdBottom uom="ft">8913</mdBottom>
+						<tvdTop uom="ft">8912</tvdTop>
+						<tvdBottom uom="ft">8913</tvdBottom>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<accessory uid="lateralString1_packer1" equipmentRefUID="lateral1_packer1">
+						<equipmentType>Packer</equipmentType>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">8818</mdTop>
+						<mdBottom uom="ft">8822</mdBottom>
+						<tvdTop uom="ft">8818</tvdTop>
+						<tvdBottom uom="ft">8822</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!--lateral 2 sub wellbore -->
+			<downholeString uid="productioncasing_lateral2" uidParentString="productionLiner_1" uidWellbore="wellbore_2">
+				<stringType>Casing</stringType>
+				<stringEquipmentSet>
+					<stringEquipment uid="lateralString2_casing1" equipmentRefUID="lateral2_casing1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">150</length>
+						<mdTop uom="ft">9064</mdTop>
+						<mdBottom uom="ft">9214</mdBottom>
+						<tvdTop uom="ft">9064</tvdTop>
+						<tvdBottom uom="ft">9214</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString2_mandrel1" equipmentRefUID="lateral2_mandrel1">
+						<equipmentType>Seal Assembly</equipmentType>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">9214</mdTop>
+						<mdBottom uom="ft">9218</mdBottom>
+						<tvdTop uom="ft">9214</tvdTop>
+						<tvdBottom uom="ft">9218</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString2_casing2" equipmentRefUID="lateral2_casing2">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<length uom="ft">90</length>
+						<mdTop uom="ft">9218</mdTop>
+						<mdBottom uom="ft">9308</mdBottom>
+						<tvdTop uom="ft">9218</tvdTop>
+						<tvdBottom uom="ft">9308</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString2_casingShoe1" equipmentRefUID="lateral2_casingShoe1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">9308</mdTop>
+						<mdBottom uom="ft">9309</mdBottom>
+						<tvdTop uom="ft">9308</tvdTop>
+						<tvdBottom uom="ft">9309</tvdBottom>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<accessory uid="lateral2_packer1" equipmentRefUID="lateral2_packer1">
+						<equipmentType>Packer</equipmentType>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">9214</mdTop>
+						<mdBottom uom="ft">9218</mdBottom>
+						<tvdTop uom="ft">9214</tvdTop>
+						<tvdBottom uom="ft">9218</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+			<!--tubing in lateral 2 -->
+			<downholeString uid="tubing_later2" uidParentString="lproductioncasing_ateral2" uidWellbore="wellbore_2">
+				<stringType>Tubing</stringType>
+				<stringEquipmentSet>
+					<stringEquipment uid="tubingString_1" equipmentRefUID="tubing1_Hanger_1">
+						<equipmentType>Tubing Hanger</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">11</mdTop>
+						<mdBottom uom="ft">12</mdBottom>
+						<tvdTop uom="ft">11</tvdTop>
+						<tvdBottom uom="ft">12</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubingString_2" equipmentRefUID="tubing1_tubing_1">
+						<equipmentType>Tubing</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">12</mdTop>
+						<mdBottom uom="ft">2677.5</mdBottom>
+						<tvdTop uom="ft">11</tvdTop>
+						<tvdBottom uom="ft">2689.5</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubingString_3" equipmentRefUID="tubing1_ssvalve_2005">
+						<equipmentType>Subsurface Safety Valve</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">3.75</length>
+						<mdTop uom="ft">2689.5</mdTop>
+						<mdBottom uom="ft">2693.25</mdBottom>
+						<tvdTop uom="ft">2689.5</tvdTop>
+						<tvdBottom uom="ft">2693.25</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubingString_4" equipmentRefUID="tubing1_tubing_2">
+						<equipmentType>Tubing</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">1806.5</length>
+						<mdTop uom="ft">2693.25</mdTop>
+						<mdBottom uom="ft">4500</mdBottom>
+						<tvdTop uom="ft">2693.25</tvdTop>
+						<tvdBottom uom="ft">4500</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubingString_5" equipmentRefUID="tubing1_SealAssembly_1">
+						<equipmentType>Seal Assembly</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">6</length>
+						<mdTop uom="ft">4500</mdTop>
+						<mdBottom uom="ft">4506</mdBottom>
+						<tvdTop uom="ft">4500</tvdTop>
+						<tvdBottom uom="ft">4506</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubingString_6" equipmentRefUID="tubing1_tubing_3">
+						<equipmentType>Tubing</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">4472</length>
+						<mdTop uom="ft">2693.25</mdTop>
+						<mdBottom uom="ft">8978</mdBottom>
+						<tvdTop uom="ft">2693.25</tvdTop>
+						<tvdBottom uom="ft">8978</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_tubing_1" equipmentRefUID="tubing_2005_1">
+						<equipmentType>Tubing</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">378</length>
+						<mdTop uom="ft">8988</mdTop>
+						<mdBottom uom="ft">9366</mdBottom>
+						<tvdTop uom="ft">8988</tvdTop>
+						<tvdBottom uom="ft">9366</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_slidingSleeve_1" equipmentRefUID="slidingSleeve_1">
+						<equipmentType>Sliding Sleeve</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">5</length>
+						<mdTop uom="ft">9366</mdTop>
+						<mdBottom uom="ft">9371</mdBottom>
+						<tvdTop uom="ft">9366</tvdTop>
+						<tvdBottom uom="ft">9371</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_tubing_2005_4" equipmentRefUID="tubing_2005_2">
+						<equipmentType>Tubing</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">259</length>
+						<mdTop uom="ft">9371</mdTop>
+						<mdBottom uom="ft">9630</mdBottom>
+						<tvdTop uom="ft">9371</tvdTop>
+						<tvdBottom uom="ft">9630</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_packerMandrel_2005_4" equipmentRefUID="tubing_sealAssembly_1">
+						<equipmentType>Seal Assembly</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">10</length>
+						<mdTop uom="ft">9630</mdTop>
+						<mdBottom uom="ft">9640</mdBottom>
+						<tvdTop uom="ft">9630</tvdTop>
+						<tvdBottom uom="ft">9640</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_tubing_2005_5" equipmentRefUID="tubing_2005_3">
+						<equipmentType>Tubing</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">409.5</length>
+						<mdTop uom="ft">9640</mdTop>
+						<mdBottom uom="ft">10049.5</mdBottom>
+						<tvdTop uom="ft">9640</tvdTop>
+						<tvdBottom uom="ft">10049.5</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_slidingSleeve_2" equipmentRefUID="slidingSleeve_2">
+						<equipmentType>Sliding Sleeve</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">5</length>
+						<mdTop uom="ft">10049.5</mdTop>
+						<mdBottom uom="ft">10054.5</mdBottom>
+						<tvdTop uom="ft">10049.5</tvdTop>
+						<tvdBottom uom="ft">10054.5</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_tubing_2005_6" equipmentRefUID="tubing_2005_4">
+						<equipmentType>Tubing</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">1806.5</length>
+						<mdTop uom="ft">10054.5</mdTop>
+						<mdBottom uom="ft">10086</mdBottom>
+						<tvdTop uom="ft">10054.5</tvdTop>
+						<tvdBottom uom="ft">10086</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="tubing2_bullplug_2005_1" equipmentRefUID="bullplug_2005_1">
+						<equipmentType>Bull Plug</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">0.42</length>
+						<mdTop uom="ft">10086</mdTop>
+						<mdBottom uom="ft">10086.42</mdBottom>
+						<tvdTop uom="ft">10086</tvdTop>
+						<tvdBottom uom="ft">10086.42</tvdBottom>
+					</stringEquipment>
+				</stringEquipmentSet>
+			</downholeString>
+			<!--lateral 3 sub wellbore -->
+			<downholeString uid="productioncasing_lateral3" uidParentString="productionLiner_1" uidWellbore="wellbore_3">
+				<stringType>Casing</stringType>
+				<stringEquipmentSet>
+					<stringEquipment uid="lateralString3_casing1" equipmentRefUID="lateral3_casing1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">150</length>
+						<mdTop uom="ft">9680</mdTop>
+						<mdBottom uom="ft">9830</mdBottom>
+						<tvdTop uom="ft">9680</tvdTop>
+						<tvdBottom uom="ft">9830</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString3_casing1" equipmentRefUID="lateral3_casing1">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">150</length>
+						<mdTop uom="ft">9680</mdTop>
+						<mdBottom uom="ft">9830</mdBottom>
+						<tvdTop uom="ft">9680</tvdTop>
+						<tvdBottom uom="ft">9830</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString3_mandrel1" equipmentRefUID="lateral3_mandrel1">
+						<equipmentType>Seal Assembly</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">9830</mdTop>
+						<mdBottom uom="ft">9834</mdBottom>
+						<tvdTop uom="ft">9830</tvdTop>
+						<tvdBottom uom="ft">9834</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString3_casing2" equipmentRefUID="lateral3_casing2">
+						<equipmentType>Casing/Casing Liner</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">90</length>
+						<mdTop uom="ft">9834</mdTop>
+						<mdBottom uom="ft">9924</mdBottom>
+						<tvdTop uom="ft">9834</tvdTop>
+						<tvdBottom uom="ft">9924</tvdBottom>
+					</stringEquipment>
+					<stringEquipment uid="lateralString3_casingShoe1" equipmentRefUID="lateral3_casingShoe1">
+						<equipmentType>Casing Shoe</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">1</length>
+						<mdTop uom="ft">9924</mdTop>
+						<mdBottom uom="ft">9925</mdBottom>
+						<tvdTop uom="ft">9924</tvdTop>
+						<tvdBottom uom="ft">9925</tvdBottom>
+					</stringEquipment>
+				</stringEquipmentSet>
+				<accessories>
+					<accessory uid="lateral3_packer1" equipmentRefUID="lateral3_packer1">
+						<equipmentType>Packer</equipmentType>
+						<equipmentEventHistory>
+							<beginEvent>
+								<eventRefID>E08</eventRefID>
+								<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+							</beginEvent>
+							<endEvent/>
+						</equipmentEventHistory>
+						<length uom="ft">4</length>
+						<mdTop uom="ft">9830</mdTop>
+						<mdBottom uom="ft">9834</mdBottom>
+						<tvdTop uom="ft">9830</tvdTop>
+						<tvdBottom uom="ft">9834</tvdBottom>
+					</accessory>
+				</accessories>
+			</downholeString>
+ 		</downholeStringSet>
+ 		<equipmentSet>
+			<equipment uid="casingHead_1">
+				<equipmentName>casing Head</equipmentName>
+				<equipmentType>Casing Head</equipmentType>
+				<model>API 3000#</model>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="surfacecasing_casingliner_1">
+				<equipmentName>surfacecasing casingliner</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+				<unitWeight uom="lbm/ft">9.65</unitWeight>
+				<OD uom="in">18.625</OD>
+				<ID uom="in">17.655</ID>
+				<drift uom="in">17.468</drift>
+			</equipment>
+			<equipment uid="surfacecasingshoe_1">
+				<equipmentName>surface casing shoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="cementbehind_surfacecasing_1">
+				<equipmentName>cement behind surfacecasing</equipmentName>
+				<equipmentType>Cement (behind Casing)</equipmentType>
+			</equipment>
+			<equipment uid=" ntercasing_casingliner_1">
+				<equipmentName>intercasing casingliner</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+				<unitWeight uom="lbm/ft">7.9</unitWeight>
+				<OD uom="in">11.75</OD>
+				<ID uom="in">10.438</ID>
+				<drift uom="in">10.282</drift>
+			</equipment>
+			<equipment uid="intercasing_casingshoe_1">
+				<equipmentName>intercaing casingshoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+			</equipment>
+			<equipment uid="cementbehind_intercasing_1">
+				<equipmentName>cement behind intermediate casing</equipmentName>
+				<equipmentType>Cement (behind Casing)</equipmentType>
+			</equipment>
+			<equipment uid="prod_casingliner_1">
+				<equipmentName>prod_casingliner</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+				<unitWeight uom="lbm/ft">4.35</unitWeight>
+				<OD uom="in">9.625</OD>
+				<ID uom="in">8.755</ID>
+				<drift uom="in">8.599</drift>
+			</equipment>
+			<equipment uid="prod_casingshoe_1">
+				<equipmentName>prodcasingshoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="cementbehind_prod_1">
+				<equipmentName>cement behind production casing</equipmentName>
+				<equipmentType>Cement (behind Casing)</equipmentType>
+			</equipment>
+			<equipment uid="packer_prodliner_1">
+				<equipmentName>packer</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+			</equipment>
+			<equipment uid="packer_prodliner_2">
+				<equipmentName>packer</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<material>Steel</material>
+				<grade>J-55</grade>
+			</equipment>
+			<equipment uid="cementSqueeze_1">
+				<equipmentName>cementSqueeze</equipmentName>
+				<equipmentType>Cement Squeeze</equipmentType>
+			</equipment>
+			<equipment uid="brigePlug_2005">
+				<equipmentName>brigePlug</equipmentName>
+				<equipmentType>Bridge Plug</equipmentType>
+				<OD uom="in">5.500</OD>
+			</equipment>
+			<equipment uid="liner_1">
+				<equipmentName>liner hanger</equipmentName>
+				<equipmentType>Liner Hanger</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+			</equipment>
+			<equipment uid="liner_2">
+				<equipmentName>casing liner</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+			</equipment>
+			<equipment uid="liner_3">
+				<equipmentName>casing shoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+				<material>Steel</material>
+				<grade>K-55</grade>
+			</equipment>
+			<equipment uid="lateral1_casing1">
+				<equipmentName>casing lateral1</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+			</equipment>
+			<equipment uid="lateral1_mandrel1">
+				<equipmentName>mandrel lateral1</equipmentName>
+				<equipmentType>Seal Assembly</equipmentType>
+			</equipment>
+			<equipment uid="lateral1_casing2">
+				<equipmentName>casing lateral 1</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+			</equipment>
+			<equipment uid="lateral1_casingShoe">
+				<equipmentName>lateral casingshoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+			</equipment>
+			<equipment uid="lateral1_packer1">
+				<equipmentName>packer lateral1</equipmentName>
+				<equipmentType>Packer</equipmentType>
+			</equipment>
+			<equipment uid="lateral2_casing1">
+				<equipmentName>casing lateral1</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+			</equipment>
+			<equipment uid="lateral2_mandrel1">
+				<equipmentName>mandrel lateral1</equipmentName>
+				<equipmentType>Seal Assembly</equipmentType>
+			</equipment>
+			<equipment uid="lateral2_casing2">
+				<equipmentName>casing lateral 1</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+			</equipment>
+			<equipment uid="lateral2_casingShoe">
+				<equipmentName>lateral casingshoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+			</equipment>
+			<equipment uid="lateral2_packer1">
+				<equipmentName>packer lateral1</equipmentName>
+				<equipmentType>Packer</equipmentType>
+			</equipment>
+			<equipment uid="tubing1_Hanger_1">
+				<equipmentName>tubing1_Hanger_1</equipmentName>
+				<equipmentType>Tubing Hanger</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing1_tubing_1">
+				<equipmentName>tubing1_tubing_1</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing1_ssvalve_2005">
+				<equipmentName>tubing1_ssvalve_2005</equipmentName>
+				<equipmentType>Subsurface Safety Valve</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing1_tubing_2">
+				<equipmentName>tubing1_tubing_2</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing1_SealAssembly_1">
+				<equipmentName>tubing1_SealAssembly_1</equipmentName>
+				<equipmentType>Seal Assembly</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing1_tubing_3">
+				<equipmentName>tubing1_tubing_3</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing_2005_1">
+				<equipmentName>tubing_2005_1</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="slidingSleeve_1">
+				<equipmentName>slidingSleeve_1</equipmentName>
+				<equipmentType>Sliding Sleeve</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing_2005_2">
+				<equipmentName>tubing_2005_2</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing_sealAssembly_1">
+				<equipmentName>tubing_sealAssembly_1</equipmentName>
+				<equipmentType>Seal Assembly</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing_2005_3">
+				<equipmentName>tubing_2005_3</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="slidingSleeve_2">
+				<equipmentName>slidingSleeve_2</equipmentName>
+				<equipmentType>Sliding Sleeve</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="tubing_2005_4">
+				<equipmentName>tubing_2005_4</equipmentName>
+				<equipmentType>Tubing</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="bullplug_2005_1">
+				<equipmentName>bullplug_2005_1</equipmentName>
+				<equipmentType>Bull Plug</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="lateral3_casing1">
+				<equipmentName>casing lateral1</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="lateral3_mandrel1">
+				<equipmentName>mandrel lateral1</equipmentName>
+				<equipmentType>Seal Assembly</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="lateral3_casing2">
+				<equipmentName>casing lateral 1</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="lateral3_casingShoe">
+				<equipmentName>lateral casingshoe</equipmentName>
+				<equipmentType>Casing Shoe</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="lateral3_packer1">
+				<equipmentName>packer lateral1</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<material>Steel</material>
+			</equipment>
+			<equipment uid="topgppack_1">
+				<equipmentName>Packer Dual (Retrievable)</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Dual Packer</model>
+				<modelType>XR</modelType>
+				<material>Steel</material>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.8</MaxOD>
+				<MinOD uom="in">9.44</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechanical</value>
+				</property>
+			</equipment>
+			<equipment uid="bottomgppack_1">
+				<equipmentName> Packer Isolation -  9.625"</equipmentName>
+				<equipmentType>Packer</equipmentType>
+				<model>Single</model>
+				<modelType>IP</modelType>
+				<material>Steel</material>
+				<OD uom="in">9.625</OD>
+				<MaxOD uom="in">9.8</MaxOD>
+				<MinOD uom="in">9.44</MinOD>
+				<property>
+					<name>PackerSettingMethod</name>
+					<value>Hydro-Mechanical</value>
+				</property>
+			</equipment>
+			<equipment uid="casingWindow_1">
+				<equipmentName>casingWindow</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+			</equipment>
+			<equipment uid="casingWindow_2">
+				<equipmentName>casingWindow</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+			</equipment>
+			<equipment uid="casingWindow_3">
+				<equipmentName>casingWindow</equipmentName>
+				<equipmentType>Casing/Casing Liner</equipmentType>
+			</equipment>
+		</equipmentSet>
+ 		<perforationSets>
+			<perforationSet uid="perf_Garyburg">
+				<mdTop uom="ft">4512</mdTop>
+				<mdBottom uom="ft">4604</mdBottom>
+				<tvdTop uom="ft">4512</tvdTop>
+				<tvdBottom uom="ft">4604</tvdBottom>
+				<perforationTool> TCP Gun</perforationTool>
+				<perforationPenetration uom="ft">1.7</perforationPenetration>
+				<crushZoneDiameter uom="in">0.72</crushZoneDiameter>
+				<crushDamageRatio>0.31</crushDamageRatio>
+				<permanentRemarks>2 JSPI @ 4528, 53, 60, 64, 68, 83, 92, 95, 4604</permanentRemarks>
+			</perforationSet>
+			<perforationSet uid="perf_Mckee">
+				<eventHistory>
+					<beginEvent>
+						<eventRefID>E08</eventRefID>
+						<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+					</beginEvent>
+					<endEvent/>
+				</eventHistory>
+				<mdTop uom="ft">4616</mdTop>
+				<mdBottom uom="ft">4698</mdBottom>
+				<tvdTop uom="ft">4616</tvdTop>
+				<tvdBottom uom="ft">4698</tvdBottom>
+				<perforationTool> TCP Gun</perforationTool>
+				<perforationPenetration uom="ft">1.7</perforationPenetration>
+				<crushZoneDiameter uom="in">0.69</crushZoneDiameter>
+				<crushDamageRatio>0.28</crushDamageRatio>
+				<permanentRemarks>2 JSPI @ 4616, 26, 33, 37, 64, 69, 74, 87, 94, 4704 &amp; 4712'.</permanentRemarks>
+			</perforationSet>
+			<perforationSet uid="perf_MckeeLower">
+				<eventHistory>
+					<beginEvent>
+						<eventRefID>E08</eventRefID>
+						<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+					</beginEvent>
+					<endEvent/>
+				</eventHistory>
+				<mdTop uom="ft">4700</mdTop>
+				<mdBottom uom="ft">4712</mdBottom>
+				<tvdTop uom="ft">4616</tvdTop>
+				<tvdBottom uom="ft">4712</tvdBottom>
+				<perforationTool> TCP Gun</perforationTool>
+				<perforationPenetration uom="ft">1.7</perforationPenetration>
+				<crushZoneDiameter uom="in">0.69</crushZoneDiameter>
+				<crushDamageRatio>0.28</crushDamageRatio>
+				<permanentRemarks> 4704 &amp; 4712'.</permanentRemarks>
+			</perforationSet>
+			<perforationSet uid="perf_Morrow">
+				<eventHistory>
+					<beginEvent>
+						<eventRefID>E08</eventRefID>
+						<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+					</beginEvent>
+					<endEvent/>
+				</eventHistory>
+				<mdTop uom="ft">8688</mdTop>
+				<mdBottom uom="ft">10819</mdBottom>
+				<tvdTop uom="ft">8688</tvdTop>
+				<tvdBottom uom="ft">10819</tvdBottom>
+				<perforationDate>2005-03-18T00:00:00.000Z</perforationDate>
+			</perforationSet>
+			<perforationSet uid="perf_Hair">
+				<eventHistory>
+					<beginEvent>
+						<eventRefID>E08</eventRefID>
+						<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+					</beginEvent>
+					<endEvent/>
+				</eventHistory>
+				<mdTop uom="ft">9850</mdTop>
+				<mdBottom uom="ft">9960</mdBottom>
+				<tvdTop uom="ft">9850</tvdTop>
+				<tvdBottom uom="ft">9960</tvdBottom>
+				<perforationDate>2005-03-18T00:00:00.000Z</perforationDate>
+			</perforationSet>
+			<perforationSet uid="perf_Montaya">
+				<eventHistory>
+					<beginEvent>
+						<eventRefID>E08</eventRefID>
+						<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+					</beginEvent>
+					<endEvent/>
+				</eventHistory>
+				<mdTop uom="ft">9850</mdTop>
+				<mdBottom uom="ft">9960</mdBottom>
+				<tvdTop uom="ft">9850</tvdTop>
+				<tvdBottom uom="ft">9960</tvdBottom>
+				<perforationDate>2005-03-18T00:00:00.000Z</perforationDate>
+			</perforationSet>
+			<perforationSet uid="openHole_Morrow">
+				<eventHistory>
+					<beginEvent>
+						<eventRefID>E08</eventRefID>
+						<eventDate>2005-03-28T00:00:00.000Z</eventDate>
+					</beginEvent>
+					<endEvent/>
+				</eventHistory>
+				<mdTop uom="ft">9969</mdTop>
+				<mdBottom uom="ft">11469</mdBottom>
+				<tvdTop uom="ft">9969</tvdTop>
+				<tvdBottom uom="ft">11469</tvdBottom>
+				<perforationDate>2005-03-18T00:00:00.000Z</perforationDate>
+			</perforationSet>
+ 		</perforationSets>
+	</downholeComponent>
+</downholeComponents>

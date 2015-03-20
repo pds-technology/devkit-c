@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wellTestTestVolume.xsd" />
+   <xsd:include schemaLocation="cs_wellTestFluidRate.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wellTestProductionTestResults">
+      <xsd:annotation>
+         <xsd:documentation>Oil, gas, and water volumes and rates measured during the well test. The volumes allow either actual volumes or standard (corrected) volumes. The
+         densities are also recorded with the volumes.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="oilVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Oil volumes measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="oilRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Oil rates measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Gas volumes measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Gas rates measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Water volumes measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Water rates measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="condensateVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>condensate volumes measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="condensateRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Condensate rates measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasOilRatio" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The ratio of the volume of gas and the volume of oil that was produced.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterCut" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The ratio of water produced compared to the volume of total liquids produced.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="density" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The density of the fluid mixture.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fluidVelocity" type="prodml:velocityMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The velocity of the overall fluid mixture.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="condensateYield" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This is the condensate yield, which describes the amount of condensate per unit of natural gas produced</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="basicSedimentAndWater" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This is the measured of impurities present in crude oil as it comes from the well. BSandW content is commonly used as a measure for treating
+               performance of hydrocarbon liquids</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="oilPotential" type="prodml:volumeFlowRateMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This is the the potential of the well to produce crude oil. This represents the flow rate that could be achieved under maximum
+               drawdown.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasPotential" type="prodml:volumeFlowRateMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This is the potential of the well to produce natural gas. This represents the flow rate that could be achieved under maximum
+               drawdown.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sandVolume" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The volume of sand that was produced.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="allocatedSplit" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the the split factors are allocated as opposed to measured. False ("false" or "0") or not given indicates
+               otherwise.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="oilSplitFactor" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The split factor for Oil relative to the overall volume of the test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasSplitFactor" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The split factor for Gas relative to the overall volume of the test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterSplitFactor" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The split factor for Water relative to the overall volume of the test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="condensateSplitFactor" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The split factor for Condensate relative to the overall volume of the test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="productivityIndex" type="prodml:productivityIndexMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Productivity Index (PI) is an expression which defines the pressure drop in the reservoir to produce a unit of oil per day. That is, the energy
+               to produce a unit of oil. The value was defined at ambient temperature and pressure.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="productivityIndexStdTempPres" type="prodml:productivityIndexMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Productivity Index (PI) is an expression which defines the pressure drop in the reservoir to produce a unit of oil per day. That is, the energy
+               to produce a unit of oil. The value has been converted to the declared conditions of standard temperature and pressure.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

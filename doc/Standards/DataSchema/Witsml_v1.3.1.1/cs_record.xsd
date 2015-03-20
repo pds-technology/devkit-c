@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_record">
+		<xsd:annotation>
+			<xsd:documentation> WITSML - Realtime Record Component Schema </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="id" type="witsml:str32" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The id of the group that this record represents.
+					The combination of id and seq should be unique within a subscription.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="seq" type="witsml:positiveCount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The one-based sequence of records for one group in this subscription.
+					The first record for a group should have a sequence number of one and each
+					subsequent record for that group should increment by one.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTim" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The time index for the record if the interval 
+					type is time-based. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="md" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Along hole measured depth of measurement from the drill datum.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="value" type="witsml:encodedArrayString"  minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The data values for the record.
+					A comma delimited list of data values with one 
+					value for each channel in the group (e.g., "xxx,yyy, zzz"). For array channels,
+					the value of the array channel will be a space delimited list of values that
+					are contained within the commas that delimit the value for that curve
+					(e.g., "xxx,aa bb cc,zzz").
+					This essentially represents one row of a table where the channel 
+					mnemonics represent the column headings. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>	
+	</xsd:complexType>
+</xsd:schema>

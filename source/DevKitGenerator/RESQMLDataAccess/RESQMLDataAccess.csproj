@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HDF5DotNet">
-      <HintPath>..\..\HDF5\HDF5DotNet.dll</HintPath>
+      <HintPath>..\DataAccess\Library\HDF5DotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

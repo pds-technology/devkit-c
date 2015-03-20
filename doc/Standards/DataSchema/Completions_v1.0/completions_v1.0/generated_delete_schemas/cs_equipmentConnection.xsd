@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="cs_equipmentCatalog.xsd" />
+   <xsd:include schemaLocation="cs_connection.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:complexType name="cs_equipmentConnection">
+      <xsd:annotation>
+         <xsd:documentation>Information detailing the connection between 2 components</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="witsml:cs_connection">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="radialOffset" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>measurement of radial offset</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:choice minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The choice of connection type</xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:element name="casingConnectionType" type="witsml:CasingConnectionType" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>The connection type of casing</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="tubingConnectionType" type="witsml:TubingConnectionType" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>The connection type of tubing</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="rodConnectionType" type="witsml:RodConnectionType" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>The connection type of rod</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="otherConnectionType" type="witsml:OtherConnectionType" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>The other connection type which is used for other tools</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+               </xsd:choice>
+               <xsd:element name="connectionForm" type="witsml:ConnectionFormType" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The form of connection: Box or Pin</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="connectionUpset" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Connection upset</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="stringEquipmentRefUID" type="witsml:nameString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Reference to the string equipment</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

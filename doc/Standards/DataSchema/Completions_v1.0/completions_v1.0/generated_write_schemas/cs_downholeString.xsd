@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="grp_downholeString.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:annotation>
+      <xsd:documentation>The schema for downhole strings describing the string's linear-connected equipment</xsd:documentation>
+   </xsd:annotation>
+   <xsd:complexType name="cs_downholeString">
+      <xsd:sequence>
+         <xsd:element name="stringType" type="witsml:DownholeStringType" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>An enumeration type defined in equipmentCatelog, the "DownholeStringEnum" contains valid option of "case","rod","tubing",
+               "otherString".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="subStringType" type="witsml:SubStringType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>An enumeration type define for express further string type etc. "SurfaceCasing", "IntermediaCasing", "productionCasing".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="name" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of downhole string.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="stringInstallDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The install date of downhole string.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parentStringsName" type="witsml:refString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of parent string.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth at Top of Interval</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth at bottom of the section</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="axisOffset" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>the distance from the sibling string.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:group ref="witsml:grp_downholeString" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation>Downhole string non-normative values</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="extensionAny" type="witsml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="witsml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the downhole component.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+      <xsd:attribute name="uidParentString" type="witsml:uidParentString" use="required">
+         <xsd:annotation>
+            <xsd:documentation>The uidParentString points to the parent string. Even if the string is not physically connected together, this string is still considered as a
+            continuation of the parent string.</xsd:documentation>
+            <xsd:appinfo>write-constraint:@use="optional"</xsd:appinfo>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="uidWellbore" type="witsml:uidParentString" use="required">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.</xsd:documentation>
+            <xsd:appinfo>write-constraint:@use="optional"</xsd:appinfo>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

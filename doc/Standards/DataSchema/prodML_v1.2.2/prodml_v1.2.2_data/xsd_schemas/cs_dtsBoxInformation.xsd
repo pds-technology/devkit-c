@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_dtsInstrumentBox.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>DTS Instrument Box Information</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:complexType name="cs_dtsBoxInformation">
+		<xsd:annotation>
+			<xsd:documentation>The instrument box used for distributed temperature surveys</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="installationDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date the instrument box was installed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="installationCompany" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The company that installed the instrument box in the wellbore 
+					measurement system.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="deInstallationDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date the instrument box was de-installed from the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="instrumentBox" type="prodml:cs_dtsInstrumentBox" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The properties of the instrument box.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

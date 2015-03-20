@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example wellbores in a multi-lateral well -->
+<wellbores
+	xmlns="http://www.witsml.org/schemas/1series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.witsml.org/schemas/1series  C:\Energistics\WITSML_v1.4.1_Data_Schema\witsml_v1.4.1_data\xsd_schemas\obj_wellbore.xsd"
+	version="1.4.1.0">
+	<!-- Main Wellbore -->
+	<wellbore uidWell="W-1" uid="B-0">
+		<nameWell>Lateral Example</nameWell>
+		<name>0</name>
+		<number>0</number>
+		<typeWellbore>initial</typeWellbore>
+	</wellbore>
+	<!-- Lateral 1  -->
+	<wellbore uidWell="W-1" uid="B-1">
+		<nameWell>Lateral Example</nameWell>
+		<name>1</name>
+		<parentWellbore uidRef="B-0">0</parentWellbore>
+		<number>1</number>
+		<typeWellbore>sidetrack</typeWellbore>
+		<mdKickoff uom="ft">1000</mdKickoff>
+	</wellbore>
+	<!-- Lateral 2 -->
+	<wellbore uidWell="W-1" uid="B-2">
+		<nameWell>Lateral Example</nameWell>
+		<name>2</name>
+		<parentWellbore uidRef="B-0">0</parentWellbore>
+		<number>2</number>
+		<typeWellbore>sidetrack</typeWellbore>
+		<mdKickoff uom="ft">2000</mdKickoff>
+	</wellbore>
+	<!-- Lateral 1-1 -->
+	<wellbore uidWell="W-1" uid="B-3">
+		<nameWell>Lateral Example</nameWell>
+		<name>1-1</name>
+		<parentWellbore uidRef="B-1">1</parentWellbore>
+		<number>1-1</number>
+		<typeWellbore>sidetrack</typeWellbore>
+		<mdKickoff uom="ft">1200</mdKickoff>
+	</wellbore>
+	<!-- Lateral 1-2 -->
+	<wellbore uidWell="W-1" uid="B-4">
+		<nameWell>Lateral Example</nameWell>
+		<name>1-2</name>
+		<parentWellbore uidRef="B-1">1</parentWellbore>
+		<number>1-2</number>
+		<typeWellbore>sidetrack</typeWellbore>
+		<mdKickoff uom="ft">1400</mdKickoff>
+	</wellbore>
+	<!-- Lateral 2-1 -->
+	<wellbore uidWell="W-1" uid="B-5">
+		<nameWell>Lateral Example</nameWell>
+		<name>2-1</name>
+		<parentWellbore uidRef="B-2">2</parentWellbore>
+		<number>2-1</number>
+		<typeWellbore>sidetrack</typeWellbore>
+		<mdKickoff uom="ft">2500</mdKickoff>
+	</wellbore>
+</wellbores>

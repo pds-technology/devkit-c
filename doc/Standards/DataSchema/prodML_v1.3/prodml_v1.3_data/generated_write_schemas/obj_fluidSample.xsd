@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:import namespace="http://www.energistics.org/schemas/abstract" schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd" />
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_documentInfo.xsd" />
+   <xsd:include schemaLocation="cs_commonData.xsd" />
+   <xsd:include schemaLocation="cs_customData.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:include schemaLocation="grp_fluidSample.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>Product Flow Model information that supports the WITSML standard.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:element name="fluidSamples" type="prodml:obj_fluidSamples" substitutionGroup="abs:abstractDataObject">
+      <xsd:annotation>
+         <xsd:documentation>The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an "s" to the
+         singular name.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <!--                                                         -->
+   <xsd:complexType name="obj_fluidSamples">
+      <xsd:complexContent>
+         <xsd:extension base="abs:abstractObject">
+            <xsd:sequence>
+               <xsd:element name="documentInfo" type="prodml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about the XML message instance.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="fluidSample" type="prodml:obj_fluidSample" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about a single Fluid Sample.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="version" type="prodml:schemaVersionStringProdml" use="required">
+               <xsd:annotation>
+                  <xsd:documentation>Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are
+                  assumed by the documenti nstance.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="obj_fluidSample">
+      <xsd:sequence>
+         <xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the Fluid Sample.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:group ref="prodml:grp_fluidSample" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The non-contextual elements for general Fluid Sample information.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="commonData" type="prodml:cs_commonData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container element that contains elements that are common to all data objects.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="customData" type="prodml:cs_customData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container element that can contain custom or user defined data elements.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the Fluid Sample.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

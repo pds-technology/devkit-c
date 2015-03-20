@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wellDatum.xsd" />
+   <xsd:complexType name="cs_wellContext">
+      <xsd:annotation>
+         <xsd:documentation>Within the context of a WITSML Server, this data should duplicate the equivalent information in the well object.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="field" type="prodml:nameStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Name of the field in which the well is located.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An alias name associated with the well. If the wellName is associated with a naming system then it should be included in this
+               list.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellDatum" type="prodml:cs_wellDatum" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A datum to which elevations and depths are referenced.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fluidWell" type="prodml:WellFluid" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>POSC well fluid. The type of fluid being produced from or injected into a well facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="directionWell" type="prodml:WellDirection" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>POSC well direction. The direction of flow of the fluids in a well facility (generally, injected or produced, or some
+               combination).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

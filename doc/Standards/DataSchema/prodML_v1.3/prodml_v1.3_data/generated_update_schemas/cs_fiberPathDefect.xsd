@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:complexType name="cs_fiberPathDefect">
+      <xsd:annotation>
+         <xsd:documentation>A zone of the fibre which has defective optical properties (e.g., darkening).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+         <xsd:element name="opticalPathDistanceStart" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Starting point of the detected defect as distance in the optical path from the lightbox</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="opticalPathDistanceEnd" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Ending point of the detected defect as distance in the optical path from the lightbox. Can have the same value as the 'opticalPathDistanceStart'
+               if the defect is found at a specific location rather than a segment.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="defectType" type="prodml:PathDefectTypes" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Enum. The type of defect on the optical path.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="timeStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Date when the defect was detected</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="timeEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Date when the defect was no longer detected (or was corrected)</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark about the defect found on this location</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="defectID" type="prodml:uidString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>The uid of this object.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

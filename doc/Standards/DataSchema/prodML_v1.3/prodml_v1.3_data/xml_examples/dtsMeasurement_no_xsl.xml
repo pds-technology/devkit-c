@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:dtsMeasurements xmlns:prodml="http://www.prodml.org/schemas/1series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.prodml.org/schemas/1series ../xsd_schemas/obj_dtsMeasurement.xsd">
+	<prodml:documentInfo>
+		<prodml:documentName>Measurements with Log</prodml:documentName>
+	</prodml:documentInfo>
+	<prodml:facilityIdentifier>
+		<prodml:name>Sample Well</prodml:name>
+		<prodml:installation>INS2</prodml:installation>
+		<prodml:kind>Well</prodml:kind>
+		<prodml:contextFacility>Sample Facility</prodml:contextFacility>
+		<prodml:geographicContext>
+			<prodml:country>USA</prodml:country>
+			<prodml:state>TX</prodml:state>
+			<prodml:field>Eagle Ford</prodml:field>
+		</prodml:geographicContext>
+		<prodml:businessUnit>
+			<prodml:kind>Asset</prodml:kind>
+		</prodml:businessUnit>
+		<prodml:operator>
+			<prodml:name>ACME</prodml:name>
+		</prodml:operator>
+	</prodml:facilityIdentifier>
+	<prodml:dtsMeasurement uid="DTS1">
+		<prodml:name>Raw Measurement 1</prodml:name>
+		<prodml:badSetFlag>0</prodml:badSetFlag>
+		<prodml:emptySetFlag>0</prodml:emptySetFlag>
+		<prodml:timeStart>2013-12-21T08:00:00Z</prodml:timeStart>
+		<prodml:timeEnd>2013-12-21T08:00:30Z</prodml:timeEnd>
+		<prodml:timeSinceInstrumentStartup uom="min">90</prodml:timeSinceInstrumentStartup>
+		<prodml:measurementTags/>
+		<prodml:installedSystemRef>IS1</prodml:installedSystemRef>
+		<prodml:measurementConfiguration>single-ended</prodml:measurementConfiguration>
+		<prodml:measurementTrace>
+			<prodml:traceProcessingType>as acquired</prodml:traceProcessingType>
+			<prodml:samplingInterval uom="m">1</prodml:samplingInterval>
+			<prodml:indexMnemonic>fiberDistance</prodml:indexMnemonic>
+			<prodml:pointCount>1500</prodml:pointCount>
+			<prodml:frequencyRayleigh1 uom="Hz">10</prodml:frequencyRayleigh1>
+			<prodml:frequencyRayleigh2 uom="Hz">20</prodml:frequencyRayleigh2>
+			<prodml:logDataTrace>
+				<prodml:mnemonicList>fiberDistance,antistokes,stokes,reverseAntiStokes,reverseStokes,rayleigh1,rayleigh2,brillouinfrequency,loss,lossRatio,cumulativeExcessLoss,frequencyQualityMeasure,measurementUncertainty,brillouinAmplitude,opticalPathTemperature,uncalibratedTemperature1,uncalibratedTemperature2,</prodml:mnemonicList>
+				<prodml:unitList>m,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degC,mW,degC,degC,degC,</prodml:unitList>
+				<prodml:data>1,35.424,84.893,,,,,,,,,,,,,,,</prodml:data>
+				<prodml:data>2,36.432,85.231,,,,,,,,,,,,,,,</prodml:data>
+				<!-- Multiple entries of <prodml:data> go here -->
+				<prodml:data>1500,38.235,86.412,,,,,,,,,,,,,,,</prodml:data>
+			</prodml:logDataTrace>
+		</prodml:measurementTrace>
+		<prodml:interpretationLog>
+			<prodml:interpretationData interpretationID="ID1">
+				<prodml:facilityMappingRef>foo</prodml:facilityMappingRef>
+				<prodml:samplingInterval uom="m">1</prodml:samplingInterval>
+				<prodml:badFlag>false</prodml:badFlag>
+				<prodml:creationStartTime>2013-12-21T08:00:00Z</prodml:creationStartTime>
+				<prodml:interpretationProcessingType>temperature-shifted</prodml:interpretationProcessingType>
+				<prodml:indexMnemonic>facilityDistance</prodml:indexMnemonic>
+				<prodml:pointCount>1500</prodml:pointCount>
+				<prodml:logDataInterpretation>
+					<prodml:mnemonicList>facilityDistance,adjustedTemperature</prodml:mnemonicList>
+					<prodml:unitList>m,degC</prodml:unitList>
+					<prodml:data>1,28</prodml:data>
+					<prodml:data>2,28</prodml:data>
+					<prodml:data>3,29</prodml:data>
+					<!-- Multiple entries of 'data' go here -->
+					<prodml:data>1500,58</prodml:data>
+				</prodml:logDataInterpretation>
+			</prodml:interpretationData>
+		</prodml:interpretationLog>
+	</prodml:dtsMeasurement>
+</prodml:dtsMeasurements>

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_personName.xsd"/>
+	<xsd:include schemaLocation="cs_generalAddress.xsd"/>
+	<!--                                                         -->
+	<!--                                                         -->
+	<xsd:complexType name="cs_businessAssociate">
+		<xsd:annotation>
+			<xsd:documentation>The business associate describes any company, person, 
+			group, consultant, etc, which is associated within a context (e.g., a well). 
+			The information contained in this module is:
+			(1) contact information, such as address, phone numbers, email,
+			(2) alternate name, or aliases, and
+			(3) associations, such as the business associate that this one is associated 
+		 	   with, or a contact who is associated with this business associate.  </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the business associate. 
+					This can be the name of a person, business, group, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="role" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The role of the business associate within the 
+					context. For example, "driller" or "operator", 
+					"lead agency - CEQA compliance" "regulatory contact", "safety contact". 
+					A business associate will generally have one role
+					but the role may be called different things in different naming systems.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="personName" type="prodml:cs_personName" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>If the business associate is a person, this specifies
+					the component names of the person.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="alias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The alias is an alternate name of a 
+					business associate. It is generally associated with a 
+					naming system. An alias is not necessarily unique 
+					within the naming system. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="address" type="prodml:cs_generalAddress" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Note that address may occur more than 
+					once, because it may be necessary to give a physical 
+					address, a mailing address, or both. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="phoneNumber" type="prodml:phoneNumberStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The various types of phone numbers may 
+					be given. The may be office or home, they may be a 
+					number for a cell phone, or for a fax, etc. Attributes 
+					of PhoneNumber declare the type of phone number that is 
+					being given. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="email" type="prodml:emailQualifierStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The email address may be home, office, 
+					or permanent. More than one may be given. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="contactPreference" type="prodml:ContactPreference" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The preferred method of being contacted within the context
+					of this role. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="associatedWith" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to another business associate that this 
+					business associate is associated with. The most common situation is that 
+					of an employee being associated with a company. But it may also be, for 
+					example, a work group associated with a university.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="contact" type="prodml:refNameString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to a business associate 
+					(generally a person) who serves as a contact for this 
+					business associate. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="personnelCount" type="prodml:nonNegativeCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The count of the number of personnel in a group.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A general comment. This should not 
+					be used to carry semantic information. This is not 
+					intended to be machine interpretable. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlAbstractValues" abstract="true">
+      <xsd:annotation>
+         <xsd:documentation>The abstract supertype of continuous and discrete value arrays. The purpose of this type is to provide an abstract proxy class for processing the
+         arrays.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence />
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

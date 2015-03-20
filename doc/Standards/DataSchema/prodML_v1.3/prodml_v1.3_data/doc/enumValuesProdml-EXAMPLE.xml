@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+<!-- 
+These lists can be locally extended but the definition of an extension 
+can not duplicate an existing value. Only new concepts or specializations 
+should be added.
+-->
+
+<enumListSet
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series 
+			   ./cs_enumValues.xsd" 
+	version="1.2.1.0(PRODML)">
+	<enumList>
+		<name>FacilityParameter</name>
+		<description>Defines kinds of facility parameters.</description>
+		<namingSystem>PRODML</namingSystem>
+		<value>
+			<name>root property</name>
+			<description>The abstract supertype of all properties. This property does not have a parent.</description>
+			<version>1.2.2</version>
+			<isAbstract>true</isAbstract>
+		</value>
+	<!--  CONTINUOUS STUFF -->
+		<value>
+			<name>continuous</name>
+			<description>The abstract supertype of all floating point properties.</description>
+			<version>1.2.2</version>
+			<isAbstract>true</isAbstract>
+			<parentKind>root property</parentKind>
+		</value>
+		<value>
+			<name>quantity</name>
+			<description>The abstract supertype of all floating point properties with a unit of measure.</description>
+			<version>1.2.2</version>
+			<isAbstract>true</isAbstract>
+			<parentKind>continuous</parentKind>
+		</value>
+		<value>
+			<name>length class</name>
+			<version>1.2.1</version>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<quantityMeasureClass>length</quantityMeasureClass>
+		</value>
+		<value>
+			<name>annulus inner diameter</name>
+			<description>Inner diameter of Annulus.</description>
+			<version>1.2.2</version>
+			<isAbstract>false</isAbstract>
+			<parentKind>length class</parentKind>
+			<quantityMeasureClass>length</quantityMeasureClass>
+		</value>
+	<!--  CATEGORICAL STUFF -->
+		<value>
+			<name>categorical</name>
+			<description>The abstract supertype of all enumerated string properties.</description>
+			<version>1.2.2</version>
+			<isAbstract>true</isAbstract>
+			<parentKind>root property</parentKind>
+		</value>
+		<value>
+			<name>code</name>
+			<description>A discrete code.</description>
+			<version>1.2.2</version>
+			<isAbstract>true</isAbstract>
+			<parentKind>categorical</parentKind>
+		</value>
+		<value>
+			<name>pump status</name>
+			<description>The operating status of the pump.</description>
+			<version>1.2.2</version>
+			<isAbstract>false</isAbstract>
+			<parentKind>categorical</parentKind>
+			<enumValue>on</enumValue>
+			<enumValue>off</enumValue>
+		</value>
+	<!--  DISCRETE STUFF -->
+		<value>
+			<name>discrete</name>
+			<description>The abstract supertype of all integer properties.</description>
+			<version>1.2.2</version>
+			<isAbstract>true</isAbstract>
+			<parentKind>root property</parentKind>
+		</value>
+	</enumList>
+</enumListSet>

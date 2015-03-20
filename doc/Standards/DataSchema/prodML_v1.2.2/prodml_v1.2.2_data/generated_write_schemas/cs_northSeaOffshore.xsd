@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--PPDM Schema Incorporated
+        This file incorporates a block of schema from PPDM (area hierarchy) with 
+        the permission of PPDM.
+        All rights for this block are retained by PPDM.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_northSeaOffshore">
+      <xsd:annotation>
+         <xsd:documentation>A type of offshore location that captures the North Sea Offshore terminology.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="areaName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>An optional, uncontrolled value, which may be used to describe the general area of offshore North Sea in which the point is
+               located.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="quadrant" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The number or letter of the quadrant in the North Sea.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="blockSuffix" type="prodml:str2" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A lower case letter assigned if a block is subdivided.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="../xsd_schemas/typ_dataTypesProdml.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>Schema for listing standardized values as an alternative 
+		to using an enumeration in XML Schema. This schema is not intended to be part 
+		of a WITSML data object.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:element name="enumListSet" type="prodml:enumListSet">
+		<xsd:annotation>
+			<xsd:documentation>A container for enumeration lists.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                                                         -->
+	<xsd:complexType name="enumListSet">
+		<xsd:sequence>
+			<xsd:element name="enumList" type="prodml:enumList" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A single enumeration list.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Data object schema version.  This should match the
+				value of the version attribute on the root XML plural object.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="enumList">
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:str32" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the list.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the list. 
+					This specifies what the individual values represent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="namingSystem" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The naming system within which the terms are defined.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="value" type="prodml:enumValue" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A description of an enumberation value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="enumValue">
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:kindString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the value. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="version" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The version when the value was added.
+					The string should match the content of the root version attribute of the schema.
+					For example, "1.4.0.0".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="deprecated" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A non blank version indicates that the value has
+					been deprecated and may be removed in future versions.
+					The string should match the content of the root version attribute of the schema.
+					For example, "1.4.0.0".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="replacedBy" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The value to use as a replacement for a deprecated value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<!-- For use with lists such as "FacilityParameter" and "ReportingFacility" which may define a hierarchy of kinds. -->
+				<xsd:element name="isAbstract" type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>True ("1" or "true") indicates that the kind is abstract and cannot be used to characterize a value.
+						False ("0" or "false") or not given indicates a non-abstract kind that can be instantiated.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="parentKind" type="xsd:string" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Points to a parent kind. A "root" kind does not have a parent.
+						A child kind inherits any constraints defined for the parent kind.
+						Note that if parentKind is specified then isAbstract must also be specified.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="1">
+				<xsd:sequence>
+					<xsd:element name="lithoType" type="prodml:EnumValueLithoType" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For lithology qualifiers, the type of qualifier: "noun", "adjective" or "both". 
+							For a qualifier which has a type of "both", the "noun" form must be specified as the qualifier value
+							and an adjective form must be listed as a variant.
+							The interpretation of whether a specified qualifier value represents a noun or a adjective is 
+							defined by its association with either an interval (adjective) or point (noun).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="lithoVariant" type="prodml:emumValueLithoVariant" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>A lithology qualifier value which represents a variant value for 
+							the same underlying concept.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="extensionDataType" type="prodml:PrimitiveType" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, the underlying data type of the value. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionMaximumSize" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, the maximum number of charactetrs in a string value. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionMeasureClass" type="prodml:MeasureClass" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, defines the measure class associated with the temm.
+							This controls the allowed units of measure. 
+							If this is specified then the value must be defined with a unit of measure.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionPath" type="prodml:descriptionString" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, defines the path to the allowed location in the schema
+							where the extension is allowed. 
+							This should begin at the singular object level  (e.g., "/well/commonData/extension"). 
+							A relative location will allow it in any object (i.e., ".//commonData/extension").
+							A relative location within the object will allow it at any location within that object
+							(e.g., "/opsReport//commonData/extension").</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="measureRepresentativeUOM" type="prodml:uomString" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines a representative uom. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="measureBaseForConversion" type="prodml:uomString" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines the base uom for conversion. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="measureUom" type="prodml:uomString" minOccurs="1" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines an allowed uom for the class. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:choice>
+						<xsd:element name="realtimeDataType" type="prodml:EnumValueRealtimeType" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>For realtime data, defines the underlying type data associated with this term.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="realtimeMeasureClass" type="prodml:MeasureClass" minOccurs="0" maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>For realtime data, defines the measure class associated with the term.
+								This controls the allowed units of measure. 
+								If this is specified then the value must be defined with a unit of measure.
+								All measure values inherently have a numeric data type.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:sequence>
+				<xsd:sequence>
+					<!-- For use with "ReportingFacility". -->
+					<!-- This section requires the use of the sequence containing isAbstract and parentKind. -->
+					<xsd:element name="facilityParameter" type="prodml:FacilityParameter" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>A kind of parameter which may be reasonaby expected to be used with an instance of a facility of this kind.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<!-- For use with "FacilityParameter" (variation of similar concept in RESQML). -->
+					<!-- This section requires the use of the sequence containing isAbstract and parentKind. -->
+					<xsd:choice minOccurs="0">
+						<xsd:sequence>
+							<!-- This sequence replaces RESQML's unitOfMeasure and dimensionalClass which limits a quantity to one unit of measure. -->
+							<!-- That is, the RESQML view was a constrained union of this plus the behavior defined by MeasureClass. -->
+							<!-- Technically, the dimension class applies to the measure class whose constraints are inherited by the parameter. -->
+							<xsd:element name="quantityMeasureClass" type="prodml:MeasureClass" minOccurs="1" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>The underlying class of measurement.
+									The kind "quantity" must be an ancestor (parent or grandparent) of this kind.
+									Any unit of measure used for the parameter must be in the list allowed by this class.
+									The class for a child kind must match the class of its parent kind.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:element name="minimumValue" type="xsd:long" minOccurs="0" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>The minimum value allowed for the discrete (i.e., whole numbered) property.
+									The kind "discrete" must be an ancestor (parent or grandparent) of this kind.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="maximumValue" type="xsd:long" minOccurs="0" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>The maximum value allowed for the discrete (i.e., whole numbered) property.
+									The kind "discrete" must be an ancestor (parent or grandparent) of this kind.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:element name="enumValue" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation>A value allowed for the categorical (i.e., string) property.
+									The kind "categorical" must be an ancestor (parent or grandparent) of this kind.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:choice>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:choice>
+						<xsd:element name="underlyingMeasureClass" type="prodml:MeasureClass" minOccurs="0" maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									For parameter or property data, defines the measure class associated with the term.
+									This controls the allowed units of measure.
+									If this is specified then the value must be defined with a unit of measure.
+									All measure values inherently have a numeric data type.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="emumValueLithoVariant" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A variant of a qualifer. A qualifier can have both adjective and noun forms.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="prodml:abstractNameString">
+				<xsd:attribute name="form" type="prodml:EnumValueLithoType" use="required">
+					<xsd:annotation>
+						<xsd:documentation>The kind of qualifier form. This should be either "adjective" or "noun".</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:simpleType name="EnumValueLithoType">
+		<xsd:annotation>
+			<xsd:documentation>Lithology qualifier types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum">
+			<xsd:enumeration value="noun">
+				<xsd:annotation>
+						<xsd:documentation>Qualifiers which are isolated or spot occurrences suggesting 
+						that these components are `included' in a lithology and does not imply a 
+						lithology type (for example, a single occurrence of a fossil).
+					A qualifier which is specified as a point value (top=bottom) should be interpreted 
+					as representing the noun form.</xsd:documentation>
+					</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="adjective">
+				<xsd:annotation>
+						<xsd:documentation>Qualifiers which are components or attributes of the lithology 
+						occurring/prevailing over a depth range, or over the whole lithology; an adjective 
+						should be used as a further definition of an existing lithology type (for example, 
+						types of cementation or other diagenetic effects would be expressed using adjectives).
+					A qualifier which is specified over a depth range should be interpreted as representing
+					the adjective form.</xsd:documentation>
+					</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="both">
+				<xsd:annotation>
+						<xsd:documentation>A qualifier which can have both adjective and noun forms.
+					If the qualifier is specified either over a depth range then it should be interpreted
+					as representing its adjective form. If the qualifier is specified at a point then it
+					should be interpreted as its noun form.</xsd:documentation>
+					</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+						<xsd:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xsd:documentation>
+					</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="EnumValueRealtimeType">
+		<xsd:annotation>
+			<xsd:documentation>Lithology qualifier types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum">
+			<xsd:enumeration value="string">
+				<xsd:annotation>
+					<xsd:documentation>The value is a string. This is also appropriate for a short list of integer codes (e.g., "1", 2" or "3") or for booleans.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="numeric">
+				<xsd:annotation>
+					<xsd:documentation>The value is a number and fractional component is allowed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="integer">
+				<xsd:annotation>
+					<xsd:documentation>Specialization of numeric. The value is a whole number. That is, a fractional component is not allowed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+						<xsd:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xsd:documentation>
+					</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+</xsd:schema>

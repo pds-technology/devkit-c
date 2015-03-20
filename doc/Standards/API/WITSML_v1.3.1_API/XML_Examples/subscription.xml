@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../stylesheets/subscription.xsl" type="text/xsl" media="screen"?>
+<subscriptions 
+	xmlns="http://www.witsml.org/api/131" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.witsml.org/api/131 
+			    http://www.witsml.org/api/131/obj_subscription.xsd" 
+	version="1.3.1">
+	<!--		Example of a Subscription Request	-->
+	<subscription host="server4.npsinc.com" process="rtrecv.asp" action="add" encrypt="true" port="2023" retry="3" idPub="101-12345:pswd" test="false" updateInterval="3600">
+		<well uidWell="W-1" namespace="http://www.witsml.org/schemas/130">
+			<nameWell/>
+			<nameLegal/>
+			<numLicense/>
+			<numGovt/>
+			<dTimLicense/>
+			<field/>
+			<country/>
+			<location>
+				<latitude uom=""/>
+				<longitude uom="">-60.32086731</longitude>
+				<xCoord uom=""/>
+				<yCoord uom=""/>
+				<inputType/>
+			</location>
+			<cartographicProjection>
+				<mapProjection>
+					<projectionCode/>
+					<stdParallel1 uom=""/>
+					<stdParallel2 uom=""/>
+					<centralMeridian uom=""/>
+					<originLatitude uom=""/>
+					<falseEasting uom=""/>
+					<falseNorthing uom=""/>
+				</mapProjection>
+				<geodeticModel>
+					<geodeticDatumCode/>
+					<geodeticDatumName/>
+					<xTranslation uom=""/>
+					<yTranslation uom=""/>
+					<zTranslation uom=""/>
+					<xRotation uom=""/>
+					<yRotation uom=""/>
+					<zRotation uom=""/>
+					<scaleFactor/>
+					<ellipsoidCode/>
+					<ellipsoidSemiMajorAxis uom=""/>
+					<ellipsoidInverseFlattening/>
+				</geodeticModel>
+			</cartographicProjection>
+		</well>
+		<wellbore uidWell="W-1" uidWellbore="B-001">
+			<nameWell/>
+			<nameWellbore/>
+			<number/>
+			<suffixAPI>x</suffixAPI>
+			<numGovt/>
+			<statusWellbore/>
+			<purposeWellbore/>
+			<typeWellbore/>
+			<shape/>
+			<dTimKickoff/>
+			<mdCurrent uom=""/>
+			<tvdCurrent uom=""/>
+			<mdKickoff uom=""/>
+			<tvdKickoff uom=""/>
+			<mdPlanned uom=""/>
+			<tvdPlanned uom=""/>
+			<mdSubSeaPlanned uom=""/>
+			<tvdSubSeaPlanned uom=""/>
+			<dayTarget/>
+		</wellbore>
+	</subscription>
+</subscriptions>

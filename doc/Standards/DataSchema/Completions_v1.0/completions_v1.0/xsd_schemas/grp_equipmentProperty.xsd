@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:abs="http://www.energistics.org/schemas/abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="cs_equipmentCatalog.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="cs_extensionAny.xsd"/>
+	<xsd:group name="grp_equipmentProperty">
+		<xsd:annotation>
+			<xsd:documentation>Non-usage information on the equipment</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="manufacturer" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Manufacturer of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="model" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation> The model of the equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="catalogID" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Catalog where equipment can be found.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="catalogName" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Name of equipment as found in catalog.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="brandName" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation> The equipment's brand name .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="modelType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation> The equipment's model type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="series" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Series number</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isSerialized" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>a flag indicates the equipment has serialNumber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="serialNumber" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>serial number</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="partNo" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Number that identifies this part.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="surfaceCondition" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>surface condition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="material" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Material that equipment is made from</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="grade" type="witsml:GradeType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Grade level of this material.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="unitWeight" type="witsml:massPerLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The weight per length of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="coatingLinerapplied" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Flag indicating whether equipment has coating</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="outsideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Equipment's outside coating based on enumeration value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="insideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Equipment's inner coating based on enumeration value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="unitLength" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The length of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<xsd:element name="majorOD" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The major outside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minorOD" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minor outside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OD" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The outside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaxOD" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The maximum outside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MinOD" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minimum outside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<xsd:element name="majorID" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The major inside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minorID" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minor inside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ID" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The inside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaxID" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The maximum inside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MinID" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minimum inside diameter of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<xsd:element name="drift" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The drift diameter is the minimum inside diameter of pipe through which another tool or string can be pulled.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nominalSize" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The nominal size of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nameService" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>sweet or sour service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The description of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="descriptionPermanent" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The description of this equipment to be permanently kept.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="remark" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Remarks about this equipment property.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

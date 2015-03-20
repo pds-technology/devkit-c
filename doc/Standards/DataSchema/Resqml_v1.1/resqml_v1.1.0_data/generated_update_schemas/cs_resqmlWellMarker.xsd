@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.0">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlWellMarker">
+      <xsd:annotation>
+         <xsd:documentation>A set of points defined in 3 dimensional space.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="nameWell" type="resqml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name and uid of the well that contains the wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nameWellbore" type="resqml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name and uid of the wellbore that intersects the feature. If nameWellbore is specified then nameWell must also be
+               specified.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nameMarker" type="resqml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name and uid of the formationMarker whose location is represented here. If nameMarker is specified then nameWellbore must also be
+               specified.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="md" type="resqml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The measured depth of the intersected point.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="x" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The x-coordinate of the intersected point.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="y" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The y-coordinate of the intersected point.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="z" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The z-coordinate of the intersected point.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

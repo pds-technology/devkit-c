@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productVolumeBusinessOwnershipShare.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeBusinessAccountInfo.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumeBusinessSubUnit">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Volume component schema for defining ownership shares of business units.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="kind" type="prodml:refNameString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Points to business unit which is part of another business unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice>
+            <xsd:element name="ownershipShare" type="prodml:cs_productVolumeBusinessOwnershipShare" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>Defines the ownership share in the parent unit at a point in time. This commonly applies at a parent source unit (e.g., a field or
+                  platform).</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="accountInformation" type="prodml:cs_productVolumeBusinessAccountInfo" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>Defines account information in the parent unit. This commonly applies at a parent terminus unit (e.g., a terminal),</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the business unit.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

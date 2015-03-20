@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>The stockTank type is used in the fluid report. It reports the temperature of the stock tank. This may need to be filled out later with more
+      information.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_fluidResultStockTank">
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="temperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1" />
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

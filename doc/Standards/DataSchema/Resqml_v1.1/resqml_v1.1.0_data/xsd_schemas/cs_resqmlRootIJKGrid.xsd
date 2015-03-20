@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_resqmlAbstractIJKGrid.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlLocalIJKGrid.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlExplicitCornerPointGridRepresentation.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_resqmlRootIJKGrid">
+		<xsd:annotation>
+			<xsd:documentation>An IJK structured root geometry of a volume
+			This type inherits the following:
+				grp_resqmlTraceabilityDublinCore
+				startIndexI
+				startIndexJ
+				startIndexK
+				ni
+				nj
+				nk
+				gridTopologyFlags
+				gapAfterLayer
+				gridCellShape
+				positiveGridParity
+				gridStatic
+				mostComplexLineGeometry
+				anyIJGap
+				anyGeometryUndefined
+				anyIJPinch
+				anyKPinch
+				anyLineNull
+				attgrp_uidGlobal
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="resqml:cs_resqmlAbstractIJKGrid">
+				<xsd:sequence>
+					<xsd:element name="localIJKGrid" type="resqml:cs_resqmlLocalIJKGrid" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Defines a Local Grid related to this root grid. 
+							A local grid may be defined from a root grid or another local grid.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="explicitGridRepresentation" type="resqml:cs_resqmlExplicitCornerPointGridRepresentation" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>A 3D corner point grid representation using explicit nodes on coordinate lines.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

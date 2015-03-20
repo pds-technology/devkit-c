@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_logDataTrace.xsd" />
+   <xsd:complexType name="cs_dtsMeasurementTrace">
+      <xsd:annotation>
+         <xsd:documentation>Header data for raw (measured) traces collections</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="1" maxOccurs="1">
+         <xsd:element name="traceProcessingType" type="prodml:TraceProcessingType" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Denotes whether the trace was stored as acquired by the measurement device or recalibrated in any way.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="samplingInterval" type="prodml:lengthMeasure" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The sampling interval is the difference in fiber distance between consecutive temperature sample points in a single temperature
+               trace.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="indexMnemonic" type="prodml:str32" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This is the mnemonic of the channel in the MeasuredTraceSet which represents the index to the data (expected to be a length along the facility
+               (e.g., wellbore, pipeline) being measured.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pointCount" type="prodml:nonNegativeCount" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The number of rows in this interpreted data object. Each row or "point" represents a measurement along the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="frequencyRayleigh1" type="prodml:frequencyMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Frequency reference for Rayleigh 1 measurement.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="frequencyRayleigh2" type="prodml:frequencyMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Frequency reference for Rayleigh 2 measurement.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark about the measured trace set</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="logDataTrace" type="prodml:cs_logDataTrace" minOccurs="1" maxOccurs="1" />
+      </xsd:sequence>
+      <xsd:attribute name="parentMeasurementID" type="prodml:refString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>Where this dtsMeasuredTraceSet was derived from a "parent" dtsMeasuredTraceSet (having been recalibrated for example), the parent
+            dtsMeasuredTraceSet can be indicated by referencing its UID with this element.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="measurementID" type="prodml:uidString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>The uid of this object.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

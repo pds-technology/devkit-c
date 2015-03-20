@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_fiberFacilityMappingPart.xsd" />
+   <xsd:complexType name="cs_fiberFacilityMapping">
+      <xsd:annotation>
+         <xsd:documentation>The facility mapping relates lengths of fiber to corresponding lengths of facilities (probably wellbores or pipelines). The facilityMapping also
+         contains the datum from which the InterpretedData is indexed.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="timeStart" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Date when the mapping between the facility and the optical path becomes effective</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="timeEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Date when the mapping between the facility and the optical path is no longer valid</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberFacilityMappingPart" type="prodml:cs_fiberFacilityMappingPart" minOccurs="1" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Relates distances measured along the optical path to specific lengths along facilities (wellbores or pipelines).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark about the facility mapping</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="mappingID" type="prodml:uidString" use="required">
+         <xsd:annotation>
+            <xsd:documentation>The uid of this facility mapping collection.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

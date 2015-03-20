@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saudi Aramco CR-0012 example for reporting static facility information. This example demonstrates how to report measured depth for 
+		 an electrical submersible pump. -->
+<productVolumes
+	xmlns="http://www.prodml.org/schemas/1series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productVolume.xsd"
+	version="1.2.0.0(PRODML)">
+	<productVolume>
+		<name>Static Facility Data</name>
+		<kind>static facility parameters</kind>
+		<facility>
+			<name kind="pump" siteKind="electric submersible pump" uidRef="ESP01">Dammam #1 ESP01</name>
+			<facilityParent1 kind="wellbore" uidRef="B01">Dammam #1 B01</facilityParent1>
+			<facilityParent2 kind="well" uidRef="W01">Dammam #1</facilityParent2>
+			<contextFacility kind="field" uidRef="F01">Ghawar</contextFacility>
+			<!-- measured depth -->
+			<parameterSet>
+				<name>measured depth</name>
+				<measureClass>length</measureClass>
+				<coordianteReferenceSystem>well datum(KB)</coordianteReferenceSystem>
+				<parameter>
+					<measureValue uom="m">2000</measureValue>
+				</parameter>
+			</parameterSet>
+		</facility>
+	</productVolume>
+</productVolumes>

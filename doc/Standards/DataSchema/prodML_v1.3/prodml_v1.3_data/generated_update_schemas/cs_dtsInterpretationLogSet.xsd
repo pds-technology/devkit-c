@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_dtsInterpretationData.xsd" />
+   <xsd:complexType name="cs_dtsInterpretationLogSet">
+      <xsd:annotation>
+         <xsd:documentation>Container of interpreted data which also specifies by reference the measured data on which the interpretation is based.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="preferredInterpretationID" type="prodml:refString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Where there is a set of dtsInterpretedData logs that are generated from the same measurement (each log having gone through a different
+               post-processing type, for example), if there is one log that is &#226;&#8364;&#732;preferred&#226;&#8364;&#8482; for additional business decisions (while the other
+               ones were merely what-if scenarios), then this preferred log in the collection of child dtsInterpretedData can be flagged by referencing its UID with this
+               element.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="interpretationData" type="prodml:cs_dtsInterpretationData" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="measurementID" type="prodml:refString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>Mandatory element indicating that the referenced MeasuredTraceSet object is the raw trace data from which this InterpretedData is derived. This is
+            needed so that any InterpretedData can be related to the raw measurement from which it is derived.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="interpretationLogID" type="prodml:uidString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>The uid of this object.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

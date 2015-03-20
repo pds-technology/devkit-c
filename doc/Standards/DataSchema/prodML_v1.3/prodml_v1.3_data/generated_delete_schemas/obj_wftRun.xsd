@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:import namespace="http://www.energistics.org/schemas/abstract" schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd" />
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_wftRun.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="cs_commonData.xsd" />
+   <xsd:include schemaLocation="cs_customData.xsd" />
+   <xsd:include schemaLocation="cs_documentInfo.xsd" />
+   <xsd:include schemaLocation="attgrp_objectUid.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>WITSML - Wireline Formation Test (WFT) schema</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:element name="wftRuns" type="prodml:obj_wftRuns" substitutionGroup="abs:abstractDataObject">
+      <xsd:annotation>
+         <xsd:documentation>The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an "s" to the
+         singular name.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <!--                                                         -->
+   <xsd:complexType name="obj_wftRuns">
+      <xsd:complexContent>
+         <xsd:extension base="abs:abstractObject">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="documentInfo" type="prodml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about the XML message instance.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="wftRun" type="prodml:obj_wftRun" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about a single Wireline Formation Test (WFT).</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="version" type="prodml:schemaVersionStringProdml" use="required">
+               <xsd:annotation>
+                  <xsd:documentation>Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are
+                  assumed by the document instance.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="obj_wftRun">
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="nameWell" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Human recognizable context for the well that contains the Wireline Formation Test (WFT).</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nameWellbore" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Human recognizable context for the wellbore that contains the Wireline Formation Test (WFT).</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Human recognizable context for the Wireline Formation Test (WFT).</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:group ref="prodml:grp_wftRun" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The non-contextual elements for a Wireline Formation Test (WFT).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="commonData" type="prodml:cs_commonData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container element that contains elements that are common to all data objects.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="customData" type="prodml:cs_customData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container element that can contain custom or user defined data elements.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="uidWell" type="prodml:uidParentString" use="required">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.</xsd:documentation>
+            <xsd:appinfo>write-constraint:@use="optional"</xsd:appinfo>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="uidWellbore" type="prodml:uidParentString" use="required">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.</xsd:documentation>
+            <xsd:appinfo>write-constraint:@use="optional"</xsd:appinfo>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attributeGroup ref="prodml:attgrp_objectUid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the Wireline Formation Test (WFT).</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

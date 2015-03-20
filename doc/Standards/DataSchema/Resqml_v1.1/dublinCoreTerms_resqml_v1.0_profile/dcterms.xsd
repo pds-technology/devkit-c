@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+           targetNamespace="http://purl.org/dc/terms/"
+           xmlns="http://purl.org/dc/terms/"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+	<!--                                                         -->
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+			RESQML profile. All non-date types are constrained to a maximum of 4000 characters
+			and specialization (i.e., a new type) is disallowed. 
+			The xml:lang attribute is still allowed.
+			Substitution groups have been eliminated which means for example that an
+			"abstract" element cannot be substituted for a "description" element.
+			That is, the element referenced in the RESQML schema is all that you will
+			ever see in the XML.
+			For dates, the attribute xsi:type="dc:W3CDTF" must be specified with each element with date content.
+			This will constrain all dates to xs:dateTime. In the normative DC schema, W3CDTF represents a union of "xs:gYear xs:gYearMonth xs:date xs:dateTime".
+			An xml:lang attribute is not allowed for dates.
+		</xs:documentation>
+	</xs:annotation>
+	<!--                                                         -->
+	<!-- Copied from schemaLocation="http://www.w3.org/2001/03/xml.xsd" -->
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+			schemaLocation="xml.xsd"/>
+
+	<xs:element name="title" type="dublinCoreString"/>
+	<xs:element name="creator" type="dublinCoreString"/>
+	<xs:element name="subject" type="dublinCoreString"/>
+	<xs:element name="description" type="dublinCoreString"/>
+	<xs:element name="publisher" type="dublinCoreString"/>
+	<xs:element name="contributor" type="dublinCoreString"/>
+	<xs:element name="date" type="abstractW3CDTF"/>
+	<xs:element name="type" type="dublinCoreString"/>
+	<xs:element name="format" type="ResqmlFormat"/>
+	<xs:element name="identifier" type="dublinCoreString"/>
+	<xs:element name="source" type="globalUidString"/>
+	<xs:element name="language" type="dublinCoreString"/>
+	<xs:element name="relation" type="dublinCoreString"/>
+	<xs:element name="coverage" type="dublinCoreString"/>
+	<xs:element name="rights" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: title -->
+	<xs:element name="alternative" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: description -->
+	<xs:element name="tableOfContents" type="dublinCoreString"/>
+	<xs:element name="abstract" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: date -->
+	<xs:element name="created" type="abstractW3CDTF"/>
+	<xs:element name="valid" type="abstractW3CDTF"/>
+	<xs:element name="available" type="abstractW3CDTF"/>
+	<xs:element name="issued" type="abstractW3CDTF"/>
+	<xs:element name="modified" type="abstractW3CDTF"/>
+	<xs:element name="dateAccepted" type="abstractW3CDTF"/>
+	<xs:element name="dateCopyrighted" type="abstractW3CDTF"/>
+	<xs:element name="dateSubmitted" type="abstractW3CDTF"/>
+
+	<!-- VARIATION OF: format -->
+	<xs:element name="extent" type="dublinCoreString"/>
+	<xs:element name="medium" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: relation -->
+	<xs:element name="isVersionOf" type="dublinCoreString"/>
+	<xs:element name="hasVersion" type="dublinCoreString"/>
+	<xs:element name="isReplacedBy" type="dublinCoreString"/>
+	<xs:element name="replaces" type="dublinCoreString"/>
+	<xs:element name="isRequiredBy" type="dublinCoreString"/>
+	<xs:element name="requires" type="dublinCoreString"/>
+	<xs:element name="isPartOf" type="dublinCoreString"/>
+	<xs:element name="hasPart" type="dublinCoreString"/>
+	<xs:element name="isReferencedBy" type="dublinCoreString"/>
+	<xs:element name="references" type="dublinCoreString"/>
+	<xs:element name="isFormatOf" type="dublinCoreString"/>
+	<xs:element name="hasFormat" type="dublinCoreString"/>
+	<xs:element name="conformsTo" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: coverage -->
+	<xs:element name="spatial" type="dublinCoreString"/>
+	<xs:element name="temporal" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: dc:any -->
+	<xs:element name="audience" type="dublinCoreString"/>
+	<xs:element name="accrualMethod" type="dublinCoreString"/>
+	<xs:element name="accrualPeriodicity" type="dublinCoreString"/>
+	<xs:element name="accrualPolicy" type="dublinCoreString"/>
+	<xs:element name="instructionalMethod" type="dublinCoreString"/>
+	<xs:element name="provenance" type="dublinCoreString"/>
+	<xs:element name="rightsHolder" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: audience -->
+	<xs:element name="mediator" type="dublinCoreString"/>
+	<xs:element name="educationLevel" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: rights -->
+	<xs:element name="accessRights" type="dublinCoreString"/>
+	<xs:element name="license" type="dublinCoreString"/>
+
+	<!-- VARIATION OF: identifier -->
+	<xs:element name="bibliographicCitation" type="dublinCoreString"/>
+
+
+	<!--                                                         -->
+	<xs:complexType name="dublinCoreString" final="#all">
+		<xs:annotation>
+			<xs:documentation>A sting value with an xml:lang attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="abstractMaximumLengthStringDC">
+				<xs:attribute ref="xml:lang" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:simpleType name="abstractMaximumLengthStringDC">
+		<xs:annotation>
+			<xs:documentation>This defines the maximum acceptable length of a
+			string that can be stored in a data base.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4000">
+				<xs:annotation>
+					<xs:documentation>This value should be the smallest "maximum 
+					size of a variable length character type" in commonly used DBMSs. 
+					This is the maximum size of a VARCHAR2 in Oracle 8.</xs:documentation>
+				</xs:annotation>
+			</xs:maxLength>
+			<xs:whiteSpace value='collapse'>
+				<xs:annotation>
+					<xs:documentation>Replace tab, line feed and carriage return with 
+					a space, collapse contiguous sequences of spaces to a single space 
+					and then remove leading and trailing spaces.</xs:documentation>
+				</xs:annotation>
+			</xs:whiteSpace>
+			<xs:minLength value='1'>
+				<xs:annotation>
+					<xs:documentation>The empty string is not allowed.
+					This constraint conbined with the whiteSpace collapse constraint means
+					that a blank value is not allowed.</xs:documentation>
+				</xs:annotation>
+			</xs:minLength>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--                                                         -->
+	<xs:simpleType name="ResqmlFormat" final="#all">
+		<xs:annotation>
+			<xs:documentation>Defines the alternative formats for RESQML.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RESQML XML only">
+				<xs:annotation>
+					<xs:documentation>All data is contained within the XML file. HDF is not used.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RESQML XML/HDF">
+				<xs:annotation>
+					<xs:documentation>All data is contained within HDF files that are pointed to by the XML.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--                                                         -->
+	<xs:complexType name="abstractTimestamp" abstract="true">
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--                                                         -->
+	<xs:complexType name="abstractW3CDTF" abstract="true">
+		<xs:simpleContent>
+			<xs:restriction base="abstractTimestamp">
+				<xs:pattern value=".+T.+[Z+\-].*"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--                                                         -->
+	<xs:complexType name="W3CDTF" final="#all">
+		<xs:simpleContent>
+			<xs:extension base="abstractW3CDTF"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--                                                     -->
+	<xs:simpleType name="globalUidString" final="#all">
+		<xs:annotation>
+			<xs:documentation>A reference to the globaly unique identifier of another element. 
+			This value represents a foreign key from one element to another.
+			The value should match the value of an attribute of type uuidString.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="abstractMaximumLengthStringDC">
+			<xs:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

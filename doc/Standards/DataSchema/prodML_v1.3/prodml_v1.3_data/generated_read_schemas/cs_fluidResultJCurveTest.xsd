@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>The J Curve test consists of table header information plus one or more rows of data, which are captured in jcrvTestStep.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_fluidResultJCurveTestStep.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultVolumeReference.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_fluidResultJCurveTest">
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="testNumber" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0">
+            <xsd:element name="bubblePointPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="retrogradeDewPointPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+         </xsd:choice>
+         <xsd:element name="liquidDropoutReference" type="prodml:cs_fluidResultVolumeReference" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="cumulativeGasProducedReference" type="prodml:standardVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="condensateYieldPressure1" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="condensateYieldTemperature1" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="condensateYieldPressure2" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="condensateYieldTemperature2" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="jcrvTestStep" type="prodml:cs_fluidResultJCurveTestStep" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

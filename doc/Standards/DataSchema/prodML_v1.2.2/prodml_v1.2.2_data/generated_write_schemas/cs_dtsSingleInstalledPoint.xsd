@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>This is a single installed point of a fiber in the DTS installation. It is used in the fiberInstalledPoints.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:complexType name="cs_dtsSingleInstalledPoint">
+      <xsd:annotation>
+         <xsd:documentation>A set of points recorded during the installation process. The information can include the length along the fiber, the measured depth, and a type of
+         point.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="md" type="prodml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The measured depth of the installed point of the fiber. This is optional, because the sender may want to record points that are outside the
+               well.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="lengthAlongFiber" type="prodml:lengthMeasure" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The length along the fiber, from the zero point, for this particular point.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="type" type="prodml:InstalledFiberPoint" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of point that is being recorded.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the point.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

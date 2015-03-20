@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation></xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_fluidResultCvdTestStep.xsd"/>
+	<xsd:include schemaLocation="cs_fluidResultVolumeReference.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_fluidResultConstantVolumeDepletionTest">
+		<xsd:sequence>
+			<xsd:element name="testNumber" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="1" maxOccurs="1"/>
+			<xsd:choice>
+				<xsd:element name="bubblePointPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="retrogradeDewPointPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1"/>
+			</xsd:choice>
+			<xsd:element name="liquidDropoutReference" type="prodml:cs_fluidResultVolumeReference" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="cumulativeGasProducedReferenceStd" type="prodml:standardVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+					The volume is corrected to standard conditions of temperature and pressure.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="cvdTestStep" type="prodml:cs_fluidResultCvdTestStep" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

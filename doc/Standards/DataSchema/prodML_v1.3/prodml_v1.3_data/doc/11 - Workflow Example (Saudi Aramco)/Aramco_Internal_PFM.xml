@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productFlowModels
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productFlowModel.xsd"
+	version="1.2.0.0(PRODML)">
+	<!-- Saudi Aramco CR-0012 Internal Flow Network Example -->
+	<productFlowModel uid="PFM-02">
+		<name>Saudi Aramco CR-0012 Flow Network Example</name>
+		<installation kind="field" uidRef="F01">Ghawar</installation>
+		<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+		<network uid="NET-W01">
+			<name>Saudi Aramco CR-0012 Flow Network Example</name>
+			<!-- Dammam #1 wellbore unit (AA) -->
+			<unit uid="U21">
+				<name>AA</name>
+				<facility kind="wellbore" uidRef="B01">Dammam #1 wellbore</facility>
+				<facilityParent1 kind="well" uidRef="W01">Dammam #1</facilityParent1>
+				<contextFacility kind="field" uidRef="F01">Ghawar</contextFacility>
+				<!-- annulus inner diameter (static) -->
+				<expectedProperty>
+					<property>annulus inner diameter</property>
+				</expectedProperty>
+				<!-- annulus outer diameter (static) -->
+				<expectedProperty>
+					<property>annulus outer diameter</property>
+				</expectedProperty>
+				<!-- ESP measured depth (static) -->
+				<expectedProperty>
+					<property>measured depth</property>
+					<childFacilityIdentifier>electrical submersible pump(ESP01)</childFacilityIdentifier>
+				</expectedProperty>
+				<!-- bottomhole pressure -->
+				<expectedProperty>
+					<property>pressure</property>
+					<childFacilityIdentifier>bottomhole</childFacilityIdentifier>
+				</expectedProperty>
+				<!-- ESP motor current -->
+				<expectedProperty>
+					<property>motor current</property>
+					<childFacilityIdentifier>electrical submersible pump(ESP01)</childFacilityIdentifier>
+				</expectedProperty>
+				<!-- ESP motor speed -->
+				<expectedProperty>
+					<property>motor speed</property>
+					<childFacilityIdentifier>electrical submersible pump(ESP01)</childFacilityIdentifier>
+				</expectedProperty>
+				<!-- ESP motor voltage -->
+				<expectedProperty>
+					<property>motor voltage</property>
+					<childFacilityIdentifier>electrical submersible pump(ESP01)</childFacilityIdentifier>
+				</expectedProperty>
+				<!-- Inlet port from reservior -->
+				<port uid="21">
+					<name>RESERVOIR-AA inlet</name>
+					<direction>inlet</direction>
+					<connectedNode>
+						<node>RESERVOIR</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				</port>
+				<!-- Outlet port to production header -->
+				<port uid="22">
+					<name>AA-AB outlet</name>
+					<direction>outlet</direction>
+					<!-- Node AA-AB -->
+					<connectedNode>
+						<node>AA-AB</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				 </port>
+			</unit>
+			<!-- Dammam #1 wellhead unit (AB) -->
+			<unit uid="U22">
+				<name>AB</name>
+				<facility kind="wellhead" uidRef="WH01">Dammam #1 wellhead</facility>
+				<facilityParent1 kind="well" uidRef="W01">Dammam #1</facilityParent1>
+				<contextFacility kind="field" uidRef="F01">Ghawar</contextFacility>
+				<!-- shutin pressure -->
+				<expectedProperty>
+					<property>shutin pressure</property>
+				</expectedProperty>
+				<!-- Inlet port from wellbore -->
+				<port uid="23">
+					<name>AA-AB inlet</name>
+					<direction>inlet</direction>
+					<connectedNode>
+						<node>AA-AB</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				</port>
+				<!-- Outlet port to choke -->
+				<port uid="24">
+					<name>AB-AC outlet</name>
+					<direction>outlet</direction>
+					<!-- Node AB-AC -->
+					<connectedNode>
+						<node>AB-AC</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				</port>
+			</unit>
+			<!-- Dammam #1 choke unit (AC) -->
+			<unit uid="U23">
+				<name>AC</name>
+				<facility kind="choke" uidRef="CHK01">Dammam #1 choke</facility>
+				<facilityParent1 kind="well" uidRef="W01">Dammam #1</facilityParent1>
+				<contextFacility kind="field" uidRef="F01">Ghawar</contextFacility>
+				<!-- choke setting -->
+				<expectedProperty>
+					<property>choke setting</property>
+				</expectedProperty>
+				<!-- Inlet port from wellhead -->
+				<port uid="25">
+					<name>AB-AC inlet</name>
+					<direction>inlet</direction>
+					<connectedNode>
+						<node>AB-AC</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				</port>
+				<!-- Outlet port  -->
+				<port uid="24">
+					<name>AC-A outlet</name>
+					<direction>outlet</direction>
+					<!-- Node AC-A -->
+					<connectedNode>
+						<node>AC-A</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				</port>
+			</unit>
+		</network>
+	</productFlowModel>
+</productFlowModels>

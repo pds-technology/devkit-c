@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="cs_fiberOpticalPathSegment.xsd"/>
+	<xsd:include schemaLocation="cs_fiberTurnaround.xsd"/>
+	<xsd:include schemaLocation="cs_fiberSplice.xsd"/>
+	<xsd:include schemaLocation="cs_fiberConnection.xsd"/>
+	<xsd:include schemaLocation="cs_fiberTerminator.xsd"/>
+	<xsd:complexType name="cs_fiberOpticalPathInventory">
+		<xsd:annotation>
+			<xsd:documentation>The list of equipment used in the optical path.  (Equipment may be used in the optical path for different periods of time, so this inventory contains all items of equipment which are used at some period of time).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="segment" type="prodml:cs_fiberOpticalPathSegment" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A single segment of the optical fiber used for distributed temperature surveys. Multiple such segments may be connected by other types of component including connectors, splices and fiber turnarounds.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="turnaround" type="prodml:cs_fiberTurnaround" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A turnaround component within the optical path.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="splice" type="prodml:cs_fiberSplice" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A splice component within the optical path.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="connection" type="prodml:cs_fiberConnection" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A connection component within the optical path.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="terminator" type="prodml:cs_fiberTerminator" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The terminator of the optical path. This may be a component (in the case of a single ended fiber installation), or it may be a connection back into the instrument box in the case of a double ended fiber installation.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	  </xsd:complexType>
+</xsd:schema>

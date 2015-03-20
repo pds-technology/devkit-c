@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
+
+<dtsInstrumentBox xmlns="http://www.prodml.org/schemas/1series" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.prodml.org/schemas/1series ../xsd_schemas/ges_dtsInstrumentBox.xsd">
+
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+They totally artificial and are not intended to demonstrate best practices. 
+-->
+	<name>Example Instrument Box 1</name>
+	<manufacturer>Yorick</manufacturer>
+	<manufacturingDate>2001-12-17</manufacturingDate>
+	<type>DTS800-M12</type>
+	<nameTag>
+		<name>123456789</name>
+		<numberingScheme>serial number</numberingScheme>
+	</nameTag>
+	<softwareVersion>1.2</softwareVersion>
+	<factoryCalibration uid="boxcal1">
+		<dTimCalibration>1967-08-13</dTimCalibration>
+		<calibratedBy>Groener Vassar</calibratedBy>
+		<calibrationProtocol>IEEE 7.3</calibrationProtocol>
+		<parameter uom="mm" name="parameter one">2.77</parameter>
+		<parameter uom="ms" name="parameter two">881</parameter>
+		<parameter uom="ubar" name="parameter three">55.8</parameter>
+		<remarks>Bench calibration to set internal box settings</remarks>
+		<offsetTemperatureCalibration uom="degC">2.8</offsetTemperatureCalibration>
+		<slopeCalibration uom="degC/km">1.88</slopeCalibration>
+	</factoryCalibration>
+	<internalOvenLocationNear uom="m">35</internalOvenLocationNear>
+	<internalOvenLocationFar uom="m">85</internalOvenLocationFar>
+	<ovenSetPoint uom="degC">48.3</ovenSetPoint>
+	<testCable>AXBZ123</testCable>
+	<offset>2.8 degC</offset>
+	<differentialLossSetting uom="db/km">.345</differentialLossSetting>
+	<parameter index="1" name="parameter three" uom="lbf" description="Weight of the instrument box">27.2</parameter>
+	<parameter index="1" name="parameter four" uom="cm" description="Height of the instrument box">66</parameter>
+</dtsInstrumentBox>

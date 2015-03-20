@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                     -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                     -->
+	<xsd:include schemaLocation="cs_resqmlSplitLineReference.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlPoint3dSet.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlHdfGroup.xsd"/>
+	<xsd:include schemaLocation="typ_dataTypesResqml.xsd"/>
+	<!--                                                     -->
+	<xsd:complexType name="cs_resqmlExplicitNodeSet">
+		<xsd:annotation>
+			<xsd:documentation>Defines explicit nodes on coordinate lines.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:element name="splitLineReference" type="resqml:cs_resqmlSplitLineReference" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Defines the index locations of one additional (split) coordinate line.
+							The reference value refers to the order in the lineSet aggregate.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="lineSet" type="resqml:cs_resqmlPoint3dSet" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Defines a set of node points on coordinate lines, organized by layer.	
+							There are "nk+gapCount+1" layers of nodes. 	
+							Each layer has "(NI+1)*(NJ+1)+splitLineCount" node points. 	
+							Here gapCount is the number of k layer gaps and splitLineCount is the number of additional DISTINCT lines.	
+							This data ordering facilitates K-slabbing of data sets and is shared between the XML and the HDF representations.	
+							In a layer, the first "(NI+1)*(NJ+1)" nodes are shared between columns of adjacent cells unless otherwise indicated.	
+							The lines are ordered according to a zero-based line_index defined by:	
+								(I-startIndexI)+(NI+1)*(J-startIndexJ)
+							where 	
+								I = I direction line coordinate for a column of cells. Minimum value=startIndexI, count=NI+1.
+								J = J direction line coordinate for a column of cells. Minimum value=startIndexJ, count=NJ+1.  
+							The line I corresponds to the ICORN=0 side of cell I, and so the count of I is NI+1; Similarly for J.	
+							The next splitLineCount nodes are placed on the additional lines as indicated by the splitLineReferences	
+							in the order defined by the reference element in splitLineReference.	
+							The first additional line will be located at (NI+1)*(NJ+1) (assuming a zero-based index).	
+							There must be nk+gapCount+1 nodes on each line. For a line whose kind is "null" the values should be "NaN".	
+							For the additional lines, the line kind will never be "null".	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:element name="ijkGridHdfGroup" type="resqml:cs_resqmlHdfGroup" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Defines information related to capturing the array data 
+						in an HDF5 formatted file.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                     -->
+</xsd:schema>

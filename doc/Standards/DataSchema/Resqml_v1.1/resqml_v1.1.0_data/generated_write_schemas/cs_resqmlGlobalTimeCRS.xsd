@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                     -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                     -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <!--                                                     -->
+   <xsd:complexType name="cs_resqmlGlobalTimeCRS">
+      <xsd:annotation>
+         <xsd:documentation>Defines a 1D Vertical Time Coordinate Reference System (CRS) relative to the global vertical (length) CRS. The label associated with the axis on this
+         system is Z.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="verticalOrigin" type="xsd:double" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The vertical location of the origin of this local system in the global vertical (length) CRS. The unit of measure is defined by the unit of
+               measure for the global vertical CRS.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="timeUnit" type="resqml:VerticalTimeUnit" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the unit of measure of all vertical (seismic two-way) time coordinates. The direction is positve when traveling toward the center of the
+               Earth.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                     -->
+</xsd:schema>

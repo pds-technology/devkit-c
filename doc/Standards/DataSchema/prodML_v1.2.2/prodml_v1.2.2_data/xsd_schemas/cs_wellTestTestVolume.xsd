@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+
+	<xsd:complexType name="cs_wellTestTestVolume">
+		<xsd:annotation>
+			<xsd:documentation>The following sequence of four elements can be used for reporting of most production fluids.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="volumeStdTempPres" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The volume is the fluid, corrected to standard conditions of temperature and pressure.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="volume" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The volume, uncorrected. This volume is generally reported at reservoir conditions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="densityStdTempPres" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The density of the fluid,  corrected to standard conditions of temperature and pressure.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="density" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The density of the fluid, uncorrected.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gasClass" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Class for Natural Gas. This is not valid for oil or water.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

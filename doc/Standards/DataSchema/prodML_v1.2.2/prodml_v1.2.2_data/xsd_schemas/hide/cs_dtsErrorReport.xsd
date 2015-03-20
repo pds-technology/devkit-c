@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_dtsErrorReport">
+		<xsd:annotation>
+			<xsd:documentation>A simple structure that allows an error report to be exchanged. 
+			The strucutre will allow for an error name, error id (generally a numerical code), 
+			and a description.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A name of the error.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="id" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A code, or other id, for the error.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the error.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the error report.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

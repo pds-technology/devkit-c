@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                     -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                     -->
+   <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../gml_resqml_v1.0_profile/gml/3.2.1/gml.xsd" />
+   <!--                                                     -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <!--                                                     -->
+   <xsd:complexType name="cs_resqmlGlobal2dCRS">
+      <xsd:annotation>
+         <xsd:documentation>Defines the global 2D CRS.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:choice>
+            <xsd:element name="srsName" type="resqml:anyURI" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>A URN to a well-known Projected CRS.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="gml:ProjectedCRS" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The definition of a Projected CRS.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="unit" type="resqml:ProjectedCoordinateUom" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The unit of measure of the CRS axes. This must match the unit for the each axis on the CRS.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="axisOrder" type="resqml:GlobalAxisOrder" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This describes the axis order of the 2D CRS. The order is defined using the EPSG axis names.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                     -->
+</xsd:schema>

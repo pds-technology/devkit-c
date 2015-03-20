@@ -1,0 +1,3044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                         -->
+<!-- Energistics License Agreement
+This file is distributed under the Energistics License Agreement at
+http://www.energistics.org
+Use of this file constitutes agreement with the Energistics License Agreement.
+Copyright (c) 2012 Energistics. All rights reserved.
+Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+-->
+<witsml:equipmentPropertySet xsi:schemaLocation="http://www.witsml.org/schemas/1series cs_xmlEquipmentProperties.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:witsml="http://www.witsml.org/schemas/1series">
+	<witsml:equipmentProperties>
+		<witsml:equipment>Casing Crossover</witsml:equipment>
+		<witsml:property name="torqueMaxTorque">
+			<witsml:type>momentOfForceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="torqueMakeupTorque">
+			<witsml:type>momentOfForceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Casing Head</witsml:equipment>
+		<witsml:property name="presRatingTopConnection">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presRatingBottomConnection">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaValveBore_1">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaValveBore_2">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presMaxPres">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePackoffType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameBottomRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTopRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSection">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOutletLocation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOutletMaxPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOutletRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOutletWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isValveBullPlug">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isValveCompanionFlange">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveMake">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveModel">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveSN">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="dTimeLastOverhaulDate">
+			<witsml:type>timestamp</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presValveWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeValve_1">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeValve_2">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Casing Shoe</witsml:equipment>
+		<witsml:property name="typeShoe">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="torqueMaxTorque">
+			<witsml:type>momentOfForceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="torqueMakeupTorque">
+			<witsml:type>momentOfForceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Casing Spool</witsml:equipment>
+		<witsml:property name="presRatingTopConnection">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presRatingBottomConnection">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaValveBore_1">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaValveBore_2">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presMaxPres">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isProposedWellhead">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePackoffType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameBottomRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTopRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSection">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOutletLocation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOutletMaxPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOutletRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOutletWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isValveBullPlug">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isValveCompanionFlange">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveMake">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveModel">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveSN">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presValveWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="dTimeLastOverhaulDate">
+			<witsml:type>timestamp</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveType1">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveType2">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Casing/Casing Liner</witsml:equipment>
+		<witsml:property name="blankBottomLength">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="blankTopLength">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="perforationMaxDimension">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="perforationMinDimension">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="percOpenArea">
+			<witsml:type>dimensionlessMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment> Chemical Injection Mandrel</witsml:equipment>
+		<witsml:property name="numStationNo">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOrificeMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameRetrievalMethods">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaPortSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTROPull">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTRORun">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valvePacking">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Chemical Injection Valve</witsml:equipment>
+		<witsml:property name="diaPort">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOpening">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numStationNo">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOrificeMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameRetrievalMethods">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameServiceType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTROPull">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valvePacking">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Corrosion Coupon Carrier</witsml:equipment>
+		<witsml:property name="diaScraperSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numScrapersPerRod">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameInnerCoating">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Dip Tube</witsml:equipment>
+		<witsml:property name="typeTube">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Downhole Sensor</witsml:equipment>
+		<witsml:property name="dTimeLastCalDate">
+			<witsml:type>timestamp</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthWire">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presPressureAccuracy">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presMaxPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempTempAccuracy">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempMaxTemp">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ESPPSIHightRange">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ESPPSILowRange">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeSensor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Assembly</witsml:equipment>
+		<witsml:property name="nameConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Bolt on Intake</witsml:equipment>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isCheckValve">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isIntegralGasSeparator">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ratioGasSeparatorEfficiency">
+			<witsml:type>dimensionlessMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Bolt on Motor Base</witsml:equipment>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Bolt on Motor Head</witsml:equipment>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Cable</witsml:equipment>
+		<witsml:property name="isFlat">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isStranded">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMfgRating">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempMfgRating">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaConductor(AWG)">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isDoubleArmor">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialJacket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materilaInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialCoreConductor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isLeadShield">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempOperatingMax">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempReference">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="resistivityPerLength">
+			<witsml:type>resistivityPerLengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="impedance">
+			<witsml:type>electricResistanceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="resistancePerLengthAt68F">
+			<witsml:type>resistivityPerLengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="unitlessquantityMotorCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizerQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizer">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableShape">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableSheath">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorCableVolt">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ampsMotorCurrentRating">
+			<witsml:type>electricCurrentMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hzMotorFrequencyRating">
+			<witsml:type>frequencyMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLubrication">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hpMotorPowerRating">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorVoltageRating">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePenetratorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsClampsorProtectolizers">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuardQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuard">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numPowerCableNumberofSplices">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableProfile">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="sealBagConfiguration">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Gas Handler</witsml:equipment>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Gas Separator</witsml:equipment>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Lower Pigtail</witsml:equipment>
+		<witsml:property name="isFlat">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isStranded">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMfgRating">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempMfgRating">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaConductor(AWG)">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isDoubleArmor">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialJacket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materilaInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialCoreConductor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isLeadShield">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempOperatingMax">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempReference">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="resistancePerLength">
+			<witsml:type>resistivityPerLengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="impedance">
+			<witsml:type>electricResistanceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="resistancePerLengthAt68F">
+			<witsml:type>resistivityPerLengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="unitlessquantityMotorCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizerQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizer">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableShape">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableSheath">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorCableVolt">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ampsMotorCurrentRating">
+			<witsml:type>electricCurrentMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hzMotorFrequencyRating">
+			<witsml:type>frequencyMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLubrication">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hpMotorPowerRating">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorVoltageRating">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePenetratorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsClampsorProtectolizers">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuardQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuard">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numPowerCableNumberofSplices">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableProfile">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Motor</witsml:equipment>
+		<witsml:property name="hp">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltAt50HzOr60Hz">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="amps">
+			<witsml:type>electricCurrentMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="motorHPAt60Hz">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="motorHPAt50Hz">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltAt60Hz">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltAt50Hz">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeStatorHousing">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isIntegralSensor">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="unitlessquantityMotorCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizerQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizer">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableShape">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableSheath">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorCableVolt">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hzMotorFrequencyRating">
+			<witsml:type>frequencyMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLubrication">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePenetratorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsClampsorProtectolizers">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuardQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuard">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numPowerCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthPowerCableLength">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameCableMake">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numPowerCableNumberofSplices">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableProfile">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableShape">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableSheath">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltPowerCableVolt">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Motor Flat Cable</witsml:equipment>
+		<witsml:property name="isStranded">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMfgRating">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempMfgRating">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaConductor(AWG)">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isDoubleArmor">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialJacket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materilaInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialCoreConductor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isLeadShield">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempOperatingMax">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempReference">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="resistancePerLength">
+			<witsml:type>resistivityPerLengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="impedance">
+			<witsml:type>electricResistanceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="resistancePerLengthAt68F">
+			<witsml:type>resistivityPerLengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizerQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizer">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableShape">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ampsMotorCurrentRating">
+			<witsml:type>electricCurrentMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hzMotorFrequencyRating">
+			<witsml:type>frequencyMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLubrication">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hpMotorPowerRating">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorVoltageRating">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePenetratorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsClampsorProtectolizers">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuardQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuard">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Promotor</witsml:equipment>
+		<witsml:property name="numStagesManufactured">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hp">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltAt50HzOr60Hz">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="amps">
+			<witsml:type>electricCurrentMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numStagesAsRun">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHightStrengthShaft">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isAbrasionResistant">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isCompression">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHydraulicBalance">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isRadicallyStabilized">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltAt60Hz">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltAt50Hz">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeStatorHousing">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialHousing">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="coatingHousing">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHighPressureHousing">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isIntegralSensor">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tcc">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isWaterAlternatingGas">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isClockwiseRotation">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isIntegralGasHandler">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="unitlessquantityMotorCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="unitlessquantityMotorCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableMake">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizerQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLeadExtensionProtectolizer">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableShape">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableSheath">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorCableVolt">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ampsMotorCurrentRating">
+			<witsml:type>electricCurrentMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hzMotorFrequencyRating">
+			<witsml:type>frequencyMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorLubrication">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hpMotorPowerRating">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameMotorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltMotorVoltageRating">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePenetratorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableBandsClampsorProtectolizers">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuardQuantity">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableGuard">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableArmor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numPowerCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableInsulation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameCableMake">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numPowerCableNumberofSplices">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableProfile">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableShape">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableSheath">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePowerCableType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="voltPowerCableVolt">
+			<witsml:type>electricPotentialMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthDesignedHydrostaticHead">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameImpellerMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hpPowerRating">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presDesignIntakePressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="flowrateDesignedVolumetricRate">
+			<witsml:type>volumeFlowRateMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Pump</witsml:equipment>
+		<witsml:property name="numStagesManufactured">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numStagesAsRun">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHighStrengthShaft">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isAbrasionResistant">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isCompression">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHydraulicBalance">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isRadialllyStabilized">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialHousing">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="coatingHousing">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isUpperTandem">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isLowerTandem">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="TTC">
+			<witsml:type>N/A</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isWaterAlternatingGas">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isClockwiseRotation">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isIntegralGasHandler">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthDesignedHydrostaticHead">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameImpellerMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hpPowerRating">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presDesignIntakePressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="flowrateDesignedVolumetricRate">
+			<witsml:type>volumeFlowRateMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Pump Discharge Sensor Sub</witsml:equipment>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>ESP Seal</witsml:equipment>
+		<witsml:property name="materialShaft">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaShaft">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeSealBagConfiguration">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialSealBag">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHighLoad">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHightStrengthShaft">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isAbrasionResistant">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isHighTemperature">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="loadThrustBearingLimit">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="sealChamberModel">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Gas Lift Mandrel</witsml:equipment>
+		<witsml:property name="diaODValve">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="Minor">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeGasLiftValveLatch">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numStationNo">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOrificeMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameRetrievalMethods">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameServiceType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaPortSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTROPull">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTRORun">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valvePacking">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volumeDisplaced">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Gas Lift Valve</witsml:equipment>
+		<witsml:property name="diaOrifice">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="areaBellowsEffective">
+			<witsml:type>areaMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isContinuousFlow">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isIntermittentFlow">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numStationNo">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOrificeMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameRetrievalMethods">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameServiceType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTROPull">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTRORun">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valvePacking">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volumeDisplaced">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeLatch">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isWirelineRetrievable">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="gasLiftValveType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="hasBellows">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isDummy">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isProdPressOperated">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Gravel Pack Screen</witsml:equipment>
+		<witsml:property name="diaSand">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaScreenGauge">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="carrierDensity">
+			<witsml:type>densityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameCarrierFluid">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="viscCarrierViscosity">
+			<witsml:type>dynamicViscosityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volCarrierVolume">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="weightSandAmount">
+			<witsml:type>massMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameShroudType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="slurryDensity">
+			<witsml:type>densityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="slurryRate">
+			<witsml:type>volumeFlowRateMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volSlurryVolume">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Injection Mandrel</witsml:equipment>
+		<witsml:property name="numStationNo">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOrificeMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameRetrievalMethods">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameServiceType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaPortSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTROPull">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTRORun">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valvePacking">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Injection Valve</witsml:equipment>
+		<witsml:property name="diaPort">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOpening">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numStationNo">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="latchType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOrificeMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameRetrievalMethods">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameServiceType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presTRORun">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valvePacking">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Liner Hanger</witsml:equipment>
+		<witsml:property name="diaNominalCasing">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="packerMin">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="packerMax">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isStingerStyle">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typePackerSetting">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameElastomerType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="elementCenterDepth">
+			<witsml:type>measuredDepthCoord</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="polishBoreLength">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isRetrievable">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSettingProcedure">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSlipDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaPolishBoreSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameUnsettingProcedure">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Overshot</witsml:equipment>
+		<witsml:property name="typeCoupling">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaCoupling">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="costItemCost">
+			<witsml:type>cost</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthFishingNeck">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaFishingNeckOD">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="angleBottomInclination">
+			<witsml:type>yAxisAzimuth</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="angleMaxInclination">
+			<witsml:type>yAxisAzimuth</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="angleTopInclination">
+			<witsml:type>yAxisAzimuth</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numItemNumber">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numJointsinTally">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tallyLength">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="temperatureRating">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="torqueMaxTorque">
+			<witsml:type>momentOfForceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="torqueMakeupTorque">
+			<witsml:type>momentOfForceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="VolumeDisplacedOpenEnd">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Packer</witsml:equipment>
+		<witsml:property name="diaNominalCasing">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="packerMin">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="packerMax">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isStingerStyle">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typePackerSetting">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameElastomerType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="elementCenterDepth">
+			<witsml:type>measuredDepthCoord</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthLenPolishBore">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presMaxDiffPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isRetrievable">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameRetrieveMeth">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSetFluidType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSetMechanics">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="shearRelease">
+			<witsml:type>forceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSlips">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaSzPolishBore">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameUnsettingProcedure">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Polished Rod Liner</witsml:equipment>
+		<witsml:property name="isLiner">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Profile Nipple</witsml:equipment>
+		<witsml:property name="typeNipple">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="MandrelLock">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaPackingBore">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="NoGoID">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>PCP-No Turn Tool/Torque Anchor</witsml:equipment>
+		<witsml:property name="weightNominalCasingMin">
+			<witsml:type>massMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="weightNominalCasingMax">
+			<witsml:type>massMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numTallySequence">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>PCP-Rotor</witsml:equipment>
+		<witsml:property name="typePCPRotor">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthPCPRotorCode">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isLeftHandRotation">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volPCPDisplacementNominal">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volPCPDisplacementValidated">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presHeadRating">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaMajorContour">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaMinorContour">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthContour">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isoIdentifier">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="thicknessSurfaceCoating">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="torqueRatingMax">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="areaLoadBearing">
+			<witsml:type>areaMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isBtmCircPump">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="unitlessquantityCavityInflowIndex">
+			<witsml:type>unitlessQuantity</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isChargePump">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameDriveType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="dTimeLastInspectionDate">
+			<witsml:type>timestamp</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaEccentricity">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ratioEfficiencyInspect">
+			<witsml:type>volumePerVolumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameGearRatio">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="identifierAssociatedPumpBody">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameNoteInspection">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthPitch">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="rpmDesignRPM">
+			<witsml:type>anglePerTimeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="angleSweptAngle">
+			<witsml:type>yAxisAzimuth</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>PCP-Stator</witsml:equipment>
+		<witsml:property name="typePCPStator">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthPCPStatorCode">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isLeftHandRotation">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volPCPDisplacementNominal">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volPCPDisplacementValidated">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presHeadRating">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="rpmMax">
+			<witsml:type>powerMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="materialElastomer">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeElastomer">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typePCPLobe">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isoIdentifier">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isIntegralTagbar">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presCavityRating">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthContour">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="dTimeBenchTestDate">
+			<witsml:type>timestamp</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="torqueBenchTestFrictionTorque">
+			<witsml:type>momentOfForceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presBenchTestDifferentialPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="rpmBenchTestSpeed">
+			<witsml:type>anglePerTimeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ratioBenchTestVolumetricEffatRefDP">
+			<witsml:type>volumePerVolumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ratioBenchTestVolumetricEffatZeroDP">
+			<witsml:type>volumePerVolumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthDistanceTagBar">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthStatorElastomer">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameElastomerModel">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="tempMaxTemp">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isPerforated">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthPitch">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>PCP-Tag Bar</witsml:equipment>
+		<witsml:property name="diaPin">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Sand Screen-Tubing</witsml:equipment>
+		<witsml:property name="unitlessquantityMotorCableGauge">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameStandingValveSeatMeaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveBallMeaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveSeatMeaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="carrierDensity">
+			<witsml:type>densityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameCarrierFluid">
+			<witsml:type>densityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="viscCarrierViscosity">
+			<witsml:type>dynamicViscosityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="visCarrierVolume">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="weigthSandAmount">
+			<witsml:type>massMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="sandSize">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="screenGauge">
+			<witsml:type>unitlessQuantity</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="flowrateSlurryRate">
+			<witsml:type>volumeFlowRateMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volSlurryVolume">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Seal Assembly</witsml:equipment>
+		<witsml:property name="refParentPacker">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Shear Tool</witsml:equipment>
+		<witsml:property name="shearRating">
+			<witsml:type>forceMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="scraperDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="scraperMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numScrapersPerRod">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaScraperSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Strainer Nipple</witsml:equipment>
+		<witsml:property name="nameStandingValveSeatMeaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveBallMeaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveSeatMeaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="carrierDensity">
+			<witsml:type>densityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameCarrierFluid">
+			<witsml:type>densityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="viscCarrierViscosity">
+			<witsml:type>dynamicViscosityMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="visCarrierVolume">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="weigthSandAmount">
+			<witsml:type>massMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="sandSize">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="screenGauge">
+			<witsml:type>unitlessQuantity</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="flowrateSlurryRate">
+			<witsml:type>volumeFlowRateMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="volSlurryVolume">
+			<witsml:type>volumeMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Shear Tool</witsml:equipment>
+		<witsml:property name="shearRating">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numScrapersPerRod">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="scraperMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numScrapersPerRod">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaScraperSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="scraperDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Steam Cup Mandrel</witsml:equipment>
+		<witsml:property name="typeCupConfiguration">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Subsurface Safety Valve</witsml:equipment>
+		<witsml:property name="temperatureRating">
+			<witsml:type>thermodynamicTemperatureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSetFluidType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isEncapsulated">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameEncapsulationType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameControlFluid">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTypeofControl">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionPull">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameConditionRun">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="dTimeRunDate">
+			<witsml:type>timestamp</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthSpacer">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presControlPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSeatType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthValveSpringRate">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaInsertBoreID">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="valveType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isInsertWirelineRetrievable">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Sucker Rod-Continuous</witsml:equipment>
+		<witsml:property name="diaScraperSize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numScrapersPerRod">
+			<witsml:type>positiveCount</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Sucker Rod Pump-Insert</witsml:equipment>
+		<witsml:property name="api11axTubingSize">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axPumpBore">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axPumpType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axBarrelType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axSeatAssyLocation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axSeatAssyType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpBarrel">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpPlunger">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpExtCouplingUpper">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpExtCouplingLower">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxExtraDescriptionText">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpBarrelType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpSeatAssyLocation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpSeatAssy">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpSandAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxSuckerRodPumpBarrelAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTopPlungerAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxBottomPlungerAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpPlunger">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpPlungerPin">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValvePrimary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValveCagePrimary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValveSecondary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValveCageSecondary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingPrimaryValve">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingPrimaryValveCage">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingSecondaryValve">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingSecondaryValveCage">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingValveSeatPlug">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeValveRod">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxFitSuckerRodPumpBarrelPlunger">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpMaxStroke">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numLegacyPump">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameAPIAnchorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthGasAnchor">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="ODDiameterofGasAnchor">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameAPIBarrelMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameAPIPlungerMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSeatingAssemblyDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameStandingValveBallMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameStandingValveSeatMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveBallMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveSeatMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Sucker Rod Pump-Tubing Pump Barrel</witsml:equipment>
+		<witsml:property name="api11axSuckerRodPumpDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axTubingSize">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axPumpBore">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axPumpType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axBarrelType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axSeatAssyLocation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axSeatAssyType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpBarrel">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axLengthPlunger">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpExtCouplingUpper">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpExtCouplingLower">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxExtraDescriptionText">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpBarrelType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpSeatAssyLocation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpSeatAssy">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpSandAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxSuckerRodPumpBarrelAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpMaxStroke">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numLegacyPump">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Sucker Rod Pump-Tubing Pump Plunger</witsml:equipment>
+		<witsml:property name="api11axSuckerRodPumpDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axPumpBore">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axPumpType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpPlunger">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxExtraDescriptionText">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpSandAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTopPlungerAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxBottomPlungerAccessories">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpPlunger">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeSuckerRodPumpPlungerPin">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValvePrimary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValveCagePrimary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValveSecondary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeStandingValveCageSecondary">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingPrimaryValve">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingPrimaryValveCage">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingSecondaryValve">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingSecondaryValveCage">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeTravelingValveSeatPlug">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxTypeValveRod">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxFitSuckerRodPumpBarrelPlunger">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="api11axxLengthSuckerRodPumpMaxStroke">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="numLegacyPump">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameAPIAnchorType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameAPIBarrelMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameAPIPlungerMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameAPIBarrelType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthBarrel">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaDiametricalPlungerClearance">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthGasAnchor">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthLowerExtension">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="DiameterofGasAnchor">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="scraperDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="lengthUpperExtension">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSeatingAssemblyDescription">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaSeatingAssemblySize">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameSeatingAssemblyType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameStandingValveBallMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameStandingValveSeatMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveBallMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTravelingValveSeatMaterial">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Tubing Head (Spool)</witsml:equipment>
+		<witsml:property name="presRatingTopConnection">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presRatingBottomConnection">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeValve_1">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaValveBore_1">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="typeValve_2">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="diaValveBore_2">
+			<witsml:type>lengthMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presMaxPres">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="namePackoffType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameBottomRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameTopRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOutletLocation">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOutletMaxPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOutletRingGasket">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameOutletType">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presOutletWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isValveBullPlug">
+			<witsml:type>logicalBoolean</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="isValveCompanionFlange">
+			<witsml:type>logicalMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveMake">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveModel">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="nameValveSN">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="presValveWorkingPressure">
+			<witsml:type>pressureMeasure</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+		<witsml:property name="dTimeLastOverhaulDate">
+			<witsml:type>timestamp</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+	<witsml:equipmentProperties>
+		<witsml:equipment>Wellbore Notes</witsml:equipment>
+		<witsml:property name="typeNote">
+			<witsml:type>nameString</witsml:type>
+			<witsml:isOptional>true</witsml:isOptional>
+		</witsml:property>
+	</witsml:equipmentProperties>
+</witsml:equipmentPropertySet>

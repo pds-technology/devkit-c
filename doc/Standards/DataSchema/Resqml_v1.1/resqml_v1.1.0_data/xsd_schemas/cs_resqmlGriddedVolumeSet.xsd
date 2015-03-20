@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                     -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                     -->
+	<xsd:include schemaLocation="cs_resqmlGridSet.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlBlockedWellboreSet.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlNonStandardAdjacencySet.xsd"/>
+	<!--                                                     -->
+	<xsd:complexType name="cs_resqmlGriddedVolumeSet">
+		<xsd:annotation>
+			<xsd:documentation>Defines the grids and properties for volumes.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="blockedWellboreSet" type="resqml:cs_resqmlBlockedWellboreSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines path of wellbores through the grids.
+					May assign properties to each path.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nonStandardAdjacencySet" type="resqml:cs_resqmlNonStandardAdjacencySet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines cell-face-pair non-standard adjacency geometry for the grids.
+					May assign properties to each NSA geometry.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gridSet" type="resqml:cs_resqmlGridSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container for 3D grids.
+					May assign properties to each grid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                     -->
+</xsd:schema>

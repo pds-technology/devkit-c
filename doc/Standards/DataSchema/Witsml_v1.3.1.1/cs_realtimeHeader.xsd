@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_groupDefinition.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_realtimeHeader">
+		<xsd:annotation>
+			<xsd:documentation>WITSML realtime header component object.
+			The header is only transmitted with the first realtime, when the header changes
+			or when a retransmit is requested.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="nameWell" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the well that contains the wellbore.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nameWellbore" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the wellbore that contains the tubular.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="serviceCompany" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Name of contractor who provided the service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="runNumber" type="witsml:str16" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Log run number. This should normally be a number; however 
+					some legacy systems encode other information in this value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bhaRunNumber" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The bottom hole assembly run number associated with this log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pass" type="witsml:str16" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Identifies the pass within the run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="creationDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Date and time that the realtime was created.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Comments about the realtime.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="groupDefinition" type="witsml:cs_groupDefinition" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The definition of a group of channels.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

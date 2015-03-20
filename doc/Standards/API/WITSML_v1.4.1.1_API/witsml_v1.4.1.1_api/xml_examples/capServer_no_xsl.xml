@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--   		Example of capserver document 		-->
+<capServers 
+	xmlns="http://www.witsml.org/api/141" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.witsml.org/api/141 
+			   ../xsd_schemas/obj_capServer.xsd" 
+	version="1.4.1">
+	<capServer apiVers="1.4.1">
+		<contact>
+			<name>Server contact name</name>
+			<email>serverAdministrator@serverCompany.com</email>
+			<phone>281-135-7924</phone>
+		</contact>
+		<description>Server description</description>
+		<name>John Smith</name>
+		<vendor>INSITE Server #1</vendor>
+		<version>1.1.0.120</version>
+		<schemaVersion>1.4.1.0</schemaVersion>
+		<changeDetectionPeriod>36</changeDetectionPeriod>
+		<growingTimeoutPeriod dataObject="log">60</growingTimeoutPeriod>
+		<growingTimeoutPeriod dataObject="mudLog">60</growingTimeoutPeriod>
+		<cascadedDelete>false</cascadedDelete>
+		<supportUomConversion>true</supportUomConversion>
+		<compressionMethod>gzip</compressionMethod>
+		<function name="WMLS_GetCap">
+			<dataObject>capServer</dataObject>
+		</function>
+		<function name="WMLS_GetFromStore" >
+			<dataObject>well</dataObject>
+			<dataObject>wellbore</dataObject>
+			<dataObject maxDataNodes="1000" maxDataPoints="10000">log</dataObject>
+			<dataObject maxDataNodes="200">mudLog</dataObject>
+		</function>
+		<function name="WMLS_AddToStore">
+			<dataObject maxDataNodes="500" maxDataPoints="5000">log</dataObject>
+			<dataObject maxDataNodes="200">mudLog</dataObject>
+		</function>
+		<function name="WMLS_UpdateInStore">
+			<dataObject maxDataNodes="500" maxDataPoints="5000">log</dataObject>
+			<dataObject maxDataNodes="200" >mudLog</dataObject>
+		</function>
+		<function name="WMLS_GetBaseMsg"/>
+		<function name="WMLS_GetVersion"/>
+	</capServer>
+</capServers>

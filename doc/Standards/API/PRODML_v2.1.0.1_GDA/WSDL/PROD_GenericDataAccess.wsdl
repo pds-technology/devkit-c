@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions 
+	name="GenericDataAccess"
+	targetNamespace="http://www.prodml.org/api/210/genericDataAccess"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"  
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:tns="http://www.prodml.org/api/210/genericDataAccess" 
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract" >
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2008-2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.prodml.org/api/210/genericDataAccess" elementFormDefault="qualified">
+			<xsd:import namespace="http://www.energistics.org/schemas/abstract" schemaLocation="http://w3.energistics.org/schema/abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd" />
+			<xsd:complexType name="DataObjectReference">
+				<xsd:annotation>
+					<xsd:documentation>The name of a data object which is to be returned from a GDA query.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleContent>
+					<xsd:extension base="xsd:string">
+						<xsd:attribute name="version" type="xsd:string" use="optional">
+							<xsd:annotation>
+								<xsd:documentation>The requested version of the data object which is to be returned from a GDA query.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="namespace" type="xsd:string" use="optional">
+							<xsd:annotation>
+								<xsd:documentation>The namespace of a data object which is to be returned from a GDA query. The namespace is not required and can be assumed for any published WITSML/PRODML object</xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:extension>
+				</xsd:simpleContent>
+			</xsd:complexType>
+			<xsd:complexType name="GroupingIntervalType">
+				<xsd:annotation>
+					<xsd:documentation>Specifies the interval, or 'bucket' size used when requesting a range of data from a growing object, such as a historian.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleContent>
+					<xsd:extension base="xsd:double">
+						<xsd:attribute name="uom" type="xsd:string" use="required" />
+					</xsd:extension>
+				</xsd:simpleContent>
+			</xsd:complexType>
+			<xsd:simpleType name="EndpointQualifier">
+				<xsd:annotation>
+					<xsd:documentation>An enumeration of available qualifiers applied to the 'endpoints' of Ranges of values specified in growing objects (e.g. time or depth)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="Inclusive" />
+					<xsd:enumeration value="Exclusive" />
+					<xsd:enumeration value="Extensive" />
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="EndpointQualifiedDateTime" final="#all">
+				<xsd:annotation>
+					<xsd:documentation>A timestamp value used for min/max query parameters related to "growing objects". The meaning of the endpoint of an interval can be modified by the endpoint attribute.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleContent>
+					<xsd:extension base="xsd:dateTime">
+						<xsd:attribute name="Endpoint" type="tns:EndpointQualifier" use="optional" default="Inclusive">
+							<xsd:annotation>
+								<xsd:documentation>The default is "Inclusive".</xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:extension>
+				</xsd:simpleContent>
+			</xsd:complexType>
+			<xsd:complexType name="EndpointQualifiedDepth" final="#all">
+				<xsd:annotation>
+					<xsd:documentation>A depth value used for min/max query parameters related to "growing objects". The meaning of the endpoint of an interval can be modified by the endpoint attribute.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleContent>
+					<xsd:extension base="xsd:double">
+						<xsd:attribute name="endpoint" type="tns:EndpointQualifier" use="optional" fixed="Inclusive">
+							<xsd:annotation>
+								<xsd:documentation>The default is "inclusive".</xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:extension>
+				</xsd:simpleContent>
+			</xsd:complexType>
+			<xsd:complexType name="DateTimeRange">
+				<xsd:annotation>
+					<xsd:documentation>A structure for defining a start and end date/time as applied to a query or subset.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="Path" type="xsd:string" minOccurs="1" />
+					<xsd:element name="T0" type="tns:EndpointQualifiedDateTime" />
+					<xsd:element name="T1" type="tns:EndpointQualifiedDateTime" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="DepthRange">
+				<xsd:annotation>
+					<xsd:documentation>A structure for defining a start and end depth as applied to a query or subset</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="Path" type="xsd:string" />
+					<xsd:element name="Uom" type="xsd:string" />
+					<xsd:element name="FromValue" type="tns:EndpointQualifiedDepth" />
+					<xsd:element name="ToValue" type="tns:EndpointQualifiedDepth" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:simpleType name="SelectionCriterionOperator">
+				<xsd:annotation>
+					<xsd:documentation>An enumeration which specifies the status of a PutData operation with a data-object.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="lt" />
+					<xsd:enumeration value="le" />
+					<xsd:enumeration value="eq" />
+					<xsd:enumeration value="gt" />
+					<xsd:enumeration value="ge" />
+					<xsd:enumeration value="ne" />
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="SelectionCriterion">
+				<xsd:annotation>
+					<xsd:documentation>Selection criterion for non-recurring elements.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="Path" type="xsd:string" />
+					<xsd:element name="Operator" type="tns:SelectionCriterionOperator" />
+					<xsd:element name="Value" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="NameValuePair">
+				<xsd:annotation>
+					<xsd:documentation>A generic structure for option values that are not specified in schema.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="Name" type="xsd:string" minOccurs="1" />
+					<xsd:element name="Value" type="xsd:string" minOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ArrayOfNameValuePair">
+				<xsd:annotation>
+					<xsd:documentation>A collection of generic option values.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="NameValuePair" type="tns:NameValuePair" minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:simpleType name="PutDataResultStatus">
+				<xsd:annotation>
+					<xsd:documentation>An enumeration which specifies the status of a PutData operation with a data-object.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="Added" />
+					<xsd:enumeration value="Updated" />
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="GroupingFunctions">
+				<xsd:annotation>
+					<xsd:documentation>An enumeration of available or requested methods for combining or grouping values when requesting data from a 'growing' or time-series object in specified intervals, or as an aggregate.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="Average" />
+					<xsd:enumeration value="Minimum" />
+					<xsd:enumeration value="Maximum" />
+					<xsd:enumeration value="Sum" />
+					<xsd:enumeration value="Raw" />
+					<xsd:enumeration value="StdDeviation" />
+					<xsd:enumeration value="Any" />
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="SubsetTypes">
+				<xsd:annotation>
+					<xsd:documentation>An enumeration of the available methods of sub-setting an object (i.e. returning a partial object)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="UidOnly">
+						<xsd:annotation>
+							<xsd:documentation>Indicates that only the Uid of the object should be returned. In cases of compound identity all Uid components would be returned. For example a query against wellLogs would include the wellUid, wellboreUid, and wellLogUid.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+					<xsd:enumeration value="HeaderOnly">
+						<xsd:annotation>
+							<xsd:documentation>Indicates that only the top-level elements for the object should be returned. For standard WITSML and PRODML schema objects this would</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+					<xsd:enumeration value="Range">
+						<xsd:annotation>
+							<xsd:documentation>This value applies primarily to 'growing' objects. For a wellLog it would indicate that only a specific depth range would be returned. For a process control historian, it would indicate that a range of time samples be included.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+					<xsd:enumeration value="Aggregate">
+						<xsd:annotation>
+							<xsd:documentation>This value applies primarily to 'growing' objects. It indicates that the growing values be aggregated using the function specified GroupingFunction</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+					<xsd:enumeration value="Interpolate">
+						<xsd:annotation>
+							<xsd:documentation>This value applies primarily to 'growing' objects. It indicates that the growing values be interpolated based on the GroupingInterval.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+					<xsd:enumeration value="Current">
+						<xsd:annotation>
+							<xsd:documentation>For growing objects, specifies that the current or 'Live' value is to be returned.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:enumeration>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="GetDataSubsetOptions">
+				<xsd:annotation>
+					<xsd:documentation>Specifies the options to a GetDataQuery relating to the subset of a growing object that is to be returned.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="SubsetType" type="tns:SubsetTypes" minOccurs="0" />
+					<xsd:element name="MaxValues" type="xsd:integer" minOccurs="0" />
+					<xsd:element name="GroupingFunction" type="tns:GroupingFunctions" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The requested method for combining multiple values.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="GroupingInterval" type="tns:GroupingIntervalType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Specifies the interval, or 'bucket' size used when requesting a range of data from a growing object, such as a historian.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="GetDataOptions">
+				<xsd:annotation>
+					<xsd:documentation>Specifies all of the Options for the the GetDataRequest.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="RequestedUom" type="xsd:string" minOccurs="0" />
+					<xsd:element name="SubsetOptions" type="tns:GetDataSubsetOptions" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Options that specify what portion or subset of a growing object should be returned.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="CustomOptions" type="tns:ArrayOfNameValuePair" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>CustomOptions is used to send generic or server-specific options for the request.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ArrayOfSupportedDataObject">
+				<xsd:annotation>
+					<xsd:documentation>A collection of SupportedDataObject objects.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="SupportedDataObject" type="tns:SupportedDataObject" minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="SupportedDataObject">
+				<xsd:annotation>
+					<xsd:documentation>Describes a single element or data type supported by a GenericDataAccess server.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="Name" type="xsd:string" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The name of the type. This should be exactly the same as the local name (sans namespace) of the supported element or type.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="SupportedOperation" type="tns:SupportedOperation" minOccurs="0" maxOccurs="2" />
+				</xsd:sequence>
+				<xsd:attribute name="version" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>A string describing the version of the type. In the case of prodml/witsml objects, this much exactly match the version attribute found in the top-level plural object.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="namespace" type="xsd:string" use="optional" />
+			</xsd:complexType>
+			<xsd:simpleType name="SupportedOperation">
+				<xsd:annotation>
+					<xsd:documentation>Enumeration which indicates the operations supported on a given data type for a GDA server. A server can support PutData, GetData, or both.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="GetData" />
+					<xsd:enumeration value="PutData" />
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="GenericDataAccessCapabilities">
+				<xsd:annotation>
+					<xsd:documentation>Describes the capabilities of this server.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="SupportedDataObjects" type="tns:ArrayOfSupportedDataObject" />
+					<xsd:element name="Properties" type="tns:ArrayOfNameValuePair" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="GetDataQuery">
+				<xsd:annotation>
+					<xsd:documentation>Encapsulates a single query on a GenericDataAccess server. All query parameters in this structure will be 'and'ed by the server to come up with a list of returned objects. Do not use this section to specify a 'subset' of an individual object, or the range of measurements to be returned for a sensor or device.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="DataObject" type="tns:DataObjectReference">
+						<xsd:annotation>
+							<xsd:documentation>The type name of the kind of data to be returned.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Uid" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>A List of Uids for which data is to be returned.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DateTimeCriterion" type="tns:DateTimeRange" minOccurs="0" />
+					<xsd:element name="DepthCriterion" type="tns:DepthRange" minOccurs="0" />
+					<xsd:element name="ContentFilter" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>ContentFilter defines a selection criterion as an XPath statement into the returned object type. In the case of a pure XML database, it could possibly applied as a query into the datastore. In most case, however, backing databases with be SQL, in which case the ContentFilter would be applied post-query, but before objects are returned to the caller. Note that this also means that objects must be serialized to XML before the XPath can be applied. The XPath statement should be interpreted as an 'assertion' on the candidate object. If the XPath evaluates to any nodes at all, then it is included in the result set. If it does not, it is discarded.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="SelectionCriteria" type="tns:SelectionCriterion" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Each path/operator/value triadic may be applied to non-recurring elements. The SERVER SHALL apply this criterion BEFORE the XPath based ContentFilter.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Options" type="tns:GetDataOptions" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Specifies options for the GetDataQuery</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<!-- GetCapabilities -->
+			<xsd:element name="GetCapabilities">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for GetCapabilities</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence />
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GetCapabilitiesResponse">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for response from GetCapabilities</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getCapabilitiesResult" type="tns:GenericDataAccessCapabilities" minOccurs="0" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- PutData -->
+			<xsd:complexType name="PutDataResult">
+				<xsd:annotation>
+					<xsd:documentation>Contains information regarding the response to a DataOperation outside of the returned data itself.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="Status" type="tns:PutDataResultStatus" minOccurs="1" />
+					<xsd:element name="Id" type="xsd:string" minOccurs="1" />
+					<xsd:element name="SuppMsg" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="PutData">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for PutData</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="abs:abstractDataObject" />
+						<xsd:element name="options" type="tns:NameValuePair" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="PutDataResponse">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for response from PutData</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="putDataResult" type="tns:PutDataResult" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- GetData -->
+			<xsd:element name="GetData">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for GetData</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="query" type="tns:GetDataQuery" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GetDataResponse">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for response from GetData</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getDataResult" type="tns:GetDataResult" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:complexType name="GetDataResult">
+				<xsd:annotation>
+					<xsd:documentation>The results of a single query</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element ref="abs:abstractDataObject" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<!-- DeleteData -->
+			<xsd:complexType name="DeleteDataResult">
+				<xsd:annotation>
+					<xsd:documentation>Contains information regarding the response to a DeleteData operation.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="Count" type="xsd:int" minOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="DeleteData">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for DeleteData</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Uid" type="xsd:string" minOccurs="1" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DeleteDataResponse">
+				<xsd:annotation>
+					<xsd:documentation>SOAP Message for response from DeleteData</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="deleteDataResult" type="tns:DeleteDataResult" minOccurs="1" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!-- Faults -->
+			<xsd:element name="UnsupportedOptionFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="OptionName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="UnsupportedDataObjectFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="DataObjectName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="InvalidXPathFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="XPath" type="xsd:string" />
+						<xsd:element name="XPathProcessorError" type="xsd:string" />
+						<xsd:element name="Position" type="xsd:integer" minOccurs="0" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="UnknownUidFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Uid" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="UnsupportedCriterionFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CriterionName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="MissingParameterFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Parameter" type="xsd:string" minOccurs="1" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<!-- GetCapabilities -->
+	<wsdl:message name="GetCapabilitiesSoapIn">
+		<wsdl:part name="parameters" element="tns:GetCapabilities" />
+	</wsdl:message>
+	<wsdl:message name="GetCapabilitiesSoapOut">
+		<wsdl:part name="parameters" element="tns:GetCapabilitiesResponse" />
+	</wsdl:message>
+	<!-- GetData -->
+	<wsdl:message name="GetDataSoapIn">
+		<wsdl:part name="parameters" element="tns:GetData" />
+	</wsdl:message>
+	<wsdl:message name="GetDataSoapOut">
+		<wsdl:part name="parameters" element="tns:GetDataResponse" />
+	</wsdl:message>
+	<!-- PutData -->
+	<wsdl:message name="PutDataSoapIn">
+		<wsdl:part name="parameters" element="tns:PutData" />
+	</wsdl:message>
+	<wsdl:message name="PutDataSoapOut">
+		<wsdl:part name="parameters" element="tns:PutDataResponse" />
+	</wsdl:message>
+	<!-- DeleteData -->
+	<wsdl:message name="DeleteDataSoapIn">
+		<wsdl:part name="parameters" element="tns:DeleteData" />
+	</wsdl:message>
+	<wsdl:message name="DeleteDataSoapOut">
+		<wsdl:part name="parameters" element="tns:DeleteDataResponse" />
+	</wsdl:message>
+	<!-- Faults -->
+	<wsdl:message name="MissingParameterFaultMessage">
+		<wsdl:part name="fault" element="tns:MissingParameterFault" />
+	</wsdl:message>
+	<wsdl:message name="UnsupportedOptionFaultMessage">
+		<wsdl:part name="fault" element="tns:UnsupportedOptionFault" />
+	</wsdl:message>
+	<wsdl:message name="UnsupportedDataObjectFaultMessage">
+		<wsdl:part name="fault" element="tns:UnsupportedDataObjectFault" />
+	</wsdl:message>
+	<wsdl:message name="InvalidXPathFaultMessage">
+		<wsdl:part name="fault" element="tns:InvalidXPathFault" />
+	</wsdl:message>
+	<wsdl:message name="UnknownUidFaultMessage">
+		<wsdl:part name="fault" element="tns:UnknownUidFault" />
+	</wsdl:message>
+	<wsdl:message name="UnsupportedCriterionFaultMessage">
+		<wsdl:part name="fault" element="tns:UnsupportedCriterionFault" />
+	</wsdl:message>
+	<wsdl:portType name="PROD_GenericDataAccessSoap">
+		<wsdl:operation name="GetCapabilities">
+			<wsdl:input message="tns:GetCapabilitiesSoapIn" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/GetCapabilities" />
+			<wsdl:output message="tns:GetCapabilitiesSoapOut" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/GetCapabilitiesResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="GetData">
+			<wsdl:input message="tns:GetDataSoapIn" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/GetData" />
+			<wsdl:output message="tns:GetDataSoapOut" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/GetDataResponse" />
+			<wsdl:fault name="UnsupportedOptionFault" message="tns:UnsupportedOptionFaultMessage" />
+			<wsdl:fault name="UnsupportedDataObjectFault" message="tns:UnsupportedDataObjectFaultMessage" />
+			<wsdl:fault name="UnknownUidFault" message="tns:UnknownUidFaultMessage" />
+			<wsdl:fault name="InvalidXPathFault" message="tns:InvalidXPathFaultMessage" />
+			<wsdl:fault name="UnsupportedCriterionFault" message="tns:UnsupportedCriterionFaultMessage" />
+			<wsdl:fault name="MissingParameterFault" message="tns:MissingParameterFaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="PutData">
+			<wsdl:input message="tns:PutDataSoapIn" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/PutData" />
+			<wsdl:output message="tns:PutDataSoapOut" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/PutDataResponse" />
+			<wsdl:fault name="UnsupportedOptionFault" message="tns:UnsupportedOptionFaultMessage" />
+			<wsdl:fault name="UnsupportedDataObjectFault" message="tns:UnsupportedDataObjectFaultMessage" />
+			<wsdl:fault name="UnknownUidFault" message="tns:UnknownUidFaultMessage" />
+			<wsdl:fault name="MissingParameterFault" message="tns:MissingParameterFaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="DeleteData">
+			<wsdl:input message="tns:DeleteDataSoapIn" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/PutData" />
+			<wsdl:output message="tns:DeleteDataSoapOut" wsaw:Action="http://www.prodml.org/api/210/genericDataAccess/PutDataResponse" />
+			<wsdl:fault name="UnknownUidFault" message="tns:UnknownUidFaultMessage" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PROD_GenericDataAccessSoap" type="tns:PROD_GenericDataAccessSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<!-- GetCapabilities Operation -->
+		<wsdl:operation name="GetCapabilities">
+			<soap:operation soapAction="http://www.prodml.org/api/210/genericDataAccess/GetCapabilities" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<!-- GetData Operation -->
+		<wsdl:operation name="GetData">
+			<soap:operation soapAction="http://www.prodml.org/api/210/genericDataAccess/GetData" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnsupportedOptionFault">
+				<soap:fault use="literal" name="UnsupportedOptionFault" />
+			</wsdl:fault>
+			<wsdl:fault name="UnsupportedDataObjectFault">
+				<soap:fault use="literal" name="UnsupportedDataObjectFault" />
+			</wsdl:fault>
+			<wsdl:fault name="UnknownUidFault">
+				<soap:fault use="literal" name="UnknownUidFault" />
+			</wsdl:fault>
+			<wsdl:fault name="InvalidXPathFault">
+				<soap:fault use="literal" name="InvalidXPathFault" />
+			</wsdl:fault>
+			<wsdl:fault name="UnsupportedCriterionFault">
+				<soap:fault use="literal" name="UnsupportedCriterionFault" />
+			</wsdl:fault>
+			<wsdl:fault name="MissingParameterFault">
+				<soap:fault use="literal" name="MissingParameterFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<!-- PutData Operation -->
+		<wsdl:operation name="PutData">
+			<soap:operation soapAction="http://www.prodml.org/api/210/genericDataAccess/PutData" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnsupportedOptionFault">
+				<soap:fault use="literal" name="UnsupportedOptionFault" />
+			</wsdl:fault>
+			<wsdl:fault name="UnsupportedDataObjectFault">
+				<soap:fault use="literal" name="UnsupportedDataObjectFault" />
+			</wsdl:fault>
+			<wsdl:fault name="UnknownUidFault">
+				<soap:fault use="literal" name="UnknownUidFault" />
+			</wsdl:fault>
+			<wsdl:fault name="MissingParameterFault">
+				<soap:fault use="literal" name="MissingParameterFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<!-- DeleteData Operation -->
+		<wsdl:operation name="DeleteData">
+			<soap:operation soapAction="http://www.prodml.org/api/210/genericDataAccess/DeleteData" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnknownUidFault">
+				<soap:fault use="literal" name="UnknownUidFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PROD_GenericDataAccess">
+		<wsdl:port name="PROD_GenericDataAccessSoap" binding="tns:PROD_GenericDataAccessSoap">
+			<soap:address location="http://_Vendor_Address_And_Port_/_Vendor_Service_Name_/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="obj_resqmlDocument.xsd" />
+   <!--                                                         -->
+   <xsd:element name="resqmlDocument" type="resqml:obj_resqmlDocumentStandAlone">
+      <xsd:annotation>
+         <xsd:documentation>A Global Element Schema for the singular object. This is for use outside the context of the plural.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <!--                                                         -->
+   <xsd:complexType name="obj_resqmlDocumentStandAlone">
+      <xsd:annotation>
+         <xsd:documentation>Adds a schema version element to the object type.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="resqml:obj_resqmlDocument">
+            <xsd:sequence />
+            <xsd:attribute name="version" type="resqml:schemaVersionStringResqml" use="required">
+               <xsd:annotation>
+                  <xsd:documentation>Data object schema version.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

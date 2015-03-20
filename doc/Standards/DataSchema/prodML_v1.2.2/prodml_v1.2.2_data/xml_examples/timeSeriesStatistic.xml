@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
+<!--    		Example of time series data 		  -->
+<timeSeriesStatistics 
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series  ../xsd_schemas/obj_timeSeriesStatistic.xsd" 
+	version="1.2.0.0(PRODML)">
+	<timeSeriesStatistic uid="ts-123">
+		<name>measured prodml://gary/mine/2736</name>
+		<key keyword="asset identifier">prodml://mysite.mycompany.com/well/22b/wellbore/1/bottomhole/2736</key>
+		<key keyword="qualifier">measured</key>
+		<key keyword="subqualifier">maximum</key>
+		<unit>psi</unit>
+		<measureClass>pressure</measureClass>
+		<comment>example pressure series</comment>
+		<dTimMin endpoint="inclusive">2008-10-31T12:00:00.000Z</dTimMin>
+		<dTimMax endpoint="inclusive">2008-10-31T12:00:02.000Z</dTimMax>
+		<minimum>11.2</minimum>
+		<maximum>19.999</maximum>
+		<sum>42.499</sum>
+		<mean>14.166333</mean>
+		<median>11.3</median>
+		<standardDeviation>6.1</standardDeviation>
+		<timeAtThreshold>
+			<thresholdMinimum endpoint="inclusive">10.0</thresholdMinimum>
+			<thresholdMaximum endpoint="exclusive">20</thresholdMaximum>
+			<duration uom="s">2</duration>
+		</timeAtThreshold>
+	</timeSeriesStatistic>
+</timeSeriesStatistics>

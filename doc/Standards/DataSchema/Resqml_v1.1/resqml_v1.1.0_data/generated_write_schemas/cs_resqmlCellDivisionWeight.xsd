@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlCellDivisionWeight">
+      <xsd:annotation>
+         <xsd:documentation>Defines the local grid refinement (LGR) by dividing the individual cells.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence />
+      <xsd:attribute name="count" type="resqml:listOfShort" use="required">
+         <xsd:annotation>
+            <xsd:documentation>A list that defines the number of refined cells within each target cell. The length of the list must be equal to the number of target cells in the
+            specified direction (i.e., maxIndex-minIndex+1). The target cells are defined by a target cell window (i.e., by a minimum index and maximum index) in the parent grid.
+            The order in the aggregate is significant. The first value represents the number of refined cells in the first target cell. The next value represents the number of
+            refined cells in the second target cell. The number of resulting cells in specified direction is equal to the sum of this list of counts.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="weight" type="resqml:listOfFloat" use="required">
+         <xsd:annotation>
+            <xsd:documentation>A list that defines the weight to apply to each refined cell within each target cell. The length of the array must be equal to the sum of the counts
+            in the count list. The order in the aggregate is significant. The first count(1) values represent the list of refinements for the the first target cell. The next
+            count(2) values represent the list of refinements for the second target cell. The first weight within each refinement list applies to the lower index side of the
+            target cell. The width of each refined cell will be proportional to the weights within each refinement list. Readers are advised to normalize the weights within each
+            refinement list.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

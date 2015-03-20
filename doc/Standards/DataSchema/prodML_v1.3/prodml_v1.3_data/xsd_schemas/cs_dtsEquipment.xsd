@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="cs_businessAssociate.xsd"/>
+	<xsd:complexType name="cs_dtsEquipment" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>The abstract class of equipment in the optical path from which all components in the optical path inherit.</xsd:documentation>
+		</xsd:annotation>
+		    <xsd:sequence>
+			      <xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The name for the item of equipment.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="manufacturer" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The manufacturer for this item of equipment.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="manufacturingDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>Date when the equipment (e.g. instrument box) was manufactured</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="type" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The type of equipment. This might include the model type.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="supplier" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>Contact details for the company/person supplying the equipment.  </xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+		              <xsd:element name="supplyDate" type="xsd:date" minOccurs="0" maxOccurs="1">
+			                <xsd:annotation>
+						  <xsd:documentation>The date on which this fiber segment was suppied.</xsd:documentation>
+					</xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="supplierModelNumber" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						  <xsd:documentation>The model number (alphanumeric) that is used by the supplier to reference the type of fiber that is supplied to the user.</xsd:documentation>
+					</xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="softwareVersion" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>Latest known version of the software/firmware that is running in the equipment</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>A descriptive remark about the equipment (e.g. optical fiber)</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+		    </xsd:sequence>
+	  </xsd:complexType>
+</xsd:schema>

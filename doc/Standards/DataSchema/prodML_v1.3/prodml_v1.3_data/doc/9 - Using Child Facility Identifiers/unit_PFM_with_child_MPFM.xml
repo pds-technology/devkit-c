@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Saudi Aramco CR-0012 Flow Network Example using childFacilityIdentifier -->
+<productFlowModels
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productFlowModel.xsd"
+	version="1.2.0.0(PRODML)">
+	<productFlowModel uid="PFM-01">
+		<name>Saudi Aramco CR-0012 Flow Network Example</name>
+		<dTimStart>2012-01-01T00:00:00.000Z</dTimStart>
+		<network uid="NET-B01">
+			<name>Saudi Aramco CR-0012 Child Facility Example</name>
+			<unit uid="U01">
+				<name>Unit D</name>
+				<facility kind="manifold" uidRef="H01">Production Header #1</facility>
+				<contextFacility kind="field" uidRef="F01">Ghawar</contextFacility>
+				<!-- Inlet port from unit A -->
+				<port uid="2">
+					<name>A-D inlet</name>
+					<direction>inlet</direction>
+					<facility kind="manifold" uidRef="H01">Production Header #1</facility>
+					<connectedNode>
+						<node>A-D</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+					<!-- measured production for combined (oil/gas/water) flow -->
+					<expectedFlowProduct>
+						<flow>production</flow>
+						<product>oil and gas</product>
+						<qualifier>measured</qualifier>
+					</expectedFlowProduct>
+					<!-- pressure -->
+					<expectedFlowProperty>
+						<property>pressure</property>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+						<tagAlias namingSystem="osi.aramco.com">H01_InletPressure_2</tagAlias>
+						<expectedFlowProduct>
+							<flow>production</flow>
+							<product>oil and gas</product>
+							<qualifier>measured</qualifier>
+						</expectedFlowProduct>
+					</expectedFlowProperty>
+					<!-- temperature -->
+					<expectedFlowProperty>
+						<property>temperature</property>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+						<tagAlias namingSystem="osi.aramco.com">H01_InletTemperature_2</tagAlias>
+						<expectedFlowProduct>
+							<flow>production</flow>
+							<product>oil and gas</product>
+							<qualifier>measured</qualifier>
+						</expectedFlowProduct>
+					</expectedFlowProperty>
+				</port>
+				<!-- Inlet port from unit B -->
+				<port uid="4">
+					<name>B-D inlet</name>
+					<direction>inlet</direction>
+					<facility kind="manifold" uidRef="H01">Production Header #1</facility>
+					<connectedNode>
+						<node>B-D</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+					<!-- measured production for combined (oil/gas/water) flow -->
+					<expectedFlowProduct>
+						<flow>production</flow>
+						<product>oil and gas</product>
+						<qualifier>measured</qualifier>
+					</expectedFlowProduct>
+					<!-- pressure -->
+					<expectedFlowProperty>
+						<property>pressure</property>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+						<tagAlias namingSystem="osi.aramco.com">H01_InletPressure_4</tagAlias>
+						<expectedFlowProduct>
+							<flow>production</flow>
+							<product>oil and gas</product>
+							<qualifier>measured</qualifier>
+						</expectedFlowProduct>
+					</expectedFlowProperty>
+					<!-- temperature -->
+					<expectedFlowProperty>
+						<property>temperature</property>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+						<tagAlias namingSystem="osi.aramco.com">H01_InletTemperature_4</tagAlias>
+						<expectedFlowProduct>
+							<flow>production</flow>
+							<product>oil and gas</product>
+							<qualifier>measured</qualifier>
+						</expectedFlowProduct>
+					</expectedFlowProperty>
+				</port>
+				<!-- Inlet port from unit C -->
+				<port uid="6">
+					<name>C-D inlet</name>
+					<direction>inlet</direction>
+					<facility kind="manifold" uidRef="H01">Production Header #1</facility>
+					<connectedNode>
+						<node>C-D</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+					<!-- measured production for combined (oil/gas/water) flow -->
+					<expectedFlowProduct>
+						<flow>production</flow>
+						<product>oil and gas</product>
+						<qualifier>measured</qualifier>
+					</expectedFlowProduct>
+					<!-- pressure -->
+					<expectedFlowProperty>
+						<property>pressure</property>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+						<tagAlias namingSystem="osi.aramco.com">H01_InletPressure_6</tagAlias>
+						<expectedFlowProduct>
+							<flow>production</flow>
+							<product>oil and gas</product>
+							<qualifier>measured</qualifier>
+						</expectedFlowProduct>
+					</expectedFlowProperty>
+					<!-- temperature -->
+					<expectedFlowProperty>
+						<property>temperature</property>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+						<tagAlias namingSystem="osi.aramco.com">H01_InletTemperature_6</tagAlias>
+						<expectedFlowProduct>
+							<flow>production</flow>
+							<product>oil and gas</product>
+							<qualifier>measured</qualifier>
+						</expectedFlowProduct>
+					</expectedFlowProperty>
+				</port>
+				<!-- outlet port -->
+				<port uid="2">
+					<name>D-E outlet</name>
+					<direction>outlet</direction>
+					<!-- The facility -->
+					<facility kind="flow meter" siteKind="multi-phase flow meter" uidRef="MPFM01">Multi-phase flow meter #1</facility>
+					<!-- Connected to separator unit E -->
+					<connectedNode>
+						<node>D-E</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+					<!-- measured production for combined (oil/gas/water) flow -->
+					<expectedFlowProduct>
+						<flow>production</flow>
+						<product>oil and gas</product>
+						<qualifier>measured</qualifier>
+					</expectedFlowProduct>
+					<!-- measured production for gas flow -->
+					<expectedFlowProduct>
+						<flow>production</flow>
+						<product>gas</product>
+						<qualifier>measured</qualifier>
+					</expectedFlowProduct>
+					<!-- gas flow rate -->
+					<expectedFlowProperty>
+						<property>flow rate</property>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+						<expectedFlowProduct>
+							<flow>production</flow>
+							<product>gas</product>
+							<qualifier>measured</qualifier>
+						</expectedFlowProduct>
+					</expectedFlowProperty>
+				</port>
+			</unit>
+		</network>
+	</productFlowModel>
+</productFlowModels>

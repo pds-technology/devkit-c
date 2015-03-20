@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.posc.org/schemas/unitAlias" 
+	xmlns:ua="http://www.posc.org/schemas/unitAlias" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--                                                         -->
+	<xsd:element name="unitAlias" type="ua:unitAlias"/>
+
+	<xsd:complexType name="unitAlias">
+		<xsd:sequence>
+			<xsd:element name="unit" type="ua:unit" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A single unit of measure.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="unit">
+		<xsd:annotation>
+			<xsd:documentation>A container for information about one unit of measure.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the unit of measure.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="alias" type="ua:nameStruct" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An alias for the unit of measure.
+					The same alias value can be specified in many different sources.
+					This would allow one file to capture aliases from many sources
+					while only applying aliases from one source for a particular transform.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="nameStruct">
+		<xsd:annotation>
+			<xsd:documentation>The name of something with a source for the name.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="source" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>The name of the source of the alias.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

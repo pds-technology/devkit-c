@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productVolumeDestination.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeBalanceDetail.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumeBalanceSet">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Flow Balance Set Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="kind" type="prodml:BalanceFlowPart" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the aspect being described.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="cargoNumber" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A cargo identifier for the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="cargoBatchNumber" type="prodml:nonNegativeCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A cargo batch number. Used if the vessel needs to temporarily disconnect for some reason (e.g., weather).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="shipper" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the shipper</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="destination" type="prodml:cs_productVolumeDestination" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the destination of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="balanceDetail" type="prodml:cs_productVolumeBalanceDetail" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Provides details on the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

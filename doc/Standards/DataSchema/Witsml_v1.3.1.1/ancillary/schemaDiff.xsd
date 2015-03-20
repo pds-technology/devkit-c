@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.posc.org/schemas/schemaDiff" 
+	xmlns:diff="http://www.posc.org/schemas/schemaDiff" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--                                                         -->
+	<xsd:element name="schemaDiff" type="diff:schemaDiff"/>
+
+	<xsd:complexType name="schemaDiff">
+		<xsd:sequence>
+			<xsd:element name="fileset" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for old files.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fileold" type="diff:fileold" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A mapping of old complex types to new complex types.
+								This excludes simplistic complex types.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="typeset" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for old renamed types.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="typecompat" type="diff:typecompat" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A mapping of old simplistic types to new simplistic types.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="enumSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for old renamed enum 'simple' types.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="oldEnumType" type="diff:oldEnumType" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A mapping of old enum values to new enum values.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="fileold">
+		<xsd:annotation>
+			<xsd:documentation>A container for information about an old file containing types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the old file containing types.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="typeold" type="diff:typeold" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about a type in the old file. 
+					This is primarily intended to support a type that was split into
+					two types (e.g., element groups)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="typeold">
+		<xsd:annotation>
+			<xsd:documentation>A container for information about an old type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the old type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="status" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The status of the type:
+					DELETE	= The type was deleted. The file and type 
+						  for the 'new type' will refer to the old file and 
+						  type in order to define mapping of the elements.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="typenew" type="diff:typenew" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about a type related to the old type. The old type and/or file
+					may have been renamed or it may have been split into multiple types in multiple files.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="typenew">
+		<xsd:annotation>
+			<xsd:documentation>Information about a new type related to an old type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="file" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the file containing the type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the type in the file.
+					This may or may not match the name of the old type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="elementmap" type="diff:elementmap" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A mapping from and old element name to a new 
+					element name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="attributemap" type="diff:attributemap" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A mapping from and old attribute name to a new 
+					attribute name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="elementmap">
+		<xsd:annotation>
+			<xsd:documentation>Defines a mapping between element names.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="oldname" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The old element name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="newname" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A new element name in the type. If the new name is not in the type
+					then it may be referenced in movedTo.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="status" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The compatibility of the substitution:
+					RENAME             = Forward and backward mapping.
+					FORWARD	           = Forward compatible .
+					BACKWARD           = Backward compatible.
+					FWD-MOVED          = Forward mapping move to one spot. Element movedTo should be populated.
+					BWD-MOVED          = Backward mapping move to one spot. Element movedTo should be populated.
+					FWD/BWD-MOVED      = Moved to one spot with Forward and backward mapping.
+							     Element movedTo should be populated. 
+					FWD/BWD-MULTI-MOVE = Moved to multiple spots with Forward and backward mapping.
+					FWD/BWD-MAPPING    = A simplistic mapping that supports both forward and backward.
+					MAPPING            = Complicated mapping.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="movedTo" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>For any variation of a status of 'MOVED', the 
+					dot notation from a starting type to the new element.
+					For example, 'cs_xxx.yyy' where yyy is the new element or attribute.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment related to the status.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="attributemap">
+		<xsd:annotation>
+			<xsd:documentation>Defines a mapping between attribute names.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="oldname" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The old attribute name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="newname" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A new attribute name in the type. If the new name is not in the type
+					then it may be referenced in movedTo.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="status" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The compatibility of the substitution:
+					RENAME             = Forward and backward mapping.
+					FORWARD	           = Forward compatible .
+					BACKWARD           = Backward compatible.
+					FWD-MOVED          = Forward mapping move to one spot. Element movedTo should be populated.
+					BWD-MOVED          = Backward mapping move to one spot. Element movedTo should be populated.
+					FWD/BWD-MOVED      = Moved to one spot with Forward and backward mapping.
+							     Element movedTo should be populated. 
+					FWD/BWD-MULTI-MOVE = Moved to multiple spots with Forward and backward mapping.
+					FWD/BWD-MAPPING    = A simplistic mapping that supports both forward and backward.
+					MAPPING            = Complicated mapping.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="movedTo" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>For any variation of a status of 'MOVED', the 
+					dot notation from a starting type to the new element.
+					For example, 'cs_xxx.yyy' where yyy is the new element or attribute.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment related to the status.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="typecompat">
+		<xsd:annotation>
+			<xsd:documentation>Defines the compatibility of an old type to a new type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the old type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="newstatus" type="diff:newstatus" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Defines the status of a new type when substituted
+					for the old type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="newstatus">
+		<xsd:annotation>
+			<xsd:documentation>Defines the compatibility of an old type to a new type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="status" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The compatibility of the substitution:
+					FORWARD, BACKWARD, MAPPING, RENAME or CLARIFY. 
+					CLARIFY	implies narrowing a constraint and is thus FORWARD compatible.
+					RENAME is inherently MAPPING compatible.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="newtype" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the new type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment related to the status.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="oldEnumType">
+		<xsd:annotation>
+			<xsd:documentation>Defines the compatibility of the values in an 
+			old enum type to the new values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the old enum type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="status" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The compatibility of the substitution:
+					CURRENT    = The type is or a direct variant exists in the new schema.
+						     This is the default value.
+					MAPPING    = The type is only included for mapping purposes.
+						     This probably means that it was deleted.
+					ADD	   = The type was added in the new schema.
+						     No new values should be defined.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment related to the status.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="newEnumType" type="diff:newEnumType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Defines the status of the equivalent type 
+					in the new schema.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="newEnumType">
+		<xsd:annotation>
+			<xsd:documentation>Defines the status of the equivalent type in the new schema.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the new type (may be the 
+					same as the old type).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="oldValue" type="diff:oldEnumValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The name of an old value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="oldEnumValue">
+		<xsd:annotation>
+			<xsd:documentation>Defines the status of an old enum value.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the old value. Required except for ADD.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="status" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The compatibility of the substitution:
+					ADD 		   = The value was added to the new version.
+							     No backward mapping.
+					CLARIFY		   = Implies narrowing a constraint and is thus forward compatible.
+							     Comment should be given.
+					RENAME             = Forward and backward mapping. 
+							     One newValue should be given.
+					DUPLICATE          = Semantic duplicate. Forward compatible and backward mapping. 
+							     One newValue should be given to represent the value that was retained.
+					SPLIT	           = Split into multiple values. Forward mapping. 
+							     Multiple newValues should be given.
+					MERGE	           = Multiple values combined into one value. Backward mapping.
+							     One newValue should be given with each old value.
+					MOVED		   = Moved with no appropriate mapping.
+							     Comment should be given.
+					FWD-MOVED          = Forward mapping move to one spot. 
+							     Element movedTo should be populated.
+					BWD-MOVED          = Backward mapping move to one spot. 
+							     Element movedTo should be populated.
+					FWD/BWD-MOVED      = Moved to one spot with forward and backward mapping.
+							     Element movedTo should be populated. 
+					FWD/BWD-MULTI-MOVE = Moved to multiple spots with forward and backward mapping.
+							     Comment should be given.
+					FWD/BWD-MAPPING    = A simplistic mapping that supports both forward and backward.
+							     Comment should be given.
+					MAPPING            = Complicated mapping.
+							     Comment should be given.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="movedTo" type="xsd:string" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>For any variation of a status of 'MOVED', the 
+						dot notation from a starting type to the new element.
+						For example, 'cs_xxx.yyy' where yyy is the new element or attribute.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="newValue" type="xsd:string" minOccurs="1" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>The name of the old value</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment related to the status.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="newEnumValue">
+		<xsd:annotation>
+			<xsd:documentation>Defines the compatibility of a new enum value.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the new enum value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="status" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The compatibility of the substitution:
+					FORWARD, BACKWARD, MAPPING, RENAME, DELETE or CLARIFY. 
+					CLARIFY	implies narrowing a constraint and is thus FORWARD compatible.
+					RENAME is inherently MAPPING compatible.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="movedTo" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>For any variation of a status of 'MOVED', the 
+					dot notation from a starting type to the new element.
+					For example, 'cs_xxx.yyy' where yyy is the new element or attribute.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment related to the status.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:abs="http://www.energistics.org/schemas/abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="cs_contactIntervalSet.xsd"/>
+	<xsd:include schemaLocation="cs_CompletionStatusHistory.xsd"/>
+	<xsd:group name="grp_wellboreCompletion">
+		<xsd:sequence>
+			<xsd:element name="wellboreCompletionNo" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>CompletionNo, etc API14</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellboreCompletionAlias" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Preferred alias name</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="evenHistory" type="witsml:cs_eventInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="wellboreCompletionDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Completion Date  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="suffixAPI" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>API suffix. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Measured depth at top of interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Measured depth at base of interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdTop" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True vertical depth at top of the section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdBottom" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True vertical depth at bottom of the section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="currentStatus" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="statusDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="statusHistory" type="witsml:CompletionStatusHistory" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="contactIntervalSet" type="witsml:cs_contactIntervalSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collection of contact interval information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

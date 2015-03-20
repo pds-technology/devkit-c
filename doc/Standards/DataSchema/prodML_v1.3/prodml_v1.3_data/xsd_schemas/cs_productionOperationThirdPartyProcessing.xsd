@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productionOperationThirdPartyProcessing">
+		<xsd:annotation>
+			<xsd:documentation>Production losses due to Third Party Processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the installation which performed the processing. 
+					The name can be qualified by a naming system. 
+					This also defines the kind of facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="oilStdTempPres" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The estimated amount of oil lost.
+					This volume has been corrected to standard conditions of temperature and pressure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gasStdTempPres" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The estimated amount of gas lost.
+					This volume has been corrected to standard conditions of temperature and pressure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of the event.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

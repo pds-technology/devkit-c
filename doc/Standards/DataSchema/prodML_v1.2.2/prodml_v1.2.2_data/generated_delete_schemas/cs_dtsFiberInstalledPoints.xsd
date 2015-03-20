@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_dtsSingleInstalledPoint.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>This records a table of values of the length along the fiber, the measured depth, and type of point for important points along the wellbore. Typically,
+      these values are used to calculate a relationship of the length along the fiber vs measured depth.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:complexType name="cs_dtsFiberInstalledPoints">
+      <xsd:annotation>
+         <xsd:documentation>A wrapper for multiple instances of the point in a well.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="installedPoint" type="prodml:cs_dtsSingleInstalledPoint" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>This carries the information about one point</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

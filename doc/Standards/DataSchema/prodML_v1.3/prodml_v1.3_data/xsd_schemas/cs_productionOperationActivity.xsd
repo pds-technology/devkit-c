@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_productionOperationAlarm.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationCargoShipOperation.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationLostProduction.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationMarineOperation.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationOperationalComment.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationShutdown.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationWaterCleaningQuality.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productionOperationActivity">
+		<xsd:annotation>
+			<xsd:documentation>WITSML - Production Activity Component Schema.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="lostProduction" type="prodml:cs_productionOperationLostProduction" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Infomation about a lost production.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lostInjection" type="prodml:cs_productionOperationLostProduction" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Infomation about a lost injection.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="waterCleaningQuality" type="prodml:cs_productionOperationWaterCleaningQuality" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about the contaminants in water, and the general water quality.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="shutdown" type="prodml:cs_productionOperationShutdown" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Infomation about a shutdown event.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="alarm" type="prodml:cs_productionOperationAlarm" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Infomation about an alarm.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="marineOperation" type="prodml:cs_productionOperationMarineOperation" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about a marine operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="cargoShipOperation" type="prodml:cs_productionOperationCargoShipOperation" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about a cargo operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="operationalComment" type="prodml:cs_productionOperationOperationalComment" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A comment about a kind of operation.
+					The time of the operation can be specified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

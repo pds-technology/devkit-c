@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+
+	<xsd:complexType name="cs_dtsOtdr">
+		<xsd:annotation>
+			<xsd:documentation>This records the result arrays, along with context information, from an 
+			Optical Time Domain Reflectometry (OTDR) run. The arrays will define the relative scattered 
+			power from the Rayleigh scattering vs distance along the fiber. The actual data values are 
+			recorded in a wellLog object, which is referenced in a subelement.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="reasonForRun" type="prodml:OTDRReason" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The reason the OTDR test was run. The three main reasons are 
+					'pre-installation', which is before the installation of the fiber; 'post-installation', 
+					which is used to validate a successful fiber installation; and 'DTS run', which is 
+					a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimRun" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The dateTime of the run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataInWellLog" type="prodml:refNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the well log used to record the table of data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberEndConncected" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the fiber connection node. If more than one node 
+					is available for a well/wellbore, this element is used to specify which node is 
+					connected to the instrument box. This name should correspond to the fiberEndPoint/name 
+					that is recorded in the installed system object.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A general comment about the OTDR run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the run.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+
+</xsd:schema>

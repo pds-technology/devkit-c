@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>WITSML- Catalog of Value Constrainted Types.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <!--                                                         -->
+   <xsd:simpleType name="ExtensionName">
+      <xsd:annotation>
+         <xsd:documentation>The name of a data extension. The list of standard values is contained in the WITSML enumValues.xml file.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-71, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="MeasureClass">
+      <xsd:annotation>
+         <xsd:documentation>Measure class values. The list of standard values is contained in the WITSML enumValues.xml file.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-78, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="PrimitiveType">
+      <xsd:annotation>
+         <xsd:documentation>The underlying XML Schema primitve type Does NOT support "decimal", "QName" or "NOTATION".</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-71, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="string" />
+         <xsd:enumeration value="boolean" />
+         <xsd:enumeration value="float" />
+         <xsd:enumeration value="double" />
+         <xsd:enumeration value="duration" />
+         <xsd:enumeration value="dateTime" />
+         <xsd:enumeration value="time" />
+         <xsd:enumeration value="date" />
+         <xsd:enumeration value="gYearMonth" />
+         <xsd:enumeration value="gYear" />
+         <xsd:enumeration value="gMonthDay" />
+         <xsd:enumeration value="gDay" />
+         <xsd:enumeration value="gMonth" />
+         <xsd:enumeration value="base64Binary" />
+         <xsd:enumeration value="anyURI" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

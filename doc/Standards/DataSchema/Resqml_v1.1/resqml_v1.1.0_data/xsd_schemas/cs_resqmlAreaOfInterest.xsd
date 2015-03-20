@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:import namespace="http://www.opengis.net/gml/3.2" 
+		    schemaLocation="../../gml_resqml_v1.0_profile/gml/3.2.1/gml.xsd"/>
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesResqml.xsd"/>
+	<!--                                                         -->
+<!-- Some of the naming conventions used in this file conform to the requirements of GML which prescribes the use of UpperCamelCase for some element names. -->
+	<!--                                                         -->
+	<xsd:complexType name="cs_resqmlAreaOfInterest">
+		<xsd:annotation>
+			<xsd:documentation>A GML feature representing the overall area of interest.
+			The following are inherited from the normative GML schema.
+			The RESQML profiled schema represents a subset of the normative GML schema.
+			attributes:
+				gml:id			(required)
+				gml:boundedBy		(optional but profiled to be mandatory)
+				gml:location		(deprecated - eliminated from the profiled schema.)
+			elements:
+				gml:metaDataProperty	(deprecated - eliminated from the profiled schema.)
+				gml:description		(optional)
+				gml:descriptionReference(optional)
+				gml:identifier		(optional)
+				gml:name		(optional maxOccurs="unbounded")
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="gml:AbstractFeatureType">
+				<xsd:sequence>
+					<xsd:element name="outline" type="resqml:AreaOfInterestPropertyType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The CRS is defined by ../gml:boundedBy/gml:Envelope/@srsName unless
+							it is overridden by ./gml:Polygon/gml:exterior/gml:LinearRing/gml:posList/@srsName.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="AreaOfInterestPropertyType">
+		<xsd:sequence minOccurs="0">
+			<xsd:element ref="gml:Polygon" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The nominal surface boundary of the area of interest for the resevoir model.
+					It is nominal because there may be many versions of the model.
+					A gml:LinearRing (via ./gml:exterior/gml:LinearRing/gml:posList) is defined by four or more coordinate tuples, with linear interpolation between them.
+					The first and last points shall be coincident. 
+					The number of values per tuple is defined by the number of axes on the CRS.
+					The order of the values within a tuple is defined by the order of the axes in the CRS.
+					The unit of measure of the values is defined by the unit of measure on each axis of the CRS.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<!-- Did not use gml:AssociationAttributeGroup. -->
+		<!-- Did not use gml:OwnershipAttributeGroup. -->
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

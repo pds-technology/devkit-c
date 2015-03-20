@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlParentBlockedWellbore">
+      <xsd:annotation>
+         <xsd:documentation>This replaces an optional sequence of elements. The original purpose of the sequence was to insure that if one element was specified then both must be
+         specified. This type was created in order to get around a "feature" of the MS xsd.exe utility. The utility does not look at the minOccurs of the sequence which results in
+         the contents of the sequence being mandatory. See http://msdn.microsoft.com/en-us/library/zds0b35c%28v=vs.80%29.aspx</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="parent" type="resqml:refGlobalNameString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Points to the blocked wellbore which contains the kickoff point cell.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parentIndex" type="resqml:nonNegativeInt" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A zero-based pointer to the kickoff point cell within parentBlockedWellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

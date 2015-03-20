@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>This type is used in the fluid sample report. Each instance is a row of a table for the constant composition expansion test.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="grp_fluidResultCommonTestGroup.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+
+	<!--                                                         -->
+	<xsd:complexType name="cs_fluidResultCceTestStep">
+		<xsd:sequence>
+			<xsd:element name="stepNumber" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The stepNumber represents a row in the table.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="stepPressure" type="prodml:pressureMeasure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="oilMassDensity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="oilCompressibility" type="prodml:compressibilityMeasure" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="oilViscosity" type="prodml:dynamicViscosityMeasure" minOccurs="0" maxOccurs="1"/>
+			<xsd:choice minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Either give the pair, totalVolume and liquidVolume, or the single value, liquidDropoutPercent. The liquidDropoutPercent = liquidVolume / totalVolume.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="totalVolume" type="prodml:volumeMeasure" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="liquidVolume" type="prodml:volumeMeasure" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:element name="liquidDropoutPercent" type="prodml:volumePerVolumeMeasurePercent" minOccurs="1" maxOccurs="1"/>
+			</xsd:choice>
+			<xsd:element name="relativeVolumeRatio" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="gasMassDensity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="gasZFactor" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="gasCompressibility" type="prodml:compressibilityMeasure" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="gasViscosity" type="prodml:dynamicViscosityMeasure" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="yFactor" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1"/>
+			<xsd:group ref="prodml:grp_fluidResultCommonTestGroup"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

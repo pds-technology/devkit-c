@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_volumeValue">
+		<xsd:annotation>
+			<xsd:documentation>A possibly temperature and pressure corrected volume value.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="volume" type="prodml:volumeQualifiedMeasure" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The volume of the product.
+					If the 'status' attribute is absent and the value is not "NaN", 
+					the data value can be assumed to be good with no restrictions.
+					A value of "NaN" should be interpreted as null and should be not be given unless 
+					a status is also specified to explain why it is null.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="grossCalorificValue" type="prodml:modulusOfCompressionMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The amount of heat which would be released by the complete
+					combustion in air of the above volume of product. 
+					This is considered to be a condition of measurement (i.e., the volume may have been converted to this condition).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="standardTempPres" type="prodml:StandardCondition" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Defines the standard temperature and pressure to which
+						the volume has been corrected.
+						If neither standardTempPres nor temp,pres are specified then the standard condition 
+						is defined by standardTempPres at the procuctVolume root.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:sequence>
+					<xsd:element name="temp" type="prodml:thermodynamicTemperatureMeasure" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The temperature to which the volume has been corrected.
+							If given, then a pressure must also be given.
+							Common standard temperatures are: 0 degC, 15 degC, 60 degF.
+							If neither standardTempPres nor temp,pres are specified then the standard condition 
+							is defined by standardTempPres at the productVolume root.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="pres" type="prodml:pressureMeasure" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The pressure to which the volume has been corrected.
+							If given, then a temperature must also be given.
+							Common standard pressures are: 1 atm and 14.696 psi (which are equivalent).
+							If neither standardTempPres nor temp,pres are specified then the standard condition 
+							is defined by standardTempPres at the productVolume root.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:choice>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

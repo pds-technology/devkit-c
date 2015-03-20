@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+	<xsd:include schemaLocation="cs_curveData.xsd"/>
+	<xsd:include schemaLocation="cs_productVolumeAlert.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productVolumeParameterValue">
+		<xsd:annotation>
+			<xsd:documentation>WITSML - Parameter Value Component Schema.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="dTim" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date and time at which the parameter applies.
+					If no time is specified then the value is static.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date and time at which the parameter no longer applies.
+					The "active" time interval is inclusive of this point.
+					If dTimEnd is given then dTim shall also be given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="1" maxOccurs="1">
+				<xsd:element name="measureValue" type="prodml:generalQualifiedMeasure" minOccurs="1" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>A measure value.
+						Unless the parameter is defined as a tuple, only one value should be specified.
+						The measure class is defined by measureClass in the parent set.
+						The unit of measure must conform to the units allowed by the measure class
+						in the unit dictionary file. 
+						If the 'status' attribute is absent and the value is not "NaN", 
+						the data value can be assumed to be good with no restrictions.
+						A value of "NaN" should be interpreted as null and should be not be given unless 
+						a status is also specified to explain why it is null.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="curveValue" type="prodml:cs_curveData" minOccurs="1" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>The values in one row of a curve.
+						The aggregate of the curve rows represent the curve.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="stringValue" type="prodml:kindQualifiedString" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>A string value.
+						If the 'status' attribute is absent and the value is not "NaN", 
+						the data value can be assumed to be good with no restrictions.
+						A value of "NaN" should be interpreted as null and should be not be given unless 
+						a status is also specified to explain why it is null.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="integerValue" type="prodml:integerQualifiedCount" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>An integer value.
+						If the 'status' attribute is absent and the value is not "NaN", 
+						the data value can be assumed to be good with no restrictions.
+						A value of "NaN" should be interpreted as null and should be not be given unless 
+						a status is also specified to explain why it is null.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="port" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A port related to the parameter.
+					If a port is given then the corresponding unit usually must be given.
+					For example, an "offset along network" parameter must specify a port from
+					which the offset was measured. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="unit" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A unit related to the parameter.
+					For example, an "offset along network" parameter must specify a port (on a unit) from
+					which the offset was measured. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="alert" type="prodml:cs_productVolumeAlert" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An indication of some sort of abnormal condition relative
+					this parameter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_resqmlAbstractFeatureRepresentation.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlTriangulatedPatch.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_resqmlTriangulatedRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A set of triangulated mesh patches.
+			All patches shall utilize the same CRS.
+			This type inherits the following items:
+				grp_resqmlTraceabilityDublinCore
+				local3dCRS
+				extensionAny
+				extensionNameValue
+				attgrp_uidGlobal
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="resqml:cs_resqmlAbstractFeatureRepresentation">
+				<xsd:sequence>
+					<xsd:element name="triangulatedPatch" type="resqml:cs_resqmlTriangulatedPatch" minOccurs="1" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>One triangulated mesh surface patch.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

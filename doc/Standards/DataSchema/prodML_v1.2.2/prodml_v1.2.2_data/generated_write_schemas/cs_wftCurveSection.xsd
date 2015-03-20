@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wftCurveSection">
+      <xsd:annotation>
+         <xsd:documentation>Points to an interval on a curve in a log (or wellLog).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="logRef" type="prodml:refObjectString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to a specific log or wellLog that contains the curve.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mnemonic" type="prodml:str32" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The mnemonic of the curve in the referenced log or wellLog.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

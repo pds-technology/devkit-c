@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_timeSeriesThreshold.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_timeSeriesStatistic">
+      <xsd:annotation>
+         <xsd:documentation>The non-contextual content of WITSML statistics about a range of time series data.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="key" type="prodml:keywordValueStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an
+               instance of a concept or it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a
+               classification of the data in the specified system (keyword).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="unit" type="prodml:uomString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the
+               measure class. If this is specified then the measure class must be specified.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="measureClass" type="prodml:MeasureClass" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some
+               information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the
+               underlying nature.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A comment about the time series.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimMin" type="prodml:endpointDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The lower bound of the analyzed time range. Only data within the range was included in the analysis. The endpoint attribute specifies whether the
+               data was inclusive or exclusive of this point.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimMax" type="prodml:endpointDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The upper bound of the analyzed time range. Only data within the range was included in the analysis. The endpoint attribute specifies whether the
+               data was inclusive or exclusive of this point.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="minimum" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="maximum" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sum" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The sum of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mean" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The arithmetic mean (sum divided by count) of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure
+               of this value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="median" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The median value of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this
+               value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="standardDeviation" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The standard deviation of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this
+               value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="timeAtThreshold" type="prodml:cs_timeSeriesThreshold" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines a value threshold window and the time duration where values (within the time range of dTimMin to dTimMax) were within that
+               window.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+   <!--                                                         -->
+</xsd:schema>

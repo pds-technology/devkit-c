@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wftCurveSection.xsd" />
+   <xsd:include schemaLocation="cs_wftInOutParameter.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wftTestData">
+      <xsd:annotation>
+         <xsd:documentation>A reference to a set of formation tester data that was recorded.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="role" type="prodml:WftTestDataRole" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The role of the test data. The role applies either to a curve or to a point parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="curveSection" type="prodml:cs_wftCurveSection" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A reference to a specific interval of a specific curve in a specific log.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parameter" type="prodml:cs_wftInOutParameter" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Test parameters used here are either control parameters used to govern the test or are single value parameters measured by the test (and not by
+               subsequent analysis).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

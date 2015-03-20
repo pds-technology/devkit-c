@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_fiber.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>DTS Fiber Information</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:complexType name="cs_fiberInformation">
+		<xsd:annotation>
+			<xsd:documentation>The optical fiber used for distributed temperature surveys</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="installationDate" type="witsml:anyDate" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date the fiber is installed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="installationCompany" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The company that installed the fiber in the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="deInstallationDate" type="witsml:anyDate" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date the fiber was de-installed from the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="capillaryTubeDiameter" type="witsml:lengthMeasure"  minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The diameter of the capillary tube into which one or more fibers 
+					will be installed. If the installation has fibers that go to different wellbores, 
+					only those fibers installed in the parent wellbore should be included in this instance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiber" type="witsml:cs_fiber" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The properties of the fiber or fibers installed in the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,224 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<title>WITSML</title>
+<style>
+<!--
+ /* Style Definitions */
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{
+	margin-top:18.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-top:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+-->
+</style>
+</head>
+
+<body>
+
+<h1 align=center>WITSML Application Programming Interface Overview </h1>
+<h1 align=center>Version 1.4.1.1</h1>
+
+<p class=MsoNormal>This document contains the following sections:</p>
+
+<ul>
+  <li><a href="#_Introduction">Introduction</a></li>
+
+  <li><a href="#_Server_Schema_Objects">Server Schema Objects</a></li>
+
+  <li><a href="#_WITSML_Schemas">Schemas, XML documents, and Style sheets</a></li>
+
+</ul>
+
+
+<p>Changes between versions 1.4.1 and 1.4.1.1 are defined in the <a
+href="../CHANGE_DETAIL_API.TXT">Schema Change Detail</a> and in the API specification documents. 
+This overview is non-normative and is not part of the standard.</p>
+
+<h2><a name="_Introduction">Introduction</h2>
+
+<p>The Wellsite Information Transfer Standard Markup Language
+(WITSML) is a standard for sending well site information in an XML document
+format between business partners. XML schemas
+are used to define the content of an XML document. 
+The WITSML standard consists of specifications which will are
+versioned independently: Data Schema
+and Application Program Interface (API). The Data Schemas are defined in another specification. </p>
+
+
+<p>The WITSML client/server STORE interface provides basic access of information such as Get,
+Update, Add and Delete. These schemas are utilized as part of that interface and represent data
+structures that are passed in the web service function calls. See the relevant API specification
+for a discussion of the behavior related to these schemas.</p>
+
+
+<p>The following file is the Web Service Description Language
+(WSDL) file used to expose the STOREinterface to SOAP clients. 
+Note that this file is unchanged since v1.2.
+<UL>
+	<LI><a href="../WMLS.WSDL">WMLS.WSDL</a>. 
+
+</UL> 
+</p>
+
+
+<h2><a name="_Server_Schema_Objects">Server Schema Objects</h2>
+
+<p>The API specification includes the following schema objects. 
+These objects are required for the proper functioning of the API
+and are independent of the Data Schema objects that are described elsewhere.</p>
+
+<H3>capClient</H3>
+<P>The <A HREF="#_capClient_schema">Capability of Client</A> object provides a mechanism for a client application
+to inform the server of the capabilities of the client. 
+For example, what Data Schema versions does the client support.</P>
+
+<H3>capServer</H3>
+<P>The <A HREF="#_capServer_schema">Capability of Server</A> object provides a mechanism for a server application
+to inform a client application the capabilities of the server. 
+For example, which Data Schema objects does a server support.</P>
+
+
+<h2><a name="_WITSML_Schemas"></a>Schemas, XML documents, and Style sheets:</h2>
+
+<p>The API specification requires the following object
+schemas and component sub-schemas. Component schemas are XML schemas, but they
+do not represent complete objects. 
+A component schema may be included by more than one object schema.
+All component schemas are prefixed with
+(cs_). Each component schema file
+generally defines one "type" that has the same name as the file name.
+Schema file <a href="./schema/typ_dataTypes.html">typ_dataTypes.xsd</a>
+defines many simplistic data types that are referenced by elements and
+attributes in object schemas and component schemas. It is directly or indirectly
+included in all object schemas.
+
+<p>The following schemas represent the information content of parameters in the API interface.
+They do <i>not</i> represent Data Schema objects that can be queried using the API
+query mechanisms.</p>
+
+ 
+      
+      <h4><a name="_capClient_schema">capClient data object</a></h4>
+      
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;Schemas</th>
+            <th colspan="4" align="center" valign="top">&nbsp;&nbsp;Links to Documents</th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+            <th width="75">&nbsp;&nbsp;XML<BR>&nbsp;&nbsp;Document
+            </th>
+            <th width="75">&nbsp;&nbsp;XML via<BR>&nbsp;&nbsp;Stylesheet
+            </th>
+            <th width="75">&nbsp;&nbsp;Stylesheet<BR>&nbsp;&nbsp;Source
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;obj_capClient.xsd</td>
+            <td><a href="./schema/obj_capClient.html">XSD</a></td>
+            <td><a href="../XML_Examples/capClient_no_xsl.xml">XML</a></td>
+            <td><a href="../XML_Examples/capClient.xml">XML/XSL</a></td>
+            <td><a href="../xml_examples/stylesheets/generic.xsl">XSL</a></td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_contact.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_contact.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      
+      <BR>
+      <BR>
+      
+      <h4><a name="_capServer_schema">capServer data object</a></h4>
+      
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;Schemas</th>
+            <th colspan="4" align="center" valign="top">&nbsp;&nbsp;Links to Documents</th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema</th>
+            <th width="75">&nbsp;&nbsp;XML<BR>&nbsp;&nbsp;Document</th>
+            <th width="75">&nbsp;&nbsp;XML via<BR>&nbsp;&nbsp;Stylesheet</th>
+            <th width="75">&nbsp;&nbsp;Stylesheet<BR>&nbsp;&nbsp;Source</th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;obj_capServer.xsd</td>
+            <td><a href="./schema/obj_capServer.html">XSD</a></td>
+            <td><a href="../XML_Examples/capServer_no_xsl.xml">XML</a></td>
+            <td><a href="../XML_Examples/capServer.xml">XML/XSL</a></td>
+            <td><a href="../xml_examples/stylesheets/generic.xsl">XSL</a></td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_contact.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_contact.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_function.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_function.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      
+      <BR>
+      <BR>
+
+<p><small>Copyright(c) 2003-2012 Energistics. All rights reserved.</BR>
+
+WITSML™ and the WITSML logo™ are trademarks of Energistics.</small></p>
+
+
+</body>
+
+</html>

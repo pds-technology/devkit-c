@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productFlowPort.xsd" />
+   <xsd:include schemaLocation="cs_relativeCoordinate.xsd" />
+   <xsd:include schemaLocation="cs_productFlowExpectedUnitProperty.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productFlowUnit">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Flow Unit Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the Product Flow Unit within the context of the Product Flow Network.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="planName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The
+               parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="internalNetwork" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to the network representing the internal behavior of this unit. The names of the external ports on the internal network must match the
+               names of the ports on this unit. That is they are logically the same ports.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the facility for which this Product Flow Unit describes fluid flow connecton behavior. The name can be qualified by a naming system.
+               This also defines the kind of facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityParent1" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>For facilities whose name is unique within the context of another facility, the name of the parent facility this named facility. The name can be
+               qualified by a naming system. This also defines the kind of facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityParent2" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>For facilities whose name is unique within the context of another facility, the name of the parent facility of facilityParent1. The name can be
+               qualified by a naming system. This also defines the kind of facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within the
+               context of a parent) should also be listed as an alias.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The name and type of a facility whose context is relevant to the represented facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="expectedProperty" type="prodml:cs_productFlowExpectedUnitProperty" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines an expected property of the facility represented by this unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="relativeCoordinate" type="prodml:cs_relativeCoordinate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the relative coordinate of the unit on a display screen. This is not intended for detailed diagrams. Rather it is intended to allow
+               different applications to present a user view which has a consistent layout.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="port" type="prodml:cs_productFlowPort" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An inlet or outlet port associated with this unit. If there is an internal network then the name of this port must match the name of an external
+               port for that network. Any properties (e.g., volume, pressure, temperature) that are assigned to this port are inherently assigned to the corresponding external
+               port on the internal network. That is, the ports are logically the same port. Similar to a node, there is no pressure drop across a port. Also similar to a node,
+               conservation of mass exists across the port and the flow direction across the port can change over time if the relative pressures across connected units
+               change.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark associated with this unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the Unit.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

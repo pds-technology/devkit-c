@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_pumpLogRow">
+		<xsd:annotation>
+			<xsd:documentation>The pump log row are elements defined in the sequence below.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="cableSpeed" type="witsml:velocityMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The speed of the cable.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberPumpedLength" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The length of fiber pumped into the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pumpPressure" type="witsml:pressureMeasure"  minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The operating pressure of the pump.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pumpFluid" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The fluid used in the pumping operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="temperatureIn" type="witsml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The temperature going into the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="temperatureOut" type="witsml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The temperature at the end of the operation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="remarks" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Any general remarks about the pumping operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>	
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the row.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

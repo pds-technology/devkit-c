@@ -1,0 +1,198 @@
+================================================
+============= Changes since v1.2.2 =============
+================================================
+
+This release respecifies the Distributed Temperature Survey model.
+	In the main schema, new or redefined objects:
+		dtsInstalledSystem
+		dtsInstrumentBox
+		dtsMeasurement
+		fiberOpticalPath
+	New components:
+		dtsCalibration
+		dtsEquipment
+		dtsFiber
+		dtsInstrumentBox
+		dtsInstrumentBoxCalibration
+		dtsInterpretationData
+		dtsInterpretationLogSet
+		dtsMeasurementTrace
+		dtsOneWayLoss
+		dtsPatchCord
+		dtsRefractiveIndex
+		facilityIdentifier
+		fiberCommon
+		fiberConnection
+		fiberControlLine
+		fiberConveyance
+		fiberFacilityMapping
+		fiberFacilityMappingPart
+		fiberFacilityPipeline
+		fiberFacilityWell
+		fiberOneWayAttenuation
+		fiberOpticalPathInventory
+		fiberOpticalPathNetwork
+		fiberOpticalPathSegment
+		fiberOTDR
+		fiberOTDRInstrumentBox
+		fiberPathDefect
+		fiberPumpActivity
+		fiberRefractiveIndex
+		fiberSplice
+		fiberTerminator
+		fiberTurnaround
+		instrument
+		interventionConveyance
+		logDataInterpretation
+		logDataTrace
+	And new enumerations:
+		ControlLineEncapsulationSize
+		ControlLineEncapsulationType
+		ControlLineMaterial
+		ControlLineSize
+		FiberConnectorTypes
+		FiberEndType
+		FiberSpliceTypes
+		InterpretationMnemonicType
+		InterpretationProcessingType
+		InterpretationUnitType
+		InterventionConveyanceType
+		MeasurementMnemonicType
+		MeasurementUnitType
+		OpticalPathConfiguration
+		OTDRDirection
+		PermanentCable
+		TerminationType
+		TraceProcessingType
+		
+Changed the file version from "PRODML_v1.2.2" to "PRODML_v1.3".
+
+================================================
+============= Changes since v1.2.1 =============
+================================================
+
+================================================
+This change was made to support 1.2.0 through 1.2.2
+	In typ_dataTypesProdml.xsd:
+		Modified pattern value of schemaVersionStringProdml
+================================================
+
+Issue PCR_012 "Saudi Aramco Facilities Parameters Requests"
+	In enumValuesProdml.xml:
+		In FacilityParameter:
+			Added the following values:
+				annulus inner diameter
+				annulus outer diameter
+				choke position
+				choke setting
+				condensate rate
+				cathodic protection output current
+				cathodic protection output voltage
+				density
+				differential pressure
+				facility temperature
+				flow rate
+				gas liquid ratio
+				gas oil ratio
+				gas rate 
+				gas volume
+				internal control valve status
+				measured depth
+				motor current
+				motor current leakage
+				motor speed
+				motor temperature
+				motor vibration
+				motor voltage
+				oil density
+				oil rate
+				oil volume
+				pump status
+				rectifier structure potential
+				sub surface safety valve status
+				surface safety valve status
+				valve status
+				water cut
+				water density
+				water rate
+				water volume
+				well operating status
+		In ReportingFacility:
+			Added the following values:
+				trap
+				gas lift valve mandrel
+				electric submersible pump
+				downhole monitoring system
+				rectifier
+				remote terminal unit
+		In ReportingProduct:
+			Added the following values:
+				basic sediment and water
+		In ReportingProperty:
+			Added the following values:
+				alarm absolute pressure
+				atmospheric pressure
+				density
+				density flow rate
+				density standard
+				dewpoint temperature standard
+				differential pressure
+				differential temperature
+				efficiency
+				flow rate
+				flow rate standard
+				gas liquid ratio
+				gas oil ratio
+				gross calorific value standard
+				mass
+				mass concentration
+				molar amount
+				molar fraction
+				molecular weight
+				pressure
+				reid vapor pressure
+				specific gravity
+				temperature
+				true vapor pressure
+				volume
+				volume concentration
+				volume standard
+				wobbe index
+				work
+		In ValueStatus:
+			Added the following values:
+				frozen
+				substituted
+				bad
+				overflow
+				calculation failure
+				not available
+				access denied
+	In cs_enumValues.xsd:
+		Added the following to enumValue:
+			isAbstract
+			parentKind
+			facilityParameter
+			quantityMeasureClass
+			minimumValue
+			maximumValue
+			enumValue
+	In cs_productFlowExpectedPortProperty.xsd:
+		Added deadband.
+		Added maximumFrequency.
+	In cs_productFlowExpectedUnitProperty.xsd:
+		Added childFacilityIdentifier.
+		Added expectedFlowProduct.
+		Added tagAlias.
+		Added deadband.
+		Added maximumFrequency.
+	In cs_productVolumeParameterSet.xsd:
+		Added coordinateReferenceSystem.
+	In grp_commonPropertiesProductVolume.xsd:
+		Added gasLiquidRatio.
+	In typ_dataTypesProdml.xsd:
+		Added siteKind to facilityIdentifierStruct.
+		Updated dTim annotation in timeSeriesDoubleSample.
+		Updated dTim annotation in timeSeriesStringSample.
+
+Changed the file version from "PRODML_v1.2" to "PRODML_v1.2.2".

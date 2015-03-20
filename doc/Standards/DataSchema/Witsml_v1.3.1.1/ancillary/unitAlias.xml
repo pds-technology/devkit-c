@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is an example unit alias file for use by the conversion script. -->
+<unitAlias 
+	xmlns="http://www.posc.org/schemas/unitAlias" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.posc.org/schemas/unitAlias ./unitAlias.xsd" 
+	version="1.0">
+	<unit>
+		<name>ft</name>
+		<alias source="Edward Clements">Feet</alias>
+		<alias source="Edward Clements">Ft</alias>
+		<alias source="Edward Clements">Ft.</alias>
+	</unit>
+	<unit>
+		<name>m</name>
+		<alias source="Edward Clements">Meters</alias>
+		<alias source="Edward Clements">Metres</alias>
+		<alias source="Edward Clements">M.</alias>
+		<alias source="Edward Clements">M</alias>
+	</unit>
+	<unit>
+		<name>rpm</name>
+		<alias source="Edward Clements">RPM</alias>
+	</unit>
+	<unit>
+		<name>klbf</name>
+		<alias source="Edward Clements">KLBS</alias>
+	</unit>
+	<unit>
+		<name>ft/h</name>
+		<alias source="Edward Clements">Ft/Hr</alias>
+	</unit>
+</unitAlias>

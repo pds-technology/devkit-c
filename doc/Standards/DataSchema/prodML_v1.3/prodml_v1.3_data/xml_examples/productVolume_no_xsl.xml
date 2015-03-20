@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<productVolumes 
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../xsd_schemas/obj_productVolume.xsd" 
+	version="1.2.0.0(PRODML)">
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+They totally artificial and are not intended to demonstrate best practices. 
+-->
+        <productVolume>
+                <name>PRODML Flow 1</name>
+                <installation kind="field">FLOW-1</installation>
+                <kind>PRODML optimization</kind>
+                <periodKind>report start</periodKind>
+                <dateStart>2005-10-26</dateStart>
+                <productFlowModel uidRef="PFM-1">Flow #1 Network Model</productFlowModel>
+                <facility>
+                        <name kind="compressor">Compressor Bank A</name>
+                        <facilityParent1 kind="field">FLOW-1</facilityParent1>
+                        <unit uidRef="A">A</unit>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>constraint</qualifier>
+                                <subQualifier>maximum</subQualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+						<flowRateValue>
+                                               		<flowRate uom="m3/d">66544</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">35396</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">33980</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">59465</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>constraint</qualifier>
+                                <subQualifier>fixed</subQualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>estimate</qualifier>
+                                <subQualifier>fixed</subQualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period >
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <temp uom="degC">40</temp>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <temp uom="degC">40</temp>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <temp uom="degC">40</temp>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <temp uom="degC">40</temp>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>recommended</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">66543</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">35394</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">33979</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">59464</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+                <facility>
+                        <name kind="controller -- lift">lift gas controller</name>
+                        <facilityParent1 kind="well">W1</facilityParent1>
+                        <facilityParent2 kind="field">FLOW-1</facilityParent2>
+                        <unit uidRef="C">C</unit>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>recommended</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">21237</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">11326</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">0</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">15574</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <pres uom="kPa">3155</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <pres uom="kPa">3155</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <pres uom="kPa">5600</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <pres uom="kPa">3155</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+                <facility>
+                        <name kind="wellhead">wellhead</name>
+                        <facilityParent1 kind="well">W1</facilityParent1>
+                        <facilityParent2 kind="field">FLOW-1</facilityParent2>
+                        <unit uidRef="E">E</unit>
+                        <parameterSet>
+                                <name>block valve status</name>
+                                <qualifier>measured</qualifier>
+                                <parameter>
+                                        <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                        <stringValue>open</stringValue>
+                                </parameter>
+                                <parameter>
+                                        <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                        <stringValue>closed</stringValue>
+                                </parameter>
+                                <parameter>
+                                        <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                        <stringValue>open</stringValue>
+                                </parameter>
+                        </parameterSet>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>oil</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">7</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">7</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">0</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">7</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>water</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>oil and gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <temp uom="degC">59</temp>
+                                                <pres uom="kPa">824</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <temp uom="degC">59</temp>
+                                                <pres uom="kPa">824</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <temp uom="degC">70</temp>
+                                                <pres uom="kPa">1100</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <temp uom="degC">59</temp>
+                                                <pres uom="kPa">824</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+                <facility>
+                        <name kind="controller -- lift">lift gas controller</name>
+                        <facilityParent1 kind="well">W2</facilityParent1>
+                        <facilityParent2 kind="field">FLOW-1</facilityParent2>
+                        <unit uidRef="CC">CC</unit>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>recommended</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">25485</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">11326</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">21235</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">45485</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <pres uom="kPa">3700</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <pres uom="kPa">3700</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <pres uom="kPa">3700</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <pres uom="kPa">3700</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+                <facility>
+                        <name kind="wellhead">wellhead</name>
+                        <facilityParent1 kind="well">W2</facilityParent1>
+                        <facilityParent2 kind="field">FLOW-1</facilityParent2>
+                        <unit uidRef="EE">EE</unit>
+                        <parameterSet>
+                                <name>block valve status</name>
+                                <qualifier>measured</qualifier>
+                                <parameter>
+                                        <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                        <stringValue>open</stringValue>
+                                </parameter>
+                        </parameterSet>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>oil</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>water</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">33</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">27</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">32</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">33</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>oil and gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <temp uom="degC">72</temp>
+                                                <pres uom="kPa">400</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <temp uom="degC">72</temp>
+                                                <pres uom="kPa">400</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <temp uom="degC">72</temp>
+                                                <pres uom="kPa">400</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <temp uom="degC">72</temp>
+                                                <pres uom="kPa">400</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+                <facility>
+                        <name kind="controller -- lift">lift gas controller</name>
+                        <facilityParent1 kind="well">W3</facilityParent1>
+                        <facilityParent2 kind="field">FLOW-1</facilityParent2>
+                        <unit uidRef="CCC">CCC</unit>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>recommended</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">19821</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">12742</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">12742</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">18405</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>gas lift</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <pres uom="kPa">5500</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+                <facility>
+                        <name kind="wellhead">wellhead</name>
+                        <facilityParent1 kind="well">W3</facilityParent1>
+                        <facilityParent2 kind="field">FLOW-1</facilityParent2>
+                        <unit uidRef="EEE">EEE</unit>
+                        <parameterSet>
+                                <name>block valve status</name>
+                                <qualifier>measured</qualifier>
+                                <parameter>
+                                        <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                        <stringValue>open</stringValue>
+                                </parameter>
+                        </parameterSet>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>oil</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>water</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">-999</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">28</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">28</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">28</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">28</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                                <product>
+                                        <kind>oil and gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <temp uom="degC">75</temp>
+                                                <pres uom="kPa">1000</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <temp uom="degC">75</temp>
+                                                <pres uom="kPa">1000</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <temp uom="degC">75</temp>
+                                                <pres uom="kPa">1000</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <temp uom="degC">75</temp>
+                                                <pres uom="kPa">1000</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+                <facility>
+                        <name kind="separator">separator</name>
+                        <facilityParent1 kind="field">FLOW-1</facilityParent1>
+                        <unit uidRef="H">H</unit>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-1">1</port>
+                                <direction>inlet</direction>
+                                <qualifier>constraint</qualifier>
+                                <product>
+                                        <kind>oil and gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <pres uom="kPa">380</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <pres uom="kPa">380</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <pres uom="kPa">380</pres>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <pres uom="kPa">380</pres>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-1">1</port>
+                                <direction>inlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>oil and gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <temp uom="degC">57</temp>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <temp uom="degC">57</temp>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <temp uom="degC">57</temp>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <temp uom="degC">57</temp>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-2">2</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>oil</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">70</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">63</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">61</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">70</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-3">3</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>water</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">673</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">638</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">566</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">671</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                        <flow>
+                                <kind>production</kind>
+                                <port uidRef="port-4">4</port>
+                                <direction>outlet</direction>
+                                <qualifier>simulated</qualifier>
+                                <product>
+                                        <kind>gas</kind>
+                                        <period>
+                                                <dTim>2005-10-26T00:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">77905</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T06:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">46007</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T08:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">43001</flowRate>
+						</flowRateValue>
+                                        </period>
+                                        <period>
+                                                <dTim>2005-10-26T12:00:00.000Z</dTim>
+                                                <flowRateValue>
+                                               		<flowRate uom="m3/d">70797</flowRate>
+						</flowRateValue>
+                                        </period>
+                                </product>
+                        </flow>
+                </facility>
+        </productVolume>
+</productVolumes>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wellTestFluidLevelTest.xsd" />
+   <xsd:include schemaLocation="cs_wellTestInjectionTestData.xsd" />
+   <xsd:include schemaLocation="cs_wellTestProductionTestData.xsd" />
+   <xsd:include schemaLocation="cs_wellTestValidationOperation.xsd" />
+   <xsd:include schemaLocation="cs_wellContext.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_wellTest">
+      <xsd:annotation>
+         <xsd:documentation>The non-contextual content of a WITSML Well Test object.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="dTimMin" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. That is, all wellTest for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special
+               Handling" of growing objects for a description of the behavior related to this parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimMax" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimCurrent" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The definition of the "current time" index for this object. The current time index is a server query parameter which requests the selection of a
+               single node from a recurring set (e.g., the data related to one point in a time series). That is, the "most recent" (at or before the specified time) wellTest for a
+               well. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellContext" type="prodml:cs_wellContext" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Contextual data about the well that was tested.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testDate" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date-time of well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="previousTestDate" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date-time of the previous well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="lastValidTest" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date-time of the last valid well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testReason" type="prodml:TestReason" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The reason for the well test: initial, periodic, revision.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testType" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of well production test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="chokeOrificeSize" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED: use productionTest/wellheadData/chokeOrificeSize or injectionTest/chokeOrificeSize. The size of the opening in the flow choke at the
+               wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="productFlowPort" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A port on a Product Flow Unit that is represented by this test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="productFlowUnit" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Product Flow Unit represented by the port. This is defined within the Product Flow Model</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="productFlowModel" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Product Flow Model that represents the above Product Flow Unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="standardTempPres" type="prodml:StandardTempPress" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the standard temperature and pressure to which all standard volumes in this report have been corrected. This applies to all elements
+               whose name is suffixed by StdTempPres.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="validationState" type="prodml:ValidationState" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The overall state of the test with respect to validation operations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="validationOperation" type="prodml:cs_wellTestValidationOperation" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines the results of one validation operation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element name="fluidLevelTest" type="prodml:cs_wellTestFluidLevelTest" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Data from a fluid level test.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="productionTest" type="prodml:cs_wellTestProductionTestData" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>Data from a production test. Multiple tests generally indicate that there are multiple components of a single overall test. For example, for
+                  multi-zoned wells.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="injectionTest" type="prodml:cs_wellTestInjectionTestData" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>Data from an injection test. Multiple tests generally indicate that there are multiple components of the overall test. For example, for
+                  multi-zoned wells.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

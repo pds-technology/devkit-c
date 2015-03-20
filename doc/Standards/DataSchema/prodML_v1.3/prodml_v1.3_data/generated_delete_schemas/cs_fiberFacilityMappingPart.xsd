@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_fiberFacilityWell.xsd" />
+   <xsd:include schemaLocation="cs_fiberFacilityPipeline.xsd" />
+   <xsd:complexType name="cs_fiberFacilityMappingPart">
+      <xsd:annotation>
+         <xsd:documentation>Relates distances measured along the optical path to specific lengths along facilities (wellbores or pipelines).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+         <xsd:element name="opticalPathDistanceStart" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="opticalPathDistanceEnd" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Distance between the beginning of the optical path to the distance where the mapping with the facility ends.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityLengthStart" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Distance between the facility datum and the distance where the mapping with the optical path takes place</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityLengthEnd" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Distance between the facility datum and the distance where the mapping with the optical path ends.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark about the facility mapping</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0" maxOccurs="1">
+            <xsd:element name="well" type="prodml:cs_fiberFacilityWell" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Choice where the facility mapping is inside a well.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="pipeline" type="prodml:cs_fiberFacilityPipeline" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Choice where the facility mapping is a pipeline.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+      </xsd:sequence>
+      <xsd:attribute name="mappingPartID" type="prodml:uidString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>The uid of this facility mapping part.</xsd:documentation>
+            <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+         </xsd:annotation>
+      </xsd:attribute>
+   </xsd:complexType>
+</xsd:schema>

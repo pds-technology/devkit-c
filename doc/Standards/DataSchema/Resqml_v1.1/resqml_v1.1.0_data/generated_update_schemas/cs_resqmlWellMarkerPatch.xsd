@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.0">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlWellMarkerSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPropertySet.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlWellMarkerPatch">
+      <xsd:annotation>
+         <xsd:documentation>A gemetrical representation which is a set of points that approximates a surface. Note that that this does not fullly represent a surface. It is just a
+         random set of points (typically from seismic). More information is required to define an actual surface. All points shall utilize the same CRS.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="point3dSet" type="resqml:cs_resqmlWellMarkerSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the set of points that represents a nominal surface. The order of the points in the aggregate is not significant relative to the surface.
+               The order represents the "point index" which is used for assigning properties.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="propertyValues" type="resqml:cs_resqmlPropertySet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Properties for this patch.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

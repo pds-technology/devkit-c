@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:abs="http://www.energistics.org/schemas/abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../xsd_schemas/cs_equipmentCatalog.xsd"/>
+	<xsd:include schemaLocation="../xsd_schemas/typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="../xsd_schemas/cs_extensionAny.xsd"/>
+	<xsd:annotation>
+		<xsd:documentation> 
+            This is special xsd for for generating catalog/equipment properties.
+            This file regulates the format of the loader xml file.
+            This xsd is not used in outline schema. 
+        </xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="equipmentPropertySet" type="witsml:equipmentPropertySet">
+		<xsd:annotation>
+			<xsd:documentation>This is the collection of equipment properties.
+            </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="equipmentPropertySet">
+		<xsd:sequence>
+			<xsd:element name="equipmentProperties" type="witsml:properties" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="properties">
+		<xsd:annotation>
+			<xsd:documentation>A single equipment's properties are listed in this section.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="equipment" type="witsml:EquipmentType">
+				<xsd:annotation>
+					<xsd:documentation>
+                        This is the name/type of equipment which is listed in the equipmentEnum of cs_equipmentCatalog.xsd.
+                    </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="property" type="witsml:property" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+                        Each individual property should be listed in this section.
+                    </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="property">
+		<xsd:annotation>
+			<xsd:documentation>The structure of property including the name, type, description, uom and flag for mantatory/optional</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="type" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Type of property, it can be the name of witsml class type or enum type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Describes the equipment property.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isOptional" type="witsml:logicalBoolean">
+				<xsd:annotation>
+					<xsd:documentation>This flag determines whether this property is mandatory or not.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionAny" type="witsml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>This is the name of the of the property. It is required.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>

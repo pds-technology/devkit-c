@@ -92,7 +92,7 @@ namespace Energistics.SchemaGatherer
             {
                 VerifyAppConfig();
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 return 1;
             }
@@ -114,8 +114,9 @@ namespace Energistics.SchemaGatherer
             VerifyPath("ENERGY_ML_GENERATOR_PROJ_PATH");
             VerifyPath("MS_SDK");
 
-            foreach (string set in GetAppSetting("SETS").Split(new Char[] { ',' }))
+            foreach (string setname in GetAppSetting("SETS").Split(new Char[] { ',' }))
             {
+                String set = setname.Trim();
                 VerifyPath(set + "_XSD_PATH");
                 VerifyPath(set + "_ABSTRACTXSD_PATH");
                 VerifyPath(set + "_ENUMVAL_PATH");
@@ -188,8 +189,16 @@ namespace Energistics.SchemaGatherer
             string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
             string wsdlPath = GetAppSetting(setName + "_WSDL");
         
-            if (Directory.Exists(targetFolder) && Directory.Exists(sourceFolder))
+
+            if( !Directory.Exists(targetFolder) ) {
+                Directory.CreateDirectory(targetFolder);
+            }
+            if(! Directory.Exists(sourceFolder))
             {
+                Console.WriteLine("{0} doesn't exist", sourceFolder);
+                return;
+            }
+            
 
                 string targetXmlFile = targetFolder + @"\out2.xml";                                                
                 string newTypeCatalog = targetFolder + @"\new_typ_catalog.xsd";
@@ -209,16 +218,35 @@ namespace Energistics.SchemaGatherer
 
                     if (setName.StartsWith("RESQML"))
                     {
-                        sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd") + "</schema>"); 
-                        sw.WriteLine("    <schema>" + Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd") + "</schema>");
-                        sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd") + "</schema>");
-                        sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd") + "</schema>");
-                        sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd") + "</schema>");
-                        sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd") + "</schema>");
-                        sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd") + "</schema>"); 
+                        if(setName.StartsWith("RESQML1"))
+                        {
+                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd") + "</schema>"); 
+                            if(enumList.Length>0)
+                                sw.WriteLine("    <schema>" + Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd") + "</schema>");
+                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd") + "</schema>");
+                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd") + "</schema>");
+                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd") + "</schema>");
+                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd") + "</schema>");
+                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd") + "</schema>"); 
+                        }
+                        else
+                          if(setName.StartsWith("RESQML2"))
+                        { 
+                            // we also need to include all xsd file in common v2.
+                            foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
+                            {
+                                sw.WriteLine("    <schema>" + f + "</schema>");
+                            }
+                        }
                     }
                     else
                     {
+                        if(setName.StartsWith("COMPLETION"))
+                        {
+                            ProcessEnumValuesXml(sourceFolder + @"\typ_catalogCompletion.xsd", newTypeCatalog, enumList, sw);
+
+                            ProcessEnumValuesXml(sourceFolder + @"\cs_equipmentCatalog.xsd", newTypeCatalog, enumList, sw);
+                        }
                         ProcessEnumValuesXml(sourceFolder + @"\typ_catalog.xsd", newTypeCatalog, enumList, sw);
                         ProcessEnumValuesXml(sourceFolder + @"\typ_catalogProdml.xsd", newTypeCatalogProdml, enumProdList, sw);
                     }
@@ -241,8 +269,8 @@ namespace Energistics.SchemaGatherer
 
                     sw.WriteLine("  </generateClasses>");
                     sw.WriteLine("</xsd>");
+                
                 }
-
 
 
                 using (Process p = new Process())
@@ -288,7 +316,7 @@ namespace Energistics.SchemaGatherer
                     }
                 }
             }
-        }
+        
 
         /// <summary>
         /// Parses enumValues.xml and inserts the values into typ_catalog.xsd

@@ -1,0 +1,95 @@
+
+=======================================================================================
+Changes since v1.3.1.0
+=======================================================================================
+Retained the namespace as "http://www.witsml.org/schemas/131"
+Changed the XML schema version attribute from "1.3.1.0" to "1.3.1.1".
+In typ_dataTypes.xsd, modified schemaVersionString to not allow "1.3.1.0".
+
+Issue 1.3-40 "Do somebody need runNumber as a string?"
+In grp_log, grp_wellLog and cs_realtimeHeader, added bhaRunNumber.
+In grp_bhaRun, clarified that numStringRun is the BHA run number.
+
+Issue 1.3-59 "Why do 1.3 use maxOccurs="2" for interval ?"
+In cs_realtimeHeader, deleted interval.
+In cs_groupDefinition, changed maxOccurs of interval from 2 to 1.
+In cs_channelDefinition, changed maxOccurs of interval from 2 to 1.
+In cs_interval, deleted uid.
+
+Issue 1.3.1-3 "Schema Error in trajectoryStation"
+In grp_trajectoryStation, change the type of magTotalFieldReference
+from accelerationLinearMeasure to magneticInductionMeasure.
+
+Issue 1.3.1-4 "Units of Pressure"
+In witsmlUnitDict.xml, deprecated psig and psia.
+
+Issue 1.3.1-6 "Schema Error in grp_cementJob.xsd"
+In grp_cementJob, change the type of rpmPipeRecip from momentOfForceMeasure
+to anglePerTimeMeasure.
+
+Issue 1.3.1-7 "Errors in enums"
+In enumValues.xml, change "aasalt" to "basalt". 
+Change "do description" to "no description".
+
+Issue 1.3.1-8 "mudLog Lithology-GIs without mdBottom"
+In cs_geologyInterval, made mdBottom mandatory.
+Documented a point interval as top=bottom.
+
+Issue 1.3.1-9 "Significant wave in cs_weather"
+In cs_weather, added significantWave.
+Also added maxWave which was mistakenly omitted from the request.
+
+Issue 1.3.1-11 "Unit of measure: mol"
+In witsmlUnitDict.xml, deprecated mol.
+
+Issue 1.3.1-13 "Is mnemonic unique?"
+In cs_logCurveInfo, document that mnemonic must be unique for all curves in a log.
+In cs_blockInfo, document that each curve in the block must have a different mnemonic.
+
+Issue 1.3.1-16 "commonData still missing in trajectoryStation?"
+In cs_trajectoryStation, added an include for cs_commonData.xsd.
+
+Issue 1.3.1-17 "issue with witsmlUnitDict.xml"
+In witsmlUnitDict.xml, deleted <!DOCTYPE defineIDs [ ... ]>
+
+Issue 1.3.1-18 "Grad unit of measure"
+In witsmlUnitDict.xsd, deprecated grad.
+As part of new dictionary, added "dB/km", "tonfUK/ft2".
+Modified Units.xsl to flag deprecated values.
+
+Issue 1.3.1-22 "Measurement assigned to Trajectory magnetic data"
+Change the type of the following 
+from magneticFieldStrengthMeasure to magneticInductionMeasure (flux density):
+	In grp_trajectoryStation, 
+		magTotalUncert
+	In cs_stnTrajRawData, 
+		magAxialRaw 
+		magTran1Raw 
+		magTran2Raw
+	In cs_stnTrajCorUsed,
+		magAxialDrlstrCor 
+		magTran1DrlstrCor 
+		magTran2DrlstrCor 
+	In cs_stnTrajValid,
+		magTotalFieldCalc
+
+Issue 1.3.1-23 "mudLog-131 issues for the Houston Meeting"
+In cs_lithology, changed the type of lithPc 
+	from lengthPerLengthMeasure to volumePerVolumeMeasurePercent.
+	In lithPc, documented that the sum over an interval should be 100 percent.
+In cs_qualifier, changed the type of abundance 
+	from volumePerVolumeMeasure to volumePerVolumeMeasurePercent.
+	Documented that mdTop and mdBottom must be within the range of the
+	geologicInterval.
+In enumValues.xml, added "undifferentiated" to LithologyType.
+
+Issue 1.3.1-25 "units for mudLog-geologyInterval-averageTorque"
+In cs_geologyInterval, added currentAv.
+
+Issue 1.3.1-28 "WITSML quantity type request"
+In cs_tubularComponent, changed the type of the following
+from energyPerAreaMeasure to forcePerLengthMeasure:
+	bendStiffness
+	axialStiffness
+	torsionalStiffness
+

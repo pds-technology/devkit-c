@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_productFlowChangeLog.xsd"/>
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productFlowNetworkPlan">
+		<xsd:annotation>
+			<xsd:documentation>A plan to extend an actual network.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name assigned to the plan.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date and time of the start of the plan.
+					This point coincides with the end of the actual configuration.
+					The configuration of the actual at this point in time represents the
+					configuration of the plan at this starting point.
+					All changes to this plan must be in the future from this point in time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="purpose" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A textual description of the purpose of the plan.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="changeLog" type="prodml:cs_productFlowChangeLog" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Documents that a change occurred at a particular time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

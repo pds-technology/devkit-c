@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>
+		These types represent numeric quantities with a unit of measure implemented as a uom attribute. The units are gathered into single quantity class which represents a group of units. The unit symbols appropriate for the class are captured as enumerated lists. The implementation of this is to develop a type for each uom class that is a union of a standard list, the unknown value, and the Other: extension. Additional files will contain these structures.
+    		</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_quantityClass.xsd"/>
+	<!--                                                         -->
+</xsd:schema>

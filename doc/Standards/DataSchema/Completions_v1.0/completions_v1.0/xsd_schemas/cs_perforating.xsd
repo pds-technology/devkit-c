@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="cs_equipmentCatalog.xsd"/>
+	<xsd:complexType name="cs_perforating">
+		<xsd:annotation>
+			<xsd:documentation>Information on the perforating job.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="stageNumber" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation> index number of stage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bottomPackerSet" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Perf-Bottom of packer set depth 	</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="perforationFluidType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Perforation fluid type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="hydrostaticPressure" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>hydrostaticPressure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="surfacePressure" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Surface pressure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="reservoirPressure" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Reservoir pressure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fluidDensity" type="witsml:densityMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The density of fluid</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fluidLevel" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Fluid level.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="conveyanceMethod" type="witsml:PerfConveyanceMethod" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The conveyance method</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="shotsPlanned" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Number of shots planned</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="shotsDensity" type="witsml:perLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Number of shots per unit length (ft, m)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="shotsMisfired" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The number of missed firings from the gun.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="orientation" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>orientaton</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="orientationMethod" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Description of orientaton method</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="perforationCompany" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of company providing the perforation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="carrierManufacturer" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The manufacturer of the carrier.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="carrierSize" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Size of the carrier.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="carrierDescription" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Description from carrier</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="chargeManufacturer" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The manufacturer of the charge.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="chargeSize" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The size of the charge.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="chargeWeight" type="witsml:massMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The weight of the charge.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="chargeType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of the charge.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="refLog" type="witsml:refString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the log</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gunCentralized" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True if centralized, else decentralized.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gunSize" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The size of the perforation gun.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gunDesciption" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Description about the perforating gun.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gunLeftInHole" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Flag indicating whether the gun is left in hole or not.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

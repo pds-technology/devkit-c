@@ -1,0 +1,174 @@
+<HTML>
+<HED>
+  <TITLE>Schema Changes for WITSML Data Schema</TITLE>
+<STYLE>
+<!--
+ /* Style Definitions */
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Times New Roman;
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-top:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+ul
+	{margin-top:.0001pt;}
+-->
+</STYLE>
+</HEAD>
+
+<BODY>
+  <DIV class="Section1"><H1 align='center'>WITSML Version 1.4.1.1 Data Schema Change Summary</H1>
+
+<P><P>
+
+<P>This document is intended to summarize Data Schema changes
+between version 1.4.1 and version 1.4.1.1. </P>
+
+<P><B>In the schema:</B></P>
+<UL>
+<LI>Added element analysisMethod to cs_stimFetTest</LI>
+<LI>Added avgBHStaticTemperature and avgBHTreatingTemperature in cs_stimJobInterval</LI>
+<LI>Added include cs_drillingParams to grp_risk</LI>
+<LI>Added mudClass to cs_drillingParams</LI>
+<LI>Added mudSubClass to cs_drillingParams</LI>
+<LI>Added lithostratigraphic element to formationMarker</LI>
+<LI>Modified type of chronostratigraphic from str32 to chronostratigraphyStruct and maxOccurs from unbounded to 1 in formationMarker</LI>
+<LI>Deprecated nameFormation in formationMarker</LI>
+<LI>Corrected type of nameFormation element in opsReport, convCore and swcSample to nameString</LI>
+<LI>Added elements density, pH, purpose, description, supplier, fluidType and fluidSubtype to cs_stimFluid.xsd</LI>
+<LI>Changed type of groupType to nameString in grp_objectGroup.xsd</LI>
+<LI>Added new element groupSubtype (also nameString) in grp_objectGroup.xsd</LI>
+<LI>Corrected description of WITSML - Rig schema documentation in obj_rig.xsd</LI>
+<LI>Included reference to cs_stimAdditive in cs_stimJobInterval</LI>
+<LI>Added element additive in cs_stimJobInterval</LI>
+<LI>Modified pattern of schemaVersionString</LI>
+<LI>Removed requestLatestValue element from the log data-object</LI>
+</UL>
+
+<P><B>In the enumerations:</B></P>
+
+<UL><B>Added StimAnalysisMethod type and the following enumerations to typ_catalog.xsd</B>
+	<LI>average</LI>
+	<LI>delta pressure over g-time</LI>
+	<LI>delta pressure over linear time</LI>
+	<LI>delta pressure over radial time</LI>
+	<LI>gdk 2-d</LI>
+	<LI>horner</LI>
+	<LI>linear</LI>
+	<LI>log-log</LI>
+	<LI>nolte</LI>
+	<LI>pdl coefficient</LI>
+	<LI>perkins and kern 2-d</LI>
+	<LI>radial 2-d</LI>
+	<LI>square root</LI>
+	<LI>third-party software</LI>
+	<LI>other</LI>
+	<LI>unknown</LI>
+</UL>
+
+<UL><B>Added pneumatic enumeration to MudClass in typ_catalog.xsd</B>
+    <LI>pneumatic</LI>
+</UL>
+
+<UL><B>Added MudSubClass to enumValues.xml</B>
+	<LI>water-based drilling fluids</LI>
+	<LI>freshwater</LI>
+	<LI>brackish water</LI>
+	<LI>sea water</LI>
+	<LI>brine</LI>
+	<LI>caesium formate</LI>
+	<LI>potassium formate</LI>
+	<LI>sodium formate</LI>
+	<LI>lignite/lignosulfonate mud</LI>
+	<LI>lime mud</LI>
+	<LI>potassium-treated mud</LI>
+	<LI>salt water mud</LI>
+	<LI>saturated salt mud</LI>
+	<LI>seawater mud</LI>
+	<LI>spud mud</LI>
+	<LI>native/natural mud</LI>
+	<LI>low solids, non-dispersed</LI>
+	<LI>lightly treated non-dispersed</LI>
+	<LI>polymer mud</LI>
+	<LI>silicate mud</LI>
+	<LI>glycol mud</LI>
+	<LI>mixed-metal oxide mud</LI>
+	<LI>non-aqueous (invert emulsion) drilling fluids</LI>
+	<LI>diesel oil-based</LI>
+	<LI>mineral oil-based</LI>
+	<LI>low toxicity mineral oil-based</LI>
+	<LI>internal-olefin synthetic-based</LI>
+	<LI>linear-alpha-olefin synthetic-based</LI>
+	<LI>linear paraffin synthetic-based</LI>
+	<LI>ester synthetic-based</LI>
+	<LI>pneumatic (gaseous) drilling fluids</LI>
+	<LI>air</LI>
+	<LI>mist</LI>
+	<LI>stiff foam</LI>
+	<LI>stable foam</LI>
+	<LI>natural gas</LI>
+	<LI>aerated mud</LI>
+	<LI>nitrogen-aerated mud</LI>
+</UL>
+
+<UL><B>Added StimFluidType type and the following enumerations to typ_catalog.xsd</B>
+	<LI>acid-based</LI>
+	<LI>gas</LI>
+	<LI>oil-based</LI>
+	<LI>water-based</LI>
+</UL>
+
+<UL><B>Added StimFluidSubType type and the following enumerations to typ_catalog.xsd</B>
+	<LI>acid</LI>
+	<LI>base</LI>
+	<LI>carbon dioxide</LI>
+	<LI>carbon dioxide and nitrogen</LI>
+	<LI>carbon dioxide and water</LI>
+	<LI>condensate</LI>
+	<LI>cross-linked gel</LI>
+	<LI>crude oil</LI>
+	<LI>diesel</LI>
+	<LI>foam</LI>
+	<LI>fracturing oil</LI>
+	<LI>fresh water</LI>
+	<LI>gelled acid</LI>
+	<LI>gelled condensate</LI>
+	<LI>gelled crude</LI>
+	<LI>gelled diesel</LI>
+	<LI>gelled oil</LI>
+	<LI>gelled salt water</LI>
+	<LI>hot condensate</LI>
+	<LI>hot fresh water</LI>
+	<LI>hot oil</LI>
+	<LI>hot salt water</LI>
+	<LI>hybrid</LI>
+	<LI>linear gel</LI>
+	<LI>liquefied petroleum gas</LI>
+	<LI>nitrogen</LI>
+	<LI>oil</LI>
+	<LI>produced water</LI>
+	<LI>salt water</LI>
+	<LI>slick water</LI>
+	<LI>other</LI>
+</UL>
+
+<UL><B>Deleted ObjectGroupKind from typ_catalog.xsd</UL></B>
+
+<UL><B>Added the following enumerations to StimStageFlowPath in typ_catalog.xsd</B>
+    <LI>coiled tubing</LI>
+    <LI>tubing and annulus</LI>
+</UL>
+
+  </DIV>
+</BODY>
+</HTML>
+

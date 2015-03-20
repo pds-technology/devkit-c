@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="cs_fiberPathDefect.xsd"/>
+	<xsd:include schemaLocation="cs_fiberFacilityMapping.xsd"/>
+	<xsd:include schemaLocation="cs_businessAssociate.xsd"/>
+	<xsd:include schemaLocation="cs_fiberOTDR.xsd"/>
+	<xsd:include schemaLocation="cs_fiberOpticalPathNetwork.xsd"/>
+	<xsd:include schemaLocation="cs_fiberOpticalPathInventory.xsd"/>
+	<xsd:group name="grp_fiberOpticalPath">
+		<xsd:annotation>
+			<xsd:documentation>The group of elements corresponding to a fiber optical path.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="inventory" type="prodml:cs_fiberOpticalPathInventory" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The list of equipment used in the optical path.  Equipment may be used in the optical path for different periods of time, so this inventory contains all items of equipment which are used at some period of time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="opticalPathNetwork" type="prodml:cs_fiberOpticalPathNetwork" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The sequence of connected items of equipment along the optical path. Represented by a flow network.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="defect" type="prodml:cs_fiberPathDefect" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A zone of the fibre which has defective optical properties (e.g., darkening).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="facilityMapping" type="prodml:cs_fiberFacilityMapping" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Relates distances measured along the optical path to specific lengths along facilities (wellbores or pipelines).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="installingVendor" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The vendor who performed the physical deployment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="otdr" type="prodml:cs_fiberOTDR" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>This records the result arrays along with context information for an Optical Time Domain Reflectometry (OTDR) survey. 
+					The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber. 
+					The actual data values are recorded in a OTDR file and/or image file, which are referenced in subelements.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

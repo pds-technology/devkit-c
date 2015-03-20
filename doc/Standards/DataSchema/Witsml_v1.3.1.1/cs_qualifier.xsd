@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_qualifier">
+		<xsd:annotation>
+			<xsd:documentation>WITSML - lithology qualifier Component Schema</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="type" type="witsml:QualifierType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of qualifier.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The measured depth at the top of the interval represented 
+						by the qualifier. This must be within the range of the parent geologic interval.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The measured depth at the bottom of the interval represented by the qualifier.
+						A point can be indicated by specifying bottom=top.
+						This must be within the range of the parent geologic interval.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:element name="abundance" type="witsml:volumePerVolumeMeasurePercent" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The relative abundance of the qualifier.
+					This is usually estimated based on a "visual area" basis by inspecting the cuttings 
+					spread out on the shaker table. This either represents a point value or the 
+					upperbound of a range (e.g., 0% to 10%).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="abundanceCode" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A code associated with the relative abundance of the qualifier.
+					For example, "trace", "common" or "abundant". 
+					This is generally a proprietary code. The interoperable semantics are provided
+					by the above abundance value. The presumption is that the value range associated with
+					a code is mapped to a single value. On the other end of an exchange, the single
+					value is mapped to the range associated with the local codes on that end.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A textual description of the qualifier.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the lithology qualifier.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_surveySection.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_surveyProgram">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML Survey Program object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="surveyVer" type="witsml:positiveCount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Survey version number, incremented every time the program is modified.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimTrajProg" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Date and time trajectory program was created or edited.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="engineer" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Name of engineer.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="final" type="witsml:str16" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Is program a final or intermediate/preliminary?  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="surveySection" type="witsml:cs_surveySection" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Survey section object.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

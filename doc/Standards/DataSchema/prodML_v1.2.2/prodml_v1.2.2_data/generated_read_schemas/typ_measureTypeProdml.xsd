@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>These types represent numeric quantities with a unit of measure implemented as a uom attribute. The units are gathered into single quantity class which
+      represents a group of units. The unit symbols appropriate for the class are captured as enumerated lists. The implementation of this is to develop a type for each uom class
+      that is a union of a standard list, the unknown value, and the Other: extension. Additional files will contain these structures.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_quantityClassProdml.xsd" />
+   <xsd:include schemaLocation="typ_quantityClass.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="amountOfSubstanceMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:AmountOfSubstanceUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="compressibilityMeasure">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:CompressibilityUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type energyPerAreaMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="frequencyMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:FrequencyUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type magneticFieldStrengthMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="massConcentrationMeasurePercent" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A mass per mass measure that is constrained to a unit of percent.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:PercentUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="massFlowRateMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:MassFlowRateUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="modulusOfCompressionMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:ModulusOfCompressionUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="molarFractionMeasurePercent" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The number of moles as a proportion of the total number of moles measure that is constrained to a unit of percent.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:PercentUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="molarVolumeMeasure">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:MolarVolumeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="productivityIndexMeasure">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:ProductivityIndexUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="thermalConductivityMeasure">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:ThermalConductivityUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="standardVolumeMeasure">
+      <xsd:annotation>
+         <xsd:documentation>A volume corrected to standard conditions of temperature and pressure. The standard conditions must be known outside the context of the data type
+         because the unit of measure is independent of the standard conditions. The main intent of this type is to allow programatic determination of where standard conditions are
+         assumed.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="standardVolumePerStandardVolumeMeasure">
+      <xsd:annotation>
+         <xsd:documentation>A ratio of volumes that have each been corrected to standard conditions of temperature and pressure. The standard conditions must be known outside the
+         context of the data type because the unit of measure is independent of the standard conditions. The main intent of this type is to allow programatic determination of
+         where standard conditions are assumed.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumePerVolumeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="standardVolumePerVolumeMeasure">
+      <xsd:annotation>
+         <xsd:documentation>A ratio of a volume that has been corrected to standard conditions of temperature and pressure to an uncorrected volume. The standard conditions must
+         be known outside the context of the data type because the unit of measure is independent of the standard conditions. The main intent of this type is to allow programatic
+         determination of where standard conditions are assumed.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumePerVolumeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="volumePerStandardVolumeMeasure">
+      <xsd:annotation>
+         <xsd:documentation>A ratio of an uncorrected volume to a volume corrected to standard conditions of temperature and pressure. The standard conditions must be known
+         outside the context of the data type because the unit of measure is independent of the standard conditions. The main intent of this type is to allow programatic
+         determination of where standard conditions are assumed.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumePerVolumeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="workMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:WorkUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

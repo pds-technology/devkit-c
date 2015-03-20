@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>WITSML- Catalog of Value Constrained Types.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:simpleType name="PerforationStatus">
+      <xsd:annotation>
+         <xsd:documentation>These values represent the status of a perforation.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="open">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="squeezed">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="proposed">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="PhysicalStatus">
+      <xsd:annotation>
+         <xsd:documentation>These values represent the physical status of an interval.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="open">
+            <xsd:annotation>
+               <xsd:documentation>The open physical status the interval.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="closed">
+            <xsd:annotation>
+               <xsd:documentation>The squeezed physical status the interval.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="proposed">
+            <xsd:annotation>
+               <xsd:documentation>The proposed physical status the interval.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="CompletionStatus">
+      <xsd:annotation>
+         <xsd:documentation>These values represent the status of a wellbore completion.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="Planned" />
+         <xsd:enumeration value="Active" />
+         <xsd:enumeration value="Inactive" />
+         <xsd:enumeration value="Permanent Abandoned" />
+         <xsd:enumeration value="Suspended" />
+         <xsd:enumeration value="Temporary Abandoned" />
+         <xsd:enumeration value="Testing" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

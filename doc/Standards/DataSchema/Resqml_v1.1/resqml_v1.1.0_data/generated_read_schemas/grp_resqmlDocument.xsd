@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!-- For the normative schema point here.
+        <xsd:import namespace="http://purl.org/dc/terms/"
+                    schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd"/>
+-->
+   <!-- For code generation and XML validation use the following.
+-->
+   <xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../dublinCoreTerms_resqml_v1.0_profile/dcterms.xsd" />
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlAreaOfInterest.xsd" />
+   <xsd:include schemaLocation="cs_resqmlSpatialReferenceSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPropertyKindSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPropertyGroupSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlInterfaceFeatureSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlGriddedVolumeSet.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_resqmlDocument">
+      <xsd:annotation>
+         <xsd:documentation>The non-contextual content of a RESQML document object.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="dc:title" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the RESQML model.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:creator" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Name (or user ID) of the person who initially created this RESQML document.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:subject" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>KKey words to describe an activity, for example, history match or volumetric calculations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:description" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A user comment about the document.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:publisher" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Software or service that was used to initially create the document.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:created" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Date and time the document was initially created. The time zone offset must be specified.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:format" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The format of the document.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="areaOfInterest" type="resqml:cs_resqmlAreaOfInterest" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A GML based feature representing the area of interest. This contains a mandatory bounding box and an optional polygon
+               outline.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="spatialReferenceSet" type="resqml:cs_resqmlSpatialReferenceSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The set of CRS definitions that are utilized within this message. Any referenced well-known systems will not be included in this
+               set.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="propertyKindSet" type="resqml:cs_resqmlPropertyKindSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container for property kind definitions used in this document.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="propertyGroupSet" type="resqml:cs_resqmlPropertyGroupSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container for property groups.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="interfaceFeatureSet" type="resqml:cs_resqmlInterfaceFeatureSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A set of interface features and their geometry. These by themselves do not represent a coherent model. They are building blocks which can be used
+               to create a model.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="griddedVolumeSet" type="resqml:cs_resqmlGriddedVolumeSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container for 3D grids and related properties.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

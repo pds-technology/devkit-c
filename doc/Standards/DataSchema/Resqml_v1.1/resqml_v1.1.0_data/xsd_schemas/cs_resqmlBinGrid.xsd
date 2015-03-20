@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="grp_resqmlTraceabilityDublinCore.xsd"/>
+	<xsd:include schemaLocation="cs_extensionAny.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlExtensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uidGlobal.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_resqmlBinGrid">
+		<xsd:annotation>
+			<xsd:documentation>Defines the relationship between the 2D grid coordinates and the bin grid.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="resqml:grp_resqmlTraceabilityDublinCore" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The Dublin Core elements used for traceability.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="local3dCRS" type="resqml:refGlobalNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the local 3D CRS which represents the coordinates.
+					This must point to a child of spatialReferenceSet.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ni" type="resqml:positiveInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The number of nodes in the I dimension.
+					This axis is parallel to the first axis in the local3dCRS.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nj" type="resqml:positiveInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The number of nodes in the J dimension.
+					This axis is parallel to the second axis in the local2dCRS.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="originOrdinal1" type="xsd:double" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The inline/crossline value at the origin (namely at i=0, j=0).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="originOrdinal2" type="xsd:double" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The inline/crossline value at the origin (namely at i=0, j=0).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="deltaI" type="xsd:double" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The constant distance between nodes along the I axis of the grid.
+					The unit of measure is defined by the CRS.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="deltaJ" type="xsd:double" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The constant distance between nodes along the J axis of the grid.
+					The unit of measure is defined by arealUnit.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:sequence minOccurs="0">
+				<!-- If any are given then all must be given. -->
+				<xsd:element name="inlineParallelToIAxis" type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>True ("true" or "1") indicates that the inlines are parallel to the i-axis
+						which means that each inline represents a constant value of j and 
+						each crossline represents a constant value of i.
+						False ("false" or "0") indicates that the inlines are parallel to the j-axis
+						which means that each inline represents a constant value of i and 
+						each crossline represents a constant value of j.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="originInline" type="resqml:nonNegativeInt" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The index of the first inline beginning at i=0, j=0.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="originCrossline" type="resqml:nonNegativeInt" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The index of the first crosslineline beginning at i=0, j=0.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="inlineIncrement" type="xsd:int" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The inline increment increment.
+						If inlines are parallel to the i-axis the inline increment will be the difference 
+						in the inline number from node i=0, j=0 to node i=1, j=0.
+						If inlines are parallel to the j-axis the inline increment will be the difference 
+						in the inline number from node i=0, j=0 to node i=0, j=1. 
+						The increment can be a positive or negative integer, but not zero.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="crosslineIncrement" type="xsd:int" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The crossline increment.
+						The increment can be a positive or negative integer, but not zero.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:element name="extensionAny" type="resqml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="resqml:cs_resqmlExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="resqml:attgrp_uidGlobal">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.
+				This must be a globally unique identifier.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

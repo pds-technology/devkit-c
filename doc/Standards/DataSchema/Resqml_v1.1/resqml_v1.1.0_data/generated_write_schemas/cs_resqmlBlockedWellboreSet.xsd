@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlIJKBlockedWellbore.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlBlockedWellboreSet">
+      <xsd:annotation>
+         <xsd:documentation>A container for blocked wellbores and their properties.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="ijkBlockedWellbore" type="resqml:cs_resqmlIJKBlockedWellbore" minOccurs="1" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The path of and properties along a wellbore defined as a list of traversed grid cells. The direction of the traversal is from a cell that is
+               nearer the surface (smaller measured depth) toward a cell that is nearer the bottomhole (larger measured depth). One block wellbore can represent some portion of
+               the original hole (i.e., has no kickoff point). For sidetracks (laterals) the blocked wellbore will represent only the new hole from the kickoff point (in another
+               blocked wellbore) toward the bottomhole. While the paths represented by the blocked wellbores should not overlap, the paths may intersect some of the same
+               cells.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

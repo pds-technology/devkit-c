@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="cs_facilityIdentifier.xsd"/>
+	<xsd:include schemaLocation="grp_dtsInstalledSystem.xsd"/>
+	<xsd:include schemaLocation="cs_documentInfo.xsd"/>
+	<xsd:include schemaLocation="cs_commonData.xsd"/>
+	<xsd:include schemaLocation="cs_customData.xsd"/>
+	<!--                                                         -->
+	<xsd:import namespace="http://www.energistics.org/schemas/abstract" schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd"/>
+	<!--                                                         -->
+	<xsd:element name="dtsInstalledSystems" type="prodml:obj_dtsInstalledSystems" substitutionGroup="abs:abstractDataObject"/>
+	<xsd:complexType name="obj_dtsInstalledSystems">
+		<xsd:annotation>
+			<xsd:documentation>The plural root element which allows data concerning multiple installed systems to be transferred.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="abs:abstractObject">
+				<xsd:sequence>
+					<xsd:element name="documentInfo" type="prodml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="facilityIdentifier" type="prodml:cs_facilityIdentifier" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="dtsinstalledSystem" type="prodml:obj_dtsInstalledSystem" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="prodml:schemaVersionStringProdml" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Data object schema version.  The fourth level must match the 
+						version of the schema constraints (enumerations and XML loader files) that are assumed
+						by the document instance.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="obj_dtsInstalledSystem">
+		<xsd:annotation>
+			<xsd:documentation>The system which can make DTS measurements. Comprises one optical path and one DTS instrument box.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1"/>
+			<xsd:group ref="prodml:grp_dtsInstalledSystem" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="commonData" type="prodml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data objects. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="prodml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of an object. 
+				This should not be used for child nodes within an object. For an independent object, the value may be globally unique. 
+				For a dependent object, the value must be unique (for the same object type) within the context of the parent object. 
+				There should be no assumption as to the semantic content of this attribute. 
+				The purpose of this type is to facilitate modifying the optionality in derived schemas.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

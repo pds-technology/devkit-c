@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_productionOperationHSE.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationActivity.xsd"/>
+	<xsd:include schemaLocation="cs_geographicContext.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productionOperationInstallationReport">
+		<xsd:annotation>
+			<xsd:documentation>WITSML -Installation Report Component Schema</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The installation represented by this report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bedsAvailable" type="prodml:nonNegativeCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Total count of beds available on the installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="crewCount" type="prodml:crewCount" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The count of personnel on a type of crew.
+					One of the types is all personnel on board.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="work" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The total cumulative amount of time worked during the 
+					reporting period. 
+					Commonly specified in units of hours. 
+					Note that a day unit translates to 24 hours worked.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="workMonthToDate" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The total cumulative amount of time worked from the beginning of 
+					the month to the end of reporting period. 
+					Commonly specified in units of hours. 
+					Note that a day unit translates to 24 hours worked.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="workYearToDate" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The total cumulative amount of time worked from the beginning of 
+					the year to the end of reporting period. 
+					Commonly specified in units of hours. 
+					Note that a day unit translates to 24 hours worked.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="operationalHSE" type="prodml:cs_productionOperationHSE" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Health, Safety and Environmenal information.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="productionActivity" type="prodml:cs_productionOperationActivity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Production activities.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

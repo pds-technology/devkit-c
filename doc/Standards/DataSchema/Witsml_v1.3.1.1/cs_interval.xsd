@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_interval">
+		<xsd:annotation>
+			<xsd:documentation> WITSML - Realtime Channel Interval Schema </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="type" type="witsml:IntervalType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>This sequence is optional but if given then
+					the method and one interval is required.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="method" type="witsml:IntervalMethod" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The interval method. Not appropriate for a SpotSample.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:choice minOccurs="1" maxOccurs="1">
+					<xsd:element name="timeInterval" type="witsml:timeMeasure" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The time interval associated with the method.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="distanceInterval" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The distance interval associated with the method.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wellTestInterval.xsd" />
+   <xsd:include schemaLocation="cs_wellTestBottomholeData.xsd" />
+   <xsd:include schemaLocation="cs_wellTestElectricSubmersiblePumpData.xsd" />
+   <xsd:include schemaLocation="cs_wellTestPointData.xsd" />
+   <xsd:include schemaLocation="cs_wellTestWellheadData.xsd" />
+   <xsd:include schemaLocation="cs_wellTestCumulative.xsd" />
+   <xsd:include schemaLocation="cs_wellTestSeparatorData.xsd" />
+   <xsd:include schemaLocation="cs_wellTestProductionTestResults.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wellTestProductionTestData">
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="testDuration" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The time length (with uom) of the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testInterval" type="prodml:cs_wellTestInterval" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The interval tested. This element includes a top and base depth, and the formation(s) tested. It also includes control data for the tested
+               interval.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellheadData" type="prodml:cs_wellTestWellheadData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This element records measurements made and settings made at the wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="bottomholeData" type="prodml:cs_wellTestBottomholeData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="espData" type="prodml:cs_wellTestElectricSubmersiblePumpData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Frequency and electric current measured during the well test for electric submersible pump (ESP) wells. The presumption is that only one pump per
+               well is operational during each test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pointData" type="prodml:cs_wellTestPointData" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>This element records temperature and pressure at points in the wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="separatorData" type="prodml:cs_wellTestSeparatorData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This element records the measurements (pressure and temperature) at the separator.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="operatingMethod" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The method being used to operate the well. Examples are 'flowing', 'pumping', 'gas lifted'.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellTestCumulative" type="prodml:cs_wellTestCumulative" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="productionTestResults" type="prodml:cs_wellTestProductionTestResults" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The production results of the test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

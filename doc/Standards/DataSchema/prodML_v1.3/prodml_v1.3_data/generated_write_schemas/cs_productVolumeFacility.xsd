@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_datedComment.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeFlow.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeParameterSet.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumeFacility">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Report Facility Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="name" type="prodml:facilityIdentifierStruct" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the facility. The name can be qualified by a naming system. This also defines the kind of facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityParent1" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>For facilities whose name is unique within the context of another facility, the name of the parent facility. For example, if name represents a
+               completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines
+               the kind of facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityParent2" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>For facilities whose name is unique within the context of another facility, the name of the parent facility of parent1. The name can be qualified
+               by a naming system. This also defines the kind of facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within the
+               context of a parent) should also be listed as an alias.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:sequence minOccurs="0" maxOccurs="1">
+            <xsd:element name="unit" type="prodml:refNameString" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="network" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The Product Flow Network representing the facility. This can only be given if unit is given. This is only required if the network is not the
+                  same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented by this
+                  report.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:sequence>
+         <xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The name and type of a facility whose context is relevant to this facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="statusWell" type="prodml:WellStatus" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The status of the well. In PRODML, the value of "active -- injecting" has been DEPRECATED. Instead, use "active" with wellProducing=true. In
+               PRODML, the value of "active -- producing" has been DEPRECATED. Instead, use "active" with wellInjecting=true.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fluidWell" type="prodml:WellFluid" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>POSC well fluid. The type of fluid being produced from or injected into a well facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="operatingMethod" type="prodml:WellOperationMethod" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The lift method being used to operate the well.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellProducing" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True (or 1) indicates that the well is producing. False (or 0) or not given indicates that the well is not producing. This only applies if the
+               facility is a well or wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellInjecting" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True (or 1) indicates that the well is injecting. False (or 0) or not given indicates that the well is not injecting. This only applies if the
+               facility is a well or wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="capacity" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The storage capacity of the facility (e.g., a tank).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="operationTime" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The amount of time that the facility was active during the reporting period.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="downtimeReason" type="prodml:cs_datedComment" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The reason for any down time during the reporting period.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parameterSet" type="prodml:cs_productVolumeParameterSet" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Usage values for one parameter associated with the facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="flow" type="prodml:cs_productVolumeFlow" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Reports a flow of a product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:cs_datedComment" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A timestamped remark about the facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the Product Volume Facility.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

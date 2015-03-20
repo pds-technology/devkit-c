@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>The Transport Properties test consists of one or more rows of data, which are captured in the Test Step</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_fluidResultTransportTestStep.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_fluidResultTransportPropertiesTest">
+		<xsd:sequence>
+			<xsd:element name="testNumber" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>xxxxxxxxxxxxxxxxxxxxxxxxxx</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="transportTestStep" type="prodml:cs_fluidResultTransportTestStep" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

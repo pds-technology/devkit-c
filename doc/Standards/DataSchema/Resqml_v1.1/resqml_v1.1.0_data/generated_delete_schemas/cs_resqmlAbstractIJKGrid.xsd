@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_resqmlTraceabilityDublinCore.xsd" />
+   <xsd:include schemaLocation="cs_resqmlHdfGroup.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPropertySet.xsd" />
+   <xsd:include schemaLocation="cs_extensionAny.xsd" />
+   <xsd:include schemaLocation="cs_resqmlExtensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uidGlobal.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlAbstractIJKGrid" abstract="true">
+      <xsd:annotation>
+         <xsd:documentation>A structured IJK geometry of a volume.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:group ref="resqml:grp_resqmlTraceabilityDublinCore" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Dublin Core elements used for traceability.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="startIndexI" type="xsd:int" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>I indices lower bound. All "I" values will be greater than or equal to this value. May be negative.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="startIndexJ" type="xsd:int" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>J indices lower bound. All "J" values will be greater than or equal to this value. May be negative.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="startIndexK" type="xsd:int" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>K indices lower bound. All "K" values will be greater than or equal to this value. May be negative.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="ni" type="resqml:positiveInt" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Number of cells in the "I" direction. Minimum value = 1.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nj" type="resqml:positiveInt" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Number of cells in the "J" direction. Minimum value = 1.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nk" type="resqml:positiveInt" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Number of cells in the "K" direction. Minimum value = 1.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0">
+            <xsd:element name="gridTopologyFlags" type="resqml:shortValues" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>An encoded array of boolean flags which indicate cell node identity without the need for any floating point comparison The underlying type of
+                  each item is an integer. Each integer value represents the sum of integer components where:: 1=cellGeometryDefined, 2=iPinch, 4=jPinch, 8=kPinch,
+                  16=iStandardAdjacency, 32=jStandardAdjacency, 64=kStandardAdjacency. This creates a bit encoded array within one integer value. Example: A "standard" cell has a
+                  value of 1+16+32+64 = 113 (hex 0x71 binary 1110001). A non-zero value for cellGeometryDefined indicates that the apparent geometry in a cell is well defined. A
+                  non-zero value for kPinch indicates that the top four nodes of a cell are identical to the corresponding bottom four nodes of the same cell. Similar for iPinch
+                  and jPinch. A non-zero value for iStandardAdjacency indicates that the four "I+" face nodes of cell (I,J,K) are identical to the four corresponding "I-" face
+                  nodes of cell (I+1,J,K). iStandardAdjacency=0 indicates that the only kind of adjacency you can expect will be described in the nonStandardAdjacency list.
+                  Similar for jStandardAdjacency and kStandardAdjacency. Consistent with this definition, standardAdjacency=0 off the edge of a grid.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ijkGridHdfGroup" type="resqml:cs_resqmlHdfGroup" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Defines information related to capturing the gridTopologyFlags array data in an HDF5 formatted file.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="gapAfterLayer" type="resqml:positiveShort" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines a K layer after which a gap exists in the K layering. For example, if gapAfterLayer=2 then the node arrays will contain an extra node for
+               the top of layer 3. If there is no gap then each node (except the first and last) represents the bottom of one layer and the top of the next. The length of the
+               aggregate specifies the number of gaps in the K layering.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gridCellShape" type="resqml:CellShape" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the shape of all grid cells.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="positiveGridParity" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The grid parity is the sign of (I cross J dot K) where I, J, and K are vectors in the direction of increasing I, J, and K numbering. Positive
+               parity means that the IJK cell numbering is right-handed. True ("true" or "1") indicates that the grid has positive parity. False ("false" or "0") indicates that
+               the grid has negative parity.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gridStatic" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the grid does not deform in time. False ("false" or "0") indicates that the grid DOES deform in
+               time.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mostComplexLineGeometry" type="resqml:ResqmlMostComplexLineGeometry" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Asserts the most complex type of line used in the grid.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="anyIJGap" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the grid will have split lines with laterally separated geometry. False ("false" or "0") indicates that the
+               grid will NOT have split lines with laterally separated geometry.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="anyGeometryUndefined" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the grid will have at least one cell with undefined geometry. False ("false" or "0") indicates that all cells
+               in the grid have well-defined geometry.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="anyIJPinch" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the grid will have at least one cell pinched in the I or J direction. False ("false" or "0") indicates that
+               the grid has neither iPinch nor jPinch.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="anyKPinch" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the grid will have at least one cell pinched in the K direction. False ("false" or "0") indicates that the
+               grid has no kPinch.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="anyLineNull" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that at least one coordinate node list line has entirely undefined geometry. False ("false" or "0") indicates that
+               all coordinate node lists are defined. Individual nodal values may still be undefined in this case.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="propertyValues" type="resqml:cs_resqmlPropertySet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Properties for this object.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionAny" type="resqml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="resqml:cs_resqmlExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uidGlobal">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node. This must be a globally unique identifier.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

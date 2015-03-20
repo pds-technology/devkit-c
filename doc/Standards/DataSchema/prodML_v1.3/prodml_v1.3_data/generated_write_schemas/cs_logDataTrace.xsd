@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_catalogProdml.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:include schemaLocation="cs_logData.xsd" />
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:complexType name="cs_logDataTrace">
+      <xsd:annotation>
+         <xsd:documentation>Recorded trace data from the installed system.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:restriction base="prodml:cs_logData">
+            <xsd:sequence>
+               <xsd:element name="mnemonicList" type="prodml:MeasurementMnemonicType" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The list of channels (ie, "columns") of data in the measuredTraceSet object. This is a fixed list (enum). The list is in the form of comma
+                     separated names for the channels, e.g. "pathDistance,stokes,antiStokes,....". These names are the mnemonics by which the channels are
+                     identified.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="unitList" type="prodml:MeasurementUnitType" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The list of units of measure for the channels of data in the meausured data object. This is a fixed list (enum). The list is in the form of
+                     comma separated units of measure for the channels, e.g. "m,degC,...". These units of measure types are taken from the Energistics measureTypes. Note that the
+                     string used must match the channels specified in the mnemonicList element.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="data" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Container for one "rows" of log data. It is in the form of comma separated values for the channels at this row, e.g.
+                     "100.0,75.5,,26.78,"</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:restriction>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

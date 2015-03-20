@@ -1,0 +1,1985 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <xsd:include schemaLocation="typ_baseTypeResqml.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>WITSML- Catalog of Value Constrainted Types.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <!--                                                         -->
+   <xsd:simpleType name="CellShape">
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="cartesian">
+            <xsd:annotation>
+               <xsd:documentation>Cells defined by the tri-linear isoparametric mapping from the unit cube.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="GlobalAxisOrder">
+      <xsd:annotation>
+         <xsd:documentation>Defines the cordinate system axis order of the global CRS using the axis names (from EPSG database).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="easting northing">
+            <xsd:annotation>
+               <xsd:documentation>The first axis is easting and the second axis is northing.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="northing easting">
+            <xsd:annotation>
+               <xsd:documentation>The first axis is northing and the second asis is easting.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="westing southing">
+            <xsd:annotation>
+               <xsd:documentation>The first axis is westing and the second axis is southing.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="southing westing">
+            <xsd:annotation>
+               <xsd:documentation>The first axis is southing and the second axis is westing.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="northing westing">
+            <xsd:annotation>
+               <xsd:documentation>the first axis is northing and the second axis is westing.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="westing northing">
+            <xsd:annotation>
+               <xsd:documentation>the first axis is westing and the second axis is northing.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                     -->
+   <xsd:simpleType name="ProjectedCoordinateUom">
+      <xsd:annotation>
+         <xsd:documentation>The units of measure that are valid for vertical gravity based coordinates (i.e., elevation or vertical depth) within the context of a
+         well.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Moved</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractUomEnum">
+         <xsd:enumeration value="m">
+            <xsd:annotation>
+               <xsd:documentation>meter</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ft">
+            <xsd:annotation>
+               <xsd:documentation>International Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftUS">
+            <xsd:annotation>
+               <xsd:documentation>US Survey Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftBr(65)">
+            <xsd:annotation>
+               <xsd:documentation>British Foot 1865</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="chBnB">
+            <xsd:annotation>
+               <xsd:documentation>Benoit chain (1895 B)</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="chSe">
+            <xsd:annotation>
+               <xsd:documentation>Sears chain</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftSe">
+            <xsd:annotation>
+               <xsd:documentation>Sears Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ydSe">
+            <xsd:annotation>
+               <xsd:documentation>Sears yard</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftCla">
+            <xsd:annotation>
+               <xsd:documentation>Imperial Foot. Same as EPSG "Clarke foot".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="lkCla">
+            <xsd:annotation>
+               <xsd:documentation>Clarke link</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftGC">
+            <xsd:annotation>
+               <xsd:documentation>Gold Coast Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ydInd">
+            <xsd:annotation>
+               <xsd:documentation>Indian yard</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="km">
+            <xsd:annotation>
+               <xsd:documentation>kilometre</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="PropertyAttachment">
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="nodes">
+            <xsd:annotation>
+               <xsd:documentation>Properties are associated with the nodes of the object.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="edges">
+            <xsd:annotation>
+               <xsd:documentation>Properties are associated with the edges of the object.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="faces">
+            <xsd:annotation>
+               <xsd:documentation>Properties are associated with the faces of the object.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="cells">
+            <xsd:annotation>
+               <xsd:documentation>Properties are associated with the cells of the object.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="ResqmlMostComplexLineGeometry">
+      <xsd:annotation>
+         <xsd:documentation>Defines the most complex geometry type used in constructing a corner point grid.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="vertical">
+            <xsd:annotation>
+               <xsd:documentation>This is the less complex than straight.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="straight">
+            <xsd:annotation>
+               <xsd:documentation>This is less complex than curved and more complex than vertical.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="curved">
+            <xsd:annotation>
+               <xsd:documentation>This is more complex than straight or vertical.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="ResqmlPropertyKind">
+      <xsd:annotation>
+         <xsd:documentation>The standard set of RESQML property kinds. The list of standard values is contained in the RESQML enumValuesResqml.xml file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="absorbed dose">
+            <xsd:annotation>
+               <xsd:documentation>The amount of energy absorbed per mass.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="acceleration linear">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="activity (of radioactivity)">
+            <xsd:annotation>
+               <xsd:documentation>A measure of the radiation being emitted.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="amount of substance">
+            <xsd:annotation>
+               <xsd:documentation>Molar amount of a substance.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="amplitude">
+            <xsd:annotation>
+               <xsd:documentation>Amplitude of the acoustic signal recorded. It is not a physical property, only a value.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="angle per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="angle per time">
+            <xsd:annotation>
+               <xsd:documentation>The angular velocity. The rate of change of an angle.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="angle per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="angular acceleration">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="area per area">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity where the basis of the ratio is area.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="area per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="attenuation">
+            <xsd:annotation>
+               <xsd:documentation>A logarithmic, fractional change of some measure, generally power or amplitude, over a standard range. This is generally used for frequency
+               attenuation over an octave.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="attenuation per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="azimuth">
+            <xsd:annotation>
+               <xsd:documentation>Angle between the North and the projection of the normal to the horizon surface estimated on a local area of the interface.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="bubble point pressure">
+            <xsd:annotation>
+               <xsd:documentation>The pressure at which the first gas bubble appears while decreasing pressure on a fluid sample.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="bulk modulus">
+            <xsd:annotation>
+               <xsd:documentation>Bulk modulus, K</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="capacitance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="categorical">
+            <xsd:annotation>
+               <xsd:documentation>The abstract supertype of all enumerated string properties.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="cell length">
+            <xsd:annotation>
+               <xsd:documentation>distance from cell face center to cell face center in the specified direction, DI, DJ, DK</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="charge density">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="chemical potential">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="code">
+            <xsd:annotation>
+               <xsd:documentation>A discrete code.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="compressibility">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="concentration of B">
+            <xsd:annotation>
+               <xsd:documentation>molar concentration of a substance.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="conductivity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="continuous">
+            <xsd:annotation>
+               <xsd:documentation>The abstract supertype of all floating point properties.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="cross section absorption">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="current density">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Darcy flow coefficient">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="data transmission speed">
+            <xsd:annotation>
+               <xsd:documentation>used primarily for computer transmission rates.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="delta temperature">
+            <xsd:annotation>
+               <xsd:documentation>Delta temperature refers to temperature differences. For non-zero offset temperature scales, Fahrenheit and Celsius, the conversion formulas are
+               different than for absolute temperatures.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="density">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="depth">
+            <xsd:annotation>
+               <xsd:documentation>The perpendicular measurement downward from a surface. Also, the direct linear measurement from the point of viewing usually from front to
+               back.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="diffusion coefficient">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="digital storage">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="dimensionless">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity is the ratio of two dimensional quantities. The quantity types are not apparent from the basic dimensionless class, but
+               may be apparent in variations - such as area per area, volume per volume, or mass per mass.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="dip">
+            <xsd:annotation>
+               <xsd:documentation>In the azimuth direction, Angle between an horizon plane and an estimated plane on a local area of the interface.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="discrete">
+            <xsd:annotation>
+               <xsd:documentation>The abstract supertype of all integer properties.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="dose equivalent">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="dose equivalent rate">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="dynamic viscosity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electric charge">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electric conductance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electric current">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electric dipole moment">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electric field strength">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electric polarization">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electric potential">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electrical resistivity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electrochemical equivalent">
+            <xsd:annotation>
+               <xsd:documentation>An electrochemical equivalent differs from molarity in that the valence (oxidation reduction potential) of the element is also
+               considered.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="electromagnetic moment">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="energy length per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="energy length per time area temperature">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="energy per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="energy per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="equivalent per mass">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="equivalent per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="exposure (radioactivity)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="fluid volume">
+            <xsd:annotation>
+               <xsd:documentation>Volume of fluid</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="force">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="force area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="force length per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="force per force">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity where the basis of the ratio is force.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="force per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="force per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="formation volume factor">
+            <xsd:annotation>
+               <xsd:documentation>Ratio of volumes at subsurface and surface conditions</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="frequency">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="frequency interval">
+            <xsd:annotation>
+               <xsd:documentation>An octave is a doubling of a frquency.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="gamma ray API unit">
+            <xsd:annotation>
+               <xsd:documentation>This class is defined by the API, and is used for units of gamma ray log response.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="heat capacity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="heat flow rate">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="heat transfer coefficient">
+            <xsd:annotation>
+               <xsd:documentation>PRESSURE PER VELOCITY PER AREA</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="illuminance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="index">
+            <xsd:annotation>
+               <xsd:documentation>Serial ordering</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="irradiance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="isothermal compressibility">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kinematic viscosity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Lambda Rho">
+            <xsd:annotation>
+               <xsd:documentation>Product of Lame constant and density, LR</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Lame constant">
+            <xsd:annotation>
+               <xsd:documentation>Lame constant, Lambda</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="length per length">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity where the basis of the ratio is length.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="length per temperature">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="length per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="level of power intensity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="light exposure">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="linear thermal expansion">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="luminance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="luminous efficacy">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="luminous flux">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="luminous intensity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="magnetic dipole moment">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="magnetic field strength">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="magnetic flux">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="magnetic induction">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="magnetic permeability">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="magnetic vector potential">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass">
+            <xsd:annotation>
+               <xsd:documentation>M/L2T</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass attenuation coefficient">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass concentration">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity where the basis of the ratio is mass.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass flow rate">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass per energy">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass per length">
+            <xsd:annotation>
+               <xsd:documentation>M /L4T</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass per time per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass per time per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mass per volume per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mobility">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="modulus of compression">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="molar concentration">
+            <xsd:annotation>
+               <xsd:documentation>molar concentration of a substance.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="molar heat capacity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="molar volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mole per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mole per time">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mole per time per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="moment of force">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="moment of inertia">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="moment of section">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="momentum">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Mu Rho">
+            <xsd:annotation>
+               <xsd:documentation>Product of Shear modulus and density, MR</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="net to gross ratio">
+            <xsd:annotation>
+               <xsd:documentation>Ratio of net rock volume to gross rock volume, NTG</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="neutron API unit">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="nonDarcy flow coefficient">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="operations per time">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="parachor">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="per electric potential">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="per force">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="per mass">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="permeability length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="permeability rock">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="permeability thickness">
+            <xsd:annotation>
+               <xsd:documentation>Product of permeability and thickness</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="permeance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="permittivity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pH">
+            <xsd:annotation>
+               <xsd:documentation>The pH is a class that measures the hydrogen ion concentration (acidity).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="plane angle">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Poisson ratio">
+            <xsd:annotation>
+               <xsd:documentation>Poisson's ratio, Sigma</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pore volume">
+            <xsd:annotation>
+               <xsd:documentation>Volume of the Pore Space of the Rock</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="porosity">
+            <xsd:annotation>
+               <xsd:documentation>porosity</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="potential difference per power drop">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="power">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="power per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pressure">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pressure per time">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pressure squared">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pressure squared per force time per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pressure time per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="productivity index">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="property multiplier">
+            <xsd:annotation>
+               <xsd:documentation>Unitless multiplier to apply to any property</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="quantity">
+            <xsd:annotation>
+               <xsd:documentation>The abstract supertype of all floating point properties with a unit of measure.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="quantity of light">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="radiance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="radiant intensity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="relative permeability">
+            <xsd:annotation>
+               <xsd:documentation>Ratio of phase permeability, which is a function of saturation, to the rock permeability</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="relative power">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity where the basis of the ratio is power.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="relative time">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity where the basis of the ratio is time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="reluctance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="resistance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="resistivity per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RESQML root property">
+            <xsd:annotation>
+               <xsd:documentation>The abstract supertype of all properties. This property does not have a parent.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Rock Impedance">
+            <xsd:annotation>
+               <xsd:documentation>Acoustic impedence, Ip, Is</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="rock permeability">
+            <xsd:annotation>
+               <xsd:documentation>See "permeability rock"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="rock volume">
+            <xsd:annotation>
+               <xsd:documentation>Rock Volume</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="saturation">
+            <xsd:annotation>
+               <xsd:documentation>Ratio of phase fluid volume to pore volume</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="second moment of area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="shear modulus">
+            <xsd:annotation>
+               <xsd:documentation>Shear modulus, Mu</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="solid angle">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="solution gas-oil ratio">
+            <xsd:annotation>
+               <xsd:documentation>Ratio of solution gas volume to oil volume at reservoir conditions</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="specific activity (of radioactivity)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="specific energy">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="specific heat capacity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="specific productivity index">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="specific volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="surface density">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="temperature per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="temperature per time">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="thermal conductance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="thermal conductivity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="thermal diffusivity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="thermal insulance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="thermal resistance">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="thermodynamic temperature">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="thickness">
+            <xsd:annotation>
+               <xsd:documentation>Distance measured in a volume between two surfaces ( e.G. Geological Top Boundary and Geological Bottom Boundary of a Geological
+               unit).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="time">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="time per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="time per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="transmissibility">
+            <xsd:annotation>
+               <xsd:documentation>Volumetric flux per unit area per unit pressure drop for unit viscosity fluid</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="unit productivity index">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="unitless">
+            <xsd:annotation>
+               <xsd:documentation>The abstract supertype of all floating point properties with NO unit of measure. In order to allow the unit information to be required for all
+               continuous properties, the special unit of measure of "NONE" has been assigned to all children of this class. In addition, the special dimensional class of "0" has
+               been assigned to all children of this class.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="vapor oil-gas ratio">
+            <xsd:annotation>
+               <xsd:documentation>Ratio of oil vapor volume to gas volume at reservoir conditions</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="velocity">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume flow rate">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume length per time">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume per time per area">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume per time per length">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume per time per time">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume per time per volume">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volume per volume">
+            <xsd:annotation>
+               <xsd:documentation>A dimensionless quantity where the basis of the ratio is volume.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volumetric heat transfer coefficient">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="volumetric thermal expansion">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="work">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Young modulus">
+            <xsd:annotation>
+               <xsd:documentation>Young's modulus, E</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="ResqmlUnitOfMeasure">
+      <xsd:annotation>
+         <xsd:documentation>Allowed units of measure. The list of standard values is contained in the RESQML enumValuesResqml.xml file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="NONE">
+            <xsd:annotation>
+               <xsd:documentation>This is a special unit for use with "unitless" properties. This is not appropriate for "dimensionless" properties. Supporting NONE allows all
+               "continuous" to have a mandatory unit of measure.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/H">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/N">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/Pa">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1/V">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="A">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="A.m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="A/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="A/m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="B">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="B/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="B/O">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="bps">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Bq">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Bq/kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="byte">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C.m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C/kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C/m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="cd">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="cd/m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="eq">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="eq/kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="eq/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Euc">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="F">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="F/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="gAPI">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Gy">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="H">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="H/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Hz">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J/K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J/kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J/kg.K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J/mol">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J/mol.K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K.m2/W">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K/W">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg.m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg.m/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg.m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg/J">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg/m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg/m2.s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg/m4">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="kg/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="lm">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="lm.s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="lm/W">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="lx">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="lx.s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m/K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m/s2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m2/kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m2/mol">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m2/Pa.s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m2/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3/J">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3/kg">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3/mol">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3/Pa.s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3/Pa2.s2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m3/s2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m4">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="m4/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mol">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mol/m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mol/m2.s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mol/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="mol/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N.m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N4/kg.m7">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="nAPI">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="O">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ohm">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ohm.m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ohm/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pa">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pa.s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pa.s/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pa.s/m6">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pa/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pa/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pa2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="pH">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="rad">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="rad/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="rad/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="rad/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="rad/s2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="s/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="s/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="sr">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sv">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sv/s">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="T">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="V">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="V/B">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="V/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/m.K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/m2">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/m2.K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/m2.sr">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/m3">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/m3.K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="W/sr">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wb">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wb.m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wb/m">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="VerticalDirection">
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="up">
+            <xsd:annotation>
+               <xsd:documentation>Values are positive when moving away from the center of the Earth.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="down">
+            <xsd:annotation>
+               <xsd:documentation>Values are positive when moving toward the center of the Earth.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="VerticalTimeUnit">
+      <xsd:restriction base="resqml:abstractTypeEnum">
+         <xsd:enumeration value="s">
+            <xsd:annotation>
+               <xsd:documentation>Second. This is only valid when the domain is time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ms">
+            <xsd:annotation>
+               <xsd:documentation>Milliseconds. This is only valid when the domain is time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

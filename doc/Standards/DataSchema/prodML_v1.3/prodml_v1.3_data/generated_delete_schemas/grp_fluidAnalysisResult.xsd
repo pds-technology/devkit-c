@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>The collection of information items for a fluid sample analysis result.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_fluidResultDataQuality.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultComposition.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultSaturationTest.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultConstantCompositionExpansionTest.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultConstantVolumeDepletionTest.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultDifferentialLiberationTest.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultJCurveTest.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultTransportPropertiesTest.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultSeparatorTest.xsd" />
+   <xsd:include schemaLocation="cs_fluidResultContaminant.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_fluidAnalysisResult">
+      <xsd:sequence>
+         <xsd:element name="transferPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="transferTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="reservoirPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="reservoirTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="saturationPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="producingGORStd" type="prodml:standardVolumePerStandardVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="oilAPIGravityMeasured" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="oilAPIGravityCorrected" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasGravityMeasured" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasGravityCorrected" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="h2oGravityMeasured" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="h2oGravityCorrected" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="h2oSalinity" type="prodml:massConcentrationMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="aromaticsWeightPercent" type="prodml:massConcentrationMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="asphaltenesWeightPercent" type="prodml:massConcentrationMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="napthenesWeightPercent" type="prodml:massConcentrationMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parafinsWeightPercent" type="prodml:massConcentrationMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="standardPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The definition of standard pressure for all elements which end in "Std".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="standardTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The definition of standard temperature for all elements which end in "Std".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="eosMOdel" type="prodml:EosModelKind" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="analysisDescription" type="prodml:descriptionString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="analysisPurpose" type="prodml:descriptionString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fluidDataQuality" type="prodml:cs_fluidResultDataQuality" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fluidSampleComposition" type="prodml:cs_fluidResultComposition" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="saturationTest" type="prodml:cs_fluidResultSaturationTest" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="constantCompositionExpansionTest" type="prodml:cs_fluidResultConstantCompositionExpansionTest" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="constantVolumeDepletionTest" type="prodml:cs_fluidResultConstantVolumeDepletionTest" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="differentialLiberationTest" type="prodml:cs_fluidResultDifferentialLiberationTest" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="jCurveTest" type="prodml:cs_fluidResultJCurveTest" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="transportPropertiesTest" type="prodml:cs_fluidResultTransportPropertiesTest" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="separatorTest" type="prodml:cs_fluidResultSeparatorTest" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="fluidSampleContaminant" type="prodml:cs_fluidResultContaminant" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

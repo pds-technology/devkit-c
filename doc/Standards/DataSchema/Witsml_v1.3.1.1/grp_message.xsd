@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_message">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML Message object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="objectReference" type="witsml:refObjectString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A reference to an object that is defined within the 
+					context of a wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="subObjectReference" type="witsml:refObjectString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A reference to an sub-object that is defined within the 
+					context of the object referenced by objectReference.
+					This should only refer to recurring components of a growing object.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTim" type="witsml:timestamp" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Date and time the information is related to.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="activityCode" type="witsml:ActivityCode" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A code used to define rig activity.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="detailActivity" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Custom string to further define an activity.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="md" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Along hole measured depth of measurement from the drill datum.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdBit" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Along hole measured depth of measurement from the drill datum.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="typeMessage" type="witsml:MessageType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Message type.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="messageText" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Message text. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="param" type="witsml:indexedObject" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Any extra numeric data.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="severity" type="witsml:MessageSeverity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Severity of incident.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="warnProbability" type="witsml:MessageProbability" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A warning probability (applies to warning).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!--                                                         -->
+</xsd:schema>

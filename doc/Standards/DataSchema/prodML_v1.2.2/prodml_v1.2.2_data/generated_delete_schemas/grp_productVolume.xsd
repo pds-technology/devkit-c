@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_businessAssociate.xsd" />
+   <xsd:include schemaLocation="cs_geographicContext.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeBusinessUnit.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeFacility.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_productVolume">
+      <xsd:annotation>
+         <xsd:documentation>The non-contextual content of a WITSML Product Volume object.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of
+               facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The name and type of a facility whose context is relevant to the represented installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="kind" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of report.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="periodKind" type="prodml:ReportingPeriod" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of period that is being reported. This value must be consistent with the reporting start and end values.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The reporting period. If one value from a pair are given the both values must be given.</xsd:documentation>
+            </xsd:annotation>
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The beginning date and time that the report represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The ending date and time that the report represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="dateStart" type="prodml:date" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The beginning date that the report represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="dateEnd" type="prodml:date" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The ending date that the report represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:element name="month" type="prodml:calendarMonth" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The ending date that the report represents.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="dTimMin" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data
+               should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimMax" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data
+               should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimCurrent" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The definition of the "current time" index for this report. The current time index is a server query parameter which requests the selection of a
+               single node from a recurring "period" set (e.g., the data related to one point in a time series). For the purposes of this parameter, a "period" without any time
+               data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on "Special Handling" of growing objects for a
+               description of the behavior related to this parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="calculationMethod" type="prodml:CalculationMethod" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The calculation method for for "filling in" values in an indexed set. If not given, the default is that no calculations are performed to create
+               data where none exists within an existing set. This is not to be construed as to prevent concepts such as simulation and forcasting from being applied in order to
+               create a new set. This is a server query parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="operator" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The operator of the facilities in the report.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="title" type="prodml:nameStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The tile of the report if different from the name of the report.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="geographicContext" type="prodml:cs_geographicContext" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The geographic context of the report.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="issueDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date that the report was issued.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="issuedBy" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The person or company that issued the report. This may contain the role of the person or company within the context of the
+               report.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="approvalDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date that the report was approved.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="approver" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The person or company that approved the report. This may contain the role of the person or company within the context of the
+               report.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="productFlowModel" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Product Flow Model for the overall installation. This model represents all Product Flow Units referenced within this
+               report.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="standardTempPres" type="prodml:StandardCondition" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the default standard temperature and pressure to which all volumes, densities and flow rates in this report have been corrected. The
+               default may be locally overridden for an individual value. If not specified, then the conditions must be presumed to be ambient conditions (i.e., uncorrected)
+               unless otherwise specified at a local level.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="businessUnit" type="prodml:cs_productVolumeBusinessUnit" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A business unit and related account or ownership share information.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facility" type="prodml:cs_productVolumeFacility" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A facility for which product information is being reported.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

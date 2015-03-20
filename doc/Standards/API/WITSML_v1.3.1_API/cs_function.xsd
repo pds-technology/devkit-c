@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.witsml.org/api/131" 
+	xmlns=          "http://www.witsml.org/api/131" 
+	xmlns:witsml=   "http://www.witsml.org/api/131"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>Defines a WITSML function supported by this 
+		Server/Publisher (WMLS_GetFromStore, WMLP_Subscribe, etc),
+		the WITSML data objects supported by the function, and the version 
+		of API Capability of the function.
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:complexType name="cs_function">
+		<xsd:sequence>
+			<xsd:element name="dataObject" type="witsml:str64" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A WITSML data object (well, wellbore, etc) 
+					which is supported by this Server/Publisher for this function. 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="witsml:str16" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Name of function, (WMLS_GetFromStore, etc)
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>

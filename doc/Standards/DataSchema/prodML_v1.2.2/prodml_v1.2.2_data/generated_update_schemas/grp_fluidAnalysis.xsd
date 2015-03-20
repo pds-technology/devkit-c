@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>The collection of information items for a fluid sample. Note that a fluid sample can come from many sources, not just from a
+      well/wellbore.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_fluidAnalysis">
+      <xsd:sequence>
+         <xsd:choice minOccurs="0">
+            <xsd:element name="userAnalysisKind" type="prodml:FluidAnalysisKind" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="laboratorybAnalysisKind" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="analysisdDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="applicationName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the application that was run by the user.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="applicationVersion" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The version of the application that was run by the user.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="analysisCompany" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="personName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the analyst or user who is responsible for the results.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="reportIdentifier" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="reportDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="reportLocation" type="prodml:descriptionString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>xxxxxxxxxxxxxxxx</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

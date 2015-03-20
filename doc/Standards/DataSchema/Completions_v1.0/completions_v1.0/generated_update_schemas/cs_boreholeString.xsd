@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--         <xsd:include schemaLocation="cs_boreholeFlowInterval.xsd"/>
+ -->
+   <xsd:include schemaLocation="cs_stringAccessory.xsd" />
+   <xsd:include schemaLocation="cs_borehole.xsd" />
+   <xsd:include schemaLocation="cs_geologyFeature.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:complexType name="cs_boreholeString">
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="nameWellbore" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Human recognizable context for the downhole equipment.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="name" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the borehole String</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="borehole" type="witsml:cs_borehole" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The collection of boreholes</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="geologyFeature" type="witsml:cs_geologyFeature" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Geology feature information</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="accessories" type="witsml:cs_stringAccessory" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The borehole accessories.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="uidWellbore" type="witsml:uidParentString" use="required">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the wellbore.</xsd:documentation>
+            <xsd:appinfo>write-constraint:@use="optional"</xsd:appinfo>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attributeGroup ref="witsml:attgrp_objectUid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the borehole string.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

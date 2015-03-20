@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeSeriesDatas
+	xmlns="http://www.prodml.org/schemas/1series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series  ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_timeSeriesData.xsd"
+	version="1.2.0.0(PRODML)">
+	<!-- Time series value status attribute usage example. -->
+	<timeSeriesData>
+		<name>Production Header outlet pressure</name>
+		<key keyword="asset identifier">prodml://aramco.com/manifold(HDR01)</key>
+		<key keyword="flow">production</key>
+		<key keyword="product">oil</key>
+		<key keyword="qualifier">measured</key>
+		<unit>psi</unit>
+		<measureClass>pressure</measureClass>
+		<doubleValue dTim="2012-02-08T13:00:00+03:00">747.7316</doubleValue>
+		<doubleValue dTim="2012-02-08T13:01:01+03:00">746.7316</doubleValue>
+		<doubleValue dTim="2012-02-08T13:02:02+03:00">745.7316</doubleValue>
+		<doubleValue dTim="2012-02-08T13:03:03+03:00">746.0003</doubleValue>
+		<doubleValue dTim="2012-02-08T13:04:04+03:00">748.613</doubleValue>
+	</timeSeriesData>
+</timeSeriesDatas>

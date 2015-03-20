@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_calibrationParameter.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_calibration">
+		<xsd:annotation>
+			<xsd:documentation>Calibration parameters vary from vendor to vendor, depending 
+			on the calibration method being used. This is a general type that allows a calibration 
+			date, business associate, and many  name/value pairs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="dTimCalibration" type="witsml:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date of the calibration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="calibratedBy" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The business associate that performed the calibration.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="calibrationProtocol" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>This may be a standard protocol, or a software application.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parameter" type="witsml:cs_calibrationParameter" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Attribute name is the name of the parameter. Optional attribute 
+					uom is the unit of measure of the parameter. The value of the element is the value 
+					of the parameter. Note that a string value may appear as a parameter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="remarks" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Any remarks that may be useful, regarding the calibration information.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the calibration.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

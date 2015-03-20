@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="grp_resqmlTraceabilityDublinCore.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlRefTimeStep.xsd"/>
+	<xsd:include schemaLocation="cs_extensionAny.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlExtensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uidGlobal.xsd"/>
+	<xsd:include schemaLocation="typ_dataTypesResqml.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_resqmlAbstractPropertyValues" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>The abstract supertype of information specific to one property for an object+attachment.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="resqml:grp_resqmlTraceabilityDublinCore" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The Dublin Core elements used for traceability.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:choice>
+				<xsd:element name="resqmlKind" type="resqml:nameString" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The standard RESQML property which represents these values.
+						For properties which have a unit of measure, this kind will directly or indirectly specify
+						the single unit of measure which must be utilized for the property values.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="localKind" type="resqml:refGlobalNameString" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>A pointer to the locally defined property which represents these values. 
+						Note that all local kinds must directly or indirectly be specialized from a standard RESQML kind.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="propertyAttachment" type="resqml:PropertyAttachment" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines how the data values are associated with the object.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="timestamp" type="resqml:timestamp" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The date and time related to the property.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="timeStep" type="resqml:cs_resqmlRefTimeStep" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The date and time related to the property.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="extensionAny" type="resqml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="resqml:cs_resqmlExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="resqml:attgrp_uidGlobal">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.
+				This must be a globally unique identifier.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

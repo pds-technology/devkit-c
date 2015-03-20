@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:import namespace="http://www.energistics.org/schemas/abstract"
+		     schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd"/>
+	<!--                                                         -->
+	<xsd:include schemaLocation="grp_timeSeriesStatistic.xsd"/>
+	<xsd:include schemaLocation="cs_commonData.xsd"/>
+	<xsd:include schemaLocation="cs_customData.xsd"/>
+	<xsd:include schemaLocation="cs_documentInfo.xsd"/>
+	<xsd:include schemaLocation="attgrp_objectUid.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation> WITSML - A view of the time series data which provides derived Statistics about a window of the time series.
+		Since this information is derived, it cannot be added, updated or deleted. </xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:element name="timeSeriesStatistics" type="prodml:obj_timeSeriesStatistics" substitutionGroup="abs:abstractDataObject">
+		<xsd:annotation>
+			<xsd:documentation>The WITSML API mandated plural root element which allows 
+			multiple singular objects to be sent. The plural name is formed by adding
+			an "s" to the singular name.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                                                         -->
+	<xsd:complexType name="obj_timeSeriesStatistics">
+		<xsd:complexContent>
+			<xsd:extension base="abs:abstractObject">
+				<xsd:sequence>
+					<xsd:element name="documentInfo" type="prodml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Information about the XML message instance.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="timeSeriesStatistic" type="prodml:obj_timeSeriesStatistic" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Statistics about a single range of time.
+							This is a VIEW of the time series data and represents derived information about that series.
+							As such, it is not persisted and cannot be added, updated or deleted from a persistent server.
+							The statistics view uses the same identity (including uid) as the time series data object.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="prodml:schemaVersionStringProdml" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Data object schema version.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="obj_timeSeriesStatistic">
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the time series.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="prodml:grp_timeSeriesStatistic" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual elements for the statistics about values within a time range.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="prodml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+				objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="prodml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_objectUid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the time series.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

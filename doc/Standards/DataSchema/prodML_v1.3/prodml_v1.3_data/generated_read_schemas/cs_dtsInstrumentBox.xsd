@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_nameTag.xsd" />
+   <xsd:include schemaLocation="cs_dtsInstrumentBoxCalibration.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>DTS Instrument Box Object</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:complexType name="cs_dtsInstrumentBox">
+      <xsd:annotation>
+         <xsd:documentation>The instrument box used for distributed temperature surveys</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A name for the instrument box. This can be used to access the instrument box.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="manufacturer" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The ultimate manufacturer of the instrument box.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="manufacturingDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date the manufacturing of the instrument box was completed.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="type" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of instrument box used.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nameTag" type="prodml:cs_nameTag" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of
+               information. This structure just identifies the tag and does not describe the contents.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="softwareVersion" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The version of the software installed in the instrument box.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="factoryCalibration" type="prodml:cs_dtsInstrumentBoxCalibration" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Information about the calibration of the instrument box that was performed. This includes factory calibrations before shipping, and bench
+               calibrations. This does not include calibrations made in preparation for taking measurements.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="internalOvenLocationNear" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Near distance of the oven from the beginning of the fiber.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="internalOvenLocationFar" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Far distance of the oven from the beginning of the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="ovenSetPoint" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature of the oven.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testCable" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The cable used to test the instrument box.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="offset" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The offset setting applied to the instrument box based on the factory or bench calibration.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="differentialLossSetting" type="prodml:generalMeasureType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The power loss over the length of the cable.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parameter" type="prodml:indexedObject" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Additional parameters to define the instrument box as a piece of equipment. These should not be parameters to define the installation or use of
+               the box in the wellbore, or other system. This element should be used only if an appropriate parameter is not available as an element, or in the calibration
+               operation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

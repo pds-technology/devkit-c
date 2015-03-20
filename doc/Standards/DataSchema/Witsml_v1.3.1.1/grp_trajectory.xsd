@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_trajectoryStation.xsd"/>
+	<xsd:include schemaLocation="cs_refWellboreTrajectory.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_trajectory">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML Trajectory object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="objectGrowing" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Whether or not the trajectory is growing. 
+					True ("true" or "1") indicates the that the trajectory is still growing 
+					in size (that is, trajectoryStation values are still being added).
+					For example, it may be connected to a realtime stream.
+					False ("false" or "0") indicates that the trajectory is 
+					closed (that is, no further trajectoryStation values will be added).
+					Not given indicates that the status of the trajectory is not known.
+					This value is only relevant within the context of a server.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parentTrajectory" type="witsml:cs_refWellboreTrajectory" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>If a trajectory is tied into another trajectory, 
+					a pointer to the parent trajectory.  
+					The trajectory may be in another wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimTrajStart" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Start date and time of trajectory station measurements.
+					Note that this is NOT a server query parameter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimTrajEnd" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>End date and time of trajectory station measurements.
+					Note that this is NOT a server query parameter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdMn" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Minimum measured depth of trajectory.
+					This is a query parameter. It's value will be populated by the server
+					to reflect the values of md in the returned trajectoryStations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdMx" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Maximum measured depth of trajectory.
+					This is a query parameter. It's value will be populated by the server
+					to reflect the values of md in the returned trajectoryStations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="serviceCompany" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Name of contractor who provided the service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="magDeclUsed" type="witsml:planeAngleMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Magnetic declination used to correct a magnetic survey. 
+					Starting value if stations have individual values. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="gridCorUsed" type="witsml:planeAngleMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Grid correction used to correct a survey. 
+					Starting value if stations have individual values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="aziVertSect" type="witsml:planeAngleMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Azimuth used for vertical section plot/computations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dispNsVertSectOrig" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Origin north-south used for vertical section plot/computations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dispEwVertSectOrig" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Origin east-west used for vertical section plot/computations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="definitive" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True ("true" or "1") indicates that this trajectory is definitive for 
+					this wellbore. False ("false" or "0") or not given indicates otherwise.
+					There can only be one trajectory per wellbore with definitive=true and it
+					must define the geometry of the whole wellbore (surface to bottom).
+					The definitive trajectory may represent a composite of information in many
+					other trajectories. A query requesting a subset of the possible information can
+					provide a simplistic view of the geometry of the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="memory" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Is trajectory a result of a memory dump from a tool?  
+					Values are "true" (or "1") and "false" (or "0").</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="finalTraj" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Is trajectory a final or intermediate/preliminary?  
+					Values are "true" (or "1") and "false" (or "0").</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="aziRef" type="witsml:AziRef" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Specifies the definition of north.
+					While this is optional because of legacy data, it is strongly recommended 
+					that this always be specified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="trajectoryStation" type="witsml:cs_trajectoryStation" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Container element for trajectory station elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

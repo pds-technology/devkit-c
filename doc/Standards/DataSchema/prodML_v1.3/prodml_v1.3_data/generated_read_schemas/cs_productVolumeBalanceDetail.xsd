@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productVolumeBalanceEvent.xsd" />
+   <xsd:include schemaLocation="cs_volumeValue.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeComponentContent.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumeBalanceDetail">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Volume Balance Detail Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="owner" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to the business unit which owns the product.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sourceUnit" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Points to the business unit from which the product originated.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="share" type="prodml:volumePerVolumeMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The owner's share of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="accountNumber" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>An account identifier for the balance.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="event" type="prodml:cs_productVolumeBalanceEvent" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A dated event related to the balance.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="volumeValue" type="prodml:cs_volumeValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The volume of the fluid, possibly corrected to specific conditions of temperature and pressure. Different volumes may be defined at different
+               conditions but they should all represent the same mass of material.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sampleAnalysisResult" type="prodml:refNameString" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to a fluid sample analysis result object that is relevant to the balance. This sample may have been acquired previous to or after this
+               period and is used for determining the allocated characteristics.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="componentContent" type="prodml:cs_productVolumeComponentContent" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The relative amount of a component product in the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

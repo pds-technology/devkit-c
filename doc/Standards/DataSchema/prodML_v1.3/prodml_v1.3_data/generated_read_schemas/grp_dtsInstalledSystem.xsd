@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_catalogProdml.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_dtsCalibration.xsd" />
+   <xsd:include schemaLocation="cs_instrument.xsd" />
+   <xsd:group name="grp_dtsInstalledSystem">
+      <xsd:annotation>
+         <xsd:documentation>The group of elements corresponding to a DTS installed system.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="dateMin" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special
+               Handling" of growing objects for a description of the behavior related to this parameter.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dateMax" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="opticalPathLength" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The length of the fiber installed in the wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="opticalBudget" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Total light budget available for the installation. This is generally measured in decibels, and indicates the total power loss for two-way travel
+               of the light in the installed fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="opticalPathRef" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Reference to optical path.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="instrumentBoxRef" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Reference to instrument box.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Comment about this installed system.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dtsCalibration" type="prodml:cs_dtsCalibration" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is a general type that allows a
+               calibration date, business associate, and many name/value pairs.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

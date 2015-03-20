@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>This file defines a set of standard POSC units of measure 
+		for various quantity classes. This units list captures information contained 
+		in the POSC units dictionary at http://www.posc.org/refs/poscUnits20.xml. 
+		The enumerated lists do not contain any deprecated units. </xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_baseType.xsd"/>
+	<!--                                                         -->
+	<!-- ======================================================= -->
+	<!-- ================= MEASURE TYPES ======================= -->
+	<!-- ======================================================= -->
+	<xsd:simpleType name="FrequencyUom">
+		<xsd:annotation>
+			<xsd:appinfo>Added-in-version=Completions1.0</xsd:appinfo>
+		</xsd:annotation>
+	    <xsd:restriction base="witsml:abstractUomEnum">
+    		<xsd:enumeration value="Hz"/>
+    		<xsd:enumeration value="c/s"/>
+    		<xsd:enumeration value="GHz"/>
+    		<xsd:enumeration value="kHz"/>
+    		<xsd:enumeration value="mHz"/>
+    		<xsd:enumeration value="MHz"/>
+    		<xsd:enumeration value="uHz"/>
+    		<xsd:enumeration value="1/s"/>
+    		<xsd:enumeration value="1/a"/>
+    		<xsd:enumeration value="1/d"/>
+    		<xsd:enumeration value="1/h"/>
+    		<xsd:enumeration value="1/min"/>
+    		<xsd:enumeration value="1/wk"/>
+    		<xsd:enumeration value="kEuc/s"/>
+  		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ElectricResistanceUom">
+		<xsd:annotation>
+			<xsd:appinfo>Added-in-version=Completions1.0</xsd:appinfo>
+		</xsd:annotation>
+	    <xsd:restriction base="witsml:abstractUomEnum">
+			<xsd:enumeration value="ohm"/>
+			<xsd:enumeration value="Gohm"/>
+			<xsd:enumeration value="Mohm"/>
+			<xsd:enumeration value="Tohm"/>
+			<xsd:enumeration value="kohm"/>
+			<xsd:enumeration value="mohm"/>
+			<xsd:enumeration value="nohm"/>
+			<xsd:enumeration value="uohm"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ResistivityPerLengthUom">
+		<xsd:annotation>
+			<xsd:appinfo>Added-in-version=Completions1.0</xsd:appinfo>
+		</xsd:annotation>
+	    <xsd:restriction base="witsml:abstractUomEnum">
+			<xsd:enumeration value="ohm/m"/>
+			<xsd:enumeration value="uohm/ft"/>
+			<xsd:enumeration value="uohm/m"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

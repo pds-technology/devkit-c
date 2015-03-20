@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>This represents a single row in the table of results of a Transport Properties test. It is used in Fluid Sample report.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_fluidResultCommonTestGroup.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_fluidResultTransportTestStep">
+      <xsd:sequence>
+         <xsd:element name="stepNumber" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The stepNumber represents a row in the table.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="stepTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="1" maxOccurs="1" />
+         <xsd:element name="stepPressure" type="prodml:pressureMeasure" minOccurs="1" maxOccurs="1" />
+         <xsd:choice>
+            <xsd:element name="bubblePointPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="retrogradeDewPointPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+         </xsd:choice>
+         <xsd:element name="dewPointPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="cloudPoint" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="pourPoint" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="oilMolecularWeight" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:choice>
+            <xsd:element name="oilAPIGravity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="oilSpecificGravity" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         </xsd:choice>
+         <xsd:element name="oilMassDensity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="oilCompressibility" type="prodml:compressibilityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="oilViscosity" type="prodml:dynamicViscosityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="oilThermalConductivity" type="prodml:thermalConductivityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasMolecularWeight" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasGravity" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasMassDensity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasZFactor" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasCompressibility" type="prodml:compressibilityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasViscosity" type="prodml:dynamicViscosityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasThermalConductivity" type="prodml:thermalConductivityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasHeatingValue" type="prodml:modulusOfCompressionMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:group ref="prodml:grp_fluidResultCommonTestGroup" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

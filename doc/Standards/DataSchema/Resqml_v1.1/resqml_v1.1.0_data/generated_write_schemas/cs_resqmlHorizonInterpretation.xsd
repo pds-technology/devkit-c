@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlAbstractFeatureInterpretation.xsd" />
+   <xsd:include schemaLocation="cs_resqmlGrid2dRepresentation.xsd" />
+   <xsd:include schemaLocation="cs_resqmlTriangulatedRepresentation.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPointSetRepresentation.xsd" />
+   <xsd:include schemaLocation="cs_resqmlHybridGridRepresentation.xsd" />
+   <xsd:include schemaLocation="cs_resqmlWellMarkerRepresentation.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlHorizonInterpretation">
+      <xsd:annotation>
+         <xsd:documentation>One interpretation of the geometry of a horizon. Multiple representations are supported but all representations must be either in time or in depth.
+         That is, a mixture of time and depth representations is not allowed. At least one representation is required. This type inherits the following items:
+         grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="resqml:cs_resqmlAbstractFeatureInterpretation">
+            <xsd:sequence>
+               <xsd:element name="grid2dRepresentation" type="resqml:cs_resqmlGrid2dRepresentation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>One 2D grid representation of this interpretation of the horizon. Each representation must represent the same opinion of the geometry for
+                     this interpretation. All representations must be either in time or in depth. That is, a mixture of time and depth representations is not
+                     allowed.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="triangulatedRepresentation" type="resqml:cs_resqmlTriangulatedRepresentation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>One triangulated mesh representation of this interpretation of the horizon. Each representation must represent the same opinion of the
+                     geometry for this interpretation. All representations must be either in time or in depth. That is, a mixture of time and depth representations is not
+                     allowed.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="pointSetRepresentation" type="resqml:cs_resqmlPointSetRepresentation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>One point set representation of this interpretation of the fault. Each representation must represent the same opinion of the geometry for
+                     this interpretation. All representations must be either in time or in depth. That is, a mixture of time and depth representations is not
+                     allowed.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="hybridGridRepresentation" type="resqml:cs_resqmlHybridGridRepresentation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>One point set representation of this interpretation of the fault. Each representation must represent the same opinion of the geometry for
+                     this interpretation. All representations must be either in time or in depth. That is, a mixture of time and depth representations is not
+                     allowed.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="wellMarkerRepresentation" type="resqml:cs_resqmlWellMarkerRepresentation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>One well marker representation of this interpretation of the fault. Each representation must represent the same opinion of the geometry for
+                     this interpretation. All representations must be either in time or in depth. That is, a mixture of time and depth representations is not
+                     allowed.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

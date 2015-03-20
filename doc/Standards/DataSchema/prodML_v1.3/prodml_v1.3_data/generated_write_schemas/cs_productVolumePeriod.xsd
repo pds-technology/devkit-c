@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_datedComment.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeComponentContent.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeBalanceSet.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeAlert.xsd" />
+   <xsd:include schemaLocation="grp_commonPropertiesProductVolume.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumePeriod">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Volume Period Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="kind" type="prodml:ReportingPeriod" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of period that is being reported. If not specified and a time is not given then the period is defined by the reporting
+               period.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A reporting period that is different from the overall report period. For example, a particular day within a monthly report. This period must
+               conform to the kind of interval. If one value from a pair are given then both values must be given.</xsd:documentation>
+            </xsd:annotation>
+            <xsd:element name="dTim" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The beginning date and time that the period represents.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="date" type="prodml:date" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>The day that the period represents.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:sequence>
+               <xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The beginning date and time that the period represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The ending date and time that the period represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:sequence>
+               <xsd:element name="dateStart" type="prodml:date" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The beginning date that the period represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="dateEnd" type="prodml:date" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The ending date that the period represents.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:choice>
+         <xsd:group ref="prodml:grp_commonPropertiesProductVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The properties whose existance is independent of a specific location in the hierarchy.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="componentContent" type="prodml:cs_productVolumeComponentContent" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The relative amount of a component product in the product stream.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="balanceSet" type="prodml:cs_productVolumeBalanceSet" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Provides the sales context for this period.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="alert" type="prodml:cs_productVolumeAlert" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>An indication of some sort of abnormal condition relative the values in this period.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:cs_datedComment" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A timestamped remark about the amounts.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the Product Volume Period.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

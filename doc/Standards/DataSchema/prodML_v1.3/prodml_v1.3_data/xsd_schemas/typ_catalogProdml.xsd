@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_baseTypeProdml.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>WITSML- Catalog of Value Constrainted Types.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:simpleType name="AddressKindEnum" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Kind of Address.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="AddressQualifier" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>What kind of email (or phone) is this? Is it a 
+			work phone? Or personal? Or is a permanent one?
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="BusinessUnitKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines a type of business unit.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="BalanceEventKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines a type of event related to a product balance.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="BalanceFlowPart" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines a subdivision of a flow related to the stock balance.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="BalanceDestinationType" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines a type of destination.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="CalculationMethod" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines the calculation methods available for "filling in" values in an indexed set.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ContactPreference" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The preferred method of contacting a business associate.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="CrewType" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The type of Production Operations personnel grouping.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="DataQuality">
+		<xsd:annotation>
+			<xsd:documentation>Defines the quality of data.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="EndpointQualifier" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The meaning of the endpoint for min/max query parameters 
+			on "growing objects".
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="EndpointQualifierInterval" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The meaning of the endpoint for a simple interval.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="EosModelKind">
+		<xsd:annotation>
+			<xsd:documentation>Defines the Kind of equation of state model.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FacilityParameter" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines kinds of facility parameters.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FiberMode" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The mode of a Distributed Temperature Survey (DTS) fiber.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FlowQualifier" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines qualifiers for type of flow.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FlowSubQualifier" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines a specialization of a flow qualifier.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FluidAnalysisKind">
+		<xsd:annotation>
+			<xsd:documentation>xxxxxxxxxxxxxxxxxxxxxxxxxx.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FluidComponent">
+		<xsd:annotation>
+			<xsd:documentation>Defines, in a mixture such as an oil or gas, either a single chemical component, a group of isomeric chemicals or a fraction.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FluidComponentKind">
+		<xsd:annotation>
+			<xsd:documentation>Defines, for a Fluid Component in a mixture such as an oil or gas, that the component is of a given kind.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FluidContaminant">
+		<xsd:annotation>
+			<xsd:documentation>Defines the kind of contaminating fluid present in a fluid sample.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FluidSampleKind">
+		<xsd:annotation>
+			<xsd:documentation>Defines the kind of fluid sample by reference to how it was obtained.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FluidSampleTestAcquisition">
+		<xsd:annotation>
+			<xsd:documentation>Defines the kind of test acquisition which resulted in the fluid sample.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="InjectionFluid" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Fluids which are injected into a well.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="InstalledFiberPoint" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The type of Distributed Temperature Survey (DTS) fiber point.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="OperationKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The type of Production Operation for which general comments can be defined.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="OTDRReason" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The reason an Optical Time Domain Reflectometry (OTDR) 
+			test was run within a  Distributed Temperature Survey (DTS).
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="PhoneType" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>One method of characterizing a phone number.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ProductFlowPortType" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines the types of Product Flow Ports.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReasonLost" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Reason for lost production.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReportingFacility" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A kind of facility (usage of equipment or material).
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReportingFlow" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Defines the types of flows for volume reports.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReportingPeriod" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A time period for a report.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReportingProduct">
+		<xsd:annotation>
+			<xsd:documentation>A kind of product in a fluid system.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReportingProperty" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The type of properties that can be measured at a port.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReportVersionStatus" final="#all"> 
+		<xsd:annotation>
+			<xsd:documentation>The status of a version of a report.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ReservoirFluidKind"> 
+		<xsd:annotation>
+			<xsd:documentation>Defines the reservoir hydrocarbon fluid in broad terms of its phase behaviour.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="SafetyType" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The type of safety issues for which a count can be defined.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="StandardCondition" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Combinations of standard temperature and pressure including "ambient".
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="StandardTempPress" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Combinations of standard temperature and pressure.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="TestReason" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A reason for running a well test.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="TimeSeriesKeyword" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>Keyword used for defining keyword-value pairs in a time series.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ValidationOperation" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A well test validation operation.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ValidationResult" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A well test validation result.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ValidationState" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>An overall state of all well test validation operations.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ValueStatus" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>An indicator of the quality of a value.
+			This is designed for a SCADA or OPC style of value stasus.
+			The token in parentheses are OPC's status string for the condition.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="VolumeReferenceKind">
+		<xsd:annotation>
+			<xsd:documentation>Defines the conditions at which the volume is measured.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="WellOperationMethod">
+		<xsd:annotation>
+			<xsd:documentation>A lift method for producing a well.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="WftFlowingIntervalKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>This is used to characterize the kind of connection between the 
+			wireline formation tester tool (WFT) and the formation via a section of wellbore. 
+			Since WFTs can have probes or pairs of packers, which have different geometries 
+			(respectively a point connection or a section of wellbore like a welltest),
+			it is necessary to state which kind if flowing for this station.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="WftEventKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>This is used to identify events occuring during the operation of a 
+			wireline formation tester (WFT) at a given station (ie a temporary fixed position 
+			in the wellbore where a series of tests will be made).  
+			This list could be expanded in future.  Two basic events are documented.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="WftStationKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>This is used to characterize the kind of station.  Two kinds are expected:
+			conventional where flow is occuring and being measured, and observation where there is 
+			no flow and merely pressure observation of the effect at this station of flow which is 
+			occuring at a different station.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="WftTestKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>This is used to characterise the kind of Test being carried out at a given time at 
+			a given station by a wireline formation tester (WFT). 
+			This list could be expanded in future.  Two basic tests are documented.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="WftTestResultKind" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>This is used to characterize the kind of test result. The kind of result typically 
+			represents a combination of test kind and analysis method applied.  
+			This list could be expanded in future.  Two illustrative result kinds are documented.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="WftTestDataRole" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>This is used to charaterize the test data being described.  A curve of data
+			may comprise one item of test data (by use of the curveSection element), in which case 
+			the wftTestDataRole is used to say what	that curve "means" in the test. 
+			Alternatively a single parameter may characterise the test in some manner (by use of the
+			parameter element), in which case the wftTestDataRole is used to say what that parameter
+			"means" in the test.   
+			This list could be expanded in future. Two illustrative WftTestDataRole kinds are documented.
+			The list of standard values is contained in the enumValuesProdml.xml file. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractTypeEnum"/>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="CableType" final="#all">
+		<xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="electrical-fiber-cable"/>
+			      <xsd:enumeration value="multi-fiber-cable"/>
+			      <xsd:enumeration value="single-fiber-cable"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ControlLineEncapsulationSize" final="#all">
+		    <xsd:restriction base="xsd:string">
+			      <xsd:enumeration value="11x11"/>
+			      <xsd:enumeration value="23x11"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ControlLineEncapsulationType" final="#all">
+		<xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="round"/>
+			      <xsd:enumeration value="square"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ControlLineMaterial" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="inc 825"/>
+			      <xsd:enumeration value="ss 316"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ControlLineSize" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="diameter 0.25 in weight 0.028 lb/ft"/>
+			      <xsd:enumeration value="diameter 0.25 in weight 0.035 lb/ft"/>
+			      <xsd:enumeration value="diameter 0.375 in weight 0.048 lb/ft"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FiberConnectorTypes" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="dry mate"/>
+			      <xsd:enumeration value="wet mate"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FiberEndType" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="angle polished"/>
+			      <xsd:enumeration value="flat polished"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="FiberSpliceTypes" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="cable splice"/>
+			      <xsd:enumeration value="h splice"/>
+			      <xsd:enumeration value="user-custom"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="InterpretationMnemonicType" final="#all">
+		    <xsd:restriction base="xsd:string">
+			      <xsd:enumeration value="facilityDistance,adjustedTemperature"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="InterpretationProcessingType" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="averaged"/>
+			      <xsd:enumeration value="denormalized"/>
+			      <xsd:enumeration value="depth-corrected"/>
+			      <xsd:enumeration value="manufacturer-generated"/>
+			      <xsd:enumeration value="temperature-shifted"/>
+			      <xsd:enumeration value="user-custom"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="InterpretationUnitType" final="#all">
+		    <xsd:restriction base="xsd:string">
+			      <xsd:enumeration value="m,degC"/>
+			      <xsd:enumeration value="ft,degF"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="InterventionConveyanceType" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="coiled tubing"/>
+			      <xsd:enumeration value="rod"/>
+			      <xsd:enumeration value="slickline"/>
+			      <xsd:enumeration value="wireline"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="MeasurementMnemonicType" final="#all">
+		    <xsd:restriction base="xsd:string">
+		       <xsd:enumeration value="fiberDistance,antistokes,stokes,reverseAntiStokes,reverseStokes,rayleigh1,rayleigh2,brillouinfrequency,loss,lossRatio,cumulativeExcessLoss,frequencyQualityMeasure,measurementUncertainty,brillouinAmplitude,opticalPathTemperature,uncalibratedTemperature1,uncalibratedTemperature2,"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="MeasurementUnitType" final="#all">
+		    <xsd:restriction base="xsd:string">
+		       <xsd:enumeration value="m,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degC,mW,degC,degC,degC,"/>
+		       <xsd:enumeration value="ft,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degF,mW,degF,degF,degF,"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="OpticalPathConfiguration" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="accurate single-ended/dual laser"/>
+			      <xsd:enumeration value="differential loss calibrated"/>
+			      <xsd:enumeration value="double-ended"/>
+			      <xsd:enumeration value="single-ended"/>
+		    </xsd:restriction>
+	 </xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="OTDRDirection" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="backward"/>
+			      <xsd:enumeration value="forward"/>
+		    </xsd:restriction>
+	 </xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="PathDefectTypes" final="#all">
+		    <xsd:annotation>
+			      <xsd:documentation>Types of fiber zone we wish to report.</xsd:documentation>
+		    </xsd:annotation>
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="darkened fiber"/>
+			      <xsd:enumeration value="other"/>
+		    </xsd:restriction>
+	 </xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="PermanentCableInstallationType" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="buried parallel to tubular"/>
+			      <xsd:enumeration value="clamped to tubular"/>
+			      <xsd:enumeration value="wrapped around tubular"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="TerminationType" final="#all">
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="looped back to instrument box"/>
+			      <xsd:enumeration value="termination at cable"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="TraceProcessingType" final="#all">
+		    <xsd:annotation>
+			      <xsd:documentation>Enum of the types of facility which we can map to for a given length of fiber measurement</xsd:documentation>
+		    </xsd:annotation>
+		    <xsd:restriction base="prodml:abstractTypeEnum">
+			      <xsd:enumeration value="as acquired"/>
+			      <xsd:enumeration value="recalibrated"/>
+		    </xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+</xsd:schema>
+

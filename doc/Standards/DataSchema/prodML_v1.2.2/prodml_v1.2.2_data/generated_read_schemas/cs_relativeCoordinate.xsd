@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_relativeCoordinate">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Flow Connected Node Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="x" type="prodml:lengthPerLengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the relative from-left-to-right location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as
+               viewed by the user.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="y" type="prodml:lengthPerLengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the relative from-top-to-bottom location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as
+               viewed by the user.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="z" type="prodml:lengthPerLengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the relative from-front-to-back location in a 3D system. The unrotated display origin (0,0) is the upper left-hand corner of the display
+               as viewed by the user. The "3D picture" may be rotated on the 2d display.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

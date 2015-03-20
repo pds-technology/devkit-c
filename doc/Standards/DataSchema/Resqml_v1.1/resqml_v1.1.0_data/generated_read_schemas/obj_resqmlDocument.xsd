@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:import namespace="http://www.energistics.org/schemas/abstract" schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd" />
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_documentInfo.xsd" />
+   <xsd:include schemaLocation="grp_resqmlDocument.xsd" />
+   <xsd:include schemaLocation="cs_customData.xsd" />
+   <xsd:include schemaLocation="attgrp_objectUid.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>RESQML document information that supports the WITSML standard.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:element name="resqmlDocuments" type="resqml:obj_resqmlDocuments" substitutionGroup="abs:abstractDataObject">
+      <xsd:annotation>
+         <xsd:documentation>The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an "s" to the
+         singular name.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <!--                                                         -->
+   <xsd:complexType name="obj_resqmlDocuments">
+      <xsd:complexContent>
+         <xsd:extension base="abs:abstractObject">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="documentInfo" type="resqml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about the XML message instance.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="resqmlDocument" type="resqml:obj_resqmlDocument" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about a single resqmlDocument.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="version" type="resqml:schemaVersionStringResqml" use="required">
+               <xsd:annotation>
+                  <xsd:documentation>Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are
+                  assumed by the document instance.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="obj_resqmlDocument">
+      <xsd:sequence minOccurs="0">
+         <xsd:group ref="resqml:grp_resqmlDocument" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The non-contextual elements for resqmlDocument information.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="customData" type="resqml:cs_customData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container element that can contain custom or user defined data elements.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_objectUid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the resqmlDocument. This should be a globally unique identifier.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

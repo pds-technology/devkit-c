@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="stylesheets/generic.xsl" type="text/xsl" media="screen"?>
+<!--
+        This example is non-normative and is only intended to demonstrate the type of data that can be exchanged.
+        It is totally artificial and is not intended to demonstrate best practices. 
+        The data values were generically assigned based on their underlying type.
+        Enumerated values were randomly chosen from the allowed list.
+        Most (but not necessarily all) elements with a uid attribute can recur.
+-->
+<resqmlDocuments 
+	xmlns="http://www.resqml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://www.resqml.org/schemas/1series ../xsd_schemas/obj_resqmlDocument.xsd" 
+	version="1.1.0.0(RESQML)">
+   <documentInfo>
+      <documentName namingSystem="ABCD">ABCD</documentName>
+      <documentAlias namingSystem="ABCD">ABCD</documentAlias>
+      <documentDate>2008-12-12T00:00:00Z</documentDate>
+      <documentClass namingSystem="ABCD">ABCD</documentClass>
+      <fileCreationInformation>
+         <fileCreationDate>2008-12-12T00:00:00Z</fileCreationDate>
+         <softwareName>ABCD</softwareName>
+         <fileCreator>ABCD</fileCreator>
+         <comment>ABCD</comment>
+      </fileCreationInformation>
+      <securityInformation uid="x21345abc">
+         <class>abcd</class>
+         <securitySystem>abcd</securitySystem>
+         <endDate>2008-12-12T00:00:00Z</endDate>
+         <comment>ABCD</comment>
+         <extensionNameValue uid="x21345abc">
+            <name>abcd</name>
+            <value uom="uom">ABCD</value>
+            <dataType>string</dataType>
+            <dTim>2008-12-12T00:00:00Z</dTim>
+            <md uom="m" datum="ABCD">12.345678</md>
+            <index>1234</index>
+            <measureClass>abcd</measureClass>
+            <description>ABCD</description>
+         </extensionNameValue>
+      </securityInformation>
+      <disclaimer>ABCD</disclaimer>
+      <auditTrail>
+         <event uid="x21345abc">
+            <eventDate>2008-12-12T00:00:00Z</eventDate>
+            <eventType>ABCD</eventType>
+            <responsibleParty>ABCD</responsibleParty>
+            <comment>ABCD</comment>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">12.345678</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </event>
+      </auditTrail>
+      <owner>ABCD</owner>
+      <comment>ABCD</comment>
+   </documentInfo>
+   <resqmlDocument uid="x21345abc">
+         <dc:title>ABCD</dc:title>
+         <dc:creator>ABCD</dc:creator>
+         <dc:subject>ABCD</dc:subject>
+         <dc:description>ABCD</dc:description>
+         <dc:publisher>ABCD</dc:publisher>
+         <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+         <dc:format>RESQML XML only</dc:format>
+
+	<areaOfInterest gml:id="aoi">
+		<gml:description>ABCD</gml:description>
+		<gml:descriptionReference owns="false" nilReason="ABCD" xlink:href="ABCD" xlink:role="ABCD" xlink:arcrole="ABCD" xlink:title="ABCD" xlink:show="none" xlink:actuate="onLoad"/>
+		<gml:identifier codeSpace="ABCD">ABCD</gml:identifier>
+		<gml:name codeSpace="ABCD">ABCD</gml:name>
+		<gml:boundedBy> <!-- profiled to be MANDATORY. -->
+			<gml:Envelope srsName="ABCD" srsDimension="1234" axisLabels="x y" uomLabels="m m">
+				<gml:lowerCorner>1.1 2.2</gml:lowerCorner>
+				<gml:upperCorner>3.3 4.4</gml:upperCorner>
+			</gml:Envelope>
+		</gml:boundedBy>
+		<outline>
+			<gml:Polygon gml:id="poly">
+				<gml:exterior>
+					<gml:LinearRing>
+						<gml:posList srsName="ABCD" srsDimension="1234" axisLabels="x y" uomLabels="m m">111 222  33 44  55 66 111 222</gml:posList>
+					</gml:LinearRing>
+				</gml:exterior>
+			</gml:Polygon>
+		</outline>
+	</areaOfInterest>
+
+      <spatialReferenceSet>
+         <global2dCRS>
+            <srsName>ANYURI</srsName>
+            <unit>m</unit>
+            <axisOrder>easting northing</axisOrder>
+         </global2dCRS>
+         <globalVerticalCRS>
+            <srsName>ANYURI</srsName>
+            <unit>m</unit>
+            <direction>up</direction>
+         </globalVerticalCRS>
+         <globalTimeCRS>
+            <verticalOrigin>12.345678</verticalOrigin>
+            <timeUnit>s</timeUnit>
+         </globalTimeCRS>
+         <local3dCRS uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+            <dc:title>ABCD</dc:title>
+            <dc:creator>ABCD</dc:creator>
+            <dc:description>ABCD</dc:description>
+            <dc:publisher>ABCD</dc:publisher>
+            <dc:contributor>ABCD</dc:contributor>
+            <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+            <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+            <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+            <originOrdinal1>12.345678</originOrdinal1>
+            <originOrdinal2>12.345678</originOrdinal2>
+            <arealRotation>12.345678</arealRotation>
+            <originOrdinal3>12.345678</originOrdinal3>
+            <timeOrigin>2.345678</timeOrigin>
+         </local3dCRS>
+      </spatialReferenceSet>
+      <propertyKindSet>
+         <propertyKind uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+            <dc:title>ABCD</dc:title>
+            <dc:creator>ABCD</dc:creator>
+            <dc:description>ABCD</dc:description>
+            <dc:publisher>ABCD</dc:publisher>
+            <dc:contributor>ABCD</dc:contributor>
+            <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+            <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+            <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+            <namingSystem>ANYURI</namingSystem>
+            <isAbstract>false</isAbstract>
+            <!-- CHOICE-OF: --><parentResqmlKind>absorbed dose</parentResqmlKind>
+            <!-- ELSE: parentLocalKind-->
+         </propertyKind>
+      </propertyKindSet>
+      <propertyGroupSet>
+         <propertyGroup uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+            <dc:title>ABCD</dc:title>
+            <dc:creator>ABCD</dc:creator>
+            <dc:description>ABCD</dc:description>
+            <dc:publisher>ABCD</dc:publisher>
+            <dc:contributor>ABCD</dc:contributor>
+            <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+            <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+            <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+            <parentGroup uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</parentGroup>
+            <description>ABCD</description>
+            <timeStep>
+               <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+               <timeIndex>1234</timeIndex>
+            </timeStep>
+            <memberProperty uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</memberProperty>
+         </propertyGroup>
+         <timeStepList uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+            <dc:title>ABCD</dc:title>
+            <dc:creator>ABCD</dc:creator>
+            <dc:description>ABCD</dc:description>
+            <dc:publisher>ABCD</dc:publisher>
+            <dc:contributor>ABCD</dc:contributor>
+            <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+            <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+            <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+            <timeStep>2008-12-12T00:00:00.000Z</timeStep>
+         </timeStepList>
+      </propertyGroupSet>
+      <interfaceFeatureSet>
+         <horizon uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+            <dc:title>ABCD</dc:title>
+            <dc:creator>ABCD</dc:creator>
+            <dc:description>ABCD</dc:description>
+            <dc:publisher>ABCD</dc:publisher>
+            <dc:contributor>ABCD</dc:contributor>
+            <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+            <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+            <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+            <horizonInterpretation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+               <dc:title>ABCD</dc:title>
+               <dc:creator>ABCD</dc:creator>
+               <dc:description>ABCD</dc:description>
+               <dc:publisher>ABCD</dc:publisher>
+               <dc:contributor>ABCD</dc:contributor>
+               <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+               <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+               <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+               <grid2dRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <grid2dPatch uid="x21345abc">
+                     <ni>12345678</ni>
+                     <nj>12345678</nj>
+                     <iStart>12345678</iStart>
+                     <jStart>12345678</jStart>
+                     <iIncrement>12345678</iIncrement>
+                     <jIncrement>12345678</jIncrement>
+                     <binGrid uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">12345678</binGrid>
+                     <!-- CHOICE-OF: zValueDataset -->
+                     <!-- ELSE: --><grid2dHdfGroup>
+                        <groupPath>ANYURI</groupPath>
+                     </grid2dHdfGroup>
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </grid2dPatch>
+               </grid2dRepresentation>
+               <triangulatedRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <triangulatedPatch uid="x21345abc">
+                     <point3dSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </point3dSet>
+                     <!-- CHOICE-OF: --><triangleNodeIndexSet>
+                        <trgl ix1="12345678" ix2="12345678" ix3="12345678" />
+                     </triangleNodeIndexSet>
+                     <!-- AND        --><splitEdgeNodeIndexSet>
+                        <splitEdge ix1="12345678" ix2="12345678" />
+                     </splitEdgeNodeIndexSet>
+                     <!-- ELSE: triangulatedHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </triangulatedPatch>
+               </triangulatedRepresentation>
+               <pointSetRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <pointSetPatch uid="x21345abc">
+                     <!-- CHOICE-OF: --><point3dSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </point3dSet>
+                      <!-- ELSE: pointSetHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </pointSetPatch>
+               </pointSetRepresentation>
+               <hybridGridRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <grid2dPatch uid="x21345abc">
+                     <ni>12345678</ni>
+                     <nj>12345678</nj>
+                     <iStart>12345678</iStart>
+                     <jStart>12345678</jStart>
+                     <iIncrement>12345678</iIncrement>
+                     <jIncrement>12345678</jIncrement>
+                     <binGrid uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">12345678</binGrid>
+                      <!-- CHOICE-OF: --><zValueDataset array="12.345678  12.345678" />
+                      <!-- ELSE: grid2dHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </grid2dPatch>
+                  <triangulatedPatch uid="x21345abc">
+                     <!-- CHOICE-OF: --><point3dSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </point3dSet>
+                     <!-- AND        --><triangleNodeIndexSet>
+                        <trgl ix1="12345678" ix2="12345678" ix3="12345678" />
+                        <trgl ix1="12345678" ix2="12345678" ix3="12345678" />
+                     </triangleNodeIndexSet>
+                     <!-- AND        --><splitEdgeNodeIndexSet>
+                        <splitEdge ix1="12345678" ix2="12345678" />
+                        <splitEdge ix1="12345678" ix2="12345678" />
+                     </splitEdgeNodeIndexSet>
+                     <!-- ELSE: triangulatedRefinementHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </triangulatedPatch>
+               </hybridGridRepresentation>
+            </horizonInterpretation>
+         </horizon>
+         <fault uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+            <dc:title>ABCD</dc:title>
+            <dc:creator>ABCD</dc:creator>
+            <dc:description>ABCD</dc:description>
+            <dc:publisher>ABCD</dc:publisher>
+            <dc:contributor>ABCD</dc:contributor>
+            <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+            <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+            <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+            <faultInterpretation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+               <dc:title>ABCD</dc:title>
+               <dc:creator>ABCD</dc:creator>
+               <dc:description>ABCD</dc:description>
+               <dc:publisher>ABCD</dc:publisher>
+               <dc:contributor>ABCD</dc:contributor>
+               <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+               <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+               <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+               <grid2dRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <grid2dPatch uid="x21345abc">
+                     <ni>12345678</ni>
+                     <nj>12345678</nj>
+                     <iStart>12345678</iStart>
+                     <jStart>12345678</jStart>
+                     <iIncrement>12345678</iIncrement>
+                     <jIncrement>12345678</jIncrement>
+                     <binGrid uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">12345678</binGrid>
+                      <!-- CHOICE-OF: --><zValueDataset array="12.345678  12.345678" />
+                      <!-- ELSE: grid2dHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </grid2dPatch>
+               </grid2dRepresentation>
+               <triangulatedRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <triangulatedPatch uid="x21345abc">
+                     <!-- CHOICE-OF: --><point3dSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </point3dSet>
+                     <!-- AND        --><triangleNodeIndexSet>
+                        <trgl ix1="12345678" ix2="12345678" ix3="12345678" />
+                     </triangleNodeIndexSet>
+                     <!-- AND        --><splitEdgeNodeIndexSet>
+                        <splitEdge ix1="12345678" ix2="12345678" />
+                     </splitEdgeNodeIndexSet>
+                     <!-- ELSE: triangulatedHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                          </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </triangulatedPatch>
+               </triangulatedRepresentation>
+               <pillarSetRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <pillarSetPatch uid="x21345abc">
+                     <nodeCountPerPillar>12345678</nodeCountPerPillar>
+                     <!-- CHOICE-OF: --><pillarSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </pillarSet>
+                     <!-- ELSE: pillarSetHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                          </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </pillarSetPatch>
+               </pillarSetRepresentation>
+               <pointSetRepresentation uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <pointSetPatch uid="x21345abc">
+                     <!-- CHOICE-OF: --><point3dSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </point3dSet>
+                     <!-- ELSE: pointSetHdfGroup -->
+                     <propertyValues>
+                        <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                          </timeStep>
+                           <minimumValue>12.345678</minimumValue>
+                           <maximumValue>12.345678</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: doubleValues -->
+                              <!-- ELSE: floatValues -->
+                              <!-- ELSE: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE:  hdfRepresentation -->
+                        </continuousPropertyValues>
+                        <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <minimumValue>1234567890123456</minimumValue>
+                           <maximumValue>1234567890123456</maximumValue>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </discretePropertyValues>
+                        <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                           <dc:title>ABCD</dc:title>
+                           <dc:creator>ABCD</dc:creator>
+                           <dc:description>ABCD</dc:description>
+                           <dc:publisher>ABCD</dc:publisher>
+                           <dc:contributor>ABCD</dc:contributor>
+                           <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                           <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                           <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                           <!-- CHOICE-OF: resqmlKind -->
+                           <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                           <propertyAttachment>nodes</propertyAttachment>
+                           <!-- CHOICE-OF: timestamp -->
+                           <!-- ELSE: --><timeStep>
+                              <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                              <timeIndex>1234</timeIndex>
+                           </timeStep>
+                           <stringLookup uid="x21345abc">
+                              <stringValue>abcd</stringValue>
+                              <integerValue>1234567890123456</integerValue>
+                           </stringLookup>
+                           <!-- CHOICE-OF: --><xmlRepresentation>
+                              <!-- CHOICE-OF: longValues -->
+                              <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                              <!-- ELSE: shortValues -->
+                              <!-- ELSE: byteValues -->
+                           </xmlRepresentation>
+                           <!-- ELSE: hdfRepresentation -->
+                        </categoricalPropertyValues>
+                     </propertyValues>
+                  </pointSetPatch>
+               </pointSetRepresentation>
+            </faultInterpretation>
+         </fault>
+      </interfaceFeatureSet>
+      <griddedVolumeSet>
+         <blockedWellboreSet>
+            <ijkBlockedWellbore uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+               <dc:title>ABCD</dc:title>
+               <dc:creator>ABCD</dc:creator>
+               <dc:description>ABCD</dc:description>
+               <dc:publisher>ABCD</dc:publisher>
+               <dc:contributor>ABCD</dc:contributor>
+               <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+               <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+               <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+               <wellName uidRef="x21345abc">ABCD</wellName>
+               <wellboreName uidRef="x21345abc">ABCD</wellboreName>
+               <parentBlockedWellbore>
+                  <parent uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</parent>
+                  <parentIndex>12345678</parentIndex>
+               </parentBlockedWellbore>
+               <grid3dGUID uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</grid3dGUID>
+               <gridIJKCell>
+                  <gridID>12345678</gridID>
+                  <i>1234</i>
+                  <j>1234</j>
+                  <k>1234</k>
+               </gridIJKCell>
+               <propertyValues>
+                  <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <minimumValue>12.345678</minimumValue>
+                     <maximumValue>12.345678</maximumValue>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: doubleValues -->
+                        <!-- ELSE: floatValues -->
+                        <!-- ELSE: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE:  hdfRepresentation -->
+                  </continuousPropertyValues>
+                  <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <minimumValue>1234567890123456</minimumValue>
+                     <maximumValue>1234567890123456</maximumValue>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE: hdfRepresentation -->
+                  </discretePropertyValues>
+                  <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <stringLookup uid="x21345abc">
+                        <stringValue>abcd</stringValue>
+                        <integerValue>1234567890123456</integerValue>
+                     </stringLookup>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE: hdfRepresentation -->
+                  </categoricalPropertyValues>
+               </propertyValues>
+            </ijkBlockedWellbore>
+         </blockedWellboreSet>
+         <nonStandardAdjacencySet>
+            <ijkNonStandardAdjacency uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+               <dc:title>ABCD</dc:title>
+               <dc:creator>ABCD</dc:creator>
+               <dc:description>ABCD</dc:description>
+               <dc:publisher>ABCD</dc:publisher>
+               <dc:contributor>ABCD</dc:contributor>
+               <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+               <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+               <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+               <faultName uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</faultName>
+               <gridIJKCellFacePair>
+                  <gridID1>12345678</gridID1>
+                  <i1>1234</i1>
+                  <j1>1234</j1>
+                  <k1>1234</k1>
+                  <face1>2</face1>
+                  <gridID2>1234</gridID2>
+                  <i2>1234</i2>
+                  <j2>1234</j2>
+                  <k2>1234</k2>
+                  <face2>3</face2>
+               </gridIJKCellFacePair>
+               <gridIJKCellFacePair>
+                  <gridID1>12345678</gridID1>
+                  <i1>1234</i1>
+                  <j1>1234</j1>
+                  <k1>1234</k1>
+                  <face1>4</face1>
+                  <gridID2>1234</gridID2>
+                  <i2>1234</i2>
+                  <j2>1234</j2>
+                  <k2>1234</k2>
+                  <face2>5</face2>
+               </gridIJKCellFacePair>
+               <grid3dGUID uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</grid3dGUID>
+               <propertyValues>
+                  <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <minimumValue>12.345678</minimumValue>
+                     <maximumValue>12.345678</maximumValue>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: doubleValues -->
+                        <!-- ELSE: floatValues -->
+                        <!-- ELSE: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE:  hdfRepresentation -->
+                  </continuousPropertyValues>
+                  <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <minimumValue>1234567890123456</minimumValue>
+                     <maximumValue>1234567890123456</maximumValue>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE: hdfRepresentation -->
+                  </discretePropertyValues>
+                  <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <stringLookup uid="x21345abc">
+                        <stringValue>abcd</stringValue>
+                        <integerValue>1234567890123456</integerValue>
+                     </stringLookup>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE: hdfRepresentation -->
+                  </categoricalPropertyValues>
+               </propertyValues>
+            </ijkNonStandardAdjacency>
+         </nonStandardAdjacencySet>
+         <gridSet>
+            <rootIJKGrid uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+               <dc:title>ABCD</dc:title>
+               <dc:creator>ABCD</dc:creator>
+               <dc:description>ABCD</dc:description>
+               <dc:publisher>ABCD</dc:publisher>
+               <dc:contributor>ABCD</dc:contributor>
+               <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+               <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+               <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+               <startIndexI>1234</startIndexI>
+               <startIndexJ>1234</startIndexJ>
+               <startIndexK>1234</startIndexK>
+               <ni>12345678</ni>
+               <nj>12345678</nj>
+               <nk>12345678</nk>
+               <!-- CHOICE-OF: --><gridTopologyFlags nullValue="12" array="12 12"/>
+               <!-- ELSE: hdfRepresentation -->
+               <gapAfterLayer>1234</gapAfterLayer>
+               <gridCellShape>cartesian</gridCellShape>
+               <positiveGridParity>true</positiveGridParity>
+               <gridStatic>true</gridStatic>
+               <mostComplexLineGeometry>vertical</mostComplexLineGeometry>
+               <anyIJGap>true</anyIJGap>
+               <anyGeometryUndefined>true</anyGeometryUndefined>
+               <anyIJPinch>true</anyIJPinch>
+               <anyKPinch>true</anyKPinch>
+               <anyLineNull>true</anyLineNull>
+               <propertyValues>
+                  <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <minimumValue>12.345678</minimumValue>
+                     <maximumValue>12.345678</maximumValue>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: doubleValues -->
+                        <!-- ELSE: floatValues -->
+                        <!-- ELSE: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE:  hdfRepresentation -->
+                  </continuousPropertyValues>
+                  <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <minimumValue>1234567890123456</minimumValue>
+                     <maximumValue>1234567890123456</maximumValue>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE: hdfRepresentation -->
+                  </discretePropertyValues>
+                  <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                     <dc:title>ABCD</dc:title>
+                     <dc:creator>ABCD</dc:creator>
+                     <dc:description>ABCD</dc:description>
+                     <dc:publisher>ABCD</dc:publisher>
+                     <dc:contributor>ABCD</dc:contributor>
+                     <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                     <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                     <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                     <!-- CHOICE-OF: resqmlKind -->
+                     <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                     <propertyAttachment>nodes</propertyAttachment>
+                     <!-- CHOICE-OF: timestamp -->
+                     <!-- ELSE: --><timeStep>
+                        <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                        <timeIndex>1234</timeIndex>
+                     </timeStep>
+                     <stringLookup uid="x21345abc">
+                        <stringValue>abcd</stringValue>
+                        <integerValue>1234567890123456</integerValue>
+                     </stringLookup>
+                     <!-- CHOICE-OF: --><xmlRepresentation>
+                        <!-- CHOICE-OF: longValues -->
+                        <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                        <!-- ELSE: shortValues -->
+                        <!-- ELSE: byteValues -->
+                     </xmlRepresentation>
+                     <!-- ELSE: hdfRepresentation -->
+                  </categoricalPropertyValues>
+               </propertyValues>
+               <localIJKGrid uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                  <dc:title>ABCD</dc:title>
+                  <dc:creator>ABCD</dc:creator>
+                  <dc:description>ABCD</dc:description>
+                  <dc:publisher>ABCD</dc:publisher>
+                  <dc:contributor>ABCD</dc:contributor>
+                  <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                  <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                  <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                  <startIndexI>1234</startIndexI>
+                  <startIndexJ>1234</startIndexJ>
+                  <startIndexK>1234</startIndexK>
+                  <ni>12345678</ni>
+                  <nj>12345678</nj>
+                  <nk>12345678</nk>
+                  <!-- CHOICE-OF: --><gridTopologyFlags nullValue="12" array="12 12"/>
+                  <!-- ELSE: hdfRepresentation -->
+                  <gapAfterLayer>1234</gapAfterLayer>
+                  <gridCellShape>cartesian</gridCellShape>
+                  <positiveGridParity>true</positiveGridParity>
+                  <gridStatic>true</gridStatic>
+                  <mostComplexLineGeometry>vertical</mostComplexLineGeometry>
+                  <anyIJGap>true</anyIJGap>
+                  <anyGeometryUndefined>true</anyGeometryUndefined>
+                  <anyIJPinch>true</anyIJPinch>
+                  <anyKPinch>true</anyKPinch>
+                  <anyLineNull>true</anyLineNull>
+                  <propertyValues>
+                     <continuousPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                        <dc:title>ABCD</dc:title>
+                        <dc:creator>ABCD</dc:creator>
+                        <dc:description>ABCD</dc:description>
+                        <dc:publisher>ABCD</dc:publisher>
+                        <dc:contributor>ABCD</dc:contributor>
+                        <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                        <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                        <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                        <!-- CHOICE-OF: resqmlKind -->
+                        <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                        <propertyAttachment>nodes</propertyAttachment>
+                        <!-- CHOICE-OF: timestamp -->
+                        <!-- ELSE: --><timeStep>
+                           <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                           <timeIndex>1234</timeIndex>
+                        </timeStep>
+                        <minimumValue>12.345678</minimumValue>
+                        <maximumValue>12.345678</maximumValue>
+                        <!-- CHOICE-OF: --><xmlRepresentation>
+                           <!-- CHOICE-OF: doubleValues -->
+                           <!-- ELSE: floatValues -->
+                           <!-- ELSE: longValues -->
+                           <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                           <!-- ELSE: shortValues -->
+                           <!-- ELSE: byteValues -->
+                        </xmlRepresentation>
+                        <!-- ELSE:  hdfRepresentation -->
+                     </continuousPropertyValues>
+                     <discretePropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                        <dc:title>ABCD</dc:title>
+                        <dc:creator>ABCD</dc:creator>
+                        <dc:description>ABCD</dc:description>
+                        <dc:publisher>ABCD</dc:publisher>
+                        <dc:contributor>ABCD</dc:contributor>
+                        <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                        <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                        <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                        <!-- CHOICE-OF: resqmlKind -->
+                        <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                        <propertyAttachment>nodes</propertyAttachment>
+                        <!-- CHOICE-OF: timestamp -->
+                        <!-- ELSE: --><timeStep>
+                           <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                           <timeIndex>1234</timeIndex>
+                        </timeStep>
+                        <minimumValue>1234567890123456</minimumValue>
+                        <maximumValue>1234567890123456</maximumValue>
+                        <!-- CHOICE-OF: --><xmlRepresentation>
+                           <!-- CHOICE-OF: longValues -->
+                           <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                           <!-- ELSE: shortValues -->
+                           <!-- ELSE: byteValues -->
+                        </xmlRepresentation>
+                        <!-- ELSE: hdfRepresentation -->
+                     </discretePropertyValues>
+                     <categoricalPropertyValues uid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">
+                        <dc:title>ABCD</dc:title>
+                        <dc:creator>ABCD</dc:creator>
+                        <dc:description>ABCD</dc:description>
+                        <dc:publisher>ABCD</dc:publisher>
+                        <dc:contributor>ABCD</dc:contributor>
+                        <dc:created xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:created>
+                        <dc:modified xsi:type="dc:W3CDTF">2008-12-12T00:00:00.000Z</dc:modified>
+                        <dc:bibliographicCitation>ABCD</dc:bibliographicCitation>
+                        <!-- CHOICE-OF: resqmlKind -->
+                        <!-- ELSE: --><localKind uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</localKind>
+                        <propertyAttachment>nodes</propertyAttachment>
+                        <!-- CHOICE-OF: timestamp -->
+                        <!-- ELSE: --><timeStep>
+                           <timeStepList uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</timeStepList>
+                           <timeIndex>1234</timeIndex>
+                        </timeStep>
+                        <stringLookup uid="x21345abc">
+                           <stringValue>abcd</stringValue>
+                           <integerValue>1234567890123456</integerValue>
+                        </stringLookup>
+                        <!-- CHOICE-OF: --><xmlRepresentation>
+                           <!-- CHOICE-OF: longValues -->
+                           <!-- ELSE: --><intValues nullValue="12345678" array="12345678  12345678" />
+                           <!-- ELSE: shortValues -->
+                           <!-- ELSE: byteValues -->
+                        </xmlRepresentation>
+                        <!-- ELSE: hdfRepresentation -->
+                     </categoricalPropertyValues>
+                  </propertyValues>
+                  <parentGrid uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</parentGrid>
+                  <parentIMin>1234</parentIMin>
+                  <parentIMax>1234</parentIMax>
+                  <parentJMin>1234</parentJMin>
+                  <parentJMax>1234</parentJMax>
+                  <parentKMin>1234</parentKMin>
+                  <parentKMax>1234</parentKMax>
+                  <!-- CHOICE-OF: ijkGridRefinement -->
+                  <!-- ELSE: --><explicitCornerPointGrid>
+                     <description>ABCD</description>
+                     <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                     <ijExplicitNodeSet>
+                        <!-- CHOICE-OF: --><splitLineReference>
+                           <i>1234</i>
+                           <j>1234</j>
+                           <iCorn>1</iCorn>
+                           <jCorn>0</jCorn>
+                           <reference>12345678</reference>
+                        </splitLineReference>
+                        <splitLineReference>
+                           <i>1234</i>
+                           <j>1234</j>
+                           <iCorn>1</iCorn>
+                           <jCorn>0</jCorn>
+                           <reference>12345678</reference>
+                        </splitLineReference>
+                        <!-- AND: --><lineSet>
+                           <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                           <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                        </lineSet>
+                        <!-- ELSE: ijkGridHdfGroup-->
+                     </ijExplicitNodeSet>
+                     <ijkSplitNodeSet>
+                        <!-- CHOICE-OF: --><splitNodeReference>
+                           <i>1234</i>
+                           <j>1234</j>
+                           <k>1234</k>
+                           <iCorn>1</iCorn>
+                           <jCorn>0</jCorn>
+                           <kCorn>1</kCorn>
+                           <reference>12345678</reference>
+                        </splitNodeReference>
+                        <splitNodeReference>
+                           <i>1234</i>
+                           <j>1234</j>
+                           <k>1234</k>
+                           <iCorn>1</iCorn>
+                           <jCorn>0</jCorn>
+                           <kCorn>1</kCorn>
+                           <reference>12345678</reference>
+                        </splitNodeReference>
+                        <!-- AND: --><splitNodeSet>
+                           <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                           <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                        </splitNodeSet>
+                        <!-- ELSE: ijkGridHdfGroup -->
+                     </ijkSplitNodeSet>
+                  </explicitCornerPointGrid>
+               </localIJKGrid>
+               <explicitGridRepresentation>
+                  <description>ABCD</description>
+                  <local3dCRS uidRef="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa">ABCD</local3dCRS>
+                  <ijExplicitNodeSet>
+                     <!-- CHOICE-OF: --><splitLineReference>
+                        <i>1</i>
+                        <j>0</j>
+                        <iCorn>0</iCorn>
+                        <jCorn>1</jCorn>
+                        <reference>12345678</reference>
+                     </splitLineReference>
+                     <splitLineReference>
+                        <i>1</i>
+                        <j>0</j>
+                        <iCorn>0</iCorn>
+                        <jCorn>1</jCorn>
+                        <reference>12345678</reference>
+                     </splitLineReference>
+                     <!-- AND: --><lineSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </lineSet>
+                     <!-- ELSE: ijkGridHdfGroup-->
+                  </ijExplicitNodeSet>
+                  <ijkSplitNodeSet>
+                     <!-- CHOICE-OF: --><splitNodeReference>
+                        <i>1234</i>
+                        <j>1234</j>
+                        <k>1234</k>
+                        <iCorn>1</iCorn>
+                        <jCorn>0</jCorn>
+                        <kCorn>1</kCorn>
+                        <reference>12345678</reference>
+                     </splitNodeReference>
+                     <splitNodeReference>
+                        <i>1234</i>
+                        <j>1234</j>
+                        <k>1234</k>
+                        <iCorn>1</iCorn>
+                        <jCorn>0</jCorn>
+                        <kCorn>1</kCorn>
+                        <reference>12345678</reference>
+                     </splitNodeReference>
+                     <!-- AND: --><splitNodeSet>
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                        <vrtx x="12.345678" y="12.345678" z="12.345678" />
+                     </splitNodeSet>
+                     <!-- ELSE: ijkGridHdfGroup -->
+                  </ijkSplitNodeSet>
+               </explicitGridRepresentation>
+            </rootIJKGrid>
+         </gridSet>
+      </griddedVolumeSet>
+      <customData />
+   </resqmlDocument>
+</resqmlDocuments>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productFlowQualifierExpected.xsd" />
+   <xsd:include schemaLocation="cs_productFlowExpectedPortProperty.xsd" />
+   <xsd:include schemaLocation="cs_connectedNode.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productFlowPort">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Flow Port Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the port within the context of the Product Flow Unit.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="planName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of a network plan. This indicates a planned port. All child network components must all be planned and be part of the same plan. The
+               parent unit must be part of the same plan or be an actual. Not specified indicates an actual port.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="direction" type="prodml:ProductFlowPortType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines whether this port is an inlet or outlet. This is a nominal intended direction.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the facility represented by this Product Flow Port The name can be qualified by a naming system. The facility name is assumed to be
+               unique within the context of the facility represented by the unit. This also defines the kind of facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="facilityAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name should also be listed as
+               an alias.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="exposed" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the port is an exposed internal port and cannot be used in a connection external to the unit. False ("false"
+               or "0") or not given indicates a normal port.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="connectedNode" type="prodml:cs_connectedNode" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines the node to which this port is connected. A timestamp activates and deactivates the connection. Only one connectedNode should be active
+               at any one point in time. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently
+               connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model).
+               All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network. Any node that is
+               internally connected to only one port is presumably a candidate to be connected to an external node. The behavior of ports connected at a common node is as follows:
+               a) There is no pressure drop across the node. All ports connected to the node have the same pressure. That is, there is an assumption of steady state fluid flow. b)
+               Conservation of mass exists across the node. The mass into the node via all connected ports equals the mass out of the node via all connected ports. c) The flow
+               direction of a port connected to the node may be transient. That is, flow direction may change toward any port(s) if the relative internal pressure of the Product
+               Flow Units change and a new steady state is achieved.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="expectedFlowProduct" type="prodml:cs_productFlowQualifierExpected" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines the expected flow and product pairs to be assigned to this port by a Product Volume report. A set of expected qualifiers can be defined
+               for each pair.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="expectedFlowProperty" type="prodml:cs_productFlowExpectedPortProperty" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines the properties that are expected to be measured at this port. This can also specify the equipment tag(s) of the sensor that will read the
+               value. Only one of each property kind should be active at any point in time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark associated with this port.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the port.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

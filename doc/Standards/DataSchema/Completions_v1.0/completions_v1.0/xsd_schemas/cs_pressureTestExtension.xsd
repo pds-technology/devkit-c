@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"  version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="cs_extensionAny.xsd"/>
+	<xsd:complexType name="cs_pressureTestExtension">
+		<xsd:annotation>
+			<xsd:documentation>Information on pressure test event.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="diaOrificeSize" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Orifice Size</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimeNextTestDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Next Test Date</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="flowrateRateBled" type="witsml:volumeFlowRateMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Rate Bled</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="identifierJob" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>String Being Tested</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isSuccess" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True if successful</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxPressureDuration" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Maximum pressure held during test</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="circulatingPosition" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Circulating position</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fluidBledType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Fluid bled type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="orientationMethod" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Description of orientaton method</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testFluidType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Test fluid type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testSubType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Test sub type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Test type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="annulusPressure" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Annulus pressure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellPressureUsed" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Well pressure used </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="str10Reference" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Reference #</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="uidAssembly" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Well (Assembly)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="volumeBled" type="witsml:volumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Volume Bled</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="volumeLost" type="witsml:volumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Volume Lost</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="volumePumped" type="witsml:volumeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Volume Pumped</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionAny" type="witsml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

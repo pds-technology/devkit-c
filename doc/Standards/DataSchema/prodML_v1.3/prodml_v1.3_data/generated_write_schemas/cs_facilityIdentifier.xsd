@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_geographicContext.xsd" />
+   <xsd:include schemaLocation="cs_productVolumeBusinessUnit.xsd" />
+   <xsd:include schemaLocation="cs_businessAssociate.xsd" />
+   <xsd:complexType name="cs_facilityIdentifier">
+      <xsd:annotation>
+         <xsd:documentation>An element containing details about the facility being surveyed, such as name, geographical data, etc.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="name" type="prodml:nameStruct" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Name of the facility</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the facility which is represented by this facilityMapping</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="kind" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Type of facility where the fiber is deployed</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name and type of a facility whose context is relevant to the represented installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="geographicContext" type="prodml:cs_geographicContext" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The geographical information about the facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="businessUnit" type="prodml:cs_productVolumeBusinessUnit" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Identifier of the business unit responsible for the facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="operator" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Contact for the company/person operating the facility</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

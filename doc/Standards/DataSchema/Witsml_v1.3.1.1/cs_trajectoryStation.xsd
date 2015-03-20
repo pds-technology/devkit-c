@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="grp_trajectoryStation.xsd"/>
+	<xsd:include schemaLocation="cs_commonData.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_trajectoryStation">
+		<xsd:annotation>
+			<xsd:documentation>WITSML - Trajectory Station Component Schema</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="witsml:grp_trajectoryStation" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual elements for a trajectory station.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the trajectory station.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

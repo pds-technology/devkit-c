@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_wellTestInterval">
+		<xsd:sequence>
+			<xsd:element name="mdTop" type="prodml:measuredDepthCoord" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The measured depth to the top of the interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdBase" type="prodml:measuredDepthCoord" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The measured depth to the bottom of the interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellbore" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines the wellbore (sidetract) represented by the measured depth.
+					This must be given when the well has multiple wellbores and the measured depth 
+					value is deeper than the first kickoff point. It is recommended that it always be given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testedFormation" type="prodml:kindString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A formation that was tested.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="valvePosition" type="prodml:lengthPerLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The relative opening of the downhole control valve for the tested zone.
+					This is for surface controllable valves.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

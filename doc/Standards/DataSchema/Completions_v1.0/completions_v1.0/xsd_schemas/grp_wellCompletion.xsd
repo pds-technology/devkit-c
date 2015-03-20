@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="cs_equipmentCatalog.xsd"/>
+	<xsd:include schemaLocation="cs_CompletionStatusHistory.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_wellCompletion">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a well completion object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="fieldID" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Field ID.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fieldCode" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Field code.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fieldType" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Field type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="effectiveDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Field date.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="expiredDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Expiration date</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="E_P_RightsID" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Documents exploration and production rights
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="currentStatus" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="statusDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="statusHistory" type="witsml:CompletionStatusHistory" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

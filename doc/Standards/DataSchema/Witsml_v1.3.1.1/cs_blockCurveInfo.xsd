@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_blockCurveInfo">
+		<xsd:annotation>
+			<xsd:documentation>Descriptor of a curve associated with a block.
+			This captures the representational aspects of the curve.
+			The data semantics is defined by logCurveInfo.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="curveId" type="witsml:refString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the curveInfo's curveId that this curve represents.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="columnIndex" type="witsml:nonNegativeCount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A 1-based index of curve data in the data records.
+					A value of zero indicates an implied curve with no values in the data record.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minIndex" type="witsml:genericMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minimum index value at which the first valid data point is located.
+					This value will be properly set by the server to reflect data in the returned document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxIndex" type="witsml:genericMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The maximum index value at which the last valid data point is located.
+					This value will be properly set by the server to reflect data in the returned document. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minDateTimeIndex" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minimum index value at which the first valid data point
+					is located. This value will be properly set by the server to reflect data 
+					in the returned document. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxDateTimeIndex" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The maximum index value at which the last valid data point 
+					is located. This value will be properly set by the server to reflect data 
+					in the returned document. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the curve information.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_flowRateValue.xsd" />
+   <xsd:include schemaLocation="cs_densityValue.xsd" />
+   <xsd:include schemaLocation="cs_volumeValue.xsd" />
+   <xsd:include schemaLocation="cs_productVolumePortDifference.xsd" />
+   <xsd:include schemaLocation="cs_refProductFlow.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_commonPropertiesProductVolume">
+      <xsd:annotation>
+         <xsd:documentation>Properties which are common to multiple structures in the productVolume schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="gor" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the
+               installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gorMTD" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Gas oil ratio month to date. The gas oil ratio from the beginning of the month to the end of the reporting priod.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasLiquidRatio" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The volumetric ratio of gas to liquid for all products in the whole flow.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterConcMass" type="prodml:massConcentrationMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Water concentration mass basis. The ratio of water produced compared to the mass of total liquids produced.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterConcVol" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="atmosphere" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The average atmospheric pressure during the reporting period.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="volumeValue" type="prodml:cs_volumeValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The volume of the fluid, possibly corrected to specific conditions of temperature and pressure. A positive value for an inlet port indicates flow
+               into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative
+               value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the
+               intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same opinion
+               of the volume (at different conditions).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="volume" type="prodml:volumeQualifiedMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of
+               volumeValue. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should
+               be interpreted as null and should be not be given unless a status is also specified to explain why it is null.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="volumeStd" type="prodml:volumeQualifiedMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard conditions of temperature and pressure. The sign of the
+               value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be
+               good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is
+               null.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="flowRateValue" type="prodml:cs_flowRateValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The flow rate of the product, possibly corrected to specific conditions of temperature and pressure. The sign of the value should conform to the
+               above description of volumeValue. If more than one value is specified then all values must represent the same opinion of the flow rate (at different
+               conditions).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="flowRate" type="prodml:volumeFlowRateQualifiedMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of
+               volume. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be
+               interpreted as null and should be not be given unless a status is also specified to explain why it is null.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="temp" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of
+               the flow.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pres" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the
+               flow.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="absoluteMinPres" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Absolute minimum pressure before the system will give an alarm.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="portDiff" type="prodml:cs_productVolumePortDifference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The internal differences between this port and one other port on this unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mass" type="prodml:massMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The mass of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="work" type="prodml:workMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The electrical energy represented by the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="efficiency" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The actual volume divided by the potential volume.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="rvp" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and volatile petroleum liquids, except liquefied petroleum
+               gases, as determined in accordance with American Society for Testing and Materials under the designation ASTM D323-56.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tvp" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid as determined in accordance with standard
+               methods.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="bsw" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Basic sediment and water is measured from a liquid sample of the production stream. It includes free water, sediment and emulsion and is measured
+               as a volume percentage of the production stream.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="bswPrevious" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The basic sediment and water as measured on the previous reporting period (e.g., day).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="densityValue" type="prodml:cs_densityValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The density of the fluid, possibly corrected to specific conditions of temperature and pressure. If more than one value is specified then all
+               values must represent the same opinion of the density (at different conditions).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="density" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED. Use densityValue for new work. The density of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="densityFlowRate" type="prodml:massFlowRateMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The mass basis flow rate of the product. This is used for things like a sand component.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="densityStd" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED. Use densityValue for new work. The density of the product after it has been corrected to standard temperature and
+               pressure.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="concentration" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The concentration of the product as a volume percentage of the product stream.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="molecularWeight" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The molecular weight of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="weightPercent" type="prodml:massConcentrationMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The weight fraction of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="molePercent" type="prodml:molarFractionMeasurePercent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The mole fraction of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="moleAmt" type="prodml:amountOfSubstanceMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The molar amount.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sg" type="prodml:dimensionlessMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The specific gravity of the product.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="hcDewpoint" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature at which the heavier hydrocarbons come out of solution.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterDewpoint" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature at which the first water comes out of solution.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wobbeIndex" type="prodml:modulusOfCompressionMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the square root
+               of its specific gravity.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="grossCalorificValueStd" type="prodml:modulusOfCompressionMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and
+               pressure.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="rvpStabilizedCrude" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Reid vapor pressure of stabilized crude.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="bswStabilizedCrude" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Basic sediment and water content in stabilized crude.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="densityStabilizedCrude" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The density of stabilized crude.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+   <!--                                                         -->
+</xsd:schema>

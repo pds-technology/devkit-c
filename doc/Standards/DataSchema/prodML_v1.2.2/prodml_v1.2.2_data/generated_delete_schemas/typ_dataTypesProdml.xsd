@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_measureTypeProdml.xsd" />
+   <xsd:include schemaLocation="typ_catalogProdml.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <!--                                                         -->
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type areaPerAreaQualifiedMeasure.-->
+   <!--NOT-USED: Deleted type anglePerTimeQualifiedMeasure.-->
+   <!--NOT-USED: Deleted type areaQualifiedMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="binaryInteractionCoefficient" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDouble">
+            <xsd:attribute name="referenceComponent" type="prodml:kindString" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="calendarMonth" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A month of a year (CCYY-MM). A time zone is not allowed. This type is meant to capture original invariant values. It is not intended to be used in
+         "time math" where knowledge of the time zone is needed.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractString">
+         <xsd:pattern value="([1-9][0-9][0-9][0-9])-(([0][0-9])|([1][0-2]))" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="calibrationParameter" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Parameters are given by name/ value pairs, with optional uom. The parameter name and uom are attributes, and the value is the value of the
+         element.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="uom" type="prodml:uomString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The unit of measure of the parameter value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="name" type="prodml:nameString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The name of the parameter.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="crewCount" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A one based count of personnel on a type of crew.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNonNegativeCount">
+            <xsd:attribute name="type" type="prodml:CrewType" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The type of crew for which a count is being defined.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="emailQualifierStruct" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An email address with an attribute, used to "qualify" an email as personal, work, or permanent.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractTypeEnum">
+            <xsd:attribute name="qualifier" type="prodml:AddressQualifier" use="optional" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="endpointQualifiedDate" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A date value used for min/max query parameters related to "growing objects". The meaning of the endpoint of an interval can be modified by the endpoint
+         attribute.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDate">
+            <xsd:attribute name="endpoint" type="prodml:EndpointQualifier" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The default is "inclusive".</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="endpointQualifiedDateTime" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A timestamp value used for min/max query parameters related to "growing objects". The meaning of the endpoint of an interval can be modified by the
+         endpoint attribute.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDateTime">
+            <xsd:attribute name="endpoint" type="prodml:EndpointQualifier" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The default is "inclusive".</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="endpointQuantity" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A value used for the endpoint of an interval. If the value represents a measure then the unit must be specified elsewhere. The meaning of the endpoint
+         of an interval must be defined by the endpoint attribute.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDouble">
+            <xsd:attribute name="endpoint" type="prodml:EndpointQualifierInterval" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Defines the semantics (inclusive or exclusive) of the endpoint within the context of the interval.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="endpointDateTime" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A value used for the endpoint of a date-time interval. The meaning of the endpoint of an interval must be defined by the endpoint
+         attribute.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDateTime">
+            <xsd:attribute name="endpoint" type="prodml:EndpointQualifierInterval" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Defines the semantics (inclusive or exclusive) of the endpoint within the context of the interval.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="facilityIdentifierStruct" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Identifies a facility.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="kind" type="prodml:ReportingFacility" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The kind of facility.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="siteKind" type="prodml:nameString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>A custom sub-categorization of facility kind. This attribute is free-form text and allows implementers to provide a more specific or
+                  specialized description of the facility kind.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="namingSystem" type="prodml:nameString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The naming system within which the name is unique. For example, API or NPD.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="uidRef" type="prodml:uidString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>If the facility is defined and instantiated within the context of a WITSML server, this is a pointer to the uid value of that object
+                  instance.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="generalMeasureType" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:uomString" use="optional" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="generalQualifiedMeasure" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A measure which may have a quality status. The measure class (e.g., length) must be defined within the context of the usage of this type (e.g., in
+         another element). This should not be used if the measure class will always be the same thing. If the 'status' attribute is absent and the value is not "NaN", the data
+         value can be assumed to be good with no restrictions.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="status" type="prodml:ValueStatus" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>An indicator of the quality of the value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="component" type="prodml:kindString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The kind of the value component. For example, "X" in a tuple of X and Y.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="uom" type="prodml:uomString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The unit of measure for the value. This value must conform to the values allowed by the measure class.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="integerQualifiedCount" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An integer which may have a quality status. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good
+         with no restrictions.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractInt">
+            <xsd:attribute name="status" type="prodml:ValueStatus" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>An indicator of the quality of the value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="keywordValueStruct" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A value for the specified keyword. That is, a keyword,value pair. The allowed length of the value is contrained by the keyword.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMaximumLengthString">
+            <xsd:attribute name="keyword" type="prodml:TimeSeriesKeyword" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The keyword within which the value is unique. The concept of a keyword is very close to the concept of a classification
+                  system.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="kindQualifiedString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A kind which may have a quality status. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with
+         no restrictions.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractTypeEnum">
+            <xsd:attribute name="status" type="prodml:ValueStatus" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>An indicator of the quality of the value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type lengthPerLengthQualifiedMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="lostVolumeAndReason" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A volume corrected to standard temperature and pressure.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="reasonLost" type="prodml:ReasonLost" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Defines why the volume was lost.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="measureOrQuantity" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A measure with a uom or a quantity (without a uom). This should not be used except in situations where the underlying class of data is captured
+         elsewhere. For example, via a measure class.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:uomString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The unit of measure for the quantity. This value must conform to the values allowed by a measure class. If the value is a measure then the uom
+                  must be specified.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="nonNegativeFraction" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A floating point value between zero (inclusive) and one (inclusive)</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractDouble">
+         <xsd:minInclusive value="0">
+            <xsd:annotation>
+               <xsd:documentation>This value can be zero but cannot be negative.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+         <xsd:maxInclusive value="1">
+            <xsd:annotation>
+               <xsd:documentation>This value can not be greater than one.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:maxInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="phoneNumberStruct" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A phone number with two attributes, used to "type" and "qualify" a phone number. The type would carry information such as fax, modem, voice, and the
+         qualifier would carry information such as home or office.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractTypeEnum">
+            <xsd:attribute name="type" type="prodml:PhoneType" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The kind of phone such as voice or fax.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="qualifier" type="prodml:AddressQualifier" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Indicates whether the number is personal, business or both.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="extension" type="prodml:kindString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The phone number extension.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="prodmlRelativeIdentifier" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A PRODML Relative Identifier as defined by the "PRODML Identifier" specification. It follows the general pattern of "type(id)/type(id)" where "(id)" is
+         optional.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:anyURI" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type pressureQualifiedMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="safetyCount" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A zero based count of a type of safety item.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNonNegativeCount">
+            <xsd:attribute name="type" type="prodml:SafetyType" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The type of safety issue for which a count is being defined.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="period" type="prodml:ReportingPeriod" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The type of period being reported by this count.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="schemaVersionStringProdml" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The version of the schema. The first three levels are fixed. The fourth level can vary to represent the constraints defined in enumerations and XML
+         loader files.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractString">
+         <xsd:maxLength value="16" />
+         <xsd:pattern value="1\.2\.[0-9]\.[1-9]?[0-9]\(PRODML\)" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:complexType name="temperatureSlopeMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:uomString" use="optional" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type thermodynamicTemperatureQualifiedMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="timeSeriesDoubleSample" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A single double value in a time series.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDouble">
+            <xsd:attribute name="dTim" type="prodml:timestamp" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either
+                  dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no
+                  restrictions.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="status" type="prodml:ValueStatus" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>An indicator of the quality of the value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="timeSeriesStringSample" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A single string value in a time series.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractCommentString">
+            <xsd:attribute name="dTim" type="prodml:timestamp" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either
+                  dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no
+                  restrictions.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="status" type="prodml:ValueStatus" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>An indicator of the quality of the value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="typeOptionalClassString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A type with a classType attribute. This allows a user to give a classification of something, and to specify the type of classification that it is.
+         There is no control over the class values, or the class types.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="classType" type="prodml:kindString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>This identifies the classification system to which the class belongs.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="volumeFlowRateQualifiedMeasure" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A volume flow rate which may have a quality status.. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to
+         be good with no restrictions.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="status" type="prodml:ValueStatus" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>An indicator of the quality of the value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="uom" type="prodml:VolumeFlowRateUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="volumeQualifiedMeasure" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A volume flow rate which may have a quality status. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be
+         good with no restrictions.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="status" type="prodml:ValueStatus" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>An indicator of the quality of the value.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="uom" type="prodml:VolumeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_wftTestResult.xsd"/>
+	<xsd:include schemaLocation="cs_wftStation.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_wftRun">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML Wireline Formation Test (WFT) object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="objectGrowing" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The growing state of the object.
+					This value is only relevant within the context of a server.
+					This is an API server parameter releted to the "Special Handling of Change Information" within a server. 
+					See the relevant API specification for the behavior related to this element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tieInLogRef" type="prodml:refObjectString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>References a log containing WFT tie-in (e.g. gamma ray) log vs. depth data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="serviceCompany" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Name of contractor who provided the service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date and time when the data collection started.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date and time when the data collection completed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minIndex" type="prodml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The minimum station depth within this WFT.
+					This is an API "structural-range" query parameter for growing objects. 
+					See the relevant API specification for the query behavior related to this element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxIndex" type="prodml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The maximum station depth within this WFT.
+					This is an API "structural-range" query parameter for growing objects. 
+					See the relevant API specification for the query behavior related to this element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="station" type="prodml:cs_wftStation" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An individual WFT station.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="result" type="prodml:cs_wftTestResult" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A single result derived from analysis of formation tester data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

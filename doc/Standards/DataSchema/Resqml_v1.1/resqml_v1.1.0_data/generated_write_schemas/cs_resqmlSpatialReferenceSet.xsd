@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlGlobal2dCRS.xsd" />
+   <xsd:include schemaLocation="cs_resqmlGlobal1dCRS.xsd" />
+   <xsd:include schemaLocation="cs_resqmlGlobalTimeCRS.xsd" />
+   <xsd:include schemaLocation="cs_resqmlLocal3dCRS.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlSpatialReferenceSet">
+      <xsd:annotation>
+         <xsd:documentation>A container for Coordinate Reference System (CRS) information.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="global2dCRS" type="resqml:cs_resqmlGlobal2dCRS" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the projected CRS which represents the global horizontal 2D CRS for the model.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="globalVerticalCRS" type="resqml:cs_resqmlGlobal1dCRS" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the global vertical (length) CRS for the model. All local vertical 1d systems will be defined relative to this
+               system.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="globalTimeCRS" type="resqml:cs_resqmlGlobalTimeCRS" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A definition of the global vertical (seismic two-way) time CRS for the model. This will be defined relative to the global vertical (length) CRS.
+               All local vertical time systems will be defined relative to this system.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="local3dCRS" type="resqml:cs_resqmlLocal3dCRS" minOccurs="1" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A local 3D Coordinate Reference System (CRS) used in this model. All coordinates will point to a local 3D system.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

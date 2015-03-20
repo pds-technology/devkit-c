@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_fiberControlLine.xsd" />
+   <xsd:include schemaLocation="cs_permanentCable.xsd" />
+   <xsd:include schemaLocation="cs_interventionConveyance.xsd" />
+   <xsd:complexType name="cs_fiberConveyance">
+      <xsd:annotation>
+         <xsd:documentation>The means by which this fiber segment is conveyed into the well. A choice between a permanent, intervention or control line conveyance
+         method.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element name="intervention" type="prodml:cs_interventionConveyance" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Information on type of intervention conveyance used by the optical path.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="permanent" type="prodml:cs_permanentCable" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Information on type of permanent conveyance used by the optical path.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="fiberControlLine" type="prodml:cs_fiberControlLine" minOccurs="1" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Information regarding the control line into which a fiber cable may be pumped in order to measure a facility.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="cs_wftInOutParameter.xsd" />
+   <xsd:include schemaLocation="cs_wftTestData.xsd" />
+   <xsd:include schemaLocation="cs_wftResultRef.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wftTestResult">
+      <xsd:annotation>
+         <xsd:documentation>A single result derived from analysis of formation tester data.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="kind" type="prodml:WftTestResultKind" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The kind of result represents a combination of test kind and analysis method applied.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="method" type="prodml:kindString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of a proprietary method which generally represents a specialization of a result kind.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdTop" type="prodml:measuredDepthCoord" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The top of the interval to which this result applies.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdBottom" type="prodml:measuredDepthCoord" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The bottom of the interval to which this result applies.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testData" type="prodml:cs_wftTestData" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A reference to the formation tester data used to derive this result.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="inputParameter" type="prodml:cs_wftInOutParameter" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An input parameter to the analysis method.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="outputParameter" type="prodml:cs_wftInOutParameter" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An output (result) parameter from the analysis of the test. The aggregate of parameters might represent something like the simulated response of
+               the test, to compare with actual.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="inputResultRef" type="prodml:cs_wftResultRef" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A reference to an outputParameter of another result which was used as an input to this result. For a test result, the other result will be in the
+               same test (i.e., ../result). For a station result, the other result will be in the same station (i.e., ../result) or will be a test result in the same station
+               (../test/result) or will be an sampleAcquisition in the same station (i.e., ../sampleAcquisition/result). For a wftRun result, the other result will be in the same
+               wftRun (i.e., ../result) or will be a result in a station (i.e., ../station/result) or will be a result in a station's test (i.e., ../station/test/result) or will
+               be a result in a station's sampleAcquisition (i.e., ../station/sampleAcquisition/result). The "../result" notation means: starting in the parent node, traverse down
+               to the appropriate child result using the provided pointers.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

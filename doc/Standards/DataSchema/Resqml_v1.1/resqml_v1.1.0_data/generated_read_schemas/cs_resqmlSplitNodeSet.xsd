@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                     -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                     -->
+   <xsd:include schemaLocation="cs_resqmlSplitNodeReference.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPoint3dSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlHdfGroup.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                     -->
+   <xsd:complexType name="cs_resqmlSplitNodeSet">
+      <xsd:annotation>
+         <xsd:documentation>Defines the 3D coordinates for each split node. Each node may represent part of an 8-way split.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:choice minOccurs="0">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="splitNodeReference" type="resqml:cs_resqmlSplitNodeReference" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Defines the index locations of one referenced split node. The reference value refers to the order in point3dSet.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="splitNodeSet" type="resqml:cs_resqmlPoint3dSet" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>A set of points that are split. There must be splitNodeCount points in the aggregate.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:element name="ijkGridHdfGroup" type="resqml:cs_resqmlHdfGroup" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Defines information related to capturing the array data in an HDF5 formatted file.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                     -->
+</xsd:schema>

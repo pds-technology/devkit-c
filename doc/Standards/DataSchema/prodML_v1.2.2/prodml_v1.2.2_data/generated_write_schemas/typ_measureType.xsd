@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>These types represent numeric quantities with a unit of measure implemented as a uom attribute. The units are gathered into single quantity class which
+      represents a group of units. The unit symbols appropriate for the class are captured as enumerated lists. The implementation of this is to develop a type for each uom class
+      that is a union of a standard list, the unknown value, and the Other: extension. Additional files will contain these structures.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_quantityClass.xsd" />
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type accelerationLinearMeasure.-->
+   <!--NOT-USED: Deleted type anglePerLengthMeasure.-->
+   <!--NOT-USED: Deleted type anglePerTimeMeasure.-->
+   <!--NOT-USED: Deleted type areaMeasure.-->
+   <!--NOT-USED: Deleted type areaPerAreaMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="densityMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:DensityUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:densityUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="dimensionlessMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:DimensionlessUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:dimensionlessUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="dynamicViscosityMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:DynamicViscosityUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:dynamicViscosityUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="electricCurrentMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:ElectricCurrentUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:electricCurrentUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type electricPotentialMeasure.-->
+   <!--NOT-USED: Deleted type equivalentPerMassMeasure.-->
+   <!--NOT-USED: Deleted type forceMeasure.-->
+   <!--NOT-USED: Deleted type forcePerLengthMeasure.-->
+   <!--NOT-USED: Deleted type forcePerVolumeMeasure.-->
+   <!--NOT-USED: Deleted type illuminanceMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="lengthMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:LengthUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:lengthUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="lengthPerLengthMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:LengthPerLengthUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:lengthPerLengthUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation />
+   </xsd:annotation>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type magneticInductionMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="massConcentrationMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:MassConcentrationUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:massConcentrationUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="massMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:MassUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:massUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type massPerLengthMeasure.-->
+   <!--NOT-USED: Deleted type momentOfForceMeasure.-->
+   <!--NOT-USED: Deleted type perLengthMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="planeAngleMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:PlaneAngleUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:planeAngleUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type powerMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="pressureMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:PressureUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:pressureUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type relativePowerMeasure.-->
+   <!--NOT-USED: Deleted type specificVolumeMeasure.-->
+   <!--                                                         -->
+   <xsd:complexType name="thermodynamicTemperatureMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:ThermodynamicTemperatureUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:thermodynamicTemperatureUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="timeMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:TimeUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:timeUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="velocityMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VelocityUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:velocityUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="volumeMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumeUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:volumeUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="volumeFlowRateMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumeFlowRateUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:volumeFlowRateUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="volumePerVolumeMeasure" final="#all">
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:VolumePerVolumeUom" use="required">
+               <xsd:annotation>
+                  <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Changed-type-from:volumePerVolumeUom</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

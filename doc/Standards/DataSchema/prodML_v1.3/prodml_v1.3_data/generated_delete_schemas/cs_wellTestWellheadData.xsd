@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wellTestTestVolume.xsd" />
+   <xsd:include schemaLocation="cs_wellTestFluidRate.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wellTestWellheadData">
+      <xsd:annotation>
+         <xsd:documentation>Basic measurements at the wellhead, during the well test.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="temperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature measured at the wellhead during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="flowingPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The flowing pressure measured at the wellhead during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="shutInPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The shut-in pressure measured at the wellhead during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="flowLinePressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The pressure measured at the flow line connected to the wellhead during this well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="chokeOrificeSize" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The size of the choke opening at the wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasLiftPres" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The pressure of the lift gas at the wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasLiftTemp" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature of the lift gas at the wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasLiftVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Lift gas volumes injected during the well test at the wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasLiftRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Lift gas rates injected during the well test at the wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasLiftchokeOrificeSize" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The size of the gas lift choke opening.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

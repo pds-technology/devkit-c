@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlAbstractFeatureRepresentation.xsd" />
+   <xsd:include schemaLocation="cs_resqmlGrid2dPatch.xsd" />
+   <xsd:include schemaLocation="cs_resqmlTriangulatedPatch.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlHybridGridRepresentation">
+      <xsd:annotation>
+         <xsd:documentation>A hybrid surface composed of one 2D grid patch and one triangulated mesh patch. All patches shall utilize the same CRS. This type inherits the
+         following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="resqml:cs_resqmlAbstractFeatureRepresentation">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="grid2dPatch" type="resqml:cs_resqmlGrid2dPatch" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>One 2d grid surface patch.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="triangulatedPatch" type="resqml:cs_resqmlTriangulatedPatch" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>One triangulated mesh surface patch.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<xsd:include schemaLocation="cs_curveDefinition.xsd"/>
+	<xsd:include schemaLocation="cs_productVolumeParameterValue.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productVolumeParameterSet">
+		<xsd:annotation>
+			<xsd:documentation>WITSML - Product Volume Facility Parameter Set Component Schema.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:FacilityParameter" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the facility parameter.
+					This should reflect the business semantics of all values in the set and not  
+					the underlying kind. For example, specify "diameter" rather than "length" or "distance".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="childFacilityIdentifier" type="prodml:prodmlRelativeIdentifier" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The "PRODML Relative Identifier" of a child of the parent facility.
+					The idenfifier path is presumed to begin with the identity of the parent facility.
+					This identifies a sub-facility which is identified within the context of the 
+					parent facilityParent2/facilityParent1/name identification hierarchy.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="port" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The port to which this parameter is assigned.
+					This must be a port on the unit representing the parent facility of this parameter.
+					If not specified then the parameter represents the unit.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="measureClass" type="prodml:MeasureClass" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>If the value is a measure (value with unit of measure), this defines the 
+					measurement class of the value. The units of measure for the value must conform to the 
+					list allowed by the measurement class in the unit dictionary file.
+					Mutually exclusive with curveDefinition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="coordinateReferenceSystem" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						The pointer to the coordinate reference system. This is needed for coordinates such as measure depth
+						to specify the reference datum.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveDefinition" type="prodml:cs_curveDefinition" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>If the value is a curve, this defines the meaning of the one column 
+					in the table representing the curve.
+					Mutually exclusive with measureClass.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="qualifier" type="prodml:FlowQualifier" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Qualifies the type of parameter that is being reported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="subQualifier" type="prodml:FlowSubQualifier" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines a specialization of the qualifier value.
+					This should only be given if a qualifier is given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="version" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A timestamp representing the version of this data. 
+					A parameter set with a more recent timestamp will represent 
+					the "current" version.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="versionSource" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Identifies the source of the version. 
+					This will commonly be the name of the software which created the version.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="product" type="prodml:ReportingProduct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of product that is being reported.
+					This would be useful for something like specifying a tank procuct volume or level.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="periodKind" type="prodml:ReportingPeriod" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of period that is being reported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parameter" type="prodml:cs_productVolumeParameterValue" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A parameter value, possibly at a time.
+					If a time is not given then only one parameter should be given.
+					If a time is specified with one value then time should be specified
+					for all values. Each value in a time series should be of the same 
+					underling kind of value (for example, a length measure).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment about the parameter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

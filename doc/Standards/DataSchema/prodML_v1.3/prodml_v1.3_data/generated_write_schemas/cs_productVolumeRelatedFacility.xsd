@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productVolumeRelatedFacility">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Report Facility Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:sequence minOccurs="1" maxOccurs="1">
+            <xsd:sequence minOccurs="0" maxOccurs="1">
+               <xsd:element name="name" type="prodml:facilityIdentifierStruct" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The name of the facility. The name can be qualified by a naming system. This can also define the kind of facility.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="facilityParent1" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>For facilities whose name is unique within the context of another facility, the name of the parent facility. The name can be qualified by a
+                     naming system. This also defines the kind of facility.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="facilityParent2" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>For facilities whose name is unique within the context of another facility, the name of the parent facility of parent1. The name can be
+                     qualified by a naming system. This also defines the kind of facility.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:element name="kind" type="prodml:ReportingFacility" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>A kind of facility where the specific name is not relevant.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:sequence minOccurs="0" maxOccurs="1">
+               <xsd:element name="port" type="prodml:refNameString" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The Product Flow Port associated with the Product Flow Unit.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="unit" type="prodml:refNameString" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The Product Flow Unit representing the facility.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="network" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The Product Flow Network representing the facility. This is only required if the network is not the same as the primary network that
+                     represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented by this report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:sequence>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

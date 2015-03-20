@@ -1,4 +1,5 @@
-﻿<#@ output extension=".cs" encoding="UTF-8" #>
+﻿<#@ template debug="true" hostSpecific ="true" #>
+<#@ output extension=".cs" encoding="UTF-8" #>
 <#=SchemaSetClassCreator.GetLicenseText()#>
 <#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System"#>

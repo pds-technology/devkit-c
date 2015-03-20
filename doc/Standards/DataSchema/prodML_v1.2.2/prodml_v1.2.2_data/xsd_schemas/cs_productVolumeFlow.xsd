@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_productVolumeRelatedFacility.xsd"/>
+	<xsd:include schemaLocation="cs_productVolumeProduct.xsd"/>
+	<xsd:include schemaLocation="cs_datedComment.xsd"/>
+	<xsd:include schemaLocation="grp_commonPropertiesProductVolume.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productVolumeFlow">
+		<xsd:annotation>
+			<xsd:documentation>WITSML - Product Volume Flow Component Schema.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of this flow within the context of this report.
+					This might reflect some combination of the kind of flow, port, qualifier and related facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="kind" type="prodml:ReportingFlow" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Indicates the type of flow that is being reported.
+					The type of flow is an indication of the overall source or target of the flow.
+					A production flow has one or more wells as the originating source.
+					An injection flow has one or more wells as the ultimate target.
+					An import flow has an offsite source.
+					An export flow has an offiste target.
+					A consumption flow generally has a kind of equipment as a target.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="port" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The Product Flow Port to which the flow is assigned.
+					This is the port on the Product Flow Unit that represents the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="direction" type="prodml:ProductFlowPortType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The kind of port that this flow represents: inlet or outlet.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="facility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the facility represented by the port 
+					where the measurements were taken. 
+					The name can be qualified by a naming system. 
+					This also defines the kind of facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="facilityAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An alternatative name of a facility represented by the port. This is generally
+					unique within a naming system. The above contextually unique name (that is, within 
+					the context of a parent) should also be
+					listed as an alias.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="qualifier" type="prodml:FlowQualifier" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Qualifies the type of flow that is being reported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="subQualifier" type="prodml:FlowSubQualifier" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines a specialization of the qualifier value.
+					This should only be given if a qualifier is given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="relatedFacility" type="prodml:cs_productVolumeRelatedFacility" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A second facility related to this flow. 
+					For a production flow, this would represent a role of 'produced for'.
+					For an import flow, this would represent a role of 'inport from'.
+					For an export flow, this would represent a role of 'export to'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="version" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A timestamp representing the version of this data. 
+					A flow (same port and products) with a more recent timestamp will represent 
+					the "current" version.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="versionSource" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Identifies the source of the version. 
+					This will commonly be the name of the software which created the version.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sourceFlow" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>This is a pointer to the flow from which this flow was derived.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="prodml:grp_commonPropertiesProductVolume" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The properties whose existance is independent of a specific location in the hierarchy.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="product" type="prodml:cs_productVolumeProduct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Reports a product flow stream.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:cs_datedComment" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A timestamped remark about the flow.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the Product Volume Flow.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

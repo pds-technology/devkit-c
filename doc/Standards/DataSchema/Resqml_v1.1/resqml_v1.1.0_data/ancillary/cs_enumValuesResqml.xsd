@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.4.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="../xsd_schemas/typ_dataTypesResqml.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>Schema for listing standardized values as an alternative 
+		to using an enumeration in XML Schema. This schema is not intended to be part 
+		of a resqml data object.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:element name="enumListSet" type="resqml:enumListSet">
+		<xsd:annotation>
+			<xsd:documentation>A container for enumeration lists.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                                                         -->
+	<xsd:complexType name="enumListSet">
+		<xsd:sequence>
+			<xsd:element name="enumList" type="resqml:enumList" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A single enumeration list.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="resqml:schemaVersionStringResqml" use="required">
+			<xsd:annotation>
+			<xsd:documentation>Data object schema version.  The fourth level must match the 
+			version of the schema constraints (enumerations and XML loader files) that are assumed
+			by the document instance.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="enumList">
+		<xsd:sequence>
+			<xsd:element name="name" type="resqml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the list.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="resqml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the list. 
+					This specifies what the individual values represent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="namingSystem" type="resqml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The naming system within which the terms are defined.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="value" type="resqml:enumValue" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A description of an enumberation value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="enumValue">
+		<xsd:sequence>
+			<xsd:element name="name" type="resqml:kindString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="resqml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the value. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="version" type="resqml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The version when the value was added.
+					The string should match the content of the root version attribute of the schema.
+					For example, "1.4.0.0".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="deprecated" type="resqml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A non blank version indicates that the value has
+					been deprecated and may be removed in future versions.
+					The string should match the content of the root version attribute of the schema.
+					For example, "1.4.0.0".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="replacedBy" type="resqml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The value to use as a replacement for a deprecated value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="0" maxOccurs="1">
+				<xsd:sequence>
+					<xsd:element name="extensionDataType" type="resqml:PrimitiveType" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, the underlying data type of the value. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionMaximumSize" type="resqml:positiveCount" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, the maximum number of charactetrs in a string value. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionMeasureClass" type="resqml:MeasureClass" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, defines the measure class associated with the temm.
+							This controls the allowed units of measure. 
+							If this is specified then the value must be defined with a unit of measure.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionPath" type="resqml:descriptionString" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, defines the path to the allowed location in the schema
+							where the extension is allowed. 
+							This should begin at the singular object level  (e.g., "/well/commonData/extension"). 
+							A relative location will allow it in any object (i.e., ".//commonData/extension").
+							A relative location within the object will allow it at any location within that object
+							(e.g., "/opsReport//commonData/extension").</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="measureRepresentativeUOM" type="resqml:uomString" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines a representative uom. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="measureBaseForConversion" type="resqml:uomString" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines the base uom for conversion. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="measureUom" type="resqml:uomString" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines an allowed uom for the class. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<!-- For use with "ResqmlPropertyKind". -->
+					<xsd:element name="isAbstract" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>True ("1" or "true") indicates that the property is abstract and cannot be used to characterize a value.
+							False ("0" or "false") or not given indicates a non-abstract property that can be instantiated.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="parentKind" type="xsd:string" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Points to a parent property kind</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:choice minOccurs="0">
+						<xsd:sequence>
+							<xsd:element name="unitOfMeasure" type="resqml:ResqmlUnitOfMeasure" minOccurs="1" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>The allowed unit of measure for the continuous property.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="dimensionalClass" type="xsd:string" minOccurs="1" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>The dimensional analysis of the unit of measure. 
+									For example, a meter (m) would be of class "L", which represents length. 
+									A foot (ft) would also be in this dimension.
+									Note that angle       is considered to be dimensionless ratio of length.
+									Note that solid angle is considered to be dimensionless ratio of area.
+									The following nomenclature is used: 
+										A = angle 			(SI unit = radian) 
+										B = luminous intensity 		(SI unit = candela)
+										C = electrical current 		(SI unit = ampere)
+										K = thermodynamic temperature 	(SI unit = kelvin)
+										L = length 			(SI unit = metre)
+										M = mass 			(SI unit = kilogram)
+										N = amount of substance 	(SI unit = mole)
+										S = solid angle 		(SI unit = steradian)
+										T = time 			(SI unit = second)
+										1 = dimensionless
+										2 = squared			(e.g., "M2")
+										3 = cubed
+										4 = 4th power
+										5 = 5th power
+										6 = 6th power
+										7 = 7th power
+										8 = 8th power
+										/ = division
+										ratio(X) = A dimensionless ratio of another dimension. 
+										        For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the equivalent of "L2/L2".
+											This is only used when the underlying dimension would otherwise be "1".
+									The values may be broken into numerator and denominator separated by a slash "/" but multiple slashes must not be used. 
+									A slash must not terminate the string.
+									For example, length per time would be indicated by "L/T"
+									A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component.
+									The number "1" will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). 
+									The number "1" must not be used as a denominator because it is implied (e.g., "M" impiles "M/1").
+									For consistency, the items within a numerator or denominator are listed in alphabetical order (i.e., LM - not ML).</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:element name="minimumValue" type="xsd:long" minOccurs="0" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>The minimum value allowed for the discrete property.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="maximumValue" type="xsd:long" minOccurs="0" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>The maximum value allowed for the discrete property.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:element name="enumValue" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation>A value allowed for the categorical property.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:choice>
+					<xsd:element name="category" type="resqml:nameStruct" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>A property classification.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

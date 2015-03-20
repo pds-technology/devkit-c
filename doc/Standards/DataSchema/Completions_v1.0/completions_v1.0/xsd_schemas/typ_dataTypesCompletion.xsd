@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_measureType.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:appinfo>Modified-in-version=1.0, By-issue=xxxxxx, Change=Added</xsd:appinfo>
+	</xsd:annotation>
+	<!--                                                         -->
+	<!-- ========== CONTENT SPECIFIC INTEGER TYPES  ============ -->
+	<!--                                                         -->
+    <xsd:simpleType name="nonNegativeFraction" final="#all">
+		<xsd:annotation>
+   			<xsd:documentation>A floating point value between zero (inclusive) and one (inclusive)</xsd:documentation>
+      	</xsd:annotation>
+      	<xsd:restriction base="witsml:abstractDouble">
+			<xsd:minInclusive value="0">
+	            <xsd:annotation>
+    	           <xsd:documentation>This value can be zero but cannot be negative.</xsd:documentation>
+        	    </xsd:annotation>
+         	</xsd:minInclusive>
+         	<xsd:maxInclusive value="1">
+            	<xsd:annotation>
+               		<xsd:documentation>This value can not be greater than one.</xsd:documentation>
+            	</xsd:annotation>
+         	</xsd:maxInclusive>
+      	</xsd:restriction>
+   	</xsd:simpleType>
+	<!--                                                         -->
+</xsd:schema>

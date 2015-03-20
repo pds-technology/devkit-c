@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="cs_documentInfo.xsd" />
+   <xsd:include schemaLocation="cs_jobExtension.xsd" />
+   <xsd:include schemaLocation="cs_cementExtension.xsd" />
+   <xsd:include schemaLocation="cs_directionalSurveyExtension.xsd" />
+   <xsd:include schemaLocation="cs_cleanFillExtension.xsd" />
+   <xsd:include schemaLocation="cs_lostCirculationExtension.xsd" />
+   <xsd:include schemaLocation="cs_perforatingExtension.xsd" />
+   <xsd:include schemaLocation="cs_pressureTestExtension.xsd" />
+   <xsd:include schemaLocation="cs_waitingOnExtension.xsd" />
+   <xsd:include schemaLocation="cs_acidizefracExtension.xsd" />
+   <xsd:include schemaLocation="cs_BHPExtension.xsd" />
+   <xsd:include schemaLocation="cs_fluidReportExtension.xsd" />
+   <xsd:include schemaLocation="cs_downholeExtension.xsd" />
+   <xsd:complexType name="cs_eventExtension">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - event extension schema</xsd:documentation>
+      </xsd:annotation>
+      <xsd:choice minOccurs="0" maxOccurs="1">
+         <xsd:element name="cementExtension" type="witsml:cs_cementExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for cement</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="cleanFillExtension" type="witsml:cs_cleanFillExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for clean fill</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="directionalSurveyExtension" type="witsml:cs_directionalSurveyExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for directional survey</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="lostCirculationExtension" type="witsml:cs_lostCirculationExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for lost circulation</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="BHPExtension" type="witsml:cs_BHPExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for bottom hole pressure</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="acidizeFracExtension" type="witsml:cs_acidizefracExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for acidizing and fracturing</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="jobExtension" type="witsml:cs_jobExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for job</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pressureTestExtension" type="witsml:cs_pressureTestExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for pressure test</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waitingOnExtension" type="witsml:cs_waitingOnExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for waiting on</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="perforationExtension" type="witsml:cs_perforatingExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for perforating event</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fluidReportExtension" type="witsml:cs_fluidReportExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for fluid report</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="downholeExtension" type="witsml:cs_downholeExtension" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for downhole component</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:choice>
+   </xsd:complexType>
+</xsd:schema>

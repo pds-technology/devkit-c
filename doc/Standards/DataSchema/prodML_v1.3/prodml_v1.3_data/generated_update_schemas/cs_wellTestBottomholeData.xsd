@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wellTestBottomholeData">
+      <xsd:annotation>
+         <xsd:documentation>Well test data gathered at the bottomhole.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="bottomholePres" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The pressure at the bottomhole of the well.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="bottomholeTemp" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature at the bottomhole of the well.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="bottomholePOverZ" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The P/Z value at the bottomhole. This is P/Z, pressure over gas compressibility factor (z), at the bottomhole of the well. Note that the uom is
+               units of pressure., since Z is dimensionless.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="bottomholeMD" type="prodml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The measured depth of the bottomhole.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellbore" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured
+               depth value is deeper than the first kickoff point. It is recommended that it always be given.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

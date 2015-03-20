@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+
+	<xsd:complexType name="cs_otdr">
+		<xsd:annotation>
+			<xsd:documentation>This records the result arrays, along with context information, from an 
+			Optical Time Domain Reflectometry (OTDR) run. The arrays will define the relative scattered 
+			power from the Rayleigh scattering vs distance along the fiber. The actual data values are 
+			recorded in a wellLog object, which is referenced in a subelement.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="reasonForRun" type="witsml:OTDRReason" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The reason the OTDR test was run. The three main reasons are 
+					'pre-installation', which is before the installation of the fiber; 'post-installation', 
+					which is used to validate a successful fiber installation; and 'DTS run', which is 
+					a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimRun" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The dateTime of the run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataInWellLog" type="witsml:refNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the well log used to record the table of data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberEndConncected" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the fiber connection node. If more than one node 
+					is available for a well/wellbore, this element is used to specify which node is 
+					connected to the instrument box. This name should correspond to the fiberEndPoint/name 
+					that is recorded in the installed system object.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A general comment about the OTDR run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the run.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+
+</xsd:schema>

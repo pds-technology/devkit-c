@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_measureType.xsd" />
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <!--                                                         -->
+   <!--                                                         -->
+   <!-- ================ DATE AND TIME TYPES  ================= -->
+   <!--                                                         -->
+   <xsd:simpleType name="date" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A julian date.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractDate" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="timestamp" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A date with a time of day and a mandatory time zone offset. This must captute the correct date-time relative to UTC. It is not necessary to use a local
+         time zone because software may convert the date-time to a different local time zone (while retaining correct date-time relative to UTC). See acquisitionTmeZone in
+         commonData for the original time zone of times in an object.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-39, Change=Modified-description</xsd:appinfo>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-39, Change=Modified-constraint</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractDateTime">
+         <xsd:pattern value=".+T.+[Z+\-].*" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type timeZone.-->
+   <!--                                                         -->
+   <xsd:complexType name="timestampedTimeZone" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A local time zone conforming to the XSD:dateTime specification. The dTim attribute can capture when the local time zone changed. The use of this type
+         is generally related to a specific (set of) date and time for which the original time zone needs to be captured.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-39, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractTimeZone">
+            <xsd:attribute name="dTim" type="prodml:timestamp" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The date and time when this local time zone became active. This value must be defined on the second and subsequent
+                  occurrences.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="calendarYear" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A calendar year (CCYY) in the gregorian calendar. This type is meant to captute original invariant values. It is not intended to be used in "time math"
+         where knowledge of the time zone is needed.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-53, Change=Changed-type-from:abstractYear</xsd:appinfo>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-53, Change=Modified-constraint</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractInt">
+         <xsd:minInclusive value="1000" />
+         <xsd:maxInclusive value="9999" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!-- =============== MISCELLANEOUS TYPES  ================== -->
+   <!--                                                         -->
+   <xsd:simpleType name="logicalBoolean" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>Values of "true" (or "1") and "false" (or "0").</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractBoolean" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type yAxisAzimuth.-->
+   <!--                                                         -->
+   <xsd:complexType name="volumePerVolumeMeasurePercent" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A volume per volume measure that is constrained to a unit of percent.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-110, Change=Non-semantic</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:PercentUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="unitlessQuantity" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A unitless quantity. This should not be confused with a dimensionless measure.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractDouble" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type genericMeasure.-->
+   <!--NOT-USED: Deleted type ratioGenericMeasure.-->
+   <!--NOT-USED: Deleted type indexCurve.-->
+   <!--NOT-USED: Deleted type fileName.-->
+   <!--NOT-USED: Deleted type checksum.-->
+   <!--NOT-USED: Deleted type listOfString.-->
+   <!--                                                         -->
+   <!-- =========== uid and foreign key data types ============ -->
+   <!--                                                         -->
+   <xsd:simpleType name="uidString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A locally unique identifier. The value is not intended to convey any semantic content (e.g., it may be computer generated).</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-5, Change=Modified-description</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUidString" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="uidParentString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A unique identifier of an object parent. This should only be used for the uid of a parent object (i.e., a foreign key to another object). It should not
+         be used for child nodes of an object. The value is not intended to convey any semantic content (e.g., it may be computer generated). The purpose of this type is to
+         facilitate modifying the optionality of parentage uids in derived schemas.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-5, Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUidString" />
+   </xsd:simpleType>
+   <!--                                                     -->
+   <xsd:simpleType name="refString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A reference to the unique identifier of another element. This value represents a foreign key from one element to another. The value should match the
+         value of an attribute of type uidString.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUidString" />
+   </xsd:simpleType>
+   <!--                                                     -->
+   <xsd:complexType name="refNameString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A reference to a name in another node of the xml hierachy. This value represents a foreign key from one element to another.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="uidRef" type="prodml:refString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>A reference to the unique identifier (uid attribute) in the node referenced by the name value. This attribute is required within the context
+                  of a WITSML server.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="refObjectString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A reference to a name in another object. This value represents a foreign key from one object to another. Knowledge of the object being referenced is
+         defined by an attribute.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="object" type="prodml:nameString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The name of the singular object being referenced.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="uidRef" type="prodml:refString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>A reference to the unique identifier (uid attribute) in the object referenced by the name value. This attribute is required within the context
+                  of a WITSML server.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type refPositiveCount.-->
+   <!--                                                     -->
+   <xsd:simpleType name="refWellDatum" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A reference to a wellDatum in the current well. This value must match the uid value in a WellDatum. This value represents a foreign key from one
+         element to another. This is an exception to the convention that a foreign key must utilize both a human contextual name and a uid value. For messages outside the context
+         of a server then this value will commonly match the value of the name of the wellDatum (e.g., 'KB') if uids are not not used in that context. This was a compromise in
+         order to allow the coordinate structures to be simple and still be usable both within the context of a server and outside the context of a server.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUidString" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!-- =========== CONTENT SPECIFIC STRING TYPES  ============ -->
+   <!--                                                         -->
+   <xsd:simpleType name="nameString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A user assigned human recognizable contextual name of something. There should be no assumption that (interoperable) semantic information will be
+         extracted from the name by a third party. This type of value is generally not guaranteed to be unique and is not a candidate to be replaced by an
+         enumeration.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractNameString" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="commentString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A comment or remark intended for human consumption. There should be no assumption that semantics can be extracted from this field by a computer.
+         Neither should there be an assumption that any two humans will interpret the information in the same way (i.e., it may not be interoperable).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractCommentString" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="descriptionString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A textual description of something.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-33, Change=Changed-type-from:abstractString</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractDescriptionString" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type shortDescriptionString.-->
+   <!--NOT-USED: Deleted type timestampedDescriptionString.-->
+   <!--NOT-USED: Deleted type encodedArrayString.-->
+   <!--NOT-USED: Deleted type encodedValueString.-->
+   <!--                                                         -->
+   <xsd:complexType name="extensionvalue" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A extension value. Each standard name should document the expected maximum size. Knowledge of the semantics must be provided with the context of the
+         usage of this type.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-71 Change=Added</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMaximumLengthString">
+            <xsd:attribute name="uom" type="prodml:uomString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The unit of measure for the value. This value must conform to the values allowed by a measure class.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="kindString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A community assigned human recognizable name. This type of value is intended to be unique and is generally a candidate to be constrained to an
+         enumerated list.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="uomString" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A unit of measure acronym from the POSC unit of measure file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUomEnum" />
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type schemaVersionString.-->
+   <!--                                                         -->
+   <xsd:complexType name="nameStruct" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The name of something within a naming system.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="namingSystem" type="prodml:nameString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The naming system within the name is (hopefully) unique.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="wellKnownNameStruct" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>The name of something within a mandatory naming system with an optional code.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="namingSystem" type="prodml:nameString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The naming system within the name is unique.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="code" type="prodml:kindString" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>A unique (short) code associated with the name.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type uncollapsedString.-->
+   <!--NOT-USED: Deleted type iadcBearingWearCode.-->
+   <!--NOT-USED: Deleted type geodeticZoneString.-->
+   <!--                                                         -->
+   <!-- =========== Well Based Coordinate Types  ============== -->
+   <!--                                                         -->
+   <xsd:complexType name="measuredDepthCoord" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A measured depth coordinate in a wellbore. Positive moving from the reference datum toward the bottomhole. All coordinates with the same datum (and
+         same uom) can be considered to be in the same Coordinate Reference System and are thus directly comparable.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:MeasuredDepthUom" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The unit of measure of the quantity value.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="datum" type="prodml:refWellDatum" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>A pointer to the reference datum for this coordinate value as defined in WellDatum. This value is assumed to match the uid value in a
+                  WellDatum. If not given then the default WellDatum must be assumed.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                     -->
+   <!--NOT-USED: Deleted type wellVerticalDepthCoord.-->
+   <!--                                                     -->
+   <xsd:complexType name="wellElevationCoord" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A vertical (gravity based) elevation coordinate within the context of a well. Positive moving upward from the reference datum. All coordinates with the
+         same datum (and same uom) can be considered to be in the same Coordinate Reference System and are thus directly comparable.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractMeasure">
+            <xsd:attribute name="uom" type="prodml:WellVerticalCoordinateUom" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be
+                  assumed.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="datum" type="prodml:refWellDatum" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>A pointer to the reference datum for this coordinate value as defined in WellDatum. If not given then the default WellDatum must be
+                  assumed.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <!-- =========== USA based Coordinate Types  =============== -->
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type sectionNumber.-->
+   <!--NOT-USED: Deleted type publicLandSurveySystemQuarterTownship.-->
+   <!--NOT-USED: Deleted type publicLandSurveySystemQuarterSection.-->
+   <!--NOT-USED: Deleted type footageNorthSouth.-->
+   <!--NOT-USED: Deleted type footageEastWest.-->
+   <!--                                                         -->
+   <!-- ========== CONTENT SPECIFIC INTEGER TYPES  ============ -->
+   <!--                                                         -->
+   <xsd:simpleType name="nonNegativeCount" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A non-negative integer (zero based count or index) with a maximum value of 32767 (2-bytes). For items that represent "number of" something or a
+         "sequential" count or index.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractShort">
+         <xsd:minInclusive value="0">
+            <xsd:annotation>
+               <xsd:documentation>This value can be zero but cannot be negative.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--NOT-USED: Deleted type nonNegativeBigCount.-->
+   <!--                                                         -->
+   <xsd:simpleType name="positiveCount" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>A positive integer (one based count or index).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractPositiveCount">
+         <xsd:minInclusive value="1">
+            <xsd:annotation>
+               <xsd:documentation>This value cannot be negative or zero.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--NOT-USED: Deleted type positiveBigCount.-->
+   <!--NOT-USED: Deleted type integerCount.-->
+   <!--                                                         -->
+   <xsd:simpleType name="beaufortScaleIntegerCode" final="#all">
+      <xsd:annotation>
+         <xsd:documentation>An estimate wind strength based on the Beaufort Wind Scale. Values range from 0 (calm) to 12 (hurricane).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractShort">
+         <xsd:minInclusive value="0" />
+         <xsd:maxInclusive value="12" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type pumpActionIntegerCode.-->
+   <!--NOT-USED: Deleted type iadcIntegerCode.-->
+   <!--NOT-USED: Deleted type levelIntegerCode.-->
+   <!--                                                         -->
+   <!-- ========== REMAINING V1.2 TYPES  ============ -->
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type cost.-->
+   <!--                                                         -->
+   <xsd:complexType name="indexedObject" final="#all">
+      <xsd:annotation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-110, Change=Non-semantic</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractTypeEnum">
+            <xsd:attribute name="index" type="prodml:positiveCount" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Indexes things with the same name. That is the first one, the second one, etc.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="name" type="prodml:kindString" use="optional" />
+            <xsd:attribute name="uom" type="prodml:uomString" use="optional" />
+            <xsd:attribute name="description" type="prodml:descriptionString" use="optional" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:simpleType name="str2" final="#all">
+      <xsd:annotation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-110, Change=Non-semantic</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractString">
+         <xsd:maxLength value="2" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type str16.-->
+   <!--                                                         -->
+   <xsd:simpleType name="str32" final="#all">
+      <xsd:annotation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3-44, Change=Changed-type-from:abstractString</xsd:appinfo>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-110, Change=Non-semantic</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractString32" />
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productFlowUnit.xsd" />
+   <xsd:include schemaLocation="cs_productFlowChangeLog.xsd" />
+   <xsd:include schemaLocation="cs_productFlowNetworkPlan.xsd" />
+   <xsd:include schemaLocation="cs_productFlowlExternalPort.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productFlowNetwork">
+      <xsd:annotation>
+         <xsd:documentation>The non-contextual content of a WITSML Product Flow Network object.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the Product Flow Network. This must be unique within the context of the overall Product Flow Model.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="planName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The
+               parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parentNetwork" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to the network containing the unit that this network represents. That is, the Unit must exist in a different Network. If a parent
+               network is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall
+               installation. All other networks represent internal detail and should not be referenced from outside the model. The external ports on the model network represent
+               the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because
+               it is redundant to knowledge of the model name (i.e., there is a one-to-one correspondence).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="representedUnit" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>DEPRECATED. Use parentNetwork for all new work. A pointer to the Flow Unit that this network represents. The Unit must exist in a different
+               Network. If a unit is not specified then the network represents the model. A model should only be represented by one network. The model network represents the
+               overall installation. All other networks represent internal detail and should not be referenced from outside this model. The external ports on the model network
+               represent the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model
+               network because it is redundant to knowledge of the model name (i.e., there is a one-to-one correspondence). A unit model defines the internal behavior of a Flow
+               Unit.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark about the network.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="port" type="prodml:cs_productFlowlExternalPort" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An external port. This exposes an internal node for the purpose of allowing connections to the internal behavior of the network. Networks that
+               represent a Flow Unit should always have external ports. If this network represents a Unit then the name of the external port must match the name of a port on the
+               Unit (i.e., they are logically the same port).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="unit" type="prodml:cs_productFlowUnit" minOccurs="1" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A flow behavior for one unit. Within this context, a unit represents a usage of equipment for some purpose. The unit is generally identified by
+               its function rather than the actual equipment used to realize the function. A unit might represent something complex like a field or separator or something simple
+               like a valve or pump.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="changeLog" type="prodml:cs_productFlowChangeLog" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Documents that a change occurred at a particular time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="plan" type="prodml:cs_productFlowNetworkPlan" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines the existance of a planned network which is a variant of this network beginning at a specified point in time. Any changes to the actual
+               network after that time do not affect the plan.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the network.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

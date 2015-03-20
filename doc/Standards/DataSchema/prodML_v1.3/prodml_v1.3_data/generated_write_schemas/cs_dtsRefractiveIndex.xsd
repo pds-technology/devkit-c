@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_dtsRefractiveIndex">
+      <xsd:annotation>
+         <xsd:documentation>The refractive index of a material depends on the frequency or wavelength of the light. Hence it is necessary to include both the value (a unitless
+         number) and the frequency or wavelength. The frequency will be a quantity type with a frequency unit, such as Hz, kHz, or MHz. The wavelength will be a quantity type with
+         a length unit, such as m, cm, um, in, or ft.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="value" type="prodml:unitlessQuantity" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The value of the refractive index.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="frequency" type="prodml:frequencyMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The frequency (and uom) for which the refractive index is measured.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wavelength" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The wavelength (and uom) for which the refractive index is measured. The reported wavelength should be the wavelength of the light in a
+               vacuum.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the index.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

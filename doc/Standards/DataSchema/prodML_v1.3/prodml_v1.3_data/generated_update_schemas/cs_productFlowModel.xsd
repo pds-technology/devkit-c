@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productFlowExternalReference.xsd" />
+   <xsd:include schemaLocation="cs_productFlowNetwork.xsd" />
+   <xsd:include schemaLocation="typ_measureType.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productFlowModel">
+      <xsd:annotation>
+         <xsd:documentation>The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal
+         detail.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the facility which is represented by this model. The name can be qualified by a naming system. This also defines the kind of
+               facility.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The name and type of a facility whose context is relevant to the represented installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time of the start of validity for this model.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time of the termination of validity for this model.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="existenceTime" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The time for which "currently existing" data is desired from the network. All connections (and related data) existing at this time (i.e. start
+               and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on
+               "Special Handling" of growing objects for a description of the behavior related to this parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimMin" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimMax" type="prodml:endpointQualifiedDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="externalConnect" type="prodml:cs_productFlowExternalReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines the external port in another Product Flow Model to which an external port in this model is connected. An external port should be
+               connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be
+               defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of
+               those facilities. This allows any question about mass balancing to be contained within each individual model. The external port name must match the name of an
+               external port on the network that represents this model.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="network" type="prodml:cs_productFlowNetwork" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal
+               detail. One of the networks must represent this model.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark about the model.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

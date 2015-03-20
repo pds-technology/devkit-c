@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.energistics.org/schemas/aggregate" 
+	xmlns:agg="http://www.energistics.org/schemas/aggregate"
+	xmlns:abs="http://www.energistics.org/schemas/abstract" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="common_v1.4.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2008 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:import namespace="http://www.energistics.org/schemas/abstract"
+		    schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd"/>
+	<!--                                                         -->
+	<!-- This include is used to add the member schemas of the substitution group. -->
+	<xsd:include schemaLocation="sub_objectMember.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>An Energsitics object which is an aggregate of other objects.
+		This object is NOT INTENDED FOR USE WITHIN A WITSML SERVER even though it is constructed
+		similar to the standard data object pattern. The anticipated normal usage would be
+		for collecting an aggregate of object messages for transport outside the context of a WITSML server.
+		The aggregate uses element substitution groups in a manner which makes it agnostic 
+		to the namespace of the members of the aggregate.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:element name="aggregates" type="agg:obj_aggregates">
+		<xsd:annotation>
+			<xsd:documentation>A container for multiple singular aggregate.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                                                         -->
+	<xsd:complexType name="obj_aggregates">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-81, Change=Added</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="aggregate" type="agg:obj_aggregate" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A single aggregate.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" use="required" fixed="1.0">
+			<xsd:annotation>
+				<xsd:documentation>Data object schema version.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="obj_aggregate">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the aggregate.  
+					The length of this name should be constrained to the standard name length
+					in the aggregate members.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="abs:abstractContextualObject" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A place-holder for a contextual object. 
+					This defines the context for the set of data objects.
+					The abstract element cannot be intantiated in an XML message.
+					Rather, a member of the substitution group must be insantiated. 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="abs:abstractDataObject" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A placeholder for a data single object. 
+					Note that the objects can be specified in any order but it is recommended that
+					the most independent data objects be specified first (e.g., well before wellbore).
+					The abstract element cannot be intantiated in an XML message.
+					Rather, a member of the substitution group (i.e., any singular data object) must be instantiated. 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

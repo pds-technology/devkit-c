@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productFlowQualifierExpected.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productFlowExpectedPortProperty">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Product Flow Expected Property Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="property" type="prodml:ReportingProperty" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The expected kind of property.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time that the sensor was activated on the port.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time that the sensor was deactivated on the port.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tagAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An alternative name for the sensor that will measure the property.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="deadband" type="prodml:generalMeasureType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Difference between two consecutive readings must exceeds deadband value to be accepted</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="maximumFrequency" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum time difference from the last sent event before the next event is sent.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="expectedFlowProduct" type="prodml:cs_productFlowQualifierExpected" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Defines the expected flow and product pairs to be assigned to this port by a Product Volume report. A set of expected qualifiers can be defined
+               for each pair. The aggregate of expectations on all properties should be a subset of the aggregate of expectations on the port. If no expectations are defined on
+               the port then the port aggregate will be defined by the properties.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark associated with this property.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

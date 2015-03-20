@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../stylesheets/capSubscriber.xsl" type="text/xsl" media="screen"?>
+<!--   		Example of capSubscriber document 		-->
+<capSubscribers 
+	xmlns="http://www.witsml.org/api/131" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.witsml.org/api/131 
+			    http://www.witsml.org/api/131/obj_capSubscriber.xsd" 
+	version="1.3.1">
+	<capSubscriber apiVers="1.2.0">
+		<contact>
+			<name>Subscriber #1 at ABC corp.</name>
+			<email>myEmailAddress@abc.com</email>
+			<phone>888-123-4567</phone>
+		</contact>
+		<description>Engineering departent at ABC corp.</description>
+		<name>John Smith</name>
+		<vendor>Acme Downhole Software</vendor>
+		<version>1.2.0.1451</version>
+		<schemaVersion>1.2.0</schemaVersion>
+	</capSubscriber>
+</capSubscribers>

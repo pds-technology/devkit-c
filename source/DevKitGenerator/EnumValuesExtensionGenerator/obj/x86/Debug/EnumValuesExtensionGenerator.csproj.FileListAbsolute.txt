@@ -1,0 +1,9 @@
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\Debug\EnumValuesExtensionGenerator.exe.config
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\Debug\EnumValuesExtensionGenerator.exe
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\Debug\EnumValuesExtensionGenerator.pdb
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\Debug\Energistics.DataAccess.dll
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\Debug\Energistics.DataAccess.pdb
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\Debug\Energistics.DataAccess.xml
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\obj\x86\Debug\EnumValuesExtensionGenerator.csprojResolveAssemblyReference.cache
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\obj\x86\Debug\EnumValuesExtensionGenerator.exe
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\obj\x86\Debug\EnumValuesExtensionGenerator.pdb

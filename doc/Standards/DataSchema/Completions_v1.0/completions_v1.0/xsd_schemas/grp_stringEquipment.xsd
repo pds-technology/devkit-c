@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="cs_equipmentConnection.xsd"/>
+	<xsd:include schemaLocation="cs_assembly.xsd"/>
+	<xsd:include schemaLocation="cs_refContactInterval.xsd"/>
+	<xsd:include schemaLocation="cs_perfHole.xsd"/>
+	<xsd:include schemaLocation="cs_refContainer.xsd"/>
+	<xsd:group name="grp_stringEquipment">
+		<xsd:annotation>
+			<xsd:documentation>These are the usage properties for the equipment</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="orderOfObject" type="witsml:objectSequence" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Defines a sequence number and with an optional description attribute</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="status" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The status of the piece of equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="runNo" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The well run No</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="previousRunDays" type="witsml:timeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The days that the equipment has run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="objectCondition" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Object condition at installation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="surfaceCondition" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Object surface condition</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="count" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The count number of the same equipment. The default is 1.  In some cases, multiple pieces group into one component.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="length" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The total length of the equipment.  This is NOT length per unit.
+                    This is the length of unit stored at equipmentset's equipment information section.
+                	</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Measured depth at top of interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Measured depth at base of interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdTop" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True vertical depth at top of the section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdBottom" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True vertical depth at bottom of the section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdBase" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True vertical depth at base of interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="outsideString" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Flag indicating whether this component is inside the string or not .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="insideComponent" type="witsml:cs_refContainer" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The list of components contained in the equipment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="outsideComponent" type="witsml:cs_refContainer" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The list of components outside of this piece of equipment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tensileMax" type="witsml:forceMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Max Tensile Strength </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="presRating" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Pressure  Rating</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="presCollapse" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Collapse Pressure </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="presBurst" type="witsml:pressureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Burst Pressure </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="heatRating" type="witsml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>heat rating </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isLinetoSurface" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Flag indicating the equipment has line connected to surface.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="isCentralized" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Flag indicating equipment is centralized
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="hasScratchers" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Flag indicating scratchers have been added to the equipment.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="connectionNext" type="witsml:cs_equipmentConnection" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+                    	Describes the next component connected.
+                	</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="assembly" type="witsml:cs_assembly" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+                    	Describes the assembly connected.
+                	</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="perforationSetRefID" type="witsml:refString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>reference the perforated hole in equipment after perforation event.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="permanentRemarks" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Remarks on the equipment stored permanently.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="usageComment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Remarks on usage of this equipment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                     -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                     -->
+	<xsd:include schemaLocation="cs_resqmlContinuousPropertyValues.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlDiscretePropertyValues.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlCategoricalPropertyValues.xsd"/>
+	<!--                                                     -->
+	<xsd:complexType name="cs_resqmlPropertySet">
+		<xsd:annotation>
+			<xsd:documentation>Contains all property values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="continuousPropertyValues" type="resqml:cs_resqmlContinuousPropertyValues" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Defines the property values specific to one property for an object. 
+					This property has a unit of measure and may be defined as floating point values. 
+					At least one of continuousPropertyValues, discretePropertyValues and 
+					categoricalPropertyValues must be given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="discretePropertyValues" type="resqml:cs_resqmlDiscretePropertyValues" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Defines the property values specific to one property for an object. 
+					This property has whole numbered values. 
+					At least one of continuousPropertyValues, discretePropertyValues and 
+					categoricalPropertyValues must be given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="categoricalPropertyValues" type="resqml:cs_resqmlCategoricalPropertyValues" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Defines the property values specific to one property for an object. 
+					This property has whole numbered values which represent a string. 
+					At least one of continuousPropertyValues, discretePropertyValues and 
+					categoricalPropertyValues must be given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                     -->
+</xsd:schema>

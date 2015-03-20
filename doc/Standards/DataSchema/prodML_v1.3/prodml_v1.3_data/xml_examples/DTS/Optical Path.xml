@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:fiberOpticalPaths xmlns:prodml="http://www.prodml.org/schemas/1series" xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../xsd_schemas/obj_fiberOpticalPath.xsd">
+	<prodml:documentInfo>
+		<prodml:documentName>test</prodml:documentName>
+	</prodml:documentInfo>
+	<prodml:facilityIdentifier>
+		<prodml:name>Sample Well</prodml:name>
+	</prodml:facilityIdentifier>
+	<prodml:fiberOpticalPath uid="OP1">
+		<prodml:name>Optical Fiber 1</prodml:name>
+		<prodml:inventory>
+			<prodml:segment uid="10">
+				<prodml:name>Surface Fiber</prodml:name>
+				<prodml:type>fiber</prodml:type>
+				<prodml:fiberLength uom="ft">127</prodml:fiberLength>
+				<prodml:overStuffing uom="ft">3</prodml:overStuffing>
+				<prodml:fiberConveyance>
+					<prodml:permanent>
+						<prodml:permanentCableInstallationType>clamped to tubular</prodml:permanentCableInstallationType>
+					</prodml:permanent>
+				</prodml:fiberConveyance>
+			</prodml:segment>
+			<prodml:segment uid="30">
+				<prodml:name>Downhole Fiber</prodml:name>
+				<prodml:type>fiber</prodml:type>
+				<prodml:fiberLength uom="ft">1500</prodml:fiberLength>
+				<prodml:overStuffing uom="ft">50</prodml:overStuffing>
+				<prodml:fiberConveyance>
+					<prodml:permanent>
+						<prodml:permanentCableInstallationType>clamped to tubular</prodml:permanentCableInstallationType>
+					</prodml:permanent>
+				</prodml:fiberConveyance>
+			</prodml:segment>
+			<prodml:segment uid="50">
+				<prodml:name>Uphole Fiber</prodml:name>
+				<prodml:type>fiber</prodml:type>
+				<prodml:fiberLength uom="ft">1500</prodml:fiberLength>
+				<prodml:overStuffing uom="ft">75</prodml:overStuffing>
+				<prodml:fiberConveyance>
+					<prodml:permanent>
+						<prodml:permanentCableInstallationType>clamped to tubular</prodml:permanentCableInstallationType>
+					</prodml:permanent>
+				</prodml:fiberConveyance>
+			</prodml:segment>
+			<prodml:segment uid="70">
+				<prodml:name>Short segment before the splice</prodml:name>
+				<prodml:type>fiber</prodml:type>
+				<prodml:fiberLength uom="ft">50</prodml:fiberLength>
+				<prodml:fiberConveyance>
+					<prodml:permanent>
+						<prodml:permanentCableInstallationType>clamped to tubular</prodml:permanentCableInstallationType>
+					</prodml:permanent>
+				</prodml:fiberConveyance>
+			</prodml:segment>
+			<prodml:segment uid="90">
+				<prodml:name>Return Fiber to LightBox</prodml:name>
+				<prodml:type>fiber</prodml:type>
+				<prodml:fiberLength uom="ft">150</prodml:fiberLength>
+				<prodml:fiberConveyance>
+					<prodml:permanent>
+						<prodml:permanentCableInstallationType>clamped to tubular</prodml:permanentCableInstallationType>
+					</prodml:permanent>
+				</prodml:fiberConveyance>
+			</prodml:segment>
+			<prodml:turnaround uid="40">
+				<prodml:name>Bottom Hole Turnaround</prodml:name>
+				<prodml:type>turnaround</prodml:type>
+			</prodml:turnaround>
+			<prodml:splice uid="80">
+				<prodml:name>Main Splice</prodml:name>
+				<prodml:type>what is this for??</prodml:type>
+				<prodml:fiberSpliceType>cable splice</prodml:fiberSpliceType>
+			</prodml:splice>
+			<prodml:connection uid="20">
+				<prodml:name>Surface Connector</prodml:name>
+				<prodml:type>connector</prodml:type>
+				<prodml:connectorType>dry mate</prodml:connectorType>
+			</prodml:connection>
+			<prodml:connection uid="60">
+				<prodml:name>Surface Connector 2</prodml:name>
+				<prodml:type>connector</prodml:type>
+				<prodml:connectorType>dry mate</prodml:connectorType>
+			</prodml:connection>
+			<prodml:terminator uid="OPT1">
+				<prodml:name>Main Terminator</prodml:name>
+				<prodml:terminationType>looped back to instrument box</prodml:terminationType>
+			</prodml:terminator>			
+		</prodml:inventory>
+		<prodml:opticalPathNetwork>
+			<prodml:network uid="OPN1">
+				<prodml:name>Current Setup</prodml:name>
+				<prodml:unit uid="OPNU10">
+					<prodml:facility uidRef="10">Surface Fiber Segment</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection to LightBox</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Instrument Box</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection to Surface Connector</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Surface Connector 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU20">
+					<prodml:facility uidRef="20">Surface Connector</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from Surface Connector to Surface Fiber</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Surface Connector 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection from Surface Connector to Downhole Fiber</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Surface Connector 2</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU30">
+					<prodml:facility uidRef="30">Downhole Fiber</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from Surface Connector to Downhole Fiber</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Surface Connector 2</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection from Downhole Fiber to Turnaround</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Downhole Connection 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU40">
+					<prodml:facility uidRef="40">Bottom Hole Turnaround</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from Downhole Fiber to Turnaround</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Downhole Connection 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection from Turnaround to Uphole Fiber</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Uphole Connection 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU50">
+					<prodml:facility uidRef="50">Uphole Fiber</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from Turnaround to Uphole Fiber</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Uphole Connection 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection from Uphole Fiber to Surface Connector 2</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Uphole Connection 2</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU60">
+					<prodml:facility uidRef="60">Surface Connector 2</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from Uphole Fiber to Surface Connector 2</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Uphole Connection 2</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection from Surface Connector 2 to Segment before splice</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Surface 2 Connection</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU70">
+					<prodml:facility uidRef="70">Short Segment before the Splice</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from Surface Connector 2 to Segment before the splice</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Surface 2 Connection</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection with the splice</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Splice Connection 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU80">
+					<prodml:facility uidRef="80">Main Splice</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from short segment to splice</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Splice Connection 1</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection from splice to return fiber</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Splice Connection 2</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+				<prodml:unit uid="OPNU90">
+					<prodml:facility>Return Fiber to the Instrument Box</prodml:facility>
+					<prodml:port>
+						<prodml:name>Connection from splice to return fiber</prodml:name>
+						<prodml:direction>backward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Splice Connection 2</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+					<prodml:port>
+						<prodml:name>Connection from the Return Fiber to the Instrument Box</prodml:name>
+						<prodml:direction>forward</prodml:direction>
+						<prodml:connectedNode>
+							<prodml:node>Instrument Box 2</prodml:node>
+						</prodml:connectedNode>
+					</prodml:port>
+				</prodml:unit>
+			</prodml:network>
+		</prodml:opticalPathNetwork>
+			<prodml:defect defectID="OPD1">
+				<prodml:opticalPathDistanceStart uom="ft">1700</prodml:opticalPathDistanceStart>
+				<prodml:defectType>other</prodml:defectType>
+				<prodml:timeStart>2002-05-30T09:00:00Z</prodml:timeStart>
+				<prodml:comment>Consistent signal spike detected at this location</prodml:comment>
+			</prodml:defect>
+			<prodml:defect defectID="OPD2">
+				<prodml:opticalPathDistanceStart uom="ft">2798</prodml:opticalPathDistanceStart>
+				<prodml:defectType>darkened fiber</prodml:defectType>
+				<prodml:timeStart>2002-05-30T09:00:00Z</prodml:timeStart>
+				<prodml:comment>Fiber darkening detected at this spot</prodml:comment>
+			</prodml:defect>
+			<!-- Insert more defects here as you see fit -->
+			<prodml:facilityMapping mappingID="FM1">
+				<prodml:timeStart>2002-05-30T09:00:00Z</prodml:timeStart>
+				<prodml:fiberFacilityMappingPart mappingPartID="FM1part1">
+					<prodml:opticalPathDistanceStart uom="ft">128</prodml:opticalPathDistanceStart>
+					<prodml:opticalPathDistanceEnd uom="ft">1628</prodml:opticalPathDistanceEnd>
+					<prodml:facilityLengthStart uom="ft">1</prodml:facilityLengthStart>
+					<prodml:facilityLengthEnd uom="ft">1500</prodml:facilityLengthEnd>
+					<prodml:well uidWell="W01" uidWellbore="WB01">
+						<prodml:name>Well-01</prodml:name>
+						<prodml:nameWell>Sample Well</prodml:nameWell>
+						<prodml:nameWellbore>Main</prodml:nameWellbore>
+					</prodml:well>
+				</prodml:fiberFacilityMappingPart>
+				<prodml:comment>No 'timeEnd' specified since this mapping is still valid</prodml:comment>
+			</prodml:facilityMapping>
+			<prodml:facilityMapping mappingID="FM2">
+				<prodml:timeStart>2002-05-30T09:00:00Z</prodml:timeStart>
+				<prodml:fiberFacilityMappingPart mappingPartID="FM2part1">
+					<prodml:opticalPathDistanceStart uom="ft">1630</prodml:opticalPathDistanceStart>
+					<prodml:opticalPathDistanceEnd uom="ft">3205</prodml:opticalPathDistanceEnd>
+					<prodml:facilityLengthStart uom="ft">1</prodml:facilityLengthStart>
+					<prodml:facilityLengthEnd uom="ft">1500</prodml:facilityLengthEnd>
+					<prodml:comment>Mapping of the uphole fiber to the same facility distance</prodml:comment>
+					<prodml:well uidWell="W01" uidWellbore="WB01">
+						<prodml:name>Well-01</prodml:name>
+						<prodml:nameWell>Sample Well</prodml:nameWell>
+						<prodml:nameWellbore>Main</prodml:nameWellbore>
+					</prodml:well>
+				</prodml:fiberFacilityMappingPart>
+			</prodml:facilityMapping>
+			<prodml:otdr uid="OTDR1">
+				<prodml:name>Initial OTDR</prodml:name>
+				<prodml:dTimRun>2002-05-30T09:00:00Z</prodml:dTimRun>
+				<prodml:dataInOTDRFile>myOTDR.dat</prodml:dataInOTDRFile>
+				<prodml:opticalPathDistanceStart uom="ft">0</prodml:opticalPathDistanceStart>
+				<prodml:opticalPathDistanceEnd uom="ft">3700</prodml:opticalPathDistanceEnd>
+				<prodml:direction>forward</prodml:direction>
+				<prodml:wavelength uom="nm">20</prodml:wavelength>
+			</prodml:otdr>
+	</prodml:fiberOpticalPath>
+</prodml:fiberOpticalPaths>

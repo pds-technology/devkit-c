@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:abs="http://www.energistics.org/schemas/abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<xsd:include schemaLocation="cs_documentInfo.xsd"/>
+	<xsd:include schemaLocation="cs_downholeStringSet.xsd"/>
+	<xsd:include schemaLocation="cs_assembly.xsd"/>
+	<xsd:include schemaLocation="cs_equipmentSet.xsd"/>
+	<xsd:include schemaLocation="cs_perforationSets.xsd"/>
+	<xsd:include schemaLocation="cs_boreholeStringSet.xsd"/>
+	<xsd:group name="grp_downholeComponent">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML downhole component object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="startDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date range specification: start date</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="endDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date range specification: end date</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellHead" type="witsml:cs_downholeString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>This section contains wellhead information, and is composed of string equipment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="boreholeStringSet" type="witsml:cs_boreholeStringSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>This section contains bore hole string information including flow interval
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="downholeStringSet" type="witsml:cs_downholeStringSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The linear downhole string equipment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="equipmentSet" type="witsml:cs_equipmentSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collection of equipment / component</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="perforationSets" type="witsml:cs_perforationSets" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collection of contact interval information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

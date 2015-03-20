@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_catalogProdml.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_logData.xsd" />
+   <xsd:complexType name="cs_logDataInterpretation">
+      <xsd:annotation>
+         <xsd:documentation>Interpreted data in the form of a log of properties vs length along the facility (wellbore or pipeline).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:restriction base="prodml:cs_logData">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="mnemonicList" type="prodml:InterpretationMnemonicType" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The list of channels (ie, "columns") of data in the interpreted data object. This is a fixed list (enum). The list is in the form of comma
+                     separated names for the channels, e.g. "facilityDistance,adjustedTemperature,". These names are the mnemonics by which the channels are
+                     identified.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="unitList" type="prodml:InterpretationUnitType" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The list of units of measure for the channels of data in the interpreted data object. This is a fixed list (enum). The list is in the form
+                     of comma separated units of measure for the channels, e.g. "m,degC,". These units of measure types are taken from the Energistics
+                     measureTypes.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="data" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Container for one "rows" of log data. It is in the form of comma separated values for the channels at this row, e.g.
+                     "100.0,75.5"</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:restriction>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

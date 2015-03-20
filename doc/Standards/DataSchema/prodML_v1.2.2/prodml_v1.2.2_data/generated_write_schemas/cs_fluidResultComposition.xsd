@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>Part of the fluid analysis of a fluid report.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_fluidResultComposition">
+      <xsd:sequence>
+         <xsd:element name="isPrimary" type="prodml:logicalBoolean" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True ("true" or "1") indicates that the component is the primary component in the composition. False ("false" or "0") or not given indicates that
+               this is not a primary component.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="componentName" type="prodml:nameString" minOccurs="1" maxOccurs="1" />
+         <xsd:element name="componentBaseKind" type="prodml:FluidComponent" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="componentKind" type="prodml:FluidComponentKind" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="molecularWeight" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="weightPercent" type="prodml:massConcentrationMeasurePercent" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="molePercent" type="prodml:molarFractionMeasurePercent" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="specificGravity" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="boilingPoint" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="criticalPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="criticalTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="criticalVolume" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="acentricFactor" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="volumeTranslationFactor" type="prodml:molarVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="alphaShapeFactor" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="watsonKExponent" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="splitCount" type="prodml:positiveCount" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="plusMinimumMolecularWeight" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="plusMaximumMolecularWeight" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="rvp" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and volatile petroleum liquids, except liquefied petroleum
+               gases, as determined in accordance with American Society for Testing and Materials under the designation ASTM D323-56.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tvp" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid as determined in accordance with standard
+               methods.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="binaryInteractionCoefficient" type="prodml:binaryInteractionCoefficient" minOccurs="0" maxOccurs="unbounded" />
+         <xsd:element name="calculated" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1" />
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_realtimeHeader.xsd"/>
+	<xsd:include schemaLocation="cs_channel.xsd"/>
+	<xsd:include schemaLocation="cs_record.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_realtime">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML Realtime object.
+			Realtime data is not persistent data.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:sequence minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>At least one of dTim and md must be given.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="dTim" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The time index for the realtime object if the interval type is time-based.  
+						It is the default time index for all data in the realtime object.
+						Both dTim and md can be overridden at the channel level.
+						This value should be given when "dTim" is given with any channel.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="md" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Along hole measured depth of measurement from the drill datum.  
+						It is the default depth index for all data in the realtime object.
+						Both dTim and md can be overridden at the channel level.
+						This value should be given when "md" is given with any channel.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:element name="sequence" type="witsml:positiveBigCount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The one-based sequence of realtime messages for one subscription.
+					The first message for a subscription should have a sequence number of one and each
+					subsequent message for that subscription should increment by one.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="activityCode" type="witsml:ActivityCode" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A code used to define rig activity.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="detailActivity" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Custom string to further define an activity.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataGroup" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The group name of the channels in this realtime.
+					For example, a publisher can publish data from the mudlogger, drilling and MWD systems
+					at the same time. The drilling and mudlogger systems could have channels with the 
+					same mnemonic. The group name is used to distinguish between curves from these
+					different source systems.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:sequence minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>At least one of realtimeHeader and channel must be given.
+					A channel must always be given unless only the header is being returned
+					because a retransmit was requested or because the header was updated.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="realtimeHeader" type="witsml:cs_realtimeHeader" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>The information which is constant for all realtimes.
+						This will only be sent with the first realtime for a subscription, when
+						a retransmit is requested or when the header is updated (e.g., when
+						more channels are added).</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="channel" type="witsml:cs_channel" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>The data associated with a (de-multiplexed) channel.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="record" type="witsml:cs_record" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>The multiplexed data associated with a channel.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_fiberCommon.xsd" />
+   <xsd:complexType name="cs_fiberSplice">
+      <xsd:annotation>
+         <xsd:documentation>A splice component within the optical path.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="prodml:cs_fiberCommon">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="fiberSpliceType" type="prodml:FiberSpliceTypes" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Enum. The type of splice.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="pressureRating" type="prodml:PressureUom" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The pressure rating for which the splice is expected to withstand</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="bendAngle" type="prodml:PlaneAngleUom" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The measurement of the bend on the splice.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="spliceEquipmentUsed" type="xsd:string" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>A useful description of the equipment used to create the splice</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="strippingType" type="xsd:string" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>A useful description of the stripping type that was conducted</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="protectorType" type="xsd:string" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>A useful description of the type of protector used in the splice.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

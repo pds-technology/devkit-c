@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:complexType name="cs_dtsOneWayLoss">
+      <xsd:annotation>
+         <xsd:documentation>The The power loss for one way travel of a beam of light, usually measured in decibels per unit length. It is necessary to include both the value (and
+         its unit) and the wavelength. The wavelength varies with the refractive index, while the frequency remains constant. The wavelength given to specify this type is the
+         wavelength in a vacuum (refractive index = 1).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="value" type="prodml:generalMeasureType" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The value of the one way loss per unit of length. The usual uom is decibels per kilometre (dB/km), although this might vary depending on the
+               calibration method used.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="frequency" type="prodml:frequencyMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The frequency (and uom) for which the one-way loss is measured.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wavelength" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The wavelength (and uom) for which the one-way loss is measured. The reported wavelength should be the wavelength of the light in a
+               vacuum.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the loss.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<prodml:dtsInstalledSystems xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../xsd_schemas/obj_dtsInstalledSystem.xsd" 
+                            xmlns:prodml="http://www.prodml.org/schemas/1series" 
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<prodml:facilityIdentifier>
+		<prodml:name>well 1</prodml:name>
+		<prodml:installation>yes</prodml:installation>
+		<prodml:kind>well</prodml:kind>
+		<prodml:contextFacility>my facility</prodml:contextFacility>
+		<prodml:geographicContext></prodml:geographicContext>
+		<prodml:businessUnit>
+			<prodml:kind>business</prodml:kind>
+		</prodml:businessUnit>
+		<prodml:operator>
+			<prodml:name>smooth</prodml:name>
+		</prodml:operator>		
+	</prodml:facilityIdentifier>
+	<prodml:dtsinstalledSystem>
+		<prodml:name>Sample Installed System</prodml:name>
+		<prodml:dateMin>2002-05-30T09:00:00Z</prodml:dateMin>
+		<prodml:opticalPathLength uom="m">3460</prodml:opticalPathLength>
+		<prodml:opticalPathRef>OP1</prodml:opticalPathRef>
+		<prodml:instrumentBoxRef>IB1</prodml:instrumentBoxRef>
+		<!-- Entry for the instrument box is missing here -->
+	</prodml:dtsinstalledSystem>
+</prodml:dtsInstalledSystems>

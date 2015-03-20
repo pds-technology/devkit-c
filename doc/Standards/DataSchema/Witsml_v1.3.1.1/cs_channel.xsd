@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_channel">
+		<xsd:annotation>
+			<xsd:documentation> WITSML - Realtime Channel Component Schema </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="id" type="witsml:str32" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The id of the group that this channel represents.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mnemonic" type="witsml:str32" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The mnemonic assigned to the channel. This must match 
+					a mnemonic of a channel definition in the header and represents the unique 
+					key of the channel. Multiple (de-multiplexed) channels with the same mnemonic cannot exist 
+					in the same realtime.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTim" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The time index for the realtime channel if the interval 
+					type is time-based. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="md" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Along hole measured depth of measurement from the drill datum.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="value" type="witsml:encodedArrayString"  minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Value of the channel.
+					The encoding of the value is defined by "dataType" in the header.
+					For array channels, this will be a space delimited list of values. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="densData" type="witsml:perLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Data density of sample in samples per length unit  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="qualData" type="witsml:str16" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Data quality indicator.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fet" type="witsml:timeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Formation exposure time.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>	
+	</xsd:complexType>
+</xsd:schema>

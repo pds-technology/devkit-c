@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productionOperationWeather.xsd" />
+   <xsd:include schemaLocation="cs_productionOperationSafety.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productionOperationHSE">
+      <xsd:annotation>
+         <xsd:documentation>WITSML - Operational Health, Safety and Environment Component Schema.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="IncidentCount" type="prodml:nonNegativeCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>the number of incidents of accidents and injuries that were reported.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sinceLostTime" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The amount of time since the most recent Lost Time Accident.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sincePreventionExercise" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The amount of time since the most recent accident prevention exercise.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sinceDefinedSituation" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The amount of time since the most recent defined hazard and accident situation (Norwegian DFU).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="medicalTreatmentCount" type="prodml:nonNegativeCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The number of medical treatments that have occurred.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="alarmCount" type="prodml:nonNegativeCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The number of system alarms that have occurred.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="safetyIntroCount" type="prodml:nonNegativeCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The number of personnel safety introductions that have occurred.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="safetyDescription" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A textual description of safety considerations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="safety" type="prodml:cs_productionOperationSafety" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Safety information at a specific installatino.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="weather" type="prodml:cs_productionOperationWeather" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Information about the weather at a point in time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+
+	<xsd:complexType name="cs_oneWayLoss">
+		<xsd:annotation>
+			<xsd:documentation>The The power loss for one way travel of a beam of light, usually measured 
+			in decibels per unit length. It is necessary to include both the value (and its unit) and the 
+			wavelength. The wavelength varies with the refractive index, while the frequency remains constant. 
+			The wavelength given to specify this type is the wavelength in a vacuum (refractive index = 1).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="value" type="witsml:generalMeasureType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The value of the one way loss per unit of length. 
+					The usual uom is decibels per kilometre (dB/km), although this might vary depending on the 
+					calibration method used.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="frequency" type="witsml:frequencyMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The frequency (and uom) for which the one-way loss is measured.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wavelength" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The wavelength (and uom) for which the one-way loss is 
+					measured. The reported wavelength should be the wavelength of the light in a vacuum.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the loss.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+
+</xsd:schema>

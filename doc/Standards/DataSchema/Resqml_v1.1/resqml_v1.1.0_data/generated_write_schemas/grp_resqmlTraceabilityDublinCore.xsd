@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <!-- For normative schema point here.
+        <xsd:import namespace="http://purl.org/dc/terms/"
+                    schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd"/>
+-->
+   <!-- For code generation and XML validation use this.
+-->
+   <xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../dublinCoreTerms_resqml_v1.0_profile/dcterms.xsd" />
+   <!--                                                         -->
+   <xsd:group name="grp_resqmlTraceabilityDublinCore">
+      <xsd:annotation>
+         <xsd:documentation>The Dublin Core elements which are used in RESQML for tracability.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="dc:title" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the item.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:creator" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name (or user ID) of the person who creates the item (the semantic content, not necessarily when the XML file is
+               written).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:description" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A user comment.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:publisher" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Software or service that was used to last create/update/modify the item.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:contributor" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Name (user ID) of the last person to update/edit the item after it was created.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:created" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Date and time the item was initially created (the semantic content, not necessarily when the XML file is written). The time zone offset must
+               be specified.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:modified" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time of modification. The time zone offset must be specified.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:source" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the guid of the item from which this item was derived.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="dc:bibliographicCitation" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A source for additional information about something contained in a model. Preferably, a URI/URL.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

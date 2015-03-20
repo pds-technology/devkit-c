@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_offshoreLocation.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_geographicContext">
+		<xsd:annotation>
+			<xsd:documentation>A geographic context of a report.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="country" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the country.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="state" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The state of province within the country.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="field" type="prodml:nameStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the field within whose context the report exists.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="offshoreLocation" type="prodml:cs_offshoreLocation" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An offshore context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An general comment that further explains the 
+					offshore location.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

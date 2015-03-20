@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wellTestTestVolume.xsd" />
+   <xsd:include schemaLocation="cs_wellTestFluidRate.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wellTestInjectionTestResults">
+      <xsd:annotation>
+         <xsd:documentation>Oil, gas, and water volumes and rates measured during the well test. The volumes allow either actual volumes or standard (corrected) volumes. The
+         densities are also recorded with the volumes.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="oilVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Oil volumes measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="oilRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Oil rates measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Gas volumes measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gasRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Gas rates measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterVolume" type="prodml:cs_wellTestTestVolume" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Water volumes measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="waterRate" type="prodml:cs_wellTestFluidRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Water rates measured during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

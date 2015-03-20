@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!--POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_documentInfo">
+		<xsd:annotation>
+			<xsd:documentation>A  schema to capture a set of data that is 
+			relevant for many exchange documents. It includes information about the 
+			file that was created, and high-level information about the data that is 
+			being exchanged within the file.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DocumentName" type="witsml:nameStruct" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An identifier for the document. This is 
+					intended to be unique within the context of the NamingSystem.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DocumentAlias" type="witsml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Zero or more alternate names for the document. 
+					These names do not need to be unique within the naming system.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DocumentDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date of the creation of the document. 
+					This is not the same as the date that the file was created. 
+					For this date, the document is considered to be the set of 
+					information associated with this document information. 
+					For example, the document may be a seismic binset. 
+					This represents the date that the binset was created. 
+					The FileCreation information would capture the date that 
+					the XML file was created to send or exchange the binset.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="documentClass" type="witsml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A document class. Examples of classes would be a 
+					metadata classification or a set of keywords. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FileCreationInformation" type="witsml:fileCreationType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The information about the creation of the 
+					exchange file. This is not about the creation of the data within 
+					the file, but the creation of the file itself.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SecurityInformation" type="witsml:securityInfoType" minOccurs="0" maxOccurs="5">
+				<xsd:annotation>
+					<xsd:documentation>Information about the security to be applied to 
+					this file. More than one classification can be given.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Disclaimer" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A free-form string that allows a disclaimer to 
+					accompany the information.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AuditTrail" type="witsml:auditType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collection of events that can document the 
+					history of the data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Owner" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The owner of the data.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Comment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An optional comment about the document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="fileCreationType">
+		<xsd:annotation>
+			<xsd:documentation>A block of information about the creation of the XML file. 
+			This is different than the creation of the data that is included within the file.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FileCreationDate" type="witsml:timestamp" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date and time that the file was created.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SoftwareName" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>If appropriate, the software that created the file. 
+					This is a free form string, and may include whatever information 
+					is deemed relevant.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FileCreator" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The person or business associate that created 
+					the file.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Comment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Any comment that would be useful to further 
+					explain the creation of this instance document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="securityInfoType">
+		<xsd:annotation>
+			<xsd:documentation>Information about the security classification of the document. 
+			This is intended as a documentation of the security so that the file will not 
+			inadvertently be sent to someone who is not allowed access to the data. 
+			This block also carries a date that the security classification expires.
+			For example, a well log is confidential for a period of time, and then
+			becomes open.
+			All security classes are characterized by their classification systems.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Class" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The security class in which this document is 
+					classified. Examples would be confidential, partner confidential, 
+					tight. The meaning of the class is determined by the System in which 
+					it is defined.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="System" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The security classification system. 
+					This gives context to the meaning of the Class value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndDate" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date on which this security class is no 
+					longer applicable.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Comment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A general comment to further define the security 
+					class.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="auditType">
+		<xsd:annotation>
+			<xsd:documentation>The audit records what happened to the data, to produce 
+			the data that is in this file. It consists of one or more events.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Event" type="witsml:eventType" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="eventType">
+		<xsd:annotation>
+			<xsd:documentation>An event type captures the basic information about an 
+			event that has affected the data.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="EventDate" type="witsml:timestamp" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date on which the event took place.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ResponsibleParty" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The party responsible for the event.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Comment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A free form comment that can further 
+					define the event that occurred.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

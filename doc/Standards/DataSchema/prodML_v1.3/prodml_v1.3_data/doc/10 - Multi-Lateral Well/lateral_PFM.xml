@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productFlowModels
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productFlowModel.xsd"
+	version="1.2.0.0(PRODML)">
+	<!-- Saudi Aramco CR-0012 multi-lateral flow network example -->
+	<productFlowModel uid="PFM-01">
+		<name>Saudi Aramco CR-0012 multi-lateral flow network example</name>
+		<installation kind="field" uidRef="F-01">Ghawar</installation>
+		<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+		<network uid="NET-F01">
+			<name>Saudi Aramco CR-0012 Flow Network Example</name>
+			<!-- well unit -->
+			<unit uid="A">
+				<name>Lateral Example unit</name>
+				<facility kind="well" uidRef="W-1">Lateral Example</facility>
+				<port uid="2">
+					<name>outlet port</name>
+					<direction>outlet</direction>
+					<connectedNode>
+						<node>A-H</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				 </port>
+			</unit>
+			<!-- Lateral 2-1 -->
+			<unit uid="B">
+				<name>Lateral 2-1 unit</name>
+				<facility kind="wellbore" uidRef="B-5">2-1</facility>
+				<facilityParent1 kind="well" uidRef="W-1">Lateral Example</facilityParent1>
+				<port uid="3">
+					<name>inlet port</name>
+					<direction>inlet</direction>
+					<connectedNode>
+						<node>RESERVOIR</node>
+						<dTimStart>2012-02-01T01:00:00+03:00</dTimStart>
+					</connectedNode>
+				</port>
+			 </unit>
+		</network>
+	</productFlowModel>
+</productFlowModels>

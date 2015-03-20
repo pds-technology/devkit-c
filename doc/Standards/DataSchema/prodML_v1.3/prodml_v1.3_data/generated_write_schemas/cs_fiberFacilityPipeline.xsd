@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:complexType name="cs_fiberFacilityPipeline">
+      <xsd:annotation>
+         <xsd:documentation>IF facility mapping is to a pipeline, this element shows what optical path distances map to pipeline lengths.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="1" maxOccurs="1">
+         <xsd:element name="name" type="prodml:nameStruct" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of this facilityMapping instance.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="datumPortReference" type="xsd:string" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A description of which "port" ie, connection/end or defined point on a pipeline the facilityLength is indexed from.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the facility which is represented by this facilityMapping</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="kind" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The kind of facility mapped to the optical path. Expected to be a pipeline but this element can be used to show other facilities being mapped to
+               fiber length in future.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name and type of a facility whose context is relevant to the represented installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

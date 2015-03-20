@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>A row in the table of results of a differntial liberation test. It is used in Fluid report.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_fluidResultCommonTestGroup.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_fluidResultDifferentialLiberationTestStep">
+      <xsd:sequence>
+         <xsd:element name="stepNumber" type="prodml:positiveCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The stepNumber represents a row in the table.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="stepPressure" type="prodml:pressureMeasure" minOccurs="1" maxOccurs="1" />
+         <xsd:element name="oilMassDensity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="oilFormationVolumeFactorStd" type="prodml:volumePerStandardVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="oilCompressibility" type="prodml:compressibilityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="oilViscosity" type="prodml:dynamicViscosityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:choice>
+            <xsd:element name="oilVolume" type="prodml:volumeMeasure" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="oilShrinkageFactor" type="prodml:volumePerVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         </xsd:choice>
+         <xsd:element name="gasMolecularWeight" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasGravity" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasMassDensity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasFormationVolumeFactorStd" type="prodml:volumePerStandardVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasZFactor" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="gasViscosity" type="prodml:dynamicViscosityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="totalFormationVolumeFactorStd" type="prodml:volumePerStandardVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="solutionGORStd" type="prodml:standardVolumePerStandardVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="cumulativeStockTankGORStd" type="prodml:standardVolumePerStandardVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="cumulativeSaturatedGORStd" type="prodml:standardVolumePerVolumeMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:element name="residualAPIGravity" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1" />
+         <xsd:group ref="prodml:grp_fluidResultCommonTestGroup" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

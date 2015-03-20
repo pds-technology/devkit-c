@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_fiberInformation.xsd"/>
+	<xsd:include schemaLocation="cs_boxInformation.xsd"/>
+	<xsd:include schemaLocation="cs_fiberInstalledPoints.xsd"/>
+	<xsd:include schemaLocation="cs_fiberEndPoint.xsd"/>
+	<xsd:include schemaLocation="cs_otdr.xsd"/>
+	<xsd:include schemaLocation="cs_pumpActivity.xsd"/>
+	<xsd:include schemaLocation="cs_calibration.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>DTS Installed System Type</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:group name="grp_dtsInstalledSystem">
+		<xsd:annotation>
+			<xsd:documentation>The optical fiber is installed in a wellbore and attached to an 
+			instrument box. Calibrations are performed. In general, this should be a subelement of 
+			a DTS object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="isPlanned" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Is this a planned installation in a well, or has the 
+					installation already occurred. Note that the default value is 'false', 
+					which states that this is an actual installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberInformation" type="witsml:cs_fiberInformation" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Information about the fiber used, and its installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="instrumentBoxInformation" type="witsml:cs_boxInformation" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Information about the instrument box used, and its installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberConfiguration" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The configuration of the fiber installation. Example values 
+					would be linear, linear with gauge, J, U.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberEndPoint" type="witsml:cs_fiberEndPoint" minOccurs="0" maxOccurs="2">
+				<xsd:annotation>
+					<xsd:documentation>A fiber installed with a "U" configuration will have two ends 
+					available for hookup to an instrument box. In order to record which end is 
+					cabled to the instrument box on a particular measurement run, it is necessary 
+					to identify the two ends. This complex type allows a name and description for 
+					each end, so that it may be identified in a later use. This may also be useful 
+					when multiple fibers in multiple wellbores converge at the same wellhead.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fiberLength" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The length of the fiber installed in the wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellboreFiberSchematic" type="witsml:cs_fiberInstalledPoints" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A table of values along the length along the fiber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="opticalBudget" type="witsml:generalMeasureType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Total light budget available for the installation. This is 
+					generally measured in decibels, and indicates the total power loss for two-way 
+					travel of the light in the installed fiber.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pumpActivity" type="witsml:cs_pumpActivity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The activity of pumping the fiber downhole</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="otdrInstallationTest" type="witsml:cs_otdr" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>This captures the data from the pre-installation and post-installation 
+					OTDR tests run on the fiber. A standard quality control program would include these 
+					two, but the schema allows for more than two if additional runs associated with the 
+					installation of the fiber are performed. OTDR runs associated with a measurement are 
+					given as a child of the measurementInformation element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="installationCalibration" type="witsml:cs_calibration" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Any calibration other than the ones explicitly given may be 
+					recorded here. This is a general calibration type, which is populated with name/value pairs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="basedOnInstalledFiber" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>If an instrument box is changed, for example, but the 
+					fiber remains the same, this instance of installed fiber is given to record 
+					that change. This element refers to a previous installed fiber, on which 
+					this one is based. For example, the wellboreFiberSchematic is unchanged, and 
+					may be obtained from the previous instance of installed fiber that is 
+					referenced here.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!--                                                         -->
+</xsd:schema>

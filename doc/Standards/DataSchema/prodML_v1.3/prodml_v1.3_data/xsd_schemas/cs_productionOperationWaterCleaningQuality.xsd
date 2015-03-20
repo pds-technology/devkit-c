@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypesProdml.xsd"/>
+	<xsd:include schemaLocation="cs_datedComment.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_productionOperationWaterCleaningQuality">
+		<xsd:annotation>
+			<xsd:documentation>Information about the contaminants in water, and the general 
+			water quality. The values are measured from a sample, which is described below. 
+			Values measured from other samples should be given in different instances of the type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="samplePoint" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An identifier of the point from which the sample was taken. 
+					This is an uncontrolled string value, which should be as descriptive as possible.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="oilInWaterProduced" type="prodml:massConcentrationMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Total measured oil in the water after the water cleaning process, 
+					but before it is discharged from the installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="amountOfOil" type="prodml:massMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Total measured oil in the water after the water cleaning process, 
+					but before it is discharged from the installation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ammonium" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The amount of ammonium found in the water sample.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="totalOrganicCarbon" type="prodml:massConcentrationMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The amount of total organic carbon found in the water. 
+					The water is under high temperature and the carbon left is measured</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="phenol" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The amount of Fenol found in the water sample.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="glycol" type="prodml:densityMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The amount of Glycol found in the water sample.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="phValue" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The pH value of the treated water. 
+					The pH value is best given as a value, with no unit of measure, 
+					since there are no variations from the pH.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="waterTemperature" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The temperature of the water before it is discharged.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="residualChloride" type="prodml:massConcentrationMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Total measured residual clorines in the water after the 
+					water cleaning process, but before it is discharged from the installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="oxygen" type="prodml:massConcentrationMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Total measured Oxygen in the water after the water cleaning 
+					process, but before it is discharged from the installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="turbidity" type="prodml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A measure of the cloudiness of water caused by suspended particles.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="coulterCounter" type="prodml:massConcentrationMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A measure of the number of particles in water as
+					measured by a coulter counter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:cs_datedComment" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Any comment that may be useful in describing the water quality. 
+					There can be multiple comments.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

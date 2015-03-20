@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="cs_wftSampleAcquisition.xsd" />
+   <xsd:include schemaLocation="cs_wftEvent.xsd" />
+   <xsd:include schemaLocation="cs_wftTest.xsd" />
+   <xsd:include schemaLocation="cs_wftTestResult.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wftStation">
+      <xsd:annotation>
+         <xsd:documentation>Information about a single station in a wireline formation tester run.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="stationKind" type="prodml:WftStationKind" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of the station (such as, conventional, observation).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time when the data collection started for this station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date and time when the data collection completed for this station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="flowingIntervalKind" type="prodml:WftFlowingIntervalKind" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of flowing interval.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdTop" type="prodml:measuredDepthCoord" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Top depth of station if flowingIntervalKind="packed interval". Depth of probe if flowingIntervalKind="probe".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdBottom" type="prodml:measuredDepthCoord" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Bottom depth of station if flowingIntervalKind="packed interval". Depth of probe if flowingIntervalKind="probe".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="diaProbe" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The diameter of the probe used, only valid if flowingIntervalKind is equal to "probe".</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="description" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A description of the station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="logRef" type="prodml:refObjectString" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A reference a log containing WFT time-series data at this station (may be superset of all the test log references at this
+               station).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="event" type="prodml:cs_wftEvent" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A formation tester event that occurs during this station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="test" type="prodml:cs_wftTest" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A formation tester test period that is recorded as part of this station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="sampleAcquisition" type="prodml:cs_wftSampleAcquisition" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A formation tester sample that is collected as part of this station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="result" type="prodml:cs_wftTestResult" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A result of formation tester analysis that applies to this station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="stationRef" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>References a station containing the flowing flowing Interval in cases where this station is an observation station.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

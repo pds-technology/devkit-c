@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                     -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                     -->
+	<xsd:include schemaLocation="typ_dataTypesResqml.xsd"/>
+	<!--                                                     -->
+	<xsd:complexType name="cs_resqmlSplitLineReference">
+		<xsd:annotation>
+			<xsd:documentation>A single split line index description. The line is at one corner of a cell.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="i" type="xsd:int" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The I direction cell coordinate for a column of cells. 
+					Minimum value of startIndexI. 
+					Maximum value of ni+startIndexI-1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="j" type="xsd:int" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The I direction cell coordinate for a column of cells.
+					Minimum value of startIndexJ. 
+					Maximum value of nj+startIndexJ-1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="iCorn" type="resqml:zeroOrOneShort" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The I direction corner coordinate for a coordinate line within a column of cells.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="jCorn" type="resqml:zeroOrOneShort" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The J direction corner coordinate for a coordinate line within a column of cells.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="reference" type="resqml:nonNegativeInt" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A 0-based index into the coordinate line list.
+					A value of zero represents the first line in the line list.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<!-- A uid has been explicitly excluded from this type. -->
+	</xsd:complexType>
+	<!--                                                     -->
+</xsd:schema>

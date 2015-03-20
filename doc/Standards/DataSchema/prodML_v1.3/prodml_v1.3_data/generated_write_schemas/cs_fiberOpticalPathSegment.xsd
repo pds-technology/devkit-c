@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_fiberCommon.xsd" />
+   <xsd:include schemaLocation="cs_fiberConveyance.xsd" />
+   <xsd:include schemaLocation="cs_fiberRefractiveIndex.xsd" />
+   <xsd:include schemaLocation="cs_fiberOneWayAttenuation.xsd" />
+   <xsd:complexType name="cs_fiberOpticalPathSegment">
+      <xsd:annotation>
+         <xsd:documentation>A single segment of the optical fiber used for distributed temperature surveys. Multiple such segments may be connected by other types of component
+         including connectors, splices and fiber turnarounds.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="prodml:cs_fiberCommon">
+            <xsd:sequence>
+               <xsd:element name="fiberLength" type="prodml:lengthMeasure" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The length of fiber in this optical path section.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="overStuffing" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>For this fiber segment, the amount of "overstuffing", ie the excess length of fiber which was installed compared to the length of the
+                     facility which is to be surveyed. Example, if 110m of fiber were to be installed to measure 100m length of pipeline, the overstuffing would be 10m.
+                     Overstuffing can be allowed for in the facilityMapping section. The overstuffing is assumed to be linear distributed along the facility being
+                     measured.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="coreDiameter" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The inner diameter of the core, generally measured in microns (um).</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="claddedDiameter" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The diameter of the core plus the cladding, generally measured in microns (um).</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="outsideDiameter" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The diameter of the cable containing the fiber, including all its sheathing layers.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="mode" type="prodml:FiberMode" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The mode of fiber. Enum. Values are single- or multi- mode fiber, or other/unknown.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="coating" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The type of coating on the fiber.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="jacket" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The type of jacket covering the fiber.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="coreType" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Property of the fiber core.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="parameter" type="prodml:indexedObject" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>Additional parameters to define the fiber as a material.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="spoolNumberTag" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The spool number of the particular spool from which this fiber segement was taken. The spool number may contain alphanumeric
+                     characters.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="spoolLength" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The length of the fiber on the spool when purchased.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="refractiveIndex" type="prodml:cs_fiberRefractiveIndex" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>The refractive index of a material depends on the frequency (or wavelength) of the light. Hence it is necessary to include both the value
+                     (a unitless number) and the frequency (or wavelength) it was measured at. The frequency will be a quantity type with a frequency unit such as
+                     Hz.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="oneWayAttenuation" type="prodml:cs_fiberOneWayAttenuation" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>The power loss for one way travel of a beam of light, usually measured in decibels per unit length. It is necessary to include both the
+                     value (and its unit) and the wavelength. The wavelength varies with the refractive index, while the frequency remains constant. The wavelength given to
+                     specify this type is the wavelength in a vacuum (refractive index = 1).</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="fiberConveyance" type="prodml:cs_fiberConveyance" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The means by which this fiber segment is conveyed into the well.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="cableType" type="prodml:CableType" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>ENUM: The type of cable used in this segment. Example: single-fiber-cable</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

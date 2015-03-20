@@ -1,0 +1,32 @@
+<HTML xmlns:cont="http://www.posc.org/schemas/schemaContent" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><SCRIPT language="JavaScript" type="text/javascript" src="convert_xsd_to_html.js"></SCRIPT><LINK rel="stylesheet" type="text/css" href="convert_xsd_to_html.css"></HEAD><BODY class="st"><DIV class="e"><DIV STYLE="margin-left:1em;text-indent:-2em" class="c"><A class="b" href="#" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;</SPAN><SPAN class="t">xsd:schema </SPAN> <SPAN class="t">elementFormDefault</SPAN><SPAN class="m">="</SPAN><B>qualified</B><SPAN class="m">"</SPAN> <SPAN class="t">attributeFormDefault</SPAN><SPAN class="m">="</SPAN><B>unqualified</B><SPAN class="m">"</SPAN> <SPAN class="t">targetNamespace</SPAN><SPAN class="m">="</SPAN><B>http://www.energistics.org/schemas/aggregate</B><SPAN class="m">"</SPAN> <SPAN class="t">version</SPAN><SPAN class="m">="</SPAN><B>aggregate_1.0.0</B><SPAN class="m">"</SPAN><SPAN class="m">&gt;</SPAN></DIV><DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+	</SPAN></DIV><DIV class="k"><SPAN><A STYLE="visibility:hidden" class="b" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;!--</SPAN></SPAN><SPAN class="ci" id="clean"><PRE>                                                         </PRE></SPAN><SPAN class="b">&nbsp;</SPAN><SPAN class="m">--&gt;</SPAN><SCRIPT language="JavaScript">f(document.getElementById('clean'));</SCRIPT></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+	</SPAN></DIV><DIV class="k"><SPAN><A STYLE="visibility:hidden" class="b" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;!--</SPAN></SPAN><SPAN class="ci" id="clean"><PRE> Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2008 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	</PRE></SPAN><SPAN class="b">&nbsp;</SPAN><SPAN class="m">--&gt;</SPAN><SCRIPT language="JavaScript">f(document.getElementById('clean'));</SCRIPT></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+	</SPAN></DIV><DIV class="k"><SPAN><A STYLE="visibility:hidden" class="b" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;!--</SPAN></SPAN><SPAN class="ci" id="clean"><PRE>                                                         </PRE></SPAN><SPAN class="b">&nbsp;</SPAN><SPAN class="m">--&gt;</SPAN><SCRIPT language="JavaScript">f(document.getElementById('clean'));</SCRIPT></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+</SPAN></DIV><DIV class="k"><SPAN><A STYLE="visibility:hidden" class="b" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;!--</SPAN></SPAN><SPAN class="ci" id="clean"><PRE> Example import of all the WITSML and PRODML object schemas:
+	&lt;xsd:import namespace="http://www.witsml.org/schemas/1series" 
+		    schemaLocation="../../witsml_v1.4.0_data/xsd_schemas/sub_objectMemberWitsml.xsd"/&gt;
+	&lt;xsd:import namespace="http://www.prodml.org/schemas/1series" 
+		    schemaLocation="../../prodml_v1.2.0_data/xsd_schemas/sub_objectMemberProdml.xsd"/&gt;
+</PRE></SPAN><SPAN class="b">&nbsp;</SPAN><SPAN class="m">--&gt;</SPAN><SCRIPT language="JavaScript">f(document.getElementById('clean'));</SCRIPT></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+	</SPAN></DIV><DIV class="k"><SPAN><A STYLE="visibility:hidden" class="b" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;!--</SPAN></SPAN><SPAN class="ci" id="clean"><PRE>                                                         </PRE></SPAN><SPAN class="b">&nbsp;</SPAN><SPAN class="m">--&gt;</SPAN><SCRIPT language="JavaScript">f(document.getElementById('clean'));</SCRIPT></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+	</SPAN></DIV><DIV class="e"><DIV STYLE="margin-left:1em;text-indent:-2em" class="c"><A class="b" href="#" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;</SPAN><SPAN class="t">xsd:annotation</SPAN><SPAN class="m">&gt;</SPAN></DIV><DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+		</SPAN></DIV><DIV class="e"><DIV STYLE="margin-left:1em;text-indent:-2em"><SPAN class="b">&nbsp;</SPAN><SPAN class="m">&lt;</SPAN><SPAN class="t">xsd:documentation</SPAN><SPAN class="m">&gt;</SPAN><SPAN class="tx">WITSML Substitution Group Members.
+		This file can be edited to import object schemas for use in the aggregate object.
+		The default is that there are no data object members. This is so that the aggregate object can be used
+		with any version in any namespace.
+		The schemas for each Energistics domain (e.g., WITSML, PRODML, RESQML) will contain
+		a file named something like sub_objectMemberXxxxxxx.xsd where Xxxxxxx indicates the domain.
+		The contents of that member file will list the includes all of the objects which can be expected to be added to this list.
+		If the aggregate may contain anything in that domain then the domain's member file can be imported as-is.
+		If a subset of that list is expected in the aggregate, a copy of the member file may be added (e.g., to this folder)
+		and edited to remove undesired objects. 
+		</SPAN><SPAN class="m">&lt;/</SPAN><SPAN class="t">xsd:documentation</SPAN><SPAN class="m">&gt;</SPAN></DIV></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+	</SPAN></DIV><DIV><SPAN class="b">&nbsp;</SPAN><SPAN class="m">&lt;/</SPAN><SPAN class="t">xsd:annotation</SPAN><SPAN class="m">&gt;</SPAN></DIV></DIV></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+	</SPAN></DIV><DIV class="k"><SPAN><A STYLE="visibility:hidden" class="b" onclick="return false" onfocus="h()">-</A><SPAN class="m">&lt;!--</SPAN></SPAN><SPAN class="ci" id="clean"><PRE>                                                         </PRE></SPAN><SPAN class="b">&nbsp;</SPAN><SPAN class="m">--&gt;</SPAN><SCRIPT language="JavaScript">f(document.getElementById('clean'));</SCRIPT></DIV><DIV class="e"><SPAN class="b"></SPAN><SPAN class="tx">
+</SPAN></DIV><DIV><SPAN class="b">&nbsp;</SPAN><SPAN class="m">&lt;/</SPAN><SPAN class="t">xsd:schema</SPAN><SPAN class="m">&gt;</SPAN></DIV></DIV></DIV></BODY></HTML>

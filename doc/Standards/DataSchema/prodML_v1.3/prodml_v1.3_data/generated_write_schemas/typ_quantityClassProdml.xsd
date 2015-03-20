@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>This file defines a set of standard POSC units of measure for various quantity classes. This units list captures information contained in the POSC units
+      dictionary at http://www.posc.org/refs/poscUnits20.xml. The enumerated lists do not contain any deprecated units.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseTypeProdml.xsd" />
+   <!--                                                         -->
+   <xsd:simpleType name="AmountOfSubstanceUom" final="#all">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="kmol" />
+         <xsd:enumeration value="mmol" />
+         <xsd:enumeration value="mol" />
+         <xsd:enumeration value="kmol" />
+         <xsd:enumeration value="lbmole" />
+         <xsd:enumeration value="umol" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="CompressibilityUom">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="1/Pa" />
+         <xsd:enumeration value="1/bar" />
+         <xsd:enumeration value="1/kPa" />
+         <xsd:enumeration value="1/pPa" />
+         <xsd:enumeration value="1/psi" />
+         <xsd:enumeration value="1/upsi" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type EnergyPerAreaUom.-->
+   <!--                                                         -->
+   <xsd:simpleType name="FrequencyUom" final="#all">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="Hz" />
+         <xsd:enumeration value="c/s" />
+         <xsd:enumeration value="GHz" />
+         <xsd:enumeration value="kHz" />
+         <xsd:enumeration value="mHz" />
+         <xsd:enumeration value="MHz" />
+         <xsd:enumeration value="uHz" />
+         <xsd:enumeration value="1/s" />
+         <xsd:enumeration value="1/a" />
+         <xsd:enumeration value="1/d" />
+         <xsd:enumeration value="1/h" />
+         <xsd:enumeration value="1/min" />
+         <xsd:enumeration value="1/wk" />
+         <xsd:enumeration value="kEuc/s" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!--NOT-USED: Deleted type MagneticFieldStrengthUom.-->
+   <!--                                                         -->
+   <xsd:simpleType name="MassFlowRateUom" final="#all">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="Mg/a" />
+         <xsd:enumeration value="Mg/d" />
+         <xsd:enumeration value="Mg/h" />
+         <xsd:enumeration value="Mlbm/yr" />
+         <xsd:enumeration value="g/s" />
+         <xsd:enumeration value="kg/d" />
+         <xsd:enumeration value="kg/h" />
+         <xsd:enumeration value="kg/min" />
+         <xsd:enumeration value="kg/s" />
+         <xsd:enumeration value="lbm/d" />
+         <xsd:enumeration value="lbm/h" />
+         <xsd:enumeration value="lbm/min" />
+         <xsd:enumeration value="lbm/s" />
+         <xsd:enumeration value="t/a" />
+         <xsd:enumeration value="t/d" />
+         <xsd:enumeration value="t/h" />
+         <xsd:enumeration value="t/min" />
+         <xsd:enumeration value="tonUK/a" />
+         <xsd:enumeration value="tonUK/d" />
+         <xsd:enumeration value="tonUK/h" />
+         <xsd:enumeration value="tonUK/min" />
+         <xsd:enumeration value="tonUS/a" />
+         <xsd:enumeration value="tonUS/d" />
+         <xsd:enumeration value="tonUS/h" />
+         <xsd:enumeration value="tonUS/min" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="ModulusOfCompressionUom" final="#all">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="J/m3" />
+         <xsd:enumeration value="Btu/bbl" />
+         <xsd:enumeration value="Btu/ft3" />
+         <xsd:enumeration value="Btu/galUK" />
+         <xsd:enumeration value="Btu/galUS" />
+         <xsd:enumeration value="cal/cm3" />
+         <xsd:enumeration value="cal/mL" />
+         <xsd:enumeration value="cal/mm3" />
+         <xsd:enumeration value="erg/cm3" />
+         <xsd:enumeration value="erg/m3" />
+         <xsd:enumeration value="ft.lbf/bbl" />
+         <xsd:enumeration value="ft.lbf/galUS" />
+         <xsd:enumeration value="hp.hr/bbl" />
+         <xsd:enumeration value="J/dm3" />
+         <xsd:enumeration value="kcal/cm3" />
+         <xsd:enumeration value="kcal/m3" />
+         <xsd:enumeration value="kJ/dm3" />
+         <xsd:enumeration value="kJ/m3" />
+         <xsd:enumeration value="kW.h/dm3" />
+         <xsd:enumeration value="kW.h/m3" />
+         <xsd:enumeration value="lbf.ft/bbl" />
+         <xsd:enumeration value="MJ/m3" />
+         <xsd:enumeration value="MW.h/m3" />
+         <xsd:enumeration value="therm/ft3" />
+         <xsd:enumeration value="therm/galUK" />
+         <xsd:enumeration value="tonfUS.mi/bbl" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="MolarVolumeUom">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="m3/mol" />
+         <xsd:enumeration value="dm3/mol(kg)" />
+         <xsd:enumeration value="ft3/mol(lbm)" />
+         <xsd:enumeration value="L/mol(g)" />
+         <xsd:enumeration value="L/mol(kg)" />
+         <xsd:enumeration value="m3/mol(kg)" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="ProductivityIndexUom" final="#all">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="1000ft3/psi.d" />
+         <xsd:enumeration value="L/bar.min" />
+         <xsd:enumeration value="bbl/kPa.d" />
+         <xsd:enumeration value="bbl/psi.d" />
+         <xsd:enumeration value="m3/Pa.s" />
+         <xsd:enumeration value="m3/Pa/s" />
+         <xsd:enumeration value="m3/bar.d" />
+         <xsd:enumeration value="m3/bar.h" />
+         <xsd:enumeration value="m3/bar.min" />
+         <xsd:enumeration value="m3/kPa.d" />
+         <xsd:enumeration value="m3/kPa.h" />
+         <xsd:enumeration value="m3/psi.d" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="ThermalConductivityUom">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="W/m.K" />
+         <xsd:enumeration value="Btu/hr.ft.degF" />
+         <xsd:enumeration value="cal/h.cm.degC" />
+         <xsd:enumeration value="cal/s.cm.degC" />
+         <xsd:enumeration value="kcal/h.m.degC" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="WorkUom" final="#all">
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="J" />
+         <xsd:enumeration value="aJ" />
+         <xsd:enumeration value="Btu" />
+         <xsd:enumeration value="cal" />
+         <xsd:enumeration value="ch.h" />
+         <xsd:enumeration value="Chu" />
+         <xsd:enumeration value="CV.h" />
+         <xsd:enumeration value="EJ" />
+         <xsd:enumeration value="erg" />
+         <xsd:enumeration value="eV" />
+         <xsd:enumeration value="GeV" />
+         <xsd:enumeration value="GJ" />
+         <xsd:enumeration value="GW.h" />
+         <xsd:enumeration value="hp.hr" />
+         <xsd:enumeration value="kcal" />
+         <xsd:enumeration value="keV" />
+         <xsd:enumeration value="kJ" />
+         <xsd:enumeration value="kW.h" />
+         <xsd:enumeration value="MeV" />
+         <xsd:enumeration value="mJ" />
+         <xsd:enumeration value="MJ" />
+         <xsd:enumeration value="MW.h" />
+         <xsd:enumeration value="nJ" />
+         <xsd:enumeration value="quad" />
+         <xsd:enumeration value="TeV" />
+         <xsd:enumeration value="therm" />
+         <xsd:enumeration value="TJ" />
+         <xsd:enumeration value="TW.h" />
+         <xsd:enumeration value="uJ" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <xsd:simpleType name="AttenuationUom">
+      <xsd:annotation>
+         <xsd:appinfo>Added-in-version=DTS1.0</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="dB/km" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

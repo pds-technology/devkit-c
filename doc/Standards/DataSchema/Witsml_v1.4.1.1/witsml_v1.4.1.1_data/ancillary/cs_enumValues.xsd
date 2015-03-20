@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.4.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="../xsd_schemas/typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>Schema for listing standardized values as an alternative 
+		to using an enumeration in XML Schema. This schema is not intended to be part 
+		of a WITSML data object.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:element name="enumListSet" type="witsml:enumListSet">
+		<xsd:annotation>
+			<xsd:documentation>A container for enumeration lists.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                                                         -->
+	<xsd:complexType name="enumListSet">
+		<xsd:sequence>
+			<xsd:element name="enumList" type="witsml:enumList" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A single enumeration list.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="witsml:schemaVersionString" use="required">
+			<xsd:annotation>
+			<xsd:documentation>Data object schema version.  The fourth level must match the 
+			version of the schema constraints (enumerations and XML loader files) that are assumed
+			by the document instance.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="enumList">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:str32" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the list.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the list. 
+					This specifies what the individual values represent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="namingSystem" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The naming system within which the terms are defined.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="value" type="witsml:enumValue" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A description of an enumberation value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="enumValue">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:kindString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the value. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="version" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The version when the value was added.
+					The string should match the content of the root version attribute of the schema.
+					For example, "1.4.0.0".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="deprecated" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A non blank version indicates that the value has
+					been deprecated and may be removed in future versions.
+					The string should match the content of the root version attribute of the schema.
+					For example, "1.4.0.0".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="replacedBy" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The value to use as a replacement for a deprecated value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="0" maxOccurs="1">
+				<xsd:sequence>
+					<xsd:element name="lithoType" type="witsml:EnumValueLithoType" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For lithology qualifiers, the type of qualifier: "noun", "adjective" or "both". 
+							For a qualifier which has a type of "both", the "noun" form must be specified as the qualifier value
+							and an adjective form must be listed as a variant.
+							The interpretation of whether a specified qualifier value represents a noun or a adjective is 
+							defined by its association with either an interval (adjective) or point (noun).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="variantOf" type="witsml:kindString" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>The name of the lithology qualifier for which this qualifier 
+							represents a variation of the same underlying concept. 
+							A variant will always represent either an adjective or a noun but not both.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="isLithology" type="xsd:boolean" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>True ("true" or "1") indicates that the qualifier is also in the LithologyType list.
+							False ("false" or "0") indicates otherwise.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="isMatrixCement" type="xsd:boolean" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>True ("true" or "1") indicates that the qualifier is also in the MatrixCementType list.
+							False ("false" or "0") indicates otherwise.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="extensionDataType" type="witsml:PrimitiveType" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, the underlying data type of the value. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionMaximumSize" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, the maximum number of charactetrs in a string value. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionMeasureClass" type="witsml:MeasureClass" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, defines the measure class associated with the temm.
+							This controls the allowed units of measure. 
+							If this is specified then the value must be defined with a unit of measure.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="extensionPath" type="witsml:descriptionString" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>For extensions, defines the path to the allowed location in the schema
+							where the extension is allowed. 
+							This should begin at the singular object level  (e.g., "/well/commonData/extension"). 
+							A relative location will allow it in any object (i.e., ".//commonData/extension").
+							A relative location within the object will allow it at any location within that object
+							(e.g., "/opsReport//commonData/extension").</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="measureRepresentativeUOM" type="witsml:uomString" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines a representative uom. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="measureBaseForConversion" type="witsml:uomString" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines the base uom for conversion. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="measureUom" type="witsml:uomString" minOccurs="1" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>For measure classes, defines an allowed uom for the class. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:choice>
+						<xsd:element name="realtimeDataType" type="witsml:EnumValueRealtimeType" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>For realtime data, defines the underlying type data associated with this term.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="realtimeMeasureClass" type="witsml:MeasureClass" minOccurs="0" maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>For realtime data, defines the measure class associated with the term.
+								This controls the allowed units of measure. 
+								If this is specified then the value must be defined with a unit of measure.
+								All measure values inherently have a numeric data type.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="emumValueLithoVariant" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A variant of a qualifer. A qualifier can have both adjective and noun forms.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="witsml:abstractNameString">
+				<xsd:attribute name="form" type="witsml:EnumValueLithoType" use="required">
+					<xsd:annotation>
+						<xsd:documentation>The kind of qualifier form. This should be either "adjective" or "noun".</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:simpleType name="EnumValueLithoType">
+		<xsd:annotation>
+			<xsd:documentation>Lithology qualifier types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="witsml:abstractTypeEnum">
+			<xsd:enumeration value="noun">
+ 				<xsd:annotation>
+  					<xsd:documentation>Qualifiers which are isolated or spot occurrences suggesting 
+  					that these components are `included' in a lithology and does not imply a 
+  					lithology type (for example, a single occurrence of a fossil).
+					A qualifier which is specified as a point value (top=bottom) should be interpreted 
+					as representing the noun form.</xsd:documentation>
+  				</xsd:annotation>
+ 			</xsd:enumeration>
+			<xsd:enumeration value="adjective">
+ 				<xsd:annotation>
+  					<xsd:documentation>Qualifiers which are components or attributes of the lithology 
+  					occurring/prevailing over a depth range, or over the whole lithology; an adjective 
+  					should be used as a further definition of an existing lithology type (for example, 
+  					types of cementation or other diagenetic effects would be expressed using adjectives).
+					A qualifier which is specified over a depth range should be interpreted as representing
+					the adjective form.</xsd:documentation>
+  				</xsd:annotation>
+ 			</xsd:enumeration>
+ 			<xsd:enumeration value="both">
+ 				<xsd:annotation>
+  					<xsd:documentation>A qualifier which can have both adjective and noun forms.
+					If the qualifier is specified either over a depth range then it should be interpreted
+					as representing its adjective form. If the qualifier is specified at a point then it
+					should be interpreted as its noun form.</xsd:documentation>
+  				</xsd:annotation>
+ 			</xsd:enumeration>
+ 			<xsd:enumeration value="unknown">
+ 				<xsd:annotation>
+  					<xsd:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xsd:documentation>
+  				</xsd:annotation>
+ 			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="EnumValueRealtimeType">
+		<xsd:annotation>
+			<xsd:documentation>Lithology qualifier types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="witsml:abstractTypeEnum">
+			<xsd:enumeration value="string">
+				<xsd:annotation>
+					<xsd:documentation>The value is a string. This is also appropriate for a short list of integer codes (e.g., "1", 2" or "3") or for booleans.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="numeric">
+				<xsd:annotation>
+					<xsd:documentation>The value is a number and fractional component is allowed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="integer">
+				<xsd:annotation>
+					<xsd:documentation>Specialization of numeric. The value is a whole number. That is, a fractional component is not allowed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+ 			<xsd:enumeration value="unknown">
+ 				<xsd:annotation>
+  					<xsd:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xsd:documentation>
+  				</xsd:annotation>
+ 			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+</xsd:schema>

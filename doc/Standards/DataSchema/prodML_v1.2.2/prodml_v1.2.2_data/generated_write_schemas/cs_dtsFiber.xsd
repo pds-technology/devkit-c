@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_dtsRefractiveIndex.xsd" />
+   <xsd:include schemaLocation="cs_dtsOneWayLoss.xsd" />
+   <xsd:include schemaLocation="cs_dtsCalibration.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>DTS Fiber Object</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:complexType name="cs_dtsFiber">
+      <xsd:annotation>
+         <xsd:documentation>The optical fiber used for distributed temperature surveys</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A human understandable name for the fiber. This is used for identification of the instance.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mode" type="prodml:FiberMode" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The mode of fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="type" type="prodml:typeOptionalClassString" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Zero or more instances that allow other classifications to be assigned to the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="coating" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of coating on the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="jacket" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of jacket covering the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="coreDiameter" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The inner diameter of the core, generally measured in microns (um).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="claddedDiameter" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The diameter of the core plus the cladding, generally measured in microns (um).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="outsideDiameter" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The diameter of the cable and all its sheathing, generally measured in microns (um). This is intended to be the diameter of the cable on the
+               spool.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="refractiveIndex" type="prodml:cs_dtsRefractiveIndex" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The refractive index of the fiber. Also included is the frequency in Hz for which this refractive index is valid. There may be multiple instances
+               of this element.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="oneWayLoss" type="prodml:cs_dtsOneWayLoss" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The power loss (usually in decibels) per unit of length of the fiber. Also included is the frequency for which this loss is measured. There ay be
+               multiple instances of this element.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parameter" type="prodml:indexedObject" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Additional parameters to define the fiber as a material. These should not be parameters to define the installation of the fiber in a well, or
+               other system. This element should be used only if an appropriate parameter is not available as an element, or in the calibration operation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="spoolNumberTag" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The spool number located on the particular spool. The spool number may contain alphanumeric characters.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="spoolLength" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The length of the fiber on the spool when purchased.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="supplyDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A fiber may go through several manufacturers for its various parts. The supplier is the final company in the chain that supplies the fiber to the
+               end user.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="supplier" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A fiber may go through several manufacturers for its various parts. The supplier is the final company in the chain that supplies the fiber to the
+               end user.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="supplierModelNumber" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The model number (alphanumeric) that is used by the supplier to reference the type of fiber that is supplied to the user.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="factoryCalibration" type="prodml:cs_dtsCalibration" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Information about calibrations and quality checks that were performed on the cable at the factory. This is not to include calibrations that are
+               run at installation time and at measurement time.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="installationHistory" type="prodml:refNameString" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A reference to a dtsInstalledSytem object that previously used the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the fiber.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_singleInstalledPoint.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>This records a table of values of the length along the fiber, the measured 
+		depth, and type of point for important points along the wellbore. Typically, these values are 
+		used to calculate a relationship of the length along the fiber vs measured depth.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:complexType name="cs_fiberInstalledPoints">
+		<xsd:annotation>
+			<xsd:documentation>A wrapper for multiple instances of the point in a well.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="installedPoint" type="witsml:cs_singleInstalledPoint" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>This carries the information about one point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

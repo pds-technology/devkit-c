@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="cs_fiberCommon.xsd"/>
+	<xsd:include schemaLocation="cs_fiberOTDRInstrumentBox.xsd"/>
+	<xsd:include schemaLocation="cs_businessAssociate.xsd"/>
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:complexType name="cs_fiberOTDR">
+		<xsd:annotation>
+			<xsd:documentation>This records the result arrays along with context information for an Optical Time Domain Reflectometry (OTDR) survey. The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber. The actual data values are recorded in a OTDR file and/or image file, which are referenced in subelements.</xsd:documentation>
+		</xsd:annotation>
+	        <xsd:sequence>
+			  <xsd:element name="name" type="prodml:nameString" minOccurs="1" maxOccurs="1">
+				    <xsd:annotation>
+					      <xsd:documentation>The name for this OTDR.</xsd:documentation>
+				    </xsd:annotation>
+			  </xsd:element>
+		          <xsd:element name="reasonForRun" type="prodml:OTDRReason" minOccurs="0" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>The reason the OTDR test was run. The three main reasons are pre-installation' which is before the installation of the fiber; 'post-installation'  which is used to validate a successful fiber installation;  and 'DTS run' a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="dTimRun" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>The dateTime of the run.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="dataInOTDRFile" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>A reference to the external file used to record the OTDR data. Note this file will not be in an Energistics format but likely in a special OTDR format.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="OTDRImageFile" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>A reference to the well log used to record the table of data.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="OTDRInstrument" type="prodml:cs_fiberOTDRInstrumentBox" minOccurs="0" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>A reference to the instrument box that was used for the OTDR run</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="opticalPathDistanceStart" type="prodml:lengthMeasure" minOccurs="1" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>The point measured along the optical path at which this OTDR survey starts.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="opticalPathDistanceEnd" type="prodml:lengthMeasure" minOccurs="1" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>The point measured along the optical path at which this OTDR survey ends.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="direction" type="prodml:OTDRDirection" minOccurs="1" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>Enum. The direction of the OTDR survey.  "Forward"  means "in the same direction as the positive direction along the optical path".</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="wavelength" type="prodml:lengthMeasure" minOccurs="1" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>The wavelength at which this OTDR survey was carried out.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="measurementContact" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+			            <xsd:annotation>
+				              <xsd:documentation>Contact for the person who performed the OTDR reading</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+		          <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+			            <xsd:annotation>
+				              <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+			            </xsd:annotation>
+		          </xsd:element>
+	        </xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of an object. 
+				This should not be used for child nodes within an object. For an independent object, the value may be globally unique. 
+				For a dependent object, the value must be unique (for the same object type) within the context of the parent object. 
+				There should be no assumption as to the semantic content of this attribute. 
+				The purpose of this type is to facilitate modifying the optionality in derived schemas.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dtsMeasurements 
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../xsd_schemas/obj_dtsMeasurement.xsd"
+	version="1.2.0.0(PRODML)">
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+They totally artificial and are not intended to demonstrate best practices. 
+-->
+	<documentInfo>
+		<documentName>dtsMeasurement</documentName>
+		<fileCreationInformation>
+			<fileCreationDate>2005-10-08T14:32:16.223Z</fileCreationDate>
+			<fileCreator>Joe's Well Service</fileCreator>
+		</fileCreationInformation>
+	</documentInfo>
+	<dtsMeasurement uidWell="D88CA733F" uidWellbore="82996A3B" uid="1FO19-120050603-1">
+		<nameWell>1FO19</nameWell>
+		<nameWellbore>1FO19-1</nameWellbore>
+		<name>Wellbore 1FO19-1 measurement 8Oct2005</name>
+		<dTim>2005-06-03T13:00:00Z</dTim>
+		<runDuration uom="s">600</runDuration>
+		<installedSystemUsed uidRef="1FO19-1-1">Hole 1FO19-1 installation 1</installedSystemUsed>
+		<dataInWellLog uidRef="8CA290B22">Wellbore 1FO19-1 measurement 8Oct2005</dataInWellLog>
+		<fiberEndConnected uidRef="A6">C-1</fiberEndConnected>
+		<fiberDefinedPoint uid="I2">
+			<lengthAlongFiber uom="m">127</lengthAlongFiber>
+			<type>wellhead junction box</type>
+		</fiberDefinedPoint>
+	</dtsMeasurement>
+</dtsMeasurements>

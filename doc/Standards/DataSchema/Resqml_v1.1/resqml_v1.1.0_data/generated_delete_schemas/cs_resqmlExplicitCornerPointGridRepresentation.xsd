@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                     -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                     -->
+   <xsd:include schemaLocation="cs_resqmlExplicitNodeSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlSplitNodeSet.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                     -->
+   <xsd:complexType name="cs_resqmlExplicitCornerPointGridRepresentation">
+      <xsd:annotation>
+         <xsd:documentation>An i,j,k based corner point grid which uses i,j coordinate lines and k nodes to define the geometry. This may be used to define the overall geometry of
+         a grid or may be used to define Local Grid Refinement.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="description" type="resqml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A textual description of the grid.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="local3dCRS" type="resqml:refGlobalNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to the localCRS which represents the 3D coordinates in this grid.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="ijExplicitNodeSet" type="resqml:cs_resqmlExplicitNodeSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Coordinate line node geometries.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="ijkSplitNodeSet" type="resqml:cs_resqmlSplitNodeSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Defines the geometry of split nodes. The geometry is defined independent of coordinate lines.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                     -->
+</xsd:schema>

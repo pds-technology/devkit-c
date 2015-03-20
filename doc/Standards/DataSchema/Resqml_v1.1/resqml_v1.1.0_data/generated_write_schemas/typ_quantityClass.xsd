@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>This file defines a set of standard POSC units of measure for various quantity classes. This units list captures information contained in the POSC units
+      dictionary at http://www.posc.org/refs/poscUnits20.xml. The enumerated lists do not contain any deprecated units.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <!-- ======================================================= -->
+   <!-- ================= SPECIAL TYPES ======================= -->
+   <!-- ======================================================= -->
+   <!--                                                         -->
+   <xsd:simpleType name="MeasuredDepthUom">
+      <xsd:annotation>
+         <xsd:documentation>The units of measure that are valid for measured depths in a wellbore.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Moved</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractUomEnum">
+         <xsd:enumeration value="m">
+            <xsd:annotation>
+               <xsd:documentation>meter</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ft">
+            <xsd:annotation>
+               <xsd:documentation>International Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftUS">
+            <xsd:annotation>
+               <xsd:documentation>US Survey Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                     -->
+   <xsd:simpleType name="WellVerticalCoordinateUom">
+      <xsd:annotation>
+         <xsd:documentation>The units of measure that are valid for vertical gravity based coordinates (i.e., elevation or vertical depth) within the context of a
+         well.</xsd:documentation>
+         <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Moved</xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="resqml:abstractUomEnum">
+         <xsd:enumeration value="m">
+            <xsd:annotation>
+               <xsd:documentation>meter</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ft">
+            <xsd:annotation>
+               <xsd:documentation>International Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftUS">
+            <xsd:annotation>
+               <xsd:documentation>US Survey Foot</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ftBr(65)">
+            <xsd:annotation>
+               <xsd:documentation>British Foot 1865</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+   <!-- ======================================================= -->
+   <!-- ================= MEASURE TYPES ======================= -->
+   <!-- ======================================================= -->
+   <!--                                                         -->
+</xsd:schema>

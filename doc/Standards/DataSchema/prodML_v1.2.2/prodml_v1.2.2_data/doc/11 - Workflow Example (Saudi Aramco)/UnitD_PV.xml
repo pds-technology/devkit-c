@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Daily production summary example for production header Unit D. -->
+<productVolumes
+	xmlns="http://www.prodml.org/schemas/1series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productVolume.xsd"
+	version="1.2.0.0(PRODML)">
+	<productVolume>
+		<name>Daily production summary example for a unit D</name>
+		<periodKind>day</periodKind>
+		<productFlowModel uidRef="PFM01">Saudi Aramco CR-0012 Flow Network Example</productFlowModel>
+		<!-- Production Header Unit D -->
+		<facility>
+			<name kind="manifold" siteKind="production header" uidRef="HDR01">Production header</name>
+			<unit uidRef="U04">D</unit>
+			<contextFacility kind="field" uidRef="F01">Ghawar</contextFacility>
+			<!-- product flows (port #7) -->
+			<flow>
+				<kind>production</kind>
+				<port uidRef="7">Unit D outlet</port>
+				<facility kind="flow meter" siteKind="multi-phase flow meter" uidRef="MPFM01">Multi-phase flow meter #1</facility>
+				<qualifier>measured</qualifier>
+				<!-- oil, gas, and water (port #7) -->
+				<product>
+					<kind>oil and gas</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<!-- gas oil ratio -->
+						<gor uom="%">55.3566</gor>
+						<!-- gas liquid ratio -->
+						<gasLiquidRatio uom="%">56.3566</gasLiquidRatio>
+						<!-- oil-gas-water flow rate -->
+						<flowRateValue>
+							<flowRate uom="m3/d">360</flowRate>
+						</flowRateValue>
+						<!-- temperature -->
+						<temp uom="degC">60</temp>
+						<!-- pressure -->
+						<pres uom="psi">747.7316</pres>
+					</period>
+				</product>
+				<!-- gas (port #7) -->
+				<product>
+					<kind>gas</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<!-- gas rate -->
+						<flowRateValue>
+							<flowRate uom="m3/d">360</flowRate>
+						</flowRateValue>
+					</period>
+				</product>
+				<!-- oil (port #7) -->
+				<product>
+					<kind>oil</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<!-- oil rate -->
+						<flowRateValue>
+							<flowRate uom="m3/d">2250</flowRate>
+						</flowRateValue>
+					</period>
+				</product>
+				<!-- water (port #7) -->
+				<product>
+					<kind>water</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<!-- water rate -->
+						<flowRateValue>
+							<flowRate uom="m3/d">14.0135</flowRate>
+						</flowRateValue>
+						<!-- water cut -->
+						<concentration uom="%">5</concentration>
+					</period>
+				</product>
+			</flow>
+		</facility>
+	</productVolume>
+</productVolumes>

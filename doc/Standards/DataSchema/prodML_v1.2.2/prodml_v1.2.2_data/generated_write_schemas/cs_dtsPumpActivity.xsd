@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_dtsPumpLogTable.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>DTS Pumping Activity</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:complexType name="cs_dtsPumpActivity">
+      <xsd:annotation>
+         <xsd:documentation>The activity of pumping the fiber downhole.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A name which can be used to reference the pumping activity. In general, a pumping activity does not have a natural name, so that this element
+               will not be often used.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="installedFiber" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The name of the InstalledFiberInstance that this activity relates to.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pumpingDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date of the pumping activity.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="engineerName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The person in charge of the pumping activity.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="serviceCompany" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The company that performed the pumping activity.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pumpFluidType" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of fluid used in the pump.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="controlLineFluid" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of fluid used in the control line.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pumpDirection" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The direction of the pumping.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberEndSeal" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of end seal on the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="cableMeterType" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The type of cable meter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="cableMeterSerialNumber" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The serial number of the cable meter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="cableMeterCalibrationDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date the cable meter was calibrated.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice>
+            <xsd:element name="wasDriftRunPerformed" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>True or False. Was a drift run performed? This element should be used to indicate if a drift run was performed or not, where the instance of
+                  the drift run (OTDR) is not available. If the OTDR is available, use the OTDRPerformed element to specify the OTDR instance.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="OTDRPerformed" type="prodml:refNameString" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>A reference to the OTDR that was run. If an OTDR was run, but there is not instance of the OTDR to reference, choose the wasDriftRunPerformed
+                  element, and set it to True.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="excessFiberRecovered" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The length of the excess fiber that was removed.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pumpLog" type="prodml:cs_dtsPumpLogTable" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Information about the pumping activity, that is captured in the pump log.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

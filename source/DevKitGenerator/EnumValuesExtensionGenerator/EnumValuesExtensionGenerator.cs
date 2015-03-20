@@ -93,7 +93,7 @@ namespace Energistics.Generator.EnumValuesExtensionGenerator
                 string setName = args[2];
 
                 // Check to make sure the set name is valud
-                if (setName == "WITSML131" || setName == "WITSML141" || setName == "PRODML122")
+                if (setName == "WITSML131" || setName == "WITSML141" || setName == "PRODML122"||setName == "COMPLETION100")
                 {
                     // Namespace must start with a capital letter, 
                     // followed by any number of word characters or dots, 

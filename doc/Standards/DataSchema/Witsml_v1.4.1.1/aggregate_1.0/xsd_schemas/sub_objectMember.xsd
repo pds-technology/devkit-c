@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.energistics.org/schemas/aggregate" 
+	xmlns:agg="http://www.energistics.org/schemas/aggregate" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="common_v1.4.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2008 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+<!-- Example import of all the WITSML object schemas:
+	<xsd:import namespace="http://www.witsml.org/schemas/1series" 
+		    schemaLocation="../../witsml_v1.4.1_data/xsd_schemas/sub_objectMemberWitsml.xsd"/>
+	<xsd:import namespace="http://www.prodml.org/schemas/1series" 
+		    schemaLocation="../../prodml_v1.2.0_data/xsd_schemas/sub_objectMemberProdml.xsd"/>
+-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>WITSML Substitution Group Members.
+		This file can be edited to import object schemas for use in the aggregate object.
+		The default is that there are no data object members. This is so that the aggregate object can be used
+		with any version in any namespace.
+		The schemas for each Energistics domain (e.g., WITSML, PRODML, RESQML) will contain
+		a file named something like sub_objectMemberXxxxxxx.xsd where Xxxxxxx indicates the domain.
+		The contents of that member file will list the includes all of the objects which can be expected to be added to this list.
+		If the aggregate may contain anything in that domain then the domain's member fle can be imported as-is.
+		If a subset of that list is expected in the aggregate, a copy of the member file may be added (e.g., to this folder)
+		and edited to remove undesired objects. 
+		</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+</xsd:schema>

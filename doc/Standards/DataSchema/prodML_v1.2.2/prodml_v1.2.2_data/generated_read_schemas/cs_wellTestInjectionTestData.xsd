@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_wellTestInterval.xsd" />
+   <xsd:include schemaLocation="cs_wellTestCumulative.xsd" />
+   <xsd:include schemaLocation="cs_wellTestInjectionTestResults.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_wellTestInjectionTestData">
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="testDuration" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The time length (with uom) of the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="testInterval" type="prodml:cs_wellTestInterval" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The interval tested. This element includes a top and base depth, and the formation tested.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="InjectedFluid" type="prodml:InjectionFluid" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The fluid that is being injected.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellTestCumulative" type="prodml:cs_wellTestCumulative" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="chokeOrificeSize" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The size of the opening in the flow choke at the wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="minimumAnnularPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum pressure measured at the annulus.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="maximumAnnularPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum pressure measured at the annulus.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellheadFlowingPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The flowing pressure measured at the wellhead during the test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellheadMaximumPressure" type="prodml:pressureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum pressure measured at the wellhead during the well test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="injectionTestResults" type="prodml:cs_wellTestInjectionTestResults" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The production results of the test.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

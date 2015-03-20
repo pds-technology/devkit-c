@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>These types represent numeric quantities with a unit of measure implemented as a uom attribute. The units are gathered into single quantity class which
+      represents a group of units. The unit symbols appropriate for the class are captured as enumerated lists. The implementation of this is to develop a type for each uom class
+      that is a union of a standard list, the unknown value, and the Other: extension. Additional files will contain these structures.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_quantityClass.xsd" />
+   <xsd:include schemaLocation="typ_quantityClassCompletion.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="frequencyMeasure">
+      <xsd:simpleContent>
+         <xsd:extension base="witsml:abstractMeasure">
+            <xsd:attribute name="uom" type="witsml:FrequencyUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>Added-in-version=Completions1.0</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="electricResistanceMeasure">
+      <xsd:simpleContent>
+         <xsd:extension base="witsml:abstractMeasure">
+            <xsd:attribute name="uom" type="witsml:ElectricResistanceUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>Added-in-version=Completions1.0</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="resistivityPerLengthMeasure">
+      <xsd:simpleContent>
+         <xsd:extension base="witsml:abstractMeasure">
+            <xsd:attribute name="uom" type="witsml:ResistivityPerLengthUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>Added-in-version=Completions1.0</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

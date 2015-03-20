@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="cs_wftTestResult.xsd"/>
+	<xsd:include schemaLocation="cs_wftTestData.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_wftSampleAcquisition">
+		<xsd:annotation>
+			<xsd:documentation>Information about a single formation tester sample acquistion.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="sampleRef" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the Sample that was collected at this point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sampleCylinderId" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The ID of the sample cylinder in which this sample was collected.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A name assigned to the acquisition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="kind" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The kind of sample acquisition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation> Sampling  start time.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation> Sampling  end time.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fieldComment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Comments created by the field engineers collecting the sample.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="interpretationComment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Comments created by the engineers analysing the sample.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sampleId" type="prodml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An identifier for the fluid collected as part of this acquistion.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sampleCarrierSlotId" type="prodml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An identifier for the slot in the sample carrier where the sample was acquired.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="toolSectionId" type="prodml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An identifier for the formation tester tool section that acquired the sample.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bottleId" type="prodml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An identifier for the sample bottle that was used for this acquisition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bottleConfiguration" type="prodml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A description of the kind of bottle used, for example whether the bottle is pressurized with Nitrogen or not.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="cushionPressure" type="prodml:generalMeasureType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The pressure that was used to charge the sample bottle.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="grossFluidKind" type="prodml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The expected kind of the sample, typically oil, water or gas.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="result" type="prodml:cs_wftTestResult" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A result of formation tester analysis that applies to this acquisition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testRef" type="prodml:refNameString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A refererence to a test (uid) under the current station.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="testData" type="prodml:cs_wftTestData" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the associated data acquired during this acquisition.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_wellbore">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML Wellbore object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="parentWellbore" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>This is a pointer to the parent wellbore. No parent = starts from top.   </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="number" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Operator borehole number.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="suffixAPI" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>API suffix.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="numGovt" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Government assigned number.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="statusWellbore" type="witsml:WellStatus" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>POSC wellbore status.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="purposeWellbore" type="witsml:WellPurpose" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>POSC wellbore purpose.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="typeWellbore" type="witsml:WellboreType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Type of wellbore.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="shape" type="witsml:WellboreShape" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>POSC wellbore trajectory shape.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dTimKickoff" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Date and time of wellbore kickoff.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="achievedTD" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True ("true" of "1") indicates that the wellbore has 
+					acheieved total depth. That is, drilling has completed. False ("false" or "0") indicates otherwise. 
+					Not given indicates that it is not known whether total depth has been reached.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdCurrent" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The current measured depth of the borehole. If status is plugged, 
+					indicates the maximum depth reached before plugging.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdCurrent" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The current true vertical depth of the borehole.  If status is plugged, indicates the 
+					maximum depth reached before plugging.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdKickoff" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Kickoff measured depth of the wellbore. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdKickoff" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Kickoff true vertical depth of the wellbore.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdPlanned" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Planned measured depth for the wellbore total depth.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdPlanned" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Planned true vertical depth for the wellbore total depth.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdSubSeaPlanned" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Planned measured for the wellbore total depth - with respect to seabed.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdSubSeaPlanned" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Planned true vertical depth for the wellbore total depth - with respect to seabed.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dayTarget" type="witsml:timeMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Target days for drilling wellbore.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

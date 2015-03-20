@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_documentInfo.xsd"/>
+	<xsd:include schemaLocation="grp_realtime.xsd"/>
+	<xsd:include schemaLocation="cs_commonData.xsd"/>
+	<xsd:include schemaLocation="cs_customData.xsd"/>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation> Realtime information that supports the WITSML standard. </xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:element name="realtimes" type="witsml:obj_realtimes">
+		<xsd:annotation>
+			<xsd:documentation>The WITSML API mandated plural root element which allows 
+			multiple singular objects to be sent. The plural name is formed by adding
+			an "s" to the singular name.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                                                         -->
+	<xsd:complexType name="obj_realtimes">
+		<xsd:sequence>
+			<xsd:element name="documentInfo" type="witsml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+				<xsd:documentation>Information about the XML message instance.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="realtime" type="witsml:obj_realtime" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+				<xsd:documentation>A single realtime.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="witsml:schemaVersionString" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Data object schema version.  The fourth level must match the 
+				version of the schema constraints (enumerations and XML loader files) that are assumed
+				by the document instance.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="obj_realtime">
+		<xsd:sequence>
+			<!--	nameWelll and nameWellbore are not included here because realtime represents the details.
+				These names are defined in the realtime header.
+			-->
+			<xsd:group ref="witsml:grp_realtime" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual elements for a realtime.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="uidWell" type="witsml:uidString" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the well. This uniquely represents 
+				the well referenced by the (possibly non-unique) nameWell. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="uidWellbore" type="witsml:uidString" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the wellbore. This uniquely represents 
+				the wellbore referenced by the (possibly non-unique) nameWellbore. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="idSub" type="witsml:uidString" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the Subscription. This matches the 
+				value of the idSub attribute that is returned in the Subscription Request.
+				The value is only optional so that the a realtime can be retrieved 
+				using the Store interface (possibly after the subscription has retired). 
+				Otherwise, the value must be included when the realtime is returned as
+				a result of a subscription.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>

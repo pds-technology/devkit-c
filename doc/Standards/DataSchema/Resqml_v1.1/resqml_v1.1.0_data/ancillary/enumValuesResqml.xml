@@ -1,0 +1,2706 @@
+<?xml version="1.0"?>
+
+<!--
+This file is distributed under the POSC License Agreement at
+http://www.posc.org/about/license.shtml.
+Use of this file constitutes agreement with the POSC License Agreement.
+-->
+
+<enumListSet 
+	xmlns="http://www.resqml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.resqml.org/schemas/1series 
+			   cs_enumValuesResqml.xsd" 
+	version="1.1.0.0(RESQML)">
+	<enumList>
+		<name>ExtensionName</name>
+		<description>The names of agreed extensions to WITSML.
+		This list may be locally extended but it is recommended that new names be
+		approved by the WITSML SIG before use.
+		Each standard name must define its data type.
+		For string types, the maximum length must be defined in number of characters.
+		For measures, the expected measure class must be defined.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>dummy-example-string</name>
+			<description>This is an example for the purpose of demonstrating the capabilities.
+			This name should not be used and can be removed from a production file.
+			It describes a string of maximum length of 64 characters which can be used in 
+			the commonData of any object. 
+			The semantics of the name would be defined in this description field.</description>
+			<extensionDataType>string</extensionDataType>
+			<extensionMaximumSize>64</extensionMaximumSize>
+			<extensionPath>.//commonData/extensionNameValue</extensionPath>
+		</value>
+		<value>
+			<name>dummy-example-measure</name>
+			<description>This is an example for the purpose of demonstrating the capabilities.
+			This name should not be used and can be removed from a production file.
+			It describes a length measure which can only be specified in the commonData of the well and wellbore objects.
+			The semantics of the name would be defined in this description field.
+			The extensionMeasureClass constrains the allowed units of measure for each value.
+			The extensionDataType value of double constrains the size of each value.</description>
+			<extensionDataType>double</extensionDataType>
+			<extensionMeasureClass>length</extensionMeasureClass>
+			<extensionPath>/well/commonData/extensionNameValue</extensionPath>
+			<extensionPath>/wellbore/commonData/extensionNameValue</extensionPath>
+		</value>
+		<value>
+			<name>dummy-example-dateTime</name>
+			<description>This is an example for the purpose of demonstrating the capabilities.
+			This name should not be used and can be removed from a production file.
+			It describes a dateTime value which can be specified anywhere in the tubular object.
+			The semantics of the name would be defined in this description field.</description>
+			<extensionDataType>dateTime</extensionDataType>
+			<extensionPath>/tubular//extensionNameValue</extensionPath>
+		</value>
+	</enumList>
+	<enumList>
+		<name>MeasureClass</name>
+		<description>Defines classes of measures and their allowed units of measures. For a value whose underlying meaning conforms to one of these classes, any specified unit of measure must conform to the defined list. These are copied from the Energistics (POSC) Units Classes v2.2.</description>
+		<namingSystem>Energistics</namingSystem>
+		<value>
+			<name>absorbed dose</name>
+			<description>The amount of energy absorbed per mass.</description>
+			<measureBaseForConversion>Gy</measureBaseForConversion>
+		</value>
+		<value>
+			<name>acceleration linear</name>
+			<measureBaseForConversion>m/s2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>activity (of radioactivity)</name>
+			<description>A measure of the radiation being emitted.</description>
+			<measureBaseForConversion>Bq</measureBaseForConversion>
+		</value>
+		<value>
+			<name>concentration of B</name>
+			<description>molar concentration of a substance</description>
+			<measureBaseForConversion>mol/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>amount of substance</name>
+			<description>molar amount of a substance</description>
+			<measureBaseForConversion>mol</measureBaseForConversion>
+		</value>
+		<value>
+			<name>angle per length</name>
+			<measureBaseForConversion>rad/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>angle per time</name>
+			<description>The angular velocity. The rate of change of an angle.</description>
+			<measureBaseForConversion>rad/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>angle per volume</name>
+			<measureBaseForConversion>rad/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>angular acceleration</name>
+			<measureBaseForConversion>rad/s2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>area</name>
+			<measureBaseForConversion>m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>area per area</name>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>area per volume</name>
+			<measureBaseForConversion>1/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>attenuation</name>
+			<description>A logarithmic, fractional change of some measure, generally power or amplitude, over a standard range. This is generally used for frequency attenuation over an octave.</description>
+			<measureBaseForConversion>B/O</measureBaseForConversion>
+		</value>
+		<value>
+			<name>attenuation per length</name>
+			<measureBaseForConversion>B/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>capacitance</name>
+			<measureBaseForConversion>F</measureBaseForConversion>
+		</value>
+		<value>
+			<name>charge density</name>
+			<measureBaseForConversion>C/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>chemical potential</name>
+			<measureBaseForConversion>J/mol</measureBaseForConversion>
+		</value>
+		<value>
+			<name>compressibility</name>
+			<measureBaseForConversion>1/Pa</measureBaseForConversion>
+		</value>
+		<value>
+			<name>conductivity</name>
+			<measureBaseForConversion>S/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>cross section absorption</name>
+			<measureBaseForConversion>m2/mol</measureBaseForConversion>
+		</value>
+		<value>
+			<name>current density</name>
+			<measureBaseForConversion>A/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>Darcy flow coefficient</name>
+			<measureBaseForConversion>Pa/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>data transmission speed</name>
+			<description>used primarily for computer transmission rates.</description>
+			<measureBaseForConversion>bps</measureBaseForConversion>
+		</value>
+		<value>
+			<name>delta temperature</name>
+			<description>Delta temperature refers to temperature differences. For non-zero offset temperature scales, Fahrenheit and Celsius, the conversion formulas are different than for absolute temperatures.</description>
+			<measureBaseForConversion>K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>density</name>
+			<measureBaseForConversion>kg/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>diffusion coefficient</name>
+			<measureBaseForConversion>m2/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>digital storage</name>
+			<measureBaseForConversion>byte</measureBaseForConversion>
+		</value>
+		<value>
+			<name>dimensionless</name>
+			<description>A dimensionless quantity is the ratio of two dimensional quantities. The quantity types are not apparent from the basic dimensionless class, but may be apparent in variations - such as area per area, volume per volume, or mass per mass.</description>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>dose equivalent</name>
+			<measureBaseForConversion>Sv</measureBaseForConversion>
+		</value>
+		<value>
+			<name>dose equivalent rate</name>
+			<measureBaseForConversion>Sv/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>dynamic viscosity</name>
+			<measureBaseForConversion>Pa.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electric charge</name>
+			<measureBaseForConversion>C</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electric conductance</name>
+			<measureBaseForConversion>S</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electric current</name>
+			<measureBaseForConversion>A</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electric dipole moment</name>
+			<measureBaseForConversion>C.m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electric field strength</name>
+			<measureBaseForConversion>V/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electric polarization</name>
+			<measureBaseForConversion>C/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electric potential</name>
+			<measureBaseForConversion>V</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electrical resistivity</name>
+			<measureBaseForConversion>ohm.m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electrochemical equivalent</name>
+			<description>An electrochemical equivalent differs from molarity in that the valence (oxidation reduction potential) of the element is also considered.</description>
+			<measureBaseForConversion>eq</measureBaseForConversion>
+		</value>
+		<value>
+			<name>electromagnetic moment</name>
+			<measureBaseForConversion>A.m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>energy length per area</name>
+			<measureBaseForConversion>N</measureBaseForConversion>
+		</value>
+		<value>
+			<name>energy length per time area temperature</name>
+			<measureBaseForConversion>W/m.K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>energy per area</name>
+			<measureBaseForConversion>N/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>energy per length</name>
+			<measureBaseForConversion>N</measureBaseForConversion>
+		</value>
+		<value>
+			<name>equivalent per mass</name>
+			<measureBaseForConversion>eq/kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>equivalent per volume</name>
+			<measureBaseForConversion>eq/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>exposure (radioactivity)</name>
+			<measureBaseForConversion>C/kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>force</name>
+			<measureBaseForConversion>N</measureBaseForConversion>
+		</value>
+		<value>
+			<name>force area</name>
+			<measureBaseForConversion>N.m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>force length per length</name>
+			<measureBaseForConversion>N</measureBaseForConversion>
+		</value>
+		<value>
+			<name>force per force</name>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>force per length</name>
+			<measureBaseForConversion>N/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>force per volume</name>
+			<measureBaseForConversion>N/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>frequency</name>
+			<measureBaseForConversion>Hz</measureBaseForConversion>
+		</value>
+		<value>
+			<name>frequency interval</name>
+			<description>An octave is a doubling of a frquency.</description>
+			<measureBaseForConversion>O</measureBaseForConversion>
+		</value>
+		<value>
+			<name>gamma ray API unit</name>
+			<description>This class is defined by the API, and is used for units of gamma ray log response.</description>
+			<measureBaseForConversion>gAPI</measureBaseForConversion>
+		</value>
+		<value>
+			<name>heat capacity</name>
+			<measureBaseForConversion>J/K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>heat flow rate</name>
+			<measureBaseForConversion>W</measureBaseForConversion>
+		</value>
+		<value>
+			<name>heat transfer coefficient</name>
+			<measureBaseForConversion>W/m2.K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>illuminance</name>
+			<measureBaseForConversion>lx</measureBaseForConversion>
+		</value>
+		<value>
+			<name>irradiance</name>
+			<measureBaseForConversion>W/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>isothermal compressibility</name>
+			<measureBaseForConversion>m3/J</measureBaseForConversion>
+		</value>
+		<value>
+			<name>kinematic viscosity</name>
+			<measureBaseForConversion>m2/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>length</name>
+			<measureBaseForConversion>m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>length per length</name>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>length per temperature</name>
+			<measureBaseForConversion>m/K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>length per volume</name>
+			<measureBaseForConversion>1/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>level of power intensity</name>
+			<measureBaseForConversion>B</measureBaseForConversion>
+		</value>
+		<value>
+			<name>light exposure</name>
+			<measureBaseForConversion>lx.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass per length</name>
+			<measureBaseForConversion>kg/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>linear thermal expansion</name>
+			<measureBaseForConversion>1/K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>luminance</name>
+			<measureBaseForConversion>cd/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>luminous efficacy</name>
+			<measureBaseForConversion>lm/W</measureBaseForConversion>
+		</value>
+		<value>
+			<name>luminous flux</name>
+			<measureBaseForConversion>lm</measureBaseForConversion>
+		</value>
+		<value>
+			<name>luminous intensity</name>
+			<measureBaseForConversion>cd</measureBaseForConversion>
+		</value>
+		<value>
+			<name>magnetic dipole moment</name>
+			<measureBaseForConversion>Wb.m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>magnetic field strength</name>
+			<measureBaseForConversion>A/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>magnetic flux</name>
+			<measureBaseForConversion>Wb</measureBaseForConversion>
+		</value>
+		<value>
+			<name>magnetic induction</name>
+			<measureBaseForConversion>T</measureBaseForConversion>
+		</value>
+		<value>
+			<name>magnetic permeability</name>
+			<measureBaseForConversion>H/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>magnetic vector potential</name>
+			<measureBaseForConversion>Wb/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass</name>
+			<measureBaseForConversion>kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass attenuation coefficient</name>
+			<measureBaseForConversion>m2/kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass flow rate</name>
+			<measureBaseForConversion>kg/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass length</name>
+			<measureBaseForConversion>kg.m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass per energy</name>
+			<measureBaseForConversion>kg/J</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass per time per area</name>
+			<measureBaseForConversion>kg/m2.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass per time per length</name>
+			<measureBaseForConversion>Pa.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass per volume per length</name>
+			<measureBaseForConversion>kg/m4</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mass concentration</name>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mobility</name>
+			<measureBaseForConversion>m2/Pa.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>modulus of compression</name>
+			<measureBaseForConversion>J/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>molar heat capacity</name>
+			<measureBaseForConversion>J/mol.K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>molar volume</name>
+			<measureBaseForConversion>m3/mol</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mole per area</name>
+			<measureBaseForConversion>mol/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mole per time</name>
+			<measureBaseForConversion>mol/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>mole per time per area</name>
+			<measureBaseForConversion>mol/m2.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>moment of force</name>
+			<measureBaseForConversion>J</measureBaseForConversion>
+		</value>
+		<value>
+			<name>moment of inertia</name>
+			<measureBaseForConversion>kg.m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>moment of section</name>
+			<measureBaseForConversion>m4</measureBaseForConversion>
+		</value>
+		<value>
+			<name>momentum</name>
+			<measureBaseForConversion>kg.m/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>neutron API unit</name>
+			<measureBaseForConversion>nAPI</measureBaseForConversion>
+		</value>
+		<value>
+			<name>nonDarcy flow coefficient</name>
+			<measureBaseForConversion>Pa.s/m6</measureBaseForConversion>
+		</value>
+		<value>
+			<name>operations per time</name>
+			<measureBaseForConversion>1/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>parachor</name>
+			<measureBaseForConversion>N4/kg.m7</measureBaseForConversion>
+		</value>
+		<value>
+			<name>per area</name>
+			<measureBaseForConversion>1/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>per electric potential</name>
+			<measureBaseForConversion>1/V</measureBaseForConversion>
+		</value>
+		<value>
+			<name>per force</name>
+			<measureBaseForConversion>1/N</measureBaseForConversion>
+		</value>
+		<value>
+			<name>per length</name>
+			<measureBaseForConversion>1/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>per mass</name>
+			<measureBaseForConversion>1/kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>per volume</name>
+			<measureBaseForConversion>1/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>permeability length</name>
+			<measureBaseForConversion>m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>permeability rock</name>
+			<measureBaseForConversion>m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>permeance</name>
+			<measureBaseForConversion>H</measureBaseForConversion>
+		</value>
+		<value>
+			<name>permittivity</name>
+			<measureBaseForConversion>F/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>pH</name>
+			<description>The pH is a class that measures the hydrogen ion concentration (acidity).</description>
+			<measureBaseForConversion>pH</measureBaseForConversion>
+		</value>
+		<value>
+			<name>plane angle</name>
+			<measureBaseForConversion>rad</measureBaseForConversion>
+		</value>
+		<value>
+			<name>potential difference per power drop</name>
+			<measureBaseForConversion>V/B</measureBaseForConversion>
+		</value>
+		<value>
+			<name>power</name>
+			<measureBaseForConversion>W</measureBaseForConversion>
+		</value>
+		<value>
+			<name>power per volume</name>
+			<measureBaseForConversion>W/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>pressure</name>
+			<measureBaseForConversion>Pa</measureBaseForConversion>
+		</value>
+		<value>
+			<name>pressure per time</name>
+			<measureBaseForConversion>Pa/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>pressure squared</name>
+			<measureBaseForConversion>Pa2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>pressure squared per force time per area</name>
+			<measureBaseForConversion>Pa/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>pressure time per volume</name>
+			<measureBaseForConversion>Pa.s/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>productivity index</name>
+			<measureBaseForConversion>m3/Pa.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>quantity of light</name>
+			<measureBaseForConversion>lm.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>radiance</name>
+			<measureBaseForConversion>W/m2.sr</measureBaseForConversion>
+		</value>
+		<value>
+			<name>radiant intensity</name>
+			<measureBaseForConversion>W/sr</measureBaseForConversion>
+		</value>
+		<value>
+			<name>relative power</name>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>relative time</name>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>reluctance</name>
+			<measureBaseForConversion>1/H</measureBaseForConversion>
+		</value>
+		<value>
+			<name>resistance</name>
+			<measureBaseForConversion>ohm</measureBaseForConversion>
+		</value>
+		<value>
+			<name>resistivity per length</name>
+			<measureBaseForConversion>ohm/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>second moment of area</name>
+			<measureBaseForConversion>m4</measureBaseForConversion>
+		</value>
+		<value>
+			<name>solid angle</name>
+			<measureBaseForConversion>sr</measureBaseForConversion>
+		</value>
+		<value>
+			<name>specific activity (of radioactivity)</name>
+			<measureBaseForConversion>Bq/kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>specific energy</name>
+			<measureBaseForConversion>J/kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>specific heat capacity</name>
+			<measureBaseForConversion>J/kg.K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>specific productivity index</name>
+			<measureBaseForConversion>m3/Pa2.s2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>specific volume</name>
+			<measureBaseForConversion>m3/kg</measureBaseForConversion>
+		</value>
+		<value>
+			<name>standard volume</name>
+			<measureBaseForConversion>scm(15C)</measureBaseForConversion>
+		</value>
+		<value>
+			<name>standard volume per area</name>
+			<measureBaseForConversion>scm(15C)/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>standard volume per time</name>
+			<measureBaseForConversion>scm(15C)/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>standard volume per volume</name>
+			<measureBaseForConversion>scm(15C)/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>surface density</name>
+			<measureBaseForConversion>kg/m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>temperature per length</name>
+			<measureBaseForConversion>K/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>temperature per time</name>
+			<measureBaseForConversion>K/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>thermal conductance</name>
+			<measureBaseForConversion>W/K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>thermal conductivity</name>
+			<measureBaseForConversion>W/m.K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>thermal diffusivity</name>
+			<measureBaseForConversion>m2/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>thermal insulance</name>
+			<measureBaseForConversion>K.m2/W</measureBaseForConversion>
+		</value>
+		<value>
+			<name>thermal resistance</name>
+			<measureBaseForConversion>K/W</measureBaseForConversion>
+		</value>
+		<value>
+			<name>thermodynamic temperature</name>
+			<measureBaseForConversion>K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>time</name>
+			<measureBaseForConversion>s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>time per length</name>
+			<measureBaseForConversion>s/m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>time per volume</name>
+			<measureBaseForConversion>s/m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>unit productivity index</name>
+			<measureBaseForConversion>m2/Pa.s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>velocity</name>
+			<measureBaseForConversion>m/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume</name>
+			<measureBaseForConversion>m3</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume flow rate</name>
+			<measureBaseForConversion>m3/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume length per time</name>
+			<measureBaseForConversion>m4/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per area</name>
+			<measureBaseForConversion>m</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per length</name>
+			<measureBaseForConversion>m2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per standard volume</name>
+			<measureBaseForConversion>m3/scm(15C)</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per time per area</name>
+			<measureBaseForConversion>m/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per time per length</name>
+			<measureBaseForConversion>m2/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per time per time</name>
+			<measureBaseForConversion>m3/s2</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per time per volume</name>
+			<measureBaseForConversion>1/s</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volume per volume</name>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volumetric heat transfer coefficient</name>
+			<measureBaseForConversion>W/m3.K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>volumetric thermal expansion</name>
+			<measureBaseForConversion>1/K</measureBaseForConversion>
+		</value>
+		<value>
+			<name>work</name>
+			<measureBaseForConversion>J</measureBaseForConversion>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>ResqmlPropertyKind</name>
+		<description>Defines classes of properties. A property inherents the underlying characteristis of its parent but specializes its meaning.</description>
+		<namingSystem>Energistics</namingSystem>
+		<value>
+			<name>absorbed dose</name>
+			<description>The amount of energy absorbed per mass.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Gy</unitOfMeasure>
+			<dimensionalClass>L2/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>acceleration linear</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m/s2</unitOfMeasure>
+			<dimensionalClass>L/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>activity (of radioactivity)</name>
+			<description>A measure of the radiation being emitted.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Bq</unitOfMeasure>
+			<dimensionalClass>1/T</dimensionalClass>
+		</value>
+		<value>
+			<name>amount of substance</name>
+			<description>Molar amount of a substance.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>mol</unitOfMeasure>
+			<dimensionalClass>N</dimensionalClass>
+		</value>
+		<value>
+			<name>amplitude</name>
+			<description>Amplitude of the acoustic signal recorded. It is not a physical property, only a value.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>unitless</parentKind>
+			<unitOfMeasure>NONE</unitOfMeasure>
+			<dimensionalClass>0</dimensionalClass>
+		</value>
+		<value>
+			<name>angle per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>rad/m</unitOfMeasure>
+			<dimensionalClass>A/L</dimensionalClass>
+		</value>
+		<value>
+			<name>angle per time</name>
+			<description>The angular velocity. The rate of change of an angle.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>rad/s</unitOfMeasure>
+			<dimensionalClass>A/T</dimensionalClass>
+		</value>
+		<value>
+			<name>angle per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>rad/m3</unitOfMeasure>
+			<dimensionalClass>A/L3</dimensionalClass>
+		</value>
+		<value>
+			<name>angular acceleration</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>rad/s2</unitOfMeasure>
+			<dimensionalClass>A/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>area</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2</unitOfMeasure>
+			<dimensionalClass>L2</dimensionalClass>
+		</value>
+		<value>
+			<name>area per area</name>
+			<description>A dimensionless quantity where the basis of the ratio is area.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L2)</dimensionalClass>
+		</value>
+		<value>
+			<name>area per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/m</unitOfMeasure>
+			<dimensionalClass>1/L</dimensionalClass>
+		</value>
+		<value>
+			<name>attenuation</name>
+			<description>A logarithmic, fractional change of some measure, generally power or amplitude, over a standard range. This is generally used for frequency attenuation over an octave.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>B/O</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>attenuation per length</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>B/m</unitOfMeasure>
+			<dimensionalClass>1/L</dimensionalClass>
+		</value>
+		<value>
+			<name>azimuth</name>
+			<description>Angle between the North and the projection of the normal to the horizon surface estimated on a local area of the interface.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>plane angle</parentKind>
+			<unitOfMeasure>rad</unitOfMeasure>
+			<dimensionalClass>A</dimensionalClass>
+		</value>
+		<value>
+			<name>bubble point pressure</name>
+			<description>The pressure at which the first gas bubble appears while decreasing pressure on a fluid sample.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>pressure</parentKind>
+			<unitOfMeasure>Pa</unitOfMeasure>
+			<dimensionalClass>M/LT2</dimensionalClass>
+		</value>
+		<value>
+			<name>bulk modulus</name>
+			<description>Bulk modulus, K</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>pressure</parentKind>
+			<unitOfMeasure>Pa</unitOfMeasure>
+			<dimensionalClass>M/LT2</dimensionalClass>
+		</value>
+		<value>
+			<name>capacitance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>F</unitOfMeasure>
+			<dimensionalClass>C2T4/L2M</dimensionalClass>
+		</value>
+		<value>
+			<name>categorical</name>
+			<description>The abstract supertype of all enumerated string properties.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>RESQML root property</parentKind>
+		</value>
+		<value>
+			<name>cell length</name>
+			<description>distance from cell face center to cell face center in the specified direction, DI, DJ, DK</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>length</parentKind>
+			<unitOfMeasure>m</unitOfMeasure>
+			<dimensionalClass>L</dimensionalClass>
+		</value>
+		<value>
+			<name>charge density</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>C/m3</unitOfMeasure>
+			<dimensionalClass>CT/L3</dimensionalClass>
+		</value>
+		<value>
+			<name>chemical potential</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J/mol</unitOfMeasure>
+			<dimensionalClass>L2M/NT2</dimensionalClass>
+		</value>
+		<value>
+			<name>code</name>
+			<description>A discrete code.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>categorical</parentKind>
+		</value>
+		<value>
+			<name>compressibility</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/Pa</unitOfMeasure>
+			<dimensionalClass>LT2/M</dimensionalClass>
+		</value>
+		<value>
+			<name>concentration of B</name>
+			<description>molar concentration of a substance.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>mol/m3</unitOfMeasure>
+			<dimensionalClass>N/L3</dimensionalClass>
+		</value>
+		<value>
+			<name>conductivity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>S/m</unitOfMeasure>
+			<dimensionalClass>C2T3/L3M</dimensionalClass>
+		</value>
+		<value>
+			<name>continuous</name>
+			<description>The abstract supertype of all floating point properties.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>RESQML root property</parentKind>
+		</value>
+		<value>
+			<name>cross section absorption</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/mol</unitOfMeasure>
+			<dimensionalClass>L2/N</dimensionalClass>
+		</value>
+		<value>
+			<name>current density</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>A/m2</unitOfMeasure>
+			<dimensionalClass>C/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>Darcy flow coefficient</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa/m3</unitOfMeasure>
+			<dimensionalClass>M/L4T2</dimensionalClass>
+		</value>
+		<value>
+			<name>data transmission speed</name>
+			<description>used primarily for computer transmission rates.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>bps</unitOfMeasure>
+			<dimensionalClass>1/T</dimensionalClass>
+		</value>
+		<value>
+			<name>delta temperature</name>
+			<description>Delta temperature refers to temperature differences. For non-zero offset temperature scales, Fahrenheit and Celsius, the conversion formulas are different than for absolute temperatures.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>K</unitOfMeasure>
+			<dimensionalClass>K</dimensionalClass>
+		</value>
+		<value>
+			<name>density</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg/m3</unitOfMeasure>
+			<dimensionalClass>M/L3</dimensionalClass>
+		</value>
+		<value>
+			<name>depth</name>
+			<description>The perpendicular measurement downward from a surface. Also, the direct linear measurement from the point of viewing usually from front to back.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>length</parentKind>
+			<unitOfMeasure>m</unitOfMeasure>
+			<dimensionalClass>L</dimensionalClass>
+		</value>
+		<value>
+			<name>diffusion coefficient</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/s</unitOfMeasure>
+			<dimensionalClass>L2/T</dimensionalClass>
+		</value>
+		<value>
+			<name>digital storage</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>byte</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>dimensionless</name>
+			<description>A dimensionless quantity is the ratio of two dimensional quantities. The quantity types are not apparent from the basic dimensionless class, but may be apparent in variations - such as area per area, volume per volume, or mass per mass.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>dip</name>
+			<description>In the azimuth direction, Angle between an horizon plane and an estimated plane on a local area of the interface.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>plane angle</parentKind>
+			<unitOfMeasure>rad</unitOfMeasure>
+			<dimensionalClass>A</dimensionalClass>
+		</value>
+		<value>
+			<name>discrete</name>
+			<description>The abstract supertype of all integer properties.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>RESQML root property</parentKind>
+		</value>
+		<value>
+			<name>dose equivalent</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Sv</unitOfMeasure>
+			<dimensionalClass>L2/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>dose equivalent rate</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Sv/s</unitOfMeasure>
+			<dimensionalClass>L2/T3</dimensionalClass>
+		</value>
+		<value>
+			<name>dynamic viscosity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa.s</unitOfMeasure>
+			<dimensionalClass>M/LT</dimensionalClass>
+		</value>
+		<value>
+			<name>electric charge</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>C</unitOfMeasure>
+			<dimensionalClass>CT</dimensionalClass>
+		</value>
+		<value>
+			<name>electric conductance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>S</unitOfMeasure>
+			<dimensionalClass>C2T3/L2M</dimensionalClass>
+		</value>
+		<value>
+			<name>electric current</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>A</unitOfMeasure>
+			<dimensionalClass>C</dimensionalClass>
+		</value>
+		<value>
+			<name>electric dipole moment</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>C.m</unitOfMeasure>
+			<dimensionalClass>CTL</dimensionalClass>
+		</value>
+		<value>
+			<name>electric field strength</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>V/m</unitOfMeasure>
+			<dimensionalClass>LM/CT3</dimensionalClass>
+		</value>
+		<value>
+			<name>electric polarization</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>C/m2</unitOfMeasure>
+			<dimensionalClass>CT/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>electric potential</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>V</unitOfMeasure>
+			<dimensionalClass>L2M/CT3</dimensionalClass>
+		</value>
+		<value>
+			<name>electrical resistivity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>ohm.m</unitOfMeasure>
+			<dimensionalClass>L3M/C2T3</dimensionalClass>
+		</value>
+		<value>
+			<name>electrochemical equivalent</name>
+			<description>An electrochemical equivalent differs from molarity in that the valence (oxidation reduction potential) of the element is also considered.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>eq</unitOfMeasure>
+			<dimensionalClass>CT/N</dimensionalClass>
+		</value>
+		<value>
+			<name>electromagnetic moment</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>A.m2</unitOfMeasure>
+			<dimensionalClass>CL2</dimensionalClass>
+		</value>
+		<value>
+			<name>energy length per area</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N</unitOfMeasure>
+			<dimensionalClass>LM/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>energy length per time area temperature</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/m.K</unitOfMeasure>
+			<dimensionalClass>LM/KT3</dimensionalClass>
+		</value>
+		<value>
+			<name>energy per area</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N/m</unitOfMeasure>
+			<dimensionalClass>M/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>energy per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N</unitOfMeasure>
+			<dimensionalClass>LM/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>equivalent per mass</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>eq/kg</unitOfMeasure>
+			<dimensionalClass>CT/MN</dimensionalClass>
+		</value>
+		<value>
+			<name>equivalent per volume</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>eq/m3</unitOfMeasure>
+			<dimensionalClass>CT/L3N</dimensionalClass>
+		</value>
+		<value>
+			<name>exposure (radioactivity)</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>C/kg</unitOfMeasure>
+			<dimensionalClass>CT/M</dimensionalClass>
+		</value>
+		<value>
+			<name>fluid volume</name>
+			<description>Volume of fluid</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume</parentKind>
+			<unitOfMeasure>m3</unitOfMeasure>
+			<dimensionalClass>L3</dimensionalClass>
+		</value>
+		<value>
+			<name>force</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N</unitOfMeasure>
+			<dimensionalClass>LM/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>force area</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N.m2</unitOfMeasure>
+			<dimensionalClass>L3M/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>force length per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N</unitOfMeasure>
+			<dimensionalClass>LM/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>force per force</name>
+			<description>A dimensionless quantity where the basis of the ratio is force.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(LM/T2)</dimensionalClass>
+		</value>
+		<value>
+			<name>force per length</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N/m</unitOfMeasure>
+			<dimensionalClass>M/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>force per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N/m3</unitOfMeasure>
+			<dimensionalClass>M/L2T2</dimensionalClass>
+		</value>
+		<value>
+			<name>formation volume factor</name>
+			<description>Ratio of volumes at subsurface and surface conditions</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume per volume</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L3)</dimensionalClass>
+		</value>
+		<value>
+			<name>frequency</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Hz</unitOfMeasure>
+			<dimensionalClass>1/T</dimensionalClass>
+		</value>
+		<value>
+			<name>frequency interval</name>
+			<description>An octave is a doubling of a frquency.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>O</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>gamma ray API unit</name>
+			<description>This class is defined by the API, and is used for units of gamma ray log response.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>gAPI</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>heat capacity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J/K</unitOfMeasure>
+			<dimensionalClass>L2M/KT2</dimensionalClass>
+		</value>
+		<value>
+			<name>heat flow rate</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W</unitOfMeasure>
+			<dimensionalClass>L2M/T3</dimensionalClass>
+		</value>
+		<value>
+			<name>heat transfer coefficient</name>
+			<description>PRESSURE PER VELOCITY PER AREA</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/m2.K</unitOfMeasure>
+			<dimensionalClass>M/KT3</dimensionalClass>
+		</value>
+		<value>
+			<name>illuminance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>lx</unitOfMeasure>
+			<dimensionalClass>BS/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>index</name>
+			<description>Serial ordering</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>discrete</parentKind>
+		</value>
+		<value>
+			<name>irradiance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/m2</unitOfMeasure>
+			<dimensionalClass>M/T3</dimensionalClass>
+		</value>
+		<value>
+			<name>isothermal compressibility</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3/J</unitOfMeasure>
+			<dimensionalClass>LT2/M</dimensionalClass>
+		</value>
+		<value>
+			<name>kinematic viscosity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/s</unitOfMeasure>
+			<dimensionalClass>L2/T</dimensionalClass>
+		</value>
+		<value>
+			<name>Lambda Rho</name>
+			<description>Product of Lame constant and density, LR</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>(Pa.kg)/m3</unitOfMeasure>
+			<dimensionalClass>M2/L4T2</dimensionalClass>
+		</value>
+		<value>
+			<name>Lame constant</name>
+			<description>Lame constant, Lambda</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>pressure</parentKind>
+			<unitOfMeasure>Pa</unitOfMeasure>
+			<dimensionalClass>M/LT2</dimensionalClass>
+		</value>
+		<value>
+			<name>length</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m</unitOfMeasure>
+			<dimensionalClass>L</dimensionalClass>
+		</value>
+		<value>
+			<name>length per length</name>
+			<description>A dimensionless quantity where the basis of the ratio is length.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L)</dimensionalClass>
+		</value>
+		<value>
+			<name>length per temperature</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m/K</unitOfMeasure>
+			<dimensionalClass>L/K</dimensionalClass>
+		</value>
+		<value>
+			<name>length per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/m2</unitOfMeasure>
+			<dimensionalClass>1/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>level of power intensity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>B</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>light exposure</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>lx.s</unitOfMeasure>
+			<dimensionalClass>BST/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>linear thermal expansion</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/K</unitOfMeasure>
+			<dimensionalClass>1/K</dimensionalClass>
+		</value>
+		<value>
+			<name>luminance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>cd/m2</unitOfMeasure>
+			<dimensionalClass>B/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>luminous efficacy</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>lm/W</unitOfMeasure>
+			<dimensionalClass>BST3/L2M</dimensionalClass>
+		</value>
+		<value>
+			<name>luminous flux</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>lm</unitOfMeasure>
+			<dimensionalClass>BS</dimensionalClass>
+		</value>
+		<value>
+			<name>luminous intensity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>cd</unitOfMeasure>
+			<dimensionalClass>B</dimensionalClass>
+		</value>
+		<value>
+			<name>magnetic dipole moment</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Wb.m</unitOfMeasure>
+			<dimensionalClass>L3M/CT2</dimensionalClass>
+		</value>
+		<value>
+			<name>magnetic field strength</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>A/m</unitOfMeasure>
+			<dimensionalClass>C/L</dimensionalClass>
+		</value>
+		<value>
+			<name>magnetic flux</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Wb</unitOfMeasure>
+			<dimensionalClass>L2M/CT2</dimensionalClass>
+		</value>
+		<value>
+			<name>magnetic induction</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>T</unitOfMeasure>
+			<dimensionalClass>M/CT2</dimensionalClass>
+		</value>
+		<value>
+			<name>magnetic permeability</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>H/m</unitOfMeasure>
+			<dimensionalClass>LM/C2T2</dimensionalClass>
+		</value>
+		<value>
+			<name>magnetic vector potential</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Wb/m</unitOfMeasure>
+			<dimensionalClass>LM/CT2</dimensionalClass>
+		</value>
+		<value>
+			<name>mass</name>
+			<description>M/L2T</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg</unitOfMeasure>
+			<dimensionalClass>M</dimensionalClass>
+		</value>
+		<value>
+			<name>mass attenuation coefficient</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/kg</unitOfMeasure>
+			<dimensionalClass>L2/M</dimensionalClass>
+		</value>
+		<value>
+			<name>mass concentration</name>
+			<description>A dimensionless quantity where the basis of the ratio is mass.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(M)</dimensionalClass>
+		</value>
+		<value>
+			<name>mass flow rate</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg/s</unitOfMeasure>
+			<dimensionalClass>M/T</dimensionalClass>
+		</value>
+		<value>
+			<name>mass length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg.m</unitOfMeasure>
+			<dimensionalClass>ML</dimensionalClass>
+		</value>
+		<value>
+			<name>mass per energy</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg/J</unitOfMeasure>
+			<dimensionalClass>T2/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>mass per length</name>
+			<description>M  /L4T</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg/m</unitOfMeasure>
+			<dimensionalClass>M/L</dimensionalClass>
+		</value>
+		<value>
+			<name>mass per time per area</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg/m2.s</unitOfMeasure>
+			<dimensionalClass>M/L2T</dimensionalClass>
+		</value>
+		<value>
+			<name>mass per time per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa.s</unitOfMeasure>
+			<dimensionalClass>M/LT</dimensionalClass>
+		</value>
+		<value>
+			<name>mass per volume per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg/m4</unitOfMeasure>
+			<dimensionalClass>M/L4</dimensionalClass>
+		</value>
+		<value>
+			<name>mobility</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/Pa.s</unitOfMeasure>
+			<dimensionalClass>L3T/M</dimensionalClass>
+		</value>
+		<value>
+			<name>modulus of compression</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J/m3</unitOfMeasure>
+			<dimensionalClass>M/LT2</dimensionalClass>
+		</value>
+		<value>
+			<name>molar concentration</name>
+			<description>molar concentration of a substance.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>concentration of B</parentKind>
+			<unitOfMeasure>mol/m3</unitOfMeasure>
+			<dimensionalClass>N/L3</dimensionalClass>
+		</value>
+		<value>
+			<name>molar heat capacity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J/mol.K</unitOfMeasure>
+			<dimensionalClass>L2M/KNT2</dimensionalClass>
+		</value>
+		<value>
+			<name>molar volume</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3/mol</unitOfMeasure>
+			<dimensionalClass>L3/N</dimensionalClass>
+		</value>
+		<value>
+			<name>mole per area</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>mol/m2</unitOfMeasure>
+			<dimensionalClass>N/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>mole per time</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>mol/s</unitOfMeasure>
+			<dimensionalClass>N/T</dimensionalClass>
+		</value>
+		<value>
+			<name>mole per time per area</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>mol/m2.s</unitOfMeasure>
+			<dimensionalClass>N/L2T</dimensionalClass>
+		</value>
+		<value>
+			<name>moment of force</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J</unitOfMeasure>
+			<dimensionalClass>L2M/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>moment of inertia</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg.m2</unitOfMeasure>
+			<dimensionalClass>L2M</dimensionalClass>
+		</value>
+		<value>
+			<name>moment of section</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m4</unitOfMeasure>
+			<dimensionalClass>L4</dimensionalClass>
+		</value>
+		<value>
+			<name>momentum</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg.m/s</unitOfMeasure>
+			<dimensionalClass>LM/T</dimensionalClass>
+		</value>
+		<value>
+			<name>Mu Rho</name>
+			<description>Product of Shear modulus and density, MR</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>(Pa.kg)/m3</unitOfMeasure>
+			<dimensionalClass>M2/L4T2</dimensionalClass>
+		</value>
+		<value>
+			<name>net to gross ratio</name>
+			<description>Ratio of net rock volume to gross rock volume, NTG</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume per volume</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L3)</dimensionalClass>
+		</value>
+		<value>
+			<name>neutron API unit</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>nAPI</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>nonDarcy flow coefficient</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa.s/m6</unitOfMeasure>
+			<dimensionalClass>M/L7T</dimensionalClass>
+		</value>
+		<value>
+			<name>operations per time</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/s</unitOfMeasure>
+			<dimensionalClass>1/T</dimensionalClass>
+		</value>
+		<value>
+			<name>parachor</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>N4/kg.m7</unitOfMeasure>
+			<dimensionalClass>M3/L3T8</dimensionalClass>
+		</value>
+		<value>
+			<name>per area</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/m2</unitOfMeasure>
+			<dimensionalClass>1/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>per electric potential</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/V</unitOfMeasure>
+			<dimensionalClass>CT3/L2M</dimensionalClass>
+		</value>
+		<value>
+			<name>per force</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/N</unitOfMeasure>
+			<dimensionalClass>T2/LM</dimensionalClass>
+		</value>
+		<value>
+			<name>per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/m</unitOfMeasure>
+			<dimensionalClass>1/L</dimensionalClass>
+		</value>
+		<value>
+			<name>per mass</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/kg</unitOfMeasure>
+			<dimensionalClass>1/M</dimensionalClass>
+		</value>
+		<value>
+			<name>per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/m3</unitOfMeasure>
+			<dimensionalClass>1/L3</dimensionalClass>
+		</value>
+		<value>
+			<name>permeability length</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3</unitOfMeasure>
+			<dimensionalClass>L3</dimensionalClass>
+		</value>
+		<value>
+			<name>permeability rock</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2</unitOfMeasure>
+			<dimensionalClass>L2</dimensionalClass>
+		</value>
+		<value>
+			<name>permeability thickness</name>
+			<description>Product of permeability and thickness</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>permeability length</parentKind>
+			<unitOfMeasure>m3</unitOfMeasure>
+			<dimensionalClass>L3</dimensionalClass>
+		</value>
+		<value>
+			<name>permeance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>H</unitOfMeasure>
+			<dimensionalClass>L2M/C2T2</dimensionalClass>
+		</value>
+		<value>
+			<name>permittivity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>F/m</unitOfMeasure>
+			<dimensionalClass>C2T4/L3M</dimensionalClass>
+		</value>
+		<value>
+			<name>pH</name>
+			<description>The pH is a class that measures the hydrogen ion concentration (acidity).</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>pH</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>plane angle</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>rad</unitOfMeasure>
+			<dimensionalClass>A</dimensionalClass>
+		</value>
+		<value>
+			<name>Poisson ratio</name>
+			<description>Poisson's ratio, Sigma</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>1</dimensionalClass>
+		</value>
+		<value>
+			<name>pore volume</name>
+			<description>Volume of the Pore Space of the Rock</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume</parentKind>
+			<unitOfMeasure>m3</unitOfMeasure>
+			<dimensionalClass>L3</dimensionalClass>
+		</value>
+		<value>
+			<name>porosity</name>
+			<description>porosity</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume per volume</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L3)</dimensionalClass>
+		</value>
+		<value>
+			<name>potential difference per power drop</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>V/B</unitOfMeasure>
+			<dimensionalClass>L2M/CT3</dimensionalClass>
+		</value>
+		<value>
+			<name>power</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W</unitOfMeasure>
+			<dimensionalClass>L2M/T3</dimensionalClass>
+		</value>
+		<value>
+			<name>power per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/m3</unitOfMeasure>
+			<dimensionalClass>M/LT3</dimensionalClass>
+		</value>
+		<value>
+			<name>pressure</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa</unitOfMeasure>
+			<dimensionalClass>M/LT2</dimensionalClass>
+		</value>
+		<value>
+			<name>pressure per time</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa/s</unitOfMeasure>
+			<dimensionalClass>M/LT3</dimensionalClass>
+		</value>
+		<value>
+			<name>pressure squared</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa2</unitOfMeasure>
+			<dimensionalClass>M2/L2T4</dimensionalClass>
+		</value>
+		<value>
+			<name>pressure squared per force time per area</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa/s</unitOfMeasure>
+			<dimensionalClass>M/LT3</dimensionalClass>
+		</value>
+		<value>
+			<name>pressure time per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Pa.s/m3</unitOfMeasure>
+			<dimensionalClass>M/L4T</dimensionalClass>
+		</value>
+		<value>
+			<name>productivity index</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3/Pa.s</unitOfMeasure>
+			<dimensionalClass>L4T/M</dimensionalClass>
+		</value>
+		<value>
+			<name>property multiplier</name>
+			<description>Unitless multiplier to apply to any property</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>unitless</parentKind>
+			<unitOfMeasure>NONE</unitOfMeasure>
+			<dimensionalClass>0</dimensionalClass>
+		</value>
+		<value>
+			<name>quantity</name>
+			<description>The abstract supertype of all floating point properties with a unit of measure.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>continuous</parentKind>
+		</value>
+		<value>
+			<name>quantity of light</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>lm.s</unitOfMeasure>
+			<dimensionalClass>BST</dimensionalClass>
+		</value>
+		<value>
+			<name>radiance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/m2.sr</unitOfMeasure>
+			<dimensionalClass>M/ST3</dimensionalClass>
+		</value>
+		<value>
+			<name>radiant intensity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/sr</unitOfMeasure>
+			<dimensionalClass>L2M/ST3</dimensionalClass>
+		</value>
+		<value>
+			<name>relative permeability</name>
+			<description>Ratio of phase permeability, which is a function of saturation, to the rock permeability</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>Ratio(L2)</dimensionalClass>
+		</value>
+		<value>
+			<name>relative power</name>
+			<description>A dimensionless quantity where the basis of the ratio is power.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L2M/T3)</dimensionalClass>
+		</value>
+		<value>
+			<name>relative time</name>
+			<description>A dimensionless quantity where the basis of the ratio is time.</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(T)</dimensionalClass>
+		</value>
+		<value>
+			<name>reluctance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/H</unitOfMeasure>
+			<dimensionalClass>C2T2/L2M</dimensionalClass>
+		</value>
+		<value>
+			<name>resistance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>ohm</unitOfMeasure>
+			<dimensionalClass>L2M/C2T3</dimensionalClass>
+		</value>
+		<value>
+			<name>resistivity per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>ohm/m</unitOfMeasure>
+			<dimensionalClass>LM/C2T3</dimensionalClass>
+		</value>
+		<value>
+			<name>RESQML root property</name>
+			<description>The abstract supertype of all properties. This property does not have a parent.</description>
+			<isAbstract>true</isAbstract>
+		</value>
+		<value>
+			<name>Rock Impedance</name>
+			<description>Acoustic impedence, Ip, Is</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>mass per time per area</parentKind>
+			<unitOfMeasure>kg/m2.s</unitOfMeasure>
+			<dimensionalClass>M/L2T</dimensionalClass>
+		</value>
+		<value>
+			<name>rock permeability</name>
+			<description>See "permeability rock"</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>permeability rock</parentKind>
+			<unitOfMeasure>m2</unitOfMeasure>
+			<dimensionalClass>L2</dimensionalClass>
+		</value>
+		<value>
+			<name>rock volume</name>
+			<description>Rock Volume</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume</parentKind>
+			<unitOfMeasure>m3</unitOfMeasure>
+			<dimensionalClass>L3</dimensionalClass>
+		</value>
+		<value>
+			<name>saturation</name>
+			<description>Ratio of phase fluid volume to pore volume</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume per volume</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L3)</dimensionalClass>
+		</value>
+		<value>
+			<name>second moment of area</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m4</unitOfMeasure>
+			<dimensionalClass>L4</dimensionalClass>
+		</value>
+		<value>
+			<name>shear modulus</name>
+			<description>Shear modulus, Mu</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>pressure</parentKind>
+			<unitOfMeasure>Pa</unitOfMeasure>
+			<dimensionalClass>M/LT2</dimensionalClass>
+		</value>
+		<value>
+			<name>solid angle</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>sr</unitOfMeasure>
+			<dimensionalClass>S</dimensionalClass>
+		</value>
+		<value>
+			<name>solution gas-oil ratio</name>
+			<description>Ratio of solution gas volume to oil volume at reservoir conditions</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume per volume</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L3)</dimensionalClass>
+		</value>
+		<value>
+			<name>specific activity (of radioactivity)</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>Bq/kg</unitOfMeasure>
+			<dimensionalClass>1/MT</dimensionalClass>
+		</value>
+		<value>
+			<name>specific energy</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J/kg</unitOfMeasure>
+			<dimensionalClass>L2/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>specific heat capacity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J/kg.K</unitOfMeasure>
+			<dimensionalClass>L2/KT2</dimensionalClass>
+		</value>
+		<value>
+			<name>specific productivity index</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3/Pa2.s2</unitOfMeasure>
+			<dimensionalClass>L5T2/M2</dimensionalClass>
+		</value>
+		<value>
+			<name>specific volume</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3/kg</unitOfMeasure>
+			<dimensionalClass>L3/M</dimensionalClass>
+		</value>
+		<value>
+			<name>surface density</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>kg/m2</unitOfMeasure>
+			<dimensionalClass>M/L2</dimensionalClass>
+		</value>
+		<value>
+			<name>temperature per length</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>K/m</unitOfMeasure>
+			<dimensionalClass>K/L</dimensionalClass>
+		</value>
+		<value>
+			<name>temperature per time</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>K/s</unitOfMeasure>
+			<dimensionalClass>K/T</dimensionalClass>
+		</value>
+		<value>
+			<name>thermal conductance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/K</unitOfMeasure>
+			<dimensionalClass>L2M/KT3</dimensionalClass>
+		</value>
+		<value>
+			<name>thermal conductivity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/m.K</unitOfMeasure>
+			<dimensionalClass>LM/KT3</dimensionalClass>
+		</value>
+		<value>
+			<name>thermal diffusivity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/s</unitOfMeasure>
+			<dimensionalClass>L2/T</dimensionalClass>
+		</value>
+		<value>
+			<name>thermal insulance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>K.m2/W</unitOfMeasure>
+			<dimensionalClass>KT3/M</dimensionalClass>
+		</value>
+		<value>
+			<name>thermal resistance</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>K/W</unitOfMeasure>
+			<dimensionalClass>KT3/L2M</dimensionalClass>
+		</value>
+		<value>
+			<name>thermodynamic temperature</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>K</unitOfMeasure>
+			<dimensionalClass>K</dimensionalClass>
+		</value>
+		<value>
+			<name>thickness</name>
+			<description>Distance measured in a volume between two surfaces ( e.G. Geological Top Boundary and Geological Bottom Boundary of a Geological unit).</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>length</parentKind>
+			<unitOfMeasure>m</unitOfMeasure>
+			<dimensionalClass>L</dimensionalClass>
+		</value>
+		<value>
+			<name>time</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>s</unitOfMeasure>
+			<dimensionalClass>T</dimensionalClass>
+		</value>
+		<value>
+			<name>time per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>s/m</unitOfMeasure>
+			<dimensionalClass>T/L</dimensionalClass>
+		</value>
+		<value>
+			<name>time per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>s/m3</unitOfMeasure>
+			<dimensionalClass>T/L3</dimensionalClass>
+		</value>
+		<value>
+			<name>transmissibility</name>
+			<description>Volumetric flux per unit area per unit pressure drop for unit viscosity fluid</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3</unitOfMeasure>
+			<dimensionalClass>L3</dimensionalClass>
+		</value>
+		<value>
+			<name>unit productivity index</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/Pa.s</unitOfMeasure>
+			<dimensionalClass>L3T/M</dimensionalClass>
+		</value>
+		<value>
+			<name>unitless</name>
+			<description>The abstract supertype of all floating point properties with NO unit of measure. In order to allow the unit information to be required for all continuous properties, the special unit of measure of "NONE" has been assigned to all children of this class. In addition, the special dimensional class of "0" has been assigned to all children of this class.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>continuous</parentKind>
+			<unitOfMeasure>NONE</unitOfMeasure>
+			<dimensionalClass>0</dimensionalClass>
+		</value>
+		<value>
+			<name>vapor oil-gas ratio</name>
+			<description>Ratio of oil vapor volume to gas volume at reservoir conditions</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>volume per volume</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L3)</dimensionalClass>
+		</value>
+		<value>
+			<name>velocity</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m/s</unitOfMeasure>
+			<dimensionalClass>L/T</dimensionalClass>
+		</value>
+		<value>
+			<name>volume</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3</unitOfMeasure>
+			<dimensionalClass>L3</dimensionalClass>
+		</value>
+		<value>
+			<name>volume flow rate</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3/s</unitOfMeasure>
+			<dimensionalClass>L3/T</dimensionalClass>
+		</value>
+		<value>
+			<name>volume length per time</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m4/s</unitOfMeasure>
+			<dimensionalClass>L4/T</dimensionalClass>
+		</value>
+		<value>
+			<name>volume per area</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m</unitOfMeasure>
+			<dimensionalClass>L</dimensionalClass>
+		</value>
+		<value>
+			<name>volume per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2</unitOfMeasure>
+			<dimensionalClass>L2</dimensionalClass>
+		</value>
+		<value>
+			<name>volume per time per area</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m/s</unitOfMeasure>
+			<dimensionalClass>L/T</dimensionalClass>
+		</value>
+		<value>
+			<name>volume per time per length</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m2/s</unitOfMeasure>
+			<dimensionalClass>L2/T</dimensionalClass>
+		</value>
+		<value>
+			<name>volume per time per time</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>m3/s2</unitOfMeasure>
+			<dimensionalClass>L3/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>volume per time per volume</name>
+			<isAbstract>true</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/s</unitOfMeasure>
+			<dimensionalClass>1/T</dimensionalClass>
+		</value>
+		<value>
+			<name>volume per volume</name>
+			<description>A dimensionless quantity where the basis of the ratio is volume.</description>
+			<isAbstract>true</isAbstract>
+			<parentKind>dimensionless</parentKind>
+			<unitOfMeasure>Euc</unitOfMeasure>
+			<dimensionalClass>ratio(L3)</dimensionalClass>
+		</value>
+		<value>
+			<name>volumetric heat transfer coefficient</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>W/m3.K</unitOfMeasure>
+			<dimensionalClass>M/KLT3</dimensionalClass>
+		</value>
+		<value>
+			<name>volumetric thermal expansion</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>1/K</unitOfMeasure>
+			<dimensionalClass>1/K</dimensionalClass>
+		</value>
+		<value>
+			<name>work</name>
+			<isAbstract>false</isAbstract>
+			<parentKind>quantity</parentKind>
+			<unitOfMeasure>J</unitOfMeasure>
+			<dimensionalClass>L2M/T2</dimensionalClass>
+		</value>
+		<value>
+			<name>Young modulus</name>
+			<description>Young's modulus, E</description>
+			<isAbstract>false</isAbstract>
+			<parentKind>pressure</parentKind>
+			<unitOfMeasure>Pa</unitOfMeasure>
+			<dimensionalClass>M/LT2</dimensionalClass>
+		</value>
+	</enumList>
+	<enumList>
+		<name>ResqmlUnitOfMeasure</name>
+		<description>Defines the allowed units of measure.</description>
+		<namingSystem>Energistics</namingSystem>
+		<value>
+			<name>NONE</name>
+			<description>This is a special unit for use with properties which are a specialization of "unitless". 
+			This is not appropriate for "dimensionless" properties or any other specialization of "quantity". 
+			Supporting NONE allows all "continuous" to have a mandatory unit of measure.</description>
+		</value>
+		<value>
+			<name>(Pa.kg)/m3</name>
+		</value>
+		<value>
+			<name>1/H</name>
+		</value>
+		<value>
+			<name>1/K</name>
+		</value>
+		<value>
+			<name>1/kg</name>
+		</value>
+		<value>
+			<name>1/m</name>
+		</value>
+		<value>
+			<name>1/m2</name>
+		</value>
+		<value>
+			<name>1/m3</name>
+		</value>
+		<value>
+			<name>1/N</name>
+		</value>
+		<value>
+			<name>1/Pa</name>
+		</value>
+		<value>
+			<name>1/s</name>
+		</value>
+		<value>
+			<name>1/V</name>
+		</value>
+		<value>
+			<name>A</name>
+		</value>
+		<value>
+			<name>A.m2</name>
+		</value>
+		<value>
+			<name>A/m</name>
+		</value>
+		<value>
+			<name>A/m2</name>
+		</value>
+		<value>
+			<name>B</name>
+		</value>
+		<value>
+			<name>B/m</name>
+		</value>
+		<value>
+			<name>B/O</name>
+		</value>
+		<value>
+			<name>bps</name>
+		</value>
+		<value>
+			<name>Bq</name>
+		</value>
+		<value>
+			<name>Bq/kg</name>
+		</value>
+		<value>
+			<name>byte</name>
+		</value>
+		<value>
+			<name>C</name>
+		</value>
+		<value>
+			<name>C.m</name>
+		</value>
+		<value>
+			<name>C/kg</name>
+		</value>
+		<value>
+			<name>C/m2</name>
+		</value>
+		<value>
+			<name>C/m3</name>
+		</value>
+		<value>
+			<name>cd</name>
+		</value>
+		<value>
+			<name>cd/m2</name>
+		</value>
+		<value>
+			<name>eq</name>
+		</value>
+		<value>
+			<name>eq/kg</name>
+		</value>
+		<value>
+			<name>eq/m3</name>
+		</value>
+		<value>
+			<name>Euc</name>
+		</value>
+		<value>
+			<name>F</name>
+		</value>
+		<value>
+			<name>F/m</name>
+		</value>
+		<value>
+			<name>gAPI</name>
+		</value>
+		<value>
+			<name>Gy</name>
+		</value>
+		<value>
+			<name>H</name>
+		</value>
+		<value>
+			<name>H/m</name>
+		</value>
+		<value>
+			<name>Hz</name>
+		</value>
+		<value>
+			<name>J</name>
+		</value>
+		<value>
+			<name>J/K</name>
+		</value>
+		<value>
+			<name>J/kg</name>
+		</value>
+		<value>
+			<name>J/kg.K</name>
+		</value>
+		<value>
+			<name>J/m3</name>
+		</value>
+		<value>
+			<name>J/mol</name>
+		</value>
+		<value>
+			<name>J/mol.K</name>
+		</value>
+		<value>
+			<name>K</name>
+		</value>
+		<value>
+			<name>K.m2/W</name>
+		</value>
+		<value>
+			<name>K/m</name>
+		</value>
+		<value>
+			<name>K/s</name>
+		</value>
+		<value>
+			<name>K/W</name>
+		</value>
+		<value>
+			<name>kg</name>
+		</value>
+		<value>
+			<name>kg.m</name>
+		</value>
+		<value>
+			<name>kg.m/s</name>
+		</value>
+		<value>
+			<name>kg.m2</name>
+		</value>
+		<value>
+			<name>kg/J</name>
+		</value>
+		<value>
+			<name>kg/m</name>
+		</value>
+		<value>
+			<name>kg/m2</name>
+		</value>
+		<value>
+			<name>kg/m2.s</name>
+		</value>
+		<value>
+			<name>kg/m3</name>
+		</value>
+		<value>
+			<name>kg/m4</name>
+		</value>
+		<value>
+			<name>kg/s</name>
+		</value>
+		<value>
+			<name>lm</name>
+		</value>
+		<value>
+			<name>lm.s</name>
+		</value>
+		<value>
+			<name>lm/W</name>
+		</value>
+		<value>
+			<name>lx</name>
+		</value>
+		<value>
+			<name>lx.s</name>
+		</value>
+		<value>
+			<name>m</name>
+		</value>
+		<value>
+			<name>m/K</name>
+		</value>
+		<value>
+			<name>m/s</name>
+		</value>
+		<value>
+			<name>m/s2</name>
+		</value>
+		<value>
+			<name>m2</name>
+		</value>
+		<value>
+			<name>m2/kg</name>
+		</value>
+		<value>
+			<name>m2/mol</name>
+		</value>
+		<value>
+			<name>m2/Pa.s</name>
+		</value>
+		<value>
+			<name>m2/s</name>
+		</value>
+		<value>
+			<name>m3</name>
+		</value>
+		<value>
+			<name>m3/J</name>
+		</value>
+		<value>
+			<name>m3/kg</name>
+		</value>
+		<value>
+			<name>m3/mol</name>
+		</value>
+		<value>
+			<name>m3/Pa.s</name>
+		</value>
+		<value>
+			<name>m3/Pa2.s2</name>
+		</value>
+		<value>
+			<name>m3/s</name>
+		</value>
+		<value>
+			<name>m3/s2</name>
+		</value>
+		<value>
+			<name>m4</name>
+		</value>
+		<value>
+			<name>m4/s</name>
+		</value>
+		<value>
+			<name>mol</name>
+		</value>
+		<value>
+			<name>mol/m2</name>
+		</value>
+		<value>
+			<name>mol/m2.s</name>
+		</value>
+		<value>
+			<name>mol/m3</name>
+		</value>
+		<value>
+			<name>mol/s</name>
+		</value>
+		<value>
+			<name>N</name>
+		</value>
+		<value>
+			<name>N.m2</name>
+		</value>
+		<value>
+			<name>N/m</name>
+		</value>
+		<value>
+			<name>N/m3</name>
+		</value>
+		<value>
+			<name>N4/kg.m7</name>
+		</value>
+		<value>
+			<name>nAPI</name>
+		</value>
+		<value>
+			<name>O</name>
+		</value>
+		<value>
+			<name>ohm</name>
+		</value>
+		<value>
+			<name>ohm.m</name>
+		</value>
+		<value>
+			<name>ohm/m</name>
+		</value>
+		<value>
+			<name>Pa</name>
+		</value>
+		<value>
+			<name>Pa.s</name>
+		</value>
+		<value>
+			<name>Pa.s/m3</name>
+		</value>
+		<value>
+			<name>Pa.s/m6</name>
+		</value>
+		<value>
+			<name>Pa/m3</name>
+		</value>
+		<value>
+			<name>Pa/s</name>
+		</value>
+		<value>
+			<name>Pa2</name>
+		</value>
+		<value>
+			<name>pH</name>
+		</value>
+		<value>
+			<name>rad</name>
+		</value>
+		<value>
+			<name>rad/m</name>
+		</value>
+		<value>
+			<name>rad/m3</name>
+		</value>
+		<value>
+			<name>rad/s</name>
+		</value>
+		<value>
+			<name>rad/s2</name>
+		</value>
+		<value>
+			<name>S</name>
+		</value>
+		<value>
+			<name>s</name>
+		</value>
+		<value>
+			<name>S/m</name>
+		</value>
+		<value>
+			<name>s/m</name>
+		</value>
+		<value>
+			<name>s/m3</name>
+		</value>
+		<value>
+			<name>sr</name>
+		</value>
+		<value>
+			<name>Sv</name>
+		</value>
+		<value>
+			<name>Sv/s</name>
+		</value>
+		<value>
+			<name>T</name>
+		</value>
+		<value>
+			<name>V</name>
+		</value>
+		<value>
+			<name>V/B</name>
+		</value>
+		<value>
+			<name>V/m</name>
+		</value>
+		<value>
+			<name>W</name>
+		</value>
+		<value>
+			<name>W/K</name>
+		</value>
+		<value>
+			<name>W/m.K</name>
+		</value>
+		<value>
+			<name>W/m2</name>
+		</value>
+		<value>
+			<name>W/m2.K</name>
+		</value>
+		<value>
+			<name>W/m2.sr</name>
+		</value>
+		<value>
+			<name>W/m3</name>
+		</value>
+		<value>
+			<name>W/m3.K</name>
+		</value>
+		<value>
+			<name>W/sr</name>
+		</value>
+		<value>
+			<name>Wb</name>
+		</value>
+		<value>
+			<name>Wb.m</name>
+		</value>
+		<value>
+			<name>Wb/m</name>
+		</value>
+	</enumList>
+</enumListSet>

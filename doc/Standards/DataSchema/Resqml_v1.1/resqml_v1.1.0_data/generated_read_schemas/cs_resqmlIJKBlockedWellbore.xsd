@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="grp_resqmlTraceabilityDublinCore.xsd" />
+   <xsd:include schemaLocation="cs_resqmlParentBlockedWellbore.xsd" />
+   <xsd:include schemaLocation="cs_resqmlGridIJKCell.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPropertySet.xsd" />
+   <xsd:include schemaLocation="cs_extensionAny.xsd" />
+   <xsd:include schemaLocation="cs_resqmlExtensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uidGlobal.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlIJKBlockedWellbore">
+      <xsd:annotation>
+         <xsd:documentation>The (surface toward bottomhole) path of a wellbore defined as a list of grid cells. For sidetrack (lateral) wellbores the path starts at the kickoff
+         point.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:group ref="resqml:grp_resqmlTraceabilityDublinCore" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Dublin Core elements used for traceability.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="wellName" type="resqml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Points to the well that contains the wellbore. This identifies well.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellboreName" type="resqml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Points to the wellbore within the specified well. This identifies the wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parentBlockedWellbore" type="resqml:cs_resqmlParentBlockedWellbore" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Points to the parent blocked wellbore and the kickoff point cell.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="grid3dGUID" type="resqml:refGlobalNameString" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A pointer to a grid that contains a traversed cell. This logically points to the abstract supertype of the corner point and local grids such that
+               the referenced grid may either be a root-grid or a child-grid. The aggregate of grids represents the 3D grids that are referenced in gridIJKCell. The order is
+               significant and represents the gridID values in gridIJKCell. An index of zero will represent the first grid.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="gridIJKCell" type="resqml:cs_resqmlGridIJKCell" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Points to a grid cell traversed by the wellbore. The aggregate of traversed cells represents the path of the wellbore through the related grids.
+               The order of the cells in the aggregate is significant and represents the relative order from surface toward bottomhole. An index of zero will represent the first
+               cell. Note that the full path of the wellbore may not be represented by the available grids. For the initial (or main) wellbore, the first cell represents the cell
+               at the minimum measured depth. For sidetracks (laterals), the first cell represents the cell containing the kickoff point from the parent
+               wellbore.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="propertyValues" type="resqml:cs_resqmlPropertySet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Properties for this object.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionAny" type="resqml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="resqml:cs_resqmlExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uidGlobal">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node. This must be a globally unique identifier.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

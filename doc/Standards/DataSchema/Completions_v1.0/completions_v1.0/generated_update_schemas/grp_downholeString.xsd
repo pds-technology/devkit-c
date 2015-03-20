@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="cs_stringAccessory.xsd" />
+   <xsd:include schemaLocation="cs_stringEquipmentSet.xsd" />
+   <xsd:include schemaLocation="cs_equipmentCatalog.xsd" />
+   <xsd:group name="grp_downholeString">
+      <xsd:annotation>
+         <xsd:documentation>Information on equipment and accessories belonging to this string.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="stringEquipmentSet" type="witsml:cs_stringEquipmentSet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>the list of equipment in the string. each equipment is liner connected and carry the rest of weight</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="accessories" type="witsml:cs_stringAccessory" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>the accessories equipment of the string. It locates in the downhole string, but it is not equipment which liner connected in string (from top to
+               down), and it is not carraying the weight of string</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

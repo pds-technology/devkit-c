@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlPoint3dSet.xsd" />
+   <xsd:include schemaLocation="cs_resqmlHdfGroup.xsd" />
+   <xsd:include schemaLocation="cs_resqmlPropertySet.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlPillarSetPatch">
+      <xsd:annotation>
+         <xsd:documentation>A gemetrical representation which is a set of pillar lines that approximate a surface. Note that that this does not fully represent a surface. It is
+         just a list of lines (typically from seismic). More information is required to define an actual surface. All lines shall utilize the same CRS.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="nodeCountPerPillar" type="resqml:positiveInt" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The number of nodes per pillar.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0">
+            <xsd:element name="pillarSet" type="resqml:cs_resqmlPoint3dSet" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>A list of points representing all the nodes of all the pillars. The first nodeCountPerPillar points represent the nodes of the first pillar,
+                  the second nodeCountPerPillar points represent the nodes of the second pillar, and so on. A point defined by with NaN values shall be
+                  ignored.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="pillarSetHdfGroup" type="resqml:cs_resqmlHdfGroup" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:documentation>Defines information related to capturing the array data in an HDF5 formatted file.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="propertyValues" type="resqml:cs_resqmlPropertySet" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Properties for this patch.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

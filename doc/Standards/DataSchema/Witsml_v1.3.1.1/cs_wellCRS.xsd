@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_geodeticModel.xsd"/>
+	<xsd:include schemaLocation="cs_projectionx.xsd"/>
+	<xsd:include schemaLocation="cs_localCRS.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_wellCRS">
+		<xsd:annotation>
+			<xsd:documentation> WITSML - Well Coordinate Reference System Component Schema.
+			Note that this is intended for use with two dimensional coordinates. 
+			That does not prevent the use of a three dimensional CRS. It just means that
+			only two coordinates will be specified in that 3D system. The veritcal coordinates are
+			specified separately and, for 3D systems, one of the linked wellDatums should represent
+			the vertical datum of that 3D system so that the height in the 3d system can be determined. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the system. 
+					For a geographic system this is commonly the name of the datum. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Each well CRS can only represent only one type of system.
+					Note that these structures do not truly define a CRS but rather specify
+					information that could be used to describe a CRS.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="mapProjection" type="witsml:cs_projectionx" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Map projection system.  </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="geographic" type="witsml:cs_geodeticModel" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Geographic system.  </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="localCRS" type="witsml:cs_localCRS" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Local (engineering) system.  </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="description" type="witsml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A textual description of the system.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of the system.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

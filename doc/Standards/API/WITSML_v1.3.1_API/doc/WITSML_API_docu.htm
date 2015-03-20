@@ -1,0 +1,502 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<title>WITSML</title>
+<style>
+<!--
+ /* Style Definitions */
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{
+	margin-top:18.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-top:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+-->
+</style>
+</head>
+
+<body>
+
+<h1 align=center>WITSML Application Programming
+Interface Overview </h1>
+
+<h1 align=center>Version 1.3.1</h1>
+<p class=MsoNormal>This document contains the following sections:</p>
+
+<ul>
+  <li><a href="#_Introduction">Introduction</a></li>
+
+  <li><a href="#_Server_Profiles">Server Profiles</a></li>
+
+  <li><a href="#_WITSML_Schemas">Schemas, XML documents, and Style sheets</a></li>
+
+</ul>
+
+
+<p>Changes between versions 1.3.0 and 1.3.1 are defined in the <a
+href="../CHANGE_DETAIL.TXT">Schema Change Detail</a> and in the API specification documents. 
+This overview is non-normative and is not part of the standard.</p>
+
+<h2><a name="_Introduction">Introduction</h2>
+
+<p>The Wellsite Information Transfer Standard Markup Language
+(WITSML) is a standard for sending well site information in an XML document
+format between business partners. XML schemas
+are used to define the content of an XML document. 
+The WITSML standard consists of specifications which will now be
+versioned independently: <a
+href="http://www.witsml.org/schemas/131/doc/WITSML_Schema_docu.htm">Data Schema</a>
+and Application Program Interface (API). This document provides an overview of
+the <a href="../WITSML_Core_API_Version_1.3.1.doc">Application Program Interface</a>. 
+The use of the Data Schema is required but use of the API is optional.</p>
+
+
+<p>The API specification defines interfaces that will be
+implemented by a WITSML server for supporting client/server access. The 
+specification defines two interfaces: Store and Publish. The Store interface is
+the primary interface and it provides basic access of information such as Get,
+Update, Add and Delete. The Publish interface is primarily intended to provide
+the WITS functionality of streaming data as it is being acquired. </p>
+
+
+<p>The following files are the Web Service Description Language
+(WSDL) files used to expose the STORE and PUBLISH interfaces to SOAP clients: <a
+href="../WMLS.WSDL">WMLS.WSDL</a> and <a href="../WMLP.WSDL">WMLP.WSDL</a>.</p>
+
+
+<h2><a name="_Server_Profiles">Server Profiles</h2>
+
+<p>In order to make it easier to understand what API
+functionality may be used by different servers, a set of server profiles has
+been developed. These profiles are intended to enable WITSML consumers to 
+identify the expected behaviour of WITSML
+server products.</p>
+
+<p>The
+profiles are identified as: "Data Transfer", "Data Management" and "Archival"
+profiles and are described in more detail below.</p>
+
+
+
+<h3>Data Transfer Profile </h3>
+
+<p>A "Data
+Transfer" server is one that provides a transfer of near-real time data from
+one or more wells. This capability would normally be provided by a service
+company that is performing data acquisition services at a wellsite but it could
+also be provided by a 3<sup>rd</sup> party company that provides a WITSML server
+to aggregate data streams from multiple service companies. </p>
+
+
+
+<p>A Data
+Transfer server will typically maintain data for wells while they are being
+drilled but may also contain relevant data sets from associated offset wells. </p>
+
+
+
+<p>To the
+external customer the Data Transfer server exposes the GetVersion,
+GetCapabilities, GetFromStore and Publish/Subscribe functionality, enabling
+retrieval of real time data and queries for other WITSML data objects.
+The Publish/Subscribe functionality will
+probably be limited to the realtime,
+trajectory, trajectoryStation or mudLog objects. The
+details of the WITSML objects available via the GetFromStore API call are
+obtainable from the server via a query for the WITSML capabilities object.</p>
+
+
+
+<p>The Data
+Transfer server may implement other WITSML methods in order to receive data
+from acquisition systems at the rig to enable it to build up its internal data
+store of WITSML objects but these activities are under the control of the
+provider of the server and not exposed to the external customers. </p>
+
+
+
+<h3>Data Management Profile </h3>
+
+<p>A "Data Management Profile" server is one that can maintain a longer term data store
+and also support the additional functionality of AddToStore, UpdateInStore and
+DeleteFromStore in addition to the basic capabilities of the Data Transfer
+server. The ability to call the data transformation methods (Add, Update,
+Delete) will have to be managed via a server-specific set of permissions that
+restricts these methods to specific users or groups of users. </p>
+
+<p>A Data Management Profile Server will typically contain data from both active and
+inactive wells and be used to provide WITSML data to applications and analysis
+software </p>
+
+<p>The details of the WITSML objects available via the API calls are obtainable from the server
+via a query for the WITSML capabilities object. </p>
+
+
+<h3>Archival Profile </h3>
+
+<p>An
+"Archival Profile" server is one that is used to maintain a historical record
+of data in WITSML accessible format. This may, for example, be used by a
+government agency to make available an archive of public domain well data to
+the industry. It does not support the Publish/Subscribe API and only exposes
+the GetFromStore method to the outside world. It may need to support
+AddToStore, UpdateInStore and DeleteFromStore for internal use in populating
+and managing the data store. </p>
+
+<p>An Archival Profile Server will typically contain data from inactive wells and be used to
+provide WITSML data to applications and analysis software </p>
+
+<p>The details of the WITSML objects available via the API calls are obtainable from the
+server via a query for the WITSML capabilities object. </p>
+
+
+<h3>Profile Summary </h3>
+
+<p>The following table summarizes the capabilities are expected of the different
+server profiles: </p>
+
+
+<!--                          FOR ALL TABLES, 
+                 USE NON-BREAKING SPACE FOR LEFT MARGIN SO THAT 
+                         THE TOP MARGIN CAN BE ZERO.
+-->
+
+<table border=1 cellspacing=0 cellpadding=0>
+ <tr>
+  <td width=159 valign=top>
+  &nbsp;<b>Server
+  Profile </b>
+  </td>
+  <td width=221 valign=top'>
+  &nbsp;<b>Methods
+  Available to Client</b>
+  </td>
+ </tr>
+ <tr>
+  <td width=159 valign=top>
+    <p>&nbsp;&nbsp;Data Transfer </p>
+    <p>&nbsp;&nbsp;(Provides access to near  </BR>
+    &nbsp;&nbsp;real-time data)</p>
+  </td>
+  <td width=221 valign=top>
+    &nbsp;&nbsp;WMLP_GetVersion <BR>
+    &nbsp;&nbsp;WMLS_GetVersion </p>
+  <p>
+    &nbsp;&nbsp;WMLP_GetCapabilities <BR>
+    &nbsp;&nbsp;WMLS_GetCapabilities </p>
+  <p>
+    &nbsp;&nbsp;WMLP_GetBaseMsg <BR>
+    &nbsp;&nbsp;WMLS_GetBaseMsg </p>
+  <p>
+    &nbsp;&nbsp;WMLP_Subscribe </p>
+  <p>
+    &nbsp;&nbsp;WMLS_GetFromStore </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=159 valign=top>
+  <p>&nbsp;&nbsp;Data  Management </p>
+  
+  <p>&nbsp;&nbsp;(Provides access to and <BR>
+     &nbsp;&nbsp;manipulation of near <BR>
+     &nbsp;&nbsp;real-time and archived <BR>
+     &nbsp;&nbsp;data) </p>
+  </td>
+  <td width=221 valign=top>
+  <p>&nbsp;&nbsp;WMLP_GetVersion <BR>
+     &nbsp;&nbsp;WMLS_GetVersion</p>
+  <p>&nbsp;&nbsp;WMLP_GetCapabilities <BR>
+     &nbsp;&nbsp;WMLS_GetCapabilities </p>
+  <p>&nbsp;&nbsp;WMLP_GetBaseMsg <BR>
+     &nbsp;&nbsp;WMLS_GetBaseMsg </p>
+  <p>&nbsp;&nbsp;WMLP_Subscribe</p>
+  <p>&nbsp;&nbsp;WMLS_GetFromStore </p>
+  <p>&nbsp;&nbsp;WMLS_AddToStore</p>
+  <p>&nbsp;&nbsp;WMLS_UpdateInStore </p>
+  <p>&nbsp;&nbsp;WMLS_DeleteFromStore</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=159 valign=top>
+  <p>&nbsp;&nbsp;Archival </p>
+  
+  <p>&nbsp;&nbsp;(Provides read-only<BR>
+     &nbsp;&nbsp; access to historical <BR>
+     &nbsp;&nbsp;archive data) </p>
+  </td>
+  <td width=221 valign=top>
+  <p>&nbsp;&nbsp;WMLS_GetVersion</p>
+  
+  <p>&nbsp;&nbsp;WMLS_GetCapabilities</p>
+  
+  <p>&nbsp;&nbsp;WMLS_GetBaseMsg</p>
+  
+  <p>&nbsp;&nbsp;WMLS_GetFromStore</p>
+  </td>
+ </tr>
+</table>
+
+
+
+<h2><a name="_WITSML_Schemas"></a>Schemas, XML documents, and Style sheets:</h2>
+
+<p>The Core API specification requires the following data object
+schemas and component sub-schemas. Component schemas are XML schemas, but they
+do not represent complete data objects. 
+A component schema may be included by more than one data object schema.
+All component schemas are prefixed with
+(cs_). Each component schema file
+generally defines one "type" that has the same name as the file name.
+Schema file <a href="./schema/cs_dataTypes.html">cs_dataTypes.xsd</a>
+defines many simplistic data types that are referenced by elements and
+attributes in data object and component schemas. It is directly or indirectly
+included in all data object schemas. 
+
+Schema file <a href="./schema/cs_catalog.html">cs_catalog.xsd</a>
+defines all enumeration data types that are referenced by elements and
+attributes in data object and component schemas.</p>
+
+<p>The following schemas represent the information content of parameters in the API interface.
+They do <i>not</i> represent data objects that can be queried using the API
+query mechanisms.</p>
+
+
+<h4>Capability of Client Schema</h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="360" align="left" valign="bottom">&nbsp;&nbsp;Schemas</th>
+            <th colspan="4" align="center" valign="top">&nbsp;&nbsp;Links to Documents</th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+            <th width="75">&nbsp;&nbsp;XML<BR>&nbsp;&nbsp;Document
+            </th>
+            <th width="75">&nbsp;&nbsp;XML via<BR>&nbsp;&nbsp;Stylesheet
+            </th>
+            <th width="75">&nbsp;&nbsp;Stylesheet<BR>&nbsp;&nbsp;Source
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;obj_capClient.xsd</td>
+            <td><a href="./schema/obj_capClient.html">XSD</a></td>
+            <td><a href="../XML_Examples/capClient_no_xsl.xml">XML</a></td>
+            <td><a href="../XML_Examples/capClient.xml">XML/XSL</a></td>
+            <td><a href="../stylesheets/capClient.xsl">XSL</a></td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_contact.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_contact.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      
+      <BR>
+      <BR>
+
+<h4>Capability of Publisher Schema</h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="360" align="left" valign="bottom">&nbsp;&nbsp;Schemas</th>
+            <th colspan="4" align="center" valign="top">&nbsp;&nbsp;Links to Documents</th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+            <th width="75">&nbsp;&nbsp;XML<BR>&nbsp;&nbsp;Document
+            </th>
+            <th width="75">&nbsp;&nbsp;XML via<BR>&nbsp;&nbsp;Stylesheet
+            </th>
+            <th width="75">&nbsp;&nbsp;Stylesheet<BR>&nbsp;&nbsp;Source
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;obj_capPublisher.xsd</td>
+            <td><a href="./schema/obj_capPublisher.html">XSD</a></td>
+            <td><a href="../XML_Examples/capPublisher_no_xsl.xml">XML</a></td>
+            <td><a href="../XML_Examples/capPublisher.xml">XML/XSL</a></td>
+            <td><a href="../stylesheets/capPublisher.xsl">XSL</a></td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_contact.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_contact.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_function.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_function.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      
+      <BR>
+      <BR>
+
+
+<h4>Capability of Server Schema</h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="360" align="left" valign="bottom">&nbsp;&nbsp;Schemas</th>
+            <th colspan="4" align="center" valign="top">&nbsp;&nbsp;Links to Documents</th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+            <th width="75">&nbsp;&nbsp;XML<BR>&nbsp;&nbsp;Document
+            </th>
+            <th width="75">&nbsp;&nbsp;XML via<BR>&nbsp;&nbsp;Stylesheet
+            </th>
+            <th width="75">&nbsp;&nbsp;Stylesheet<BR>&nbsp;&nbsp;Source
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;obj_capServer.xsd</td>
+            <td><a href="./schema/obj_capServer.html">XSD</a></td>
+            <td><a href="../XML_Examples/capServer_no_xsl.xml">XML</a></td>
+            <td><a href="../XML_Examples/capServer.xml">XML/XSL</a></td>
+            <td><a href="../stylesheets/capServer.xsl">XSL</a></td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_contact.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_contact.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_function.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_function.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      
+      <BR>
+      <BR>
+<h4>Capability of Subscriber Schema</h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="360" align="left" valign="bottom">&nbsp;&nbsp;Schemas</th>
+            <th colspan="4" align="center" valign="top">&nbsp;&nbsp;Links to Documents</th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+            <th width="75">&nbsp;&nbsp;XML<BR>&nbsp;&nbsp;Document
+            </th>
+            <th width="75">&nbsp;&nbsp;XML via<BR>&nbsp;&nbsp;Stylesheet
+            </th>
+            <th width="75">&nbsp;&nbsp;Stylesheet<BR>&nbsp;&nbsp;Source
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;obj_capSubscriber.xsd</td>
+            <td><a href="./schema/obj_capSubscriber.html">XSD</a></td>
+            <td><a href="../XML_Examples/capSubscriber_no_xsl.xml">XML</a></td>
+            <td><a href="../XML_Examples/capSubscriber.xml">XML/XSL</a></td>
+            <td><a href="../stylesheets/capSubscriber.xsl">XSL</a></td>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;cs_contact.xsd</td>
+            <!--1 level Indent.-->
+            <td><a href="./schema/cs_contact.html">XSD</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      
+      <BR>
+      <BR>
+
+<h4>Capability of Subscription Schema</h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="360" align="left" valign="bottom">&nbsp;&nbsp;Schemas</th>
+            <th colspan="4" align="center" valign="top">&nbsp;&nbsp;Links to Documents</th>
+         </tr>
+         <tr align="center" valign="top">
+            <th width="75">&nbsp;&nbsp;XSD<BR>&nbsp;&nbsp;Schema
+            </th>
+            <th width="75">&nbsp;&nbsp;XML<BR>&nbsp;&nbsp;Document
+            </th>
+            <th width="75">&nbsp;&nbsp;XML via<BR>&nbsp;&nbsp;Stylesheet
+            </th>
+            <th width="75">&nbsp;&nbsp;Stylesheet<BR>&nbsp;&nbsp;Source
+            </th>
+         </tr>
+         <tr align="center" valign="top">
+            <td align="left">&nbsp;obj_subscription.xsd</td>
+            <td><a href="./schema/obj_subscription.html">XSD</a></td>
+            <td><a href="../XML_Examples/subscription_no_xsl.xml">XML</a></td>
+            <td><a href="../XML_Examples/subscription.xml">XML/XSL</a></td>
+            <td><a href="../stylesheets/subscription.xsl">XSL</a></td>
+         </tr>
+      </table>
+      
+      <BR>
+      <BR>
+
+<p><small>Copyright (c) 2005 Petrotechnical Open Standards Consortium, Inc. (POSC) All rights
+reserved. <BR>
+
+POSC® and the POSC logo® are registered trademarks and WITSML™ and the WITSML logo™
+are trademarks of POSC</small></p>
+
+
+</body>
+
+</html>

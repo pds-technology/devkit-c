@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--PPDM Schema Incorporated
+        This file incorporates a block of schema from PPDM (area hierarchy) with 
+        the permission of PPDM.
+        All rights for this block are retained by PPDM.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_northSeaOffshore.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_offshoreLocation">
+      <xsd:annotation>
+         <xsd:documentation>A generic type of offshore location. This allows an offshore location to be given by an Area Name, and up to four block names. A comment is also
+         allowed.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="areaName" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A general meaning of Area. It may be as general as 'UK North Sea' or 'Viosca Knoll'. The user community must agree on the meaning of this
+               element.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="blockID" type="prodml:nameString" minOccurs="1" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>A block ID that can more tightly locate the object. The BlockID should be an identifying name or code. The user community for an area must agree
+               on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="northSeaOffshore" type="prodml:cs_northSeaOffshore" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>An offshore location using the North Sea Offshore terminology.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>An general comment that further explains the offshore location.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

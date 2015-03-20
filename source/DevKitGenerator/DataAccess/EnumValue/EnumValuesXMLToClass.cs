@@ -100,6 +100,7 @@ namespace Energistics.DataAccess.EnumValue
         /// <returns></returns>
         public static string Convert(string filename, string nameSpace, List<string> enumClassNames, bool extensionClass, string setName)
         {
+            if (filename.Length<=0) return "";
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("using System;");
@@ -131,184 +132,187 @@ namespace Energistics.DataAccess.EnumValue
 
                 string name = GetElementInnerText(dataObj, "name");
                 string description = GetElementInnerText(dataObj, "description");
-
-                enumClassNames.Add(name);
-
-                sb.AppendLine("    /// <summary>");
-                sb.AppendLine("    /// " + description.Replace("\n", "\n    ///"));
-                sb.AppendLine("    /// </summary>");
-                if (extensionClass)
+                //prevent the duplication element created.
+                if (!enumClassNames.Contains(name))
                 {
-                    sb.AppendLine("    public class " + name + "Extension : " + name);
-                }
-                else
-                {
-                    sb.AppendLine("    public class " + name + " : " + inheritsFrom);
-                }
-                sb.AppendLine("    {");
-                sb.AppendLine("        /// <summary>");
-                sb.AppendLine("        /// Protected constructor, should always pass in \"name\"");
-                sb.AppendLine("        /// </summary>");
-                sb.AppendLine("        protected " + name + ((extensionClass) ? "Extension" : String.Empty) + "(): base() {}");
-                sb.AppendLine();
-                sb.AppendLine("        /// <summary>");
-                sb.AppendLine("        /// Constructor");
-                sb.AppendLine("        /// </summary>");
-                sb.AppendLine("        ///<param name=\"name\">Name of the " + name + "</param>");
-                sb.AppendLine("        public " + name + ((extensionClass) ? "Extension" : String.Empty) + "(string name) : base(name) {}");
-                sb.AppendLine();
+                    enumClassNames.Add(name);
 
-                
-
-                sb.AppendLine("        /// <summary>");
-                sb.AppendLine("        /// Retrieves the complete list of " + name + "s");
-                sb.AppendLine("        /// </summary>");
-                sb.AppendLine("        /// <returns>The complete list of " + name + "s</returns>");
-                sb.AppendLine("        public static List<" + name + "> GetList()");
-                sb.AppendLine("        {");
-                sb.AppendLine("            return GetList<" + name + ">();");
-                sb.AppendLine("        }");
-                sb.AppendLine();
-
-                Dictionary<string, XmlElement> usedValues = new Dictionary<string, XmlElement>();
-
-                foreach (XmlElement valueElement in dataObj.GetElementsByTagName("value"))
-                {
-                    string valueName = GetElementInnerText(valueElement, "name");
-                    string privPropName = RenameProperty(valueName, false);
-                    
-                    // We shouldn't have to check for this, but there are duplicates in enumValuesProdml.xml
-                    if (usedValues.ContainsKey(privPropName))
+                    sb.AppendLine("    /// <summary>");
+                    sb.AppendLine("    /// " + description.Replace("\n", "\n    ///"));
+                    sb.AppendLine("    /// </summary>");
+                    if (extensionClass)
                     {
-                        continue;
+                        sb.AppendLine("    public class " + name + "Extension : " + name);
                     }
                     else
                     {
-                        usedValues.Add(privPropName, valueElement);
+                        sb.AppendLine("    public class " + name + " : " + inheritsFrom);
                     }
-
-                    string valueDescription = GetElementInnerText(valueElement, "description");
-                    valueDescription = Regex.Replace(valueDescription, @"\s+", " ");
-                    valueDescription = valueDescription.Replace("&", "&amp;");
-                    valueDescription = valueDescription.Replace("<", "&lt;");
-                    valueDescription = valueDescription.Replace("<", "&gt;");
-
-                    sb.AppendLine("        private readonly static " + name + " " + privPropName + ";");
-                    
+                    sb.AppendLine("    {");
                     sb.AppendLine("        /// <summary>");
-                    sb.AppendLine("        /// " + valueDescription);
+                    sb.AppendLine("        /// Protected constructor, should always pass in \"name\"");
                     sb.AppendLine("        /// </summary>");
-                    sb.AppendLine("        [EnumValueNameAttribute(\"" + valueName + "\")]");
-                    sb.AppendLine("        public static " + name + " " + RenameProperty(valueName, true));
+                    sb.AppendLine("        protected " + name + ((extensionClass) ? "Extension" : String.Empty) + "(): base() {}");
+                    sb.AppendLine();
+                    sb.AppendLine("        /// <summary>");
+                    sb.AppendLine("        /// Constructor");
+                    sb.AppendLine("        /// </summary>");
+                    sb.AppendLine("        ///<param name=\"name\">Name of the " + name + "</param>");
+                    sb.AppendLine("        public " + name + ((extensionClass) ? "Extension" : String.Empty) + "(string name) : base(name) {}");
+                    sb.AppendLine();
+
+
+
+                    sb.AppendLine("        /// <summary>");
+                    sb.AppendLine("        /// Retrieves the complete list of " + name + "s");
+                    sb.AppendLine("        /// </summary>");
+                    sb.AppendLine("        /// <returns>The complete list of " + name + "s</returns>");
+                    sb.AppendLine("        public static List<" + name + "> GetList()");
                     sb.AppendLine("        {");
-                    sb.AppendLine("            get ");                    
-                    sb.AppendLine("            {");
-                    //sb.AppendLine("                if (" + privPropName + " == null)");
-                    //sb.AppendLine("                {");
-                    //sb.AppendLine("                    " + privPropName + " = new " + name + "(\"" + GetElementInnerText(valueElement, "name") + "\");");
-
-                    
-
-
-                    //sb.AppendLine("                }");
-                    sb.AppendLine("                return " + privPropName + ";");
-                    sb.AppendLine("            }");
+                    sb.AppendLine("            return GetList<" + name + ">();");
                     sb.AppendLine("        }");
                     sb.AppendLine();
-                }
 
-                sb.AppendLine("        static " + name + "()");
-                sb.AppendLine("        {");
+                    Dictionary<string, XmlElement> usedValues = new Dictionary<string, XmlElement>();
 
-                foreach (string usedValue in usedValues.Keys)
-                {
-                    XmlElement valueElement = usedValues[usedValue];
-                    sb.AppendLine("            " + usedValue + " = ");
-                    sb.AppendLine("                new " + name + "(\"" + GetElementInnerText(valueElement, "name") + "\")");
-                    sb.AppendLine("                {");
-                    Type t = Assembly.GetExecutingAssembly().GetType(inheritsFrom);
-                    string comma = "";
-                    foreach (PropertyInfo pi in t.GetProperties())
+                    foreach (XmlElement valueElement in dataObj.GetElementsByTagName("value"))
                     {
-                        object[] enumValNameAttrs = pi.GetCustomAttributes(typeof(EnumValueNameAttribute), false);
-                        if (enumValNameAttrs.Length == 1)
-                        {
-                            EnumValueNameAttribute enumValNameAttr = (EnumValueNameAttribute)enumValNameAttrs[0];
-                            if (enumValNameAttr.Name == "name")
-                            {
-                                continue;
-                            }
-                            string propValue = GetElementInnerText(valueElement, enumValNameAttr.Name);
-                            propValue = Regex.Replace(propValue, @"\s+", " ");
-                            //propValue = propValue.Replace(Environment.NewLine, String.Empty);
-                            propValue = propValue.Replace(@"\", @"\\");
-                            propValue = propValue.Replace("\"", "\\\"");
+                        string valueName = GetElementInnerText(valueElement, "name");
+                        string privPropName = RenameProperty(valueName, false);
 
-                            if (!String.IsNullOrEmpty(propValue))
+                        // We shouldn't have to check for this, but there are duplicates in enumValuesProdml.xml
+                        if (usedValues.ContainsKey(privPropName))
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            usedValues.Add(privPropName, valueElement);
+                        }
+
+                        string valueDescription = GetElementInnerText(valueElement, "description");
+                        valueDescription = Regex.Replace(valueDescription, @"\s+", " ");
+                        valueDescription = valueDescription.Replace("&", "&amp;");
+                        valueDescription = valueDescription.Replace("<", "&lt;");
+                        valueDescription = valueDescription.Replace("<", "&gt;");
+
+                        sb.AppendLine("        private readonly static " + name + " " + privPropName + ";");
+
+                        sb.AppendLine("        /// <summary>");
+                        sb.AppendLine("        /// " + valueDescription);
+                        sb.AppendLine("        /// </summary>");
+                        sb.AppendLine("        [EnumValueNameAttribute(\"" + valueName + "\")]");
+                        sb.AppendLine("        public static " + name + " " + RenameProperty(valueName, true));
+                        sb.AppendLine("        {");
+                        sb.AppendLine("            get ");
+                        sb.AppendLine("            {");
+                        //sb.AppendLine("                if (" + privPropName + " == null)");
+                        //sb.AppendLine("                {");
+                        //sb.AppendLine("                    " + privPropName + " = new " + name + "(\"" + GetElementInnerText(valueElement, "name") + "\");");
+
+
+
+
+                        //sb.AppendLine("                }");
+                        sb.AppendLine("                return " + privPropName + ";");
+                        sb.AppendLine("            }");
+                        sb.AppendLine("        }");
+                        sb.AppendLine();
+                    }
+
+                    sb.AppendLine("        static " + name + "()");
+                    sb.AppendLine("        {");
+
+                    foreach (string usedValue in usedValues.Keys)
+                    {
+                        XmlElement valueElement = usedValues[usedValue];
+                        sb.AppendLine("            " + usedValue + " = ");
+                        sb.AppendLine("                new " + name + "(\"" + GetElementInnerText(valueElement, "name") + "\")");
+                        sb.AppendLine("                {");
+                        Type t = Assembly.GetExecutingAssembly().GetType(inheritsFrom);
+                        string comma = "";
+                        foreach (PropertyInfo pi in t.GetProperties())
+                        {
+                            object[] enumValNameAttrs = pi.GetCustomAttributes(typeof(EnumValueNameAttribute), false);
+                            if (enumValNameAttrs.Length == 1)
                             {
-                                if (pi.PropertyType == typeof(string))
+                                EnumValueNameAttribute enumValNameAttr = (EnumValueNameAttribute)enumValNameAttrs[0];
+                                if (enumValNameAttr.Name == "name")
                                 {
-                                    sb.AppendLine(String.Format("                    {0}{1} = \"{2}\"", comma, pi.Name, propValue));
+                                    continue;
                                 }
-                                else if (pi.PropertyType == typeof(int) || pi.PropertyType == typeof(Boolean) || pi.PropertyType == typeof(Boolean?))
+                                string propValue = GetElementInnerText(valueElement, enumValNameAttr.Name);
+                                propValue = Regex.Replace(propValue, @"\s+", " ");
+                                //propValue = propValue.Replace(Environment.NewLine, String.Empty);
+                                propValue = propValue.Replace(@"\", @"\\");
+                                propValue = propValue.Replace("\"", "\\\"");
+
+                                if (!String.IsNullOrEmpty(propValue))
                                 {
-                                    sb.AppendLine(String.Format("                    {0}{1} = {2}", comma, pi.Name, propValue));
+                                    if (pi.PropertyType == typeof(string))
+                                    {
+                                        sb.AppendLine(String.Format("                    {0}{1} = \"{2}\"", comma, pi.Name, propValue));
+                                    }
+                                    else if (pi.PropertyType == typeof(int) || pi.PropertyType == typeof(Boolean) || pi.PropertyType == typeof(Boolean?))
+                                    {
+                                        sb.AppendLine(String.Format("                    {0}{1} = {2}", comma, pi.Name, propValue));
+                                    }
+                                    else if (pi.PropertyType == typeof(Type))
+                                    {
+                                        sb.AppendLine(String.Format("                    {0}{1} = typeof({2})", comma, pi.Name, CapitalizeFirstLetter(propValue)));
+                                    }
+                                    else if (pi.PropertyType == typeof(EnumValue))
+                                    {
+                                        sb.AppendLine(String.Format("                    {0}{1} = {2}", comma, pi.Name, RenameProperty(propValue, true)));
+                                    }
+                                    else if (pi.PropertyType == typeof(EnumValueLithoType))
+                                    {
+                                        sb.AppendLine(String.Format("                    {0}{1} = EnumValueLithoType.{2}", comma, pi.Name, propValue));
+                                    }
+                                    else if (pi.PropertyType == typeof(EnumValueRealtimeType))
+                                    {
+                                        propValue = CapitalizeFirstLetter(propValue);
+                                        sb.AppendLine(String.Format("                    {0}{1} = EnumValueRealtimeType.Realtime{2}", comma, pi.Name, propValue));
+                                    }
+                                    else
+                                    {
+                                        sb.AppendLine(String.Format("                    //UNK {0}{1} = \"{2}\"", comma, pi.Name, propValue));
+                                    }
+                                    comma = ",";
                                 }
-                                else if (pi.PropertyType == typeof(Type))
-                                {
-                                    sb.AppendLine(String.Format("                    {0}{1} = typeof({2})", comma, pi.Name, CapitalizeFirstLetter(propValue)));
-                                }
-                                else if (pi.PropertyType == typeof(EnumValue))
-                                {
-                                    sb.AppendLine(String.Format("                    {0}{1} = {2}", comma, pi.Name, RenameProperty(propValue, true)));
-                                }
-                                else if (pi.PropertyType == typeof(EnumValueLithoType))
-                                {
-                                    sb.AppendLine(String.Format("                    {0}{1} = EnumValueLithoType.{2}", comma, pi.Name, propValue));
-                                }
-                                else if (pi.PropertyType == typeof(EnumValueRealtimeType))
-                                {
-                                    propValue = CapitalizeFirstLetter(propValue);
-                                    sb.AppendLine(String.Format("                    {0}{1} = EnumValueRealtimeType.Realtime{2}", comma, pi.Name, propValue));
-                                }
-                                else
-                                {
-                                    sb.AppendLine(String.Format("                    //UNK {0}{1} = \"{2}\"", comma, pi.Name, propValue));
-                                }
-                                comma = ",";
                             }
                         }
+                        sb.AppendLine("            };");
                     }
-                    sb.AppendLine("            };");
-                }
-                
-                sb.AppendLine("        }");
-                sb.AppendLine();
-                sb.AppendLine("        /// <summary>");
-                sb.AppendLine("        /// Gets a " + name + " by name");
-                sb.AppendLine("        /// </summary>");
-                sb.AppendLine("        /// <param name=\"name\">The name of the " + name + " to return</param>");
-                sb.AppendLine("        /// <returns>The " + name + " represented by 'name'</returns>");
-                sb.AppendLine("        public static " + name + " GetByName(string name)");
-                sb.AppendLine("        {");
-                sb.AppendLine("            if (enumValuesRegistry.ContainsKey(typeof(" + name + ")))");
-                sb.AppendLine("            {");
-                sb.AppendLine("                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(" + name + ")];");
-                sb.AppendLine("            ");
-                sb.AppendLine("                foreach (EnumValue.EnumValue ev in myList)");
-                sb.AppendLine("                {");
-                sb.AppendLine("                    if (ev.Name == name)");
-                sb.AppendLine("                    {");
-                sb.AppendLine("                        return (" + name + ")ev;");
-                sb.AppendLine("                    }");
-                sb.AppendLine("                }");
-                sb.AppendLine("            }");
-                sb.AppendLine("            ");
-                sb.AppendLine("            return null;");
-                sb.AppendLine("        }");
 
-                sb.AppendLine("    }");
-                sb.AppendLine();
+                    sb.AppendLine("        }");
+                    sb.AppendLine();
+                    sb.AppendLine("        /// <summary>");
+                    sb.AppendLine("        /// Gets a " + name + " by name");
+                    sb.AppendLine("        /// </summary>");
+                    sb.AppendLine("        /// <param name=\"name\">The name of the " + name + " to return</param>");
+                    sb.AppendLine("        /// <returns>The " + name + " represented by 'name'</returns>");
+                    sb.AppendLine("        public static " + name + " GetByName(string name)");
+                    sb.AppendLine("        {");
+                    sb.AppendLine("            if (enumValuesRegistry.ContainsKey(typeof(" + name + ")))");
+                    sb.AppendLine("            {");
+                    sb.AppendLine("                List<EnumValue.EnumValue> myList = enumValuesRegistry[typeof(" + name + ")];");
+                    sb.AppendLine("            ");
+                    sb.AppendLine("                foreach (EnumValue.EnumValue ev in myList)");
+                    sb.AppendLine("                {");
+                    sb.AppendLine("                    if (ev.Name == name)");
+                    sb.AppendLine("                    {");
+                    sb.AppendLine("                        return (" + name + ")ev;");
+                    sb.AppendLine("                    }");
+                    sb.AppendLine("                }");
+                    sb.AppendLine("            }");
+                    sb.AppendLine("            ");
+                    sb.AppendLine("            return null;");
+                    sb.AppendLine("        }");
+
+                    sb.AppendLine("    }");
+                    sb.AppendLine();
+                }
             }
 
             sb.AppendLine("}");

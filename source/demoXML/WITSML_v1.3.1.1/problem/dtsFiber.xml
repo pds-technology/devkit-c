@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/dtsFiber.xsl"?>
+
+<dtsFiber  xmlns="http://www.witsml.org/schemas/131" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.witsml.org/schemas/131  ../ges_dtsFiber.xsd" 
+	uid="f1">
+
+	<name>Example Fiber One</name>
+	<mode>singlemode</mode>
+	<type classType="size rank">50/125</type>
+	<type classType="flexibility">flexible</type>
+	<coating>gold</coating>
+	<jacket>hytrel</jacket>
+	<coreDiameter uom="um">50.</coreDiameter>
+	<outsideDiameter uom="um">900</outsideDiameter>
+	<refractiveIndex uid=	"rfin1">
+		<value>1.4976</value>
+		<wavelength uom="nm">482</wavelength>
+	</refractiveIndex>
+	<refractiveIndex uid="rfin2">
+		<value>1.4968</value>
+		<wavelength uom="nm">615</wavelength>
+	</refractiveIndex>
+	<oneWayLoss uid="owl1">
+		<value uom="dB/km">.18</value>
+		<wavelength uom="nm">482</wavelength>
+	</oneWayLoss>
+	<parameter index="1" name="extra parameter 1" uom="cm" description="Some length parameter">16.2</parameter>
+	<parameter index="1" name="extra parameter 2" description="glossy scale">shiny and bright</parameter>
+	<parameter index="1" name="extra parameter 3" uom="s" description="Some time parameter">.234</parameter>
+	<spoolNumberTag>A16677</spoolNumberTag>
+	<spoolLength uom="m">6000</spoolLength>
+	<supplyDate>2001-12-17T09:30:47-05:00</supplyDate>
+	<supplier>Corning</supplier>
+	<supplierModelNumber>T130XL</supplierModelNumber>
+	<factoryCalibration uid="fcal1">
+		<dTimCalibration>1967-08-13</dTimCalibration>
+		<calibratedBy>Joe Belatoni</calibratedBy>
+		<calibrationProtocol>standard bench check</calibrationProtocol>
+		<parameter uom="dB" name="calibration parameter 1">15.2</parameter>
+		<remarks>No calibration problems occurred.</remarks>
+	</factoryCalibration>
+	<installationHistory>dtsInstA</installationHistory>
+</dtsFiber>

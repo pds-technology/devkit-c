@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>This file defines a set of standard POSC units of measure 
+		for various quantity classes. This units list captures information contained 
+		in the POSC units dictionary at http://www.posc.org/refs/poscUnits20.xml. 
+		The enumerated lists do not contain any deprecated units. </xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_baseType.xsd"/>
+	<!--                                                         -->
+	<!-- ======================================================= -->
+	<!-- ================= SPECIAL TYPES ======================= -->
+	<!-- ======================================================= -->
+	<!--                                                         -->
+	<xsd:simpleType name="PercentUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Moved</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="%"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="MeasuredDepthUom" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The units of measure that are valid for measured depths in a wellbore.</xsd:documentation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Moved</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="m">
+				<xsd:annotation>
+					<xsd:documentation>meter</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ft">
+				<xsd:annotation>
+					<xsd:documentation>International Foot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ftUS">
+				<xsd:annotation>
+					<xsd:documentation>US Survey Foot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                     -->
+	<xsd:simpleType name="WellVerticalCoordinateUom" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>The units of measure that are valid for vertical gravity based 
+			coordinates (i.e., elevation or vertical depth) within the context of a well.</xsd:documentation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Moved</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="m">
+				<xsd:annotation>
+					<xsd:documentation>meter</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ft">
+				<xsd:annotation>
+					<xsd:documentation>International Foot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ftUS">
+				<xsd:annotation>
+					<xsd:documentation>US Survey Foot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ftBr(65)">
+				<xsd:annotation>
+					<xsd:documentation>British Foot 1865</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<!-- ======================================================= -->
+	<!-- ================= MEASURE TYPES ======================= -->
+	<!-- ======================================================= -->
+   <!--NOT-USED: Deleted type AccelerationLinearUom.-->
+   <!--NOT-USED: Deleted type AnglePerLengthUom.-->
+   <!--NOT-USED: Deleted type AnglePerTimeUom.-->
+   <!--NOT-USED: Deleted type AreaUom.-->
+   <!--NOT-USED: Deleted type AreaPerAreaUom.-->
+	<!--                                                         -->
+	<xsd:simpleType name="DensityUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:densityUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="kg/m3"/>
+			<xsd:enumeration value="10Mg/m3"/>
+			<xsd:enumeration value="dAPI"/>
+			<xsd:enumeration value="g/cm3"/>
+			<xsd:enumeration value="g/dm3"/>
+			<xsd:enumeration value="g/galUK"/>
+			<xsd:enumeration value="g/galUS"/>
+			<xsd:enumeration value="g/L"/>
+			<xsd:enumeration value="g/m3"/>
+			<xsd:enumeration value="grain/ft3"/>
+			<xsd:enumeration value="grain/galUS"/>
+			<xsd:enumeration value="grain/100ft3"/>
+			<xsd:enumeration value="kg/dm3"/>
+			<xsd:enumeration value="kg/L"/>
+			<xsd:enumeration value="Mg/m3"/>
+			<xsd:enumeration value="lbm/10bbl"/>
+			<xsd:enumeration value="lbm/bbl"/>
+			<xsd:enumeration value="lbm/ft3"/>
+			<xsd:enumeration value="lbm/galUK"/>
+			<xsd:enumeration value="lbm/1000galUK"/>
+			<xsd:enumeration value="lbm/galUS"/>
+			<xsd:enumeration value="lbm/1000galUS"/>
+			<xsd:enumeration value="lbm/in3"/>
+			<xsd:enumeration value="lbm/Mbbl"/>
+			<xsd:enumeration value="mg/dm3"/>
+			<xsd:enumeration value="mg/galUS"/>
+			<xsd:enumeration value="mg/L"/>
+			<xsd:enumeration value="mg/m3"/>
+			<xsd:enumeration value="ug/cm3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="DimensionlessUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:dimensionlessUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="Euc"/>
+			<xsd:enumeration value="%"/>
+			<xsd:enumeration value="cEuc"/>
+			<xsd:enumeration value="mEuc"/>
+			<xsd:enumeration value="nEuc"/>
+			<xsd:enumeration value="uEuc"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="DynamicViscosityUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:dynamicViscosityUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="Pa.s"/>
+			<xsd:enumeration value="cP"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="psi.s"/>
+			<xsd:enumeration value="dyne.s/cm2"/>
+			<xsd:enumeration value="kgf.s/m2"/>
+			<xsd:enumeration value="lbf.s/ft2"/>
+			<xsd:enumeration value="lbf.s/in2"/>
+			<xsd:enumeration value="mPa.s"/>
+			<xsd:enumeration value="N.s/m2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="ElectricCurrentUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:electricCurrentUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="MA"/>
+			<xsd:enumeration value="kA"/>
+			<xsd:enumeration value="mA"/>
+			<xsd:enumeration value="nA"/>
+			<xsd:enumeration value="pA"/>
+			<xsd:enumeration value="uA"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+   <!--NOT-USED: Deleted type ElectricPotentialUom.-->
+   <!--NOT-USED: Deleted type EquivalentPerMassUom.-->
+   <!--NOT-USED: Deleted type ForceUom.-->
+   <!--NOT-USED: Deleted type ForcePerLengthUom.-->
+   <!--NOT-USED: Deleted type ForcePerVolumeUom.-->
+   <!--NOT-USED: Deleted type IlluminanceUom.-->
+	<!--                                                         -->
+	<xsd:simpleType name="LengthUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:lengthUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="m"/>
+			<xsd:enumeration value="angstrom"/>
+			<xsd:enumeration value="chBnA"/>
+			<xsd:enumeration value="chBnB"/>
+			<xsd:enumeration value="chCla"/>
+			<xsd:enumeration value="chSe"/>
+			<xsd:enumeration value="chUS"/>
+			<xsd:enumeration value="cm"/>
+			<xsd:enumeration value="dm"/>
+			<xsd:enumeration value="fathom"/>
+			<xsd:enumeration value="fm"/>
+			<xsd:enumeration value="ft"/>
+			<xsd:enumeration value="ftBnA"/>
+			<xsd:enumeration value="ftBnB"/>
+			<xsd:enumeration value="ftBr(65)"/>
+			<xsd:enumeration value="ftCla"/>
+			<xsd:enumeration value="ftGC"/>
+			<xsd:enumeration value="ftInd"/>
+			<xsd:enumeration value="ftInd(37)"/>
+			<xsd:enumeration value="ftInd(62)"/>
+			<xsd:enumeration value="ftInd(75)"/>
+			<xsd:enumeration value="ftMA"/>
+			<xsd:enumeration value="ftSe"/>
+			<xsd:enumeration value="ftUS"/>
+			<xsd:enumeration value="in"/>
+			<xsd:enumeration value="in/10"/>
+			<xsd:enumeration value="in/16"/>
+			<xsd:enumeration value="in/32"/>
+			<xsd:enumeration value="in/64"/>
+			<xsd:enumeration value="inUS"/>
+			<xsd:enumeration value="km"/>
+			<xsd:enumeration value="lkBnA"/>
+			<xsd:enumeration value="lkBnB"/>
+			<xsd:enumeration value="lkCla"/>
+			<xsd:enumeration value="lkSe"/>
+			<xsd:enumeration value="lkUS"/>
+			<xsd:enumeration value="mGer"/>
+			<xsd:enumeration value="mi"/>
+			<xsd:enumeration value="mil"/>
+			<xsd:enumeration value="miUS"/>
+			<xsd:enumeration value="mm"/>
+			<xsd:enumeration value="Mm"/>
+			<xsd:enumeration value="nautmi"/>
+			<xsd:enumeration value="nm"/>
+			<xsd:enumeration value="pm"/>
+			<xsd:enumeration value="um"/>
+			<xsd:enumeration value="yd"/>
+			<xsd:enumeration value="ydBnA"/>
+			<xsd:enumeration value="ydBnB"/>
+			<xsd:enumeration value="ydCla"/>
+			<xsd:enumeration value="ydIm"/>
+			<xsd:enumeration value="ydInd"/>
+			<xsd:enumeration value="ydInd(37)"/>
+			<xsd:enumeration value="ydInd(62)"/>
+			<xsd:enumeration value="ydInd(75)"/>
+			<xsd:enumeration value="ydSe"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="LengthPerLengthUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:lengthPerLengthUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="%"/>
+			<xsd:enumeration value="ft/100ft"/>
+			<xsd:enumeration value="ft/ft"/>
+			<xsd:enumeration value="ft/in"/>
+			<xsd:enumeration value="ft/m"/>
+			<xsd:enumeration value="ft/mi"/>
+			<xsd:enumeration value="km/cm"/>
+			<xsd:enumeration value="m/30m"/>
+			<xsd:enumeration value="m/cm"/>
+			<xsd:enumeration value="m/km"/>
+			<xsd:enumeration value="m/m"/>
+			<xsd:enumeration value="mi/in"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-22, Change=Deleted-type:magneticFieldStrengthUom</xsd:appinfo>
+	</xsd:annotation>
+	<!--                                                         -->
+   <!--NOT-USED: Deleted type MagneticInductionUom.-->
+	<!--                                                         -->
+	<xsd:simpleType name="MassConcentrationUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:massConcentrationUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="Euc"/>
+			<xsd:enumeration value="%"/>
+			<xsd:enumeration value="g/kg"/>
+			<xsd:enumeration value="kg/kg"/>
+			<xsd:enumeration value="kg/sack94"/>
+			<xsd:enumeration value="mg/kg"/>
+			<xsd:enumeration value="permil"/>
+			<xsd:enumeration value="ppdk"/>
+			<xsd:enumeration value="ppk"/>
+			<xsd:enumeration value="ppm"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="MassUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:massUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="kg"/>
+			<xsd:enumeration value="ag"/>
+			<xsd:enumeration value="ct"/>
+			<xsd:enumeration value="cwtUK"/>
+			<xsd:enumeration value="cwtUS"/>
+			<xsd:enumeration value="g"/>
+			<xsd:enumeration value="grain"/>
+			<xsd:enumeration value="klbm"/>
+			<xsd:enumeration value="lbm"/>
+			<xsd:enumeration value="Mg"/>
+			<xsd:enumeration value="mg"/>
+			<xsd:enumeration value="oz(av)"/>
+			<xsd:enumeration value="oz(troy)"/>
+			<xsd:enumeration value="ozm"/>
+			<xsd:enumeration value="sack94"/>
+			<xsd:enumeration value="t"/>
+			<xsd:enumeration value="tonUK"/>
+			<xsd:enumeration value="tonUS"/>
+			<xsd:enumeration value="ug"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+   <!--NOT-USED: Deleted type MassPerLengthUom.-->
+   <!--NOT-USED: Deleted type MomentOfForceUom.-->
+   <!--NOT-USED: Deleted type PerLengthUom.-->
+	<!--                                                         -->
+	<xsd:simpleType name="PlaneAngleUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:planeAngleUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="rad"/>
+			<xsd:enumeration value="c"/>
+			<xsd:enumeration value="ccgr"/>
+			<xsd:enumeration value="cgr"/>
+			<xsd:enumeration value="dega"/>
+			<xsd:enumeration value="gon"/>
+			<xsd:enumeration value="gr"/>
+			<xsd:enumeration value="Grad"/>
+			<xsd:enumeration value="krad"/>
+			<xsd:enumeration value="mila"/>
+			<xsd:enumeration value="mina"/>
+			<xsd:enumeration value="mrad"/>
+			<xsd:enumeration value="Mrad"/>
+			<xsd:enumeration value="mseca"/>
+			<xsd:enumeration value="seca"/>
+			<xsd:enumeration value="urad"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+   <!--NOT-USED: Deleted type PowerUom.-->
+	<!--                                                         -->
+	<xsd:simpleType name="PressureUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:pressureUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="Pa"/>
+			<xsd:enumeration value="at"/>
+			<xsd:enumeration value="atm"/>
+			<xsd:enumeration value="bar"/>
+			<xsd:enumeration value="cmH2O(4degC)"/>
+			<xsd:enumeration value="dyne/cm2"/>
+			<xsd:enumeration value="GPa"/>
+			<xsd:enumeration value="hbar"/>
+			<xsd:enumeration value="inH2O(39.2F)"/>
+			<xsd:enumeration value="inH2O(60F)"/>
+			<xsd:enumeration value="inHg(32F)"/>
+			<xsd:enumeration value="inHg(60F)"/>
+			<xsd:enumeration value="kgf/cm2"/>
+			<xsd:enumeration value="kgf/mm2"/>
+			<xsd:enumeration value="kN/m2"/>
+			<xsd:enumeration value="kPa"/>
+			<xsd:enumeration value="kpsi"/>
+			<xsd:enumeration value="lbf/ft2"/>
+			<xsd:enumeration value="lbf/100ft2"/>
+			<xsd:enumeration value="lbf/in2"/>
+			<xsd:enumeration value="mbar"/>
+			<xsd:enumeration value="mmHg(0C)"/>
+			<xsd:enumeration value="mPa"/>
+			<xsd:enumeration value="MPa"/>
+			<xsd:enumeration value="Mpsi"/>
+			<xsd:enumeration value="N/m2"/>
+			<xsd:enumeration value="N/mm2"/>
+			<xsd:enumeration value="Pa(g)"/>
+			<xsd:enumeration value="pPa"/>
+			<xsd:enumeration value="psi"/>
+			<xsd:enumeration value="tonfUS/ft2"/>
+			<xsd:enumeration value="tonfUS/in2"/>
+			<xsd:enumeration value="torr"/>
+			<xsd:enumeration value="ubar"/>
+			<xsd:enumeration value="umHg(0C)"/>
+			<xsd:enumeration value="uPa"/>
+			<xsd:enumeration value="upsi"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+   <!--NOT-USED: Deleted type RelativePowerUom.-->
+   <!--NOT-USED: Deleted type SpecificVolumeUom.-->
+	<!--                                                         -->
+	<xsd:simpleType name="ThermodynamicTemperatureUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:thermodynamicTemperatureUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="degC"/>
+			<xsd:enumeration value="degF"/>
+			<xsd:enumeration value="degR"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="TimeUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:timeUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="s"/>
+			<xsd:enumeration value="a"/>
+			<xsd:enumeration value="cs"/>
+			<xsd:enumeration value="d"/>
+			<xsd:enumeration value="Ga"/>
+			<xsd:enumeration value="h"/>
+			<xsd:enumeration value="100s"/>
+			<xsd:enumeration value="Ma"/>
+			<xsd:enumeration value="min"/>
+			<xsd:enumeration value="ms"/>
+			<xsd:enumeration value="ms/2"/>
+			<xsd:enumeration value="ns"/>
+			<xsd:enumeration value="ps"/>
+			<xsd:enumeration value="us"/>
+			<xsd:enumeration value="wk"/>
+			<xsd:enumeration value="100ka"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="VelocityUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:velocityUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="m/s"/>
+			<xsd:enumeration value="cm/a"/>
+			<xsd:enumeration value="cm/s"/>
+			<xsd:enumeration value="dm/s"/>
+			<xsd:enumeration value="ft/d"/>
+			<xsd:enumeration value="ft/h"/>
+			<xsd:enumeration value="ft/min"/>
+			<xsd:enumeration value="ft/ms"/>
+			<xsd:enumeration value="ft/s"/>
+			<xsd:enumeration value="ft/us"/>
+			<xsd:enumeration value="in/a"/>
+			<xsd:enumeration value="in/min"/>
+			<xsd:enumeration value="in/s"/>
+			<xsd:enumeration value="kft/h"/>
+			<xsd:enumeration value="kft/s"/>
+			<xsd:enumeration value="km/h"/>
+			<xsd:enumeration value="km/s"/>
+			<xsd:enumeration value="knot"/>
+			<xsd:enumeration value="m/d"/>
+			<xsd:enumeration value="m/h"/>
+			<xsd:enumeration value="m/min"/>
+			<xsd:enumeration value="m/ms"/>
+			<xsd:enumeration value="mi/h"/>
+			<xsd:enumeration value="mil/yr"/>
+			<xsd:enumeration value="mm/a"/>
+			<xsd:enumeration value="mm/s"/>
+			<xsd:enumeration value="nm/s"/>
+			<xsd:enumeration value="um/s"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="VolumeUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:volumeUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="m3"/>
+			<xsd:enumeration value="acre.ft"/>
+			<xsd:enumeration value="bbl"/>
+			<xsd:enumeration value="bcf"/>
+			<xsd:enumeration value="cm3"/>
+			<xsd:enumeration value="dm3"/>
+			<xsd:enumeration value="flozUK"/>
+			<xsd:enumeration value="flozUS"/>
+			<xsd:enumeration value="ft3"/>
+			<xsd:enumeration value="galUK"/>
+			<xsd:enumeration value="galUS"/>
+			<xsd:enumeration value="ha.m"/>
+			<xsd:enumeration value="hL"/>
+			<xsd:enumeration value="in3"/>
+			<xsd:enumeration value="1000ft3"/>
+			<xsd:enumeration value="km3"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="Mbbl"/>
+			<xsd:enumeration value="Mcf"/>
+			<xsd:enumeration value="M(ft3)"/>
+			<xsd:enumeration value="mi3"/>
+			<xsd:enumeration value="mL"/>
+			<xsd:enumeration value="M(m3)"/>
+			<xsd:enumeration value="mm3"/>
+			<xsd:enumeration value="MMbbl"/>
+			<xsd:enumeration value="ptUK"/>
+			<xsd:enumeration value="ptUS"/>
+			<xsd:enumeration value="qtUK"/>
+			<xsd:enumeration value="qtUS"/>
+			<xsd:enumeration value="tcf"/>
+			<xsd:enumeration value="um2.m"/>
+			<xsd:enumeration value="yd3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="VolumeFlowRateUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:volumeFlowRateUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="m3/s"/>
+			<xsd:enumeration value="bbl/d"/>
+			<xsd:enumeration value="bbl/hr"/>
+			<xsd:enumeration value="bbl/min"/>
+			<xsd:enumeration value="cm3/30min"/>
+			<xsd:enumeration value="cm3/h"/>
+			<xsd:enumeration value="cm3/min"/>
+			<xsd:enumeration value="cm3/s"/>
+			<xsd:enumeration value="dm3/s"/>
+			<xsd:enumeration value="ft3/d"/>
+			<xsd:enumeration value="ft3/h"/>
+			<xsd:enumeration value="ft3/min"/>
+			<xsd:enumeration value="ft3/s"/>
+			<xsd:enumeration value="galUK/d"/>
+			<xsd:enumeration value="galUK/hr"/>
+			<xsd:enumeration value="galUK/min"/>
+			<xsd:enumeration value="galUS/d"/>
+			<xsd:enumeration value="galUS/hr"/>
+			<xsd:enumeration value="galUS/min"/>
+			<xsd:enumeration value="kbbl/d"/>
+			<xsd:enumeration value="1000ft3/d"/>
+			<xsd:enumeration value="1000m3/d"/>
+			<xsd:enumeration value="1000m3/h"/>
+			<xsd:enumeration value="L/h"/>
+			<xsd:enumeration value="L/min"/>
+			<xsd:enumeration value="L/s"/>
+			<xsd:enumeration value="m3/d"/>
+			<xsd:enumeration value="m3/h"/>
+			<xsd:enumeration value="m3/min"/>
+			<xsd:enumeration value="Mbbl/d"/>
+			<xsd:enumeration value="M(ft3)/d"/>
+			<xsd:enumeration value="M(m3)/d"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+	<xsd:simpleType name="VolumePerVolumeUom" final="#all">
+		<xsd:annotation>
+			<xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-86, Change=Renamed-from:volumePerVolumeUom</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:restriction base="prodml:abstractUomEnum">
+			<xsd:enumeration value="Euc"/>
+			<xsd:enumeration value="%"/>
+			<xsd:enumeration value="permil"/>
+			<xsd:enumeration value="ppdk"/>
+			<xsd:enumeration value="ppk"/>
+			<xsd:enumeration value="ppm"/>
+			<xsd:enumeration value="bbl/acre.ft"/>
+			<xsd:enumeration value="bbl/bbl"/>
+			<xsd:enumeration value="bbl/ft3"/>
+			<xsd:enumeration value="bbl/100bbl"/>
+			<xsd:enumeration value="bbl/k(ft3)"/>
+			<xsd:enumeration value="bbl/M(ft3)"/>
+			<xsd:enumeration value="cm3/cm3"/>
+			<xsd:enumeration value="cm3/m3"/>
+			<xsd:enumeration value="dm3/m3"/>
+			<xsd:enumeration value="ft3/bbl"/>
+			<xsd:enumeration value="ft3/ft3"/>
+			<xsd:enumeration value="galUS/kgalUS"/>
+			<xsd:enumeration value="galUK/kgalUK"/>
+			<xsd:enumeration value="galUK/ft3"/>
+			<xsd:enumeration value="galUK/Mbbl"/>
+			<xsd:enumeration value="galUS/bbl"/>
+			<xsd:enumeration value="galUS/10bbl"/>
+			<xsd:enumeration value="galUS/ft3"/>
+			<xsd:enumeration value="galUS/Mbbl"/>
+			<xsd:enumeration value="1000ft3/bbl"/>
+			<xsd:enumeration value="ksm3/sm3"/>
+			<xsd:enumeration value="L/10bbl"/>
+			<xsd:enumeration value="L/m3"/>
+			<xsd:enumeration value="m3/ha.m"/>
+			<xsd:enumeration value="m3/m3"/>
+			<xsd:enumeration value="M(ft3)/acre.ft"/>
+			<xsd:enumeration value="mL/galUK"/>
+			<xsd:enumeration value="mL/galUS"/>
+			<xsd:enumeration value="mL/mL"/>
+			<xsd:enumeration value="MMbbl/acre.ft"/>
+			<xsd:enumeration value="MMscf60/stb60"/>
+			<xsd:enumeration value="Mscf60/stb60"/>
+			<xsd:enumeration value="ptUK/Mbbl"/>
+			<xsd:enumeration value="ptUS/10bbl"/>
+			<xsd:enumeration value="pu"/>
+			<xsd:enumeration value="scm15/stb60"/>
+			<xsd:enumeration value="sm3/ksm3"/>
+			<xsd:enumeration value="sm3/sm3"/>
+			<xsd:enumeration value="stb60/MMscf60"/>
+			<xsd:enumeration value="stb60/MMscm15"/>
+			<xsd:enumeration value="stb60/Mscf60"/>
+			<xsd:enumeration value="stb60/Mscm15"/>
+			<xsd:enumeration value="stb60/scm15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--                                                         -->
+</xsd:schema>

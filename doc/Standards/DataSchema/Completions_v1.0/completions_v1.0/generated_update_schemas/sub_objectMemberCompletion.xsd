@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="obj_downholeComponent.xsd" />
+   <xsd:include schemaLocation="obj_wellboreCompletion.xsd" />
+   <xsd:include schemaLocation="obj_wellCMLedger.xsd" />
+   <xsd:include schemaLocation="obj_wellCompletion.xsd" />
+   <xsd:annotation>
+      <xsd:documentation>Completion Object Substitution Group Members. This file is only an example. It defines the available object substitution group member in this release.
+      This is only relevant to the Energistics aggregate object.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <!--                                                         -->
+</xsd:schema>

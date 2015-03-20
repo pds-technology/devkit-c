@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns:witsml="http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="1.3.1">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_dataTypes.xsd"/>
+	<!--                                                         -->
+	<!--                                                         -->
+	<xsd:complexType name="cs_refWellboreTrajectoryStation" final="#all">
+		<xsd:annotation>
+			<xsd:documentation>A reference to a trajectoryStation in a wellbore.
+			The trajectoryStation may be defined within the context of another wellbore.
+			This value represents a foreign key from one element to another.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="stationReference" type="witsml:refString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the trajectoryStation within the parent trajectory.
+					This is a special case where we only use a uid for the pointer.
+					The natural identity of a station is its physical characteristics (e.g., md).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="trajectoryParent" type="witsml:refNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the trajectory within the parent wellbore.
+					This trajectory contains the trajectoryStation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellboreParent" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the wellbore that contains the trajectory.
+					This is not needed unless the trajectory is outside the 
+					context of a common parent wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

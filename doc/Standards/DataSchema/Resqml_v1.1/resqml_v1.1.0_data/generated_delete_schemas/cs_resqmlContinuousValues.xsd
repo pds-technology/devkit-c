@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_resqmlAbstractValues.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_resqmlContinuousValues">
+      <xsd:annotation>
+         <xsd:documentation>Defines the numeric arrays whose values may represent a continuous numeric space.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="resqml:cs_resqmlAbstractValues">
+            <xsd:sequence minOccurs="0">
+               <xsd:choice minOccurs="0">
+                  <xsd:element name="doubleValues" type="resqml:doubleValues" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Defines a space delimited list of double values.</xsd:documentation>
+                        <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="floatValues" type="resqml:floatValues" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Defines a space delimited list of float values.</xsd:documentation>
+                        <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="longValues" type="resqml:longValues" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Defines a space delimited list of long values.</xsd:documentation>
+                        <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="intValues" type="resqml:intValues" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Defines a space delimited list of int values.</xsd:documentation>
+                        <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="shortValues" type="resqml:shortValues" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Defines a space delimited list of short values.</xsd:documentation>
+                        <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="byteValues" type="resqml:byteValues" minOccurs="0" maxOccurs="1">
+                     <xsd:annotation>
+                        <xsd:documentation>Defines a space delimited list of byte values.</xsd:documentation>
+                        <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+               </xsd:choice>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

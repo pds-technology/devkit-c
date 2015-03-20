@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<xsd:complexType name="cs_fiberRefractiveIndex">
+		<xsd:annotation>
+			<xsd:documentation>The refractive index of a material depends on the frequency (or wavelength) of the light. Hence it is necessary to include both the value (a unitless number) and the frequency (or wavelength) it was measured at. The frequency will be a quantity type with a frequency unit such as Hz.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			      <xsd:element name="value" type="prodml:attenuationMeasure" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The value of the refractive index.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="frequency" type="prodml:frequencyMeasure" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The frequency (and uom) for which the refractive index is measured.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="wavelength" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The wavelength (and uom) for which the refractive index is measured. The reported wavelength should be the wavelength of the light in a vacuum. </xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>The unique identifier of an object. 
+				This should not be used for child nodes within an object. For an independent object, the value may be globally unique. 
+				For a dependent object, the value must be unique (for the same object type) within the context of the parent object. 
+				There should be no assumption as to the semantic content of this attribute. 
+				The purpose of this type is to facilitate modifying the optionality in derived schemas.
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	  </xsd:complexType>
+</xsd:schema>

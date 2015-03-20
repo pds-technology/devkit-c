@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.resqml.org/schemas/1series" 
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2011 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_resqmlPropertySet.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlPoint3dSet.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlTriangleSet.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlSplitEdgeSet.xsd"/>
+	<xsd:include schemaLocation="cs_resqmlHdfGroup.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<xsd:include schemaLocation="typ_dataTypesResqml.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_resqmlTriangulatedPatch">
+		<xsd:annotation>
+			<xsd:documentation>A gemetrical representation of a surface patch using a 
+			triangulated grid.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:element name="point3dSet" type="resqml:cs_resqmlPoint3dSet" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>A set of coordinate triplets which locates the nodes in the mesh. 
+							A value of "NaN" shall NOT exist in any of the points.
+							There is no semantic meaning to the point order except that properties are assigned to the 
+							vertices based on the order. This order is called the "vertex index".
+							The first vertex has an index of zero.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="triangleNodeIndexSet" type="resqml:cs_resqmlTriangleSet" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>A set of triangles in the mesh.
+							A triangle is defined by specifying the "vertex index" of each corner.
+							A corner shall not be defined as "NaN". 
+							The aggregate of triangles defines the mesh.
+							There is no semantic meaning to the triangle sequence order except that properties are  
+							assigned to the triangles based on the order. This order is called the "face index". 
+							The first triangle has an index of zero.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="splitEdgeNodeIndexSet" type="resqml:cs_resqmlSplitEdgeSet" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>A set of split edges.
+							There is no semantics assigned to the order of the edges.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:element name="triangulatedHdfGroup" type="resqml:cs_resqmlHdfGroup" minOccurs="1" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Defines information related to capturing the array data 
+						in an HDF5 formatted file.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="propertyValues" type="resqml:cs_resqmlPropertySet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Properties for this patch.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="resqml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

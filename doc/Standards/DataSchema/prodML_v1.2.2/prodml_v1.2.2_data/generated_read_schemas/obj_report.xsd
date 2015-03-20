@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <xsd:import namespace="http://www.energistics.org/schemas/abstract" schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd" />
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_businessAssociate.xsd" />
+   <xsd:include schemaLocation="cs_geographicContext.xsd" />
+   <xsd:include schemaLocation="cs_customData.xsd" />
+   <!--                                                         -->
+   <xsd:element name="report" type="prodml:obj_report" substitutionGroup="abs:abstractContextualObject">
+      <xsd:annotation>
+         <xsd:documentation>A singular contextual object for use in the Energistics aggregate schema. The purpose is to a provide report context to an aggregate of business
+         objects. This is not designed for use as an "object" within a WITSML style server.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <!--                                                         -->
+   <xsd:complexType name="obj_report">
+      <xsd:complexContent>
+         <xsd:extension base="abs:abstractObject">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="kind" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The type of report. This should define and constrain the expected content of the report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="title" type="prodml:nameStruct" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The tile of the report if different from the name of the report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="date" type="prodml:date" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The date that the report represents (i.e., not a year or month). Only one of date, month or year should be specified.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="dateEnd" type="prodml:date" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The ending date that the report represents if it represents an interval.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="month" type="prodml:calendarMonth" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The month that the report represents (i.e., not a year, date or date range). Only one of date, month or year should be
+                     specified.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="year" type="prodml:calendarYear" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The year that the report represents (i.e., not a month, date or date range). Only one of date, month or year should be
+                     specified.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>A textual comment about the report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="reportVersion" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The current report version.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="reportStatus" type="prodml:ReportVersionStatus" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The current document version status.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of
+                     facility.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>The name and type of a facility whose context is relevant to the represented installation.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="operator" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The operator of the facilities in the report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="geographicContext" type="prodml:cs_geographicContext" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The geographic context of the report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="issueDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The date that the report was issued.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="issuedBy" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The person or company that issued the report. This may contain the role of the person or company within the context of the
+                     report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="approvalDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The date that the report was approved.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="approver" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The person or company that approved the report. This may contain the role of the person or company within the context of the
+                     report.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="customData" type="prodml:cs_customData" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>A container element that can contain custom or user defined data elements.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

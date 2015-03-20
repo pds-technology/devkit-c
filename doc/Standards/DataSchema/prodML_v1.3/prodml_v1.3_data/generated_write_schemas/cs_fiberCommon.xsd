@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_dtsEquipment.xsd" />
+   <xsd:complexType name="cs_fiberCommon">
+      <xsd:annotation>
+         <xsd:documentation>A specialization of the equipment class containing information on reflectance, loss and reason for decommissioning, from which all equipment in the
+         optical path inherits.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="prodml:cs_dtsEquipment">
+            <xsd:sequence>
+               <xsd:element name="reflectance" type="prodml:dimensionlessMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The fraction of incident light that is reflected by a fiber path component. Measured in dB.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="loss" type="prodml:dimensionlessMeasure" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>The fraction of incident light that is lost by a fiber path component. Measured in dB.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="reasonForDecommissioning" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Any remarks that help understand why the optical fiber is no longer in use.</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:attributeGroup ref="prodml:attgrp_uid">
+               <xsd:annotation>
+                  <xsd:documentation>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be
+                  globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no
+                  assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived
+                  schemas.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attributeGroup>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

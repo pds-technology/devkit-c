@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.resqml.org/schemas/1series"
+	xmlns:resqml="http://www.resqml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="RESQML_v1.1">
+   <!--                                                     -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2011 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                     -->
+   <xsd:include schemaLocation="grp_resqmlTraceabilityDublinCore.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesResqml.xsd" />
+   <xsd:include schemaLocation="cs_extensionAny.xsd" />
+   <xsd:include schemaLocation="cs_resqmlExtensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uidGlobal.xsd" />
+   <!--                                                     -->
+   <xsd:complexType name="cs_resqmlLocal3dCRS">
+      <xsd:annotation>
+         <xsd:documentation>Defines a local 3D Coordinate Reference System (CRS). The local CRS MUST form a cartesian system of axes. The local areal axes MUST be in the plane of
+         the projected system. The local areal axes MUST be orthogonal to each other. The ordinals of the local system MUST be defined in units of meters. This 3D system is
+         semantically equivalent to a Compound CRS composed of a local 2d areal system and a local 1d vertical system. The vertical axis is always positive when moving from the
+         origin toward the center of the Earth. The ordinal of the vertical axis MUST be defined in units of meter (or second if offset from a time system). The labels associated
+         with the axes on this local system are X, Y, Z. The Y axis is 90 degrees counter-clockwise from the X axis. If this local system 1) has an areal origin which coincides
+         (0,0) with the origin of the projected system 2) and has a rotation of zero then the first two axes of the local system will coincide with the axes of the global 2D
+         system. That is, the Y axis would coincide with the global axis which is 90 degrees from the other global axis.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:group ref="resqml:grp_resqmlTraceabilityDublinCore" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Dublin Core elements used for traceability.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:group>
+         <xsd:element name="originOrdinal1" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The first ordinal of the location of the origin of the local areal axes relative to the global projected CRS. The value MUST represent the first
+               axis of the global system. The unit of measure is defined by the unit of measure for the global 2D CRS.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="originOrdinal2" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The second ordinal of the location of the origin of the local areal axes relative to the global projected CRS. The value MUST represent the
+               second axis of the global system. The unit of measure is defined by the unit of measure for the global 2D CRS.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="arealRotation" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The rotation in radians of the the local Y axis relative to the global projected axis which is 90 degrees counter-clockwise from the other global
+               axis. A positive value indicates a clockwise rotation from the global axis. A negative value indicates a counterclockwise rotation form the global
+               axis.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="originOrdinal3" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The vertical location of the origin of this local system in the global vertical CRS. The unit of measure is defined by the unit of measure for
+               the global vertical CRS.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="timeOrigin" type="xsd:double" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The vertical location of the origin of this local system in the global vertical CRS. The unit of measure is defined by the unit of measure for
+               the global vertical time CRS. The vertical ordinal of the local system MUST be defined in units of second. If this element is not defined then the vertical ordinal
+               of the local system MUST be defined in units of meter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionAny" type="resqml:cs_extensionAny" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema using an xsd:any construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="resqml:cs_resqmlExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="resqml:attgrp_uidGlobal">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the node. This must be a globally unique identifier.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                     -->
+</xsd:schema>

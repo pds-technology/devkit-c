@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_dtsInstrumentBoxCalibration">
+      <xsd:annotation>
+         <xsd:documentation>Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is an extension of the general
+         cs_dtsCalibration, and allows for specific parameters associated with an instrument box. The two additional parameters are the offset temperature calibration, and the
+         slope calibration. These allow for a linear shift in temperature vs measurements. Additional offset and slope calibrations may be performed at measurement
+         time.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="dTimCalibration" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The date of the calibration</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="calibratedBy" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The business associate that performed the calibration.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="calibrationProtocol" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>This may be a standard protocol, or a software application.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parameter" type="prodml:calibrationParameter" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Attribute name is the name of the parameter. Optional attribute uom is the unit of measure of the parameter. The value of the element is the
+               value of the parameter. Note that a string value may appear as a parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="remarks" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Any remarks that may be useful, regarding the calibration information.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="offsetTemperatureCalibration" type="prodml:thermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature offset correction that is applied to the dts instrument box.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="slopeCalibration" type="prodml:temperatureSlopeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The temperature slope correction that is applied to the dts instrument box.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the calibration.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

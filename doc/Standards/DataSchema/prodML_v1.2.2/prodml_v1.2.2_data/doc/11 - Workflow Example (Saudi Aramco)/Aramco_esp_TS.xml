@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeSeriesDatas
+	xmlns="http://www.prodml.org/schemas/1series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series  ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_timeSeriesData.xsd"
+	version="1.2.0.0(PRODML)">
+	<timeSeriesData uid="ESP01_MotorCurrent">
+		<name>ESP #01 motor current</name>
+		<!-- A PRODML formatted URI identifier of the asset (facility) related to the value. -->
+		<key keyword="asset identifier">prodml://osi.mycompany.com/pump(ESP01)</key>
+		<key keyword="flow">production</key>
+		<key keyword="qualifier">measured</key>
+		<unit>A</unit>
+		<measureClass>electric current</measureClass>
+		<doubleValue dTim="2012-02-08T13:02:00+03:00">60</doubleValue>
+		<doubleValue dTim="2012-02-08T13:02:00+03:00">60</doubleValue>
+		<doubleValue dTim="2012-02-08T13:02:00+03:00">59</doubleValue>
+		<doubleValue dTim="2012-02-08T13:02:00+03:00">61</doubleValue>
+		<doubleValue dTim="2012-02-08T13:02:00+03:00">60</doubleValue>
+	</timeSeriesData>
+</timeSeriesDatas>

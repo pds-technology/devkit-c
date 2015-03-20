@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+Data is based on example well from WFT.
+They totally artificial and are not intended to demonstrate best practices. 
+NOTE: Different equipment may share common properties.  String equipment may reference the same equipmentUID as itself.
+-->
+<wellCMLedgers xmlns="http://www.witsml.org/schemas/1series"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.witsml.org/schemas/1series  ../xsd_schemas/obj_wellCMLedger.xsd" version="1.4.1.1">
+	<wellCMLedger uid="BUC003LS">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-26T00:00:00Z</dTimEnd>
+		<duration uom="h">47</duration>
+		<activityCode>Job</activityCode>
+		<type>Well Maintenance Rig (Reactive)</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+			<jobExtension>
+				<jobReason>Rod Pump Failure</jobReason>
+				<jobStatus>Completed</jobStatus>
+				<primaryMotivationForJob>Failures</primaryMotivationForJob>
+			</jobExtension>
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costAmount>0</costAmount>
+		</cost>
+		<comment>ROD PUMP FAILURE- FOUND PLUNGER SAND CUT, BARREL SCOURED, TV &amp; SV CAGES WORN--BOTH BALLS &amp; SEATS LEAKED. RAN TBG SAND SCREENS. ALSO C/O TO PB AND DID 11,000 GALS 15% HCL ACID JOB IN 4 STAGES,SCALE SQUEEZED. ENGINEERS DECIDED TO REPLACE TBG WITH 2 3/8" ALSO RAN NEW N-90 RODS</comment>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZ9">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Safety Meeting</activityCode>
+		<type>Safety Meeting</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost uid="cost1">
+			<numAFE>BCT492200</numAFE>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZA">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Rig Up Pulling Unit</activityCode>
+		<type>Rig Up Pulling Unit</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZB">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Pull Rods</activityCode>
+		<type>Pull Rods</type>
+		<isPlan>false</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="BUC00R51"/>
+		</downholeComponentRef>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZC">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Kill Well</activityCode>
+		<type>Kill Well</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZD">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Pull Tubing</activityCode>
+		<type>Pull Tubing</type>
+		<isPlan>false</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="BUC00TS1"/>
+		</downholeComponentRef>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZE">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<mdTop uom="ft">1000</mdTop>
+		<mdBottom uom="ft">1050</mdBottom>
+		<rigID>336</rigID>
+		<activityCode>Clean Out Wellbore - Circulating</activityCode>
+		<type>Clean Out Wellbore - Circulating</type>
+		<isPlan>false</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="BUC00BH1"/>
+		</downholeComponentRef>
+		<eventExtension>
+			<cleanFillExtension>
+				<fillCleaningMethod>Circulate</fillCleaningMethod>
+			</cleanFillExtension>
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZF">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Set Packer</activityCode>
+		<type>Set Packer</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZG">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Acidize</activityCode>
+		<type>Acidize</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZH">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Swabbing</activityCode>
+		<type>Swabbing</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+			<acidizeFracExtension>
+				<stimJobID>UIDFracJob</stimJobID>
+				<!-- Review with SMEs and decide whether to have individual nodes or if consuming part of the referenced object would suffice -->
+			</acidizeFracExtension>
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZI">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<mdTop uom="ft">4079</mdTop>
+		<mdBottom uom="ft">4710</mdBottom>
+		<rigID>336</rigID>
+		<activityCode>Respace Pump</activityCode>
+		<type>Respace Pump</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZJ">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Pressure Test Pump</activityCode>
+		<type>Pressure Test Pump</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+		<!--	<pressureTestExtension>
+				<wellboreID>CTJ0001S</wellboreID>
+				<stringID>PrimaryWellbore_UID</stringID>
+				<presInitial uom="psi">10</presInitial>
+				<presMax uom="psi">20</presMax>
+				<duration uom="min">10</duration>
+				<mdatGauge uom="ft">4000</mdatGauge>
+			</pressureTestExtension>-->
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZK">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Plug Back Cement</activityCode>
+		<type>Plug Back Cement</type>
+		<isPlan>false</isPlan>
+		<downholeComponentRef>
+			<downholeStringsRef downholeStringRefID="BUC00PC1"/>
+		</downholeComponentRef>
+		<eventExtension>
+			<cementExtension>
+				<cementJobRefID>BUC0CMJ1</cementJobRefID>
+				<!-- Review with SMEs and decide whether to have individual nodes or if consuming part of the referenced object would suffice -->
+			</cementExtension>
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZL">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<mdTop uom="ft">1000</mdTop>
+		<mdBottom uom="ft">1100</mdBottom>
+		<rigID>336</rigID>
+		<activityCode>Kick/Lost Circulation</activityCode>
+		<type>Kick/Lost Circulation</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+			<lostCirculationExtension> 
+				<volumeLost uom="galUS">50</volumeLost>
+			</lostCirculationExtension>
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZM">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Waiting On</activityCode>
+		<type>Waiting On</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+			<waitingOnExtension>
+				<subCategory>Weather</subCategory>
+				<isNoChargeToProducer>false</isNoChargeToProducer>
+			</waitingOnExtension>
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZN">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Failure Report</activityCode>
+		<type>Failure Report</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+		<comment>
+    Failed Component: Rod Pump (Insert) (NON-SERIALIZED) - 25-150-RHBC-24-4 (Bore = 1.50)
+    Primary Failure Class: Foreign Material Related
+    Primary Failure Cause: Sticking/Friction
+    Root Failure Cause: Foreign Material-Formation Solids/Sand
+    Failure Solution: Install Sand Control/Screen/etc
+    Failure: Yes
+    ROD PUMP FAILURE- FOUND PLUNGER SAND CUT, BARREL SCOURED,TV &amp; SV CAGES WORN--BOTH BALLS &amp; SEATS LEAKED. RAN TBG SAND SCREENS. ALSO C/O TO PB AND DID 11,000 GALS 15% HCL ACID JOB IN 4 STAGES,SCALE SQUEEZED. ENGINEERS DECIDED TO REPLACE TBG WITH 2 3/8" ALSO RAN NEW N-90 RODS</comment>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZO">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Directional Survey</activityCode>
+		<type>Directional Survey</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+			<directionalSurveyExtension>
+				<trajectoryRefID>BUC0EDS1</trajectoryRefID>
+			</directionalSurveyExtension>
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZL">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<type>Well Perforation</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+	</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZL">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<activityCode>Gravel Pack</activityCode>
+		<type>Gravel Pack</type>
+		<isPlan>false</isPlan>
+		<eventExtension>
+			<!--
+		<GravelPackExtension>
+			<TODO> fill in the attributes after SME review. we might refer to stim job???</TODO>
+			 the problem here is that gravel pack is not a single component but an assembly of components and we shouldn't reference all the set of components that form gravel pack here 
+			</GravelPackExtension>	
+-->
+		</eventExtension>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+	<wellCMLedger uid="BUC00SZL">
+		<nameWellbore>Primary Wellbore</nameWellbore>
+		<parentEventID>BUC003LS</parentEventID>
+		<dTimStart>2010-10-22T00:00:00Z</dTimStart>
+		<dTimEnd>2010-10-22T00:00:00Z</dTimEnd>
+		<duration uom="min">15</duration>
+		<rigID>336</rigID>
+		<type>Job Plan</type>
+		<isPlan>false</isPlan>
+		<businessAssociate>Key Energy Services</businessAssociate>
+		<cost>
+			<numAFE>BCT492200</numAFE>
+			<costGroup>unknown</costGroup>
+			<costClass>unknown</costClass>
+			<costCode>unknown</costCode>
+			<costItemDescription>Rig Cost</costItemDescription>
+			<costPerItem currency="USD">1000</costPerItem>
+			<qtyItem>1</qtyItem>
+			<!-- .25 -->
+			<costAmount currency="USD">250</costAmount>
+		</cost>
+	</wellCMLedger>
+</wellCMLedgers>

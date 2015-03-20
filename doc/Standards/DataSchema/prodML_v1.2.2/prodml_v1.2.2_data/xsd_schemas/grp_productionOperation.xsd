@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2012 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_businessAssociate.xsd"/>
+	<xsd:include schemaLocation="cs_productionOperationInstallationReport.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_productionOperation">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a WITSML Production Operation object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="installation" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The name of the facility which is represented by this report. 
+					The name can be qualified by a naming system. 
+					This also defines the kind of facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="contextFacility" type="prodml:facilityIdentifierStruct" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The name and type of a facility whose context is relevant to the represented installation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="kind" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="periodKind" type="prodml:ReportingPeriod" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The type of period that is being reported.
+					This value must be consistent with the reporting start and end values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The reporting period.
+					If one value from a pair are given the both values must be given.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="dTimStart" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The beginning date and time that the report represents.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dTimEnd" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The ending date and time that the report represents.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="dateStart" type="prodml:date" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The beginning date that the report represents.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dateEnd" type="prodml:date" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The ending date that the report represents.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:choice>
+			<xsd:element name="operator" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The operator of the facilities in the report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="title" type="prodml:nameStruct" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The tile of the report if different from the name of the report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="geographicContext" type="prodml:cs_geographicContext" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The geographic context of the report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="issueDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date that the report was issued.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="issuedBy" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The person or company that issued the report. This may
+					contain the role of the person or company within the context of the report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="approvalDate" type="prodml:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date that the report was approved.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="approver" type="prodml:cs_businessAssociate" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The person or company that approved the report. This may
+					contain the role of the person or company within the context of the report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="installationReport" type="prodml:cs_productionOperationInstallationReport" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A report for each installation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

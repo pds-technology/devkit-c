@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:dtsMeasurements xmlns:prodml="http://www.prodml.org/schemas/1series" xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../xsd_schemas/obj_dtsMeasurement.xsd">
+	<prodml:facilityIdentifier>
+		<prodml:name>Sample Well</prodml:name>
+		<prodml:installation>INS2</prodml:installation>
+		<prodml:kind>Well</prodml:kind>
+		<prodml:contextFacility>Sample Facility</prodml:contextFacility>
+		<prodml:geographicContext>
+			<prodml:country>USA</prodml:country>
+			<prodml:state>TX</prodml:state>
+			<prodml:field>Eagle Ford</prodml:field>
+		</prodml:geographicContext>
+		<prodml:businessUnit>
+			<prodml:kind>Asset</prodml:kind>
+		</prodml:businessUnit>
+		<prodml:operator>
+			<prodml:name>ACME</prodml:name>
+		</prodml:operator>
+	</prodml:facilityIdentifier>
+	<prodml:dtsMeasurement uid="DTS2">
+		<prodml:name>Interpretation Log 1</prodml:name>
+		<prodml:badSetFlag>0</prodml:badSetFlag>
+		<prodml:emptySetFlag>0</prodml:emptySetFlag>
+		<prodml:timeStart>2013-12-21T08:00:00Z</prodml:timeStart>
+		<prodml:timeEnd>2013-12-21T08:00:30Z</prodml:timeEnd>
+		<prodml:timeSinceInstrumentStartup uom="min">90</prodml:timeSinceInstrumentStartup>
+		<prodml:measurementTags/>
+		<prodml:installedSystemRef>IS1</prodml:installedSystemRef>
+		<prodml:measurementConfiguration>single-ended</prodml:measurementConfiguration>
+		<prodml:interpretationLog measurementID="DTS1" interpretationLogID="IL1">
+			<prodml:preferredInterpretationID>ID2</prodml:preferredInterpretationID>
+			<prodml:interpretationData interpretationID="ID1">
+				<prodml:facilityMappingRef>FM1</prodml:facilityMappingRef>
+				<prodml:samplingInterval uom="m">1</prodml:samplingInterval>
+				<prodml:badFlag>false</prodml:badFlag>
+				<prodml:creationStartTime>2013-12-21T08:00:00Z</prodml:creationStartTime>
+				<prodml:interpretationProcessingType>manufacturer-generated</prodml:interpretationProcessingType>
+				<prodml:indexMnemonic>facilityDistance</prodml:indexMnemonic>
+				<prodml:pointCount>1500</prodml:pointCount>
+				<prodml:logDataInterpretation>
+					<prodml:mnemonicList>facilityDistance,adjustedTemperature</prodml:mnemonicList>
+					<prodml:unitList>m,degC</prodml:unitList>
+					<prodml:data>1,28</prodml:data>
+					<prodml:data>2,28</prodml:data>
+					<prodml:data>3,29</prodml:data>
+					
+					<!-- Multiple entries of 'data' go here -->
+					
+					<prodml:data>1500,58</prodml:data>
+				</prodml:logDataInterpretation>
+			</prodml:interpretationData>
+		</prodml:interpretationLog>
+	</prodml:dtsMeasurement>
+</prodml:dtsMeasurements>

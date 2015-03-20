@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="cs_logDataInterpretation.xsd"/>
+	<xsd:complexType name="cs_dtsInterpretationData">
+		<xsd:annotation>
+			<xsd:documentation>Header data for a particular collection of interpretation data</xsd:documentation>
+		</xsd:annotation>
+		    <xsd:sequence minOccurs="1" maxOccurs="1">
+			      <xsd:element name="facilityMappingRef" type="prodml:refNameString" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>A reference to the facilityMapping to which this InterpretationData relates. The facility mapping relates a length of fiber to a corresponding length of a facility (probably a wellbore or pipeline). The facilityMapping also contains the datum from which the InterpretedData is indexed.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="samplingInterval" type="prodml:lengthMeasure" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The “sampling interval” is the difference in fiber distance between consecutive temperature sample points in a single temperature trace.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="badFlag" type="prodml:logicalBoolean" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>Indicates whether the interpretation log contains bad data or not.  This allows you to keep bad data around (so at least you know that something was generated/acquired) and filter it out when doing relevant data-wise operations.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="creationStartTime" type="prodml:timestamp" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>Time when the interpretation log data was generated.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="interpretationProcessingType" type="prodml:InterpretationProcessingType" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>Indicates what type of post-processing technique was used to generate this interpretation log.  Enum list. The meaning is that this process was applied to the InterpretedData referenced by the parentInterpretationID.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="indexMnemonic" type="prodml:str32" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>This is the mnemonic of the channel in the InterpretedData which represents the index to the data (expected to be a length along the facility (e.g., wellbore, pipeline) being measured.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="pointCount" type="prodml:nonNegativeCount" minOccurs="1" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>The number of rows in this interpreted data object. Each row or "point" represents a measurement along the fiber.</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				        <xsd:annotation>
+					          <xsd:documentation>A descriptive remark about the interpretation log</xsd:documentation>
+				        </xsd:annotation>
+			      </xsd:element>
+			      <xsd:element name="logDataInterpretation" type="prodml:cs_logDataInterpretation" minOccurs="1" maxOccurs="1"/>
+		    </xsd:sequence>
+		    <xsd:attribute name="parentInterpretationID" use="optional" type="prodml:refString">
+			      <xsd:annotation>
+				        <xsd:documentation>Optional element indicating that the referenced InterpretedData object is the parent from which this InterpretedData is derived. Example, this instance may be derived from a parent by the data having been temperature-shifted to match an external data source. The element InterpretationProcessingType is provided to record which type of operation was peformed on the parent data to obtain this instance of data.</xsd:documentation>
+			      </xsd:annotation>
+		    </xsd:attribute>
+		    <xsd:attribute name="interpretationID" use="required" type="prodml:uidString">
+			      <xsd:annotation>
+				        <xsd:documentation>Reference to the  interpretation for this set of data.</xsd:documentation>
+			      </xsd:annotation>
+		    </xsd:attribute>
+	  </xsd:complexType>
+</xsd:schema>

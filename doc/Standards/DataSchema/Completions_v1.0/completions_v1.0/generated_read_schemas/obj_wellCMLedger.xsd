@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:import namespace="http://www.energistics.org/schemas/abstract" schemaLocation="../../abstract_v1.0/xsd_schemas/sub_abstractSubstitutionGroup.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <xsd:include schemaLocation="cs_documentInfo.xsd" />
+   <xsd:include schemaLocation="cs_dayCost.xsd" />
+   <xsd:include schemaLocation="cs_eventType.xsd" />
+   <xsd:include schemaLocation="cs_participant.xsd" />
+   <xsd:include schemaLocation="cs_eventExtension.xsd" />
+   <xsd:include schemaLocation="cs_downholeComponentRef.xsd" />
+   <xsd:include schemaLocation="cs_commonData.xsd" />
+   <xsd:include schemaLocation="cs_customData.xsd" />
+   <xsd:include schemaLocation="attgrp_objectUid.xsd" />
+   <xsd:annotation>
+      <xsd:documentation>WITSML - Construction and Maintenance Event Ledger schema</xsd:documentation>
+   </xsd:annotation>
+   <xsd:element name="wellCMLedgers" type="witsml:obj_wellCMLedgers" substitutionGroup="abs:abstractDataObject">
+      <xsd:annotation>
+         <xsd:documentation>The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an "s" to the
+         singular name.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:complexType name="obj_wellCMLedgers">
+      <xsd:complexContent>
+         <xsd:extension base="abs:abstractObject">
+            <xsd:sequence minOccurs="0">
+               <xsd:element name="documentInfo" type="witsml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about the event ledger instance.</xsd:documentation>
+                     <xsd:appinfo>Modified-in-version=1.0, By-issue=Completions-Team, Change=Added</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+               <xsd:element name="wellCMLedger" type="witsml:obj_wellCMLedger" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                     <xsd:documentation>The non-contextual elements for general event ledger information.</xsd:documentation>
+                     <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="version" type="witsml:schemaVersionString" use="required">
+               <xsd:annotation>
+                  <xsd:documentation>Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are
+                  assumed by the document instance.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <!--                                                         -->
+   <xsd:complexType name="obj_wellCMLedger">
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="nameWell" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Well name.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nameWellbore" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Wellbore name.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="name" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Ledger name.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="parentEventID" type="witsml:refString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Parent event reference id.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimStart" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Date and time that activities started.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dTimEnd" type="witsml:timestamp" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Date and time that activities were completed.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="duration" type="witsml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The activity duration (commonly in hours).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth at Top of Interval.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth at bottom of the section.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="eventOrder" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Order number of event.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="rigID" type="witsml:refString" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Rig reference id.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="activityCode" type="witsml:ActivityCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Activity code</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="type" type="witsml:eventType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Comment on type of this event, either referring to a job type or an activity type e.g. a safety meeting.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="isPlan" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True if planned.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="workOrderID" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Extension event for work order id.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="downholeComponentRef" type="witsml:downholeComponentRef" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using
+               downholeComponentExtension.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="eventExtension" type="witsml:cs_eventExtension" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Event extensions</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="businessAssociate" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Service company or business</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="responsiblePerson" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Name or information about person responsible who is implementing the service or job.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="contact" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Contact name or person to get in touch with. Might not necessarily be the person responsible.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="cost" type="witsml:cs_dayCost" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The job or event cost detail.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="nonproductive" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True if event is not productive.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="trouble" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True if event implies is in-trouble</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="preventiveMaintenance" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True of event is for preventive maintenance</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="unplanned" type="witsml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True if there is no planning infomation for this activity.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="phase" type="witsml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Phase (large activity classification) e.g. Drill Surface Hole.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="participant" type="witsml:cs_participant" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Participant points to the involved witsmlobjects</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Comment on this ledger</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container element that contains elements that are common to all data objects.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container element that can contain custom or user defined data elements.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="description" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Description of this ledger</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="uidWell" type="witsml:uidParentString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="uidWellbore" type="witsml:uidParentString" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attributeGroup ref="witsml:attgrp_objectUid">
+         <xsd:annotation>
+            <xsd:documentation>Unique identifier for the ledger.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saudi Aramco CR-0012 gas oil & gas liquid ratio example  -->
+<productVolumes
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productVolume.xsd"
+	version="1.2.0.0(PRODML)">
+	<productVolume>
+		<name>Multi-phase flow meter #1 production</name>
+		<dTimStart>2012-01-01T00:00:00Z</dTimStart>
+		<facility>
+			<name kind="flow meter" siteKind="multi-phase flow meter" uidRef="MPFM01">Multi-phase flow meter #1</name>
+			<flow>
+				<kind>production</kind>
+				<qualifier>measured</qualifier>
+				<product>
+					<kind>oil and gas</kind>
+					<period>
+						<gor uom="%">75</gor>
+						<gasLiquidRatio uom="%">70</gasLiquidRatio>
+						<volumeValue>
+							<volume uom="bbl">100.0</volume>
+						</volumeValue>
+					</period>
+				</product>
+			</flow>
+		</facility>
+	</productVolume>
+</productVolumes>

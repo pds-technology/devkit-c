@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <xsd:simpleType name="abstractNonNegativeCount">
+      <xsd:annotation>
+         <xsd:documentation>A non-negative integer (zero based count or index) with a maximum vaulue of 32767 (2-bytes).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractShort">
+         <xsd:minInclusive value="0">
+            <xsd:annotation>
+               <xsd:documentation>This value cannot be negative.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:minInclusive>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!--                                                         -->
+</xsd:schema>

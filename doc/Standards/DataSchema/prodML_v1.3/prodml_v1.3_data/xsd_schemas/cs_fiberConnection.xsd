@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="typ_catalog.xsd"/>
+	<xsd:include schemaLocation="cs_fiberCommon.xsd"/>
+	<xsd:complexType name="cs_fiberConnection">
+		<xsd:annotation>
+			<xsd:documentation>A connection component within the optical path.</xsd:documentation>
+		</xsd:annotation>
+		    <xsd:complexContent>
+			      <xsd:extension base="prodml:cs_fiberCommon">
+				        <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+					          <xsd:element name="connectorType" type="prodml:FiberConnectorTypes" minOccurs="1" maxOccurs="1">
+						            <xsd:annotation>
+							              <xsd:documentation>Specifies whether this is a dry mate or wet mate</xsd:documentation>
+						            </xsd:annotation>
+					          </xsd:element>
+					          <xsd:element name="endType" type="prodml:FiberEndType" minOccurs="0" maxOccurs="1">
+						            <xsd:annotation>
+							              <xsd:documentation>Describes whether the fiber end is angle polished or flat polished</xsd:documentation>
+						            </xsd:annotation>
+					          </xsd:element>
+				        </xsd:sequence>
+				        <xsd:attribute name="connectionID" use="optional" type="prodml:uidString">
+					          <xsd:annotation>
+						            <xsd:documentation>The uid of this object.</xsd:documentation>
+					          </xsd:annotation>
+				        </xsd:attribute>
+			      </xsd:extension>
+		    </xsd:complexContent>
+	  </xsd:complexType>
+</xsd:schema>

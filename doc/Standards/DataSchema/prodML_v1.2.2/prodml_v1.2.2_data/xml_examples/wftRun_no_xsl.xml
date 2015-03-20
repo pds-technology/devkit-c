@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file was generated and does NOT contain semantically meaningful content. -->
+<!-- It contains all elements and attributes in the schema and validates against that schema. -->
+<wftRuns 
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../xsd_schemas/obj_wftRun.xsd" 
+	version="1.2.0.0(PRODML)">
+   <documentInfo>
+      <documentName namingSystem="ABCD">ABCD</documentName>
+      <documentAlias namingSystem="ABCD">ABCD</documentAlias>
+      <documentDate>2008-12-12T00:00:00Z</documentDate>
+      <documentClass namingSystem="ABCD">ABCD</documentClass>
+      <fileCreationInformation>
+         <fileCreationDate>2008-12-12T00:00:00Z</fileCreationDate>
+         <softwareName>ABCD</softwareName>
+         <fileCreator>ABCD</fileCreator>
+         <comment>ABCD</comment>
+      </fileCreationInformation>
+      <securityInformation uid="x21345abc">
+         <class>abcd</class>
+         <securitySystem>abcd</securitySystem>
+         <endDate>2008-12-12T00:00:00Z</endDate>
+         <comment>ABCD</comment>
+         <extensionNameValue uid="x21345abc">
+            <name>abcd</name>
+            <value uom="uom">ABCD</value>
+            <dataType>string</dataType>
+            <dTim>2008-12-12T00:00:00Z</dTim>
+            <md uom="m" datum="ABCD">123.456</md>
+            <index>1234</index>
+            <measureClass>abcd</measureClass>
+            <description>ABCD</description>
+         </extensionNameValue>
+      </securityInformation>
+      <disclaimer>ABCD</disclaimer>
+      <auditTrail>
+         <event uid="x21345abc">
+            <eventDate>2008-12-12T00:00:00Z</eventDate>
+            <eventType>ABCD</eventType>
+            <responsibleParty>ABCD</responsibleParty>
+            <comment>ABCD</comment>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </event>
+      </auditTrail>
+      <owner>ABCD</owner>
+      <queryParam>
+         <dTimMin endpoint="abcd">2008-12-12T00:00:00Z</dTimMin>
+         <dTimMax endpoint="abcd">2008-12-12T00:00:00Z</dTimMax>
+      </queryParam>
+      <comment>ABCD</comment>
+   </documentInfo>
+   <wftRun uidWell="x21345abc" uidWellbore="x21345abc" uid="x21345abc">
+      <nameWell>ABCD</nameWell>
+      <nameWellbore>ABCD</nameWellbore>
+      <name>ABCD</name>
+      <objectGrowing>true</objectGrowing>
+      <tieInLogRef object="ABCD" uidRef="ABCD">ABCD</tieInLogRef>
+      <serviceCompany>ABCD</serviceCompany>
+      <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+      <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+      <minIndex uom="m" datum="ABCD">123.456</minIndex>
+      <maxIndex uom="m" datum="ABCD">123.456</maxIndex>
+      <description>ABCD</description>
+      <station uid="x21345abc">
+         <stationKind>conventional</stationKind>
+         <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+         <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+         <flowingIntervalKind>probe</flowingIntervalKind>
+         <mdTop uom="m" datum="ABCD">123.456</mdTop>
+         <mdBottom uom="m" datum="ABCD">123.456</mdBottom>
+         <diaProbe uom="m">123.456</diaProbe>
+         <description>ABCD</description>
+         <logRef object="ABCD" uidRef="ABCD">ABCD</logRef>
+         <event uid="x21345abc">
+            <kind>toolSet</kind>
+            <dTim>2008-12-12T00:00:00Z</dTim>
+            <duration uom="s">123.456</duration>
+            <comment>ABCD</comment>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </event>
+         <test uid="x21345abc">
+            <testKind>drawdown</testKind>
+            <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+            <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+            <result uid="x21345abc">
+               <kind>buildup result</kind>
+               <method>abcd</method>
+               <mdTop uom="m" datum="ABCD">123.456</mdTop>
+               <mdBottom uom="m" datum="ABCD">123.456</mdBottom>
+               <testData uid="x21345abc">
+                  <role>pressure stream</role>
+                  <curveSection uid="x21345abc">
+                     <logRef object="ABCD" uidRef="ABCD">ABCD</logRef>
+                     <mnemonic>ABCD</mnemonic>
+                     <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+                     <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+                     <extensionNameValue uid="x21345abc">
+                        <name>abcd</name>
+                        <value uom="uom">ABCD</value>
+                        <dataType>string</dataType>
+                        <dTim>2008-12-12T00:00:00Z</dTim>
+                        <md uom="m" datum="ABCD">123.456</md>
+                        <index>1234</index>
+                        <measureClass>abcd</measureClass>
+                        <description>ABCD</description>
+                     </extensionNameValue>
+                  </curveSection>
+                  <parameter uid="x21345abc">
+                     <name>ABCD</name>
+                     <value uom="uom">123.456</value>
+                     <measureClass>abcd</measureClass>
+                     <extensionNameValue uid="x21345abc">
+                        <name>abcd</name>
+                        <value uom="uom">ABCD</value>
+                        <dataType>string</dataType>
+                        <dTim>2008-12-12T00:00:00Z</dTim>
+                        <md uom="m" datum="ABCD">123.456</md>
+                        <index>1234</index>
+                        <measureClass>abcd</measureClass>
+                        <description>ABCD</description>
+                     </extensionNameValue>
+                  </parameter>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </testData>
+               <inputParameter uid="x21345abc">
+                  <name>ABCD</name>
+                  <value uom="uom">123.456</value>
+                  <measureClass>abcd</measureClass>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </inputParameter>
+               <outputParameter uid="x21345abc">
+                  <name>ABCD</name>
+                  <value uom="uom">123.456</value>
+                  <measureClass>abcd</measureClass>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </outputParameter>
+               <inputResultRef uid="x21345abc">
+                  <stationRef uidRef="ABCD">ABCD</stationRef>
+                  <testRef uidRef="ABCD">ABCD</testRef>
+                  <sampleAcquisitionRef uidRef="ABCD">ABCD</sampleAcquisitionRef>
+                  <resultRef uidRef="ABCD">ABCD</resultRef>
+                  <outputParameterRef uidRef="ABCD">ABCD</outputParameterRef>
+               </inputResultRef>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </result>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </test>
+         <sampleAcquisition uid="x21345abc">
+            <sampleRef uidRef="ABCD">ABCD</sampleRef>
+            <sampleCylinderId>ABCD</sampleCylinderId>
+            <name>ABCD</name>
+            <kind>abcd</kind>
+            <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+            <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+            <fieldComment>ABCD</fieldComment>
+            <interpretationComment>ABCD</interpretationComment>
+            <sampleId>ABCD</sampleId>
+            <sampleCarrierSlotId>ABCD</sampleCarrierSlotId>
+            <toolSectionId>ABCD</toolSectionId>
+            <bottleId>ABCD</bottleId>
+            <bottleConfiguration>ABCD</bottleConfiguration>
+            <cushionPressure uom="uom">123.456</cushionPressure>
+            <grossFluidKind>ABCD</grossFluidKind>
+            <result uid="x21345abc">
+               <kind>buildup result</kind>
+               <method>abcd</method>
+               <mdTop uom="m" datum="ABCD">123.456</mdTop>
+               <mdBottom uom="m" datum="ABCD">123.456</mdBottom>
+               <testData uid="x21345abc">
+                  <role>pressure stream</role>
+                  <curveSection uid="x21345abc">
+                     <logRef object="ABCD" uidRef="ABCD">ABCD</logRef>
+                     <mnemonic>ABCD</mnemonic>
+                     <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+                     <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+                     <extensionNameValue uid="x21345abc">
+                        <name>abcd</name>
+                        <value uom="uom">ABCD</value>
+                        <dataType>string</dataType>
+                        <dTim>2008-12-12T00:00:00Z</dTim>
+                        <md uom="m" datum="ABCD">123.456</md>
+                        <index>1234</index>
+                        <measureClass>abcd</measureClass>
+                        <description>ABCD</description>
+                     </extensionNameValue>
+                  </curveSection>
+                  <parameter uid="x21345abc">
+                     <name>ABCD</name>
+                     <value uom="uom">123.456</value>
+                     <measureClass>abcd</measureClass>
+                     <extensionNameValue uid="x21345abc">
+                        <name>abcd</name>
+                        <value uom="uom">ABCD</value>
+                        <dataType>string</dataType>
+                        <dTim>2008-12-12T00:00:00Z</dTim>
+                        <md uom="m" datum="ABCD">123.456</md>
+                        <index>1234</index>
+                        <measureClass>abcd</measureClass>
+                        <description>ABCD</description>
+                     </extensionNameValue>
+                  </parameter>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </testData>
+               <inputParameter uid="x21345abc">
+                  <name>ABCD</name>
+                  <value uom="uom">123.456</value>
+                  <measureClass>abcd</measureClass>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </inputParameter>
+               <outputParameter uid="x21345abc">
+                  <name>ABCD</name>
+                  <value uom="uom">123.456</value>
+                  <measureClass>abcd</measureClass>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </outputParameter>
+               <inputResultRef uid="x21345abc">
+                  <stationRef uidRef="ABCD">ABCD</stationRef>
+                  <testRef uidRef="ABCD">ABCD</testRef>
+                  <sampleAcquisitionRef uidRef="ABCD">ABCD</sampleAcquisitionRef>
+                  <resultRef uidRef="ABCD">ABCD</resultRef>
+                  <outputParameterRef uidRef="ABCD">ABCD</outputParameterRef>
+               </inputResultRef>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </result>
+            <testRef uidRef="ABCD">ABCD</testRef>
+            <testData uid="x21345abc">
+               <role>pressure stream</role>
+               <curveSection uid="x21345abc">
+                  <logRef object="ABCD" uidRef="ABCD">ABCD</logRef>
+                  <mnemonic>ABCD</mnemonic>
+                  <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+                  <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </curveSection>
+               <parameter uid="x21345abc">
+                  <name>ABCD</name>
+                  <value uom="uom">123.456</value>
+                  <measureClass>abcd</measureClass>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </parameter>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </testData>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </sampleAcquisition>
+         <result uid="x21345abc">
+            <kind>buildup result</kind>
+            <method>abcd</method>
+            <mdTop uom="m" datum="ABCD">123.456</mdTop>
+            <mdBottom uom="m" datum="ABCD">123.456</mdBottom>
+            <testData uid="x21345abc">
+               <role>pressure stream</role>
+               <curveSection uid="x21345abc">
+                  <logRef object="ABCD" uidRef="ABCD">ABCD</logRef>
+                  <mnemonic>ABCD</mnemonic>
+                  <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+                  <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </curveSection>
+               <parameter uid="x21345abc">
+                  <name>ABCD</name>
+                  <value uom="uom">123.456</value>
+                  <measureClass>abcd</measureClass>
+                  <extensionNameValue uid="x21345abc">
+                     <name>abcd</name>
+                     <value uom="uom">ABCD</value>
+                     <dataType>string</dataType>
+                     <dTim>2008-12-12T00:00:00Z</dTim>
+                     <md uom="m" datum="ABCD">123.456</md>
+                     <index>1234</index>
+                     <measureClass>abcd</measureClass>
+                     <description>ABCD</description>
+                  </extensionNameValue>
+               </parameter>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </testData>
+            <inputParameter uid="x21345abc">
+               <name>ABCD</name>
+               <value uom="uom">123.456</value>
+               <measureClass>abcd</measureClass>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </inputParameter>
+            <outputParameter uid="x21345abc">
+               <name>ABCD</name>
+               <value uom="uom">123.456</value>
+               <measureClass>abcd</measureClass>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </outputParameter>
+            <inputResultRef uid="x21345abc">
+               <stationRef uidRef="ABCD">ABCD</stationRef>
+               <testRef uidRef="ABCD">ABCD</testRef>
+               <sampleAcquisitionRef uidRef="ABCD">ABCD</sampleAcquisitionRef>
+               <resultRef uidRef="ABCD">ABCD</resultRef>
+               <outputParameterRef uidRef="ABCD">ABCD</outputParameterRef>
+            </inputResultRef>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </result>
+         <stationRef uidRef="ABCD">ABCD</stationRef>
+         <extensionNameValue uid="x21345abc">
+            <name>abcd</name>
+            <value uom="uom">ABCD</value>
+            <dataType>string</dataType>
+            <dTim>2008-12-12T00:00:00Z</dTim>
+            <md uom="m" datum="ABCD">123.456</md>
+            <index>1234</index>
+            <measureClass>abcd</measureClass>
+            <description>ABCD</description>
+         </extensionNameValue>
+      </station>
+      <result uid="x21345abc">
+         <kind>buildup result</kind>
+         <method>abcd</method>
+         <mdTop uom="m" datum="ABCD">123.456</mdTop>
+         <mdBottom uom="m" datum="ABCD">123.456</mdBottom>
+         <testData uid="x21345abc">
+            <role>pressure stream</role>
+            <curveSection uid="x21345abc">
+               <logRef object="ABCD" uidRef="ABCD">ABCD</logRef>
+               <mnemonic>ABCD</mnemonic>
+               <dTimStart>2008-12-12T00:00:00Z</dTimStart>
+               <dTimEnd>2008-12-12T00:00:00Z</dTimEnd>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </curveSection>
+            <parameter uid="x21345abc">
+               <name>ABCD</name>
+               <value uom="uom">123.456</value>
+               <measureClass>abcd</measureClass>
+               <extensionNameValue uid="x21345abc">
+                  <name>abcd</name>
+                  <value uom="uom">ABCD</value>
+                  <dataType>string</dataType>
+                  <dTim>2008-12-12T00:00:00Z</dTim>
+                  <md uom="m" datum="ABCD">123.456</md>
+                  <index>1234</index>
+                  <measureClass>abcd</measureClass>
+                  <description>ABCD</description>
+               </extensionNameValue>
+            </parameter>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </testData>
+         <inputParameter uid="x21345abc">
+            <name>ABCD</name>
+            <value uom="uom">123.456</value>
+            <measureClass>abcd</measureClass>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </inputParameter>
+         <outputParameter uid="x21345abc">
+            <name>ABCD</name>
+            <value uom="uom">123.456</value>
+            <measureClass>abcd</measureClass>
+            <extensionNameValue uid="x21345abc">
+               <name>abcd</name>
+               <value uom="uom">ABCD</value>
+               <dataType>string</dataType>
+               <dTim>2008-12-12T00:00:00Z</dTim>
+               <md uom="m" datum="ABCD">123.456</md>
+               <index>1234</index>
+               <measureClass>abcd</measureClass>
+               <description>ABCD</description>
+            </extensionNameValue>
+         </outputParameter>
+         <inputResultRef uid="x21345abc">
+            <stationRef uidRef="ABCD">ABCD</stationRef>
+            <testRef uidRef="ABCD">ABCD</testRef>
+            <sampleAcquisitionRef uidRef="ABCD">ABCD</sampleAcquisitionRef>
+            <resultRef uidRef="ABCD">ABCD</resultRef>
+            <outputParameterRef uidRef="ABCD">ABCD</outputParameterRef>
+         </inputResultRef>
+         <extensionNameValue uid="x21345abc">
+            <name>abcd</name>
+            <value uom="uom">ABCD</value>
+            <dataType>string</dataType>
+            <dTim>2008-12-12T00:00:00Z</dTim>
+            <md uom="m" datum="ABCD">123.456</md>
+            <index>1234</index>
+            <measureClass>abcd</measureClass>
+            <description>ABCD</description>
+         </extensionNameValue>
+      </result>
+      <extensionNameValue uid="x21345abc">
+         <name>abcd</name>
+         <value uom="uom">ABCD</value>
+         <dataType>string</dataType>
+         <dTim>2008-12-12T00:00:00Z</dTim>
+         <md uom="m" datum="ABCD">123.456</md>
+         <index>1234</index>
+         <measureClass>abcd</measureClass>
+         <description>ABCD</description>
+      </extensionNameValue>
+      <commonData>
+         <sourceName>ABCD</sourceName>
+         <dTimCreation>2008-12-12T00:00:00Z</dTimCreation>
+         <dTimLastChange>2008-12-12T00:00:00Z</dTimLastChange>
+         <itemState>actual</itemState>
+         <serviceCategory>abcd</serviceCategory>
+         <comments>ABCD</comments>
+         <acquisitionTimeZone dTim="2008-12-12T00:00:00Z">Z</acquisitionTimeZone>
+         <extensionAny />
+         <extensionNameValue uid="x21345abc">
+            <name>abcd</name>
+            <value uom="uom">ABCD</value>
+            <dataType>string</dataType>
+            <dTim>2008-12-12T00:00:00Z</dTim>
+            <md uom="m" datum="ABCD">123.456</md>
+            <index>1234</index>
+            <measureClass>abcd</measureClass>
+            <description>ABCD</description>
+         </extensionNameValue>
+      </commonData>
+      <customData />
+   </wftRun>
+</wftRuns>

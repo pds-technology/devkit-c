@@ -1,0 +1,2343 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="./WitsmlEnumList.xsl" type="text/xsl" media="screen"?>
+
+<!--
+This file is distributed under the POSC License Agreement at
+http://www.posc.org/about/license.shtml.
+Use of this file constitutes agreement with the POSC License Agreement.
+-->
+
+<enumListSet 
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series 
+			   ./cs_enumValues.xsd" 
+	version="1.2.1.0(PRODML)">
+   <!--NOT-USED: Deleted type ActivityCode.-->
+	<enumList>
+		<name>ExtensionName</name>
+		<description>The names of agreed extensions to WITSML.
+		This list may be locally extended but it is recommended that new names be
+		approved by the WITSML SIG before use.
+		Each standard name must define its data type.
+		For string types, the maximum length must be defined in number of characters.
+		For measures, the expected measure class must be defined.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>dummy-example-string</name>
+			<description>This is an example for the purpose of demonstrating the capabilities.
+			This name should not be used and can be removed from a production file.
+			It describes a string of maximum length of 64 characters which can be used in 
+			the commonData of any object. 
+			The semantics of the name would be defined in this description field.</description>
+			<extensionDataType>string</extensionDataType>
+			<extensionMaximumSize>64</extensionMaximumSize>
+			<extensionPath>.//commonData/extensionNameValue</extensionPath>
+		</value>
+		<value>
+			<name>dummy-example-measure</name>
+			<description>This is an example for the purpose of demonstrating the capabilities.
+			This name should not be used and can be removed from a production file.
+			It describes a length measure which can only be specified in the commonData of the well and wellbore objects.
+			The semantics of the name would be defined in this description field.
+			The extensionMeasureClass constrains the allowed units of measure for each value.
+			The extensionDataType value of double constrains the size of each value.</description>
+			<extensionDataType>double</extensionDataType>
+			<extensionMeasureClass>length</extensionMeasureClass>
+			<extensionPath>/well/commonData/extensionNameValue</extensionPath>
+			<extensionPath>/wellbore/commonData/extensionNameValue</extensionPath>
+		</value>
+		<value>
+			<name>dummy-example-dateTime</name>
+			<description>This is an example for the purpose of demonstrating the capabilities.
+			This name should not be used and can be removed from a production file.
+			It describes a dateTime value which can be specified anywhere in the tubular object.
+			The semantics of the name would be defined in this description field.</description>
+			<extensionDataType>dateTime</extensionDataType>
+			<extensionPath>/tubular//extensionNameValue</extensionPath>
+		</value>
+	</enumList>
+   <!--NOT-USED: Deleted type LithologyType.-->
+	<enumList>
+		<name>MeasureClass</name>
+		<description>Defines classes of measures and their allowed units of measures.
+		For a value whose underlying meaning conforms to one of these classes, 
+		any specified unit of measure must conform to the defined list.
+		These are copied from the Energistics (POSC) Units Classes v2.2.
+		The units of measure map to the POSC Units of Measure Dictionary v2.2.</description>
+		<namingSystem>Energistics</namingSystem>
+		<value>
+			<name>absorbed dose</name>
+			<description>The amount of energy absorbed per mass.</description>
+			<measureRepresentativeUOM>Gy</measureRepresentativeUOM>
+			<measureBaseForConversion>Gy</measureBaseForConversion>
+			<measureUom>Gy</measureUom>
+			<measureUom>mGy</measureUom>
+			<measureUom>rd</measureUom>
+		</value>
+		<value>
+			<name>acceleration linear</name>
+			<measureRepresentativeUOM>m/s2</measureRepresentativeUOM>
+			<measureBaseForConversion>m/s2</measureBaseForConversion>
+			<measureUom>Gal</measureUom>
+			<measureUom>cm/s2</measureUom>
+			<measureUom>ft/s2</measureUom>
+			<measureUom>gn</measureUom>
+			<measureUom>m/s2</measureUom>
+			<measureUom>mGal</measureUom>
+			<measureUom>mgn</measureUom>
+		</value>
+		<value>
+			<name>activity (of radioactivity)</name>
+			<description>A measure of the radiation being emitted.</description>
+			<measureRepresentativeUOM>Bq</measureRepresentativeUOM>
+			<measureBaseForConversion>Bq</measureBaseForConversion>
+			<measureUom>Bq</measureUom>
+			<measureUom>Ci</measureUom>
+			<measureUom>GBq</measureUom>
+			<measureUom>MBq</measureUom>
+			<measureUom>TBq</measureUom>
+			<measureUom>mCi</measureUom>
+			<measureUom>nCi</measureUom>
+			<measureUom>pCi</measureUom>
+			<measureUom>uCi</measureUom>
+		</value>
+		<value>
+			<name>concentration of B</name>
+			<description>molar concentration of a substance</description>
+			<measureRepresentativeUOM>mol/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>mol/m3</measureBaseForConversion>
+			<measureUom>kmol/m3</measureUom>
+			<measureUom>lbmole/ft3</measureUom>
+			<measureUom>lbmole/galUK</measureUom>
+			<measureUom>lbmole/galUS</measureUom>
+			<measureUom>mol/m3</measureUom>
+		</value>
+		<value>
+			<name>amount of substance</name>
+			<description>molar amount of a substance</description>
+			<measureRepresentativeUOM>mol</measureRepresentativeUOM>
+			<measureBaseForConversion>mol</measureBaseForConversion>
+			<measureUom>kmol</measureUom>
+			<measureUom>mmol</measureUom>
+			<measureUom>mol</measureUom>
+			<measureUom>mol</measureUom>
+			<measureUom>kmol</measureUom>
+			<measureUom>lbmole</measureUom>
+			<measureUom>umol</measureUom>
+		</value>
+		<value>
+			<name>angle per length</name>
+			<measureRepresentativeUOM>rad/m</measureRepresentativeUOM>
+			<measureBaseForConversion>rad/m</measureBaseForConversion>
+			<measureUom>dega/100ft</measureUom>
+			<measureUom>dega/30ft</measureUom>
+			<measureUom>dega/30m</measureUom>
+			<measureUom>dega/ft</measureUom>
+			<measureUom>dega/m</measureUom>
+			<measureUom>rad/ft</measureUom>
+			<measureUom>rad/m</measureUom>
+		</value>
+		<value>
+			<name>angle per time</name>
+			<description>The angular velocity. The rate of change of an angle.</description>
+			<measureRepresentativeUOM>rad/s</measureRepresentativeUOM>
+			<measureBaseForConversion>rad/s</measureBaseForConversion>
+			<measureUom>c/s</measureUom>
+			<measureUom>dega/h</measureUom>
+			<measureUom>dega/min</measureUom>
+			<measureUom>dega/s</measureUom>
+			<measureUom>rad/s</measureUom>
+			<measureUom>rev/s</measureUom>
+			<measureUom>rpm</measureUom>
+		</value>
+		<value>
+			<name>angle per volume</name>
+			<measureRepresentativeUOM>rad/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>rad/m3</measureBaseForConversion>
+			<measureUom>rad/ft3</measureUom>
+			<measureUom>rad/m3</measureUom>
+		</value>
+		<value>
+			<name>angular acceleration</name>
+			<measureRepresentativeUOM>rad/s2</measureRepresentativeUOM>
+			<measureBaseForConversion>rad/s2</measureBaseForConversion>
+			<measureUom>rad/s2</measureUom>
+			<measureUom>rpm/s</measureUom>
+		</value>
+		<value>
+			<name>area</name>
+			<measureRepresentativeUOM>m2</measureRepresentativeUOM>
+			<measureBaseForConversion>m2</measureBaseForConversion>
+			<measureUom>acre</measureUom>
+			<measureUom>b</measureUom>
+			<measureUom>cm2</measureUom>
+			<measureUom>ft2</measureUom>
+			<measureUom>ha</measureUom>
+			<measureUom>in2</measureUom>
+			<measureUom>km2</measureUom>
+			<measureUom>m2</measureUom>
+			<measureUom>mi2</measureUom>
+			<measureUom>miUS2</measureUom>
+			<measureUom>mm2</measureUom>
+			<measureUom>um2</measureUom>
+			<measureUom>yd2</measureUom>
+		</value>
+		<value>
+			<name>area per area</name>
+			<measureRepresentativeUOM>m2/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>%</measureUom>
+			<measureUom>in2/ft2</measureUom>
+			<measureUom>in2/in2</measureUom>
+			<measureUom>m2/m2</measureUom>
+			<measureUom>mm2/mm2</measureUom>
+		</value>
+		<value>
+			<name>area per volume</name>
+			<measureRepresentativeUOM>m2/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>1/m</measureBaseForConversion>
+			<measureUom>b/cm3</measureUom>
+			<measureUom>cu</measureUom>
+			<measureUom>ft2/in3</measureUom>
+			<measureUom>m2/cm3</measureUom>
+			<measureUom>m2/m3</measureUom>
+		</value>
+		<value>
+			<name>attenuation</name>
+			<description>A logarithmic, fractional change of some measure, generally power or amplitude, over a standard range. This is generally used for frequency attenuation over an octave.</description>
+			<measureRepresentativeUOM>Euc</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>B/O</measureUom>
+			<measureUom>Euc</measureUom>
+			<measureUom>dB/O</measureUom>
+		</value>
+		<value>
+			<name>attenuation per length</name>
+			<measureRepresentativeUOM>B/m</measureRepresentativeUOM>
+			<measureBaseForConversion>B/m</measureBaseForConversion>
+			<measureUom>B/m</measureUom>
+			<measureUom>dB/ft</measureUom>
+			<measureUom>dB/m</measureUom>
+		</value>
+		<value>
+			<name>capacitance</name>
+			<measureRepresentativeUOM>F</measureRepresentativeUOM>
+			<measureBaseForConversion>F</measureBaseForConversion>
+			<measureUom>F</measureUom>
+			<measureUom>pF</measureUom>
+			<measureUom>uF</measureUom>
+		</value>
+		<value>
+			<name>charge density</name>
+			<measureRepresentativeUOM>C/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>C/m3</measureBaseForConversion>
+			<measureUom>C/cm3</measureUom>
+			<measureUom>C/m3</measureUom>
+			<measureUom>C/mm3</measureUom>
+		</value>
+		<value>
+			<name>chemical potential</name>
+			<measureRepresentativeUOM>J/mol</measureRepresentativeUOM>
+			<measureBaseForConversion>J/mol</measureBaseForConversion>
+			<measureUom>Btu/lbmole</measureUom>
+			<measureUom>J/mol</measureUom>
+			<measureUom>MJ/kmol</measureUom>
+			<measureUom>kJ/kmol</measureUom>
+			<measureUom>kcal/mol</measureUom>
+		</value>
+		<value>
+			<name>compressibility</name>
+			<measureRepresentativeUOM>1/Pa</measureRepresentativeUOM>
+			<measureBaseForConversion>1/Pa</measureBaseForConversion>
+			<measureUom>1/Pa</measureUom>
+			<measureUom>1/bar</measureUom>
+			<measureUom>1/kPa</measureUom>
+			<measureUom>1/pPa</measureUom>
+			<measureUom>1/psi</measureUom>
+			<measureUom>1/upsi</measureUom>
+		</value>
+		<value>
+			<name>conductivity</name>
+			<measureRepresentativeUOM>S/m</measureRepresentativeUOM>
+			<measureBaseForConversion>S/m</measureBaseForConversion>
+			<measureUom>S/m</measureUom>
+			<measureUom>mS/m</measureUom>
+			<measureUom>mho/m</measureUom>
+			<measureUom>mmho/m</measureUom>
+		</value>
+		<value>
+			<name>cross section absorption</name>
+			<measureRepresentativeUOM>m2/mol</measureRepresentativeUOM>
+			<measureBaseForConversion>m2/mol</measureBaseForConversion>
+			<measureUom>b/elec</measureUom>
+			<measureUom>m2/mol</measureUom>
+		</value>
+		<value>
+			<name>current density</name>
+			<measureRepresentativeUOM>A/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>A/m2</measureBaseForConversion>
+			<measureUom>A/cm2</measureUom>
+			<measureUom>A/ft2</measureUom>
+			<measureUom>A/m2</measureUom>
+			<measureUom>A/mm2</measureUom>
+			<measureUom>mA/cm2</measureUom>
+			<measureUom>mA/ft2</measureUom>
+			<measureUom>uA/cm2</measureUom>
+			<measureUom>uA/in2</measureUom>
+		</value>
+		<value>
+			<name>Darcy flow coefficient</name>
+			<measureRepresentativeUOM>Pa/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa/m3</measureBaseForConversion>
+			<measureUom>Pa/m3</measureUom>
+			<measureUom>psi2.d/cP.ft3</measureUom>
+		</value>
+		<value>
+			<name>data transmission speed</name>
+			<description>used primarily for computer transmission rates.</description>
+			<measureRepresentativeUOM>Bd</measureRepresentativeUOM>
+			<measureBaseForConversion>Bd</measureBaseForConversion>
+			<measureUom>Bd</measureUom>
+		</value>
+		<value>
+			<name>delta temperature</name>
+			<description>Delta temperature refers to temperature differences. For non-zero offset temperature scales, Fahrenheit and Celsius, the conversion formulas are different than for absolute temperatures.</description>
+			<measureRepresentativeUOM>K</measureRepresentativeUOM>
+			<measureBaseForConversion>K</measureBaseForConversion>
+			<measureUom>K</measureUom>
+			<measureUom>ddegC</measureUom>
+			<measureUom>ddegF</measureUom>
+			<measureUom>ddegK</measureUom>
+			<measureUom>ddegR</measureUom>
+		</value>
+		<value>
+			<name>density</name>
+			<measureRepresentativeUOM>kg/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>kg/m3</measureBaseForConversion>
+			<measureUom>10Mg/m3</measureUom>
+			<measureUom>Mg/m3</measureUom>
+			<measureUom>dAPI</measureUom>
+			<measureUom>g/L</measureUom>
+			<measureUom>g/cm3</measureUom>
+			<measureUom>g/dm3</measureUom>
+			<measureUom>g/galUK</measureUom>
+			<measureUom>g/galUS</measureUom>
+			<measureUom>g/m3</measureUom>
+			<measureUom>grain/100ft3</measureUom>
+			<measureUom>grain/ft3</measureUom>
+			<measureUom>grain/galUS</measureUom>
+			<measureUom>kg/L</measureUom>
+			<measureUom>kg/dm3</measureUom>
+			<measureUom>kg/m3</measureUom>
+			<measureUom>lbm/1000galUK</measureUom>
+			<measureUom>lbm/1000galUS</measureUom>
+			<measureUom>lbm/10bbl</measureUom>
+			<measureUom>lbm/Mbbl</measureUom>
+			<measureUom>lbm/bbl</measureUom>
+			<measureUom>lbm/ft3</measureUom>
+			<measureUom>lbm/galUK</measureUom>
+			<measureUom>lbm/galUS</measureUom>
+			<measureUom>lbm/in3</measureUom>
+			<measureUom>mg/L</measureUom>
+			<measureUom>mg/dm3</measureUom>
+			<measureUom>mg/galUS</measureUom>
+			<measureUom>mg/m3</measureUom>
+			<measureUom>ug/cm3</measureUom>
+		</value>
+		<value>
+			<name>diffusion coefficient</name>
+			<measureRepresentativeUOM>m2/s</measureRepresentativeUOM>
+			<measureBaseForConversion>m2/s</measureBaseForConversion>
+			<measureUom>m2/s</measureUom>
+		</value>
+		<value>
+			<name>digital storage</name>
+			<measureRepresentativeUOM>byte</measureRepresentativeUOM>
+			<measureBaseForConversion>byte</measureBaseForConversion>
+			<measureUom>Mbyte</measureUom>
+			<measureUom>bit</measureUom>
+			<measureUom>byte</measureUom>
+			<measureUom>kbyte</measureUom>
+		</value>
+		<value>
+			<name>dimensionless</name>
+			<description>A dimensionless quantity is the ratio of two dimensional quantities. The quantity types are not apparent from the basic dimensionless class, but may be apparent in variations - such as area per area, volume per volume, or mass per mass.</description>
+			<measureRepresentativeUOM>Euc</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>%</measureUom>
+			<measureUom>Euc</measureUom>
+			<measureUom>cEuc</measureUom>
+			<measureUom>mEuc</measureUom>
+			<measureUom>nEuc</measureUom>
+			<measureUom>uEuc</measureUom>
+		</value>
+		<value>
+			<name>dose equivalent</name>
+			<measureRepresentativeUOM>Sv</measureRepresentativeUOM>
+			<measureBaseForConversion>Sv</measureBaseForConversion>
+			<measureUom>Sv</measureUom>
+			<measureUom>mSv</measureUom>
+			<measureUom>mrem</measureUom>
+			<measureUom>rem</measureUom>
+		</value>
+		<value>
+			<name>dose equivalent rate</name>
+			<measureRepresentativeUOM>Sv/s</measureRepresentativeUOM>
+			<measureBaseForConversion>Sv/s</measureBaseForConversion>
+			<measureUom>Sv/h</measureUom>
+			<measureUom>Sv/s</measureUom>
+			<measureUom>mSv/h</measureUom>
+			<measureUom>mrem/h</measureUom>
+			<measureUom>rem/h</measureUom>
+		</value>
+		<value>
+			<name>dynamic viscosity</name>
+			<measureRepresentativeUOM>Pa.s</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa.s</measureBaseForConversion>
+			<measureUom>N.s/m2</measureUom>
+			<measureUom>P</measureUom>
+			<measureUom>Pa.s</measureUom>
+			<measureUom>cP</measureUom>
+			<measureUom>dyne.s/cm2</measureUom>
+			<measureUom>kgf.s/m2</measureUom>
+			<measureUom>lbf.s/ft2</measureUom>
+			<measureUom>lbf.s/in2</measureUom>
+			<measureUom>mPa.s</measureUom>
+			<measureUom>psi.s</measureUom>
+		</value>
+		<value>
+			<name>electric charge</name>
+			<measureRepresentativeUOM>C</measureRepresentativeUOM>
+			<measureBaseForConversion>C</measureBaseForConversion>
+			<measureUom>A.h</measureUom>
+			<measureUom>C</measureUom>
+			<measureUom>fC</measureUom>
+			<measureUom>kC</measureUom>
+			<measureUom>mC</measureUom>
+			<measureUom>nC</measureUom>
+			<measureUom>pC</measureUom>
+			<measureUom>uC</measureUom>
+		</value>
+		<value>
+			<name>electric conductance</name>
+			<measureRepresentativeUOM>S</measureRepresentativeUOM>
+			<measureBaseForConversion>S</measureBaseForConversion>
+			<measureUom>GS</measureUom>
+			<measureUom>S</measureUom>
+			<measureUom>kS</measureUom>
+			<measureUom>mS</measureUom>
+			<measureUom>mho</measureUom>
+			<measureUom>pS</measureUom>
+			<measureUom>uS</measureUom>
+		</value>
+		<value>
+			<name>electric current</name>
+			<measureRepresentativeUOM>A</measureRepresentativeUOM>
+			<measureBaseForConversion>A</measureBaseForConversion>
+			<measureUom>A</measureUom>
+			<measureUom>MA</measureUom>
+			<measureUom>kA</measureUom>
+			<measureUom>mA</measureUom>
+			<measureUom>nA</measureUom>
+			<measureUom>pA</measureUom>
+			<measureUom>uA</measureUom>
+		</value>
+		<value>
+			<name>electric dipole moment</name>
+			<measureRepresentativeUOM>C.m</measureRepresentativeUOM>
+			<measureBaseForConversion>C.m</measureBaseForConversion>
+			<measureUom>C.m</measureUom>
+		</value>
+		<value>
+			<name>electric field strength</name>
+			<measureRepresentativeUOM>V/m</measureRepresentativeUOM>
+			<measureBaseForConversion>V/m</measureBaseForConversion>
+			<measureUom>V/m</measureUom>
+			<measureUom>mV/ft</measureUom>
+			<measureUom>mV/m</measureUom>
+			<measureUom>uV/ft</measureUom>
+			<measureUom>uV/m</measureUom>
+		</value>
+		<value>
+			<name>electric polarization</name>
+			<measureRepresentativeUOM>C/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>C/m2</measureBaseForConversion>
+			<measureUom>C/cm2</measureUom>
+			<measureUom>C/m2</measureUom>
+			<measureUom>C/mm2</measureUom>
+			<measureUom>mC/m2</measureUom>
+		</value>
+		<value>
+			<name>electric potential</name>
+			<measureRepresentativeUOM>V</measureRepresentativeUOM>
+			<measureBaseForConversion>V</measureBaseForConversion>
+			<measureUom>MV</measureUom>
+			<measureUom>V</measureUom>
+			<measureUom>kV</measureUom>
+			<measureUom>mV</measureUom>
+			<measureUom>uV</measureUom>
+		</value>
+		<value>
+			<name>electrical resistivity</name>
+			<measureRepresentativeUOM>ohm.m</measureRepresentativeUOM>
+			<measureBaseForConversion>ohm.m</measureBaseForConversion>
+			<measureUom>kohm.m</measureUom>
+			<measureUom>ohm.cm</measureUom>
+			<measureUom>ohm.m</measureUom>
+		</value>
+		<value>
+			<name>electrochemical equivalent</name>
+			<description>An electrochemical equivalent differs from molarity in that the valence (oxidation reduction potential) of the element is also considered.</description>
+			<measureRepresentativeUOM>eq</measureRepresentativeUOM>
+			<measureBaseForConversion>eq</measureBaseForConversion>
+			<measureUom>eq</measureUom>
+			<measureUom>meq</measureUom>
+		</value>
+		<value>
+			<name>electromagnetic moment</name>
+			<measureRepresentativeUOM>A.m2</measureRepresentativeUOM>
+			<measureBaseForConversion>A.m2</measureBaseForConversion>
+			<measureUom>A.m2</measureUom>
+		</value>
+		<value>
+			<name>energy length per area</name>
+			<measureRepresentativeUOM>kcal.m/cm2</measureRepresentativeUOM>
+			<measureBaseForConversion>kcal.m/cm2</measureBaseForConversion>
+			<measureUom>kcal.m/cm2</measureUom>
+		</value>
+		<value>
+			<name>energy length per time area temperature</name>
+			<measureRepresentativeUOM>W/m.K</measureRepresentativeUOM>
+			<measureBaseForConversion>W/m.K</measureBaseForConversion>
+			<measureUom>Btu.in/hr.ft2.F</measureUom>
+			<measureUom>W/m.K</measureUom>
+			<measureUom>kJ.m/h.m2.K</measureUom>
+		</value>
+		<value>
+			<name>energy per area</name>
+			<measureRepresentativeUOM>N/m</measureRepresentativeUOM>
+			<measureBaseForConversion>N/m</measureBaseForConversion>
+			<measureUom>J/cm2</measureUom>
+			<measureUom>J/m2</measureUom>
+			<measureUom>N/m</measureUom>
+			<measureUom>erg/cm2</measureUom>
+			<measureUom>kgf.m/cm2</measureUom>
+			<measureUom>lbf.ft/in2</measureUom>
+			<measureUom>mJ/cm2</measureUom>
+			<measureUom>mJ/m2</measureUom>
+		</value>
+		<value>
+			<name>energy per length</name>
+			<measureRepresentativeUOM>J/m</measureRepresentativeUOM>
+			<measureBaseForConversion>J/m</measureBaseForConversion>
+			<measureUom>J/m</measureUom>
+			<measureUom>MJ/m</measureUom>
+		</value>
+		<value>
+			<name>equivalent per mass</name>
+			<measureRepresentativeUOM>eq/kg</measureRepresentativeUOM>
+			<measureBaseForConversion>eq/kg</measureBaseForConversion>
+			<measureUom>eq/kg</measureUom>
+			<measureUom>meq/100g</measureUom>
+			<measureUom>meq/g</measureUom>
+		</value>
+		<value>
+			<name>equivalent per volume</name>
+			<measureRepresentativeUOM>eq/L</measureRepresentativeUOM>
+			<measureBaseForConversion>eq/L</measureBaseForConversion>
+			<measureUom>eq/L</measureUom>
+			<measureUom>eq/m3</measureUom>
+			<measureUom>meq/cm3</measureUom>
+		</value>
+		<value>
+			<name>exposure (radioactivity)</name>
+			<measureRepresentativeUOM>C/kg</measureRepresentativeUOM>
+			<measureBaseForConversion>C/kg</measureBaseForConversion>
+			<measureUom>C/g</measureUom>
+			<measureUom>C/kg</measureUom>
+		</value>
+		<value>
+			<name>force</name>
+			<measureRepresentativeUOM>N</measureRepresentativeUOM>
+			<measureBaseForConversion>N</measureBaseForConversion>
+			<measureUom>MN</measureUom>
+			<measureUom>Mgf</measureUom>
+			<measureUom>N</measureUom>
+			<measureUom>daN</measureUom>
+			<measureUom>dyne</measureUom>
+			<measureUom>gf</measureUom>
+			<measureUom>kN</measureUom>
+			<measureUom>kdyne</measureUom>
+			<measureUom>kgf</measureUom>
+			<measureUom>klbf</measureUom>
+			<measureUom>lbf</measureUom>
+			<measureUom>mN</measureUom>
+			<measureUom>ozf</measureUom>
+			<measureUom>pdl</measureUom>
+			<measureUom>tonfUK</measureUom>
+			<measureUom>tonfUS</measureUom>
+			<measureUom>uN</measureUom>
+		</value>
+		<value>
+			<name>force area</name>
+			<measureRepresentativeUOM>N.m2</measureRepresentativeUOM>
+			<measureBaseForConversion>N.m2</measureBaseForConversion>
+			<measureUom>N.m2</measureUom>
+			<measureUom>dyne.cm2</measureUom>
+			<measureUom>kN.m2</measureUom>
+			<measureUom>kgf.m2</measureUom>
+			<measureUom>lbf.in2</measureUom>
+			<measureUom>mN.m2</measureUom>
+			<measureUom>pdl.cm2</measureUom>
+			<measureUom>tonfUK.ft2</measureUom>
+			<measureUom>tonfUS.ft2</measureUom>
+		</value>
+		<value>
+			<name>force length per length</name>
+			<measureRepresentativeUOM>kgf.m/m</measureRepresentativeUOM>
+			<measureBaseForConversion>kgf.m/m</measureBaseForConversion>
+			<measureUom>N.m/m</measureUom>
+			<measureUom>kgf.m/m</measureUom>
+			<measureUom>lbf.ft/in</measureUom>
+			<measureUom>lbf.in/in</measureUom>
+			<measureUom>tonfUS.mi/ft</measureUom>
+		</value>
+		<value>
+			<name>force per force</name>
+			<measureRepresentativeUOM>N/N</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>%</measureUom>
+			<measureUom>kgf/kgf</measureUom>
+			<measureUom>lbf/lbf</measureUom>
+			<measureUom>N/N</measureUom>
+		</value>
+		<value>
+			<name>force per length</name>
+			<measureRepresentativeUOM>N/m</measureRepresentativeUOM>
+			<measureBaseForConversion>N/m</measureBaseForConversion>
+			<measureUom>N/30m</measureUom>
+			<measureUom>N/m</measureUom>
+			<measureUom>dyne/cm</measureUom>
+			<measureUom>kN/m</measureUom>
+			<measureUom>kgf/cm</measureUom>
+			<measureUom>lbf/100ft</measureUom>
+			<measureUom>lbf/30m</measureUom>
+			<measureUom>lbf/ft</measureUom>
+			<measureUom>lbf/in</measureUom>
+			<measureUom>mN/km</measureUom>
+			<measureUom>mN/m</measureUom>
+			<measureUom>pdl/cm</measureUom>
+			<measureUom>tonfUK/ft</measureUom>
+			<measureUom>tonfUS/ft</measureUom>
+		</value>
+		<value>
+			<name>force per volume</name>
+			<measureRepresentativeUOM>N/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>N/m3</measureBaseForConversion>
+			<measureUom>GPa/cm</measureUom>
+			<measureUom>MPa/m</measureUom>
+			<measureUom>N/m3</measureUom>
+			<measureUom>Pa/m</measureUom>
+			<measureUom>atm/ft</measureUom>
+			<measureUom>atm/hm</measureUom>
+			<measureUom>atm/m</measureUom>
+			<measureUom>bar/km</measureUom>
+			<measureUom>bar/m</measureUom>
+			<measureUom>kPa/100m</measureUom>
+			<measureUom>kPa/m</measureUom>
+			<measureUom>lbf/ft3</measureUom>
+			<measureUom>lbf/galUS</measureUom>
+			<measureUom>psi/100ft</measureUom>
+			<measureUom>psi/ft</measureUom>
+			<measureUom>psi/kft</measureUom>
+			<measureUom>psi/m</measureUom>
+		</value>
+		<value>
+			<name>frequency</name>
+			<measureRepresentativeUOM>Hz</measureRepresentativeUOM>
+			<measureBaseForConversion>Hz</measureBaseForConversion>
+			<measureUom>1/s</measureUom>
+			<measureUom>GHz</measureUom>
+			<measureUom>Hz</measureUom>
+			<measureUom>MHz</measureUom>
+			<measureUom>c/s</measureUom>
+			<measureUom>kHz</measureUom>
+			<measureUom>mHz</measureUom>
+			<measureUom>uHz</measureUom>
+		</value>
+		<value>
+			<name>frequency interval</name>
+			<description>An octave is a doubling of a frquency.</description>
+			<measureRepresentativeUOM>O</measureRepresentativeUOM>
+			<measureBaseForConversion>O</measureBaseForConversion>
+			<measureUom>O</measureUom>
+		</value>
+		<value>
+			<name>gamma ray API unit</name>
+			<description>This class is defined by the API, and is used for units of gamma ray log response.</description>
+			<measureRepresentativeUOM>gAPI</measureRepresentativeUOM>
+			<measureBaseForConversion>gAPI</measureBaseForConversion>
+			<measureUom>gAPI</measureUom>
+		</value>
+		<value>
+			<name>heat capacity</name>
+			<measureRepresentativeUOM>J/K</measureRepresentativeUOM>
+			<measureBaseForConversion>J/K</measureBaseForConversion>
+			<measureUom>J/K</measureUom>
+		</value>
+		<value>
+			<name>heat flow rate</name>
+			<measureRepresentativeUOM>W</measureRepresentativeUOM>
+			<measureBaseForConversion>W</measureBaseForConversion>
+			<measureUom>Btu/hr</measureUom>
+			<measureUom>Btu/min</measureUom>
+			<measureUom>Btu/s</measureUom>
+			<measureUom>EJ/a</measureUom>
+			<measureUom>GW</measureUom>
+			<measureUom>MBtu/hr</measureUom>
+			<measureUom>MW</measureUom>
+			<measureUom>TJ/a</measureUom>
+			<measureUom>TW</measureUom>
+			<measureUom>W</measureUom>
+			<measureUom>erg/a</measureUom>
+			<measureUom>ft.lbf/min</measureUom>
+			<measureUom>ft.lbf/s</measureUom>
+			<measureUom>kW</measureUom>
+			<measureUom>mW</measureUom>
+			<measureUom>nW</measureUom>
+			<measureUom>quad/yr</measureUom>
+			<measureUom>uW</measureUom>
+		</value>
+		<value>
+			<name>heat transfer coefficient</name>
+			<measureRepresentativeUOM>W/m2.K</measureRepresentativeUOM>
+			<measureBaseForConversion>W/m2.K</measureBaseForConversion>
+			<measureUom>Btu/hr.ft2.degF</measureUom>
+			<measureUom>Btu/hr.ft2.degR</measureUom>
+			<measureUom>Btu/hr.m2.degC</measureUom>
+			<measureUom>Btu/s.ft2.degF</measureUom>
+			<measureUom>J/s.m2.degC</measureUom>
+			<measureUom>W/m2.K</measureUom>
+			<measureUom>cal/h.cm2.degC</measureUom>
+			<measureUom>cal/s.cm2.degC</measureUom>
+			<measureUom>kJ/h.m2.K</measureUom>
+			<measureUom>kW/m2.K</measureUom>
+			<measureUom>kcal/h.m2.degC</measureUom>
+		</value>
+		<value>
+			<name>illuminance</name>
+			<measureRepresentativeUOM>lx</measureRepresentativeUOM>
+			<measureBaseForConversion>lx</measureBaseForConversion>
+			<measureUom>footcandle</measureUom>
+			<measureUom>klx</measureUom>
+			<measureUom>lx</measureUom>
+		</value>
+		<value>
+			<name>irradiance</name>
+			<measureRepresentativeUOM>W/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>W/m2</measureBaseForConversion>
+			<measureUom>Btu/hr.ft2</measureUom>
+			<measureUom>Btu/s.ft2</measureUom>
+			<measureUom>W/cm2</measureUom>
+			<measureUom>W/m2</measureUom>
+			<measureUom>W/mm2</measureUom>
+			<measureUom>cal/h.cm2</measureUom>
+			<measureUom>hhp/in2</measureUom>
+			<measureUom>hp/in2</measureUom>
+			<measureUom>kW/cm2</measureUom>
+			<measureUom>kW/m2</measureUom>
+			<measureUom>mW/m2</measureUom>
+			<measureUom>ucal/s.cm2</measureUom>
+		</value>
+		<value>
+			<name>isothermal compressibility</name>
+			<measureRepresentativeUOM>m3/J</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/J</measureBaseForConversion>
+			<measureUom>dm3/MJ</measureUom>
+			<measureUom>dm3/kW.h</measureUom>
+			<measureUom>m3/J</measureUom>
+			<measureUom>m3/kW.h</measureUom>
+			<measureUom>mm3/J</measureUom>
+			<measureUom>ptUK/hp.hr</measureUom>
+		</value>
+		<value>
+			<name>kinematic viscosity</name>
+			<measureRepresentativeUOM>m2/s</measureRepresentativeUOM>
+			<measureBaseForConversion>m2/s</measureBaseForConversion>
+			<measureUom>cSt</measureUom>
+			<measureUom>cm2/s</measureUom>
+			<measureUom>ft2/h</measureUom>
+			<measureUom>ft2/s</measureUom>
+			<measureUom>in2/s</measureUom>
+			<measureUom>m2/h</measureUom>
+			<measureUom>m2/s</measureUom>
+			<measureUom>mm2/s</measureUom>
+		</value>
+		<value>
+			<name>length</name>
+			<measureRepresentativeUOM>m</measureRepresentativeUOM>
+			<measureBaseForConversion>m</measureBaseForConversion>
+			<measureUom>Mm</measureUom>
+			<measureUom>angstrom</measureUom>
+			<measureUom>chBnA</measureUom>
+			<measureUom>chBnB</measureUom>
+			<measureUom>chCla</measureUom>
+			<measureUom>chSe</measureUom>
+			<measureUom>chUS</measureUom>
+			<measureUom>cm</measureUom>
+			<measureUom>dm</measureUom>
+			<measureUom>fathom</measureUom>
+			<measureUom>fm</measureUom>
+			<measureUom>ft</measureUom>
+			<measureUom>ftBnA</measureUom>
+			<measureUom>ftBnB</measureUom>
+			<measureUom>ftBr(65)</measureUom>
+			<measureUom>ftCla</measureUom>
+			<measureUom>ftGC</measureUom>
+			<measureUom>ftInd</measureUom>
+			<measureUom>ftInd(37)</measureUom>
+			<measureUom>ftInd(62)</measureUom>
+			<measureUom>ftInd(75)</measureUom>
+			<measureUom>ftMA</measureUom>
+			<measureUom>ftSe</measureUom>
+			<measureUom>ftUS</measureUom>
+			<measureUom>in</measureUom>
+			<measureUom>in/10</measureUom>
+			<measureUom>in/16</measureUom>
+			<measureUom>in/32</measureUom>
+			<measureUom>in/64</measureUom>
+			<measureUom>inUS</measureUom>
+			<measureUom>km</measureUom>
+			<measureUom>lkBnA</measureUom>
+			<measureUom>lkBnB</measureUom>
+			<measureUom>lkCla</measureUom>
+			<measureUom>lkSe</measureUom>
+			<measureUom>lkUS</measureUom>
+			<measureUom>m</measureUom>
+			<measureUom>mGer</measureUom>
+			<measureUom>mi</measureUom>
+			<measureUom>miUS</measureUom>
+			<measureUom>mil</measureUom>
+			<measureUom>mm</measureUom>
+			<measureUom>nautmi</measureUom>
+			<measureUom>nm</measureUom>
+			<measureUom>pm</measureUom>
+			<measureUom>um</measureUom>
+			<measureUom>yd</measureUom>
+			<measureUom>ydBnA</measureUom>
+			<measureUom>ydBnB</measureUom>
+			<measureUom>ydCla</measureUom>
+			<measureUom>ydIm</measureUom>
+			<measureUom>ydInd</measureUom>
+			<measureUom>ydInd(37)</measureUom>
+			<measureUom>ydInd(62)</measureUom>
+			<measureUom>ydInd(75)</measureUom>
+			<measureUom>ydSe</measureUom>
+		</value>
+		<value>
+			<name>length per length</name>
+			<measureRepresentativeUOM>m/m</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>%</measureUom>
+			<measureUom>ft/100ft</measureUom>
+			<measureUom>ft/ft</measureUom>
+			<measureUom>ft/in</measureUom>
+			<measureUom>ft/m</measureUom>
+			<measureUom>ft/mi</measureUom>
+			<measureUom>km/cm</measureUom>
+			<measureUom>m/30m</measureUom>
+			<measureUom>m/cm</measureUom>
+			<measureUom>m/km</measureUom>
+			<measureUom>m/m</measureUom>
+			<measureUom>mi/in</measureUom>
+		</value>
+		<value>
+			<name>length per temperature</name>
+			<measureRepresentativeUOM>m/K</measureRepresentativeUOM>
+			<measureBaseForConversion>m/K</measureBaseForConversion>
+			<measureUom>ft/degF</measureUom>
+			<measureUom>m/K</measureUom>
+		</value>
+		<value>
+			<name>length per volume</name>
+			<measureRepresentativeUOM>ft/bbl</measureRepresentativeUOM>
+			<measureBaseForConversion>ft/bbl</measureBaseForConversion>
+			<measureUom>ft/bbl</measureUom>
+			<measureUom>ft/ft3</measureUom>
+			<measureUom>ft/galUS</measureUom>
+			<measureUom>km/L</measureUom>
+			<measureUom>km/dm3</measureUom>
+			<measureUom>m/m3</measureUom>
+			<measureUom>mi/galUK</measureUom>
+			<measureUom>mi/galUS</measureUom>
+		</value>
+		<value>
+			<name>level of power intensity</name>
+			<measureRepresentativeUOM>B</measureRepresentativeUOM>
+			<measureBaseForConversion>B</measureBaseForConversion>
+			<measureUom>B</measureUom>
+			<measureUom>dB</measureUom>
+		</value>
+		<value>
+			<name>light exposure</name>
+			<measureRepresentativeUOM>lx.s</measureRepresentativeUOM>
+			<measureBaseForConversion>lx.s</measureBaseForConversion>
+			<measureUom>footcandle.s</measureUom>
+			<measureUom>lx.s</measureUom>
+		</value>
+		<value>
+			<name>mass per length</name>
+			<measureRepresentativeUOM>kg/m</measureRepresentativeUOM>
+			<measureBaseForConversion>kg/m</measureBaseForConversion>
+			<measureUom>Mg/in</measureUom>
+			<measureUom>kg.m/cm2</measureUom>
+			<measureUom>kg/m</measureUom>
+			<measureUom>klbm/in</measureUom>
+			<measureUom>lbm/ft</measureUom>
+		</value>
+		<value>
+			<name>linear thermal expansion</name>
+			<measureRepresentativeUOM>in/in.degF</measureRepresentativeUOM>
+			<measureBaseForConversion>in/in.degF</measureBaseForConversion>
+			<measureUom>1/K</measureUom>
+			<measureUom>in/in.degF</measureUom>
+			<measureUom>m/m.K</measureUom>
+			<measureUom>mm/mm.K</measureUom>
+		</value>
+		<value>
+			<name>luminance</name>
+			<measureRepresentativeUOM>cd/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>cd/m2</measureBaseForConversion>
+			<measureUom>cd/m2</measureUom>
+		</value>
+		<value>
+			<name>luminous efficacy</name>
+			<measureRepresentativeUOM>lm/W</measureRepresentativeUOM>
+			<measureBaseForConversion>lm/W</measureBaseForConversion>
+			<measureUom>lm/W</measureUom>
+		</value>
+		<value>
+			<name>luminous flux</name>
+			<measureRepresentativeUOM>lm</measureRepresentativeUOM>
+			<measureBaseForConversion>lm</measureBaseForConversion>
+			<measureUom>lm</measureUom>
+		</value>
+		<value>
+			<name>luminous intensity</name>
+			<measureRepresentativeUOM>cd</measureRepresentativeUOM>
+			<measureBaseForConversion>cd</measureBaseForConversion>
+			<measureUom>cd</measureUom>
+			<measureUom>kcd</measureUom>
+		</value>
+		<value>
+			<name>magnetic dipole moment</name>
+			<measureRepresentativeUOM>Wb.m</measureRepresentativeUOM>
+			<measureBaseForConversion>Wb.m</measureBaseForConversion>
+			<measureUom>Wb.m</measureUom>
+		</value>
+		<value>
+			<name>magnetic field strength</name>
+			<measureRepresentativeUOM>A/m</measureRepresentativeUOM>
+			<measureBaseForConversion>A/m</measureBaseForConversion>
+			<measureUom>A/m</measureUom>
+			<measureUom>A/mm</measureUom>
+			<measureUom>Oe</measureUom>
+			<measureUom>gamma</measureUom>
+		</value>
+		<value>
+			<name>magnetic flux</name>
+			<measureRepresentativeUOM>Wb</measureRepresentativeUOM>
+			<measureBaseForConversion>Wb</measureBaseForConversion>
+			<measureUom>Wb</measureUom>
+			<measureUom>mWb</measureUom>
+			<measureUom>uWb</measureUom>
+		</value>
+		<value>
+			<name>magnetic induction</name>
+			<measureRepresentativeUOM>T</measureRepresentativeUOM>
+			<measureBaseForConversion>T</measureBaseForConversion>
+			<measureUom>T</measureUom>
+			<measureUom>gauss</measureUom>
+			<measureUom>mT</measureUom>
+			<measureUom>mgauss</measureUom>
+			<measureUom>nT</measureUom>
+			<measureUom>uT</measureUom>
+		</value>
+		<value>
+			<name>magnetic permeability</name>
+			<measureRepresentativeUOM>H/m</measureRepresentativeUOM>
+			<measureBaseForConversion>H/m</measureBaseForConversion>
+			<measureUom>H/m</measureUom>
+			<measureUom>uH/m</measureUom>
+		</value>
+		<value>
+			<name>magnetic vector potential</name>
+			<measureRepresentativeUOM>Wb/m</measureRepresentativeUOM>
+			<measureBaseForConversion>Wb/m</measureBaseForConversion>
+			<measureUom>Wb/m</measureUom>
+			<measureUom>Wb/mm</measureUom>
+		</value>
+		<value>
+			<name>mass</name>
+			<measureRepresentativeUOM>kg</measureRepresentativeUOM>
+			<measureBaseForConversion>kg</measureBaseForConversion>
+			<measureUom>Mg</measureUom>
+			<measureUom>ag</measureUom>
+			<measureUom>ct</measureUom>
+			<measureUom>cwtUK</measureUom>
+			<measureUom>cwtUS</measureUom>
+			<measureUom>g</measureUom>
+			<measureUom>grain</measureUom>
+			<measureUom>kg</measureUom>
+			<measureUom>klbm</measureUom>
+			<measureUom>lbm</measureUom>
+			<measureUom>mg</measureUom>
+			<measureUom>oz(av)</measureUom>
+			<measureUom>oz(troy)</measureUom>
+			<measureUom>ozm</measureUom>
+			<measureUom>sack94</measureUom>
+			<measureUom>t</measureUom>
+			<measureUom>tonUK</measureUom>
+			<measureUom>tonUS</measureUom>
+			<measureUom>ug</measureUom>
+		</value>
+		<value>
+			<name>mass attenuation coefficient</name>
+			<measureRepresentativeUOM>m2/kg</measureRepresentativeUOM>
+			<measureBaseForConversion>m2/kg</measureBaseForConversion>
+			<measureUom>cm2/g</measureUom>
+			<measureUom>m2/g</measureUom>
+			<measureUom>m2/kg</measureUom>
+		</value>
+		<value>
+			<name>mass flow rate</name>
+			<measureRepresentativeUOM>kg/s</measureRepresentativeUOM>
+			<measureBaseForConversion>kg/s</measureBaseForConversion>
+			<measureUom>Mg/a</measureUom>
+			<measureUom>Mg/d</measureUom>
+			<measureUom>Mg/h</measureUom>
+			<measureUom>Mlbm/yr</measureUom>
+			<measureUom>g/s</measureUom>
+			<measureUom>kg/d</measureUom>
+			<measureUom>kg/h</measureUom>
+			<measureUom>kg/min</measureUom>
+			<measureUom>kg/s</measureUom>
+			<measureUom>lbm/d</measureUom>
+			<measureUom>lbm/h</measureUom>
+			<measureUom>lbm/min</measureUom>
+			<measureUom>lbm/s</measureUom>
+			<measureUom>t/a</measureUom>
+			<measureUom>t/d</measureUom>
+			<measureUom>t/h</measureUom>
+			<measureUom>t/min</measureUom>
+			<measureUom>tonUK/a</measureUom>
+			<measureUom>tonUK/d</measureUom>
+			<measureUom>tonUK/h</measureUom>
+			<measureUom>tonUK/min</measureUom>
+			<measureUom>tonUS/a</measureUom>
+			<measureUom>tonUS/d</measureUom>
+			<measureUom>tonUS/h</measureUom>
+			<measureUom>tonUS/min</measureUom>
+		</value>
+		<value>
+			<name>mass length</name>
+			<measureRepresentativeUOM>kg.m</measureRepresentativeUOM>
+			<measureBaseForConversion>kg.m</measureBaseForConversion>
+			<measureUom>ft.lbm</measureUom>
+			<measureUom>kg.m</measureUom>
+		</value>
+		<value>
+			<name>mass per energy</name>
+			<measureRepresentativeUOM>kg/J</measureRepresentativeUOM>
+			<measureBaseForConversion>kg/J</measureBaseForConversion>
+			<measureUom>kg/J</measureUom>
+			<measureUom>kg/MJ</measureUom>
+			<measureUom>kg/kW.h</measureUom>
+			<measureUom>lbm/hp.h</measureUom>
+			<measureUom>mg/J</measureUom>
+		</value>
+		<value>
+			<name>mass per time per area</name>
+			<measureRepresentativeUOM>kg/m2.s</measureRepresentativeUOM>
+			<measureBaseForConversion>kg/m2.s</measureBaseForConversion>
+			<measureUom>MPa.s/m</measureUom>
+			<measureUom>g.ft/cm3.s</measureUom>
+			<measureUom>kPa.s/m</measureUom>
+			<measureUom>kg/m2.s</measureUom>
+			<measureUom>lbm/h.ft2</measureUom>
+			<measureUom>lbm/s.ft2</measureUom>
+		</value>
+		<value>
+			<name>mass per time per length</name>
+			<measureRepresentativeUOM>Pa.s</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa.s</measureBaseForConversion>
+			<measureUom>Pa.s</measureUom>
+			<measureUom>kg/m.s</measureUom>
+			<measureUom>lbm/h.ft</measureUom>
+			<measureUom>lbm/s.ft</measureUom>
+		</value>
+		<value>
+			<name>mass per volume per length</name>
+			<measureRepresentativeUOM>kg/m4</measureRepresentativeUOM>
+			<measureBaseForConversion>kg/m4</measureBaseForConversion>
+			<measureUom>g/cm4</measureUom>
+			<measureUom>kg/dm4</measureUom>
+			<measureUom>kg/m4</measureUom>
+			<measureUom>lbm/ft4</measureUom>
+			<measureUom>lbm/galUK.ft</measureUom>
+			<measureUom>lbm/galUS.ft</measureUom>
+		</value>
+		<value>
+			<name>mass concentration</name>
+			<measureRepresentativeUOM>Euc</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>%</measureUom>
+			<measureUom>Euc</measureUom>
+			<measureUom>g/kg</measureUom>
+			<measureUom>kg/kg</measureUom>
+			<measureUom>kg/sack94</measureUom>
+			<measureUom>mg/kg</measureUom>
+			<measureUom>permil</measureUom>
+			<measureUom>ppdk</measureUom>
+			<measureUom>ppk</measureUom>
+			<measureUom>ppm</measureUom>
+		</value>
+		<value>
+			<name>mobility</name>
+			<measureRepresentativeUOM>m2/Pa.s</measureRepresentativeUOM>
+			<measureBaseForConversion>m2/Pa.s</measureBaseForConversion>
+			<measureUom>m2/Pa.s</measureUom>
+			<measureUom>mD.ft2/lbf.s</measureUom>
+			<measureUom>mD.in2/lbf.s</measureUom>
+			<measureUom>mD/Pa.s</measureUom>
+			<measureUom>mD/cP</measureUom>
+		</value>
+		<value>
+			<name>modulus of compression</name>
+			<measureRepresentativeUOM>J/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>J/m3</measureBaseForConversion>
+			<measureUom>Btu/bbl</measureUom>
+			<measureUom>Btu/ft3</measureUom>
+			<measureUom>Btu/galUK</measureUom>
+			<measureUom>Btu/galUS</measureUom>
+			<measureUom>J/dm3</measureUom>
+			<measureUom>J/m3</measureUom>
+			<measureUom>MJ/m3</measureUom>
+			<measureUom>MW.h/m3</measureUom>
+			<measureUom>cal/cm3</measureUom>
+			<measureUom>cal/mL</measureUom>
+			<measureUom>cal/mm3</measureUom>
+			<measureUom>erg/cm3</measureUom>
+			<measureUom>erg/m3</measureUom>
+			<measureUom>ft.lbf/bbl</measureUom>
+			<measureUom>ft.lbf/galUS</measureUom>
+			<measureUom>hp.hr/bbl</measureUom>
+			<measureUom>kJ/dm3</measureUom>
+			<measureUom>kJ/m3</measureUom>
+			<measureUom>kW.h/dm3</measureUom>
+			<measureUom>kW.h/m3</measureUom>
+			<measureUom>kcal/cm3</measureUom>
+			<measureUom>kcal/m3</measureUom>
+			<measureUom>lbf.ft/bbl</measureUom>
+			<measureUom>therm/ft3</measureUom>
+			<measureUom>therm/galUK</measureUom>
+			<measureUom>tonfUS.mi/bbl</measureUom>
+		</value>
+		<value>
+			<name>molar heat capacity</name>
+			<measureRepresentativeUOM>J/mol.K</measureRepresentativeUOM>
+			<measureBaseForConversion>J/mol.K</measureBaseForConversion>
+			<measureUom>Btu/lbmole.F</measureUom>
+			<measureUom>J/mol.K</measureUom>
+			<measureUom>cal/mol.degC</measureUom>
+			<measureUom>kJ/kmol.K</measureUom>
+		</value>
+		<value>
+			<name>molar volume</name>
+			<measureRepresentativeUOM>m3/mol</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/mol</measureBaseForConversion>
+			<measureUom>L/mol</measureUom>
+			<measureUom>L/kmol</measureUom>
+			<measureUom>dm3/kmol</measureUom>
+			<measureUom>ft3/lbmole</measureUom>
+			<measureUom>m3/mol</measureUom>
+			<measureUom>m3/kmol</measureUom>
+		</value>
+		<value>
+			<name>mole per area</name>
+			<measureRepresentativeUOM>mol/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>mol/m2</measureBaseForConversion>
+			<measureUom>mol/m2</measureUom>
+		</value>
+		<value>
+			<name>mole per time</name>
+			<measureRepresentativeUOM>mol/s</measureRepresentativeUOM>
+			<measureBaseForConversion>mol/s</measureBaseForConversion>
+			<measureUom>kmol/h</measureUom>
+			<measureUom>kmol/s</measureUom>
+			<measureUom>lbmole/h</measureUom>
+			<measureUom>lbmole/s</measureUom>
+			<measureUom>mol/s</measureUom>
+		</value>
+		<value>
+			<name>mole per time per area</name>
+			<measureRepresentativeUOM>mol/m2.s</measureRepresentativeUOM>
+			<measureBaseForConversion>mol/m2.s</measureBaseForConversion>
+			<measureUom>lbmole/h.ft2</measureUom>
+			<measureUom>lbmole/s.ft2</measureUom>
+			<measureUom>mol/m2.s</measureUom>
+		</value>
+		<value>
+			<name>moment of force</name>
+			<measureRepresentativeUOM>J</measureRepresentativeUOM>
+			<measureBaseForConversion>J</measureBaseForConversion>
+			<measureUom>J</measureUom>
+			<measureUom>N.m</measureUom>
+			<measureUom>dN.m</measureUom>
+			<measureUom>daN.m</measureUom>
+			<measureUom>ft.lbf</measureUom>
+			<measureUom>kN.m</measureUom>
+			<measureUom>kft.lbf</measureUom>
+			<measureUom>kgf.m</measureUom>
+			<measureUom>lbf.ft</measureUom>
+			<measureUom>lbf.in</measureUom>
+			<measureUom>lbm.ft2/s2</measureUom>
+			<measureUom>pdl.ft</measureUom>
+			<measureUom>tonfUS.ft</measureUom>
+			<measureUom>tonfUS.mi</measureUom>
+		</value>
+		<value>
+			<name>moment of inertia</name>
+			<measureRepresentativeUOM>kg.m2</measureRepresentativeUOM>
+			<measureBaseForConversion>kg.m2</measureBaseForConversion>
+			<measureUom>kg.m2</measureUom>
+			<measureUom>lbm.ft2</measureUom>
+		</value>
+		<value>
+			<name>moment of section</name>
+			<measureRepresentativeUOM>m4</measureRepresentativeUOM>
+			<measureBaseForConversion>m4</measureBaseForConversion>
+			<measureUom>m4</measureUom>
+		</value>
+		<value>
+			<name>momentum</name>
+			<measureRepresentativeUOM>kg.m/s</measureRepresentativeUOM>
+			<measureBaseForConversion>kg.m/s</measureBaseForConversion>
+			<measureUom>kg.m/s</measureUom>
+			<measureUom>lbm.ft/s</measureUom>
+		</value>
+		<value>
+			<name>neutron API unit</name>
+			<measureRepresentativeUOM>nAPI</measureRepresentativeUOM>
+			<measureBaseForConversion>nAPI</measureBaseForConversion>
+			<measureUom>nAPI</measureUom>
+		</value>
+		<value>
+			<name>nonDarcy flow coefficient</name>
+			<measureRepresentativeUOM>Pa.s/m6</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa.s/m6</measureBaseForConversion>
+			<measureUom>Pa.s/m6</measureUom>
+			<measureUom>psi2.d2/cP.ft6</measureUom>
+		</value>
+		<value>
+			<name>operations per time</name>
+			<measureRepresentativeUOM>1/s</measureRepresentativeUOM>
+			<measureBaseForConversion>1/s</measureBaseForConversion>
+			<measureUom>1/s</measureUom>
+			<measureUom>Mflops</measureUom>
+			<measureUom>flops</measureUom>
+		</value>
+		<value>
+			<name>parachor</name>
+			<measureRepresentativeUOM>N4/kg.m7</measureRepresentativeUOM>
+			<measureBaseForConversion>N4/kg.m7</measureBaseForConversion>
+			<measureUom>(N/m)4/kg.m3</measureUom>
+			<measureUom>(dyne/cm)4/gcm3</measureUom>
+			<measureUom>N4/kg.m7</measureUom>
+		</value>
+		<value>
+			<name>per area</name>
+			<measureRepresentativeUOM>1/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>1/m2</measureBaseForConversion>
+			<measureUom>1/ft2</measureUom>
+			<measureUom>1/km2</measureUom>
+			<measureUom>1/m2</measureUom>
+			<measureUom>1/mi2</measureUom>
+		</value>
+		<value>
+			<name>per electric potential</name>
+			<measureRepresentativeUOM>1/V</measureRepresentativeUOM>
+			<measureBaseForConversion>1/V</measureBaseForConversion>
+			<measureUom>1/V</measureUom>
+			<measureUom>1/uV</measureUom>
+		</value>
+		<value>
+			<name>per force</name>
+			<measureRepresentativeUOM>1/N</measureRepresentativeUOM>
+			<measureBaseForConversion>1/N</measureBaseForConversion>
+			<measureUom>1/N</measureUom>
+			<measureUom>1/lbf</measureUom>
+		</value>
+		<value>
+			<name>per length</name>
+			<measureRepresentativeUOM>1/m</measureRepresentativeUOM>
+			<measureBaseForConversion>1/m</measureBaseForConversion>
+			<measureUom>1/angstrom</measureUom>
+			<measureUom>1/cm</measureUom>
+			<measureUom>1/ft</measureUom>
+			<measureUom>1/in</measureUom>
+			<measureUom>1/m</measureUom>
+			<measureUom>1/mi</measureUom>
+			<measureUom>1/mm</measureUom>
+			<measureUom>1/nm</measureUom>
+			<measureUom>1/yd</measureUom>
+		</value>
+		<value>
+			<name>per mass</name>
+			<measureRepresentativeUOM>1/kg</measureRepresentativeUOM>
+			<measureBaseForConversion>1/kg</measureBaseForConversion>
+			<measureUom>1/g</measureUom>
+			<measureUom>1/kg</measureUom>
+			<measureUom>1/lbm</measureUom>
+		</value>
+		<value>
+			<name>per volume</name>
+			<measureRepresentativeUOM>1/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>1/m3</measureBaseForConversion>
+			<measureUom>1/L</measureUom>
+			<measureUom>1/bbl</measureUom>
+			<measureUom>1/ft3</measureUom>
+			<measureUom>1/galUK</measureUom>
+			<measureUom>1/galUS</measureUom>
+			<measureUom>1/m3</measureUom>
+		</value>
+		<value>
+			<name>permeability length</name>
+			<measureRepresentativeUOM>D.ft</measureRepresentativeUOM>
+			<measureBaseForConversion>D.ft</measureBaseForConversion>
+			<measureUom>D.ft</measureUom>
+			<measureUom>D.m</measureUom>
+			<measureUom>mD.ft</measureUom>
+			<measureUom>mD.m</measureUom>
+		</value>
+		<value>
+			<name>permeability rock</name>
+			<measureRepresentativeUOM>D</measureRepresentativeUOM>
+			<measureBaseForConversion>D</measureBaseForConversion>
+			<measureUom>D</measureUom>
+			<measureUom>mD</measureUom>
+		</value>
+		<value>
+			<name>permeance</name>
+			<measureRepresentativeUOM>H</measureRepresentativeUOM>
+			<measureBaseForConversion>H</measureBaseForConversion>
+			<measureUom>H</measureUom>
+			<measureUom>mH</measureUom>
+			<measureUom>nH</measureUom>
+			<measureUom>uH</measureUom>
+		</value>
+		<value>
+			<name>permittivity</name>
+			<measureRepresentativeUOM>F/m</measureRepresentativeUOM>
+			<measureBaseForConversion>F/m</measureBaseForConversion>
+			<measureUom>F/m</measureUom>
+			<measureUom>uF/m</measureUom>
+		</value>
+		<value>
+			<name>pH</name>
+			<description>The pH is a class that measures the hydrogen ion concentration (acidity).</description>
+			<measureRepresentativeUOM>pH</measureRepresentativeUOM>
+			<measureBaseForConversion>pH</measureBaseForConversion>
+			<measureUom>pH</measureUom>
+		</value>
+		<value>
+			<name>plane angle</name>
+			<measureRepresentativeUOM>rad</measureRepresentativeUOM>
+			<measureBaseForConversion>rad</measureBaseForConversion>
+			<measureUom>Grad</measureUom>
+			<measureUom>Mrad</measureUom>
+			<measureUom>c</measureUom>
+			<measureUom>ccgr</measureUom>
+			<measureUom>cgr</measureUom>
+			<measureUom>dega</measureUom>
+			<measureUom>gon</measureUom>
+			<measureUom>gr</measureUom>
+			<measureUom>krad</measureUom>
+			<measureUom>mila</measureUom>
+			<measureUom>mina</measureUom>
+			<measureUom>mrad</measureUom>
+			<measureUom>mseca</measureUom>
+			<measureUom>rad</measureUom>
+			<measureUom>seca</measureUom>
+			<measureUom>urad</measureUom>
+		</value>
+		<value>
+			<name>potential difference per power drop</name>
+			<measureRepresentativeUOM>V/B</measureRepresentativeUOM>
+			<measureBaseForConversion>V/B</measureBaseForConversion>
+			<measureUom>V/B</measureUom>
+		</value>
+		<value>
+			<name>power</name>
+			<measureRepresentativeUOM>W</measureRepresentativeUOM>
+			<measureBaseForConversion>W</measureBaseForConversion>
+			<measureUom>CV</measureUom>
+			<measureUom>GW</measureUom>
+			<measureUom>MJ/a</measureUom>
+			<measureUom>MW</measureUom>
+			<measureUom>TW</measureUom>
+			<measureUom>W</measureUom>
+			<measureUom>ch</measureUom>
+			<measureUom>ehp</measureUom>
+			<measureUom>hhp</measureUom>
+			<measureUom>hp</measureUom>
+			<measureUom>kW</measureUom>
+			<measureUom>kcal/h</measureUom>
+			<measureUom>mW</measureUom>
+			<measureUom>nW</measureUom>
+			<measureUom>ton of refrig</measureUom>
+			<measureUom>uW</measureUom>
+		</value>
+		<value>
+			<name>power per volume</name>
+			<measureRepresentativeUOM>W/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>W/m3</measureBaseForConversion>
+			<measureUom>Btu/hr.ft3</measureUom>
+			<measureUom>Btu/s.ft3</measureUom>
+			<measureUom>W/m3</measureUom>
+			<measureUom>cal/h.cm3</measureUom>
+			<measureUom>cal/s.cm3</measureUom>
+			<measureUom>hp/ft3</measureUom>
+			<measureUom>kW/m3</measureUom>
+			<measureUom>uW/m3</measureUom>
+		</value>
+		<value>
+			<name>pressure</name>
+			<measureRepresentativeUOM>Pa</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa</measureBaseForConversion>
+			<measureUom>GPa</measureUom>
+			<measureUom>MPa</measureUom>
+			<measureUom>Mpsi</measureUom>
+			<measureUom>N/m2</measureUom>
+			<measureUom>N/mm2</measureUom>
+			<measureUom>Pa</measureUom>
+			<measureUom>at</measureUom>
+			<measureUom>atm</measureUom>
+			<measureUom>bar</measureUom>
+			<measureUom>cmH2O(4degC)</measureUom>
+			<measureUom>dyne/cm2</measureUom>
+			<measureUom>hbar</measureUom>
+			<measureUom>inH2O(39.2F)</measureUom>
+			<measureUom>inH2O(60F)</measureUom>
+			<measureUom>inHg(32F)</measureUom>
+			<measureUom>inHg(60F)</measureUom>
+			<measureUom>kN/m2</measureUom>
+			<measureUom>kPa</measureUom>
+			<measureUom>kgf/cm2</measureUom>
+			<measureUom>kgf/mm2</measureUom>
+			<measureUom>kpsi</measureUom>
+			<measureUom>lbf/100ft2</measureUom>
+			<measureUom>lbf/ft2</measureUom>
+			<measureUom>lbf/in2</measureUom>
+			<measureUom>mPa</measureUom>
+			<measureUom>mbar</measureUom>
+			<measureUom>mmHg(0C)</measureUom>
+			<measureUom>pPa</measureUom>
+			<measureUom>psi</measureUom>
+			<measureUom>tonfUS/ft2</measureUom>
+			<measureUom>tonfUS/in2</measureUom>
+			<measureUom>torr</measureUom>
+			<measureUom>uPa</measureUom>
+			<measureUom>ubar</measureUom>
+			<measureUom>umHg(0C)</measureUom>
+			<measureUom>upsi</measureUom>
+		</value>
+		<value>
+			<name>pressure per time</name>
+			<measureRepresentativeUOM>Pa/s</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa/s</measureBaseForConversion>
+			<measureUom>MPa/h</measureUom>
+			<measureUom>Pa/h</measureUom>
+			<measureUom>Pa/s</measureUom>
+			<measureUom>atm/h</measureUom>
+			<measureUom>bar/h</measureUom>
+			<measureUom>kPa/h</measureUom>
+			<measureUom>kPa/min</measureUom>
+			<measureUom>psi/h</measureUom>
+			<measureUom>psi/min</measureUom>
+		</value>
+		<value>
+			<name>pressure squared</name>
+			<measureRepresentativeUOM>Pa2</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa2</measureBaseForConversion>
+			<measureUom>GPa2</measureUom>
+			<measureUom>Pa2</measureUom>
+			<measureUom>bar2</measureUom>
+			<measureUom>kPa2</measureUom>
+			<measureUom>kpsi2</measureUom>
+			<measureUom>psi2</measureUom>
+		</value>
+		<value>
+			<name>pressure squared per force time per area</name>
+			<measureRepresentativeUOM>bar2/cP</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa/s</measureBaseForConversion>
+			<measureUom>bar2/cP</measureUom>
+		</value>
+		<value>
+			<name>pressure time per volume</name>
+			<measureRepresentativeUOM>Pa.s/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>Pa.s/m3</measureBaseForConversion>
+			<measureUom>Pa.s/m3</measureUom>
+			<measureUom>psi.d/bbl</measureUom>
+		</value>
+		<value>
+			<name>productivity index</name>
+			<measureRepresentativeUOM>m3/Pa.s</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/Pa.s</measureBaseForConversion>
+			<measureUom>1000ft3/psi.d</measureUom>
+			<measureUom>L/bar.min</measureUom>
+			<measureUom>bbl/kPa.d</measureUom>
+			<measureUom>bbl/psi.d</measureUom>
+			<measureUom>m3/Pa.s</measureUom>
+			<measureUom>m3/Pa/s</measureUom>
+			<measureUom>m3/bar.d</measureUom>
+			<measureUom>m3/bar.h</measureUom>
+			<measureUom>m3/bar.min</measureUom>
+			<measureUom>m3/kPa.d</measureUom>
+			<measureUom>m3/kPa.h</measureUom>
+			<measureUom>m3/psi.d</measureUom>
+		</value>
+		<value>
+			<name>quantity of light</name>
+			<measureRepresentativeUOM>lm.s</measureRepresentativeUOM>
+			<measureBaseForConversion>lm.s</measureBaseForConversion>
+			<measureUom>lm.s</measureUom>
+			<measureUom>talbot</measureUom>
+		</value>
+		<value>
+			<name>radiance</name>
+			<measureRepresentativeUOM>W/m2.sr</measureRepresentativeUOM>
+			<measureBaseForConversion>W/m2.sr</measureBaseForConversion>
+			<measureUom>W/m2.sr</measureUom>
+		</value>
+		<value>
+			<name>radiant intensity</name>
+			<measureRepresentativeUOM>W/sr</measureRepresentativeUOM>
+			<measureBaseForConversion>W/sr</measureBaseForConversion>
+			<measureUom>W/sr</measureUom>
+		</value>
+		<value>
+			<name>relative power</name>
+			<measureRepresentativeUOM>Euc</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>%</measureUom>
+			<measureUom>Btu/bhp.hr</measureUom>
+			<measureUom>W/W</measureUom>
+			<measureUom>W/kW</measureUom>
+			<measureUom>Euc</measureUom>
+		</value>
+		<value>
+			<name>relative time</name>
+			<measureRepresentativeUOM>ms/s</measureRepresentativeUOM>
+			<measureBaseForConversion>ms/s</measureBaseForConversion>
+			<measureUom>ms/s</measureUom>
+		</value>
+		<value>
+			<name>reluctance</name>
+			<measureRepresentativeUOM>1/H</measureRepresentativeUOM>
+			<measureBaseForConversion>1/H</measureBaseForConversion>
+			<measureUom>1/H</measureUom>
+		</value>
+		<value>
+			<name>resistance</name>
+			<measureRepresentativeUOM>ohm</measureRepresentativeUOM>
+			<measureBaseForConversion>ohm</measureBaseForConversion>
+			<measureUom>Gohm</measureUom>
+			<measureUom>Mohm</measureUom>
+			<measureUom>Tohm</measureUom>
+			<measureUom>kohm</measureUom>
+			<measureUom>mohm</measureUom>
+			<measureUom>nohm</measureUom>
+			<measureUom>ohm</measureUom>
+			<measureUom>uohm</measureUom>
+		</value>
+		<value>
+			<name>resistivity per length</name>
+			<measureRepresentativeUOM>ohm/m</measureRepresentativeUOM>
+			<measureBaseForConversion>ohm/m</measureBaseForConversion>
+			<measureUom>ohm/m</measureUom>
+			<measureUom>uohm/ft</measureUom>
+			<measureUom>uohm/m</measureUom>
+		</value>
+		<value>
+			<name>second moment of area</name>
+			<measureRepresentativeUOM>m4</measureRepresentativeUOM>
+			<measureBaseForConversion>m4</measureBaseForConversion>
+			<measureUom>cm4</measureUom>
+			<measureUom>in4</measureUom>
+			<measureUom>m4</measureUom>
+		</value>
+		<value>
+			<name>solid angle</name>
+			<measureRepresentativeUOM>sr</measureRepresentativeUOM>
+			<measureBaseForConversion>sr</measureBaseForConversion>
+			<measureUom>sr</measureUom>
+		</value>
+		<value>
+			<name>specific activity (of radioactivity)</name>
+			<measureRepresentativeUOM>Bq/kg</measureRepresentativeUOM>
+			<measureBaseForConversion>Bq/kg</measureBaseForConversion>
+			<measureUom>Bq/kg</measureUom>
+			<measureUom>pCi/g</measureUom>
+		</value>
+		<value>
+			<name>specific energy</name>
+			<measureRepresentativeUOM>J/kg</measureRepresentativeUOM>
+			<measureBaseForConversion>J/kg</measureBaseForConversion>
+			<measureUom>Btu/lbm</measureUom>
+			<measureUom>J/g</measureUom>
+			<measureUom>J/kg</measureUom>
+			<measureUom>MJ/kg</measureUom>
+			<measureUom>MW.h/kg</measureUom>
+			<measureUom>cal/g</measureUom>
+			<measureUom>cal/kg</measureUom>
+			<measureUom>cal/lbm</measureUom>
+			<measureUom>erg/g</measureUom>
+			<measureUom>erg/kg</measureUom>
+			<measureUom>ft.lbf/lbm</measureUom>
+			<measureUom>hp.hr/lbm</measureUom>
+			<measureUom>kJ/kg</measureUom>
+			<measureUom>kW.h/kg</measureUom>
+			<measureUom>kcal/g</measureUom>
+			<measureUom>kcal/kg</measureUom>
+			<measureUom>lbf.ft/lbm</measureUom>
+			<measureUom>therm/lbm</measureUom>
+		</value>
+		<value>
+			<name>specific heat capacity</name>
+			<measureRepresentativeUOM>J/kg.K</measureRepresentativeUOM>
+			<measureBaseForConversion>J/kg.K</measureBaseForConversion>
+			<measureUom>Btu/lbm.degF</measureUom>
+			<measureUom>Btu/lbm.degR</measureUom>
+			<measureUom>J/g.K</measureUom>
+			<measureUom>J/kg.K</measureUom>
+			<measureUom>cal/g.K</measureUom>
+			<measureUom>kJ/kg.K</measureUom>
+			<measureUom>kW.h/kg.degC</measureUom>
+			<measureUom>kcal/kg.degC</measureUom>
+		</value>
+		<value>
+			<name>specific productivity index</name>
+			<measureRepresentativeUOM>m3/Pa2.s2</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/Pa2.s2</measureBaseForConversion>
+			<measureUom>bbl/cP.d.psi</measureUom>
+			<measureUom>m3/Pa2.s2</measureUom>
+			<measureUom>m3/cP.Pa.s</measureUom>
+			<measureUom>m3/cP.d.kPa</measureUom>
+		</value>
+		<value>
+			<name>specific volume</name>
+			<measureRepresentativeUOM>m3/kg</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/kg</measureBaseForConversion>
+			<measureUom>L/100kg</measureUom>
+			<measureUom>L/kg</measureUom>
+			<measureUom>L/t</measureUom>
+			<measureUom>L/tonUK</measureUom>
+			<measureUom>bbl/tonUK</measureUom>
+			<measureUom>bbl/tonUS</measureUom>
+			<measureUom>cm3/g</measureUom>
+			<measureUom>dm3/kg</measureUom>
+			<measureUom>dm3/t</measureUom>
+			<measureUom>ft3/kg</measureUom>
+			<measureUom>ft3/lbm</measureUom>
+			<measureUom>ft3/sack94</measureUom>
+			<measureUom>galUK/lbm</measureUom>
+			<measureUom>galUS/lbm</measureUom>
+			<measureUom>galUS/sack94</measureUom>
+			<measureUom>galUS/tonUK</measureUom>
+			<measureUom>galUS/tonUS</measureUom>
+			<measureUom>m3/g</measureUom>
+			<measureUom>m3/kg</measureUom>
+			<measureUom>m3/t</measureUom>
+			<measureUom>m3/tonUK</measureUom>
+			<measureUom>m3/tonUS</measureUom>
+		</value>
+		<value>
+			<name>standard volume</name>
+			<measureRepresentativeUOM>scm(15C)</measureRepresentativeUOM>
+			<measureBaseForConversion>scm(15C)</measureBaseForConversion>
+			<measureUom>Gsm3</measureUom>
+			<measureUom>MMscf(60F)</measureUom>
+			<measureUom>MMscm(15C)</measureUom>
+			<measureUom>MMstb(60F)</measureUom>
+			<measureUom>Mscf(60F)</measureUom>
+			<measureUom>Mstb(60F)</measureUom>
+			<measureUom>ksm3</measureUom>
+			<measureUom>scf(60F)</measureUom>
+			<measureUom>scm(0C)</measureUom>
+			<measureUom>scm(15C)</measureUom>
+			<measureUom>stb(60F)</measureUom>
+		</value>
+		<value>
+			<name>standard volume per area</name>
+			<measureRepresentativeUOM>scm(15C)/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>scm(15C)/m2</measureBaseForConversion>
+			<measureUom>MMstb/acre</measureUom>
+			<measureUom>scf(60F)/ft2</measureUom>
+			<measureUom>stb(60F)/acre</measureUom>
+			<measureUom>scm(15C)/m2</measureUom>
+		</value>
+		<value>
+			<name>standard volume per time</name>
+			<measureRepresentativeUOM>scm(15C)/s</measureRepresentativeUOM>
+			<measureBaseForConversion>scm(15C)/s</measureBaseForConversion>
+			<measureUom>MMscf(60F)/d</measureUom>
+			<measureUom>MMscm(15C)/d</measureUom>
+			<measureUom>MMstb(60F)/d</measureUom>
+			<measureUom>Mscf(60F)/d</measureUom>
+			<measureUom>Mscm(15C)/d</measureUom>
+			<measureUom>Mstb(60F)/d</measureUom>
+			<measureUom>ksm3/d</measureUom>
+			<measureUom>scf(60F)/d</measureUom>
+			<measureUom>scm(15C)/d</measureUom>
+			<measureUom>scm(15C)/s</measureUom>
+			<measureUom>stb(60F)/d</measureUom>
+		</value>
+		<value>
+			<name>standard volume per volume</name>
+			<measureRepresentativeUOM>scm(0C)/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>scm(0C)/m3</measureBaseForConversion>
+			<measureUom>MMstb/acre.ft</measureUom>
+			<measureUom>scf(60F)/bbl</measureUom>
+			<measureUom>scf(60F)/ft3</measureUom>
+			<measureUom>scm(0C)/m3</measureUom>
+			<measureUom>stb(60F)/bbl</measureUom>
+		</value>
+		<value>
+			<name>surface density</name>
+			<measureRepresentativeUOM>kg/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>kg/m2</measureBaseForConversion>
+			<measureUom>Mg/m2</measureUom>
+			<measureUom>kg/m2</measureUom>
+			<measureUom>lbm/100ft2</measureUom>
+			<measureUom>lbm/ft2</measureUom>
+			<measureUom>tonUS/ft2</measureUom>
+		</value>
+		<value>
+			<name>temperature per length</name>
+			<measureRepresentativeUOM>K/m</measureRepresentativeUOM>
+			<measureBaseForConversion>K/m</measureBaseForConversion>
+			<measureUom>K/m</measureUom>
+			<measureUom>degC/100m</measureUom>
+			<measureUom>degC/ft</measureUom>
+			<measureUom>degC/km</measureUom>
+			<measureUom>degC/m</measureUom>
+			<measureUom>degF/100ft</measureUom>
+			<measureUom>degF/ft</measureUom>
+			<measureUom>degF/m</measureUom>
+			<measureUom>mK/m</measureUom>
+		</value>
+		<value>
+			<name>temperature per time</name>
+			<measureRepresentativeUOM>K/s</measureRepresentativeUOM>
+			<measureBaseForConversion>K/s</measureBaseForConversion>
+			<measureUom>K/s</measureUom>
+			<measureUom>degC/h</measureUom>
+			<measureUom>degC/min</measureUom>
+			<measureUom>degC/s</measureUom>
+			<measureUom>degF/h</measureUom>
+			<measureUom>degF/min</measureUom>
+			<measureUom>degF/s</measureUom>
+		</value>
+		<value>
+			<name>thermal conductance</name>
+			<measureRepresentativeUOM>W/K</measureRepresentativeUOM>
+			<measureBaseForConversion>W/K</measureBaseForConversion>
+			<measureUom>W/K</measureUom>
+		</value>
+		<value>
+			<name>thermal conductivity</name>
+			<measureRepresentativeUOM>W/m.K</measureRepresentativeUOM>
+			<measureBaseForConversion>W/m.K</measureBaseForConversion>
+			<measureUom>Btu/hr.ft.degF</measureUom>
+			<measureUom>W/m.K</measureUom>
+			<measureUom>cal/h.cm.degC</measureUom>
+			<measureUom>cal/s.cm.degC</measureUom>
+			<measureUom>kcal/h.m.degC</measureUom>
+		</value>
+		<value>
+			<name>thermal diffusivity</name>
+			<measureRepresentativeUOM>m2/s</measureRepresentativeUOM>
+			<measureBaseForConversion>m2/s</measureBaseForConversion>
+			<measureUom>cm2/s</measureUom>
+			<measureUom>ft2/h</measureUom>
+			<measureUom>ft2/s</measureUom>
+			<measureUom>in2/s</measureUom>
+			<measureUom>m2/h</measureUom>
+			<measureUom>m2/s</measureUom>
+			<measureUom>mm2/s</measureUom>
+		</value>
+		<value>
+			<name>thermal insulance</name>
+			<measureRepresentativeUOM>K.m2/W</measureRepresentativeUOM>
+			<measureBaseForConversion>K.m2/W</measureBaseForConversion>
+			<measureUom>K.m2/W</measureUom>
+			<measureUom>K.m2/kW</measureUom>
+			<measureUom>degC.m2.h/kcal</measureUom>
+			<measureUom>degF.ft2.h/Btu</measureUom>
+		</value>
+		<value>
+			<name>thermal resistance</name>
+			<measureRepresentativeUOM>K/W</measureRepresentativeUOM>
+			<measureBaseForConversion>K/W</measureBaseForConversion>
+			<measureUom>K/W</measureUom>
+		</value>
+		<value>
+			<name>thermodynamic temperature</name>
+			<measureRepresentativeUOM>K</measureRepresentativeUOM>
+			<measureBaseForConversion>K</measureBaseForConversion>
+			<measureUom>K</measureUom>
+			<measureUom>degC</measureUom>
+			<measureUom>degF</measureUom>
+			<measureUom>degR</measureUom>
+		</value>
+		<value>
+			<name>time</name>
+			<measureRepresentativeUOM>s</measureRepresentativeUOM>
+			<measureBaseForConversion>s</measureBaseForConversion>
+			<measureUom>100ka</measureUom>
+			<measureUom>Ga</measureUom>
+			<measureUom>Ma</measureUom>
+			<measureUom>a</measureUom>
+			<measureUom>cs</measureUom>
+			<measureUom>d</measureUom>
+			<measureUom>h</measureUom>
+			<measureUom>hs</measureUom>
+			<measureUom>min</measureUom>
+			<measureUom>ms</measureUom>
+			<measureUom>ms/2</measureUom>
+			<measureUom>ns</measureUom>
+			<measureUom>ps</measureUom>
+			<measureUom>s</measureUom>
+			<measureUom>us</measureUom>
+			<measureUom>wk</measureUom>
+		</value>
+		<value>
+			<name>time per length</name>
+			<measureRepresentativeUOM>s/m</measureRepresentativeUOM>
+			<measureBaseForConversion>s/m</measureBaseForConversion>
+			<measureUom>h/kft</measureUom>
+			<measureUom>h/km</measureUom>
+			<measureUom>min/ft</measureUom>
+			<measureUom>min/m</measureUom>
+			<measureUom>ms/cm</measureUom>
+			<measureUom>ms/ft</measureUom>
+			<measureUom>ms/in</measureUom>
+			<measureUom>ms/m</measureUom>
+			<measureUom>ns/ft</measureUom>
+			<measureUom>ns/m</measureUom>
+			<measureUom>s/cm</measureUom>
+			<measureUom>s/ft</measureUom>
+			<measureUom>s/in</measureUom>
+			<measureUom>s/m</measureUom>
+			<measureUom>us/ft</measureUom>
+			<measureUom>us/m</measureUom>
+		</value>
+		<value>
+			<name>time per volume</name>
+			<measureRepresentativeUOM>s/m3</measureRepresentativeUOM>
+			<measureBaseForConversion>s/m3</measureBaseForConversion>
+			<measureUom>d/bbl</measureUom>
+			<measureUom>d/ft3</measureUom>
+			<measureUom>d/k(ft3)</measureUom>
+			<measureUom>d/m3</measureUom>
+			<measureUom>h/ft3</measureUom>
+			<measureUom>h/m3</measureUom>
+			<measureUom>s/L</measureUom>
+			<measureUom>s/ft3</measureUom>
+			<measureUom>s/m3</measureUom>
+			<measureUom>s/qtUK</measureUom>
+			<measureUom>s/qtUS</measureUom>
+		</value>
+		<value>
+			<name>unit productivity index</name>
+			<measureRepresentativeUOM>m2/Pa.s</measureRepresentativeUOM>
+			<measureBaseForConversion>m2/Pa.s</measureBaseForConversion>
+			<measureUom>bbl/d.ft.psi</measureUom>
+			<measureUom>ft3/d.ft.psi</measureUom>
+			<measureUom>m2/Pa.s</measureUom>
+			<measureUom>m2/d.kPa</measureUom>
+		</value>
+		<value>
+			<name>velocity</name>
+			<measureRepresentativeUOM>m/s</measureRepresentativeUOM>
+			<measureBaseForConversion>m/s</measureBaseForConversion>
+			<measureUom>cm/a</measureUom>
+			<measureUom>cm/s</measureUom>
+			<measureUom>dm/s</measureUom>
+			<measureUom>ft/d</measureUom>
+			<measureUom>ft/h</measureUom>
+			<measureUom>ft/min</measureUom>
+			<measureUom>ft/ms</measureUom>
+			<measureUom>ft/s</measureUom>
+			<measureUom>ft/us</measureUom>
+			<measureUom>in/a</measureUom>
+			<measureUom>in/min</measureUom>
+			<measureUom>in/s</measureUom>
+			<measureUom>kft/h</measureUom>
+			<measureUom>kft/s</measureUom>
+			<measureUom>km/h</measureUom>
+			<measureUom>km/s</measureUom>
+			<measureUom>knot</measureUom>
+			<measureUom>m/d</measureUom>
+			<measureUom>m/h</measureUom>
+			<measureUom>m/min</measureUom>
+			<measureUom>m/ms</measureUom>
+			<measureUom>m/s</measureUom>
+			<measureUom>mi/h</measureUom>
+			<measureUom>mil/yr</measureUom>
+			<measureUom>mm/a</measureUom>
+			<measureUom>mm/s</measureUom>
+			<measureUom>nm/s</measureUom>
+			<measureUom>um/s</measureUom>
+		</value>
+		<value>
+			<name>volume</name>
+			<measureRepresentativeUOM>m3</measureRepresentativeUOM>
+			<measureBaseForConversion>m3</measureBaseForConversion>
+			<measureUom>1000ft3</measureUom>
+			<measureUom>L</measureUom>
+			<measureUom>M(ft3)</measureUom>
+			<measureUom>M(m3)</measureUom>
+			<measureUom>MMbbl</measureUom>
+			<measureUom>Mbbl</measureUom>
+			<measureUom>Mcf</measureUom>
+			<measureUom>acre.ft</measureUom>
+			<measureUom>bbl</measureUom>
+			<measureUom>bcf</measureUom>
+			<measureUom>cm3</measureUom>
+			<measureUom>dm3</measureUom>
+			<measureUom>flozUK</measureUom>
+			<measureUom>flozUS</measureUom>
+			<measureUom>ft3</measureUom>
+			<measureUom>galUK</measureUom>
+			<measureUom>galUS</measureUom>
+			<measureUom>hL</measureUom>
+			<measureUom>ha.m</measureUom>
+			<measureUom>in3</measureUom>
+			<measureUom>km3</measureUom>
+			<measureUom>m3</measureUom>
+			<measureUom>mL</measureUom>
+			<measureUom>mi3</measureUom>
+			<measureUom>mm3</measureUom>
+			<measureUom>ptUK</measureUom>
+			<measureUom>ptUS</measureUom>
+			<measureUom>qtUK</measureUom>
+			<measureUom>qtUS</measureUom>
+			<measureUom>tcf</measureUom>
+			<measureUom>um2.m</measureUom>
+			<measureUom>yd3</measureUom>
+		</value>
+		<value>
+			<name>volume flow rate</name>
+			<measureRepresentativeUOM>m3/s</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/s</measureBaseForConversion>
+			<measureUom>1000ft3/d</measureUom>
+			<measureUom>1000m3/d</measureUom>
+			<measureUom>1000m3/h</measureUom>
+			<measureUom>L/h</measureUom>
+			<measureUom>L/min</measureUom>
+			<measureUom>L/s</measureUom>
+			<measureUom>M(ft3)/d</measureUom>
+			<measureUom>M(m3)/d</measureUom>
+			<measureUom>Mbbl/d</measureUom>
+			<measureUom>bbl/d</measureUom>
+			<measureUom>bbl/hr</measureUom>
+			<measureUom>bbl/min</measureUom>
+			<measureUom>cm3/30min</measureUom>
+			<measureUom>cm3/h</measureUom>
+			<measureUom>cm3/min</measureUom>
+			<measureUom>cm3/s</measureUom>
+			<measureUom>dm3/s</measureUom>
+			<measureUom>ft3/d</measureUom>
+			<measureUom>ft3/h</measureUom>
+			<measureUom>ft3/min</measureUom>
+			<measureUom>ft3/s</measureUom>
+			<measureUom>galUK/d</measureUom>
+			<measureUom>galUK/hr</measureUom>
+			<measureUom>galUK/min</measureUom>
+			<measureUom>galUS/d</measureUom>
+			<measureUom>galUS/hr</measureUom>
+			<measureUom>galUS/min</measureUom>
+			<measureUom>kbbl/d</measureUom>
+			<measureUom>m3/d</measureUom>
+			<measureUom>m3/h</measureUom>
+			<measureUom>m3/min</measureUom>
+			<measureUom>m3/s</measureUom>
+		</value>
+		<value>
+			<name>volume length per time</name>
+			<measureRepresentativeUOM>m4/s</measureRepresentativeUOM>
+			<measureBaseForConversion>m4/s</measureBaseForConversion>
+			<measureUom>1000m4/d</measureUom>
+			<measureUom>Mbbl.ft/d</measureUom>
+			<measureUom>m4/s</measureUom>
+		</value>
+		<value>
+			<name>volume per area</name>
+			<measureRepresentativeUOM>m3/m2</measureRepresentativeUOM>
+			<measureBaseForConversion>m</measureBaseForConversion>
+			<measureUom>bbl/acre</measureUom>
+			<measureUom>m3/m2</measureUom>
+		</value>
+		<value>
+			<name>volume per length</name>
+			<measureRepresentativeUOM>m3/m</measureRepresentativeUOM>
+			<measureBaseForConversion>m2</measureBaseForConversion>
+			<measureUom>L/100km</measureUom>
+			<measureUom>L/m</measureUom>
+			<measureUom>bbl/ft</measureUom>
+			<measureUom>bbl/in</measureUom>
+			<measureUom>bbl/mi</measureUom>
+			<measureUom>dm3/100km</measureUom>
+			<measureUom>dm3/m</measureUom>
+			<measureUom>ft3/ft</measureUom>
+			<measureUom>galUK/mi</measureUom>
+			<measureUom>galUS/ft</measureUom>
+			<measureUom>galUS/mi</measureUom>
+			<measureUom>in3/ft</measureUom>
+			<measureUom>m3/km</measureUom>
+			<measureUom>m3/m</measureUom>
+		</value>
+		<value>
+			<name>volume per standard volume</name>
+			<measureRepresentativeUOM>m3/scm(15C)</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/scm(15C)</measureBaseForConversion>
+			<measureUom>acre.ft/MMstb</measureUom>
+			<measureUom>bbl/stb(60F)</measureUom>
+			<measureUom>ft3/scf(60F)</measureUom>
+			<measureUom>galUS/Mscf(60F)</measureUom>
+			<measureUom>m3/scm(0C)</measureUom>
+			<measureUom>m3/scm(15C)</measureUom>
+		</value>
+		<value>
+			<name>volume per time per area</name>
+			<measureRepresentativeUOM>ft3/min.ft2</measureRepresentativeUOM>
+			<measureBaseForConversion>ft3/min.ft2</measureBaseForConversion>
+			<measureUom>ft3/min.ft2</measureUom>
+			<measureUom>ft3/s.ft2</measureUom>
+			<measureUom>galUK/hr.ft2</measureUom>
+			<measureUom>galUK/hr.in2</measureUom>
+			<measureUom>galUK/min.ft2</measureUom>
+			<measureUom>galUS/hr.ft2</measureUom>
+			<measureUom>galUS/hr.in2</measureUom>
+			<measureUom>galUS/min.ft2</measureUom>
+			<measureUom>m3/s.m2</measureUom>
+		</value>
+		<value>
+			<name>volume per time per length</name>
+			<measureRepresentativeUOM>bbl/d.ft</measureRepresentativeUOM>
+			<measureBaseForConversion>bbl/d.ft</measureBaseForConversion>
+			<measureUom>1000ft3/d.ft</measureUom>
+			<measureUom>1000m3/d.m</measureUom>
+			<measureUom>1000m3/h.m</measureUom>
+			<measureUom>bbl/d.ft</measureUom>
+			<measureUom>galUK/hr.ft</measureUom>
+			<measureUom>galUK/hr.in</measureUom>
+			<measureUom>galUK/min.ft</measureUom>
+			<measureUom>galUS/hr.ft</measureUom>
+			<measureUom>galUS/hr.in</measureUom>
+			<measureUom>galUS/min.ft</measureUom>
+			<measureUom>m3/d.m</measureUom>
+			<measureUom>m3/h.m</measureUom>
+			<measureUom>m3/s.ft</measureUom>
+			<measureUom>m3/s.m</measureUom>
+		</value>
+		<value>
+			<name>volume per time per time</name>
+			<measureRepresentativeUOM>m3/s2</measureRepresentativeUOM>
+			<measureBaseForConversion>m3/s2</measureBaseForConversion>
+			<measureUom>L/s2</measureUom>
+			<measureUom>bbl/d2</measureUom>
+			<measureUom>bbl/hr2</measureUom>
+			<measureUom>dm3/s2</measureUom>
+			<measureUom>ft3/d2</measureUom>
+			<measureUom>ft3/h2</measureUom>
+			<measureUom>ft3/min2</measureUom>
+			<measureUom>ft3/s2</measureUom>
+			<measureUom>galUK/hr2</measureUom>
+			<measureUom>galUK/min2</measureUom>
+			<measureUom>galUS/hr2</measureUom>
+			<measureUom>galUS/min2</measureUom>
+			<measureUom>m3/d2</measureUom>
+			<measureUom>m3/s2</measureUom>
+		</value>
+		<value>
+			<name>volume per time per volume</name>
+			<measureRepresentativeUOM>bbl/d.acre.ft</measureRepresentativeUOM>
+			<measureBaseForConversion>bbl/d.acre.ft</measureBaseForConversion>
+			<measureUom>bbl/d.acre.ft</measureUom>
+		</value>
+		<value>
+			<name>volume per volume</name>
+			<measureRepresentativeUOM>Euc</measureRepresentativeUOM>
+			<measureBaseForConversion>Euc</measureBaseForConversion>
+			<measureUom>%</measureUom>
+			<measureUom>1000ft3/bbl</measureUom>
+			<measureUom>L/10bbl</measureUom>
+			<measureUom>L/m3</measureUom>
+			<measureUom>M(ft3)/acre.ft</measureUom>
+			<measureUom>MMbbl/acre.ft</measureUom>
+			<measureUom>MMscf60/stb60</measureUom>
+			<measureUom>Mscf60/stb60</measureUom>
+			<measureUom>bbl/100bbl</measureUom>
+			<measureUom>bbl/M(ft3)</measureUom>
+			<measureUom>bbl/acre.ft</measureUom>
+			<measureUom>bbl/bbl</measureUom>
+			<measureUom>bbl/ft3</measureUom>
+			<measureUom>bbl/k(ft3)</measureUom>
+			<measureUom>cm3/cm3</measureUom>
+			<measureUom>cm3/m3</measureUom>
+			<measureUom>dm3/m3</measureUom>
+			<measureUom>ft3/bbl</measureUom>
+			<measureUom>ft3/ft3</measureUom>
+			<measureUom>galUK/Mbbl</measureUom>
+			<measureUom>galUK/ft3</measureUom>
+			<measureUom>galUK/kgalUK</measureUom>
+			<measureUom>galUS/10bbl</measureUom>
+			<measureUom>galUS/Mbbl</measureUom>
+			<measureUom>galUS/bbl</measureUom>
+			<measureUom>galUS/ft3</measureUom>
+			<measureUom>galUS/kgalUS</measureUom>
+			<measureUom>ksm3/sm3</measureUom>
+			<measureUom>m3/ha.m</measureUom>
+			<measureUom>m3/m3</measureUom>
+			<measureUom>mL/galUK</measureUom>
+			<measureUom>mL/galUS</measureUom>
+			<measureUom>mL/mL</measureUom>
+			<measureUom>ptUK/Mbbl</measureUom>
+			<measureUom>ptUS/10bbl</measureUom>
+			<measureUom>scm15/stb60</measureUom>
+			<measureUom>sm3/ksm3</measureUom>
+			<measureUom>sm3/sm3</measureUom>
+			<measureUom>stb60/MMscf60</measureUom>
+			<measureUom>stb60/MMscm15</measureUom>
+			<measureUom>stb60/Mscf60</measureUom>
+			<measureUom>stb60/Mscm15</measureUom>
+			<measureUom>stb60/scm15</measureUom>
+			<measureUom>Euc</measureUom>
+		</value>
+		<value>
+			<name>volumetric heat transfer coefficient</name>
+			<measureRepresentativeUOM>W/m3.K</measureRepresentativeUOM>
+			<measureBaseForConversion>W/m3.K</measureBaseForConversion>
+			<measureUom>Btu/hr.ft3.degF</measureUom>
+			<measureUom>Btu/s.ft3.degF</measureUom>
+			<measureUom>W/m3.K</measureUom>
+			<measureUom>kW/m3.K</measureUom>
+		</value>
+		<value>
+			<name>volumetric thermal expansion</name>
+			<measureRepresentativeUOM>1/K</measureRepresentativeUOM>
+			<measureBaseForConversion>1/K</measureBaseForConversion>
+			<measureUom>1/K</measureUom>
+			<measureUom>1/degC</measureUom>
+			<measureUom>1/degF</measureUom>
+			<measureUom>1/degR</measureUom>
+			<measureUom>ppm/degC</measureUom>
+			<measureUom>ppm/degF</measureUom>
+		</value>
+		<value>
+			<name>work</name>
+			<measureRepresentativeUOM>J</measureRepresentativeUOM>
+			<measureBaseForConversion>J</measureBaseForConversion>
+			<measureUom>Btu</measureUom>
+			<measureUom>CV.h</measureUom>
+			<measureUom>Chu</measureUom>
+			<measureUom>EJ</measureUom>
+			<measureUom>GJ</measureUom>
+			<measureUom>GW.h</measureUom>
+			<measureUom>GeV</measureUom>
+			<measureUom>J</measureUom>
+			<measureUom>MJ</measureUom>
+			<measureUom>MW.h</measureUom>
+			<measureUom>MeV</measureUom>
+			<measureUom>TJ</measureUom>
+			<measureUom>TW.h</measureUom>
+			<measureUom>TeV</measureUom>
+			<measureUom>aJ</measureUom>
+			<measureUom>cal</measureUom>
+			<measureUom>ch.h</measureUom>
+			<measureUom>eV</measureUom>
+			<measureUom>erg</measureUom>
+			<measureUom>hp.hr</measureUom>
+			<measureUom>kJ</measureUom>
+			<measureUom>kW.h</measureUom>
+			<measureUom>kcal</measureUom>
+			<measureUom>keV</measureUom>
+			<measureUom>mJ</measureUom>
+			<measureUom>nJ</measureUom>
+			<measureUom>quad</measureUom>
+			<measureUom>therm</measureUom>
+			<measureUom>uJ</measureUom>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>NameTagLocation</name>
+		<description>Defines the locations where an equipment tag might be found.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>body</name>
+			<description>The body of the equipment. For tubular components this 
+			specifies a location toward the middle of the component.
+			</description>
+		</value>
+		<value>
+			<name>box</name>
+			<description>The female threaded end of a device.</description>
+		</value>
+		<value>
+			<name>pin</name>
+			<description>The male threaded end of a device.</description>
+		</value>
+		<value>
+			<name>other</name>
+			<description>This, by exclusion, tells a user to
+			look elsewhere than on the body or near the ends of a component.</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.
+			</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>NameTagNumberingScheme</name>
+		<description>Defines the specifications for creating equipment tags.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>EPC64</name>
+			<description>RFID - Electronic Product Code, 64 bit.</description>
+		</value>
+		<value>
+			<name>EPC96</name>
+			<description>RFID - Electronic Product Code, 96 bit.</description>
+		</value>
+		<value>
+			<name>MSRCID</name>
+			<description>RFID - Merrick Systems Rapid Component Identification.</description>
+		</value>
+		<value>
+			<name>ANSI/AIM-BC2</name>
+			<description>Barcode - 1995, Uniform Symbology Specification</description>
+		</value>
+		<value>
+			<name>ANSI/AIM-BC6</name>
+			<description>Barcode - 1995, Uniform Symbology Multi Row Specification</description>
+		</value>
+		<value>
+			<name>ANSI/AIM-BC10</name>
+			<description>Barcode - 1996, International Symbology Specification - MaxiCode</description>
+		</value>
+		<value>
+			<name>EAN.UCC</name>
+			<description>Barcode - Composite Symbology</description>
+		</value>
+		<value>
+			<name>F2F</name>
+			<description>Magnetic - ISO/IEC 7811</description>
+		</value>
+		<value>
+			<name>MFM</name>
+			<description>Magnetic - 'Modified Frequency Modulation for Magnetic Stripes' 
+			standard developed by AIM Inc.</description>
+		</value>
+		<value>
+			<name>serial number</name>
+			<description>Serial number contains a code which does not require any further 
+			knowledge of an encoding scheme to manipulate or process. 
+			The identifier is the only information in the 'tag'.
+			</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.
+			</description>
+		</value>
+	</enumList>
+	<enumList>
+		<name>NameTagTechnology</name>
+		<description>Defines the mechanisms for attaching an equipment tag to an item.</description>
+		<namingSystem>WITSML</namingSystem>
+		<value>
+			<name>tagged</name>
+			<description>Independent identification components attached or embedded to a 
+			larger component for purposes of identification of the larger component. 
+			Tags typically use electronic, radio or sound based technologies and that 
+			require a special non-optical device to read them.   Radio Frequency 
+			Identification (RFID tags) are of this type, as are some magnetic and sound 
+			based identification technologies.
+			</description>
+		</value>
+		<value>
+			<name>labeled</name>
+			<description>An optical label attached to a component.  The label
+			may be glued, riveted or attached by some other method and may contain a
+			serial number, barcode or other optically recognized information. Note that
+			a label may possibly have a combination of identifiers associated with it,
+			such as a serial number, a barcode and an embedded RFID identifier.  This
+			would generate three nameTags for the one physical label, two of
+			type 'label' for the barcode and serial number and one of type 'tagged' for
+			the RFID identifier.
+			</description>
+		</value>
+		<value>
+			<name>intrinsic</name>
+			<description>Identification technologies where the intrinsic
+			properties of the component to be identified contain the identification
+			information and no other unique code has been added.  For example, some
+			magnetic identification technologies use grooves machined into a component.
+			Some components may also be identified, for example, by their individual
+			sonic signature or optical profile.
+			</description>
+		</value>
+		<value>
+			<name>stamped</name>
+			<description>An identification code physically stamped into the base
+			material of the component to be identified.  Note that if a serial number is
+			stamped into a label attached to a component, 'labeled' should be used and
+			not 'stamped'. Stamped identifiers can wear off but can not fall off.
+			</description>
+		</value>
+		<value>
+			<name>painted</name>
+			<description>Painted or stenciled on the material.	</description>
+		</value>
+		<value>
+			<name>temporary</name>
+			<description>Temporary identification codes marked with grease pencil, chalk, or such.</description>
+		</value>
+		<value>
+			<name>unknown</name>
+			<description>The value is not known. This value should not be used
+			in normal situations. All reasonable attempts should be made to determine
+			the appropriate value. Use of this value may result in rejection in some situations.
+			</description>
+		</value>
+	</enumList>
+   <!--NOT-USED: Deleted type QualifierType.-->
+   <!--NOT-USED: Deleted type RealtimeData.-->
+   <!--NOT-USED: Deleted type TrajStnCalcAlgorithm.-->
+   <!--NOT-USED: Deleted type TypeSurveyTool.-->
+</enumListSet>

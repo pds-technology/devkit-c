@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_dtsFiberInformation.xsd" />
+   <xsd:include schemaLocation="cs_dtsBoxInformation.xsd" />
+   <xsd:include schemaLocation="cs_dtsFiberInstalledPoints.xsd" />
+   <xsd:include schemaLocation="cs_dtsFiberEndPoint.xsd" />
+   <xsd:include schemaLocation="cs_dtsOtdr.xsd" />
+   <xsd:include schemaLocation="cs_dtsPumpActivity.xsd" />
+   <xsd:include schemaLocation="cs_dtsCalibration.xsd" />
+   <xsd:include schemaLocation="cs_wellContext.xsd" />
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>DTS Installed System Type</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:group name="grp_dtsInstalledSystem">
+      <xsd:annotation>
+         <xsd:documentation>The optical fiber is installed in a wellbore and attached to an instrument box. Calibrations are performed. In general, this should be a subelement of
+         a DTS object.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="dateMin" type="prodml:endpointQualifiedDate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special
+               Handling" of growing objects for a description of the behavior related to this parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dateMax" type="prodml:endpointQualifiedDate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid
+               values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="dateCurrent" type="prodml:date" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The definition of the "current date" index for this object. The current date index is a server query parameter which requests the selection of a
+               single node from a recurring set (e.g., the data related to one point in a date series). That is, the "most recent" (at or before the specified date) installation
+               for a well. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this
+               parameter.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellContext" type="prodml:cs_wellContext" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Contextual data about the well in which the system was installed.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="isPlanned" type="prodml:logicalBoolean" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Is this a planned installation in a well, or has the installation already occurred. Note that the default value is 'false', which states that
+               this is an actual installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberInformation" type="prodml:cs_dtsFiberInformation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Information about the fiber used, and its installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="instrumentBoxInformation" type="prodml:cs_dtsBoxInformation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Information about the instrument box used, and its installation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberConfiguration" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The configuration of the fiber installation. Example values would be linear, linear with gauge, J, U.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberEndPoint" type="prodml:cs_dtsFiberEndPoint" minOccurs="0" maxOccurs="2">
+            <xsd:annotation>
+               <xsd:documentation>A fiber installed with a "U" configuration will have two ends available for hookup to an instrument box. In order to record which end is cabled
+               to the instrument box on a particular measurement run, it is necessary to identify the two ends. This complex type allows a name and description for each end, so
+               that it may be identified in a later use. This may also be useful when multiple fibers in multiple wellbores converge at the same wellhead.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="fiberLength" type="prodml:lengthMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The length of the fiber installed in the wellbore.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="wellboreFiberSchematic" type="prodml:cs_dtsFiberInstalledPoints" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A table of values along the length along the fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="opticalBudget" type="prodml:generalMeasureType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Total light budget available for the installation. This is generally measured in decibels, and indicates the total power loss for two-way travel
+               of the light in the installed fiber.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="pumpActivity" type="prodml:cs_dtsPumpActivity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The activity of pumping the fiber downhole</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="otdrInstallationTest" type="prodml:cs_dtsOtdr" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>This captures the data from the pre-installation and post-installation OTDR tests run on the fiber. A standard quality control program would
+               include these two, but the schema allows for more than two if additional runs associated with the installation of the fiber are performed. OTDR runs associated with
+               a measurement are given as a child of the measurementInformation element.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="installationCalibration" type="prodml:cs_dtsCalibration" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Any calibration other than the ones explicitly given may be recorded here. This is a general calibration type, which is populated with name/value
+               pairs.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="basedOnInstalledFiber" type="prodml:refNameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>If an instrument box is changed, for example, but the fiber remains the same, this instance of installed fiber is given to record that change.
+               This element refers to a previous installed fiber, on which this one is based. For example, the wellboreFiberSchematic is unchanged, and may be obtained from the
+               previous instance of installed fiber that is referenced here.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+   <!--                                                         -->
+</xsd:schema>

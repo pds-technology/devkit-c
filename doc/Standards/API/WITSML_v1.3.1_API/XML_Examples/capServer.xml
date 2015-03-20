@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../stylesheets/capServer.xsl" type="text/xsl" media="screen"?>
+<!--   		Example of capserver document 		-->
+<capServers 
+	xmlns="http://www.witsml.org/api/131" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.witsml.org/api/131 
+			    http://www.witsml.org/api/131/obj_capServer.xsd" 
+	version="1.3.1">
+	<capServer apiVers="1.1.0">
+		<contact>
+			<name>Server contact name</name>
+			<email>serverAdministrator@serverCompany.com</email>
+			<phone>281-135-7924</phone>
+		</contact>
+		<description>Server description</description>
+		<name>John Smith</name>
+		<vendor>INSITE Server #1</vendor>
+		<version>1.1.0.120</version>
+		<schemaVersion>1.2.0</schemaVersion>
+		<function name="GetCap">
+			<dataObject>capServer</dataObject>
+			<dataObject>capPublisher</dataObject>
+		</function>
+		<function name="GetFromStore">
+			<dataObject>well</dataObject>
+			<dataObject>wellbore</dataObject>
+			<dataObject>log</dataObject>
+		</function>
+		<function name="AddToStore">
+			<dataObject>log</dataObject>
+		</function>
+		<function name="GetBaseMsg"/>
+		<function name="GetVersion"/>
+	</capServer>
+</capServers>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:abs="http://www.energistics.org/schemas/abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_objectUid.xsd"/>
+	<xsd:complexType name="cs_perfHole">
+		<xsd:annotation>
+			<xsd:documentation>Information on the perforated hole</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The measured top depth of the hole</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The measured bottom of the hole</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdTop" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True vertical depth of the top perforation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tvdBottom" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>True vertical depth of the bottom perforation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<xsd:element name="holeDiameter" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The diameter of the hole</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="holeAngle" type="witsml:planeAngleMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The angle of the holes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="holePattern" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The pattern of the holes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="holeDensity" type="witsml:perLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The density of the holes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="holeCount" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The number of holes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="remarks" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Remarks regarding this perforated hole</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

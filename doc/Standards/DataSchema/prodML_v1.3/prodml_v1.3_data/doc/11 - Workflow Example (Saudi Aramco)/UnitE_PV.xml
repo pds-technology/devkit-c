@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Daily production summary example fora  multi-phase flow meter -->
+<productVolumes
+	xmlns="http://www.prodml.org/schemas/1series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productVolume.xsd"
+	version="1.2.0.0(PRODML)">
+	<productVolume>
+		<name>Daily production summary example for separator</name>
+		<periodKind>day</periodKind>
+		<productFlowModel uidRef="PFM01">Saudi Aramco CR-0012 Flow Network Example</productFlowModel>
+		<!-- Separator Unit E -->
+		<facility>
+			<name kind="separator" uidRef="SEP01">Separator #1</name>
+			<facilityParent1 kind="field" uidRef="F01">Ghawar</facilityParent1>
+			<unit uidRef="U05">E</unit>
+			<contextFacility kind="field" uidRef="F01">Ghawar</contextFacility>
+			<!-- oil flow (port #9) -->
+			<flow>
+				<kind>production</kind>
+				<port uidRef="9">Oil outlet</port>
+				<qualifier>measured</qualifier>
+				<product>
+					<kind>oil</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<!-- oil rate -->
+						<flowRateValue>
+							<flowRate uom="m3/d">2250</flowRate>
+						</flowRateValue>
+					</period>
+				</product>
+			</flow>
+			<!-- gas flow (port #10) -->
+			<flow>
+				<kind>production</kind>
+				<port uidRef="10">Gas outlet</port>
+				<qualifier>measured</qualifier>
+				<product>
+					<kind>gas</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<!-- gas rate -->
+						<flowRateValue>
+							<flowRate uom="m3/d">360</flowRate>
+						</flowRateValue>
+					</period>
+				</product>
+			</flow>
+			<!-- water flow (port #11) -->
+			<flow>
+				<kind>production</kind>
+				<port uidRef="11">Water outlet</port>
+				<qualifier>measured</qualifier>
+				<product>
+					<kind>water</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<!-- water rate -->
+						<flowRateValue>
+							<flowRate uom="m3/d">14.0135</flowRate>
+						</flowRateValue>
+					</period>
+				</product>
+			</flow>
+		</facility>
+	</productVolume>
+</productVolumes>

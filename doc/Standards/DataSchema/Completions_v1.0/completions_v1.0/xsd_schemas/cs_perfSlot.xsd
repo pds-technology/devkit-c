@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:abs="http://www.energistics.org/schemas/abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"  version="1.4.1.1">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2013 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<xsd:include schemaLocation="cs_extensionNameValue.xsd"/>
+	<xsd:include schemaLocation="attgrp_objectUid.xsd"/>
+	<xsd:complexType name="cs_perfSlot">
+		<xsd:annotation>
+			<xsd:documentation>Information on slot resulting from perforation</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="slotHeight" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The height of slot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="slotWidth" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The width of the slot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="slotCenterDistance" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Distance from center point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="slotCount" type="witsml:positiveCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The number of the slot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="remarks" type="witsml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Remarks regarding this perforation slot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

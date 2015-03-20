@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_generalAddress">
+      <xsd:annotation>
+         <xsd:documentation>An general address structure. This form is appropriate for most countries.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="name" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Name line of an address. If missing, use the Name of the business associate.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="street" type="prodml:nameString" minOccurs="0" maxOccurs="4">
+            <xsd:annotation>
+               <xsd:documentation>The Street is a generic term for the middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come
+               between the "name" and "city" lines. This may be repeated for up to four, ordered lines.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="city" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The City for the business associate's address</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The GeneralAddress allows the choice of a State, Province, or County element. It is assumed that different elements would be appropriate in
+               different countries. A user community should choose which element is appropriate in the various countries.</xsd:documentation>
+            </xsd:annotation>
+            <xsd:element name="state" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="province" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="county" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="country" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The Country may be included. Although this is optional, it is probably required for most uses.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="postalCode" type="prodml:kindString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A postal code, if appropriate for the country. In the USA this would be the five or nine digit zip code.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="kind" type="prodml:AddressKindEnum" use="optional">
+         <xsd:annotation>
+            <xsd:documentation>The type of address: mailing, physical, or both.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+   <!--                                                         -->
+</xsd:schema>

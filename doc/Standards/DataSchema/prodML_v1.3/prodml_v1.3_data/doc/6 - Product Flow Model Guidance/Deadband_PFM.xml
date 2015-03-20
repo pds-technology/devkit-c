@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productFlowModels
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productFlowModel.xsd"
+	version="1.2.0.0(PRODML)">
+	<!-- Saudi Aramco CR-0012 Example for tagAlias, deadband, & maximumFrequency usage -->
+	<productFlowModel uid="PFM-01">
+		<name>Saudi Aramco CR-0012 Flow Network Example</name>
+		<dTimStart>2012-01-01T00:00:00.000Z</dTimStart>
+		<network uid="NET-01">
+			<name>Example Network</name>
+			<unit uid="ESP01">
+				<name>Dammam #1 ESP</name>
+				<facility kind="pump" siteKind="electric submersible pump" uidRef="ESP01">Dammam #1 ESP-01</facility>
+				<expectedProperty>
+					<property>motor current</property>
+					<qualifier>measured</qualifier>
+					<tagAlias namingSystem="osi.aramco.com">ESP01_MotorCurrent</tagAlias>
+					<deadband uom="mA">10</deadband>
+					<maximumFrequency uom="s">3600</maximumFrequency>
+				</expectedProperty>
+				<port uid="1">
+					<name>ESP inlet</name>
+					<direction>inlet</direction>
+					<!-- Node B01-ESP01 -->
+					<connectedNode>
+						<node>A-B</node>
+						<dTimStart>2012-01-01T00:00:00.000Z</dTimStart>
+					</connectedNode>
+				</port>
+				<port uid="2">
+					<name>ESP01 outlet</name>
+					<direction>outlet</direction>
+					<connectedNode>
+						<node>B-C</node>
+						<dTimStart>2012-01-01T00:00:00.000Z</dTimStart>
+					</connectedNode>
+				 </port>
+			</unit>
+		</network>
+	</productFlowModel>
+</productFlowModels>

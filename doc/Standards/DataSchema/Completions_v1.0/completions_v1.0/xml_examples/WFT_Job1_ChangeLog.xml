@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+Data is based on example well from WFT.
+They totally artificial and are not intended to demonstrate best practices. 
+NOTE: Different equipment may share common properties.  String equipment may reference the same equipmentUID as itself.
+-->
+<witsml:downholeComponents version="1.4.1.1" xsi:schemaLocation="http://www.witsml.org/schemas/1series ../xsd_schemas/obj_downholeComponent.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:witsml="http://www.witsml.org/schemas/1series">
+	<witsml:downholeComponent uid="downholecomp_Job1" uidWell="VGASAU029">
+		<witsml:nameWell>VGASAU029</witsml:nameWell>
+		<witsml:name>downholecomp_Job1</witsml:name>
+		<witsml:startDate>1990-11-12T08:00:00Z</witsml:startDate>
+		<witsml:endDate>1990-11-15T18:00:00Z</witsml:endDate>
+		<witsml:wellHead>
+			<witsml:stringType>Wellhead</witsml:stringType>
+			<witsml:name>wellhead</witsml:name>
+			<witsml:stringEquipmentSet>
+				<!-- Casing header , all casing hang on this casing head -->
+				<witsml:stringEquipment uid="wellheadString_2" equipmentRefUID="casingHead_1">
+					<witsml:equipmentType>Casing Head</witsml:equipmentType>
+					<witsml:name>Casing Head 3000# Top Flange 16.750"/Bottom Thread 16.000"</witsml:name>
+					<witsml:equipmentEventHistory>
+						<witsml:beginEvent>
+							<witsml:eventRefID>E08</witsml:eventRefID>
+							<witsml:eventDate>1990-11-12T10:00:00Z</witsml:eventDate>
+						</witsml:beginEvent>
+					</witsml:equipmentEventHistory>
+					<witsml:count>1</witsml:count>
+					<witsml:length uom="ft">1</witsml:length>
+					<witsml:mdTop uom="ft">11</witsml:mdTop>
+					<witsml:mdBottom uom="ft">12</witsml:mdBottom>
+					<witsml:tvdTop uom="ft">11</witsml:tvdTop>
+					<witsml:tvdBottom uom="ft">12</witsml:tvdBottom>
+				</witsml:stringEquipment>
+			</witsml:stringEquipmentSet>
+		</witsml:wellHead>
+		<witsml:boreholeStringSet>
+			<witsml:boreholeString uid="borehole-1">
+				<witsml:borehole uid="OD20">
+					<witsml:name>Wellbore Hole OD-20.0000</witsml:name>
+					<witsml:typeBorehole>NormalBorehole</witsml:typeBorehole>
+					<witsml:equipmentEventHistory>
+						<witsml:beginEvent>
+							<witsml:eventRefID>E07</witsml:eventRefID>
+							<witsml:eventDate>1990-11-11T11:00:00Z</witsml:eventDate>
+						</witsml:beginEvent>
+						<witsml:endEvent>
+							<witsml:eventRefID>E08</witsml:eventRefID>
+							<witsml:eventDate>1990-11-12T14:00:00Z</witsml:eventDate>
+						</witsml:endEvent>
+					</witsml:equipmentEventHistory>
+					<witsml:mdTop uom="ft">12</witsml:mdTop>
+					<witsml:mdBottom uom="ft">450</witsml:mdBottom>
+					<witsml:tvdTop uom="ft">11</witsml:tvdTop>
+					<witsml:tvdBottom uom="ft">450</witsml:tvdBottom>
+					<witsml:diaBorehole uom="in">20</witsml:diaBorehole>
+				</witsml:borehole>
+				<witsml:borehole uid="OD13">
+					<witsml:name>Wellbore Hole OD-13.0000</witsml:name>
+					<witsml:typeBorehole>NormalBorehole</witsml:typeBorehole>
+					<witsml:equipmentEventHistory>
+						<witsml:beginEvent>
+							<witsml:eventRefID>E10</witsml:eventRefID>
+							<witsml:eventDate>1990-11-13T08:00:00Z</witsml:eventDate>
+						</witsml:beginEvent>
+						<witsml:endEvent>
+							<witsml:eventRefID>E12</witsml:eventRefID>
+							<witsml:eventDate>1990-11-15T14:00:00Z</witsml:eventDate>
+						</witsml:endEvent>
+					</witsml:equipmentEventHistory>
+					<witsml:mdTop uom="ft">450</witsml:mdTop>
+					<witsml:mdBottom uom="ft">1250</witsml:mdBottom>
+					<witsml:tvdTop uom="ft">450</witsml:tvdTop>
+					<witsml:tvdBottom uom="ft">1250</witsml:tvdBottom>
+					<witsml:diaBorehole uom="in">13</witsml:diaBorehole>
+				</witsml:borehole>
+			</witsml:boreholeString>
+		</witsml:boreholeStringSet>
+		<witsml:downholeStringSet>
+			<!-- Describe the surfacecasing -->
+			<witsml:downholeString uid="surfacecasing_1" uidWellbore="primaryWellbore">
+				<witsml:stringType>Casing</witsml:stringType>
+				<witsml:name>surfacecasing_1</witsml:name>
+				<witsml:stringEquipmentSet>
+					<!-- surfacecasing 's casing and casingliner -->
+					<witsml:stringEquipment uid="surfacecasingString_1" equipmentRefUID="surfacecasing_casingliner_1">
+						<witsml:equipmentType>Casing/Casing Liner</witsml:equipmentType>
+						<witsml:name>K-55 18.625 OD/ 96.50# Round Long 17.655 ID 17.468 Drift</witsml:name>
+						<witsml:equipmentEventHistory>
+							<witsml:beginEvent>
+								<witsml:eventRefID>E07</witsml:eventRefID>
+								<witsml:eventDate>1990-11-11T11:00:00Z</witsml:eventDate>
+							</witsml:beginEvent>
+							<witsml:endEvent>
+								<witsml:eventRefID>E08</witsml:eventRefID>
+								<witsml:eventDate>1990-11-12T18:00:00Z</witsml:eventDate>
+							</witsml:endEvent>
+						</witsml:equipmentEventHistory>
+						<witsml:count>15</witsml:count>
+						<witsml:length uom="ft">437</witsml:length>
+						<witsml:mdTop uom="ft">12</witsml:mdTop>
+						<witsml:mdBottom uom="ft">449</witsml:mdBottom>
+						<witsml:tvdTop uom="ft">12</witsml:tvdTop>
+						<witsml:tvdBottom uom="ft">449</witsml:tvdBottom>
+						<witsml:tvdBase uom="ft">0</witsml:tvdBase>
+						<!-- Top connect to wellheader tubing head wellheaderString2 ; positiontop -->
+						<witsml:connectionNext uid="surfacecasingCon_1" stringEquipmentRefUID="wellheadString_2">
+							<witsml:typeThread>8RD</witsml:typeThread>
+							<witsml:sizeThread uom="in">18.625</witsml:sizeThread>
+							<witsml:position>top</witsml:position>
+							<witsml:connectionForm>Pin</witsml:connectionForm>
+							<witsml:connectionUpset>NUE</witsml:connectionUpset>
+						</witsml:connectionNext>
+						<!-- Bottom Connect to the next surfacecasing casing shoe-->
+						<witsml:connectionNext uid="surfacecasingCon_2" stringEquipmentRefUID="surfacecasing_2">
+							<witsml:typeThread>8RD</witsml:typeThread>
+							<witsml:sizeThread uom="in">18.625</witsml:sizeThread>
+							<witsml:position>bottom</witsml:position>
+							<witsml:connectionForm>Pin</witsml:connectionForm>
+							<witsml:connectionUpset>EUE</witsml:connectionUpset>
+						</witsml:connectionNext>
+					</witsml:stringEquipment>
+					<!-- end of string : casingshoe -->
+					<witsml:stringEquipment uid="surfacecasingString_2" equipmentRefUID="surfacecasingshoe_1">
+						<witsml:equipmentType>Casing Shoe</witsml:equipmentType>
+						<witsml:name>Casing Shoe (18.625 OD Casing)</witsml:name>
+						<witsml:equipmentEventHistory>
+							<witsml:beginEvent>
+								<witsml:eventRefID>E08</witsml:eventRefID>
+								<witsml:eventDate>1990-11-12T14:00:00Z</witsml:eventDate>
+							</witsml:beginEvent>
+						</witsml:equipmentEventHistory>
+						<witsml:count>1</witsml:count>
+						<witsml:length uom="ft">1</witsml:length>
+						<witsml:mdTop uom="ft">449</witsml:mdTop>
+						<witsml:mdBottom uom="ft">450</witsml:mdBottom>
+						<witsml:tvdTop uom="ft">449</witsml:tvdTop>
+						<witsml:tvdBottom uom="ft">450</witsml:tvdBottom>
+						<witsml:connectionNext uid="surfacecasingshoeCon_1" stringEquipmentRefUID="surfacecasing_casingliner_1">
+							<witsml:typeThread>8RD</witsml:typeThread>
+							<witsml:sizeThread uom="in">18.625</witsml:sizeThread>
+							<witsml:position>top</witsml:position>
+							<witsml:connectionForm>Pin</witsml:connectionForm>
+							<witsml:connectionUpset>NUE</witsml:connectionUpset>
+						</witsml:connectionNext>
+					</witsml:stringEquipment>
+				</witsml:stringEquipmentSet>
+				<witsml:accessories>
+					<!-- cement behind the casing as accessory contain in surfacecasing -->
+					<witsml:accessory uid="cement_1" equipmentRefUID="cement_1">
+						<witsml:equipmentType>Cement (behind Casing)</witsml:equipmentType>
+						<witsml:name>cementbehind_surfacecasing_1</witsml:name>
+						<witsml:equipmentEventHistory>
+							<witsml:beginEvent>
+								<witsml:eventRefID>E09</witsml:eventRefID>
+								<witsml:eventDate>1990-11-12T14:00:00Z</witsml:eventDate>
+							</witsml:beginEvent>
+						</witsml:equipmentEventHistory>
+						<witsml:count>1</witsml:count>
+						<witsml:length uom="ft">438</witsml:length>
+						<witsml:mdTop uom="ft">12</witsml:mdTop>
+						<witsml:mdBottom uom="ft">450</witsml:mdBottom>
+						<witsml:tvdTop uom="ft">12</witsml:tvdTop>
+						<witsml:tvdBottom uom="ft">450</witsml:tvdBottom>
+					</witsml:accessory>
+				</witsml:accessories>
+			</witsml:downholeString>
+			<!-- Section for intermediate casing, start from the wellhead 's casing head -->
+			<witsml:downholeString uid="intermediatecasing_1" uidWellbore="primaryWellbore">
+				<witsml:stringType>Casing</witsml:stringType>
+				<witsml:subStringType>Intermediate Casing</witsml:subStringType>
+				<witsml:name>intermediatecasing_1</witsml:name>
+				<witsml:stringEquipmentSet>
+					<!--intermediate casing, top of casing connect from the casinghead of wellhead -->
+					<witsml:stringEquipment uid="intercasing_1" equipmentRefUID="intercasing_casingliner_1">
+						<witsml:equipmentType>Casing/Casing Liner</witsml:equipmentType>
+						<witsml:name>Casing/Casing Liner OD 11.750</witsml:name>
+						<witsml:equipmentEventHistory>
+							<witsml:beginEvent>
+								<witsml:eventRefID>E12</witsml:eventRefID>
+								<witsml:eventDate>1990-11-14T08:00:00Z</witsml:eventDate>
+							</witsml:beginEvent>
+							<witsml:endEvent/>
+						</witsml:equipmentEventHistory>
+						<witsml:count>42</witsml:count>
+						<witsml:length uom="ft">1236</witsml:length>
+						<witsml:mdTop uom="ft">13</witsml:mdTop>
+						<witsml:mdBottom uom="ft">1249</witsml:mdBottom>
+						<witsml:tvdTop uom="ft">13</witsml:tvdTop>
+						<witsml:tvdBottom uom="ft">1249</witsml:tvdBottom>
+						<!-- Top connect to wellhead casing head -->
+						<witsml:connectionNext uid="intercasingCon_1" stringEquipmentRefUID="wellheadString_2">
+							<witsml:typeThread>8RD</witsml:typeThread>
+							<witsml:sizeThread uom="in">11.75</witsml:sizeThread>
+							<witsml:position>top</witsml:position>
+							<witsml:connectionForm>Pin</witsml:connectionForm>
+							<witsml:connectionUpset>NUE</witsml:connectionUpset>
+						</witsml:connectionNext>
+						<!-- Bottom connect to next string: casing shoe-->
+						<witsml:connectionNext uid="intercasingCon_2" stringEquipmentRefUID="intercasing_2">
+							<witsml:typeThread>8RD</witsml:typeThread>
+							<witsml:sizeThread uom="in">11.75</witsml:sizeThread>
+							<witsml:position>bottom</witsml:position>
+							<witsml:tubingConnectionType>SelfSealing-Threaded</witsml:tubingConnectionType>
+							<witsml:connectionForm>Pin</witsml:connectionForm>
+							<witsml:connectionUpset>NUE</witsml:connectionUpset>
+						</witsml:connectionNext>
+					</witsml:stringEquipment>
+					<!-- end of string: casing shoe -->
+					<witsml:stringEquipment uid="intercasing_2" equipmentRefUID="intercasingshoe_1">
+						<witsml:equipmentType>Casing Shoe</witsml:equipmentType>
+						<witsml:name>Casing Shoe (11.750 OD Casing)</witsml:name>
+						<witsml:equipmentEventHistory>
+							<witsml:beginEvent>
+								<witsml:eventRefID>E12</witsml:eventRefID>
+								<witsml:eventDate>1990-11-15T08:00:00Z</witsml:eventDate>
+							</witsml:beginEvent>
+						</witsml:equipmentEventHistory>
+						<witsml:count>1</witsml:count>
+						<witsml:length uom="ft">1</witsml:length>
+						<witsml:mdTop uom="ft">1249</witsml:mdTop>
+						<witsml:mdBottom uom="ft">1250</witsml:mdBottom>
+						<witsml:tvdTop uom="ft">1249</witsml:tvdTop>
+						<witsml:tvdBottom uom="ft">1250</witsml:tvdBottom>
+						<witsml:connectionNext uid="intercasingCon_2" stringEquipmentRefUID="intercasing_1">
+							<witsml:typeThread>8RD</witsml:typeThread>
+							<witsml:sizeThread uom="in">11.75</witsml:sizeThread>
+							<witsml:position>top</witsml:position>
+							<witsml:tubingConnectionType>SelfSealing-Threaded</witsml:tubingConnectionType>
+							<witsml:connectionForm>Pin</witsml:connectionForm>
+							<witsml:connectionUpset>NUE</witsml:connectionUpset>
+						</witsml:connectionNext>
+					</witsml:stringEquipment>
+				</witsml:stringEquipmentSet>
+				<witsml:accessories>
+					<!-- cement behind intercasing as accessory -->
+					<witsml:accessory uid="intercaseAccessory_1" equipmentRefUID="cementbehind_intercasing_1">
+						<witsml:equipmentType>Cement (behind Casing)</witsml:equipmentType>
+						<witsml:name>cementbehind_intercasing_1</witsml:name>
+						<witsml:equipmentEventHistory>
+							<witsml:beginEvent>
+								<witsml:eventRefID>E13</witsml:eventRefID>
+								<witsml:eventDate>1990-11-15T14:00:00Z</witsml:eventDate>
+							</witsml:beginEvent>
+						</witsml:equipmentEventHistory>
+						<witsml:count>1</witsml:count>
+						<witsml:length uom="ft">1238</witsml:length>
+						<witsml:mdTop uom="ft">12</witsml:mdTop>
+						<witsml:mdBottom uom="ft">1250</witsml:mdBottom>
+						<witsml:tvdTop uom="ft">12</witsml:tvdTop>
+						<witsml:tvdBottom uom="ft">1250</witsml:tvdBottom>
+					</witsml:accessory>
+				</witsml:accessories>
+			</witsml:downholeString>
+		</witsml:downholeStringSet>
+		<witsml:equipmentSet>
+			<witsml:equipment uid="casingHead_1">
+				<witsml:equipmentName>casing Head</witsml:equipmentName>
+				<witsml:equipmentType>Casing Head</witsml:equipmentType>
+				<witsml:model>API 3000#</witsml:model>
+				<witsml:material>Steel</witsml:material>
+			</witsml:equipment>
+			<witsml:equipment uid="surfacecasing_casingliner_1">
+				<witsml:equipmentName>surfacecasing casingliner</witsml:equipmentName>
+				<witsml:equipmentType>Casing/Casing Liner</witsml:equipmentType>
+				<witsml:material>Steel</witsml:material>
+				<witsml:grade>K-55</witsml:grade>
+				<witsml:unitWeight uom="lbm/ft">9.65</witsml:unitWeight>
+				<witsml:OD uom="in">18.625</witsml:OD>
+				<witsml:ID uom="in">17.655</witsml:ID>
+				<witsml:drift uom="in">17.468</witsml:drift>
+			</witsml:equipment>
+			<witsml:equipment uid="surfacecasingshoe_1">
+				<witsml:equipmentName>surface casing shoe</witsml:equipmentName>
+				<witsml:equipmentType>Casing Shoe</witsml:equipmentType>
+				<witsml:material>Steel</witsml:material>
+			</witsml:equipment>
+			<witsml:equipment uid="intercasing_casingliner_1">
+				<witsml:equipmentName>intercasing casingliner</witsml:equipmentName>
+				<witsml:equipmentType>Casing/Casing Liner</witsml:equipmentType>
+				<witsml:material>Steel</witsml:material>
+				<witsml:grade>K-55</witsml:grade>
+				<witsml:unitWeight uom="lbm/ft">7.9</witsml:unitWeight>
+				<witsml:OD uom="in">11.75</witsml:OD>
+				<witsml:ID uom="in">10.438</witsml:ID>
+				<witsml:drift uom="in">10.282</witsml:drift>
+			</witsml:equipment>
+			</witsml:equipmentSet>
+	</witsml:downholeComponent>
+</witsml:downholeComponents>
+

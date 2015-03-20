@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Product Volume Report for simple flow network example -->
+<productVolumes
+	xmlns="http://www.prodml.org/schemas/1series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../schemas/prodml_v1.2.1_data/xsd_schemas/obj_productVolume.xsd"
+	version="1.2.0.0(PRODML)">
+	<productVolume>
+		<name>Report for simple flow network example</name>
+		<dTimStart>2012-01-01T00:00:00+03:00</dTimStart>
+		<dTimEnd>2012-01-01T01:00:00+03:00</dTimEnd>
+		<productFlowModel uidRef="PFM01">Simple Flow Network Example</productFlowModel>
+		<!-- Well A -->
+		<facility>
+			<name kind="well" uidRef="W01" namingSystem="aramco.com">Well A</name>
+			<unit uidRef="U01">A</unit>
+			<!-- A-C outlet port pressure is reported with the flow -->
+			<flow>
+				<kind>production</kind>
+				<port uidRef="1">A-C outlet</port>
+				<direction>outlet</direction>
+				<qualifier>measured</qualifier>
+				<product>
+					<kind>oil</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<pres uom="psi">500</pres>
+					</period>
+					<period>
+						<dTim>2012-02-01T01:00:00+03:00</dTim>
+						<pres uom="psi">495</pres>
+					</period>
+				</product>
+			</flow>
+		</facility>
+		<!-- Well B -->
+		<facility>
+			<name kind="well" uidRef="W02" namingSystem="aramco.com">Well B</name>
+			<unit uidRef="U02">B</unit>
+			<!-- A-B outlet port pressure is reported with the flow -->
+			<flow>
+				<kind>production</kind>
+				<port uidRef="3">A-B outlet</port>
+				<direction>outlet</direction>
+				<qualifier>measured</qualifier>
+				<product>
+					<kind>oil</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<pres uom="psi">600</pres>
+					</period>
+					<period>
+						<dTim>2012-02-01T01:00:00+03:00</dTim>
+						<pres uom="psi">585</pres>
+					</period>
+				</product>
+			</flow>
+		</facility>
+		<!-- Production Header -->
+		<facility>
+			<name kind="manifold" 
+						siteKind="production header" 
+						uidRef="HDR01"
+						namingSystem="aramco.com">Production Header</name>
+			<unit uidRef="U03">C</unit>
+			<!-- C-P outlet oil production flow -->
+			<flow>
+				<kind>production</kind>
+				<port uidRef="5">C-P outlet</port>
+				<direction>outlet</direction>
+				<qualifier>measured</qualifier>
+				<product>
+					<kind>oil</kind>
+					<period>
+						<dTim>2012-02-01T00:00:00+03:00</dTim>
+						<flowRateValue>
+							<flowRate uom="bbl/hr">10.0</flowRate>
+						</flowRateValue>
+						<pres uom="psi">600</pres>
+					</period>
+					<period>
+						<dTim>2012-02-01T01:00:00+03:00</dTim>
+						<flowRateValue>
+							<flowRate uom="bbl/hr">12.0</flowRate>
+						</flowRateValue>
+						<pres uom="psi">610</pres>
+					</period>
+				</product>
+			</flow>
+		</facility>
+	</productVolume>
+</productVolumes>

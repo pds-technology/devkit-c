@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://www.prodml.org/schemas/1series"
+	xmlns:prodml="http://www.prodml.org/schemas/1series"
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.2.2">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2012 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_productFlowQualifierExpected.xsd" />
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="attgrp_uid.xsd" />
+   <xsd:include schemaLocation="typ_dataTypesProdml.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_productFlowExpectedUnitProperty">
+      <xsd:annotation>
+         <xsd:documentation>Defines expected properties of a facility represented by a unit.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="property" type="prodml:FacilityParameter" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The expected kind of facility property. Each property is documented to have values of a particular type.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="childFacilityIdentifier" type="prodml:prodmlRelativeIdentifier" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The "PRODML Relative Identifier" of a child of the parent facility. The idenfifier path is presumed to begin with the identity of the parent
+               facility. This identifies a sub-facility which is identified within the context of the parent facilityParent2/facilityParent1/name identification hierarchy. The
+               property will only be expected to be defined for this child and not for the parent.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:choice minOccurs="0">
+            <xsd:element name="expectedFlowProduct" type="prodml:cs_productFlowQualifierExpected" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>Defines the expected flow and product pairs to be assigned to this unit by a Product Volume report. A set of expected qualifiers can also be
+                  defined for each pair. Each unique combination of product, flow and qualifier represents an expected variation of the specified property. This element should
+                  only be specified for properties tha represent a flow stream (e.g., volume, pressure).</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="qualifier" type="prodml:FlowQualifier" minOccurs="0" maxOccurs="unbounded">
+               <xsd:annotation>
+                  <xsd:documentation>The expected kind of qualifier of the property. This element should only be specified for properties that do not represent the fluid stream
+                  (e.g., a valve status)</xsd:documentation>
+               </xsd:annotation>
+            </xsd:element>
+         </xsd:choice>
+         <xsd:element name="tagAlias" type="prodml:nameStruct" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>An alternative name for the sensor that will measure the property.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="deadband" type="prodml:generalMeasureType" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Difference between two consecutive readings must exceeds deadband value to be accepted</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="maximumFrequency" type="prodml:timeMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The maximum time difference from the last sent event before the next event is sent.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A descriptive remark associated with this property.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="extensionNameValue" type="prodml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="prodml:attgrp_uid">
+         <xsd:annotation>
+            <xsd:documentation>The unique identifier of the recurring element.</xsd:documentation>
+         </xsd:annotation>
+      </xsd:attributeGroup>
+   </xsd:complexType>
+</xsd:schema>

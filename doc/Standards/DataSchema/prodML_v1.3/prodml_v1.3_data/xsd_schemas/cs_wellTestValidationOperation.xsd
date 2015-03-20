@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.prodml.org/schemas/1series" 
+	xmlns:prodml="http://www.prodml.org/schemas/1series" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	version="PRODML_v1.3">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2014 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_wellTestValidationOperation">
+		<xsd:sequence>
+			<xsd:element name="kind" type="prodml:ValidationOperation" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The kind of validation operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="result" type="prodml:ValidationResult" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The result of the validation operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="date" type="prodml:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The date of the validation operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tool" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The tool used for the validation operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="method" type="prodml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The method used for the validation operation..</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="prodml:commentString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A comment about the operation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="prodml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the node.  </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

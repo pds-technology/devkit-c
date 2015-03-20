@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wellTests xmlns="http://www.prodml.org/schemas/1series"	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series ../xsd_schemas/obj_wellTest.xsd"
+           version="1.2.0.0(PRODML)">
+<!-- 
+These examples are only intended to demonstrate the type of data that can be exchanged.
+They totally artificial and are not intended to demonstrate best practices. 
+-->
+  <wellTest>
+    <nameWell>API14</nameWell>
+    <name>Carlson #2</name>
+    <testDate>2006-06-14T07:00:00Z</testDate>
+    <testType>production</testType>
+    <chokeOrificeSize uom="in/64">5.3</chokeOrificeSize>
+    <productionTest>
+      <testDuration uom="h">24</testDuration>
+      <productionTestResults>
+        <oilRate>
+          <fluidRate uom="bbl/d">43</fluidRate>
+        </oilRate>
+        <gasRate>
+          <fluidRate uom="M(ft3)/d">14</fluidRate>
+        </gasRate>
+        <waterRate>
+          <fluidRate uom="bbl/d">21</fluidRate>
+        </waterRate>
+      </productionTestResults>
+    </productionTest>
+  </wellTest>
+</wellTests>

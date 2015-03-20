@@ -1,0 +1,156 @@
+=======================================================================================
+Changes from v1.4.1.1
+=======================================================================================
+Minor modifications and bug fixes of 1.4.1 release. (Data schema versions for this release are 1.4.1.1.)
+
+	Officially incorporated the stimJob data-object that had been released as a new data-object under WITSML version 1.3.1.
+	Updated enumvalues file for objectGroup data-object to include value of “other” and use of groupSubType element (Section 2.1.1.2). (WITSML Change Request WCR-2012-0025)
+	Corrected inconsistency. If in GetCap function, the client doesn’t send a data schema version, the server gives an error code (Sections 6.3.2 and 6.3.3) (WCR-2012-0022)
+	Corrected verbiage around error message for multiple queries in GetFromStore function (Section 6.6.4). (WCR-2012-0027)
+	Numbered standard queries (e.g., SQ-001, SQ-002) for easy reference (Section 6.6.5.1). (WCR-2012-0007)
+	Corrected XMLout example for standard query “Get details for a well” (Section 6.6.5.4). (WCR-2012-0024)
+	Corrected XMLout example for standard query “Get log” (6.6.5.16). (WCR-2012-0023)
+	Added second example query (Query 2) for objectGroup data-object with type = “other”. (Section 14.2.6). (WCR-2012-0025)
+	Corrected XML examples for spacing and UID formats (Chapter 4 (various sections) and Section 6.6.5, Standard Query Templates.) (WCR-2012-0028)
+	Corrected text regarding QueryIn parameters and requestObjectSelectionCapability to reference Minimu Query template instead of "empty" query. (See Section 6.6.2, page 54 and Section 6.6.2.1, page 57). Discussed and agreed upon as part of the Candidate Release review. 
+	Standard Query Table (Section 6.6.5.1, page 67) for column heading Return Elements/Attributes: Removed note from SQ-001 and moved to column heading; deleted previous note in column heading. Discussed and agreed upon as part of the Candidate Release review.
+	Re-numbered pages so that title page of manual begins on page 1 (not on page i as in previous version of this API document) so that page numbers are consistent between the published PDF document and the Microsoft Word document. 
+	Clean up of minor errors, spacing issues, etc. in various examples in the document.
+	Corrected minor typos reported by Certification Team and others.
+	
+=======================================================================================
+Changes from v1.4.1h
+=======================================================================================
+In obj_capServer:
+	Modified growingTimeoutPeriod to have a maxOccurs of unbounded instead of 1.
+	This was necessary for conformance with the API spec.
+
+In the examples, utilized the generic transform to insure that all elements and attributes are presented.
+
+=======================================================================================
+Changes from v1.4.1f
+=======================================================================================
+In obj_capServer:
+	Deleted changeHistoryRetentionPeriod.
+	Deleted profileName.
+	Added supportUomConversion after cascadedDelete.
+	Changed schemaVersion to mandatory.
+	Modified example accordingly.
+
+=======================================================================================
+Changes from v1.4.1e
+=======================================================================================
+In obj_capServer:
+	Modified growingTimeoutPeriod to change maxOccurs from unbounded to 1.
+	Modified maxRequestLatestValues to change maxOccurs from unbounded to 1.
+
+=======================================================================================
+Changes from v1.4.1d
+=======================================================================================
+Deleted the following files that contained Pub/Sub related schemas:
+	obj_capPublisher.xsd
+	obj_capSubscriber.xsd
+	obj_subscription.xsd
+	typ_catalog.xsd, which contained the following:
+		EventType
+		SubscriptionAction
+In obj_capServer:
+	Changed the type of changeDetectionPeriod from positiveCount to nonNegativeCount so that it can be zero.
+	Changed the type of cascadedDelete from logicalBoolean to xsd:boolean (no semantic change).
+In typ_dataTypes.xsd:
+	Deleted the following unused types:
+		integerCount
+		abstractTypeEnum
+		logicalBoolean
+	Added nonNegativeCount.
+	Modified timestamp to escape the minus sign (to be consistent with same type in data-object schemas).
+Replaced the documentation of elements and attributes with the following statement:
+	See the API specification for a description of the use of this data.
+
+=======================================================================================
+Changes from v1.4.1c
+=======================================================================================
+In obj_capServer:
+	Added maxRequestLatestValues.
+
+=======================================================================================
+Changes from v1.4.1rc
+=======================================================================================
+In obj_capServer:
+	Deleted idleDetectionPeriod.
+	Added changeHistoryRetentionPeriod.
+	Added growingTimeoutPeriod.
+	Made changeDetectionPeriod and changeHistoryRetentionPeriod mandatory.
+Deleted idleDetectionPeriod.
+Added growingTimeoutPeriod.
+
+In type objectWithConstraint:
+	Renamed maxDataRows to maxDataNodes.
+
+In obj_capServer:
+	Modified the documentation of schemaVersion to clarify that it does not represent the API schema version.
+
+=======================================================================================
+Changes from v1.4.0
+=======================================================================================
+Move stylesheet folder inside example folder to prevent security problem with FireFox.
+In examples:
+	Changed version from "1.4.0" to "1.4.1".
+In examples and stylesheets:
+	Changed namespace from "http://www.witsml.org/api/140" to "http://www.witsml.org/api/141".
+In obj_xxx:
+	Changed fixed version string from "1.4.0" to "1.4.1"
+In capServer.xml:
+	Added changeDetectionPeriod, idleDetectionPeriod, cascadedDelete, compressionMethod.
+In capServer.xsl:
+	Added changeDetectionPeriod, idleDetectionPeriod, cascadedDelete, compressionMethod, profileName.
+	Added maxDataRows, maxDataPoints.
+Renamed file cs_dataTypes.xsd to typ_dataTypes.xsd to be more consistent with data schema packaging.
+Renamed file cs_catalog.xsd to typ_catalog.xsd to be more consistent with data schema packaging.
+
+
+Issue #26 "Row-limits in the STORE Interface"
+	In cs_function:
+		Added attribute maxDataRows to .
+		Added attribute maxDataPoints.
+
+Issue #28 "Issues with optionsIn argument in WMLS_GetCap ..."
+	In obj_capServer:
+		Added cascadedDelete.
+
+Issue #W-CR-017
+	In SubscriptionAction, added "retransmit".
+	In obj_capServer:
+		Changed type of dataObject from "str64" to "objectWithConstraint".
+	In cs_dataTypes.xsd.
+		Added idleDetectionPeriod.
+		Added objectWithConstraint.
+		Added abstractPositiveCount.
+		Added abstractString64.
+
+=======================================================================================
+Changes from v1.3.1
+=======================================================================================
+
+Added index.html file. Changed name of WITSML_API_docu.htm to witsml_api_overview.html
+
+In all xsd files:
+	Changed version fixed="1.3.1" to fixed="1.4.0".
+	Changed namespace from "http://www.witsml.org/api/131" to "http://www.witsml.org/api/140".
+
+Issue 1.3.1-2 "Error in example subscription.xml"
+	In subscription.xml and subscription_response.xml:
+		Added plural object elements.
+		Changed namespace of data schema.
+
+Issue 1.3.1-38 "Function names in Capabilities object"
+	In cs_function:
+		Changed the type of attribute name from str16 to str64.
+
+Issue 1.3.1-82 "WITSML Compression"
+	In obj_capServer:
+		Added compressionMethod.
+
+Issue 1.3.1-89 "Support for server profiles"
+	In obj_capServer:
+		Added profileName.

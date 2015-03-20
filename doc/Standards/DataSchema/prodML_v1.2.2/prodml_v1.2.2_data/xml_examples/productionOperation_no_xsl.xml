@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productionOperations
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series 
+		../xsd_schemas/obj_productionOperation.xsd"
+        version="1.2.0.0(PRODML)">
+	<productionOperation uid="14061996">
+		<name>RUB-K</name>
+		<installation kind="platform" namingSystem="EnergyComponents">RUB-K</installation>
+		<contextFacility kind="field" namingSystem="EnergyComponents">RUBIN</contextFacility>
+		<kind>DDR</kind>
+		<periodKind>day</periodKind>
+		<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+		<dTimEnd>2006-04-19T00:00:00Z</dTimEnd>
+		<operator>
+			<name>Norsk Olje AS</name>
+			<role>Platformsjef</role>
+			<role>Regular user</role>
+			<role>Full access to all pictures</role>
+			<personName>
+				<first>Schema owner</first>
+				<last>RUBIN</last>
+			</personName>
+		</operator>
+		<title>Daily Production and Activity Report</title>
+		<geographicContext>
+			<country>Norway</country>
+			<field>RUBIN</field>
+		</geographicContext>
+		<issueDate>2006-04-19</issueDate>
+		<issuedBy>
+			<name>Ole Mann</name>
+			<role>Driftsleder</role>
+			<role>Platformsjef</role>
+			<personName>
+				<first>Ole</first>
+				<last>Mann</last>
+			</personName>
+		</issuedBy>
+		<approvalDate>2006-04-19</approvalDate>
+		<approver>
+			<name>Ole Mann</name>
+			<role>Operasjonsleder Land</role>
+			<role>Platformsjef</role>
+			<role>Driftsleder</role>
+			<role>Read-only access to pictures</role>
+			<role>Regular user</role>
+			<personName>
+				<first>Ole</first>
+				<last>Mann</last>
+			</personName>
+		</approver>
+		<installationReport>
+			<installation kind="platform" namingSystem="EnergyComponents">RUB-K</installation>
+			<bedsAvailable>16</bedsAvailable>
+			<crewCount type="other crew">1</crewCount>
+			<crewCount type="own other crew">3</crewCount>
+			<crewCount type="contractor crew">4</crewCount>
+			<crewCount type="personnel on board">18</crewCount>
+			<crewCount type="own crew">7</crewCount>
+			<operationalHSE>
+				<IncidentCount>0</IncidentCount>
+				<alarmCount>0</alarmCount>
+				<safety>
+					<safetyCount period="day" type="sick on board">0</safetyCount>
+					<safetyCount period="day" type="near miss">0</safetyCount>
+					<safetyCount period="day" type="first aid">0</safetyCount>
+					<safetyCount period="day" type="safety meeting">0</safetyCount>
+					<safetyCount period="day" type="sent ashore">0</safetyCount>
+				</safety>
+				<weather>
+					<dTim>2006-04-19T00:00:00Z</dTim>
+					<barometricPressure uom="atm">0.0</barometricPressure>
+					<tempSurfaceMn uom="degC">14.0</tempSurfaceMn>
+										 <visibility uom="m">0.0</visibility>
+					<htWave uom="m">0.0</htWave>
+					<significantWave uom="m">0.0</significantWave>
+					<maxWave uom="m">0.0</maxWave>
+					<aziWind uom="c">0.0</aziWind>
+					<velWind uom="m/s">0.0</velWind>
+					<amtPrecip uom="m">0.0</amtPrecip>
+				</weather>
+			</operationalHSE>
+			<productionActivity>
+				<lostProduction>
+					<volumeAndReason reasonLost="planned maint turnaround" uom="m3">0.0</volumeAndReason>
+					<volumeAndReason reasonLost="topside equipment failure-maint" uom="m3">0.0</volumeAndReason>
+				</lostProduction>
+				<shutdown>
+					<installation kind="platform" namingSystem="EnergyComponents">RUB-K</installation>
+					<description>FV for produksjonsanlegg</description>
+					<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+					<dTimEnd>2006-04-19T23:59:00Z</dTimEnd>
+					<volumetricDownTime uom="h">24.0</volumetricDownTime>
+					<activity>
+						<who>Tom Haldorsen</who>
+						<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+						<dTimEnd>2006-04-19T23:59:00Z</dTimEnd>
+						<remark>K-101 &amp; G-101 stengt p.g.a inepskasjon i K-101. Lav injeksjon</remark>
+					</activity>
+				</shutdown>
+				<shutdown>
+					<installation kind="platform" namingSystem="EnergyComponents">RUB-K</installation>
+					<description>Utstyrsfeil og KV</description>
+					<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+					<dTimEnd>2006-04-19T23:59:00Z</dTimEnd>
+					<volumetricDownTime uom="h">24.0</volumetricDownTime>
+					<activity>
+						<who>Anne Kvinne</who>
+						<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+						<dTimEnd>2006-04-19T23:59:00Z</dTimEnd>
+						<remark>F-2 H stengt p.g.a lekasje</remark>
+					</activity>
+				</shutdown>
+				<marineOperation>
+					<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+					<dTimEnd>2006-04-19T00:00:00Z</dTimEnd>
+					<standbyVessel>Stril Poseidon</standbyVessel>
+				</marineOperation>
+				<operationalComment>
+					<type>maintenance</type>
+					<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+					<dTimEnd>2006-04-19T00:00:00Z</dTimEnd>
+					<comment>Installasjonsprosjekter: Trace-pack tubing, sveising av stag radarmast og installasjon av metanol resonatorer. Overflatebehandling ihht malingsprogram for 2005. Tilbakestilt brannpumper i akterskipet. KV 21PA500B, olje til lager pumpe.</comment>
+				</operationalComment>
+				<operationalComment>
+					<type>production</type>
+					<dTimStart>2006-04-19T00:00:00Z</dTimStart>
+					<dTimEnd>2006-04-19T00:00:00Z</dTimEnd>
+					<comment>Kl 23.30; Startet å trykksette K-102 og G-101. Redusert injeksjon grunnet redusert tilgang på injeksjonsbrønner(inspeksjon av K-101). Jettet Test Separator. Kjørt sandrensepakken.</comment>
+				</operationalComment>
+			</productionActivity>
+		</installationReport>
+	</productionOperation>
+</productionOperations>

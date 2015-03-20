@@ -1,0 +1,2314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <xsd:simpleType name="BoreholeType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Cavern" />
+         <xsd:enumeration value="Cavity" />
+         <xsd:enumeration value="NormalBorehole" />
+         <xsd:enumeration value="UnderReam" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CasingConnectionType">
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="Landed" />
+         <xsd:enumeration value="SelfSealing-Threaded" />
+         <xsd:enumeration value="Welded" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="Coating">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="N/A">
+            <xsd:annotation>
+               <xsd:documentation>"N/A"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPRAY-METAL-MONEL">
+            <xsd:annotation>
+               <xsd:documentation>"Spray Metal-Monel"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TUFFR">
+            <xsd:annotation>
+               <xsd:documentation>"TUFFR"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CORROSION COATING">
+            <xsd:annotation>
+               <xsd:documentation>"Corrosion Coating"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CARBURIZED-HARDENED">
+            <xsd:annotation>
+               <xsd:documentation>"Carburized&amp;Hardened"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CARBURIZED">
+            <xsd:annotation>
+               <xsd:documentation>"Carburized"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CARBONNITRIDED">
+            <xsd:annotation>
+               <xsd:documentation>"Carbonnitrided"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CHROMEPLATED-GROOVED">
+            <xsd:annotation>
+               <xsd:documentation>"Chrome Plated/Grooved (OBSOLETE)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CHROMEPLATED-HEAVY">
+            <xsd:annotation>
+               <xsd:documentation>"Chrome Plated (Heavy)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HARD-LINED">
+            <xsd:annotation>
+               <xsd:documentation>"Hard Lined (Stellite)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HARDENED">
+            <xsd:annotation>
+               <xsd:documentation>"Hardened"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="INS">
+            <xsd:annotation>
+               <xsd:documentation>"Insert Guided Cage (OBSOLETE)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LP">
+            <xsd:annotation>
+               <xsd:documentation>"Lubri-Pump Plunger (OBSOLETE)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-S505">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-S505"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-S650">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-S650"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-TK70">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-TK-70"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CHROME-PLATED">
+            <xsd:annotation>
+               <xsd:documentation>"Chrome Plated"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NICKEL-CARBIDE">
+            <xsd:annotation>
+               <xsd:documentation>"Nickel Carbide Coated"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPRAY-METAL">
+            <xsd:annotation>
+               <xsd:documentation>"Spray Metal"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PLUNGER-LUBRICANT">
+            <xsd:annotation>
+               <xsd:documentation>"Plunger Lubricant"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MOLY">
+            <xsd:annotation>
+               <xsd:documentation>"Moly-Coated"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MTR">
+            <xsd:annotation>
+               <xsd:documentation>"Martin Ring Plunger (OBSOLETE)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NITRIDED">
+            <xsd:annotation>
+               <xsd:documentation>"Nitrided"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NICKEL-PLATED">
+            <xsd:annotation>
+               <xsd:documentation>"Nickel Plated"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PAP">
+            <xsd:annotation>
+               <xsd:documentation>"Pressure Actuated Plunger (OBSOLETE"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PHOSPHORUS">
+            <xsd:annotation>
+               <xsd:documentation>"Phosphorus Coating"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PLASTIC">
+            <xsd:annotation>
+               <xsd:documentation>"Plastic Coated"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TEFLON-RED">
+            <xsd:annotation>
+               <xsd:documentation>"Teflon-Red"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPRAYMETAL-OD/NICKELPLATED-ID">
+            <xsd:annotation>
+               <xsd:documentation>"Spray Metal OD/Nickel Plated ID"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPRAYMETAL-THICK">
+            <xsd:annotation>
+               <xsd:documentation>"Spray Metal-Thick"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TEFLON-TAN">
+            <xsd:annotation>
+               <xsd:documentation>"Teflon-Tan"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TEFLON-YELLOW">
+            <xsd:annotation>
+               <xsd:documentation>"Teflon-Yellow"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DBLGALV">
+            <xsd:annotation>
+               <xsd:documentation>"Double Galvanized"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-NYLON">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-Nylon"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-EPXTHK">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-Epoxy Thick"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-EPXTHN">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-Epoxy Thin"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FIBERGLASS-LINED">
+            <xsd:annotation>
+               <xsd:documentation>"Fiberglass Lined"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CEMENTLINED">
+            <xsd:annotation>
+               <xsd:documentation>"Cement Lined"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PVCLINED">
+            <xsd:annotation>
+               <xsd:documentation>"PVC Lined"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PELINED">
+            <xsd:annotation>
+               <xsd:documentation>"Polyethylene Lined"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SSLINED">
+            <xsd:annotation>
+               <xsd:documentation>"Stainless Steel Lined"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-EPOXY">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-Epoxy"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BARE">
+            <xsd:annotation>
+               <xsd:documentation>"Bare"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DUOLINE">
+            <xsd:annotation>
+               <xsd:documentation>"Duoline"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-1">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (1 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-2">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (2 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-2.">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (2.5 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-3">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (3 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-4">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (4 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-5">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (5 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-6">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (6 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-7">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Molded (7 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-Sp">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Spiral"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-Fx">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Flexite"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO1">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On (1 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO2">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On (2 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO3">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On (3 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO4">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On (4 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO5">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On (5 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO6">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On (6 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RODGUIDE-SO8">
+            <xsd:annotation>
+               <xsd:documentation>"Rod Guides-Snap On (8 per rod)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="POLYPROPYLENE">
+            <xsd:annotation>
+               <xsd:documentation>"Polypropylene"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EPDM">
+            <xsd:annotation>
+               <xsd:documentation>"EPDM (ESP Cable Insulation)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NITRILE">
+            <xsd:annotation>
+               <xsd:documentation>"Nitrile"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TEFLON">
+            <xsd:annotation>
+               <xsd:documentation>"Teflon"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PPW/Nitrl">
+            <xsd:annotation>
+               <xsd:documentation>"Polypropylene w/Nitrile Jacket"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TK-99">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-TK-99"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-RWrap">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg w/Rite Wrap"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="THERMO">
+            <xsd:annotation>
+               <xsd:documentation>"Thermo-Cased"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TK-4">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-TK-4"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="POLISHED-RODLINER">
+            <xsd:annotation>
+               <xsd:documentation>"w/Polished Rod Liner"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZINCPLATED">
+            <xsd:annotation>
+               <xsd:documentation>"Zinc Plated (ASTM B633)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PHOSPHATE">
+            <xsd:annotation>
+               <xsd:documentation>"Phosphate Coating"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GALVANIZED">
+            <xsd:annotation>
+               <xsd:documentation>"Galvanized (Hot Dipped) (ASTM A153)"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DUOLINE10">
+            <xsd:annotation>
+               <xsd:documentation>"Duoline 10"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DUOLINE20">
+            <xsd:annotation>
+               <xsd:documentation>"Duoline 20"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IPC-TK75">
+            <xsd:annotation>
+               <xsd:documentation>"Internal Plastic Ctg-TK-75"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPRAYMETAL-MONEL">
+            <xsd:annotation>
+               <xsd:documentation>"Spray Metal/Monel Pin"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPRAYMETAL-NICKEL">
+            <xsd:annotation>
+               <xsd:documentation>"Spray Metal/Nickel Pin"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPRAYMETAL-STEEL">
+            <xsd:annotation>
+               <xsd:documentation>"Spray Metal/Steel Pin"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DUOLIN20WR">
+            <xsd:annotation>
+               <xsd:documentation>"Duoline 20 with Rice Wrap"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CHROME">
+            <xsd:annotation>
+               <xsd:documentation>"Chrome"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TUNGSTEN PLATED">
+            <xsd:annotation>
+               <xsd:documentation>"Tungsten Plated"</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ConnectionFormType">
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="Flange" />
+         <xsd:enumeration value="Mandrel" />
+         <xsd:enumeration value="Welded" />
+         <xsd:enumeration value="Pin" />
+         <xsd:enumeration value="Box" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ContactIntervalType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="GravelPack" />
+         <xsd:enumeration value="Openhole" />
+         <xsd:enumeration value="Perforation" />
+         <xsd:enumeration value="Slots" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CrudeOilClass">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="bitumous">
+            <xsd:annotation>
+               <xsd:documentation>Measured API gravity in oil less than 10%</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="condensate">
+            <xsd:annotation>
+               <xsd:documentation>Measured API gravity in oil greater than 45%</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="heavy">
+            <xsd:annotation>
+               <xsd:documentation>Measured API gravity greater than 9.9 and less than 22.3</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="light">
+            <xsd:annotation>
+               <xsd:documentation>Measured API gravity greater than 31.1 and less than 40</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="medium">
+            <xsd:annotation>
+               <xsd:documentation>Measured API gravity greater than 22.2 and less than 31.2</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="premium light">
+            <xsd:annotation>
+               <xsd:documentation>Measured API gravity greater than 39.9 and less than 45.1</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CrudeOilType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="sour">
+            <xsd:annotation>
+               <xsd:documentation>Measured sulfur in oil greater than 0.5%</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="sweet">
+            <xsd:annotation>
+               <xsd:documentation>Measured sulfur in oil less than 0.5%</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="heavy">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="light">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DownholeStringType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Casing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Rod">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wellhead">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Others">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="EquipmentType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Bridge Plug">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Bull Plug">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Capillary Tubing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing Crossover">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing Hanger">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing Head">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing Liner-Expandable">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing Shoe">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing Spool">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing/Casing Liner">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Cement (behind Casing)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Cement Basket">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Cement Retainer">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Cement Squeeze">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Cement Stage Tool">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Chemical Injection Mandrel">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Chemical Injection Valve">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Corrosion Coupon Carrier">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Dip Tube">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Downhole Choke">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Downhole Sensor">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Assembly">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Bolt on Discharge">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Bolt on Intake">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Bolt on Motor Base">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Bolt on Motor Head">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Cable">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Gas Handler">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Gas Separator">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Lower Pigtail">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Motor">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Motor Base Centralizer">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Motor Flat Cable">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Motor Shroud">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Promotor">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Pump">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Pump Discharge Sensor Sub">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ESP Seal">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Expansion Joint">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="External Cementing Port">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Fill">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Fish">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Float Collar">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Float Shoe/Guide Shoe">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Gas Anchor">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Gas Lift Mandrel">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Gas Lift Valve">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Gravel Pack Screen">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Hydraulic Pump">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Injection Mandrel">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Injection Valve">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Junk in Wellbore">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Landing Collar">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Liner Entry Guide">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Liner Hanger">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Mule Shoe">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Notched Collar">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="On-Off Tool">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Overshot">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Packer">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Packer-Multiple Strings">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Packer Plug">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Packoff (Tubing)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP-Flex shaft Intake">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP-Gear Reducer (Subsurface)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP-No Turn Tool/Torque Anchor">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP-Rotor">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP-Stator">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP-Tag Bar">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plug - Cement">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plug - Mud">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plunger Lift Ball">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plunger Lift Bottom Hole Bumper Assembly">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plunger Lift Bumper Spring">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plunger Lift Collar Stop">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plunger Lift Plunger">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Polished Rod">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Polished Rod Liner">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Ported Collar">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Profile Nipple">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Profile Nipple Plug">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Pump-Out Plug">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Seal Assembly">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod Backoff Coupling">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod-Continuous">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod Pump-Insert">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod Pump-Jacket">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod Pump-Tubing Pump Barrel">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod Pump-Tubing Pump Plunger">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod-Ribbon">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod-Sinker Bar">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sucker Rod Sub">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sand Screen-Tubing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sand Separator">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Screen Liner/Insert">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Seal Bore Extension">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Seat Nipple/Shoe">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Shear Tool">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sliding Sleeve">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Steam Cup Mandrel">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Steam Deflectors">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Strainer Nipple">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Subsurface Safety Valve">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TCP Gun">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing (Coiled)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Anchor/Catcher">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Crossover">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Drain">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Hanger">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Head (Spool)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Purge Check Valve">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Sub">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Whipstock">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wireline Re-Entry Guide (Bell Collar)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wellbore Notes">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Y-Tool">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="EventClassType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Job" />
+         <xsd:enumeration value="Daily Report" />
+         <xsd:enumeration value="Time Log (Time Measure)" />
+         <xsd:enumeration value="Daily Cost" />
+         <xsd:enumeration value="NPT (lost time event)" />
+         <xsd:enumeration value="Failure (downhole equipment only)" />
+         <xsd:enumeration value="Mud Attributes" />
+         <xsd:enumeration value="Job Plan (phases)" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="FluidType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Bitumen">
+            <xsd:annotation>
+               <xsd:documentation>Bitumen is crude oil produced from Oil Sands and is a naturally occurring mixture which is heavy and extremely viscous. The Bitumen produced from
+               Oil Sands requires special technology to produce and must be treated before it can be used by refineries</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Condensate">
+            <xsd:annotation>
+               <xsd:documentation>Condensate is a natural gas mixture which exists in a liquid state with a low vapor pressure compared with natural gasoline and liquid petroleum
+               gas (LPG). Condensate is mainly composed of propane, butane, pentane and heavier hydrocarbon fractions.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Hydrocabon Gas">
+            <xsd:annotation>
+               <xsd:documentation>Gas is a substance which exists in a non-solid or non-liquid state under normal temperates and pressues. It possesses perfect molecular mobility
+               and the property of indefinite expansion and is lighter than oil or water. Gas is recovered from an undergro</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Non-combustible Gas">
+            <xsd:annotation>
+               <xsd:documentation>Non-Combustible gas is Gas which is not flamable under normal circumstances and includes Nitrogen, Oxygen and Helium</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Oil">
+            <xsd:annotation>
+               <xsd:documentation>Oil is a viscous, combustible, liquid at ordinary temperatures with a chemical compostion of hydrogen and carbon. Oil is insoluble in water but
+               soluble in ether or alcohol. Oil is recovered at a well from an underground reservoir in which the hydrocarbo</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Water">
+            <xsd:annotation>
+               <xsd:documentation>Water is a transparent, odorless, tasteless liquid,with the chemical composition of two atoms of hydrogen and one atom of oxygen (H2O) freezing
+               at 32&#194;&#176;F or 0&#194;&#176;C and boiling at 212&#194;&#176;F or 100&#194;&#176;C. Water is heavier than oil or gas.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="GasType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="acid gas">
+            <xsd:annotation>
+               <xsd:documentation></xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="coalbed methane">
+            <xsd:annotation>
+               <xsd:documentation></xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="methane">
+            <xsd:annotation>
+               <xsd:documentation></xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ethane">
+            <xsd:annotation>
+               <xsd:documentation></xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ethane plus">
+            <xsd:annotation>
+               <xsd:documentation></xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="propane">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="butane">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="pentane">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="C5H12 - pentane plus">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="carbon dioxide">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="condensate">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="helium">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="liquid petroleum gas">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="sulphur">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="miscible">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="H2S">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="air">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="nitrogen">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="hydrogen">
+            <xsd:annotation />
+         </xsd:enumeration>
+         <xsd:enumeration value="oxygen">
+            <xsd:annotation />
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="GeologyType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Aquifer" />
+         <xsd:enumeration value="Reservoir" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="GradeType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="DE">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DER">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DR">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FG">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SE">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SER">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="T-66">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HS">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="KD">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-97">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="D">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="E">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="E-75">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="G-105">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-135">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="V-150">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Armco-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C-110">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C-75">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C-90">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="C-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="F-25">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="H-40">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HC-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J-20">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="J-55">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K-40">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="K-55">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="L-80">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LS-50">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LS-65">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="M-65">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="M-90">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="M-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MAV-50">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-105">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-23">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-80">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="P-105">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="P-110">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Q-125">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-80">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="T-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-140">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Unknown">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EL">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MD-56">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-60">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-67">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-87">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-88">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XD">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S-59">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="KD-63">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-30">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-40">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-54">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-78">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-75">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-90">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="N-96">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="35">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="50">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="45">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="T-K65">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="46">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="T-D61">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="T-D63">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="75">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="75A">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PH-6">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WC-50">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SOO-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="A53B">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FS-80">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FSS-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SC-90">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="USS-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="USS-125">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="USS-140">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GT-80S">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="USS-50">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LS-140">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HCL-80">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HCN-80">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HCP-110">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HCQ-125">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="H2S-90">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QT-700">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QT-800">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QT-900">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QT-1000">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QT-1200">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HO-70">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="A53">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="A53A">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="H2S-95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HCK-55">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="B">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-42">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-52">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-56">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="13CR">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="13CR- 80">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="13CR- 85">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="13CR- 95">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="13CR-110">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-46">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-60">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X-70">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="X">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="G">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="S">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Stainless">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SWR">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DWR">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="T">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SM">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="UHS">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MMS">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP 900">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP 1000">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP 1500">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PCP 2500">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plus">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="620C">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="780M">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="750N">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="960M">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="970N">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LiftMethod">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Flowing">
+            <xsd:annotation>
+               <xsd:documentation></xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GasLift-Continuous">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GasLift-NonContinuous">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Jet/Hydraulic Pump">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="JackLine Pump">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Progressive Cavity Pump">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Plunger Lift">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Rod Pump">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Submersible Pump">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Sumbersible Pump Tandem">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GasLift">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="OtherConnectionType">
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="DogsCompressionFit-Sealed" />
+         <xsd:enumeration value="Cemented-in-place" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PerfConveyanceMethod">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="N/A">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Slick Line">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Tubing Conveyed">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wireline">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PerforationFluidType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="N/A">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Brine Water">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Fresh Water">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Producing Oil">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Producing Water">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Salt Water (CaCl)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Salt Water (KCl)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Salt Water (NaCl)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PerforationPattern">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="N/A">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Cluster">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Linear">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Logarithmic">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Oriented">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PerforationToolType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="N/A">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Casing Gun">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Through Tubing Gun">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Slots-Machine Cut">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Slots-Undercut">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TCP Gun">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Strip Gun">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Drilled">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Mandrel">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Coiled Tubing Jet Tool">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="RodConnectionType">
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="Latched" />
+         <xsd:enumeration value="Seating Nipple-Cup" />
+         <xsd:enumeration value="SeatingNipple-Mechanical" />
+         <xsd:enumeration value="SlipFit-Sealed" />
+         <xsd:enumeration value="Threaded" />
+         <xsd:enumeration value="Welded" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SubStringType">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="Abandoned Junk/Fish">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Capillary String (inside Tubing)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value=" Capillary String (Tubing/Casing Annulus)">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Surface Casing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Conductor Casing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Intermediate Casing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Production Casing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value=" Protective Casing">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Drill String">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Production Liner ">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Wellbore Notes">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Y-Tool String">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Inner Liner ">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Geological Objects">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Flowline">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TubingConnectionType">
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="DogsCompressionFit-NotSealed" />
+         <xsd:enumeration value="Latched" />
+         <xsd:enumeration value="Landed" />
+         <xsd:enumeration value="SelfSealing-Threaded" />
+         <xsd:enumeration value="SlipFit-Sealed" />
+         <xsd:enumeration value="Threaded" />
+         <xsd:enumeration value="Radial" />
+         <xsd:enumeration value="Unknown" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="WaterSalinity">
+      <xsd:restriction base="witsml:abstractTypeEnum">
+         <xsd:enumeration value="brackishwater">
+            <xsd:annotation>
+               <xsd:documentation></xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="brine">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="fresh">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="saline">
+            <xsd:annotation>
+               <xsd:documentation />
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:schema>

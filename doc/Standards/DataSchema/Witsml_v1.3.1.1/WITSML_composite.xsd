@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	targetNamespace="http://www.witsml.org/schemas/131" 
+	xmlns=          "http://www.witsml.org/schemas/131" 
+	xmlns:witsml=   "http://www.witsml.org/schemas/131" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--                                                         -->
+	<!-- POSC License Agreement
+	This file is distributed under the POSC License Agreement at
+	http://www.posc.org/about/license.shtml.
+	Use of this file constitutes agreement with the POSC License Agreement.
+	-->
+	<!--                                                         -->
+	<xsd:annotation>
+		<xsd:documentation>Copyright (c) 2005 Petrotechnical Open Standards Consortium, Inc (POSC). All rights reserved.
+        	POSC(r) is a registered trademark and WITSML(tm) is a trademark of POSC.</xsd:documentation>
+	</xsd:annotation>
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_documentInfo.xsd"/>
+	<xsd:include schemaLocation="grp_bhaRun.xsd"/>
+	<xsd:include schemaLocation="grp_cementJob.xsd"/>
+	<xsd:include schemaLocation="grp_convCore.xsd"/>
+	<xsd:include schemaLocation="grp_dtsInstalledSystem.xsd"/>
+	<xsd:include schemaLocation="grp_dtsMeasurement.xsd"/>
+	<xsd:include schemaLocation="grp_fluidsReport.xsd"/>
+	<xsd:include schemaLocation="grp_formationMarker.xsd"/>
+	<xsd:include schemaLocation="grp_log.xsd"/>
+	<xsd:include schemaLocation="grp_message.xsd"/>
+	<xsd:include schemaLocation="grp_mudLog.xsd"/>
+	<xsd:include schemaLocation="grp_opsReport.xsd"/>
+	<xsd:include schemaLocation="grp_rig.xsd"/>
+	<xsd:include schemaLocation="grp_risk.xsd"/>
+	<xsd:include schemaLocation="grp_sidewallCore.xsd"/>
+	<xsd:include schemaLocation="grp_surveyProgram.xsd"/>
+	<xsd:include schemaLocation="grp_target.xsd"/>
+	<xsd:include schemaLocation="grp_trajectory.xsd"/>
+	<xsd:include schemaLocation="grp_tubular.xsd"/>
+	<xsd:include schemaLocation="grp_wbGeometry.xsd"/>
+	<xsd:include schemaLocation="grp_wellbore.xsd"/>
+	<xsd:include schemaLocation="grp_well.xsd"/>
+	<xsd:include schemaLocation="grp_wellLog.xsd"/>
+	<xsd:include schemaLocation="cs_commonData.xsd"/>
+	<xsd:include schemaLocation="cs_customData.xsd"/>
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+
+<!-- Excluded WITSML API objects.
+	  realtime is considered to be transient data.
+	<xsd:include schemaLocation="grp_realtime.xsd"/>
+
+	  trajectoryStation is redundant to the stations in trajectory.
+	<xsd:include schemaLocation="grp_trajectoryStation.xsd"/>
+-->
+	<!--                                                         -->
+	<!--                 ROOT ELEMENT                            -->
+	<!--                                                         -->
+	<xsd:element name="WITSMLComposite" type="witsml:allObjects">
+		<xsd:annotation>
+			<xsd:documentation>The root container for all WITSML data.
+			This schema is not designed for use with the WITSML API. 
+			Rather it captures the logical model represented by the API queriable objects.
+			As such it can represent all data in a server or it can represent data outside the context of a server.
+			The data in the API objects have been incorporated into a normal XML hierarchy of well/wellbore.
+			The plural API root elements have essentially been renamed to "xxxSet".
+			The content of the well and wellbore API objects has been captured in "generalInformation" elements.
+			The realtime object is not included because it is considered to be a transient server concept.
+			The trajectoryStation object is not included because it is redundant to the data in trajectory.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                                                         -->
+	<!--                                                         -->
+	<xsd:complexType name="allObjects">
+		<xsd:sequence>
+			<xsd:element name="documentInfo" type="witsml:cs_documentInfo" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Information about the XML message instance.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for wells.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="well" type="witsml:co_well" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single well.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined data elements. 
+					This is intended for adding new objects that are not a child of well.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="witsml:schemaVersionString" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Data object schema version.  The fourth level must match the 
+				version of the schema constraints (enumerations and XML loader files) that are assumed
+				by the document instance.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--                                                         -->
+	<!-- ================== Component Objects ================== -->
+	<!--                                                         -->
+	<xsd:complexType name="co_wellHeader">
+		<xsd:sequence>
+			<xsd:group ref="witsml:grp_well" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual general information for a well.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_wellboreHeader">
+		<xsd:sequence>
+			<xsd:group ref="witsml:grp_wellbore" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual general information for a wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_well">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the well.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="generalInformation" type="witsml:co_wellHeader" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>General information about a well.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="wellboreSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for wellbores.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="wellbore" type="witsml:co_wellbore" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single wellbore.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined data elements. 
+					This is intended for adding new custom objects that are a child of well.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the well.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_wellbore">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the wellbore.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="generalInformation" type="witsml:co_wellboreHeader" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>General information about a wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bhaRunSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for bottom hole assembly runs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="bhaRun" type="witsml:co_bhaRun" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single bottom hole assembly run.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="cementJobSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for cement jobs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="cementJob" type="witsml:co_cementJob" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single cement job.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="convCoreSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for conventional cores.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="convCore" type="witsml:co_convCore" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single conventional core.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="dtsInstalledSystemSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for Distributed Temperature Survey Installed Systems.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="dtsInstalledSystem" type="witsml:co_dtsInstalledSystem" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single Distributed Temperature Survey Installed System.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="dtsMeasurementSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for Distributed Temperature Survey Measurements.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="dtsMeasurement" type="witsml:co_dtsMeasurement" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single Distributed Temperature Survey Measurement.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="fluidsReportSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for fluids reports.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fluidsReport" type="witsml:co_fluidsReport" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single fluids report.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="formationMarkerSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for formation markers.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="formationMarker" type="witsml:co_formationMarker" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single formation marker.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="logSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for logs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="log" type="witsml:co_log" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single log.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="messageSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for messages.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="message" type="witsml:co_message" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single message.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="mudLogSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for mud logs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="mudLog" type="witsml:co_mudLog" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single mud log.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="opsReportSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for operations reports.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="opsReport" type="witsml:co_opsReport" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single operations report.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!--    Realtime is not supported because it is considered transient.        -->
+			<xsd:element name="riskSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for risks.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="risk" type="witsml:co_risk" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single risk.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="rigSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for rigs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="rig" type="witsml:co_rig" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single rig.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="sidewallCoreSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for sidewall cores.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="sidewallCore" type="witsml:co_sidewallCore" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single sidewall core.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="surveyProgramSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for survey programs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="surveyProgram" type="witsml:co_surveyProgram" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single survey program.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="targetSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for targets.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="target" type="witsml:co_target" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single target.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="trajectorySet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for trajectories.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="trajectory" type="witsml:co_trajectory" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single trajectory.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<!--    The Trajectory Station Object is a query concept and is not supported 
+				as an independent item. See trajectory.
+			 -->
+			<xsd:element name="tubularSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for tubulars.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="tubular" type="witsml:co_tubular" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single tubular.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="wbGeometrySet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for wellbore geometries.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="wbGeometry" type="witsml:co_wbGeometry" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single wellbore geometry.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="wellLogSet" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A collector for well logs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="wellLog" type="witsml:co_wellLog" minOccurs="1" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>A single well log.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined data elements. 
+					This is intended for adding new objects that are a child of wellbore.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the wellbore.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_bhaRun">
+		<xsd:sequence>
+			<xsd:group ref="witsml:grp_bhaRun" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a BHA run.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_cementJob">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the cement job.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_cementJob" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a cement job.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the cement job.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_convCore">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the conventional core.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_convCore" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a conventional core.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the conventional core.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_dtsInstalledSystem">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the Distributed Temperature Survey Installed System.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_dtsInstalledSystem" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a Distributed Temperature Survey Installed System.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the Distributed Temperature Survey Installed System.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_dtsMeasurement">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the  Distributed Temperature Survey Measurement.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_dtsMeasurement" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a Distributed Temperature Survey Measurement.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the Distributed Temperature Survey Measurement.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_fluidsReport">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for teh fluids report.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_fluidsReport" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a fluids report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>	
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the fluids report.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_formationMarker">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the formation marker.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_formationMarker" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a formation marker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the formation marker.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_log">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the log.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_log" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the log.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_message">
+		<xsd:sequence>
+			<xsd:group ref="witsml:grp_message" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a message.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the message.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_mudLog">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the mud log.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_mudLog" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a mud log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the mudlog.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_opsReport">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the operations report.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_opsReport" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for an operations report.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the operations report.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_rig">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the rig.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_rig" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a rig.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the rig.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_risk">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the risk.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_risk" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a risk.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the risk.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_sidewallCore">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the sidewall core.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_sidewallCore" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a sidewall core.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the sidewall core.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_surveyProgram">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the survey program.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_surveyProgram" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a survey program.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the survey program.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_target">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the target.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_target" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a target.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the target.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_trajectory">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the trajectory.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_trajectory" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a trajectory.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the trajectory.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_tubular">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the tubular (assembly).  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_tubular" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a tubular (assembly).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the tubular (assembly).</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_wbGeometry">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the wellbore geometry.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_wbGeometry" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a wellbore geometry.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the wellbore geometry.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+	<xsd:complexType name="co_wellLog">
+		<xsd:sequence>
+			<xsd:element name="name" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Human recognizable context for the well log.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="witsml:grp_wellLog" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The non-contextual content for a well log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="commonData" type="witsml:cs_commonData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that contains elements that are common to all data 
+					objects.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="customData" type="witsml:cs_customData" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container element that can contain custom or user defined 
+					data elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the well log.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+	<!--                                                         -->
+</xsd:schema>

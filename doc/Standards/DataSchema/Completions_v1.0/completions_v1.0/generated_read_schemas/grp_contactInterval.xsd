@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	targetNamespace="http://www.witsml.org/schemas/1series" 
+	xmlns:witsml="http://www.witsml.org/schemas/1series" 
+	xmlns:abs="http://www.energistics.org/schemas/abstract"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	version="1.4.1.1">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2013 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="cs_extensionNameValue.xsd" />
+   <xsd:include schemaLocation="cs_eventInfo.xsd" />
+   <xsd:include schemaLocation="cs_intervalStatusHistory.xsd" />
+   <xsd:include schemaLocation="cs_equipmentCatalog.xsd" />
+   <xsd:group name="grp_contactInterval">
+      <xsd:sequence>
+         <xsd:element name="mdTop" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth of the top perforation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="mdBottom" type="witsml:measuredDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Measured depth of the bottom perforation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tvdTop" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True vertical depth of the top perforation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="tvdBottom" type="witsml:wellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>True vertical depth of the bottom perforation.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="intervalStatusHistory" type="witsml:cs_intervalStatusHistory" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>The contactInterval history information</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="eventHistory" type="witsml:cs_eventInfo" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The contactInterval event information</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="geologyFeatureRefID" type="witsml:refString" minOccurs="0" maxOccurs="unbounded" />
+         <xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+               <xsd:appinfo>Modified-in-version=1.4.0, By-issue=1.3.1-71, Change=Added</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:group>
+</xsd:schema>

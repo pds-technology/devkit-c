@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prodml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="PRODML_v1.3">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2014 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_catalog.xsd" />
+   <xsd:include schemaLocation="cs_fiberCommon.xsd" />
+   <xsd:complexType name="cs_fiberTerminator">
+      <xsd:annotation>
+         <xsd:documentation>The terminator of the optical path. This may be a component (in the case of a single ended fiber installation), or it may be a connection back into the
+         instrument box in the case of a double ended fiber installation.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="prodml:cs_fiberCommon">
+            <xsd:sequence>
+               <xsd:element name="terminationType" type="prodml:TerminationType" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                     <xsd:documentation>Information about the termination used for the fiber</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+</xsd:schema>

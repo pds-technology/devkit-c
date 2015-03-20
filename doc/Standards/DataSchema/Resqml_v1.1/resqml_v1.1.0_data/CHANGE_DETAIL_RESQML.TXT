@@ -1,0 +1,246 @@
+
+===========================================================================
+Changes after Abingdon
+===========================================================================
+In cs_resqmlContinuousPropertyValues:
+	Deleted unit.
+Renamed cs_resqmlAbstractFeatureVersion to cs_resqmlAbstractFeatureInterpretation.
+Renamed cs_resqmlFaultVersion to cs_resqmlFaultInterpretation.
+Renamed cs_resqmlHorizonVersion to cs_resqmlHorizonInterpretation.
+
+Renamed grp_resqmlVersionDublinCore to grp_resqmlTraceabilityDublinCore.
+
+Added the following units to ResqmlUnitOfMeasure:
+	NONE
+	(Pa.kg)/m3
+
+Updated the ResqmlPropertyKind with values from Abingdon.
+Incorporated standard values from ancillary/enumValuesResqml.xml into typ_catalogResqml.xsd as explicit enumerations.
+
+Eliminated the following WITSML unit dictionary files:
+	ancillary\DocumentInfo.xsd
+	ancillary\Units.xsd
+	ancillary\witsmlUnitDict.html
+	ancillary\witsmlUnitDict.xml
+
+Eliminated unused items in ancillary/cs_enumValuesResqml.xsd
+
+
+===========================================================================
+Changes before Abingdon
+===========================================================================
+
+In cs_resqmlPropertyKind:
+	Added mandatory isAbstract.
+In cs_enumValuesResqml.xsd:
+	Renamed "abstract" to "isAbstract".
+	Renamed "parentClass" to "parentKind"
+In cs_resqmlGrid2dPatch:
+	Made binGrid mandatory.
+In schemaVersionStringResqml:
+	Do not allow a version "n.0.n.n".
+
+
+In ancillary/cs_enumValuesResqml.xsd:
+	Changed the type of element name in type enumList from str32 to nameString.
+
+In cs_resqmlBinGrid:
+	Modified the description of originCrossline to fix typo.
+In cs_resqmlGrid2dPatch:
+	Modified the description of ni, nj to change "cell" to "node".
+	Modified the description of iIncrement, jIncrement to remove the "subset" example and
+	to add a grid-coardening sentence. Fix typo in iIncrement.
+
+
+==================================================================
+======================= Changes since v1.0 =======================
+==================================================================
+Modified schemaVersionStringResqml to reflect v1.1.
+Modified file versions to reflect v1.1.
+
+Added enumValuesResqml.xml as a replacement for enumValues.xml. 
+	Eliminated measureUom from MeasureClass.
+	Eliminated unused lists such as LithologyType.
+	Added ResqmlPropertyKind list.
+		Makes ratio classes such as "area per area" a specialization of "dimensionless"
+In cs_enumValuesResqml.xsd:
+	In the sequence for property kind:
+		Added a sequence around unitOfMeasure and dimensionalClass and made them mandatory.
+		Added a minimumValue and maximumValue within a sequence.
+		Added a recurring eumValue. 
+		Added an optional choice around the above.
+	Changed the type of unitOfMeasure from xsd:string to ResqmlUnitOfMeasure.
+	Added ResqmlUnitOfMeasure.
+In typ_catalogResqml.xsd:
+	Added ResqmlUnitOfMeasure.
+	Added ResqmlPropertyKind.
+In cs_resqmlPropertyKind:
+	Added resqmlKind.
+	Changed the type of parentResqmlKind from nameString to ResqmlPropertyKind.
+	Added the following as a denormalization from ResqmlPropertyKind:
+		unitOfMeasure
+		dimensionalClass
+		minimumValue
+		maximumValue
+		enumValu
+In cs_resqmlContinuousPropertyValues:
+	Changed the type of unit from uomString to ResqmlUnitOfMeasure.
+	
+
+Issue R-CR-001 "Abstract design of features, feature versions and feature representation"
+	Added the following abstract supertypes:
+                cs_resqmlAbstractGeologicFeature
+                cs_resqmlAbstractFeatureVersion
+                cs_resqmlAbstractFeatureRepresentation
+	Made the following a subtype of cs_resqmlAbstractGeologicFeature and deleted name:
+		cs_resqmlFault
+		cs_resqmlHorizon
+	Made the following a subtype of cs_resqmlAbstractFeatureVersion:
+		cs_resqmlFaultVersion
+		cs_resqmlHorizonVersion
+	Made the following a subtype of cs_resqmlAbstractFeatureRepresentation:
+		cs_resqml2dGridRepresentation
+		cs_resqmlHybridGridRepresentation
+		cs_resqmlPillarSetRepresentation
+		cs_resqmlPointSetRepresentation
+		cs_resqmlTriangulatedRepresentation
+	In cs_resqmlAbstractPropertyValues:
+		Changed the type of localKind from refNameString to refGlobalNameString.
+	In cs_resqmlIJKNonStandardAdjacency:
+		Changed the type of faultName from refNameString to refGlobalNameString.
+	In cs_resqmlPropertyKind:
+		Changed the type of parentLocalKind from refNameString to refGlobalNameString.
+
+Issue R-CR-002 "Dublin Core Attachment To Horizon and Fault Features"
+	DC elements and a global uid were added to the following as part of issue R-CR-001.
+		cs_resqmlFault
+		cs_resqmlHorizon
+	In cs_resqmlTimeStepList and cs_resqmlPropertyGroup:
+		Deleted name.
+		Added grp_resqmlVersionDublinCore.
+		Added extensionAny.
+		Added extensionNameValue.
+		Changed attgrp_uid to attgrp_uidGlobal.
+	In cs_resqmlPropertyGroup:
+		Changed the type of parentGroup from refNameString to refGlobalNameString.
+	In cs_resqmlRefTimeStep:
+		Changed the type of timeStepList from refNameString to refGlobalNameString.
+
+Issue R-CR-003 "Misspelling on gridRepresentation and gridPatch"
+	In cs_resqmlFaultVersion:
+		Renamed gridRepresentation t0 grid2dRepresentation.
+	In cs_resqmlHorizonVersion:
+		Renamed gridRepresentation t0 grid2dRepresentation.
+	In cs_resqml2dGridRepresentation:
+		Reanmed gridPatch to grid2dPatch.
+	In cs_resqmlHybridGridRepresentation:
+		Reanmed gridPatch to grid2dPatch.
+	Renamed cs_resqml2dGridPatch to cs_resqmlGrid2dPatch to minic the element naming pattern.
+	Renamed cs_resqml2dGridRepresentation to cs_resqmlGrid2dRepresentation to minic the element naming pattern.
+
+Issue R-CR-004 "NAME and documentInfo TITLE redundant for a RESQML document"
+	Deleted cs_resqmlDocumentInfo.
+	In grp_resqmlDocument:
+		Replaced documentInfo with the contents of cs_resqmlDocumentInfo:
+	In obj_resqmlDocument:
+		Deleted name.
+
+Issue R-CR-005 "Provide an alternative HDF5 description for list an other heavy structures"
+	cs_resqmlIJKNonStandardAdjacency:
+		Put a choice containng hdfRepresentation around gridIJKCellFacePair.
+
+Issue R-CR-006 "Allow customization at the granularity of representation"
+	Added cs_extensionAny.
+	Added cs_resqmlExtensionNameValue:
+	In each type with a global uid (via attgrp_uidGlobal) added extensionAny and extensionNameValue.
+
+Issue R-CR-007 "Creation of a Survey(bin) independant representation"
+	In cs_resqmlInterfaceFeatureSet:
+		Added binGrid.
+	In cs_resqmlBinGrid:
+		Added grp_resqmlVersionDublinCore.
+		Added extensionAny.
+		Added extensionNameValue.
+		Added attgrp_uidGlobal.
+		Added optional sequence around mandatory inline/crossline information.
+		Added the following:
+			local3dCRS
+			ni
+			nj
+			deltaI
+			deltaJ
+			originInline
+			originCrossline
+	In cs_resqml2dGridPatch:
+		Changed the type of binGrid from cs_resqmlBinGrid to refGlobalNameString.
+		Modified the description of ni and nj.
+		Added the following:
+			iStart
+			jStart
+			iIncrement
+			jIncrement
+		Deleted the following:
+			originOrdinal1
+			originOrdinal1
+			deltaI
+			deltaJ
+		Modified the description of binGrid.
+
+Issue R-CR-008 "Constrain face indexes of 3D grid cell to be valued between 0 and 5"
+	In cs_resqmlGridIJKCellFacePair:
+		Changed the type of face1 and face2 from nonNegativeShort to faceIndex.
+	Added type faceIndex.
+
+
+Issue R-CR-009 "Traçabilty of modified representation for one version"
+	In grp_resqmlVersionDublinCore:
+		Added dc:source.
+	In dublinCoreTerms_resqml_v1.0_profile/dcterms.xsd:
+		Added type globalUidString.
+		Changed the type of source from dublinCoreString to globalUidString.
+
+Issue R-CR-010 "Make UID mandatory in refGlobalNameString"
+	In type refGlobalNameString, made uidRef mandatory.
+
+Issue R-CR-011 "Well Marker representation for structural features"
+	Added type cs_resqmlWellMarkerRepresentation.
+	Added type cs_resqmlWellMarkerPatch.
+	Added type cs_resqmlWellMarkerSet.
+	Added type cs_resqmlWellMarker.
+	In cs_resqmlFaultVersion:
+		Added wellMarkerRepresentation.
+	In cs_resqmlHorizonVersion:
+		Added wellMarkerRepresentation.
+
+
+=====================  CLEANUP  =====================
+In cs_resqmlAbstractIJKGrid:
+	Replaced resqml:logicalBoolean with xsd:boolean.
+Replaced resqml:integerCount with xsd:int in the following types:
+	cs_resqmlAbstractIJKGrid
+	cs_resqmlCellIndex
+	cs_resqmlGridIJKCell
+	cs_resqmlGridIJKCellFacePair
+	cs_resqmlLocalIJKGrid
+	cs_resqmlSplitLineReference
+	cs_resqmlSplitNodeReference
+In cs_dataTypesResqml.xsd:
+	Restricted faceIndex from xsd:short instead of abstractShort.
+	Restricted nonNegativeShort from xsd:short instead of abstractShort.
+	Restricted zeroOrOneShort from xsd:short instead of abstractShort.
+	Restricted nonNegativeInt from xsd:int instead of abstractInt.
+In cs_dataTypes.xsd:
+	Restricted timestamp from xsd:dateTime instead of abstractDateTime.
+	Restricted positiveCount from xsd:short instead of abstractPositiveCount.
+	Restricted measuredDepthCoord from xsd:double instead of abstractMeasure.
+In typ_dataTypesResqml.xsd, deleted the following unused types:
+	controlledNameStruct
+	triangleRefinement
+	verticalElevationCoord
+Removed unused types in the following files:
+	typ_baseType.xsd
+	typ_dataTypes.xsd
+	typ_catalog.xsd
+	typ_measureType.xsd
+	typ_quantityClass.xsd
+
