@@ -4,9 +4,8 @@ devkit c# provides kit to the c# developer , it handles energistics WITSML1.3.1.
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* devkit c# provides kit to the c# developer
+* 1.0 
 
 ### How do I get set up? ###
 
