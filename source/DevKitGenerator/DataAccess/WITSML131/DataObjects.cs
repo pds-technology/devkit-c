@@ -13127,8 +13127,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if TypeConc has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TypeConcSpecified = false; 
+        private Boolean TypeConcSpecified = false; 
 
         /// <summary>
         /// Concentration Amount: unit type depends of typeConc. . If you set this property, you must also set TypeConc.
@@ -13151,8 +13150,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Concentration has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ConcentrationSpecified = false; 
+        private Boolean ConcentrationSpecified = false; 
 
         /// <summary>
         /// Concentration in terms of weight per sack.
@@ -13176,8 +13174,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if WeightSack has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool WeightSackSpecified = false; 
+        private Boolean WeightSackSpecified = false; 
 
         /// <summary>
         /// Concentration in terms of volume per sack.
@@ -13201,8 +13198,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if VolSack has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool VolSackSpecified = false; 
+        private Boolean VolSackSpecified = false; 
 
 
 
@@ -21170,8 +21166,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if WasDriftRunPerformed has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool WasDriftRunPerformedSpecified = false; 
+        private Boolean WasDriftRunPerformedSpecified = false; 
 
         /// <summary>
         /// A reference to the OTDR that was run. If an OTDR was run, but there is not instance of the OTDR to reference, choose the wasDriftRunPerformed element, and set it to True.
@@ -21193,8 +21188,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if OTDRPerformed has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OTDRPerformedSpecified = false; 
+        private Boolean OTDRPerformedSpecified = false; 
 
 
 
@@ -26143,8 +26137,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if DoubleValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DoubleValuesSpecified = false; 
+        private Boolean DoubleValuesSpecified = false; 
 
         /// <summary>
         /// The serialziation of the axis positions of an array as a whitespace-delimited list values of type xsd:String. Note: the serialization of string elements with embedded whitespace cannot be properly decoded.
@@ -26166,8 +26159,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if StringValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StringValuesSpecified = false; 
+        private Boolean StringValuesSpecified = false; 
 
 
 
@@ -27534,8 +27526,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Force has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ForceSpecified = false; 
+        private Boolean ForceSpecified = false; 
 
         /// <summary>
         /// A concentration value that represents the parameter.
@@ -27559,8 +27550,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Concentration has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ConcentrationSpecified = false; 
+        private Boolean ConcentrationSpecified = false; 
 
         /// <summary>
         /// A equivalent mud weight value that represents the parameter. This commonly used for pressure gradient parameters and pressure parameters.
@@ -27584,8 +27574,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if EquivalentMudWeight has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool EquivalentMudWeightSpecified = false; 
+        private Boolean EquivalentMudWeightSpecified = false; 
 
         /// <summary>
         /// A pressure gradient value that represents the parameter. This is sometimes specified instead of an equivalent mud weight.
@@ -27609,8 +27598,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if PressureGradient has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PressureGradientSpecified = false; 
+        private Boolean PressureGradientSpecified = false; 
 
 
 
@@ -32177,8 +32165,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Latitude has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LatitudeSpecified = false; 
+        private Boolean LatitudeSpecified = false; 
 
         /// <summary>
         /// The longitude with east being positive. If you set this property, you must also set Latitude.
@@ -32207,8 +32194,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Longitude has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LongitudeSpecified = false; 
+        private Boolean LongitudeSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with east being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Northing.
@@ -32237,8 +32223,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Easting has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool EastingSpecified = false; 
+        private Boolean EastingSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with north being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Easting.
@@ -32267,8 +32252,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Northing has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool NorthingSpecified = false; 
+        private Boolean NorthingSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with west being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Southing.
@@ -32297,8 +32281,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Westing has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool WestingSpecified = false; 
+        private Boolean WestingSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with south being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Westing.
@@ -32327,8 +32310,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Southing has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SouthingSpecified = false; 
+        private Boolean SouthingSpecified = false; 
 
         /// <summary>
         /// The projected X coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedY.
@@ -32357,8 +32339,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if ProjectedX has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ProjectedXSpecified = false; 
+        private Boolean ProjectedXSpecified = false; 
 
         /// <summary>
         /// The projected Y coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedX.
@@ -32387,8 +32368,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if ProjectedY has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ProjectedYSpecified = false; 
+        private Boolean ProjectedYSpecified = false; 
 
         /// <summary>
         /// The local (engineering) X coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalY.
@@ -32417,8 +32397,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if LocalX has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LocalXSpecified = false; 
+        private Boolean LocalXSpecified = false; 
 
         /// <summary>
         /// The local (engineering) Y coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalX.
@@ -32447,8 +32426,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if LocalY has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LocalYSpecified = false; 
+        private Boolean LocalYSpecified = false; 
 
 
 
@@ -33720,8 +33698,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if ItemWeightPerUnit has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ItemWeightPerUnitSpecified = false; 
+        private Boolean ItemWeightPerUnitSpecified = false; 
 
         /// <summary>
         /// Volume per item unit. 
@@ -33743,8 +33720,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if ItemVolPerUnit has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ItemVolPerUnitSpecified = false; 
+        private Boolean ItemVolPerUnitSpecified = false; 
 
 
 
@@ -38155,8 +38131,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if PersistedAsLog has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PersistedAsLogSpecified = false; 
+        private Boolean PersistedAsLogSpecified = false; 
 
         /// <summary>
         /// A pointer to the wellLog (within the context of the current wellbore) that will be used to persist this data.
@@ -38178,8 +38153,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if PersistedAsWellLog has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PersistedAsWellLogSpecified = false; 
+        private Boolean PersistedAsWellLogSpecified = false; 
 
 
 
@@ -38340,8 +38314,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if TimeInterval has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TimeIntervalSpecified = false; 
+        private Boolean TimeIntervalSpecified = false; 
 
         /// <summary>
         /// The distance interval associated with the method.
@@ -38363,8 +38336,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if DistanceInterval has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DistanceIntervalSpecified = false; 
+        private Boolean DistanceIntervalSpecified = false; 
 
 
 
@@ -54897,8 +54869,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if BendAngle has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BendAngleSpecified = false; 
+        private Boolean BendAngleSpecified = false; 
 
         /// <summary>
         /// Offset from bottom connection to bend.
@@ -54920,8 +54891,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if BendOffset has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BendOffsetSpecified = false; 
+        private Boolean BendOffsetSpecified = false; 
 
 
 
@@ -57475,8 +57445,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if MapProjection has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool MapProjectionSpecified = false; 
+        private Boolean MapProjectionSpecified = false; 
 
         /// <summary>
         /// Geographic system. 
@@ -57499,8 +57468,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Geographic has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool GeographicSpecified = false; 
+        private Boolean GeographicSpecified = false; 
 
         /// <summary>
         /// Local (engineering) system. 
@@ -57523,8 +57491,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if LocalCRS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LocalCRSSpecified = false; 
+        private Boolean LocalCRSSpecified = false; 
 
 
 
@@ -57973,8 +57940,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if UsesWellAsOrigin has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool UsesWellAsOriginSpecified = false; 
+        private Boolean UsesWellAsOriginSpecified = false; 
 
         /// <summary>
         /// A pointer to the reference point that is the origin of this CRS.
@@ -57997,8 +57963,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if Origin has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OriginSpecified = false; 
+        private Boolean OriginSpecified = false; 
 
         /// <summary>
         /// A textual description of the origin.
@@ -58021,8 +57986,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if OriginDescription has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OriginDescriptionSpecified = false; 
+        private Boolean OriginDescriptionSpecified = false; 
 
 
 
@@ -60513,8 +60477,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if TypeLogData has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TypeLogDataSpecified = false; 
+        private Boolean TypeLogDataSpecified = false; 
 
         /// <summary>
         /// Indicates that the channel is encoded using a Base64 representation of binary values, and defines the binary type of elements of the array. If absent and axisDefinition is given, implies space delimited values, whose elemental data type is given by typeLogData.
@@ -60536,8 +60499,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Boolean to indicate if EncodingDef has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool EncodingDefSpecified = false; 
+        private Boolean EncodingDefSpecified = false; 
 
 
 

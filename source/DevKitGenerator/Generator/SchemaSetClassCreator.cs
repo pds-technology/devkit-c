@@ -325,9 +325,15 @@ namespace Energistics.Generator
 
                     do
                     {
-                        parent = parent.ParentNode;
+                        parent = parent.ParentNode; 
+                        
                     } while (parent.Name == "xsd:sequence");
 
+                    // 1. if choice are single then it is exclusive.
+                    // 2. if choice are unbounded then it is not exclusive. ignore
+                    if (choiceElements.Attributes["maxOccurs"] != null)
+                        if (((choiceElements.Attributes["maxOccurs"].Value == "unbounded" || (choiceElements.Attributes["maxOccurs"].Value.Contains("-1")))))
+                            continue;
                     Sequence choice = new Sequence();
                     choice.Sequences = new List<ChoiceElement>();
                     if (parent.Attributes["name"] != null)
@@ -338,8 +344,9 @@ namespace Energistics.Generator
                         }
                         else
                             choice.Name = parent.Attributes["name"].Value;
-                    }
+                    } 
                     choices.Add(choice);
+                 
 
                     foreach (XmlElement element in choiceElements)
                     {
@@ -789,6 +796,8 @@ namespace Energistics.Generator
                         {
                             if (attr.ElementName != otherAttr.ElementName)
                             {
+                                // 1. if choice are single then it is exclusive.
+                                // 2. if choice are unbounded then it is not exclusive. 
                                 if (choice.Contains(attr.ElementName))
                                 {
                                     if (!choice.IsSameSequence(attr.ElementName, otherAttr.ElementName))
@@ -815,8 +824,8 @@ namespace Energistics.Generator
                 sb.AppendLine("        /// <summary>");
                 sb.AppendLine("        /// Boolean to indicate if " + publicPropName + " has been set. Used for serialization.");
                 sb.AppendLine("        /// </summary>");
-                sb.AppendLine("        [XmlIgnore]");
-                sb.AppendLine("        public bool " + publicPropName + "Specified = false; ");
+                //sb.AppendLine("        [XmlIgnore]");
+                sb.AppendLine("        private Boolean " + publicPropName + "Specified = false; ");
 
                 string realClassName = RenameClass(attr.Type);
 

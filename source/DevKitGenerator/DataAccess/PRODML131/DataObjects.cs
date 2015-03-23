@@ -10188,8 +10188,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Latitude has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LatitudeSpecified = false; 
+        private Boolean LatitudeSpecified = false; 
 
         /// <summary>
         /// The longitude with east being positive. If you set this property, you must also set Latitude.
@@ -10218,8 +10217,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Longitude has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LongitudeSpecified = false; 
+        private Boolean LongitudeSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with east being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Northing.
@@ -10248,8 +10246,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Easting has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool EastingSpecified = false; 
+        private Boolean EastingSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with north being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Easting.
@@ -10278,8 +10275,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Northing has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool NorthingSpecified = false; 
+        private Boolean NorthingSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with west being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Southing.
@@ -10308,8 +10304,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Westing has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool WestingSpecified = false; 
+        private Boolean WestingSpecified = false; 
 
         /// <summary>
         /// The projected coordinate with south being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Westing.
@@ -10338,8 +10333,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Southing has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SouthingSpecified = false; 
+        private Boolean SouthingSpecified = false; 
 
         /// <summary>
         /// The projected X coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedY.
@@ -10368,8 +10362,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if ProjectedX has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ProjectedXSpecified = false; 
+        private Boolean ProjectedXSpecified = false; 
 
         /// <summary>
         /// The projected Y coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedX.
@@ -10398,8 +10391,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if ProjectedY has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ProjectedYSpecified = false; 
+        private Boolean ProjectedYSpecified = false; 
 
         /// <summary>
         /// The local (engineering) X coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalY.
@@ -10428,8 +10420,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LocalX has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LocalXSpecified = false; 
+        private Boolean LocalXSpecified = false; 
 
         /// <summary>
         /// The local (engineering) Y coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalX.
@@ -10458,8 +10449,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LocalY has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LocalYSpecified = false; 
+        private Boolean LocalYSpecified = false; 
 
 
 
@@ -10999,8 +10989,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DatumName has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DatumNameSpecified = false; 
+        private Boolean DatumNameSpecified = false; 
 
         /// <summary>
         /// A reference to the coordinateReferenceSystem object representing the vertical reference datum (i.e., this wellDatum). This should only be specified if the above 'code' represents some variation of sea level. 
@@ -11022,8 +11011,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DatumCRS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DatumCRSSpecified = false; 
+        private Boolean DatumCRSSpecified = false; 
 
 
 
@@ -12007,8 +11995,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if FluidLevelTest has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool FluidLevelTestSpecified = false; 
+        private Boolean FluidLevelTestSpecified = false; 
 
         /// <summary>
         /// Data from a production test. Multiple tests generally indicate that there are multiple components of a single overall test. For example, for multi-zoned wells.
@@ -12031,8 +12018,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if ProductionTest has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ProductionTestSpecified = false; 
+        private Boolean ProductionTestSpecified = false; 
 
         /// <summary>
         /// Data from an injection test. Multiple tests generally indicate that there are multiple components of the overall test. For example, for multi-zoned wells.
@@ -12055,8 +12041,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if InjectionTest has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool InjectionTestSpecified = false; 
+        private Boolean InjectionTestSpecified = false; 
 
 
 
@@ -13740,8 +13725,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DoubleValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DoubleValueSpecified = false; 
+        private Boolean DoubleValueSpecified = false; 
 
         /// <summary>
         /// A single string value in the time series.
@@ -13763,8 +13747,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StringValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StringValueSpecified = false; 
+        private Boolean StringValueSpecified = false; 
 
 
 
@@ -14249,8 +14232,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StandardTempPres has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StandardTempPresSpecified = false; 
+        private Boolean StandardTempPresSpecified = false; 
 
         /// <summary>
         /// The temperature to which the volume has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
@@ -14272,8 +14254,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Temp has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TempSpecified = false; 
+        private Boolean TempSpecified = false; 
 
         /// <summary>
         /// The pressure to which the volume has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
@@ -14295,8 +14276,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Pres has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PresSpecified = false; 
+        private Boolean PresSpecified = false; 
 
 
 
@@ -15281,8 +15261,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StandardTempPres has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StandardTempPresSpecified = false; 
+        private Boolean StandardTempPresSpecified = false; 
 
         /// <summary>
         /// The temperature to which the flowRate has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
@@ -15304,8 +15283,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Temp has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TempSpecified = false; 
+        private Boolean TempSpecified = false; 
 
         /// <summary>
         /// The pressure to which the flowRate has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
@@ -15327,8 +15305,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Pres has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PresSpecified = false; 
+        private Boolean PresSpecified = false; 
 
 
 
@@ -15625,8 +15602,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StandardTempPres has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StandardTempPresSpecified = false; 
+        private Boolean StandardTempPresSpecified = false; 
 
         /// <summary>
         /// The temperature to which the density has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
@@ -15648,8 +15624,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Temp has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TempSpecified = false; 
+        private Boolean TempSpecified = false; 
 
         /// <summary>
         /// The pressure to which the density has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
@@ -15671,8 +15646,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Pres has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PresSpecified = false; 
+        private Boolean PresSpecified = false; 
 
 
 
@@ -16170,8 +16144,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateTime has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeSpecified = false; 
+        private Boolean DateTimeSpecified = false; 
 
         /// <summary>
         /// The day that the period represents.
@@ -16197,8 +16170,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Date has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateSpecified = false; 
+        private Boolean DateSpecified = false; 
 
         /// <summary>
         /// The beginning date and time that the period represents. If you set this property, you must also set DateTimeEnd.
@@ -16223,8 +16195,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateTimeStart has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeStartSpecified = false; 
+        private Boolean DateTimeStartSpecified = false; 
 
         /// <summary>
         /// The ending date and time that the period represents. If you set this property, you must also set DateTimeStart.
@@ -16249,8 +16220,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateTimeEnd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeEndSpecified = false; 
+        private Boolean DateTimeEndSpecified = false; 
 
         /// <summary>
         /// The beginning date that the period represents. If you set this property, you must also set DateEnd.
@@ -16275,8 +16245,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateStart has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateStartSpecified = false; 
+        private Boolean DateStartSpecified = false; 
 
         /// <summary>
         /// The ending date that the period represents. If you set this property, you must also set DateStart.
@@ -16301,8 +16270,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateEnd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateEndSpecified = false; 
+        private Boolean DateEndSpecified = false; 
 
 
 
@@ -20560,8 +20528,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if MeasureValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool MeasureValueSpecified = false; 
+        private Boolean MeasureValueSpecified = false; 
 
         /// <summary>
         /// The values in one row of a curve. The aggregate of the curve rows represent the curve.
@@ -20585,8 +20552,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if CurveValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CurveValueSpecified = false; 
+        private Boolean CurveValueSpecified = false; 
 
         /// <summary>
         /// A string value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
@@ -20610,8 +20576,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StringValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StringValueSpecified = false; 
+        private Boolean StringValueSpecified = false; 
 
         /// <summary>
         /// An integer value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
@@ -20635,8 +20600,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if IntegerValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IntegerValueSpecified = false; 
+        private Boolean IntegerValueSpecified = false; 
 
 
 
@@ -22057,8 +22021,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateTimeStart has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeStartSpecified = false; 
+        private Boolean DateTimeStartSpecified = false; 
 
         /// <summary>
         /// The ending date and time that the report represents. If you set this property, you must also set DateTimeStart.
@@ -22082,8 +22045,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateTimeEnd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeEndSpecified = false; 
+        private Boolean DateTimeEndSpecified = false; 
 
         /// <summary>
         /// The beginning date that the report represents. If you set this property, you must also set DateEnd.
@@ -22107,8 +22069,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateStart has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateStartSpecified = false; 
+        private Boolean DateStartSpecified = false; 
 
         /// <summary>
         /// The ending date that the report represents. If you set this property, you must also set DateStart.
@@ -22132,8 +22093,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateEnd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateEndSpecified = false; 
+        private Boolean DateEndSpecified = false; 
 
         /// <summary>
         /// The ending date that the report represents.
@@ -22158,8 +22118,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Month has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool MonthSpecified = false; 
+        private Boolean MonthSpecified = false; 
 
 
 
@@ -23143,8 +23102,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if State has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StateSpecified = false; 
+        private Boolean StateSpecified = false; 
 
         /// <summary>
         /// province property
@@ -23167,8 +23125,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Province has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ProvinceSpecified = false; 
+        private Boolean ProvinceSpecified = false; 
 
         /// <summary>
         /// county property
@@ -23191,8 +23148,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if County has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CountySpecified = false; 
+        private Boolean CountySpecified = false; 
 
 
 
@@ -24263,8 +24219,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OwnershipShare has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OwnershipShareSpecified = false; 
+        private Boolean OwnershipShareSpecified = false; 
 
         /// <summary>
         /// Defines account information in the parent unit. This commonly applies at a parent terminus unit (e.g., a terminal),
@@ -24286,8 +24241,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if AccountInformation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool AccountInformationSpecified = false; 
+        private Boolean AccountInformationSpecified = false; 
 
 
 
@@ -28591,8 +28545,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateTimeStart has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeStartSpecified = false; 
+        private Boolean DateTimeStartSpecified = false; 
 
         /// <summary>
         /// The ending date and time that the report represents. If you set this property, you must also set DateTimeStart.
@@ -28615,8 +28568,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateTimeEnd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeEndSpecified = false; 
+        private Boolean DateTimeEndSpecified = false; 
 
         /// <summary>
         /// The beginning date that the report represents. If you set this property, you must also set DateEnd.
@@ -28639,8 +28591,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateStart has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateStartSpecified = false; 
+        private Boolean DateStartSpecified = false; 
 
         /// <summary>
         /// The ending date that the report represents. If you set this property, you must also set DateStart.
@@ -28663,8 +28614,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if DateEnd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateEndSpecified = false; 
+        private Boolean DateEndSpecified = false; 
 
 
 
@@ -30247,8 +30197,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if ExpectedFlowProduct has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ExpectedFlowProductSpecified = false; 
+        private Boolean ExpectedFlowProductSpecified = false; 
 
         /// <summary>
         /// The expected kind of qualifier of the property. This element should only be specified for properties that do not represent the fluid stream (e.g., a valve status)
@@ -30270,8 +30219,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Qualifier has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool QualifierSpecified = false; 
+        private Boolean QualifierSpecified = false; 
 
 
 
@@ -32538,8 +32486,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BubblePointPressureSpecified = false; 
+        private Boolean BubblePointPressureSpecified = false; 
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -32561,8 +32508,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RetrogradeDewPointPressureSpecified = false; 
+        private Boolean RetrogradeDewPointPressureSpecified = false; 
 
 
 
@@ -32605,8 +32551,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilAPIGravity has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilAPIGravitySpecified = false; 
+        private Boolean OilAPIGravitySpecified = false; 
 
         /// <summary>
         /// oilSpecificGravity property
@@ -32628,8 +32573,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilSpecificGravity has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilSpecificGravitySpecified = false; 
+        private Boolean OilSpecificGravitySpecified = false; 
 
 
 
@@ -32708,8 +32652,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilVolumeSpecified = false; 
+        private Boolean OilVolumeSpecified = false; 
 
         /// <summary>
         /// gasVolume property
@@ -32732,8 +32675,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if GasVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool GasVolumeSpecified = false; 
+        private Boolean GasVolumeSpecified = false; 
 
         /// <summary>
         /// oilShrinkageFactor property
@@ -32756,8 +32698,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilShrinkageFactor has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilShrinkageFactorSpecified = false; 
+        private Boolean OilShrinkageFactorSpecified = false; 
 
         /// <summary>
         /// stageSeparatorGORStd property
@@ -32780,8 +32721,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StageSeparatorGORStd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StageSeparatorGORStdSpecified = false; 
+        private Boolean StageSeparatorGORStdSpecified = false; 
 
 
 
@@ -33044,8 +32984,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StockTankSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
         /// <summary>
         /// saturated property
@@ -33066,8 +33005,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SaturatedSpecified = false; 
+        private Boolean SaturatedSpecified = false; 
 
         /// <summary>
         /// reservoir property
@@ -33088,8 +33026,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ReservoirSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
 
 
@@ -33900,8 +33837,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BubblePointPressureSpecified = false; 
+        private Boolean BubblePointPressureSpecified = false; 
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -33923,8 +33859,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RetrogradeDewPointPressureSpecified = false; 
+        private Boolean RetrogradeDewPointPressureSpecified = false; 
 
 
 
@@ -34059,8 +33994,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilAPIGravity has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilAPIGravitySpecified = false; 
+        private Boolean OilAPIGravitySpecified = false; 
 
         /// <summary>
         /// oilSpecificGravity property
@@ -34082,8 +34016,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilSpecificGravity has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilSpecificGravitySpecified = false; 
+        private Boolean OilSpecificGravitySpecified = false; 
 
 
 
@@ -34400,8 +34333,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SaturatedSpecified = false; 
+        private Boolean SaturatedSpecified = false; 
 
         /// <summary>
         /// reservoir property
@@ -34422,8 +34354,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ReservoirSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
         /// <summary>
         /// stockTank property
@@ -34444,8 +34375,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StockTankSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
 
 
@@ -34800,8 +34730,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LiquidVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LiquidVolumeSpecified = false; 
+        private Boolean LiquidVolumeSpecified = false; 
 
         /// <summary>
         /// liquidDropoutPercent property
@@ -34823,8 +34752,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LiquidDropoutPercent has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LiquidDropoutPercentSpecified = false; 
+        private Boolean LiquidDropoutPercentSpecified = false; 
 
 
 
@@ -34998,8 +34926,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if CumulativeGasProducedVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CumulativeGasProducedVolumeSpecified = false; 
+        private Boolean CumulativeGasProducedVolumeSpecified = false; 
 
         /// <summary>
         /// cumulativeGasProducedRatioStd property
@@ -35021,8 +34948,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if CumulativeGasProducedRatioStd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CumulativeGasProducedRatioStdSpecified = false; 
+        private Boolean CumulativeGasProducedRatioStdSpecified = false; 
 
 
 
@@ -35099,8 +35025,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StockTankSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
         /// <summary>
         /// reservoir property
@@ -35121,8 +35046,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ReservoirSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
         /// <summary>
         /// saturated property
@@ -35143,8 +35067,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SaturatedSpecified = false; 
+        private Boolean SaturatedSpecified = false; 
 
 
 
@@ -35361,8 +35284,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BubblePointPressureSpecified = false; 
+        private Boolean BubblePointPressureSpecified = false; 
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -35384,8 +35306,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RetrogradeDewPointPressureSpecified = false; 
+        private Boolean RetrogradeDewPointPressureSpecified = false; 
 
 
 
@@ -35746,8 +35667,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilVolumeSpecified = false; 
+        private Boolean OilVolumeSpecified = false; 
 
         /// <summary>
         /// oilShrinkageFactor property
@@ -35769,8 +35689,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if OilShrinkageFactor has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OilShrinkageFactorSpecified = false; 
+        private Boolean OilShrinkageFactorSpecified = false; 
 
 
 
@@ -36069,8 +35988,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StockTankSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
         /// <summary>
         /// saturated property
@@ -36091,8 +36009,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SaturatedSpecified = false; 
+        private Boolean SaturatedSpecified = false; 
 
         /// <summary>
         /// reservoir property
@@ -36113,8 +36030,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ReservoirSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
 
 
@@ -36331,8 +36247,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BubblePointPressureSpecified = false; 
+        private Boolean BubblePointPressureSpecified = false; 
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -36354,8 +36269,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RetrogradeDewPointPressureSpecified = false; 
+        private Boolean RetrogradeDewPointPressureSpecified = false; 
 
 
 
@@ -36572,8 +36486,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LiquidVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LiquidVolumeSpecified = false; 
+        private Boolean LiquidVolumeSpecified = false; 
 
         /// <summary>
         /// liquidDropoutPercent property
@@ -36595,8 +36508,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LiquidDropoutPercent has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LiquidDropoutPercentSpecified = false; 
+        private Boolean LiquidDropoutPercentSpecified = false; 
 
 
 
@@ -36770,8 +36682,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if CumulativeGasProducedVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CumulativeGasProducedVolumeSpecified = false; 
+        private Boolean CumulativeGasProducedVolumeSpecified = false; 
 
         /// <summary>
         /// cumulativeGasProducedRatioStd property
@@ -36793,8 +36704,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if CumulativeGasProducedRatioStd has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CumulativeGasProducedRatioStdSpecified = false; 
+        private Boolean CumulativeGasProducedRatioStdSpecified = false; 
 
 
 
@@ -36835,8 +36745,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SaturatedSpecified = false; 
+        private Boolean SaturatedSpecified = false; 
 
         /// <summary>
         /// reservoir property
@@ -36857,8 +36766,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ReservoirSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
         /// <summary>
         /// stockTank property
@@ -36879,8 +36787,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StockTankSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
 
 
@@ -37097,8 +37004,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BubblePointPressureSpecified = false; 
+        private Boolean BubblePointPressureSpecified = false; 
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -37120,8 +37026,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RetrogradeDewPointPressureSpecified = false; 
+        private Boolean RetrogradeDewPointPressureSpecified = false; 
 
 
 
@@ -37392,8 +37297,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if TotalVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TotalVolumeSpecified = false; 
+        private Boolean TotalVolumeSpecified = false; 
 
         /// <summary>
         /// liquidVolume property
@@ -37415,8 +37319,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LiquidVolume has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LiquidVolumeSpecified = false; 
+        private Boolean LiquidVolumeSpecified = false; 
 
         /// <summary>
         /// liquidDropoutPercent property
@@ -37439,8 +37342,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LiquidDropoutPercent has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LiquidDropoutPercentSpecified = false; 
+        private Boolean LiquidDropoutPercentSpecified = false; 
 
 
 
@@ -37648,8 +37550,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool StockTankSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
         /// <summary>
         /// reservoir property
@@ -37670,8 +37571,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ReservoirSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
         /// <summary>
         /// saturated property
@@ -37692,8 +37592,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SaturatedSpecified = false; 
+        private Boolean SaturatedSpecified = false; 
 
 
 
@@ -37910,8 +37809,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BubblePointPressureSpecified = false; 
+        private Boolean BubblePointPressureSpecified = false; 
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -37933,8 +37831,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RetrogradeDewPointPressureSpecified = false; 
+        private Boolean RetrogradeDewPointPressureSpecified = false; 
 
 
 
@@ -38151,8 +38048,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BubblePointPressureSpecified = false; 
+        private Boolean BubblePointPressureSpecified = false; 
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -38174,8 +38070,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RetrogradeDewPointPressureSpecified = false; 
+        private Boolean RetrogradeDewPointPressureSpecified = false; 
 
 
 
@@ -39905,198 +39800,149 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
-        [XmlElement("saturationTest")]
-        public FluidResultSaturationTest[] SaturationTest {
-            get {
-                return saturationTestField;
-            } 
-            set {
-                if (value != null && JCurveTestSpecified) throw new Exception("Cannot set property SaturationTest when property JCurveTest is already set");
-                if (value != null && DifferentialLiberationTestSpecified) throw new Exception("Cannot set property SaturationTest when property DifferentialLiberationTest is already set");
-                if (value != null && ConstantVolumeDepletionTestSpecified) throw new Exception("Cannot set property SaturationTest when property ConstantVolumeDepletionTest is already set");
-                if (value != null && TransportPropertiesTestSpecified) throw new Exception("Cannot set property SaturationTest when property TransportPropertiesTest is already set");
-                if (value != null && ConstantCompositionExpansionTestSpecified) throw new Exception("Cannot set property SaturationTest when property ConstantCompositionExpansionTest is already set");
-                if (value != null && SeparatorTestSpecified) throw new Exception("Cannot set property SaturationTest when property SeparatorTest is already set");
-                saturationTestField = value;
-                SaturationTestSpecified = (value!=null);
-                NotifyPropertyChanged("SaturationTest");
-            }
-        }
-
-        private FluidResultSaturationTest[] saturationTestField; 
-        /// <summary>
-        /// Boolean to indicate if SaturationTest has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool SaturationTestSpecified = false; 
-
-        /// <summary>
-        /// xxxxxxxxxxxxxxxx
-        /// </summary>
-        [XmlElement("constantCompositionExpansionTest")]
-        public FluidResultConstantCompositionExpansionTest[] ConstantCompositionExpansionTest {
-            get {
-                return constantCompositionExpansionTestField;
-            } 
-            set {
-                if (value != null && JCurveTestSpecified) throw new Exception("Cannot set property ConstantCompositionExpansionTest when property JCurveTest is already set");
-                if (value != null && DifferentialLiberationTestSpecified) throw new Exception("Cannot set property ConstantCompositionExpansionTest when property DifferentialLiberationTest is already set");
-                if (value != null && ConstantVolumeDepletionTestSpecified) throw new Exception("Cannot set property ConstantCompositionExpansionTest when property ConstantVolumeDepletionTest is already set");
-                if (value != null && TransportPropertiesTestSpecified) throw new Exception("Cannot set property ConstantCompositionExpansionTest when property TransportPropertiesTest is already set");
-                if (value != null && SaturationTestSpecified) throw new Exception("Cannot set property ConstantCompositionExpansionTest when property SaturationTest is already set");
-                if (value != null && SeparatorTestSpecified) throw new Exception("Cannot set property ConstantCompositionExpansionTest when property SeparatorTest is already set");
-                constantCompositionExpansionTestField = value;
-                ConstantCompositionExpansionTestSpecified = (value!=null);
-                NotifyPropertyChanged("ConstantCompositionExpansionTest");
-            }
-        }
-
-        private FluidResultConstantCompositionExpansionTest[] constantCompositionExpansionTestField; 
-        /// <summary>
-        /// Boolean to indicate if ConstantCompositionExpansionTest has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool ConstantCompositionExpansionTestSpecified = false; 
-
-        /// <summary>
-        /// xxxxxxxxxxxxxxxx
-        /// </summary>
-        [XmlElement("constantVolumeDepletionTest")]
-        public FluidResultConstantVolumeDepletionTest[] ConstantVolumeDepletionTest {
-            get {
-                return constantVolumeDepletionTestField;
-            } 
-            set {
-                if (value != null && JCurveTestSpecified) throw new Exception("Cannot set property ConstantVolumeDepletionTest when property JCurveTest is already set");
-                if (value != null && DifferentialLiberationTestSpecified) throw new Exception("Cannot set property ConstantVolumeDepletionTest when property DifferentialLiberationTest is already set");
-                if (value != null && TransportPropertiesTestSpecified) throw new Exception("Cannot set property ConstantVolumeDepletionTest when property TransportPropertiesTest is already set");
-                if (value != null && SaturationTestSpecified) throw new Exception("Cannot set property ConstantVolumeDepletionTest when property SaturationTest is already set");
-                if (value != null && ConstantCompositionExpansionTestSpecified) throw new Exception("Cannot set property ConstantVolumeDepletionTest when property ConstantCompositionExpansionTest is already set");
-                if (value != null && SeparatorTestSpecified) throw new Exception("Cannot set property ConstantVolumeDepletionTest when property SeparatorTest is already set");
-                constantVolumeDepletionTestField = value;
-                ConstantVolumeDepletionTestSpecified = (value!=null);
-                NotifyPropertyChanged("ConstantVolumeDepletionTest");
-            }
-        }
-
-        private FluidResultConstantVolumeDepletionTest[] constantVolumeDepletionTestField; 
-        /// <summary>
-        /// Boolean to indicate if ConstantVolumeDepletionTest has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool ConstantVolumeDepletionTestSpecified = false; 
-
-        /// <summary>
-        /// xxxxxxxxxxxxxxxx
-        /// </summary>
-        [XmlElement("differentialLiberationTest")]
-        public FluidResultDifferentialLiberationTest[] DifferentialLiberationTest {
-            get {
-                return differentialLiberationTestField;
-            } 
-            set {
-                if (value != null && JCurveTestSpecified) throw new Exception("Cannot set property DifferentialLiberationTest when property JCurveTest is already set");
-                if (value != null && ConstantVolumeDepletionTestSpecified) throw new Exception("Cannot set property DifferentialLiberationTest when property ConstantVolumeDepletionTest is already set");
-                if (value != null && TransportPropertiesTestSpecified) throw new Exception("Cannot set property DifferentialLiberationTest when property TransportPropertiesTest is already set");
-                if (value != null && SaturationTestSpecified) throw new Exception("Cannot set property DifferentialLiberationTest when property SaturationTest is already set");
-                if (value != null && ConstantCompositionExpansionTestSpecified) throw new Exception("Cannot set property DifferentialLiberationTest when property ConstantCompositionExpansionTest is already set");
-                if (value != null && SeparatorTestSpecified) throw new Exception("Cannot set property DifferentialLiberationTest when property SeparatorTest is already set");
-                differentialLiberationTestField = value;
-                DifferentialLiberationTestSpecified = (value!=null);
-                NotifyPropertyChanged("DifferentialLiberationTest");
-            }
-        }
-
-        private FluidResultDifferentialLiberationTest[] differentialLiberationTestField; 
-        /// <summary>
-        /// Boolean to indicate if DifferentialLiberationTest has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool DifferentialLiberationTestSpecified = false; 
-
-        /// <summary>
-        /// xxxxxxxxxxxxxxxx
-        /// </summary>
         [XmlElement("jCurveTest")]
-        public FluidResultJCurveTest[] JCurveTest {
+        public FluidResultJCurveTest JCurveTest {
             get {
                 return jCurveTestField;
             } 
             set {
-                if (value != null && DifferentialLiberationTestSpecified) throw new Exception("Cannot set property JCurveTest when property DifferentialLiberationTest is already set");
-                if (value != null && ConstantVolumeDepletionTestSpecified) throw new Exception("Cannot set property JCurveTest when property ConstantVolumeDepletionTest is already set");
-                if (value != null && TransportPropertiesTestSpecified) throw new Exception("Cannot set property JCurveTest when property TransportPropertiesTest is already set");
-                if (value != null && SaturationTestSpecified) throw new Exception("Cannot set property JCurveTest when property SaturationTest is already set");
-                if (value != null && ConstantCompositionExpansionTestSpecified) throw new Exception("Cannot set property JCurveTest when property ConstantCompositionExpansionTest is already set");
-                if (value != null && SeparatorTestSpecified) throw new Exception("Cannot set property JCurveTest when property SeparatorTest is already set");
                 jCurveTestField = value;
                 JCurveTestSpecified = (value!=null);
                 NotifyPropertyChanged("JCurveTest");
             }
         }
 
-        private FluidResultJCurveTest[] jCurveTestField; 
+        private FluidResultJCurveTest jCurveTestField; 
         /// <summary>
         /// Boolean to indicate if JCurveTest has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool JCurveTestSpecified = false; 
+        private Boolean JCurveTestSpecified = false; 
+
+        /// <summary>
+        /// xxxxxxxxxxxxxxxx
+        /// </summary>
+        [XmlElement("differentialLiberationTest")]
+        public FluidResultDifferentialLiberationTest DifferentialLiberationTest {
+            get {
+                return differentialLiberationTestField;
+            } 
+            set {
+                differentialLiberationTestField = value;
+                DifferentialLiberationTestSpecified = (value!=null);
+                NotifyPropertyChanged("DifferentialLiberationTest");
+            }
+        }
+
+        private FluidResultDifferentialLiberationTest differentialLiberationTestField; 
+        /// <summary>
+        /// Boolean to indicate if DifferentialLiberationTest has been set. Used for serialization.
+        /// </summary>
+        private Boolean DifferentialLiberationTestSpecified = false; 
+
+        /// <summary>
+        /// xxxxxxxxxxxxxxxx
+        /// </summary>
+        [XmlElement("constantVolumeDepletionTest")]
+        public FluidResultConstantVolumeDepletionTest ConstantVolumeDepletionTest {
+            get {
+                return constantVolumeDepletionTestField;
+            } 
+            set {
+                constantVolumeDepletionTestField = value;
+                ConstantVolumeDepletionTestSpecified = (value!=null);
+                NotifyPropertyChanged("ConstantVolumeDepletionTest");
+            }
+        }
+
+        private FluidResultConstantVolumeDepletionTest constantVolumeDepletionTestField; 
+        /// <summary>
+        /// Boolean to indicate if ConstantVolumeDepletionTest has been set. Used for serialization.
+        /// </summary>
+        private Boolean ConstantVolumeDepletionTestSpecified = false; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
         [XmlElement("transportPropertiesTest")]
-        public FluidResultTransportPropertiesTest[] TransportPropertiesTest {
+        public FluidResultTransportPropertiesTest TransportPropertiesTest {
             get {
                 return transportPropertiesTestField;
             } 
             set {
-                if (value != null && JCurveTestSpecified) throw new Exception("Cannot set property TransportPropertiesTest when property JCurveTest is already set");
-                if (value != null && DifferentialLiberationTestSpecified) throw new Exception("Cannot set property TransportPropertiesTest when property DifferentialLiberationTest is already set");
-                if (value != null && ConstantVolumeDepletionTestSpecified) throw new Exception("Cannot set property TransportPropertiesTest when property ConstantVolumeDepletionTest is already set");
-                if (value != null && SaturationTestSpecified) throw new Exception("Cannot set property TransportPropertiesTest when property SaturationTest is already set");
-                if (value != null && ConstantCompositionExpansionTestSpecified) throw new Exception("Cannot set property TransportPropertiesTest when property ConstantCompositionExpansionTest is already set");
-                if (value != null && SeparatorTestSpecified) throw new Exception("Cannot set property TransportPropertiesTest when property SeparatorTest is already set");
                 transportPropertiesTestField = value;
                 TransportPropertiesTestSpecified = (value!=null);
                 NotifyPropertyChanged("TransportPropertiesTest");
             }
         }
 
-        private FluidResultTransportPropertiesTest[] transportPropertiesTestField; 
+        private FluidResultTransportPropertiesTest transportPropertiesTestField; 
         /// <summary>
         /// Boolean to indicate if TransportPropertiesTest has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TransportPropertiesTestSpecified = false; 
+        private Boolean TransportPropertiesTestSpecified = false; 
+
+        /// <summary>
+        /// xxxxxxxxxxxxxxxx
+        /// </summary>
+        [XmlElement("saturationTest")]
+        public FluidResultSaturationTest SaturationTest {
+            get {
+                return saturationTestField;
+            } 
+            set {
+                saturationTestField = value;
+                SaturationTestSpecified = (value!=null);
+                NotifyPropertyChanged("SaturationTest");
+            }
+        }
+
+        private FluidResultSaturationTest saturationTestField; 
+        /// <summary>
+        /// Boolean to indicate if SaturationTest has been set. Used for serialization.
+        /// </summary>
+        private Boolean SaturationTestSpecified = false; 
+
+        /// <summary>
+        /// xxxxxxxxxxxxxxxx
+        /// </summary>
+        [XmlElement("constantCompositionExpansionTest")]
+        public FluidResultConstantCompositionExpansionTest ConstantCompositionExpansionTest {
+            get {
+                return constantCompositionExpansionTestField;
+            } 
+            set {
+                constantCompositionExpansionTestField = value;
+                ConstantCompositionExpansionTestSpecified = (value!=null);
+                NotifyPropertyChanged("ConstantCompositionExpansionTest");
+            }
+        }
+
+        private FluidResultConstantCompositionExpansionTest constantCompositionExpansionTestField; 
+        /// <summary>
+        /// Boolean to indicate if ConstantCompositionExpansionTest has been set. Used for serialization.
+        /// </summary>
+        private Boolean ConstantCompositionExpansionTestSpecified = false; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
         [XmlElement("separatorTest")]
-        public FluidResultSeparatorTest[] SeparatorTest {
+        public FluidResultSeparatorTest SeparatorTest {
             get {
                 return separatorTestField;
             } 
             set {
-                if (value != null && JCurveTestSpecified) throw new Exception("Cannot set property SeparatorTest when property JCurveTest is already set");
-                if (value != null && DifferentialLiberationTestSpecified) throw new Exception("Cannot set property SeparatorTest when property DifferentialLiberationTest is already set");
-                if (value != null && ConstantVolumeDepletionTestSpecified) throw new Exception("Cannot set property SeparatorTest when property ConstantVolumeDepletionTest is already set");
-                if (value != null && TransportPropertiesTestSpecified) throw new Exception("Cannot set property SeparatorTest when property TransportPropertiesTest is already set");
-                if (value != null && SaturationTestSpecified) throw new Exception("Cannot set property SeparatorTest when property SaturationTest is already set");
-                if (value != null && ConstantCompositionExpansionTestSpecified) throw new Exception("Cannot set property SeparatorTest when property ConstantCompositionExpansionTest is already set");
                 separatorTestField = value;
                 SeparatorTestSpecified = (value!=null);
                 NotifyPropertyChanged("SeparatorTest");
             }
         }
 
-        private FluidResultSeparatorTest[] separatorTestField; 
+        private FluidResultSeparatorTest separatorTestField; 
         /// <summary>
         /// Boolean to indicate if SeparatorTest has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SeparatorTestSpecified = false; 
+        private Boolean SeparatorTestSpecified = false; 
 
 
 
@@ -40287,8 +40133,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if UserAnalysisKind has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool UserAnalysisKindSpecified = false; 
+        private Boolean UserAnalysisKindSpecified = false; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -40310,8 +40155,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if LaboratorybAnalysisKind has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LaboratorybAnalysisKindSpecified = false; 
+        private Boolean LaboratorybAnalysisKindSpecified = false; 
 
 
 
@@ -42346,8 +42190,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Frequency has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool FrequencySpecified = false; 
+        private Boolean FrequencySpecified = false; 
 
         /// <summary>
         /// The wavelength for which the one way loss is measured. 
@@ -42369,8 +42212,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Wavelength has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool WavelengthSpecified = false; 
+        private Boolean WavelengthSpecified = false; 
 
 
 
@@ -42459,8 +42301,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Intervention has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool InterventionSpecified = false; 
+        private Boolean InterventionSpecified = false; 
 
         /// <summary>
         /// Information on type of permanent conveyance used by the optical path. 
@@ -42483,8 +42324,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Permanent has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PermanentSpecified = false; 
+        private Boolean PermanentSpecified = false; 
 
         /// <summary>
         /// Information regarding the control line into which a fiber cable may be pumped in order to measure a facility. 
@@ -42507,8 +42347,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if FiberControlLine has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool FiberControlLineSpecified = false; 
+        private Boolean FiberControlLineSpecified = false; 
 
 
 
@@ -44254,8 +44093,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Well has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool WellSpecified = false; 
+        private Boolean WellSpecified = false; 
 
         /// <summary>
         /// Choice where the facility mapping is a pipeline.
@@ -44277,8 +44115,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Boolean to indicate if Pipeline has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PipelineSpecified = false; 
+        private Boolean PipelineSpecified = false; 
 
 
 

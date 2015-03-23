@@ -10340,8 +10340,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if CementExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CementExtensionSpecified = false; 
+        private Boolean CementExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for clean fill
@@ -10373,8 +10372,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if CleanFillExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CleanFillExtensionSpecified = false; 
+        private Boolean CleanFillExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for directional survey
@@ -10406,8 +10404,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if DirectionalSurveyExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DirectionalSurveyExtensionSpecified = false; 
+        private Boolean DirectionalSurveyExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for lost circulation
@@ -10439,8 +10436,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if LostCirculationExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LostCirculationExtensionSpecified = false; 
+        private Boolean LostCirculationExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for bottom hole pressure
@@ -10472,8 +10468,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if BHPExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool BHPExtensionSpecified = false; 
+        private Boolean BHPExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for acidizing and fracturing
@@ -10505,8 +10500,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if AcidizeFracExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool AcidizeFracExtensionSpecified = false; 
+        private Boolean AcidizeFracExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for job
@@ -10538,8 +10532,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if JobExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool JobExtensionSpecified = false; 
+        private Boolean JobExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for pressure test
@@ -10571,8 +10564,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if PressureTestExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PressureTestExtensionSpecified = false; 
+        private Boolean PressureTestExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for waiting on
@@ -10604,8 +10596,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if WaitingOnExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool WaitingOnExtensionSpecified = false; 
+        private Boolean WaitingOnExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for perforating event
@@ -10637,8 +10628,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if PerforationExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PerforationExtensionSpecified = false; 
+        private Boolean PerforationExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for fluid report
@@ -10670,8 +10660,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if FluidReportExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool FluidReportExtensionSpecified = false; 
+        private Boolean FluidReportExtensionSpecified = false; 
 
         /// <summary>
         /// Extension event for downhole component
@@ -10703,8 +10692,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if DownholeExtension has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DownholeExtensionSpecified = false; 
+        private Boolean DownholeExtensionSpecified = false; 
 
 
 
@@ -18244,8 +18232,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if RodConnectionType has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool RodConnectionTypeSpecified = false; 
+        private Boolean RodConnectionTypeSpecified = false; 
 
         /// <summary>
         /// The connection type of tubing
@@ -18266,8 +18253,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if TubingConnectionType has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TubingConnectionTypeSpecified = false; 
+        private Boolean TubingConnectionTypeSpecified = false; 
 
         /// <summary>
         /// The connection type of casing
@@ -18288,8 +18274,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if CasingConnectionType has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CasingConnectionTypeSpecified = false; 
+        private Boolean CasingConnectionTypeSpecified = false; 
 
         /// <summary>
         /// The other connection type which is used for other tools
@@ -18310,8 +18295,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Boolean to indicate if OtherConnectionType has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool OtherConnectionTypeSpecified = false; 
+        private Boolean OtherConnectionTypeSpecified = false; 
 
 
 
