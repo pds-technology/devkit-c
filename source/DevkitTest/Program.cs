@@ -12,6 +12,9 @@ using Energistics.DataAccess.COMPLETION100;
 using Energistics.DataAccess.WITSML131;
 using Energistics.DataAccess.WITSML141;
 using Energistics.DataAccess.PRODML122;
+using Energistics.DataAccess.PRODML131;
+using Energistics.DataAccess;
+using Energistics.DataAccess.PRODML122.PROD_GenericDataAccess;
 namespace DevkitTest
 {
     class Program
@@ -85,7 +88,7 @@ namespace DevkitTest
             if(startP2>0)
                 FormatStr2 = xmloutput.Substring(startP2, xmloutput.Length - startP2);
 
-            if ((Math.Abs(FormatStr.Length - FormatStr2.Length) / (float)FormatStr.Length) > 0.1)
+            if (((Math.Abs(FormatStr.Length - FormatStr2.Length) / (float)FormatStr.Length) > 0.1) &&(FormatStr2.Length < FormatStr.Length))
                     result = false;
             return result;
         }
@@ -159,10 +162,10 @@ namespace DevkitTest
                     //    Console.WriteLine("success!");
                     
                 }
-                catch(Exception)
+                catch(Exception e)
                 {
                     successs = false;
-                    failureList.Add(f);
+                    failureList.Add(f + " " + e.Message);
                     if(reader!=null)
                     {
                         reader.Close();
@@ -173,8 +176,124 @@ namespace DevkitTest
            
         }
 
+
+        static void testProdmlWebService()
+        {
+            string uid = "TestUID_1";
+            Console.WriteLine("test DeleteData...");
+            PRODMLWebServiceConnection webconn = new PRODMLWebServiceConnection("http://localhost:8080/Prodml_DataAccessService.svc");
+            String[] d = new String[1];
+            d[0] = uid;
+            DeleteDataResult result = webconn.DeleteData(d);
+            if (result.Count == 999)
+                Console.WriteLine("deleteData successful!");
+            else
+                Console.WriteLine("deleteData executed but wrong return!");
+
+            Console.WriteLine("test GetCapabilities...");
+            GenericDataAccessCapabilities cap = webconn.GetCapabilities();
+            if (cap.Properties[0].Value.CompareTo("PRODML1.2.2") == 0)
+                Console.WriteLine("GetCapabilities successful!");
+            else
+                Console.WriteLine("GetCapabilities executed but wrong return!");
+
+            Console.WriteLine("test GetData...");
+            GetDataQuery query = new GetDataQuery();
+            query.Uid = new String[1];
+            query.Uid[0] = uid;
+            Energistics.DataAccess.PRODML122.AbstractObject obj = webconn.GetData(query);
+            if (obj is Energistics.DataAccess.PRODML122.FluidAnalysisList)
+            {
+
+                Console.WriteLine("GetData successful!");
+            }
+            else
+                Console.WriteLine("GetData executed but wrong return!");
+
+
+            Console.WriteLine("test PutData...");
+            NameValuePair[] options = new NameValuePair[1];
+            options[0] = new NameValuePair();
+            options[0].Name = "OPTION_0";
+            options[0].Value = "1";
+            Energistics.DataAccess.PRODML122.FluidAnalysis fa = new Energistics.DataAccess.PRODML122.FluidAnalysis();
+            fa.AnalysisCompany = "Energistics";
+            fa.Uid = uid;
+            Energistics.DataAccess.PRODML122.FluidAnalysisList falist = new Energistics.DataAccess.PRODML122.FluidAnalysisList();
+            falist.FluidAnalysis = new List<Energistics.DataAccess.PRODML122.FluidAnalysis>();
+            falist.FluidAnalysis.Add(fa);
+
+            PutDataResult[] res = webconn.PutData((Energistics.DataAccess.PRODML122.AbstractObject)falist, options);
+            if (res != null)
+            {
+                if (res[0].SuppMsg.CompareTo("Success!") == 0)
+                {
+                    Console.WriteLine("PutData successful!");
+                }
+                else
+                    Console.WriteLine("PutData executed but wrong return!");
+            }
+        }
+
+
+        private static void testWITSMLWebService()
+        {
+            string uid = "TestUID_1";
+            WITSMLWebServiceConnection webconn = new WITSMLWebServiceConnection("http://localhost:56669/WITSML_DataService.svc",WMLSVersion.WITSML141);
+ 
+            Console.WriteLine("test WMLS_GetVersion...");
+            String version = webconn.GetVersion();
+            if(version.CompareTo("WITSML1.4.1")==0)
+            {
+                Console.WriteLine("successs");
+            }
+            else
+                Console.WriteLine("failure");
+ 
+           
+            Console.WriteLine("test WMLS_GetCap...");
+            Energistics.DataAccess.WITSML141.CapServers cap = webconn.GetCap<Energistics.DataAccess.WITSML141.CapServers>();
+            if (cap.CapServer.ApiVers.CompareTo("WITSML1.4.1") == 0)
+            {
+                Console.WriteLine("successs");
+            }
+            else
+                Console.WriteLine("failure");
+            
+            try
+            {
+                Console.WriteLine("test WMLS_AddtoStore...");
+                Energistics.DataAccess.WITSML141.Well well = new Energistics.DataAccess.WITSML141.Well();
+                well.Name = "well1";
+                well.Uid = uid;
+
+                webconn.Write<Energistics.DataAccess.WITSML141.Well>(well);
+
+                Console.WriteLine("test WMLS_GetFromStore...");
+                webconn.Read<Energistics.DataAccess.WITSML141.Well>(well);
+
+                Console.WriteLine("test WMLS_UpdateInStore...");
+                webconn.Update<Energistics.DataAccess.WITSML141.Well>(well);
+
+                Console.WriteLine("test WMLS_DeleteFromStore...");
+                webconn.Delete<Energistics.DataAccess.WITSML141.Well>(well);
+
+                Console.WriteLine("successs!");
+            }
+           catch(Exception ){
+               Console.WriteLine("failure!");
+           }
+
+        }
+
         static void Main(string[] args)
         {
+            Console.WriteLine("Test the WITSML WebServiceAPI ... ");
+            testWITSMLWebService();
+
+            Console.WriteLine("Test the PRODML WebServiceAPI ... ");
+            testProdmlWebService();
+
             String product = "";
             product = "PRODML_v1.3";
             testDemoFile("Energistics.DataAccess.PRODML131",product);
@@ -205,6 +324,8 @@ namespace DevkitTest
                     Console.WriteLine(f);
                 }
             }
+
+           
             Console.WriteLine("Press any key to stop...");
             Console.ReadKey();
             // validate the xml using the devkit

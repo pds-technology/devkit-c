@@ -15947,8 +15947,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if Date has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateSpecified = false; 
+        private Boolean DateSpecified = false; 
 
         /// <summary>
         /// DateTime property
@@ -15969,8 +15968,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if DateTime has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeSpecified = false; 
+        private Boolean DateTimeSpecified = false; 
 
 
 
@@ -18080,8 +18078,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if CartesianCS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CartesianCSSpecified = false; 
+        private Boolean CartesianCSSpecified = false; 
 
         /// <summary>
         /// sphericalCS property
@@ -18102,8 +18099,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if SphericalCS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SphericalCSSpecified = false; 
+        private Boolean SphericalCSSpecified = false; 
 
         /// <summary>
         /// ellipsoidalCS property
@@ -18124,8 +18120,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool EllipsoidalCSSpecified = false; 
+        private Boolean EllipsoidalCSSpecified = false; 
 
 
 
@@ -19325,8 +19320,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if IsSphere has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IsSphereSpecified = false; 
+        private Boolean IsSphereSpecified = false; 
 
         /// <summary>
         /// inverseFlattening property
@@ -19347,8 +19341,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if InverseFlattening has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool InverseFlatteningSpecified = false; 
+        private Boolean InverseFlatteningSpecified = false; 
 
         /// <summary>
         /// semiMinorAxis property
@@ -19369,8 +19362,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Boolean to indicate if SemiMinorAxis has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SemiMinorAxisSpecified = false; 
+        private Boolean SemiMinorAxisSpecified = false; 
 
 
 

@@ -1,0 +1,7 @@
+C:\projects\source\EnergisticsAPIService\WITSMLAPISERVICE\bin\WITSMLAPISERVICE.dll
+C:\projects\source\EnergisticsAPIService\WITSMLAPISERVICE\bin\WITSMLAPISERVICE.pdb
+C:\projects\source\EnergisticsAPIService\WITSMLAPISERVICE\bin\Energistics.DataAccess.dll
+C:\projects\source\EnergisticsAPIService\WITSMLAPISERVICE\bin\Energistics.DataAccess.pdb
+C:\projects\source\EnergisticsAPIService\WITSMLAPISERVICE\bin\Energistics.DataAccess.xml
+C:\projects\source\EnergisticsAPIService\WITSMLAPISERVICE\obj\Debug\WITSMLAPISERVICE.dll
+C:\projects\source\EnergisticsAPIService\WITSMLAPISERVICE\obj\Debug\WITSMLAPISERVICE.pdb

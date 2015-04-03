@@ -1,0 +1,8 @@
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\bin\EnergisticsAPIService.dll
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\bin\EnergisticsAPIService.pdb
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\obj\Debug\EnergisticsAPIService.dll
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\obj\Debug\EnergisticsAPIService.pdb
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\bin\Energistics.DataAccess.dll
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\bin\Energistics.DataAccess.pdb
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\bin\Energistics.DataAccess.xml
+C:\projects\source\EnergisticsAPIService\EnergisticsAPIService\EnergisticsAPIService\obj\Debug\EnergisticsAPIService.csprojResolveAssemblyReference.cache

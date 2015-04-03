@@ -747,8 +747,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if UpperCorner has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool UpperCornerSpecified = false; 
+        private Boolean UpperCornerSpecified = false; 
 
         /// <summary>
         /// lowerCorner property
@@ -769,8 +768,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if LowerCorner has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LowerCornerSpecified = false; 
+        private Boolean LowerCornerSpecified = false; 
 
         /// <summary>
         /// pos property
@@ -791,8 +789,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if Pos has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PosSpecified = false; 
+        private Boolean PosSpecified = false; 
 
 
 
@@ -1693,8 +1690,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if CartesianCS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool CartesianCSSpecified = false; 
+        private Boolean CartesianCSSpecified = false; 
 
         /// <summary>
         /// ellipsoidalCS property
@@ -1715,8 +1711,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool EllipsoidalCSSpecified = false; 
+        private Boolean EllipsoidalCSSpecified = false; 
 
         /// <summary>
         /// sphericalCS property
@@ -1737,8 +1732,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SphericalCS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SphericalCSSpecified = false; 
+        private Boolean SphericalCSSpecified = false; 
 
 
 
@@ -2957,8 +2951,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if PosList has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PosListSpecified = false; 
+        private Boolean PosListSpecified = false; 
 
         /// <summary>
         /// pos property
@@ -2979,8 +2972,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if Pos has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PosSpecified = false; 
+        private Boolean PosSpecified = false; 
 
 
 
@@ -5409,8 +5401,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if Date has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateSpecified = false; 
+        private Boolean DateSpecified = false; 
 
         /// <summary>
         /// DateTime property
@@ -5431,8 +5422,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if DateTime has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DateTimeSpecified = false; 
+        private Boolean DateTimeSpecified = false; 
 
 
 
@@ -8894,8 +8884,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if IsSphere has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IsSphereSpecified = false; 
+        private Boolean IsSphereSpecified = false; 
 
         /// <summary>
         /// semiMinorAxis property
@@ -8916,8 +8905,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SemiMinorAxis has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SemiMinorAxisSpecified = false; 
+        private Boolean SemiMinorAxisSpecified = false; 
 
         /// <summary>
         /// inverseFlattening property
@@ -8938,8 +8926,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if InverseFlattening has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool InverseFlatteningSpecified = false; 
+        private Boolean InverseFlatteningSpecified = false; 
 
 
 
@@ -11195,8 +11182,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SrsName has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SrsNameSpecified = false; 
+        private Boolean SrsNameSpecified = false; 
 
         /// <summary>
         /// ProjectedCRS property
@@ -11217,8 +11203,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ProjectedCRS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ProjectedCRSSpecified = false; 
+        private Boolean ProjectedCRSSpecified = false; 
 
 
 
@@ -11324,8 +11309,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SrsName has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SrsNameSpecified = false; 
+        private Boolean SrsNameSpecified = false; 
 
         /// <summary>
         /// VerticalCRS property
@@ -11346,8 +11330,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if VerticalCRS has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool VerticalCRSSpecified = false; 
+        private Boolean VerticalCRSSpecified = false; 
 
 
 
@@ -12344,8 +12327,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ResqmlKind has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ResqmlKindSpecified = false; 
+        private Boolean ResqmlKindSpecified = false; 
 
         /// <summary>
         /// The parent RESQML standard property which this specializes. The semantics of this property is a specialization of the specified standard property. For properties which have a unit of measure, the parent kind will indirectly specify the single unit of measure which must be utilized for the property values.
@@ -12368,8 +12350,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ParentResqmlKind has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ParentResqmlKindSpecified = false; 
+        private Boolean ParentResqmlKindSpecified = false; 
 
         /// <summary>
         /// A pointer to parent locally defined property. The semantics of this property is a specialization of the specified local property. Note that all local kinds must directly or indirectly be related to a standard RESQML standard kind.
@@ -12392,8 +12373,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ParentLocalKind has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ParentLocalKindSpecified = false; 
+        private Boolean ParentLocalKindSpecified = false; 
 
 
 
@@ -12438,8 +12418,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if UnitOfMeasure has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool UnitOfMeasureSpecified = false; 
+        private Boolean UnitOfMeasureSpecified = false; 
 
         /// <summary>
         /// The dimensional analysis of the unit of measure. For example, a meter (m) would be of class "L", which represents length. Note that angle is considered to be dimensionless ratio of length. Note that solid angle is considered to be dimensionless ratio of area. The following nomenclature is used: A = angle (SI unit = radian) B = luminous intensity (SI unit = candela) C = electrical current (SI unit = ampere) K = thermodynamic temperature (SI unit = kelvin) L = length (SI unit = metre) M = mass (SI unit = kilogram) N = amount of substance (SI unit = mole) S = solid angle (SI unit = steradian) T = time (SI unit = second) 1 = dimensionless 2 = squared (e.g., "M2") 3 = cubed 4 = 4th power 5 = 5th power 6 = 6th power 7 = 7th power 8 = 8th power / = division ratio(X) = A dimensionless ratio of another dimension. For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the equivalent of "L2/L2". This is only used when the underlying dimension would otherwise be "1". The values may be broken into numerator and denominator separated by a slash "/" but multiple slashes must not be used. A slash must not terminate the string. For example, length per time would be indicated by "L/T" A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component. The number "1" will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). The number "1" must not be used as a denominator because it is implied (e.g., "M" impiles "M/1"). For consistency, the items within a numerator or denominator are listed in alphabetical order (e.g., LM - not ML). If you set this property, you must also set UnitOfMeasure.
@@ -12463,8 +12442,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if DimensionalClass has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DimensionalClassSpecified = false; 
+        private Boolean DimensionalClassSpecified = false; 
 
         /// <summary>
         /// The minimum value allowed for the discrete property. If you set this property, you must also set MaximumValue.
@@ -12488,8 +12466,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if MinimumValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool MinimumValueSpecified = false; 
+        private Boolean MinimumValueSpecified = false; 
 
         /// <summary>
         /// The maximum value allowed for the discrete property. If you set this property, you must also set MinimumValue.
@@ -12513,8 +12490,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if MaximumValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool MaximumValueSpecified = false; 
+        private Boolean MaximumValueSpecified = false; 
 
         /// <summary>
         /// A value allowed for the categorical property.
@@ -12539,8 +12515,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if EnumValue has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool EnumValueSpecified = false; 
+        private Boolean EnumValueSpecified = false; 
 
 
 
@@ -14833,8 +14808,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ZValueDataset has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ZValueDatasetSpecified = false; 
+        private Boolean ZValueDatasetSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -14856,8 +14830,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if Grid2dHdfGroup has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool Grid2dHdfGroupSpecified = false; 
+        private Boolean Grid2dHdfGroupSpecified = false; 
 
 
 
@@ -15371,8 +15344,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ResqmlKind has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ResqmlKindSpecified = false; 
+        private Boolean ResqmlKindSpecified = false; 
 
         /// <summary>
         /// A pointer to the locally defined property which represents these values. Note that all local kinds must directly or indirectly be specialized from a standard RESQML kind.
@@ -15394,8 +15366,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if LocalKind has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LocalKindSpecified = false; 
+        private Boolean LocalKindSpecified = false; 
 
 
 
@@ -15437,8 +15408,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if Timestamp has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TimestampSpecified = false; 
+        private Boolean TimestampSpecified = false; 
 
         /// <summary>
         /// The date and time related to the property.
@@ -15460,8 +15430,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if TimeStep has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TimeStepSpecified = false; 
+        private Boolean TimeStepSpecified = false; 
 
 
 
@@ -15620,8 +15589,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool XmlRepresentationSpecified = false; 
+        private Boolean XmlRepresentationSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -15642,8 +15610,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool HdfRepresentationSpecified = false; 
+        private Boolean HdfRepresentationSpecified = false; 
 
 
 
@@ -15743,8 +15710,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ByteValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ByteValuesSpecified = false; 
+        private Boolean ByteValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of int values.
@@ -15765,8 +15731,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if IntValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IntValuesSpecified = false; 
+        private Boolean IntValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of float values.
@@ -15787,8 +15752,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if FloatValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool FloatValuesSpecified = false; 
+        private Boolean FloatValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of short values.
@@ -15809,8 +15773,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ShortValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ShortValuesSpecified = false; 
+        private Boolean ShortValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of long values.
@@ -15831,8 +15794,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if LongValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LongValuesSpecified = false; 
+        private Boolean LongValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of double values.
@@ -15853,8 +15815,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if DoubleValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool DoubleValuesSpecified = false; 
+        private Boolean DoubleValuesSpecified = false; 
 
 
 
@@ -16436,8 +16397,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ByteValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ByteValuesSpecified = false; 
+        private Boolean ByteValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of short values.
@@ -16458,8 +16418,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ShortValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ShortValuesSpecified = false; 
+        private Boolean ShortValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of long values.
@@ -16480,8 +16439,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if LongValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LongValuesSpecified = false; 
+        private Boolean LongValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of int values.
@@ -16502,8 +16460,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if IntValues has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IntValuesSpecified = false; 
+        private Boolean IntValuesSpecified = false; 
 
 
 
@@ -16571,8 +16528,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool HdfRepresentationSpecified = false; 
+        private Boolean HdfRepresentationSpecified = false; 
 
         /// <summary>
         /// Captures the array of values in an XML representation.
@@ -16593,8 +16549,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool XmlRepresentationSpecified = false; 
+        private Boolean XmlRepresentationSpecified = false; 
 
 
 
@@ -16780,8 +16735,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool HdfRepresentationSpecified = false; 
+        private Boolean HdfRepresentationSpecified = false; 
 
         /// <summary>
         /// Captures the array of values in an XML representation.
@@ -16802,8 +16756,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool XmlRepresentationSpecified = false; 
+        private Boolean XmlRepresentationSpecified = false; 
 
 
 
@@ -16917,8 +16870,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if PillarSet has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PillarSetSpecified = false; 
+        private Boolean PillarSetSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -16940,8 +16892,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if PillarSetHdfGroup has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PillarSetHdfGroupSpecified = false; 
+        private Boolean PillarSetHdfGroupSpecified = false; 
 
 
 
@@ -17755,8 +17706,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if Point3dSet has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool Point3dSetSpecified = false; 
+        private Boolean Point3dSetSpecified = false; 
 
         /// <summary>
         /// A set of triangles in the mesh. A triangle is defined by specifying the "vertex index" of each corner. A corner shall not be defined as "NaN". The aggregate of triangles defines the mesh. There is no semantic meaning to the triangle sequence order except that properties are assigned to the triangles based on the order. This order is called the "face index". The first triangle has an index of zero. If you set this property, you must also set Point3dSet, SplitEdgeNodeIndexSet.
@@ -17778,8 +17728,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if TriangleNodeIndexSet has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TriangleNodeIndexSetSpecified = false; 
+        private Boolean TriangleNodeIndexSetSpecified = false; 
 
         /// <summary>
         /// A set of split edges. There is no semantics assigned to the order of the edges. If you set this property, you must also set Point3dSet, TriangleNodeIndexSet.
@@ -17801,8 +17750,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SplitEdgeNodeIndexSet has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SplitEdgeNodeIndexSetSpecified = false; 
+        private Boolean SplitEdgeNodeIndexSetSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -17826,8 +17774,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if TriangulatedHdfGroup has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool TriangulatedHdfGroupSpecified = false; 
+        private Boolean TriangulatedHdfGroupSpecified = false; 
 
 
 
@@ -18288,8 +18235,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if Point3dSet has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool Point3dSetSpecified = false; 
+        private Boolean Point3dSetSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -18311,8 +18257,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if PointSetHdfGroup has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool PointSetHdfGroupSpecified = false; 
+        private Boolean PointSetHdfGroupSpecified = false; 
 
 
 
@@ -19956,8 +19901,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if GridIJKCellFacePair has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool GridIJKCellFacePairSpecified = false; 
+        private Boolean GridIJKCellFacePairSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the cell-face-pair array data in an HDF5 formatted file.
@@ -19979,8 +19923,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool HdfRepresentationSpecified = false; 
+        private Boolean HdfRepresentationSpecified = false; 
 
 
 
@@ -20640,8 +20583,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if GridTopologyFlags has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool GridTopologyFlagsSpecified = false; 
+        private Boolean GridTopologyFlagsSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the gridTopologyFlags array data in an HDF5 formatted file.
@@ -20663,8 +20605,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IjkGridHdfGroupSpecified = false; 
+        private Boolean IjkGridHdfGroupSpecified = false; 
 
 
 
@@ -21174,8 +21115,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if ExplicitCornerPointGrid has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool ExplicitCornerPointGridSpecified = false; 
+        private Boolean ExplicitCornerPointGridSpecified = false; 
 
         /// <summary>
         /// Structured IJK grid refinement.
@@ -21196,8 +21136,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if IjkGridRefinement has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IjkGridRefinementSpecified = false; 
+        private Boolean IjkGridRefinementSpecified = false; 
 
 
 
@@ -21366,8 +21305,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SplitLineReference has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SplitLineReferenceSpecified = false; 
+        private Boolean SplitLineReferenceSpecified = false; 
 
         /// <summary>
         /// Defines a set of node points on coordinate lines, organized by layer. There are "nk+gapCount+1" layers of nodes. Each layer has "(NI+1)*(NJ+1)+splitLineCount" node points. Here gapCount is the number of k layer gaps and splitLineCount is the number of additional DISTINCT lines. This data ordering facilitates K-slabbing of data sets and is shared between the XML and the HDF representations. In a layer, the first "(NI+1)*(NJ+1)" nodes are shared between columns of adjacent cells unless otherwise indicated. The lines are ordered according to a zero-based line_index defined by: (I-startIndexI)+(NI+1)*(J-startIndexJ) where I = I direction line coordinate for a column of cells. Minimum value=startIndexI, count=NI+1. J = J direction line coordinate for a column of cells. Minimum value=startIndexJ, count=NJ+1. The line I corresponds to the ICORN=0 side of cell I, and so the count of I is NI+1; Similarly for J. The next splitLineCount nodes are placed on the additional lines as indicated by the splitLineReferences in the order defined by the reference element in splitLineReference. The first additional line will be located at (NI+1)*(NJ+1) (assuming a zero-based index). There must be nk+gapCount+1 nodes on each line. For a line whose kind is "null" the values should be "NaN". For the additional lines, the line kind will never be "null". . If you set this property, you must also set SplitLineReference.
@@ -21389,8 +21327,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if LineSet has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool LineSetSpecified = false; 
+        private Boolean LineSetSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -21413,8 +21350,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IjkGridHdfGroupSpecified = false; 
+        private Boolean IjkGridHdfGroupSpecified = false; 
 
 
 
@@ -21620,8 +21556,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SplitNodeReference has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SplitNodeReferenceSpecified = false; 
+        private Boolean SplitNodeReferenceSpecified = false; 
 
         /// <summary>
         /// A set of points that are split. There must be splitNodeCount points in the aggregate. If you set this property, you must also set SplitNodeReference.
@@ -21643,8 +21578,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if SplitNodeSet has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool SplitNodeSetSpecified = false; 
+        private Boolean SplitNodeSetSpecified = false; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -21667,8 +21601,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
         /// </summary>
-        [XmlIgnore]
-        public bool IjkGridHdfGroupSpecified = false; 
+        private Boolean IjkGridHdfGroupSpecified = false; 
 
 
 
