@@ -5,24 +5,25 @@ devkit c# provides kit to the c# developer , it handles energistics WITSML1.3.1.
 ### What is this repository for? ###
 
 * devkit c# provides kit to the c# developer
-* 1.0 
 
 ### How do I get set up? ###
-
 * Summary of set up
-* Configuration
+download the code for bitbucket, restore to the directory which will be used in app.config.
+in our default, we restore to c:\projects.
+in projects folder we will have:
+doc: document contains the all supported energistics xsd for user's convenience.
+source: contains project:
+Devkit:  this is old Devkit, we are using DevkitTest to perform test using the supplied sample xml.
+DevKitGenerator: this is project that generator all devkit java classes. 
+DekitTest: this is testing project that using the example xml from demoXML folder.
+DemoXML: this is folder that contains all sample xml which supports DevkitTest.
+EnergisticsAPIService: this is webservice api project.
+
+* Configuration.
+app.config has contains all supported project's mapping.
+if you only need to generator certain ml, for example only WITSML1.4.1.1
+you need to change key "Sets" to be <add key="SETS" value= WITSML141"/>.
+you need to have WITSML1.4.1.1 configuration, you might or might not remove rest configure for other ML. 
+ 
 * Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+  Download the HDF5library, make sure the C:\Program Files\HDF Group\HDF5\1.8.9\bin (the HDF installation path, might be different in your install machine) and must be present in a directory that is part of your PATH environment variable.
