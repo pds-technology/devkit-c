@@ -1,6 +1,6 @@
 # README #
 
-devkit c# provides kit to the c# developer , it handles energistics WITSML1.3.1.1, WITSML1.4.1.1, PRODML 1.2, PRODML1.3, COMPLETION1.0 and RESQML1.0
+devkit c# provides kit to the c# developer , it handles energistics WITSML1.3.1.1, WITSML1.4.1.1, PRODML 1.2.2, PRODML1.3, COMPLETION1.0 RESQML1.0 and RESQML2.01
 
 ### What is this repository for? ###
 
