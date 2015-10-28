@@ -13,13 +13,13 @@ Restore to the directory which will be used in app.config. In our default, we re
     *  DevKitGenerator: this is project that generator all devkit java classes.    
     *  DekitTest: this is testing project that using the example xml from demoXML folder.   
     *  DemoXML: this is folder that contains all sample xml which supports DevkitTest.   
-    EnergisticsAPIService: this is webservice api project.   
+    *  EnergisticsAPIService: this is webservice api project.   
 
 ##   Configuration.    
 *  app.config has contains all supported project's mapping.  
 * if you only need to generator certain ml, for example only WITSML1.4.1.1  
 * you need to change key "Sets" to be <add key="SETS" value= WITSML141"/>.  
-* you need to have WITSML1.4.1.1 configuration, you might or might not remove rest configure for other ML.    
+* you need to have WITSML1.4.1.1 configuration, you might or might not remove rest configure.    
 
 ##    Dependencies
 
