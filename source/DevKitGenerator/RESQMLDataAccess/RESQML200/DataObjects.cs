@@ -40,17 +40,17 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractObject xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedVolumeFrameworkRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractStratigraphicOrganizationInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeatureInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractResqmlDataObject))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MdDatum))]
 
@@ -61,6 +61,8 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
@@ -96,8 +98,6 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreTrajectoryRepresentation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreFrameRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarkerFrameRepresentation))]
@@ -111,8 +111,6 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RedefinedGeometryRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepresentationSetRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedVolumeFrameworkRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceFrameworkRepresentation))]
 
@@ -138,21 +136,19 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridRepresentation))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridRepresentation))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepresentationIdentitySet))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalGridSet))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumn))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeatureInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractResqmlDataObject))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCitedDataObject))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EarthModelInterpretation))]
 
@@ -170,7 +166,7 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractOrganizationInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractStratigraphicOrganizationInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreTrajectoryRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicOccurrenceInterpretation))]
 
@@ -200,6 +196,8 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrontierFeature))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrganizationFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BoundaryFeature))]
@@ -207,6 +205,8 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TectonicBoundaryFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneticBoundaryFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitFeature))]
 
@@ -216,19 +216,19 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -266,7 +266,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("Aliases")]
 
-        public List<ObjectAliaList> Aliases {
+        public List<ObjectAlias> Aliases {
             get {
                 return AliasesField;
             } 
@@ -276,7 +276,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private List<ObjectAliaList> AliasesField; 
+        private List<ObjectAlias> AliasesField; 
 
 
         /// <summary>
@@ -724,7 +724,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchOfValues", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchOfValues xsd type.")]
-    public partial class PatchOfValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class PatchOfValues : Object , INotifyPropertyChanged
     {
 
 
@@ -798,7 +798,7 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractValueArray xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractIntegerArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerHdf5Array))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractBooleanArray))]
 
@@ -810,21 +810,21 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromIndexArray))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDoubleArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractIntegerArray))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerRangeArray))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerLatticeArray))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerHdf5Array))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerConstantArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleHdf5Array))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerArrayFromBooleanMaskArray))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StringHdf5Array))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerRangeArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDoubleArray))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleHdf5Array))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerConstantArray))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleConstantArray))]
 
@@ -876,13 +876,13 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractBooleanArray xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromIndexArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanConstantArray))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanHdf5Array))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanConstantArray))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromDiscretePropertyArray))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromIndexArray))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -1967,11 +1967,11 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractDoubleArray xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleConstantArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleLatticeArray))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleHdf5Array))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleLatticeArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleConstantArray))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -2200,7 +2200,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchOfPoints", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchOfPoints xsd type.")]
-    public partial class PatchOfPointList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class PatchOfPoints : Object , INotifyPropertyChanged
     {
 
 
@@ -2274,8 +2274,6 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractPoint3dArray xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Point2dHdf5Array))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Point3dFromRepresentationLatticeArray))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Point3dParametricArray))]
@@ -2285,6 +2283,8 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Point3dZValueArray))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Point3dLatticeArray))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Point2dHdf5Array))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -2494,9 +2494,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractParametricLineArray xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParametricLineFromRepresentationLatticeArray))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParametricLineArray))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParametricLineFromRepresentationLatticeArray))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -2651,7 +2651,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("ParametricLineIntersections")]
 
-        public ParametricLineIntersectionList ParametricLineIntersections {
+        public ParametricLineIntersections ParametricLineIntersections {
             get {
                 return ParametricLineIntersectionsField;
             } 
@@ -2661,7 +2661,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private ParametricLineIntersectionList ParametricLineIntersectionsField; 
+        private ParametricLineIntersections ParametricLineIntersectionsField; 
 
 
 
@@ -2687,7 +2687,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ParametricLineIntersections", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ParametricLineIntersections xsd type.")]
-    public partial class ParametricLineIntersectionList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ParametricLineIntersections : Object , INotifyPropertyChanged
     {
 
 
@@ -3632,7 +3632,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchBoundaries", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchBoundaries xsd type.")]
-    public partial class PatchBoundarieList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class PatchBoundaries : Object , INotifyPropertyChanged
     {
 
 
@@ -3906,6 +3906,16 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractGeometry xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGridGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractParametricLineGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParametricLineFromRepresentationGeometry))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParametricLineGeometry))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractPlaneGeometry))]
@@ -3916,19 +3926,9 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointGeometry))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGridGeometry))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridGeometry))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridGeometry))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridGeometry))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridGeometry))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractParametricLineGeometry))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParametricLineFromRepresentationGeometry))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -4305,9 +4305,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractPlaneGeometry xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TiltedPlaneGeometry))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(HorizontalPlaneGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TiltedPlaneGeometry))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -4427,15 +4427,15 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the PointGeometry xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridGeometry))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridGeometry))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGridGeometry))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridGeometry))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridGeometry))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -4472,7 +4472,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SeismicCoordinates")]
 
-        public AbstractSeismicCoordinateList SeismicCoordinates {
+        public AbstractSeismicCoordinates SeismicCoordinates {
             get {
                 return SeismicCoordinatesField;
             } 
@@ -4482,7 +4482,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private AbstractSeismicCoordinateList SeismicCoordinatesField; 
+        private AbstractSeismicCoordinates SeismicCoordinatesField; 
 
 
 
@@ -4500,9 +4500,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractSeismicCoordinates xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic2dCoordinateList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic2dCoordinates))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic3dCoordinateList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic3dCoordinates))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -4512,7 +4512,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractSeismicCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AbstractSeismicCoordinates xsd type.")]
-    public abstract partial class AbstractSeismicCoordinateList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractSeismicCoordinates : Object , INotifyPropertyChanged
     {
 
 
@@ -4576,7 +4576,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Seismic2dCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Seismic2dCoordinates xsd type.")]
-    public partial class Seismic2dCoordinateList : AbstractSeismicCoordinateList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class Seismic2dCoordinates : AbstractSeismicCoordinates , INotifyPropertyChanged
     {
 
 
@@ -4639,7 +4639,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Seismic3dCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Seismic3dCoordinates xsd type.")]
-    public partial class Seismic3dCoordinateList : AbstractSeismicCoordinateList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class Seismic3dCoordinates : AbstractSeismicCoordinates , INotifyPropertyChanged
     {
 
 
@@ -4712,9 +4712,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractGridGeometry xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridGeometry))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridGeometry))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridGeometry))]
 
@@ -4737,7 +4737,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("AdditionalGridPoints")]
 
-        public List<AdditionalGridPointList> AdditionalGridPoints {
+        public List<AdditionalGridPoints> AdditionalGridPoints {
             get {
                 return AdditionalGridPointsField;
             } 
@@ -4747,7 +4747,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private List<AdditionalGridPointList> AdditionalGridPointsField; 
+        private List<AdditionalGridPoints> AdditionalGridPointsField; 
 
 
 
@@ -4773,7 +4773,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AdditionalGridPoints", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AdditionalGridPoints xsd type.")]
-    public partial class AdditionalGridPointList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class AdditionalGridPoints : Object , INotifyPropertyChanged
     {
 
 
@@ -4865,9 +4865,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractColumnLayerGridGeometry xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridGeometry))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridGeometry))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridGeometry))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -5012,7 +5012,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SplitCoordinateLines")]
 
-        public ColumnLayerSplitCoordinateLineList SplitCoordinateLines {
+        public ColumnLayerSplitCoordinateLines SplitCoordinateLines {
             get {
                 return SplitCoordinateLinesField;
             } 
@@ -5022,7 +5022,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private ColumnLayerSplitCoordinateLineList SplitCoordinateLinesField; 
+        private ColumnLayerSplitCoordinateLines SplitCoordinateLinesField; 
 
 
         /// <summary>
@@ -5058,9 +5058,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the SubnodeTopology xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredSubnodeTopology))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ColumnLayerSubnodeTopology))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredSubnodeTopology))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -5189,23 +5189,15 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the Patch xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ColumnSubnodePatch))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrianglePatch))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SplitNodePatch))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridIjkGridPatch))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridUnstructuredColumnLayerGridPatch))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VariableSubnodePatch))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UniformSubnodePatch))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolylineSetPatch))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridUnstructuredGridPatch))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Grid2dPatch))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Patch1d))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrianglePatch))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(NodePatch))]
 
@@ -5215,13 +5207,21 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubRepresentationPatch))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridIjkGridPatch))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridUnstructuredGridPatch))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolylineSetPatch))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncationCellPatch))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubnodePatch))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VariableSubnodePatch))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UniformSubnodePatch))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ColumnSubnodePatch))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridUnstructuredColumnLayerGridPatch))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SplitNodePatch))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -5563,15 +5563,15 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the Patch1d xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrianglePatch))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EdgePatch))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactPatch))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubRepresentationPatch))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(NodePatch))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrianglePatch))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubRepresentationPatch))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -5887,7 +5887,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("ElementIndices")]
 
-        public List<ElementIndiceList> ElementIndices {
+        public List<ElementIndices> ElementIndices {
             get {
                 return ElementIndicesField;
             } 
@@ -5897,7 +5897,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private List<ElementIndiceList> ElementIndicesField; 
+        private List<ElementIndices> ElementIndicesField; 
 
 
 
@@ -5923,7 +5923,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ElementIndices", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ElementIndices xsd type.")]
-    public partial class ElementIndiceList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ElementIndices : Object , INotifyPropertyChanged
     {
 
 
@@ -5932,7 +5932,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IndexableElement")]
 
-        public IndexableElementList? IndexableElement {
+        public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
             } 
@@ -5942,7 +5942,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IndexableElementList? IndexableElementField; 
+        private IndexableElements? IndexableElementField; 
 
 
         /// <summary>
@@ -6169,7 +6169,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IjGaps")]
 
-        public IjGapList IjGaps {
+        public IjGaps IjGaps {
             get {
                 return IjGapsField;
             } 
@@ -6179,7 +6179,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IjGapList IjGapsField; 
+        private IjGaps IjGapsField; 
 
 
 
@@ -6205,7 +6205,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IjGaps", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IjGaps xsd type.")]
-    public partial class IjGapList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IjGaps : Object , INotifyPropertyChanged
     {
 
 
@@ -6268,7 +6268,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IjSplitColumnEdges")]
 
-        public IjSplitColumnEdgeList IjSplitColumnEdges {
+        public IjSplitColumnEdges IjSplitColumnEdges {
             get {
                 return IjSplitColumnEdgesField;
             } 
@@ -6278,7 +6278,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IjSplitColumnEdgeList IjSplitColumnEdgesField; 
+        private IjSplitColumnEdges IjSplitColumnEdgesField; 
 
 
 
@@ -6405,7 +6405,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IjSplitColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IjSplitColumnEdges xsd type.")]
-    public partial class IjSplitColumnEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IjSplitColumnEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -6838,7 +6838,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("HingeNodeFaces")]
 
-        public UnstructuredGridHingeNodeFaceList HingeNodeFaces {
+        public UnstructuredGridHingeNodeFaces HingeNodeFaces {
             get {
                 return HingeNodeFacesField;
             } 
@@ -6848,7 +6848,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private UnstructuredGridHingeNodeFaceList HingeNodeFacesField; 
+        private UnstructuredGridHingeNodeFaces HingeNodeFacesField; 
 
 
         /// <summary>
@@ -6892,7 +6892,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="UnstructuredGridHingeNodeFaces", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the UnstructuredGridHingeNodeFaces xsd type.")]
-    public partial class UnstructuredGridHingeNodeFaceList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class UnstructuredGridHingeNodeFaces : Object , INotifyPropertyChanged
     {
 
 
@@ -6983,7 +6983,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("Edges")]
 
-        public EdgeList Edges {
+        public Edges Edges {
             get {
                 return EdgesField;
             } 
@@ -6993,7 +6993,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private EdgeList EdgesField; 
+        private Edges EdgesField; 
 
 
         /// <summary>
@@ -7037,7 +7037,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Edges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Edges xsd type.")]
-    public partial class EdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class Edges : Object , INotifyPropertyChanged
     {
 
 
@@ -7453,7 +7453,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("ColumnEdges")]
 
-        public UnstructuredColumnEdgeList ColumnEdges {
+        public UnstructuredColumnEdges ColumnEdges {
             get {
                 return ColumnEdgesField;
             } 
@@ -7463,7 +7463,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private UnstructuredColumnEdgeList ColumnEdgesField; 
+        private UnstructuredColumnEdges ColumnEdgesField; 
 
 
 
@@ -7489,7 +7489,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="UnstructuredColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the UnstructuredColumnEdges xsd type.")]
-    public partial class UnstructuredColumnEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class UnstructuredColumnEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -7634,7 +7634,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SplitFaces")]
 
-        public SplitFaceList SplitFaces {
+        public SplitFaces SplitFaces {
             get {
                 return SplitFacesField;
             } 
@@ -7644,7 +7644,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private SplitFaceList SplitFacesField; 
+        private SplitFaces SplitFacesField; 
 
 
 
@@ -7670,7 +7670,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SplitFaces", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the SplitFaces xsd type.")]
-    public partial class SplitFaceList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class SplitFaces : Object , INotifyPropertyChanged
     {
 
 
@@ -7733,7 +7733,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SplitEdges")]
 
-        public SplitEdgeList SplitEdges {
+        public SplitEdges SplitEdges {
             get {
                 return SplitEdgesField;
             } 
@@ -7743,7 +7743,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private SplitEdgeList SplitEdgesField; 
+        private SplitEdges SplitEdgesField; 
 
 
 
@@ -7788,7 +7788,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SplitEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the SplitEdges xsd type.")]
-    public partial class SplitEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class SplitEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -7888,7 +7888,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ColumnLayerSplitCoordinateLines", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ColumnLayerSplitCoordinateLines xsd type.")]
-    public partial class ColumnLayerSplitCoordinateLineList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ColumnLayerSplitCoordinateLines : Object , INotifyPropertyChanged
     {
 
 
@@ -7951,7 +7951,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SplitColumnEdges")]
 
-        public ColumnLayerSplitColumnEdgeList SplitColumnEdges {
+        public ColumnLayerSplitColumnEdges SplitColumnEdges {
             get {
                 return SplitColumnEdgesField;
             } 
@@ -7961,7 +7961,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private ColumnLayerSplitColumnEdgeList SplitColumnEdgesField; 
+        private ColumnLayerSplitColumnEdges SplitColumnEdgesField; 
 
 
 
@@ -8006,7 +8006,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ColumnLayerSplitColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ColumnLayerSplitColumnEdges xsd type.")]
-    public partial class ColumnLayerSplitColumnEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ColumnLayerSplitColumnEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -8398,9 +8398,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractContactRepresentationPart xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactRepresentationReference))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedContactRepresentationPart))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactRepresentationReference))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(NonSealedContactRepresentationPart))]
 
@@ -8765,7 +8765,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ConnectionInterpretations", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ConnectionInterpretations xsd type.")]
-    public partial class ConnectionInterpretationList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ConnectionInterpretations : Object , INotifyPropertyChanged
     {
 
 
@@ -8847,7 +8847,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntervalStratigraphicUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IntervalStratigraphicUnits xsd type.")]
-    public partial class IntervalStratigraphicUnitList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IntervalStratigraphicUnits : Object , INotifyPropertyChanged
     {
 
 
@@ -8929,7 +8929,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="KGaps", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the KGaps xsd type.")]
-    public partial class KGapList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class KGaps : Object , INotifyPropertyChanged
     {
 
 
@@ -9038,7 +9038,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("KGaps")]
 
-        public KGapList KGaps {
+        public KGaps KGaps {
             get {
                 return KGapsField;
             } 
@@ -9048,7 +9048,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private KGapList KGapsField; 
+        private KGaps KGapsField; 
 
 
         /// <summary>
@@ -9129,7 +9129,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CellStratigraphicUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the CellStratigraphicUnits xsd type.")]
-    public partial class CellStratigraphicUnitList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class CellStratigraphicUnits : Object , INotifyPropertyChanged
     {
 
 
@@ -9211,7 +9211,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Intervals", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Intervals xsd type.")]
-    public partial class IntervalList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class Intervals : Object , INotifyPropertyChanged
     {
 
 
@@ -9356,7 +9356,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("Intervals")]
 
-        public IntervalList Intervals {
+        public Intervals Intervals {
             get {
                 return IntervalsField;
             } 
@@ -9366,7 +9366,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IntervalList IntervalsField; 
+        private Intervals IntervalsField; 
 
 
 
@@ -9942,7 +9942,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CellFluidPhaseUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the CellFluidPhaseUnits xsd type.")]
-    public partial class CellFluidPhaseUnitList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class CellFluidPhaseUnits : Object , INotifyPropertyChanged
     {
 
 
@@ -10033,7 +10033,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SplitEdges")]
 
-        public SplitEdgeList SplitEdges {
+        public SplitEdges SplitEdges {
             get {
                 return SplitEdgesField;
             } 
@@ -10043,7 +10043,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private SplitEdgeList SplitEdgesField; 
+        private SplitEdges SplitEdgesField; 
 
 
         /// <summary>
@@ -10069,7 +10069,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SplitColumnEdges")]
 
-        public ColumnLayerSplitColumnEdgeList SplitColumnEdges {
+        public ColumnLayerSplitColumnEdges SplitColumnEdges {
             get {
                 return SplitColumnEdgesField;
             } 
@@ -10079,7 +10079,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private ColumnLayerSplitColumnEdgeList SplitColumnEdgesField; 
+        private ColumnLayerSplitColumnEdges SplitColumnEdgesField; 
 
 
         /// <summary>
@@ -10087,7 +10087,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("UnstructuredColumnEdges")]
 
-        public UnstructuredColumnEdgeList UnstructuredColumnEdges {
+        public UnstructuredColumnEdges UnstructuredColumnEdges {
             get {
                 return UnstructuredColumnEdgesField;
             } 
@@ -10097,7 +10097,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private UnstructuredColumnEdgeList UnstructuredColumnEdgesField; 
+        private UnstructuredColumnEdges UnstructuredColumnEdgesField; 
 
 
         /// <summary>
@@ -10105,7 +10105,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("SplitFaces")]
 
-        public SplitFaceList SplitFaces {
+        public SplitFaces SplitFaces {
             get {
                 return SplitFacesField;
             } 
@@ -10115,7 +10115,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private SplitFaceList SplitFacesField; 
+        private SplitFaces SplitFacesField; 
 
 
         /// <summary>
@@ -10123,7 +10123,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IjSplitColumnEdges")]
 
-        public IjSplitColumnEdgeList IjSplitColumnEdges {
+        public IjSplitColumnEdges IjSplitColumnEdges {
             get {
                 return IjSplitColumnEdgesField;
             } 
@@ -10133,7 +10133,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IjSplitColumnEdgeList IjSplitColumnEdgesField; 
+        private IjSplitColumnEdges IjSplitColumnEdgesField; 
 
 
         /// <summary>
@@ -10259,7 +10259,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IndexableElement")]
 
-        public IndexableElementList? IndexableElement {
+        public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
             } 
@@ -10269,7 +10269,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IndexableElementList? IndexableElementField; 
+        private IndexableElements? IndexableElementField; 
 
 
         /// <summary>
@@ -11157,9 +11157,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractContactInterpretationPart xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BinaryContactInterpretationPart))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MultipleContactInterpretationPart))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BinaryContactInterpretationPart))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -11943,11 +11943,11 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractVerticalCrs xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrsEpsgCode))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GmlVerticalCrsDefinition))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrsEpsgCode))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -11957,7 +11957,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractVerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the AbstractVerticalCrs xsd type.")]
-    public abstract partial class AbstractVerticalCrList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractVerticalCrs : Object , INotifyPropertyChanged
     {
 
 
@@ -12003,7 +12003,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalUnknownCrs xsd type.")]
-    public partial class VerticalUnknownCrList : AbstractVerticalCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class VerticalUnknownCrs : AbstractVerticalCrs , INotifyPropertyChanged
     {
 
 
@@ -12048,7 +12048,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GmlVerticalCrsDefinition", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the GmlVerticalCrsDefinition xsd type.")]
-    public partial class GmlVerticalCrsDefinition : AbstractVerticalCrList , INotifyPropertyChanged
+    public partial class GmlVerticalCrsDefinition : AbstractVerticalCrs , INotifyPropertyChanged
     {
 
 
@@ -12085,7 +12085,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractGMLType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
 
@@ -12107,9 +12109,7 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
 
@@ -12267,9 +12267,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the DefinitionBaseType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
 
@@ -12334,6 +12334,8 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the DefinitionType xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
@@ -12345,8 +12347,6 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
 
@@ -12418,15 +12418,15 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the IdentifiedObjectType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
 
@@ -12438,21 +12438,21 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -12481,13 +12481,13 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractCRSType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -12699,13 +12699,13 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractCoordinateSystemType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -13862,11 +13862,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractObject_Type xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
 
@@ -13875,6 +13873,8 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
 
@@ -13886,9 +13886,9 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
 
@@ -15929,27 +15929,6 @@ namespace Energistics.DataAccess.RESQML200
 
 
         /// <summary>
-        /// Date property
-        /// </summary>
-        [XmlElement("Date")]
-        public String Date {
-            get {
-                return DateField;
-            } 
-            set {
-                DateField = value;
-                DateSpecified = (value!=null);
-                NotifyPropertyChanged("Date");
-            }
-        }
-
-        private String DateField; 
-        /// <summary>
-        /// Boolean to indicate if Date has been set. Used for serialization.
-        /// </summary>
-        private Boolean DateSpecified = false; 
-
-        /// <summary>
         /// DateTime property
         /// </summary>
         [XmlElement("DateTime")]
@@ -15969,6 +15948,27 @@ namespace Energistics.DataAccess.RESQML200
         /// Boolean to indicate if DateTime has been set. Used for serialization.
         /// </summary>
         private Boolean DateTimeSpecified = false; 
+
+        /// <summary>
+        /// Date property
+        /// </summary>
+        [XmlElement("Date")]
+        public String Date {
+            get {
+                return DateField;
+            } 
+            set {
+                DateField = value;
+                DateSpecified = (value!=null);
+                NotifyPropertyChanged("Date");
+            }
+        }
+
+        private String DateField; 
+        /// <summary>
+        /// Boolean to indicate if Date has been set. Used for serialization.
+        /// </summary>
+        private Boolean DateSpecified = false; 
 
 
 
@@ -18081,27 +18081,6 @@ namespace Energistics.DataAccess.RESQML200
         private Boolean CartesianCSSpecified = false; 
 
         /// <summary>
-        /// sphericalCS property
-        /// </summary>
-        [XmlElement("sphericalCS")]
-        public SphericalCSPropertyType SphericalCS {
-            get {
-                return sphericalCSField;
-            } 
-            set {
-                sphericalCSField = value;
-                SphericalCSSpecified = (value!=null);
-                NotifyPropertyChanged("SphericalCS");
-            }
-        }
-
-        private SphericalCSPropertyType sphericalCSField; 
-        /// <summary>
-        /// Boolean to indicate if SphericalCS has been set. Used for serialization.
-        /// </summary>
-        private Boolean SphericalCSSpecified = false; 
-
-        /// <summary>
         /// ellipsoidalCS property
         /// </summary>
         [XmlElement("ellipsoidalCS")]
@@ -18121,6 +18100,27 @@ namespace Energistics.DataAccess.RESQML200
         /// Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
         /// </summary>
         private Boolean EllipsoidalCSSpecified = false; 
+
+        /// <summary>
+        /// sphericalCS property
+        /// </summary>
+        [XmlElement("sphericalCS")]
+        public SphericalCSPropertyType SphericalCS {
+            get {
+                return sphericalCSField;
+            } 
+            set {
+                sphericalCSField = value;
+                SphericalCSSpecified = (value!=null);
+                NotifyPropertyChanged("SphericalCS");
+            }
+        }
+
+        private SphericalCSPropertyType sphericalCSField; 
+        /// <summary>
+        /// Boolean to indicate if SphericalCS has been set. Used for serialization.
+        /// </summary>
+        private Boolean SphericalCSSpecified = false; 
 
 
 
@@ -18889,9 +18889,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the MeasureType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -19195,7 +19195,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("secondDefiningParameter")]
 
-        public StandAloneSecondDefiningParameter SecondDefiningParameter {
+        public SecondDefParameter SecondDefiningParameter {
             get {
                 return secondDefiningParameterField;
             } 
@@ -19205,7 +19205,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private StandAloneSecondDefiningParameter secondDefiningParameterField; 
+        private SecondDefParameter secondDefiningParameterField; 
 
 
 
@@ -19232,7 +19232,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
 
     [Description("This class represents the secondDefiningParameter xsd type.")]
-    public partial class StandAloneSecondDefiningParameter : Object , INotifyPropertyChanged
+    public partial class SecondDefParameter : Object , INotifyPropertyChanged
     {
 
 
@@ -19302,27 +19302,6 @@ namespace Energistics.DataAccess.RESQML200
 
 
         /// <summary>
-        /// isSphere property
-        /// </summary>
-        [XmlElement("isSphere")]
-        public Boolean? IsSphere {
-            get {
-                return isSphereField;
-            } 
-            set {
-                isSphereField = value;
-                IsSphereSpecified = (value!=null);
-                NotifyPropertyChanged("IsSphere");
-            }
-        }
-
-        private Boolean? isSphereField; 
-        /// <summary>
-        /// Boolean to indicate if IsSphere has been set. Used for serialization.
-        /// </summary>
-        private Boolean IsSphereSpecified = false; 
-
-        /// <summary>
         /// inverseFlattening property
         /// </summary>
         [XmlElement("inverseFlattening")]
@@ -19342,6 +19321,27 @@ namespace Energistics.DataAccess.RESQML200
         /// Boolean to indicate if InverseFlattening has been set. Used for serialization.
         /// </summary>
         private Boolean InverseFlatteningSpecified = false; 
+
+        /// <summary>
+        /// isSphere property
+        /// </summary>
+        [XmlElement("isSphere")]
+        public Boolean? IsSphere {
+            get {
+                return isSphereField;
+            } 
+            set {
+                isSphereField = value;
+                IsSphereSpecified = (value!=null);
+                NotifyPropertyChanged("IsSphere");
+            }
+        }
+
+        private Boolean? isSphereField; 
+        /// <summary>
+        /// Boolean to indicate if IsSphere has been set. Used for serialization.
+        /// </summary>
+        private Boolean IsSphereSpecified = false; 
 
         /// <summary>
         /// semiMinorAxis property
@@ -20031,7 +20031,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrsEpsgCode", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalCrsEpsgCode xsd type.")]
-    public partial class VerticalCrsEpsgCode : AbstractVerticalCrList , INotifyPropertyChanged
+    public partial class VerticalCrsEpsgCode : AbstractVerticalCrs , INotifyPropertyChanged
     {
 
 
@@ -20068,11 +20068,11 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractProjectedCrs xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GmlProjectedCrsDefinition))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrsEpsgCode))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GmlProjectedCrsDefinition))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -20082,7 +20082,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractProjectedCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the AbstractProjectedCrs xsd type.")]
-    public abstract partial class AbstractProjectedCrList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractProjectedCrs : Object , INotifyPropertyChanged
     {
 
 
@@ -20128,7 +20128,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedUnknownCrs xsd type.")]
-    public partial class ProjectedUnknownCrList : AbstractProjectedCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ProjectedUnknownCrs : AbstractProjectedCrs , INotifyPropertyChanged
     {
 
 
@@ -20173,7 +20173,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GmlProjectedCrsDefinition", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the GmlProjectedCrsDefinition xsd type.")]
-    public partial class GmlProjectedCrsDefinition : AbstractProjectedCrList , INotifyPropertyChanged
+    public partial class GmlProjectedCrsDefinition : AbstractProjectedCrs , INotifyPropertyChanged
     {
 
 
@@ -20218,7 +20218,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedCrsEpsgCode", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedCrsEpsgCode xsd type.")]
-    public partial class ProjectedCrsEpsgCode : AbstractProjectedCrList , INotifyPropertyChanged
+    public partial class ProjectedCrsEpsgCode : AbstractProjectedCrs , INotifyPropertyChanged
     {
 
 
@@ -20327,7 +20327,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ObjectAlias", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ObjectAlias xsd type.")]
-    public partial class ObjectAliaList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ObjectAlias : Object , INotifyPropertyChanged
     {
 
 
@@ -20419,7 +20419,11 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractCitedDataObject xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreFrameRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalGridSet))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractResqmlDataObject))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MdDatum))]
 
@@ -20469,8 +20473,6 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreTrajectoryRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreFrameRepresentation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarkerFrameRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BlockedWellboreRepresentation))]
@@ -20513,7 +20515,7 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepresentationIdentitySet))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalGridSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumn))]
 
@@ -20561,7 +20563,7 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLineFeature))]
 
@@ -20585,27 +20587,25 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractResqmlDataObject))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -20634,6 +20634,16 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractResqmlDataObject xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneticBoundaryFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BoundaryFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TectonicBoundaryFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumnRankInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicOccurrenceInterpretation))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MdDatum))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractProperty))]
@@ -20758,10 +20768,6 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractStratigraphicOrganizationInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicOccurrenceInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumnRankInterpretation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuralOrganizationInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidOrganizationInterpretation))]
@@ -20790,12 +20796,6 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrganizationFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BoundaryFeature))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TectonicBoundaryFeature))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneticBoundaryFeature))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitFeature))]
@@ -20806,13 +20806,13 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -20936,13 +20936,13 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractProperty xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractValuesProperty))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractValuesProperty))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
@@ -20983,7 +20983,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IndexableElement")]
 
-        public IndexableElementList? IndexableElement {
+        public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
             } 
@@ -20993,7 +20993,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IndexableElementList? IndexableElementField; 
+        private IndexableElements? IndexableElementField; 
 
 
         /// <summary>
@@ -21121,11 +21121,11 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -21144,7 +21144,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("PatchOfValues")]
 
-        public List<PatchOfValueList> PatchOfValues {
+        public List<PatchOfValues> PatchOfValues {
             get {
                 return PatchOfValuesField;
             } 
@@ -21154,7 +21154,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private List<PatchOfValueList> PatchOfValuesField; 
+        private List<PatchOfValues> PatchOfValuesField; 
 
 
         /// <summary>
@@ -21423,7 +21423,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("PatchOfPoints")]
 
-        public List<PatchOfPointList> PatchOfPoints {
+        public List<PatchOfPoints> PatchOfPoints {
             get {
                 return PatchOfPointsField;
             } 
@@ -21433,7 +21433,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private List<PatchOfPointList> PatchOfPointsField; 
+        private List<PatchOfPoints> PatchOfPointsField; 
 
 
 
@@ -21989,23 +21989,15 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractRepresentation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedVolumeFrameworkRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NonSealedSurfaceFrameworkRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedUnstructuredColumnLayerGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RedefinedGeometryRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedIjkGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGridRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceFrameworkRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Grid2dSetRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Grid2dRepresentation))]
 
@@ -22031,23 +22023,31 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RedefinedGeometryRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepresentationSetRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedVolumeFrameworkRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Grid2dSetRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceFrameworkRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedSurfaceFrameworkRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NonSealedSurfaceFrameworkRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GridConnectionSetRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepresentationSetRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTruncatedColumnLayerGridRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GridConnectionSetRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedIjkGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedUnstructuredColumnLayerGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridRepresentation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -22137,7 +22137,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("Boundaries")]
 
-        public List<PatchBoundarieList> Boundaries {
+        public List<PatchBoundaries> Boundaries {
             get {
                 return BoundariesField;
             } 
@@ -22147,7 +22147,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private List<PatchBoundarieList> BoundariesField; 
+        private List<PatchBoundaries> BoundariesField; 
 
 
 
@@ -22824,7 +22824,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IntervalStratigraphiUnits")]
 
-        public IntervalStratigraphicUnitList IntervalStratigraphiUnits {
+        public IntervalStratigraphicUnits IntervalStratigraphiUnits {
             get {
                 return IntervalStratigraphiUnitsField;
             } 
@@ -22834,7 +22834,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IntervalStratigraphicUnitList IntervalStratigraphiUnitsField; 
+        private IntervalStratigraphicUnits IntervalStratigraphiUnitsField; 
 
 
         /// <summary>
@@ -22842,7 +22842,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("CellFluidPhaseUnits")]
 
-        public CellFluidPhaseUnitList CellFluidPhaseUnits {
+        public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
                 return CellFluidPhaseUnitsField;
             } 
@@ -22852,7 +22852,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private CellFluidPhaseUnitList CellFluidPhaseUnitsField; 
+        private CellFluidPhaseUnits CellFluidPhaseUnitsField; 
 
 
         /// <summary>
@@ -23394,13 +23394,13 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the obj_RepresentationSetRepresentation xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedVolumeFrameworkRepresentation))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(NonSealedSurfaceFrameworkRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceFrameworkRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedSurfaceFrameworkRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SealedVolumeFrameworkRepresentation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23759,7 +23759,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("ConnectionInterpretations")]
 
-        public ConnectionInterpretationList ConnectionInterpretations {
+        public ConnectionInterpretations ConnectionInterpretations {
             get {
                 return ConnectionInterpretationsField;
             } 
@@ -23769,7 +23769,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private ConnectionInterpretationList ConnectionInterpretationsField; 
+        private ConnectionInterpretations ConnectionInterpretationsField; 
 
 
         /// <summary>
@@ -23803,9 +23803,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractGridRepresentation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedIjkGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedIjkGridRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridRepresentation))]
 
@@ -23813,11 +23813,11 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTruncatedColumnLayerGridRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredGridRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractColumnLayerGridRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedUnstructuredColumnLayerGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GpGridRepresentation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23836,7 +23836,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("CellFluidPhaseUnits")]
 
-        public CellFluidPhaseUnitList CellFluidPhaseUnits {
+        public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
                 return CellFluidPhaseUnitsField;
             } 
@@ -23846,7 +23846,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private CellFluidPhaseUnitList CellFluidPhaseUnitsField; 
+        private CellFluidPhaseUnits CellFluidPhaseUnitsField; 
 
 
         /// <summary>
@@ -23872,7 +23872,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("CellStratigraphicUnits")]
 
-        public CellStratigraphicUnitList CellStratigraphicUnits {
+        public CellStratigraphicUnits CellStratigraphicUnits {
             get {
                 return CellStratigraphicUnitsField;
             } 
@@ -23882,7 +23882,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private CellStratigraphicUnitList CellStratigraphicUnitsField; 
+        private CellStratigraphicUnits CellStratigraphicUnitsField; 
 
 
 
@@ -23900,9 +23900,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractColumnLayerGridRepresentation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridRepresentation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnstructuredColumnLayerGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IjkGridRepresentation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23939,7 +23939,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("IntervalStratigraphicUnits")]
 
-        public IntervalStratigraphicUnitList IntervalStratigraphicUnits {
+        public IntervalStratigraphicUnits IntervalStratigraphicUnits {
             get {
                 return IntervalStratigraphicUnitsField;
             } 
@@ -23949,7 +23949,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private IntervalStratigraphicUnitList IntervalStratigraphicUnitsField; 
+        private IntervalStratigraphicUnits IntervalStratigraphicUnitsField; 
 
 
 
@@ -24056,7 +24056,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("KGaps")]
 
-        public KGapList KGaps {
+        public KGaps KGaps {
             get {
                 return KGapsField;
             } 
@@ -24066,7 +24066,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private KGapList KGapsField; 
+        private KGaps KGapsField; 
 
 
         /// <summary>
@@ -24159,9 +24159,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractTruncatedColumnLayerGridRepresentation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedIjkGridRepresentation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedUnstructuredColumnLayerGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TruncatedIjkGridRepresentation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -24621,15 +24621,13 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractFeatureInterpretation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(HorizonInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuralOrganizationInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidOrganizationInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractOrganizationInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicOccurrenceInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumnRankInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyBoundaryInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitInterpretation))]
 
@@ -24641,19 +24639,21 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BoundaryFeatureInterpretation))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(HorizonInterpretation))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FaultInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyBoundaryInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericFeatureInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractOrganizationInterpretation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractStratigraphicOrganizationInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuralOrganizationInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidOrganizationInterpretation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -24733,11 +24733,11 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the obj_GeologicUnitInterpretation xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitInterpretation))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitInterpretation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -25152,11 +25152,11 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the obj_BoundaryFeatureInterpretation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyBoundaryInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FaultInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(HorizonInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FaultInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyBoundaryInterpretation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -25501,15 +25501,15 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractOrganizationInterpretation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumnRankInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuralOrganizationInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractStratigraphicOrganizationInterpretation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicOccurrenceInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidOrganizationInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumnRankInterpretation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StructuralOrganizationInterpretation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidOrganizationInterpretation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -25556,9 +25556,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractStratigraphicOrganizationInterpretation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicOccurrenceInterpretation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicColumnRankInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicOccurrenceInterpretation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -25938,6 +25938,8 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrganizationFeature))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeFeature))]
@@ -25954,7 +25956,7 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BoundaryFeature))]
 
@@ -25964,13 +25966,11 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitFeature))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyFeature))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -25999,8 +25999,6 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractTechnicalFeature xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreFeature))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLineSetFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
@@ -26009,9 +26007,11 @@ namespace Energistics.DataAccess.RESQML200
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLineFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrontierFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrontierFeature))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -26433,23 +26433,23 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractGeologicFeature xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrganizationFeature))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BoundaryFeature))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TectonicBoundaryFeature))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneticBoundaryFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeologicUnitFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitFeature))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BoundaryFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TectonicBoundaryFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrganizationFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitFeature))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -26516,11 +26516,11 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the obj_BoundaryFeature xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TectonicBoundaryFeature))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneticBoundaryFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidBoundaryFeature))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TectonicBoundaryFeature))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -26686,9 +26686,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the obj_GeologicUnitFeature xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitFeature))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeobodyFeature))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StratigraphicUnitFeature))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
@@ -26883,7 +26883,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlRootAttribute("TimeSeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_TimeSeries xsd type.")]
-    public partial class TimeSerieList : AbstractResqmlDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class TimeSeries : AbstractResqmlDataObject , INotifyPropertyChanged
     {
 
 
@@ -26904,18 +26904,6 @@ namespace Energistics.DataAccess.RESQML200
 
         private List<Timestamp> TimeField; 
 
-
-        /// <summary>
-        /// Time property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Time;
-			}
-        }
 
         /// <summary>
         /// TimeSeriesParentage property
@@ -26948,9 +26936,9 @@ namespace Energistics.DataAccess.RESQML200
     /// This class represents the AbstractLocal3dCrs xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -26960,7 +26948,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractLocal3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AbstractLocal3dCrs xsd type.")]
-    public abstract partial class AbstractLocal3dCrList : AbstractResqmlDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractLocal3dCrs : AbstractResqmlDataObject , INotifyPropertyChanged
     {
 
 
@@ -27113,7 +27101,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("VerticalCrs")]
 
-        public AbstractVerticalCrList VerticalCrs {
+        public AbstractVerticalCrs VerticalCrs {
             get {
                 return VerticalCrsField;
             } 
@@ -27123,7 +27111,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private AbstractVerticalCrList VerticalCrsField; 
+        private AbstractVerticalCrs VerticalCrsField; 
 
 
         /// <summary>
@@ -27131,7 +27119,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("ProjectedCrs")]
 
-        public AbstractProjectedCrList ProjectedCrs {
+        public AbstractProjectedCrs ProjectedCrs {
             get {
                 return ProjectedCrsField;
             } 
@@ -27141,7 +27129,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private AbstractProjectedCrList ProjectedCrsField; 
+        private AbstractProjectedCrs ProjectedCrsField; 
 
 
 
@@ -27165,7 +27153,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlRootAttribute("LocalDepth3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_LocalDepth3dCrs xsd type.")]
-    public partial class LocalDepth3dCrList : AbstractLocal3dCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class LocalDepth3dCrs : AbstractLocal3dCrs , INotifyPropertyChanged
     {
 
 
@@ -27188,7 +27176,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlRootAttribute("LocalTime3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_LocalTime3dCrs xsd type.")]
-    public partial class LocalTime3dCrList : AbstractLocal3dCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class LocalTime3dCrs : AbstractLocal3dCrs , INotifyPropertyChanged
     {
 
 
@@ -27272,7 +27260,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalCrs xsd type.")]
-    public partial class VerticalCrList : AbstractCitedDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class VerticalCrs : AbstractCitedDataObject , INotifyPropertyChanged
     {
 
 
@@ -27299,7 +27287,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("AbstractVerticalCrs")]
 
-        public AbstractVerticalCrList AbstractVerticalCrs {
+        public AbstractVerticalCrs AbstractVerticalCrs {
             get {
                 return AbstractVerticalCrsField;
             } 
@@ -27309,7 +27297,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private AbstractVerticalCrList AbstractVerticalCrsField; 
+        private AbstractVerticalCrs AbstractVerticalCrsField; 
 
 
 		/// <summary>
@@ -27353,7 +27341,7 @@ namespace Energistics.DataAccess.RESQML200
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedCrs xsd type.")]
-    public partial class ProjectedCrList : AbstractCitedDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ProjectedCrs : AbstractCitedDataObject , INotifyPropertyChanged
     {
 
 
@@ -27380,7 +27368,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[XmlElement("AbstractProjectedCrs")]
 
-        public AbstractProjectedCrList AbstractProjectedCrs {
+        public AbstractProjectedCrs AbstractProjectedCrs {
             get {
                 return AbstractProjectedCrsField;
             } 
@@ -27390,7 +27378,7 @@ namespace Energistics.DataAccess.RESQML200
             }
         }
 
-        private AbstractProjectedCrList AbstractProjectedCrsField; 
+        private AbstractProjectedCrs AbstractProjectedCrsField; 
 
 
 		/// <summary>
@@ -28682,7 +28670,7 @@ namespace Energistics.DataAccess.RESQML200
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
         [Description("This class represents the IndexableElements xsd enumeration.")]
-        public enum IndexableElementList 
+        public enum IndexableElements 
         {
         /// <summary>
         /// cells property

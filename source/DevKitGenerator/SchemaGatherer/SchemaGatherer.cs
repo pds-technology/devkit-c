@@ -116,11 +116,23 @@ namespace Energistics.SchemaGatherer
 
             foreach (string setname in GetAppSetting("SETS").Split(new Char[] { ',' }))
             {
+                
                 String set = setname.Trim();
                 VerifyPath(set + "_XSD_PATH");
                 VerifyPath(set + "_ABSTRACTXSD_PATH");
-                VerifyPath(set + "_ENUMVAL_PATH");
-                VerifyPath(set + "_ENUMVALPRODML_PATH");
+                
+                if (set.Contains("RESQML201"))
+                {
+                    VerifyPath(set + "_ENUMVAL_PATH");
+                }
+                else
+                {
+                    if (!set.Contains("RESQML200"))
+                    {
+                        VerifyPath(set + "_ENUMVAL_PATH");
+                        VerifyPath(set + "_ENUMVALPRODML_PATH");
+                    }
+                }
                 VerifyPath(set + "_WSDL");
                 VerifyPath(set + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH");
                 VerifySetting(set + "_VERSION_STRING");
@@ -185,7 +197,9 @@ namespace Energistics.SchemaGatherer
             string sourceFolder = GetAppSetting(setName + "_XSD_PATH");
             string nameSpace = "Energistics.Generator." + setName;
             string enumList = GetAppSetting(setName + "_ENUMVAL_PATH");
-            string enumProdList = GetAppSetting(setName + "_ENUMVALPRODML_PATH");
+            string enumProdList ="";
+            if(setName.Contains("PRODML"))
+                enumProdList = GetAppSetting(setName + "_ENUMVALPRODML_PATH");
             string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
             string wsdlPath = GetAppSetting(setName + "_WSDL");
         

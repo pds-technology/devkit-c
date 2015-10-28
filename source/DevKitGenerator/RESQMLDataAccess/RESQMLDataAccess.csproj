@@ -51,12 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RESQML110\DataObjects.cs" />
-    <Compile Include="RESQML110\DataStructures.cs" />
-    <Compile Include="RESQML110\GeneratedEnumValues.cs" />
-    <Compile Include="RESQML110\GeneratedResqmlHDF5PartialClasses.cs" />
-    <Compile Include="RESQML110\ResqmlException.cs" />
-    <Compile Include="RESQML110\ResqmlHDF5DataAccess.cs" />
+    <Compile Include="RESQML200\DataObjects.cs" />
+    <Compile Include="RESQML201\DataObjects.cs" />
+    <Compile Include="RESQML201\GeneratedEnumValues.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
@@ -64,6 +61,7 @@
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy $(TargetDir)\Energistics.RESQMLDataAccess.dll $(SolutionDir)\..\DevKit\Assemblies

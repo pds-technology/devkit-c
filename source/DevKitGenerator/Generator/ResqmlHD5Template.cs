@@ -97,7 +97,7 @@ namespace Energistics.Generator
         /// <summary>
         /// Create the template output
         /// </summary>
-        public virtual string TransformText()
+        public virtual string TransformText(String Version)
         {
             
             #line 2 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
@@ -106,7 +106,7 @@ namespace Energistics.Generator
             #line default
             #line hidden
             this.Write("\r\n");
-            this.Write("\r\nusing System;\r\n\r\nnamespace Energistics.DataAccess.RESQML110.ComponentSchemas\r\n{" +
+            this.Write("\r\nusing System;\r\n\r\nnamespace Energistics.DataAccess." + Version + ".ComponentSchemas\r\n{" +
                     "\r\n");
             
             #line 10 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"

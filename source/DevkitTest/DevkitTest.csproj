@@ -37,6 +37,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DevKit\Assemblies\Energistics.DataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="Energistics.RESQMLDataAccess">
+      <HintPath>..\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.RESQMLDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />

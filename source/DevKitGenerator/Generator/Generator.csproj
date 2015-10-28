@@ -81,6 +81,7 @@
     <Compile Include="PRODML131\DataObject.cs" />
     <Compile Include="RESQML110\DataObject.cs" />
     <Compile Include="RESQML200\DataObject.cs" />
+    <Compile Include="RESQML201\DataObject.cs" />
     <Compile Include="ResqmlHD5Template.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

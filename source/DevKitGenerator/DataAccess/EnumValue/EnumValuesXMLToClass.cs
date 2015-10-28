@@ -129,7 +129,7 @@ namespace Energistics.DataAccess.EnumValue
                 if (dataObj.InnerXml.Contains("<measureBaseForConversion>")) inheritsFrom = "Energistics.DataAccess.EnumValue.MeasureUOMEnumValue";
                 if (dataObj.InnerXml.Contains("<realtimeDataType>")) inheritsFrom = "Energistics.DataAccess.EnumValue.RealtimeEnumValue";
                 if (dataObj.InnerXml.Contains("<dimensionalClass>")) inheritsFrom = "Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue";
-
+             
                 string name = GetElementInnerText(dataObj, "name");
                 string description = GetElementInnerText(dataObj, "description");
                 //prevent the duplication element created.

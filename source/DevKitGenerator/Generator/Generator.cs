@@ -116,32 +116,37 @@ namespace Energistics.Generator
         private static void GenerateClasses(string setName, string currentPath)
         {
             string mlPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_XSD_PATH");
-
-            List<string> enumClassNames = new List<string>();
             string targetFilename = String.Format(@"{0}\{1}\GeneratedEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
-            string csCode = EnumValuesXMLToClass.Convert(Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVAL_PATH"), "Energistics.DataAccess." + setName, enumClassNames, false, null);
-            
-            if(targetFilename.Contains(".cs"))
-            {
-                DirectorySecurity securityRules = new DirectorySecurity();
-                String targetPath = targetFilename.Remove(targetFilename.LastIndexOf("\\"));
-                if (!Directory.Exists(targetPath)) 
-                    Directory.CreateDirectory(targetPath);
+            List<string> enumClassNames = new List<string>();
+           // if ((!setName.Contains("RESQML200"))&&(!setName.Contains("RESQML201")))
+            if (!setName.Contains("RESQML200"))
+            {               
+                string csCode = EnumValuesXMLToClass.Convert(Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVAL_PATH"), "Energistics.DataAccess." + setName, enumClassNames, false, null);
+
+                if (targetFilename.Contains(".cs"))
+                {
+                    DirectorySecurity securityRules = new DirectorySecurity();
+                    String targetPath = targetFilename.Remove(targetFilename.LastIndexOf("\\"));
+                    if (!Directory.Exists(targetPath))
+                        Directory.CreateDirectory(targetPath);
+                }
+                File.WriteAllText(targetFilename, csCode);
             }
-            File.WriteAllText(targetFilename, csCode);
-
-            string prodMLPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVALPRODML_PATH");
-            if (!String.IsNullOrEmpty(prodMLPath))
+            if (setName.Contains("PRODML"))
             {
-                targetFilename = String.Format(@"{0}\{1}\GeneratedProdmlEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
-                File.WriteAllText(targetFilename, EnumValuesXMLToClass.Convert(prodMLPath, "Energistics.DataAccess." + setName, enumClassNames, false, null));
+                string prodMLPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVALPRODML_PATH");
+                if (!String.IsNullOrEmpty(prodMLPath))
+                {
+                    targetFilename = String.Format(@"{0}\{1}\GeneratedProdmlEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
+                    File.WriteAllText(targetFilename, EnumValuesXMLToClass.Convert(prodMLPath, "Energistics.DataAccess." + setName, enumClassNames, false, null));
+                }
             }
 
-
-            if (setName.StartsWith("RESQML"))
+            /* HD5 previously was coded in RESQML 100, regards 200 strcuture has changed, and HD5 is not support at this moment */
+            if (setName.StartsWith("RESQML100"))
             {
                 ResqmlHD5Template resqmlTextTemplate = new ResqmlHD5Template();
-                string resmltext = resqmlTextTemplate.TransformText();
+                string resmltext = resqmlTextTemplate.TransformText(setName);
                 File.WriteAllText(String.Format(@"{0}\{1}\GeneratedResqmlHDF5PartialClasses.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName), resmltext);
             }
 

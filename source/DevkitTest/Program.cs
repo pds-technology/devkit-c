@@ -13,6 +13,7 @@ using Energistics.DataAccess.WITSML131;
 using Energistics.DataAccess.WITSML141;
 using Energistics.DataAccess.PRODML122;
 using Energistics.DataAccess.PRODML131;
+using Energistics.DataAccess.RESQML200;
 using Energistics.DataAccess;
 using Energistics.DataAccess.PRODML122.PROD_GenericDataAccess;
 namespace DevkitTest
@@ -21,7 +22,7 @@ namespace DevkitTest
     {
         static Boolean successs = true;
         static List<String> failureList = new List<string>();
-        static ObjectHandle createInstance(String className, String objname)
+        static ObjectHandle createInstance(String assemblyName, String className, String objname)
         {
             if (objname.StartsWith("wb"))
             {
@@ -34,7 +35,7 @@ namespace DevkitTest
                     //WellList
                     String name = className + "." + objectListname.Substring(0, 1).ToUpper() + objectListname.Substring(1, objectListname.Length - 1);
 
-                    demoObject = Activator.CreateInstance("Energistics.DataAccess", name);   
+                    demoObject = Activator.CreateInstance(assemblyName, name);   
                     
                 }
                 catch(Exception )
@@ -43,21 +44,21 @@ namespace DevkitTest
                     String name = className + "." + objectListname;
                     try
                     {
-                        demoObject = Activator.CreateInstance("Energistics.DataAccess", name);
+                        demoObject = Activator.CreateInstance(assemblyName, name);
                     }
                     catch(Exception)
                     {
                         try // Well
                         { 
                             name = className + "." + objname.Substring(0, 1).ToUpper() + objname.Substring(1, objname.Length - 1);
-                            demoObject = Activator.CreateInstance("Energistics.DataAccess", name);   
+                            demoObject = Activator.CreateInstance(assemblyName, name);   
                         }
                         catch (Exception)
                         {
                             try //well
                             {
                                 name = className + "." + objname;
-                                demoObject = Activator.CreateInstance("Energistics.DataAccess", name);
+                                demoObject = Activator.CreateInstance(assemblyName, name);
                             }
                             catch (Exception)
                             {
@@ -88,13 +89,19 @@ namespace DevkitTest
             if(startP2>0)
                 FormatStr2 = xmloutput.Substring(startP2, xmloutput.Length - startP2);
 
-            if (((Math.Abs(FormatStr.Length - FormatStr2.Length) / (float)FormatStr.Length) > 0.1) &&(FormatStr2.Length < FormatStr.Length))
+            if (((Math.Abs(FormatStr.Length - FormatStr2.Length) / (float)FormatStr.Length) > 0.02) &&(FormatStr2.Length < FormatStr.Length))
                     result = false;
             return result;
         }
+        public class Utf8StringWriter : StringWriter
+        {
+            public override Encoding Encoding
+            {
+                get { return Encoding.UTF8; }
+            }
+        }
 
-
-        static void testDemoFile(String className,String product)
+        static void testDemoFile(String assemblyName, String className,String product)
         {
             Console.WriteLine("test the class {0}", className);
             // load all the demo xml. 
@@ -115,8 +122,8 @@ namespace DevkitTest
                 Console.WriteLine("process the file {0}", f);
                 int startp = f.LastIndexOf("\\") + "\\".Length;
                 int length = f.IndexOf(".xml") - startp;
-                String objname = f.Substring(startp, length);
-                ObjectHandle demoObject = createInstance(className, objname);
+                String objname = f.Substring(startp, length).Replace("obj_","");
+                ObjectHandle demoObject = createInstance(assemblyName,className, objname);
 
                 if (demoObject == null)
                 {
@@ -149,7 +156,7 @@ namespace DevkitTest
                    
                     reader.Close();
                     // now we test the serialize 
-                    StringWriter writer = new StringWriter();
+                    StringWriter writer = new Utf8StringWriter();
                     x.Serialize(writer, result);
                     String xmloutput = writer.ToString();
                    if (!ComparationOutput(outputPrev, xmloutput))
@@ -288,31 +295,39 @@ namespace DevkitTest
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Test the WITSML WebServiceAPI ... ");
-            testWITSMLWebService();
+            String assemblyName = "Energistics.DataAccess";
+            // if webservice is up, can use this line to test the webservice
+            //Console.WriteLine("Test the WITSML WebServiceAPI ... ");
+            //testWITSMLWebService();
 
-            Console.WriteLine("Test the PRODML WebServiceAPI ... ");
-            testProdmlWebService();
-
+            //Console.WriteLine("Test the PRODML WebServiceAPI ... ");
+            //testProdmlWebService();
+           
             String product = "";
-            product = "PRODML_v1.3";
-            testDemoFile("Energistics.DataAccess.PRODML131",product);
+
+            product = "PRODML_v1.3"; 
+            assemblyName = "Energistics.DataAccess";
+            testDemoFile(assemblyName,"Energistics.DataAccess.PRODML131",product);
            
             //1. test the completion 1.0
              product = "Completion_v1.0";
-            testDemoFile("Energistics.DataAccess.COMPLETION100",product);
+             testDemoFile(assemblyName, "Energistics.DataAccess.COMPLETION100", product);
 
             
             product = "WITSML_v1.3.1.1";
-            testDemoFile("Energistics.DataAccess.WITSML131",product);
+            testDemoFile(assemblyName, "Energistics.DataAccess.WITSML131", product);
 
 
             product = "WITSML_v1.4.1.1";
-            testDemoFile("Energistics.DataAccess.WITSML141",product);
+            testDemoFile(assemblyName, "Energistics.DataAccess.WITSML141", product);
 
 
             product = "PRODML_v1.2.2";
-            testDemoFile("Energistics.DataAccess.PRODML122", product);
+            testDemoFile(assemblyName, "Energistics.DataAccess.PRODML122", product);
+           
+            product = "RESQML_v2.0";
+            assemblyName = "Energistics.RESQMLDataAccess";
+            testDemoFile(assemblyName, "Energistics.DataAccess.RESQML200", product);
 
             if (successs == true)
                 Console.WriteLine("test output class successfully!");
@@ -328,9 +343,7 @@ namespace DevkitTest
            
             Console.WriteLine("Press any key to stop...");
             Console.ReadKey();
-            // validate the xml using the devkit
-            // generate the xml using devkit.
-            //test web kit?
+
         }
     }
 }
