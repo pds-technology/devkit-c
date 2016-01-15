@@ -1,15 +1,15 @@
 ##  What is this repository for? 
-  devkit provides kit to the c# developer  
+  The devkit provides developing kit to the c# developer.
 
 ##   How do I get set up?   
 ###   Summary of set up  
-Download the code for bitbucket.  
+Download the code for BitBucket.  
 Restore to the directory which will be used in app.config. In our default, we restore files to c:\projects. For your convenience, please don't change the internal structure, then your only need to modify the root folder which point to c:\projects. as   
   <add key="ROOT_FOLDER" value="C:\Projects" />  
  in projects folder we will have:   
  doc: document contains the all supported energistics xsd for user's convenience.   
  source: contains project:   
-    *  Devkit:  this is old Devkit, we are using DevkitTest to perform test using the supplied sample xml.   
+    *  Devkit:  this is old Devkit, we are using DevkitTest to perform test using the supplied sample XML.   
     *  DevKitGenerator: this is project that generator all devkit java classes.    
     *  DekitTest: this is testing project that using the example xml from demoXML folder.   
     *  DemoXML: this is folder that contains all sample xml which supports DevkitTest.   
