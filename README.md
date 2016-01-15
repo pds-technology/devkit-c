@@ -1,5 +1,5 @@
 ##  What is this repository for? 
-  devkit c provides kit to the c developer  
+  devkit provides kit to the c# developer  
 
 ##   How do I get set up?   
 ###   Summary of set up  
