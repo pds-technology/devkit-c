@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:TectonicBoundaryFeature xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="97472fec-4aff-4490-b3a0-bb85d03d2700">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">Fault1</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:TectonicBoundaryKind xsi:type="resqml2:TectonicBoundaryKind">fault</resqml2:TectonicBoundaryKind>
+</resqml2:TectonicBoundaryFeature>

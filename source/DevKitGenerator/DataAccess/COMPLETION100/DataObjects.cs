@@ -1151,13 +1151,15 @@ namespace Energistics.DataAccess.COMPLETION100
     /// This class represents the abstractMeasure xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
 
@@ -1177,8 +1179,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
@@ -1190,6 +1190,8 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
 
@@ -1205,13 +1207,7 @@ namespace Energistics.DataAccess.COMPLETION100
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
 
@@ -1224,6 +1220,10 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
 
@@ -10319,17 +10319,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return cementExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property CementExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CementExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CementExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CementExtension when property PressureTestExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CementExtension when property AcidizeFracExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CementExtension when property AcidizeFracExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property CementExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CementExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property CementExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CementExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property CementExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CementExtension when property WaitingOnExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property CementExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CementExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CementExtension when property BHPExtension is already set");
                 cementExtensionField = value;
                 CementExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("CementExtension");
@@ -10351,17 +10351,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return cleanFillExtensionField;
             } 
             set {
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property WaitingOnExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property BHPExtension is already set");
                 cleanFillExtensionField = value;
                 CleanFillExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("CleanFillExtension");
@@ -10383,17 +10383,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return directionalSurveyExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property PressureTestExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property CementExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property WaitingOnExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property BHPExtension is already set");
                 directionalSurveyExtensionField = value;
                 DirectionalSurveyExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("DirectionalSurveyExtension");
@@ -10415,17 +10415,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return lostCirculationExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property FluidReportExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property WaitingOnExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property JobExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property BHPExtension is already set");
                 lostCirculationExtensionField = value;
                 LostCirculationExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("LostCirculationExtension");
@@ -10447,17 +10447,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return BHPExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property JobExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property WaitingOnExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property PressureTestExtension is already set");
                 BHPExtensionField = value;
                 BHPExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("BHPExtension");
@@ -10479,17 +10479,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return acidizeFracExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property PressureTestExtension is already set");
-                if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CementExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CementExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property WaitingOnExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property BHPExtension is already set");
                 acidizeFracExtensionField = value;
                 AcidizeFracExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("AcidizeFracExtension");
@@ -10511,17 +10511,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return jobExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property JobExtension when property CleanFillExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property JobExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property JobExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property JobExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property JobExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property JobExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property JobExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property JobExtension when property FluidReportExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property JobExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property JobExtension when property WaitingOnExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property JobExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property JobExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property JobExtension when property BHPExtension is already set");
                 jobExtensionField = value;
                 JobExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("JobExtension");
@@ -10543,17 +10543,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return pressureTestExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property BHPExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property WaitingOnExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property PerforationExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property BHPExtension is already set");
                 pressureTestExtensionField = value;
                 PressureTestExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("PressureTestExtension");
@@ -10575,17 +10575,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return waitingOnExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property CleanFillExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property BHPExtension is already set");
                 waitingOnExtensionField = value;
                 WaitingOnExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("WaitingOnExtension");
@@ -10607,17 +10607,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return perforationExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property CleanFillExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property LostCirculationExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property WaitingOnExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property BHPExtension is already set");
                 perforationExtensionField = value;
                 PerforationExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("PerforationExtension");
@@ -10639,17 +10639,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return fluidReportExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DownholeExtension is already set");
-                if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property LostCirculationExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property CleanFillExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property WaitingOnExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DownholeExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property JobExtension is already set");
+                if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property BHPExtension is already set");
                 fluidReportExtensionField = value;
                 FluidReportExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("FluidReportExtension");
@@ -10671,17 +10671,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return downholeExtensionField;
             } 
             set {
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property CleanFillExtension is already set");
-                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property JobExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property BHPExtension is already set");
-                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property PressureTestExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property CementExtension is already set");
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property FluidReportExtension is already set");
-                if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property LostCirculationExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property CleanFillExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property WaitingOnExtension is already set");
+                if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property FluidReportExtension is already set");
+                if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property JobExtension is already set");
+                if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property PerforationExtension is already set");
+                if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property PressureTestExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property BHPExtension is already set");
                 downholeExtensionField = value;
                 DownholeExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("DownholeExtension");
@@ -18214,48 +18214,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
 
         /// <summary>
-        /// The connection type of rod
-        /// </summary>
-        [XmlElement("rodConnectionType")]
-        public RodConnectionType? RodConnectionType {
-            get {
-                return rodConnectionTypeField;
-            } 
-            set {
-                rodConnectionTypeField = value;
-                RodConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("RodConnectionType");
-            }
-        }
-
-        private RodConnectionType? rodConnectionTypeField; 
-        /// <summary>
-        /// Boolean to indicate if RodConnectionType has been set. Used for serialization.
-        /// </summary>
-        private Boolean RodConnectionTypeSpecified = false; 
-
-        /// <summary>
-        /// The connection type of tubing
-        /// </summary>
-        [XmlElement("tubingConnectionType")]
-        public TubingConnectionType? TubingConnectionType {
-            get {
-                return tubingConnectionTypeField;
-            } 
-            set {
-                tubingConnectionTypeField = value;
-                TubingConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("TubingConnectionType");
-            }
-        }
-
-        private TubingConnectionType? tubingConnectionTypeField; 
-        /// <summary>
-        /// Boolean to indicate if TubingConnectionType has been set. Used for serialization.
-        /// </summary>
-        private Boolean TubingConnectionTypeSpecified = false; 
-
-        /// <summary>
         /// The connection type of casing
         /// </summary>
         [XmlElement("casingConnectionType")]
@@ -18277,6 +18235,27 @@ namespace Energistics.DataAccess.COMPLETION100
         private Boolean CasingConnectionTypeSpecified = false; 
 
         /// <summary>
+        /// The connection type of rod
+        /// </summary>
+        [XmlElement("rodConnectionType")]
+        public RodConnectionType? RodConnectionType {
+            get {
+                return rodConnectionTypeField;
+            } 
+            set {
+                rodConnectionTypeField = value;
+                RodConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("RodConnectionType");
+            }
+        }
+
+        private RodConnectionType? rodConnectionTypeField; 
+        /// <summary>
+        /// Boolean to indicate if RodConnectionType has been set. Used for serialization.
+        /// </summary>
+        private Boolean RodConnectionTypeSpecified = false; 
+
+        /// <summary>
         /// The other connection type which is used for other tools
         /// </summary>
         [XmlElement("otherConnectionType")]
@@ -18296,6 +18275,27 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Boolean to indicate if OtherConnectionType has been set. Used for serialization.
         /// </summary>
         private Boolean OtherConnectionTypeSpecified = false; 
+
+        /// <summary>
+        /// The connection type of tubing
+        /// </summary>
+        [XmlElement("tubingConnectionType")]
+        public TubingConnectionType? TubingConnectionType {
+            get {
+                return tubingConnectionTypeField;
+            } 
+            set {
+                tubingConnectionTypeField = value;
+                TubingConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("TubingConnectionType");
+            }
+        }
+
+        private TubingConnectionType? tubingConnectionTypeField; 
+        /// <summary>
+        /// Boolean to indicate if TubingConnectionType has been set. Used for serialization.
+        /// </summary>
+        private Boolean TubingConnectionTypeSpecified = false; 
 
 
 

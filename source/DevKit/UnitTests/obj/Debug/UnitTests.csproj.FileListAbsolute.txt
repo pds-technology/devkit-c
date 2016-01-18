@@ -1,0 +1,13 @@
+C:\projects\source\DevKit\UnitTests\bin\Debug\UnitTests.dll.config
+C:\projects\source\DevKit\UnitTests\bin\Debug\UnitTests.dll
+C:\projects\source\DevKit\UnitTests\bin\Debug\UnitTests.pdb
+C:\projects\source\DevKit\UnitTests\bin\Debug\Energistics.DataAccess.dll
+C:\projects\source\DevKit\UnitTests\bin\Debug\Energistics.RESQMLDataAccess.dll
+C:\projects\source\DevKit\UnitTests\bin\Debug\HDF5DotNet.dll
+C:\projects\source\DevKit\UnitTests\bin\Debug\Energistics.DataAccess.pdb
+C:\projects\source\DevKit\UnitTests\bin\Debug\Energistics.DataAccess.xml
+C:\projects\source\DevKit\UnitTests\bin\Debug\Energistics.RESQMLDataAccess.pdb
+C:\projects\source\DevKit\UnitTests\bin\Debug\Energistics.RESQMLDataAccess.xml
+C:\projects\source\DevKit\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+C:\projects\source\DevKit\UnitTests\obj\Debug\UnitTests.dll
+C:\projects\source\DevKit\UnitTests\obj\Debug\UnitTests.pdb

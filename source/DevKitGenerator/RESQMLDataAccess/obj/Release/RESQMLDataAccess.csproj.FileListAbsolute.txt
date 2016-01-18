@@ -1,0 +1,9 @@
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.RESQMLDataAccess.XML
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.RESQMLDataAccess.dll
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.RESQMLDataAccess.pdb
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.DataAccess.dll
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\HDF5DotNet.dll
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.DataAccess.pdb
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.DataAccess.xml
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Release\Energistics.RESQMLDataAccess.dll
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Release\Energistics.RESQMLDataAccess.pdb

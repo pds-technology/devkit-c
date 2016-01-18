@@ -144,9 +144,9 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the abstractTimestamp xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(W3CDTF))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractW3CDTF))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(W3CDTF))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -983,7 +983,11 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractGMLType xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionBaseType))]
 
@@ -997,7 +1001,7 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
 
@@ -1005,11 +1009,9 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometryType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
 
@@ -1027,7 +1029,7 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometryType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
 
@@ -1040,8 +1042,6 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeatureType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlAreaOfInterest))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -1179,7 +1179,13 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the DefinitionBaseType xsd type.
     /// </summary>
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
 
@@ -1213,12 +1219,6 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1246,7 +1246,7 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the DefinitionType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
 
@@ -1260,11 +1260,11 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
@@ -1274,7 +1274,7 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
 
@@ -1330,17 +1330,15 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the IdentifiedObjectType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
 
@@ -1350,7 +1348,7 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
 
@@ -1360,11 +1358,13 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -1393,11 +1393,11 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractCRSType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
 
@@ -1693,27 +1693,6 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean CartesianCSSpecified = false; 
 
         /// <summary>
-        /// ellipsoidalCS property
-        /// </summary>
-        [XmlElement("ellipsoidalCS")]
-        public EllipsoidalCSPropertyType EllipsoidalCS {
-            get {
-                return ellipsoidalCSField;
-            } 
-            set {
-                ellipsoidalCSField = value;
-                EllipsoidalCSSpecified = (value!=null);
-                NotifyPropertyChanged("EllipsoidalCS");
-            }
-        }
-
-        private EllipsoidalCSPropertyType ellipsoidalCSField; 
-        /// <summary>
-        /// Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
-        /// </summary>
-        private Boolean EllipsoidalCSSpecified = false; 
-
-        /// <summary>
         /// sphericalCS property
         /// </summary>
         [XmlElement("sphericalCS")]
@@ -1733,6 +1712,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if SphericalCS has been set. Used for serialization.
         /// </summary>
         private Boolean SphericalCSSpecified = false; 
+
+        /// <summary>
+        /// ellipsoidalCS property
+        /// </summary>
+        [XmlElement("ellipsoidalCS")]
+        public EllipsoidalCSPropertyType EllipsoidalCS {
+            get {
+                return ellipsoidalCSField;
+            } 
+            set {
+                ellipsoidalCSField = value;
+                EllipsoidalCSSpecified = (value!=null);
+                NotifyPropertyChanged("EllipsoidalCS");
+            }
+        }
+
+        private EllipsoidalCSPropertyType ellipsoidalCSField; 
+        /// <summary>
+        /// Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
+        /// </summary>
+        private Boolean EllipsoidalCSSpecified = false; 
 
 
 
@@ -1852,13 +1852,13 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractCoordinateSystemType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -2453,9 +2453,9 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractGeometryType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
 
@@ -2524,11 +2524,11 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractGeometricPrimitiveType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -2933,27 +2933,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// posList property
-        /// </summary>
-        [XmlElement("posList")]
-        public DirectPositionListType PosList {
-            get {
-                return posListField;
-            } 
-            set {
-                posListField = value;
-                PosListSpecified = (value!=null);
-                NotifyPropertyChanged("PosList");
-            }
-        }
-
-        private DirectPositionListType posListField; 
-        /// <summary>
-        /// Boolean to indicate if PosList has been set. Used for serialization.
-        /// </summary>
-        private Boolean PosListSpecified = false; 
-
-        /// <summary>
         /// pos property
         /// </summary>
         [XmlElement("pos")]
@@ -2973,6 +2952,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if Pos has been set. Used for serialization.
         /// </summary>
         private Boolean PosSpecified = false; 
+
+        /// <summary>
+        /// posList property
+        /// </summary>
+        [XmlElement("posList")]
+        public DirectPositionListType PosList {
+            get {
+                return posListField;
+            } 
+            set {
+                posListField = value;
+                PosListSpecified = (value!=null);
+                NotifyPropertyChanged("PosList");
+            }
+        }
+
+        private DirectPositionListType posListField; 
+        /// <summary>
+        /// Boolean to indicate if PosList has been set. Used for serialization.
+        /// </summary>
+        private Boolean PosListSpecified = false; 
 
 
 
@@ -3110,9 +3110,9 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractDatumType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -3316,13 +3316,19 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractObject_Type xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_OnlineResource_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
 
@@ -3332,21 +3338,15 @@ namespace Energistics.DataAccess.RESQML110
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MD_Identifier_Type))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -5383,27 +5383,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// Date property
-        /// </summary>
-        [XmlElement("Date")]
-        public String Date {
-            get {
-                return DateField;
-            } 
-            set {
-                DateField = value;
-                DateSpecified = (value!=null);
-                NotifyPropertyChanged("Date");
-            }
-        }
-
-        private String DateField; 
-        /// <summary>
-        /// Boolean to indicate if Date has been set. Used for serialization.
-        /// </summary>
-        private Boolean DateSpecified = false; 
-
-        /// <summary>
         /// DateTime property
         /// </summary>
         [XmlElement("DateTime")]
@@ -5423,6 +5402,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if DateTime has been set. Used for serialization.
         /// </summary>
         private Boolean DateTimeSpecified = false; 
+
+        /// <summary>
+        /// Date property
+        /// </summary>
+        [XmlElement("Date")]
+        public String Date {
+            get {
+                return DateField;
+            } 
+            set {
+                DateField = value;
+                DateSpecified = (value!=null);
+                NotifyPropertyChanged("Date");
+            }
+        }
+
+        private String DateField; 
+        /// <summary>
+        /// Boolean to indicate if Date has been set. Used for serialization.
+        /// </summary>
+        private Boolean DateSpecified = false; 
 
 
 
@@ -8866,6 +8866,27 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
+        /// inverseFlattening property
+        /// </summary>
+        [XmlElement("inverseFlattening")]
+        public MeasureType InverseFlattening {
+            get {
+                return inverseFlatteningField;
+            } 
+            set {
+                inverseFlatteningField = value;
+                InverseFlatteningSpecified = (value!=null);
+                NotifyPropertyChanged("InverseFlattening");
+            }
+        }
+
+        private MeasureType inverseFlatteningField; 
+        /// <summary>
+        /// Boolean to indicate if InverseFlattening has been set. Used for serialization.
+        /// </summary>
+        private Boolean InverseFlatteningSpecified = false; 
+
+        /// <summary>
         /// isSphere property
         /// </summary>
         [XmlElement("isSphere")]
@@ -8906,27 +8927,6 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if SemiMinorAxis has been set. Used for serialization.
         /// </summary>
         private Boolean SemiMinorAxisSpecified = false; 
-
-        /// <summary>
-        /// inverseFlattening property
-        /// </summary>
-        [XmlElement("inverseFlattening")]
-        public MeasureType InverseFlattening {
-            get {
-                return inverseFlatteningField;
-            } 
-            set {
-                inverseFlatteningField = value;
-                InverseFlatteningSpecified = (value!=null);
-                NotifyPropertyChanged("InverseFlattening");
-            }
-        }
-
-        private MeasureType inverseFlatteningField; 
-        /// <summary>
-        /// Boolean to indicate if InverseFlattening has been set. Used for serialization.
-        /// </summary>
-        private Boolean InverseFlatteningSpecified = false; 
 
 
 
@@ -9345,7 +9345,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlRootAttribute("resqmlDocuments", Namespace="http://www.resqml.org/schemas/1series", IsNullable=false)]
 
     [Description("This class represents the obj_resqmlDocuments xsd type.")]
-    public partial class ResqmlDocumentList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ResqmlDocumentList : AbstractObject , INotifyPropertyChanged
     {
 
 
@@ -12338,8 +12338,8 @@ namespace Energistics.DataAccess.RESQML110
                 return parentResqmlKindField;
             } 
             set {
-                if (value != null && ResqmlKindSpecified) throw new Exception("Cannot set property ParentResqmlKind when property ResqmlKind is already set");
                 if (value != null && ParentLocalKindSpecified) throw new Exception("Cannot set property ParentResqmlKind when property ParentLocalKind is already set");
+                if (value != null && ResqmlKindSpecified) throw new Exception("Cannot set property ParentResqmlKind when property ResqmlKind is already set");
                 parentResqmlKindField = value;
                 ParentResqmlKindSpecified = (value!=null);
                 NotifyPropertyChanged("ParentResqmlKind");
@@ -12361,8 +12361,8 @@ namespace Energistics.DataAccess.RESQML110
                 return parentLocalKindField;
             } 
             set {
-                if (value != null && ResqmlKindSpecified) throw new Exception("Cannot set property ParentLocalKind when property ResqmlKind is already set");
                 if (value != null && ParentResqmlKindSpecified) throw new Exception("Cannot set property ParentLocalKind when property ParentResqmlKind is already set");
+                if (value != null && ResqmlKindSpecified) throw new Exception("Cannot set property ParentLocalKind when property ResqmlKind is already set");
                 parentLocalKindField = value;
                 ParentLocalKindSpecified = (value!=null);
                 NotifyPropertyChanged("ParentLocalKind");
@@ -12405,9 +12405,9 @@ namespace Energistics.DataAccess.RESQML110
                 return unitOfMeasureField;
             } 
             set {
+                if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MaximumValue is already set");
                 if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MinimumValue is already set");
                 if (value != null && EnumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property EnumValue is already set");
-                if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MaximumValue is already set");
                 unitOfMeasureField = value;
                 UnitOfMeasureSpecified = (value!=null);
                 NotifyPropertyChanged("UnitOfMeasure");
@@ -12429,9 +12429,9 @@ namespace Energistics.DataAccess.RESQML110
                 return dimensionalClassField;
             } 
             set {
+                if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MaximumValue is already set");
                 if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MinimumValue is already set");
                 if (value != null && EnumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property EnumValue is already set");
-                if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MaximumValue is already set");
                 dimensionalClassField = value;
                 DimensionalClassSpecified = (value!=null);
                 NotifyPropertyChanged("DimensionalClass");
@@ -12453,9 +12453,9 @@ namespace Energistics.DataAccess.RESQML110
                 return minimumValueField;
             } 
             set {
-                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property MinimumValue when property UnitOfMeasure is already set");
-                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property MinimumValue when property EnumValue is already set");
                 if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property MinimumValue when property DimensionalClass is already set");
+                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property MinimumValue when property EnumValue is already set");
+                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property MinimumValue when property UnitOfMeasure is already set");
                 minimumValueField = value;
                 MinimumValueSpecified = (value!=null);
                 NotifyPropertyChanged("MinimumValue");
@@ -12477,9 +12477,9 @@ namespace Energistics.DataAccess.RESQML110
                 return maximumValueField;
             } 
             set {
-                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property MaximumValue when property UnitOfMeasure is already set");
-                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property MaximumValue when property EnumValue is already set");
                 if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property MaximumValue when property DimensionalClass is already set");
+                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property MaximumValue when property EnumValue is already set");
+                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property MaximumValue when property UnitOfMeasure is already set");
                 maximumValueField = value;
                 MaximumValueSpecified = (value!=null);
                 NotifyPropertyChanged("MaximumValue");
@@ -12501,10 +12501,10 @@ namespace Energistics.DataAccess.RESQML110
                 return enumValueField;
             } 
             set {
-                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property EnumValue when property UnitOfMeasure is already set");
-                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property EnumValue when property MinimumValue is already set");
-                if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property EnumValue when property DimensionalClass is already set");
                 if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property EnumValue when property MaximumValue is already set");
+                if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property EnumValue when property DimensionalClass is already set");
+                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property EnumValue when property MinimumValue is already set");
+                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property EnumValue when property UnitOfMeasure is already set");
                 enumValueField = value;
                 EnumValueSpecified = (value!=null);
                 NotifyPropertyChanged("EnumValue");
@@ -13235,7 +13235,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlTimeStepList", Namespace="http://www.resqml.org/schemas/1series")]
 
     [Description("A list of timesteps.")]
-    public partial class ResqmlTimeStepList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ResqmlTimeStepList : Object , INotifyPropertyChanged
     {
 
 
@@ -13930,9 +13930,9 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the cs_resqmlAbstractFeatureInterpretation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizonInterpretation))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlFaultInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizonInterpretation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -14313,17 +14313,17 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the cs_resqmlAbstractFeatureRepresentation xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPillarSetRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPointSetRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHybridGridRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPillarSetRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlWellMarkerRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlTriangulatedRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHybridGridRepresentation))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlGrid2dRepresentation))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPointSetRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlTriangulatedRepresentation))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -14976,7 +14976,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="doubleValues", Namespace="http://www.resqml.org/schemas/1series")]
 
     [Description("This class represents the doubleValues xsd type.")]
-    public partial class DoubleValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class DoubleValueList : Object , INotifyPropertyChanged
     {
 
 
@@ -15144,11 +15144,11 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the cs_resqmlAbstractPropertyValues xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscretePropertyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousPropertyValues))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlCategoricalPropertyValues))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousPropertyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscretePropertyValues))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -15629,9 +15629,9 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the cs_resqmlAbstractValues xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscreteValues))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousValues))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscreteValues))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -15692,25 +15692,25 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// Defines a space delimited list of byte values.
+        /// Defines a space delimited list of double values.
         /// </summary>
-        [XmlElement("byteValues")]
-        public ByteValueList ByteValues {
+        [XmlElement("doubleValues")]
+        public DoubleValueList DoubleValues {
             get {
-                return byteValuesField;
+                return doubleValuesField;
             } 
             set {
-                byteValuesField = value;
-                ByteValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ByteValues");
+                doubleValuesField = value;
+                DoubleValuesSpecified = (value!=null);
+                NotifyPropertyChanged("DoubleValues");
             }
         }
 
-        private ByteValueList byteValuesField; 
+        private DoubleValueList doubleValuesField; 
         /// <summary>
-        /// Boolean to indicate if ByteValues has been set. Used for serialization.
+        /// Boolean to indicate if DoubleValues has been set. Used for serialization.
         /// </summary>
-        private Boolean ByteValuesSpecified = false; 
+        private Boolean DoubleValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of int values.
@@ -15734,27 +15734,6 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean IntValuesSpecified = false; 
 
         /// <summary>
-        /// Defines a space delimited list of float values.
-        /// </summary>
-        [XmlElement("floatValues")]
-        public FloatValueList FloatValues {
-            get {
-                return floatValuesField;
-            } 
-            set {
-                floatValuesField = value;
-                FloatValuesSpecified = (value!=null);
-                NotifyPropertyChanged("FloatValues");
-            }
-        }
-
-        private FloatValueList floatValuesField; 
-        /// <summary>
-        /// Boolean to indicate if FloatValues has been set. Used for serialization.
-        /// </summary>
-        private Boolean FloatValuesSpecified = false; 
-
-        /// <summary>
         /// Defines a space delimited list of short values.
         /// </summary>
         [XmlElement("shortValues")]
@@ -15774,6 +15753,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if ShortValues has been set. Used for serialization.
         /// </summary>
         private Boolean ShortValuesSpecified = false; 
+
+        /// <summary>
+        /// Defines a space delimited list of byte values.
+        /// </summary>
+        [XmlElement("byteValues")]
+        public ByteValueList ByteValues {
+            get {
+                return byteValuesField;
+            } 
+            set {
+                byteValuesField = value;
+                ByteValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ByteValues");
+            }
+        }
+
+        private ByteValueList byteValuesField; 
+        /// <summary>
+        /// Boolean to indicate if ByteValues has been set. Used for serialization.
+        /// </summary>
+        private Boolean ByteValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of long values.
@@ -15797,25 +15797,25 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean LongValuesSpecified = false; 
 
         /// <summary>
-        /// Defines a space delimited list of double values.
+        /// Defines a space delimited list of float values.
         /// </summary>
-        [XmlElement("doubleValues")]
-        public DoubleValueList DoubleValues {
+        [XmlElement("floatValues")]
+        public FloatValueList FloatValues {
             get {
-                return doubleValuesField;
+                return floatValuesField;
             } 
             set {
-                doubleValuesField = value;
-                DoubleValuesSpecified = (value!=null);
-                NotifyPropertyChanged("DoubleValues");
+                floatValuesField = value;
+                FloatValuesSpecified = (value!=null);
+                NotifyPropertyChanged("FloatValues");
             }
         }
 
-        private DoubleValueList doubleValuesField; 
+        private FloatValueList floatValuesField; 
         /// <summary>
-        /// Boolean to indicate if DoubleValues has been set. Used for serialization.
+        /// Boolean to indicate if FloatValues has been set. Used for serialization.
         /// </summary>
-        private Boolean DoubleValuesSpecified = false; 
+        private Boolean FloatValuesSpecified = false; 
 
 
 
@@ -15842,7 +15842,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="byteValues", Namespace="http://www.resqml.org/schemas/1series")]
 
     [Description("This class represents the byteValues xsd type.")]
-    public partial class ByteValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ByteValueList : Object , INotifyPropertyChanged
     {
 
 
@@ -15956,7 +15956,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="floatValues", Namespace="http://www.resqml.org/schemas/1series")]
 
     [Description("This class represents the floatValues xsd type.")]
-    public partial class FloatValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class FloatValueList : Object , INotifyPropertyChanged
     {
 
 
@@ -16032,7 +16032,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="intValues", Namespace="http://www.resqml.org/schemas/1series")]
 
     [Description("This class represents the intValues xsd type.")]
-    public partial class IntValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IntValueList : Object , INotifyPropertyChanged
     {
 
 
@@ -16146,7 +16146,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="longValues", Namespace="http://www.resqml.org/schemas/1series")]
 
     [Description("This class represents the longValues xsd type.")]
-    public partial class LongValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class LongValueList : Object , INotifyPropertyChanged
     {
 
 
@@ -16260,7 +16260,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="shortValues", Namespace="http://www.resqml.org/schemas/1series")]
 
     [Description("This class represents the shortValues xsd type.")]
-    public partial class ShortValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ShortValueList : Object , INotifyPropertyChanged
     {
 
 
@@ -16400,27 +16400,6 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean ByteValuesSpecified = false; 
 
         /// <summary>
-        /// Defines a space delimited list of short values.
-        /// </summary>
-        [XmlElement("shortValues")]
-        public ShortValueList ShortValues {
-            get {
-                return shortValuesField;
-            } 
-            set {
-                shortValuesField = value;
-                ShortValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ShortValues");
-            }
-        }
-
-        private ShortValueList shortValuesField; 
-        /// <summary>
-        /// Boolean to indicate if ShortValues has been set. Used for serialization.
-        /// </summary>
-        private Boolean ShortValuesSpecified = false; 
-
-        /// <summary>
         /// Defines a space delimited list of long values.
         /// </summary>
         [XmlElement("longValues")]
@@ -16461,6 +16440,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if IntValues has been set. Used for serialization.
         /// </summary>
         private Boolean IntValuesSpecified = false; 
+
+        /// <summary>
+        /// Defines a space delimited list of short values.
+        /// </summary>
+        [XmlElement("shortValues")]
+        public ShortValueList ShortValues {
+            get {
+                return shortValuesField;
+            } 
+            set {
+                shortValuesField = value;
+                ShortValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ShortValues");
+            }
+        }
+
+        private ShortValueList shortValuesField; 
+        /// <summary>
+        /// Boolean to indicate if ShortValues has been set. Used for serialization.
+        /// </summary>
+        private Boolean ShortValuesSpecified = false; 
 
 
 
@@ -16717,27 +16717,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// Defines information related to capturing the array data in an HDF5 formatted file.
-        /// </summary>
-        [XmlElement("hdfRepresentation")]
-        public ResqmlHdfGroup HdfRepresentation {
-            get {
-                return hdfRepresentationField;
-            } 
-            set {
-                hdfRepresentationField = value;
-                HdfRepresentationSpecified = (value!=null);
-                NotifyPropertyChanged("HdfRepresentation");
-            }
-        }
-
-        private ResqmlHdfGroup hdfRepresentationField; 
-        /// <summary>
-        /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
-        /// </summary>
-        private Boolean HdfRepresentationSpecified = false; 
-
-        /// <summary>
         /// Captures the array of values in an XML representation.
         /// </summary>
         [XmlElement("xmlRepresentation")]
@@ -16757,6 +16736,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
         /// </summary>
         private Boolean XmlRepresentationSpecified = false; 
+
+        /// <summary>
+        /// Defines information related to capturing the array data in an HDF5 formatted file.
+        /// </summary>
+        [XmlElement("hdfRepresentation")]
+        public ResqmlHdfGroup HdfRepresentation {
+            get {
+                return hdfRepresentationField;
+            } 
+            set {
+                hdfRepresentationField = value;
+                HdfRepresentationSpecified = (value!=null);
+                NotifyPropertyChanged("HdfRepresentation");
+            }
+        }
+
+        private ResqmlHdfGroup hdfRepresentationField; 
+        /// <summary>
+        /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
+        /// </summary>
+        private Boolean HdfRepresentationSpecified = false; 
 
 
 
@@ -17761,9 +17761,9 @@ namespace Energistics.DataAccess.RESQML110
                 return triangulatedHdfGroupField;
             } 
             set {
-                if (value != null && SplitEdgeNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property SplitEdgeNodeIndexSet is already set");
                 if (value != null && TriangleNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property TriangleNodeIndexSet is already set");
                 if (value != null && Point3dSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property Point3dSet is already set");
+                if (value != null && SplitEdgeNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property SplitEdgeNodeIndexSet is already set");
                 triangulatedHdfGroupField = value;
                 TriangulatedHdfGroupSpecified = (value!=null);
                 NotifyPropertyChanged("TriangulatedHdfGroup");
@@ -20277,9 +20277,9 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the cs_resqmlAbstractIJKGrid xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlLocalIJKGrid))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlRootIJKGrid))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlLocalIJKGrid))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -21338,8 +21338,8 @@ namespace Energistics.DataAccess.RESQML110
                 return ijkGridHdfGroupField;
             } 
             set {
-                if (value != null && LineSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property LineSet is already set");
                 if (value != null && SplitLineReferenceSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitLineReference is already set");
+                if (value != null && LineSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property LineSet is already set");
                 ijkGridHdfGroupField = value;
                 IjkGridHdfGroupSpecified = (value!=null);
                 NotifyPropertyChanged("IjkGridHdfGroup");

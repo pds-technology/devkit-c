@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:SealedSurfaceFrameworkRepresentation xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="57efb454-cedc-480f-af37-7a8dcbca9bb8">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">StructuralOrg1 Interp1 Interp1 SealedSurfFrmwk</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:RepresentedInterpretation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_StructuralOrganizationInterpretation</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">StructuralOrg1 Interp1</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">670ef382-3d32-4215-84b6-ba684ecb6698</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:RepresentedInterpretation>
+	<resqml2:IsHomogeneous xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:boolean">false</resqml2:IsHomogeneous>
+	<resqml2:Representation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_TriangulatedSetRepresentation</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">Fault1 Interp1 TriRep</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">8f8ae33f-d69c-430d-b977-b98d6d512edb</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:Representation>
+	<resqml2:Representation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_TriangulatedSetRepresentation</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">Horizon1 Interp1 TriRep</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">c6525fae-08d2-47f9-877a-6cd98fbcccd7</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:Representation>
+	<resqml2:Representation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_TriangulatedSetRepresentation</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">Horizon2 Interp1 TriRep</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">45cf409b-ecaf-4cf1-b29e-3b46d144ebec</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:Representation>
+	<resqml2:ContactIdentity xsi:type="resqml2:ContactIdentity">
+		<resqml2:IdentityKind xsi:type="resqml2:IdentityKind">previous colocation</resqml2:IdentityKind>
+		<resqml2:ListOfContactRepresentations xsi:type="resqml2:IntegerHdf5Array">
+			<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+			<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+				<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/contactIdentity_listOfContactRep_0</eml:PathInHdfFile>
+				<eml:HdfProxy xsi:type="eml:DataObjectReference">
+					<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+					<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+					<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+					<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+				</eml:HdfProxy>
+			</resqml2:Values>
+		</resqml2:ListOfContactRepresentations>
+	</resqml2:ContactIdentity>
+	<resqml2:ContactIdentity xsi:type="resqml2:ContactIdentity">
+		<resqml2:IdentityKind xsi:type="resqml2:IdentityKind">previous colocation</resqml2:IdentityKind>
+		<resqml2:ListOfContactRepresentations xsi:type="resqml2:IntegerHdf5Array">
+			<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+			<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+				<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/contactIdentity_listOfContactRep_1</eml:PathInHdfFile>
+				<eml:HdfProxy xsi:type="eml:DataObjectReference">
+					<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+					<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+					<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+					<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+				</eml:HdfProxy>
+			</resqml2:Values>
+		</resqml2:ListOfContactRepresentations>
+	</resqml2:ContactIdentity>
+	<resqml2:SealedContactRepresentation xsi:type="resqml2:SealedContactRepresentationPart">
+		<resqml2:Index xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:Index>
+		<resqml2:IdentityKind xsi:type="resqml2:IdentityKind">colocation</resqml2:IdentityKind>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact0_patch0</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact0_patch1</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">2</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact0_patch2</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+	</resqml2:SealedContactRepresentation>
+	<resqml2:SealedContactRepresentation xsi:type="resqml2:SealedContactRepresentationPart">
+		<resqml2:Index xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:Index>
+		<resqml2:IdentityKind xsi:type="resqml2:IdentityKind">colocation</resqml2:IdentityKind>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact1_patch0</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact1_patch1</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">2</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact1_patch2</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+	</resqml2:SealedContactRepresentation>
+	<resqml2:SealedContactRepresentation xsi:type="resqml2:SealedContactRepresentationPart">
+		<resqml2:Index xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">2</resqml2:Index>
+		<resqml2:IdentityKind xsi:type="resqml2:IdentityKind">colocation</resqml2:IdentityKind>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact2_patch0</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">2</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact2_patch1</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">2</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact2_patch2</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+	</resqml2:SealedContactRepresentation>
+	<resqml2:SealedContactRepresentation xsi:type="resqml2:SealedContactRepresentationPart">
+		<resqml2:Index xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">3</resqml2:Index>
+		<resqml2:IdentityKind xsi:type="resqml2:IdentityKind">colocation</resqml2:IdentityKind>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact3_patch0</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">2</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact3_patch1</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+		<resqml2:Contact xsi:type="resqml2:ContactPatch">
+			<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">2</resqml2:PatchIndex>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+			<resqml2:RepresentationIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:RepresentationIndex>
+			<resqml2:SupportingRepresentationNodes xsi:type="resqml2:IntegerHdf5Array">
+				<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+				<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/57efb454-cedc-480f-af37-7a8dcbca9bb8/SupportingRepresentationNodes_contact3_patch2</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Values>
+			</resqml2:SupportingRepresentationNodes>
+		</resqml2:Contact>
+	</resqml2:SealedContactRepresentation>
+</resqml2:SealedSurfaceFrameworkRepresentation>

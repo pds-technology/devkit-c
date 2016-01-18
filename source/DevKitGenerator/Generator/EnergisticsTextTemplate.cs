@@ -261,7 +261,8 @@ using Energistics.DataAccess.");
             this.Write(" ");
             
             #line 1 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : String.Empty));
+            if(this.mlVersion.Contains("RESQML")==false)
+              this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : String.Empty));
             
             #line default
             #line hidden

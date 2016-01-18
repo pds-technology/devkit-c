@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:LocalTime3dCrs xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="e4e3c72e-1ef3-426c-8ea9-68504daa089f">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">Default local time CRS</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:YOffset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:double">0</resqml2:YOffset>
+	<resqml2:ZOffset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:double">0</resqml2:ZOffset>
+	<resqml2:ArealRotation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" uom="rad" xsi:type="eml:PlaneAngleMeasure">0</resqml2:ArealRotation>
+	<resqml2:ProjectedAxisOrder xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:AxisOrder2d">easting northing</resqml2:ProjectedAxisOrder>
+	<resqml2:ProjectedUom xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:LengthUom">m</resqml2:ProjectedUom>
+	<resqml2:VerticalUom xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:LengthUom">m</resqml2:VerticalUom>
+	<resqml2:XOffset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:double">0</resqml2:XOffset>
+	<resqml2:ZIncreasingDownward xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:boolean">true</resqml2:ZIncreasingDownward>
+	<resqml2:VerticalCrs xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:VerticalUnknownCrs">
+		<eml:Unknown xsi:type="eml:DescriptionString">Unknown</eml:Unknown>
+	</resqml2:VerticalCrs>
+	<resqml2:ProjectedCrs xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:ProjectedCrsEpsgCode">
+		<eml:EpsgCode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">23031</eml:EpsgCode>
+	</resqml2:ProjectedCrs>
+	<resqml2:TimeUom xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:TimeUom">s</resqml2:TimeUom>
+</resqml2:LocalTime3dCrs>

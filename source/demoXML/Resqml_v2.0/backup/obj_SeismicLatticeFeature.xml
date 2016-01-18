@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:SeismicLatticeFeature xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="13405d02-279e-46b6-b58c-769ffc080323">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">Seismic lattice</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:CrosslineCount xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">2</resqml2:CrosslineCount>
+	<resqml2:CrosslineIndexIncrement xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2</resqml2:CrosslineIndexIncrement>
+	<resqml2:FirstCrosslineIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">152</resqml2:FirstCrosslineIndex>
+	<resqml2:FirstInlineIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">150</resqml2:FirstInlineIndex>
+	<resqml2:InlineCount xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">4</resqml2:InlineCount>
+	<resqml2:InlineIndexIncrement xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2</resqml2:InlineIndexIncrement>
+</resqml2:SeismicLatticeFeature>

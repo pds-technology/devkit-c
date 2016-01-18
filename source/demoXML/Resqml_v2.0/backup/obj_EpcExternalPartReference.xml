@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:EpcExternalPartReference xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="8de37419-8d4a-456f-bd01-d38573151241" >
+	<eml:Citation xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<eml:MimeType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-hdf5</eml:MimeType>
+</eml:EpcExternalPartReference>

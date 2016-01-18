@@ -1780,7 +1780,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndices", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the TimeIndices xsd type.")]
-    public partial class TimeIndiceList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class TimeIndiceList : Object , INotifyPropertyChanged
     {
 
 
@@ -3172,7 +3172,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchOfValues", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchOfValues xsd type.")]
-    public partial class PatchOfValueList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class PatchOfValueList : Object , INotifyPropertyChanged
     {
 
 
@@ -3254,7 +3254,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchOfPoints", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchOfPoints xsd type.")]
-    public partial class PatchOfPointList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class PatchOfPointList : Object , INotifyPropertyChanged
     {
 
 
@@ -3741,7 +3741,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ParametricLineIntersections", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ParametricLineIntersections xsd type.")]
-    public partial class ParametricLineIntersectionList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ParametricLineIntersectionList : Object , INotifyPropertyChanged
     {
 
 
@@ -4686,7 +4686,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StreamlineWellbores", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the StreamlineWellbores xsd type.")]
-    public partial class StreamlineWellboreList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class StreamlineWellboreList : Object , INotifyPropertyChanged
     {
 
 
@@ -4786,7 +4786,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchBoundaries", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchBoundaries xsd type.")]
-    public partial class PatchBoundarieList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class PatchBoundarieList : Object , INotifyPropertyChanged
     {
 
 
@@ -5584,7 +5584,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractSeismicCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AbstractSeismicCoordinates xsd type.")]
-    public abstract partial class AbstractSeismicCoordinateList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractSeismicCoordinateList : Object , INotifyPropertyChanged
     {
 
 
@@ -5648,7 +5648,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Seismic2dCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Seismic2dCoordinates xsd type.")]
-    public partial class Seismic2dCoordinateList : AbstractSeismicCoordinateList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class Seismic2dCoordinateList : AbstractSeismicCoordinateList , INotifyPropertyChanged
     {
 
 
@@ -5711,7 +5711,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Seismic3dCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Seismic3dCoordinates xsd type.")]
-    public partial class Seismic3dCoordinateList : AbstractSeismicCoordinateList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class Seismic3dCoordinateList : AbstractSeismicCoordinateList , INotifyPropertyChanged
     {
 
 
@@ -5845,7 +5845,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AdditionalGridPoints", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AdditionalGridPoints xsd type.")]
-    public partial class AdditionalGridPointList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class AdditionalGridPointList : Object , INotifyPropertyChanged
     {
 
 
@@ -6600,7 +6600,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntervalGridCells", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IntervalGridCells xsd type.")]
-    public partial class IntervalGridCellList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IntervalGridCellList : Object , INotifyPropertyChanged
     {
 
 
@@ -7250,7 +7250,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ElementIndices", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ElementIndices xsd type.")]
-    public partial class ElementIndiceList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ElementIndiceList : Object , INotifyPropertyChanged
     {
 
 
@@ -7532,7 +7532,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IjGaps", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IjGaps xsd type.")]
-    public partial class IjGapList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IjGapList : Object , INotifyPropertyChanged
     {
 
 
@@ -7732,7 +7732,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IjSplitColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IjSplitColumnEdges xsd type.")]
-    public partial class IjSplitColumnEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IjSplitColumnEdgeList : Object , INotifyPropertyChanged
     {
 
 
@@ -8219,7 +8219,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="UnstructuredGridHingeNodeFaces", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the UnstructuredGridHingeNodeFaces xsd type.")]
-    public partial class UnstructuredGridHingeNodeFaceList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class UnstructuredGridHingeNodeFaceList : Object , INotifyPropertyChanged
     {
 
 
@@ -8364,7 +8364,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Edges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Edges xsd type.")]
-    public partial class EdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class EdgeList : Object , INotifyPropertyChanged
     {
 
 
@@ -8816,7 +8816,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="UnstructuredColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the UnstructuredColumnEdges xsd type.")]
-    public partial class UnstructuredColumnEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class UnstructuredColumnEdgeList : Object , INotifyPropertyChanged
     {
 
 
@@ -8997,7 +8997,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SplitFaces", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the SplitFaces xsd type.")]
-    public partial class SplitFaceList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class SplitFaceList : Object , INotifyPropertyChanged
     {
 
 
@@ -9115,7 +9115,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SplitEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the SplitEdges xsd type.")]
-    public partial class SplitEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class SplitEdgeList : Object , INotifyPropertyChanged
     {
 
 
@@ -9215,7 +9215,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ColumnLayerSplitCoordinateLines", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ColumnLayerSplitCoordinateLines xsd type.")]
-    public partial class ColumnLayerSplitCoordinateLineList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ColumnLayerSplitCoordinateLineList : Object , INotifyPropertyChanged
     {
 
 
@@ -9333,7 +9333,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ColumnLayerSplitColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ColumnLayerSplitColumnEdges xsd type.")]
-    public partial class ColumnLayerSplitColumnEdgeList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ColumnLayerSplitColumnEdgeList : Object , INotifyPropertyChanged
     {
 
 
@@ -10092,7 +10092,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ConnectionInterpretations", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ConnectionInterpretations xsd type.")]
-    public partial class ConnectionInterpretationList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ConnectionInterpretationList : Object , INotifyPropertyChanged
     {
 
 
@@ -10174,7 +10174,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntervalStratigraphicUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IntervalStratigraphicUnits xsd type.")]
-    public partial class IntervalStratigraphicUnitList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IntervalStratigraphicUnitList : Object , INotifyPropertyChanged
     {
 
 
@@ -10256,7 +10256,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="KGaps", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the KGaps xsd type.")]
-    public partial class KGapList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class KGapList : Object , INotifyPropertyChanged
     {
 
 
@@ -10456,7 +10456,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CellStratigraphicUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the CellStratigraphicUnits xsd type.")]
-    public partial class CellStratigraphicUnitList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class CellStratigraphicUnitList : Object , INotifyPropertyChanged
     {
 
 
@@ -10538,7 +10538,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Intervals", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Intervals xsd type.")]
-    public partial class IntervalList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IntervalList : Object , INotifyPropertyChanged
     {
 
 
@@ -11269,7 +11269,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CellFluidPhaseUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the CellFluidPhaseUnits xsd type.")]
-    public partial class CellFluidPhaseUnitList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class CellFluidPhaseUnitList : Object , INotifyPropertyChanged
     {
 
 
@@ -13284,7 +13284,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractVerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the AbstractVerticalCrs xsd type.")]
-    public abstract partial class AbstractVerticalCrList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractVerticalCrList : Object , INotifyPropertyChanged
     {
 
 
@@ -13330,7 +13330,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalUnknownCrs xsd type.")]
-    public partial class VerticalUnknownCrList : AbstractVerticalCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class VerticalUnknownCrList : AbstractVerticalCrList , INotifyPropertyChanged
     {
 
 
@@ -21409,7 +21409,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractProjectedCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the AbstractProjectedCrs xsd type.")]
-    public abstract partial class AbstractProjectedCrList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractProjectedCrList : Object , INotifyPropertyChanged
     {
 
 
@@ -21455,7 +21455,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedUnknownCrs xsd type.")]
-    public partial class ProjectedUnknownCrList : AbstractProjectedCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ProjectedUnknownCrList : AbstractProjectedCrList , INotifyPropertyChanged
     {
 
 
@@ -21654,7 +21654,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ObjectAlias", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ObjectAlias xsd type.")]
-    public partial class ObjectAliaList : Object , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ObjectAliaList : Object , INotifyPropertyChanged
     {
 
 
@@ -22732,7 +22732,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CategoricalPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_CategoricalPropertySeries xsd type.")]
-    public partial class CategoricalPropertySerieList : CategoricalProperty , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class CategoricalPropertySerieList : CategoricalProperty , INotifyPropertyChanged
     {
 
 
@@ -22852,7 +22852,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("DiscretePropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_DiscretePropertySeries xsd type.")]
-    public partial class DiscretePropertySerieList : DiscreteProperty , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class DiscretePropertySerieList : DiscreteProperty , INotifyPropertyChanged
     {
 
 
@@ -22954,7 +22954,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CommentPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_CommentPropertySeries xsd type.")]
-    public partial class CommentPropertySerieList : CommentProperty , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class CommentPropertySerieList : CommentProperty , INotifyPropertyChanged
     {
 
 
@@ -23092,7 +23092,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("ContinuousPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_ContinuousPropertySeries xsd type.")]
-    public partial class ContinuousPropertySerieList : ContinuousProperty , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ContinuousPropertySerieList : ContinuousProperty , INotifyPropertyChanged
     {
 
 
@@ -28780,7 +28780,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("TimeSeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_TimeSeries xsd type.")]
-    public partial class TimeSerieList : AbstractResqmlDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class TimeSerieList : AbstractResqmlDataObject , INotifyPropertyChanged
     {
 
 
@@ -28857,7 +28857,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractLocal3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AbstractLocal3dCrs xsd type.")]
-    public abstract partial class AbstractLocal3dCrList : AbstractResqmlDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public abstract partial class AbstractLocal3dCrList : AbstractResqmlDataObject , INotifyPropertyChanged
     {
 
 
@@ -29062,7 +29062,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("LocalDepth3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_LocalDepth3dCrs xsd type.")]
-    public partial class LocalDepth3dCrList : AbstractLocal3dCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class LocalDepth3dCrList : AbstractLocal3dCrList , INotifyPropertyChanged
     {
 
 
@@ -29085,7 +29085,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("LocalTime3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_LocalTime3dCrs xsd type.")]
-    public partial class LocalTime3dCrList : AbstractLocal3dCrList , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class LocalTime3dCrList : AbstractLocal3dCrList , INotifyPropertyChanged
     {
 
 
@@ -29169,7 +29169,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalCrs xsd type.")]
-    public partial class VerticalCrList : AbstractCitedDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class VerticalCrList : AbstractCitedDataObject , INotifyPropertyChanged
     {
 
 
@@ -29250,7 +29250,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedCrs xsd type.")]
-    public partial class ProjectedCrList : AbstractCitedDataObject , IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ProjectedCrList : AbstractCitedDataObject , INotifyPropertyChanged
     {
 
 

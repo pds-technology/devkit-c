@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:IjkGridRepresentation xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="6076be7d-897f-4e82-8196-b64b441704d8">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">One unfaulted sugar cube</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:Nk xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">1</resqml2:Nk>
+	<resqml2:Ni xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">1</resqml2:Ni>
+	<resqml2:Nj xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">1</resqml2:Nj>
+	<resqml2:Geometry xsi:type="resqml2:IjkGridGeometry">
+		<resqml2:LocalCrs xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+			<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_LocalDepth3dCrs</eml:ContentType>
+			<eml:Title xsi:type="eml:DescriptionString">Default local CRS</eml:Title>
+			<eml:UUID xsi:type="eml:UuidString">6cce0a0f-9f57-438e-82da-4a302c46bf29</eml:UUID>
+			<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+		</resqml2:LocalCrs>
+		<resqml2:Points xsi:type="resqml2:Point3dHdf5Array">
+			<resqml2:Coordinates xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+				<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/6076be7d-897f-4e82-8196-b64b441704d8/Points</eml:PathInHdfFile>
+				<eml:HdfProxy xsi:type="eml:DataObjectReference">
+					<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+					<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+					<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+					<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+				</eml:HdfProxy>
+			</resqml2:Coordinates>
+		</resqml2:Points>
+		<resqml2:KDirection xsi:type="resqml2:KDirection">down</resqml2:KDirection>
+		<resqml2:PillarGeometryIsDefined xsi:type="resqml2:BooleanConstantArray">
+			<resqml2:Value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:boolean">true</resqml2:Value>
+			<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">4</resqml2:Count>
+		</resqml2:PillarGeometryIsDefined>
+		<resqml2:PillarShape xsi:type="resqml2:PillarShape">vertical</resqml2:PillarShape>
+		<resqml2:GridIsRighthanded xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:boolean">false</resqml2:GridIsRighthanded>
+	</resqml2:Geometry>
+</resqml2:IjkGridRepresentation>

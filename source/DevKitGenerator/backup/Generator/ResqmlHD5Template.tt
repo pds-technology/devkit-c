@@ -1,0 +1,112 @@
+﻿<#@ output extension=".cs" encoding="UTF-8" #>
+<#=SchemaSetClassCreator.GetLicenseText()#>
+<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System"#>
+
+using System;
+
+namespace Energistics.DataAccess.RESQML110.ComponentSchemas
+{
+<#
+string[,] classes = new string[,] { 
+                                    { "ResqmlSplitNodeSet : Object", "Point3D", "[]", "IjkGridHdfGroup", "null" },
+									{ "ResqmlTriangulatedPatch : Object", "Point3D", "[]", "TriangulatedHdfGroup", "point3dSet" },
+									{ "ResqmlTriangulatedPatch : Object", "Triangle", "[]", "TriangulatedHdfGroup", "triangleNodeIndexSet" }, 
+									{ "ResqmlTriangulatedPatch : Object", "Edge", "[]", "TriangulatedHdfGroup", "splitEdgeNodeIndexSet" },
+									{ "ResqmlPointSetPatch : Object", "Point3D", "[]", "PointSetHdfGroup", "null" }, 
+									{ "ResqmlAbstractIJKGrid : Object", "Point3D", "[,]", "IjkGridHdfGroup", "explicitNodeList" }, 
+									{ "ResqmlAbstractIJKGrid : Object", "SplitLineReference", "[]", "IjkGridHdfGroup", "splitLineReferences" }, 
+									{ "ResqmlAbstractIJKGrid : Object", "byte", "[,,]", "IjkGridHdfGroup", "topologyFlags" }, 
+									{ "ResqmlAbstractIJKGrid : Object", "SplitNodeReference", "[]", "IjkGridHdfGroup", "splitNodeReferences" }, 
+									{ "ResqmlAbstractIJKGrid : Object", "Point3D", "[]", "IjkGridHdfGroup", "splitNodes" },
+									{ "ResqmlPillarSetPatch : Object", "Point3D", "[,]", "PillarSetHdfGroup", "pillarSet" },
+									{ "ResqmlIJKNonStandardAdjacency : Object", "GridIJKCellFacePair", "[]", "HdfRepresentation", "null" },
+									{ "ResqmlGrid2dPatch : Object", "double", "[,]", "Grid2dHdfGroup", "zValueSet" },
+									{ "ResqmlExplicitNodeSet : Object", "int", "[,,]", "IjkGridHdfGroup", "null" }
+                                  };
+for (int i=0; i<classes.GetLength(0); i++) {
+    string name = classes[i,0];
+	string type = classes[i,1];
+	string array = classes[i,2];
+	string property = classes[i,3];
+	string oriddatasetname = classes[i,4];
+	string quotdatasetname = (oriddatasetname=="null") ? oriddatasetname : String.Format("\"{0}\"", oriddatasetname);    
+	string readname = (oriddatasetname=="null") ? property : oriddatasetname;
+	readname = readname.Substring(0,1).ToUpper() + readname.Substring(1);
+    
+#>
+    public partial class <#=name#>
+    {
+        /// <summary>
+        /// Reads HDF5 data
+        /// </summary>
+        /// <param name="doc">Parent ResqmlDocument</param>
+        /// <returns>The data returned from the HDF5 document</returns>
+        public <#=type#><#=array#> Read<#=readname#>(ResqmlDocument doc)
+        {
+            return this.Read<#=readname#>(doc, null, null);
+        }
+
+        /// <summary>
+        /// Reads HDF5 data using hyperslabbing
+        /// </summary>
+        /// <param name="doc">Parent ResqmlDocument</param>
+		/// <param name="start">Offset of start of subsetting selection, null if not hyperslabbing</param>
+        /// <param name="count">Number of blocks to include in selection, null if not hyperslabbing</param>
+        /// <returns>The data returned from the HDF5 document</returns>
+        public <#=type#><#=array#> Read<#=readname#>(ResqmlDocument doc, long[] start, long[] count)
+        {
+            return (<#=type#><#=array#>)this.<#=property#>.Read<<#=type#>>(doc, start, count, <#=quotdatasetname#>);
+        }
+
+		/// <summary>
+        /// Writes HDF5 data
+        /// </summary>
+        /// <param name="doc">Parent ResqmlDocument</param>
+        /// <param name="obj">Object to write</param>        
+		public void Write<#=readname#>(ResqmlDocument doc, <#=type#><#=array#> obj)
+        {
+            this.Write<#=readname#>(doc, obj, null, null);
+        }
+
+		/// <summary>
+        /// Writes HDF5 data using hyperslabbing
+        /// </summary>
+        /// <param name="doc">Parent ResqmlDocument</param>
+        /// <param name="obj">Object to write</param>
+        /// <param name="start">Offset of start of subsetting selection, null if not hyperslabbing</param>
+        /// <param name="filespace">Total size to allot for the data within the HDF5 file</param>
+		public void Write<#=readname#>(ResqmlDocument doc, <#=type#><#=array#> obj, long[] start, long[] filespace)
+        {
+		    if (this.<#=property#> == null) 
+			{
+			    this.<#=property#> = new ResqmlHdfGroup();
+			}
+            this.<#=property#>.Write<<#=type#>>(doc, obj, start, filespace, <#=quotdatasetname#>);
+        }
+
+		/// <summary>
+        /// Checks to see if dataset exists
+        /// </summary>
+        /// <param name="doc">Parent ResqmlDocument</param>
+        /// <returns>True if the dataset exists, false if it does not</returns>
+        public bool DoesExist<#=readname#>(ResqmlDocument doc)
+        {
+            if (this.<#=property#> == null) return false;
+            HDF5DotNet.H5DataSetId dataId = this.<#=property#>.GetDataSetId(doc, <#=quotdatasetname#>, HDF5DotNet.H5F.OpenMode.ACC_RDONLY, true);
+
+			if (dataId == null) 
+			{
+			    return false;
+			}
+			else
+			{
+				HDF5DotNet.H5D.close(dataId);
+			    return true;
+			}
+        }
+    }
+<#
+}
+#>
+}

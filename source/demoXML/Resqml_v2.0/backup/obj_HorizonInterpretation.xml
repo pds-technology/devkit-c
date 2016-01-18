@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:HorizonInterpretation xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="56d89eb5-bb7b-44b6-97b3-4141bb5cb3f5">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">Horizon1 Interp1</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:Domain xsi:type="resqml2:Domain">depth</resqml2:Domain>
+	<resqml2:InterpretedFeature xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_GeneticBoundaryFeature</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">Horizon1</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">99c5fa4d-7fa9-4c86-b4af-0f8042665e3c</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:InterpretedFeature>
+</resqml2:HorizonInterpretation>

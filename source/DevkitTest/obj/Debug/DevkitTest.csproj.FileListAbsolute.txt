@@ -6,3 +6,7 @@ C:\projects\source\DevkitTest\bin\Debug\Energistics.DataAccess.pdb
 C:\projects\source\DevkitTest\bin\Debug\Energistics.DataAccess.xml
 C:\projects\source\DevkitTest\obj\Debug\DevkitTest.exe
 C:\projects\source\DevkitTest\obj\Debug\DevkitTest.pdb
+C:\projects\source\DevkitTest\obj\Debug\DevkitTest.csprojResolveAssemblyReference.cache
+C:\projects\source\DevkitTest\bin\Debug\Energistics.RESQMLDataAccess.dll
+C:\projects\source\DevkitTest\bin\Debug\Energistics.RESQMLDataAccess.pdb
+C:\projects\source\DevkitTest\bin\Debug\Energistics.RESQMLDataAccess.xml

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:TriangulatedSetRepresentation xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="c6525fae-08d2-47f9-877a-6cd98fbcccd7">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">Horizon1 Interp1 TriRep</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:RepresentedInterpretation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_HorizonInterpretation</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">Horizon1 Interp1</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">56d89eb5-bb7b-44b6-97b3-4141bb5cb3f5</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:RepresentedInterpretation>
+	<resqml2:SurfaceRole xsi:type="resqml2:SurfaceRole">map</resqml2:SurfaceRole>
+	<resqml2:TrianglePatch xsi:type="resqml2:TrianglePatch">
+		<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">0</resqml2:PatchIndex>
+		<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+		<resqml2:NodeCount xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">5</resqml2:NodeCount>
+		<resqml2:Triangles xsi:type="resqml2:IntegerHdf5Array">
+			<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+			<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+				<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/c6525fae-08d2-47f9-877a-6cd98fbcccd7/triangles_patch0</eml:PathInHdfFile>
+				<eml:HdfProxy xsi:type="eml:DataObjectReference">
+					<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+					<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+					<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+					<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+				</eml:HdfProxy>
+			</resqml2:Values>
+		</resqml2:Triangles>
+		<resqml2:Geometry xsi:type="resqml2:PointGeometry">
+			<resqml2:LocalCrs xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+				<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_LocalDepth3dCrs</eml:ContentType>
+				<eml:Title xsi:type="eml:DescriptionString">Default local CRS</eml:Title>
+				<eml:UUID xsi:type="eml:UuidString">6cce0a0f-9f57-438e-82da-4a302c46bf29</eml:UUID>
+				<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+			</resqml2:LocalCrs>
+			<resqml2:Points xsi:type="resqml2:Point3dHdf5Array">
+				<resqml2:Coordinates xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/c6525fae-08d2-47f9-877a-6cd98fbcccd7/points_patch0</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Coordinates>
+			</resqml2:Points>
+		</resqml2:Geometry>
+	</resqml2:TrianglePatch>
+	<resqml2:TrianglePatch xsi:type="resqml2:TrianglePatch">
+		<resqml2:PatchIndex xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">1</resqml2:PatchIndex>
+		<resqml2:Count xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:positiveInteger">3</resqml2:Count>
+		<resqml2:NodeCount xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:nonNegativeInteger">5</resqml2:NodeCount>
+		<resqml2:Triangles xsi:type="resqml2:IntegerHdf5Array">
+			<resqml2:NullValue xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:integer">2147483647</resqml2:NullValue>
+			<resqml2:Values xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+				<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/c6525fae-08d2-47f9-877a-6cd98fbcccd7/triangles_patch1</eml:PathInHdfFile>
+				<eml:HdfProxy xsi:type="eml:DataObjectReference">
+					<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+					<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+					<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+					<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+				</eml:HdfProxy>
+			</resqml2:Values>
+		</resqml2:Triangles>
+		<resqml2:Geometry xsi:type="resqml2:PointGeometry">
+			<resqml2:LocalCrs xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+				<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_LocalDepth3dCrs</eml:ContentType>
+				<eml:Title xsi:type="eml:DescriptionString">Default local CRS</eml:Title>
+				<eml:UUID xsi:type="eml:UuidString">6cce0a0f-9f57-438e-82da-4a302c46bf29</eml:UUID>
+				<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+			</resqml2:LocalCrs>
+			<resqml2:Points xsi:type="resqml2:Point3dHdf5Array">
+				<resqml2:Coordinates xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Hdf5Dataset">
+					<eml:PathInHdfFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">/RESQML/c6525fae-08d2-47f9-877a-6cd98fbcccd7/points_patch1</eml:PathInHdfFile>
+					<eml:HdfProxy xsi:type="eml:DataObjectReference">
+						<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_EpcExternalPartReference</eml:ContentType>
+						<eml:Title xsi:type="eml:DescriptionString">Hdf Proxy</eml:Title>
+						<eml:UUID xsi:type="eml:UuidString">8de37419-8d4a-456f-bd01-d38573151241</eml:UUID>
+						<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+					</eml:HdfProxy>
+				</resqml2:Coordinates>
+			</resqml2:Points>
+		</resqml2:Geometry>
+	</resqml2:TrianglePatch>
+</resqml2:TriangulatedSetRepresentation>

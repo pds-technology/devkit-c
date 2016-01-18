@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:PropertyKind xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="15b96259-6ab9-46dc-b4d8-1ff9d59b7304">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">cellIndex</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:NamingSystem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:anyURI">urn:resqml:f2i-consulting.com</resqml2:NamingSystem>
+	<resqml2:IsAbstract xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:boolean">false</resqml2:IsAbstract>
+	<resqml2:RepresentativeUom xsi:type="resqml2:ResqmlUom">Euc</resqml2:RepresentativeUom>
+	<resqml2:ParentPropertyKind xsi:type="resqml2:StandardPropertyKind">
+		<resqml2:Kind xsi:type="resqml2:ResqmlPropertyKind">discrete</resqml2:Kind>
+	</resqml2:ParentPropertyKind>
+</resqml2:PropertyKind>

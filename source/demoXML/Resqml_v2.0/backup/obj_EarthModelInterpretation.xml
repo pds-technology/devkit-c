@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resqml2:EarthModelInterpretation xmlns:resqml2="http://www.energistics.org/energyml/data/resqmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0" uuid="477297a6-7e46-4fa3-bd83-3a007743e652">
+	<eml:Citation xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:Citation">
+		<eml:Title xsi:type="eml:DescriptionString">EarthModel</eml:Title>
+		<eml:Originator xsi:type="eml:NameString">Mathieu</eml:Originator>
+		<eml:Creation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:dateTime">2014-10-02T13:33:11Z</eml:Creation>
+		<eml:Format xsi:type="eml:DescriptionString">[F2I-CONSULTING:resqml2CppApi]</eml:Format>
+	</eml:Citation>
+	<resqml2:Domain xsi:type="resqml2:Domain">mixed</resqml2:Domain>
+	<resqml2:InterpretedFeature xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_OrganizationFeature</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">EarthModelOrg</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">6453e31d-77ce-4c34-b230-cdabf35d13dc</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:InterpretedFeature>
+	<resqml2:Structure xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xsi:type="eml:DataObjectReference">
+		<eml:ContentType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">application/x-resqml+xml;version=2.0;type=obj_StructuralOrganizationInterpretation</eml:ContentType>
+		<eml:Title xsi:type="eml:DescriptionString">StructuralOrg1 Interp1</eml:Title>
+		<eml:UUID xsi:type="eml:UuidString">670ef382-3d32-4215-84b6-ba684ecb6698</eml:UUID>
+		<eml:VersionString xsi:type="eml:NameString">1412256791</eml:VersionString>
+	</resqml2:Structure>
+</resqml2:EarthModelInterpretation>
