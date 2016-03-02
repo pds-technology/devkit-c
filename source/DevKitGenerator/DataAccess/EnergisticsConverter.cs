@@ -81,7 +81,7 @@ using System.Xml.Xsl;
 using System.Xml;
 using System.Reflection;
 using System.Text.RegularExpressions;
-
+using System.Xml.Serialization;
 namespace Energistics.DataAccess
 {
     /// <summary>
@@ -136,9 +136,10 @@ namespace Energistics.DataAccess
             if (encoding != null)
             {
                 Type type = obj.GetType();
-
-                var serializer = new XmlSerializer(obj.GetType(), GetXmlRootAttribute(type));
-
+                var serializer = new XmlSerializer(obj.GetType());
+                //fixing memory leaks.
+                //var serializer = new XmlSerializer(obj.GetType(), GetXmlRootAttribute(type));
+                
                 using (var memstream = new MemoryStream())
                 {
                     XmlSerializerNamespaces xsn = new XmlSerializerNamespaces();

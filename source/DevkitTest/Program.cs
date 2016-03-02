@@ -140,7 +140,7 @@ namespace DevkitTest
                     successs = false;
                     failureList.Add("cann't found the class "+ f);
                     continue;
-                }  
+                }
                 // test the deserialize
                 XmlSerializer x = new XmlSerializer(demoObject.Unwrap().GetType());
                 StreamReader reader = new StreamReader(f);
@@ -175,8 +175,10 @@ namespace DevkitTest
                         failureList.Add("output has differences: " + f);
                         successs = false;
                     }
+                  
                     //if(xmloutput.Length>0)
                     //    Console.WriteLine("success!");
+                   Console.WriteLine(xmloutput); 
                     
                 }
                 catch(Exception e)
@@ -305,6 +307,7 @@ namespace DevkitTest
 
         static void Main(string[] args)
         {
+            
             String assemblyName = "Energistics.DataAccess";
             // if webservice is up, can use this line to test the webservice
             //Console.WriteLine("Test the WITSML WebServiceAPI ... ");
