@@ -1156,99 +1156,6 @@ namespace Energistics.DataAccess.WITSML141
 
 
     /// <summary>
-    /// This class represents the abstractObject xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSetList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TubularList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrajectoryList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorModelList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TargetList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurveyProgramList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SidewallCoreList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RiskList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RigList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpsReportList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectGroupList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MessageList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LogList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FormationMarkerList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReportList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReportList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConvCoreList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChangeLogList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRunList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttachmentList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeometryList))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
-
-    [Description("This class represents the abstractObject xsd type.")]
-    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
-    {
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-
-
-    /// <summary>
     /// This class represents the obj_attachments xsd type.
     /// </summary>
 
@@ -2356,174 +2263,6 @@ namespace Energistics.DataAccess.WITSML141
     {
 
     /// <summary>
-    /// This class represents the abstractMeasure xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificVolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificHeatCapacityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelativePowerMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
-    [Description("This class represents the abstractMeasure xsd type.")]
-    public abstract partial class AbstractMeasure : Object , INotifyPropertyChanged
-    {
-
-
-		/// <summary>
-        /// Value property
-        /// </summary>
-        [XmlText]
-
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
     /// This class represents the measuredDepthCoord xsd type.
     /// </summary>
 
@@ -2599,6 +2338,174 @@ namespace Energistics.DataAccess.WITSML141
 
 
 
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the abstractMeasure xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificVolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificHeatCapacityMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelativePowerMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
+
+    [Description("This class represents the abstractMeasure xsd type.")]
+    public abstract partial class AbstractMeasure : Object , INotifyPropertyChanged
+    {
+
+
+		/// <summary>
+        /// Value property
+        /// </summary>
+        [XmlText]
+
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -7738,6 +7645,99 @@ namespace Energistics.DataAccess.WITSML141
 
 
     /// <summary>
+    /// This class represents the abstractObject xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeometryList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TubularList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrajectoryList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSetList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorModelList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TargetList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurveyProgramList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SidewallCoreList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RiskList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RigList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpsReportList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectGroupList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MessageList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LogList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FormationMarkerList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReportList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReportList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConvCoreList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChangeLogList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRunList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttachmentList))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
+
+    [Description("This class represents the abstractObject xsd type.")]
+    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
+    {
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+
+
+    /// <summary>
     /// This class represents the obj_wellbores xsd type.
     /// </summary>
 
@@ -10052,14 +10052,14 @@ namespace Energistics.DataAccess.WITSML141
                 return latitudeField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Latitude when property ProjectedY is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Latitude when property Easting is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Latitude when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Latitude when property LocalY is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Latitude when property Northing is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Latitude when property LocalX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Latitude when property Easting is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Latitude when property ProjectedX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Latitude when property ProjectedY is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Latitude when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Latitude when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Latitude when property ProjectedX is already set");
                 latitudeField = value;
                 LatitudeSpecified = (value!=null);
                 NotifyPropertyChanged("Latitude");
@@ -10081,14 +10081,14 @@ namespace Energistics.DataAccess.WITSML141
                 return longitudeField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Longitude when property ProjectedY is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Longitude when property Easting is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Longitude when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Longitude when property LocalY is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Longitude when property Northing is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Longitude when property LocalX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Longitude when property Easting is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Longitude when property ProjectedX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Longitude when property ProjectedY is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Longitude when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Longitude when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Longitude when property ProjectedX is already set");
                 longitudeField = value;
                 LongitudeSpecified = (value!=null);
                 NotifyPropertyChanged("Longitude");
@@ -10110,14 +10110,14 @@ namespace Energistics.DataAccess.WITSML141
                 return eastingField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Easting when property ProjectedY is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Easting when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Easting when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Easting when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Easting when property Longitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Easting when property LocalX is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Easting when property ProjectedY is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Easting when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Easting when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Easting when property Latitude is already set");
                 eastingField = value;
                 EastingSpecified = (value!=null);
                 NotifyPropertyChanged("Easting");
@@ -10139,14 +10139,14 @@ namespace Energistics.DataAccess.WITSML141
                 return northingField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Northing when property ProjectedY is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Northing when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Northing when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Northing when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Northing when property Longitude is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Northing when property LocalX is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Northing when property ProjectedY is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Northing when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Northing when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Northing when property Latitude is already set");
                 northingField = value;
                 NorthingSpecified = (value!=null);
                 NotifyPropertyChanged("Northing");
@@ -10168,14 +10168,14 @@ namespace Energistics.DataAccess.WITSML141
                 return westingField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Westing when property ProjectedY is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Westing when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Westing when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Westing when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Westing when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Westing when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Westing when property Northing is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Westing when property LocalX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Westing when property Easting is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Westing when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Westing when property Latitude is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Westing when property ProjectedY is already set");
                 westingField = value;
                 WestingSpecified = (value!=null);
                 NotifyPropertyChanged("Westing");
@@ -10197,14 +10197,14 @@ namespace Energistics.DataAccess.WITSML141
                 return southingField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Southing when property ProjectedY is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Southing when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Southing when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Southing when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Southing when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Southing when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Southing when property Northing is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Southing when property LocalX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Southing when property Easting is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Southing when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Southing when property Latitude is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Southing when property ProjectedY is already set");
                 southingField = value;
                 SouthingSpecified = (value!=null);
                 NotifyPropertyChanged("Southing");
@@ -10226,14 +10226,14 @@ namespace Energistics.DataAccess.WITSML141
                 return projectedXField;
             } 
             set {
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedX when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedX when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedX when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedX when property Northing is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedX when property LocalX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedX when property Easting is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedX when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedX when property Westing is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Latitude is already set");
                 projectedXField = value;
                 ProjectedXSpecified = (value!=null);
                 NotifyPropertyChanged("ProjectedX");
@@ -10255,14 +10255,14 @@ namespace Energistics.DataAccess.WITSML141
                 return projectedYField;
             } 
             set {
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedY when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedY when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedY when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedY when property Northing is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedY when property LocalX is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedY when property Easting is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedY when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedY when property Westing is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Latitude is already set");
                 projectedYField = value;
                 ProjectedYSpecified = (value!=null);
                 NotifyPropertyChanged("ProjectedY");
@@ -10284,14 +10284,14 @@ namespace Energistics.DataAccess.WITSML141
                 return localXField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalX when property ProjectedY is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalX when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalX when property Latitude is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalX when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalX when property Northing is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalX when property Easting is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalX when property ProjectedX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalX when property ProjectedY is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalX when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalX when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalX when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalX when property Latitude is already set");
                 localXField = value;
                 LocalXSpecified = (value!=null);
                 NotifyPropertyChanged("LocalX");
@@ -10313,14 +10313,14 @@ namespace Energistics.DataAccess.WITSML141
                 return localYField;
             } 
             set {
-                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalY when property ProjectedY is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalY when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalY when property Latitude is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalY when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalY when property Northing is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalY when property Easting is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalY when property ProjectedX is already set");
+                if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalY when property ProjectedY is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalY when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalY when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalY when property ProjectedX is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalY when property Latitude is already set");
                 localYField = value;
                 LocalYSpecified = (value!=null);
                 NotifyPropertyChanged("LocalY");
@@ -11035,10 +11035,10 @@ namespace Energistics.DataAccess.WITSML141
                 return mapProjectionField;
             } 
             set {
-                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property MapProjection when property MapProjectionCRS is already set");
-                if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property MapProjection when property LocalCRS is already set");
                 if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property MapProjection when property GeodeticCRS is already set");
                 if (value != null && GeographicSpecified) throw new Exception("Cannot set property MapProjection when property Geographic is already set");
+                if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property MapProjection when property LocalCRS is already set");
+                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property MapProjection when property MapProjectionCRS is already set");
                 mapProjectionField = value;
                 MapProjectionSpecified = (value!=null);
                 NotifyPropertyChanged("MapProjection");
@@ -11060,10 +11060,10 @@ namespace Energistics.DataAccess.WITSML141
                 return geographicField;
             } 
             set {
-                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property Geographic when property MapProjectionCRS is already set");
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property Geographic when property GeodeticCRS is already set");
                 if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property Geographic when property LocalCRS is already set");
                 if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property Geographic when property MapProjection is already set");
-                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property Geographic when property GeodeticCRS is already set");
+                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property Geographic when property MapProjectionCRS is already set");
                 geographicField = value;
                 GeographicSpecified = (value!=null);
                 NotifyPropertyChanged("Geographic");
@@ -11085,10 +11085,10 @@ namespace Energistics.DataAccess.WITSML141
                 return mapProjectionCRSField;
             } 
             set {
-                if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property MapProjectionCRS when property LocalCRS is already set");
-                if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property MapProjectionCRS when property MapProjection is already set");
                 if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property MapProjectionCRS when property GeodeticCRS is already set");
                 if (value != null && GeographicSpecified) throw new Exception("Cannot set property MapProjectionCRS when property Geographic is already set");
+                if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property MapProjectionCRS when property LocalCRS is already set");
+                if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property MapProjectionCRS when property MapProjection is already set");
                 mapProjectionCRSField = value;
                 MapProjectionCRSSpecified = (value!=null);
                 NotifyPropertyChanged("MapProjectionCRS");
@@ -11110,10 +11110,10 @@ namespace Energistics.DataAccess.WITSML141
                 return geodeticCRSField;
             } 
             set {
-                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property MapProjectionCRS is already set");
+                if (value != null && GeographicSpecified) throw new Exception("Cannot set property GeodeticCRS when property Geographic is already set");
                 if (value != null && LocalCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property LocalCRS is already set");
                 if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property GeodeticCRS when property MapProjection is already set");
-                if (value != null && GeographicSpecified) throw new Exception("Cannot set property GeodeticCRS when property Geographic is already set");
+                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property MapProjectionCRS is already set");
                 geodeticCRSField = value;
                 GeodeticCRSSpecified = (value!=null);
                 NotifyPropertyChanged("GeodeticCRS");
@@ -11135,10 +11135,10 @@ namespace Energistics.DataAccess.WITSML141
                 return localCRSField;
             } 
             set {
-                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property LocalCRS when property MapProjectionCRS is already set");
-                if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property LocalCRS when property MapProjection is already set");
                 if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property LocalCRS when property GeodeticCRS is already set");
                 if (value != null && GeographicSpecified) throw new Exception("Cannot set property LocalCRS when property Geographic is already set");
+                if (value != null && MapProjectionSpecified) throw new Exception("Cannot set property LocalCRS when property MapProjection is already set");
+                if (value != null && MapProjectionCRSSpecified) throw new Exception("Cannot set property LocalCRS when property MapProjectionCRS is already set");
                 localCRSField = value;
                 LocalCRSSpecified = (value!=null);
                 NotifyPropertyChanged("LocalCRS");
@@ -11634,8 +11634,8 @@ namespace Energistics.DataAccess.WITSML141
                 return usesWellAsOriginField;
             } 
             set {
-                if (value != null && OriginDescriptionSpecified) throw new Exception("Cannot set property UsesWellAsOrigin when property OriginDescription is already set");
                 if (value != null && OriginSpecified) throw new Exception("Cannot set property UsesWellAsOrigin when property Origin is already set");
+                if (value != null && OriginDescriptionSpecified) throw new Exception("Cannot set property UsesWellAsOrigin when property OriginDescription is already set");
                 usesWellAsOriginField = value;
                 UsesWellAsOriginSpecified = (value!=null);
                 NotifyPropertyChanged("UsesWellAsOrigin");
@@ -11680,8 +11680,8 @@ namespace Energistics.DataAccess.WITSML141
                 return originDescriptionField;
             } 
             set {
-                if (value != null && UsesWellAsOriginSpecified) throw new Exception("Cannot set property OriginDescription when property UsesWellAsOrigin is already set");
                 if (value != null && OriginSpecified) throw new Exception("Cannot set property OriginDescription when property Origin is already set");
+                if (value != null && UsesWellAsOriginSpecified) throw new Exception("Cannot set property OriginDescription when property UsesWellAsOrigin is already set");
                 originDescriptionField = value;
                 OriginDescriptionSpecified = (value!=null);
                 NotifyPropertyChanged("OriginDescription");
@@ -22589,9 +22589,9 @@ namespace Energistics.DataAccess.WITSML141
                 return aziField;
             } 
             set {
-                if (value != null && TvdSpecified) throw new Exception("Cannot set property Azi when property Tvd is already set");
                 if (value != null && DepthSpecified) throw new Exception("Cannot set property Azi when property Depth is already set");
                 if (value != null && IncSpecified) throw new Exception("Cannot set property Azi when property Inc is already set");
+                if (value != null && TvdSpecified) throw new Exception("Cannot set property Azi when property Tvd is already set");
                 aziField = value;
                 AziSpecified = (value!=null);
                 NotifyPropertyChanged("Azi");
@@ -22614,8 +22614,8 @@ namespace Energistics.DataAccess.WITSML141
             } 
             set {
                 if (value != null && AziSpecified) throw new Exception("Cannot set property Inc when property Azi is already set");
-                if (value != null && TvdSpecified) throw new Exception("Cannot set property Inc when property Tvd is already set");
                 if (value != null && DepthSpecified) throw new Exception("Cannot set property Inc when property Depth is already set");
+                if (value != null && TvdSpecified) throw new Exception("Cannot set property Inc when property Tvd is already set");
                 incField = value;
                 IncSpecified = (value!=null);
                 NotifyPropertyChanged("Inc");
@@ -22638,8 +22638,8 @@ namespace Energistics.DataAccess.WITSML141
             } 
             set {
                 if (value != null && AziSpecified) throw new Exception("Cannot set property Depth when property Azi is already set");
-                if (value != null && TvdSpecified) throw new Exception("Cannot set property Depth when property Tvd is already set");
                 if (value != null && IncSpecified) throw new Exception("Cannot set property Depth when property Inc is already set");
+                if (value != null && TvdSpecified) throw new Exception("Cannot set property Depth when property Tvd is already set");
                 depthField = value;
                 DepthSpecified = (value!=null);
                 NotifyPropertyChanged("Depth");
@@ -56135,8 +56135,8 @@ namespace Energistics.DataAccess.WITSML141
                 return concentrationField;
             } 
             set {
-                if (value != null && ForceSpecified) throw new Exception("Cannot set property Concentration when property Force is already set");
                 if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Concentration when property EquivalentMudWeight is already set");
+                if (value != null && ForceSpecified) throw new Exception("Cannot set property Concentration when property Force is already set");
                 if (value != null && PressureGradientSpecified) throw new Exception("Cannot set property Concentration when property PressureGradient is already set");
                 concentrationField = value;
                 ConcentrationSpecified = (value!=null);
@@ -56184,8 +56184,8 @@ namespace Energistics.DataAccess.WITSML141
             } 
             set {
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property PressureGradient when property Concentration is already set");
-                if (value != null && ForceSpecified) throw new Exception("Cannot set property PressureGradient when property Force is already set");
                 if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property PressureGradient when property EquivalentMudWeight is already set");
+                if (value != null && ForceSpecified) throw new Exception("Cannot set property PressureGradient when property Force is already set");
                 pressureGradientField = value;
                 PressureGradientSpecified = (value!=null);
                 NotifyPropertyChanged("PressureGradient");
@@ -74728,9 +74728,9 @@ namespace Energistics.DataAccess.WITSML141
                 return wtSackField;
             } 
             set {
-                if (value != null && VolSackSpecified) throw new Exception("Cannot set property WeightSack when property VolSack is already set");
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property WeightSack when property Concentration is already set");
                 if (value != null && TypeConcSpecified) throw new Exception("Cannot set property WeightSack when property TypeConc is already set");
+                if (value != null && VolSackSpecified) throw new Exception("Cannot set property WeightSack when property VolSack is already set");
                 wtSackField = value;
                 WeightSackSpecified = (value!=null);
                 NotifyPropertyChanged("WeightSack");
@@ -74752,9 +74752,9 @@ namespace Energistics.DataAccess.WITSML141
                 return volSackField;
             } 
             set {
-                if (value != null && WeightSackSpecified) throw new Exception("Cannot set property VolSack when property WeightSack is already set");
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property VolSack when property Concentration is already set");
                 if (value != null && TypeConcSpecified) throw new Exception("Cannot set property VolSack when property TypeConc is already set");
+                if (value != null && WeightSackSpecified) throw new Exception("Cannot set property VolSack when property WeightSack is already set");
                 volSackField = value;
                 VolSackSpecified = (value!=null);
                 NotifyPropertyChanged("VolSack");

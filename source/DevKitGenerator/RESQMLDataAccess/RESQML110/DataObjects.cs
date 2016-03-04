@@ -474,6 +474,55 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// This class represents the CodeWithAuthorityType xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("identifier", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+
+    [Description("This class represents the CodeWithAuthorityType xsd type.")]
+    public partial class CodeWithAuthorityType : CodeType , INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the CodeWithAuthorityType class.
+        /// </summary>
+        public CodeWithAuthorityType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the CodeWithAuthorityType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public CodeWithAuthorityType(String value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// This class represents the CodeType xsd type.
     /// </summary>
 
@@ -569,55 +618,6 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
         #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the CodeWithAuthorityType xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("identifier", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-
-    [Description("This class represents the CodeWithAuthorityType xsd type.")]
-    public partial class CodeWithAuthorityType : CodeType , INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the CodeWithAuthorityType class.
-        /// </summary>
-        public CodeWithAuthorityType() {}
-
-        /// <summary>
-        /// Initializes a new instance of the CodeWithAuthorityType class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public CodeWithAuthorityType(String value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-
-
 
     } //here
 
@@ -729,27 +729,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// upperCorner property
-        /// </summary>
-        [XmlElement("upperCorner")]
-        public DirectPositionType UpperCorner {
-            get {
-                return upperCornerField;
-            } 
-            set {
-                upperCornerField = value;
-                UpperCornerSpecified = (value!=null);
-                NotifyPropertyChanged("UpperCorner");
-            }
-        }
-
-        private DirectPositionType upperCornerField; 
-        /// <summary>
-        /// Boolean to indicate if UpperCorner has been set. Used for serialization.
-        /// </summary>
-        private Boolean UpperCornerSpecified = false; 
-
-        /// <summary>
         /// lowerCorner property
         /// </summary>
         [XmlElement("lowerCorner")]
@@ -790,6 +769,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if Pos has been set. Used for serialization.
         /// </summary>
         private Boolean PosSpecified = false; 
+
+        /// <summary>
+        /// upperCorner property
+        /// </summary>
+        [XmlElement("upperCorner")]
+        public DirectPositionType UpperCorner {
+            get {
+                return upperCornerField;
+            } 
+            set {
+                upperCornerField = value;
+                UpperCornerSpecified = (value!=null);
+                NotifyPropertyChanged("UpperCorner");
+            }
+        }
+
+        private DirectPositionType upperCornerField; 
+        /// <summary>
+        /// Boolean to indicate if UpperCorner has been set. Used for serialization.
+        /// </summary>
+        private Boolean UpperCornerSpecified = false; 
 
 
 
@@ -969,534 +969,6 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
         #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the AbstractGMLType xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionBaseType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometryType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeatureType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlAreaOfInterest))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractGMLType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the AbstractGMLType xsd type.")]
-    public abstract partial class AbstractGMLType : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// description property
-        /// </summary>
-		[XmlElement("description")]
-
-        public StringOrRefType Description {
-            get {
-                return descriptionField;
-            } 
-            set {
-                descriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private StringOrRefType descriptionField; 
-
-
-        /// <summary>
-        /// descriptionReference property
-        /// </summary>
-		[XmlElement("descriptionReference")]
-
-        public ReferenceType DescriptionReference {
-            get {
-                return descriptionReferenceField;
-            } 
-            set {
-                descriptionReferenceField = value;
-                NotifyPropertyChanged("DescriptionReference");
-            }
-        }
-
-        private ReferenceType descriptionReferenceField; 
-
-
-        /// <summary>
-        /// identifier property
-        /// </summary>
-		[XmlElement("identifier")]
-
-        public CodeWithAuthorityType Identifier {
-            get {
-                return identifierField;
-            } 
-            set {
-                identifierField = value;
-                NotifyPropertyChanged("Identifier");
-            }
-        }
-
-        private CodeWithAuthorityType identifierField; 
-
-
-        /// <summary>
-        /// name property
-        /// </summary>
-		[XmlElement("name")]
-
-        public List<CodeType> Name {
-            get {
-                return nameField;
-            } 
-            set {
-                nameField = value;
-                NotifyPropertyChanged("Name");
-            }
-        }
-
-        private List<CodeType> nameField; 
-
-
-		/// <summary>
-        /// id property
-        /// </summary>
-        [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
-
-        public String Id {
-            get {
-                return idField;
-            } 
-            set {
-                idField = value;
-                NotifyPropertyChanged("Id");
-            }
-        }
-
-        private String idField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the DefinitionBaseType xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DefinitionBaseType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the DefinitionBaseType xsd type.")]
-    public partial class DefinitionBaseType : AbstractGMLType , INotifyPropertyChanged
-    {
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the DefinitionType xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("Definition", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-
-    [Description("This class represents the DefinitionType xsd type.")]
-    public partial class DefinitionType : DefinitionBaseType , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// remarks property
-        /// </summary>
-		[XmlElement("remarks")]
-
-        public String Remarks {
-            get {
-                return remarksField;
-            } 
-            set {
-                remarksField = value;
-                NotifyPropertyChanged("Remarks");
-            }
-        }
-
-        private String remarksField; 
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the IdentifiedObjectType xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IdentifiedObjectType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the IdentifiedObjectType xsd type.")]
-    public abstract partial class IdentifiedObjectType : DefinitionType , INotifyPropertyChanged
-    {
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the AbstractCRSType xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractCRSType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the AbstractCRSType xsd type.")]
-    public abstract partial class AbstractCRSType : IdentifiedObjectType , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// domainOfValidity property
-        /// </summary>
-		[XmlElement("domainOfValidity")]
-
-        public List<DomainOfValidity> DomainOfValidity {
-            get {
-                return domainOfValidityField;
-            } 
-            set {
-                domainOfValidityField = value;
-                NotifyPropertyChanged("DomainOfValidity");
-            }
-        }
-
-        private List<DomainOfValidity> domainOfValidityField; 
-
-
-        /// <summary>
-        /// scope property
-        /// </summary>
-		[XmlElement("scope")]
-
-        public List<String> Scope {
-            get {
-                return scopeField;
-            } 
-            set {
-                scopeField = value;
-                NotifyPropertyChanged("Scope");
-            }
-        }
-
-        private List<String> scopeField; 
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the AbstractGeneralDerivedCRSType xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractGeneralDerivedCRSType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the AbstractGeneralDerivedCRSType xsd type.")]
-    public abstract partial class AbstractGeneralDerivedCRSType : AbstractCRSType , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// conversion property
-        /// </summary>
-		[XmlElement("conversion")]
-
-        public GeneralConversionPropertyType Conversion {
-            get {
-                return conversionField;
-            } 
-            set {
-                conversionField = value;
-                NotifyPropertyChanged("Conversion");
-            }
-        }
-
-        private GeneralConversionPropertyType conversionField; 
-
-
-
 
     } //here
 
@@ -1693,27 +1165,6 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean CartesianCSSpecified = false; 
 
         /// <summary>
-        /// sphericalCS property
-        /// </summary>
-        [XmlElement("sphericalCS")]
-        public SphericalCSPropertyType SphericalCS {
-            get {
-                return sphericalCSField;
-            } 
-            set {
-                sphericalCSField = value;
-                SphericalCSSpecified = (value!=null);
-                NotifyPropertyChanged("SphericalCS");
-            }
-        }
-
-        private SphericalCSPropertyType sphericalCSField; 
-        /// <summary>
-        /// Boolean to indicate if SphericalCS has been set. Used for serialization.
-        /// </summary>
-        private Boolean SphericalCSSpecified = false; 
-
-        /// <summary>
         /// ellipsoidalCS property
         /// </summary>
         [XmlElement("ellipsoidalCS")]
@@ -1733,6 +1184,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
         /// </summary>
         private Boolean EllipsoidalCSSpecified = false; 
+
+        /// <summary>
+        /// sphericalCS property
+        /// </summary>
+        [XmlElement("sphericalCS")]
+        public SphericalCSPropertyType SphericalCS {
+            get {
+                return sphericalCSField;
+            } 
+            set {
+                sphericalCSField = value;
+                SphericalCSSpecified = (value!=null);
+                NotifyPropertyChanged("SphericalCS");
+            }
+        }
+
+        private SphericalCSPropertyType sphericalCSField; 
+        /// <summary>
+        /// Boolean to indicate if SphericalCS has been set. Used for serialization.
+        /// </summary>
+        private Boolean SphericalCSSpecified = false; 
 
 
 
@@ -1849,16 +1321,44 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// This class represents the CartesianCSType xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("CartesianCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+
+    [Description("This class represents the CartesianCSType xsd type.")]
+    public partial class CartesianCSType : AbstractCoordinateSystemType , INotifyPropertyChanged
+    {
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// This class represents the AbstractCoordinateSystemType xsd type.
     /// </summary>
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -1926,34 +1426,6 @@ namespace Energistics.DataAccess.RESQML110
         }
 
         private Boolean aggregationTypeSpecifiedField; 
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the CartesianCSType xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("CartesianCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-
-    [Description("This class represents the CartesianCSType xsd type.")]
-    public partial class CartesianCSType : AbstractCoordinateSystemType , INotifyPropertyChanged
-    {
 
 
 
@@ -2209,6 +1681,416 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// This class represents the IdentifiedObjectType xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IdentifiedObjectType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the IdentifiedObjectType xsd type.")]
+    public abstract partial class IdentifiedObjectType : DefinitionType , INotifyPropertyChanged
+    {
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the DefinitionType xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("Definition", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+
+    [Description("This class represents the DefinitionType xsd type.")]
+    public partial class DefinitionType : DefinitionBaseType , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// remarks property
+        /// </summary>
+		[XmlElement("remarks")]
+
+        public String Remarks {
+            get {
+                return remarksField;
+            } 
+            set {
+                remarksField = value;
+                NotifyPropertyChanged("Remarks");
+            }
+        }
+
+        private String remarksField; 
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the DefinitionBaseType xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DefinitionBaseType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the DefinitionBaseType xsd type.")]
+    public partial class DefinitionBaseType : AbstractGMLType , INotifyPropertyChanged
+    {
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the AbstractGMLType xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionBaseType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometryType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeatureType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlAreaOfInterest))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractGMLType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the AbstractGMLType xsd type.")]
+    public abstract partial class AbstractGMLType : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[XmlElement("description")]
+
+        public StringOrRefType Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private StringOrRefType descriptionField; 
+
+
+        /// <summary>
+        /// descriptionReference property
+        /// </summary>
+		[XmlElement("descriptionReference")]
+
+        public ReferenceType DescriptionReference {
+            get {
+                return descriptionReferenceField;
+            } 
+            set {
+                descriptionReferenceField = value;
+                NotifyPropertyChanged("DescriptionReference");
+            }
+        }
+
+        private ReferenceType descriptionReferenceField; 
+
+
+        /// <summary>
+        /// identifier property
+        /// </summary>
+		[XmlElement("identifier")]
+
+        public CodeWithAuthorityType Identifier {
+            get {
+                return identifierField;
+            } 
+            set {
+                identifierField = value;
+                NotifyPropertyChanged("Identifier");
+            }
+        }
+
+        private CodeWithAuthorityType identifierField; 
+
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[XmlElement("name")]
+
+        public List<CodeType> Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private List<CodeType> nameField; 
+
+
+		/// <summary>
+        /// id property
+        /// </summary>
+        [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+
+        public String Id {
+            get {
+                return idField;
+            } 
+            set {
+                idField = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
+
+        private String idField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// This class represents the AbstractTimeObjectType xsd type.
     /// </summary>
 
@@ -2269,6 +2151,71 @@ namespace Energistics.DataAccess.RESQML110
         }
 
         private List<RelatedTimeType> relatedTimeField; 
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the RelatedTimeType xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RelatedTimeType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the RelatedTimeType xsd type.")]
+    public partial class RelatedTimeType : TimePrimitivePropertyType , INotifyPropertyChanged
+    {
+
+
+		/// <summary>
+        /// relativePosition property
+        /// </summary>
+        [XmlAttribute("relativePosition")]
+
+        public RelatedTimeTypeRelativePosition RelativePosition {
+            get {
+                return relativePositionField;
+            } 
+            set {
+                relativePositionField = value;
+                this.RelativePositionSpecified = true;
+                NotifyPropertyChanged("RelativePosition");
+            }
+        }
+
+        private RelatedTimeTypeRelativePosition relativePositionField; 
+
+
+		/// <summary>
+        /// relativePositionSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+
+        public Boolean RelativePositionSpecified {
+            get {
+                return relativePositionSpecifiedField;
+            } 
+            set {
+                relativePositionSpecifiedField = value;
+                NotifyPropertyChanged("RelativePositionSpecified");
+            }
+        }
+
+        private Boolean relativePositionSpecifiedField; 
 
 
 
@@ -2385,79 +2332,14 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
-    /// This class represents the RelatedTimeType xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RelatedTimeType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the RelatedTimeType xsd type.")]
-    public partial class RelatedTimeType : TimePrimitivePropertyType , INotifyPropertyChanged
-    {
-
-
-		/// <summary>
-        /// relativePosition property
-        /// </summary>
-        [XmlAttribute("relativePosition")]
-
-        public RelatedTimeTypeRelativePosition RelativePosition {
-            get {
-                return relativePositionField;
-            } 
-            set {
-                relativePositionField = value;
-                this.RelativePositionSpecified = true;
-                NotifyPropertyChanged("RelativePosition");
-            }
-        }
-
-        private RelatedTimeTypeRelativePosition relativePositionField; 
-
-
-		/// <summary>
-        /// relativePositionSpecified property
-        /// </summary>
-        [XmlIgnore]
-		[Browsable(false)]
-
-        public Boolean RelativePositionSpecified {
-            get {
-                return relativePositionSpecifiedField;
-            } 
-            set {
-                relativePositionSpecifiedField = value;
-                NotifyPropertyChanged("RelativePositionSpecified");
-            }
-        }
-
-        private Boolean relativePositionSpecifiedField; 
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
     /// This class represents the AbstractGeometryType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
 
@@ -2524,11 +2406,11 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractGeometricPrimitiveType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -2868,54 +2750,6 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
-    /// This class represents the AbstractRingType xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearRingType))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractRingType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the AbstractRingType xsd type.")]
-    public abstract partial class AbstractRingType : Object , INotifyPropertyChanged
-    {
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
     /// This class represents the LinearRingType xsd type.
     /// </summary>
 
@@ -3074,6 +2908,54 @@ namespace Energistics.DataAccess.RESQML110
         }
 
         private List<String> TextField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the AbstractRingType xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearRingType))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractRingType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the AbstractRingType xsd type.")]
+    public abstract partial class AbstractRingType : Object , INotifyPropertyChanged
+    {
 
 
 
@@ -3280,120 +3162,6 @@ namespace Energistics.DataAccess.RESQML110
         }
 
         private String nilReasonField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the AbstractObject_Type xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_OnlineResource_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Date_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Citation_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MD_Identifier_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractObject_Type", Namespace="http://www.isotc211.org/2005/gco")]
-
-    [Description("This class represents the AbstractObject_Type xsd type.")]
-    public abstract partial class AbstractObject_Type : Object , INotifyPropertyChanged
-    {
-
-
-		/// <summary>
-        /// id property
-        /// </summary>
-        [XmlAttribute("id")]
-
-        public String Id {
-            get {
-                return idField;
-            } 
-            set {
-                idField = value;
-                NotifyPropertyChanged("Id");
-            }
-        }
-
-        private String idField; 
-
-
-		/// <summary>
-        /// uuid property
-        /// </summary>
-        [XmlAttribute("uuid")]
-
-        public String Uuid {
-            get {
-                return uuidField;
-            } 
-            set {
-                uuidField = value;
-                NotifyPropertyChanged("Uuid");
-            }
-        }
-
-        private String uuidField; 
 
 
 
@@ -3803,6 +3571,120 @@ namespace Energistics.DataAccess.RESQML110
         }
 
         private String nilReasonField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the AbstractObject_Type xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_OnlineResource_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Date_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Citation_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MD_Identifier_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractObject_Type", Namespace="http://www.isotc211.org/2005/gco")]
+
+    [Description("This class represents the AbstractObject_Type xsd type.")]
+    public abstract partial class AbstractObject_Type : Object , INotifyPropertyChanged
+    {
+
+
+		/// <summary>
+        /// id property
+        /// </summary>
+        [XmlAttribute("id")]
+
+        public String Id {
+            get {
+                return idField;
+            } 
+            set {
+                idField = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
+
+        private String idField; 
+
+
+		/// <summary>
+        /// uuid property
+        /// </summary>
+        [XmlAttribute("uuid")]
+
+        public String Uuid {
+            get {
+                return uuidField;
+            } 
+            set {
+                uuidField = value;
+                NotifyPropertyChanged("Uuid");
+            }
+        }
+
+        private String uuidField; 
 
 
 
@@ -5383,27 +5265,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// DateTime property
-        /// </summary>
-        [XmlElement("DateTime")]
-        public DateTime? DateTime {
-            get {
-                return DateTimeField;
-            } 
-            set {
-                DateTimeField = value;
-                DateTimeSpecified = (value!=null);
-                NotifyPropertyChanged("DateTime");
-            }
-        }
-
-        private DateTime? DateTimeField; 
-        /// <summary>
-        /// Boolean to indicate if DateTime has been set. Used for serialization.
-        /// </summary>
-        private Boolean DateTimeSpecified = false; 
-
-        /// <summary>
         /// Date property
         /// </summary>
         [XmlElement("Date")]
@@ -5423,6 +5284,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if Date has been set. Used for serialization.
         /// </summary>
         private Boolean DateSpecified = false; 
+
+        /// <summary>
+        /// DateTime property
+        /// </summary>
+        [XmlElement("DateTime")]
+        public DateTime? DateTime {
+            get {
+                return DateTimeField;
+            } 
+            set {
+                DateTimeField = value;
+                DateTimeSpecified = (value!=null);
+                NotifyPropertyChanged("DateTime");
+            }
+        }
+
+        private DateTime? DateTimeField; 
+        /// <summary>
+        /// Boolean to indicate if DateTime has been set. Used for serialization.
+        /// </summary>
+        private Boolean DateTimeSpecified = false; 
 
 
 
@@ -7193,6 +7075,124 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// This class represents the AbstractCRSType xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractCRSType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the AbstractCRSType xsd type.")]
+    public abstract partial class AbstractCRSType : IdentifiedObjectType , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// domainOfValidity property
+        /// </summary>
+		[XmlElement("domainOfValidity")]
+
+        public List<DomainOfValidity> DomainOfValidity {
+            get {
+                return domainOfValidityField;
+            } 
+            set {
+                domainOfValidityField = value;
+                NotifyPropertyChanged("DomainOfValidity");
+            }
+        }
+
+        private List<DomainOfValidity> domainOfValidityField; 
+
+
+        /// <summary>
+        /// scope property
+        /// </summary>
+		[XmlElement("scope")]
+
+        public List<String> Scope {
+            get {
+                return scopeField;
+            } 
+            set {
+                scopeField = value;
+                NotifyPropertyChanged("Scope");
+            }
+        }
+
+        private List<String> scopeField; 
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the AbstractGeneralDerivedCRSType xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractGeneralDerivedCRSType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the AbstractGeneralDerivedCRSType xsd type.")]
+    public abstract partial class AbstractGeneralDerivedCRSType : AbstractCRSType , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// conversion property
+        /// </summary>
+		[XmlElement("conversion")]
+
+        public GeneralConversionPropertyType Conversion {
+            get {
+                return conversionField;
+            } 
+            set {
+                conversionField = value;
+                NotifyPropertyChanged("Conversion");
+            }
+        }
+
+        private GeneralConversionPropertyType conversionField; 
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// This class represents the GeneralConversionPropertyType xsd type.
     /// </summary>
 
@@ -7265,6 +7265,33 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
         #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the AbstractGeneralConversionType xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractGeneralConversionType", Namespace="http://www.opengis.net/gml/3.2")]
+
+    [Description("This class represents the AbstractGeneralConversionType xsd type.")]
+    public abstract partial class AbstractGeneralConversionType : AbstractCoordinateOperationType , INotifyPropertyChanged
+    {
+
+
+
 
     } //here
 
@@ -7399,33 +7426,6 @@ namespace Energistics.DataAccess.RESQML110
         }
 
         private CRSPropertyType targetCRSField; 
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the AbstractGeneralConversionType xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractGeneralConversionType", Namespace="http://www.opengis.net/gml/3.2")]
-
-    [Description("This class represents the AbstractGeneralConversionType xsd type.")]
-    public abstract partial class AbstractGeneralConversionType : AbstractCoordinateOperationType , INotifyPropertyChanged
-    {
 
 
 
@@ -8450,12 +8450,61 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// This class represents the AngleType xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("greenwichLongitude", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+
+    [Description("This class represents the AngleType xsd type.")]
+    public partial class AngleType : MeasureType , INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the AngleType class.
+        /// </summary>
+        public AngleType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AngleType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public AngleType(Double value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// This class represents the MeasureType xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleType))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthType))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleType))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -8529,55 +8578,6 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
         #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the AngleType xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("greenwichLongitude", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-
-    [Description("This class represents the AngleType xsd type.")]
-    public partial class AngleType : MeasureType , INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the AngleType class.
-        /// </summary>
-        public AngleType() {}
-
-        /// <summary>
-        /// Initializes a new instance of the AngleType class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public AngleType(Double value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-
-
 
     } //here
 
@@ -9286,49 +9286,6 @@ namespace Energistics.DataAccess.RESQML110
     } //here
 
     }
-
-
-
-    /// <summary>
-    /// This class represents the abstractObject xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDocumentList))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
-
-    [Description("This class represents the abstractObject xsd type.")]
-    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
-    {
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
 
 
 
@@ -12315,8 +12272,8 @@ namespace Energistics.DataAccess.RESQML110
                 return resqmlKindField;
             } 
             set {
-                if (value != null && ParentResqmlKindSpecified) throw new Exception("Cannot set property ResqmlKind when property ParentResqmlKind is already set");
                 if (value != null && ParentLocalKindSpecified) throw new Exception("Cannot set property ResqmlKind when property ParentLocalKind is already set");
+                if (value != null && ParentResqmlKindSpecified) throw new Exception("Cannot set property ResqmlKind when property ParentResqmlKind is already set");
                 resqmlKindField = value;
                 ResqmlKindSpecified = (value!=null);
                 NotifyPropertyChanged("ResqmlKind");
@@ -12405,9 +12362,9 @@ namespace Energistics.DataAccess.RESQML110
                 return unitOfMeasureField;
             } 
             set {
+                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property EnumValue is already set");
                 if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MaximumValue is already set");
                 if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MinimumValue is already set");
-                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property EnumValue is already set");
                 unitOfMeasureField = value;
                 UnitOfMeasureSpecified = (value!=null);
                 NotifyPropertyChanged("UnitOfMeasure");
@@ -12429,9 +12386,9 @@ namespace Energistics.DataAccess.RESQML110
                 return dimensionalClassField;
             } 
             set {
+                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property EnumValue is already set");
                 if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MaximumValue is already set");
                 if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MinimumValue is already set");
-                if (value != null && EnumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property EnumValue is already set");
                 dimensionalClassField = value;
                 DimensionalClassSpecified = (value!=null);
                 NotifyPropertyChanged("DimensionalClass");
@@ -12501,8 +12458,8 @@ namespace Energistics.DataAccess.RESQML110
                 return enumValueField;
             } 
             set {
-                if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property EnumValue when property MaximumValue is already set");
                 if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property EnumValue when property DimensionalClass is already set");
+                if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property EnumValue when property MaximumValue is already set");
                 if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property EnumValue when property MinimumValue is already set");
                 if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property EnumValue when property UnitOfMeasure is already set");
                 enumValueField = value;
@@ -13616,272 +13573,6 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
-    /// This class represents the cs_resqmlAbstractGeologicFeature xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlFault))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizon))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractGeologicFeature", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("This class represents the cs_resqmlAbstractGeologicFeature xsd type.")]
-    public abstract partial class ResqmlAbstractGeologicFeature : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// title property
-        /// </summary>
-		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Title {
-            get {
-                return titleField;
-            } 
-            set {
-                titleField = value;
-                NotifyPropertyChanged("Title");
-            }
-        }
-
-        private DublinCoreString titleField; 
-
-
-        /// <summary>
-        /// creator property
-        /// </summary>
-		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Creator {
-            get {
-                return creatorField;
-            } 
-            set {
-                creatorField = value;
-                NotifyPropertyChanged("Creator");
-            }
-        }
-
-        private DublinCoreString creatorField; 
-
-
-        /// <summary>
-        /// description property
-        /// </summary>
-		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Description {
-            get {
-                return descriptionField;
-            } 
-            set {
-                descriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private DublinCoreString descriptionField; 
-
-
-        /// <summary>
-        /// publisher property
-        /// </summary>
-		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Publisher {
-            get {
-                return publisherField;
-            } 
-            set {
-                publisherField = value;
-                NotifyPropertyChanged("Publisher");
-            }
-        }
-
-        private DublinCoreString publisherField; 
-
-
-        /// <summary>
-        /// contributor property
-        /// </summary>
-		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Contributor {
-            get {
-                return contributorField;
-            } 
-            set {
-                contributorField = value;
-                NotifyPropertyChanged("Contributor");
-            }
-        }
-
-        private DublinCoreString contributorField; 
-
-
-        /// <summary>
-        /// created property
-        /// </summary>
-		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Created {
-            get {
-                return createdField;
-            } 
-            set {
-                createdField = value;
-                NotifyPropertyChanged("Created");
-            }
-        }
-
-        private AbstractW3CDTF createdField; 
-
-
-        /// <summary>
-        /// modified property
-        /// </summary>
-		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Modified {
-            get {
-                return modifiedField;
-            } 
-            set {
-                modifiedField = value;
-                NotifyPropertyChanged("Modified");
-            }
-        }
-
-        private AbstractW3CDTF modifiedField; 
-
-
-        /// <summary>
-        /// source property
-        /// </summary>
-		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-
-        public String Source {
-            get {
-                return sourceField;
-            } 
-            set {
-                sourceField = value;
-                NotifyPropertyChanged("Source");
-            }
-        }
-
-        private String sourceField; 
-
-
-        /// <summary>
-        /// bibliographicCitation property
-        /// </summary>
-		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
-
-        public List<DublinCoreString> BibliographicCitation {
-            get {
-                return bibliographicCitationField;
-            } 
-            set {
-                bibliographicCitationField = value;
-                NotifyPropertyChanged("BibliographicCitation");
-            }
-        }
-
-        private List<DublinCoreString> bibliographicCitationField; 
-
-
-        /// <summary>
-        /// Extensions to the schema using an xsd:any construct.
-        /// </summary>
-		[XmlElement("extensionAny")]
-
-        public ExtensionAny ExtensionAny {
-            get {
-                return extensionAnyField;
-            } 
-            set {
-                extensionAnyField = value;
-                NotifyPropertyChanged("ExtensionAny");
-            }
-        }
-
-        private ExtensionAny extensionAnyField; 
-
-
-        /// <summary>
-        /// Extensions to the schema based on a name-value construct.
-        /// </summary>
-		[XmlElement("extensionNameValue")]
-
-        public List<ResqmlExtensionNameValue> ExtensionNameValue {
-            get {
-                return extensionNameValueField;
-            } 
-            set {
-                extensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-        private List<ResqmlExtensionNameValue> extensionNameValueField; 
-
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-        [XmlAttribute("uid")]
-
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
     /// Information specific to one geologic horizon. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
 
@@ -13916,272 +13607,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
 
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the cs_resqmlAbstractFeatureInterpretation xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlFaultInterpretation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizonInterpretation))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractFeatureInterpretation", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("This class represents the cs_resqmlAbstractFeatureInterpretation xsd type.")]
-    public abstract partial class ResqmlAbstractFeatureInterpretation : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// title property
-        /// </summary>
-		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Title {
-            get {
-                return titleField;
-            } 
-            set {
-                titleField = value;
-                NotifyPropertyChanged("Title");
-            }
-        }
-
-        private DublinCoreString titleField; 
-
-
-        /// <summary>
-        /// creator property
-        /// </summary>
-		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Creator {
-            get {
-                return creatorField;
-            } 
-            set {
-                creatorField = value;
-                NotifyPropertyChanged("Creator");
-            }
-        }
-
-        private DublinCoreString creatorField; 
-
-
-        /// <summary>
-        /// description property
-        /// </summary>
-		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Description {
-            get {
-                return descriptionField;
-            } 
-            set {
-                descriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private DublinCoreString descriptionField; 
-
-
-        /// <summary>
-        /// publisher property
-        /// </summary>
-		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Publisher {
-            get {
-                return publisherField;
-            } 
-            set {
-                publisherField = value;
-                NotifyPropertyChanged("Publisher");
-            }
-        }
-
-        private DublinCoreString publisherField; 
-
-
-        /// <summary>
-        /// contributor property
-        /// </summary>
-		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Contributor {
-            get {
-                return contributorField;
-            } 
-            set {
-                contributorField = value;
-                NotifyPropertyChanged("Contributor");
-            }
-        }
-
-        private DublinCoreString contributorField; 
-
-
-        /// <summary>
-        /// created property
-        /// </summary>
-		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Created {
-            get {
-                return createdField;
-            } 
-            set {
-                createdField = value;
-                NotifyPropertyChanged("Created");
-            }
-        }
-
-        private AbstractW3CDTF createdField; 
-
-
-        /// <summary>
-        /// modified property
-        /// </summary>
-		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Modified {
-            get {
-                return modifiedField;
-            } 
-            set {
-                modifiedField = value;
-                NotifyPropertyChanged("Modified");
-            }
-        }
-
-        private AbstractW3CDTF modifiedField; 
-
-
-        /// <summary>
-        /// source property
-        /// </summary>
-		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-
-        public String Source {
-            get {
-                return sourceField;
-            } 
-            set {
-                sourceField = value;
-                NotifyPropertyChanged("Source");
-            }
-        }
-
-        private String sourceField; 
-
-
-        /// <summary>
-        /// bibliographicCitation property
-        /// </summary>
-		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
-
-        public List<DublinCoreString> BibliographicCitation {
-            get {
-                return bibliographicCitationField;
-            } 
-            set {
-                bibliographicCitationField = value;
-                NotifyPropertyChanged("BibliographicCitation");
-            }
-        }
-
-        private List<DublinCoreString> bibliographicCitationField; 
-
-
-        /// <summary>
-        /// Extensions to the schema using an xsd:any construct.
-        /// </summary>
-		[XmlElement("extensionAny")]
-
-        public ExtensionAny ExtensionAny {
-            get {
-                return extensionAnyField;
-            } 
-            set {
-                extensionAnyField = value;
-                NotifyPropertyChanged("ExtensionAny");
-            }
-        }
-
-        private ExtensionAny extensionAnyField; 
-
-
-        /// <summary>
-        /// Extensions to the schema based on a name-value construct.
-        /// </summary>
-		[XmlElement("extensionNameValue")]
-
-        public List<ResqmlExtensionNameValue> ExtensionNameValue {
-            get {
-                return extensionNameValueField;
-            } 
-            set {
-                extensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-        private List<ResqmlExtensionNameValue> extensionNameValueField; 
-
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-        [XmlAttribute("uid")]
-
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -14299,298 +13724,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
 
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the cs_resqmlAbstractFeatureRepresentation xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPointSetRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPillarSetRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlWellMarkerRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHybridGridRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlGrid2dRepresentation))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlTriangulatedRepresentation))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractFeatureRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("This class represents the cs_resqmlAbstractFeatureRepresentation xsd type.")]
-    public abstract partial class ResqmlAbstractFeatureRepresentation : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// title property
-        /// </summary>
-		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Title {
-            get {
-                return titleField;
-            } 
-            set {
-                titleField = value;
-                NotifyPropertyChanged("Title");
-            }
-        }
-
-        private DublinCoreString titleField; 
-
-
-        /// <summary>
-        /// creator property
-        /// </summary>
-		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Creator {
-            get {
-                return creatorField;
-            } 
-            set {
-                creatorField = value;
-                NotifyPropertyChanged("Creator");
-            }
-        }
-
-        private DublinCoreString creatorField; 
-
-
-        /// <summary>
-        /// description property
-        /// </summary>
-		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Description {
-            get {
-                return descriptionField;
-            } 
-            set {
-                descriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private DublinCoreString descriptionField; 
-
-
-        /// <summary>
-        /// publisher property
-        /// </summary>
-		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Publisher {
-            get {
-                return publisherField;
-            } 
-            set {
-                publisherField = value;
-                NotifyPropertyChanged("Publisher");
-            }
-        }
-
-        private DublinCoreString publisherField; 
-
-
-        /// <summary>
-        /// contributor property
-        /// </summary>
-		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Contributor {
-            get {
-                return contributorField;
-            } 
-            set {
-                contributorField = value;
-                NotifyPropertyChanged("Contributor");
-            }
-        }
-
-        private DublinCoreString contributorField; 
-
-
-        /// <summary>
-        /// created property
-        /// </summary>
-		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Created {
-            get {
-                return createdField;
-            } 
-            set {
-                createdField = value;
-                NotifyPropertyChanged("Created");
-            }
-        }
-
-        private AbstractW3CDTF createdField; 
-
-
-        /// <summary>
-        /// modified property
-        /// </summary>
-		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Modified {
-            get {
-                return modifiedField;
-            } 
-            set {
-                modifiedField = value;
-                NotifyPropertyChanged("Modified");
-            }
-        }
-
-        private AbstractW3CDTF modifiedField; 
-
-
-        /// <summary>
-        /// source property
-        /// </summary>
-		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-
-        public String Source {
-            get {
-                return sourceField;
-            } 
-            set {
-                sourceField = value;
-                NotifyPropertyChanged("Source");
-            }
-        }
-
-        private String sourceField; 
-
-
-        /// <summary>
-        /// bibliographicCitation property
-        /// </summary>
-		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
-
-        public List<DublinCoreString> BibliographicCitation {
-            get {
-                return bibliographicCitationField;
-            } 
-            set {
-                bibliographicCitationField = value;
-                NotifyPropertyChanged("BibliographicCitation");
-            }
-        }
-
-        private List<DublinCoreString> bibliographicCitationField; 
-
-
-        /// <summary>
-        /// A pointer to the local 3D CRS which represents the coordinates in all patchs. This must point to a child of spatialReferenceSet.
-        /// </summary>
-		[XmlElement("local3dCRS")]
-
-        public RefGlobalNameString Local3dCRS {
-            get {
-                return local3dCRSField;
-            } 
-            set {
-                local3dCRSField = value;
-                NotifyPropertyChanged("Local3dCRS");
-            }
-        }
-
-        private RefGlobalNameString local3dCRSField; 
-
-
-        /// <summary>
-        /// Extensions to the schema using an xsd:any construct.
-        /// </summary>
-		[XmlElement("extensionAny")]
-
-        public ExtensionAny ExtensionAny {
-            get {
-                return extensionAnyField;
-            } 
-            set {
-                extensionAnyField = value;
-                NotifyPropertyChanged("ExtensionAny");
-            }
-        }
-
-        private ExtensionAny extensionAnyField; 
-
-
-        /// <summary>
-        /// Extensions to the schema based on a name-value construct.
-        /// </summary>
-		[XmlElement("extensionNameValue")]
-
-        public List<ResqmlExtensionNameValue> ExtensionNameValue {
-            get {
-                return extensionNameValueField;
-            } 
-            set {
-                extensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-        private List<ResqmlExtensionNameValue> extensionNameValueField; 
-
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-        [XmlAttribute("uid")]
-
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -15141,384 +14274,6 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
-    /// This class represents the cs_resqmlAbstractPropertyValues xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousPropertyValues))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlCategoricalPropertyValues))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscretePropertyValues))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractPropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("This class represents the cs_resqmlAbstractPropertyValues xsd type.")]
-    public abstract partial class ResqmlAbstractPropertyValues : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// title property
-        /// </summary>
-		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Title {
-            get {
-                return titleField;
-            } 
-            set {
-                titleField = value;
-                NotifyPropertyChanged("Title");
-            }
-        }
-
-        private DublinCoreString titleField; 
-
-
-        /// <summary>
-        /// creator property
-        /// </summary>
-		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Creator {
-            get {
-                return creatorField;
-            } 
-            set {
-                creatorField = value;
-                NotifyPropertyChanged("Creator");
-            }
-        }
-
-        private DublinCoreString creatorField; 
-
-
-        /// <summary>
-        /// description property
-        /// </summary>
-		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Description {
-            get {
-                return descriptionField;
-            } 
-            set {
-                descriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private DublinCoreString descriptionField; 
-
-
-        /// <summary>
-        /// publisher property
-        /// </summary>
-		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Publisher {
-            get {
-                return publisherField;
-            } 
-            set {
-                publisherField = value;
-                NotifyPropertyChanged("Publisher");
-            }
-        }
-
-        private DublinCoreString publisherField; 
-
-
-        /// <summary>
-        /// contributor property
-        /// </summary>
-		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
-
-        public DublinCoreString Contributor {
-            get {
-                return contributorField;
-            } 
-            set {
-                contributorField = value;
-                NotifyPropertyChanged("Contributor");
-            }
-        }
-
-        private DublinCoreString contributorField; 
-
-
-        /// <summary>
-        /// created property
-        /// </summary>
-		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Created {
-            get {
-                return createdField;
-            } 
-            set {
-                createdField = value;
-                NotifyPropertyChanged("Created");
-            }
-        }
-
-        private AbstractW3CDTF createdField; 
-
-
-        /// <summary>
-        /// modified property
-        /// </summary>
-		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
-
-        public AbstractW3CDTF Modified {
-            get {
-                return modifiedField;
-            } 
-            set {
-                modifiedField = value;
-                NotifyPropertyChanged("Modified");
-            }
-        }
-
-        private AbstractW3CDTF modifiedField; 
-
-
-        /// <summary>
-        /// source property
-        /// </summary>
-		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-
-        public String Source {
-            get {
-                return sourceField;
-            } 
-            set {
-                sourceField = value;
-                NotifyPropertyChanged("Source");
-            }
-        }
-
-        private String sourceField; 
-
-
-        /// <summary>
-        /// bibliographicCitation property
-        /// </summary>
-		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
-
-        public List<DublinCoreString> BibliographicCitation {
-            get {
-                return bibliographicCitationField;
-            } 
-            set {
-                bibliographicCitationField = value;
-                NotifyPropertyChanged("BibliographicCitation");
-            }
-        }
-
-        private List<DublinCoreString> bibliographicCitationField; 
-
-
-        /// <summary>
-        /// The standard RESQML property which represents these values. For properties which have a unit of measure, this kind will directly or indirectly specify the single unit of measure which must be utilized for the property values.
-        /// </summary>
-        [XmlElement("resqmlKind")]
-        public String ResqmlKind {
-            get {
-                return resqmlKindField;
-            } 
-            set {
-                if (value != null && LocalKindSpecified) throw new Exception("Cannot set property ResqmlKind when property LocalKind is already set");
-                resqmlKindField = value;
-                ResqmlKindSpecified = (value!=null);
-                NotifyPropertyChanged("ResqmlKind");
-            }
-        }
-
-        private String resqmlKindField; 
-        /// <summary>
-        /// Boolean to indicate if ResqmlKind has been set. Used for serialization.
-        /// </summary>
-        private Boolean ResqmlKindSpecified = false; 
-
-        /// <summary>
-        /// A pointer to the locally defined property which represents these values. Note that all local kinds must directly or indirectly be specialized from a standard RESQML kind.
-        /// </summary>
-        [XmlElement("localKind")]
-        public RefGlobalNameString LocalKind {
-            get {
-                return localKindField;
-            } 
-            set {
-                if (value != null && ResqmlKindSpecified) throw new Exception("Cannot set property LocalKind when property ResqmlKind is already set");
-                localKindField = value;
-                LocalKindSpecified = (value!=null);
-                NotifyPropertyChanged("LocalKind");
-            }
-        }
-
-        private RefGlobalNameString localKindField; 
-        /// <summary>
-        /// Boolean to indicate if LocalKind has been set. Used for serialization.
-        /// </summary>
-        private Boolean LocalKindSpecified = false; 
-
-
-
-        /// <summary>
-        /// Defines how the data values are associated with the object.
-        /// </summary>
-		[XmlElement("propertyAttachment")]
-
-        public PropertyAttachment? PropertyAttachment {
-            get {
-                return propertyAttachmentField;
-            } 
-            set {
-                propertyAttachmentField = value;
-                NotifyPropertyChanged("PropertyAttachment");
-            }
-        }
-
-        private PropertyAttachment? propertyAttachmentField; 
-
-
-        /// <summary>
-        /// The date and time related to the property.
-        /// </summary>
-        [XmlElement("timestamp")]
-        public DateTime? Timestamp {
-            get {
-                return timestampField;
-            } 
-            set {
-                if (value != null && TimeStepSpecified) throw new Exception("Cannot set property Timestamp when property TimeStep is already set");
-                timestampField = value;
-                TimestampSpecified = (value!=null);
-                NotifyPropertyChanged("Timestamp");
-            }
-        }
-
-        private DateTime? timestampField; 
-        /// <summary>
-        /// Boolean to indicate if Timestamp has been set. Used for serialization.
-        /// </summary>
-        private Boolean TimestampSpecified = false; 
-
-        /// <summary>
-        /// The date and time related to the property.
-        /// </summary>
-        [XmlElement("timeStep")]
-        public ResqmlRefTimeStep TimeStep {
-            get {
-                return timeStepField;
-            } 
-            set {
-                if (value != null && TimestampSpecified) throw new Exception("Cannot set property TimeStep when property Timestamp is already set");
-                timeStepField = value;
-                TimeStepSpecified = (value!=null);
-                NotifyPropertyChanged("TimeStep");
-            }
-        }
-
-        private ResqmlRefTimeStep timeStepField; 
-        /// <summary>
-        /// Boolean to indicate if TimeStep has been set. Used for serialization.
-        /// </summary>
-        private Boolean TimeStepSpecified = false; 
-
-
-
-        /// <summary>
-        /// Extensions to the schema using an xsd:any construct.
-        /// </summary>
-		[XmlElement("extensionAny")]
-
-        public ExtensionAny ExtensionAny {
-            get {
-                return extensionAnyField;
-            } 
-            set {
-                extensionAnyField = value;
-                NotifyPropertyChanged("ExtensionAny");
-            }
-        }
-
-        private ExtensionAny extensionAnyField; 
-
-
-        /// <summary>
-        /// Extensions to the schema based on a name-value construct.
-        /// </summary>
-		[XmlElement("extensionNameValue")]
-
-        public List<ResqmlExtensionNameValue> ExtensionNameValue {
-            get {
-                return extensionNameValueField;
-            } 
-            set {
-                extensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-        private List<ResqmlExtensionNameValue> extensionNameValueField; 
-
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-        [XmlAttribute("uid")]
-
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
     /// Information specific to one continuous property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal 
     /// </summary>
 
@@ -15571,27 +14326,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// Captures the array of values in an XML representation.
-        /// </summary>
-        [XmlElement("xmlRepresentation")]
-        public ResqmlContinuousValues XmlRepresentation {
-            get {
-                return xmlRepresentationField;
-            } 
-            set {
-                xmlRepresentationField = value;
-                XmlRepresentationSpecified = (value!=null);
-                NotifyPropertyChanged("XmlRepresentation");
-            }
-        }
-
-        private ResqmlContinuousValues xmlRepresentationField; 
-        /// <summary>
-        /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
-        /// </summary>
-        private Boolean XmlRepresentationSpecified = false; 
-
-        /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
         [XmlElement("hdfRepresentation")]
@@ -15612,59 +14346,30 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         private Boolean HdfRepresentationSpecified = false; 
 
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the cs_resqmlAbstractValues xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousValues))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscreteValues))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractValues", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("This class represents the cs_resqmlAbstractValues xsd type.")]
-    public abstract partial class ResqmlAbstractValues : Object , INotifyPropertyChanged
-    {
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
+        /// <summary>
+        /// Captures the array of values in an XML representation.
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
+        [XmlElement("xmlRepresentation")]
+        public ResqmlContinuousValues XmlRepresentation {
+            get {
+                return xmlRepresentationField;
+            } 
+            set {
+                xmlRepresentationField = value;
+                XmlRepresentationSpecified = (value!=null);
+                NotifyPropertyChanged("XmlRepresentation");
             }
         }
-        #endregion INotifyPropertyChanged Members
+
+        private ResqmlContinuousValues xmlRepresentationField; 
+        /// <summary>
+        /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
+        /// </summary>
+        private Boolean XmlRepresentationSpecified = false; 
+
+
+
+
 
     } //here
 
@@ -15692,6 +14397,27 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
+        /// Defines a space delimited list of byte values.
+        /// </summary>
+        [XmlElement("byteValues")]
+        public ByteValueList ByteValues {
+            get {
+                return byteValuesField;
+            } 
+            set {
+                byteValuesField = value;
+                ByteValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ByteValues");
+            }
+        }
+
+        private ByteValueList byteValuesField; 
+        /// <summary>
+        /// Boolean to indicate if ByteValues has been set. Used for serialization.
+        /// </summary>
+        private Boolean ByteValuesSpecified = false; 
+
+        /// <summary>
         /// Defines a space delimited list of double values.
         /// </summary>
         [XmlElement("doubleValues")]
@@ -15711,6 +14437,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if DoubleValues has been set. Used for serialization.
         /// </summary>
         private Boolean DoubleValuesSpecified = false; 
+
+        /// <summary>
+        /// Defines a space delimited list of float values.
+        /// </summary>
+        [XmlElement("floatValues")]
+        public FloatValueList FloatValues {
+            get {
+                return floatValuesField;
+            } 
+            set {
+                floatValuesField = value;
+                FloatValuesSpecified = (value!=null);
+                NotifyPropertyChanged("FloatValues");
+            }
+        }
+
+        private FloatValueList floatValuesField; 
+        /// <summary>
+        /// Boolean to indicate if FloatValues has been set. Used for serialization.
+        /// </summary>
+        private Boolean FloatValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of int values.
@@ -15734,48 +14481,6 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean IntValuesSpecified = false; 
 
         /// <summary>
-        /// Defines a space delimited list of short values.
-        /// </summary>
-        [XmlElement("shortValues")]
-        public ShortValueList ShortValues {
-            get {
-                return shortValuesField;
-            } 
-            set {
-                shortValuesField = value;
-                ShortValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ShortValues");
-            }
-        }
-
-        private ShortValueList shortValuesField; 
-        /// <summary>
-        /// Boolean to indicate if ShortValues has been set. Used for serialization.
-        /// </summary>
-        private Boolean ShortValuesSpecified = false; 
-
-        /// <summary>
-        /// Defines a space delimited list of byte values.
-        /// </summary>
-        [XmlElement("byteValues")]
-        public ByteValueList ByteValues {
-            get {
-                return byteValuesField;
-            } 
-            set {
-                byteValuesField = value;
-                ByteValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ByteValues");
-            }
-        }
-
-        private ByteValueList byteValuesField; 
-        /// <summary>
-        /// Boolean to indicate if ByteValues has been set. Used for serialization.
-        /// </summary>
-        private Boolean ByteValuesSpecified = false; 
-
-        /// <summary>
         /// Defines a space delimited list of long values.
         /// </summary>
         [XmlElement("longValues")]
@@ -15797,25 +14502,25 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean LongValuesSpecified = false; 
 
         /// <summary>
-        /// Defines a space delimited list of float values.
+        /// Defines a space delimited list of short values.
         /// </summary>
-        [XmlElement("floatValues")]
-        public FloatValueList FloatValues {
+        [XmlElement("shortValues")]
+        public ShortValueList ShortValues {
             get {
-                return floatValuesField;
+                return shortValuesField;
             } 
             set {
-                floatValuesField = value;
-                FloatValuesSpecified = (value!=null);
-                NotifyPropertyChanged("FloatValues");
+                shortValuesField = value;
+                ShortValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ShortValues");
             }
         }
 
-        private FloatValueList floatValuesField; 
+        private ShortValueList shortValuesField; 
         /// <summary>
-        /// Boolean to indicate if FloatValues has been set. Used for serialization.
+        /// Boolean to indicate if ShortValues has been set. Used for serialization.
         /// </summary>
-        private Boolean FloatValuesSpecified = false; 
+        private Boolean ShortValuesSpecified = false; 
 
 
 
@@ -16363,6 +15068,56 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// This class represents the cs_resqmlAbstractValues xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscreteValues))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousValues))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractValues", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("This class represents the cs_resqmlAbstractValues xsd type.")]
+    public abstract partial class ResqmlAbstractValues : Object , INotifyPropertyChanged
+    {
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// Defines the whole numbered arrays.
     /// </summary>
 
@@ -16400,27 +15155,6 @@ namespace Energistics.DataAccess.RESQML110
         private Boolean ByteValuesSpecified = false; 
 
         /// <summary>
-        /// Defines a space delimited list of long values.
-        /// </summary>
-        [XmlElement("longValues")]
-        public LongValueList LongValues {
-            get {
-                return longValuesField;
-            } 
-            set {
-                longValuesField = value;
-                LongValuesSpecified = (value!=null);
-                NotifyPropertyChanged("LongValues");
-            }
-        }
-
-        private LongValueList longValuesField; 
-        /// <summary>
-        /// Boolean to indicate if LongValues has been set. Used for serialization.
-        /// </summary>
-        private Boolean LongValuesSpecified = false; 
-
-        /// <summary>
         /// Defines a space delimited list of int values.
         /// </summary>
         [XmlElement("intValues")]
@@ -16440,6 +15174,27 @@ namespace Energistics.DataAccess.RESQML110
         /// Boolean to indicate if IntValues has been set. Used for serialization.
         /// </summary>
         private Boolean IntValuesSpecified = false; 
+
+        /// <summary>
+        /// Defines a space delimited list of long values.
+        /// </summary>
+        [XmlElement("longValues")]
+        public LongValueList LongValues {
+            get {
+                return longValuesField;
+            } 
+            set {
+                longValuesField = value;
+                LongValuesSpecified = (value!=null);
+                NotifyPropertyChanged("LongValues");
+            }
+        }
+
+        private LongValueList longValuesField; 
+        /// <summary>
+        /// Boolean to indicate if LongValues has been set. Used for serialization.
+        /// </summary>
+        private Boolean LongValuesSpecified = false; 
 
         /// <summary>
         /// Defines a space delimited list of short values.
@@ -16465,6 +15220,384 @@ namespace Energistics.DataAccess.RESQML110
 
 
 
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the cs_resqmlAbstractPropertyValues xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlCategoricalPropertyValues))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscretePropertyValues))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousPropertyValues))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractPropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("This class represents the cs_resqmlAbstractPropertyValues xsd type.")]
+    public abstract partial class ResqmlAbstractPropertyValues : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// title property
+        /// </summary>
+		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Title {
+            get {
+                return titleField;
+            } 
+            set {
+                titleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private DublinCoreString titleField; 
+
+
+        /// <summary>
+        /// creator property
+        /// </summary>
+		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Creator {
+            get {
+                return creatorField;
+            } 
+            set {
+                creatorField = value;
+                NotifyPropertyChanged("Creator");
+            }
+        }
+
+        private DublinCoreString creatorField; 
+
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private DublinCoreString descriptionField; 
+
+
+        /// <summary>
+        /// publisher property
+        /// </summary>
+		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Publisher {
+            get {
+                return publisherField;
+            } 
+            set {
+                publisherField = value;
+                NotifyPropertyChanged("Publisher");
+            }
+        }
+
+        private DublinCoreString publisherField; 
+
+
+        /// <summary>
+        /// contributor property
+        /// </summary>
+		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Contributor {
+            get {
+                return contributorField;
+            } 
+            set {
+                contributorField = value;
+                NotifyPropertyChanged("Contributor");
+            }
+        }
+
+        private DublinCoreString contributorField; 
+
+
+        /// <summary>
+        /// created property
+        /// </summary>
+		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Created {
+            get {
+                return createdField;
+            } 
+            set {
+                createdField = value;
+                NotifyPropertyChanged("Created");
+            }
+        }
+
+        private AbstractW3CDTF createdField; 
+
+
+        /// <summary>
+        /// modified property
+        /// </summary>
+		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Modified {
+            get {
+                return modifiedField;
+            } 
+            set {
+                modifiedField = value;
+                NotifyPropertyChanged("Modified");
+            }
+        }
+
+        private AbstractW3CDTF modifiedField; 
+
+
+        /// <summary>
+        /// source property
+        /// </summary>
+		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
+
+        public String Source {
+            get {
+                return sourceField;
+            } 
+            set {
+                sourceField = value;
+                NotifyPropertyChanged("Source");
+            }
+        }
+
+        private String sourceField; 
+
+
+        /// <summary>
+        /// bibliographicCitation property
+        /// </summary>
+		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
+
+        public List<DublinCoreString> BibliographicCitation {
+            get {
+                return bibliographicCitationField;
+            } 
+            set {
+                bibliographicCitationField = value;
+                NotifyPropertyChanged("BibliographicCitation");
+            }
+        }
+
+        private List<DublinCoreString> bibliographicCitationField; 
+
+
+        /// <summary>
+        /// The standard RESQML property which represents these values. For properties which have a unit of measure, this kind will directly or indirectly specify the single unit of measure which must be utilized for the property values.
+        /// </summary>
+        [XmlElement("resqmlKind")]
+        public String ResqmlKind {
+            get {
+                return resqmlKindField;
+            } 
+            set {
+                if (value != null && LocalKindSpecified) throw new Exception("Cannot set property ResqmlKind when property LocalKind is already set");
+                resqmlKindField = value;
+                ResqmlKindSpecified = (value!=null);
+                NotifyPropertyChanged("ResqmlKind");
+            }
+        }
+
+        private String resqmlKindField; 
+        /// <summary>
+        /// Boolean to indicate if ResqmlKind has been set. Used for serialization.
+        /// </summary>
+        private Boolean ResqmlKindSpecified = false; 
+
+        /// <summary>
+        /// A pointer to the locally defined property which represents these values. Note that all local kinds must directly or indirectly be specialized from a standard RESQML kind.
+        /// </summary>
+        [XmlElement("localKind")]
+        public RefGlobalNameString LocalKind {
+            get {
+                return localKindField;
+            } 
+            set {
+                if (value != null && ResqmlKindSpecified) throw new Exception("Cannot set property LocalKind when property ResqmlKind is already set");
+                localKindField = value;
+                LocalKindSpecified = (value!=null);
+                NotifyPropertyChanged("LocalKind");
+            }
+        }
+
+        private RefGlobalNameString localKindField; 
+        /// <summary>
+        /// Boolean to indicate if LocalKind has been set. Used for serialization.
+        /// </summary>
+        private Boolean LocalKindSpecified = false; 
+
+
+
+        /// <summary>
+        /// Defines how the data values are associated with the object.
+        /// </summary>
+		[XmlElement("propertyAttachment")]
+
+        public PropertyAttachment? PropertyAttachment {
+            get {
+                return propertyAttachmentField;
+            } 
+            set {
+                propertyAttachmentField = value;
+                NotifyPropertyChanged("PropertyAttachment");
+            }
+        }
+
+        private PropertyAttachment? propertyAttachmentField; 
+
+
+        /// <summary>
+        /// The date and time related to the property.
+        /// </summary>
+        [XmlElement("timestamp")]
+        public DateTime? Timestamp {
+            get {
+                return timestampField;
+            } 
+            set {
+                if (value != null && TimeStepSpecified) throw new Exception("Cannot set property Timestamp when property TimeStep is already set");
+                timestampField = value;
+                TimestampSpecified = (value!=null);
+                NotifyPropertyChanged("Timestamp");
+            }
+        }
+
+        private DateTime? timestampField; 
+        /// <summary>
+        /// Boolean to indicate if Timestamp has been set. Used for serialization.
+        /// </summary>
+        private Boolean TimestampSpecified = false; 
+
+        /// <summary>
+        /// The date and time related to the property.
+        /// </summary>
+        [XmlElement("timeStep")]
+        public ResqmlRefTimeStep TimeStep {
+            get {
+                return timeStepField;
+            } 
+            set {
+                if (value != null && TimestampSpecified) throw new Exception("Cannot set property TimeStep when property Timestamp is already set");
+                timeStepField = value;
+                TimeStepSpecified = (value!=null);
+                NotifyPropertyChanged("TimeStep");
+            }
+        }
+
+        private ResqmlRefTimeStep timeStepField; 
+        /// <summary>
+        /// Boolean to indicate if TimeStep has been set. Used for serialization.
+        /// </summary>
+        private Boolean TimeStepSpecified = false; 
+
+
+
+        /// <summary>
+        /// Extensions to the schema using an xsd:any construct.
+        /// </summary>
+		[XmlElement("extensionAny")]
+
+        public ExtensionAny ExtensionAny {
+            get {
+                return extensionAnyField;
+            } 
+            set {
+                extensionAnyField = value;
+                NotifyPropertyChanged("ExtensionAny");
+            }
+        }
+
+        private ExtensionAny extensionAnyField; 
+
+
+        /// <summary>
+        /// Extensions to the schema based on a name-value construct.
+        /// </summary>
+		[XmlElement("extensionNameValue")]
+
+        public List<ResqmlExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+        private List<ResqmlExtensionNameValue> extensionNameValueField; 
+
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+        [XmlAttribute("uid")]
+
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -16717,27 +15850,6 @@ namespace Energistics.DataAccess.RESQML110
 
 
         /// <summary>
-        /// Captures the array of values in an XML representation.
-        /// </summary>
-        [XmlElement("xmlRepresentation")]
-        public ResqmlDiscreteValues XmlRepresentation {
-            get {
-                return xmlRepresentationField;
-            } 
-            set {
-                xmlRepresentationField = value;
-                XmlRepresentationSpecified = (value!=null);
-                NotifyPropertyChanged("XmlRepresentation");
-            }
-        }
-
-        private ResqmlDiscreteValues xmlRepresentationField; 
-        /// <summary>
-        /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
-        /// </summary>
-        private Boolean XmlRepresentationSpecified = false; 
-
-        /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
         [XmlElement("hdfRepresentation")]
@@ -16758,9 +15870,322 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         private Boolean HdfRepresentationSpecified = false; 
 
+        /// <summary>
+        /// Captures the array of values in an XML representation.
+        /// </summary>
+        [XmlElement("xmlRepresentation")]
+        public ResqmlDiscreteValues XmlRepresentation {
+            get {
+                return xmlRepresentationField;
+            } 
+            set {
+                xmlRepresentationField = value;
+                XmlRepresentationSpecified = (value!=null);
+                NotifyPropertyChanged("XmlRepresentation");
+            }
+        }
+
+        private ResqmlDiscreteValues xmlRepresentationField; 
+        /// <summary>
+        /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
+        /// </summary>
+        private Boolean XmlRepresentationSpecified = false; 
 
 
 
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the cs_resqmlAbstractFeatureRepresentation xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPillarSetRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlWellMarkerRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHybridGridRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPointSetRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlTriangulatedRepresentation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlGrid2dRepresentation))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractFeatureRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("This class represents the cs_resqmlAbstractFeatureRepresentation xsd type.")]
+    public abstract partial class ResqmlAbstractFeatureRepresentation : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// title property
+        /// </summary>
+		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Title {
+            get {
+                return titleField;
+            } 
+            set {
+                titleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private DublinCoreString titleField; 
+
+
+        /// <summary>
+        /// creator property
+        /// </summary>
+		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Creator {
+            get {
+                return creatorField;
+            } 
+            set {
+                creatorField = value;
+                NotifyPropertyChanged("Creator");
+            }
+        }
+
+        private DublinCoreString creatorField; 
+
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private DublinCoreString descriptionField; 
+
+
+        /// <summary>
+        /// publisher property
+        /// </summary>
+		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Publisher {
+            get {
+                return publisherField;
+            } 
+            set {
+                publisherField = value;
+                NotifyPropertyChanged("Publisher");
+            }
+        }
+
+        private DublinCoreString publisherField; 
+
+
+        /// <summary>
+        /// contributor property
+        /// </summary>
+		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Contributor {
+            get {
+                return contributorField;
+            } 
+            set {
+                contributorField = value;
+                NotifyPropertyChanged("Contributor");
+            }
+        }
+
+        private DublinCoreString contributorField; 
+
+
+        /// <summary>
+        /// created property
+        /// </summary>
+		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Created {
+            get {
+                return createdField;
+            } 
+            set {
+                createdField = value;
+                NotifyPropertyChanged("Created");
+            }
+        }
+
+        private AbstractW3CDTF createdField; 
+
+
+        /// <summary>
+        /// modified property
+        /// </summary>
+		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Modified {
+            get {
+                return modifiedField;
+            } 
+            set {
+                modifiedField = value;
+                NotifyPropertyChanged("Modified");
+            }
+        }
+
+        private AbstractW3CDTF modifiedField; 
+
+
+        /// <summary>
+        /// source property
+        /// </summary>
+		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
+
+        public String Source {
+            get {
+                return sourceField;
+            } 
+            set {
+                sourceField = value;
+                NotifyPropertyChanged("Source");
+            }
+        }
+
+        private String sourceField; 
+
+
+        /// <summary>
+        /// bibliographicCitation property
+        /// </summary>
+		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
+
+        public List<DublinCoreString> BibliographicCitation {
+            get {
+                return bibliographicCitationField;
+            } 
+            set {
+                bibliographicCitationField = value;
+                NotifyPropertyChanged("BibliographicCitation");
+            }
+        }
+
+        private List<DublinCoreString> bibliographicCitationField; 
+
+
+        /// <summary>
+        /// A pointer to the local 3D CRS which represents the coordinates in all patchs. This must point to a child of spatialReferenceSet.
+        /// </summary>
+		[XmlElement("local3dCRS")]
+
+        public RefGlobalNameString Local3dCRS {
+            get {
+                return local3dCRSField;
+            } 
+            set {
+                local3dCRSField = value;
+                NotifyPropertyChanged("Local3dCRS");
+            }
+        }
+
+        private RefGlobalNameString local3dCRSField; 
+
+
+        /// <summary>
+        /// Extensions to the schema using an xsd:any construct.
+        /// </summary>
+		[XmlElement("extensionAny")]
+
+        public ExtensionAny ExtensionAny {
+            get {
+                return extensionAnyField;
+            } 
+            set {
+                extensionAnyField = value;
+                NotifyPropertyChanged("ExtensionAny");
+            }
+        }
+
+        private ExtensionAny extensionAnyField; 
+
+
+        /// <summary>
+        /// Extensions to the schema based on a name-value construct.
+        /// </summary>
+		[XmlElement("extensionNameValue")]
+
+        public List<ResqmlExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+        private List<ResqmlExtensionNameValue> extensionNameValueField; 
+
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+        [XmlAttribute("uid")]
+
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -17761,9 +17186,9 @@ namespace Energistics.DataAccess.RESQML110
                 return triangulatedHdfGroupField;
             } 
             set {
-                if (value != null && TriangleNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property TriangleNodeIndexSet is already set");
                 if (value != null && Point3dSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property Point3dSet is already set");
                 if (value != null && SplitEdgeNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property SplitEdgeNodeIndexSet is already set");
+                if (value != null && TriangleNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property TriangleNodeIndexSet is already set");
                 triangulatedHdfGroupField = value;
                 TriangulatedHdfGroupSpecified = (value!=null);
                 NotifyPropertyChanged("TriangulatedHdfGroup");
@@ -18373,6 +17798,272 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// This class represents the cs_resqmlAbstractFeatureInterpretation xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlFaultInterpretation))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizonInterpretation))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractFeatureInterpretation", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("This class represents the cs_resqmlAbstractFeatureInterpretation xsd type.")]
+    public abstract partial class ResqmlAbstractFeatureInterpretation : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// title property
+        /// </summary>
+		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Title {
+            get {
+                return titleField;
+            } 
+            set {
+                titleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private DublinCoreString titleField; 
+
+
+        /// <summary>
+        /// creator property
+        /// </summary>
+		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Creator {
+            get {
+                return creatorField;
+            } 
+            set {
+                creatorField = value;
+                NotifyPropertyChanged("Creator");
+            }
+        }
+
+        private DublinCoreString creatorField; 
+
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private DublinCoreString descriptionField; 
+
+
+        /// <summary>
+        /// publisher property
+        /// </summary>
+		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Publisher {
+            get {
+                return publisherField;
+            } 
+            set {
+                publisherField = value;
+                NotifyPropertyChanged("Publisher");
+            }
+        }
+
+        private DublinCoreString publisherField; 
+
+
+        /// <summary>
+        /// contributor property
+        /// </summary>
+		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Contributor {
+            get {
+                return contributorField;
+            } 
+            set {
+                contributorField = value;
+                NotifyPropertyChanged("Contributor");
+            }
+        }
+
+        private DublinCoreString contributorField; 
+
+
+        /// <summary>
+        /// created property
+        /// </summary>
+		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Created {
+            get {
+                return createdField;
+            } 
+            set {
+                createdField = value;
+                NotifyPropertyChanged("Created");
+            }
+        }
+
+        private AbstractW3CDTF createdField; 
+
+
+        /// <summary>
+        /// modified property
+        /// </summary>
+		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Modified {
+            get {
+                return modifiedField;
+            } 
+            set {
+                modifiedField = value;
+                NotifyPropertyChanged("Modified");
+            }
+        }
+
+        private AbstractW3CDTF modifiedField; 
+
+
+        /// <summary>
+        /// source property
+        /// </summary>
+		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
+
+        public String Source {
+            get {
+                return sourceField;
+            } 
+            set {
+                sourceField = value;
+                NotifyPropertyChanged("Source");
+            }
+        }
+
+        private String sourceField; 
+
+
+        /// <summary>
+        /// bibliographicCitation property
+        /// </summary>
+		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
+
+        public List<DublinCoreString> BibliographicCitation {
+            get {
+                return bibliographicCitationField;
+            } 
+            set {
+                bibliographicCitationField = value;
+                NotifyPropertyChanged("BibliographicCitation");
+            }
+        }
+
+        private List<DublinCoreString> bibliographicCitationField; 
+
+
+        /// <summary>
+        /// Extensions to the schema using an xsd:any construct.
+        /// </summary>
+		[XmlElement("extensionAny")]
+
+        public ExtensionAny ExtensionAny {
+            get {
+                return extensionAnyField;
+            } 
+            set {
+                extensionAnyField = value;
+                NotifyPropertyChanged("ExtensionAny");
+            }
+        }
+
+        private ExtensionAny extensionAnyField; 
+
+
+        /// <summary>
+        /// Extensions to the schema based on a name-value construct.
+        /// </summary>
+		[XmlElement("extensionNameValue")]
+
+        public List<ResqmlExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+        private List<ResqmlExtensionNameValue> extensionNameValueField; 
+
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+        [XmlAttribute("uid")]
+
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// One interpretation of the geometry of a fault. Multiple representations are supported but all representations must be either in time or in depth. That is, a mixture of time and depth representations is not allowed. At least one representation is required. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
 
@@ -18479,6 +18170,272 @@ namespace Energistics.DataAccess.RESQML110
 
 
 
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the cs_resqmlAbstractGeologicFeature xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlFault))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizon))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractGeologicFeature", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("This class represents the cs_resqmlAbstractGeologicFeature xsd type.")]
+    public abstract partial class ResqmlAbstractGeologicFeature : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// title property
+        /// </summary>
+		[XmlElement("title", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Title {
+            get {
+                return titleField;
+            } 
+            set {
+                titleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private DublinCoreString titleField; 
+
+
+        /// <summary>
+        /// creator property
+        /// </summary>
+		[XmlElement("creator", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Creator {
+            get {
+                return creatorField;
+            } 
+            set {
+                creatorField = value;
+                NotifyPropertyChanged("Creator");
+            }
+        }
+
+        private DublinCoreString creatorField; 
+
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[XmlElement("description", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private DublinCoreString descriptionField; 
+
+
+        /// <summary>
+        /// publisher property
+        /// </summary>
+		[XmlElement("publisher", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Publisher {
+            get {
+                return publisherField;
+            } 
+            set {
+                publisherField = value;
+                NotifyPropertyChanged("Publisher");
+            }
+        }
+
+        private DublinCoreString publisherField; 
+
+
+        /// <summary>
+        /// contributor property
+        /// </summary>
+		[XmlElement("contributor", Namespace="http://purl.org/dc/terms/")]
+
+        public DublinCoreString Contributor {
+            get {
+                return contributorField;
+            } 
+            set {
+                contributorField = value;
+                NotifyPropertyChanged("Contributor");
+            }
+        }
+
+        private DublinCoreString contributorField; 
+
+
+        /// <summary>
+        /// created property
+        /// </summary>
+		[XmlElement("created", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Created {
+            get {
+                return createdField;
+            } 
+            set {
+                createdField = value;
+                NotifyPropertyChanged("Created");
+            }
+        }
+
+        private AbstractW3CDTF createdField; 
+
+
+        /// <summary>
+        /// modified property
+        /// </summary>
+		[XmlElement("modified", Namespace="http://purl.org/dc/terms/")]
+
+        public AbstractW3CDTF Modified {
+            get {
+                return modifiedField;
+            } 
+            set {
+                modifiedField = value;
+                NotifyPropertyChanged("Modified");
+            }
+        }
+
+        private AbstractW3CDTF modifiedField; 
+
+
+        /// <summary>
+        /// source property
+        /// </summary>
+		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
+
+        public String Source {
+            get {
+                return sourceField;
+            } 
+            set {
+                sourceField = value;
+                NotifyPropertyChanged("Source");
+            }
+        }
+
+        private String sourceField; 
+
+
+        /// <summary>
+        /// bibliographicCitation property
+        /// </summary>
+		[XmlElement("bibliographicCitation", Namespace="http://purl.org/dc/terms/")]
+
+        public List<DublinCoreString> BibliographicCitation {
+            get {
+                return bibliographicCitationField;
+            } 
+            set {
+                bibliographicCitationField = value;
+                NotifyPropertyChanged("BibliographicCitation");
+            }
+        }
+
+        private List<DublinCoreString> bibliographicCitationField; 
+
+
+        /// <summary>
+        /// Extensions to the schema using an xsd:any construct.
+        /// </summary>
+		[XmlElement("extensionAny")]
+
+        public ExtensionAny ExtensionAny {
+            get {
+                return extensionAnyField;
+            } 
+            set {
+                extensionAnyField = value;
+                NotifyPropertyChanged("ExtensionAny");
+            }
+        }
+
+        private ExtensionAny extensionAnyField; 
+
+
+        /// <summary>
+        /// Extensions to the schema based on a name-value construct.
+        /// </summary>
+		[XmlElement("extensionNameValue")]
+
+        public List<ResqmlExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+        private List<ResqmlExtensionNameValue> extensionNameValueField; 
+
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+        [XmlAttribute("uid")]
+
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
 
     } //here
 
@@ -20274,6 +20231,1222 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
+    /// An IJK structured root geometry of a volume This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal 
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlRootIJKGrid", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("An IJK structured root geometry of a volume This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal ")]
+    public partial class ResqmlRootIJKGrid : ResqmlAbstractIJKGrid , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// Defines a Local Grid related to this root grid. A local grid may be defined from a root grid or another local grid.
+        /// </summary>
+		[XmlElement("localIJKGrid")]
+
+        public List<ResqmlLocalIJKGrid> LocalIJKGrid {
+            get {
+                return localIJKGridField;
+            } 
+            set {
+                localIJKGridField = value;
+                NotifyPropertyChanged("LocalIJKGrid");
+            }
+        }
+
+        private List<ResqmlLocalIJKGrid> localIJKGridField; 
+
+
+        /// <summary>
+        /// A 3D corner point grid representation using explicit nodes on coordinate lines.
+        /// </summary>
+		[XmlElement("explicitGridRepresentation")]
+
+        public ResqmlExplicitCornerPointGridRepresentation ExplicitGridRepresentation {
+            get {
+                return explicitGridRepresentationField;
+            } 
+            set {
+                explicitGridRepresentationField = value;
+                NotifyPropertyChanged("ExplicitGridRepresentation");
+            }
+        }
+
+        private ResqmlExplicitCornerPointGridRepresentation explicitGridRepresentationField; 
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// An IJK structured local geometry of a volume. This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal 
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlLocalIJKGrid", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("An IJK structured local geometry of a volume. This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal ")]
+    public partial class ResqmlLocalIJKGrid : ResqmlAbstractIJKGrid , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// A pointer to the parent grid that is being locally redefined.
+        /// </summary>
+		[XmlElement("parentGrid")]
+
+        public RefGlobalNameString ParentGrid {
+            get {
+                return parentGridField;
+            } 
+            set {
+                parentGridField = value;
+                NotifyPropertyChanged("ParentGrid");
+            }
+        }
+
+        private RefGlobalNameString parentGridField; 
+
+
+        /// <summary>
+        /// The beginning cell of the redefinition window in the I direction. The "redefinition window" defines the cells to be replaced in the parent grid.
+        /// </summary>
+		[XmlElement("parentIMin")]
+
+        public Int32? ParentIMin {
+            get {
+                return parentIMinField;
+            } 
+            set {
+                parentIMinField = value;
+                NotifyPropertyChanged("ParentIMin");
+            }
+        }
+
+        private Int32? parentIMinField; 
+
+
+        /// <summary>
+        /// The ending cell of the redefinition window in I direction.
+        /// </summary>
+		[XmlElement("parentIMax")]
+
+        public Int32? ParentIMax {
+            get {
+                return parentIMaxField;
+            } 
+            set {
+                parentIMaxField = value;
+                NotifyPropertyChanged("ParentIMax");
+            }
+        }
+
+        private Int32? parentIMaxField; 
+
+
+        /// <summary>
+        /// The beginning cell of the redefinition window in the J direction. The "redefinition window" defines the cells to be replaced in the parent grid.
+        /// </summary>
+		[XmlElement("parentJMin")]
+
+        public Int32? ParentJMin {
+            get {
+                return parentJMinField;
+            } 
+            set {
+                parentJMinField = value;
+                NotifyPropertyChanged("ParentJMin");
+            }
+        }
+
+        private Int32? parentJMinField; 
+
+
+        /// <summary>
+        /// The ending cell of the redefinition window in J direction.
+        /// </summary>
+		[XmlElement("parentJMax")]
+
+        public Int32? ParentJMax {
+            get {
+                return parentJMaxField;
+            } 
+            set {
+                parentJMaxField = value;
+                NotifyPropertyChanged("ParentJMax");
+            }
+        }
+
+        private Int32? parentJMaxField; 
+
+
+        /// <summary>
+        /// The beginning cell of the redefinition window in the K direction. The "redefinition window" defines the cells to be replaced in the parent grid.
+        /// </summary>
+		[XmlElement("parentKMin")]
+
+        public Int32? ParentKMin {
+            get {
+                return parentKMinField;
+            } 
+            set {
+                parentKMinField = value;
+                NotifyPropertyChanged("ParentKMin");
+            }
+        }
+
+        private Int32? parentKMinField; 
+
+
+        /// <summary>
+        /// The ending cell of the redefinition window in K direction.
+        /// </summary>
+		[XmlElement("parentKMax")]
+
+        public Int32? ParentKMax {
+            get {
+                return parentKMaxField;
+            } 
+            set {
+                parentKMaxField = value;
+                NotifyPropertyChanged("ParentKMax");
+            }
+        }
+
+        private Int32? parentKMaxField; 
+
+
+        /// <summary>
+        /// A 3D corner point grid representation using explicit nodes on coordinate lines.
+        /// </summary>
+        [XmlElement("explicitCornerPointGrid")]
+        public ResqmlExplicitCornerPointGridRepresentation ExplicitCornerPointGrid {
+            get {
+                return explicitCornerPointGridField;
+            } 
+            set {
+                explicitCornerPointGridField = value;
+                ExplicitCornerPointGridSpecified = (value!=null);
+                NotifyPropertyChanged("ExplicitCornerPointGrid");
+            }
+        }
+
+        private ResqmlExplicitCornerPointGridRepresentation explicitCornerPointGridField; 
+        /// <summary>
+        /// Boolean to indicate if ExplicitCornerPointGrid has been set. Used for serialization.
+        /// </summary>
+        private Boolean ExplicitCornerPointGridSpecified = false; 
+
+        /// <summary>
+        /// Structured IJK grid refinement.
+        /// </summary>
+        [XmlElement("ijkGridRefinement")]
+        public ResqmlIJKGridRefinement IjkGridRefinement {
+            get {
+                return ijkGridRefinementField;
+            } 
+            set {
+                ijkGridRefinementField = value;
+                IjkGridRefinementSpecified = (value!=null);
+                NotifyPropertyChanged("IjkGridRefinement");
+            }
+        }
+
+        private ResqmlIJKGridRefinement ijkGridRefinementField; 
+        /// <summary>
+        /// Boolean to indicate if IjkGridRefinement has been set. Used for serialization.
+        /// </summary>
+        private Boolean IjkGridRefinementSpecified = false; 
+
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// An i,j,k based corner point grid which uses i,j coordinate lines and k nodes to define the geometry. This may be used to define the overall geometry of a grid or may be used to define Local Grid Refinement.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlExplicitCornerPointGridRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("An i,j,k based corner point grid which uses i,j coordinate lines and k nodes to define the geometry. This may be used to define the overall geometry of a grid or may be used to define Local Grid Refinement.")]
+    public partial class ResqmlExplicitCornerPointGridRepresentation : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// A textual description of the grid.
+        /// </summary>
+		[XmlElement("description")]
+
+        public String Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String descriptionField; 
+
+
+        /// <summary>
+        /// A pointer to the localCRS which represents the 3D coordinates in this grid.
+        /// </summary>
+		[XmlElement("local3dCRS")]
+
+        public RefGlobalNameString Local3dCRS {
+            get {
+                return local3dCRSField;
+            } 
+            set {
+                local3dCRSField = value;
+                NotifyPropertyChanged("Local3dCRS");
+            }
+        }
+
+        private RefGlobalNameString local3dCRSField; 
+
+
+        /// <summary>
+        /// Coordinate line node geometries.
+        /// </summary>
+		[XmlElement("ijExplicitNodeSet")]
+
+        public ResqmlExplicitNodeSet IjExplicitNodeSet {
+            get {
+                return ijExplicitNodeSetField;
+            } 
+            set {
+                ijExplicitNodeSetField = value;
+                NotifyPropertyChanged("IjExplicitNodeSet");
+            }
+        }
+
+        private ResqmlExplicitNodeSet ijExplicitNodeSetField; 
+
+
+        /// <summary>
+        /// Defines the geometry of split nodes. The geometry is defined independent of coordinate lines.
+        /// </summary>
+		[XmlElement("ijkSplitNodeSet")]
+
+        public ResqmlSplitNodeSet IjkSplitNodeSet {
+            get {
+                return ijkSplitNodeSetField;
+            } 
+            set {
+                ijkSplitNodeSetField = value;
+                NotifyPropertyChanged("IjkSplitNodeSet");
+            }
+        }
+
+        private ResqmlSplitNodeSet ijkSplitNodeSetField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// Defines explicit nodes on coordinate lines.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlExplicitNodeSet", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("Defines explicit nodes on coordinate lines.")]
+    public partial class ResqmlExplicitNodeSet : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// Defines the index locations of one additional (split) coordinate line. The reference value refers to the order in the lineSet aggregate. If you set this property, you must also set LineSet.
+        /// </summary>
+        [XmlElement("splitLineReference")]
+        public ResqmlSplitLineReference[] SplitLineReference {
+            get {
+                return splitLineReferenceField;
+            } 
+            set {
+                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property SplitLineReference when property IjkGridHdfGroup is already set");
+                splitLineReferenceField = value;
+                SplitLineReferenceSpecified = (value!=null);
+                NotifyPropertyChanged("SplitLineReference");
+            }
+        }
+
+        private ResqmlSplitLineReference[] splitLineReferenceField; 
+        /// <summary>
+        /// Boolean to indicate if SplitLineReference has been set. Used for serialization.
+        /// </summary>
+        private Boolean SplitLineReferenceSpecified = false; 
+
+        /// <summary>
+        /// Defines a set of node points on coordinate lines, organized by layer. There are "nk+gapCount+1" layers of nodes. Each layer has "(NI+1)*(NJ+1)+splitLineCount" node points. Here gapCount is the number of k layer gaps and splitLineCount is the number of additional DISTINCT lines. This data ordering facilitates K-slabbing of data sets and is shared between the XML and the HDF representations. In a layer, the first "(NI+1)*(NJ+1)" nodes are shared between columns of adjacent cells unless otherwise indicated. The lines are ordered according to a zero-based line_index defined by: (I-startIndexI)+(NI+1)*(J-startIndexJ) where I = I direction line coordinate for a column of cells. Minimum value=startIndexI, count=NI+1. J = J direction line coordinate for a column of cells. Minimum value=startIndexJ, count=NJ+1. The line I corresponds to the ICORN=0 side of cell I, and so the count of I is NI+1; Similarly for J. The next splitLineCount nodes are placed on the additional lines as indicated by the splitLineReferences in the order defined by the reference element in splitLineReference. The first additional line will be located at (NI+1)*(NJ+1) (assuming a zero-based index). There must be nk+gapCount+1 nodes on each line. For a line whose kind is "null" the values should be "NaN". For the additional lines, the line kind will never be "null". . If you set this property, you must also set SplitLineReference.
+        /// </summary>
+        [XmlElement("lineSet")]
+        public ResqmlPoint3dSet LineSet {
+            get {
+                return lineSetField;
+            } 
+            set {
+                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property LineSet when property IjkGridHdfGroup is already set");
+                lineSetField = value;
+                LineSetSpecified = (value!=null);
+                NotifyPropertyChanged("LineSet");
+            }
+        }
+
+        private ResqmlPoint3dSet lineSetField; 
+        /// <summary>
+        /// Boolean to indicate if LineSet has been set. Used for serialization.
+        /// </summary>
+        private Boolean LineSetSpecified = false; 
+
+        /// <summary>
+        /// Defines information related to capturing the array data in an HDF5 formatted file.
+        /// </summary>
+        [XmlElement("ijkGridHdfGroup")]
+        public ResqmlHdfGroup IjkGridHdfGroup {
+            get {
+                return ijkGridHdfGroupField;
+            } 
+            set {
+                if (value != null && LineSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property LineSet is already set");
+                if (value != null && SplitLineReferenceSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitLineReference is already set");
+                ijkGridHdfGroupField = value;
+                IjkGridHdfGroupSpecified = (value!=null);
+                NotifyPropertyChanged("IjkGridHdfGroup");
+            }
+        }
+
+        private ResqmlHdfGroup ijkGridHdfGroupField; 
+        /// <summary>
+        /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
+        /// </summary>
+        private Boolean IjkGridHdfGroupSpecified = false; 
+
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// A single split line index description. The line is at one corner of a cell.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlSplitLineReference", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("A single split line index description. The line is at one corner of a cell.")]
+    public partial class ResqmlSplitLineReference : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexI. Maximum value of ni+startIndexI-1.
+        /// </summary>
+		[XmlElement("i")]
+
+        public Int32? I {
+            get {
+                return iField;
+            } 
+            set {
+                iField = value;
+                NotifyPropertyChanged("I");
+            }
+        }
+
+        private Int32? iField; 
+
+
+        /// <summary>
+        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexJ. Maximum value of nj+startIndexJ-1.
+        /// </summary>
+		[XmlElement("j")]
+
+        public Int32? J {
+            get {
+                return jField;
+            } 
+            set {
+                jField = value;
+                NotifyPropertyChanged("J");
+            }
+        }
+
+        private Int32? jField; 
+
+
+        /// <summary>
+        /// The I direction corner coordinate for a coordinate line within a column of cells.
+        /// </summary>
+		[XmlElement("iCorn")]
+
+        public Int16? ICorn {
+            get {
+                return iCornField;
+            } 
+            set {
+                iCornField = value;
+                NotifyPropertyChanged("ICorn");
+            }
+        }
+
+        private Int16? iCornField; 
+
+
+        /// <summary>
+        /// The J direction corner coordinate for a coordinate line within a column of cells.
+        /// </summary>
+		[XmlElement("jCorn")]
+
+        public Int16? JCorn {
+            get {
+                return jCornField;
+            } 
+            set {
+                jCornField = value;
+                NotifyPropertyChanged("JCorn");
+            }
+        }
+
+        private Int16? jCornField; 
+
+
+        /// <summary>
+        /// A 0-based index into the coordinate line list. A value of zero represents the first line in the line list.
+        /// </summary>
+		[XmlElement("reference")]
+
+        public Int32? Reference {
+            get {
+                return referenceField;
+            } 
+            set {
+                referenceField = value;
+                NotifyPropertyChanged("Reference");
+            }
+        }
+
+        private Int32? referenceField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// Defines the 3D coordinates for each split node. Each node may represent part of an 8-way split.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlSplitNodeSet", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("Defines the 3D coordinates for each split node. Each node may represent part of an 8-way split.")]
+    public partial class ResqmlSplitNodeSet : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// Defines the index locations of one referenced split node. The reference value refers to the order in point3dSet. If you set this property, you must also set SplitNodeSet.
+        /// </summary>
+        [XmlElement("splitNodeReference")]
+        public ResqmlSplitNodeReference[] SplitNodeReference {
+            get {
+                return splitNodeReferenceField;
+            } 
+            set {
+                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property SplitNodeReference when property IjkGridHdfGroup is already set");
+                splitNodeReferenceField = value;
+                SplitNodeReferenceSpecified = (value!=null);
+                NotifyPropertyChanged("SplitNodeReference");
+            }
+        }
+
+        private ResqmlSplitNodeReference[] splitNodeReferenceField; 
+        /// <summary>
+        /// Boolean to indicate if SplitNodeReference has been set. Used for serialization.
+        /// </summary>
+        private Boolean SplitNodeReferenceSpecified = false; 
+
+        /// <summary>
+        /// A set of points that are split. There must be splitNodeCount points in the aggregate. If you set this property, you must also set SplitNodeReference.
+        /// </summary>
+        [XmlElement("splitNodeSet")]
+        public ResqmlPoint3dSet SplitNodeSet {
+            get {
+                return splitNodeSetField;
+            } 
+            set {
+                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property SplitNodeSet when property IjkGridHdfGroup is already set");
+                splitNodeSetField = value;
+                SplitNodeSetSpecified = (value!=null);
+                NotifyPropertyChanged("SplitNodeSet");
+            }
+        }
+
+        private ResqmlPoint3dSet splitNodeSetField; 
+        /// <summary>
+        /// Boolean to indicate if SplitNodeSet has been set. Used for serialization.
+        /// </summary>
+        private Boolean SplitNodeSetSpecified = false; 
+
+        /// <summary>
+        /// Defines information related to capturing the array data in an HDF5 formatted file.
+        /// </summary>
+        [XmlElement("ijkGridHdfGroup")]
+        public ResqmlHdfGroup IjkGridHdfGroup {
+            get {
+                return ijkGridHdfGroupField;
+            } 
+            set {
+                if (value != null && SplitNodeReferenceSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitNodeReference is already set");
+                if (value != null && SplitNodeSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitNodeSet is already set");
+                ijkGridHdfGroupField = value;
+                IjkGridHdfGroupSpecified = (value!=null);
+                NotifyPropertyChanged("IjkGridHdfGroup");
+            }
+        }
+
+        private ResqmlHdfGroup ijkGridHdfGroupField; 
+        /// <summary>
+        /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
+        /// </summary>
+        private Boolean IjkGridHdfGroupSpecified = false; 
+
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// A single split node index description. The node is at one corner of a cell.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlSplitNodeReference", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("A single split node index description. The node is at one corner of a cell.")]
+    public partial class ResqmlSplitNodeReference : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexI. Maximum value of ni+startIndexI-1.
+        /// </summary>
+		[XmlElement("i")]
+
+        public Int32? I {
+            get {
+                return iField;
+            } 
+            set {
+                iField = value;
+                NotifyPropertyChanged("I");
+            }
+        }
+
+        private Int32? iField; 
+
+
+        /// <summary>
+        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexJ. Maximum value of nj+startIndexJ-1.
+        /// </summary>
+		[XmlElement("j")]
+
+        public Int32? J {
+            get {
+                return jField;
+            } 
+            set {
+                jField = value;
+                NotifyPropertyChanged("J");
+            }
+        }
+
+        private Int32? jField; 
+
+
+        /// <summary>
+        /// The K direction cell coordinate for a column of cells. Minimum value of startIndexK. Maximum value of nj+startIndexK-1.
+        /// </summary>
+		[XmlElement("k")]
+
+        public Int32? K {
+            get {
+                return kField;
+            } 
+            set {
+                kField = value;
+                NotifyPropertyChanged("K");
+            }
+        }
+
+        private Int32? kField; 
+
+
+        /// <summary>
+        /// The I direction corner coordinate for a node within a column of cells.
+        /// </summary>
+		[XmlElement("iCorn")]
+
+        public Int16? ICorn {
+            get {
+                return iCornField;
+            } 
+            set {
+                iCornField = value;
+                NotifyPropertyChanged("ICorn");
+            }
+        }
+
+        private Int16? iCornField; 
+
+
+        /// <summary>
+        /// The J direction corner coordinate for a node within a column of cells.
+        /// </summary>
+		[XmlElement("jCorn")]
+
+        public Int16? JCorn {
+            get {
+                return jCornField;
+            } 
+            set {
+                jCornField = value;
+                NotifyPropertyChanged("JCorn");
+            }
+        }
+
+        private Int16? jCornField; 
+
+
+        /// <summary>
+        /// The K direction corner coordinate for a node within a column of cells.
+        /// </summary>
+		[XmlElement("kCorn")]
+
+        public Int16? KCorn {
+            get {
+                return kCornField;
+            } 
+            set {
+                kCornField = value;
+                NotifyPropertyChanged("KCorn");
+            }
+        }
+
+        private Int16? kCornField; 
+
+
+        /// <summary>
+        /// A 0-based index into the additional split node list. A value of zero represents the first additional node.
+        /// </summary>
+		[XmlElement("reference")]
+
+        public Int32? Reference {
+            get {
+                return referenceField;
+            } 
+            set {
+                referenceField = value;
+                NotifyPropertyChanged("Reference");
+            }
+        }
+
+        private Int32? referenceField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// Defines a local grid refinement (LGR).
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlIJKGridRefinement", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("Defines a local grid refinement (LGR).")]
+    public partial class ResqmlIJKGridRefinement : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// Defines the refinement of the parent cells in the I direction.
+        /// </summary>
+		[XmlElement("iRefine")]
+
+        public ResqmlCellDivisionWeight IRefine {
+            get {
+                return iRefineField;
+            } 
+            set {
+                iRefineField = value;
+                NotifyPropertyChanged("IRefine");
+            }
+        }
+
+        private ResqmlCellDivisionWeight iRefineField; 
+
+
+        /// <summary>
+        /// Defines the refinement of the parent cells in the J direction.
+        /// </summary>
+		[XmlElement("jRefine")]
+
+        public ResqmlCellDivisionWeight JRefine {
+            get {
+                return jRefineField;
+            } 
+            set {
+                jRefineField = value;
+                NotifyPropertyChanged("JRefine");
+            }
+        }
+
+        private ResqmlCellDivisionWeight jRefineField; 
+
+
+        /// <summary>
+        /// Defines the refinement of the parent cells in the K direction.
+        /// </summary>
+		[XmlElement("kRefine")]
+
+        public ResqmlCellDivisionWeight KRefine {
+            get {
+                return kRefineField;
+            } 
+            set {
+                kRefineField = value;
+                NotifyPropertyChanged("KRefine");
+            }
+        }
+
+        private ResqmlCellDivisionWeight kRefineField; 
+
+
+        /// <summary>
+        /// A parent cell to omit from the refinement.
+        /// </summary>
+		[XmlElement("omittedCell")]
+
+        public List<ResqmlCellIndex> OmittedCell {
+            get {
+                return omittedCellField;
+            } 
+            set {
+                omittedCellField = value;
+                NotifyPropertyChanged("OmittedCell");
+            }
+        }
+
+        private List<ResqmlCellIndex> omittedCellField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// Defines the local grid refinement (LGR) by dividing the individual cells.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlCellDivisionWeight", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("Defines the local grid refinement (LGR) by dividing the individual cells.")]
+    public partial class ResqmlCellDivisionWeight : Object , INotifyPropertyChanged
+    {
+
+
+		/// <summary>
+        /// A list that defines the number of refined cells within each target cell. The length of the list must be equal to the number of target cells in the specified direction (i.e., maxIndex-minIndex+1). The target cells are defined by a target cell window (i.e., by a minimum index and maximum index) in the parent grid. The order in the aggregate is significant. The first value represents the number of refined cells in the first target cell. The next value represents the number of refined cells in the second target cell. The number of resulting cells in specified direction is equal to the sum of this list of counts. 
+        /// </summary>
+        [XmlAttribute("count")]
+
+        public List<Int16> Count {
+            get {
+                return countField;
+            } 
+            set {
+                countField = value;
+                NotifyPropertyChanged("Count");
+            }
+        }
+
+        private List<Int16> countField; 
+
+
+		/// <summary>
+        /// A list that defines the weight to apply to each refined cell within each target cell. The length of the array must be equal to the sum of the counts in the count list. The order in the aggregate is significant. The first count(1) values represent the list of refinements for the the first target cell. The next count(2) values represent the list of refinements for the second target cell. The first weight within each refinement list applies to the lower index side of the target cell. The width of each refined cell will be proportional to the weights within each refinement list. Readers are advised to normalize the weights within each refinement list.
+        /// </summary>
+        [XmlAttribute("weight")]
+
+        public List<Single> Weight {
+            get {
+                return weightField;
+            } 
+            set {
+                weightField = value;
+                NotifyPropertyChanged("Weight");
+            }
+        }
+
+        private List<Single> weightField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// Defines the indices for one cell in a 3D grid.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlCellIndex", Namespace="http://www.resqml.org/schemas/1series")]
+
+    [Description("Defines the indices for one cell in a 3D grid.")]
+    public partial class ResqmlCellIndex : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// The I index of the cell.
+        /// </summary>
+		[XmlElement("i")]
+
+        public Int32? I {
+            get {
+                return iField;
+            } 
+            set {
+                iField = value;
+                NotifyPropertyChanged("I");
+            }
+        }
+
+        private Int32? iField; 
+
+
+        /// <summary>
+        /// The J index of the cell.
+        /// </summary>
+		[XmlElement("j")]
+
+        public Int32? J {
+            get {
+                return jField;
+            } 
+            set {
+                jField = value;
+                NotifyPropertyChanged("J");
+            }
+        }
+
+        private Int32? jField; 
+
+
+        /// <summary>
+        /// The K index of the cell.
+        /// </summary>
+		[XmlElement("k")]
+
+        public Int32? K {
+            get {
+                return kField;
+            } 
+            set {
+                kField = value;
+                NotifyPropertyChanged("K");
+            }
+        }
+
+        private Int32? kField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// This class represents the cs_resqmlAbstractIJKGrid xsd type.
     /// </summary>
 
@@ -20892,1222 +22065,6 @@ namespace Energistics.DataAccess.RESQML110
     {
 
     /// <summary>
-    /// An IJK structured root geometry of a volume This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal 
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlRootIJKGrid", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("An IJK structured root geometry of a volume This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal ")]
-    public partial class ResqmlRootIJKGrid : ResqmlAbstractIJKGrid , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// Defines a Local Grid related to this root grid. A local grid may be defined from a root grid or another local grid.
-        /// </summary>
-		[XmlElement("localIJKGrid")]
-
-        public List<ResqmlLocalIJKGrid> LocalIJKGrid {
-            get {
-                return localIJKGridField;
-            } 
-            set {
-                localIJKGridField = value;
-                NotifyPropertyChanged("LocalIJKGrid");
-            }
-        }
-
-        private List<ResqmlLocalIJKGrid> localIJKGridField; 
-
-
-        /// <summary>
-        /// A 3D corner point grid representation using explicit nodes on coordinate lines.
-        /// </summary>
-		[XmlElement("explicitGridRepresentation")]
-
-        public ResqmlExplicitCornerPointGridRepresentation ExplicitGridRepresentation {
-            get {
-                return explicitGridRepresentationField;
-            } 
-            set {
-                explicitGridRepresentationField = value;
-                NotifyPropertyChanged("ExplicitGridRepresentation");
-            }
-        }
-
-        private ResqmlExplicitCornerPointGridRepresentation explicitGridRepresentationField; 
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// An IJK structured local geometry of a volume. This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal 
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlLocalIJKGrid", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("An IJK structured local geometry of a volume. This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal ")]
-    public partial class ResqmlLocalIJKGrid : ResqmlAbstractIJKGrid , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// A pointer to the parent grid that is being locally redefined.
-        /// </summary>
-		[XmlElement("parentGrid")]
-
-        public RefGlobalNameString ParentGrid {
-            get {
-                return parentGridField;
-            } 
-            set {
-                parentGridField = value;
-                NotifyPropertyChanged("ParentGrid");
-            }
-        }
-
-        private RefGlobalNameString parentGridField; 
-
-
-        /// <summary>
-        /// The beginning cell of the redefinition window in the I direction. The "redefinition window" defines the cells to be replaced in the parent grid.
-        /// </summary>
-		[XmlElement("parentIMin")]
-
-        public Int32? ParentIMin {
-            get {
-                return parentIMinField;
-            } 
-            set {
-                parentIMinField = value;
-                NotifyPropertyChanged("ParentIMin");
-            }
-        }
-
-        private Int32? parentIMinField; 
-
-
-        /// <summary>
-        /// The ending cell of the redefinition window in I direction.
-        /// </summary>
-		[XmlElement("parentIMax")]
-
-        public Int32? ParentIMax {
-            get {
-                return parentIMaxField;
-            } 
-            set {
-                parentIMaxField = value;
-                NotifyPropertyChanged("ParentIMax");
-            }
-        }
-
-        private Int32? parentIMaxField; 
-
-
-        /// <summary>
-        /// The beginning cell of the redefinition window in the J direction. The "redefinition window" defines the cells to be replaced in the parent grid.
-        /// </summary>
-		[XmlElement("parentJMin")]
-
-        public Int32? ParentJMin {
-            get {
-                return parentJMinField;
-            } 
-            set {
-                parentJMinField = value;
-                NotifyPropertyChanged("ParentJMin");
-            }
-        }
-
-        private Int32? parentJMinField; 
-
-
-        /// <summary>
-        /// The ending cell of the redefinition window in J direction.
-        /// </summary>
-		[XmlElement("parentJMax")]
-
-        public Int32? ParentJMax {
-            get {
-                return parentJMaxField;
-            } 
-            set {
-                parentJMaxField = value;
-                NotifyPropertyChanged("ParentJMax");
-            }
-        }
-
-        private Int32? parentJMaxField; 
-
-
-        /// <summary>
-        /// The beginning cell of the redefinition window in the K direction. The "redefinition window" defines the cells to be replaced in the parent grid.
-        /// </summary>
-		[XmlElement("parentKMin")]
-
-        public Int32? ParentKMin {
-            get {
-                return parentKMinField;
-            } 
-            set {
-                parentKMinField = value;
-                NotifyPropertyChanged("ParentKMin");
-            }
-        }
-
-        private Int32? parentKMinField; 
-
-
-        /// <summary>
-        /// The ending cell of the redefinition window in K direction.
-        /// </summary>
-		[XmlElement("parentKMax")]
-
-        public Int32? ParentKMax {
-            get {
-                return parentKMaxField;
-            } 
-            set {
-                parentKMaxField = value;
-                NotifyPropertyChanged("ParentKMax");
-            }
-        }
-
-        private Int32? parentKMaxField; 
-
-
-        /// <summary>
-        /// A 3D corner point grid representation using explicit nodes on coordinate lines.
-        /// </summary>
-        [XmlElement("explicitCornerPointGrid")]
-        public ResqmlExplicitCornerPointGridRepresentation ExplicitCornerPointGrid {
-            get {
-                return explicitCornerPointGridField;
-            } 
-            set {
-                explicitCornerPointGridField = value;
-                ExplicitCornerPointGridSpecified = (value!=null);
-                NotifyPropertyChanged("ExplicitCornerPointGrid");
-            }
-        }
-
-        private ResqmlExplicitCornerPointGridRepresentation explicitCornerPointGridField; 
-        /// <summary>
-        /// Boolean to indicate if ExplicitCornerPointGrid has been set. Used for serialization.
-        /// </summary>
-        private Boolean ExplicitCornerPointGridSpecified = false; 
-
-        /// <summary>
-        /// Structured IJK grid refinement.
-        /// </summary>
-        [XmlElement("ijkGridRefinement")]
-        public ResqmlIJKGridRefinement IjkGridRefinement {
-            get {
-                return ijkGridRefinementField;
-            } 
-            set {
-                ijkGridRefinementField = value;
-                IjkGridRefinementSpecified = (value!=null);
-                NotifyPropertyChanged("IjkGridRefinement");
-            }
-        }
-
-        private ResqmlIJKGridRefinement ijkGridRefinementField; 
-        /// <summary>
-        /// Boolean to indicate if IjkGridRefinement has been set. Used for serialization.
-        /// </summary>
-        private Boolean IjkGridRefinementSpecified = false; 
-
-
-
-
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// An i,j,k based corner point grid which uses i,j coordinate lines and k nodes to define the geometry. This may be used to define the overall geometry of a grid or may be used to define Local Grid Refinement.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlExplicitCornerPointGridRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("An i,j,k based corner point grid which uses i,j coordinate lines and k nodes to define the geometry. This may be used to define the overall geometry of a grid or may be used to define Local Grid Refinement.")]
-    public partial class ResqmlExplicitCornerPointGridRepresentation : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// A textual description of the grid.
-        /// </summary>
-		[XmlElement("description")]
-
-        public String Description {
-            get {
-                return descriptionField;
-            } 
-            set {
-                descriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private String descriptionField; 
-
-
-        /// <summary>
-        /// A pointer to the localCRS which represents the 3D coordinates in this grid.
-        /// </summary>
-		[XmlElement("local3dCRS")]
-
-        public RefGlobalNameString Local3dCRS {
-            get {
-                return local3dCRSField;
-            } 
-            set {
-                local3dCRSField = value;
-                NotifyPropertyChanged("Local3dCRS");
-            }
-        }
-
-        private RefGlobalNameString local3dCRSField; 
-
-
-        /// <summary>
-        /// Coordinate line node geometries.
-        /// </summary>
-		[XmlElement("ijExplicitNodeSet")]
-
-        public ResqmlExplicitNodeSet IjExplicitNodeSet {
-            get {
-                return ijExplicitNodeSetField;
-            } 
-            set {
-                ijExplicitNodeSetField = value;
-                NotifyPropertyChanged("IjExplicitNodeSet");
-            }
-        }
-
-        private ResqmlExplicitNodeSet ijExplicitNodeSetField; 
-
-
-        /// <summary>
-        /// Defines the geometry of split nodes. The geometry is defined independent of coordinate lines.
-        /// </summary>
-		[XmlElement("ijkSplitNodeSet")]
-
-        public ResqmlSplitNodeSet IjkSplitNodeSet {
-            get {
-                return ijkSplitNodeSetField;
-            } 
-            set {
-                ijkSplitNodeSetField = value;
-                NotifyPropertyChanged("IjkSplitNodeSet");
-            }
-        }
-
-        private ResqmlSplitNodeSet ijkSplitNodeSetField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// Defines explicit nodes on coordinate lines.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlExplicitNodeSet", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("Defines explicit nodes on coordinate lines.")]
-    public partial class ResqmlExplicitNodeSet : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// Defines the index locations of one additional (split) coordinate line. The reference value refers to the order in the lineSet aggregate. If you set this property, you must also set LineSet.
-        /// </summary>
-        [XmlElement("splitLineReference")]
-        public ResqmlSplitLineReference[] SplitLineReference {
-            get {
-                return splitLineReferenceField;
-            } 
-            set {
-                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property SplitLineReference when property IjkGridHdfGroup is already set");
-                splitLineReferenceField = value;
-                SplitLineReferenceSpecified = (value!=null);
-                NotifyPropertyChanged("SplitLineReference");
-            }
-        }
-
-        private ResqmlSplitLineReference[] splitLineReferenceField; 
-        /// <summary>
-        /// Boolean to indicate if SplitLineReference has been set. Used for serialization.
-        /// </summary>
-        private Boolean SplitLineReferenceSpecified = false; 
-
-        /// <summary>
-        /// Defines a set of node points on coordinate lines, organized by layer. There are "nk+gapCount+1" layers of nodes. Each layer has "(NI+1)*(NJ+1)+splitLineCount" node points. Here gapCount is the number of k layer gaps and splitLineCount is the number of additional DISTINCT lines. This data ordering facilitates K-slabbing of data sets and is shared between the XML and the HDF representations. In a layer, the first "(NI+1)*(NJ+1)" nodes are shared between columns of adjacent cells unless otherwise indicated. The lines are ordered according to a zero-based line_index defined by: (I-startIndexI)+(NI+1)*(J-startIndexJ) where I = I direction line coordinate for a column of cells. Minimum value=startIndexI, count=NI+1. J = J direction line coordinate for a column of cells. Minimum value=startIndexJ, count=NJ+1. The line I corresponds to the ICORN=0 side of cell I, and so the count of I is NI+1; Similarly for J. The next splitLineCount nodes are placed on the additional lines as indicated by the splitLineReferences in the order defined by the reference element in splitLineReference. The first additional line will be located at (NI+1)*(NJ+1) (assuming a zero-based index). There must be nk+gapCount+1 nodes on each line. For a line whose kind is "null" the values should be "NaN". For the additional lines, the line kind will never be "null". . If you set this property, you must also set SplitLineReference.
-        /// </summary>
-        [XmlElement("lineSet")]
-        public ResqmlPoint3dSet LineSet {
-            get {
-                return lineSetField;
-            } 
-            set {
-                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property LineSet when property IjkGridHdfGroup is already set");
-                lineSetField = value;
-                LineSetSpecified = (value!=null);
-                NotifyPropertyChanged("LineSet");
-            }
-        }
-
-        private ResqmlPoint3dSet lineSetField; 
-        /// <summary>
-        /// Boolean to indicate if LineSet has been set. Used for serialization.
-        /// </summary>
-        private Boolean LineSetSpecified = false; 
-
-        /// <summary>
-        /// Defines information related to capturing the array data in an HDF5 formatted file.
-        /// </summary>
-        [XmlElement("ijkGridHdfGroup")]
-        public ResqmlHdfGroup IjkGridHdfGroup {
-            get {
-                return ijkGridHdfGroupField;
-            } 
-            set {
-                if (value != null && SplitLineReferenceSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitLineReference is already set");
-                if (value != null && LineSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property LineSet is already set");
-                ijkGridHdfGroupField = value;
-                IjkGridHdfGroupSpecified = (value!=null);
-                NotifyPropertyChanged("IjkGridHdfGroup");
-            }
-        }
-
-        private ResqmlHdfGroup ijkGridHdfGroupField; 
-        /// <summary>
-        /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
-        /// </summary>
-        private Boolean IjkGridHdfGroupSpecified = false; 
-
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// A single split line index description. The line is at one corner of a cell.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlSplitLineReference", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("A single split line index description. The line is at one corner of a cell.")]
-    public partial class ResqmlSplitLineReference : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexI. Maximum value of ni+startIndexI-1.
-        /// </summary>
-		[XmlElement("i")]
-
-        public Int32? I {
-            get {
-                return iField;
-            } 
-            set {
-                iField = value;
-                NotifyPropertyChanged("I");
-            }
-        }
-
-        private Int32? iField; 
-
-
-        /// <summary>
-        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexJ. Maximum value of nj+startIndexJ-1.
-        /// </summary>
-		[XmlElement("j")]
-
-        public Int32? J {
-            get {
-                return jField;
-            } 
-            set {
-                jField = value;
-                NotifyPropertyChanged("J");
-            }
-        }
-
-        private Int32? jField; 
-
-
-        /// <summary>
-        /// The I direction corner coordinate for a coordinate line within a column of cells.
-        /// </summary>
-		[XmlElement("iCorn")]
-
-        public Int16? ICorn {
-            get {
-                return iCornField;
-            } 
-            set {
-                iCornField = value;
-                NotifyPropertyChanged("ICorn");
-            }
-        }
-
-        private Int16? iCornField; 
-
-
-        /// <summary>
-        /// The J direction corner coordinate for a coordinate line within a column of cells.
-        /// </summary>
-		[XmlElement("jCorn")]
-
-        public Int16? JCorn {
-            get {
-                return jCornField;
-            } 
-            set {
-                jCornField = value;
-                NotifyPropertyChanged("JCorn");
-            }
-        }
-
-        private Int16? jCornField; 
-
-
-        /// <summary>
-        /// A 0-based index into the coordinate line list. A value of zero represents the first line in the line list.
-        /// </summary>
-		[XmlElement("reference")]
-
-        public Int32? Reference {
-            get {
-                return referenceField;
-            } 
-            set {
-                referenceField = value;
-                NotifyPropertyChanged("Reference");
-            }
-        }
-
-        private Int32? referenceField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// Defines the 3D coordinates for each split node. Each node may represent part of an 8-way split.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlSplitNodeSet", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("Defines the 3D coordinates for each split node. Each node may represent part of an 8-way split.")]
-    public partial class ResqmlSplitNodeSet : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// Defines the index locations of one referenced split node. The reference value refers to the order in point3dSet. If you set this property, you must also set SplitNodeSet.
-        /// </summary>
-        [XmlElement("splitNodeReference")]
-        public ResqmlSplitNodeReference[] SplitNodeReference {
-            get {
-                return splitNodeReferenceField;
-            } 
-            set {
-                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property SplitNodeReference when property IjkGridHdfGroup is already set");
-                splitNodeReferenceField = value;
-                SplitNodeReferenceSpecified = (value!=null);
-                NotifyPropertyChanged("SplitNodeReference");
-            }
-        }
-
-        private ResqmlSplitNodeReference[] splitNodeReferenceField; 
-        /// <summary>
-        /// Boolean to indicate if SplitNodeReference has been set. Used for serialization.
-        /// </summary>
-        private Boolean SplitNodeReferenceSpecified = false; 
-
-        /// <summary>
-        /// A set of points that are split. There must be splitNodeCount points in the aggregate. If you set this property, you must also set SplitNodeReference.
-        /// </summary>
-        [XmlElement("splitNodeSet")]
-        public ResqmlPoint3dSet SplitNodeSet {
-            get {
-                return splitNodeSetField;
-            } 
-            set {
-                if (value != null && IjkGridHdfGroupSpecified) throw new Exception("Cannot set property SplitNodeSet when property IjkGridHdfGroup is already set");
-                splitNodeSetField = value;
-                SplitNodeSetSpecified = (value!=null);
-                NotifyPropertyChanged("SplitNodeSet");
-            }
-        }
-
-        private ResqmlPoint3dSet splitNodeSetField; 
-        /// <summary>
-        /// Boolean to indicate if SplitNodeSet has been set. Used for serialization.
-        /// </summary>
-        private Boolean SplitNodeSetSpecified = false; 
-
-        /// <summary>
-        /// Defines information related to capturing the array data in an HDF5 formatted file.
-        /// </summary>
-        [XmlElement("ijkGridHdfGroup")]
-        public ResqmlHdfGroup IjkGridHdfGroup {
-            get {
-                return ijkGridHdfGroupField;
-            } 
-            set {
-                if (value != null && SplitNodeSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitNodeSet is already set");
-                if (value != null && SplitNodeReferenceSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitNodeReference is already set");
-                ijkGridHdfGroupField = value;
-                IjkGridHdfGroupSpecified = (value!=null);
-                NotifyPropertyChanged("IjkGridHdfGroup");
-            }
-        }
-
-        private ResqmlHdfGroup ijkGridHdfGroupField; 
-        /// <summary>
-        /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
-        /// </summary>
-        private Boolean IjkGridHdfGroupSpecified = false; 
-
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// A single split node index description. The node is at one corner of a cell.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlSplitNodeReference", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("A single split node index description. The node is at one corner of a cell.")]
-    public partial class ResqmlSplitNodeReference : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexI. Maximum value of ni+startIndexI-1.
-        /// </summary>
-		[XmlElement("i")]
-
-        public Int32? I {
-            get {
-                return iField;
-            } 
-            set {
-                iField = value;
-                NotifyPropertyChanged("I");
-            }
-        }
-
-        private Int32? iField; 
-
-
-        /// <summary>
-        /// The I direction cell coordinate for a column of cells. Minimum value of startIndexJ. Maximum value of nj+startIndexJ-1.
-        /// </summary>
-		[XmlElement("j")]
-
-        public Int32? J {
-            get {
-                return jField;
-            } 
-            set {
-                jField = value;
-                NotifyPropertyChanged("J");
-            }
-        }
-
-        private Int32? jField; 
-
-
-        /// <summary>
-        /// The K direction cell coordinate for a column of cells. Minimum value of startIndexK. Maximum value of nj+startIndexK-1.
-        /// </summary>
-		[XmlElement("k")]
-
-        public Int32? K {
-            get {
-                return kField;
-            } 
-            set {
-                kField = value;
-                NotifyPropertyChanged("K");
-            }
-        }
-
-        private Int32? kField; 
-
-
-        /// <summary>
-        /// The I direction corner coordinate for a node within a column of cells.
-        /// </summary>
-		[XmlElement("iCorn")]
-
-        public Int16? ICorn {
-            get {
-                return iCornField;
-            } 
-            set {
-                iCornField = value;
-                NotifyPropertyChanged("ICorn");
-            }
-        }
-
-        private Int16? iCornField; 
-
-
-        /// <summary>
-        /// The J direction corner coordinate for a node within a column of cells.
-        /// </summary>
-		[XmlElement("jCorn")]
-
-        public Int16? JCorn {
-            get {
-                return jCornField;
-            } 
-            set {
-                jCornField = value;
-                NotifyPropertyChanged("JCorn");
-            }
-        }
-
-        private Int16? jCornField; 
-
-
-        /// <summary>
-        /// The K direction corner coordinate for a node within a column of cells.
-        /// </summary>
-		[XmlElement("kCorn")]
-
-        public Int16? KCorn {
-            get {
-                return kCornField;
-            } 
-            set {
-                kCornField = value;
-                NotifyPropertyChanged("KCorn");
-            }
-        }
-
-        private Int16? kCornField; 
-
-
-        /// <summary>
-        /// A 0-based index into the additional split node list. A value of zero represents the first additional node.
-        /// </summary>
-		[XmlElement("reference")]
-
-        public Int32? Reference {
-            get {
-                return referenceField;
-            } 
-            set {
-                referenceField = value;
-                NotifyPropertyChanged("Reference");
-            }
-        }
-
-        private Int32? referenceField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// Defines a local grid refinement (LGR).
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlIJKGridRefinement", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("Defines a local grid refinement (LGR).")]
-    public partial class ResqmlIJKGridRefinement : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// Defines the refinement of the parent cells in the I direction.
-        /// </summary>
-		[XmlElement("iRefine")]
-
-        public ResqmlCellDivisionWeight IRefine {
-            get {
-                return iRefineField;
-            } 
-            set {
-                iRefineField = value;
-                NotifyPropertyChanged("IRefine");
-            }
-        }
-
-        private ResqmlCellDivisionWeight iRefineField; 
-
-
-        /// <summary>
-        /// Defines the refinement of the parent cells in the J direction.
-        /// </summary>
-		[XmlElement("jRefine")]
-
-        public ResqmlCellDivisionWeight JRefine {
-            get {
-                return jRefineField;
-            } 
-            set {
-                jRefineField = value;
-                NotifyPropertyChanged("JRefine");
-            }
-        }
-
-        private ResqmlCellDivisionWeight jRefineField; 
-
-
-        /// <summary>
-        /// Defines the refinement of the parent cells in the K direction.
-        /// </summary>
-		[XmlElement("kRefine")]
-
-        public ResqmlCellDivisionWeight KRefine {
-            get {
-                return kRefineField;
-            } 
-            set {
-                kRefineField = value;
-                NotifyPropertyChanged("KRefine");
-            }
-        }
-
-        private ResqmlCellDivisionWeight kRefineField; 
-
-
-        /// <summary>
-        /// A parent cell to omit from the refinement.
-        /// </summary>
-		[XmlElement("omittedCell")]
-
-        public List<ResqmlCellIndex> OmittedCell {
-            get {
-                return omittedCellField;
-            } 
-            set {
-                omittedCellField = value;
-                NotifyPropertyChanged("OmittedCell");
-            }
-        }
-
-        private List<ResqmlCellIndex> omittedCellField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// Defines the local grid refinement (LGR) by dividing the individual cells.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlCellDivisionWeight", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("Defines the local grid refinement (LGR) by dividing the individual cells.")]
-    public partial class ResqmlCellDivisionWeight : Object , INotifyPropertyChanged
-    {
-
-
-		/// <summary>
-        /// A list that defines the number of refined cells within each target cell. The length of the list must be equal to the number of target cells in the specified direction (i.e., maxIndex-minIndex+1). The target cells are defined by a target cell window (i.e., by a minimum index and maximum index) in the parent grid. The order in the aggregate is significant. The first value represents the number of refined cells in the first target cell. The next value represents the number of refined cells in the second target cell. The number of resulting cells in specified direction is equal to the sum of this list of counts. 
-        /// </summary>
-        [XmlAttribute("count")]
-
-        public List<Int16> Count {
-            get {
-                return countField;
-            } 
-            set {
-                countField = value;
-                NotifyPropertyChanged("Count");
-            }
-        }
-
-        private List<Int16> countField; 
-
-
-		/// <summary>
-        /// A list that defines the weight to apply to each refined cell within each target cell. The length of the array must be equal to the sum of the counts in the count list. The order in the aggregate is significant. The first count(1) values represent the list of refinements for the the first target cell. The next count(2) values represent the list of refinements for the second target cell. The first weight within each refinement list applies to the lower index side of the target cell. The width of each refined cell will be proportional to the weights within each refinement list. Readers are advised to normalize the weights within each refinement list.
-        /// </summary>
-        [XmlAttribute("weight")]
-
-        public List<Single> Weight {
-            get {
-                return weightField;
-            } 
-            set {
-                weightField = value;
-                NotifyPropertyChanged("Weight");
-            }
-        }
-
-        private List<Single> weightField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// Defines the indices for one cell in a 3D grid.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlCellIndex", Namespace="http://www.resqml.org/schemas/1series")]
-
-    [Description("Defines the indices for one cell in a 3D grid.")]
-    public partial class ResqmlCellIndex : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// The I index of the cell.
-        /// </summary>
-		[XmlElement("i")]
-
-        public Int32? I {
-            get {
-                return iField;
-            } 
-            set {
-                iField = value;
-                NotifyPropertyChanged("I");
-            }
-        }
-
-        private Int32? iField; 
-
-
-        /// <summary>
-        /// The J index of the cell.
-        /// </summary>
-		[XmlElement("j")]
-
-        public Int32? J {
-            get {
-                return jField;
-            } 
-            set {
-                jField = value;
-                NotifyPropertyChanged("J");
-            }
-        }
-
-        private Int32? jField; 
-
-
-        /// <summary>
-        /// The K index of the cell.
-        /// </summary>
-		[XmlElement("k")]
-
-        public Int32? K {
-            get {
-                return kField;
-            } 
-            set {
-                kField = value;
-                NotifyPropertyChanged("K");
-            }
-        }
-
-        private Int32? kField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
     /// This class represents the cs_customData xsd type.
     /// </summary>
 
@@ -22165,6 +22122,49 @@ namespace Energistics.DataAccess.RESQML110
     } //here
 
     }
+
+
+
+    /// <summary>
+    /// This class represents the abstractObject xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDocumentList))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
+
+    [Description("This class represents the abstractObject xsd type.")]
+    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
+    {
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
 
 
 

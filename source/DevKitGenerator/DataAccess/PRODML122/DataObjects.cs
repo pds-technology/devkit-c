@@ -34,73 +34,6 @@ namespace Energistics.DataAccess.PRODML122
     #region Classes
 
     /// <summary>
-    /// This class represents the abstractObject xsd type.
-    /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidAnalysisList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DtsMeasurementList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidSampleList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WftRunList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellTestList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeriesDataList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Report))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductVolumeList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductionOperationList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductFlowModelList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidAnalysisResultList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeriesStatisticList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DtsInstalledSystemList))]
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
-
-    [Description("This class represents the abstractObject xsd type.")]
-    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
-    {
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-
-
-    /// <summary>
     /// This class represents the obj_dtsInstalledSystems xsd type.
     /// </summary>
 
@@ -1110,28 +1043,84 @@ namespace Energistics.DataAccess.PRODML122
     {
 
     /// <summary>
+    /// This class represents the generalMeasureType xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="generalMeasureType", Namespace="http://www.prodml.org/schemas/1series")]
+
+    [Description("This class represents the generalMeasureType xsd type.")]
+    public partial class GeneralMeasureType : AbstractMeasure , INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the GeneralMeasureType class.
+        /// </summary>
+        public GeneralMeasureType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the GeneralMeasureType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public GeneralMeasureType(Double value, String uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+        [XmlAttribute("uom")]
+
+        public String Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private String uomField; 
+
+
+
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
     /// This class represents the abstractMeasure xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeQualifiedMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerStandardVolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerVolumeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateQualifiedMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TemperatureSlopeMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LostVolumeAndReason))]
 
@@ -1165,23 +1154,35 @@ namespace Energistics.DataAccess.PRODML122
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MolarFractionMeasurePercent))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeQualifiedMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkMeasure))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerStandardVolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerVolumeMeasure))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerStandardVolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductivityIndexMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MolarVolumeMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateQualifiedMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MolarFractionMeasurePercent))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ModulusOfCompressionMeasure))]
 
@@ -1245,74 +1246,6 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
         #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the generalMeasureType xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="generalMeasureType", Namespace="http://www.prodml.org/schemas/1series")]
-
-    [Description("This class represents the generalMeasureType xsd type.")]
-    public partial class GeneralMeasureType : AbstractMeasure , INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the GeneralMeasureType class.
-        /// </summary>
-        public GeneralMeasureType() {}
-
-        /// <summary>
-        /// Initializes a new instance of the GeneralMeasureType class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public GeneralMeasureType(Double value, String uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-        [XmlAttribute("uom")]
-
-        public String Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private String uomField; 
-
-
-
 
     } //here
 
@@ -10521,8 +10454,8 @@ namespace Energistics.DataAccess.PRODML122
                 return fluidLevelTestField;
             } 
             set {
-                if (value != null && ProductionTestSpecified) throw new Exception("Cannot set property FluidLevelTest when property ProductionTest is already set");
                 if (value != null && InjectionTestSpecified) throw new Exception("Cannot set property FluidLevelTest when property InjectionTest is already set");
+                if (value != null && ProductionTestSpecified) throw new Exception("Cannot set property FluidLevelTest when property ProductionTest is already set");
                 fluidLevelTestField = value;
                 FluidLevelTestSpecified = (value!=null);
                 NotifyPropertyChanged("FluidLevelTest");
@@ -11768,13 +11701,13 @@ namespace Energistics.DataAccess.PRODML122
                 return latitudeField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Latitude when property Southing is already set");
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property Latitude when property Easting is already set");
-                if (value != null && NorthingSpecified) throw new Exception("Cannot set property Latitude when property Northing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Latitude when property ProjectedX is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Latitude when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Latitude when property LocalY is already set");
+                if (value != null && NorthingSpecified) throw new Exception("Cannot set property Latitude when property Northing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Latitude when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Latitude when property ProjectedY is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Latitude when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Latitude when property Westing is already set");
                 latitudeField = value;
                 LatitudeSpecified = (value!=null);
@@ -11797,13 +11730,13 @@ namespace Energistics.DataAccess.PRODML122
                 return longitudeField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Longitude when property Southing is already set");
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property Longitude when property Easting is already set");
-                if (value != null && NorthingSpecified) throw new Exception("Cannot set property Longitude when property Northing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Longitude when property ProjectedX is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Longitude when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Longitude when property LocalY is already set");
+                if (value != null && NorthingSpecified) throw new Exception("Cannot set property Longitude when property Northing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Longitude when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Longitude when property ProjectedY is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Longitude when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Longitude when property Westing is already set");
                 longitudeField = value;
                 LongitudeSpecified = (value!=null);
@@ -11826,13 +11759,13 @@ namespace Energistics.DataAccess.PRODML122
                 return eastingField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Easting when property Southing is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Easting when property Longitude is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Easting when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Easting when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Easting when property LocalY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Easting when property Longitude is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Easting when property ProjectedY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Easting when property Latitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Easting when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Easting when property Westing is already set");
                 eastingField = value;
                 EastingSpecified = (value!=null);
@@ -11855,13 +11788,13 @@ namespace Energistics.DataAccess.PRODML122
                 return northingField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Northing when property Southing is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Northing when property Longitude is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Northing when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Northing when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Northing when property LocalY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Northing when property Longitude is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Northing when property ProjectedY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Northing when property Latitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Northing when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Northing when property Westing is already set");
                 northingField = value;
                 NorthingSpecified = (value!=null);
@@ -11885,13 +11818,13 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property Westing when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Westing when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Westing when property LocalX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Westing when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Westing when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Westing when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Westing when property ProjectedX is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Westing when property LocalX is already set");
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Westing when property LocalY is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Westing when property ProjectedY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Westing when property Latitude is already set");
                 westingField = value;
                 WestingSpecified = (value!=null);
                 NotifyPropertyChanged("Westing");
@@ -11914,13 +11847,13 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property Southing when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Southing when property Latitude is already set");
+                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Southing when property LocalX is already set");
+                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Southing when property LocalY is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Southing when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Southing when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Southing when property ProjectedX is already set");
-                if (value != null && LocalXSpecified) throw new Exception("Cannot set property Southing when property LocalX is already set");
-                if (value != null && LocalYSpecified) throw new Exception("Cannot set property Southing when property LocalY is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Southing when property ProjectedY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Southing when property Latitude is already set");
                 southingField = value;
                 SouthingSpecified = (value!=null);
                 NotifyPropertyChanged("Southing");
@@ -11942,13 +11875,13 @@ namespace Energistics.DataAccess.PRODML122
                 return projectedXField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedX when property Southing is already set");
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedX when property Easting is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Longitude is already set");
-                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedX when property Northing is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedX when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedX when property LocalY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Latitude is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Longitude is already set");
+                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedX when property Northing is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedX when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedX when property Westing is already set");
                 projectedXField = value;
                 ProjectedXSpecified = (value!=null);
@@ -11971,13 +11904,13 @@ namespace Energistics.DataAccess.PRODML122
                 return projectedYField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedY when property Southing is already set");
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedY when property Easting is already set");
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Longitude is already set");
-                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedY when property Northing is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedY when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedY when property LocalY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Latitude is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Longitude is already set");
+                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedY when property Northing is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedY when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedY when property Westing is already set");
                 projectedYField = value;
                 ProjectedYSpecified = (value!=null);
@@ -12000,13 +11933,13 @@ namespace Energistics.DataAccess.PRODML122
                 return localXField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalX when property Southing is already set");
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalX when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalX when property Latitude is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalX when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalX when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalX when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalX when property ProjectedY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalX when property Latitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalX when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalX when property Westing is already set");
                 localXField = value;
                 LocalXSpecified = (value!=null);
@@ -12029,13 +11962,13 @@ namespace Energistics.DataAccess.PRODML122
                 return localYField;
             } 
             set {
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalY when property Southing is already set");
                 if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalY when property Easting is already set");
+                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalY when property Latitude is already set");
                 if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalY when property Longitude is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalY when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalY when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalY when property ProjectedY is already set");
-                if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalY when property Latitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalY when property Southing is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalY when property Westing is already set");
                 localYField = value;
                 LocalYSpecified = (value!=null);
@@ -14128,8 +14061,8 @@ namespace Energistics.DataAccess.PRODML122
                 return standardTempPresField;
             } 
             set {
-                if (value != null && TempSpecified) throw new Exception("Cannot set property StandardTempPres when property Temp is already set");
                 if (value != null && PresSpecified) throw new Exception("Cannot set property StandardTempPres when property Pres is already set");
+                if (value != null && TempSpecified) throw new Exception("Cannot set property StandardTempPres when property Temp is already set");
                 standardTempPresField = value;
                 StandardTempPresSpecified = (value!=null);
                 NotifyPropertyChanged("StandardTempPres");
@@ -15157,8 +15090,8 @@ namespace Energistics.DataAccess.PRODML122
                 return standardTempPresField;
             } 
             set {
-                if (value != null && TempSpecified) throw new Exception("Cannot set property StandardTempPres when property Temp is already set");
                 if (value != null && PresSpecified) throw new Exception("Cannot set property StandardTempPres when property Pres is already set");
+                if (value != null && TempSpecified) throw new Exception("Cannot set property StandardTempPres when property Temp is already set");
                 standardTempPresField = value;
                 StandardTempPresSpecified = (value!=null);
                 NotifyPropertyChanged("StandardTempPres");
@@ -15498,8 +15431,8 @@ namespace Energistics.DataAccess.PRODML122
                 return standardTempPresField;
             } 
             set {
-                if (value != null && TempSpecified) throw new Exception("Cannot set property StandardTempPres when property Temp is already set");
                 if (value != null && PresSpecified) throw new Exception("Cannot set property StandardTempPres when property Pres is already set");
+                if (value != null && TempSpecified) throw new Exception("Cannot set property StandardTempPres when property Temp is already set");
                 standardTempPresField = value;
                 StandardTempPresSpecified = (value!=null);
                 NotifyPropertyChanged("StandardTempPres");
@@ -16037,11 +15970,11 @@ namespace Energistics.DataAccess.PRODML122
                 return dTimField;
             } 
             set {
+                if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateTime when property DateTimeEnd is already set");
+                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateTime when property DateTimeStart is already set");
                 if (value != null && DateSpecified) throw new Exception("Cannot set property DateTime when property Date is already set");
                 if (value != null && DateEndSpecified) throw new Exception("Cannot set property DateTime when property DateEnd is already set");
-                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateTime when property DateTimeStart is already set");
                 if (value != null && DateStartSpecified) throw new Exception("Cannot set property DateTime when property DateStart is already set");
-                if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateTime when property DateTimeEnd is already set");
                 dTimField = value;
                 DateTimeSpecified = (value!=null);
                 NotifyPropertyChanged("DateTime");
@@ -16063,11 +15996,11 @@ namespace Energistics.DataAccess.PRODML122
                 return dateField;
             } 
             set {
-                if (value != null && DateEndSpecified) throw new Exception("Cannot set property Date when property DateEnd is already set");
-                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property Date when property DateTimeStart is already set");
                 if (value != null && DateTimeSpecified) throw new Exception("Cannot set property Date when property DateTime is already set");
-                if (value != null && DateStartSpecified) throw new Exception("Cannot set property Date when property DateStart is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property Date when property DateTimeEnd is already set");
+                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property Date when property DateTimeStart is already set");
+                if (value != null && DateEndSpecified) throw new Exception("Cannot set property Date when property DateEnd is already set");
+                if (value != null && DateStartSpecified) throw new Exception("Cannot set property Date when property DateStart is already set");
                 dateField = value;
                 DateSpecified = (value!=null);
                 NotifyPropertyChanged("Date");
@@ -16089,9 +16022,9 @@ namespace Energistics.DataAccess.PRODML122
                 return dTimStartField;
             } 
             set {
+                if (value != null && DateTimeSpecified) throw new Exception("Cannot set property DateTimeStart when property DateTime is already set");
                 if (value != null && DateSpecified) throw new Exception("Cannot set property DateTimeStart when property Date is already set");
                 if (value != null && DateEndSpecified) throw new Exception("Cannot set property DateTimeStart when property DateEnd is already set");
-                if (value != null && DateTimeSpecified) throw new Exception("Cannot set property DateTimeStart when property DateTime is already set");
                 if (value != null && DateStartSpecified) throw new Exception("Cannot set property DateTimeStart when property DateStart is already set");
                 dTimStartField = value;
                 DateTimeStartSpecified = (value!=null);
@@ -16114,9 +16047,9 @@ namespace Energistics.DataAccess.PRODML122
                 return dTimEndField;
             } 
             set {
+                if (value != null && DateTimeSpecified) throw new Exception("Cannot set property DateTimeEnd when property DateTime is already set");
                 if (value != null && DateSpecified) throw new Exception("Cannot set property DateTimeEnd when property Date is already set");
                 if (value != null && DateEndSpecified) throw new Exception("Cannot set property DateTimeEnd when property DateEnd is already set");
-                if (value != null && DateTimeSpecified) throw new Exception("Cannot set property DateTimeEnd when property DateTime is already set");
                 if (value != null && DateStartSpecified) throw new Exception("Cannot set property DateTimeEnd when property DateStart is already set");
                 dTimEndField = value;
                 DateTimeEndSpecified = (value!=null);
@@ -16139,10 +16072,10 @@ namespace Energistics.DataAccess.PRODML122
                 return dateStartField;
             } 
             set {
-                if (value != null && DateSpecified) throw new Exception("Cannot set property DateStart when property Date is already set");
-                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateStart when property DateTimeStart is already set");
                 if (value != null && DateTimeSpecified) throw new Exception("Cannot set property DateStart when property DateTime is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateStart when property DateTimeEnd is already set");
+                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateStart when property DateTimeStart is already set");
+                if (value != null && DateSpecified) throw new Exception("Cannot set property DateStart when property Date is already set");
                 dateStartField = value;
                 DateStartSpecified = (value!=null);
                 NotifyPropertyChanged("DateStart");
@@ -16164,10 +16097,10 @@ namespace Energistics.DataAccess.PRODML122
                 return dateEndField;
             } 
             set {
-                if (value != null && DateSpecified) throw new Exception("Cannot set property DateEnd when property Date is already set");
-                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeStart is already set");
                 if (value != null && DateTimeSpecified) throw new Exception("Cannot set property DateEnd when property DateTime is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeEnd is already set");
+                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeStart is already set");
+                if (value != null && DateSpecified) throw new Exception("Cannot set property DateEnd when property Date is already set");
                 dateEndField = value;
                 DateEndSpecified = (value!=null);
                 NotifyPropertyChanged("DateEnd");
@@ -20424,8 +20357,8 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 if (value != null && CurveValueSpecified) throw new Exception("Cannot set property MeasureValue when property CurveValue is already set");
-                if (value != null && StringValueSpecified) throw new Exception("Cannot set property MeasureValue when property StringValue is already set");
                 if (value != null && IntegerValueSpecified) throw new Exception("Cannot set property MeasureValue when property IntegerValue is already set");
+                if (value != null && StringValueSpecified) throw new Exception("Cannot set property MeasureValue when property StringValue is already set");
                 measureValueField = value;
                 MeasureValueSpecified = (value!=null);
                 NotifyPropertyChanged("MeasureValue");
@@ -20447,9 +20380,9 @@ namespace Energistics.DataAccess.PRODML122
                 return curveValueField;
             } 
             set {
+                if (value != null && IntegerValueSpecified) throw new Exception("Cannot set property CurveValue when property IntegerValue is already set");
                 if (value != null && MeasureValueSpecified) throw new Exception("Cannot set property CurveValue when property MeasureValue is already set");
                 if (value != null && StringValueSpecified) throw new Exception("Cannot set property CurveValue when property StringValue is already set");
-                if (value != null && IntegerValueSpecified) throw new Exception("Cannot set property CurveValue when property IntegerValue is already set");
                 curveValueField = value;
                 CurveValueSpecified = (value!=null);
                 NotifyPropertyChanged("CurveValue");
@@ -20471,9 +20404,9 @@ namespace Energistics.DataAccess.PRODML122
                 return stringValueField;
             } 
             set {
-                if (value != null && MeasureValueSpecified) throw new Exception("Cannot set property StringValue when property MeasureValue is already set");
                 if (value != null && CurveValueSpecified) throw new Exception("Cannot set property StringValue when property CurveValue is already set");
                 if (value != null && IntegerValueSpecified) throw new Exception("Cannot set property StringValue when property IntegerValue is already set");
+                if (value != null && MeasureValueSpecified) throw new Exception("Cannot set property StringValue when property MeasureValue is already set");
                 stringValueField = value;
                 StringValueSpecified = (value!=null);
                 NotifyPropertyChanged("StringValue");
@@ -20495,8 +20428,8 @@ namespace Energistics.DataAccess.PRODML122
                 return integerValueField;
             } 
             set {
-                if (value != null && MeasureValueSpecified) throw new Exception("Cannot set property IntegerValue when property MeasureValue is already set");
                 if (value != null && CurveValueSpecified) throw new Exception("Cannot set property IntegerValue when property CurveValue is already set");
+                if (value != null && MeasureValueSpecified) throw new Exception("Cannot set property IntegerValue when property MeasureValue is already set");
                 if (value != null && StringValueSpecified) throw new Exception("Cannot set property IntegerValue when property StringValue is already set");
                 integerValueField = value;
                 IntegerValueSpecified = (value!=null);
@@ -22530,9 +22463,9 @@ namespace Energistics.DataAccess.PRODML122
                 return dTimStartField;
             } 
             set {
+                if (value != null && DateEndSpecified) throw new Exception("Cannot set property DateTimeStart when property DateEnd is already set");
                 if (value != null && DateStartSpecified) throw new Exception("Cannot set property DateTimeStart when property DateStart is already set");
                 if (value != null && MonthSpecified) throw new Exception("Cannot set property DateTimeStart when property Month is already set");
-                if (value != null && DateEndSpecified) throw new Exception("Cannot set property DateTimeStart when property DateEnd is already set");
                 dTimStartField = value;
                 DateTimeStartSpecified = (value!=null);
                 NotifyPropertyChanged("DateTimeStart");
@@ -22554,9 +22487,9 @@ namespace Energistics.DataAccess.PRODML122
                 return dTimEndField;
             } 
             set {
+                if (value != null && DateEndSpecified) throw new Exception("Cannot set property DateTimeEnd when property DateEnd is already set");
                 if (value != null && DateStartSpecified) throw new Exception("Cannot set property DateTimeEnd when property DateStart is already set");
                 if (value != null && MonthSpecified) throw new Exception("Cannot set property DateTimeEnd when property Month is already set");
-                if (value != null && DateEndSpecified) throw new Exception("Cannot set property DateTimeEnd when property DateEnd is already set");
                 dTimEndField = value;
                 DateTimeEndSpecified = (value!=null);
                 NotifyPropertyChanged("DateTimeEnd");
@@ -22578,9 +22511,9 @@ namespace Energistics.DataAccess.PRODML122
                 return dateStartField;
             } 
             set {
-                if (value != null && MonthSpecified) throw new Exception("Cannot set property DateStart when property Month is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateStart when property DateTimeEnd is already set");
                 if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateStart when property DateTimeStart is already set");
+                if (value != null && MonthSpecified) throw new Exception("Cannot set property DateStart when property Month is already set");
                 dateStartField = value;
                 DateStartSpecified = (value!=null);
                 NotifyPropertyChanged("DateStart");
@@ -22602,9 +22535,9 @@ namespace Energistics.DataAccess.PRODML122
                 return dateEndField;
             } 
             set {
-                if (value != null && MonthSpecified) throw new Exception("Cannot set property DateEnd when property Month is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeEnd is already set");
                 if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeStart is already set");
+                if (value != null && MonthSpecified) throw new Exception("Cannot set property DateEnd when property Month is already set");
                 dateEndField = value;
                 DateEndSpecified = (value!=null);
                 NotifyPropertyChanged("DateEnd");
@@ -22626,10 +22559,10 @@ namespace Energistics.DataAccess.PRODML122
                 return monthField;
             } 
             set {
-                if (value != null && DateStartSpecified) throw new Exception("Cannot set property Month when property DateStart is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property Month when property DateTimeEnd is already set");
                 if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property Month when property DateTimeStart is already set");
                 if (value != null && DateEndSpecified) throw new Exception("Cannot set property Month when property DateEnd is already set");
+                if (value != null && DateStartSpecified) throw new Exception("Cannot set property Month when property DateStart is already set");
                 monthField = value;
                 MonthSpecified = (value!=null);
                 NotifyPropertyChanged("Month");
@@ -23612,8 +23545,8 @@ namespace Energistics.DataAccess.PRODML122
                 return stateField;
             } 
             set {
-                if (value != null && ProvinceSpecified) throw new Exception("Cannot set property State when property Province is already set");
                 if (value != null && CountySpecified) throw new Exception("Cannot set property State when property County is already set");
+                if (value != null && ProvinceSpecified) throw new Exception("Cannot set property State when property Province is already set");
                 stateField = value;
                 StateSpecified = (value!=null);
                 NotifyPropertyChanged("State");
@@ -23635,8 +23568,8 @@ namespace Energistics.DataAccess.PRODML122
                 return provinceField;
             } 
             set {
-                if (value != null && StateSpecified) throw new Exception("Cannot set property Province when property State is already set");
                 if (value != null && CountySpecified) throw new Exception("Cannot set property Province when property County is already set");
+                if (value != null && StateSpecified) throw new Exception("Cannot set property Province when property State is already set");
                 provinceField = value;
                 ProvinceSpecified = (value!=null);
                 NotifyPropertyChanged("Province");
@@ -23658,8 +23591,8 @@ namespace Energistics.DataAccess.PRODML122
                 return countyField;
             } 
             set {
-                if (value != null && StateSpecified) throw new Exception("Cannot set property County when property State is already set");
                 if (value != null && ProvinceSpecified) throw new Exception("Cannot set property County when property Province is already set");
+                if (value != null && StateSpecified) throw new Exception("Cannot set property County when property State is already set");
                 countyField = value;
                 CountySpecified = (value!=null);
                 NotifyPropertyChanged("County");
@@ -28487,8 +28420,8 @@ namespace Energistics.DataAccess.PRODML122
                 return dateStartField;
             } 
             set {
-                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateStart when property DateTimeStart is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateStart when property DateTimeEnd is already set");
+                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateStart when property DateTimeStart is already set");
                 dateStartField = value;
                 DateStartSpecified = (value!=null);
                 NotifyPropertyChanged("DateStart");
@@ -28510,8 +28443,8 @@ namespace Energistics.DataAccess.PRODML122
                 return dateEndField;
             } 
             set {
-                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeStart is already set");
                 if (value != null && DateTimeEndSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeEnd is already set");
+                if (value != null && DateTimeStartSpecified) throw new Exception("Cannot set property DateEnd when property DateTimeStart is already set");
                 dateEndField = value;
                 DateEndSpecified = (value!=null);
                 NotifyPropertyChanged("DateEnd");
@@ -32548,8 +32481,8 @@ namespace Energistics.DataAccess.PRODML122
                 return oilVolumeField;
             } 
             set {
-                if (value != null && StageSeparatorGORStdSpecified) throw new Exception("Cannot set property OilVolume when property StageSeparatorGORStd is already set");
                 if (value != null && OilShrinkageFactorSpecified) throw new Exception("Cannot set property OilVolume when property OilShrinkageFactor is already set");
+                if (value != null && StageSeparatorGORStdSpecified) throw new Exception("Cannot set property OilVolume when property StageSeparatorGORStd is already set");
                 oilVolumeField = value;
                 OilVolumeSpecified = (value!=null);
                 NotifyPropertyChanged("OilVolume");
@@ -32571,8 +32504,8 @@ namespace Energistics.DataAccess.PRODML122
                 return gasVolumeField;
             } 
             set {
-                if (value != null && StageSeparatorGORStdSpecified) throw new Exception("Cannot set property GasVolume when property StageSeparatorGORStd is already set");
                 if (value != null && OilShrinkageFactorSpecified) throw new Exception("Cannot set property GasVolume when property OilShrinkageFactor is already set");
+                if (value != null && StageSeparatorGORStdSpecified) throw new Exception("Cannot set property GasVolume when property StageSeparatorGORStd is already set");
                 gasVolumeField = value;
                 GasVolumeSpecified = (value!=null);
                 NotifyPropertyChanged("GasVolume");
@@ -32594,8 +32527,8 @@ namespace Energistics.DataAccess.PRODML122
                 return oilShrinkageFactorField;
             } 
             set {
-                if (value != null && OilVolumeSpecified) throw new Exception("Cannot set property OilShrinkageFactor when property OilVolume is already set");
                 if (value != null && GasVolumeSpecified) throw new Exception("Cannot set property OilShrinkageFactor when property GasVolume is already set");
+                if (value != null && OilVolumeSpecified) throw new Exception("Cannot set property OilShrinkageFactor when property OilVolume is already set");
                 oilShrinkageFactorField = value;
                 OilShrinkageFactorSpecified = (value!=null);
                 NotifyPropertyChanged("OilShrinkageFactor");
@@ -32617,8 +32550,8 @@ namespace Energistics.DataAccess.PRODML122
                 return stageSeparatorGORStdField;
             } 
             set {
-                if (value != null && OilVolumeSpecified) throw new Exception("Cannot set property StageSeparatorGORStd when property OilVolume is already set");
                 if (value != null && GasVolumeSpecified) throw new Exception("Cannot set property StageSeparatorGORStd when property GasVolume is already set");
+                if (value != null && OilVolumeSpecified) throw new Exception("Cannot set property StageSeparatorGORStd when property OilVolume is already set");
                 stageSeparatorGORStdField = value;
                 StageSeparatorGORStdSpecified = (value!=null);
                 NotifyPropertyChanged("StageSeparatorGORStd");
@@ -32874,27 +32807,6 @@ namespace Energistics.DataAccess.PRODML122
 
 
         /// <summary>
-        /// saturated property
-        /// </summary>
-        [XmlElement("saturated")]
-        public Boolean? Saturated {
-            get {
-                return saturatedField;
-            } 
-            set {
-                saturatedField = value;
-                SaturatedSpecified = (value!=null);
-                NotifyPropertyChanged("Saturated");
-            }
-        }
-
-        private Boolean? saturatedField; 
-        /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
-        /// </summary>
-        private Boolean SaturatedSpecified = false; 
-
-        /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
@@ -32914,6 +32826,27 @@ namespace Energistics.DataAccess.PRODML122
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
         private Boolean ReservoirSpecified = false; 
+
+        /// <summary>
+        /// saturated property
+        /// </summary>
+        [XmlElement("saturated")]
+        public Boolean? Saturated {
+            get {
+                return saturatedField;
+            } 
+            set {
+                saturatedField = value;
+                SaturatedSpecified = (value!=null);
+                NotifyPropertyChanged("Saturated");
+            }
+        }
+
+        private Boolean? saturatedField; 
+        /// <summary>
+        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// </summary>
+        private Boolean SaturatedSpecified = false; 
 
         /// <summary>
         /// stockTank property
@@ -34223,25 +34156,25 @@ namespace Energistics.DataAccess.PRODML122
 
 
         /// <summary>
-        /// stockTank property
+        /// reservoir property
         /// </summary>
-        [XmlElement("stockTank")]
-        public FluidResultStockTank StockTank {
+        [XmlElement("reservoir")]
+        public Boolean? Reservoir {
             get {
-                return stockTankField;
+                return reservoirField;
             } 
             set {
-                stockTankField = value;
-                StockTankSpecified = (value!=null);
-                NotifyPropertyChanged("StockTank");
+                reservoirField = value;
+                ReservoirSpecified = (value!=null);
+                NotifyPropertyChanged("Reservoir");
             }
         }
 
-        private FluidResultStockTank stockTankField; 
+        private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
         /// <summary>
         /// saturated property
@@ -34265,25 +34198,25 @@ namespace Energistics.DataAccess.PRODML122
         private Boolean SaturatedSpecified = false; 
 
         /// <summary>
-        /// reservoir property
+        /// stockTank property
         /// </summary>
-        [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        [XmlElement("stockTank")]
+        public FluidResultStockTank StockTank {
             get {
-                return reservoirField;
+                return stockTankField;
             } 
             set {
-                reservoirField = value;
-                ReservoirSpecified = (value!=null);
-                NotifyPropertyChanged("Reservoir");
+                stockTankField = value;
+                StockTankSpecified = (value!=null);
+                NotifyPropertyChanged("StockTank");
             }
         }
 
-        private Boolean? reservoirField; 
+        private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
 
 
@@ -34915,27 +34848,6 @@ namespace Energistics.DataAccess.PRODML122
 
 
         /// <summary>
-        /// saturated property
-        /// </summary>
-        [XmlElement("saturated")]
-        public Boolean? Saturated {
-            get {
-                return saturatedField;
-            } 
-            set {
-                saturatedField = value;
-                SaturatedSpecified = (value!=null);
-                NotifyPropertyChanged("Saturated");
-            }
-        }
-
-        private Boolean? saturatedField; 
-        /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
-        /// </summary>
-        private Boolean SaturatedSpecified = false; 
-
-        /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
@@ -34955,6 +34867,27 @@ namespace Energistics.DataAccess.PRODML122
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
         private Boolean ReservoirSpecified = false; 
+
+        /// <summary>
+        /// saturated property
+        /// </summary>
+        [XmlElement("saturated")]
+        public Boolean? Saturated {
+            get {
+                return saturatedField;
+            } 
+            set {
+                saturatedField = value;
+                SaturatedSpecified = (value!=null);
+                NotifyPropertyChanged("Saturated");
+            }
+        }
+
+        private Boolean? saturatedField; 
+        /// <summary>
+        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// </summary>
+        private Boolean SaturatedSpecified = false; 
 
         /// <summary>
         /// stockTank property
@@ -35878,27 +35811,6 @@ namespace Energistics.DataAccess.PRODML122
 
 
         /// <summary>
-        /// saturated property
-        /// </summary>
-        [XmlElement("saturated")]
-        public Boolean? Saturated {
-            get {
-                return saturatedField;
-            } 
-            set {
-                saturatedField = value;
-                SaturatedSpecified = (value!=null);
-                NotifyPropertyChanged("Saturated");
-            }
-        }
-
-        private Boolean? saturatedField; 
-        /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
-        /// </summary>
-        private Boolean SaturatedSpecified = false; 
-
-        /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
@@ -35918,6 +35830,27 @@ namespace Energistics.DataAccess.PRODML122
         /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
         private Boolean ReservoirSpecified = false; 
+
+        /// <summary>
+        /// saturated property
+        /// </summary>
+        [XmlElement("saturated")]
+        public Boolean? Saturated {
+            get {
+                return saturatedField;
+            } 
+            set {
+                saturatedField = value;
+                SaturatedSpecified = (value!=null);
+                NotifyPropertyChanged("Saturated");
+            }
+        }
+
+        private Boolean? saturatedField; 
+        /// <summary>
+        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// </summary>
+        private Boolean SaturatedSpecified = false; 
 
         /// <summary>
         /// stockTank property
@@ -36635,25 +36568,25 @@ namespace Energistics.DataAccess.PRODML122
 
 
         /// <summary>
-        /// stockTank property
+        /// reservoir property
         /// </summary>
-        [XmlElement("stockTank")]
-        public FluidResultStockTank StockTank {
+        [XmlElement("reservoir")]
+        public Boolean? Reservoir {
             get {
-                return stockTankField;
+                return reservoirField;
             } 
             set {
-                stockTankField = value;
-                StockTankSpecified = (value!=null);
-                NotifyPropertyChanged("StockTank");
+                reservoirField = value;
+                ReservoirSpecified = (value!=null);
+                NotifyPropertyChanged("Reservoir");
             }
         }
 
-        private FluidResultStockTank stockTankField; 
+        private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// Boolean to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private Boolean ReservoirSpecified = false; 
 
         /// <summary>
         /// saturated property
@@ -36677,25 +36610,25 @@ namespace Energistics.DataAccess.PRODML122
         private Boolean SaturatedSpecified = false; 
 
         /// <summary>
-        /// reservoir property
+        /// stockTank property
         /// </summary>
-        [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        [XmlElement("stockTank")]
+        public FluidResultStockTank StockTank {
             get {
-                return reservoirField;
+                return stockTankField;
             } 
             set {
-                reservoirField = value;
-                ReservoirSpecified = (value!=null);
-                NotifyPropertyChanged("Reservoir");
+                stockTankField = value;
+                StockTankSpecified = (value!=null);
+                NotifyPropertyChanged("StockTank");
             }
         }
 
-        private Boolean? reservoirField; 
+        private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// Boolean to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private Boolean StockTankSpecified = false; 
 
 
 
@@ -37238,8 +37171,8 @@ namespace Energistics.DataAccess.PRODML122
                 return liquidDropoutPercentField;
             } 
             set {
-                if (value != null && TotalVolumeSpecified) throw new Exception("Cannot set property LiquidDropoutPercent when property TotalVolume is already set");
                 if (value != null && LiquidVolumeSpecified) throw new Exception("Cannot set property LiquidDropoutPercent when property LiquidVolume is already set");
+                if (value != null && TotalVolumeSpecified) throw new Exception("Cannot set property LiquidDropoutPercent when property TotalVolume is already set");
                 liquidDropoutPercentField = value;
                 LiquidDropoutPercentSpecified = (value!=null);
                 NotifyPropertyChanged("LiquidDropoutPercent");
@@ -37461,27 +37394,6 @@ namespace Energistics.DataAccess.PRODML122
         private Boolean ReservoirSpecified = false; 
 
         /// <summary>
-        /// stockTank property
-        /// </summary>
-        [XmlElement("stockTank")]
-        public FluidResultStockTank StockTank {
-            get {
-                return stockTankField;
-            } 
-            set {
-                stockTankField = value;
-                StockTankSpecified = (value!=null);
-                NotifyPropertyChanged("StockTank");
-            }
-        }
-
-        private FluidResultStockTank stockTankField; 
-        /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
-        /// </summary>
-        private Boolean StockTankSpecified = false; 
-
-        /// <summary>
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
@@ -37501,6 +37413,27 @@ namespace Energistics.DataAccess.PRODML122
         /// Boolean to indicate if Saturated has been set. Used for serialization.
         /// </summary>
         private Boolean SaturatedSpecified = false; 
+
+        /// <summary>
+        /// stockTank property
+        /// </summary>
+        [XmlElement("stockTank")]
+        public FluidResultStockTank StockTank {
+            get {
+                return stockTankField;
+            } 
+            set {
+                stockTankField = value;
+                StockTankSpecified = (value!=null);
+                NotifyPropertyChanged("StockTank");
+            }
+        }
+
+        private FluidResultStockTank stockTankField; 
+        /// <summary>
+        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// </summary>
+        private Boolean StockTankSpecified = false; 
 
 
 
@@ -39708,65 +39641,44 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
-        [XmlElement("transportPropertiesTest")]
-        public FluidResultTransportPropertiesTest TransportPropertiesTest {
+        [XmlElement("constantCompositionExpansionTest")]
+        public FluidResultConstantCompositionExpansionTest ConstantCompositionExpansionTest {
             get {
-                return transportPropertiesTestField;
+                return constantCompositionExpansionTestField;
             } 
             set {
-                transportPropertiesTestField = value;
-                TransportPropertiesTestSpecified = (value!=null);
-                NotifyPropertyChanged("TransportPropertiesTest");
+                constantCompositionExpansionTestField = value;
+                ConstantCompositionExpansionTestSpecified = (value!=null);
+                NotifyPropertyChanged("ConstantCompositionExpansionTest");
             }
         }
 
-        private FluidResultTransportPropertiesTest transportPropertiesTestField; 
+        private FluidResultConstantCompositionExpansionTest constantCompositionExpansionTestField; 
         /// <summary>
-        /// Boolean to indicate if TransportPropertiesTest has been set. Used for serialization.
+        /// Boolean to indicate if ConstantCompositionExpansionTest has been set. Used for serialization.
         /// </summary>
-        private Boolean TransportPropertiesTestSpecified = false; 
+        private Boolean ConstantCompositionExpansionTestSpecified = false; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
-        [XmlElement("separatorTest")]
-        public FluidResultSeparatorTest SeparatorTest {
+        [XmlElement("constantVolumeDepletionTest")]
+        public FluidResultConstantVolumeDepletionTest ConstantVolumeDepletionTest {
             get {
-                return separatorTestField;
+                return constantVolumeDepletionTestField;
             } 
             set {
-                separatorTestField = value;
-                SeparatorTestSpecified = (value!=null);
-                NotifyPropertyChanged("SeparatorTest");
+                constantVolumeDepletionTestField = value;
+                ConstantVolumeDepletionTestSpecified = (value!=null);
+                NotifyPropertyChanged("ConstantVolumeDepletionTest");
             }
         }
 
-        private FluidResultSeparatorTest separatorTestField; 
+        private FluidResultConstantVolumeDepletionTest constantVolumeDepletionTestField; 
         /// <summary>
-        /// Boolean to indicate if SeparatorTest has been set. Used for serialization.
+        /// Boolean to indicate if ConstantVolumeDepletionTest has been set. Used for serialization.
         /// </summary>
-        private Boolean SeparatorTestSpecified = false; 
-
-        /// <summary>
-        /// xxxxxxxxxxxxxxxx
-        /// </summary>
-        [XmlElement("saturationTest")]
-        public FluidResultSaturationTest SaturationTest {
-            get {
-                return saturationTestField;
-            } 
-            set {
-                saturationTestField = value;
-                SaturationTestSpecified = (value!=null);
-                NotifyPropertyChanged("SaturationTest");
-            }
-        }
-
-        private FluidResultSaturationTest saturationTestField; 
-        /// <summary>
-        /// Boolean to indicate if SaturationTest has been set. Used for serialization.
-        /// </summary>
-        private Boolean SaturationTestSpecified = false; 
+        private Boolean ConstantVolumeDepletionTestSpecified = false; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -39813,44 +39725,65 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
-        [XmlElement("constantCompositionExpansionTest")]
-        public FluidResultConstantCompositionExpansionTest ConstantCompositionExpansionTest {
+        [XmlElement("saturationTest")]
+        public FluidResultSaturationTest SaturationTest {
             get {
-                return constantCompositionExpansionTestField;
+                return saturationTestField;
             } 
             set {
-                constantCompositionExpansionTestField = value;
-                ConstantCompositionExpansionTestSpecified = (value!=null);
-                NotifyPropertyChanged("ConstantCompositionExpansionTest");
+                saturationTestField = value;
+                SaturationTestSpecified = (value!=null);
+                NotifyPropertyChanged("SaturationTest");
             }
         }
 
-        private FluidResultConstantCompositionExpansionTest constantCompositionExpansionTestField; 
+        private FluidResultSaturationTest saturationTestField; 
         /// <summary>
-        /// Boolean to indicate if ConstantCompositionExpansionTest has been set. Used for serialization.
+        /// Boolean to indicate if SaturationTest has been set. Used for serialization.
         /// </summary>
-        private Boolean ConstantCompositionExpansionTestSpecified = false; 
+        private Boolean SaturationTestSpecified = false; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
-        [XmlElement("constantVolumeDepletionTest")]
-        public FluidResultConstantVolumeDepletionTest ConstantVolumeDepletionTest {
+        [XmlElement("separatorTest")]
+        public FluidResultSeparatorTest SeparatorTest {
             get {
-                return constantVolumeDepletionTestField;
+                return separatorTestField;
             } 
             set {
-                constantVolumeDepletionTestField = value;
-                ConstantVolumeDepletionTestSpecified = (value!=null);
-                NotifyPropertyChanged("ConstantVolumeDepletionTest");
+                separatorTestField = value;
+                SeparatorTestSpecified = (value!=null);
+                NotifyPropertyChanged("SeparatorTest");
             }
         }
 
-        private FluidResultConstantVolumeDepletionTest constantVolumeDepletionTestField; 
+        private FluidResultSeparatorTest separatorTestField; 
         /// <summary>
-        /// Boolean to indicate if ConstantVolumeDepletionTest has been set. Used for serialization.
+        /// Boolean to indicate if SeparatorTest has been set. Used for serialization.
         /// </summary>
-        private Boolean ConstantVolumeDepletionTestSpecified = false; 
+        private Boolean SeparatorTestSpecified = false; 
+
+        /// <summary>
+        /// xxxxxxxxxxxxxxxx
+        /// </summary>
+        [XmlElement("transportPropertiesTest")]
+        public FluidResultTransportPropertiesTest TransportPropertiesTest {
+            get {
+                return transportPropertiesTestField;
+            } 
+            set {
+                transportPropertiesTestField = value;
+                TransportPropertiesTestSpecified = (value!=null);
+                NotifyPropertyChanged("TransportPropertiesTest");
+            }
+        }
+
+        private FluidResultTransportPropertiesTest transportPropertiesTestField; 
+        /// <summary>
+        /// Boolean to indicate if TransportPropertiesTest has been set. Used for serialization.
+        /// </summary>
+        private Boolean TransportPropertiesTestSpecified = false; 
 
 
 
@@ -45811,6 +45744,73 @@ namespace Energistics.DataAccess.PRODML122
     } //here
 
     }
+
+
+
+    /// <summary>
+    /// This class represents the abstractObject xsd type.
+    /// </summary>
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WftRunList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellTestList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeriesStatisticList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeriesDataList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Report))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductVolumeList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductionOperationList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductFlowModelList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidSampleList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidAnalysisResultList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidAnalysisList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DtsMeasurementList))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DtsInstalledSystemList))]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
+
+    [Description("This class represents the abstractObject xsd type.")]
+    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
+    {
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
 
 
 
