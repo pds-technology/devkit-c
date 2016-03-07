@@ -237,6 +237,7 @@ namespace Energistics.SchemaGatherer
                             sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd") + "</schema>"); 
                             if(enumList.Length>0)
                                 sw.WriteLine("    <schema>" + Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd") + "</schema>");
+                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd") + "</schema>");
                             sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd") + "</schema>");
                             sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd") + "</schema>");
                             sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd") + "</schema>");
@@ -286,7 +287,13 @@ namespace Energistics.SchemaGatherer
                 
                 }
 
+                ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder);
 
+                //GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
+            }
+
+        private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
+        {
                 using (Process p = new Process())
                 {
                     p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";

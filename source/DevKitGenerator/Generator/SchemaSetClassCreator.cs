@@ -75,6 +75,8 @@
 // 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -401,7 +403,10 @@ namespace Energistics.Generator
                 //the duplicate classes are removed.  Classes starting with Item are left in the list since those are generated as part of a XSD choice element.
                 //XSD Choice elements need to be handled separately.
                 return Assembly.GetExecutingAssembly().GetTypes().Except(new Type[] { this.GetType() }).Where(
-                    (t) => !t.IsEnum && t.Namespace == "Energistics.Generator." + mlVersion && !t.Name.Equals("cs_documentInfoQueryPara") && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item")));
+                    (t) => !t.IsEnum
+                        && t.Namespace == "Energistics.Generator." + mlVersion
+                        && !t.Name.Equals("cs_documentInfoQueryPara")
+                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.StartsWith("WITSML2")));
             }
         }
 
@@ -410,7 +415,9 @@ namespace Energistics.Generator
             get
             {
                 return Assembly.GetExecutingAssembly().GetTypes().Except(new Type[] { this.GetType() }).Where(
-                    (t) => t.IsEnum && t.Namespace == "Energistics.Generator." + mlVersion && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item")));
+                    (t) => t.IsEnum
+                        && t.Namespace == "Energistics.Generator." + mlVersion
+                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.StartsWith("WITSML2")));
             }
         }
 
@@ -441,7 +448,7 @@ namespace Energistics.Generator
                 newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
 
                 // previous code from exxon only works for version 1.0 , not future code.
-                if (!t.FullName.Contains("RESQML200"))
+                if (!t.FullName.Contains("RESQML2") && !t.FullName.Contains("WITSML2"))
                 {
                     //There are two trajectoryStation and wbGeometry types in WITSML.  The cs_trajectoryStation is used when the station is a component of a larger
                     //xml document.  The obj_trajectoryStation is used when the trajectory stations represent the top level object in the xml document.
@@ -480,6 +487,15 @@ namespace Energistics.Generator
                 }
                 else
                 {
+                    if (t.FullName.Contains("WITSML2"))
+                    {
+                        //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
+                        if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
+                        {
+                            newName = newName.Substring(0, newName.Length - 1);
+                        }
+                    }
+
                     //RESQML2.0 there is two same name class declared SecondDefiningParameter.
                     if (!OnceRename)
                     {
@@ -955,8 +971,65 @@ namespace Energistics.Generator
                 return String.Format("[XmlElement(\"{0}\")]", property.Name);
             }
         }
-        
-        
+
+
+        public string GetValidationAttributes(Type type, PropertyInfo property)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            Action init = () =>
+            {
+                if (sb.Length > 0)
+                    sb.AppendLine().Append("\t\t");
+            };
+
+            var reqs = property.GetCustomAttributes(typeof(RequiredAttribute), false);
+            if (reqs.Length > 0)
+            {
+                init();
+                var req = ((RequiredAttribute)reqs[0]);
+                sb.Append("[Required]");
+            }
+
+            var regexs = property.GetCustomAttributes(typeof(RegularExpressionAttribute), false);
+            if (regexs.Length > 0 && property.PropertyType == typeof(string))
+            {
+                init();
+                var regex = ((RegularExpressionAttribute)regexs[0]);
+                sb.AppendFormat("[RegularExpression(\"{0}\")]", regex.Pattern
+                    .Replace("\\", "\\\\")
+                    .Replace("\"", "\\\""));
+            }
+
+            var lengths = property.GetCustomAttributes(typeof(StringLengthAttribute), false);
+            if (lengths.Length > 0)
+            {
+                init();
+                var length = ((StringLengthAttribute)lengths[0]);
+                sb.AppendFormat("[StringLength({0})]", length.MaximumLength);
+            }
+
+            var ranges = property.GetCustomAttributes(typeof(RangeAttribute), false);
+            if (ranges.Length > 0)
+            {
+                init();
+                var range = ((RangeAttribute)ranges[0]);
+                sb.AppendFormat("[Range({0}, {1})]", range.Minimum, range.Maximum);
+            }
+
+            var descriptions = property.GetCustomAttributes(typeof(DescriptionAttribute), false);
+            if (descriptions.Length > 0)
+            {
+                init();
+                var desc = ((DescriptionAttribute)descriptions[0]);
+                sb.AppendFormat("[Description(\"{0}\")]", desc.Description
+                    .Replace("\\", "\\\\")
+                    .Replace("\"", "\\\""));
+            }
+
+            return sb.ToString();
+        }
+
 
         /// <summary>
         /// Used by ExpandChoiceAttributes

@@ -1,26 +1,10 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //This code was generated using the Energistics Generator tool.  Direct changes to this code will be lost
 //during regeneration.
 
 using System;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
@@ -32,315 +16,22 @@ using Energistics.DataAccess.COMPLETION100.ReferenceData;
 namespace Energistics.DataAccess.COMPLETION100
 {
     #region Classes
-
     /// <summary>
-    /// This class represents the obj_downholeComponents xsd type.
+    /// This class represents the abstractObject xsd type.
     /// </summary>
-
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletionList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedgerList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletionList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponentList))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    [System.Xml.Serialization.XmlRootAttribute("downholeComponents", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-
-    [Description("This class represents the obj_downholeComponents xsd type.")]
-    public partial class DownholeComponentList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/schemas/abstract")]
+    [System.Xml.Serialization.XmlRootAttribute("abstractDataObject", Namespace="http://www.energistics.org/schemas/abstract", IsNullable=false)]
+    [Description("This class represents the abstractObject xsd type.")]
+    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
     {
-
-
-        /// <summary>
-        /// Information about the downhole component.
-        /// </summary>
-		[XmlElement("documentInfo")]
-
-        public DocumentInfo DocumentInfo {
-            get {
-                return documentInfoField;
-            } 
-            set {
-                documentInfoField = value;
-                NotifyPropertyChanged("DocumentInfo");
-            }
-        }
-
-        private DocumentInfo documentInfoField; 
-
-
-        /// <summary>
-        /// Information about a downhole equipment
-        /// </summary>
-		[XmlElement("downholeComponent")]
-
-        public List<DownholeComponent> DownholeComponent {
-            get {
-                return downholeComponentField;
-            } 
-            set {
-                downholeComponentField = value;
-                NotifyPropertyChanged("DownholeComponent");
-            }
-        }
-
-        private List<DownholeComponent> downholeComponentField; 
-
-
-        /// <summary>
-        /// Information about a downhole equipment
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return DownholeComponent;
-			}
-        }
-
-		/// <summary>
-        /// Data object schema version.
-        /// </summary>
-        [XmlAttribute("version")]
-
-        public String Version {
-            get {
-                return versionField;
-            } 
-            set {
-                versionField = value;
-                NotifyPropertyChanged("Version");
-            }
-        }
-
-        private String versionField = "1.0"; 
-
-
-
-
-    } //here
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentInfo", Namespace="http://www.witsml.org/schemas/1series")]
-
-    [Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
-    public partial class DocumentInfo : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// An identifier for the document. This is intended to be unique within the context of the NamingSystem.
-        /// </summary>
-		[XmlElement("documentName")]
-
-        public NameStruct DocumentName {
-            get {
-                return documentNameField;
-            } 
-            set {
-                documentNameField = value;
-                NotifyPropertyChanged("DocumentName");
-            }
-        }
-
-        private NameStruct documentNameField; 
-
-
-        /// <summary>
-        /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
-        /// </summary>
-		[XmlElement("documentAlias")]
-
-        public List<NameStruct> DocumentAlias {
-            get {
-                return documentAliasField;
-            } 
-            set {
-                documentAliasField = value;
-                NotifyPropertyChanged("DocumentAlias");
-            }
-        }
-
-        private List<NameStruct> documentAliasField; 
-
-
-        /// <summary>
-        /// The date of the creation of the document. This is not the same as the date that the file was created. For this date, the document is considered to be the set of information associated with this document information. For example, the document may be a seismic binset. This represents the date that the binset was created. The FileCreation information would capture the date that the XML file was created to send or exchange the binset.
-        /// </summary>
-		[XmlElement("documentDate")]
-
-        public DateTime? DocumentDate {
-            get {
-                return documentDateField;
-            } 
-            set {
-                documentDateField = value;
-                this.DocumentDateSpecified = true;
-                NotifyPropertyChanged("DocumentDate");
-            }
-        }
-
-        private DateTime? documentDateField; 
-
-
-		/// <summary>
-        /// documentDateSpecified property
-        /// </summary>
-        [XmlIgnore]
-		[Browsable(false)]
-
-        public Boolean DocumentDateSpecified {
-            get {
-                return documentDateSpecifiedField;
-            } 
-            set {
-                documentDateSpecifiedField = value;
-                NotifyPropertyChanged("DocumentDateSpecified");
-            }
-        }
-
-        private Boolean documentDateSpecifiedField; 
-
-
-        /// <summary>
-        /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
-        /// </summary>
-		[XmlElement("documentClass")]
-
-        public List<NameStruct> DocumentClass {
-            get {
-                return documentClassField;
-            } 
-            set {
-                documentClassField = value;
-                NotifyPropertyChanged("DocumentClass");
-            }
-        }
-
-        private List<NameStruct> documentClassField; 
-
-
-        /// <summary>
-        /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
-        /// </summary>
-		[XmlElement("fileCreationInformation")]
-
-        public DocumentFileCreation FileCreationInformation {
-            get {
-                return fileCreationInformationField;
-            } 
-            set {
-                fileCreationInformationField = value;
-                NotifyPropertyChanged("FileCreationInformation");
-            }
-        }
-
-        private DocumentFileCreation fileCreationInformationField; 
-
-
-        /// <summary>
-        /// Information about the security to be applied to this file. More than one classification can be given.
-        /// </summary>
-		[XmlElement("securityInformation")]
-
-        public List<DocumentSecurityInfo> SecurityInformation {
-            get {
-                return securityInformationField;
-            } 
-            set {
-                securityInformationField = value;
-                NotifyPropertyChanged("SecurityInformation");
-            }
-        }
-
-        private List<DocumentSecurityInfo> securityInformationField; 
-
-
-        /// <summary>
-        /// A free-form string that allows a disclaimer to accompany the information.
-        /// </summary>
-		[XmlElement("disclaimer")]
-
-        public String Disclaimer {
-            get {
-                return disclaimerField;
-            } 
-            set {
-                disclaimerField = value;
-                NotifyPropertyChanged("Disclaimer");
-            }
-        }
-
-        private String disclaimerField; 
-
-
-        /// <summary>
-        /// A collection of events that can document the history of the data.
-        /// </summary>
-		[XmlArrayItem("event")]
-        [XmlArray("auditTrail")]
-
-        public List<DocumentEvent> AuditTrail {
-            get {
-                return auditTrailField;
-            } 
-            set {
-                auditTrailField = value;
-                NotifyPropertyChanged("AuditTrail");
-            }
-        }
-
-        private List<DocumentEvent> auditTrailField; 
-
-
-        /// <summary>
-        /// The owner of the data.
-        /// </summary>
-		[XmlElement("owner")]
-
-        public String Owner {
-            get {
-                return ownerField;
-            } 
-            set {
-                ownerField = value;
-                NotifyPropertyChanged("Owner");
-            }
-        }
-
-        private String ownerField; 
-
-
-        /// <summary>
-        /// An optional comment about the document.
-        /// </summary>
-		[XmlElement("comment")]
-
-        public String Comment {
-            get {
-                return commentField;
-            } 
-            set {
-                commentField = value;
-                NotifyPropertyChanged("Comment");
-            }
-        }
-
-        private String commentField; 
-
 
 
         
@@ -362,137 +53,26 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the nameStruct xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="nameStruct", Namespace="http://www.witsml.org/schemas/1series")]
-
-    [Description("This class represents the nameStruct xsd type.")]
-    public partial class NameStruct : Object , INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the NameStruct class.
-        /// </summary>
-        public NameStruct() {}
-
-        /// <summary>
-        /// Initializes a new instance of the NameStruct class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public NameStruct(String value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-
-		/// <summary>
-        /// The naming system within the name is (hopefully) unique.
-        /// </summary>
-        [XmlAttribute("namingSystem")]
-
-        public String NamingSystem {
-            get {
-                return namingSystemField;
-            } 
-            set {
-                namingSystemField = value;
-                NotifyPropertyChanged("NamingSystem");
-            }
-        }
-
-        private String namingSystemField; 
-
-
-		/// <summary>
-        /// Value property
-        /// </summary>
-        [XmlText]
-
-        public String Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private String ValueField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
 
     /// <summary>
     /// The non-contextual content of a well completion object.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCompletion", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("The non-contextual content of a well completion object.")]
     public partial class WellCompletion : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Human recognizable context for the well that contains the completion. 
         /// </summary>
+		[Required]
+		[Description("Human recognizable context for the well that contains the completion.")]
 		[XmlElement("nameWell")]
-
         public String NameWell {
             get {
                 return nameWellField;
@@ -505,12 +85,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellField; 
 
-
         /// <summary>
         /// Human recognizable context for the completion. 
         /// </summary>
+		[Required]
+		[Description("Human recognizable context for the completion.")]
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -523,12 +103,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// fieldID property
         /// </summary>
+		[Description("Field ID.")]
 		[XmlElement("fieldID")]
-
         public String FieldID {
             get {
                 return fieldIDField;
@@ -541,12 +120,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String fieldIDField; 
 
-
         /// <summary>
         /// fieldCode property
         /// </summary>
+		[Description("Field code.")]
 		[XmlElement("fieldCode")]
-
         public String FieldCode {
             get {
                 return fieldCodeField;
@@ -559,12 +137,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String fieldCodeField; 
 
-
         /// <summary>
         /// fieldType property
         /// </summary>
+		[Description("Field type.")]
 		[XmlElement("fieldType")]
-
         public String FieldType {
             get {
                 return fieldTypeField;
@@ -577,12 +154,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String fieldTypeField; 
 
-
         /// <summary>
         /// effectiveDate property
         /// </summary>
+		[Description("Field date.")]
 		[XmlElement("effectiveDate")]
-
         public DateTime? EffectiveDate {
             get {
                 return effectiveDateField;
@@ -596,13 +172,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? effectiveDateField; 
 
-
 		/// <summary>
         /// effectiveDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EffectiveDateSpecified {
             get {
                 return effectiveDateSpecifiedField;
@@ -615,12 +189,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean effectiveDateSpecifiedField; 
 
-
         /// <summary>
         /// expiredDate property
         /// </summary>
+		[Description("Expiration date")]
 		[XmlElement("expiredDate")]
-
         public DateTime? ExpiredDate {
             get {
                 return expiredDateField;
@@ -634,13 +207,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? expiredDateField; 
 
-
 		/// <summary>
         /// expiredDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ExpiredDateSpecified {
             get {
                 return expiredDateSpecifiedField;
@@ -653,12 +224,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean expiredDateSpecifiedField; 
 
-
         /// <summary>
         /// E_P_RightsID property
         /// </summary>
+		[Description("Documents exploration and production rights")]
 		[XmlElement("E_P_RightsID")]
-
         public String E_P_RightsID {
             get {
                 return E_P_RightsIDField;
@@ -671,12 +241,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String E_P_RightsIDField; 
 
-
         /// <summary>
         /// currentStatus property
         /// </summary>
+		
 		[XmlElement("currentStatus")]
-
         public CompletionStatus? CurrentStatus {
             get {
                 return currentStatusField;
@@ -690,13 +259,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CompletionStatus? currentStatusField; 
 
-
 		/// <summary>
         /// currentStatusSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean CurrentStatusSpecified {
             get {
                 return currentStatusSpecifiedField;
@@ -709,12 +276,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean currentStatusSpecifiedField; 
 
-
         /// <summary>
         /// statusDate property
         /// </summary>
+		
 		[XmlElement("statusDate")]
-
         public DateTime? StatusDate {
             get {
                 return statusDateField;
@@ -728,13 +294,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? statusDateField; 
 
-
 		/// <summary>
         /// statusDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StatusDateSpecified {
             get {
                 return statusDateSpecifiedField;
@@ -747,12 +311,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean statusDateSpecifiedField; 
 
-
         /// <summary>
         /// statusHistory property
         /// </summary>
+		
 		[XmlElement("statusHistory")]
-
         public List<CompletionStatusHistory> StatusHistory {
             get {
                 return statusHistoryField;
@@ -765,12 +328,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<CompletionStatusHistory> statusHistoryField; 
 
-
         /// <summary>
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
+		[Description("A container element that contains elements that are common to all data  objects.")]
 		[XmlElement("commonData")]
-
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -783,12 +345,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CommonData commonDataField; 
 
-
         /// <summary>
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
+		[Description("A container element that can contain custom or user defined  data elements.")]
 		[XmlElement("customData")]
-
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -801,12 +362,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CustomData customDataField; 
 
-
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell. 
         /// </summary>
+		[Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
-
+		
         public String UidWell {
             get {
                 return uidWellField;
@@ -819,12 +380,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -836,7 +397,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -858,35 +418,27 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the CompletionStatusHistory xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CompletionStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the CompletionStatusHistory xsd type.")]
     public partial class CompletionStatusHistory : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Completion status
         /// </summary>
+		[Description("Completion status")]
 		[XmlElement("status")]
-
         public CompletionStatus? Status {
             get {
                 return statusField;
@@ -900,13 +452,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CompletionStatus? statusField; 
 
-
 		/// <summary>
         /// statusSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StatusSpecified {
             get {
                 return statusSpecifiedField;
@@ -919,12 +469,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean statusSpecifiedField; 
 
-
         /// <summary>
         /// the start date of status
         /// </summary>
+		[Description("the start date of status")]
 		[XmlElement("startDate")]
-
         public DateTime? StartDate {
             get {
                 return startDateField;
@@ -938,13 +487,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? startDateField; 
 
-
 		/// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -957,12 +504,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean startDateSpecifiedField; 
 
-
         /// <summary>
         /// the end date of status
         /// </summary>
+		[Description("the end date of status")]
 		[XmlElement("endDate")]
-
         public DateTime? EndDate {
             get {
                 return endDateField;
@@ -976,13 +522,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? endDateField; 
 
-
 		/// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -995,12 +539,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean endDateSpecifiedField; 
 
-
         /// <summary>
         /// The measured bottom of perforation
         /// </summary>
+		[Description("The measured bottom of perforation")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -1013,12 +556,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// The measured top of perforation
         /// </summary>
+		[Description("The measured top of perforation")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -1031,12 +573,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// The description about the status
         /// </summary>
+		[Description("The description about the status")]
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -1049,12 +590,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -1066,7 +607,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -1088,27 +628,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the measuredDepthCoord xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="measuredDepthCoord", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the measuredDepthCoord xsd type.")]
     public partial class MeasuredDepthCoord : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1136,12 +668,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
+		[Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
-
+		
         public MeasuredDepthUom Uom {
             get {
                 return uomField;
@@ -1154,12 +686,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthUom uomField; 
 
-
 		/// <summary>
         /// A pointer to the reference datum for this coordinate value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.
         /// </summary>
+		[Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.")]
         [XmlAttribute("datum")]
-
+		
         public String Datum {
             get {
                 return datumField;
@@ -1173,142 +705,80 @@ namespace Energistics.DataAccess.COMPLETION100
         private String datumField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the abstractMeasure xsd type.
     /// </summary>
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificVolumeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificHeatCapacityMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelativePowerMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the abstractMeasure xsd type.")]
     public abstract partial class AbstractMeasure : Object , INotifyPropertyChanged
     {
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public Double Value {
             get {
                 return ValueField;
@@ -1320,7 +790,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private Double ValueField; 
-
 
 
         
@@ -1342,27 +811,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the footageEastWest xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="footageEastWest", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the footageEastWest xsd type.")]
     public partial class FootageEastWest : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1390,12 +851,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure of the distance value.
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public LengthUom Uom {
             get {
                 return uomField;
@@ -1408,12 +869,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthUom uomField; 
 
-
 		/// <summary>
         /// Specifies the reference line that is the origin of the distance.
         /// </summary>
+		
         [XmlAttribute("ref")]
-
+		
         public EastOrWest Ref {
             get {
                 return refField;
@@ -1427,28 +888,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private EastOrWest refField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the footageNorthSouth xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="footageNorthSouth", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the footageNorthSouth xsd type.")]
     public partial class FootageNorthSouth : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1476,12 +928,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure of the distance value.
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public LengthUom Uom {
             get {
                 return uomField;
@@ -1494,12 +946,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthUom uomField; 
 
-
 		/// <summary>
         /// Specifies the reference line that is the origin of the distance.
         /// </summary>
+		
         [XmlAttribute("ref")]
-
+		
         public NorthOrSouth Ref {
             get {
                 return refField;
@@ -1513,28 +965,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private NorthOrSouth refField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the wellElevationCoord xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="wellElevationCoord", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the wellElevationCoord xsd type.")]
     public partial class WellElevationCoord : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1562,12 +1005,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public WellVerticalCoordinateUom Uom {
             get {
                 return uomField;
@@ -1580,12 +1023,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalCoordinateUom uomField; 
 
-
 		/// <summary>
         /// A pointer to the reference datum for this coordinate value as defined in WellDatum. If not given then the default WellDatum must be assumed.
         /// </summary>
+		
         [XmlAttribute("datum")]
-
+		
         public String Datum {
             get {
                 return datumField;
@@ -1599,28 +1042,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private String datumField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the wellVerticalDepthCoord xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="wellVerticalDepthCoord", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the wellVerticalDepthCoord xsd type.")]
     public partial class WellVerticalDepthCoord : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1648,12 +1082,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
+		[Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
-
+		
         public WellVerticalCoordinateUom Uom {
             get {
                 return uomField;
@@ -1666,12 +1100,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalCoordinateUom uomField; 
 
-
 		/// <summary>
         /// A pointer to the reference datum for this coordinate value as defined in WellDatum. If not given then the default WellDatum must be assumed.
         /// </summary>
+		[Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.")]
         [XmlAttribute("datum")]
-
+		
         public String Datum {
             get {
                 return datumField;
@@ -1685,28 +1119,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private String datumField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the ratioGenericMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ratioGenericMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the ratioGenericMeasure xsd type.")]
     public partial class RatioGenericMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1734,12 +1159,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public String Uom {
             get {
                 return uomField;
@@ -1752,12 +1177,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uomField; 
 
-
 		/// <summary>
         /// numerator property
         /// </summary>
+		
         [XmlAttribute("numerator")]
-
+		
         public Double Numerator {
             get {
                 return numeratorField;
@@ -1771,13 +1196,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double numeratorField; 
 
-
 		/// <summary>
         /// numeratorSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean NumeratorSpecified {
             get {
                 return numeratorSpecifiedField;
@@ -1790,12 +1213,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean numeratorSpecifiedField; 
 
-
 		/// <summary>
         /// denominator property
         /// </summary>
+		
         [XmlAttribute("denominator")]
-
+		
         public Double Denominator {
             get {
                 return denominatorField;
@@ -1809,13 +1232,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double denominatorField; 
 
-
 		/// <summary>
         /// denominatorSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DenominatorSpecified {
             get {
                 return denominatorSpecifiedField;
@@ -1829,28 +1250,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private Boolean denominatorSpecifiedField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the genericMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="genericMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the genericMeasure xsd type.")]
     public partial class GenericMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1878,12 +1290,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure for the quantity.
         /// </summary>
+		[Description("The unit of measure for the quantity.")]
         [XmlAttribute("uom")]
-
+		
         public String Uom {
             get {
                 return uomField;
@@ -1897,28 +1309,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private String uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the measureOrQuantity xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="measureOrQuantity", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the measureOrQuantity xsd type.")]
     public partial class MeasureOrQuantity : AbstractMeasure , INotifyPropertyChanged
     {
@@ -1946,12 +1349,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure for the quantity. This value must conform to the values allowed by a measure class. If the value is a measure then the uom must be specified.
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public String Uom {
             get {
                 return uomField;
@@ -1965,28 +1368,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private String uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the volumePerVolumeMeasurePercent xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumePerVolumeMeasurePercent", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the volumePerVolumeMeasurePercent xsd type.")]
     public partial class VolumePerVolumeMeasurePercent : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2014,12 +1408,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public PercentUom Uom {
             get {
                 return uomField;
@@ -2033,28 +1427,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private PercentUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the yAxisAzimuth xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="yAxisAzimuth", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the yAxisAzimuth xsd type.")]
     public partial class YAxisAzimuth : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2082,12 +1467,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure of the azimuth value.
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public PlaneAngleUom Uom {
             get {
                 return uomField;
@@ -2100,12 +1485,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PlaneAngleUom uomField; 
 
-
 		/// <summary>
         /// Specifies the direction to be considered North for the y axis.
         /// </summary>
+		
         [XmlAttribute("northDirection")]
-
+		
         public AziRef NorthDirection {
             get {
                 return northDirectionField;
@@ -2119,13 +1504,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private AziRef northDirectionField; 
 
-
 		/// <summary>
         /// northDirectionSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean NorthDirectionSpecified {
             get {
                 return northDirectionSpecifiedField;
@@ -2139,28 +1522,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private Boolean northDirectionSpecifiedField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the volumePerVolumeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumePerVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the volumePerVolumeMeasure xsd type.")]
     public partial class VolumePerVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2188,12 +1562,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public VolumePerVolumeUom Uom {
             get {
                 return uomField;
@@ -2207,28 +1581,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private VolumePerVolumeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the volumePerLengthMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumePerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the volumePerLengthMeasure xsd type.")]
     public partial class VolumePerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2256,12 +1621,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public VolumePerLengthUom Uom {
             get {
                 return uomField;
@@ -2275,28 +1640,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private VolumePerLengthUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the volumeFlowRateMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumeFlowRateMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the volumeFlowRateMeasure xsd type.")]
     public partial class VolumeFlowRateMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2324,12 +1680,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public VolumeFlowRateUom Uom {
             get {
                 return uomField;
@@ -2343,28 +1699,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private VolumeFlowRateUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the volumeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the volumeMeasure xsd type.")]
     public partial class VolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2392,12 +1739,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public VolumeUom Uom {
             get {
                 return uomField;
@@ -2411,28 +1758,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private VolumeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the velocityMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="velocityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the velocityMeasure xsd type.")]
     public partial class VelocityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2460,12 +1798,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public VelocityUom Uom {
             get {
                 return uomField;
@@ -2479,28 +1817,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private VelocityUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the timeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="timeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the timeMeasure xsd type.")]
     public partial class TimeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2528,12 +1857,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public TimeUom Uom {
             get {
                 return uomField;
@@ -2547,28 +1876,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private TimeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the thermodynamicTemperatureMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="thermodynamicTemperatureMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the thermodynamicTemperatureMeasure xsd type.")]
     public partial class ThermodynamicTemperatureMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2596,12 +1916,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ThermodynamicTemperatureUom Uom {
             get {
                 return uomField;
@@ -2615,28 +1935,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ThermodynamicTemperatureUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the thermalVolumetricExpansionMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="thermalVolumetricExpansionMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the thermalVolumetricExpansionMeasure xsd type.")]
     public partial class ThermalVolumetricExpansionMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2664,12 +1975,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ThermalVolumetricExpansionUom Uom {
             get {
                 return uomField;
@@ -2683,28 +1994,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ThermalVolumetricExpansionUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the thermalConductivityMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="thermalConductivityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the thermalConductivityMeasure xsd type.")]
     public partial class ThermalConductivityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2732,12 +2034,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ThermalConductivityUom Uom {
             get {
                 return uomField;
@@ -2751,28 +2053,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ThermalConductivityUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the standardVolumePerTimeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="standardVolumePerTimeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the standardVolumePerTimeMeasure xsd type.")]
     public partial class StandardVolumePerTimeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2800,12 +2093,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public StandardVolumePerTimeUom Uom {
             get {
                 return uomField;
@@ -2819,28 +2112,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private StandardVolumePerTimeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the standardVolumeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="standardVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the standardVolumeMeasure xsd type.")]
     public partial class StandardVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2868,12 +2152,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public StandardVolumeUom Uom {
             get {
                 return uomField;
@@ -2887,28 +2171,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private StandardVolumeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the specificVolumeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="specificVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the specificVolumeMeasure xsd type.")]
     public partial class SpecificVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -2936,12 +2211,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public SpecificVolumeUom Uom {
             get {
                 return uomField;
@@ -2955,28 +2230,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private SpecificVolumeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the specificHeatCapacityMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="specificHeatCapacityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the specificHeatCapacityMeasure xsd type.")]
     public partial class SpecificHeatCapacityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3004,12 +2270,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public SpecificHeatCapacityUom Uom {
             get {
                 return uomField;
@@ -3023,28 +2289,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private SpecificHeatCapacityUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the relativePowerMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="relativePowerMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the relativePowerMeasure xsd type.")]
     public partial class RelativePowerMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3072,12 +2329,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public RelativePowerUom Uom {
             get {
                 return uomField;
@@ -3091,28 +2348,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private RelativePowerUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the pressureMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="pressureMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the pressureMeasure xsd type.")]
     public partial class PressureMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3140,12 +2388,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public PressureUom Uom {
             get {
                 return uomField;
@@ -3159,28 +2407,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private PressureUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the powerMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="powerMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the powerMeasure xsd type.")]
     public partial class PowerMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3208,12 +2447,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public PowerUom Uom {
             get {
                 return uomField;
@@ -3227,28 +2466,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private PowerUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the planeAngleMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="planeAngleMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the planeAngleMeasure xsd type.")]
     public partial class PlaneAngleMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3276,12 +2506,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public PlaneAngleUom Uom {
             get {
                 return uomField;
@@ -3295,28 +2525,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private PlaneAngleUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the permeabilityRockMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="permeabilityRockMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the permeabilityRockMeasure xsd type.")]
     public partial class PermeabilityRockMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3344,12 +2565,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public PermeabilityRockUom Uom {
             get {
                 return uomField;
@@ -3363,28 +2584,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private PermeabilityRockUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the perLengthMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="perLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the perLengthMeasure xsd type.")]
     public partial class PerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3412,12 +2624,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public PerLengthUom Uom {
             get {
                 return uomField;
@@ -3431,28 +2643,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private PerLengthUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the momentOfForceMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="momentOfForceMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the momentOfForceMeasure xsd type.")]
     public partial class MomentOfForceMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3480,12 +2683,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public MomentOfForceUom Uom {
             get {
                 return uomField;
@@ -3499,28 +2702,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private MomentOfForceUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the massPerLengthMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="massPerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the massPerLengthMeasure xsd type.")]
     public partial class MassPerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3548,12 +2742,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public MassPerLengthUom Uom {
             get {
                 return uomField;
@@ -3567,28 +2761,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private MassPerLengthUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the massMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="massMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the massMeasure xsd type.")]
     public partial class MassMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3616,12 +2801,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public MassUom Uom {
             get {
                 return uomField;
@@ -3635,28 +2820,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private MassUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the massConcentrationMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="massConcentrationMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the massConcentrationMeasure xsd type.")]
     public partial class MassConcentrationMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3684,12 +2860,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public MassConcentrationUom Uom {
             get {
                 return uomField;
@@ -3703,28 +2879,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private MassConcentrationUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the magneticInductionMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="magneticInductionMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the magneticInductionMeasure xsd type.")]
     public partial class MagneticInductionMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3752,12 +2919,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public MagneticInductionUom Uom {
             get {
                 return uomField;
@@ -3771,28 +2938,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private MagneticInductionUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the lengthPerLengthMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="lengthPerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the lengthPerLengthMeasure xsd type.")]
     public partial class LengthPerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3820,12 +2978,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public LengthPerLengthUom Uom {
             get {
                 return uomField;
@@ -3839,28 +2997,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private LengthPerLengthUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the lengthMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="lengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the lengthMeasure xsd type.")]
     public partial class LengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3888,12 +3037,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public LengthUom Uom {
             get {
                 return uomField;
@@ -3907,28 +3056,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private LengthUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the illuminanceMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="illuminanceMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the illuminanceMeasure xsd type.")]
     public partial class IlluminanceMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -3956,12 +3096,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public IlluminanceUom Uom {
             get {
                 return uomField;
@@ -3975,28 +3115,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private IlluminanceUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the forcePerVolumeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="forcePerVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the forcePerVolumeMeasure xsd type.")]
     public partial class ForcePerVolumeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4024,12 +3155,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ForcePerVolumeUom Uom {
             get {
                 return uomField;
@@ -4043,28 +3174,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ForcePerVolumeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the forcePerLengthMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="forcePerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the forcePerLengthMeasure xsd type.")]
     public partial class ForcePerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4092,12 +3214,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ForcePerLengthUom Uom {
             get {
                 return uomField;
@@ -4111,28 +3233,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ForcePerLengthUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the forceMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="forceMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the forceMeasure xsd type.")]
     public partial class ForceMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4160,12 +3273,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ForceUom Uom {
             get {
                 return uomField;
@@ -4179,28 +3292,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ForceUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the equivalentPerMassMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="equivalentPerMassMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the equivalentPerMassMeasure xsd type.")]
     public partial class EquivalentPerMassMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4228,12 +3332,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public EquivalentPerMassUom Uom {
             get {
                 return uomField;
@@ -4247,28 +3351,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private EquivalentPerMassUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the electricPotentialMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="electricPotentialMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the electricPotentialMeasure xsd type.")]
     public partial class ElectricPotentialMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4296,12 +3391,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ElectricPotentialUom Uom {
             get {
                 return uomField;
@@ -4315,28 +3410,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ElectricPotentialUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the electricCurrentMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="electricCurrentMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the electricCurrentMeasure xsd type.")]
     public partial class ElectricCurrentMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4364,12 +3450,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public ElectricCurrentUom Uom {
             get {
                 return uomField;
@@ -4383,28 +3469,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private ElectricCurrentUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the dynamicViscosityMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="dynamicViscosityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the dynamicViscosityMeasure xsd type.")]
     public partial class DynamicViscosityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4432,12 +3509,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public DynamicViscosityUom Uom {
             get {
                 return uomField;
@@ -4451,28 +3528,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private DynamicViscosityUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the dimensionlessMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="dimensionlessMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the dimensionlessMeasure xsd type.")]
     public partial class DimensionlessMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4500,12 +3568,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public DimensionlessUom Uom {
             get {
                 return uomField;
@@ -4519,28 +3587,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private DimensionlessUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the densityMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="densityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the densityMeasure xsd type.")]
     public partial class DensityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4568,12 +3627,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public DensityUom Uom {
             get {
                 return uomField;
@@ -4587,28 +3646,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private DensityUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the compressibilityMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="compressibilityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the compressibilityMeasure xsd type.")]
     public partial class CompressibilityMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4636,12 +3686,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public CompressibilityUom Uom {
             get {
                 return uomField;
@@ -4655,28 +3705,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private CompressibilityUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the areaPerAreaMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="areaPerAreaMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the areaPerAreaMeasure xsd type.")]
     public partial class AreaPerAreaMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4704,12 +3745,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public AreaPerAreaUom Uom {
             get {
                 return uomField;
@@ -4723,28 +3764,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private AreaPerAreaUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the areaMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="areaMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the areaMeasure xsd type.")]
     public partial class AreaMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4772,12 +3804,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public AreaUom Uom {
             get {
                 return uomField;
@@ -4791,28 +3823,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private AreaUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the anglePerTimeMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="anglePerTimeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the anglePerTimeMeasure xsd type.")]
     public partial class AnglePerTimeMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4840,12 +3863,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public AnglePerTimeUom Uom {
             get {
                 return uomField;
@@ -4859,28 +3882,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private AnglePerTimeUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the anglePerLengthMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="anglePerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the anglePerLengthMeasure xsd type.")]
     public partial class AnglePerLengthMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4908,12 +3922,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public AnglePerLengthUom Uom {
             get {
                 return uomField;
@@ -4927,28 +3941,19 @@ namespace Energistics.DataAccess.COMPLETION100
         private AnglePerLengthUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the accelerationLinearMeasure xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="accelerationLinearMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the accelerationLinearMeasure xsd type.")]
     public partial class AccelerationLinearMeasure : AbstractMeasure , INotifyPropertyChanged
     {
@@ -4976,12 +3981,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public AccelerationLinearUom Uom {
             get {
                 return uomField;
@@ -4995,38 +4000,28 @@ namespace Energistics.DataAccess.COMPLETION100
         private AccelerationLinearUom uomField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     ///  WITSML - Common Data Component Schema 
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_commonData", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description(" WITSML - Common Data Component Schema ")]
     public partial class CommonData : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// An identifier to indicate the data originator. This identifies the server that originally created the object and thus most of the uids in the object (but not necessarily the uids of the parents). This is typically a url. 
         /// </summary>
+		[Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
 		[XmlElement("sourceName")]
-
         public String SourceName {
             get {
                 return sourceNameField;
@@ -5039,12 +4034,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String sourceNameField; 
 
-
         /// <summary>
         /// When the data was created at the persistent data store. This is an API server parameter releted to the "Special Handling of Change Information" within a server. See the relevant API specification for the behavior related to this element.
         /// </summary>
+		[Description("When the data was created at the persistent data store.  This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimCreation")]
-
         public DateTime? DateTimeCreation {
             get {
                 return dTimCreationField;
@@ -5058,13 +4052,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? dTimCreationField; 
 
-
 		/// <summary>
         /// dTimCreationSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DateTimeCreationSpecified {
             get {
                 return dTimCreationSpecifiedField;
@@ -5077,12 +4069,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimCreationSpecifiedField; 
 
-
         /// <summary>
         /// Last change of any element of the data at the persistent data store. This is an API server parameter releted to the "Special Handling of Change Information" within a server. See the relevant API specification for the behavior related to this element.
         /// </summary>
+		[Description("Last change of any element of the data at the persistent data store. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimLastChange")]
-
         public DateTime? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
@@ -5096,13 +4087,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? dTimLastChangeField; 
 
-
 		/// <summary>
         /// dTimLastChangeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DateTimeLastChangeSpecified {
             get {
                 return dTimLastChangeSpecifiedField;
@@ -5115,12 +4104,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimLastChangeSpecifiedField; 
 
-
         /// <summary>
         /// The item state for the data object. 
         /// </summary>
+		[Description("The item state for the data object.")]
 		[XmlElement("itemState")]
-
         public ItemState? ItemState {
             get {
                 return itemStateField;
@@ -5134,13 +4122,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ItemState? itemStateField; 
 
-
 		/// <summary>
         /// itemStateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ItemStateSpecified {
             get {
                 return itemStateSpecifiedField;
@@ -5153,12 +4139,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean itemStateSpecifiedField; 
 
-
         /// <summary>
         /// The category of the service related to the creation of the object. For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". 
         /// </summary>
+		[Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\".")]
 		[XmlElement("serviceCategory")]
-
         public String ServiceCategory {
             get {
                 return serviceCategoryField;
@@ -5171,12 +4156,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String serviceCategoryField; 
 
-
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
-
         public String Comments {
             get {
                 return commentsField;
@@ -5189,12 +4173,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentsField; 
 
-
         /// <summary>
         /// The local time zone of the original acquisition date-time values. It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.
         /// </summary>
+		[Description("The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.")]
 		[XmlElement("acquisitionTimeZone")]
-
         public List<TimestampedTimeZone> AcquisitionTimeZone {
             get {
                 return acquisitionTimeZoneField;
@@ -5207,12 +4190,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<TimestampedTimeZone> acquisitionTimeZoneField; 
 
-
         /// <summary>
         /// A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object. Depth coordinates that do not specify a datum attribute shall be assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.
         /// </summary>
+		[Description("A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object.  Depth coordinates that do not specify a datum attribute shall be  assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.")]
 		[XmlElement("defaultDatum")]
-
         public RefNameString DefaultDatum {
             get {
                 return defaultDatumField;
@@ -5225,12 +4207,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private RefNameString defaultDatumField; 
 
-
         /// <summary>
         /// This is an API query parameter. See the API specification for the behavior related to this element.
         /// </summary>
+		[Description("This is an API query parameter. See the API specification for the behavior related to this element.")]
 		[XmlElement("privateGroupOnly")]
-
         public Boolean? PrivateGroupOnly {
             get {
                 return privateGroupOnlyField;
@@ -5244,13 +4225,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? privateGroupOnlyField; 
 
-
 		/// <summary>
         /// privateGroupOnlySpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean PrivateGroupOnlySpecified {
             get {
                 return privateGroupOnlySpecifiedField;
@@ -5263,12 +4242,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean privateGroupOnlySpecifiedField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		[Description("Extensions to the schema using an xsd:any construct.")]
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -5281,12 +4259,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -5298,7 +4275,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -5320,27 +4296,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the timestampedTimeZone xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="timestampedTimeZone", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the timestampedTimeZone xsd type.")]
     public partial class TimestampedTimeZone : Object , INotifyPropertyChanged
     {
@@ -5366,12 +4334,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value.ToString();
         }
 
-
 		/// <summary>
         /// The date and time when this local time zone became active. This value must be defined on the second and subsequent occurrences.
         /// </summary>
+		[Description("The date and time when this local time zone became active. This value must be defined on the second and subsequent occurrences.")]
         [XmlAttribute("dTim")]
-
+		
         public DateTime DateTime {
             get {
                 return dTimField;
@@ -5385,13 +4353,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime dTimField; 
 
-
 		/// <summary>
         /// dTimSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
@@ -5404,12 +4370,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimSpecifiedField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public String Value {
             get {
                 return ValueField;
@@ -5421,7 +4386,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String ValueField; 
-
 
 
         
@@ -5443,27 +4407,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the refNameString xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="refNameString", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the refNameString xsd type.")]
     public partial class RefNameString : Object , INotifyPropertyChanged
     {
@@ -5489,12 +4445,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value.ToString();
         }
 
-
 		/// <summary>
         /// A reference to the unique identifier (uid attribute) in the node referenced by the name value. This attribute is required within the context of a WITSML server.
         /// </summary>
+		[Description("A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
-
+		
         public String UidRef {
             get {
                 return uidRefField;
@@ -5507,12 +4463,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidRefField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public String Value {
             get {
                 return ValueField;
@@ -5526,7 +4481,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String ValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5546,37 +4500,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// WITSML - Extension Schema. The intent is to allow standard WITSML schema extensions which will validate in older clients or servers. A client or server can ignore any schema that it does not recognize. New versions will modify specific elements to replace this type with a type that adds new elements, including another element with this type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionAny", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("WITSML - Extension Schema. The intent is to allow standard WITSML schema extensions which will validate in older clients or servers. A client or server can ignore any schema that it does not recognize. New versions will modify specific elements to replace this type with a type that adds new elements, including another element with this type.")]
     public partial class ExtensionAny : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Any property
         /// </summary>
+		
 		[XmlElement("Any")]
-
         public List<XmlElement> Any {
             get {
                 return AnyField;
@@ -5590,7 +4535,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private List<XmlElement> AnyField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5610,37 +4554,29 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// WITSML - Extension values Schema. The intent is to allow standard WITSML "named" extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
     public partial class ExtensionNameValue : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size. For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the WITSML SIG Technical Team before use.
         /// </summary>
+		[Required]
+		[Description("The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  WITSML SIG Technical Team before use.")]
 		[XmlElement("name")]
-
         public ExtensionName Name {
             get {
                 return nameField;
@@ -5653,12 +4589,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionName nameField; 
 
-
         /// <summary>
         /// The value of the extension. This may also include a uom attribute. The content should conform to constraints defined by the data type.
         /// </summary>
+		[Required]
+		[Description("The value of the extension.  This may also include a uom attribute.  The content should conform to constraints defined by the data type.")]
 		[XmlElement("value")]
-
         public Extensionvalue Value {
             get {
                 return valueField;
@@ -5671,12 +4607,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Extensionvalue valueField; 
 
-
         /// <summary>
         /// The underlying XML type of the value.
         /// </summary>
+		[Required]
+		[Description("The underlying XML type of the value.")]
 		[XmlElement("dataType")]
-
         public PrimitiveType? DataType {
             get {
                 return dataTypeField;
@@ -5689,12 +4625,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PrimitiveType? dataTypeField; 
 
-
         /// <summary>
         /// The date-time associated with the value.
         /// </summary>
+		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-
         public DateTime? DateTime {
             get {
                 return dTimField;
@@ -5708,13 +4643,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? dTimField; 
 
-
 		/// <summary>
         /// dTimSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
@@ -5727,12 +4660,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimSpecifiedField; 
 
-
         /// <summary>
         /// The measured depth associated with the value.
         /// </summary>
+		[Description("The measured depth associated with the value.")]
 		[XmlElement("md")]
-
         public MeasuredDepthCoord MD {
             get {
                 return mdField;
@@ -5745,12 +4677,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdField; 
 
-
         /// <summary>
         /// Indexes things with the same name. That is, 1 indicates the first one, 2 incidates the second one, etc.
         /// </summary>
+		[Description("Indexes things with the same name.  That is, 1 indicates the first one, 2 incidates the second one, etc.")]
 		[XmlElement("index")]
-
         public Int16? Index {
             get {
                 return indexField;
@@ -5764,13 +4695,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? indexField; 
 
-
 		/// <summary>
         /// indexSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IndexSpecified {
             get {
                 return indexSpecifiedField;
@@ -5783,12 +4712,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean indexSpecifiedField; 
 
-
         /// <summary>
         /// The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.
         /// </summary>
+		[Description("The kind of the measure. For example, \"length\". This should be specified if the value requires a unit of measure.")]
 		[XmlElement("measureClass")]
-
         public MeasureClass MeasureClass {
             get {
                 return measureClassField;
@@ -5802,13 +4730,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasureClass measureClassField; 
 
-
 		/// <summary>
         /// measureClassSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
@@ -5821,12 +4747,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean measureClassSpecifiedField; 
 
-
         /// <summary>
         /// A textual description of the extension.
         /// </summary>
+		[Description("A textual description of the extension.")]
 		[XmlElement("description")]
-
         public String Description {
             get {
                 return descriptionField;
@@ -5839,12 +4764,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -5856,7 +4781,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -5878,27 +4802,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the extensionvalue xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="extensionvalue", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the extensionvalue xsd type.")]
     public partial class Extensionvalue : Object , INotifyPropertyChanged
     {
@@ -5926,12 +4842,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// The unit of measure for the value. This value must conform to the values allowed by a measure class.
         /// </summary>
+		[Description("The unit of measure for the value. This value must conform to the values allowed by a measure class.")]
         [XmlAttribute("uom")]
-
+		
         public String Uom {
             get {
                 return uomField;
@@ -5944,12 +4860,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uomField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public String Value {
             get {
                 return ValueField;
@@ -5963,7 +4878,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String ValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -5983,37 +4897,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_customData xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_customData", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_customData xsd type.")]
     public partial class CustomData : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Any property
         /// </summary>
+		
 		[XmlElement("Any")]
-
         public List<XmlElement> Any {
             get {
                 return AnyField;
@@ -6027,7 +4932,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private List<XmlElement> AnyField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -6047,27 +4951,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the indexedObject xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="indexedObject", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the indexedObject xsd type.")]
     public partial class IndexedObject : Object , INotifyPropertyChanged
     {
@@ -6095,12 +4991,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value + " " + Uom;
         }
 
-
 		/// <summary>
         /// index property
         /// </summary>
+		[Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
         [XmlAttribute("index")]
-
+		
         public Int16 Index {
             get {
                 return indexField;
@@ -6113,12 +5009,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16 indexField; 
 
-
 		/// <summary>
         /// name property
         /// </summary>
+		
         [XmlAttribute("name")]
-
+		
         public String Name {
             get {
                 return nameField;
@@ -6131,12 +5027,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
 		/// <summary>
         /// uom property
         /// </summary>
+		
         [XmlAttribute("uom")]
-
+		
         public String Uom {
             get {
                 return uomField;
@@ -6149,12 +5045,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uomField; 
 
-
 		/// <summary>
         /// description property
         /// </summary>
+		
         [XmlAttribute("description")]
-
+		
         public String Description {
             get {
                 return descriptionField;
@@ -6167,12 +5063,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -6185,12 +5081,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public String Value {
             get {
                 return ValueField;
@@ -6202,7 +5097,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String ValueField; 
-
 
 
         
@@ -6224,27 +5118,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the refObjectString xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="refObjectString", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the refObjectString xsd type.")]
     public partial class RefObjectString : Object , INotifyPropertyChanged
     {
@@ -6270,12 +5156,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value.ToString();
         }
 
-
 		/// <summary>
         /// The type of data-object being referenced (e.g., "well", "wellbore").
         /// </summary>
+		[Description("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
         [XmlAttribute("object")]
-
+		
         public String Object {
             get {
                 return objectField;
@@ -6288,12 +5174,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String objectField; 
 
-
 		/// <summary>
         /// A reference to the unique identifier (uid attribute) in the object referenced by the name value. This attribute is required within the context of a WITSML server.
         /// </summary>
+		[Description("A reference to the unique identifier (uid attribute) in the object referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
-
+		
         public String UidRef {
             get {
                 return uidRefField;
@@ -6306,12 +5192,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidRefField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public String Value {
             get {
                 return ValueField;
@@ -6325,7 +5210,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String ValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -6345,37 +5229,29 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Defines a member of an objectGroup.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_memberObject", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Defines a member of an objectGroup.")]
     public partial class MemberObject : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// A reference to an object that is defined within the context of the specified wellbore.
         /// </summary>
+		[Required]
+		[Description("A reference to an object that is defined within the  context of the specified wellbore.")]
 		[XmlElement("objectReference")]
-
         public RefObjectString ObjectReference {
             get {
                 return objectReferenceField;
@@ -6388,12 +5264,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private RefObjectString objectReferenceField; 
 
-
         /// <summary>
         /// For a log object, this specifies the kind of the index curve for the log. This is only relevant for a systematically growing object.
         /// </summary>
+		[Description("For a log object, this specifies the kind of the index curve for the log. This is only relevant for a systematically growing object.")]
 		[XmlElement("indexType")]
-
         public LogIndexType? IndexType {
             get {
                 return indexTypeField;
@@ -6407,13 +5282,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LogIndexType? indexTypeField; 
 
-
 		/// <summary>
         /// indexTypeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IndexTypeSpecified {
             get {
                 return indexTypeSpecifiedField;
@@ -6426,12 +5299,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean indexTypeSpecifiedField; 
 
-
         /// <summary>
         /// Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.
         /// </summary>
+		[Required]
+		[Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
 		[XmlElement("sequence1")]
-
         public ObjectSequence Sequence1 {
             get {
                 return sequence1Field;
@@ -6444,12 +5317,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ObjectSequence sequence1Field; 
 
-
         /// <summary>
         /// Defines secondary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType. A value for sequence2 can only be given if a value is given for sequence1.
         /// </summary>
+		
 		[XmlElement("sequence2")]
-
         public ObjectSequence Sequence2 {
             get {
                 return sequence2Field;
@@ -6462,12 +5334,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ObjectSequence sequence2Field; 
 
-
         /// <summary>
         /// Defines tertiary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType. A value for sequence3 can only be given if a value is given for sequence2.
         /// </summary>
+		
 		[XmlElement("sequence3")]
-
         public ObjectSequence Sequence3 {
             get {
                 return sequence3Field;
@@ -6480,12 +5351,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ObjectSequence sequence3Field; 
 
-
         /// <summary>
         /// The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
+		[Description("The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeMin")]
-
         public GenericMeasure RangeMin {
             get {
                 return rangeMinField;
@@ -6498,12 +5368,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private GenericMeasure rangeMinField; 
 
-
         /// <summary>
         /// The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
+		[Description("The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeMax")]
-
         public GenericMeasure RangeMax {
             get {
                 return rangeMaxField;
@@ -6516,12 +5385,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private GenericMeasure rangeMaxField; 
 
-
         /// <summary>
         /// The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
+		[Description("The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMin")]
-
         public DateTime? RangeDateTimeMin {
             get {
                 return rangeDateTimeMinField;
@@ -6535,13 +5403,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? rangeDateTimeMinField; 
 
-
 		/// <summary>
         /// rangeDateTimeMinSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean RangeDateTimeMinSpecified {
             get {
                 return rangeDateTimeMinSpecifiedField;
@@ -6554,12 +5420,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean rangeDateTimeMinSpecifiedField; 
 
-
         /// <summary>
         /// The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
+		[Description("The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMax")]
-
         public DateTime? RangeDateTimeMax {
             get {
                 return rangeDateTimeMaxField;
@@ -6573,13 +5438,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? rangeDateTimeMaxField; 
 
-
 		/// <summary>
         /// rangeDateTimeMaxSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean RangeDateTimeMaxSpecified {
             get {
                 return rangeDateTimeMaxSpecifiedField;
@@ -6592,12 +5455,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean rangeDateTimeMaxSpecifiedField; 
 
-
         /// <summary>
         /// A comma delimited list of log curve mnemonics. Each mnemonic should only occur once in the list. If not specified then the group applies to all curves in the log.
         /// </summary>
+		[Description("A comma delimited list of log curve mnemonics. Each mnemonic should only occur once in the list. If not specified then the group applies to all curves in the log.")]
 		[XmlElement("mnemonicList")]
-
         public String MnemonicList {
             get {
                 return mnemonicListField;
@@ -6610,12 +5472,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String mnemonicListField; 
 
-
         /// <summary>
         /// A measured depth related to this group. This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.
         /// </summary>
+		[Description("A measured depth related to this group.  This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.")]
 		[XmlElement("referenceDepth")]
-
         public MeasuredDepthCoord ReferenceDepth {
             get {
                 return referenceDepthField;
@@ -6628,12 +5489,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord referenceDepthField; 
 
-
         /// <summary>
         /// A date and time related to this group. This does not necessarily represent an actual index within a growing-object. The significance of this time is defined by the groupType.
         /// </summary>
+		[Description("A date and time related to this group.  This does not necessarily represent an actual index within a growing-object. The significance of this time is defined by the groupType.")]
 		[XmlElement("referenceDateTime")]
-
         public DateTime? ReferenceDateTime {
             get {
                 return referenceDateTimeField;
@@ -6647,13 +5507,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? referenceDateTimeField; 
 
-
 		/// <summary>
         /// referenceDateTimeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ReferenceDateTimeSpecified {
             get {
                 return referenceDateTimeSpecifiedField;
@@ -6666,12 +5524,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean referenceDateTimeSpecifiedField; 
 
-
         /// <summary>
         /// Any extra parameter data related to the group. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
+		[Description("Any extra parameter data related to the group.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
 		[XmlElement("param")]
-
         public List<IndexedObject> Param {
             get {
                 return paramField;
@@ -6684,12 +5541,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<IndexedObject> paramField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -6702,12 +5558,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -6719,7 +5575,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -6741,27 +5596,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the objectSequence xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="objectSequence", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the objectSequence xsd type.")]
     public partial class ObjectSequence : Object , INotifyPropertyChanged
     {
@@ -6787,12 +5634,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value.ToString();
         }
 
-
 		/// <summary>
         /// A description related to the sequence number.
         /// </summary>
+		[Description("A description related to the sequence number.")]
         [XmlAttribute("description")]
-
+		
         public String Description {
             get {
                 return descriptionField;
@@ -6805,12 +5652,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public Int16 Value {
             get {
                 return ValueField;
@@ -6824,7 +5670,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private Int16 ValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -6844,37 +5689,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on WITSML objects used
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_participant", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on WITSML objects used")]
     public partial class Participant : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// A collection of involved participants.
         /// </summary>
+		[Description("A collection of involved participants.")]
 		[XmlElement("participant")]
-
         public List<MemberObject> Participants {
             get {
                 return participantField;
@@ -6887,12 +5723,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<MemberObject> participantField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extNameValues")]
-
         public List<ExtensionNameValue> ExtNameValues {
             get {
                 return extNameValuesField;
@@ -6906,7 +5741,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private List<ExtensionNameValue> extNameValuesField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -6926,37 +5760,29 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// WITSML - Equipment NameTag Schema
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_nameTag", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("WITSML - Equipment NameTag Schema")]
     public partial class NameTag : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The physical identification string of the equipment tag.
         /// </summary>
+		[Required]
+		[Description("The physical identification string of the equipment tag.")]
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -6969,12 +5795,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// The format or encoding specification of the equipment tag. The tag may contain may different pieces of information and knowledge of that information is inherent in the specification. The "identification string" is a mandatory part of the information in a tag.
         /// </summary>
+		[Required]
+		[Description("The format or encoding specification of the equipment tag.  The tag may contain may different pieces of information and knowledge of that  information is inherent in the specification.  The \"identification string\" is a mandatory part of the information in a tag.")]
 		[XmlElement("numberingScheme")]
-
         public NameTagNumberingScheme NumberingScheme {
             get {
                 return numberingSchemeField;
@@ -6987,12 +5813,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private NameTagNumberingScheme numberingSchemeField; 
 
-
         /// <summary>
         /// Identifies the general type of identifier on an item. If multiple identifiers exist on an item, a separate description set for each identifier should be created. For example, a joint of casing may have a barcode label on it along with a painted-on code and an RFID tag attached or embedded into the coupling. The barcode label may in turn be an RFID equipped label. This particular scenario would require populating five nameTags to fully describe and decode all the possible identifiers as follows: 'tagged' - RFID tag embedded in the coupling, 'label' - Serial number printed on the label, 'tagged' - RFID tag embedded into the label, 'label' - Barcode printed on the label, 'painted'- Mill number painted on the pipe body.
         /// </summary>
+		[Description("Identifies the general type of identifier on an item.  If multiple identifiers exist on an item, a separate description set for each identifier should be created.   For example, a joint of casing may have a barcode label on it along with a painted-on code and an RFID tag attached or embedded into the coupling.  The barcode label may in turn be an RFID equipped label. This particular scenario would require populating five nameTags to fully describe and decode all the possible identifiers as follows: 'tagged' - RFID tag embedded in the coupling, 'label'  - Serial number printed on the label, 'tagged' - RFID tag embedded into the label, 'label'  - Barcode printed on the label, 'painted'- Mill number painted on the pipe body.")]
 		[XmlElement("technology")]
-
         public NameTagTechnology Technology {
             get {
                 return technologyField;
@@ -7006,13 +5831,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private NameTagTechnology technologyField; 
 
-
 		/// <summary>
         /// technologySpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean TechnologySpecified {
             get {
                 return technologySpecifiedField;
@@ -7025,12 +5848,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean technologySpecifiedField; 
 
-
         /// <summary>
         /// An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item. This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener. 'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item. Most non-downhole tools will use either 'body', 'other' or not specified as the location tends to lose value with smaller or non threaded items.
         /// </summary>
+		[Description("An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item.  This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener.  'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item.  Most non-downhole tools will use either 'body', 'other' or not specified as the location tends to lose value with smaller or non threaded items.")]
 		[XmlElement("location")]
-
         public NameTagLocation Location {
             get {
                 return locationField;
@@ -7044,13 +5866,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private NameTagLocation locationField; 
 
-
 		/// <summary>
         /// locationSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean LocationSpecified {
             get {
                 return locationSpecifiedField;
@@ -7063,12 +5883,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean locationSpecifiedField; 
 
-
         /// <summary>
         /// When the tag was installed in or on the item. 
         /// </summary>
+		[Description("When the tag was installed in or on the item.")]
 		[XmlElement("installationDate")]
-
         public DateTime? InstallationDate {
             get {
                 return installationDateField;
@@ -7082,13 +5901,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? installationDateField; 
 
-
 		/// <summary>
         /// installationDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean InstallationDateSpecified {
             get {
                 return installationDateSpecifiedField;
@@ -7101,12 +5918,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean installationDateSpecifiedField; 
 
-
         /// <summary>
         /// The name of the company that installed the tag. 
         /// </summary>
+		[Description("The name of the company that installed the tag.")]
 		[XmlElement("installationCompany")]
-
         public String InstallationCompany {
             get {
                 return installationCompanyField;
@@ -7119,12 +5935,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String installationCompanyField; 
 
-
         /// <summary>
         /// Reference to a manufacturers or installers installation description, code, or method. 
         /// </summary>
+		[Description("Reference to a manufacturers or installers installation  description, code, or method.")]
 		[XmlElement("mountingCode")]
-
         public String MountingCode {
             get {
                 return mountingCodeField;
@@ -7137,12 +5952,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String mountingCodeField; 
 
-
         /// <summary>
         /// A comment or remark about the tag.
         /// </summary>
+		[Description("A comment or remark about the tag.")]
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -7155,12 +5969,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -7173,12 +5986,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -7190,7 +6003,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -7212,27 +6024,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cost xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cost", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cost xsd type.")]
     public partial class Cost : Object , INotifyPropertyChanged
     {
@@ -7258,12 +6062,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value.ToString();
         }
 
-
 		/// <summary>
         /// currency property
         /// </summary>
+		
         [XmlAttribute("currency")]
-
+		
         public String Currency {
             get {
                 return currencyField;
@@ -7276,12 +6080,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String currencyField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public Double Value {
             get {
                 return ValueField;
@@ -7295,7 +6098,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private Double ValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7315,37 +6117,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     ///  WITSML - Day Cost Component Schema 
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dayCost", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description(" WITSML - Day Cost Component Schema ")]
     public partial class DayCost : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// AFE number that this cost item applies to. 
         /// </summary>
+		[Description("AFE number that this cost item applies to.")]
 		[XmlElement("numAFE")]
-
         public String NumAFE {
             get {
                 return numAFEField;
@@ -7358,12 +6151,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String numAFEField; 
 
-
         /// <summary>
         /// Cost group code. 
         /// </summary>
+		[StringLength(16)]
+		[Description("Cost group code.")]
 		[XmlElement("costGroup")]
-
         public String CostGroup {
             get {
                 return costGroupField;
@@ -7376,12 +6169,13 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String costGroupField; 
 
-
         /// <summary>
         /// Cost class code. 
         /// </summary>
+		[Required]
+		[StringLength(16)]
+		[Description("Cost class code.")]
 		[XmlElement("costClass")]
-
         public String CostClass {
             get {
                 return costClassField;
@@ -7394,12 +6188,13 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String costClassField; 
 
-
         /// <summary>
         /// Cost code. 
         /// </summary>
+		[Required]
+		[StringLength(16)]
+		[Description("Cost code.")]
 		[XmlElement("costCode")]
-
         public String CostCode {
             get {
                 return costCodeField;
@@ -7412,12 +6207,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String costCodeField; 
 
-
         /// <summary>
         /// Cost subcode. 
         /// </summary>
+		[StringLength(16)]
+		[Description("Cost subcode.")]
 		[XmlElement("costSubCode")]
-
         public String CostSubCode {
             get {
                 return costSubCodeField;
@@ -7430,12 +6225,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String costSubCodeField; 
 
-
         /// <summary>
         /// Description of cost item. 
         /// </summary>
+		[StringLength(64)]
+		[Description("Description of cost item.")]
 		[XmlElement("costItemDescription")]
-
         public String CostItemDescription {
             get {
                 return costItemDescriptionField;
@@ -7448,12 +6243,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String costItemDescriptionField; 
 
-
         /// <summary>
         /// Cost per cost item, assume same currency.
         /// </summary>
+		[Description("Cost per cost item, assume same currency.")]
 		[XmlElement("costPerItem")]
-
         public Cost CostPerItem {
             get {
                 return costPerItemField;
@@ -7466,12 +6260,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Cost costPerItemField; 
 
-
         /// <summary>
         /// The kind of cost item specified (e.g., rig dayrate, joints casing). 
         /// </summary>
+		[Description("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
 		[XmlElement("itemKind")]
-
         public String ItemKind {
             get {
                 return itemKindField;
@@ -7484,12 +6277,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String itemKindField; 
 
-
         /// <summary>
         /// Size of one cost item. 
         /// </summary>
+		[Description("Size of one cost item.")]
 		[XmlElement("itemSize")]
-
         public Double? ItemSize {
             get {
                 return itemSizeField;
@@ -7503,13 +6295,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? itemSizeField; 
 
-
 		/// <summary>
         /// itemSizeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ItemSizeSpecified {
             get {
                 return itemSizeSpecifiedField;
@@ -7522,12 +6312,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean itemSizeSpecifiedField; 
 
-
         /// <summary>
         /// Number of cost items used that day e.g. 1 rig dayrate, 30 joints casing. 
         /// </summary>
+		[Description("Number of cost items used that day e.g. 1 rig dayrate, 30 joints casing.")]
 		[XmlElement("qtyItem")]
-
         public Int16? QtyItem {
             get {
                 return qtyItemField;
@@ -7541,13 +6330,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? qtyItemField; 
 
-
 		/// <summary>
         /// qtyItemSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean QtyItemSpecified {
             get {
                 return qtyItemSpecifiedField;
@@ -7560,12 +6347,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean qtyItemSpecifiedField; 
 
-
         /// <summary>
         /// Cost for the item for this record. 
         /// </summary>
+		[Required]
+		[Description("Cost for the item for this record.")]
 		[XmlElement("costAmount")]
-
         public Cost CostAmount {
             get {
                 return costAmountField;
@@ -7578,12 +6365,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Cost costAmountField; 
 
-
         /// <summary>
         /// Invoice number for cost item, bill sent to Operator. 
         /// </summary>
+		[Description("Invoice number for cost item, bill sent to Operator.")]
 		[XmlElement("numInvoice")]
-
         public String NumInvoice {
             get {
                 return numInvoiceField;
@@ -7596,12 +6382,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String numInvoiceField; 
 
-
         /// <summary>
         /// Purchase order number, provided by Operator. 
         /// </summary>
+		[Description("Purchase order number, provided by Operator.")]
 		[XmlElement("numPO")]
-
         public String NumPO {
             get {
                 return numPOField;
@@ -7614,12 +6399,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String numPOField; 
 
-
         /// <summary>
         /// Field Ticket number, issued by service company on location. 
         /// </summary>
+		[Description("Field Ticket number, issued by service company on location.")]
 		[XmlElement("numTicket")]
-
         public String NumTicket {
             get {
                 return numTicketField;
@@ -7632,12 +6416,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String numTicketField; 
 
-
         /// <summary>
         /// Is this item carried from day to day? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
+		[Description("Is this item carried from day to day? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("isCarryOver")]
-
         public Boolean? IsCarryOver {
             get {
                 return isCarryOverField;
@@ -7651,13 +6434,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isCarryOverField; 
 
-
 		/// <summary>
         /// isCarryOverSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsCarryOverSpecified {
             get {
                 return isCarryOverSpecifiedField;
@@ -7670,12 +6451,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isCarryOverSpecifiedField; 
 
-
         /// <summary>
         /// Is this item a rental? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
+		[Description("Is this item a rental? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("isRental")]
-
         public Boolean? IsRental {
             get {
                 return isRentalField;
@@ -7689,13 +6469,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isRentalField; 
 
-
 		/// <summary>
         /// isRentalSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsRentalSpecified {
             get {
                 return isRentalSpecifiedField;
@@ -7708,12 +6486,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isRentalSpecifiedField; 
 
-
         /// <summary>
         /// An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
+		[Description("An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
 		[XmlElement("nameTag")]
-
         public List<NameTag> NameTag {
             get {
                 return nameTagField;
@@ -7726,12 +6503,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<NameTag> nameTagField; 
 
-
         /// <summary>
         /// Serial number. 
         /// </summary>
+		[Description("Serial number.")]
 		[XmlElement("numSerial")]
-
         public String NumSerial {
             get {
                 return numSerialField;
@@ -7744,12 +6520,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String numSerialField; 
 
-
         /// <summary>
         /// Name of vendor. 
         /// </summary>
+		[Description("Name of vendor.")]
 		[XmlElement("nameVendor")]
-
         public String NameVendor {
             get {
                 return nameVendorField;
@@ -7762,12 +6537,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameVendorField; 
 
-
         /// <summary>
         /// Vendor number. 
         /// </summary>
+		[StringLength(16)]
+		[Description("Vendor number.")]
 		[XmlElement("numVendor")]
-
         public String NumVendor {
             get {
                 return numVendorField;
@@ -7780,12 +6555,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String numVendorField; 
 
-
         /// <summary>
         /// Name of pool/reservoir that this cost item can be accounted to. 
         /// </summary>
+		[Description("Name of pool/reservoir that this cost item can be accounted to.")]
 		[XmlElement("pool")]
-
         public String Pool {
             get {
                 return poolField;
@@ -7798,12 +6572,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String poolField; 
 
-
         /// <summary>
         /// Is this an estimated cost? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
+		[Description("Is this an estimated cost? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("estimated")]
-
         public Boolean? Estimated {
             get {
                 return estimatedField;
@@ -7817,13 +6590,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? estimatedField; 
 
-
 		/// <summary>
         /// estimatedSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EstimatedSpecified {
             get {
                 return estimatedSpecifiedField;
@@ -7836,12 +6607,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean estimatedSpecifiedField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -7854,12 +6624,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -7873,7 +6643,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String uidField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -7893,37 +6662,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on downhole related to this event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_downholeExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on downhole related to this event.")]
     public partial class DownholeExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Reference to downhole component 
         /// </summary>
+		
 		[XmlElement("downholeComponentRefID")]
-
         public String DownholeComponentRefID {
             get {
                 return downholeComponentRefIDField;
@@ -7936,12 +6696,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String downholeComponentRefIDField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -7954,12 +6713,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -7971,7 +6729,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -7993,37 +6750,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on fluid report event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidReportExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on fluid report event.")]
     public partial class FluidReportExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Reference to the fluid report
         /// </summary>
+		
 		[XmlElement("fluidReportRefID")]
-
         public String FluidReportRefID {
             get {
                 return fluidReportRefIDField;
@@ -8036,12 +6784,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String fluidReportRefIDField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -8054,12 +6801,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -8071,7 +6817,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -8093,37 +6838,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on the perforating job.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforating", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on the perforating job.")]
     public partial class Perforating : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         ///  index number of stage
         /// </summary>
+		
 		[XmlElement("stageNumber")]
-
         public Int16? StageNumber {
             get {
                 return stageNumberField;
@@ -8137,13 +6873,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? stageNumberField; 
 
-
 		/// <summary>
         /// stageNumberSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StageNumberSpecified {
             get {
                 return stageNumberSpecifiedField;
@@ -8156,12 +6890,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean stageNumberSpecifiedField; 
 
-
         /// <summary>
         /// Perf-Bottom of packer set depth 
         /// </summary>
+		
 		[XmlElement("bottomPackerSet")]
-
         public MeasuredDepthCoord BottomPackerSet {
             get {
                 return bottomPackerSetField;
@@ -8174,12 +6907,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord bottomPackerSetField; 
 
-
         /// <summary>
         /// Perforation fluid type
         /// </summary>
+		
 		[XmlElement("perforationFluidType")]
-
         public String PerforationFluidType {
             get {
                 return perforationFluidTypeField;
@@ -8192,12 +6924,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String perforationFluidTypeField; 
 
-
         /// <summary>
         /// hydrostaticPressure
         /// </summary>
+		
 		[XmlElement("hydrostaticPressure")]
-
         public PressureMeasure HydrostaticPressure {
             get {
                 return hydrostaticPressureField;
@@ -8210,12 +6941,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure hydrostaticPressureField; 
 
-
         /// <summary>
         /// Surface pressure
         /// </summary>
+		
 		[XmlElement("surfacePressure")]
-
         public PressureMeasure SurfacePressure {
             get {
                 return surfacePressureField;
@@ -8228,12 +6958,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure surfacePressureField; 
 
-
         /// <summary>
         /// Reservoir pressure
         /// </summary>
+		
 		[XmlElement("reservoirPressure")]
-
         public PressureMeasure ReservoirPressure {
             get {
                 return reservoirPressureField;
@@ -8246,12 +6975,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure reservoirPressureField; 
 
-
         /// <summary>
         /// The density of fluid
         /// </summary>
+		
 		[XmlElement("fluidDensity")]
-
         public DensityMeasure FluidDensity {
             get {
                 return fluidDensityField;
@@ -8264,12 +6992,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DensityMeasure fluidDensityField; 
 
-
         /// <summary>
         /// Fluid level.
         /// </summary>
+		
 		[XmlElement("fluidLevel")]
-
         public MeasuredDepthCoord FluidLevel {
             get {
                 return fluidLevelField;
@@ -8282,12 +7009,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord fluidLevelField; 
 
-
         /// <summary>
         /// The conveyance method
         /// </summary>
+		
 		[XmlElement("conveyanceMethod")]
-
         public PerfConveyanceMethod? ConveyanceMethod {
             get {
                 return conveyanceMethodField;
@@ -8301,13 +7027,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerfConveyanceMethod? conveyanceMethodField; 
 
-
 		/// <summary>
         /// conveyanceMethodSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ConveyanceMethodSpecified {
             get {
                 return conveyanceMethodSpecifiedField;
@@ -8320,12 +7044,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean conveyanceMethodSpecifiedField; 
 
-
         /// <summary>
         /// Number of shots planned
         /// </summary>
+		
 		[XmlElement("shotsPlanned")]
-
         public Int16? ShotsPlanned {
             get {
                 return shotsPlannedField;
@@ -8339,13 +7062,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? shotsPlannedField; 
 
-
 		/// <summary>
         /// shotsPlannedSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ShotsPlannedSpecified {
             get {
                 return shotsPlannedSpecifiedField;
@@ -8358,12 +7079,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean shotsPlannedSpecifiedField; 
 
-
         /// <summary>
         /// Number of shots per unit length (ft, m)
         /// </summary>
+		
 		[XmlElement("shotsDensity")]
-
         public PerLengthMeasure ShotsDensity {
             get {
                 return shotsDensityField;
@@ -8376,12 +7096,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerLengthMeasure shotsDensityField; 
 
-
         /// <summary>
         /// The number of missed firings from the gun.
         /// </summary>
+		
 		[XmlElement("shotsMisfired")]
-
         public Int16? ShotsMisfired {
             get {
                 return shotsMisfiredField;
@@ -8395,13 +7114,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? shotsMisfiredField; 
 
-
 		/// <summary>
         /// shotsMisfiredSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ShotsMisfiredSpecified {
             get {
                 return shotsMisfiredSpecifiedField;
@@ -8414,12 +7131,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean shotsMisfiredSpecifiedField; 
 
-
         /// <summary>
         /// orientaton
         /// </summary>
+		
 		[XmlElement("orientation")]
-
         public String Orientation {
             get {
                 return orientationField;
@@ -8432,12 +7148,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String orientationField; 
 
-
         /// <summary>
         /// Description of orientaton method
         /// </summary>
+		
 		[XmlElement("orientationMethod")]
-
         public String OrientationMethod {
             get {
                 return orientationMethodField;
@@ -8450,12 +7165,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String orientationMethodField; 
 
-
         /// <summary>
         /// The name of company providing the perforation.
         /// </summary>
+		
 		[XmlElement("perforationCompany")]
-
         public String PerforationCompany {
             get {
                 return perforationCompanyField;
@@ -8468,12 +7182,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String perforationCompanyField; 
 
-
         /// <summary>
         /// The manufacturer of the carrier.
         /// </summary>
+		
 		[XmlElement("carrierManufacturer")]
-
         public String CarrierManufacturer {
             get {
                 return carrierManufacturerField;
@@ -8486,12 +7199,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String carrierManufacturerField; 
 
-
         /// <summary>
         /// Size of the carrier.
         /// </summary>
+		
 		[XmlElement("carrierSize")]
-
         public LengthMeasure CarrierSize {
             get {
                 return carrierSizeField;
@@ -8504,12 +7216,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure carrierSizeField; 
 
-
         /// <summary>
         /// Description from carrier
         /// </summary>
+		
 		[XmlElement("carrierDescription")]
-
         public String CarrierDescription {
             get {
                 return carrierDescriptionField;
@@ -8522,12 +7233,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String carrierDescriptionField; 
 
-
         /// <summary>
         /// The manufacturer of the charge.
         /// </summary>
+		
 		[XmlElement("chargeManufacturer")]
-
         public String ChargeManufacturer {
             get {
                 return chargeManufacturerField;
@@ -8540,12 +7250,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String chargeManufacturerField; 
 
-
         /// <summary>
         /// The size of the charge.
         /// </summary>
+		
 		[XmlElement("chargeSize")]
-
         public LengthMeasure ChargeSize {
             get {
                 return chargeSizeField;
@@ -8558,12 +7267,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure chargeSizeField; 
 
-
         /// <summary>
         /// The weight of the charge.
         /// </summary>
+		
 		[XmlElement("chargeWeight")]
-
         public MassMeasure ChargeWeight {
             get {
                 return chargeWeightField;
@@ -8576,12 +7284,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MassMeasure chargeWeightField; 
 
-
         /// <summary>
         /// The type of the charge.
         /// </summary>
+		
 		[XmlElement("chargeType")]
-
         public String ChargeType {
             get {
                 return chargeTypeField;
@@ -8594,12 +7301,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String chargeTypeField; 
 
-
         /// <summary>
         /// Reference to the log
         /// </summary>
+		
 		[XmlElement("refLog")]
-
         public String RefLog {
             get {
                 return refLogField;
@@ -8612,12 +7318,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String refLogField; 
 
-
         /// <summary>
         /// True if centralized, else decentralized.
         /// </summary>
+		
 		[XmlElement("gunCentralized")]
-
         public String GunCentralized {
             get {
                 return gunCentralizedField;
@@ -8630,12 +7335,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String gunCentralizedField; 
 
-
         /// <summary>
         /// The size of the perforation gun.
         /// </summary>
+		
 		[XmlElement("gunSize")]
-
         public LengthMeasure GunSize {
             get {
                 return gunSizeField;
@@ -8648,12 +7352,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure gunSizeField; 
 
-
         /// <summary>
         /// Description about the perforating gun.
         /// </summary>
+		
 		[XmlElement("gunDesciption")]
-
         public String GunDesciption {
             get {
                 return gunDesciptionField;
@@ -8666,12 +7369,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String gunDesciptionField; 
 
-
         /// <summary>
         /// Flag indicating whether the gun is left in hole or not.
         /// </summary>
+		
 		[XmlElement("gunLeftInHole")]
-
         public Boolean? GunLeftInHole {
             get {
                 return gunLeftInHoleField;
@@ -8685,13 +7387,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? gunLeftInHoleField; 
 
-
 		/// <summary>
         /// gunLeftInHoleSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean GunLeftInHoleSpecified {
             get {
                 return gunLeftInHoleSpecifiedField;
@@ -8704,12 +7404,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean gunLeftInHoleSpecifiedField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -8723,7 +7422,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -8743,37 +7441,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on the perforating event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforatingExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on the perforating event.")]
     public partial class PerforatingExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The perforationSet reference ID.
         /// </summary>
+		
 		[XmlElement("perforationSetRefID")]
-
         public String PerforationSetRefID {
             get {
                 return perforationSetRefIDField;
@@ -8786,12 +7475,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String perforationSetRefIDField; 
 
-
         /// <summary>
         /// Information on perforating event.
         /// </summary>
+		
 		[XmlElement("perforating")]
-
         public List<Perforating> Perforating {
             get {
                 return perforatingField;
@@ -8804,12 +7492,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<Perforating> perforatingField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -8823,7 +7510,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private ExtensionAny extensionAnyField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -8843,37 +7529,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on waiting event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_waitingOnExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on waiting event.")]
     public partial class WaitingOnExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Sub category
         /// </summary>
+		
 		[XmlElement("subCategory")]
-
         public String SubCategory {
             get {
                 return subCategoryField;
@@ -8886,12 +7563,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String subCategoryField; 
 
-
         /// <summary>
         /// Code for charge type
         /// </summary>
+		
 		[XmlElement("chargeTypeCode")]
-
         public String ChargeTypeCode {
             get {
                 return chargeTypeCodeField;
@@ -8904,12 +7580,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String chargeTypeCodeField; 
 
-
         /// <summary>
         /// Business organization waiting on 
         /// </summary>
+		
 		[XmlElement("businessOrgWaitingOn")]
-
         public String BusinessOrgWaitingOn {
             get {
                 return businessOrgWaitingOnField;
@@ -8922,12 +7597,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String businessOrgWaitingOnField; 
 
-
         /// <summary>
         /// Flag indicating whether producer is charged or not
         /// </summary>
+		
 		[XmlElement("isNoChargeToProducer")]
-
         public Boolean? IsNoChargeToProducer {
             get {
                 return isNoChargeToProducerField;
@@ -8941,13 +7615,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isNoChargeToProducerField; 
 
-
 		/// <summary>
         /// isNoChargeToProducerSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsNoChargeToProducerSpecified {
             get {
                 return isNoChargeToProducerSpecifiedField;
@@ -8960,12 +7632,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isNoChargeToProducerSpecifiedField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -8978,12 +7649,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -8995,7 +7665,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -9017,37 +7686,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on pressure test event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_pressureTestExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on pressure test event.")]
     public partial class PressureTestExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Orifice Size
         /// </summary>
+		
 		[XmlElement("diaOrificeSize")]
-
         public LengthMeasure DiaOrificeSize {
             get {
                 return diaOrificeSizeField;
@@ -9060,12 +7720,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure diaOrificeSizeField; 
 
-
         /// <summary>
         /// Next Test Date
         /// </summary>
+		
 		[XmlElement("dTimeNextTestDate")]
-
         public DateTime? DTimeNextTestDate {
             get {
                 return dTimeNextTestDateField;
@@ -9079,13 +7738,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? dTimeNextTestDateField; 
 
-
 		/// <summary>
         /// dTimeNextTestDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DTimeNextTestDateSpecified {
             get {
                 return dTimeNextTestDateSpecifiedField;
@@ -9098,12 +7755,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimeNextTestDateSpecifiedField; 
 
-
         /// <summary>
         /// Rate Bled
         /// </summary>
+		
 		[XmlElement("flowrateRateBled")]
-
         public VolumeFlowRateMeasure FlowrateRateBled {
             get {
                 return flowrateRateBledField;
@@ -9116,12 +7772,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private VolumeFlowRateMeasure flowrateRateBledField; 
 
-
         /// <summary>
         /// String Being Tested
         /// </summary>
+		
 		[XmlElement("identifierJob")]
-
         public String IdentifierJob {
             get {
                 return identifierJobField;
@@ -9134,12 +7789,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String identifierJobField; 
 
-
         /// <summary>
         /// True if successful
         /// </summary>
+		
 		[XmlElement("isSuccess")]
-
         public Boolean? IsSuccess {
             get {
                 return isSuccessField;
@@ -9153,13 +7807,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isSuccessField; 
 
-
 		/// <summary>
         /// isSuccessSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsSuccessSpecified {
             get {
                 return isSuccessSpecifiedField;
@@ -9172,12 +7824,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isSuccessSpecifiedField; 
 
-
         /// <summary>
         /// Maximum pressure held during test
         /// </summary>
+		
 		[XmlElement("maxPressureDuration")]
-
         public PressureMeasure MaxPressureDuration {
             get {
                 return maxPressureDurationField;
@@ -9190,12 +7841,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure maxPressureDurationField; 
 
-
         /// <summary>
         /// Circulating position
         /// </summary>
+		
 		[XmlElement("circulatingPosition")]
-
         public String CirculatingPosition {
             get {
                 return circulatingPositionField;
@@ -9208,12 +7858,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String circulatingPositionField; 
 
-
         /// <summary>
         /// Fluid bled type
         /// </summary>
+		
 		[XmlElement("fluidBledType")]
-
         public String FluidBledType {
             get {
                 return fluidBledTypeField;
@@ -9226,12 +7875,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String fluidBledTypeField; 
 
-
         /// <summary>
         /// Description of orientaton method
         /// </summary>
+		
 		[XmlElement("orientationMethod")]
-
         public String OrientationMethod {
             get {
                 return orientationMethodField;
@@ -9244,12 +7892,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String orientationMethodField; 
 
-
         /// <summary>
         /// Test fluid type
         /// </summary>
+		
 		[XmlElement("testFluidType")]
-
         public String TestFluidType {
             get {
                 return testFluidTypeField;
@@ -9262,12 +7909,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String testFluidTypeField; 
 
-
         /// <summary>
         /// Test sub type
         /// </summary>
+		
 		[XmlElement("testSubType")]
-
         public String TestSubType {
             get {
                 return testSubTypeField;
@@ -9280,12 +7926,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String testSubTypeField; 
 
-
         /// <summary>
         /// Test type
         /// </summary>
+		
 		[XmlElement("testType")]
-
         public String TestType {
             get {
                 return testTypeField;
@@ -9298,12 +7943,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String testTypeField; 
 
-
         /// <summary>
         /// Annulus pressure
         /// </summary>
+		
 		[XmlElement("annulusPressure")]
-
         public PressureMeasure AnnulusPressure {
             get {
                 return annulusPressureField;
@@ -9316,12 +7960,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure annulusPressureField; 
 
-
         /// <summary>
         /// Well pressure used 
         /// </summary>
+		
 		[XmlElement("wellPressureUsed")]
-
         public String WellPressureUsed {
             get {
                 return wellPressureUsedField;
@@ -9334,12 +7977,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String wellPressureUsedField; 
 
-
         /// <summary>
         /// Reference #
         /// </summary>
+		
 		[XmlElement("str10Reference")]
-
         public String Str10Reference {
             get {
                 return str10ReferenceField;
@@ -9352,12 +7994,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String str10ReferenceField; 
 
-
         /// <summary>
         /// Well (Assembly)
         /// </summary>
+		
 		[XmlElement("uidAssembly")]
-
         public String UidAssembly {
             get {
                 return uidAssemblyField;
@@ -9370,12 +8011,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidAssemblyField; 
 
-
         /// <summary>
         /// Volume Bled
         /// </summary>
+		
 		[XmlElement("volumeBled")]
-
         public VolumeMeasure VolumeBled {
             get {
                 return volumeBledField;
@@ -9388,12 +8028,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private VolumeMeasure volumeBledField; 
 
-
         /// <summary>
         /// Volume Lost
         /// </summary>
+		
 		[XmlElement("volumeLost")]
-
         public VolumeMeasure VolumeLost {
             get {
                 return volumeLostField;
@@ -9406,12 +8045,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private VolumeMeasure volumeLostField; 
 
-
         /// <summary>
         /// Volume Pumped
         /// </summary>
+		
 		[XmlElement("volumePumped")]
-
         public VolumeMeasure VolumePumped {
             get {
                 return volumePumpedField;
@@ -9424,12 +8062,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private VolumeMeasure volumePumpedField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -9442,12 +8079,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -9459,7 +8095,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -9481,37 +8116,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on the job event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_jobExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on the job event.")]
     public partial class JobExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Comment on the reason for the job
         /// </summary>
+		
 		[XmlElement("jobReason")]
-
         public String JobReason {
             get {
                 return jobReasonField;
@@ -9524,12 +8150,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String jobReasonField; 
 
-
         /// <summary>
         /// Status of job
         /// </summary>
+		
 		[XmlElement("jobStatus")]
-
         public String JobStatus {
             get {
                 return jobStatusField;
@@ -9542,12 +8167,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String jobStatusField; 
 
-
         /// <summary>
         /// The primary reason for doing this job.
         /// </summary>
+		
 		[XmlElement("primaryMotivationForJob")]
-
         public String PrimaryMotivationForJob {
             get {
                 return primaryMotivationForJobField;
@@ -9560,12 +8184,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String primaryMotivationForJobField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -9578,12 +8201,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -9595,7 +8217,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -9617,37 +8238,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on fractionation event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_acidizefracExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on fractionation event.")]
     public partial class AcidizefracExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Reference to stimJob
         /// </summary>
+		
 		[XmlElement("stimJobID")]
-
         public String StimJobID {
             get {
                 return stimJobIDField;
@@ -9660,12 +8272,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String stimJobIDField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -9678,12 +8289,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -9695,7 +8305,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private ExtensionAny extensionAnyField; 
-
 
 
         
@@ -9717,37 +8326,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on bottom hole pressure during this event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_BHPExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on bottom hole pressure during this event.")]
     public partial class BHPExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Reference to bottom hole pressure 
         /// </summary>
+		
 		[XmlElement("BHPRefID")]
-
         public String BHPRefID {
             get {
                 return BHPRefIDField;
@@ -9760,12 +8360,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String BHPRefIDField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -9778,12 +8377,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -9795,7 +8393,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -9817,37 +8414,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on lost circulation event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_lostCirculationExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on lost circulation event.")]
     public partial class LostCirculationExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Volume lost
         /// </summary>
+		
 		[XmlElement("volumeLost")]
-
         public VolumeMeasure VolumeLost {
             get {
                 return volumeLostField;
@@ -9860,12 +8448,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private VolumeMeasure volumeLostField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -9878,12 +8465,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -9895,7 +8481,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -9917,37 +8502,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on directional survey event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_directionalSurveyExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on directional survey event.")]
     public partial class DirectionalSurveyExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// trajectory reference id.
         /// </summary>
+		
 		[XmlElement("trajectoryRefID")]
-
         public String TrajectoryRefID {
             get {
                 return trajectoryRefIDField;
@@ -9960,12 +8536,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String trajectoryRefIDField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -9978,12 +8553,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -9995,7 +8569,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -10017,37 +8590,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on clean fill event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_cleanFillExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on clean fill event.")]
     public partial class CleanFillExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// method of fill and cleaning
         /// </summary>
+		
 		[XmlElement("fillCleaningMethod")]
-
         public String FillCleaningMethod {
             get {
                 return fillCleaningMethodField;
@@ -10060,12 +8624,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String fillCleaningMethodField; 
 
-
         /// <summary>
         /// the size of the tool 
         /// </summary>
+		
 		[XmlElement("toolSize")]
-
         public LengthMeasure ToolSize {
             get {
                 return toolSizeField;
@@ -10078,12 +8641,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure toolSizeField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -10096,12 +8658,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -10113,7 +8674,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -10135,37 +8695,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on cement job event.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_cementExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on cement job event.")]
     public partial class CementExtension : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// unique id of cementJob
         /// </summary>
+		
 		[XmlElement("cementJobRefID")]
-
         public String CementJobRefID {
             get {
                 return cementJobRefIDField;
@@ -10178,12 +8729,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String cementJobRefIDField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -10196,12 +8746,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -10213,7 +8762,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private ExtensionAny extensionAnyField; 
-
 
 
         
@@ -10235,31 +8783,22 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// WITSML - event extension schema
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_eventExtension", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("WITSML - event extension schema")]
     public partial class EventExtension : Object , INotifyPropertyChanged
     {
-
 
         /// <summary>
         /// Extension event for cement
@@ -10647,7 +9186,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10667,37 +9205,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the downholeStringRef xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="downholeStringRef", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the downholeStringRef xsd type.")]
     public partial class DownholeStringRef : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
+		
 		[XmlElement("stringEquipmentRefID")]
-
         public List<String> StringEquipmentRefID {
             get {
                 return stringEquipmentRefIDField;
@@ -10710,12 +9239,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> stringEquipmentRefIDField; 
 
-
 		/// <summary>
         /// downholeStringRefID property
         /// </summary>
+		
         [XmlAttribute("downholeStringRefID")]
-
+		
         public String DownholeStringRefID {
             get {
                 return downholeStringRefIDField;
@@ -10729,7 +9258,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String downholeStringRefIDField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10749,37 +9277,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the boreholeStringRef xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="boreholeStringRef", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the boreholeStringRef xsd type.")]
     public partial class BoreholeStringRef : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
+		
 		[XmlElement("stringEquipmentRefID")]
-
         public List<String> StringEquipmentRefID {
             get {
                 return stringEquipmentRefIDField;
@@ -10792,12 +9311,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> stringEquipmentRefIDField; 
 
-
 		/// <summary>
         /// boreholeStringRefID property
         /// </summary>
+		
         [XmlAttribute("boreholeStringRefID")]
-
+		
         public String BoreholeStringRefID {
             get {
                 return boreholeStringRefIDField;
@@ -10811,7 +9330,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String boreholeStringRefIDField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10831,37 +9349,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the downholeComponentRef xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="downholeComponentRef", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the downholeComponentRef xsd type.")]
     public partial class DownholeComponentRef : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
+		
 		[XmlElement("stringEquipmentRefID")]
-
         public List<String> StringEquipmentRefID {
             get {
                 return stringEquipmentRefIDField;
@@ -10874,12 +9383,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> stringEquipmentRefIDField; 
 
-
         /// <summary>
         /// boreholeStringRef property
         /// </summary>
+		
 		[XmlElement("boreholeStringRef")]
-
         public List<BoreholeStringRef> BoreholeStringRef {
             get {
                 return boreholeStringRefField;
@@ -10892,12 +9400,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<BoreholeStringRef> boreholeStringRefField; 
 
-
         /// <summary>
         /// downholeStringsRef property
         /// </summary>
+		
 		[XmlElement("downholeStringsRef")]
-
         public List<DownholeStringRef> DownholeStringsRef {
             get {
                 return downholeStringsRefField;
@@ -10910,12 +9417,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<DownholeStringRef> downholeStringsRefField; 
 
-
         /// <summary>
         /// perforationSetRefID property
         /// </summary>
+		
 		[XmlElement("perforationSetRefID")]
-
         public List<String> PerforationSetRefID {
             get {
                 return perforationSetRefIDField;
@@ -10929,7 +9435,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private List<String> perforationSetRefIDField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -10949,27 +9454,19 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the eventType xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="eventType", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the eventType xsd type.")]
     public partial class EventType : Object , INotifyPropertyChanged
     {
@@ -10995,12 +9492,12 @@ namespace Energistics.DataAccess.COMPLETION100
             return Value.ToString();
         }
 
-
 		/// <summary>
         /// Class of the event type (job, daily report, etc.)
         /// </summary>
+		[Description("Class of the event type (job, daily report, etc.)")]
         [XmlAttribute("class")]
-
+		
         public EventClassType Class {
             get {
                 return classField;
@@ -11014,13 +9511,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventClassType classField; 
 
-
 		/// <summary>
         /// classSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ClassSpecified {
             get {
                 return classSpecifiedField;
@@ -11033,12 +9528,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean classSpecifiedField; 
 
-
 		/// <summary>
         /// Value property
         /// </summary>
+		
         [XmlText]
-
         public String Value {
             get {
                 return ValueField;
@@ -11052,7 +9546,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String ValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -11072,34 +9565,26 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     /// <summary>
     /// This class represents the obj_wellCMLedger xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCMLedger", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the obj_wellCMLedger xsd type.")]
     public partial class WellCMLedger : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Well name.
         /// </summary>
+		[Description("Well name.")]
 		[XmlElement("nameWell")]
-
         public String NameWell {
             get {
                 return nameWellField;
@@ -11112,12 +9597,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellField; 
 
-
         /// <summary>
         /// Wellbore name.
         /// </summary>
+		[Description("Wellbore name.")]
 		[XmlElement("nameWellbore")]
-
         public String NameWellbore {
             get {
                 return nameWellboreField;
@@ -11130,12 +9614,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellboreField; 
 
-
         /// <summary>
         /// Ledger name.
         /// </summary>
+		[Description("Ledger name.")]
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -11148,12 +9631,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// Parent event reference id.
         /// </summary>
+		[Description("Parent event reference id.")]
 		[XmlElement("parentEventID")]
-
         public String ParentEventID {
             get {
                 return parentEventIDField;
@@ -11166,12 +9648,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String parentEventIDField; 
 
-
         /// <summary>
         /// Date and time that activities started.
         /// </summary>
+		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-
         public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
@@ -11185,13 +9666,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? dTimStartField; 
 
-
 		/// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
@@ -11204,12 +9683,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimStartSpecifiedField; 
 
-
         /// <summary>
         /// Date and time that activities were completed.
         /// </summary>
+		[Description("Date and time that activities were completed.")]
 		[XmlElement("dTimEnd")]
-
         public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -11223,13 +9701,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? dTimEndField; 
 
-
 		/// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
@@ -11242,12 +9718,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimEndSpecifiedField; 
 
-
         /// <summary>
         /// The activity duration (commonly in hours).
         /// </summary>
+		[Description("The activity duration (commonly in hours).")]
 		[XmlElement("duration")]
-
         public TimeMeasure Duration {
             get {
                 return durationField;
@@ -11260,12 +9735,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private TimeMeasure durationField; 
 
-
         /// <summary>
         /// Measured depth at Top of Interval.
         /// </summary>
+		[Description("Measured depth at Top of Interval.")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -11278,12 +9752,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// Measured depth at bottom of the section.
         /// </summary>
+		[Description("Measured depth at bottom of the section.")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -11296,12 +9769,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// Order number of event.
         /// </summary>
+		[Description("Order number of event.")]
 		[XmlElement("eventOrder")]
-
         public Int16? EventOrder {
             get {
                 return eventOrderField;
@@ -11315,13 +9787,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? eventOrderField; 
 
-
 		/// <summary>
         /// eventOrderSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EventOrderSpecified {
             get {
                 return eventOrderSpecifiedField;
@@ -11334,12 +9804,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean eventOrderSpecifiedField; 
 
-
         /// <summary>
         /// Rig reference id.
         /// </summary>
+		[Description("Rig reference id.")]
 		[XmlElement("rigID")]
-
         public List<String> RigID {
             get {
                 return rigIDField;
@@ -11352,12 +9821,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> rigIDField; 
 
-
         /// <summary>
         /// Activity code
         /// </summary>
+		[Description("Activity code")]
 		[XmlElement("activityCode")]
-
         public ActivityCode ActivityCode {
             get {
                 return activityCodeField;
@@ -11371,13 +9839,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ActivityCode activityCodeField; 
 
-
 		/// <summary>
         /// activityCodeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ActivityCodeSpecified {
             get {
                 return activityCodeSpecifiedField;
@@ -11390,12 +9856,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean activityCodeSpecifiedField; 
 
-
         /// <summary>
         /// Comment on type of this event, either referring to a job type or an activity type e.g. a safety meeting. 
         /// </summary>
+		[Description("Comment on type of this event, either referring to a job type or an  activity type e.g. a safety meeting.")]
 		[XmlElement("type")]
-
         public EventType Type {
             get {
                 return typeField;
@@ -11408,12 +9873,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventType typeField; 
 
-
         /// <summary>
         /// True if planned.
         /// </summary>
+		[Description("True if planned.")]
 		[XmlElement("isPlan")]
-
         public Boolean? IsPlan {
             get {
                 return isPlanField;
@@ -11427,13 +9891,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isPlanField; 
 
-
 		/// <summary>
         /// isPlanSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsPlanSpecified {
             get {
                 return isPlanSpecifiedField;
@@ -11446,12 +9908,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isPlanSpecifiedField; 
 
-
         /// <summary>
         /// Extension event for work order id.
         /// </summary>
+		[Description("Extension event for work order id.")]
 		[XmlElement("workOrderID")]
-
         public String WorkOrderID {
             get {
                 return workOrderIDField;
@@ -11464,12 +9925,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String workOrderIDField; 
 
-
         /// <summary>
         /// this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using downholeComponentExtension.
         /// </summary>
+		[Description("this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using downholeComponentExtension.")]
 		[XmlElement("downholeComponentRef")]
-
         public DownholeComponentRef DownholeComponentRef {
             get {
                 return downholeComponentRefField;
@@ -11482,12 +9942,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DownholeComponentRef downholeComponentRefField; 
 
-
         /// <summary>
         /// Event extensions
         /// </summary>
+		[Description("Event extensions")]
 		[XmlElement("eventExtension")]
-
         public List<EventExtension> EventExtension {
             get {
                 return eventExtensionField;
@@ -11500,12 +9959,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<EventExtension> eventExtensionField; 
 
-
         /// <summary>
         /// Service company or business
         /// </summary>
+		[Description("Service company or business")]
 		[XmlElement("businessAssociate")]
-
         public String BusinessAssociate {
             get {
                 return businessAssociateField;
@@ -11518,12 +9976,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String businessAssociateField; 
 
-
         /// <summary>
         /// Name or information about person responsible who is implementing the service or job.
         /// </summary>
+		[Description("Name or information about person responsible who is implementing the service or job.")]
 		[XmlElement("responsiblePerson")]
-
         public String ResponsiblePerson {
             get {
                 return responsiblePersonField;
@@ -11536,12 +9993,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String responsiblePersonField; 
 
-
         /// <summary>
         /// Contact name or person to get in touch with. Might not necessarily be the person responsible.
         /// </summary>
+		[Description("Contact name or person to get in touch with. Might not necessarily be the person responsible.")]
 		[XmlElement("contact")]
-
         public String Contact {
             get {
                 return contactField;
@@ -11554,12 +10010,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String contactField; 
 
-
         /// <summary>
         /// The job or event cost detail.
         /// </summary>
+		[Description("The job or event cost detail.")]
 		[XmlElement("cost")]
-
         public List<DayCost> Cost {
             get {
                 return costField;
@@ -11572,12 +10027,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<DayCost> costField; 
 
-
         /// <summary>
         /// True if event is not productive.
         /// </summary>
+		[Description("True if event is not productive.")]
 		[XmlElement("nonproductive")]
-
         public Boolean? Nonproductive {
             get {
                 return nonproductiveField;
@@ -11591,13 +10045,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? nonproductiveField; 
 
-
 		/// <summary>
         /// nonproductiveSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean NonproductiveSpecified {
             get {
                 return nonproductiveSpecifiedField;
@@ -11610,12 +10062,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean nonproductiveSpecifiedField; 
 
-
         /// <summary>
         /// True if event implies is in-trouble
         /// </summary>
+		[Description("True if event implies is in-trouble")]
 		[XmlElement("trouble")]
-
         public Boolean? Trouble {
             get {
                 return troubleField;
@@ -11629,13 +10080,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? troubleField; 
 
-
 		/// <summary>
         /// troubleSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean TroubleSpecified {
             get {
                 return troubleSpecifiedField;
@@ -11648,12 +10097,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean troubleSpecifiedField; 
 
-
         /// <summary>
         /// True of event is for preventive maintenance
         /// </summary>
+		[Description("True of event is for preventive maintenance")]
 		[XmlElement("preventiveMaintenance")]
-
         public Boolean? PreventiveMaintenance {
             get {
                 return preventiveMaintenanceField;
@@ -11667,13 +10115,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? preventiveMaintenanceField; 
 
-
 		/// <summary>
         /// preventiveMaintenanceSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean PreventiveMaintenanceSpecified {
             get {
                 return preventiveMaintenanceSpecifiedField;
@@ -11686,12 +10132,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean preventiveMaintenanceSpecifiedField; 
 
-
         /// <summary>
         /// True if there is no planning infomation for this activity.
         /// </summary>
+		[Description("True if there is no planning infomation for this activity.")]
 		[XmlElement("unplanned")]
-
         public Boolean? Unplanned {
             get {
                 return unplannedField;
@@ -11705,13 +10150,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? unplannedField; 
 
-
 		/// <summary>
         /// unplannedSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean UnplannedSpecified {
             get {
                 return unplannedSpecifiedField;
@@ -11724,12 +10167,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean unplannedSpecifiedField; 
 
-
         /// <summary>
         /// Phase (large activity classification) e.g. Drill Surface Hole.
         /// </summary>
+		[Description("Phase (large activity classification) e.g. Drill Surface Hole.")]
 		[XmlElement("phase")]
-
         public String Phase {
             get {
                 return phaseField;
@@ -11742,12 +10184,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String phaseField; 
 
-
         /// <summary>
         /// Participant points to the involved witsmlobjects
         /// </summary>
+		[Description("Participant points to the involved witsmlobjects")]
 		[XmlElement("participant")]
-
         public Participant Participants {
             get {
                 return participantField;
@@ -11760,12 +10201,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Participant participantField; 
 
-
         /// <summary>
         /// Comment on this ledger
         /// </summary>
+		[Description("Comment on this ledger")]
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -11778,12 +10218,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -11796,12 +10235,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
         /// <summary>
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
+		[Description("A container element that contains elements that are common to all data objects.")]
 		[XmlElement("commonData")]
-
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -11814,12 +10252,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CommonData commonDataField; 
 
-
         /// <summary>
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
+		[Description("A container element that can contain custom or user defined data elements.")]
 		[XmlElement("customData")]
-
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -11832,12 +10269,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CustomData customDataField; 
 
-
         /// <summary>
         /// Description of this ledger
         /// </summary>
+		[Description("Description of this ledger")]
 		[XmlElement("description")]
-
         public String Description {
             get {
                 return descriptionField;
@@ -11850,12 +10286,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionField; 
 
-
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell. 
         /// </summary>
+		[Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
-
+		
         public String UidWell {
             get {
                 return uidWellField;
@@ -11868,12 +10304,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellField; 
 
-
 		/// <summary>
         /// Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore. 
         /// </summary>
+		[Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
         [XmlAttribute("uidWellbore")]
-
+		
         public String UidWellbore {
             get {
                 return uidWellboreField;
@@ -11886,12 +10322,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellboreField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -11903,7 +10339,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -11925,35 +10360,27 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_slotsInterval xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_slotsInterval", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_slotsInterval xsd type.")]
     public partial class SlotsInterval : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// stringEquipmentRefUID property
         /// </summary>
+		
 		[XmlElement("stringEquipmentRefUID")]
-
         public String StringEquipmentRefUID {
             get {
                 return stringEquipmentRefUIDField;
@@ -11966,12 +10393,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String stringEquipmentRefUIDField; 
 
-
         /// <summary>
         /// mdTop property
         /// </summary>
+		[Description("Measured depth of the top perforation.")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -11984,12 +10410,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// mdBottom property
         /// </summary>
+		[Description("Measured depth of the bottom perforation.")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -12002,12 +10427,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// tvdTop property
         /// </summary>
+		[Description("True vertical depth of the top perforation.")]
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -12020,12 +10444,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// tvdBottom property
         /// </summary>
+		[Description("True vertical depth of the bottom perforation.")]
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -12038,12 +10461,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// intervalStatusHistory property
         /// </summary>
+		[Description("The contactInterval history information")]
 		[XmlElement("intervalStatusHistory")]
-
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
                 return intervalStatusHistoryField;
@@ -12056,12 +10478,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
-
         /// <summary>
         /// eventHistory property
         /// </summary>
+		[Description("The contactInterval event information")]
 		[XmlElement("eventHistory")]
-
         public EventInfo EventHistory {
             get {
                 return eventHistoryField;
@@ -12074,12 +10495,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventInfo eventHistoryField; 
 
-
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		
 		[XmlElement("geologyFeatureRefID")]
-
         public List<String> GeologyFeatureRefID {
             get {
                 return geologyFeatureRefIDField;
@@ -12092,12 +10512,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> geologyFeatureRefIDField; 
 
-
         /// <summary>
         /// extensionNameValue property
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -12110,12 +10529,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -12127,7 +10546,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -12149,37 +10567,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on the status history in the interval
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_intervalStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on the status history in the interval")]
     public partial class IntervalStatusHistory : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The physical status of an interval (e.g., open, closed, proposed)
         /// </summary>
+		[Description("The physical status of an interval (e.g., open, closed, proposed)")]
 		[XmlElement("physicalStatus")]
-
         public PhysicalStatus? PhysicalStatus {
             get {
                 return physicalStatusField;
@@ -12193,13 +10602,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PhysicalStatus? physicalStatusField; 
 
-
 		/// <summary>
         /// physicalStatusSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean PhysicalStatusSpecified {
             get {
                 return physicalStatusSpecifiedField;
@@ -12212,12 +10619,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean physicalStatusSpecifiedField; 
 
-
         /// <summary>
         /// The start date of status and allocation factor
         /// </summary>
+		[Description("The start date of status and allocation factor")]
 		[XmlElement("startDate")]
-
         public DateTime? StartDate {
             get {
                 return startDateField;
@@ -12231,13 +10637,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? startDateField; 
 
-
 		/// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -12250,12 +10654,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean startDateSpecifiedField; 
 
-
         /// <summary>
         /// The end date of status and allocation factor
         /// </summary>
+		[Description("The end date of status and allocation factor")]
 		[XmlElement("endDate")]
-
         public DateTime? EndDate {
             get {
                 return endDateField;
@@ -12269,13 +10672,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? endDateField; 
 
-
 		/// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -12288,12 +10689,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean endDateSpecifiedField; 
 
-
         /// <summary>
         /// The measured top depth of the interval
         /// </summary>
+		[Description("The measured top depth of the interval")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -12306,12 +10706,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// The measured bottom depth of the interval
         /// </summary>
+		[Description("The measured bottom depth of the interval")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -12324,12 +10723,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// defines the proportional amount of fluid from the well completion that is flowing through this interval whithin a wellbore
         /// </summary>
+		[Range(0, 1)]
+		[Description("defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore")]
 		[XmlElement("allocationFactor")]
-
         public Double? AllocationFactor {
             get {
                 return allocationFactorField;
@@ -12343,13 +10742,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? allocationFactorField; 
 
-
 		/// <summary>
         /// allocationFactorSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean AllocationFactorSpecified {
             get {
                 return allocationFactorSpecifiedField;
@@ -12362,12 +10759,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean allocationFactorSpecifiedField; 
 
-
         /// <summary>
         /// A remark about the interval over this period of time
         /// </summary>
+		[Description("A remark about the interval over this period of time")]
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -12380,12 +10776,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -12399,7 +10795,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String uidField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -12419,37 +10814,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Event information type
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_eventInfo", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Event information type")]
     public partial class EventInfo : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The referencing event was initailized
         /// </summary>
+		[Description("The referencing event was initailized")]
 		[XmlElement("beginEvent")]
-
         public EventRefInfo BeginEvent {
             get {
                 return beginEventField;
@@ -12462,12 +10848,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventRefInfo beginEventField; 
 
-
         /// <summary>
         /// The referencing event when the even was end
         /// </summary>
+		[Description("The referencing event when the even was end")]
 		[XmlElement("endEvent")]
-
         public EventRefInfo EndEvent {
             get {
                 return endEventField;
@@ -12480,12 +10865,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventRefInfo endEventField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -12499,7 +10883,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -12519,37 +10902,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Event reference collection
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_eventRefInfo", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Event reference collection")]
     public partial class EventRefInfo : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The referencing eventledger ID
         /// </summary>
+		[Description("The referencing eventledger ID")]
 		[XmlElement("eventRefID")]
-
         public String EventRefID {
             get {
                 return eventRefIDField;
@@ -12562,12 +10936,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String eventRefIDField; 
 
-
         /// <summary>
         /// install/pull date
         /// </summary>
+		[Description("install/pull date")]
 		[XmlElement("eventDate")]
-
         public DateTime? EventDate {
             get {
                 return eventDateField;
@@ -12581,13 +10954,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? eventDateField; 
 
-
 		/// <summary>
         /// eventDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EventDateSpecified {
             get {
                 return eventDateSpecifiedField;
@@ -12601,7 +10972,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private Boolean eventDateSpecifiedField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -12621,37 +10991,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on collection of perforation status history
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on collection of perforation status history")]
     public partial class PerforationStatusHistory : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// perforation status
         /// </summary>
+		[Description("perforation status")]
 		[XmlElement("perforationStatus")]
-
         public PerforationStatus? PerforationStatus {
             get {
                 return perforationStatusField;
@@ -12665,13 +11026,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerforationStatus? perforationStatusField; 
 
-
 		/// <summary>
         /// perforationStatusSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean PerforationStatusSpecified {
             get {
                 return perforationStatusSpecifiedField;
@@ -12684,12 +11043,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean perforationStatusSpecifiedField; 
 
-
         /// <summary>
         /// the start date of status
         /// </summary>
+		[Description("the start date of status")]
 		[XmlElement("startDate")]
-
         public DateTime? StartDate {
             get {
                 return startDateField;
@@ -12703,13 +11061,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? startDateField; 
 
-
 		/// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -12722,12 +11078,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean startDateSpecifiedField; 
 
-
         /// <summary>
         /// the end date of status
         /// </summary>
+		[Description("the end date of status")]
 		[XmlElement("endDate")]
-
         public DateTime? EndDate {
             get {
                 return endDateField;
@@ -12741,13 +11096,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? endDateField; 
 
-
 		/// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -12760,12 +11113,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean endDateSpecifiedField; 
 
-
         /// <summary>
         /// The measured top of perforation
         /// </summary>
+		[Description("The measured top of perforation")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -12778,12 +11130,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// The measured bottom of perforation
         /// </summary>
+		[Description("The measured bottom of perforation")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -12796,12 +11147,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// defines the proportional amount of fluid from the well completion that is flowing through this interval whithin a wellbore
         /// </summary>
+		[Range(0, 1)]
+		[Description("defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore")]
 		[XmlElement("allocationFactor")]
-
         public Double? AllocationFactor {
             get {
                 return allocationFactorField;
@@ -12815,13 +11166,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? allocationFactorField; 
 
-
 		/// <summary>
         /// allocationFactorSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean AllocationFactorSpecified {
             get {
                 return allocationFactorSpecifiedField;
@@ -12834,12 +11183,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean allocationFactorSpecifiedField; 
 
-
         /// <summary>
         /// The description about the status
         /// </summary>
+		[Description("The description about the status")]
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -12852,12 +11200,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -12869,7 +11217,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -12891,37 +11238,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_perforationSetInterval xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSetInterval", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_perforationSetInterval xsd type.")]
     public partial class PerforationSetInterval : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// perforationSetRefID property
         /// </summary>
+		
 		[XmlElement("perforationSetRefID")]
-
         public String PerforationSetRefID {
             get {
                 return perforationSetRefIDField;
@@ -12934,12 +11272,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String perforationSetRefIDField; 
 
-
         /// <summary>
         /// mdTop property
         /// </summary>
+		[Description("Measured depth of the top perforation.")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -12952,12 +11289,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// mdBottom property
         /// </summary>
+		[Description("Measured depth of the bottom perforation.")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -12970,12 +11306,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// tvdTop property
         /// </summary>
+		[Description("True vertical depth of the top perforation.")]
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -12988,12 +11323,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// tvdBottom property
         /// </summary>
+		[Description("True vertical depth of the bottom perforation.")]
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -13006,12 +11340,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// perforationStatusHistory property
         /// </summary>
+		[Description("The contactInterval history information")]
 		[XmlElement("perforationStatusHistory")]
-
         public List<PerforationStatusHistory> PerforationStatusHistory {
             get {
                 return perforationStatusHistoryField;
@@ -13024,12 +11357,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<PerforationStatusHistory> perforationStatusHistoryField; 
 
-
         /// <summary>
         /// eventHistory property
         /// </summary>
+		[Description("The contactInterval event information")]
 		[XmlElement("eventHistory")]
-
         public EventInfo EventHistory {
             get {
                 return eventHistoryField;
@@ -13042,12 +11374,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventInfo eventHistoryField; 
 
-
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		
 		[XmlElement("geologyFeatureRefID")]
-
         public List<String> GeologyFeatureRefID {
             get {
                 return geologyFeatureRefIDField;
@@ -13060,12 +11391,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> geologyFeatureRefIDField; 
 
-
         /// <summary>
         /// extensionNameValue property
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -13078,12 +11408,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -13095,7 +11425,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -13117,37 +11446,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_openHoleInterval xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_openHoleInterval", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_openHoleInterval xsd type.")]
     public partial class OpenHoleInterval : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// boreholeStringRefID property
         /// </summary>
+		
 		[XmlElement("boreholeStringRefID")]
-
         public String BoreholeStringRefID {
             get {
                 return boreholeStringRefIDField;
@@ -13160,12 +11480,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String boreholeStringRefIDField; 
 
-
         /// <summary>
         /// mdTop property
         /// </summary>
+		[Description("Measured depth of the top perforation.")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -13178,12 +11497,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// mdBottom property
         /// </summary>
+		[Description("Measured depth of the bottom perforation.")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -13196,12 +11514,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// tvdTop property
         /// </summary>
+		[Description("True vertical depth of the top perforation.")]
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -13214,12 +11531,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// tvdBottom property
         /// </summary>
+		[Description("True vertical depth of the bottom perforation.")]
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -13232,12 +11548,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// intervalStatusHistory property
         /// </summary>
+		[Description("The contactInterval history information")]
 		[XmlElement("intervalStatusHistory")]
-
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
                 return intervalStatusHistoryField;
@@ -13250,12 +11565,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
-
         /// <summary>
         /// eventHistory property
         /// </summary>
+		[Description("The contactInterval event information")]
 		[XmlElement("eventHistory")]
-
         public EventInfo EventHistory {
             get {
                 return eventHistoryField;
@@ -13268,12 +11582,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventInfo eventHistoryField; 
 
-
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		
 		[XmlElement("geologyFeatureRefID")]
-
         public List<String> GeologyFeatureRefID {
             get {
                 return geologyFeatureRefIDField;
@@ -13286,12 +11599,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> geologyFeatureRefIDField; 
 
-
         /// <summary>
         /// extensionNameValue property
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -13304,12 +11616,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -13321,7 +11633,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -13343,37 +11654,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_gravelPackInterval xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_gravelPackInterval", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_gravelPackInterval xsd type.")]
     public partial class GravelPackInterval : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// downholeStringRefID property
         /// </summary>
+		
 		[XmlElement("downholeStringRefID")]
-
         public String DownholeStringRefID {
             get {
                 return downholeStringRefIDField;
@@ -13386,12 +11688,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String downholeStringRefIDField; 
 
-
         /// <summary>
         /// mdTop property
         /// </summary>
+		[Description("Measured depth of the top perforation.")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -13404,12 +11705,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// mdBottom property
         /// </summary>
+		[Description("Measured depth of the bottom perforation.")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -13422,12 +11722,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// tvdTop property
         /// </summary>
+		[Description("True vertical depth of the top perforation.")]
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -13440,12 +11739,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// tvdBottom property
         /// </summary>
+		[Description("True vertical depth of the bottom perforation.")]
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -13458,12 +11756,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// intervalStatusHistory property
         /// </summary>
+		[Description("The contactInterval history information")]
 		[XmlElement("intervalStatusHistory")]
-
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
                 return intervalStatusHistoryField;
@@ -13476,12 +11773,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
-
         /// <summary>
         /// eventHistory property
         /// </summary>
+		[Description("The contactInterval event information")]
 		[XmlElement("eventHistory")]
-
         public EventInfo EventHistory {
             get {
                 return eventHistoryField;
@@ -13494,12 +11790,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventInfo eventHistoryField; 
 
-
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		
 		[XmlElement("geologyFeatureRefID")]
-
         public List<String> GeologyFeatureRefID {
             get {
                 return geologyFeatureRefIDField;
@@ -13512,12 +11807,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> geologyFeatureRefIDField; 
 
-
         /// <summary>
         /// extensionNameValue property
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -13530,12 +11824,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -13547,7 +11841,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -13569,37 +11862,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on collection of contact intervals
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_contactIntervalSet", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on collection of contact intervals")]
     public partial class ContactIntervalSet : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// gravelPack interval 
         /// </summary>
+		[Description("gravelPack interval")]
 		[XmlElement("gravelPackInterval")]
-
         public List<GravelPackInterval> GravelPackInterval {
             get {
                 return gravelPackIntervalField;
@@ -13612,12 +11896,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<GravelPackInterval> gravelPackIntervalField; 
 
-
         /// <summary>
         /// cs_openHole interval 
         /// </summary>
+		[Description("cs_openHole interval")]
 		[XmlElement("openHoleInterval")]
-
         public List<OpenHoleInterval> OpenHoleInterval {
             get {
                 return openHoleIntervalField;
@@ -13630,12 +11913,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<OpenHoleInterval> openHoleIntervalField; 
 
-
         /// <summary>
         /// perforation interval 
         /// </summary>
+		[Description("perforation interval")]
 		[XmlElement("perforationSetInterval")]
-
         public List<PerforationSetInterval> PerforationSetInterval {
             get {
                 return perforationSetIntervalField;
@@ -13648,12 +11930,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<PerforationSetInterval> perforationSetIntervalField; 
 
-
         /// <summary>
         /// cs_slots interval 
         /// </summary>
+		[Description("cs_slots interval")]
 		[XmlElement("slotsInterval")]
-
         public List<SlotsInterval> SlotsInterval {
             get {
                 return slotsIntervalField;
@@ -13667,7 +11948,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private List<SlotsInterval> slotsIntervalField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -13687,34 +11967,27 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     /// <summary>
     /// This class represents the obj_wellboreCompletion xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellboreCompletion", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the obj_wellboreCompletion xsd type.")]
     public partial class WellboreCompletion : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// nameWell property
         /// </summary>
+		[Required]
+		[Description("Human recognizable context for the well that contains the completion.")]
 		[XmlElement("nameWell")]
-
         public String NameWell {
             get {
                 return nameWellField;
@@ -13727,12 +12000,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellField; 
 
-
         /// <summary>
         /// nameWellbore property
         /// </summary>
+		[Required]
+		[Description("Human recognizable context for the wellbore that contains the completion.")]
 		[XmlElement("nameWellbore")]
-
         public String NameWellbore {
             get {
                 return nameWellboreField;
@@ -13745,12 +12018,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellboreField; 
 
-
         /// <summary>
         /// nameWellCompletion property
         /// </summary>
+		[Required]
+		[Description("Human recognizable context for the well completion that contains the completion.")]
 		[XmlElement("nameWellCompletion")]
-
         public String NameWellCompletion {
             get {
                 return nameWellCompletionField;
@@ -13763,12 +12036,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellCompletionField; 
 
-
         /// <summary>
         /// name property
         /// </summary>
+		[Description("Preferred name")]
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -13781,12 +12053,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// wellboreCompletionNo property
         /// </summary>
+		[Description("CompletionNo, etc API14")]
 		[XmlElement("wellboreCompletionNo")]
-
         public String WellboreCompletionNo {
             get {
                 return wellboreCompletionNoField;
@@ -13799,12 +12070,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String wellboreCompletionNoField; 
 
-
         /// <summary>
         /// wellboreCompletionAlias property
         /// </summary>
+		[Description("Preferred alias name")]
 		[XmlElement("wellboreCompletionAlias")]
-
         public String WellboreCompletionAlias {
             get {
                 return wellboreCompletionAliasField;
@@ -13817,12 +12087,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String wellboreCompletionAliasField; 
 
-
         /// <summary>
         /// evenHistory property
         /// </summary>
+		
 		[XmlElement("evenHistory")]
-
         public List<EventInfo> EvenHistory {
             get {
                 return evenHistoryField;
@@ -13835,12 +12104,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<EventInfo> evenHistoryField; 
 
-
         /// <summary>
         /// wellboreCompletionDate property
         /// </summary>
+		[Description("Completion Date")]
 		[XmlElement("wellboreCompletionDate")]
-
         public DateTime? WellboreCompletionDate {
             get {
                 return wellboreCompletionDateField;
@@ -13854,13 +12122,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? wellboreCompletionDateField; 
 
-
 		/// <summary>
         /// wellboreCompletionDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean WellboreCompletionDateSpecified {
             get {
                 return wellboreCompletionDateSpecifiedField;
@@ -13873,12 +12139,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean wellboreCompletionDateSpecifiedField; 
 
-
         /// <summary>
         /// suffixAPI property
         /// </summary>
+		[Description("API suffix.")]
 		[XmlElement("suffixAPI")]
-
         public String SuffixAPI {
             get {
                 return suffixAPIField;
@@ -13891,12 +12156,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String suffixAPIField; 
 
-
         /// <summary>
         /// mdTop property
         /// </summary>
+		[Description("Measured depth at top of interval.")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -13909,12 +12173,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// mdBottom property
         /// </summary>
+		[Description("Measured depth at base of interval.")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -13927,12 +12190,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// tvdTop property
         /// </summary>
+		[Description("True vertical depth at top of the section.")]
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -13945,12 +12207,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// tvdBottom property
         /// </summary>
+		[Description("True vertical depth at bottom of the section.")]
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -13963,12 +12224,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// currentStatus property
         /// </summary>
+		
 		[XmlElement("currentStatus")]
-
         public CompletionStatus? CurrentStatus {
             get {
                 return currentStatusField;
@@ -13982,13 +12242,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CompletionStatus? currentStatusField; 
 
-
 		/// <summary>
         /// currentStatusSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean CurrentStatusSpecified {
             get {
                 return currentStatusSpecifiedField;
@@ -14001,12 +12259,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean currentStatusSpecifiedField; 
 
-
         /// <summary>
         /// statusDate property
         /// </summary>
+		
 		[XmlElement("statusDate")]
-
         public DateTime? StatusDate {
             get {
                 return statusDateField;
@@ -14020,13 +12277,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? statusDateField; 
 
-
 		/// <summary>
         /// statusDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StatusDateSpecified {
             get {
                 return statusDateSpecifiedField;
@@ -14039,12 +12294,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean statusDateSpecifiedField; 
 
-
         /// <summary>
         /// statusHistory property
         /// </summary>
+		
 		[XmlElement("statusHistory")]
-
         public List<CompletionStatusHistory> StatusHistory {
             get {
                 return statusHistoryField;
@@ -14057,12 +12311,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<CompletionStatusHistory> statusHistoryField; 
 
-
         /// <summary>
         /// contactIntervalSet property
         /// </summary>
+		[Description("A collection of contact interval information")]
 		[XmlElement("contactIntervalSet")]
-
         public ContactIntervalSet ContactIntervalSet {
             get {
                 return contactIntervalSetField;
@@ -14075,12 +12328,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ContactIntervalSet contactIntervalSetField; 
 
-
         /// <summary>
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
+		[Description("A container element that contains elements that are common to all data objects.")]
 		[XmlElement("commonData")]
-
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -14093,12 +12345,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CommonData commonDataField; 
 
-
         /// <summary>
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
+		[Description("A container element that can contain custom or user defined data elements.")]
 		[XmlElement("customData")]
-
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -14111,12 +12362,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CustomData customDataField; 
 
-
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell. 
         /// </summary>
+		[Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
-
+		
         public String UidWell {
             get {
                 return uidWellField;
@@ -14129,12 +12380,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellField; 
 
-
 		/// <summary>
         /// Unique identifier for the wellbore.. 
         /// </summary>
+		[Description("Unique identifier for the wellbore..")]
         [XmlAttribute("uidWellbore")]
-
+		
         public String UidWellbore {
             get {
                 return uidWellboreField;
@@ -14147,12 +12398,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellboreField; 
 
-
 		/// <summary>
         /// Unique identifier for the well completion. 
         /// </summary>
+		[Description("Unique identifier for the well completion.")]
         [XmlAttribute("uidWellCompletion")]
-
+		
         public String UidWellCompletion {
             get {
                 return uidWellCompletionField;
@@ -14165,12 +12416,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellCompletionField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -14182,7 +12433,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -14204,35 +12454,27 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_perforationSet xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSet", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_perforationSet xsd type.")]
     public partial class PerforationSet : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// perforation on borehole String
         /// </summary>
+		
 		[XmlElement("boreholeStringRefID")]
-
         public List<String> BoreholeStringRefID {
             get {
                 return boreholeStringRefIDField;
@@ -14245,12 +12487,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> boreholeStringRefIDField; 
 
-
         /// <summary>
         /// perforation on downholeStringRefID
         /// </summary>
+		
 		[XmlElement("downholeStringRefID")]
-
         public List<String> DownholeStringRefID {
             get {
                 return downholeStringRefIDField;
@@ -14263,12 +12504,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> downholeStringRefIDField; 
 
-
         /// <summary>
         /// The contactInterval event information
         /// </summary>
+		
 		[XmlElement("eventHistory")]
-
         public EventInfo EventHistory {
             get {
                 return eventHistoryField;
@@ -14281,12 +12521,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventInfo eventHistoryField; 
 
-
         /// <summary>
         /// The measured top depth of the hole
         /// </summary>
+		
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -14299,12 +12538,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// The measured bottom of the hole
         /// </summary>
+		
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -14317,12 +12555,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// True vertical depth of the top perforation.
         /// </summary>
+		
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -14335,12 +12572,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// True vertical depth of the bottom perforation.
         /// </summary>
+		
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -14353,12 +12589,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// The diameter of the hole
         /// </summary>
+		
 		[XmlElement("holeDiameter")]
-
         public LengthMeasure HoleDiameter {
             get {
                 return holeDiameterField;
@@ -14371,12 +12606,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure holeDiameterField; 
 
-
         /// <summary>
         /// The angle of the holes
         /// </summary>
+		
 		[XmlElement("holeAngle")]
-
         public PlaneAngleMeasure HoleAngle {
             get {
                 return holeAngleField;
@@ -14389,12 +12623,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PlaneAngleMeasure holeAngleField; 
 
-
         /// <summary>
         /// The pattern of the holes
         /// </summary>
+		
 		[XmlElement("holePattern")]
-
         public String HolePattern {
             get {
                 return holePatternField;
@@ -14407,12 +12640,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String holePatternField; 
 
-
         /// <summary>
         /// The density of the holes
         /// </summary>
+		
 		[XmlElement("holeDensity")]
-
         public PerLengthMeasure HoleDensity {
             get {
                 return holeDensityField;
@@ -14425,12 +12657,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerLengthMeasure holeDensityField; 
 
-
         /// <summary>
         /// The number of holes
         /// </summary>
+		
 		[XmlElement("holeCount")]
-
         public Int16? HoleCount {
             get {
                 return holeCountField;
@@ -14444,13 +12675,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? holeCountField; 
 
-
 		/// <summary>
         /// holeCountSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean HoleCountSpecified {
             get {
                 return holeCountSpecifiedField;
@@ -14463,12 +12692,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean holeCountSpecifiedField; 
 
-
         /// <summary>
         /// The friction factor of each perforation set.
         /// </summary>
+		
 		[XmlElement("frictionFactor")]
-
         public Double? FrictionFactor {
             get {
                 return frictionFactorField;
@@ -14482,13 +12710,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? frictionFactorField; 
 
-
 		/// <summary>
         /// frictionFactorSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean FrictionFactorSpecified {
             get {
                 return frictionFactorSpecifiedField;
@@ -14501,12 +12727,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean frictionFactorSpecifiedField; 
 
-
         /// <summary>
         /// The friction pressure for the perforation set.
         /// </summary>
+		
 		[XmlElement("frictionPres")]
-
         public PressureMeasure FrictionPres {
             get {
                 return frictionPresField;
@@ -14519,12 +12744,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure frictionPresField; 
 
-
         /// <summary>
         /// A coefficient used in the equation for calculation of pressure drop across a perforation set.
         /// </summary>
+		
 		[XmlElement("dischargeCoefficient")]
-
         public Double? DischargeCoefficient {
             get {
                 return dischargeCoefficientField;
@@ -14538,13 +12762,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? dischargeCoefficientField; 
 
-
 		/// <summary>
         /// dischargeCoefficientSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean DischargeCoefficientSpecified {
             get {
                 return dischargeCoefficientSpecifiedField;
@@ -14557,12 +12779,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dischargeCoefficientSpecifiedField; 
 
-
         /// <summary>
         ///  The type of perforation tool.
         /// </summary>
+		
 		[XmlElement("perforationTool")]
-
         public PerforationToolType? PerforationTool {
             get {
                 return perforationToolField;
@@ -14576,13 +12797,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerforationToolType? perforationToolField; 
 
-
 		/// <summary>
         /// perforationToolSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean PerforationToolSpecified {
             get {
                 return perforationToolSpecifiedField;
@@ -14595,12 +12814,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean perforationToolSpecifiedField; 
 
-
         /// <summary>
         /// The Penetration length of perforation.
         /// </summary>
+		
 		[XmlElement("perforationPenetration")]
-
         public LengthMeasure PerforationPenetration {
             get {
                 return perforationPenetrationField;
@@ -14613,12 +12831,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure perforationPenetrationField; 
 
-
         /// <summary>
         /// The diameter of crushed zone
         /// </summary>
+		
 		[XmlElement("crushZoneDiameter")]
-
         public LengthMeasure CrushZoneDiameter {
             get {
                 return crushZoneDiameterField;
@@ -14631,12 +12848,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure crushZoneDiameterField; 
 
-
         /// <summary>
         /// The ratio value of cursh damage
         /// </summary>
+		
 		[XmlElement("crushDamageRatio")]
-
         public String CrushDamageRatio {
             get {
                 return crushDamageRatioField;
@@ -14649,12 +12865,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String crushDamageRatioField; 
 
-
         /// <summary>
         /// The original perforation date
         /// </summary>
+		
 		[XmlElement("perforationDate")]
-
         public DateTime? PerforationDate {
             get {
                 return perforationDateField;
@@ -14668,13 +12883,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? perforationDateField; 
 
-
 		/// <summary>
         /// perforationDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean PerforationDateSpecified {
             get {
                 return perforationDateSpecifiedField;
@@ -14687,12 +12900,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean perforationDateSpecifiedField; 
 
-
         /// <summary>
         /// Remarks regarding this perforationSet
         /// </summary>
+		
 		[XmlElement("permanentRemarks")]
-
         public String PermanentRemarks {
             get {
                 return permanentRemarksField;
@@ -14705,12 +12917,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String permanentRemarksField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -14722,7 +12934,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -14744,37 +12955,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on the perforated hole
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perfHole", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on the perforated hole")]
     public partial class PerfHole : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The measured top depth of the hole
         /// </summary>
+		
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -14787,12 +12989,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// The measured bottom of the hole
         /// </summary>
+		
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -14805,12 +13006,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// True vertical depth of the top perforation.
         /// </summary>
+		
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -14823,12 +13023,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// True vertical depth of the bottom perforation.
         /// </summary>
+		
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -14841,12 +13040,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// The diameter of the hole
         /// </summary>
+		
 		[XmlElement("holeDiameter")]
-
         public LengthMeasure HoleDiameter {
             get {
                 return holeDiameterField;
@@ -14859,12 +13057,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure holeDiameterField; 
 
-
         /// <summary>
         /// The angle of the holes
         /// </summary>
+		
 		[XmlElement("holeAngle")]
-
         public PlaneAngleMeasure HoleAngle {
             get {
                 return holeAngleField;
@@ -14877,12 +13074,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PlaneAngleMeasure holeAngleField; 
 
-
         /// <summary>
         /// The pattern of the holes
         /// </summary>
+		
 		[XmlElement("holePattern")]
-
         public String HolePattern {
             get {
                 return holePatternField;
@@ -14895,12 +13091,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String holePatternField; 
 
-
         /// <summary>
         /// The density of the holes
         /// </summary>
+		
 		[XmlElement("holeDensity")]
-
         public PerLengthMeasure HoleDensity {
             get {
                 return holeDensityField;
@@ -14913,12 +13108,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerLengthMeasure holeDensityField; 
 
-
         /// <summary>
         /// The number of holes
         /// </summary>
+		
 		[XmlElement("holeCount")]
-
         public Int16? HoleCount {
             get {
                 return holeCountField;
@@ -14932,13 +13126,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? holeCountField; 
 
-
 		/// <summary>
         /// holeCountSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean HoleCountSpecified {
             get {
                 return holeCountSpecifiedField;
@@ -14951,12 +13143,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean holeCountSpecifiedField; 
 
-
         /// <summary>
         /// Remarks regarding this perforated hole
         /// </summary>
+		
 		[XmlElement("remarks")]
-
         public String Remarks {
             get {
                 return remarksField;
@@ -14969,12 +13160,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String remarksField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -14986,7 +13176,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -15008,37 +13197,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on slot resulting from perforation
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perfSlot", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on slot resulting from perforation")]
     public partial class PerfSlot : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The height of slot
         /// </summary>
+		
 		[XmlElement("slotHeight")]
-
         public LengthMeasure SlotHeight {
             get {
                 return slotHeightField;
@@ -15051,12 +13231,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure slotHeightField; 
 
-
         /// <summary>
         /// The width of the slot
         /// </summary>
+		
 		[XmlElement("slotWidth")]
-
         public LengthMeasure SlotWidth {
             get {
                 return slotWidthField;
@@ -15069,12 +13248,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure slotWidthField; 
 
-
         /// <summary>
         /// Distance from center point
         /// </summary>
+		
 		[XmlElement("slotCenterDistance")]
-
         public LengthMeasure SlotCenterDistance {
             get {
                 return slotCenterDistanceField;
@@ -15087,12 +13265,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure slotCenterDistanceField; 
 
-
         /// <summary>
         /// The number of the slot
         /// </summary>
+		
 		[XmlElement("slotCount")]
-
         public Int16? SlotCount {
             get {
                 return slotCountField;
@@ -15106,13 +13283,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? slotCountField; 
 
-
 		/// <summary>
         /// slotCountSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean SlotCountSpecified {
             get {
                 return slotCountSpecifiedField;
@@ -15125,12 +13300,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean slotCountSpecifiedField; 
 
-
         /// <summary>
         /// Remarks regarding this perforation slot
         /// </summary>
+		
 		[XmlElement("remarks")]
-
         public String Remarks {
             get {
                 return remarksField;
@@ -15143,12 +13317,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String remarksField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -15160,7 +13333,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private List<ExtensionNameValue> extensionNameValueField; 
-
 
 
         
@@ -15182,37 +13354,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Name-value extensions for the equipment property
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extPropNameValue", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Name-value extensions for the equipment property")]
     public partial class ExtPropNameValue : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         ///  A string representing the name of property.
         /// </summary>
+		
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -15225,12 +13388,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         ///  A value string representing the units of measure of the value.
         /// </summary>
+		
 		[XmlElement("value")]
-
         public Extensionvalue Value {
             get {
                 return valueField;
@@ -15244,7 +13406,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private Extensionvalue valueField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -15264,37 +13425,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_equipment xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipment", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_equipment xsd type.")]
     public partial class Equipment : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The name of the piece of equipment.
         /// </summary>
+		
 		[XmlElement("equipmentName")]
-
         public String EquipmentName {
             get {
                 return equipmentNameField;
@@ -15307,12 +13459,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String equipmentNameField; 
 
-
         /// <summary>
         /// The equipment type etc. bridge plug, bull plug. capillary tubing..
         /// </summary>
+		
 		[XmlElement("equipmentType")]
-
         public EquipmentType? EquipmentType {
             get {
                 return equipmentTypeField;
@@ -15325,12 +13476,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EquipmentType? equipmentTypeField; 
 
-
         /// <summary>
         /// manufacturer property
         /// </summary>
+		
 		[XmlElement("manufacturer")]
-
         public String Manufacturer {
             get {
                 return manufacturerField;
@@ -15343,12 +13493,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String manufacturerField; 
 
-
         /// <summary>
         /// model property
         /// </summary>
+		
 		[XmlElement("model")]
-
         public String Model {
             get {
                 return modelField;
@@ -15361,12 +13510,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String modelField; 
 
-
         /// <summary>
         /// catalogID property
         /// </summary>
+		
 		[XmlElement("catalogID")]
-
         public String CatalogID {
             get {
                 return catalogIDField;
@@ -15379,12 +13527,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String catalogIDField; 
 
-
         /// <summary>
         /// catalogName property
         /// </summary>
+		
 		[XmlElement("catalogName")]
-
         public String CatalogName {
             get {
                 return catalogNameField;
@@ -15397,12 +13544,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String catalogNameField; 
 
-
         /// <summary>
         /// brandName property
         /// </summary>
+		
 		[XmlElement("brandName")]
-
         public String BrandName {
             get {
                 return brandNameField;
@@ -15415,12 +13561,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String brandNameField; 
 
-
         /// <summary>
         /// modelType property
         /// </summary>
+		
 		[XmlElement("modelType")]
-
         public String ModelType {
             get {
                 return modelTypeField;
@@ -15433,12 +13578,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String modelTypeField; 
 
-
         /// <summary>
         /// series property
         /// </summary>
+		
 		[XmlElement("series")]
-
         public String Series {
             get {
                 return seriesField;
@@ -15451,12 +13595,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String seriesField; 
 
-
         /// <summary>
         /// isSerialized property
         /// </summary>
+		
 		[XmlElement("isSerialized")]
-
         public Boolean? IsSerialized {
             get {
                 return isSerializedField;
@@ -15470,13 +13613,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isSerializedField; 
 
-
 		/// <summary>
         /// isSerializedSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsSerializedSpecified {
             get {
                 return isSerializedSpecifiedField;
@@ -15489,12 +13630,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isSerializedSpecifiedField; 
 
-
         /// <summary>
         /// serialNumber property
         /// </summary>
+		
 		[XmlElement("serialNumber")]
-
         public String SerialNumber {
             get {
                 return serialNumberField;
@@ -15507,12 +13647,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String serialNumberField; 
 
-
         /// <summary>
         /// partNo property
         /// </summary>
+		
 		[XmlElement("partNo")]
-
         public String PartNo {
             get {
                 return partNoField;
@@ -15525,12 +13664,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String partNoField; 
 
-
         /// <summary>
         /// surfaceCondition property
         /// </summary>
+		
 		[XmlElement("surfaceCondition")]
-
         public String SurfaceCondition {
             get {
                 return surfaceConditionField;
@@ -15543,12 +13681,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String surfaceConditionField; 
 
-
         /// <summary>
         /// material property
         /// </summary>
+		
 		[XmlElement("material")]
-
         public String Material {
             get {
                 return materialField;
@@ -15561,12 +13698,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String materialField; 
 
-
         /// <summary>
         /// grade property
         /// </summary>
+		
 		[XmlElement("grade")]
-
         public GradeType? Grade {
             get {
                 return gradeField;
@@ -15580,13 +13716,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private GradeType? gradeField; 
 
-
 		/// <summary>
         /// gradeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean GradeSpecified {
             get {
                 return gradeSpecifiedField;
@@ -15599,12 +13733,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean gradeSpecifiedField; 
 
-
         /// <summary>
         /// unitWeight property
         /// </summary>
+		
 		[XmlElement("unitWeight")]
-
         public MassPerLengthMeasure UnitWeight {
             get {
                 return unitWeightField;
@@ -15617,12 +13750,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MassPerLengthMeasure unitWeightField; 
 
-
         /// <summary>
         /// coatingLinerapplied property
         /// </summary>
+		
 		[XmlElement("coatingLinerapplied")]
-
         public Boolean? CoatingLinerapplied {
             get {
                 return coatingLinerappliedField;
@@ -15636,13 +13768,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? coatingLinerappliedField; 
 
-
 		/// <summary>
         /// coatingLinerappliedSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean CoatingLinerappliedSpecified {
             get {
                 return coatingLinerappliedSpecifiedField;
@@ -15655,12 +13785,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean coatingLinerappliedSpecifiedField; 
 
-
         /// <summary>
         /// outsideCoating property
         /// </summary>
+		
 		[XmlElement("outsideCoating")]
-
         public Coating? OutsideCoating {
             get {
                 return outsideCoatingField;
@@ -15674,13 +13803,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Coating? outsideCoatingField; 
 
-
 		/// <summary>
         /// outsideCoatingSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean OutsideCoatingSpecified {
             get {
                 return outsideCoatingSpecifiedField;
@@ -15693,12 +13820,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean outsideCoatingSpecifiedField; 
 
-
         /// <summary>
         /// insideCoating property
         /// </summary>
+		
 		[XmlElement("insideCoating")]
-
         public Coating? InsideCoating {
             get {
                 return insideCoatingField;
@@ -15712,13 +13838,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Coating? insideCoatingField; 
 
-
 		/// <summary>
         /// insideCoatingSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean InsideCoatingSpecified {
             get {
                 return insideCoatingSpecifiedField;
@@ -15731,12 +13855,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean insideCoatingSpecifiedField; 
 
-
         /// <summary>
         /// unitLength property
         /// </summary>
+		
 		[XmlElement("unitLength")]
-
         public LengthMeasure UnitLength {
             get {
                 return unitLengthField;
@@ -15749,12 +13872,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure unitLengthField; 
 
-
         /// <summary>
         /// majorOD property
         /// </summary>
+		
 		[XmlElement("majorOD")]
-
         public LengthMeasure MajorOD {
             get {
                 return majorODField;
@@ -15767,12 +13889,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure majorODField; 
 
-
         /// <summary>
         /// minorOD property
         /// </summary>
+		
 		[XmlElement("minorOD")]
-
         public LengthMeasure MinorOD {
             get {
                 return minorODField;
@@ -15785,12 +13906,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure minorODField; 
 
-
         /// <summary>
         /// OD property
         /// </summary>
+		
 		[XmlElement("OD")]
-
         public LengthMeasure OD {
             get {
                 return ODField;
@@ -15803,12 +13923,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure ODField; 
 
-
         /// <summary>
         /// MaxOD property
         /// </summary>
+		
 		[XmlElement("MaxOD")]
-
         public LengthMeasure MaxOD {
             get {
                 return MaxODField;
@@ -15821,12 +13940,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure MaxODField; 
 
-
         /// <summary>
         /// MinOD property
         /// </summary>
+		
 		[XmlElement("MinOD")]
-
         public LengthMeasure MinOD {
             get {
                 return MinODField;
@@ -15839,12 +13957,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure MinODField; 
 
-
         /// <summary>
         /// majorID property
         /// </summary>
+		
 		[XmlElement("majorID")]
-
         public LengthMeasure MajorID {
             get {
                 return majorIDField;
@@ -15857,12 +13974,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure majorIDField; 
 
-
         /// <summary>
         /// minorID property
         /// </summary>
+		
 		[XmlElement("minorID")]
-
         public LengthMeasure MinorID {
             get {
                 return minorIDField;
@@ -15875,12 +13991,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure minorIDField; 
 
-
         /// <summary>
         /// ID property
         /// </summary>
+		
 		[XmlElement("ID")]
-
         public LengthMeasure ID {
             get {
                 return IDField;
@@ -15893,12 +14008,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure IDField; 
 
-
         /// <summary>
         /// MaxID property
         /// </summary>
+		
 		[XmlElement("MaxID")]
-
         public LengthMeasure MaxID {
             get {
                 return MaxIDField;
@@ -15911,12 +14025,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure MaxIDField; 
 
-
         /// <summary>
         /// MinID property
         /// </summary>
+		
 		[XmlElement("MinID")]
-
         public LengthMeasure MinID {
             get {
                 return MinIDField;
@@ -15929,12 +14042,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure MinIDField; 
 
-
         /// <summary>
         /// drift property
         /// </summary>
+		
 		[XmlElement("drift")]
-
         public LengthMeasure Drift {
             get {
                 return driftField;
@@ -15947,12 +14059,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure driftField; 
 
-
         /// <summary>
         /// nominalSize property
         /// </summary>
+		
 		[XmlElement("nominalSize")]
-
         public LengthMeasure NominalSize {
             get {
                 return nominalSizeField;
@@ -15965,12 +14076,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure nominalSizeField; 
 
-
         /// <summary>
         /// nameService property
         /// </summary>
+		
 		[XmlElement("nameService")]
-
         public String NameService {
             get {
                 return nameServiceField;
@@ -15983,12 +14093,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameServiceField; 
 
-
         /// <summary>
         /// description property
         /// </summary>
+		
 		[XmlElement("description")]
-
         public String Description {
             get {
                 return descriptionField;
@@ -16001,12 +14110,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionField; 
 
-
         /// <summary>
         /// descriptionPermanent property
         /// </summary>
+		
 		[XmlElement("descriptionPermanent")]
-
         public String DescriptionPermanent {
             get {
                 return descriptionPermanentField;
@@ -16019,12 +14127,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionPermanentField; 
 
-
         /// <summary>
         /// remark property
         /// </summary>
+		
 		[XmlElement("remark")]
-
         public String Remark {
             get {
                 return remarkField;
@@ -16037,12 +14144,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String remarkField; 
 
-
         /// <summary>
         /// Property description
         /// </summary>
+		
 		[XmlElement("property")]
-
         public List<ExtPropNameValue> Property {
             get {
                 return propertyField;
@@ -16055,12 +14161,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtPropNameValue> propertyField; 
 
-
         /// <summary>
         /// Describes the slot in equipment.
         /// </summary>
+		
 		[XmlElement("slotAsManufactured")]
-
         public List<PerfSlot> SlotAsManufactured {
             get {
                 return slotAsManufacturedField;
@@ -16073,12 +14178,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<PerfSlot> slotAsManufacturedField; 
 
-
         /// <summary>
         /// Describes the hole in equipment.
         /// </summary>
+		
 		[XmlElement("holeAsManufactured")]
-
         public List<PerfHole> HoleAsManufactured {
             get {
                 return holeAsManufacturedField;
@@ -16091,12 +14195,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<PerfHole> holeAsManufacturedField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -16109,12 +14212,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -16127,12 +14229,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -16144,7 +14246,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -16166,37 +14267,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Geology features found in the location of the borehole string.  
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_geologyFeature", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Geology features found in the location of the borehole string.  ")]
     public partial class GeologyFeature : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Name of the feature
         /// </summary>
+		
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -16209,12 +14301,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// Aquifer or reservoir
         /// </summary>
+		
 		[XmlElement("geologyType")]
-
         public GeologyType? GeologyType {
             get {
                 return geologyTypeField;
@@ -16228,13 +14319,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private GeologyType? geologyTypeField; 
 
-
 		/// <summary>
         /// geologyTypeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean GeologyTypeSpecified {
             get {
                 return geologyTypeSpecifiedField;
@@ -16247,12 +14336,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean geologyTypeSpecifiedField; 
 
-
         /// <summary>
         /// Measured depth at top of interval.
         /// </summary>
+		
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -16265,12 +14353,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// Measured depth at base of interval.
         /// </summary>
+		
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -16283,12 +14370,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// True vertical depth at top of the section.
         /// </summary>
+		
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -16301,12 +14387,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// True vertical depth at bottom of the section.
         /// </summary>
+		
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -16319,12 +14404,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// True vertical depth at base of interval.
         /// </summary>
+		
 		[XmlElement("tvdBase")]
-
         public WellVerticalDepthCoord TvdBase {
             get {
                 return tvdBaseField;
@@ -16337,12 +14421,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBaseField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -16355,12 +14438,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -16372,7 +14455,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -16394,37 +14476,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on the borehole
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_borehole", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on the borehole")]
     public partial class Borehole : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The name of borehole
         /// </summary>
+		
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -16437,12 +14510,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam
         /// </summary>
+		
 		[XmlElement("typeBorehole")]
-
         public BoreholeType? TypeBorehole {
             get {
                 return typeBoreholeField;
@@ -16456,13 +14528,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private BoreholeType? typeBoreholeField; 
 
-
 		/// <summary>
         /// typeBoreholeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean TypeBoreholeSpecified {
             get {
                 return typeBoreholeSpecifiedField;
@@ -16475,12 +14545,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean typeBoreholeSpecifiedField; 
 
-
         /// <summary>
         /// Event reference pointing to the eventledger.
         /// </summary>
+		
 		[XmlElement("equipmentEventHistory")]
-
         public EventInfo EquipmentEventHistory {
             get {
                 return equipmentEventHistoryField;
@@ -16493,12 +14562,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventInfo equipmentEventHistoryField; 
 
-
         /// <summary>
         /// Measured depth at Top of Interval
         /// </summary>
+		
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -16511,12 +14579,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// Measured depth at bottom of the section
         /// </summary>
+		
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -16529,12 +14596,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// True vertical depth at top of the section
         /// </summary>
+		
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -16547,12 +14613,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// True vertical depth at bottom of the section
         /// </summary>
+		
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -16565,12 +14630,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// Borehole diameter
         /// </summary>
+		
 		[XmlElement("diaBorehole")]
-
         public LengthMeasure DiaBorehole {
             get {
                 return diaBoreholeField;
@@ -16583,12 +14647,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure diaBoreholeField; 
 
-
         /// <summary>
         /// The description of this equipment to be permanently kept.
         /// </summary>
+		
 		[XmlElement("descriptionPermanent")]
-
         public String DescriptionPermanent {
             get {
                 return descriptionPermanentField;
@@ -16601,12 +14664,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionPermanentField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -16619,12 +14681,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -16636,7 +14698,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -16658,37 +14719,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_boreholeString xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_boreholeString", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_boreholeString xsd type.")]
     public partial class BoreholeString : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Human recognizable context for the downhole equipment.
         /// </summary>
+		
 		[XmlElement("nameWellbore")]
-
         public String NameWellbore {
             get {
                 return nameWellboreField;
@@ -16701,12 +14753,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellboreField; 
 
-
         /// <summary>
         ///  The name of the borehole String 
         /// </summary>
+		
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -16719,12 +14770,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         ///  The collection of boreholes 
         /// </summary>
+		
 		[XmlElement("borehole")]
-
         public List<Borehole> Borehole {
             get {
                 return boreholeField;
@@ -16737,12 +14787,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<Borehole> boreholeField; 
 
-
         /// <summary>
         /// Geology feature information 
         /// </summary>
+		
 		[XmlElement("geologyFeature")]
-
         public List<GeologyFeature> GeologyFeature {
             get {
                 return geologyFeatureField;
@@ -16755,13 +14804,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<GeologyFeature> geologyFeatureField; 
 
-
         /// <summary>
         ///  The borehole accessories. 
         /// </summary>
+		
 		[XmlArrayItem("accessory")]
         [XmlArray("accessories")]
-
         public List<StringEquipment> Accessories {
             get {
                 return accessoriesField;
@@ -16774,12 +14822,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<StringEquipment> accessoriesField; 
 
-
 		/// <summary>
         /// Unique identifier for the wellbore.
         /// </summary>
+		
         [XmlAttribute("uidWellbore")]
-
+		
         public String UidWellbore {
             get {
                 return uidWellboreField;
@@ -16792,12 +14840,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellboreField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -16809,7 +14857,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -16831,37 +14878,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_stringEquipment xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stringEquipment", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_stringEquipment xsd type.")]
     public partial class StringEquipment : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The type of the equipment. Enumeration is defined in cs_equipmentCatalog.xsd. "Optional" is for expansion purpose, strong suggest that only ignore it if the equipment type could not found from equipmentType definition.
         /// </summary>
+		
 		[XmlElement("equipmentType")]
-
         public EquipmentType? EquipmentType {
             get {
                 return equipmentTypeField;
@@ -16875,13 +14913,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EquipmentType? equipmentTypeField; 
 
-
 		/// <summary>
         /// equipmentTypeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EquipmentTypeSpecified {
             get {
                 return equipmentTypeSpecifiedField;
@@ -16894,12 +14930,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean equipmentTypeSpecifiedField; 
 
-
         /// <summary>
         /// The name of the equipment. Length of this element is 256 characters.
         /// </summary>
+		
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -16912,12 +14947,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// History of event tied to this equipment
         /// </summary>
+		
 		[XmlElement("equipmentEventHistory")]
-
         public List<EventInfo> EquipmentEventHistory {
             get {
                 return equipmentEventHistoryField;
@@ -16930,12 +14964,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<EventInfo> equipmentEventHistoryField; 
 
-
         /// <summary>
         /// Defines a sequence number and with an optional description attribute
         /// </summary>
+		
 		[XmlElement("orderOfObject")]
-
         public ObjectSequence OrderOfObject {
             get {
                 return orderOfObjectField;
@@ -16948,12 +14981,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ObjectSequence orderOfObjectField; 
 
-
         /// <summary>
         /// The status of the piece of equipment.
         /// </summary>
+		
 		[XmlElement("status")]
-
         public String Status {
             get {
                 return statusField;
@@ -16966,12 +14998,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String statusField; 
 
-
         /// <summary>
         /// The well run No
         /// </summary>
+		
 		[XmlElement("runNo")]
-
         public String RunNo {
             get {
                 return runNoField;
@@ -16984,12 +15015,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String runNoField; 
 
-
         /// <summary>
         /// The days that the equipment has run.
         /// </summary>
+		
 		[XmlElement("previousRunDays")]
-
         public TimeMeasure PreviousRunDays {
             get {
                 return previousRunDaysField;
@@ -17002,12 +15032,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private TimeMeasure previousRunDaysField; 
 
-
         /// <summary>
         /// Object condition at installation
         /// </summary>
+		
 		[XmlElement("objectCondition")]
-
         public String ObjectCondition {
             get {
                 return objectConditionField;
@@ -17020,12 +15049,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String objectConditionField; 
 
-
         /// <summary>
         /// Object surface condition
         /// </summary>
+		
 		[XmlElement("surfaceCondition")]
-
         public String SurfaceCondition {
             get {
                 return surfaceConditionField;
@@ -17038,12 +15066,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String surfaceConditionField; 
 
-
         /// <summary>
         /// The count number of the same equipment. The default is 1. In some cases, multiple pieces group into one component.
         /// </summary>
+		
 		[XmlElement("count")]
-
         public Int16? Count {
             get {
                 return countField;
@@ -17057,13 +15084,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? countField; 
 
-
 		/// <summary>
         /// countSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean CountSpecified {
             get {
                 return countSpecifiedField;
@@ -17076,12 +15101,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean countSpecifiedField; 
 
-
         /// <summary>
         /// The total length of the equipment. This is NOT length per unit. This is the length of unit stored at equipmentset's equipment information section. 
         /// </summary>
+		
 		[XmlElement("length")]
-
         public LengthMeasure Length {
             get {
                 return lengthField;
@@ -17094,12 +15118,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure lengthField; 
 
-
         /// <summary>
         /// Measured depth at top of interval.
         /// </summary>
+		
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -17112,12 +15135,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// Measured depth at base of interval.
         /// </summary>
+		
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -17130,12 +15152,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// True vertical depth at top of the section.
         /// </summary>
+		
 		[XmlElement("tvdTop")]
-
         public WellVerticalDepthCoord TvdTop {
             get {
                 return tvdTopField;
@@ -17148,12 +15169,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdTopField; 
 
-
         /// <summary>
         /// True vertical depth at bottom of the section.
         /// </summary>
+		
 		[XmlElement("tvdBottom")]
-
         public WellVerticalDepthCoord TvdBottom {
             get {
                 return tvdBottomField;
@@ -17166,12 +15186,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBottomField; 
 
-
         /// <summary>
         /// True vertical depth at base of interval.
         /// </summary>
+		
 		[XmlElement("tvdBase")]
-
         public WellVerticalDepthCoord TvdBase {
             get {
                 return tvdBaseField;
@@ -17184,12 +15203,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WellVerticalDepthCoord tvdBaseField; 
 
-
         /// <summary>
         /// Flag indicating whether this component is inside the string or not .
         /// </summary>
+		
 		[XmlElement("outsideString")]
-
         public Boolean? OutsideString {
             get {
                 return outsideStringField;
@@ -17203,13 +15221,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? outsideStringField; 
 
-
 		/// <summary>
         /// outsideStringSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean OutsideStringSpecified {
             get {
                 return outsideStringSpecifiedField;
@@ -17222,12 +15238,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean outsideStringSpecifiedField; 
 
-
         /// <summary>
         /// The list of components contained in the equipment
         /// </summary>
+		
 		[XmlElement("insideComponent")]
-
         public List<RefContainer> InsideComponent {
             get {
                 return insideComponentField;
@@ -17240,12 +15255,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<RefContainer> insideComponentField; 
 
-
         /// <summary>
         /// The list of components outside of this piece of equipment
         /// </summary>
+		
 		[XmlElement("outsideComponent")]
-
         public List<RefContainer> OutsideComponent {
             get {
                 return outsideComponentField;
@@ -17258,12 +15272,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<RefContainer> outsideComponentField; 
 
-
         /// <summary>
         /// Max Tensile Strength 
         /// </summary>
+		
 		[XmlElement("tensileMax")]
-
         public ForceMeasure TensileMax {
             get {
                 return tensileMaxField;
@@ -17276,12 +15289,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ForceMeasure tensileMaxField; 
 
-
         /// <summary>
         /// Pressure Rating
         /// </summary>
+		
 		[XmlElement("presRating")]
-
         public PressureMeasure PresRating {
             get {
                 return presRatingField;
@@ -17294,12 +15306,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure presRatingField; 
 
-
         /// <summary>
         /// Collapse Pressure 
         /// </summary>
+		
 		[XmlElement("presCollapse")]
-
         public PressureMeasure PresCollapse {
             get {
                 return presCollapseField;
@@ -17312,12 +15323,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure presCollapseField; 
 
-
         /// <summary>
         /// Burst Pressure 
         /// </summary>
+		
 		[XmlElement("presBurst")]
-
         public PressureMeasure PresBurst {
             get {
                 return presBurstField;
@@ -17330,12 +15340,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure presBurstField; 
 
-
         /// <summary>
         /// heat rating 
         /// </summary>
+		
 		[XmlElement("heatRating")]
-
         public ThermodynamicTemperatureMeasure HeatRating {
             get {
                 return heatRatingField;
@@ -17348,12 +15357,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ThermodynamicTemperatureMeasure heatRatingField; 
 
-
         /// <summary>
         ///  Flag indicating the equipment has line connected to surface. 
         /// </summary>
+		
 		[XmlElement("isLinetoSurface")]
-
         public Boolean? IsLinetoSurface {
             get {
                 return isLinetoSurfaceField;
@@ -17367,13 +15375,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isLinetoSurfaceField; 
 
-
 		/// <summary>
         /// isLinetoSurfaceSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsLinetoSurfaceSpecified {
             get {
                 return isLinetoSurfaceSpecifiedField;
@@ -17386,12 +15392,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isLinetoSurfaceSpecifiedField; 
 
-
         /// <summary>
         ///  Flag indicating equipment is centralized 
         /// </summary>
+		
 		[XmlElement("isCentralized")]
-
         public Boolean? IsCentralized {
             get {
                 return isCentralizedField;
@@ -17405,13 +15410,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isCentralizedField; 
 
-
 		/// <summary>
         /// isCentralizedSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean IsCentralizedSpecified {
             get {
                 return isCentralizedSpecifiedField;
@@ -17424,12 +15427,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean isCentralizedSpecifiedField; 
 
-
         /// <summary>
         ///  Flag indicating scratchers have been added to the equipment. 
         /// </summary>
+		
 		[XmlElement("hasScratchers")]
-
         public Boolean? HasScratchers {
             get {
                 return hasScratchersField;
@@ -17443,13 +15445,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? hasScratchersField; 
 
-
 		/// <summary>
         /// hasScratchersSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean HasScratchersSpecified {
             get {
                 return hasScratchersSpecifiedField;
@@ -17462,12 +15462,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean hasScratchersSpecifiedField; 
 
-
         /// <summary>
         ///  Describes the next component connected. 
         /// </summary>
+		
 		[XmlElement("connectionNext")]
-
         public List<EquipmentConnection> ConnectionNext {
             get {
                 return connectionNextField;
@@ -17480,13 +15479,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<EquipmentConnection> connectionNextField; 
 
-
         /// <summary>
         ///  Describes the assembly connected. 
         /// </summary>
+		
 		[XmlArrayItem("part")]
         [XmlArray("assembly")]
-
         public List<StringEquipment> Assembly {
             get {
                 return assemblyField;
@@ -17499,12 +15497,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<StringEquipment> assemblyField; 
 
-
         /// <summary>
         /// reference the perforated hole in equipment after perforation event.
         /// </summary>
+		
 		[XmlElement("perforationSetRefID")]
-
         public List<String> PerforationSetRefID {
             get {
                 return perforationSetRefIDField;
@@ -17517,12 +15514,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<String> perforationSetRefIDField; 
 
-
         /// <summary>
         /// Remarks on the equipment stored permanently.
         /// </summary>
+		
 		[XmlElement("permanentRemarks")]
-
         public String PermanentRemarks {
             get {
                 return permanentRemarksField;
@@ -17535,12 +15531,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String permanentRemarksField; 
 
-
         /// <summary>
         /// Remarks on usage of this equipment.
         /// </summary>
+		
 		[XmlElement("usageComment")]
-
         public String UsageComment {
             get {
                 return usageCommentField;
@@ -17553,12 +15548,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String usageCommentField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -17571,12 +15565,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
         /// <summary>
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
+		
 		[XmlElement("commonData")]
-
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -17589,12 +15582,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CommonData commonDataField; 
 
-
         /// <summary>
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
+		
 		[XmlElement("customData")]
-
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -17607,12 +15599,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CustomData customDataField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -17625,12 +15617,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
-
 		/// <summary>
         /// Unique reference for the equipment.
         /// </summary>
+		
         [XmlAttribute("equipmentRefUID")]
-
+		
         public String EquipmentRefUID {
             get {
                 return equipmentRefUIDField;
@@ -17644,7 +15636,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String equipmentRefUIDField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17664,37 +15655,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information on containing or contained component  
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_refContainer", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information on containing or contained component  ")]
     public partial class RefContainer : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// DownholeString reference id 
         /// </summary>
+		
 		[XmlElement("stringRefID")]
-
         public String StringRefID {
             get {
                 return stringRefIDField;
@@ -17707,12 +15689,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String stringRefIDField; 
 
-
         /// <summary>
         /// Equipment reference id 
         /// </summary>
+		
 		[XmlElement("equipmentRefID")]
-
         public String EquipmentRefID {
             get {
                 return equipmentRefIDField;
@@ -17725,12 +15706,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String equipmentRefIDField; 
 
-
         /// <summary>
         /// Reference to the equipment for this accessory 
         /// </summary>
+		
 		[XmlElement("accesoryEquipmentRefID")]
-
         public String AccesoryEquipmentRefID {
             get {
                 return accesoryEquipmentRefIDField;
@@ -17743,12 +15723,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String accesoryEquipmentRefIDField; 
 
-
         /// <summary>
         /// Comment on this container reference
         /// </summary>
+		
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -17762,7 +15741,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String commentField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -17782,37 +15760,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information detailing the connection between 2 components
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipmentConnection", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information detailing the connection between 2 components")]
     public partial class EquipmentConnection : Connection , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// measurement of radial offset 
         /// </summary>
+		
 		[XmlElement("radialOffset")]
-
         public LengthMeasure RadialOffset {
             get {
                 return radialOffsetField;
@@ -17824,7 +15793,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private LengthMeasure radialOffsetField; 
-
 
         /// <summary>
         /// The connection type of casing
@@ -17911,12 +15879,11 @@ namespace Energistics.DataAccess.COMPLETION100
         private Boolean TubingConnectionTypeSpecified = false; 
 
 
-
         /// <summary>
         /// The form of connection: Box or Pin 
         /// </summary>
+		
 		[XmlElement("connectionForm")]
-
         public ConnectionFormType? ConnectionForm {
             get {
                 return connectionFormField;
@@ -17930,13 +15897,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ConnectionFormType? connectionFormField; 
 
-
 		/// <summary>
         /// connectionFormSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean ConnectionFormSpecified {
             get {
                 return connectionFormSpecifiedField;
@@ -17949,12 +15914,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean connectionFormSpecifiedField; 
 
-
         /// <summary>
         /// Connection upset
         /// </summary>
+		
 		[XmlElement("connectionUpset")]
-
         public String ConnectionUpset {
             get {
                 return connectionUpsetField;
@@ -17967,12 +15931,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String connectionUpsetField; 
 
-
 		/// <summary>
         /// Reference to the string equipment
         /// </summary>
+		
         [XmlAttribute("stringEquipmentRefUID")]
-
+		
         public String StringEquipmentRefUID {
             get {
                 return stringEquipmentRefUIDField;
@@ -17986,40 +15950,29 @@ namespace Energistics.DataAccess.COMPLETION100
         private String stringEquipmentRefUIDField; 
 
 
-
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     ///  WITSML - Tubular Connection Component Schema 
     /// </summary>
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquipmentConnection))]
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_connection", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description(" WITSML - Tubular Connection Component Schema ")]
     public partial class Connection : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Internal diameter of object. 
         /// </summary>
+		
 		[XmlElement("id")]
-
         public LengthMeasure InnerDiameter {
             get {
                 return idField;
@@ -18032,12 +15985,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure idField; 
 
-
         /// <summary>
         /// Outside diameter of the body of the item. 
         /// </summary>
+		
 		[XmlElement("od")]
-
         public LengthMeasure OuterDiameter {
             get {
                 return odField;
@@ -18050,12 +16002,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure odField; 
 
-
         /// <summary>
         /// Length of the item. 
         /// </summary>
+		
 		[XmlElement("len")]
-
         public LengthMeasure Len {
             get {
                 return lenField;
@@ -18068,12 +16019,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure lenField; 
 
-
         /// <summary>
         /// Thread type from API RP7G, 5CT. 
         /// </summary>
+		
 		[XmlElement("typeThread")]
-
         public String TypeThread {
             get {
                 return typeThreadField;
@@ -18086,12 +16036,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String typeThreadField; 
 
-
         /// <summary>
         /// Thread size. 
         /// </summary>
+		
 		[XmlElement("sizeThread")]
-
         public LengthMeasure SizeThread {
             get {
                 return sizeThreadField;
@@ -18104,12 +16053,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure sizeThreadField; 
 
-
         /// <summary>
         /// Yield stress of steel - worn stress. 
         /// </summary>
+		
 		[XmlElement("tensYield")]
-
         public PressureMeasure TensYield {
             get {
                 return tensYieldField;
@@ -18122,12 +16070,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure tensYieldField; 
 
-
         /// <summary>
         /// Torque at which yield occurs.
         /// </summary>
+		
 		[XmlElement("tqYield")]
-
         public MomentOfForceMeasure TorqueYield {
             get {
                 return tqYieldField;
@@ -18140,12 +16087,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MomentOfForceMeasure tqYieldField; 
 
-
         /// <summary>
         /// Where connected. 
         /// </summary>
+		
 		[XmlElement("position")]
-
         public ConnectionPosition? Position {
             get {
                 return positionField;
@@ -18159,13 +16105,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ConnectionPosition? positionField; 
 
-
 		/// <summary>
         /// positionSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean PositionSpecified {
             get {
                 return positionSpecifiedField;
@@ -18178,12 +16122,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean positionSpecifiedField; 
 
-
         /// <summary>
         /// For bending stiffness ratio. 
         /// </summary>
+		
 		[XmlElement("criticalCrossSection")]
-
         public AreaMeasure CriticalCrossSection {
             get {
                 return criticalCrossSectionField;
@@ -18196,12 +16139,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private AreaMeasure criticalCrossSectionField; 
 
-
         /// <summary>
         /// Leak pressure rating. 
         /// </summary>
+		
 		[XmlElement("presLeak")]
-
         public PressureMeasure PresLeak {
             get {
                 return presLeakField;
@@ -18214,12 +16156,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureMeasure presLeakField; 
 
-
         /// <summary>
         /// Make up torque. 
         /// </summary>
+		
 		[XmlElement("tqMakeup")]
-
         public MomentOfForceMeasure TorqueMakeup {
             get {
                 return tqMakeupField;
@@ -18232,12 +16173,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MomentOfForceMeasure tqMakeupField; 
 
-
         /// <summary>
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
+		
 		[XmlElement("customData")]
-
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -18250,12 +16190,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CustomData customDataField; 
 
-
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
+		
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -18268,12 +16207,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -18286,12 +16224,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -18303,7 +16241,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -18325,37 +16262,29 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// This class represents the cs_downholeString xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_downholeString", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("This class represents the cs_downholeString xsd type.")]
     public partial class DownholeString : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// stringType property
         /// </summary>
+		[Required]
+		[Description("An enumeration type defined in equipmentCatelog, the \"DownholeStringEnum\"                     contains valid option of \"case\",\"rod\",\"tubing\", \"otherString\".")]
 		[XmlElement("stringType")]
-
         public DownholeStringType? StringType {
             get {
                 return stringTypeField;
@@ -18368,12 +16297,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DownholeStringType? stringTypeField; 
 
-
         /// <summary>
         /// subStringType property
         /// </summary>
+		[Description("An enumeration type define for express further string type etc. \"SurfaceCasing\", \"IntermediaCasing\", \"productionCasing\".")]
 		[XmlElement("subStringType")]
-
         public SubStringType? SubStringType {
             get {
                 return subStringTypeField;
@@ -18387,13 +16315,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private SubStringType? subStringTypeField; 
 
-
 		/// <summary>
         /// subStringTypeSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean SubStringTypeSpecified {
             get {
                 return subStringTypeSpecifiedField;
@@ -18406,12 +16332,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean subStringTypeSpecifiedField; 
 
-
         /// <summary>
         /// name property
         /// </summary>
+		[Description("The name of downhole string.")]
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -18424,12 +16349,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// stringInstallDate property
         /// </summary>
+		[Description("The install date of downhole string.")]
 		[XmlElement("stringInstallDate")]
-
         public DateTime? StringInstallDate {
             get {
                 return stringInstallDateField;
@@ -18443,13 +16367,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? stringInstallDateField; 
 
-
 		/// <summary>
         /// stringInstallDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StringInstallDateSpecified {
             get {
                 return stringInstallDateSpecifiedField;
@@ -18462,12 +16384,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean stringInstallDateSpecifiedField; 
 
-
         /// <summary>
         /// parentStringsName property
         /// </summary>
+		[Description("The name of parent string.")]
 		[XmlElement("parentStringsName")]
-
         public String ParentStringsName {
             get {
                 return parentStringsNameField;
@@ -18480,12 +16401,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String parentStringsNameField; 
 
-
         /// <summary>
         /// mdTop property
         /// </summary>
+		[Description("Measured depth at Top of Interval")]
 		[XmlElement("mdTop")]
-
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -18498,12 +16418,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdTopField; 
 
-
         /// <summary>
         /// mdBottom property
         /// </summary>
+		[Description("Measured depth at bottom of the section")]
 		[XmlElement("mdBottom")]
-
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -18516,12 +16435,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasuredDepthCoord mdBottomField; 
 
-
         /// <summary>
         /// axisOffset property
         /// </summary>
+		[Description("the distance from the sibling string.")]
 		[XmlElement("axisOffset")]
-
         public LengthMeasure AxisOffset {
             get {
                 return axisOffsetField;
@@ -18534,13 +16452,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LengthMeasure axisOffsetField; 
 
-
         /// <summary>
         /// stringEquipmentSet property
         /// </summary>
+		[Description("the list of equipment in the string. each equipment is liner connected and carry the rest of weight")]
 		[XmlArrayItem("stringEquipment")]
         [XmlArray("stringEquipmentSet")]
-
         public List<StringEquipment> StringEquipmentSet {
             get {
                 return stringEquipmentSetField;
@@ -18553,13 +16470,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<StringEquipment> stringEquipmentSetField; 
 
-
         /// <summary>
         /// accessories property
         /// </summary>
+		[Description("the accessories equipment of the string. It locates in the downhole string, but it is not equipment which liner connected in string (from top to down), and it is not carraying the weight of string")]
 		[XmlArrayItem("accessory")]
         [XmlArray("accessories")]
-
         public List<StringEquipment> Accessories {
             get {
                 return accessoriesField;
@@ -18572,12 +16488,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<StringEquipment> accessoriesField; 
 
-
         /// <summary>
         /// extensionAny property
         /// </summary>
+		[Description("Extensions to the schema using an xsd:any construct.")]
 		[XmlElement("extensionAny")]
-
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -18590,12 +16505,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ExtensionAny extensionAnyField; 
 
-
         /// <summary>
         /// extensionNameValue property
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -18608,12 +16522,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -18626,12 +16540,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
-
 		/// <summary>
         /// uidParentString property
         /// </summary>
+		[Description("The uidParentString points to the parent string. Even if the string is not physically connected together, this string is             still considered as a continuation of the parent string.")]
         [XmlAttribute("uidParentString")]
-
+		
         public String UidParentString {
             get {
                 return uidParentStringField;
@@ -18644,12 +16558,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidParentStringField; 
 
-
 		/// <summary>
         /// uidWellbore property
         /// </summary>
+		[Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
         [XmlAttribute("uidWellbore")]
-
+		
         public String UidWellbore {
             get {
                 return uidWellboreField;
@@ -18663,7 +16577,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String uidWellboreField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -18683,34 +16596,27 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     /// <summary>
     /// The non-contextual content of a WITSML downhole component object.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_downholeComponent", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("The non-contextual content of a WITSML downhole component object.")]
     public partial class DownholeComponent : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Human recognizable context for the well.
         /// </summary>
+		[Required]
+		[Description("Human recognizable context for the well.")]
 		[XmlElement("nameWell")]
-
         public String NameWell {
             get {
                 return nameWellField;
@@ -18723,12 +16629,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameWellField; 
 
-
         /// <summary>
         /// Human recognizable context for the downhole equipment.
         /// </summary>
+		[Required]
+		[Description("Human recognizable context for the downhole equipment.")]
 		[XmlElement("name")]
-
         public String Name {
             get {
                 return nameField;
@@ -18741,12 +16647,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String nameField; 
 
-
         /// <summary>
         /// The date range specification: start date
         /// </summary>
+		[Description("The date range specification: start date")]
 		[XmlElement("startDate")]
-
         public DateTime? StartDate {
             get {
                 return startDateField;
@@ -18760,13 +16665,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? startDateField; 
 
-
 		/// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -18779,12 +16682,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean startDateSpecifiedField; 
 
-
         /// <summary>
         /// The date range specification: end date
         /// </summary>
+		[Description("The date range specification: end date")]
 		[XmlElement("endDate")]
-
         public DateTime? EndDate {
             get {
                 return endDateField;
@@ -18798,13 +16700,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? endDateField; 
 
-
 		/// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -18817,12 +16717,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean endDateSpecifiedField; 
 
-
         /// <summary>
         /// This section contains wellhead information, and is composed of string equipment
         /// </summary>
+		[Description("This section contains wellhead information, and is composed of string equipment")]
 		[XmlElement("wellHead")]
-
         public DownholeString WellHead {
             get {
                 return wellHeadField;
@@ -18835,13 +16734,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DownholeString wellHeadField; 
 
-
         /// <summary>
         /// This section contains bore hole string information including flow interval 
         /// </summary>
+		[Description("This section contains bore hole string information including flow interval")]
 		[XmlArrayItem("boreholeString")]
         [XmlArray("boreholeStringSet")]
-
         public List<BoreholeString> BoreholeStringSet {
             get {
                 return boreholeStringSetField;
@@ -18854,13 +16752,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<BoreholeString> boreholeStringSetField; 
 
-
         /// <summary>
         /// The linear downhole string equipment
         /// </summary>
+		[Description("The linear downhole string equipment")]
 		[XmlArrayItem("downholeString")]
         [XmlArray("downholeStringSet")]
-
         public List<DownholeString> DownholeStringSet {
             get {
                 return downholeStringSetField;
@@ -18873,13 +16770,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<DownholeString> downholeStringSetField; 
 
-
         /// <summary>
         /// A collection of equipment / component
         /// </summary>
+		[Description("A collection of equipment / component")]
 		[XmlArrayItem("equipment")]
         [XmlArray("equipmentSet")]
-
         public List<Equipment> EquipmentSet {
             get {
                 return equipmentSetField;
@@ -18892,13 +16788,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<Equipment> equipmentSetField; 
 
-
         /// <summary>
         /// A collection of contact interval information
         /// </summary>
+		[Description("A collection of contact interval information")]
 		[XmlArrayItem("perforationSet")]
         [XmlArray("perforationSets")]
-
         public List<PerforationSet> PerforationSets {
             get {
                 return perforationSetsField;
@@ -18911,12 +16806,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<PerforationSet> perforationSetsField; 
 
-
         /// <summary>
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
+		[Description("A container element that contains elements that are common to all data objects.")]
 		[XmlElement("commonData")]
-
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -18929,12 +16823,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CommonData commonDataField; 
 
-
         /// <summary>
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
+		[Description("A container element that can contain custom or user defined data elements.")]
 		[XmlElement("customData")]
-
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -18947,12 +16840,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CustomData customDataField; 
 
-
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.
         /// </summary>
+		[Description("Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
-
+		
         public String UidWell {
             get {
                 return uidWellField;
@@ -18965,12 +16858,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidWellField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -18982,7 +16875,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -19004,35 +16896,27 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// An event type captures the basic information about an event that has affected the data.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("An event type captures the basic information about an event that has affected the data.")]
     public partial class DocumentEvent : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The date on which the event took place.
         /// </summary>
+		
 		[XmlElement("eventDate")]
-
         public DateTime? EventDate {
             get {
                 return eventDateField;
@@ -19045,12 +16929,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? eventDateField; 
 
-
         /// <summary>
         /// The kind of event event.
         /// </summary>
+		
 		[XmlElement("eventType")]
-
         public String EventType {
             get {
                 return eventTypeField;
@@ -19063,12 +16946,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String eventTypeField; 
 
-
         /// <summary>
         /// The party responsible for the event.
         /// </summary>
+		
 		[XmlElement("responsibleParty")]
-
         public String ResponsibleParty {
             get {
                 return responsiblePartyField;
@@ -19081,12 +16963,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String responsiblePartyField; 
 
-
         /// <summary>
         /// A free form comment that can further define the event that occurred.
         /// </summary>
+		
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -19099,12 +16980,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -19117,12 +16997,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -19134,7 +17014,6 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private String uidField; 
-
 
 
         
@@ -19156,37 +17035,28 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
     public partial class DocumentSecurityInfo : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The security class in which this document is classified. Examples would be confidential, partner confidential, tight. The meaning of the class is determined by the System in which it is defined.
         /// </summary>
+		[Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
-
         public String Class {
             get {
                 return classField;
@@ -19199,12 +17069,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String classField; 
 
-
         /// <summary>
         /// The security classification system. This gives context to the meaning of the Class value.
         /// </summary>
+		[Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
-
         public String SecuritySystem {
             get {
                 return securitySystemField;
@@ -19217,12 +17086,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String securitySystemField; 
 
-
         /// <summary>
         /// The date on which this security class is no longer applicable.
         /// </summary>
+		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-
         public DateTime? EndDate {
             get {
                 return endDateField;
@@ -19236,13 +17104,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? endDateField; 
 
-
 		/// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
 		[Browsable(false)]
-
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -19255,12 +17121,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean endDateSpecifiedField; 
 
-
         /// <summary>
         /// A general comment to further define the security class.
         /// </summary>
+		[Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -19273,12 +17138,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String commentField; 
 
-
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
 		[XmlElement("extensionNameValue")]
-
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -19291,12 +17155,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<ExtensionNameValue> extensionNameValueField; 
 
-
 		/// <summary>
         /// uid property
         /// </summary>
+		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
-
+		
         public String Uid {
             get {
                 return uidField;
@@ -19310,7 +17174,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String uidField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -19330,37 +17193,29 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
-
-
 
     namespace ComponentSchemas 
     {
-
     /// <summary>
     /// A block of information about the creation of the XML file. This is different than the creation of the data that is included within the file.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentFileCreation", Namespace="http://www.witsml.org/schemas/1series")]
-
     [Description("A block of information about the creation of the XML file. This is different than the creation of the data that is included within the file.")]
     public partial class DocumentFileCreation : Object , INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// The date and time that the file was created.
         /// </summary>
+		[Required]
+		[Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-
         public DateTime? FileCreationDate {
             get {
                 return fileCreationDateField;
@@ -19373,12 +17228,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? fileCreationDateField; 
 
-
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
         /// </summary>
+		[Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
-
         public String SoftwareName {
             get {
                 return softwareNameField;
@@ -19391,12 +17245,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String softwareNameField; 
 
-
         /// <summary>
         /// The person or business associate that created the file.
         /// </summary>
+		[Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
-
         public String FileCreator {
             get {
                 return fileCreatorField;
@@ -19409,12 +17262,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String fileCreatorField; 
 
-
         /// <summary>
         /// Any comment that would be useful to further explain the creation of this instance document.
         /// </summary>
+		[Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
-
         public String Comment {
             get {
                 return commentField;
@@ -19428,7 +17280,6 @@ namespace Energistics.DataAccess.COMPLETION100
         private String commentField; 
 
 
-
         
 		#region INotifyPropertyChanged Members
 		/// <summary>
@@ -19448,36 +17299,78 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
-
     }
 
-
-
+    namespace ComponentSchemas 
+    {
     /// <summary>
-    /// This class represents the abstractObject xsd type.
+    /// This class represents the nameStruct xsd type.
     /// </summary>
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletionList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedgerList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletionList))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponentList))]
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
-
-    [Description("This class represents the abstractObject xsd type.")]
-    public abstract partial class AbstractObject : Object , INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="nameStruct", Namespace="http://www.witsml.org/schemas/1series")]
+    [Description("This class represents the nameStruct xsd type.")]
+    public partial class NameStruct : Object , INotifyPropertyChanged
     {
+        /// <summary>
+        /// Initializes a new instance of the NameStruct class.
+        /// </summary>
+        public NameStruct() {}
 
+        /// <summary>
+        /// Initializes a new instance of the NameStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public NameStruct(String value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// The naming system within the name is (hopefully) unique.
+        /// </summary>
+		[Description("The naming system within the name is (hopefully) unique.")]
+        [XmlAttribute("namingSystem")]
+		
+        public String NamingSystem {
+            get {
+                return namingSystemField;
+            } 
+            set {
+                namingSystemField = value;
+                NotifyPropertyChanged("NamingSystem");
+            }
+        }
+
+        private String namingSystemField; 
+
+		/// <summary>
+        /// Value property
+        /// </summary>
+		
+        [XmlText]
+        public String Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private String ValueField; 
 
 
         
@@ -19499,33 +17392,254 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
         #endregion INotifyPropertyChanged Members
-
     } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentInfo", Namespace="http://www.witsml.org/schemas/1series")]
+    [Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
+    public partial class DocumentInfo : Object , INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// An identifier for the document. This is intended to be unique within the context of the NamingSystem.
+        /// </summary>
+		[Required]
+		[Description("An identifier for the document. This is  intended to be unique within the context of the NamingSystem.")]
+		[XmlElement("documentName")]
+        public NameStruct DocumentName {
+            get {
+                return documentNameField;
+            } 
+            set {
+                documentNameField = value;
+                NotifyPropertyChanged("DocumentName");
+            }
+        }
+
+        private NameStruct documentNameField; 
+
+        /// <summary>
+        /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
+        /// </summary>
+		[Description("Zero or more alternate names for the document.  These names do not need to be unique within the naming system.")]
+		[XmlElement("documentAlias")]
+        public List<NameStruct> DocumentAlias {
+            get {
+                return documentAliasField;
+            } 
+            set {
+                documentAliasField = value;
+                NotifyPropertyChanged("DocumentAlias");
+            }
+        }
+
+        private List<NameStruct> documentAliasField; 
+
+        /// <summary>
+        /// The date of the creation of the document. This is not the same as the date that the file was created. For this date, the document is considered to be the set of information associated with this document information. For example, the document may be a seismic binset. This represents the date that the binset was created. The FileCreation information would capture the date that the XML file was created to send or exchange the binset.
+        /// </summary>
+		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
+		[XmlElement("documentDate")]
+        public DateTime? DocumentDate {
+            get {
+                return documentDateField;
+            } 
+            set {
+                documentDateField = value;
+                this.DocumentDateSpecified = true;
+                NotifyPropertyChanged("DocumentDate");
+            }
+        }
+
+        private DateTime? documentDateField; 
+
+		/// <summary>
+        /// documentDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+        public Boolean DocumentDateSpecified {
+            get {
+                return documentDateSpecifiedField;
+            } 
+            set {
+                documentDateSpecifiedField = value;
+                NotifyPropertyChanged("DocumentDateSpecified");
+            }
+        }
+
+        private Boolean documentDateSpecifiedField; 
+
+        /// <summary>
+        /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
+        /// </summary>
+		[Description("A document class. Examples of classes would be a  metadata classification or a set of keywords.")]
+		[XmlElement("documentClass")]
+        public List<NameStruct> DocumentClass {
+            get {
+                return documentClassField;
+            } 
+            set {
+                documentClassField = value;
+                NotifyPropertyChanged("DocumentClass");
+            }
+        }
+
+        private List<NameStruct> documentClassField; 
+
+        /// <summary>
+        /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
+        /// </summary>
+		[Description("The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.")]
+		[XmlElement("fileCreationInformation")]
+        public DocumentFileCreation FileCreationInformation {
+            get {
+                return fileCreationInformationField;
+            } 
+            set {
+                fileCreationInformationField = value;
+                NotifyPropertyChanged("FileCreationInformation");
+            }
+        }
+
+        private DocumentFileCreation fileCreationInformationField; 
+
+        /// <summary>
+        /// Information about the security to be applied to this file. More than one classification can be given.
+        /// </summary>
+		[Description("Information about the security to be applied to  this file. More than one classification can be given.")]
+		[XmlElement("securityInformation")]
+        public List<DocumentSecurityInfo> SecurityInformation {
+            get {
+                return securityInformationField;
+            } 
+            set {
+                securityInformationField = value;
+                NotifyPropertyChanged("SecurityInformation");
+            }
+        }
+
+        private List<DocumentSecurityInfo> securityInformationField; 
+
+        /// <summary>
+        /// A free-form string that allows a disclaimer to accompany the information.
+        /// </summary>
+		[Description("A free-form string that allows a disclaimer to  accompany the information.")]
+		[XmlElement("disclaimer")]
+        public String Disclaimer {
+            get {
+                return disclaimerField;
+            } 
+            set {
+                disclaimerField = value;
+                NotifyPropertyChanged("Disclaimer");
+            }
+        }
+
+        private String disclaimerField; 
+
+        /// <summary>
+        /// A collection of events that can document the history of the data.
+        /// </summary>
+		[Description("A collection of events that can document the  history of the data.")]
+		[XmlArrayItem("event")]
+        [XmlArray("auditTrail")]
+        public List<DocumentEvent> AuditTrail {
+            get {
+                return auditTrailField;
+            } 
+            set {
+                auditTrailField = value;
+                NotifyPropertyChanged("AuditTrail");
+            }
+        }
+
+        private List<DocumentEvent> auditTrailField; 
+
+        /// <summary>
+        /// The owner of the data.
+        /// </summary>
+		[Description("The owner of the data.")]
+		[XmlElement("owner")]
+        public String Owner {
+            get {
+                return ownerField;
+            } 
+            set {
+                ownerField = value;
+                NotifyPropertyChanged("Owner");
+            }
+        }
+
+        private String ownerField; 
+
+        /// <summary>
+        /// An optional comment about the document.
+        /// </summary>
+		[Description("An optional comment about the document.")]
+		[XmlElement("comment")]
+        public String Comment {
+            get {
+                return commentField;
+            } 
+            set {
+                commentField = value;
+                NotifyPropertyChanged("Comment");
+            }
+        }
+
+        private String commentField; 
 
 
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
 
     /// <summary>
     /// The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an "s" to the singular name.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("wellCompletions", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-
     [Description("The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an s to the singular name.")]
     public partial class WellCompletionList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Information about the well completion.
         /// </summary>
+		[Description("Information about the well completion.")]
 		[XmlElement("documentInfo")]
-
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -19538,12 +17652,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DocumentInfo documentInfoField; 
 
-
         /// <summary>
         /// Information about a wellbore completion.
         /// </summary>
+		[Required]
+		[Description("Information about a wellbore completion.")]
 		[XmlElement("wellCompletion")]
-
         public List<WellCompletion> WellCompletion {
             get {
                 return wellCompletionField;
@@ -19556,7 +17670,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<WellCompletion> wellCompletionField; 
 
-
         /// <summary>
         /// Information about a wellbore completion.
         /// </summary>
@@ -19568,12 +17681,12 @@ namespace Energistics.DataAccess.COMPLETION100
 			    return WellCompletion;
 			}
         }
-
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
+		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
-
+		
         public String Version {
             get {
                 return versionField;
@@ -19587,34 +17700,26 @@ namespace Energistics.DataAccess.COMPLETION100
         private String versionField = "1.0"; 
 
 
-
-
     } //here
-
-
 
     /// <summary>
     /// This class represents the obj_wellCMLedgers xsd type.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("wellCMLedgers", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-
     [Description("This class represents the obj_wellCMLedgers xsd type.")]
     public partial class WellCMLedgerList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Information about the event ledger instance.
         /// </summary>
+		[Description("Information about the event ledger instance.")]
 		[XmlElement("documentInfo")]
-
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -19627,12 +17732,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DocumentInfo documentInfoField; 
 
-
         /// <summary>
         /// The non-contextual elements for general event ledger information.
         /// </summary>
+		[Required]
+		[Description("The non-contextual elements for general event ledger information.")]
 		[XmlElement("wellCMLedger")]
-
         public List<WellCMLedger> WellCMLedger {
             get {
                 return wellCMLedgerField;
@@ -19645,7 +17750,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<WellCMLedger> wellCMLedgerField; 
 
-
         /// <summary>
         /// The non-contextual elements for general event ledger information.
         /// </summary>
@@ -19657,12 +17761,12 @@ namespace Energistics.DataAccess.COMPLETION100
 			    return WellCMLedger;
 			}
         }
-
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
+		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
-
+		
         public String Version {
             get {
                 return versionField;
@@ -19676,34 +17780,26 @@ namespace Energistics.DataAccess.COMPLETION100
         private String versionField = "1.0"; 
 
 
-
-
     } //here
-
-
 
     /// <summary>
     /// Information on wellbore completion collection.
     /// </summary>
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("wellboreCompletions", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-
     [Description("Information on wellbore completion collection.")]
     public partial class WellboreCompletionList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
     {
 
-
         /// <summary>
         /// Information about the downhole component.
         /// </summary>
+		[Description("Information about the downhole component.")]
 		[XmlElement("documentInfo")]
-
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -19716,12 +17812,12 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DocumentInfo documentInfoField; 
 
-
         /// <summary>
         /// Wellbore completion type
         /// </summary>
+		[Required]
+		[Description("Wellbore completion type")]
 		[XmlElement("wellboreCompletion")]
-
         public List<WellboreCompletion> WellboreCompletion {
             get {
                 return wellboreCompletionField;
@@ -19734,7 +17830,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private List<WellboreCompletion> wellboreCompletionField; 
 
-
         /// <summary>
         /// Wellbore completion type
         /// </summary>
@@ -19746,12 +17841,12 @@ namespace Energistics.DataAccess.COMPLETION100
 			    return WellboreCompletion;
 			}
         }
-
 		/// <summary>
         /// Data object schema version.
         /// </summary>
+		[Description("Data object schema version.")]
         [XmlAttribute("version")]
-
+		
         public String Version {
             get {
                 return versionField;
@@ -19765,17 +17860,92 @@ namespace Energistics.DataAccess.COMPLETION100
         private String versionField = "1.0"; 
 
 
+    } //here
+
+    /// <summary>
+    /// This class represents the obj_downholeComponents xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("downholeComponents", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    [Description("This class represents the obj_downholeComponents xsd type.")]
+    public partial class DownholeComponentList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Information about the downhole component.
+        /// </summary>
+		[Description("Information about the downhole component.")]
+		[XmlElement("documentInfo")]
+        public DocumentInfo DocumentInfo {
+            get {
+                return documentInfoField;
+            } 
+            set {
+                documentInfoField = value;
+                NotifyPropertyChanged("DocumentInfo");
+            }
+        }
+
+        private DocumentInfo documentInfoField; 
+
+        /// <summary>
+        /// Information about a downhole equipment
+        /// </summary>
+		[Required]
+		[Description("Information about a downhole equipment")]
+		[XmlElement("downholeComponent")]
+        public List<DownholeComponent> DownholeComponent {
+            get {
+                return downholeComponentField;
+            } 
+            set {
+                downholeComponentField = value;
+                NotifyPropertyChanged("DownholeComponent");
+            }
+        }
+
+        private List<DownholeComponent> downholeComponentField; 
+
+        /// <summary>
+        /// Information about a downhole equipment
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return DownholeComponent;
+			}
+        }
+		/// <summary>
+        /// Data object schema version.
+        /// </summary>
+		[Description("Data object schema version.")]
+        [XmlAttribute("version")]
+		
+        public String Version {
+            get {
+                return versionField;
+            } 
+            set {
+                versionField = value;
+                NotifyPropertyChanged("Version");
+            }
+        }
+
+        private String versionField = "1.0"; 
 
 
     } //here
-
-
 
     #endregion
 
     #region Enumerations
     namespace ReferenceData {
-
         /// <summary>
         /// This class represents the CompletionStatus xsd enumeration.
         /// </summary>
@@ -19815,9 +17985,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Testing property
         /// </summary>
           Testing
-
         }
-
         /// <summary>
         /// This class represents the MeasuredDepthUom xsd enumeration.
         /// </summary>
@@ -19839,9 +18007,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// US Survey Foot
         /// </summary>
           ftUS
-
         }
-
         /// <summary>
         /// This class represents the LengthUom xsd enumeration.
         /// </summary>
@@ -20086,9 +18252,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// ydSe property
         /// </summary>
           ydSe
-
         }
-
         /// <summary>
         /// This class represents the EastOrWest xsd enumeration.
         /// </summary>
@@ -20110,9 +18274,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
-
         }
-
         /// <summary>
         /// This class represents the NorthOrSouth xsd enumeration.
         /// </summary>
@@ -20134,9 +18296,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
-
         }
-
         /// <summary>
         /// This class represents the WellVerticalCoordinateUom xsd enumeration.
         /// </summary>
@@ -20163,9 +18323,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("ftBr(65)")]
           ftBr65
-
         }
-
         /// <summary>
         /// This class represents the PercentUom xsd enumeration.
         /// </summary>
@@ -20180,9 +18338,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("%")]
           Item
-
         }
-
         /// <summary>
         /// This class represents the PlaneAngleUom xsd enumeration.
         /// </summary>
@@ -20256,9 +18412,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// urad property
         /// </summary>
           urad
-
         }
-
         /// <summary>
         /// This class represents the AziRef xsd enumeration.
         /// </summary>
@@ -20287,9 +18441,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
-
         }
-
         /// <summary>
         /// This class represents the VolumePerVolumeUom xsd enumeration.
         /// </summary>
@@ -20538,9 +18690,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("stb60/scm15")]
           stb60scm15
-
         }
-
         /// <summary>
         /// This class represents the VolumePerLengthUom xsd enumeration.
         /// </summary>
@@ -20616,9 +18766,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// m3Pm property
         /// </summary>
           m3Pm
-
         }
-
         /// <summary>
         /// This class represents the VolumeFlowRateUom xsd enumeration.
         /// </summary>
@@ -20788,9 +18936,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("M(m3)/d")]
           Mm3d
-
         }
-
         /// <summary>
         /// This class represents the VolumeUom xsd enumeration.
         /// </summary>
@@ -20934,9 +19080,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// yd3 property
         /// </summary>
           yd3
-
         }
-
         /// <summary>
         /// This class represents the VelocityUom xsd enumeration.
         /// </summary>
@@ -21085,9 +19229,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("um/s")]
           ums
-
         }
-
         /// <summary>
         /// This class represents the TimeUom xsd enumeration.
         /// </summary>
@@ -21164,9 +19306,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("100ka")]
           Item100ka
-
         }
-
         /// <summary>
         /// This class represents the ThermodynamicTemperatureUom xsd enumeration.
         /// </summary>
@@ -21192,9 +19332,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// degR property
         /// </summary>
           degR
-
         }
-
         /// <summary>
         /// This class represents the ThermalVolumetricExpansionUom xsd enumeration.
         /// </summary>
@@ -21234,9 +19372,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("1/degR")]
           Item1degR
-
         }
-
         /// <summary>
         /// This class represents the ThermalConductivityUom xsd enumeration.
         /// </summary>
@@ -21271,9 +19407,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("cal/s.cm.degC")]
           calscmdegC
-
         }
-
         /// <summary>
         /// This class represents the StandardVolumePerTimeUom xsd enumeration.
         /// </summary>
@@ -21338,9 +19472,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("MMscf(60F)/d")]
           MMscf60Fd
-
         }
-
         /// <summary>
         /// This class represents the StandardVolumeUom xsd enumeration.
         /// </summary>
@@ -21403,9 +19535,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("stb(60F)")]
           stb60F
-
         }
-
         /// <summary>
         /// This class represents the SpecificVolumeUom xsd enumeration.
         /// </summary>
@@ -21525,9 +19655,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("m3/tonUS")]
           m3tonUS
-
         }
-
         /// <summary>
         /// This class represents the SpecificHeatCapacityUom xsd enumeration.
         /// </summary>
@@ -21577,9 +19705,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("kW.h/kg.degC")]
           kWhkgdegC
-
         }
-
         /// <summary>
         /// This class represents the RelativePowerUom xsd enumeration.
         /// </summary>
@@ -21609,9 +19735,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("W/W")]
           WW
-
         }
-
         /// <summary>
         /// This class represents the PressureUom xsd enumeration.
         /// </summary>
@@ -21796,9 +19920,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// upsi property
         /// </summary>
           upsi
-
         }
-
         /// <summary>
         /// This class represents the PowerUom xsd enumeration.
         /// </summary>
@@ -21875,9 +19997,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// uW property
         /// </summary>
           uW
-
         }
-
         /// <summary>
         /// This class represents the PermeabilityRockUom xsd enumeration.
         /// </summary>
@@ -21895,9 +20015,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mD property
         /// </summary>
           mD
-
         }
-
         /// <summary>
         /// This class represents the PerLengthUom xsd enumeration.
         /// </summary>
@@ -21952,9 +20070,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("1/yd")]
           Item1yd
-
         }
-
         /// <summary>
         /// This class represents the MomentOfForceUom xsd enumeration.
         /// </summary>
@@ -22033,9 +20149,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("tonfUS.mi")]
           tonfUSmi
-
         }
-
         /// <summary>
         /// This class represents the MassPerLengthUom xsd enumeration.
         /// </summary>
@@ -22070,9 +20184,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("kg.m/cm2")]
           kgmcm2
-
         }
-
         /// <summary>
         /// This class represents the MassUom xsd enumeration.
         /// </summary>
@@ -22160,9 +20272,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// ug property
         /// </summary>
           ug
-
         }
-
         /// <summary>
         /// This class represents the MassConcentrationUom xsd enumeration.
         /// </summary>
@@ -22217,9 +20327,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// ppm property
         /// </summary>
           ppm
-
         }
-
         /// <summary>
         /// This class represents the MagneticInductionUom xsd enumeration.
         /// </summary>
@@ -22253,9 +20361,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// uT property
         /// </summary>
           uT
-
         }
-
         /// <summary>
         /// This class represents the LengthPerLengthUom xsd enumeration.
         /// </summary>
@@ -22325,9 +20431,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("mi/in")]
           miin
-
         }
-
         /// <summary>
         /// This class represents the IlluminanceUom xsd enumeration.
         /// </summary>
@@ -22354,9 +20458,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// klx property
         /// </summary>
           klx
-
         }
-
         /// <summary>
         /// This class represents the ForcePerVolumeUom xsd enumeration.
         /// </summary>
@@ -22451,9 +20553,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("atm/ft")]
           atmft
-
         }
-
         /// <summary>
         /// This class represents the ForcePerLengthUom xsd enumeration.
         /// </summary>
@@ -22533,9 +20633,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("tonfUS/ft")]
           tonfUSft
-
         }
-
         /// <summary>
         /// This class represents the ForceUom xsd enumeration.
         /// </summary>
@@ -22613,9 +20711,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// uN property
         /// </summary>
           uN
-
         }
-
         /// <summary>
         /// This class represents the EquivalentPerMassUom xsd enumeration.
         /// </summary>
@@ -22640,9 +20736,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("meq/100g")]
           meq100g
-
         }
-
         /// <summary>
         /// This class represents the ElectricPotentialUom xsd enumeration.
         /// </summary>
@@ -22672,9 +20766,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// uV property
         /// </summary>
           uV
-
         }
-
         /// <summary>
         /// This class represents the ElectricCurrentUom xsd enumeration.
         /// </summary>
@@ -22712,9 +20804,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// uA property
         /// </summary>
           uA
-
         }
-
         /// <summary>
         /// This class represents the DynamicViscosityUom xsd enumeration.
         /// </summary>
@@ -22772,9 +20862,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("N.s/m2")]
           Nsm2
-
         }
-
         /// <summary>
         /// This class represents the DimensionlessUom xsd enumeration.
         /// </summary>
@@ -22809,9 +20897,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// uEuc property
         /// </summary>
           uEuc
-
         }
-
         /// <summary>
         /// This class represents the DensityUom xsd enumeration.
         /// </summary>
@@ -22965,9 +21051,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("ug/cm3")]
           ugcm3
-
         }
-
         /// <summary>
         /// This class represents the CompressibilityUom xsd enumeration.
         /// </summary>
@@ -23007,9 +21091,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("1/pPa")]
           Item1pPa
-
         }
-
         /// <summary>
         /// This class represents the AreaPerAreaUom xsd enumeration.
         /// </summary>
@@ -23048,9 +21130,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("mm2/mm2")]
           mm2mm2
-
         }
-
         /// <summary>
         /// This class represents the AreaUom xsd enumeration.
         /// </summary>
@@ -23112,9 +21192,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// yd2 property
         /// </summary>
           yd2
-
         }
-
         /// <summary>
         /// This class represents the AnglePerTimeUom xsd enumeration.
         /// </summary>
@@ -23158,9 +21236,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// rpm property
         /// </summary>
           rpm
-
         }
-
         /// <summary>
         /// This class represents the AnglePerLengthUom xsd enumeration.
         /// </summary>
@@ -23205,9 +21281,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("rad/ft")]
           radft
-
         }
-
         /// <summary>
         /// This class represents the AccelerationLinearUom xsd enumeration.
         /// </summary>
@@ -23248,9 +21322,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mGal property
         /// </summary>
           mGal
-
         }
-
         /// <summary>
         /// This class represents the ItemState xsd enumeration.
         /// </summary>
@@ -23276,9 +21348,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
-
         }
-
         /// <summary>
         /// This class represents the PrimitiveType xsd enumeration.
         /// </summary>
@@ -23352,9 +21422,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
-
         }
-
         /// <summary>
         /// This class represents the LogIndexType xsd enumeration.
         /// </summary>
@@ -23396,9 +21464,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
-
         }
-
         /// <summary>
         /// This class represents the PerfConveyanceMethod xsd enumeration.
         /// </summary>
@@ -23427,9 +21493,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Wireline property
         /// </summary>
           Wireline
-
         }
-
         /// <summary>
         /// This class represents the EventClassType xsd enumeration.
         /// </summary>
@@ -23478,9 +21542,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("Job Plan (phases)")]
           JobPlanphases
-
         }
-
         /// <summary>
         /// This class represents the PhysicalStatus xsd enumeration.
         /// </summary>
@@ -23502,9 +21564,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The proposed physical status the interval.
         /// </summary>
           proposed
-
         }
-
         /// <summary>
         /// This class represents the PerforationStatus xsd enumeration.
         /// </summary>
@@ -23526,9 +21586,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// proposed property
         /// </summary>
           proposed
-
         }
-
         /// <summary>
         /// This class represents the PerforationToolType xsd enumeration.
         /// </summary>
@@ -23586,9 +21644,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("Coiled Tubing Jet Tool")]
           CoiledTubingJetTool
-
         }
-
         /// <summary>
         /// This class represents the EquipmentType xsd enumeration.
         /// </summary>
@@ -24182,9 +22238,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("Y-Tool")]
           YTool
-
         }
-
         /// <summary>
         /// This class represents the GradeType xsd enumeration.
         /// </summary>
@@ -24839,9 +22893,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("970N")]
           Item970N
-
         }
-
         /// <summary>
         /// This class represents the Coating xsd enumeration.
         /// </summary>
@@ -25244,9 +23296,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("TUNGSTEN PLATED")]
           TUNGSTENPLATED
-
         }
-
         /// <summary>
         /// This class represents the GeologyType xsd enumeration.
         /// </summary>
@@ -25264,9 +23314,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Reservoir property
         /// </summary>
           Reservoir
-
         }
-
         /// <summary>
         /// This class represents the BoreholeType xsd enumeration.
         /// </summary>
@@ -25292,9 +23340,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// UnderReam property
         /// </summary>
           UnderReam
-
         }
-
         /// <summary>
         /// This class represents the CasingConnectionType xsd enumeration.
         /// </summary>
@@ -25317,9 +23363,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Welded property
         /// </summary>
           Welded
-
         }
-
         /// <summary>
         /// This class represents the OtherConnectionType xsd enumeration.
         /// </summary>
@@ -25339,9 +23383,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
           [XmlEnum("Cemented-in-place")]
           Cementedinplace
-
         }
-
         /// <summary>
         /// This class represents the RodConnectionType xsd enumeration.
         /// </summary>
@@ -25378,9 +23420,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Welded property
         /// </summary>
           Welded
-
         }
-
         /// <summary>
         /// This class represents the TubingConnectionType xsd enumeration.
         /// </summary>
@@ -25425,9 +23465,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Unknown property
         /// </summary>
           Unknown
-
         }
-
         /// <summary>
         /// This class represents the ConnectionFormType xsd enumeration.
         /// </summary>
@@ -25457,9 +23495,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Box property
         /// </summary>
           Box
-
         }
-
         /// <summary>
         /// This class represents the ConnectionPosition xsd enumeration.
         /// </summary>
@@ -25485,9 +23521,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
-
         }
-
         /// <summary>
         /// This class represents the DownholeStringType xsd enumeration.
         /// </summary>
@@ -25517,9 +23551,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Others property
         /// </summary>
           Others
-
         }
-
         /// <summary>
         /// This class represents the SubStringType xsd enumeration.
         /// </summary>
@@ -25603,9 +23635,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Flowline property
         /// </summary>
           Flowline
-
         }
-
     }
     #endregion
 }

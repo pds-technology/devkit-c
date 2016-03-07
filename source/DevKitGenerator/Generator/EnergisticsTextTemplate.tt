@@ -23,6 +23,7 @@
 
 using System;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
@@ -97,6 +98,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
                 {
 #>
 		<#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetValidationAttributes(type, property)#>
         [XmlText]
 <#
                 }
@@ -116,6 +118,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 					   XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
 #>
         <#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetValidationAttributes(type, property)#>
 		<#=generator.GetXmlElementAttrTag(xmlElemAttr, property)#>
 <#
                     }
@@ -127,13 +130,16 @@ namespace Energistics.DataAccess.<#=mlVersion#>
                             XmlAttributeAttribute attribute = attributetAttributes[0] as XmlAttributeAttribute;
 #>
 		<#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetValidationAttributes(type, property)#>
         [XmlAttribute("<#=string.IsNullOrEmpty(attribute.AttributeName) ? property.Name : attribute.AttributeName#>"<#=attribute.Form.HasFlag(XmlSchemaForm.Qualified) ? ", Form = System.Xml.Schema.XmlSchemaForm.Qualified" : String.Empty#><#=string.IsNullOrEmpty(attribute.Namespace) ? String.Empty : String.Format(", Namespace = \"{0}\"", attribute.Namespace)#>)]
-<#=generator.GetSurrogate(type, property)#><#                      
+		<#=generator.GetSurrogate(type, property)#>
+<#                      
                         }
                         else
                         {
 #>
         <#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetValidationAttributes(type, property)#>
 		<#=generator.GetXmlElementOrXmlArray(type, property)#>
 <#						}
                     }
