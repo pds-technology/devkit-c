@@ -358,6 +358,7 @@ namespace Energistics.SchemaGatherer
                     .SelectMany(x => x.Markup)
                     .Select(x => x.InnerText
                         .Replace(Environment.NewLine, " ")
+                        .Replace("\n", " ")
                         .Replace("\t", string.Empty)
                         .Trim())
                     .FirstOrDefault();
