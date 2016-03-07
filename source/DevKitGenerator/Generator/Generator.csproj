@@ -90,6 +90,7 @@
     <Compile Include="SchemaSetClassCreator.cs" />
     <Compile Include="WITSML131\DataObject.cs" />
     <Compile Include="WITSML141\DataObject.cs" />
+    <Compile Include="WITSML200\DataObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />

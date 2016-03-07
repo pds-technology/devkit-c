@@ -743,7 +743,7 @@ namespace Energistics.Generator
         {
             //Some of the enumeration values duplicate the names of C# keywords.  In those cases, prepend an '@' to the name to indicate to the compiler
             //that the string should be treated literally.
-            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed", "base" };
+            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed", "base", "null" };
 
             if (keywords.Contains(originalName))
             {
