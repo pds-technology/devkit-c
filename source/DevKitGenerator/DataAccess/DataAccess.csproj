@@ -97,6 +97,7 @@
     <Compile Include="EnumValue\EnumValuesXMLToClass.cs" />
     <Compile Include="IEnergisticsCollection.cs" />
     <Compile Include="IH5Document.cs" />
+    <Compile Include="IWitsmlClient.cs" />
     <Compile Include="PRODML122\DataObjects.cs">
       <SubType>code</SubType>
     </Compile>
@@ -128,9 +129,11 @@
     <Compile Include="WITSML131\GeneratedEnumValues.cs" />
     <Compile Include="WITSML131\WMLP.cs" />
     <Compile Include="WITSML131\WMLS.cs" />
+    <Compile Include="WITSML131\WMLS.custom.cs" />
     <Compile Include="WITSML141\DataObjects.cs" />
     <Compile Include="WITSML141\GeneratedEnumValues.cs" />
     <Compile Include="WITSML141\WMLS.cs" />
+    <Compile Include="WITSML141\WMLS.custom.cs" />
     <Compile Include="WITSMLWebServiceConnection.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -106,6 +106,12 @@ namespace Energistics.DataAccess
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether compression is enabled.
+        /// </summary>
+        /// <value><c>true</c> if compression is enabled; otherwise, <c>false</c>.</value>
+        bool IsCompressionEnabled { get; set; }
+
+        /// <summary>
         /// Reads an object of type T from the WITSML web service
         /// </summary>
         /// <typeparam name="T">The type of the Energistic object to read</typeparam>
@@ -286,17 +292,9 @@ namespace Energistics.DataAccess
         /// <param name="methodParms">The array of parameters to pass to the method</param>
         /// <returns>Status code</returns>
         private object WMLSCall(string wmlsMethod, string[] methodParms)
-        {            
-            
-            Type wmlsType = Type.GetType("Energistics.DataAccess." + Enum.GetName(typeof(WMLSVersion), ver) + ".WMLS.WMLS");
-            SoapHttpClientProtocol service = (SoapHttpClientProtocol)wmlsType.GetConstructor(new Type[0]).Invoke(new object[] { });
-
-            service.Url = Url;
-            service.Timeout = Timeout;           
-            service.Proxy = Proxy;
-            service.Credentials = GetNetworkCredential();
-
-            object statusCode = wmlsType.GetMethod(wmlsMethod).Invoke(service, methodParms);
+        {
+            var service = CreateClientProxy();
+            object statusCode = service.GetType().GetMethod(wmlsMethod).Invoke(service, methodParms);
 
             if (statusCode is short)
             {
@@ -309,8 +307,30 @@ namespace Energistics.DataAccess
             return statusCode;
         }
 
-        
-                   
+        /// <summary>
+        /// Initializes an instance of the WMLS client proxy for the specified <see cref="WMLSVersion"/>.
+        /// </summary>
+        /// <returns></returns>
+        public SoapHttpClientProtocol CreateClientProxy()
+        {
+            Type wmlsType = Type.GetType("Energistics.DataAccess." + Enum.GetName(typeof(WMLSVersion), ver) + ".WMLS.WMLS");
+            SoapHttpClientProtocol service = (SoapHttpClientProtocol)wmlsType.GetConstructor(new Type[0]).Invoke(new object[] { });
+
+            service.Url = Url;
+            service.Timeout = Timeout;
+            service.Proxy = Proxy;
+            service.Credentials = GetNetworkCredential();
+
+            var client = service as IWitsmlClient;
+            if (client != null)
+            {
+                client.IsCompressionEnabled = IsCompressionEnabled;
+            }
+
+            return service;
+        }
+
+
         /// <summary>
         /// Build an empty query object of type T
         /// </summary>
