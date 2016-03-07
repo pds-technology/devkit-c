@@ -136,6 +136,7 @@
     <Compile Include="WITSML141\GeneratedEnumValues.cs" />
     <Compile Include="WITSML141\WMLS.cs" />
     <Compile Include="WITSML141\WMLS.custom.cs" />
+    <Compile Include="WITSML200\DataObjects.cs" />
     <Compile Include="WITSMLWebServiceConnection.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -254,6 +254,14 @@ namespace Energistics.SchemaGatherer
                             }
                         }
                     }
+                    else if (setName.StartsWith("WITSML2"))
+                    {
+                        // we also need to include all xsd file in common v2.
+                        foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
+                        {
+                            sw.WriteLine("    <schema>" + f + "</schema>");
+                        }
+                    }
                     else
                     {
                         if(setName.StartsWith("COMPLETION"))
