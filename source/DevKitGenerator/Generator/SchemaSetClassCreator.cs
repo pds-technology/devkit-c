@@ -422,6 +422,34 @@ namespace Energistics.Generator
         }
 
 
+        public string GetDataObjectInterface(Type t)
+        {
+            var properties = t.GetProperties()
+                .Where(x => x.Name.Contains("uid") || x.Name.Contains("name"))
+                .Where(x => x.PropertyType == typeof(String))
+                .Select(x => x.Name.ToLowerInvariant())
+                .ToList();
+
+            if (properties.Contains("uid") && properties.Contains("name")
+                && properties.Contains("uidwell") && properties.Contains("namewell")
+                && properties.Contains("uidwellbore") && properties.Contains("namewellbore"))
+            {
+                return ", IWellboreObject";
+            }
+            else if (properties.Contains("uid") && properties.Contains("name")
+                && properties.Contains("uidwell") && properties.Contains("namewell"))
+            {
+                return ", IWellObject";
+            }
+            else if (properties.Contains("uid") && properties.Contains("name"))
+            {
+                return ", IDataObject";
+            }
+
+            return string.Empty;
+        }
+
+
         private static Boolean OnceRename = false;
         public string RenameClass(Type t)
         {

@@ -243,10 +243,9 @@ using Energistics.DataAccess.");
             
             #line default
             #line hidden
-            this.Write(" ");
             
             #line 80 "C:\Projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : String.Empty));
+            this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)));
             
             #line default
             #line hidden

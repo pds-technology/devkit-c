@@ -96,6 +96,7 @@
     <Compile Include="EnumValue\EnumValue.cs" />
     <Compile Include="EnumValue\EnumValueNameAttribute.cs" />
     <Compile Include="EnumValue\EnumValuesXMLToClass.cs" />
+    <Compile Include="IDataObject.cs" />
     <Compile Include="IEnergisticsCollection.cs" />
     <Compile Include="IH5Document.cs" />
     <Compile Include="IWitsmlClient.cs" />
