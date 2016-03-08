@@ -1075,14 +1075,10 @@ namespace Energistics.Generator
                 init();
                 sb.Append("[Object]");
             }
-            else if (propType.IsGenericType)
+            else if (propType.IsArray && !propType.Name.StartsWith("obj_", StringComparison.CurrentCultureIgnoreCase))
             {
-                var genericType = propType.GetGenericTypeDefinition();
-                if (genericType == typeof(List<>))
-                {
-                    init();
-                    sb.Append("[Collection]");
-                }
+                init();
+                sb.Append("[Collection]");
             }
 
             return sb.ToString();
