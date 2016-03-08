@@ -1068,6 +1068,13 @@ namespace Energistics.Generator
                     .Replace("\"", "\\\""));
             }
 
+            var propType = property.PropertyType;
+            if (propType.BaseType == typeof(object))
+            {
+                init();
+                sb.Append("[Object]");
+            }
+
             return sb.ToString();
         }
 

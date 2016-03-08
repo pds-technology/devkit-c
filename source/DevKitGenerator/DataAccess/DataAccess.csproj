@@ -88,6 +88,7 @@
     <Compile Include="AbstractWebServiceConnection.cs" />
     <Compile Include="COMPLETION100\DataObjects.cs" />
     <Compile Include="COMPLETION100\GeneratedEnumValues.cs" />
+    <Compile Include="CustomValidationAttributes.cs" />
     <Compile Include="Documentation\Generating.cs" />
     <Compile Include="Documentation\GettingStarted.cs" />
     <Compile Include="Documentation\MainPage.cs" />
