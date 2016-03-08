@@ -1069,10 +1069,20 @@ namespace Energistics.Generator
             }
 
             var propType = property.PropertyType;
-            if (propType.BaseType == typeof(object))
+            var subProperties = propType.GetProperties().Where(p => p.IsDefined(typeof(XmlElementAttribute), false) || p.IsDefined(typeof(XmlAttributeAttribute), false)).ToList();
+            if (subProperties.Count > 0)
             {
                 init();
                 sb.Append("[Object]");
+            }
+            else if (propType.IsGenericType)
+            {
+                var genericType = propType.GetGenericTypeDefinition();
+                if (genericType == typeof(List<>))
+                {
+                    init();
+                    sb.Append("[Collection]");
+                }
             }
 
             return sb.ToString();
