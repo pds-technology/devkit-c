@@ -1005,6 +1005,12 @@ namespace Energistics.Generator
         {
             StringBuilder sb = new StringBuilder();
 
+            bool addValidation = bool.Parse(SchemaGatherer.SchemaGatherer.GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
+            if (!addValidation)
+            {
+                return string.Empty;
+            }
+
             Action init = () =>
             {
                 if (sb.Length > 0)

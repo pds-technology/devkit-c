@@ -295,9 +295,15 @@ namespace Energistics.SchemaGatherer
                 
                 }
 
-                ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder);
-
-                //GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
+                bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
+                if (addValidation)
+                {
+                    ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder);
+                }
+                else
+                {
+                    GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
+                }
             }
 
         private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
