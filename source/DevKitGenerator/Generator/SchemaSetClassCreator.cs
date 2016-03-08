@@ -1069,8 +1069,8 @@ namespace Energistics.Generator
             }
 
             var propType = property.PropertyType;
-            var subProperties = propType.GetProperties().Where(p => p.IsDefined(typeof(XmlElementAttribute), false) || p.IsDefined(typeof(XmlAttributeAttribute), false)).ToList();
-            if (subProperties.Count > 0)
+            var nested = propType.GetProperties().Any(p => p.IsDefined(typeof(XmlElementAttribute), false) || p.IsDefined(typeof(XmlAttributeAttribute), false));
+            if (nested)
             {
                 init();
                 sb.Append("[Object]");
