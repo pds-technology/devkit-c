@@ -41,7 +41,7 @@ namespace Energistics.DataAccess.Validation
                 {
                     var uid = dataObj.Uid;
                     if (uids.Contains(uid))
-                        return new ValidationResult("Uid for recurring element must be unique", new string[] { "Uid" });
+                        return new WitsmlValidationResult(-464, "Uid for recurring element must be unique", new string[] { "Uid" });
                     uids.Add(uid);
                 }
             }
