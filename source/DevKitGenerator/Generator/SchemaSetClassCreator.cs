@@ -422,6 +422,11 @@ namespace Energistics.Generator
         }
 
 
+        /// <summary>
+        /// Gets the WITSML interface of data object.
+        /// </summary>
+        /// <param name="t">The data object type.</param>
+        /// <returns>The WITSML interface in a string format</returns>
         public string GetDataObjectInterface(Type t)
         {
             bool addInterfaces = bool.Parse(SchemaGatherer.SchemaGatherer.GetAppSetting("INCLUDE_DATA_OBJECT_INTERFACE"));
@@ -746,6 +751,11 @@ namespace Energistics.Generator
             return string.Format("This class represents the {0} xsd {1}.", t.Name, t.IsEnum ? "enumeration" : "type" );
         }
 
+        /// <summary>
+        /// Differentiate the enum name from C# keywords.
+        /// </summary>
+        /// <param name="originalName">Name of the original enum.</param>
+        /// <returns>The name of the enum after treatment.</returns>
         public string GetEnumName(string originalName)
         {
             //Some of the enumeration values duplicate the names of C# keywords.  In those cases, prepend an '@' to the name to indicate to the compiler
@@ -1008,6 +1018,14 @@ namespace Energistics.Generator
         }
 
 
+        /// <summary>
+        /// Gets validation attributes to the property.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <param name="property">The property.</param>
+        /// <returns>
+        /// The validation attributes for the property.
+        /// </returns>
         public string GetValidationAttributes(Type type, PropertyInfo property)
         {
             StringBuilder sb = new StringBuilder();

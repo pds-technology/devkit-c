@@ -308,49 +308,49 @@ namespace Energistics.SchemaGatherer
 
         private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
         {
-                using (Process p = new Process())
+            using (Process p = new Process())
+            {
+                p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";
+                p.StartInfo.Arguments = String.Format(@"/parameters:{0} /out:{1}", targetXmlFile, targetFolder);
+                p.StartInfo.RedirectStandardError = true;
+                p.StartInfo.RedirectStandardOutput = true;
+                p.StartInfo.UseShellExecute = false;
+                p.Start();
+
+
+                string output = p.StandardOutput.ReadToEnd();
+                string error = p.StandardError.ReadToEnd();
+
+                p.WaitForExit();
+                if (!String.IsNullOrEmpty(error))
                 {
-                    p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";
-                    p.StartInfo.Arguments = String.Format(@"/parameters:{0} /out:{1}", targetXmlFile, targetFolder);
-                    p.StartInfo.RedirectStandardError = true;
-                    p.StartInfo.RedirectStandardOutput = true;
-                    p.StartInfo.UseShellExecute = false;
-                    p.Start();
+                    Debugger.Break();
+                }
 
+                foreach (Match m in Regex.Matches(output, @"Writing file '(" + targetFolder.Replace(@"\", @"\\") + ".*?)'."))
+                {
+                    string sourceFile = m.Groups[1].Value;
+                    string targetCSFile = String.Format(@"{0}\DataObject.cs", targetFolder);
 
-                    string output = p.StandardOutput.ReadToEnd();
-                    string error = p.StandardError.ReadToEnd();
-
-                    p.WaitForExit();
-                    if (!String.IsNullOrEmpty(error))
+                    if (File.Exists(sourceFile))
                     {
-                        Debugger.Break();
-                    }
-
-                    foreach (Match m in Regex.Matches(output, @"Writing file '(" + targetFolder.Replace(@"\", @"\\") + ".*?)'."))
-                    {
-                        string sourceFile = m.Groups[1].Value;
-                        string targetCSFile = String.Format(@"{0}\DataObject.cs", targetFolder);
-
-                        if (File.Exists(sourceFile))
+                        if (File.Exists(targetCSFile))
                         {
-                            if (File.Exists(targetCSFile))
-                            {
-                                File.Delete(targetCSFile);
-                            }
-                            File.Move(sourceFile, targetCSFile);
-                            File.Delete(targetXmlFile);
-                            File.Delete(newTypeCatalog);
-                            if (File.Exists(newTypeCatalogProdml))
-                            {
-                                File.Delete(newTypeCatalogProdml);
-                            }
+                            File.Delete(targetCSFile);
                         }
-
-                        break;
+                        File.Move(sourceFile, targetCSFile);
+                        File.Delete(targetXmlFile);
+                        File.Delete(newTypeCatalog);
+                        if (File.Exists(newTypeCatalogProdml))
+                        {
+                            File.Delete(newTypeCatalogProdml);
+                        }
                     }
+
+                    break;
                 }
             }
+        }
         
 
         /// <summary>
