@@ -25,7 +25,7 @@ namespace Energistics.DataAccess.WITSML131.WMLS
             var request = base.GetWebRequest(uri);
             var httpRequest = request as HttpWebRequest;
 
-            if (httpRequest != null)
+            if (httpRequest != null && IsCompressionEnabled)
             {
                 httpRequest.Headers.Add("Accept-Encoding", "gzip");
                 httpRequest.AutomaticDecompression = DecompressionMethods.GZip;
