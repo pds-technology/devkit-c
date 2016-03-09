@@ -14,8 +14,18 @@ using System.Xml.Serialization;
 
 namespace Energistics.SchemaGatherer
 {
+    /// <summary>
+    /// Encapsulates methods to generate base data object classes with default .net validation attributes
+    /// </summary>
     public static class ValidationExtensions
     {
+        /// <summary>
+        /// Generates the data objects with code DOM.
+        /// </summary>
+        /// <param name="targetFolder">The target folder.</param>
+        /// <param name="targetXmlFile">The target XML file.</param>
+        /// <param name="nameSpace">The name space.</param>
+        /// <param name="sourceFolder">The source folder.</param>
         public static void GenerateDataObjectsWithCodeDom(string targetFolder, string targetXmlFile, string nameSpace, string sourceFolder)
         {
             var includeSchemas = new Dictionary<string, XmlSchema>();
