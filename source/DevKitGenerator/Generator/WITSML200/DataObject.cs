@@ -758,6 +758,8 @@ namespace Energistics.Generator.WITSML200 {
         
         private LengthMeasure tvdTopField;
         
+        private LengthMeasure tvdBaseField;
+        
         private string datumField;
         
         /// <remarks/>
@@ -768,6 +770,19 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at the base of the interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at the base of the interval")]
+        public LengthMeasure TvdBase {
+            get {
+                return this.tvdBaseField;
+            }
+            set {
+                this.tvdBaseField = value;
             }
         }
         
@@ -31325,7 +31340,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DescriptionAttribute("The data blob in JSON form. This allows you to embed the bulk data in a single fi" +
             "le with the xml, to avoid the issues that arise with splitting the data across m" +
             "ultiple files.")]
-        public string data {
+        public string Data {
             get {
                 return this.dataField;
             }
@@ -31339,7 +31354,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The uri of a file containing the bulkdata. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For instance, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data abc.avro. In that case the value of this element would be './abc.avro'.")]
-        public string fileUri {
+        public string FileUri {
             get {
                 return this.fileUriField;
             }
@@ -34370,7 +34385,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private MdInterval sectionMdIntervalField;
         
-        private string sectionTvdIntervalField;
+        private TvdInterval sectionTvdIntervalField;
         
         private LengthMeasure idSectionField;
         
@@ -34444,7 +34459,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>True vertical depth interval for this wellbore geometry section.</summary>
         [System.ComponentModel.DescriptionAttribute("True vertical depth interval for this wellbore geometry section.")]
-        public string SectionTvdInterval {
+        public TvdInterval SectionTvdInterval {
             get {
                 return this.sectionTvdIntervalField;
             }
@@ -36078,7 +36093,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private MassPerVolumeMeasure lcmField;
         
-        private string mbtField;
+        private GenericMeasure mbtField;
         
         private double phField;
         
@@ -36506,10 +36521,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>Cation exchange capacity (CEC) of the mud sample as measured by methylene blue titration (MBT).</summary>
+        /// <summary>Cation exchange capacity (CEC) of the mud sample as measured by methylene blue titration (MBT).  NOTE: This is temporarily set to be a GenericMeasure with no unit validation, pending addition of CEC units to the Energistics UoM spec.</summary>
         [System.ComponentModel.DescriptionAttribute("Cation exchange capacity (CEC) of the mud sample as measured by methylene blue ti" +
-            "tration (MBT).")]
-        public string Mbt {
+            "tration (MBT).  NOTE: This is temporarily set to be a GenericMeasure with no uni" +
+            "t validation, pending addition of CEC units to the Energistics UoM spec.")]
+        public GenericMeasure Mbt {
             get {
                 return this.mbtField;
             }
@@ -52197,14 +52213,14 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlRootAttribute("FormationMarkerSet", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
     public partial class obj_FormationMarkerSet : AbstractObject {
         
-        private string markerSetIntervalField;
+        private MdInterval markerSetIntervalField;
         
         private DataObjectReference wellboreField;
         
         private obj_FormationMarker[] formationMarkerField;
         
         /// <remarks/>
-        public string MarkerSetInterval {
+        public MdInterval MarkerSetInterval {
             get {
                 return this.markerSetIntervalField;
             }
@@ -54464,13 +54480,13 @@ namespace Energistics.Generator.WITSML200 {
         
         private MdInterval mdIntervalField;
         
-        private DataObjectReference showIntervalSetField;
+        private obj_ShowEvaluation showIntervalSetField;
         
-        private DataObjectReference interpretedGeologyIntervalSetField;
+        private obj_InterpretedGeology interpretedGeologyIntervalSetField;
         
         private DataObjectReference wellboreField;
         
-        private DataObjectReference cuttingsIntervalSetField;
+        private obj_CuttingsGeology cuttingsIntervalSetField;
         
         /// <remarks/>
         public MdInterval MdInterval {
@@ -54483,7 +54499,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public DataObjectReference ShowIntervalSet {
+        public obj_ShowEvaluation ShowIntervalSet {
             get {
                 return this.showIntervalSetField;
             }
@@ -54493,7 +54509,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public DataObjectReference InterpretedGeologyIntervalSet {
+        public obj_InterpretedGeology InterpretedGeologyIntervalSet {
             get {
                 return this.interpretedGeologyIntervalSetField;
             }
@@ -54513,7 +54529,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public DataObjectReference CuttingsIntervalSet {
+        public obj_CuttingsGeology CuttingsIntervalSet {
             get {
                 return this.cuttingsIntervalSetField;
             }
@@ -54712,9 +54728,258 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlRootAttribute("Log", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
     public partial class obj_Log : AbstractObject {
         
+        private ChannelState channelStateField;
+        
+        private bool channelStateFieldSpecified;
+        
+        private string timeDepthField;
+        
+        private string curveClassField;
+        
+        private string runNumberField;
+        
+        private string passNumberField;
+        
+        private AbstractIndexValue startIndexField;
+        
+        private AbstractIndexValue endIndexField;
+        
+        private string loggingCompanyNameField;
+        
+        private string loggingCompanyCodeField;
+        
+        private string toolNameField;
+        
+        private string toolClassField;
+        
+        private ChannelDerivation derivationField;
+        
+        private bool derivationFieldSpecified;
+        
+        private LoggingMethod loggingMethodField;
+        
+        private bool loggingMethodFieldSpecified;
+        
+        private LengthMeasureExt nominalHoleSizeField;
+        
         private DataObjectReference wellboreField;
         
         private obj_ChannelSet[] channelSetField;
+        
+        /// <remarks/>
+        public ChannelState ChannelState {
+            get {
+                return this.channelStateField;
+            }
+            set {
+                this.channelStateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ChannelStateSpecified {
+            get {
+                return this.channelStateFieldSpecified;
+            }
+            set {
+                this.channelStateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this a time or depth log?</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
+        public string TimeDepth {
+            get {
+                return this.timeDepthField;
+            }
+            set {
+                this.timeDepthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
+            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
+            " enumeration before WITSML is released.")]
+        public string CurveClass {
+            get {
+                return this.curveClassField;
+            }
+            set {
+                this.curveClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
+            "ttribute but it is so commonly used that it must be included.   The value here s" +
+            "hould match a bit run number for LWD data and a wireline run number for logging " +
+            "data.")]
+        public string RunNumber {
+            get {
+                return this.runNumberField;
+            }
+            set {
+                this.runNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
+            "attribute but it is so commonly used that it must be included.   The value here " +
+            "should match a wireline pass number for logging data.")]
+        public string PassNumber {
+            get {
+                return this.passNumberField;
+            }
+            set {
+                this.passNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AbstractIndexValue StartIndex {
+            get {
+                return this.startIndexField;
+            }
+            set {
+                this.startIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AbstractIndexValue EndIndex {
+            get {
+                return this.endIndexField;
+            }
+            set {
+                this.endIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging company.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
+        public string LoggingCompanyName {
+            get {
+                return this.loggingCompanyNameField;
+            }
+            set {
+                this.loggingCompanyNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
+            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
+            "es")]
+        public string LoggingCompanyCode {
+            get {
+                return this.loggingCompanyCodeField;
+            }
+            set {
+                this.loggingCompanyCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
+        public string ToolName {
+            get {
+                return this.toolNameField;
+            }
+            set {
+                this.toolNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
+            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
+            "ion before WITSML is released")]
+        public string ToolClass {
+            get {
+                return this.toolClassField;
+            }
+            set {
+                this.toolClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
+        public ChannelDerivation Derivation {
+            get {
+                return this.derivationField;
+            }
+            set {
+                this.derivationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DerivationSpecified {
+            get {
+                return this.derivationFieldSpecified;
+            }
+            set {
+                this.derivationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LoggingMethod LoggingMethod {
+            get {
+                return this.loggingMethodField;
+            }
+            set {
+                this.loggingMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LoggingMethodSpecified {
+            get {
+                return this.loggingMethodFieldSpecified;
+            }
+            set {
+                this.loggingMethodFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return this.nominalHoleSizeField;
+            }
+            set {
+                this.nominalHoleSizeField = value;
+            }
+        }
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
@@ -54743,6 +55008,79 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ChannelState {
+        
+        /// <remarks/>
+        calculated,
+        
+        /// <remarks/>
+        final,
+        
+        /// <remarks/>
+        memory,
+        
+        /// <remarks/>
+        processed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("real time")]
+        realtime,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ChannelDerivation {
+        
+        /// <remarks/>
+        raw,
+        
+        /// <remarks/>
+        simulated,
+        
+        /// <remarks/>
+        spliced,
+        
+        /// <remarks/>
+        sampled,
+        
+        /// <remarks/>
+        model,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum LoggingMethod {
+        
+        /// <remarks/>
+        Computed,
+        
+        /// <remarks/>
+        LWD,
+        
+        /// <remarks/>
+        Mixed,
+        
+        /// <remarks/>
+        MWD,
+        
+        /// <remarks/>
+        Surface,
+        
+        /// <remarks/>
+        Wireline,
+        
+        /// <remarks/>
+        Distributed,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
@@ -54754,6 +55092,40 @@ namespace Energistics.Generator.WITSML200 {
         private obj_Channel[] channelField;
         
         private ChannelData dataField;
+        
+        private ChannelState channelStateField;
+        
+        private bool channelStateFieldSpecified;
+        
+        private string timeDepthField;
+        
+        private string curveClassField;
+        
+        private string runNumberField;
+        
+        private string passNumberField;
+        
+        private AbstractIndexValue startIndexField;
+        
+        private AbstractIndexValue endIndexField;
+        
+        private string loggingCompanyNameField;
+        
+        private string loggingCompanyCodeField;
+        
+        private string toolNameField;
+        
+        private string toolClassField;
+        
+        private ChannelDerivation derivationField;
+        
+        private bool derivationFieldSpecified;
+        
+        private LoggingMethod loggingMethodField;
+        
+        private bool loggingMethodFieldSpecified;
+        
+        private LengthMeasureExt nominalHoleSizeField;
         
         private AbstractLogDataContext dataContextField;
         
@@ -54788,6 +55160,221 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.dataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ChannelState ChannelState {
+            get {
+                return this.channelStateField;
+            }
+            set {
+                this.channelStateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ChannelStateSpecified {
+            get {
+                return this.channelStateFieldSpecified;
+            }
+            set {
+                this.channelStateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this a time or depth log?</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
+        public string TimeDepth {
+            get {
+                return this.timeDepthField;
+            }
+            set {
+                this.timeDepthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
+            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
+            " enumeration before WITSML is released.")]
+        public string CurveClass {
+            get {
+                return this.curveClassField;
+            }
+            set {
+                this.curveClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
+            "ttribute but it is so commonly used that it must be included.   The value here s" +
+            "hould match a bit run number for LWD data and a wireline run number for logging " +
+            "data.")]
+        public string RunNumber {
+            get {
+                return this.runNumberField;
+            }
+            set {
+                this.runNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
+            "attribute but it is so commonly used that it must be included.   The value here " +
+            "should match a wireline pass number for logging data.")]
+        public string PassNumber {
+            get {
+                return this.passNumberField;
+            }
+            set {
+                this.passNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AbstractIndexValue StartIndex {
+            get {
+                return this.startIndexField;
+            }
+            set {
+                this.startIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AbstractIndexValue EndIndex {
+            get {
+                return this.endIndexField;
+            }
+            set {
+                this.endIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging company.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
+        public string LoggingCompanyName {
+            get {
+                return this.loggingCompanyNameField;
+            }
+            set {
+                this.loggingCompanyNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
+            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
+            "es")]
+        public string LoggingCompanyCode {
+            get {
+                return this.loggingCompanyCodeField;
+            }
+            set {
+                this.loggingCompanyCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
+        public string ToolName {
+            get {
+                return this.toolNameField;
+            }
+            set {
+                this.toolNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
+            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
+            "ion before WITSML is released")]
+        public string ToolClass {
+            get {
+                return this.toolClassField;
+            }
+            set {
+                this.toolClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
+        public ChannelDerivation Derivation {
+            get {
+                return this.derivationField;
+            }
+            set {
+                this.derivationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DerivationSpecified {
+            get {
+                return this.derivationFieldSpecified;
+            }
+            set {
+                this.derivationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LoggingMethod LoggingMethod {
+            get {
+                return this.loggingMethodField;
+            }
+            set {
+                this.loggingMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LoggingMethodSpecified {
+            get {
+                return this.loggingMethodFieldSpecified;
+            }
+            set {
+                this.loggingMethodFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return this.nominalHoleSizeField;
+            }
+            set {
+                this.nominalHoleSizeField = value;
             }
         }
         
@@ -54839,7 +55426,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private AbstractIndexValue startIndexField;
         
-        private string endIndexField;
+        private AbstractIndexValue endIndexField;
         
         private string loggingCompanyNameField;
         
@@ -55042,7 +55629,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public string EndIndex {
+        public AbstractIndexValue EndIndex {
             get {
                 return this.endIndexField;
             }
@@ -55223,79 +55810,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         inactive,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ChannelState {
-        
-        /// <remarks/>
-        calculated,
-        
-        /// <remarks/>
-        final,
-        
-        /// <remarks/>
-        memory,
-        
-        /// <remarks/>
-        processed,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("real time")]
-        realtime,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ChannelDerivation {
-        
-        /// <remarks/>
-        raw,
-        
-        /// <remarks/>
-        simulated,
-        
-        /// <remarks/>
-        spliced,
-        
-        /// <remarks/>
-        sampled,
-        
-        /// <remarks/>
-        model,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum LoggingMethod {
-        
-        /// <remarks/>
-        Computed,
-        
-        /// <remarks/>
-        LWD,
-        
-        /// <remarks/>
-        Mixed,
-        
-        /// <remarks/>
-        MWD,
-        
-        /// <remarks/>
-        Surface,
-        
-        /// <remarks/>
-        Wireline,
-        
-        /// <remarks/>
-        Distributed,
     }
     
     /// <remarks/>
@@ -57216,9 +57730,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private byte[] contentField;
         
-        private string subObjectReferenceField;
+        private DataObjectReference objectReferenceField;
         
-        private AbstractObject objectReferenceField;
+        private string subObjectReferenceField;
         
         private DataObjectReference referenceWellboreField;
         
@@ -57319,8 +57833,20 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>A reference to an object that is defined within the context of the specified wellbore.</summary>
+        [System.ComponentModel.DescriptionAttribute("A reference to an object that is defined within the context of the specified well" +
+            "bore.")]
+        public DataObjectReference ObjectReference {
+            get {
+                return this.objectReferenceField;
+            }
+            set {
+                this.objectReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
         /// <summary>A reference to an sub-object that is defined within the context of the object referenced by objectReference. This should only refer to recurring components of a growing object. The content is the Uid of the sub object.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to an sub-object that is defined within the context of the object ref" +
             "erenced by objectReference. This should only refer to recurring components of a " +
@@ -57331,16 +57857,6 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.subObjectReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractObject ObjectReference {
-            get {
-                return this.objectReferenceField;
-            }
-            set {
-                this.objectReferenceField = value;
             }
         }
         
