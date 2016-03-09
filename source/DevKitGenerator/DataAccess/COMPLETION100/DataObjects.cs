@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.COMPLETION100.ComponentSchemas;
 using Energistics.DataAccess.COMPLETION100.ReferenceData;
+using Energistics.DataAccess.Validation;
 
 namespace Energistics.DataAccess.COMPLETION100
 {
@@ -314,7 +315,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// statusHistory property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("statusHistory")]
         public List<CompletionStatusHistory> StatusHistory {
             get {
@@ -332,6 +333,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -543,6 +545,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured bottom of perforation
         /// </summary>
 		[Description("The measured bottom of perforation")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -560,6 +563,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured top of perforation
         /// </summary>
 		[Description("The measured top of perforation")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -4177,6 +4181,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The local time zone of the original acquisition date-time values. It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.
         /// </summary>
 		[Description("The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.")]
+		[RecurringElement]
 		[XmlElement("acquisitionTimeZone")]
         public List<TimestampedTimeZone> AcquisitionTimeZone {
             get {
@@ -4194,6 +4199,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object. Depth coordinates that do not specify a datum attribute shall be assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.
         /// </summary>
 		[Description("A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object.  Depth coordinates that do not specify a datum attribute shall be  assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.")]
+		[ComponentElement]
 		[XmlElement("defaultDatum")]
         public RefNameString DefaultDatum {
             get {
@@ -4263,6 +4269,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -4520,7 +4527,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Any property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("Any")]
         public List<XmlElement> Any {
             get {
@@ -4594,6 +4601,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("The value of the extension.  This may also include a uom attribute.  The content should conform to constraints defined by the data type.")]
+		[ComponentElement]
 		[XmlElement("value")]
         public Extensionvalue Value {
             get {
@@ -4664,6 +4672,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured depth associated with the value.
         /// </summary>
 		[Description("The measured depth associated with the value.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -4917,7 +4926,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Any property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("Any")]
         public List<XmlElement> Any {
             get {
@@ -5251,6 +5260,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("A reference to an object that is defined within the  context of the specified wellbore.")]
+		[ComponentElement]
 		[XmlElement("objectReference")]
         public RefObjectString ObjectReference {
             get {
@@ -5304,6 +5314,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("sequence1")]
         public ObjectSequence Sequence1 {
             get {
@@ -5320,7 +5331,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Defines secondary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType. A value for sequence2 can only be given if a value is given for sequence1.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("sequence2")]
         public ObjectSequence Sequence2 {
             get {
@@ -5337,7 +5348,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Defines tertiary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType. A value for sequence3 can only be given if a value is given for sequence2.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("sequence3")]
         public ObjectSequence Sequence3 {
             get {
@@ -5355,6 +5366,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
 		[Description("The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("rangeMin")]
         public GenericMeasure RangeMin {
             get {
@@ -5372,6 +5384,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
 		[Description("The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("rangeMax")]
         public GenericMeasure RangeMax {
             get {
@@ -5476,6 +5489,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A measured depth related to this group. This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.
         /// </summary>
 		[Description("A measured depth related to this group.  This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("referenceDepth")]
         public MeasuredDepthCoord ReferenceDepth {
             get {
@@ -5528,6 +5542,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Any extra parameter data related to the group. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
 		[Description("Any extra parameter data related to the group.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
+		[RecurringElement]
 		[XmlElement("param")]
         public List<IndexedObject> Param {
             get {
@@ -5545,6 +5560,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -5710,6 +5726,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of involved participants.
         /// </summary>
 		[Description("A collection of involved participants.")]
+		[RecurringElement]
 		[XmlElement("participant")]
         public List<MemberObject> Participants {
             get {
@@ -5727,6 +5744,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extNameValues")]
         public List<ExtensionNameValue> ExtNameValues {
             get {
@@ -5973,6 +5991,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -6247,6 +6266,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Cost per cost item, assume same currency.
         /// </summary>
 		[Description("Cost per cost item, assume same currency.")]
+		[ComponentElement]
 		[XmlElement("costPerItem")]
         public Cost CostPerItem {
             get {
@@ -6352,6 +6372,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("Cost for the item for this record.")]
+		[ComponentElement]
 		[XmlElement("costAmount")]
         public Cost CostAmount {
             get {
@@ -6490,6 +6511,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -6611,6 +6633,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -6716,7 +6739,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -6804,7 +6827,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -6893,7 +6916,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Perf-Bottom of packer set depth 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("bottomPackerSet")]
         public MeasuredDepthCoord BottomPackerSet {
             get {
@@ -6927,7 +6950,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// hydrostaticPressure
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("hydrostaticPressure")]
         public PressureMeasure HydrostaticPressure {
             get {
@@ -6944,7 +6967,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Surface pressure
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("surfacePressure")]
         public PressureMeasure SurfacePressure {
             get {
@@ -6961,7 +6984,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Reservoir pressure
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("reservoirPressure")]
         public PressureMeasure ReservoirPressure {
             get {
@@ -6978,7 +7001,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The density of fluid
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("fluidDensity")]
         public DensityMeasure FluidDensity {
             get {
@@ -6995,7 +7018,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Fluid level.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("fluidLevel")]
         public MeasuredDepthCoord FluidLevel {
             get {
@@ -7082,7 +7105,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Number of shots per unit length (ft, m)
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("shotsDensity")]
         public PerLengthMeasure ShotsDensity {
             get {
@@ -7202,7 +7225,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Size of the carrier.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("carrierSize")]
         public LengthMeasure CarrierSize {
             get {
@@ -7253,7 +7276,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The size of the charge.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("chargeSize")]
         public LengthMeasure ChargeSize {
             get {
@@ -7270,7 +7293,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The weight of the charge.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("chargeWeight")]
         public MassMeasure ChargeWeight {
             get {
@@ -7338,7 +7361,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The size of the perforation gun.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gunSize")]
         public LengthMeasure GunSize {
             get {
@@ -7407,7 +7430,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -7478,7 +7501,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Information on perforating event.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("perforating")]
         public List<Perforating> Perforating {
             get {
@@ -7652,7 +7675,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -7706,7 +7729,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Orifice Size
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("diaOrificeSize")]
         public LengthMeasure DiaOrificeSize {
             get {
@@ -7758,7 +7781,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Rate Bled
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("flowrateRateBled")]
         public VolumeFlowRateMeasure FlowrateRateBled {
             get {
@@ -7827,7 +7850,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Maximum pressure held during test
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("maxPressureDuration")]
         public PressureMeasure MaxPressureDuration {
             get {
@@ -7946,7 +7969,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Annulus pressure
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("annulusPressure")]
         public PressureMeasure AnnulusPressure {
             get {
@@ -8014,7 +8037,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Volume Bled
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("volumeBled")]
         public VolumeMeasure VolumeBled {
             get {
@@ -8031,7 +8054,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Volume Lost
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("volumeLost")]
         public VolumeMeasure VolumeLost {
             get {
@@ -8048,7 +8071,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Volume Pumped
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("volumePumped")]
         public VolumeMeasure VolumePumped {
             get {
@@ -8082,7 +8105,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -8204,7 +8227,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -8275,7 +8298,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -8380,7 +8403,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -8434,7 +8457,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Volume lost
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("volumeLost")]
         public VolumeMeasure VolumeLost {
             get {
@@ -8468,7 +8491,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -8556,7 +8579,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -8627,7 +8650,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// the size of the tool 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("toolSize")]
         public LengthMeasure ToolSize {
             get {
@@ -8661,7 +8684,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -8732,7 +8755,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -9225,7 +9248,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
             get {
@@ -9297,7 +9320,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
             get {
@@ -9369,7 +9392,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
             get {
@@ -9386,7 +9409,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// boreholeStringRef property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("boreholeStringRef")]
         public List<BoreholeStringRef> BoreholeStringRef {
             get {
@@ -9403,7 +9426,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// downholeStringsRef property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("downholeStringsRef")]
         public List<DownholeStringRef> DownholeStringsRef {
             get {
@@ -9420,7 +9443,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// perforationSetRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("perforationSetRefID")]
         public List<String> PerforationSetRefID {
             get {
@@ -9722,6 +9745,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The activity duration (commonly in hours).
         /// </summary>
 		[Description("The activity duration (commonly in hours).")]
+		[ComponentElement]
 		[XmlElement("duration")]
         public TimeMeasure Duration {
             get {
@@ -9739,6 +9763,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Measured depth at Top of Interval.
         /// </summary>
 		[Description("Measured depth at Top of Interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -9756,6 +9781,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Measured depth at bottom of the section.
         /// </summary>
 		[Description("Measured depth at bottom of the section.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -9808,6 +9834,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Rig reference id.
         /// </summary>
 		[Description("Rig reference id.")]
+		[RecurringElement]
 		[XmlElement("rigID")]
         public List<String> RigID {
             get {
@@ -9860,6 +9887,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Comment on type of this event, either referring to a job type or an activity type e.g. a safety meeting. 
         /// </summary>
 		[Description("Comment on type of this event, either referring to a job type or an  activity type e.g. a safety meeting.")]
+		[ComponentElement]
 		[XmlElement("type")]
         public EventType Type {
             get {
@@ -9929,6 +9957,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using downholeComponentExtension.
         /// </summary>
 		[Description("this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using downholeComponentExtension.")]
+		[ComponentElement]
 		[XmlElement("downholeComponentRef")]
         public DownholeComponentRef DownholeComponentRef {
             get {
@@ -9946,6 +9975,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Event extensions
         /// </summary>
 		[Description("Event extensions")]
+		[RecurringElement]
 		[XmlElement("eventExtension")]
         public List<EventExtension> EventExtension {
             get {
@@ -10014,6 +10044,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The job or event cost detail.
         /// </summary>
 		[Description("The job or event cost detail.")]
+		[RecurringElement]
 		[XmlElement("cost")]
         public List<DayCost> Cost {
             get {
@@ -10188,6 +10219,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Participant points to the involved witsmlobjects
         /// </summary>
 		[Description("Participant points to the involved witsmlobjects")]
+		[ComponentElement]
 		[XmlElement("participant")]
         public Participant Participants {
             get {
@@ -10222,6 +10254,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10239,6 +10272,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -10397,6 +10431,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -10414,6 +10449,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -10431,6 +10467,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -10448,6 +10485,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -10465,6 +10503,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// intervalStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
+		[RecurringElement]
 		[XmlElement("intervalStatusHistory")]
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
@@ -10482,6 +10521,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
+		[ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -10498,7 +10538,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
             get {
@@ -10516,6 +10556,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10693,6 +10734,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured top depth of the interval
         /// </summary>
 		[Description("The measured top depth of the interval")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -10710,6 +10752,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured bottom depth of the interval
         /// </summary>
 		[Description("The measured bottom depth of the interval")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -10869,6 +10912,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11117,6 +11161,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured top of perforation
         /// </summary>
 		[Description("The measured top of perforation")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11134,6 +11179,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured bottom of perforation
         /// </summary>
 		[Description("The measured bottom of perforation")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11276,6 +11322,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11293,6 +11340,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11310,6 +11358,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -11327,6 +11376,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -11344,6 +11394,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// perforationStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
+		[RecurringElement]
 		[XmlElement("perforationStatusHistory")]
         public List<PerforationStatusHistory> PerforationStatusHistory {
             get {
@@ -11361,6 +11412,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
+		[ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -11377,7 +11429,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
             get {
@@ -11395,6 +11447,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11484,6 +11537,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11501,6 +11555,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11518,6 +11573,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -11535,6 +11591,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -11552,6 +11609,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// intervalStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
+		[RecurringElement]
 		[XmlElement("intervalStatusHistory")]
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
@@ -11569,6 +11627,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
+		[ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -11585,7 +11644,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
             get {
@@ -11603,6 +11662,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11692,6 +11752,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11709,6 +11770,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11726,6 +11788,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -11743,6 +11806,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -11760,6 +11824,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// intervalStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
+		[RecurringElement]
 		[XmlElement("intervalStatusHistory")]
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
@@ -11777,6 +11842,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
+		[ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -11793,7 +11859,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
             get {
@@ -11811,6 +11877,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11883,6 +11950,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// gravelPack interval 
         /// </summary>
 		[Description("gravelPack interval")]
+		[RecurringElement]
 		[XmlElement("gravelPackInterval")]
         public List<GravelPackInterval> GravelPackInterval {
             get {
@@ -11900,6 +11968,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// cs_openHole interval 
         /// </summary>
 		[Description("cs_openHole interval")]
+		[RecurringElement]
 		[XmlElement("openHoleInterval")]
         public List<OpenHoleInterval> OpenHoleInterval {
             get {
@@ -11917,6 +11986,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// perforation interval 
         /// </summary>
 		[Description("perforation interval")]
+		[RecurringElement]
 		[XmlElement("perforationSetInterval")]
         public List<PerforationSetInterval> PerforationSetInterval {
             get {
@@ -11934,6 +12004,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// cs_slots interval 
         /// </summary>
 		[Description("cs_slots interval")]
+		[RecurringElement]
 		[XmlElement("slotsInterval")]
         public List<SlotsInterval> SlotsInterval {
             get {
@@ -12090,7 +12161,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// evenHistory property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("evenHistory")]
         public List<EventInfo> EvenHistory {
             get {
@@ -12160,6 +12231,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth at top of interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -12177,6 +12249,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth at base of interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -12194,6 +12267,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth at top of the section.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -12211,6 +12285,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth at bottom of the section.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -12297,7 +12372,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// statusHistory property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("statusHistory")]
         public List<CompletionStatusHistory> StatusHistory {
             get {
@@ -12315,6 +12390,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// contactIntervalSet property
         /// </summary>
 		[Description("A collection of contact interval information")]
+		[ComponentElement]
 		[XmlElement("contactIntervalSet")]
         public ContactIntervalSet ContactIntervalSet {
             get {
@@ -12332,6 +12408,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -12473,7 +12550,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// perforation on borehole String
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("boreholeStringRefID")]
         public List<String> BoreholeStringRefID {
             get {
@@ -12490,7 +12567,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// perforation on downholeStringRefID
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("downholeStringRefID")]
         public List<String> DownholeStringRefID {
             get {
@@ -12507,7 +12584,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The contactInterval event information
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -12524,7 +12601,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The measured top depth of the hole
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -12541,7 +12618,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The measured bottom of the hole
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -12558,7 +12635,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth of the top perforation.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -12575,7 +12652,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth of the bottom perforation.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -12592,7 +12669,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The diameter of the hole
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("holeDiameter")]
         public LengthMeasure HoleDiameter {
             get {
@@ -12609,7 +12686,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The angle of the holes
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("holeAngle")]
         public PlaneAngleMeasure HoleAngle {
             get {
@@ -12643,7 +12720,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The density of the holes
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("holeDensity")]
         public PerLengthMeasure HoleDensity {
             get {
@@ -12730,7 +12807,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The friction pressure for the perforation set.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("frictionPres")]
         public PressureMeasure FrictionPres {
             get {
@@ -12817,7 +12894,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The Penetration length of perforation.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("perforationPenetration")]
         public LengthMeasure PerforationPenetration {
             get {
@@ -12834,7 +12911,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The diameter of crushed zone
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("crushZoneDiameter")]
         public LengthMeasure CrushZoneDiameter {
             get {
@@ -12975,7 +13052,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The measured top depth of the hole
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -12992,7 +13069,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The measured bottom of the hole
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -13009,7 +13086,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth of the top perforation.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -13026,7 +13103,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth of the bottom perforation.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -13043,7 +13120,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The diameter of the hole
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("holeDiameter")]
         public LengthMeasure HoleDiameter {
             get {
@@ -13060,7 +13137,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The angle of the holes
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("holeAngle")]
         public PlaneAngleMeasure HoleAngle {
             get {
@@ -13094,7 +13171,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The density of the holes
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("holeDensity")]
         public PerLengthMeasure HoleDensity {
             get {
@@ -13163,7 +13240,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -13217,7 +13294,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The height of slot
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("slotHeight")]
         public LengthMeasure SlotHeight {
             get {
@@ -13234,7 +13311,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The width of the slot
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("slotWidth")]
         public LengthMeasure SlotWidth {
             get {
@@ -13251,7 +13328,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Distance from center point
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("slotCenterDistance")]
         public LengthMeasure SlotCenterDistance {
             get {
@@ -13320,7 +13397,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -13391,7 +13468,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         ///  A value string representing the units of measure of the value.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("value")]
         public Extensionvalue Value {
             get {
@@ -13736,7 +13813,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// unitWeight property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("unitWeight")]
         public MassPerLengthMeasure UnitWeight {
             get {
@@ -13858,7 +13935,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// unitLength property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("unitLength")]
         public LengthMeasure UnitLength {
             get {
@@ -13875,7 +13952,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// majorOD property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("majorOD")]
         public LengthMeasure MajorOD {
             get {
@@ -13892,7 +13969,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// minorOD property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("minorOD")]
         public LengthMeasure MinorOD {
             get {
@@ -13909,7 +13986,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// OD property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("OD")]
         public LengthMeasure OD {
             get {
@@ -13926,7 +14003,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// MaxOD property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("MaxOD")]
         public LengthMeasure MaxOD {
             get {
@@ -13943,7 +14020,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// MinOD property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("MinOD")]
         public LengthMeasure MinOD {
             get {
@@ -13960,7 +14037,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// majorID property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("majorID")]
         public LengthMeasure MajorID {
             get {
@@ -13977,7 +14054,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// minorID property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("minorID")]
         public LengthMeasure MinorID {
             get {
@@ -13994,7 +14071,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// ID property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ID")]
         public LengthMeasure ID {
             get {
@@ -14011,7 +14088,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// MaxID property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("MaxID")]
         public LengthMeasure MaxID {
             get {
@@ -14028,7 +14105,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// MinID property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("MinID")]
         public LengthMeasure MinID {
             get {
@@ -14045,7 +14122,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// drift property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("drift")]
         public LengthMeasure Drift {
             get {
@@ -14062,7 +14139,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// nominalSize property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("nominalSize")]
         public LengthMeasure NominalSize {
             get {
@@ -14147,7 +14224,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Property description
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("property")]
         public List<ExtPropNameValue> Property {
             get {
@@ -14164,7 +14241,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Describes the slot in equipment.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("slotAsManufactured")]
         public List<PerfSlot> SlotAsManufactured {
             get {
@@ -14181,7 +14258,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Describes the hole in equipment.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("holeAsManufactured")]
         public List<PerfHole> HoleAsManufactured {
             get {
@@ -14215,7 +14292,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -14339,7 +14416,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Measured depth at top of interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -14356,7 +14433,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Measured depth at base of interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -14373,7 +14450,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at top of the section.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -14390,7 +14467,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at bottom of the section.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -14407,7 +14484,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at base of interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdBase")]
         public WellVerticalDepthCoord TvdBase {
             get {
@@ -14424,7 +14501,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -14548,7 +14625,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Event reference pointing to the eventledger.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("equipmentEventHistory")]
         public EventInfo EquipmentEventHistory {
             get {
@@ -14565,7 +14642,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Measured depth at Top of Interval
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -14582,7 +14659,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Measured depth at bottom of the section
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -14599,7 +14676,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at top of the section
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -14616,7 +14693,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at bottom of the section
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -14633,7 +14710,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Borehole diameter
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("diaBorehole")]
         public LengthMeasure DiaBorehole {
             get {
@@ -14667,7 +14744,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -14773,7 +14850,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         ///  The collection of boreholes 
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("borehole")]
         public List<Borehole> Borehole {
             get {
@@ -14790,7 +14867,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Geology feature information 
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("geologyFeature")]
         public List<GeologyFeature> GeologyFeature {
             get {
@@ -14807,7 +14884,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         ///  The borehole accessories. 
         /// </summary>
-		
+		[RecurringElement]
 		[XmlArrayItem("accessory")]
         [XmlArray("accessories")]
         public List<StringEquipment> Accessories {
@@ -14950,7 +15027,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// History of event tied to this equipment
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("equipmentEventHistory")]
         public List<EventInfo> EquipmentEventHistory {
             get {
@@ -14967,7 +15044,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Defines a sequence number and with an optional description attribute
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("orderOfObject")]
         public ObjectSequence OrderOfObject {
             get {
@@ -15018,7 +15095,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The days that the equipment has run.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("previousRunDays")]
         public TimeMeasure PreviousRunDays {
             get {
@@ -15104,7 +15181,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The total length of the equipment. This is NOT length per unit. This is the length of unit stored at equipmentset's equipment information section. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("length")]
         public LengthMeasure Length {
             get {
@@ -15121,7 +15198,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Measured depth at top of interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -15138,7 +15215,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Measured depth at base of interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -15155,7 +15232,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at top of the section.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -15172,7 +15249,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at bottom of the section.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -15189,7 +15266,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// True vertical depth at base of interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tvdBase")]
         public WellVerticalDepthCoord TvdBase {
             get {
@@ -15241,7 +15318,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The list of components contained in the equipment
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("insideComponent")]
         public List<RefContainer> InsideComponent {
             get {
@@ -15258,7 +15335,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The list of components outside of this piece of equipment
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("outsideComponent")]
         public List<RefContainer> OutsideComponent {
             get {
@@ -15275,7 +15352,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Max Tensile Strength 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tensileMax")]
         public ForceMeasure TensileMax {
             get {
@@ -15292,7 +15369,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Pressure Rating
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("presRating")]
         public PressureMeasure PresRating {
             get {
@@ -15309,7 +15386,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Collapse Pressure 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("presCollapse")]
         public PressureMeasure PresCollapse {
             get {
@@ -15326,7 +15403,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Burst Pressure 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("presBurst")]
         public PressureMeasure PresBurst {
             get {
@@ -15343,7 +15420,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// heat rating 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("heatRating")]
         public ThermodynamicTemperatureMeasure HeatRating {
             get {
@@ -15465,7 +15542,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         ///  Describes the next component connected. 
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("connectionNext")]
         public List<EquipmentConnection> ConnectionNext {
             get {
@@ -15482,7 +15559,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         ///  Describes the assembly connected. 
         /// </summary>
-		
+		[RecurringElement]
 		[XmlArrayItem("part")]
         [XmlArray("assembly")]
         public List<StringEquipment> Assembly {
@@ -15500,7 +15577,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// reference the perforated hole in equipment after perforation event.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("perforationSetRefID")]
         public List<String> PerforationSetRefID {
             get {
@@ -15551,7 +15628,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -15568,7 +15645,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -15780,7 +15857,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// measurement of radial offset 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("radialOffset")]
         public LengthMeasure RadialOffset {
             get {
@@ -15971,7 +16048,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Internal diameter of object. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("id")]
         public LengthMeasure InnerDiameter {
             get {
@@ -15988,7 +16065,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Outside diameter of the body of the item. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("od")]
         public LengthMeasure OuterDiameter {
             get {
@@ -16005,7 +16082,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Length of the item. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("len")]
         public LengthMeasure Len {
             get {
@@ -16039,7 +16116,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Thread size. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("sizeThread")]
         public LengthMeasure SizeThread {
             get {
@@ -16056,7 +16133,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Yield stress of steel - worn stress. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tensYield")]
         public PressureMeasure TensYield {
             get {
@@ -16073,7 +16150,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Torque at which yield occurs.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tqYield")]
         public MomentOfForceMeasure TorqueYield {
             get {
@@ -16125,7 +16202,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// For bending stiffness ratio. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("criticalCrossSection")]
         public AreaMeasure CriticalCrossSection {
             get {
@@ -16142,7 +16219,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Leak pressure rating. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("presLeak")]
         public PressureMeasure PresLeak {
             get {
@@ -16159,7 +16236,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Make up torque. 
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("tqMakeup")]
         public MomentOfForceMeasure TorqueMakeup {
             get {
@@ -16210,7 +16287,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -16405,6 +16482,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth at Top of Interval")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -16422,6 +16500,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth at bottom of the section")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -16439,6 +16518,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// axisOffset property
         /// </summary>
 		[Description("the distance from the sibling string.")]
+		[ComponentElement]
 		[XmlElement("axisOffset")]
         public LengthMeasure AxisOffset {
             get {
@@ -16456,6 +16536,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// stringEquipmentSet property
         /// </summary>
 		[Description("the list of equipment in the string. each equipment is liner connected and carry the rest of weight")]
+		[RecurringElement]
 		[XmlArrayItem("stringEquipment")]
         [XmlArray("stringEquipmentSet")]
         public List<StringEquipment> StringEquipmentSet {
@@ -16474,6 +16555,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// accessories property
         /// </summary>
 		[Description("the accessories equipment of the string. It locates in the downhole string, but it is not equipment which liner connected in string (from top to down), and it is not carraying the weight of string")]
+		[RecurringElement]
 		[XmlArrayItem("accessory")]
         [XmlArray("accessories")]
         public List<StringEquipment> Accessories {
@@ -16509,6 +16591,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -16721,6 +16804,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// This section contains wellhead information, and is composed of string equipment
         /// </summary>
 		[Description("This section contains wellhead information, and is composed of string equipment")]
+		[ComponentElement]
 		[XmlElement("wellHead")]
         public DownholeString WellHead {
             get {
@@ -16738,6 +16822,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// This section contains bore hole string information including flow interval 
         /// </summary>
 		[Description("This section contains bore hole string information including flow interval")]
+		[RecurringElement]
 		[XmlArrayItem("boreholeString")]
         [XmlArray("boreholeStringSet")]
         public List<BoreholeString> BoreholeStringSet {
@@ -16756,6 +16841,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The linear downhole string equipment
         /// </summary>
 		[Description("The linear downhole string equipment")]
+		[RecurringElement]
 		[XmlArrayItem("downholeString")]
         [XmlArray("downholeStringSet")]
         public List<DownholeString> DownholeStringSet {
@@ -16774,6 +16860,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of equipment / component
         /// </summary>
 		[Description("A collection of equipment / component")]
+		[RecurringElement]
 		[XmlArrayItem("equipment")]
         [XmlArray("equipmentSet")]
         public List<Equipment> EquipmentSet {
@@ -16792,6 +16879,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of contact interval information
         /// </summary>
 		[Description("A collection of contact interval information")]
+		[RecurringElement]
 		[XmlArrayItem("perforationSet")]
         [XmlArray("perforationSets")]
         public List<PerforationSet> PerforationSets {
@@ -16810,6 +16898,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -16983,7 +17072,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -17142,6 +17231,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -17414,6 +17504,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("An identifier for the document. This is  intended to be unique within the context of the NamingSystem.")]
+		[ComponentElement]
 		[XmlElement("documentName")]
         public NameStruct DocumentName {
             get {
@@ -17431,6 +17522,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
         /// </summary>
 		[Description("Zero or more alternate names for the document.  These names do not need to be unique within the naming system.")]
+		[RecurringElement]
 		[XmlElement("documentAlias")]
         public List<NameStruct> DocumentAlias {
             get {
@@ -17483,6 +17575,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
         /// </summary>
 		[Description("A document class. Examples of classes would be a  metadata classification or a set of keywords.")]
+		[RecurringElement]
 		[XmlElement("documentClass")]
         public List<NameStruct> DocumentClass {
             get {
@@ -17517,6 +17610,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the security to be applied to this file. More than one classification can be given.
         /// </summary>
 		[Description("Information about the security to be applied to  this file. More than one classification can be given.")]
+		[RecurringElement]
 		[XmlElement("securityInformation")]
         public List<DocumentSecurityInfo> SecurityInformation {
             get {
@@ -17551,6 +17645,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of events that can document the history of the data.
         /// </summary>
 		[Description("A collection of events that can document the  history of the data.")]
+		[RecurringElement]
 		[XmlArrayItem("event")]
         [XmlArray("auditTrail")]
         public List<DocumentEvent> AuditTrail {
@@ -17639,6 +17734,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the well completion.
         /// </summary>
 		[Description("Information about the well completion.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -17719,6 +17815,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the event ledger instance.
         /// </summary>
 		[Description("Information about the event ledger instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -17799,6 +17896,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the downhole component.
         /// </summary>
 		[Description("Information about the downhole component.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -17879,6 +17977,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the downhole component.
         /// </summary>
 		[Description("Information about the downhole component.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {

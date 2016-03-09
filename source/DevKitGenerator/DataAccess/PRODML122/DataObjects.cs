@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.PRODML122.ComponentSchemas;
 using Energistics.DataAccess.PRODML122.ReferenceData;
+using Energistics.DataAccess.Validation;
 
 namespace Energistics.DataAccess.PRODML122
 {
@@ -82,6 +83,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Reference to the Sample that was collected at this point.
         /// </summary>
 		[Description("Reference to the Sample that was collected at this point.")]
+		[ComponentElement]
 		[XmlElement("sampleRef")]
         public RefNameString SampleRef {
             get {
@@ -339,6 +341,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The pressure that was used to charge the sample bottle.
         /// </summary>
 		[Description("The pressure that was used to charge the sample bottle.")]
+		[ComponentElement]
 		[XmlElement("cushionPressure")]
         public GeneralMeasureType CushionPressure {
             get {
@@ -373,6 +376,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A result of formation tester analysis that applies to this acquisition.
         /// </summary>
 		[Description("A result of formation tester analysis that applies to this acquisition.")]
+		[RecurringElement]
 		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
@@ -390,6 +394,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A refererence to a test (uid) under the current station.
         /// </summary>
 		[Description("A refererence to a test (uid) under the current station.")]
+		[RecurringElement]
 		[XmlElement("testRef")]
         public List<RefNameString> TestRef {
             get {
@@ -407,6 +412,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to the associated data acquired during this acquisition.
         /// </summary>
 		[Description("A reference to the associated data acquired during this acquisition.")]
+		[RecurringElement]
 		[XmlElement("testData")]
         public List<WftTestData> TestData {
             get {
@@ -424,6 +430,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -3384,6 +3391,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The top of the interval to which this result applies.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -3402,6 +3410,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The bottom of the interval to which this result applies.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -3419,6 +3428,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to the formation tester data used to derive this result.
         /// </summary>
 		[Description("A reference to the formation tester data used to derive this result.")]
+		[RecurringElement]
 		[XmlElement("testData")]
         public List<WftTestData> TestData {
             get {
@@ -3436,6 +3446,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An input parameter to the analysis method.
         /// </summary>
 		[Description("An input parameter to the analysis method.")]
+		[RecurringElement]
 		[XmlElement("inputParameter")]
         public List<WftInOutParameter> InputParameter {
             get {
@@ -3453,6 +3464,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An output (result) parameter from the analysis of the test. The aggregate of parameters might represent something like the simulated response of the test, to compare with actual.
         /// </summary>
 		[Description("An output (result) parameter from the analysis of the test. The aggregate of parameters might represent something like the simulated response  of the test, to compare with actual.")]
+		[RecurringElement]
 		[XmlElement("outputParameter")]
         public List<WftInOutParameter> OutputParameter {
             get {
@@ -3470,6 +3482,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to an outputParameter of another result which was used as an input to this result. For a test result, the other result will be in the same test (i.e., ../result). For a station result, the other result will be in the same station (i.e., ../result) or will be a test result in the same station (../test/result) or will be an sampleAcquisition in the same station (i.e., ../sampleAcquisition/result). For a wftRun result, the other result will be in the same wftRun (i.e., ../result) or will be a result in a station (i.e., ../station/result) or will be a result in a station's test (i.e., ../station/test/result) or will be a result in a station's sampleAcquisition (i.e., ../station/sampleAcquisition/result). The "../result" notation means: starting in the parent node, traverse down to the appropriate child result using the provided pointers.
         /// </summary>
 		[Description("A reference to an outputParameter of another result which was used as an input to this result. For a test result, the other result will be in the same test (i.e., ../result). For a station result, the other result will be in the same station (i.e., ../result) or  will be a test result in the same station (../test/result) or  will be an sampleAcquisition in the same station (i.e., ../sampleAcquisition/result). For a wftRun result, the other result will be in the same wftRun (i.e., ../result) or will be a result in a station (i.e., ../station/result) or will be a result in a station's test (i.e., ../station/test/result) or  will be a result in a station's sampleAcquisition (i.e., ../station/sampleAcquisition/result). The \"../result\" notation means: starting in the parent node, traverse down to the  appropriate child result using the provided pointers.")]
+		[RecurringElement]
 		[XmlElement("inputResultRef")]
         public List<WftResultRef> InputResultRef {
             get {
@@ -3487,6 +3500,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -3577,6 +3591,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to a specific interval of a specific curve in a specific log.
         /// </summary>
 		[Description("A reference to a specific interval of a specific curve in a specific log.")]
+		[RecurringElement]
 		[XmlElement("curveSection")]
         public List<WftCurveSection> CurveSection {
             get {
@@ -3594,6 +3609,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Test parameters used here are either control parameters used to govern the test or are single value parameters measured by the test (and not by subsequent analysis).
         /// </summary>
 		[Description("Test parameters used here are either control parameters used to govern  the test or are single value parameters measured by the test (and not by subsequent analysis).")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<WftInOutParameter> Parameter {
             get {
@@ -3611,6 +3627,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -3684,6 +3701,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to a specific log or wellLog that contains the curve.")]
+		[ComponentElement]
 		[XmlElement("logRef")]
         public RefObjectString LogRef {
             get {
@@ -3789,6 +3807,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -3991,6 +4010,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The value of the extension.  This may also include a uom attribute.  The content should conform to constraints defined by the data type.")]
+		[ComponentElement]
 		[XmlElement("value")]
         public Extensionvalue Value {
             get {
@@ -4061,6 +4081,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The measured depth associated with the value.
         /// </summary>
 		[Description("The measured depth associated with the value.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -4334,6 +4355,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The value of the parameter.  If the value represents a measure, then the uom attribute  and the corresponding measureClass must be specified.")]
+		[ComponentElement]
 		[XmlElement("value")]
         public MeasureOrQuantity Value {
             get {
@@ -4386,6 +4408,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -4458,6 +4481,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the station node containing the specified nodes.
         /// </summary>
 		[Description("A pointer to the station node containing the specified nodes.")]
+		[ComponentElement]
 		[XmlElement("stationRef")]
         public RefNameString StationRef {
             get {
@@ -4475,6 +4499,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the test node containing the specified nodes.
         /// </summary>
 		[Description("A pointer to the test node containing the specified nodes.")]
+		[ComponentElement]
 		[XmlElement("testRef")]
         public RefNameString TestRef {
             get {
@@ -4492,6 +4517,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the sampleAcquisition node containing the specified nodes.
         /// </summary>
 		[Description("A pointer to the sampleAcquisition node containing the specified nodes.")]
+		[ComponentElement]
 		[XmlElement("sampleAcquisitionRef")]
         public RefNameString SampleAcquisitionRef {
             get {
@@ -4510,6 +4536,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the desired result containing the outputParameter.")]
+		[ComponentElement]
 		[XmlElement("resultRef")]
         public RefNameString ResultRef {
             get {
@@ -4528,6 +4555,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the desired outputParameter.")]
+		[ComponentElement]
 		[XmlElement("outputParameterRef")]
         public RefNameString OutputParameterRef {
             get {
@@ -4688,6 +4716,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A result of formation tester analysis that applies to this test.
         /// </summary>
 		[Description("A result of formation tester analysis that applies to this test.")]
+		[RecurringElement]
 		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
@@ -4705,6 +4734,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -4814,6 +4844,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The time duration of the event.")]
+		[ComponentElement]
 		[XmlElement("duration")]
         public TimeMeasure Duration {
             get {
@@ -4848,6 +4879,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -5027,6 +5059,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Top depth of station if flowingIntervalKind=\"packed interval\". Depth of probe if flowingIntervalKind=\"probe\".")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -5045,6 +5078,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Bottom depth of station if flowingIntervalKind=\"packed interval\".  Depth of probe if flowingIntervalKind=\"probe\".")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -5062,6 +5096,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The diameter of the probe used, only valid if flowingIntervalKind is equal to "probe".
         /// </summary>
 		[Description("The diameter of the probe used, only valid if flowingIntervalKind is equal to \"probe\".")]
+		[ComponentElement]
 		[XmlElement("diaProbe")]
         public LengthMeasure DiaProbe {
             get {
@@ -5096,6 +5131,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference a log containing WFT time-series data at this station (may be superset of all the test log references at this station).
         /// </summary>
 		[Description("A reference a log containing WFT time-series data at this station (may be superset of all the test log references at this station).")]
+		[RecurringElement]
 		[XmlElement("logRef")]
         public List<RefObjectString> LogRef {
             get {
@@ -5113,6 +5149,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A formation tester event that occurs during this station.
         /// </summary>
 		[Description("A formation tester event that occurs during this station.")]
+		[RecurringElement]
 		[XmlElement("event")]
         public List<WftEvent> Event {
             get {
@@ -5130,6 +5167,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A formation tester test period that is recorded as part of this station.
         /// </summary>
 		[Description("A formation tester test period that is recorded as part of this station.")]
+		[RecurringElement]
 		[XmlElement("test")]
         public List<WftTest> Test {
             get {
@@ -5147,6 +5185,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A formation tester sample that is collected as part of this station.
         /// </summary>
 		[Description("A formation tester sample that is collected as part of this station.")]
+		[RecurringElement]
 		[XmlElement("sampleAcquisition")]
         public List<WftSampleAcquisition> SampleAcquisition {
             get {
@@ -5164,6 +5203,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A result of formation tester analysis that applies to this station.
         /// </summary>
 		[Description("A result of formation tester analysis that applies to this station.")]
+		[RecurringElement]
 		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
@@ -5181,6 +5221,7 @@ namespace Energistics.DataAccess.PRODML122
         /// References a station containing the flowing flowing Interval in cases where this station is an observation station.
         /// </summary>
 		[Description("References a station containing the flowing flowing Interval in  cases where this station is an observation station.")]
+		[ComponentElement]
 		[XmlElement("stationRef")]
         public RefNameString StationRef {
             get {
@@ -5198,6 +5239,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -5357,6 +5399,7 @@ namespace Energistics.DataAccess.PRODML122
         /// References a log containing WFT tie-in (e.g. gamma ray) log vs. depth data.
         /// </summary>
 		[Description("References a log containing WFT tie-in (e.g. gamma ray) log vs. depth data.")]
+		[ComponentElement]
 		[XmlElement("tieInLogRef")]
         public RefObjectString TieInLogRef {
             get {
@@ -5461,6 +5504,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The minimum station depth within this WFT. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("The minimum station depth within this WFT. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("minIndex")]
         public MeasuredDepthCoord MinIndex {
             get {
@@ -5478,6 +5522,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum station depth within this WFT. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("The maximum station depth within this WFT. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("maxIndex")]
         public MeasuredDepthCoord MaxIndex {
             get {
@@ -5512,6 +5557,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An individual WFT station.
         /// </summary>
 		[Description("An individual WFT station.")]
+		[RecurringElement]
 		[XmlElement("station")]
         public List<WftStation> Station {
             get {
@@ -5529,6 +5575,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A single result derived from analysis of formation tester data.
         /// </summary>
 		[Description("A single result derived from analysis of formation tester data.")]
+		[RecurringElement]
 		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
@@ -5546,6 +5593,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -5563,6 +5611,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -5843,6 +5892,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The local time zone of the original acquisition date-time values. It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.
         /// </summary>
 		[Description("The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.")]
+		[RecurringElement]
 		[XmlElement("acquisitionTimeZone")]
         public List<TimestampedTimeZone> AcquisitionTimeZone {
             get {
@@ -5877,6 +5927,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -6041,7 +6092,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Any property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("Any")]
         public List<XmlElement> Any {
             get {
@@ -6095,7 +6146,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Any property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("Any")]
         public List<XmlElement> Any {
             get {
@@ -6288,7 +6339,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The volume is the fluid, corrected to standard conditions of temperature and pressure.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("volumeStdTempPres")]
         public VolumeMeasure VolumeStdTempPres {
             get {
@@ -6305,7 +6356,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The volume, uncorrected. This volume is generally reported at reservoir conditions.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("volume")]
         public VolumeMeasure Volume {
             get {
@@ -6322,7 +6373,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The density of the fluid, corrected to standard conditions of temperature and pressure.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("densityStdTempPres")]
         public DensityMeasure DensityStdTempPres {
             get {
@@ -6339,7 +6390,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The density of the fluid, uncorrected.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -6410,7 +6461,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The fluid flow rate.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("fluidRate")]
         public VolumeFlowRateMeasure FluidRate {
             get {
@@ -6427,7 +6478,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The fluid flow rate that has been corrected to standard temperature and pressure.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("fluidRateStdTempPres")]
         public VolumeFlowRateMeasure FluidRateStdTempPres {
             get {
@@ -6498,7 +6549,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The time length (with uom) of the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("testDuration")]
         public TimeMeasure TestDuration {
             get {
@@ -6515,7 +6566,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The interval tested. This element includes a top and base depth, and the formation tested.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("testInterval")]
         public WellTestInterval TestInterval {
             get {
@@ -6584,7 +6635,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The size of the opening in the flow choke at the wellhead.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("chokeOrificeSize")]
         public LengthMeasure ChokeOrificeSize {
             get {
@@ -6601,7 +6652,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The minimum pressure measured at the annulus.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("minimumAnnularPressure")]
         public PressureMeasure MinimumAnnularPressure {
             get {
@@ -6618,7 +6669,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The maximum pressure measured at the annulus.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("maximumAnnularPressure")]
         public PressureMeasure MaximumAnnularPressure {
             get {
@@ -6635,7 +6686,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The flowing pressure measured at the wellhead during the test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("wellheadFlowingPressure")]
         public PressureMeasure WellheadFlowingPressure {
             get {
@@ -6652,7 +6703,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The maximum pressure measured at the wellhead during the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("wellheadMaximumPressure")]
         public PressureMeasure WellheadMaximumPressure {
             get {
@@ -6741,7 +6792,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The measured depth to the top of the interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -6758,7 +6809,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The measured depth to the bottom of the interval.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("mdBase")]
         public MeasuredDepthCoord MDBase {
             get {
@@ -6775,7 +6826,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth value is deeper than the first kickoff point. It is recommended that it always be given.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("wellbore")]
         public RefNameString Wellbore {
             get {
@@ -6792,7 +6843,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// A formation that was tested.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("testedFormation")]
         public List<String> TestedFormation {
             get {
@@ -6809,7 +6860,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The relative opening of the downhole control valve for the tested zone. This is for surface controllable valves.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("valvePosition")]
         public LengthPerLengthMeasure ValvePosition {
             get {
@@ -6881,7 +6932,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The cumulative amount of oil.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeOil")]
         public VolumeMeasure CumulativeOil {
             get {
@@ -6898,7 +6949,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The cumulative amount of gas.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeGas")]
         public VolumeMeasure CumulativeGas {
             get {
@@ -6915,7 +6966,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The cumulative amount of water.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeWater")]
         public VolumeMeasure CumulativeWater {
             get {
@@ -7105,7 +7156,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The ratio of the volume of gas and the volume of oil that was produced.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasOilRatio")]
         public VolumePerVolumeMeasure GasOilRatio {
             get {
@@ -7122,7 +7173,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The ratio of water produced compared to the volume of total liquids produced.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("waterCut")]
         public VolumePerVolumeMeasure WaterCut {
             get {
@@ -7139,7 +7190,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The density of the fluid mixture.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -7156,7 +7207,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The velocity of the overall fluid mixture.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("fluidVelocity")]
         public VelocityMeasure FluidVelocity {
             get {
@@ -7173,7 +7224,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This is the condensate yield, which describes the amount of condensate per unit of natural gas produced
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateYield")]
         public VolumePerVolumeMeasure CondensateYield {
             get {
@@ -7190,7 +7241,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This is the measured of impurities present in crude oil as it comes from the well. BSandW content is commonly used as a measure for treating performance of hydrocarbon liquids
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("basicSedimentAndWater")]
         public VolumePerVolumeMeasure BasicSedimentAndWater {
             get {
@@ -7207,7 +7258,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This is the the potential of the well to produce crude oil. This represents the flow rate that could be achieved under maximum drawdown.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilPotential")]
         public VolumeFlowRateMeasure OilPotential {
             get {
@@ -7224,7 +7275,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This is the potential of the well to produce natural gas. This represents the flow rate that could be achieved under maximum drawdown.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasPotential")]
         public VolumeFlowRateMeasure GasPotential {
             get {
@@ -7241,7 +7292,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The volume of sand that was produced.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("sandVolume")]
         public VolumeMeasure SandVolume {
             get {
@@ -7293,7 +7344,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The split factor for Oil relative to the overall volume of the test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilSplitFactor")]
         public VolumePerVolumeMeasure OilSplitFactor {
             get {
@@ -7310,7 +7361,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The split factor for Gas relative to the overall volume of the test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasSplitFactor")]
         public VolumePerVolumeMeasure GasSplitFactor {
             get {
@@ -7327,7 +7378,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The split factor for Water relative to the overall volume of the test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("waterSplitFactor")]
         public VolumePerVolumeMeasure WaterSplitFactor {
             get {
@@ -7344,7 +7395,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The split factor for Condensate relative to the overall volume of the test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateSplitFactor")]
         public VolumePerVolumeMeasure CondensateSplitFactor {
             get {
@@ -7361,7 +7412,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Productivity Index (PI) is an expression which defines the pressure drop in the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value was defined at ambient temperature and pressure.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("productivityIndex")]
         public ProductivityIndexMeasure ProductivityIndex {
             get {
@@ -7378,7 +7429,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Productivity Index (PI) is an expression which defines the pressure drop in the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value has been converted to the declared conditions of standard temperature and pressure.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("productivityIndexStdTempPres")]
         public ProductivityIndexMeasure ProductivityIndexStdTempPres {
             get {
@@ -7432,7 +7483,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The pressure measured at the separator during the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("separatorPressure")]
         public PressureMeasure SeparatorPressure {
             get {
@@ -7449,7 +7500,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The temperature measured at the separator during the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("separatorTemperature")]
         public ThermodynamicTemperatureMeasure SeparatorTemperature {
             get {
@@ -7503,7 +7554,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The pressure at the point.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -7520,7 +7571,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The temperature at the point.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -7537,7 +7588,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The P/Z value at the point. This is P/Z, pressure over gas compressibility factor (z). Note that the uom is units of pressure., since Z is dimensionless.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("pOverZ")]
         public PressureMeasure POverZ {
             get {
@@ -7554,7 +7605,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The measured depth of the bottomhole.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -7571,7 +7622,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth value is deeper than the first kickoff point. It is recommended that it always be given.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("wellbore")]
         public RefNameString Wellbore {
             get {
@@ -7713,7 +7764,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The average electric current of the electric submersible pump (ESP) during the test. The presumption is that only one pump per well is operational during each test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("electricCurrent")]
         public ElectricCurrentMeasure ElectricCurrent {
             get {
@@ -7730,7 +7781,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The average frequency of the electric submersible pump (ESP) during the test. The presumption is that only one pump per well is operational during each test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
@@ -7784,7 +7835,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The pressure at the bottomhole of the well.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("bottomholePres")]
         public PressureMeasure BottomholePres {
             get {
@@ -7801,7 +7852,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The temperature at the bottomhole of the well.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("bottomholeTemp")]
         public ThermodynamicTemperatureMeasure BottomholeTemp {
             get {
@@ -7818,7 +7869,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The P/Z value at the bottomhole. This is P/Z, pressure over gas compressibility factor (z), at the bottomhole of the well. Note that the uom is units of pressure., since Z is dimensionless.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("bottomholePOverZ")]
         public PressureMeasure BottomholePOverZ {
             get {
@@ -7835,7 +7886,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The measured depth of the bottomhole.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("bottomholeMD")]
         public MeasuredDepthCoord BottomholeMD {
             get {
@@ -7852,7 +7903,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth value is deeper than the first kickoff point. It is recommended that it always be given.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("wellbore")]
         public RefNameString Wellbore {
             get {
@@ -7906,7 +7957,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The temperature measured at the wellhead during the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("temperature")]
         public ThermodynamicTemperatureMeasure Temperature {
             get {
@@ -7923,7 +7974,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The flowing pressure measured at the wellhead during the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("flowingPressure")]
         public PressureMeasure FlowingPressure {
             get {
@@ -7940,7 +7991,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The shut-in pressure measured at the wellhead during the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("shutInPressure")]
         public PressureMeasure ShutInPressure {
             get {
@@ -7957,7 +8008,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The pressure measured at the flow line connected to the wellhead during this well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("flowLinePressure")]
         public PressureMeasure FlowLinePressure {
             get {
@@ -7974,7 +8025,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The size of the choke opening at the wellhead.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("chokeOrificeSize")]
         public LengthMeasure ChokeOrificeSize {
             get {
@@ -7991,7 +8042,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The pressure of the lift gas at the wellhead.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasLiftPres")]
         public PressureMeasure GasLiftPres {
             get {
@@ -8008,7 +8059,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The temperature of the lift gas at the wellhead.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasLiftTemp")]
         public ThermodynamicTemperatureMeasure GasLiftTemp {
             get {
@@ -8059,7 +8110,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The size of the gas lift choke opening.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasLiftchokeOrificeSize")]
         public LengthMeasure GasLiftchokeOrificeSize {
             get {
@@ -8113,7 +8164,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The time length (with uom) of the well test.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("testDuration")]
         public TimeMeasure TestDuration {
             get {
@@ -8130,7 +8181,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The interval tested. This element includes a top and base depth, and the formation(s) tested. It also includes control data for the tested interval.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("testInterval")]
         public List<WellTestInterval> TestInterval {
             get {
@@ -8198,7 +8249,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This element records temperature and pressure at points in the wellbore.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("pointData")]
         public List<WellTestPointData> PointData {
             get {
@@ -8338,7 +8389,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The fluid level achieved in the well. The value is given as length units from the top of the well.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("fluidLevel")]
         public LengthMeasure FluidLevel {
             get {
@@ -8355,7 +8406,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The lowest usable water depth as measured from the surface. See TxRRC H-15.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("baseUsableWater")]
         public LengthMeasure BaseUsableWater {
             get {
@@ -8638,6 +8689,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. That is, all wellTest for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. That is, all wellTest for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
@@ -8655,6 +8707,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
@@ -8707,6 +8760,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Contextual data about the well that was tested.
         /// </summary>
 		[Description("Contextual data about the well that was tested.")]
+		[ComponentElement]
 		[XmlElement("wellContext")]
         public WellContext WellContext {
             get {
@@ -8881,6 +8935,7 @@ namespace Energistics.DataAccess.PRODML122
         /// DEPRECATED: use productionTest/wellheadData/chokeOrificeSize or injectionTest/chokeOrificeSize. The size of the opening in the flow choke at the wellhead.
         /// </summary>
 		[Description("DEPRECATED: use productionTest/wellheadData/chokeOrificeSize or injectionTest/chokeOrificeSize. The size of the opening in the flow choke at the wellhead.")]
+		[ComponentElement]
 		[XmlElement("chokeOrificeSize")]
         public LengthMeasure ChokeOrificeSize {
             get {
@@ -8898,6 +8953,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A port on a Product Flow Unit that is represented by this test.
         /// </summary>
 		[Description("A port on a Product Flow Unit that is represented by this test.")]
+		[ComponentElement]
 		[XmlElement("productFlowPort")]
         public RefNameString ProductFlowPort {
             get {
@@ -8915,6 +8971,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The Product Flow Unit represented by the port. This is defined within the Product Flow Model
         /// </summary>
 		[Description("The Product Flow Unit represented by the port. This is defined within the Product Flow Model")]
+		[ComponentElement]
 		[XmlElement("productFlowUnit")]
         public RefNameString ProductFlowUnit {
             get {
@@ -8932,6 +8989,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The Product Flow Model that represents the above Product Flow Unit.
         /// </summary>
 		[Description("The Product Flow Model that represents the above Product Flow Unit.")]
+		[ComponentElement]
 		[XmlElement("productFlowModel")]
         public RefNameString ProductFlowModel {
             get {
@@ -9019,6 +9077,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the results of one validation operation.
         /// </summary>
 		[Description("Defines the results of one validation operation.")]
+		[RecurringElement]
 		[XmlElement("validationOperation")]
         public List<WellTestValidationOperation> ValidationOperation {
             get {
@@ -9106,6 +9165,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -9339,6 +9399,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Name of the field in which the well is located.
         /// </summary>
 		[Description("Name of the field in which the well is located.")]
+		[ComponentElement]
 		[XmlElement("field")]
         public NameStruct Field {
             get {
@@ -9356,6 +9417,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alias name associated with the well. If the wellName is associated with a naming system then it should be included in this list.
         /// </summary>
 		[Description("An alias name associated with the well. If the wellName is associated with a naming system then it should be included in this list.")]
+		[RecurringElement]
 		[XmlElement("wellAlias")]
         public List<NameStruct> WellAlias {
             get {
@@ -9373,6 +9435,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A datum to which elevations and depths are referenced. 
         /// </summary>
 		[Description("A datum to which elevations and depths are referenced.")]
+		[RecurringElement]
 		[XmlElement("wellDatum")]
         public List<WellDatum> WellDatum {
             get {
@@ -9687,6 +9750,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Since various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).
         /// </summary>
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
+		[RecurringElement]
 		[XmlElement("kind")]
         public List<String> Kind {
             get {
@@ -9738,6 +9802,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The gravity based elevation coordinate of this reference datum as measured from another datum. Positive moving upward from the elevation datum. An elevation should be given unless this is a vertical reference datum (e.g., sea level). 
         /// </summary>
 		[Description("The gravity based elevation coordinate of this reference datum  as measured from another datum. Positive moving upward from the elevation datum. An elevation should be given unless this is a vertical reference datum (e.g., sea level).")]
+		[ComponentElement]
 		[XmlElement("elevation")]
         public WellElevationCoord Elevation {
             get {
@@ -9755,6 +9820,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The measured depth coordinate of this reference datum as measured from another datum. The measured depth datum should either be the same as the elevation datum or it should be relatable to the elevation datum through other datums. Positive moving toward the bottomhole from the measured depth datum. This should be given when a local reference is "downhole", such as a kickoff point or ocean bottom template, and the borehole may not be vertical. If a Depth is given then an Elevation should also be given.
         /// </summary>
 		[Description("The measured depth coordinate of this reference datum as measured from another datum. The measured depth datum should either be the same as the elevation datum or it should be relatable to the elevation datum through other datums. Positive moving toward the bottomhole from the measured depth datum. This should be given when a local reference is \"downhole\",  such as a kickoff point or ocean bottom template, and the borehole may not be vertical. If a Depth is given then an Elevation should also be given.")]
+		[ComponentElement]
 		[XmlElement("measuredDepth")]
         public MeasuredDepthCoord MeasuredDepth {
             get {
@@ -9772,6 +9838,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The horizontal location of the point being used as a well datum. This may be used when the point is not directly above or below the well point location. For example, a well being drilled from a platform may have its location at the entrance into the sea floor, while the well datum may be located on the drilling rig. Or the well datum may be a kickoff point, that is not directly under the well surface point. 
         /// </summary>
 		[Description("The horizontal location of the point being used as a well datum.  This may be used when the point is not directly above or below the well point location.  For example, a well being drilled from a platform may have its location at the entrance  into the sea floor, while the well datum may be located on the drilling rig.  Or the well datum may be a kickoff point, that is not directly under the well surface point.")]
+		[ComponentElement]
 		[XmlElement("horizontalLocation")]
         public Location HorizontalLocation {
             get {
@@ -9806,6 +9873,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10098,6 +10166,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer the wellbore with which there is a relationship.")]
+		[ComponentElement]
 		[XmlElement("wellboreReference")]
         public RefNameString WellboreReference {
             get {
@@ -10115,6 +10184,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the context of a common parent well.
         /// </summary>
 		[Description("A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
+		[ComponentElement]
 		[XmlElement("wellParent")]
         public RefNameString WellParent {
             get {
@@ -10170,6 +10240,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the rig with which there is a relationship.")]
+		[ComponentElement]
 		[XmlElement("rigReference")]
         public RefNameString RigReference {
             get {
@@ -10187,6 +10258,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the context of a common parent wellbore.
         /// </summary>
 		[Description("A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the  context of a common parent wellbore.")]
+		[ComponentElement]
 		[XmlElement("wellboreParent")]
         public RefNameString WellboreParent {
             get {
@@ -10204,6 +10276,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the context of a common parent well.
         /// </summary>
 		[Description("A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
+		[ComponentElement]
 		[XmlElement("wellParent")]
         public RefNameString WellParent {
             get {
@@ -10258,6 +10331,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the wellCRS that defines the CRS for the coordinates. While optional, it is strongly recommended that this be specified.
         /// </summary>
 		[Description("A pointer to the wellCRS that defines the CRS for the coordinates.  While optional, it is strongly recommended that this be specified.")]
+		[ComponentElement]
 		[XmlElement("wellCRS")]
         public RefNameString WellCRS {
             get {
@@ -10635,6 +10709,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10816,6 +10891,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The lower bound of the threshold for testing whether values are within a specific range. Element "unit" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMinimum must be less than thresholdMaximum. If thresholdMinimum is not specified then the minimum shall be assumed to be minus infinity.
         /// </summary>
 		[Description("The lower bound of the threshold for testing whether values are within a specific range. Element \"unit\" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMinimum must be less than thresholdMaximum. If thresholdMinimum is not specified then the minimum shall be  assumed to be minus infinity.")]
+		[ComponentElement]
 		[XmlElement("thresholdMinimum")]
         public EndpointQuantity ThresholdMinimum {
             get {
@@ -10833,6 +10909,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The upper bound of the threshold for testing whether values are within a specific range. Element "unit" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMaximum must be greater than thresholdMinimum. If thresholdMaximum is not specified then the maximum shall be assumed to be plus infinity.
         /// </summary>
 		[Description("The upper bound of the threshold for testing whether values are within a specific range. Element \"unit\" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMaximum must be greater than thresholdMinimum. If thresholdMaximum is not specified then the maximum shall be  assumed to be plus infinity.")]
+		[ComponentElement]
 		[XmlElement("thresholdMaximum")]
         public EndpointQuantity ThresholdMaximum {
             get {
@@ -10851,6 +10928,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The sum of the time intervals over the range of dTimMin to dTimMax  during which the values were within the specified threshold range.")]
+		[ComponentElement]
 		[XmlElement("duration")]
         public TimeMeasure Duration {
             get {
@@ -11030,6 +11108,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).
         /// </summary>
 		[Description("A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).")]
+		[RecurringElement]
 		[XmlElement("key")]
         public List<KeywordValueStruct> Key {
             get {
@@ -11117,6 +11196,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The lower bound of the analyzed time range. Only data within the range was included in the analysis. The endpoint attribute specifies whether the data was inclusive or exclusive of this point.")]
+		[ComponentElement]
 		[XmlElement("dTimMin")]
         public EndpointDateTime DateTimeMin {
             get {
@@ -11135,6 +11215,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The upper bound of the analyzed time range. Only data within the range was included in the analysis. The endpoint attribute specifies whether the data was inclusive or exclusive of this point.")]
+		[ComponentElement]
 		[XmlElement("dTimMax")]
         public EndpointDateTime DateTimeMax {
             get {
@@ -11379,6 +11460,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -11918,6 +12000,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).
         /// </summary>
 		[Description("A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).")]
+		[RecurringElement]
 		[XmlElement("key")]
         public List<KeywordValueStruct> Key {
             get {
@@ -12156,6 +12239,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -12229,6 +12313,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the business unit which owns the product.")]
+		[ComponentElement]
 		[XmlElement("owner")]
         public RefNameString Owner {
             get {
@@ -12246,6 +12331,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Points to the business unit from which the product originated. 
         /// </summary>
 		[Description("Points to the business unit from which the product originated.")]
+		[ComponentElement]
 		[XmlElement("sourceUnit")]
         public RefNameString SourceUnit {
             get {
@@ -12263,6 +12349,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The owner's share of the product.
         /// </summary>
 		[Description("The owner's share of the product.")]
+		[ComponentElement]
 		[XmlElement("share")]
         public VolumePerVolumeMeasurePercent Share {
             get {
@@ -12297,6 +12384,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A dated event related to the balance.
         /// </summary>
 		[Description("A dated event related to the balance.")]
+		[RecurringElement]
 		[XmlElement("event")]
         public List<ProductVolumeBalanceEvent> Event {
             get {
@@ -12314,6 +12402,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The volume of the fluid, possibly corrected to specific conditions of temperature and pressure. Different volumes may be defined at different conditions but they should all represent the same mass of material.
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. Different volumes may be defined at different conditions but they should all represent the same mass of material.")]
+		[RecurringElement]
 		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
@@ -12331,6 +12420,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to a fluid sample analysis result object that is relevant to the balance. This sample may have been acquired previous to or after this period and is used for determining the allocated characteristics.
         /// </summary>
 		[Description("A pointer to a fluid sample analysis result object that is relevant to the balance.  This sample may have been acquired previous to or after this period and is  used for determining the allocated characteristics.")]
+		[RecurringElement]
 		[XmlElement("sampleAnalysisResult")]
         public List<RefNameString> SampleAnalysisResult {
             get {
@@ -12348,6 +12438,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The relative amount of a component product in the product.
         /// </summary>
 		[Description("The relative amount of a component product in the product.")]
+		[RecurringElement]
 		[XmlElement("componentContent")]
         public List<ProductVolumeComponentContent> ComponentContent {
             get {
@@ -12365,6 +12456,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -12438,6 +12530,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The volume of the product. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
@@ -12455,6 +12548,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of heat which would be released by the complete combustion in air of the above volume of product. This is considered to be a condition of measurement (i.e., the volume may have been converted to this condition).
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of the above volume of product.  This is considered to be a condition of measurement (i.e., the volume may have been converted to this condition).")]
+		[ComponentElement]
 		[XmlElement("grossCalorificValue")]
         public ModulusOfCompressionMeasure GrossCalorificValue {
             get {
@@ -12540,6 +12634,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -12665,6 +12760,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gor property
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
+		[ComponentElement]
 		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
@@ -12682,6 +12778,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gorMTD property
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
+		[ComponentElement]
 		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
@@ -12699,6 +12796,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gasLiquidRatio property
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+		[ComponentElement]
 		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
@@ -12716,6 +12814,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcMass property
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
@@ -12733,6 +12832,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcVol property
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
@@ -12750,6 +12850,7 @@ namespace Energistics.DataAccess.PRODML122
         /// atmosphere property
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
+		[ComponentElement]
 		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
@@ -12767,6 +12868,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeValue property
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
@@ -12784,6 +12886,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volume property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
@@ -12801,6 +12904,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeStd property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
@@ -12818,6 +12922,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRateValue property
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
@@ -12835,6 +12940,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRate property
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
@@ -12852,6 +12958,7 @@ namespace Energistics.DataAccess.PRODML122
         /// temp property
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -12869,6 +12976,7 @@ namespace Energistics.DataAccess.PRODML122
         /// pres property
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -12886,6 +12994,7 @@ namespace Energistics.DataAccess.PRODML122
         /// absoluteMinPres property
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
+		[ComponentElement]
 		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
@@ -12903,6 +13012,7 @@ namespace Energistics.DataAccess.PRODML122
         /// portDiff property
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
+		[RecurringElement]
 		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
@@ -12920,6 +13030,7 @@ namespace Energistics.DataAccess.PRODML122
         /// mass property
         /// </summary>
 		[Description("The mass of the product.")]
+		[ComponentElement]
 		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
@@ -12937,6 +13048,7 @@ namespace Energistics.DataAccess.PRODML122
         /// work property
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
+		[ComponentElement]
 		[XmlElement("work")]
         public WorkMeasure Work {
             get {
@@ -12954,6 +13066,7 @@ namespace Energistics.DataAccess.PRODML122
         /// efficiency property
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
+		[ComponentElement]
 		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
@@ -12971,6 +13084,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvp property
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+		[ComponentElement]
 		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
@@ -12988,6 +13102,7 @@ namespace Energistics.DataAccess.PRODML122
         /// tvp property
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
+		[ComponentElement]
 		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
@@ -13005,6 +13120,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bsw property
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
+		[ComponentElement]
 		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
@@ -13022,6 +13138,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswPrevious property
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
+		[ComponentElement]
 		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
@@ -13039,6 +13156,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityValue property
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
@@ -13056,6 +13174,7 @@ namespace Energistics.DataAccess.PRODML122
         /// density property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -13073,6 +13192,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityFlowRate property
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
+		[ComponentElement]
 		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
@@ -13090,6 +13210,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStd property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
@@ -13107,6 +13228,7 @@ namespace Energistics.DataAccess.PRODML122
         /// concentration property
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
+		[ComponentElement]
 		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
@@ -13159,6 +13281,7 @@ namespace Energistics.DataAccess.PRODML122
         /// weightPercent property
         /// </summary>
 		[Description("The weight fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -13176,6 +13299,7 @@ namespace Energistics.DataAccess.PRODML122
         /// molePercent property
         /// </summary>
 		[Description("The mole fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
@@ -13193,6 +13317,7 @@ namespace Energistics.DataAccess.PRODML122
         /// moleAmt property
         /// </summary>
 		[Description("The molar amount.")]
+		[ComponentElement]
 		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
@@ -13210,6 +13335,7 @@ namespace Energistics.DataAccess.PRODML122
         /// sg property
         /// </summary>
 		[Description("The specific gravity of the product.")]
+		[ComponentElement]
 		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
@@ -13227,6 +13353,7 @@ namespace Energistics.DataAccess.PRODML122
         /// hcDewpoint property
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
+		[ComponentElement]
 		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
@@ -13244,6 +13371,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterDewpoint property
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
+		[ComponentElement]
 		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
@@ -13261,6 +13389,7 @@ namespace Energistics.DataAccess.PRODML122
         /// wobbeIndex property
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
+		[ComponentElement]
 		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
@@ -13278,6 +13407,7 @@ namespace Energistics.DataAccess.PRODML122
         /// grossCalorificValueStd property
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
@@ -13295,6 +13425,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvpStabilizedCrude property
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
@@ -13312,6 +13443,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswStabilizedCrude property
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
@@ -13329,6 +13461,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStabilizedCrude property
         /// </summary>
 		[Description("The density of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
@@ -13346,6 +13479,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -13419,6 +13553,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The flow rate of the product. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
@@ -13504,6 +13639,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -13576,6 +13712,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A port on the other end of an internal connection. This should always be specified if a Product Flow Network is being referenced by this report. If this is not specified then there is an assumption that there is only one other port for the unit. For example, if this end of the connection represents an inlet port then the implied other end is the outlet port for the unit.
         /// </summary>
 		[Description("A port on the other end of an internal connection. This should always be specified if a Product Flow Network is being referenced by this report. If this is not specified then there is an assumption that there is only one other port for the unit. For example, if this end of the connection represents an inlet port then the implied other end is the outlet port for the unit.")]
+		[ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
             get {
@@ -13593,6 +13730,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The differential pressure between the ports.
         /// </summary>
 		[Description("The differential pressure between the ports.")]
+		[ComponentElement]
 		[XmlElement("presDiff")]
         public PressureMeasure PresDiff {
             get {
@@ -13610,6 +13748,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The differential temperature between the ports.
         /// </summary>
 		[Description("The differential temperature between the ports.")]
+		[ComponentElement]
 		[XmlElement("tempDiff")]
         public ThermodynamicTemperatureMeasure TempDiff {
             get {
@@ -13627,6 +13766,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The size of the choke. This characterizes the overall unit with respect to the flow restriction between the ports. The restriction might be implemented using a valve or an actual choke.
         /// </summary>
 		[Description("The size of the choke. This characterizes the overall unit with respect to the flow restriction between the ports. The restriction might be implemented using a valve or an actual choke.")]
+		[ComponentElement]
 		[XmlElement("chokeSize")]
         public LengthMeasure ChokeSize {
             get {
@@ -13644,6 +13784,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The relative size of the choke restriction. This characterizes the overall unit with respect to the flow restriction between the ports. The restriction might be implemented using a valve or an actual choke.
         /// </summary>
 		[Description("The relative size of the choke restriction. This characterizes the overall unit with respect to the flow restriction between the ports. The restriction might be implemented using a valve or an actual choke.")]
+		[ComponentElement]
 		[XmlElement("chokeRelative")]
         public LengthPerLengthMeasure ChokeRelative {
             get {
@@ -13661,6 +13802,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -13734,6 +13876,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The density of the product.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -13819,6 +13962,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -14118,6 +14262,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Provides details on the product.
         /// </summary>
 		[Description("Provides details on the product.")]
+		[RecurringElement]
 		[XmlElement("balanceDetail")]
         public List<ProductVolumeBalanceDetail> BalanceDetail {
             get {
@@ -14135,6 +14280,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -14412,6 +14558,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gor property
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
+		[ComponentElement]
 		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
@@ -14429,6 +14576,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gorMTD property
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
+		[ComponentElement]
 		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
@@ -14446,6 +14594,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gasLiquidRatio property
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+		[ComponentElement]
 		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
@@ -14463,6 +14612,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcMass property
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
@@ -14480,6 +14630,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcVol property
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
@@ -14497,6 +14648,7 @@ namespace Energistics.DataAccess.PRODML122
         /// atmosphere property
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
+		[ComponentElement]
 		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
@@ -14514,6 +14666,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeValue property
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
@@ -14531,6 +14684,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volume property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
@@ -14548,6 +14702,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeStd property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
@@ -14565,6 +14720,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRateValue property
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
@@ -14582,6 +14738,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRate property
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
@@ -14599,6 +14756,7 @@ namespace Energistics.DataAccess.PRODML122
         /// temp property
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -14616,6 +14774,7 @@ namespace Energistics.DataAccess.PRODML122
         /// pres property
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -14633,6 +14792,7 @@ namespace Energistics.DataAccess.PRODML122
         /// absoluteMinPres property
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
+		[ComponentElement]
 		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
@@ -14650,6 +14810,7 @@ namespace Energistics.DataAccess.PRODML122
         /// portDiff property
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
+		[RecurringElement]
 		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
@@ -14667,6 +14828,7 @@ namespace Energistics.DataAccess.PRODML122
         /// mass property
         /// </summary>
 		[Description("The mass of the product.")]
+		[ComponentElement]
 		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
@@ -14684,6 +14846,7 @@ namespace Energistics.DataAccess.PRODML122
         /// work property
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
+		[ComponentElement]
 		[XmlElement("work")]
         public WorkMeasure Work {
             get {
@@ -14701,6 +14864,7 @@ namespace Energistics.DataAccess.PRODML122
         /// efficiency property
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
+		[ComponentElement]
 		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
@@ -14718,6 +14882,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvp property
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+		[ComponentElement]
 		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
@@ -14735,6 +14900,7 @@ namespace Energistics.DataAccess.PRODML122
         /// tvp property
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
+		[ComponentElement]
 		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
@@ -14752,6 +14918,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bsw property
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
+		[ComponentElement]
 		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
@@ -14769,6 +14936,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswPrevious property
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
+		[ComponentElement]
 		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
@@ -14786,6 +14954,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityValue property
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
@@ -14803,6 +14972,7 @@ namespace Energistics.DataAccess.PRODML122
         /// density property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -14820,6 +14990,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityFlowRate property
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
+		[ComponentElement]
 		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
@@ -14837,6 +15008,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStd property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
@@ -14854,6 +15026,7 @@ namespace Energistics.DataAccess.PRODML122
         /// concentration property
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
+		[ComponentElement]
 		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
@@ -14906,6 +15079,7 @@ namespace Energistics.DataAccess.PRODML122
         /// weightPercent property
         /// </summary>
 		[Description("The weight fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -14923,6 +15097,7 @@ namespace Energistics.DataAccess.PRODML122
         /// molePercent property
         /// </summary>
 		[Description("The mole fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
@@ -14940,6 +15115,7 @@ namespace Energistics.DataAccess.PRODML122
         /// moleAmt property
         /// </summary>
 		[Description("The molar amount.")]
+		[ComponentElement]
 		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
@@ -14957,6 +15133,7 @@ namespace Energistics.DataAccess.PRODML122
         /// sg property
         /// </summary>
 		[Description("The specific gravity of the product.")]
+		[ComponentElement]
 		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
@@ -14974,6 +15151,7 @@ namespace Energistics.DataAccess.PRODML122
         /// hcDewpoint property
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
+		[ComponentElement]
 		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
@@ -14991,6 +15169,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterDewpoint property
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
+		[ComponentElement]
 		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
@@ -15008,6 +15187,7 @@ namespace Energistics.DataAccess.PRODML122
         /// wobbeIndex property
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
+		[ComponentElement]
 		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
@@ -15025,6 +15205,7 @@ namespace Energistics.DataAccess.PRODML122
         /// grossCalorificValueStd property
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
@@ -15042,6 +15223,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvpStabilizedCrude property
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
@@ -15059,6 +15241,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswStabilizedCrude property
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
@@ -15076,6 +15259,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStabilizedCrude property
         /// </summary>
 		[Description("The density of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
@@ -15093,6 +15277,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The relative amount of a component product in the product stream.
         /// </summary>
 		[Description("The relative amount of a component product in the product stream.")]
+		[RecurringElement]
 		[XmlElement("componentContent")]
         public List<ProductVolumeComponentContent> ComponentContent {
             get {
@@ -15110,6 +15295,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Provides the sales context for this period.
         /// </summary>
 		[Description("Provides the sales context for this period.")]
+		[RecurringElement]
 		[XmlElement("balanceSet")]
         public List<ProductVolumeBalanceSet> BalanceSet {
             get {
@@ -15144,6 +15330,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A timestamped remark about the amounts.
         /// </summary>
 		[Description("A timestamped remark about the amounts.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
@@ -15161,6 +15348,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -15460,6 +15648,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -15533,6 +15722,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the flow within the facility.")]
+		[ComponentElement]
 		[XmlElement("referencedFlow")]
         public RefNameString ReferencedFlow {
             get {
@@ -15551,6 +15741,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the facility that contains the flow.")]
+		[ComponentElement]
 		[XmlElement("parentfacility")]
         public RefNameString Parentfacility {
             get {
@@ -15623,6 +15814,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of product that is being reported. This is reserved for generic kinds like chemical.
         /// </summary>
 		[Description("The name of product that is being reported. This is reserved for generic kinds like chemical.")]
+		[ComponentElement]
 		[XmlElement("name")]
         public NameStruct Name {
             get {
@@ -15693,6 +15885,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gor property
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
+		[ComponentElement]
 		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
@@ -15710,6 +15903,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gorMTD property
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
+		[ComponentElement]
 		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
@@ -15727,6 +15921,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gasLiquidRatio property
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+		[ComponentElement]
 		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
@@ -15744,6 +15939,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcMass property
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
@@ -15761,6 +15957,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcVol property
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
@@ -15778,6 +15975,7 @@ namespace Energistics.DataAccess.PRODML122
         /// atmosphere property
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
+		[ComponentElement]
 		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
@@ -15795,6 +15993,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeValue property
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
@@ -15812,6 +16011,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volume property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
@@ -15829,6 +16029,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeStd property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
@@ -15846,6 +16047,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRateValue property
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
@@ -15863,6 +16065,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRate property
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
@@ -15880,6 +16083,7 @@ namespace Energistics.DataAccess.PRODML122
         /// temp property
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -15897,6 +16101,7 @@ namespace Energistics.DataAccess.PRODML122
         /// pres property
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -15914,6 +16119,7 @@ namespace Energistics.DataAccess.PRODML122
         /// absoluteMinPres property
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
+		[ComponentElement]
 		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
@@ -15931,6 +16137,7 @@ namespace Energistics.DataAccess.PRODML122
         /// portDiff property
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
+		[RecurringElement]
 		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
@@ -15948,6 +16155,7 @@ namespace Energistics.DataAccess.PRODML122
         /// mass property
         /// </summary>
 		[Description("The mass of the product.")]
+		[ComponentElement]
 		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
@@ -15965,6 +16173,7 @@ namespace Energistics.DataAccess.PRODML122
         /// work property
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
+		[ComponentElement]
 		[XmlElement("work")]
         public WorkMeasure Work {
             get {
@@ -15982,6 +16191,7 @@ namespace Energistics.DataAccess.PRODML122
         /// efficiency property
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
+		[ComponentElement]
 		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
@@ -15999,6 +16209,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvp property
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+		[ComponentElement]
 		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
@@ -16016,6 +16227,7 @@ namespace Energistics.DataAccess.PRODML122
         /// tvp property
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
+		[ComponentElement]
 		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
@@ -16033,6 +16245,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bsw property
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
+		[ComponentElement]
 		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
@@ -16050,6 +16263,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswPrevious property
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
+		[ComponentElement]
 		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
@@ -16067,6 +16281,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityValue property
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
@@ -16084,6 +16299,7 @@ namespace Energistics.DataAccess.PRODML122
         /// density property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -16101,6 +16317,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityFlowRate property
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
+		[ComponentElement]
 		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
@@ -16118,6 +16335,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStd property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
@@ -16135,6 +16353,7 @@ namespace Energistics.DataAccess.PRODML122
         /// concentration property
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
+		[ComponentElement]
 		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
@@ -16187,6 +16406,7 @@ namespace Energistics.DataAccess.PRODML122
         /// weightPercent property
         /// </summary>
 		[Description("The weight fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -16204,6 +16424,7 @@ namespace Energistics.DataAccess.PRODML122
         /// molePercent property
         /// </summary>
 		[Description("The mole fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
@@ -16221,6 +16442,7 @@ namespace Energistics.DataAccess.PRODML122
         /// moleAmt property
         /// </summary>
 		[Description("The molar amount.")]
+		[ComponentElement]
 		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
@@ -16238,6 +16460,7 @@ namespace Energistics.DataAccess.PRODML122
         /// sg property
         /// </summary>
 		[Description("The specific gravity of the product.")]
+		[ComponentElement]
 		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
@@ -16255,6 +16478,7 @@ namespace Energistics.DataAccess.PRODML122
         /// hcDewpoint property
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
+		[ComponentElement]
 		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
@@ -16272,6 +16496,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterDewpoint property
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
+		[ComponentElement]
 		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
@@ -16289,6 +16514,7 @@ namespace Energistics.DataAccess.PRODML122
         /// wobbeIndex property
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
+		[ComponentElement]
 		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
@@ -16306,6 +16532,7 @@ namespace Energistics.DataAccess.PRODML122
         /// grossCalorificValueStd property
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
@@ -16323,6 +16550,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvpStabilizedCrude property
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
@@ -16340,6 +16568,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswStabilizedCrude property
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
@@ -16357,6 +16586,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStabilizedCrude property
         /// </summary>
 		[Description("The density of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
@@ -16374,6 +16604,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The relative amount of a component product in the product stream.
         /// </summary>
 		[Description("The relative amount of a component product in the product stream.")]
+		[RecurringElement]
 		[XmlElement("componentContent")]
         public List<ProductVolumeComponentContent> ComponentContent {
             get {
@@ -16392,6 +16623,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Product amounts for a specific period.")]
+		[RecurringElement]
 		[XmlElement("period")]
         public List<ProductVolumePeriod> Period {
             get {
@@ -16409,6 +16641,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A (possibly timstamped) remark about the product.
         /// </summary>
 		[Description("A (possibly timstamped) remark about the product.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
@@ -16426,6 +16659,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -16499,6 +16733,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("name")]
         public FacilityIdentifierStruct Name {
             get {
@@ -16516,6 +16751,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility.  The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
@@ -16533,6 +16769,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility of parent1. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of parent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
@@ -16586,6 +16823,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The Product Flow Port associated with the Product Flow Unit.")]
+		[ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
             get {
@@ -16604,6 +16842,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The Product Flow Unit representing the facility.")]
+		[ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
             get {
@@ -16621,6 +16860,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The Product Flow Network representing the facility. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented by this report.
         /// </summary>
 		[Description("The Product Flow Network representing the facility. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.")]
+		[ComponentElement]
 		[XmlElement("network")]
         public RefNameString Network {
             get {
@@ -16891,6 +17131,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The Product Flow Port to which the flow is assigned. This is the port on the Product Flow Unit that represents the facility.
         /// </summary>
 		[Description("The Product Flow Port to which the flow is assigned. This is the port on the Product Flow Unit that represents the facility.")]
+		[ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
             get {
@@ -16943,6 +17184,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility represented by the port where the measurements were taken. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility represented by the port  where the measurements were taken.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
@@ -16960,6 +17202,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alternatative name of a facility represented by the port. This is generally unique within a naming system. The above contextually unique name (that is, within the context of a parent) should also be listed as an alias.
         /// </summary>
 		[Description("An alternatative name of a facility represented by the port. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
+		[RecurringElement]
 		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
@@ -17116,6 +17359,7 @@ namespace Energistics.DataAccess.PRODML122
         /// This is a pointer to the flow from which this flow was derived.
         /// </summary>
 		[Description("This is a pointer to the flow from which this flow was derived.")]
+		[ComponentElement]
 		[XmlElement("sourceFlow")]
         public RefNameString SourceFlow {
             get {
@@ -17133,6 +17377,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gor property
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
+		[ComponentElement]
 		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
@@ -17150,6 +17395,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gorMTD property
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
+		[ComponentElement]
 		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
@@ -17167,6 +17413,7 @@ namespace Energistics.DataAccess.PRODML122
         /// gasLiquidRatio property
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+		[ComponentElement]
 		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
@@ -17184,6 +17431,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcMass property
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
@@ -17201,6 +17449,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterConcVol property
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
+		[ComponentElement]
 		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
@@ -17218,6 +17467,7 @@ namespace Energistics.DataAccess.PRODML122
         /// atmosphere property
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
+		[ComponentElement]
 		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
@@ -17235,6 +17485,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeValue property
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
@@ -17252,6 +17503,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volume property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
@@ -17269,6 +17521,7 @@ namespace Energistics.DataAccess.PRODML122
         /// volumeStd property
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
@@ -17286,6 +17539,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRateValue property
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
@@ -17303,6 +17557,7 @@ namespace Energistics.DataAccess.PRODML122
         /// flowRate property
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+		[ComponentElement]
 		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
@@ -17320,6 +17575,7 @@ namespace Energistics.DataAccess.PRODML122
         /// temp property
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -17337,6 +17593,7 @@ namespace Energistics.DataAccess.PRODML122
         /// pres property
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -17354,6 +17611,7 @@ namespace Energistics.DataAccess.PRODML122
         /// absoluteMinPres property
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
+		[ComponentElement]
 		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
@@ -17371,6 +17629,7 @@ namespace Energistics.DataAccess.PRODML122
         /// portDiff property
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
+		[RecurringElement]
 		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
@@ -17388,6 +17647,7 @@ namespace Energistics.DataAccess.PRODML122
         /// mass property
         /// </summary>
 		[Description("The mass of the product.")]
+		[ComponentElement]
 		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
@@ -17405,6 +17665,7 @@ namespace Energistics.DataAccess.PRODML122
         /// work property
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
+		[ComponentElement]
 		[XmlElement("work")]
         public WorkMeasure Work {
             get {
@@ -17422,6 +17683,7 @@ namespace Energistics.DataAccess.PRODML122
         /// efficiency property
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
+		[ComponentElement]
 		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
@@ -17439,6 +17701,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvp property
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+		[ComponentElement]
 		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
@@ -17456,6 +17719,7 @@ namespace Energistics.DataAccess.PRODML122
         /// tvp property
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
+		[ComponentElement]
 		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
@@ -17473,6 +17737,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bsw property
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
+		[ComponentElement]
 		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
@@ -17490,6 +17755,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswPrevious property
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
+		[ComponentElement]
 		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
@@ -17507,6 +17773,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityValue property
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
+		[RecurringElement]
 		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
@@ -17524,6 +17791,7 @@ namespace Energistics.DataAccess.PRODML122
         /// density property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -17541,6 +17809,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityFlowRate property
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
+		[ComponentElement]
 		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
@@ -17558,6 +17827,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStd property
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
@@ -17575,6 +17845,7 @@ namespace Energistics.DataAccess.PRODML122
         /// concentration property
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
+		[ComponentElement]
 		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
@@ -17627,6 +17898,7 @@ namespace Energistics.DataAccess.PRODML122
         /// weightPercent property
         /// </summary>
 		[Description("The weight fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -17644,6 +17916,7 @@ namespace Energistics.DataAccess.PRODML122
         /// molePercent property
         /// </summary>
 		[Description("The mole fraction of the product.")]
+		[ComponentElement]
 		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
@@ -17661,6 +17934,7 @@ namespace Energistics.DataAccess.PRODML122
         /// moleAmt property
         /// </summary>
 		[Description("The molar amount.")]
+		[ComponentElement]
 		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
@@ -17678,6 +17952,7 @@ namespace Energistics.DataAccess.PRODML122
         /// sg property
         /// </summary>
 		[Description("The specific gravity of the product.")]
+		[ComponentElement]
 		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
@@ -17695,6 +17970,7 @@ namespace Energistics.DataAccess.PRODML122
         /// hcDewpoint property
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
+		[ComponentElement]
 		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
@@ -17712,6 +17988,7 @@ namespace Energistics.DataAccess.PRODML122
         /// waterDewpoint property
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
+		[ComponentElement]
 		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
@@ -17729,6 +18006,7 @@ namespace Energistics.DataAccess.PRODML122
         /// wobbeIndex property
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
+		[ComponentElement]
 		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
@@ -17746,6 +18024,7 @@ namespace Energistics.DataAccess.PRODML122
         /// grossCalorificValueStd property
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
@@ -17763,6 +18042,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvpStabilizedCrude property
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
@@ -17780,6 +18060,7 @@ namespace Energistics.DataAccess.PRODML122
         /// bswStabilizedCrude property
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
@@ -17797,6 +18078,7 @@ namespace Energistics.DataAccess.PRODML122
         /// densityStabilizedCrude property
         /// </summary>
 		[Description("The density of stabilized crude.")]
+		[ComponentElement]
 		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
@@ -17814,6 +18096,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Reports a product flow stream.
         /// </summary>
 		[Description("Reports a product flow stream.")]
+		[RecurringElement]
 		[XmlElement("product")]
         public List<ProductVolumeProduct> Product {
             get {
@@ -17831,6 +18114,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A timestamped remark about the flow.
         /// </summary>
 		[Description("A timestamped remark about the flow.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
@@ -17848,6 +18132,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -18173,7 +18458,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The value of an independent (index) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for colums where isIndex is true. The second to order=2. And so on. The number of index and data values must match the number of columns in the table.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("index")]
         public List<Double> Index {
             get {
@@ -18190,7 +18475,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false. The second to order=2. And so on. The number of index and data values must match the number of columns in the table.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("value")]
         public List<Double> Value {
             get {
@@ -18430,6 +18715,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A port related to the parameter. If a port is given then the corresponding unit usually must be given. For example, an "offset along network" parameter must specify a port from which the offset was measured. 
         /// </summary>
 		[Description("A port related to the parameter. If a port is given then the corresponding unit usually must be given. For example, an \"offset along network\" parameter must specify a port from which the offset was measured.")]
+		[ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
             get {
@@ -18447,6 +18733,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A unit related to the parameter. For example, an "offset along network" parameter must specify a port (on a unit) from which the offset was measured. 
         /// </summary>
 		[Description("A unit related to the parameter. For example, an \"offset along network\" parameter must specify a port (on a unit) from which the offset was measured.")]
+		[ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
             get {
@@ -18481,6 +18768,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -18660,6 +18948,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -18767,6 +19056,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The port to which this parameter is assigned. This must be a port on the unit representing the parent facility of this parameter. If not specified then the parameter represents the unit.
         /// </summary>
 		[Description("The port to which this parameter is assigned. This must be a port on the unit representing the parent facility of this parameter. If not specified then the parameter represents the unit.")]
+		[ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
             get {
@@ -18819,6 +19109,7 @@ namespace Energistics.DataAccess.PRODML122
         ///  The pointer to the coordinate reference system. This is needed for coordinates such as measure depth to specify the reference datum. 
         /// </summary>
 		[Description("The pointer to the coordinate reference system. This is needed for coordinates such as measure depth to specify the reference datum.")]
+		[ComponentElement]
 		[XmlElement("coordinateReferenceSystem")]
         public RefNameString CoordinateReferenceSystem {
             get {
@@ -18836,6 +19127,7 @@ namespace Energistics.DataAccess.PRODML122
         /// If the value is a curve, this defines the meaning of the one column in the table representing the curve. Mutually exclusive with measureClass.
         /// </summary>
 		[Description("If the value is a curve, this defines the meaning of the one column  in the table representing the curve. Mutually exclusive with measureClass.")]
+		[RecurringElement]
 		[XmlElement("curveDefinition")]
         public List<CurveDefinition> CurveDefinition {
             get {
@@ -19046,6 +19338,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A parameter value, possibly at a time. If a time is not given then only one parameter should be given. If a time is specified with one value then time should be specified for all values. Each value in a time series should be of the same  underling kind of value (for example, a length measure).")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<ProductVolumeParameterValue> Parameter {
             get {
@@ -19080,6 +19373,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -19153,6 +19447,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The name of the facility. The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("name")]
         public FacilityIdentifierStruct Name {
             get {
@@ -19170,6 +19465,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
@@ -19187,6 +19483,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility of parent1. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of parent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
@@ -19204,6 +19501,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within the context of a parent) should also be listed as an alias.
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
+		[RecurringElement]
 		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
@@ -19222,6 +19520,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
+		[ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
             get {
@@ -19239,6 +19538,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The Product Flow Network representing the facility. This can only be given if unit is given. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented by this report.
         /// </summary>
 		[Description("The Product Flow Network representing the facility. This can only be given if unit is given. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.")]
+		[ComponentElement]
 		[XmlElement("network")]
         public RefNameString Network {
             get {
@@ -19256,6 +19556,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name and type of a facility whose context is relevant to this facility.
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to this facility.")]
+		[RecurringElement]
 		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
@@ -19448,6 +19749,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The storage capacity of the facility (e.g., a tank).
         /// </summary>
 		[Description("The storage capacity of the facility (e.g., a tank).")]
+		[ComponentElement]
 		[XmlElement("capacity")]
         public VolumeMeasure Capacity {
             get {
@@ -19465,6 +19767,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of time that the facility was active during the reporting period.
         /// </summary>
 		[Description("The amount of time that the facility was active during the  reporting period.")]
+		[ComponentElement]
 		[XmlElement("operationTime")]
         public TimeMeasure OperationTime {
             get {
@@ -19482,6 +19785,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The reason for any down time during the reporting period.
         /// </summary>
 		[Description("The reason for any down time during the reporting period.")]
+		[RecurringElement]
 		[XmlElement("downtimeReason")]
         public List<DatedComment> DowntimeReason {
             get {
@@ -19499,6 +19803,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Usage values for one parameter associated with the facility.
         /// </summary>
 		[Description("Usage values for one parameter associated with the facility.")]
+		[RecurringElement]
 		[XmlElement("parameterSet")]
         public List<ProductVolumeParameterSet> ParameterSet {
             get {
@@ -19516,6 +19821,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Reports a flow of a product.
         /// </summary>
 		[Description("Reports a flow of a product.")]
+		[RecurringElement]
 		[XmlElement("flow")]
         public List<ProductVolumeFlow> Flow {
             get {
@@ -19533,6 +19839,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A timestamped remark about the facility.
         /// </summary>
 		[Description("A timestamped remark about the facility.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
@@ -19550,6 +19857,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -19673,7 +19981,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -19745,7 +20053,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The percent ownership of the sub-unit in the unit during the specified time.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("share")]
         public VolumePerVolumeMeasurePercent Share {
             get {
@@ -19832,7 +20140,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -19906,6 +20214,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Points to business unit which is part of another business unit.")]
+		[ComponentElement]
 		[XmlElement("kind")]
         public RefNameString Kind {
             get {
@@ -19968,6 +20277,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -20092,6 +20402,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A component part of the unit. The composition of a unit may vary with time. This defines the ownership share or account information for a sub unit within the context of the whole unit. For ownership shares, at any one point in time the sum of the shares should be 100%.
         /// </summary>
 		[Description("A component part of the unit.  The composition of a unit may vary with time. This defines the ownership share or account information for a sub unit within the context of the whole unit. For ownership shares, at any one point in time the sum of the shares should be 100%.")]
+		[RecurringElement]
 		[XmlElement("subUnit")]
         public List<ProductVolumeBusinessSubUnit> SubUnit {
             get {
@@ -20109,6 +20420,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -20180,6 +20492,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Human recognizable context for the Product Volume Report.")]
+		[ComponentElement]
 		[XmlElement("name")]
         public NameStruct Name {
             get {
@@ -20197,6 +20510,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
@@ -20214,6 +20528,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name and type of a facility whose context is relevant to the represented installation.
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
+		[RecurringElement]
 		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
@@ -20422,6 +20737,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The minimum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The minimum time index contained within the report. For the purposes of this parameter, a \"period\" or \"facility parameter\" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
@@ -20439,6 +20755,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The maximum time index contained within the report. For the purposes of this parameter, a \"period\" or \"facility parameter\" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
@@ -20526,6 +20843,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The operator of the facilities in the report.
         /// </summary>
 		[Description("The operator of the facilities in the report.")]
+		[ComponentElement]
 		[XmlElement("operator")]
         public BusinessAssociate Operator {
             get {
@@ -20543,6 +20861,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The tile of the report if different from the name of the report.
         /// </summary>
 		[Description("The tile of the report if different from the name of the report.")]
+		[ComponentElement]
 		[XmlElement("title")]
         public NameStruct Title {
             get {
@@ -20612,6 +20931,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The person or company that issued the report. This may contain the role of the person or company within the context of the report.
         /// </summary>
 		[Description("The person or company that issued the report. This may contain the role of the person or company within the context of the report.")]
+		[ComponentElement]
 		[XmlElement("issuedBy")]
         public BusinessAssociate IssuedBy {
             get {
@@ -20664,6 +20984,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The person or company that approved the report. This may contain the role of the person or company within the context of the report.
         /// </summary>
 		[Description("The person or company that approved the report. This may contain the role of the person or company within the context of the report.")]
+		[ComponentElement]
 		[XmlElement("approver")]
         public BusinessAssociate Approver {
             get {
@@ -20681,6 +21002,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The Product Flow Model for the overall installation. This model represents all Product Flow Units referenced within this report.
         /// </summary>
 		[Description("The Product Flow Model for the overall installation. This model represents all Product Flow Units referenced within this report.")]
+		[ComponentElement]
 		[XmlElement("productFlowModel")]
         public RefNameString ProductFlowModel {
             get {
@@ -20733,6 +21055,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A business unit and related account or ownership share information.
         /// </summary>
 		[Description("A business unit and related account or ownership share information.")]
+		[RecurringElement]
 		[XmlElement("businessUnit")]
         public List<ProductVolumeBusinessUnit> BusinessUnit {
             get {
@@ -20751,6 +21074,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A facility for which product information is being reported.")]
+		[RecurringElement]
 		[XmlElement("facility")]
         public List<ProductVolumeFacility> Facility {
             get {
@@ -20768,6 +21092,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -20874,6 +21199,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The role of the business associate within the context. For example, "driller" or "operator", "lead agency - CEQA compliance" "regulatory contact", "safety contact". A business associate will generally have one role but the role may be called different things in different naming systems.
         /// </summary>
 		[Description("The role of the business associate within the  context. For example, \"driller\" or \"operator\",  \"lead agency - CEQA compliance\" \"regulatory contact\", \"safety contact\".  A business associate will generally have one role but the role may be called different things in different naming systems.")]
+		[RecurringElement]
 		[XmlElement("role")]
         public List<NameStruct> Role {
             get {
@@ -20891,6 +21217,7 @@ namespace Energistics.DataAccess.PRODML122
         /// If the business associate is a person, this specifies the component names of the person.
         /// </summary>
 		[Description("If the business associate is a person, this specifies the component names of the person.")]
+		[ComponentElement]
 		[XmlElement("personName")]
         public PersonName PersonName {
             get {
@@ -20908,6 +21235,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The alias is an alternate name of a business associate. It is generally associated with a naming system. An alias is not necessarily unique within the naming system. 
         /// </summary>
 		[Description("The alias is an alternate name of a  business associate. It is generally associated with a  naming system. An alias is not necessarily unique  within the naming system.")]
+		[RecurringElement]
 		[XmlElement("alias")]
         public List<NameStruct> Alias {
             get {
@@ -20925,6 +21253,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Note that address may occur more than once, because it may be necessary to give a physical address, a mailing address, or both. 
         /// </summary>
 		[Description("Note that address may occur more than  once, because it may be necessary to give a physical  address, a mailing address, or both.")]
+		[RecurringElement]
 		[XmlElement("address")]
         public List<GeneralAddress> Address {
             get {
@@ -20942,6 +21271,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The various types of phone numbers may be given. The may be office or home, they may be a number for a cell phone, or for a fax, etc. Attributes of PhoneNumber declare the type of phone number that is being given. 
         /// </summary>
 		[Description("The various types of phone numbers may  be given. The may be office or home, they may be a  number for a cell phone, or for a fax, etc. Attributes  of PhoneNumber declare the type of phone number that is  being given.")]
+		[RecurringElement]
 		[XmlElement("phoneNumber")]
         public List<PhoneNumberStruct> PhoneNumber {
             get {
@@ -20959,6 +21289,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The email address may be home, office, or permanent. More than one may be given. 
         /// </summary>
 		[Description("The email address may be home, office,  or permanent. More than one may be given.")]
+		[RecurringElement]
 		[XmlElement("email")]
         public List<EmailQualifierStruct> Email {
             get {
@@ -20976,6 +21307,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The preferred method of being contacted within the context of this role. 
         /// </summary>
 		[Description("The preferred method of being contacted within the context of this role.")]
+		[RecurringElement]
 		[XmlElement("contactPreference")]
         public List<ContactPreference> ContactPreference {
             get {
@@ -20993,6 +21325,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to another business associate that this business associate is associated with. The most common situation is that of an employee being associated with a company. But it may also be, for example, a work group associated with a university.
         /// </summary>
 		[Description("A pointer to another business associate that this  business associate is associated with. The most common situation is that  of an employee being associated with a company. But it may also be, for  example, a work group associated with a university.")]
+		[ComponentElement]
 		[XmlElement("associatedWith")]
         public RefNameString AssociatedWith {
             get {
@@ -21010,6 +21343,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to a business associate (generally a person) who serves as a contact for this business associate. 
         /// </summary>
 		[Description("A pointer to a business associate  (generally a person) who serves as a contact for this  business associate.")]
+		[RecurringElement]
 		[XmlElement("contact")]
         public List<RefNameString> Contact {
             get {
@@ -21186,6 +21520,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A name suffix. Such as Esq, Phd, etc.
         /// </summary>
 		[Description("A name suffix. Such as Esq, Phd, etc.")]
+		[RecurringElement]
 		[XmlElement("suffix")]
         public List<String> Suffix {
             get {
@@ -21258,6 +21593,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the \"name\" and \"city\" lines. This may be repeated  for up to four, ordered lines.")]
+		[RecurringElement]
 		[XmlElement("street")]
         public List<String> Street {
             get {
@@ -21414,6 +21750,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -21878,6 +22215,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the field within whose context the report exists.
         /// </summary>
 		[Description("The name of the field within whose context the report exists.")]
+		[ComponentElement]
 		[XmlElement("field")]
         public NameStruct Field {
             get {
@@ -21895,6 +22233,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An offshore context.
         /// </summary>
 		[Description("An offshore context.")]
+		[ComponentElement]
 		[XmlElement("offshoreLocation")]
         public OffshoreLocation OffshoreLocation {
             get {
@@ -21984,6 +22323,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
+		[RecurringElement]
 		[XmlElement("blockID")]
         public List<String> BlockID {
             get {
@@ -22268,6 +22608,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A comment about the operation and/or the activities within the operation.
         /// </summary>
 		[Description("A comment about the operation and/or the activities  within the operation.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<String> Comment {
             get {
@@ -22285,6 +22626,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -22530,6 +22872,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Gross oil loaded to the ship during the report period. Gross oil includes BS and W. This volume has been corrected to standard conditions of temperature and pressure.
         /// </summary>
 		[Description("Gross oil loaded to the ship during the report period. Gross oil includes BS and W. This volume has been corrected to standard conditions of temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("oilGrossStdTempPres")]
         public VolumeMeasure OilGrossStdTempPres {
             get {
@@ -22547,6 +22890,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Gross oil loaded to the ship in total during the operation. Gross oil includes BS and W. This volume has been corrected to standard conditions of temperature and pressure.
         /// </summary>
 		[Description("Gross oil loaded to the ship in total during the operation. Gross oil includes BS and W. This volume has been corrected to standard conditions of temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("oilGrossTotalStdTempPres")]
         public VolumeMeasure OilGrossTotalStdTempPres {
             get {
@@ -22564,6 +22908,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Net oil loaded to the ship during the report period. Net oil excludes BS and W, fuel, spill and leaks. This volume has been corrected to standard conditions of temperature and pressure.
         /// </summary>
 		[Description("Net oil loaded to the ship during the report period. Net oil excludes BS and W, fuel, spill and leaks. This volume has been corrected to standard conditions of temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("oilNetStdTempPres")]
         public VolumeMeasure OilNetStdTempPres {
             get {
@@ -22581,6 +22926,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Net oil loaded to the ship from the beginning of the month to the end of the reporting period. Net oil excludes BS and W, fuel, spill and leaks. This volume has been corrected to standard conditions of temperature and pressure.
         /// </summary>
 		[Description("Net oil loaded to the ship from the beginning of the  month to the end of the reporting period. Net oil excludes BS and W, fuel, spill and leaks. This volume has been corrected to standard conditions of temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("oilNetMonthToDateStdTempPres")]
         public VolumeMeasure OilNetMonthToDateStdTempPres {
             get {
@@ -22598,6 +22944,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Density of the liquid loaded to the tanker. This density has been corrected to standard conditions of temperature and pressure.
         /// </summary>
 		[Description("Density of the liquid loaded to the tanker. This density has been corrected to standard conditions of temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("densityStdTempPres")]
         public DensityMeasure DensityStdTempPres {
             get {
@@ -22615,6 +22962,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Density of the liquid loaded to the tanker.
         /// </summary>
 		[Description("Density of the liquid loaded to the tanker.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -22632,6 +22980,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Reid vapor pressure of the liquid.
         /// </summary>
 		[Description("Reid vapor pressure of the liquid.")]
+		[ComponentElement]
 		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
@@ -22649,6 +22998,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Basic sediment and water is measured from a liquid sample of the production stream. It includes free water, sediment and emulsion and is measured as a volume percentage of the liquid.
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the liquid.")]
+		[ComponentElement]
 		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
@@ -22666,6 +23016,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Salt content. The product formed by neutralization of an acid and a base. The term is more specifically applied to sodium chloride.
         /// </summary>
 		[Description("Salt content. The product formed by neutralization of an acid  and a base. The term is more specifically applied to sodium chloride.")]
+		[ComponentElement]
 		[XmlElement("salt")]
         public DensityMeasure Salt {
             get {
@@ -22683,6 +23034,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A commnet about the operation.
         /// </summary>
 		[Description("A commnet about the operation.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
@@ -22700,6 +23052,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -22893,6 +23246,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Comment regarding the supply ship.
         /// </summary>
 		[Description("Comment regarding the supply ship.")]
+		[RecurringElement]
 		[XmlElement("supplyShipComment")]
         public List<DatedComment> SupplyShipComment {
             get {
@@ -22910,6 +23264,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Comment regarding the standby vessel.
         /// </summary>
 		[Description("Comment regarding the standby vessel.")]
+		[RecurringElement]
 		[XmlElement("standbyVesselComment")]
         public List<DatedComment> StandbyVesselComment {
             get {
@@ -22927,6 +23282,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Report of any basket movement to and from the installation.
         /// </summary>
 		[Description("Report of any basket movement to and from the installation.")]
+		[RecurringElement]
 		[XmlElement("basketMovement")]
         public List<DatedComment> BasketMovement {
             get {
@@ -22944,6 +23300,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A comment on a special event in the marine area.
         /// </summary>
 		[Description("A comment on a special event in the marine area.")]
+		[RecurringElement]
 		[XmlElement("activity")]
         public List<DatedComment> Activity {
             get {
@@ -22961,6 +23318,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23136,6 +23494,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23208,6 +23567,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the installation which was shut down. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the installation which was shut down.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
@@ -23312,6 +23672,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Downtime when the installation is unable to produce 100% of its capability. 
         /// </summary>
 		[Description("Downtime when the installation is unable to produce 100% of its capability.")]
+		[ComponentElement]
 		[XmlElement("volumetricDownTime")]
         public TimeMeasure VolumetricDownTime {
             get {
@@ -23329,6 +23690,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Estimated loss of oil deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.
         /// </summary>
 		[Description("Estimated loss of oil deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("lossOilStdTempPres")]
         public VolumeMeasure LossOilStdTempPres {
             get {
@@ -23346,6 +23708,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Estimated loss of gas deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.
         /// </summary>
 		[Description("Estimated loss of gas deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("lossGasStdTempPres")]
         public VolumeMeasure LossGasStdTempPres {
             get {
@@ -23363,6 +23726,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A description of main activities from time to time during the shutdown period. 
         /// </summary>
 		[Description("A description of main activities from time to time during the shutdown period.")]
+		[RecurringElement]
 		[XmlElement("activity")]
         public List<DatedComment> Activity {
             get {
@@ -23380,6 +23744,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23469,6 +23834,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Total measured oil in the water after the water cleaning process, but before it is discharged from the installation.
         /// </summary>
 		[Description("Total measured oil in the water after the water cleaning process,  but before it is discharged from the installation.")]
+		[ComponentElement]
 		[XmlElement("oilInWaterProduced")]
         public MassConcentrationMeasure OilInWaterProduced {
             get {
@@ -23486,6 +23852,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Total measured oil in the water after the water cleaning process, but before it is discharged from the installation
         /// </summary>
 		[Description("Total measured oil in the water after the water cleaning process,  but before it is discharged from the installation")]
+		[ComponentElement]
 		[XmlElement("amountOfOil")]
         public MassMeasure AmountOfOil {
             get {
@@ -23503,6 +23870,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of ammonium found in the water sample.
         /// </summary>
 		[Description("The amount of ammonium found in the water sample.")]
+		[ComponentElement]
 		[XmlElement("ammonium")]
         public DensityMeasure Ammonium {
             get {
@@ -23520,6 +23888,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of total organic carbon found in the water. The water is under high temperature and the carbon left is measured
         /// </summary>
 		[Description("The amount of total organic carbon found in the water.  The water is under high temperature and the carbon left is measured")]
+		[ComponentElement]
 		[XmlElement("totalOrganicCarbon")]
         public MassConcentrationMeasure TotalOrganicCarbon {
             get {
@@ -23537,6 +23906,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of Fenol found in the water sample.
         /// </summary>
 		[Description("The amount of Fenol found in the water sample.")]
+		[ComponentElement]
 		[XmlElement("phenol")]
         public DensityMeasure Phenol {
             get {
@@ -23554,6 +23924,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of Glycol found in the water sample.
         /// </summary>
 		[Description("The amount of Glycol found in the water sample.")]
+		[ComponentElement]
 		[XmlElement("glycol")]
         public DensityMeasure Glycol {
             get {
@@ -23606,6 +23977,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The temperature of the water before it is discharged.
         /// </summary>
 		[Description("The temperature of the water before it is discharged.")]
+		[ComponentElement]
 		[XmlElement("waterTemperature")]
         public ThermodynamicTemperatureMeasure WaterTemperature {
             get {
@@ -23623,6 +23995,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Total measured residual clorines in the water after the water cleaning process, but before it is discharged from the installation.
         /// </summary>
 		[Description("Total measured residual clorines in the water after the  water cleaning process, but before it is discharged from the installation.")]
+		[ComponentElement]
 		[XmlElement("residualChloride")]
         public MassConcentrationMeasure ResidualChloride {
             get {
@@ -23640,6 +24013,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Total measured Oxygen in the water after the water cleaning process, but before it is discharged from the installation.
         /// </summary>
 		[Description("Total measured Oxygen in the water after the water cleaning  process, but before it is discharged from the installation.")]
+		[ComponentElement]
 		[XmlElement("oxygen")]
         public MassConcentrationMeasure Oxygen {
             get {
@@ -23692,6 +24066,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A measure of the number of particles in water as measured by a coulter counter.
         /// </summary>
 		[Description("A measure of the number of particles in water as measured by a coulter counter.")]
+		[ComponentElement]
 		[XmlElement("coulterCounter")]
         public MassConcentrationMeasure CoulterCounter {
             get {
@@ -23709,6 +24084,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Any comment that may be useful in describing the water quality. There can be multiple comments.
         /// </summary>
 		[Description("Any comment that may be useful in describing the water quality.  There can be multiple comments.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
@@ -23726,6 +24102,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23798,6 +24175,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the installation which performed the processing. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the installation which performed the processing.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
@@ -23815,6 +24193,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The estimated amount of oil lost. This volume has been corrected to standard conditions of temperature and pressure
         /// </summary>
 		[Description("The estimated amount of oil lost. This volume has been corrected to standard conditions of temperature and pressure")]
+		[ComponentElement]
 		[XmlElement("oilStdTempPres")]
         public VolumeMeasure OilStdTempPres {
             get {
@@ -23832,6 +24211,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The estimated amount of gas lost. This volume has been corrected to standard conditions of temperature and pressure
         /// </summary>
 		[Description("The estimated amount of gas lost. This volume has been corrected to standard conditions of temperature and pressure")]
+		[ComponentElement]
 		[XmlElement("gasStdTempPres")]
         public VolumeMeasure GasStdTempPres {
             get {
@@ -23849,6 +24229,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23921,6 +24302,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A estimated lost volume and the reason for the loss.
         /// </summary>
 		[Description("A estimated lost volume and the reason for the loss.")]
+		[RecurringElement]
 		[XmlElement("volumeAndReason")]
         public List<LostVolumeAndReason> VolumeAndReason {
             get {
@@ -23938,6 +24320,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The estimated amount of oil and gas lost due to third party processing at an installation.
         /// </summary>
 		[Description("The estimated amount of oil and gas lost due to  third party processing at an installation.")]
+		[RecurringElement]
 		[XmlElement("thirdPartyProcessing")]
         public List<ProductionOperationThirdPartyProcessing> ThirdPartyProcessing {
             get {
@@ -23992,6 +24375,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Infomation about a lost production.
         /// </summary>
 		[Description("Infomation about a lost production.")]
+		[ComponentElement]
 		[XmlElement("lostProduction")]
         public ProductionOperationLostProduction LostProduction {
             get {
@@ -24009,6 +24393,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Infomation about a lost injection.
         /// </summary>
 		[Description("Infomation about a lost injection.")]
+		[ComponentElement]
 		[XmlElement("lostInjection")]
         public ProductionOperationLostProduction LostInjection {
             get {
@@ -24026,6 +24411,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the contaminants in water, and the general water quality.
         /// </summary>
 		[Description("Information about the contaminants in water, and the general water quality.")]
+		[RecurringElement]
 		[XmlElement("waterCleaningQuality")]
         public List<ProductionOperationWaterCleaningQuality> WaterCleaningQuality {
             get {
@@ -24043,6 +24429,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Infomation about a shutdown event.
         /// </summary>
 		[Description("Infomation about a shutdown event.")]
+		[RecurringElement]
 		[XmlElement("shutdown")]
         public List<ProductionOperationShutdown> Shutdown {
             get {
@@ -24060,6 +24447,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Infomation about an alarm.
         /// </summary>
 		[Description("Infomation about an alarm.")]
+		[RecurringElement]
 		[XmlElement("alarm")]
         public List<ProductionOperationAlarm> Alarm {
             get {
@@ -24077,6 +24465,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a marine operation.
         /// </summary>
 		[Description("Information about a marine operation.")]
+		[RecurringElement]
 		[XmlElement("marineOperation")]
         public List<ProductionOperationMarineOperation> MarineOperation {
             get {
@@ -24094,6 +24483,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a cargo operation.
         /// </summary>
 		[Description("Information about a cargo operation.")]
+		[RecurringElement]
 		[XmlElement("cargoShipOperation")]
         public List<ProductionOperationCargoShipOperation> CargoShipOperation {
             get {
@@ -24111,6 +24501,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A comment about a kind of operation. The time of the operation can be specified.
         /// </summary>
 		[Description("A comment about a kind of operation. The time of the operation can be specified.")]
+		[RecurringElement]
 		[XmlElement("operationalComment")]
         public List<ProductionOperationOperationalComment> OperationalComment {
             get {
@@ -24200,6 +24591,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Atmospheric pressure. 
         /// </summary>
 		[Description("Atmospheric pressure.")]
+		[ComponentElement]
 		[XmlElement("barometricPressure")]
         public PressureMeasure BarometricPressure {
             get {
@@ -24253,6 +24645,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Average temperature above ground for the period. Temperature of the atmosphere. 
         /// </summary>
 		[Description("Average temperature above ground for the period. Temperature of the atmosphere.")]
+		[ComponentElement]
 		[XmlElement("tempSurface")]
         public ThermodynamicTemperatureMeasure TempSurface {
             get {
@@ -24270,6 +24663,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Minimum temperature above ground. Temperature of the atmosphere. 
         /// </summary>
 		[Description("Minimum temperature above ground. Temperature of the atmosphere.")]
+		[ComponentElement]
 		[XmlElement("tempSurfaceMn")]
         public ThermodynamicTemperatureMeasure TempSurfaceMin {
             get {
@@ -24287,6 +24681,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Maximum temperature above ground. 
         /// </summary>
 		[Description("Maximum temperature above ground.")]
+		[ComponentElement]
 		[XmlElement("tempSurfaceMx")]
         public ThermodynamicTemperatureMeasure TempSurfaceMax {
             get {
@@ -24304,6 +24699,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A measure of the combined chilling effect of wind and low temperature on living things, also named chill factor, e.g., according to US weather service table, an air temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 degF. 
         /// </summary>
 		[Description("A measure of the combined chilling effect of wind and low temperature on  living things, also named chill factor, e.g., according to US weather service table, an air  temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 degF.")]
+		[ComponentElement]
 		[XmlElement("tempWindChill")]
         public ThermodynamicTemperatureMeasure TempWindChill {
             get {
@@ -24321,6 +24717,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Sea temperature. 
         /// </summary>
 		[Description("Sea temperature.")]
+		[ComponentElement]
 		[XmlElement("tempsea")]
         public ThermodynamicTemperatureMeasure Tempsea {
             get {
@@ -24338,6 +24735,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Horizontal visibility. 
         /// </summary>
 		[Description("Horizontal visibility.")]
+		[ComponentElement]
 		[XmlElement("visibility")]
         public LengthMeasure Visibility {
             get {
@@ -24355,6 +24753,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The direction from which the waves are coming, measured from true north. 
         /// </summary>
 		[Description("The direction from which the waves are coming, measured from true north.")]
+		[ComponentElement]
 		[XmlElement("aziWave")]
         public PlaneAngleMeasure AziWave {
             get {
@@ -24372,6 +24771,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Average height of the waves. 
         /// </summary>
 		[Description("Average height of the waves.")]
+		[ComponentElement]
 		[XmlElement("htWave")]
         public LengthMeasure HeightWave {
             get {
@@ -24389,6 +24789,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An average of the higher 1/3 of the wave heights passing during a sample period (typically 20 to 30 minutes). 
         /// </summary>
 		[Description("An average of the higher 1/3 of the wave heights passing during a   sample period (typically 20 to 30 minutes).")]
+		[ComponentElement]
 		[XmlElement("significantWave")]
         public LengthMeasure SignificantWave {
             get {
@@ -24406,6 +24807,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum wave height.
         /// </summary>
 		[Description("The maximum wave height.")]
+		[ComponentElement]
 		[XmlElement("maxWave")]
         public LengthMeasure MaxWave {
             get {
@@ -24423,6 +24825,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The elapsed time between the passing of two wave tops. 
         /// </summary>
 		[Description("The elapsed time between the passing of two wave tops.")]
+		[ComponentElement]
 		[XmlElement("periodWave")]
         public TimeMeasure PeriodWave {
             get {
@@ -24440,6 +24843,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The direction from which the wind is blowing, measured from true north. 
         /// </summary>
 		[Description("The direction from which the wind is blowing, measured from true north.")]
+		[ComponentElement]
 		[XmlElement("aziWind")]
         public PlaneAngleMeasure AziWind {
             get {
@@ -24457,6 +24861,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Wind speed. 
         /// </summary>
 		[Description("Wind speed.")]
+		[ComponentElement]
 		[XmlElement("velWind")]
         public VelocityMeasure VelWind {
             get {
@@ -24491,6 +24896,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Amount of precipitation. 
         /// </summary>
 		[Description("Amount of precipitation.")]
+		[ComponentElement]
 		[XmlElement("amtPrecip")]
         public LengthMeasure AmtPrecip {
             get {
@@ -24525,6 +24931,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Height of cloud cover. 
         /// </summary>
 		[Description("Height of cloud cover.")]
+		[ComponentElement]
 		[XmlElement("ceilingCloud")]
         public LengthMeasure CeilingCloud {
             get {
@@ -24542,6 +24949,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Current speed. 
         /// </summary>
 		[Description("Current speed.")]
+		[ComponentElement]
 		[XmlElement("currentSea")]
         public VelocityMeasure CurrentSea {
             get {
@@ -24559,6 +24967,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Azimuth of current. 
         /// </summary>
 		[Description("Azimuth of current.")]
+		[ComponentElement]
 		[XmlElement("aziCurrentSea")]
         public PlaneAngleMeasure AziCurrentSea {
             get {
@@ -24593,6 +25002,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -24844,6 +25254,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The mean time between safety incidents.
         /// </summary>
 		[Description("The mean time between safety incidents.")]
+		[ComponentElement]
 		[XmlElement("meantimeIncident")]
         public TimeMeasure MeantimeIncident {
             get {
@@ -24861,6 +25272,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The count of a type of safety issue.
         /// </summary>
 		[Description("The count of a type of safety issue.")]
+		[RecurringElement]
 		[XmlElement("safetyCount")]
         public List<SafetyCount> SafetyCount {
             get {
@@ -24878,6 +25290,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Safety related comment. 
         /// </summary>
 		[Description("Safety related comment.")]
+		[RecurringElement]
 		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
@@ -24895,6 +25308,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -25002,6 +25416,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of time since the most recent Lost Time Accident.
         /// </summary>
 		[Description("The amount of time since the most recent Lost Time Accident.")]
+		[ComponentElement]
 		[XmlElement("sinceLostTime")]
         public TimeMeasure SinceLostTime {
             get {
@@ -25019,6 +25434,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of time since the most recent accident prevention exercise.
         /// </summary>
 		[Description("The amount of time since the most recent accident prevention exercise.")]
+		[ComponentElement]
 		[XmlElement("sincePreventionExercise")]
         public TimeMeasure SincePreventionExercise {
             get {
@@ -25036,6 +25452,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The amount of time since the most recent defined hazard and accident situation (Norwegian DFU). 
         /// </summary>
 		[Description("The amount of time since the most recent defined hazard and accident situation (Norwegian DFU).")]
+		[ComponentElement]
 		[XmlElement("sinceDefinedSituation")]
         public TimeMeasure SinceDefinedSituation {
             get {
@@ -25175,6 +25592,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Safety information at a specific installatino.
         /// </summary>
 		[Description("Safety information at a specific installatino.")]
+		[RecurringElement]
 		[XmlElement("safety")]
         public List<ProductionOperationSafety> Safety {
             get {
@@ -25192,6 +25610,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the weather at a point in time.
         /// </summary>
 		[Description("Information about the weather at a point in time.")]
+		[RecurringElement]
 		[XmlElement("weather")]
         public List<ProductionOperationWeather> Weather {
             get {
@@ -25209,6 +25628,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -25408,6 +25828,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The installation represented by this report.
         /// </summary>
 		[Description("The installation represented by this report.")]
+		[ComponentElement]
 		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
@@ -25460,6 +25881,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The count of personnel on a type of crew. One of the types is all personnel on board.
         /// </summary>
 		[Description("The count of personnel on a type of crew. One of the types is all personnel on board.")]
+		[RecurringElement]
 		[XmlElement("crewCount")]
         public List<CrewCount> CrewCount {
             get {
@@ -25477,6 +25899,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The total cumulative amount of time worked during the reporting period. Commonly specified in units of hours. Note that a day unit translates to 24 hours worked.
         /// </summary>
 		[Description("The total cumulative amount of time worked during the  reporting period.  Commonly specified in units of hours.  Note that a day unit translates to 24 hours worked.")]
+		[ComponentElement]
 		[XmlElement("work")]
         public TimeMeasure Work {
             get {
@@ -25494,6 +25917,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The total cumulative amount of time worked from the beginning of the month to the end of reporting period. Commonly specified in units of hours. Note that a day unit translates to 24 hours worked.
         /// </summary>
 		[Description("The total cumulative amount of time worked from the beginning of  the month to the end of reporting period.  Commonly specified in units of hours.  Note that a day unit translates to 24 hours worked.")]
+		[ComponentElement]
 		[XmlElement("workMonthToDate")]
         public TimeMeasure WorkMonthToDate {
             get {
@@ -25511,6 +25935,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The total cumulative amount of time worked from the beginning of the year to the end of reporting period. Commonly specified in units of hours. Note that a day unit translates to 24 hours worked.
         /// </summary>
 		[Description("The total cumulative amount of time worked from the beginning of  the year to the end of reporting period.  Commonly specified in units of hours.  Note that a day unit translates to 24 hours worked.")]
+		[ComponentElement]
 		[XmlElement("workYearToDate")]
         public TimeMeasure WorkYearToDate {
             get {
@@ -25528,6 +25953,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Health, Safety and Environmenal information.
         /// </summary>
 		[Description("Health, Safety and Environmenal information.")]
+		[RecurringElement]
 		[XmlElement("operationalHSE")]
         public List<ProductionOperationHSE> OperationalHSE {
             get {
@@ -25545,6 +25971,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Production activities.
         /// </summary>
 		[Description("Production activities.")]
+		[ComponentElement]
 		[XmlElement("productionActivity")]
         public ProductionOperationActivity ProductionActivity {
             get {
@@ -25562,6 +25989,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -25633,6 +26061,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Human recognizable context for the Production Operation Report.")]
+		[ComponentElement]
 		[XmlElement("name")]
         public NameStruct Name {
             get {
@@ -25650,6 +26079,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
@@ -25667,6 +26097,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name and type of a facility whose context is relevant to the represented installation.
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
+		[RecurringElement]
 		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
@@ -25846,6 +26277,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The operator of the facilities in the report.
         /// </summary>
 		[Description("The operator of the facilities in the report.")]
+		[ComponentElement]
 		[XmlElement("operator")]
         public BusinessAssociate Operator {
             get {
@@ -25863,6 +26295,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The tile of the report if different from the name of the report.
         /// </summary>
 		[Description("The tile of the report if different from the name of the report.")]
+		[ComponentElement]
 		[XmlElement("title")]
         public NameStruct Title {
             get {
@@ -25932,6 +26365,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The person or company that issued the report. This may contain the role of the person or company within the context of the report.
         /// </summary>
 		[Description("The person or company that issued the report. This may contain the role of the person or company within the context of the report.")]
+		[ComponentElement]
 		[XmlElement("issuedBy")]
         public BusinessAssociate IssuedBy {
             get {
@@ -25984,6 +26418,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The person or company that approved the report. This may contain the role of the person or company within the context of the report.
         /// </summary>
 		[Description("The person or company that approved the report. This may contain the role of the person or company within the context of the report.")]
+		[ComponentElement]
 		[XmlElement("approver")]
         public BusinessAssociate Approver {
             get {
@@ -26001,6 +26436,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A report for each installation
         /// </summary>
 		[Description("A report for each installation")]
+		[RecurringElement]
 		[XmlElement("installationReport")]
         public List<ProductionOperationInstallationReport> InstallationReport {
             get {
@@ -26018,6 +26454,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -26159,6 +26596,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Documents that a change occurred at a particular time.
         /// </summary>
 		[Description("Documents that a change occurred at a particular time.")]
+		[RecurringElement]
 		[XmlElement("changeLog")]
         public List<ProductFlowChangeLog> ChangeLog {
             get {
@@ -26176,6 +26614,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -26301,6 +26740,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -26461,6 +26901,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alternative name for the sensor that will measure the property.
         /// </summary>
 		[Description("An alternative name for the sensor that will measure the property.")]
+		[RecurringElement]
 		[XmlElement("tagAlias")]
         public List<NameStruct> TagAlias {
             get {
@@ -26478,6 +26919,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Difference between two consecutive readings must exceeds deadband value to be accepted
         /// </summary>
 		[Description("Difference between two consecutive readings must exceeds deadband value to be accepted")]
+		[ComponentElement]
 		[XmlElement("deadband")]
         public GeneralMeasureType Deadband {
             get {
@@ -26495,6 +26937,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum time difference from the last sent event before the next event is sent. 
         /// </summary>
 		[Description("The maximum time difference from the last sent event before the next event is sent.")]
+		[ComponentElement]
 		[XmlElement("maximumFrequency")]
         public TimeMeasure MaximumFrequency {
             get {
@@ -26512,6 +26955,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the expected flow and product pairs to be assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair. The aggregate of expectations on all properties should be a subset of the aggregate of expectations on the port. If no expectations are defined on the port then the port aggregate will be defined by the properties.
         /// </summary>
 		[Description("Defines the expected flow and product pairs to be  assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair. The aggregate of expectations on all properties should be a subset of  the aggregate of expectations on the port.  If no expectations are defined on the port then the port aggregate will be defined by the properties.")]
+		[RecurringElement]
 		[XmlElement("expectedFlowProduct")]
         public List<ProductFlowQualifierExpected> ExpectedFlowProduct {
             get {
@@ -26546,6 +26990,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -26671,6 +27116,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The expected kind of qualifier of the flow.
         /// </summary>
 		[Description("The expected kind of qualifier of the flow.")]
+		[RecurringElement]
 		[XmlElement("qualifier")]
         public List<FlowQualifier> Qualifier {
             get {
@@ -26688,6 +27134,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -26882,6 +27329,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -27007,6 +27455,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility represented by this Product Flow Port The name can be qualified by a naming system. The facility name is assumed to be unique within the context of the facility represented by the unit. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility represented by this Product Flow Port The name can be qualified by a naming system. The facility name is assumed to be unique within the context of the facility  represented by the unit.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
@@ -27024,6 +27473,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name should also be listed as an alias.
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name  should also be listed as an alias.")]
+		[RecurringElement]
 		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
@@ -27077,6 +27527,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Defines the node to which this port is connected. A timestamp activates and deactivates the connection.  Only one connectedNode should be active at any one point in time. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one port is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port(s) if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
+		[RecurringElement]
 		[XmlElement("connectedNode")]
         public List<ConnectedNode> ConnectedNode {
             get {
@@ -27094,6 +27545,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the expected flow and product pairs to be assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair.
         /// </summary>
 		[Description("Defines the expected flow and product pairs to be  assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair.")]
+		[RecurringElement]
 		[XmlElement("expectedFlowProduct")]
         public List<ProductFlowQualifierExpected> ExpectedFlowProduct {
             get {
@@ -27111,6 +27563,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the properties that are expected to be measured at this port. This can also specify the equipment tag(s) of the sensor that will read the value. Only one of each property kind should be active at any point in time.
         /// </summary>
 		[Description("Defines the properties that are expected to be measured at this port. This can also specify the equipment tag(s) of the sensor that will read the value. Only one of each property kind should be active at any point in time.")]
+		[RecurringElement]
 		[XmlElement("expectedFlowProperty")]
         public List<ProductFlowExpectedPortProperty> ExpectedFlowProperty {
             get {
@@ -27145,6 +27598,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -27217,6 +27671,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the relative from-left-to-right location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as viewed by the user.
         /// </summary>
 		[Description("Defines the relative from-left-to-right location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as viewed by the user.")]
+		[ComponentElement]
 		[XmlElement("x")]
         public LengthPerLengthMeasure X {
             get {
@@ -27234,6 +27689,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the relative from-top-to-bottom location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as viewed by the user.
         /// </summary>
 		[Description("Defines the relative from-top-to-bottom location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as viewed by the user.")]
+		[ComponentElement]
 		[XmlElement("y")]
         public LengthPerLengthMeasure Y {
             get {
@@ -27251,6 +27707,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the relative from-front-to-back location in a 3D system. The unrotated display origin (0,0) is the upper left-hand corner of the display as viewed by the user. The "3D picture" may be rotated on the 2d display.
         /// </summary>
 		[Description("Defines the relative from-front-to-back location in a 3D system. The unrotated display origin (0,0) is the upper left-hand corner of the display as viewed by the user. The \"3D picture\" may be rotated on the 2d display.")]
+		[ComponentElement]
 		[XmlElement("z")]
         public LengthPerLengthMeasure Z {
             get {
@@ -27385,6 +27842,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alternative name for the sensor that will measure the property.
         /// </summary>
 		[Description("An alternative name for the sensor that will measure the property.")]
+		[RecurringElement]
 		[XmlElement("tagAlias")]
         public List<NameStruct> TagAlias {
             get {
@@ -27402,6 +27860,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Difference between two consecutive readings must exceeds deadband value to be accepted
         /// </summary>
 		[Description("Difference between two consecutive readings must exceeds deadband value to be accepted")]
+		[ComponentElement]
 		[XmlElement("deadband")]
         public GeneralMeasureType Deadband {
             get {
@@ -27419,6 +27878,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum time difference from the last sent event before the next event is sent. 
         /// </summary>
 		[Description("The maximum time difference from the last sent event before the next event is sent.")]
+		[ComponentElement]
 		[XmlElement("maximumFrequency")]
         public TimeMeasure MaximumFrequency {
             get {
@@ -27453,6 +27913,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -27559,6 +28020,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the network representing the internal behavior of this unit. The names of the external ports on the internal network must match the names of the ports on this unit. That is they are logically the same ports.
         /// </summary>
 		[Description("A pointer to the network representing the internal behavior of this unit. The names of the external ports on the internal network must match the names of  the ports on this unit. That is they are logically the same ports.")]
+		[ComponentElement]
 		[XmlElement("internalNetwork")]
         public RefNameString InternalNetwork {
             get {
@@ -27576,6 +28038,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility for which this Product Flow Unit describes fluid flow connecton behavior. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility for which this Product Flow Unit describes fluid flow connecton behavior. The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
@@ -27593,6 +28056,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility this named facility. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility this named facility.  The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
@@ -27610,6 +28074,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility of facilityParent1. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of facilityParent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
@@ -27627,6 +28092,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within the context of a parent) should also be listed as an alias.
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
+		[RecurringElement]
 		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
@@ -27644,6 +28110,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name and type of a facility whose context is relevant to the represented facility.
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented facility.")]
+		[RecurringElement]
 		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
@@ -27661,6 +28128,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines an expected property of the facility represented by this unit.
         /// </summary>
 		[Description("Defines an expected property of the facility represented by this unit.")]
+		[RecurringElement]
 		[XmlElement("expectedProperty")]
         public List<ProductFlowExpectedUnitProperty> ExpectedProperty {
             get {
@@ -27696,6 +28164,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("An inlet or outlet port associated with this unit. If there is an internal network then the name of this port must match the name of  an external port for that network. Any properties (e.g., volume, pressure, temperature) that are assigned to this port  are inherently assigned to the corresponding external port on the internal network.  That is, the ports are logically the same port. Similar to a node, there is no pressure drop across a port.   Also similar to a node, conservation of mass exists across the port and the flow direction across the port can change over time if the relative pressures across connected units change.")]
+		[RecurringElement]
 		[XmlElement("port")]
         public List<ProductFlowPort> Port {
             get {
@@ -27730,6 +28199,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -27908,6 +28378,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -28015,6 +28486,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the network containing the unit that this network represents. That is, the Unit must exist in a different Network. If a parent network is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation. All other networks represent internal detail and should not be referenced from outside the model. The external ports on the model network represent the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name (i.e., there is a one-to-one correspondence).
         /// </summary>
 		[Description("A pointer to the network containing the unit that this network represents. That is, the Unit must exist in a different Network. If a parent network is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside the model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence).")]
+		[ComponentElement]
 		[XmlElement("parentNetwork")]
         public RefNameString ParentNetwork {
             get {
@@ -28033,6 +28505,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [Obsolete()]
 		[Description("DEPRECATED. Use parentNetwork for all new work. A pointer to the Flow Unit that this network represents. The Unit must exist in a different Network. If a unit is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside this model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence). A unit model defines the internal behavior of a Flow Unit.")]
+		[ComponentElement]
 		[XmlElement("representedUnit")]
         public RefNameString RepresentedUnit {
             get {
@@ -28067,6 +28540,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An external port. This exposes an internal node for the purpose of allowing connections to the internal behavior of the network. Networks that represent a Flow Unit should always have external ports. If this network represents a Unit then the name of the external port must match the name of a port on the Unit (i.e., they are logically the same port).
         /// </summary>
 		[Description("An external port. This exposes an internal node for the purpose of allowing connections to the internal behavior of the network. Networks that represent a Flow Unit should always have external ports. If this network represents a Unit then the name of the external port must match the name of a port on the Unit (i.e., they are logically the same port).")]
+		[RecurringElement]
 		[XmlElement("port")]
         public List<ProductFlowlExternalPort> Port {
             get {
@@ -28085,6 +28559,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A flow behavior for one unit. Within this context, a unit represents a usage of equipment for some purpose. The unit is generally identified by its function rather than the actual equipment used to realize the function. A unit might represent something complex like a field or separator or something simple  like a valve or pump.")]
+		[RecurringElement]
 		[XmlElement("unit")]
         public List<ProductFlowUnit> Unit {
             get {
@@ -28102,6 +28577,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Documents that a change occurred at a particular time.
         /// </summary>
 		[Description("Documents that a change occurred at a particular time.")]
+		[RecurringElement]
 		[XmlElement("changeLog")]
         public List<ProductFlowChangeLog> ChangeLog {
             get {
@@ -28119,6 +28595,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the existance of a planned network which is a variant of this network beginning at a specified point in time. Any changes to the actual network after that time do not affect the plan.
         /// </summary>
 		[Description("Defines the existance of a planned network which is a variant of this network beginning at a specified point in time. Any changes to the actual network after that time do not affect the plan.")]
+		[RecurringElement]
 		[XmlElement("plan")]
         public List<ProductFlowNetworkPlan> Plan {
             get {
@@ -28136,6 +28613,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -28209,6 +28687,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the external port in the network  that represents the current Model.  This is the port to which a different model is being connected.")]
+		[ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
             get {
@@ -28227,6 +28706,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the external port within the connected Model. This is the port on a different model to which the port on this model is connected.")]
+		[ComponentElement]
 		[XmlElement("connectedPort")]
         public RefNameString ConnectedPort {
             get {
@@ -28245,6 +28725,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A pointer to the Product Flow Model that contains the connected port.")]
+		[ComponentElement]
 		[XmlElement("connectedModel")]
         public RefNameString ConnectedModel {
             get {
@@ -28262,6 +28743,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility that is represented by the connected model. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility that is represented by the connected model.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("connectedInstallation")]
         public FacilityIdentifierStruct ConnectedInstallation {
             get {
@@ -28279,6 +28761,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -28367,6 +28850,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility which is represented by this model. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility which is represented by this model.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
@@ -28384,6 +28868,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name and type of a facility whose context is relevant to the represented installation.
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
+		[RecurringElement]
 		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
@@ -28471,6 +28956,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The time for which "currently existing" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The time for which \"currently existing\" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("existenceTime")]
         public EndpointQualifiedDateTime ExistenceTime {
             get {
@@ -28488,6 +28974,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
@@ -28505,6 +28992,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
@@ -28522,6 +29010,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the external port in another Product Flow Model to which an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained within each individual model. The external port name must match the name of an external port on the network that represents this model.
         /// </summary>
 		[Description("Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.")]
+		[RecurringElement]
 		[XmlElement("externalConnect")]
         public List<ProductFlowExternalReference> ExternalConnect {
             get {
@@ -28540,6 +29029,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail. One of the networks must represent this model.")]
+		[RecurringElement]
 		[XmlElement("network")]
         public List<ProductFlowNetwork> Network {
             get {
@@ -28574,6 +29064,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -28730,6 +29221,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility from which the sample was acquired. The name can be qualified by a naming system. This also defines the kind of facility. Common facilities are wells, wellbores within a well, completions within a well.
         /// </summary>
 		[Description("The name of the facility from which the sample was acquired.  The name can be qualified by a naming system.  This also defines the kind of facility. Common facilities are wells, wellbores within a well, completions within a well.")]
+		[ComponentElement]
 		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
@@ -28747,6 +29239,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
@@ -28764,6 +29257,7 @@ namespace Energistics.DataAccess.PRODML122
         /// For facilities whose name is unique within the context of another facility, the name of the parent facility of parent1. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of parent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
@@ -28781,6 +29275,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within the context of a parent) should also be listed as an alias.
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
+		[RecurringElement]
 		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
@@ -28833,6 +29328,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The measured depth of the test in a wellbore.
         /// </summary>
 		[Description("The measured depth of the test in a wellbore.")]
+		[ComponentElement]
 		[XmlElement("testMD")]
         public MeasuredDepthCoord TestMD {
             get {
@@ -28971,6 +29467,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("acquisitionMD")]
         public MeasuredDepthCoord AcquisitionMD {
             get {
@@ -28988,6 +29485,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("acquisitionPressure")]
         public PressureMeasure AcquisitionPressure {
             get {
@@ -29005,6 +29503,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("acquisitionTemperature")]
         public ThermodynamicTemperatureMeasure AcquisitionTemperature {
             get {
@@ -29022,6 +29521,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("acquisitionGORStd")]
         public StandardVolumePerStandardVolumeMeasure AcquisitionGORStd {
             get {
@@ -29108,6 +29608,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -29214,6 +29715,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -29231,6 +29733,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("volumePercent")]
         public VolumePerVolumeMeasurePercent VolumePercent {
             get {
@@ -29354,7 +29857,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepTemperature")]
         public ThermodynamicTemperatureMeasure StepTemperature {
             get {
@@ -29371,7 +29874,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
@@ -29495,7 +29998,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
@@ -29512,7 +30015,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilFormationVolumeFactorStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure OilFormationVolumeFactorStd {
             get {
@@ -29529,7 +30032,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
@@ -29639,7 +30142,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// correctedStageSeparatorGORStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("correctedStageSeparatorGORStd")]
         public StandardVolumePerStandardVolumeMeasure CorrectedStageSeparatorGORStd {
             get {
@@ -29656,7 +30159,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cumulativeStockTankGORStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeStockTankGORStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeStockTankGORStd {
             get {
@@ -29673,7 +30176,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// solutionGORStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("solutionGORStd")]
         public StandardVolumePerStandardVolumeMeasure SolutionGORStd {
             get {
@@ -29760,7 +30263,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
@@ -29812,7 +30315,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
@@ -29829,7 +30332,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// residualAPIGravity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("residualAPIGravity")]
         public DensityMeasure ResidualAPIGravity {
             get {
@@ -29944,7 +30447,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// vaporComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
@@ -29961,7 +30464,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// liquidComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
@@ -29978,7 +30481,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// compositeComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
@@ -30050,7 +30553,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// temperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("temperature")]
         public ThermodynamicTemperatureMeasure Temperature {
             get {
@@ -30121,7 +30624,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// weightPercent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -30138,7 +30641,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// molePercent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
@@ -30227,7 +30730,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// weightPercent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -30244,7 +30747,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// molePercent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
@@ -30403,7 +30906,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// separatorTestStep property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("separatorTestStep")]
         public List<FluidResultSeparatorTestStep> SeparatorTestStep {
             get {
@@ -30492,7 +30995,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// referenceVolume property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("referenceVolume")]
         public VolumeMeasure ReferenceVolume {
             get {
@@ -30598,7 +31101,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepTemperature")]
         public ThermodynamicTemperatureMeasure StepTemperature {
             get {
@@ -30615,7 +31118,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
@@ -30694,7 +31197,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// dewPointPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("dewPointPressure")]
         public PressureMeasure DewPointPressure {
             get {
@@ -30711,7 +31214,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cloudPoint property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cloudPoint")]
         public ThermodynamicTemperatureMeasure CloudPoint {
             get {
@@ -30728,7 +31231,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// pourPoint property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("pourPoint")]
         public ThermodynamicTemperatureMeasure PourPoint {
             get {
@@ -30825,7 +31328,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
@@ -30842,7 +31345,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilCompressibility property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilCompressibility")]
         public CompressibilityMeasure OilCompressibility {
             get {
@@ -30859,7 +31362,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
@@ -30876,7 +31379,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilThermalConductivity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilThermalConductivity")]
         public ThermalConductivityMeasure OilThermalConductivity {
             get {
@@ -30963,7 +31466,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
@@ -31015,7 +31518,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasCompressibility property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasCompressibility")]
         public CompressibilityMeasure GasCompressibility {
             get {
@@ -31032,7 +31535,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
@@ -31049,7 +31552,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasThermalConductivity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasThermalConductivity")]
         public ThermalConductivityMeasure GasThermalConductivity {
             get {
@@ -31066,7 +31569,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasHeatingValue property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasHeatingValue")]
         public ModulusOfCompressionMeasure GasHeatingValue {
             get {
@@ -31181,7 +31684,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// vaporComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
@@ -31198,7 +31701,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// liquidComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
@@ -31215,7 +31718,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// compositeComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
@@ -31322,7 +31825,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// transportTestStep property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("transportTestStep")]
         public List<FluidResultTransportTestStep> TransportTestStep {
             get {
@@ -31429,7 +31932,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
@@ -31446,7 +31949,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
@@ -31578,7 +32081,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasFormationVolumeFactorStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure GasFormationVolumeFactorStd {
             get {
@@ -31630,7 +32133,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
@@ -31692,7 +32195,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// condensateYieldVolumeRatio1Std property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateYieldVolumeRatio1Std")]
         public VolumePerStandardVolumeMeasure CondensateYieldVolumeRatio1Std {
             get {
@@ -31709,7 +32212,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// condensateYieldVolumeRatio2Std property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateYieldVolumeRatio2Std")]
         public VolumePerStandardVolumeMeasure CondensateYieldVolumeRatio2Std {
             get {
@@ -31824,7 +32327,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// vaporComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
@@ -31841,7 +32344,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// liquidComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
@@ -31858,7 +32361,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// compositeComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
@@ -31965,7 +32468,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// testTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
@@ -32061,7 +32564,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cumulativeGasProducedReference property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeGasProducedReference")]
         public StandardVolumeMeasure CumulativeGasProducedReference {
             get {
@@ -32078,7 +32581,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// condensateYieldPressure1 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateYieldPressure1")]
         public PressureMeasure CondensateYieldPressure1 {
             get {
@@ -32095,7 +32598,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// condensateYieldTemperature1 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateYieldTemperature1")]
         public ThermodynamicTemperatureMeasure CondensateYieldTemperature1 {
             get {
@@ -32112,7 +32615,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// condensateYieldPressure2 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateYieldPressure2")]
         public PressureMeasure CondensateYieldPressure2 {
             get {
@@ -32129,7 +32632,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// condensateYieldTemperature2 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("condensateYieldTemperature2")]
         public ThermodynamicTemperatureMeasure CondensateYieldTemperature2 {
             get {
@@ -32146,7 +32649,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// jcrvTestStep property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("jcrvTestStep")]
         public List<FluidResultJCurveTestStep> JcrvTestStep {
             get {
@@ -32253,7 +32756,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
@@ -32270,7 +32773,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
@@ -32287,7 +32790,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilFormationVolumeFactorStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure OilFormationVolumeFactorStd {
             get {
@@ -32304,7 +32807,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilCompressibility property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilCompressibility")]
         public CompressibilityMeasure OilCompressibility {
             get {
@@ -32321,7 +32824,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
@@ -32453,7 +32956,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
@@ -32470,7 +32973,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasFormationVolumeFactorStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure GasFormationVolumeFactorStd {
             get {
@@ -32522,7 +33025,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
@@ -32539,7 +33042,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// totalFormationVolumeFactorStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("totalFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure TotalFormationVolumeFactorStd {
             get {
@@ -32556,7 +33059,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// solutionGORStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("solutionGORStd")]
         public StandardVolumePerStandardVolumeMeasure SolutionGORStd {
             get {
@@ -32573,7 +33076,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cumulativeStockTankGORStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeStockTankGORStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeStockTankGORStd {
             get {
@@ -32590,7 +33093,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cumulativeSaturatedGORStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeSaturatedGORStd")]
         public StandardVolumePerVolumeMeasure CumulativeSaturatedGORStd {
             get {
@@ -32607,7 +33110,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// residualAPIGravity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("residualAPIGravity")]
         public DensityMeasure ResidualAPIGravity {
             get {
@@ -32722,7 +33225,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// vaporComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
@@ -32739,7 +33242,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// liquidComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
@@ -32756,7 +33259,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// compositeComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
@@ -32863,7 +33366,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// testTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
@@ -32959,7 +33462,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// dlTestStep property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("dlTestStep")]
         public List<FluidResultDifferentialLiberationTestStep> DLTestStep {
             get {
@@ -33066,7 +33569,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
@@ -33083,7 +33586,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
@@ -33215,7 +33718,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasFormationVolumeFactorStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure GasFormationVolumeFactorStd {
             get {
@@ -33267,7 +33770,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
@@ -33427,7 +33930,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// vaporComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
@@ -33444,7 +33947,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// liquidComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
@@ -33461,7 +33964,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// compositeComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
@@ -33568,7 +34071,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// testTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
@@ -33664,7 +34167,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cumulativeGasProducedReferenceStd property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cumulativeGasProducedReferenceStd")]
         public StandardVolumeMeasure CumulativeGasProducedReferenceStd {
             get {
@@ -33681,7 +34184,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cvdTestStep property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("cvdTestStep")]
         public List<FluidResultCvdTestStep> CvdTestStep {
             get {
@@ -33788,7 +34291,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
@@ -33805,7 +34308,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
@@ -33822,7 +34325,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilCompressibility property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilCompressibility")]
         public CompressibilityMeasure OilCompressibility {
             get {
@@ -33839,7 +34342,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// oilViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
@@ -33941,7 +34444,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// relativeVolumeRatio property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("relativeVolumeRatio")]
         public VolumePerVolumeMeasure RelativeVolumeRatio {
             get {
@@ -33958,7 +34461,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasMassDensity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
@@ -34010,7 +34513,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasCompressibility property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasCompressibility")]
         public CompressibilityMeasure GasCompressibility {
             get {
@@ -34027,7 +34530,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// gasViscosity property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
@@ -34177,7 +34680,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// vaporComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
@@ -34194,7 +34697,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// liquidComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
@@ -34211,7 +34714,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// compositeComposition property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
@@ -34318,7 +34821,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// testTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
@@ -34431,7 +34934,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// cceTestStep property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("cceTestStep")]
         public List<FluidResultCceTestStep> CceTestStep {
             get {
@@ -34538,7 +35041,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// stepTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("stepTemperature")]
         public ThermodynamicTemperatureMeasure StepTemperature {
             get {
@@ -34617,7 +35120,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// dewPointPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("dewPointPressure")]
         public PressureMeasure DewPointPressure {
             get {
@@ -34741,7 +35244,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// saturationTestStep property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("saturationTestStep")]
         public List<FluidResultSaturationTestStep> SaturationTestStep {
             get {
@@ -35046,7 +35549,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// weightPercent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
@@ -35063,7 +35566,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// molePercent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
@@ -35115,7 +35618,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// boilingPoint property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("boilingPoint")]
         public ThermodynamicTemperatureMeasure BoilingPoint {
             get {
@@ -35132,7 +35635,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// criticalPressure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("criticalPressure")]
         public PressureMeasure CriticalPressure {
             get {
@@ -35149,7 +35652,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// criticalTemperature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("criticalTemperature")]
         public ThermodynamicTemperatureMeasure CriticalTemperature {
             get {
@@ -35166,7 +35669,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// criticalVolume property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("criticalVolume")]
         public VolumeMeasure CriticalVolume {
             get {
@@ -35218,7 +35721,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// volumeTranslationFactor property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("volumeTranslationFactor")]
         public MolarVolumeMeasure VolumeTranslationFactor {
             get {
@@ -35411,6 +35914,7 @@ namespace Energistics.DataAccess.PRODML122
         /// rvp property
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+		[ComponentElement]
 		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
@@ -35428,6 +35932,7 @@ namespace Energistics.DataAccess.PRODML122
         /// tvp property
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
+		[ComponentElement]
 		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
@@ -35444,7 +35949,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// binaryInteractionCoefficient property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("binaryInteractionCoefficient")]
         public List<BinaryInteractionCoefficient> BinaryInteractionCoefficient {
             get {
@@ -35690,6 +36195,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("transferPressure")]
         public PressureMeasure TransferPressure {
             get {
@@ -35707,6 +36213,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("transferTemperature")]
         public ThermodynamicTemperatureMeasure TransferTemperature {
             get {
@@ -35724,6 +36231,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("reservoirPressure")]
         public PressureMeasure ReservoirPressure {
             get {
@@ -35741,6 +36249,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("reservoirTemperature")]
         public ThermodynamicTemperatureMeasure ReservoirTemperature {
             get {
@@ -35758,6 +36267,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("saturationPressure")]
         public PressureMeasure SaturationPressure {
             get {
@@ -35775,6 +36285,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("producingGORStd")]
         public StandardVolumePerStandardVolumeMeasure ProducingGORStd {
             get {
@@ -35792,6 +36303,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("oilAPIGravityMeasured")]
         public DensityMeasure OilAPIGravityMeasured {
             get {
@@ -35809,6 +36321,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("oilAPIGravityCorrected")]
         public DensityMeasure OilAPIGravityCorrected {
             get {
@@ -35966,6 +36479,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("h2oSalinity")]
         public MassConcentrationMeasure H2oSalinity {
             get {
@@ -35983,6 +36497,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("aromaticsWeightPercent")]
         public MassConcentrationMeasurePercent AromaticsWeightPercent {
             get {
@@ -36000,6 +36515,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("asphaltenesWeightPercent")]
         public MassConcentrationMeasurePercent AsphaltenesWeightPercent {
             get {
@@ -36017,6 +36533,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("napthenesWeightPercent")]
         public MassConcentrationMeasurePercent NapthenesWeightPercent {
             get {
@@ -36034,6 +36551,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("parafinsWeightPercent")]
         public MassConcentrationMeasurePercent ParafinsWeightPercent {
             get {
@@ -36051,6 +36569,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The definition of standard pressure for all elements which end in "Std".
         /// </summary>
 		[Description("The definition of standard pressure for all elements which end in \"Std\".")]
+		[ComponentElement]
 		[XmlElement("standardPressure")]
         public PressureMeasure StandardPressure {
             get {
@@ -36068,6 +36587,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The definition of standard temperature for all elements which end in "Std".
         /// </summary>
 		[Description("The definition of standard temperature for all elements which end in \"Std\".")]
+		[ComponentElement]
 		[XmlElement("standardTemperature")]
         public ThermodynamicTemperatureMeasure StandardTemperature {
             get {
@@ -36171,6 +36691,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[RecurringElement]
 		[XmlElement("fluidSampleComposition")]
         public List<FluidResultComposition> FluidSampleComposition {
             get {
@@ -36336,6 +36857,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[RecurringElement]
 		[XmlElement("fluidSampleContaminant")]
         public List<FluidResultContaminant> FluidSampleContaminant {
             get {
@@ -36353,6 +36875,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -36710,6 +37233,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -36799,6 +37323,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The kind of processing used to create the new log.")]
+		[RecurringElement]
 		[XmlElement("processing")]
         public List<String> Processing {
             get {
@@ -36817,6 +37342,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The resultant wellLog.")]
+		[ComponentElement]
 		[XmlElement("derivedWellLog")]
         public RefNameString DerivedWellLog {
             get {
@@ -36834,6 +37360,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The wellLog which was the primary source for creating the derived log.
         /// </summary>
 		[Description("The wellLog which was the primary source for creating the derived log.")]
+		[ComponentElement]
 		[XmlElement("sourceWellLog")]
         public RefNameString SourceWellLog {
             get {
@@ -36868,6 +37395,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -36991,6 +37519,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -37115,6 +37644,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
@@ -37132,6 +37662,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
@@ -37184,6 +37715,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Contextual data about the well that was tested.
         /// </summary>
 		[Description("Contextual data about the well that was tested.")]
+		[ComponentElement]
 		[XmlElement("wellContext")]
         public WellContext WellContext {
             get {
@@ -37236,6 +37768,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The length of time that the instrument box was operating while collecting DTS data.
         /// </summary>
 		[Description("The length of time that the instrument box was operating  while collecting DTS data.")]
+		[ComponentElement]
 		[XmlElement("runDuration")]
         public TimeMeasure RunDuration {
             get {
@@ -37254,6 +37787,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A reference to the installed system that was used to make the measurements.")]
+		[ComponentElement]
 		[XmlElement("installedSystemUsed")]
         public RefNameString InstalledSystemUsed {
             get {
@@ -37272,6 +37806,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A reference to the well log used to record the table of data.")]
+		[ComponentElement]
 		[XmlElement("dataInWellLog")]
         public RefNameString DataInWellLog {
             get {
@@ -37289,6 +37824,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to the fiber used to record the table of data. This is necessary only in the cases in which a dtsInstalledSystem has a multi-fiber installation. If there is only a single installed fiber, this element is unnecessary.
         /// </summary>
 		[Description("A reference to the fiber used to record the table of data.  This is necessary only in the cases in which a dtsInstalledSystem has a multi-fiber  installation. If there is only a single installed fiber, this element is unnecessary.")]
+		[ComponentElement]
 		[XmlElement("connectedToFiber")]
         public RefNameString ConnectedToFiber {
             get {
@@ -37306,6 +37842,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the fiber connection node. If more than one node is available for a well/wellbore, this element is used to specify which node is connected to the instrument box. This name should correspond to the fiberEndPoint/name that is recorded in the installed system object.
         /// </summary>
 		[Description("A pointer to the fiber connection node. If more than one node  is available for a well/wellbore, this element is used to specify which node  is connected to the instrument box. This name should correspond to the  fiberEndPoint/name that is recorded in the installed system object.")]
+		[ComponentElement]
 		[XmlElement("fiberEndConnected")]
         public RefNameString FiberEndConnected {
             get {
@@ -37323,6 +37860,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A known point of the fiber. This point should correspond to one that is given in the wellboreFiberSchematic, so that the relationship between the length of fiber values in the wellboreFiberSchematic can be related to the values in the measurement table.
         /// </summary>
 		[Description("A known point of the fiber. This point should correspond  to one that is given in the wellboreFiberSchematic, so that the relationship  between the length of fiber values in the wellboreFiberSchematic can be related  to the values in the measurement table.")]
+		[ComponentElement]
 		[XmlElement("fiberDefinedPoint")]
         public DtsSingleInstalledPoint FiberDefinedPoint {
             get {
@@ -37340,6 +37878,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An error that occurred during the measurement.
         /// </summary>
 		[Description("An error that occurred during the measurement.")]
+		[RecurringElement]
 		[XmlElement("errorReport")]
         public List<DtsErrorReport> ErrorReport {
             get {
@@ -37357,6 +37896,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to a processed wellLog that represents this measurement.
         /// </summary>
 		[Description("A reference to a processed wellLog that represents this measurement.")]
+		[RecurringElement]
 		[XmlElement("processedLog")]
         public List<DtsProcessedWellLog> ProcessedLog {
             get {
@@ -37374,6 +37914,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -37498,6 +38039,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The measured depth of the installed point of the fiber. This is optional, because the sender may want to record points that are outside the well.
         /// </summary>
 		[Description("The measured depth of the installed point of the fiber.  This is optional, because the sender may want to record points that are  outside the well.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -37516,6 +38058,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The length along the fiber, from the zero point, for  this particular point.")]
+		[ComponentElement]
 		[XmlElement("lengthAlongFiber")]
         public LengthMeasure LengthAlongFiber {
             get {
@@ -37568,6 +38111,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -37694,6 +38238,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("A reference to the well log used to record the table of data.")]
+		[ComponentElement]
 		[XmlElement("dataInWellLog")]
         public RefNameString DataInWellLog {
             get {
@@ -37711,6 +38256,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the fiber connection node. If more than one node is available for a well/wellbore, this element is used to specify which node is connected to the instrument box. This name should correspond to the fiberEndPoint/name that is recorded in the installed system object.
         /// </summary>
 		[Description("A pointer to the fiber connection node. If more than one node  is available for a well/wellbore, this element is used to specify which node is  connected to the instrument box. This name should correspond to the fiberEndPoint/name  that is recorded in the installed system object.")]
+		[ComponentElement]
 		[XmlElement("fiberEndConncected")]
         public RefNameString FiberEndConncected {
             get {
@@ -37745,6 +38291,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -37816,7 +38363,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The speed of the cable.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("cableSpeed")]
         public VelocityMeasure CableSpeed {
             get {
@@ -37833,7 +38380,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The length of fiber pumped into the wellbore.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("fiberPumpedLength")]
         public LengthMeasure FiberPumpedLength {
             get {
@@ -37850,7 +38397,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The operating pressure of the pump.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("pumpPressure")]
         public PressureMeasure PumpPressure {
             get {
@@ -37884,7 +38431,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The temperature going into the wellbore.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("temperatureIn")]
         public ThermodynamicTemperatureMeasure TemperatureIn {
             get {
@@ -37901,7 +38448,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The temperature at the end of the operation
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("temperatureOut")]
         public ThermodynamicTemperatureMeasure TemperatureOut {
             get {
@@ -37935,7 +38482,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -38025,6 +38572,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the InstalledFiberInstance that this activity relates to.
         /// </summary>
 		[Description("The name of the InstalledFiberInstance that this activity relates to.")]
+		[ComponentElement]
 		[XmlElement("installedFiber")]
         public RefNameString InstalledFiber {
             get {
@@ -38293,6 +38841,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The length of the excess fiber that was removed.
         /// </summary>
 		[Description("The length of the excess fiber that was removed.")]
+		[ComponentElement]
 		[XmlElement("excessFiberRecovered")]
         public LengthMeasure ExcessFiberRecovered {
             get {
@@ -38310,6 +38859,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the pumping activity, that is captured in the pump log.
         /// </summary>
 		[Description("Information about the pumping activity, that is captured in the pump log.")]
+		[RecurringElement]
 		[XmlArrayItem("tableRow")]
         [XmlArray("pumpLog")]
         public List<DtsPumpLogRow> PumpLog {
@@ -38328,6 +38878,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -38417,6 +38968,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -38558,6 +39110,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Attribute name is the name of the parameter. Optional attribute uom is the unit of measure of the parameter. The value of the element is the value of the parameter. Note that a string value may appear as a parameter.
         /// </summary>
 		[Description("Attribute name is the name of the parameter. Optional attribute  uom is the unit of measure of the parameter. The value of the element is the value  of the parameter. Note that a string value may appear as a parameter.")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<CalibrationParameter> Parameter {
             get {
@@ -38592,6 +39145,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The temperature offset correction that is applied to the dts instrument box.
         /// </summary>
 		[Description("The temperature offset correction that is applied to the  dts instrument box.")]
+		[ComponentElement]
 		[XmlElement("offsetTemperatureCalibration")]
         public ThermodynamicTemperatureMeasure OffsetTemperatureCalibration {
             get {
@@ -38609,6 +39163,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The temperature slope correction that is applied to the dts instrument box.
         /// </summary>
 		[Description("The temperature slope correction that is applied to the  dts instrument box.")]
+		[ComponentElement]
 		[XmlElement("slopeCalibration")]
         public TemperatureSlopeMeasure SlopeCalibration {
             get {
@@ -38626,6 +39181,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -39003,6 +39559,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -39161,6 +39718,7 @@ namespace Energistics.DataAccess.PRODML122
         /// An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -39195,6 +39753,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the calibration of the instrument box that was performed. This includes factory calibrations before shipping, and bench calibrations. This does not include calibrations made in preparation for taking measurements.
         /// </summary>
 		[Description("Information about the calibration of the instrument box that  was performed. This includes factory calibrations before shipping, and bench  calibrations. This does not include calibrations made in preparation for  taking measurements.")]
+		[RecurringElement]
 		[XmlElement("factoryCalibration")]
         public List<DtsInstrumentBoxCalibration> FactoryCalibration {
             get {
@@ -39213,6 +39772,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Near distance of the oven from the beginning of the fiber.")]
+		[ComponentElement]
 		[XmlElement("internalOvenLocationNear")]
         public LengthMeasure InternalOvenLocationNear {
             get {
@@ -39230,6 +39790,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Far distance of the oven from the beginning of the fiber.
         /// </summary>
 		[Description("Far distance of the oven from the beginning of the fiber.")]
+		[ComponentElement]
 		[XmlElement("internalOvenLocationFar")]
         public LengthMeasure InternalOvenLocationFar {
             get {
@@ -39248,6 +39809,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The temperature of the oven.")]
+		[ComponentElement]
 		[XmlElement("ovenSetPoint")]
         public ThermodynamicTemperatureMeasure OvenSetPoint {
             get {
@@ -39299,6 +39861,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The power loss over the length of the cable.
         /// </summary>
 		[Description("The power loss over the length of the cable.")]
+		[ComponentElement]
 		[XmlElement("differentialLossSetting")]
         public GeneralMeasureType DifferentialLossSetting {
             get {
@@ -39316,6 +39879,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Additional parameters to define the instrument box as a piece of equipment. These should not be parameters to define the installation or use of the box in the wellbore, or other system. This element should be used only if an appropriate parameter is not available as an element, or in the calibration operation.
         /// </summary>
 		[Description("Additional parameters to define the instrument box as a  piece of equipment. These should not be parameters to define the installation  or use of the box in the wellbore, or other system. This element should be used  only if an appropriate parameter is not available as an element, or in the  calibration operation.")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<IndexedObject> Parameter {
             get {
@@ -39333,6 +39897,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -39623,6 +40188,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The properties of the instrument box.
         /// </summary>
 		[Description("The properties of the instrument box.")]
+		[ComponentElement]
 		[XmlElement("instrumentBox")]
         public DtsInstrumentBox InstrumentBox {
             get {
@@ -39640,6 +40206,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -39763,6 +40330,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Attribute name is the name of the parameter. Optional attribute uom is the unit of measure of the parameter. The value of the element is the value of the parameter. Note that a string value may appear as a parameter.
         /// </summary>
 		[Description("Attribute name is the name of the parameter. Optional attribute  uom is the unit of measure of the parameter. The value of the element is the value  of the parameter. Note that a string value may appear as a parameter.")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<CalibrationParameter> Parameter {
             get {
@@ -39797,6 +40365,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -39870,6 +40439,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("The value of the one way loss per unit of length.  The usual uom is decibels per kilometre (dB/km), although this might vary depending on the  calibration method used.")]
+		[ComponentElement]
 		[XmlElement("value")]
         public GeneralMeasureType Value {
             get {
@@ -39887,6 +40457,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The frequency (and uom) for which the one-way loss is measured.
         /// </summary>
 		[Description("The frequency (and uom) for which the one-way loss is measured.")]
+		[ComponentElement]
 		[XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
@@ -39904,6 +40475,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The wavelength (and uom) for which the one-way loss is measured. The reported wavelength should be the wavelength of the light in a vacuum.
         /// </summary>
 		[Description("The wavelength (and uom) for which the one-way loss is  measured. The reported wavelength should be the wavelength of the light in a vacuum.")]
+		[ComponentElement]
 		[XmlElement("wavelength")]
         public LengthMeasure Wavelength {
             get {
@@ -39921,6 +40493,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -40011,6 +40584,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The frequency (and uom) for which the refractive index is measured.
         /// </summary>
 		[Description("The frequency (and uom) for which the refractive index is measured.")]
+		[ComponentElement]
 		[XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
@@ -40028,6 +40602,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The wavelength (and uom) for which the refractive index is measured. The reported wavelength should be the wavelength of the light in a vacuum.
         /// </summary>
 		[Description("The wavelength (and uom) for which the refractive index is  measured. The reported wavelength should be the wavelength of the light in a vacuum.")]
+		[ComponentElement]
 		[XmlElement("wavelength")]
         public LengthMeasure Wavelength {
             get {
@@ -40045,6 +40620,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -40245,6 +40821,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Zero or more instances that allow other classifications to be assigned to the fiber.
         /// </summary>
 		[Description("Zero or more instances that allow other classifications  to be assigned to the fiber.")]
+		[RecurringElement]
 		[XmlElement("type")]
         public List<TypeOptionalClassString> Type {
             get {
@@ -40296,6 +40873,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The inner diameter of the core, generally measured in microns (um).
         /// </summary>
 		[Description("The inner diameter of the core, generally measured in microns (um).")]
+		[ComponentElement]
 		[XmlElement("coreDiameter")]
         public LengthMeasure CoreDiameter {
             get {
@@ -40313,6 +40891,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The diameter of the core plus the cladding, generally measured in microns (um).
         /// </summary>
 		[Description("The diameter of the core plus the cladding, generally measured in microns (um).")]
+		[ComponentElement]
 		[XmlElement("claddedDiameter")]
         public LengthMeasure CladdedDiameter {
             get {
@@ -40330,6 +40909,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The diameter of the cable and all its sheathing, generally measured in microns (um). This is intended to be the diameter of the cable on the spool.
         /// </summary>
 		[Description("The diameter of the cable and all its sheathing, generally  measured in microns (um). This is intended to be the diameter of the cable on the spool.")]
+		[ComponentElement]
 		[XmlElement("outsideDiameter")]
         public LengthMeasure OutsideDiameter {
             get {
@@ -40347,6 +40927,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The refractive index of the fiber. Also included is the frequency in Hz for which this refractive index is valid. There may be multiple instances of this element.
         /// </summary>
 		[Description("The refractive index of the fiber. Also included is the frequency  in Hz for which this refractive index is valid. There may be multiple instances of this element.")]
+		[RecurringElement]
 		[XmlElement("refractiveIndex")]
         public List<DtsRefractiveIndex> RefractiveIndex {
             get {
@@ -40364,6 +40945,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The power loss (usually in decibels) per unit of length of the fiber. Also included is the frequency for which this loss is measured. There ay be multiple instances of this element.
         /// </summary>
 		[Description("The power loss (usually in decibels) per unit of length of  the fiber. Also included is the frequency for which this loss is measured.  There ay be multiple instances of this element.")]
+		[RecurringElement]
 		[XmlElement("oneWayLoss")]
         public List<DtsOneWayLoss> OneWayLoss {
             get {
@@ -40381,6 +40963,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Additional parameters to define the fiber as a material. These should not be parameters to define the installation of the fiber in a well, or other system. This element should be used only if an appropriate parameter is not available as an element, or in the calibration operation.
         /// </summary>
 		[Description("Additional parameters to define the fiber as a material.  These should not be parameters to define the installation of the fiber in a  well, or other system. This element should be used only if an appropriate  parameter is not available as an element, or in the calibration operation.")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<IndexedObject> Parameter {
             get {
@@ -40415,6 +40998,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The length of the fiber on the spool when purchased.
         /// </summary>
 		[Description("The length of the fiber on the spool when purchased.")]
+		[ComponentElement]
 		[XmlElement("spoolLength")]
         public LengthMeasure SpoolLength {
             get {
@@ -40501,6 +41085,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about calibrations and quality checks that were performed on the cable at the factory. This is not to include calibrations that are run at installation time and at measurement time.
         /// </summary>
 		[Description("Information about calibrations and quality checks that were  performed on the cable at the factory. This is not to include calibrations that  are run at installation time and at measurement time.")]
+		[RecurringElement]
 		[XmlElement("factoryCalibration")]
         public List<DtsCalibration> FactoryCalibration {
             get {
@@ -40518,6 +41103,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to a dtsInstalledSytem object that previously used the fiber.
         /// </summary>
 		[Description("A reference to a dtsInstalledSytem object that previously  used the fiber.")]
+		[RecurringElement]
 		[XmlElement("installationHistory")]
         public List<RefNameString> InstallationHistory {
             get {
@@ -40535,6 +41121,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -40694,6 +41281,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The diameter of the capillary tube into which one or more fibers will be installed. If the installation has fibers that go to different wellbores, only those fibers installed in the parent wellbore should be included in this instance.
         /// </summary>
 		[Description("The diameter of the capillary tube into which one or more fibers  will be installed. If the installation has fibers that go to different wellbores,  only those fibers installed in the parent wellbore should be included in this instance.")]
+		[ComponentElement]
 		[XmlElement("capillaryTubeDiameter")]
         public LengthMeasure CapillaryTubeDiameter {
             get {
@@ -40711,6 +41299,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The properties of the fiber or fibers installed in the wellbore.
         /// </summary>
 		[Description("The properties of the fiber or fibers installed in the wellbore.")]
+		[RecurringElement]
 		[XmlElement("fiber")]
         public List<DtsFiber> Fiber {
             get {
@@ -40944,6 +41533,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dateMin")]
         public EndpointQualifiedDate DateMin {
             get {
@@ -40961,6 +41551,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
+		[ComponentElement]
 		[XmlElement("dateMax")]
         public EndpointQualifiedDate DateMax {
             get {
@@ -41013,6 +41604,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Contextual data about the well in which the system was installed.
         /// </summary>
 		[Description("Contextual data about the well in which the system was installed.")]
+		[ComponentElement]
 		[XmlElement("wellContext")]
         public WellContext WellContext {
             get {
@@ -41065,6 +41657,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the fiber used, and its installation.
         /// </summary>
 		[Description("Information about the fiber used, and its installation.")]
+		[ComponentElement]
 		[XmlElement("fiberInformation")]
         public DtsFiberInformation FiberInformation {
             get {
@@ -41082,6 +41675,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the instrument box used, and its installation.
         /// </summary>
 		[Description("Information about the instrument box used, and its installation.")]
+		[ComponentElement]
 		[XmlElement("instrumentBoxInformation")]
         public DtsBoxInformation InstrumentBoxInformation {
             get {
@@ -41116,6 +41710,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A fiber installed with a "U" configuration will have two ends available for hookup to an instrument box. In order to record which end is cabled to the instrument box on a particular measurement run, it is necessary to identify the two ends. This complex type allows a name and description for each end, so that it may be identified in a later use. This may also be useful when multiple fibers in multiple wellbores converge at the same wellhead.
         /// </summary>
 		[Description("A fiber installed with a \"U\" configuration will have two ends  available for hookup to an instrument box. In order to record which end is  cabled to the instrument box on a particular measurement run, it is necessary  to identify the two ends. This complex type allows a name and description for  each end, so that it may be identified in a later use. This may also be useful  when multiple fibers in multiple wellbores converge at the same wellhead.")]
+		[RecurringElement]
 		[XmlElement("fiberEndPoint")]
         public List<DtsFiberEndPoint> FiberEndPoint {
             get {
@@ -41133,6 +41728,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The length of the fiber installed in the wellbore.
         /// </summary>
 		[Description("The length of the fiber installed in the wellbore.")]
+		[ComponentElement]
 		[XmlElement("fiberLength")]
         public LengthMeasure FiberLength {
             get {
@@ -41150,6 +41746,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A table of values along the length along the fiber.
         /// </summary>
 		[Description("A table of values along the length along the fiber.")]
+		[RecurringElement]
 		[XmlArrayItem("installedPoint")]
         [XmlArray("wellboreFiberSchematic")]
         public List<DtsSingleInstalledPoint> WellboreFiberSchematic {
@@ -41168,6 +41765,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Total light budget available for the installation. This is generally measured in decibels, and indicates the total power loss for two-way travel of the light in the installed fiber.
         /// </summary>
 		[Description("Total light budget available for the installation. This is  generally measured in decibels, and indicates the total power loss for two-way  travel of the light in the installed fiber.")]
+		[ComponentElement]
 		[XmlElement("opticalBudget")]
         public GeneralMeasureType OpticalBudget {
             get {
@@ -41185,6 +41783,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The activity of pumping the fiber downhole
         /// </summary>
 		[Description("The activity of pumping the fiber downhole")]
+		[ComponentElement]
 		[XmlElement("pumpActivity")]
         public DtsPumpActivity PumpActivity {
             get {
@@ -41202,6 +41801,7 @@ namespace Energistics.DataAccess.PRODML122
         /// This captures the data from the pre-installation and post-installation OTDR tests run on the fiber. A standard quality control program would include these two, but the schema allows for more than two if additional runs associated with the installation of the fiber are performed. OTDR runs associated with a measurement are given as a child of the measurementInformation element.
         /// </summary>
 		[Description("This captures the data from the pre-installation and post-installation  OTDR tests run on the fiber. A standard quality control program would include these  two, but the schema allows for more than two if additional runs associated with the  installation of the fiber are performed. OTDR runs associated with a measurement are  given as a child of the measurementInformation element.")]
+		[RecurringElement]
 		[XmlElement("otdrInstallationTest")]
         public List<DtsOtdr> OtdrInstallationTest {
             get {
@@ -41219,6 +41819,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Any calibration other than the ones explicitly given may be recorded here. This is a general calibration type, which is populated with name/value pairs.
         /// </summary>
 		[Description("Any calibration other than the ones explicitly given may be  recorded here. This is a general calibration type, which is populated with name/value pairs.")]
+		[RecurringElement]
 		[XmlElement("installationCalibration")]
         public List<DtsCalibration> InstallationCalibration {
             get {
@@ -41236,6 +41837,7 @@ namespace Energistics.DataAccess.PRODML122
         /// If an instrument box is changed, for example, but the fiber remains the same, this instance of installed fiber is given to record that change. This element refers to a previous installed fiber, on which this one is based. For example, the wellboreFiberSchematic is unchanged, and may be obtained from the previous instance of installed fiber that is referenced here.
         /// </summary>
 		[Description("If an instrument box is changed, for example, but the  fiber remains the same, this instance of installed fiber is given to record  that change. This element refers to a previous installed fiber, on which  this one is based. For example, the wellboreFiberSchematic is unchanged, and  may be obtained from the previous instance of installed fiber that is  referenced here.")]
+		[ComponentElement]
 		[XmlElement("basedOnInstalledFiber")]
         public RefNameString BasedOnInstalledFiber {
             get {
@@ -41253,6 +41855,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -41377,6 +41980,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The minimum start time for an object. This only applies to objects with a root level date and/or dateTime element(s). The objects may or not be growing objects but the See the API specification for behavior related to this query parameter.
         /// </summary>
 		[Description("The minimum start time for an object. This only applies to objects with a root level date and/or dateTime element(s). The objects may or not be growing objects but the See the API specification for behavior related to this query parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
@@ -41394,6 +41998,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The maximum start time for an object. This only applies to objects with a root level date and/or dateTime element(s). See the API specification for behavior related to this query parameter.
         /// </summary>
 		[Description("The maximum start time for an object. This only applies to objects with a root level date and/or dateTime element(s). See the API specification for behavior related to this query parameter.")]
+		[ComponentElement]
 		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
@@ -41515,7 +42120,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -41674,6 +42279,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -41853,6 +42459,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("An identifier for the document. This is  intended to be unique within the context of the NamingSystem.")]
+		[ComponentElement]
 		[XmlElement("documentName")]
         public NameStruct DocumentName {
             get {
@@ -41870,6 +42477,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
         /// </summary>
 		[Description("Zero or more alternate names for the document.  These names do not need to be unique within the naming system.")]
+		[RecurringElement]
 		[XmlElement("documentAlias")]
         public List<NameStruct> DocumentAlias {
             get {
@@ -41922,6 +42530,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
         /// </summary>
 		[Description("A document class. Examples of classes would be a  metadata classification or a set of keywords.")]
+		[RecurringElement]
 		[XmlElement("documentClass")]
         public List<NameStruct> DocumentClass {
             get {
@@ -41956,6 +42565,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the security to be applied to this file. More than one classification can be given.
         /// </summary>
 		[Description("Information about the security to be applied to  this file. More than one classification can be given.")]
+		[RecurringElement]
 		[XmlElement("securityInformation")]
         public List<DocumentSecurityInfo> SecurityInformation {
             get {
@@ -41990,6 +42600,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A collection of events that can document the history of the data.
         /// </summary>
 		[Description("A collection of events that can document the  history of the data.")]
+		[RecurringElement]
 		[XmlArrayItem("event")]
         [XmlArray("auditTrail")]
         public List<DocumentEvent> AuditTrail {
@@ -42095,6 +42706,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -42174,6 +42786,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -42253,6 +42866,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance.
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -42411,6 +43025,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The tile of the report if different from the name of the report.
         /// </summary>
 		[Description("The tile of the report if different from the name of the report.")]
+		[ComponentElement]
 		[XmlElement("title")]
         public NameStruct Title {
             get {
@@ -42621,6 +43236,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of facility.
         /// </summary>
 		[Description("The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
+		[ComponentElement]
 		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
@@ -42638,6 +43254,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The name and type of a facility whose context is relevant to the represented installation.
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to  the represented installation.")]
+		[RecurringElement]
 		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
@@ -42655,6 +43272,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The operator of the facilities in the report.
         /// </summary>
 		[Description("The operator of the facilities in the report.")]
+		[ComponentElement]
 		[XmlElement("operator")]
         public BusinessAssociate Operator {
             get {
@@ -42724,6 +43342,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The person or company that issued the report. This may contain the role of the person or company within the context of the report.
         /// </summary>
 		[Description("The person or company that issued the report. This may contain the role of the person or company within the context of the report.")]
+		[ComponentElement]
 		[XmlElement("issuedBy")]
         public BusinessAssociate IssuedBy {
             get {
@@ -42776,6 +43395,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The person or company that approved the report. This may contain the role of the person or company within the context of the report.
         /// </summary>
 		[Description("The person or company that approved the report. This may contain the role of the person or company within the context of the report.")]
+		[ComponentElement]
 		[XmlElement("approver")]
         public BusinessAssociate Approver {
             get {
@@ -42826,6 +43446,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -42905,6 +43526,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -42985,6 +43607,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -43064,6 +43687,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -43143,6 +43767,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -43222,6 +43847,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -43301,6 +43927,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance.
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -43381,6 +44008,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about the XML message instance.
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {

@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.WITSML141.ComponentSchemas;
 using Energistics.DataAccess.WITSML141.ReferenceData;
+using Energistics.DataAccess.Validation;
 
 namespace Energistics.DataAccess.WITSML141
 {
@@ -129,6 +130,7 @@ namespace Energistics.DataAccess.WITSML141
         /// This is a pointer to the parent wellbore. No parent = starts from top. 
         /// </summary>
 		[Description("This is a pointer to the parent wellbore. No parent = starts from top.")]
+		[ComponentElement]
 		[XmlElement("parentWellbore")]
         public RefNameString ParentWellbore {
             get {
@@ -442,6 +444,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the borehole. If status is plugged, indicates the maximum depth reached before plugging. It is recommended that this value be updated about every 10 minutes by an assigned raw data provider at a site.
         /// </summary>
 		[Description("The measured depth of the borehole.  If status is plugged, indicates the maximum depth reached before plugging. It is recommended that this value be updated about every 10 minutes by an assigned  raw data provider at a site.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -459,6 +462,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth of the borehole. If status is plugged, indicates the maximum depth reached before plugging. It is recommended that this value be updated about every 10 minutes by an assigned raw data provider at a site.
         /// </summary>
 		[Description("The  true vertical depth of the borehole.   If status is plugged, indicates the maximum depth reached before plugging.  It is recommended that this value be updated about every 10 minutes by an assigned  raw data provider at a site.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -476,6 +480,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the bit. If isActive=false then this value is not relevant. It is recommended that this value be updated about every 10 minutes by an assigned raw data provider at a site.
         /// </summary>
 		[Description("The measured depth of the bit.  If isActive=false then this value is not relevant. It is recommended that this value be updated about every 10 minutes by an assigned  raw data provider at a site.")]
+		[ComponentElement]
 		[XmlElement("mdBit")]
         public MeasuredDepthCoord MDBit {
             get {
@@ -493,6 +498,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth of the bit. If isActive=false then this value is not relevant. It is recommended that this value be updated about every 10 minutes by an assigned raw data provider at a site.
         /// </summary>
 		[Description("The true vertical depth of the bit. If isActive=false then this value is not relevant. It is recommended that this value be updated about every 10 minutes by an assigned  raw data provider at a site.")]
+		[ComponentElement]
 		[XmlElement("tvdBit")]
         public WellVerticalDepthCoord TvdBit {
             get {
@@ -510,6 +516,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Kickoff measured depth of the wellbore. 
         /// </summary>
 		[Description("Kickoff measured depth of the wellbore.")]
+		[ComponentElement]
 		[XmlElement("mdKickoff")]
         public MeasuredDepthCoord MDKickoff {
             get {
@@ -527,6 +534,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Kickoff true vertical depth of the wellbore. 
         /// </summary>
 		[Description("Kickoff true vertical depth of the wellbore.")]
+		[ComponentElement]
 		[XmlElement("tvdKickoff")]
         public WellVerticalDepthCoord TvdKickoff {
             get {
@@ -544,6 +552,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Planned measured depth for the wellbore total depth. 
         /// </summary>
 		[Description("Planned measured depth for the wellbore total depth.")]
+		[ComponentElement]
 		[XmlElement("mdPlanned")]
         public MeasuredDepthCoord MDPlanned {
             get {
@@ -561,6 +570,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Planned true vertical depth for the wellbore total depth. 
         /// </summary>
 		[Description("Planned true vertical depth for the wellbore total depth.")]
+		[ComponentElement]
 		[XmlElement("tvdPlanned")]
         public WellVerticalDepthCoord TvdPlanned {
             get {
@@ -578,6 +588,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Planned measured for the wellbore total depth - with respect to seabed. 
         /// </summary>
 		[Description("Planned measured for the wellbore total depth - with respect to seabed.")]
+		[ComponentElement]
 		[XmlElement("mdSubSeaPlanned")]
         public MeasuredDepthCoord MDSubSeaPlanned {
             get {
@@ -595,6 +606,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Planned true vertical depth for the wellbore total depth - with respect to seabed. 
         /// </summary>
 		[Description("Planned true vertical depth for the wellbore total depth - with respect to seabed.")]
+		[ComponentElement]
 		[XmlElement("tvdSubSeaPlanned")]
         public WellVerticalDepthCoord TvdSubSeaPlanned {
             get {
@@ -612,6 +624,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Target days for drilling wellbore. 
         /// </summary>
 		[Description("Target days for drilling wellbore.")]
+		[ComponentElement]
 		[XmlElement("dayTarget")]
         public TimeMeasure DayTarget {
             get {
@@ -629,6 +642,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -4356,6 +4370,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The local time zone of the original acquisition date-time values. It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.
         /// </summary>
 		[Description("The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.")]
+		[RecurringElement]
 		[XmlElement("acquisitionTimeZone")]
         public List<TimestampedTimeZone> AcquisitionTimeZone {
             get {
@@ -4373,6 +4388,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object. Depth coordinates that do not specify a datum attribute shall be assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.
         /// </summary>
 		[Description("A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object.  Depth coordinates that do not specify a datum attribute shall be  assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.")]
+		[ComponentElement]
 		[XmlElement("defaultDatum")]
         public RefNameString DefaultDatum {
             get {
@@ -4442,6 +4458,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -4606,7 +4623,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Any property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("Any")]
         public List<XmlElement> Any {
             get {
@@ -4680,6 +4697,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The value of the extension.  This may also include a uom attribute.  The content should conform to constraints defined by the data type.")]
+		[ComponentElement]
 		[XmlElement("value")]
         public Extensionvalue Value {
             get {
@@ -4750,6 +4768,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth associated with the value.
         /// </summary>
 		[Description("The measured depth associated with the value.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -5003,7 +5022,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Any property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("Any")]
         public List<XmlElement> Any {
             get {
@@ -5093,6 +5112,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The gravity based elevation coordinate of this point as measured from a datum. Positive moving upward from the elevation datum. 
         /// </summary>
 		[Description("The gravity based elevation coordinate of this point  as measured from a datum. Positive moving upward from the elevation datum.")]
+		[ComponentElement]
 		[XmlElement("elevation")]
         public WellElevationCoord Elevation {
             get {
@@ -5110,6 +5130,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth coordinate of this reference point. Positive moving toward the bottomhole from the measured depth datum. This should be given when the reference is "downhole", such as an ocean bottom template, or when the reference point is also used as a vertical well datum. The measured depth value can be used to determine if the reference point and a vertical well datum are at the same point.
         /// </summary>
 		[Description("The measured depth coordinate of this reference point. Positive moving toward the bottomhole from the measured depth datum. This should be given when the reference is \"downhole\", such as an ocean  bottom template, or when the reference point is also used as a vertical well datum. The measured depth value can be used to determine if the reference point and a vertical well datum are at the same point.")]
+		[ComponentElement]
 		[XmlElement("measuredDepth")]
         public MeasuredDepthCoord MeasuredDepth {
             get {
@@ -5128,6 +5149,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Two dimensional coordinates that locate the point.")]
+		[RecurringElement]
 		[XmlElement("location")]
         public List<Location> Location {
             get {
@@ -5162,6 +5184,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -5234,6 +5257,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the wellCRS that defines the CRS for the coordinates. While optional, it is strongly recommended that this be specified.
         /// </summary>
 		[Description("A pointer to the wellCRS that defines the CRS for the coordinates.  While optional, it is strongly recommended that this be specified.")]
+		[ComponentElement]
 		[XmlElement("wellCRS")]
         public RefNameString WellCRS {
             get {
@@ -5611,6 +5635,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -5914,6 +5939,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance inside of the boundary line of the specified section. North specifies the distance from the north boundary line.
         /// </summary>
 		[Description("Distance inside of the boundary line of the specified section.  North specifies the distance from the north boundary line.")]
+		[ComponentElement]
 		[XmlElement("footageNS")]
         public FootageNorthSouth FootageNS {
             get {
@@ -5931,6 +5957,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance inside of the boundary line of the specified section. East specifies the distance from the east boundary line.
         /// </summary>
 		[Description("Distance inside of the boundary line of the specified section.  East specifies the distance from the east boundary line.")]
+		[ComponentElement]
 		[XmlElement("footageEW")]
         public FootageEastWest FootageEW {
             get {
@@ -6258,6 +6285,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Interest for Operator. Commonly in percent. 
         /// </summary>
 		[Description("Interest for Operator. Commonly in percent.")]
+		[ComponentElement]
 		[XmlElement("pcInterest")]
         public DimensionlessMeasure PercentInterest {
             get {
@@ -6502,6 +6530,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Elevation of wellhead relative to a wellDatum. 
         /// </summary>
 		[Description("Elevation of wellhead relative to a wellDatum.")]
+		[ComponentElement]
 		[XmlElement("wellheadElevation")]
         public WellElevationCoord WellheadElevation {
             get {
@@ -6519,6 +6548,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A vertical datum to which elevations and depths are referenced. 
         /// </summary>
 		[Description("A vertical datum to which elevations and depths are referenced.")]
+		[RecurringElement]
 		[XmlElement("wellDatum")]
         public List<WellDatum> WellDatum {
             get {
@@ -6536,6 +6566,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Elevation of ground level (land rigs). 
         /// </summary>
 		[Description("Elevation of ground level (land rigs).")]
+		[ComponentElement]
 		[XmlElement("groundElevation")]
         public WellElevationCoord GroundElevation {
             get {
@@ -6553,6 +6584,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Depth of water (not land rigs). 
         /// </summary>
 		[Description("Depth of water (not land rigs).")]
+		[ComponentElement]
 		[XmlElement("waterDepth")]
         public LengthMeasure WaterDepth {
             get {
@@ -6570,6 +6602,7 @@ namespace Energistics.DataAccess.WITSML141
         /// the 2D coordinates of the well surface point in one coordinate reference system. This is where the well crosses ground level on land and crosses the platform offshore. 
         /// </summary>
 		[Description("the 2D coordinates of the well surface point in one coordinate reference system.  This is where the well crosses ground level on land and crosses the platform offshore.")]
+		[RecurringElement]
 		[XmlElement("wellLocation")]
         public List<Location> WellLocation {
             get {
@@ -6604,6 +6637,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines a reference point within the context of the well. 
         /// </summary>
 		[Description("Defines a reference point within the context of the well.")]
+		[RecurringElement]
 		[XmlElement("referencePoint")]
         public List<ReferencePoint> ReferencePoint {
             get {
@@ -6621,6 +6655,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A coordinate reference system that was used within the context of this well. 
         /// </summary>
 		[Description("A coordinate reference system that was used within  the context of this well.")]
+		[RecurringElement]
 		[XmlElement("wellCRS")]
         public List<WellCRS> WellCRS {
             get {
@@ -6638,6 +6673,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -6824,6 +6860,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Since various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).
         /// </summary>
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
+		[RecurringElement]
 		[XmlElement("kind")]
         public List<String> Kind {
             get {
@@ -6875,6 +6912,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The gravity based elevation coordinate of this reference datum as measured from another datum. Positive moving upward from the elevation datum. An elevation should be given unless this is a vertical reference datum (e.g., sea level). 
         /// </summary>
 		[Description("The gravity based elevation coordinate of this reference datum  as measured from another datum. Positive moving upward from the elevation datum. An elevation should be given unless this is a vertical reference datum (e.g., sea level).")]
+		[ComponentElement]
 		[XmlElement("elevation")]
         public WellElevationCoord Elevation {
             get {
@@ -6892,6 +6930,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth coordinate of this reference datum as measured from another datum. The measured depth datum should either be the same as the elevation datum or it should be relatable to the elevation datum through other datums. Positive moving toward the bottomhole from the measured depth datum. This should be given when a local reference is "downhole", such as a kickoff point or ocean bottom template, and the borehole may not be vertical. If a Depth is given then an Elevation should also be given.
         /// </summary>
 		[Description("The measured depth coordinate of this reference datum as measured from another datum. The measured depth datum should either be the same as the elevation datum or it should be relatable to the elevation datum through other datums. Positive moving toward the bottomhole from the measured depth datum. This should be given when a local reference is \"downhole\",  such as a kickoff point or ocean bottom template, and the borehole may not be vertical. If a Depth is given then an Elevation should also be given.")]
+		[ComponentElement]
 		[XmlElement("measuredDepth")]
         public MeasuredDepthCoord MeasuredDepth {
             get {
@@ -6909,6 +6948,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The horizontal location of the point being used as a well datum. This may be used when the point is not directly above or below the well point location. For example, a well being drilled from a platform may have its location at the entrance into the sea floor, while the well datum may be located on the drilling rig. Or the well datum may be a kickoff point, that is not directly under the well surface point. 
         /// </summary>
 		[Description("The horizontal location of the point being used as a well datum.  This may be used when the point is not directly above or below the well point location.  For example, a well being drilled from a platform may have its location at the entrance  into the sea floor, while the well datum may be located on the drilling rig.  Or the well datum may be a kickoff point, that is not directly under the well surface point.")]
+		[ComponentElement]
 		[XmlElement("horizontalLocation")]
         public Location HorizontalLocation {
             get {
@@ -6943,6 +6983,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -7127,6 +7168,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A pointer the wellbore with which there is a relationship.")]
+		[ComponentElement]
 		[XmlElement("wellboreReference")]
         public RefNameString WellboreReference {
             get {
@@ -7144,6 +7186,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the context of a common parent well.
         /// </summary>
 		[Description("A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
+		[ComponentElement]
 		[XmlElement("wellParent")]
         public RefNameString WellParent {
             get {
@@ -7199,6 +7242,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A pointer to the rig with which there is a relationship.")]
+		[ComponentElement]
 		[XmlElement("rigReference")]
         public RefNameString RigReference {
             get {
@@ -7216,6 +7260,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the context of a common parent wellbore.
         /// </summary>
 		[Description("A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the  context of a common parent wellbore.")]
+		[ComponentElement]
 		[XmlElement("wellboreParent")]
         public RefNameString WellboreParent {
             get {
@@ -7233,6 +7278,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the context of a common parent well.
         /// </summary>
 		[Description("A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
+		[ComponentElement]
 		[XmlElement("wellParent")]
         public RefNameString WellParent {
             get {
@@ -7465,6 +7511,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -7536,7 +7583,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'ED50' with a code of '4230' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is also true for any other naming system. If in doubt, contact your local geodesist.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("nameCRS")]
         public WellKnownNameStruct NameCRS {
             get {
@@ -7590,7 +7637,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("xTranslation")]
         public LengthMeasure XTranslation {
             get {
@@ -7608,7 +7655,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("yTranslation")]
         public LengthMeasure YTranslation {
             get {
@@ -7626,7 +7673,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("zTranslation")]
         public LengthMeasure ZTranslation {
             get {
@@ -7644,7 +7691,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("xRotation")]
         public PlaneAngleMeasure XRotation {
             get {
@@ -7662,7 +7709,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("yRotation")]
         public PlaneAngleMeasure YRotation {
             get {
@@ -7680,7 +7727,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("zRotation")]
         public PlaneAngleMeasure ZRotation {
             get {
@@ -7770,7 +7817,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Ellipsoid semi-major axis size. Implied if geodeticDatumCode or ellipsoidCode specified. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("ellipsoidSemiMajorAxis")]
         public LengthMeasure EllipsoidSemiMajorAxis {
             get {
@@ -7930,7 +7977,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The angle of the Y axis from North (as described in attribute northDirection). Defaults to zero. Positive clockwise.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("yAxisAzimuth")]
         public YAxisAzimuth YAxisAzimuth {
             get {
@@ -7947,7 +7994,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The angle between magnetic north and true north. The angle is measured positive clockwise from true north to magnetic north. This value SHOULD be given if the yAxisAzimuth is measured from the magnetic north direction.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("magneticDeclination")]
         public PlaneAngleMeasure MagneticDeclination {
             get {
@@ -7964,7 +8011,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The angle between true north and the northing axis or the projection grid being used. The angle is measured at the point in question, and is measured from true north to grid north, positive clockwise.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("gridConvergence")]
         public PlaneAngleMeasure GridConvergence {
             get {
@@ -8070,7 +8117,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'WGS 84 / UTM zone 10N' with a code of '32610' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is also true for any other naming system. If in doubt, contact your local geodesist.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("nameCRS")]
         public WellKnownNameStruct NameCRS {
             get {
@@ -8124,7 +8171,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. A pointer to the wellCRS that represents the geographic system from which this system was projected.
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("projectedFrom")]
         public RefNameString ProjectedFrom {
             get {
@@ -8142,7 +8189,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Latitude of first standard parallel. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("stdParallel1")]
         public PlaneAngleMeasure StdParallel1 {
             get {
@@ -8160,7 +8207,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Latitude of second standard parallel, if used. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("stdParallel2")]
         public PlaneAngleMeasure StdParallel2 {
             get {
@@ -8178,7 +8225,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Longitude of the Y axis of the resulting map. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("centralMeridian")]
         public PlaneAngleMeasure CentralMeridian {
             get {
@@ -8196,7 +8243,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Latitude at which the X axis intersects the central meridian. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("originLatitude")]
         public PlaneAngleMeasure OriginLatitude {
             get {
@@ -8214,7 +8261,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Longitude of the central meridian. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("originLongitude")]
         public PlaneAngleMeasure OriginLongitude {
             get {
@@ -8232,7 +8279,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Latitude of the first point if the two-point specification of the central line is used. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("latitude1")]
         public PlaneAngleMeasure Latitude1 {
             get {
@@ -8250,7 +8297,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Longitude of the first point if the two-point specification of the central line is used. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("longitude1")]
         public PlaneAngleMeasure Longitude1 {
             get {
@@ -8268,7 +8315,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Latitude of the second point if the two-point specification of the central line is used. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("latitude2")]
         public PlaneAngleMeasure Latitude2 {
             get {
@@ -8286,7 +8333,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Longitude of the second point if the two-point specification of the central line is used. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("longitude2")]
         public PlaneAngleMeasure Longitude2 {
             get {
@@ -8304,7 +8351,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Latitude of a point for which the scale factor is specified exactly. Default to origin. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("latitudeForScale")]
         public PlaneAngleMeasure LatitudeForScale {
             get {
@@ -8322,7 +8369,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Longitude of a point for which the scale factor is specified exactly. Default to origin. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("longitudeForScale")]
         public PlaneAngleMeasure LongitudeForScale {
             get {
@@ -8340,7 +8387,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Latitude at which the scale on the map is exact. If none is provided, scale is assumed to be exact at the equator. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("trueScaleLatitude")]
         public PlaneAngleMeasure TrueScaleLatitude {
             get {
@@ -8358,7 +8405,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Spheroid radius. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("spheroidRadius")]
         public LengthMeasure SpheroidRadius {
             get {
@@ -8448,7 +8495,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Height above the surface origin location from which the perspective is taken. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("perspectiveHeight")]
         public LengthMeasure PerspectiveHeight {
             get {
@@ -8520,7 +8567,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Artificial value added to the X axis. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("falseEasting")]
         public LengthMeasure FalseEasting {
             get {
@@ -8538,7 +8585,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Artificial value added to the Y axis. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("falseNorthing")]
         public LengthMeasure FalseNorthing {
             get {
@@ -8556,7 +8603,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Bearing angle of the great circle with respect to north at the central point. 
         /// </summary>
         [Obsolete()]
-		
+		[ComponentElement]
 		[XmlElement("bearing")]
         public PlaneAngleMeasure Bearing {
             get {
@@ -8628,7 +8675,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Parameter describing the user-defined projection. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
         [Obsolete()]
-		
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<IndexedObject> Parameter {
             get {
@@ -8920,6 +8967,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at bottom. 
         /// </summary>
 		[Description("Measured depth at bottom.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -8937,6 +8985,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Air gap. 
         /// </summary>
 		[Description("Air gap.")]
+		[ComponentElement]
 		[XmlElement("gapAir")]
         public LengthMeasure GapAir {
             get {
@@ -8954,6 +9003,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Water depth. 
         /// </summary>
 		[Description("Water depth.")]
+		[ComponentElement]
 		[XmlElement("depthWaterMean")]
         public LengthMeasure DepthWaterMean {
             get {
@@ -8971,6 +9021,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore geometry section object. 
         /// </summary>
 		[Description("Wellbore geometry section object.")]
+		[RecurringElement]
 		[XmlElement("wbGeometrySection")]
         public List<WellboreGeometrySection> WellboreGeometrySection {
             get {
@@ -8988,6 +9039,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -9147,6 +9199,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at Top of Interval. 
         /// </summary>
 		[Description("Measured depth at Top of Interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -9164,6 +9217,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at bottom of the section. 
         /// </summary>
 		[Description("Measured depth at bottom of the section.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -9181,6 +9235,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at top of the section. 
         /// </summary>
 		[Description("True vertical depth at top of the section.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -9198,6 +9253,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at bottom of the section. 
         /// </summary>
 		[Description("True vertical depth at bottom of the section.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -9215,6 +9271,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter. 
         /// </summary>
 		[Description("Inner diameter.")]
+		[ComponentElement]
 		[XmlElement("idSection")]
         public LengthMeasure InnerDiameterSection {
             get {
@@ -9232,6 +9289,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outer diameter - Only for casings and risers. 
         /// </summary>
 		[Description("Outer diameter - Only for casings and risers.")]
+		[ComponentElement]
 		[XmlElement("odSection")]
         public LengthMeasure OuterDiameterSection {
             get {
@@ -9249,6 +9307,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight per unit length for casing sections. 
         /// </summary>
 		[Description("Weight per unit length for casing sections.")]
+		[ComponentElement]
 		[XmlElement("wtPerLen")]
         public MassPerLengthMeasure WeightPerLen {
             get {
@@ -9318,6 +9377,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum diameter that can pass through. 
         /// </summary>
 		[Description("Maximum diameter that can pass through.")]
+		[ComponentElement]
 		[XmlElement("diaDrift")]
         public LengthMeasure DiaDrift {
             get {
@@ -9370,6 +9430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -9505,6 +9566,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum size of hole in which the tool can operate.
         /// </summary>
 		[Description("Minimum size of hole in which the tool can operate.")]
+		[ComponentElement]
 		[XmlElement("holeSizeMn")]
         public LengthMeasure HoleSizeMin {
             get {
@@ -9522,6 +9584,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum size of hole in which the tool can operate.
         /// </summary>
 		[Description("Maximum size of hole in which the tool can operate.")]
+		[ComponentElement]
 		[XmlElement("holeSizeMx")]
         public LengthMeasure HoleSizeMax {
             get {
@@ -9539,6 +9602,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum weight on the bit.
         /// </summary>
 		[Description("Maximum weight on the bit.")]
+		[ComponentElement]
 		[XmlElement("wobMx")]
         public ForceMeasure WobMax {
             get {
@@ -9556,6 +9620,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Suggested operating speed.
         /// </summary>
 		[Description("Suggested operating speed.")]
+		[ComponentElement]
 		[XmlElement("operatingSpeed")]
         public AnglePerTimeMeasure OperatingSpeed {
             get {
@@ -9573,6 +9638,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum rotation speed.
         /// </summary>
 		[Description("Maximum rotation speed.")]
+		[ComponentElement]
 		[XmlElement("speedMx")]
         public AnglePerTimeMeasure SpeedMax {
             get {
@@ -9590,6 +9656,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum flow rate for tool operation.
         /// </summary>
 		[Description("Minimum flow rate for tool operation.")]
+		[ComponentElement]
 		[XmlElement("flowRateMn")]
         public VolumeFlowRateMeasure FlowRateMin {
             get {
@@ -9607,6 +9674,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum flow rate for tool operation.
         /// </summary>
 		[Description("Maximum flow rate for tool operation.")]
+		[ComponentElement]
 		[XmlElement("flowRateMx")]
         public VolumeFlowRateMeasure FlowRateMax {
             get {
@@ -9624,6 +9692,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum flow rate for programming tool.
         /// </summary>
 		[Description("Minimum flow rate for programming tool.")]
+		[ComponentElement]
 		[XmlElement("downLinkFlowRateMn")]
         public VolumeFlowRateMeasure DownLinkFlowRateMin {
             get {
@@ -9641,6 +9710,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum flow rate for programming tool.
         /// </summary>
 		[Description("Maximum flow rate for programming tool.")]
+		[ComponentElement]
 		[XmlElement("downLinkFlowRateMx")]
         public VolumeFlowRateMeasure DownLinkFlowRateMax {
             get {
@@ -9728,6 +9798,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of contact pad.
         /// </summary>
 		[Description("Length of contact pad.")]
+		[ComponentElement]
 		[XmlElement("padLen")]
         public LengthMeasure PadLen {
             get {
@@ -9745,6 +9816,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Width of contact pad.
         /// </summary>
 		[Description("Width of contact pad.")]
+		[ComponentElement]
 		[XmlElement("padWidth")]
         public LengthMeasure PadWidth {
             get {
@@ -9762,6 +9834,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Offset from bottom of pad to bottom connector.
         /// </summary>
 		[Description("Offset from bottom of pad to bottom connector.")]
+		[ComponentElement]
 		[XmlElement("padOffset")]
         public LengthMeasure PadOffset {
             get {
@@ -9779,6 +9852,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outside diameter of tool when pads are activated.
         /// </summary>
 		[Description("Outside diameter of tool when pads are activated.")]
+		[ComponentElement]
 		[XmlElement("openPadOd")]
         public LengthMeasure OpenPadOuterDiameter {
             get {
@@ -9796,6 +9870,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outiside diameter of tool when pads are closed.
         /// </summary>
 		[Description("Outiside diameter of tool when pads are closed.")]
+		[ComponentElement]
 		[XmlElement("closePadOd")]
         public LengthMeasure ClosePadOuterDiameter {
             get {
@@ -9813,6 +9888,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A sensor.
         /// </summary>
 		[Description("A sensor.")]
+		[RecurringElement]
 		[XmlElement("sensor")]
         public List<Sensor> Sensor {
             get {
@@ -9936,6 +10012,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Offset from bottom of measurement while drilling tool. 
         /// </summary>
 		[Description("Offset from bottom of measurement while drilling tool.")]
+		[ComponentElement]
 		[XmlElement("offsetBot")]
         public LengthMeasure OffsetBot {
             get {
@@ -10004,6 +10081,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10163,6 +10241,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of the reamer. 
         /// </summary>
 		[Description("Diameter of the reamer.")]
+		[ComponentElement]
 		[XmlElement("diaHoleOpener")]
         public LengthMeasure DiaHoleOpener {
             get {
@@ -10251,6 +10330,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Angle of the bend. 
         /// </summary>
 		[Description("Angle of the bend.")]
+		[ComponentElement]
 		[XmlElement("angle")]
         public PlaneAngleMeasure Angle {
             get {
@@ -10268,6 +10348,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance of bend from bottom of component. 
         /// </summary>
 		[Description("Distance of bend from bottom of component.")]
+		[ComponentElement]
 		[XmlElement("distBendBot")]
         public LengthMeasure DistBendBot {
             get {
@@ -10319,6 +10400,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10391,6 +10473,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of blade. 
         /// </summary>
 		[Description("Length of blade.")]
+		[ComponentElement]
 		[XmlElement("lenBlade")]
         public LengthMeasure LenBlade {
             get {
@@ -10408,6 +10491,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gauge Length of blade. That is, the length of the blade which measures at the odBladeMx.
         /// </summary>
 		[Description("Gauge Length of blade. That is, the length of the blade which measures at the odBladeMx.")]
+		[ComponentElement]
 		[XmlElement("lenBladeGauge")]
         public LengthMeasure LenBladeGauge {
             get {
@@ -10425,6 +10509,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum outer diameter of blade. 
         /// </summary>
 		[Description("Maximum outer diameter of blade.")]
+		[ComponentElement]
 		[XmlElement("odBladeMx")]
         public LengthMeasure OuterDiameterBladeMax {
             get {
@@ -10442,6 +10527,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum outer diameter of blade. 
         /// </summary>
 		[Description("Minimum outer diameter of blade.")]
+		[ComponentElement]
 		[XmlElement("odBladeMn")]
         public LengthMeasure OuterDiameterBladeMin {
             get {
@@ -10459,6 +10545,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance of blade bottom from bottom of component. 
         /// </summary>
 		[Description("Distance of blade bottom from bottom of component.")]
+		[ComponentElement]
 		[XmlElement("distBladeBot")]
         public LengthMeasure DistBladeBot {
             get {
@@ -10615,6 +10702,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10687,6 +10775,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Tool offset from bottom. 
         /// </summary>
 		[Description("Tool offset from bottom.")]
+		[ComponentElement]
 		[XmlElement("offsetTool")]
         public LengthMeasure OffsetTool {
             get {
@@ -10739,6 +10828,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum flow rate. 
         /// </summary>
 		[Description("Minimum flow rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateMn")]
         public VolumeFlowRateMeasure FlowrateMin {
             get {
@@ -10756,6 +10846,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum flow rate. 
         /// </summary>
 		[Description("Maximum flow rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateMx")]
         public VolumeFlowRateMeasure FlowrateMax {
             get {
@@ -10773,6 +10864,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of rotor at nozzle. 
         /// </summary>
 		[Description("Diameter of rotor at nozzle.")]
+		[ComponentElement]
 		[XmlElement("diaRotorNozzle")]
         public LengthMeasure DiaRotorNozzle {
             get {
@@ -10790,6 +10882,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Clearance inside bearing box. 
         /// </summary>
 		[Description("Clearance inside bearing box.")]
+		[ComponentElement]
 		[XmlElement("clearanceBearBox")]
         public LengthMeasure ClearanceBearBox {
             get {
@@ -10912,6 +11005,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum operating temperature. 
         /// </summary>
 		[Description("Maximum operating temperature.")]
+		[ComponentElement]
 		[XmlElement("tempOpMx")]
         public ThermodynamicTemperatureMeasure TempOperatingMax {
             get {
@@ -10999,6 +11093,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Nozzle diameter. 
         /// </summary>
 		[Description("Nozzle diameter.")]
+		[ComponentElement]
 		[XmlElement("diaNozzle")]
         public LengthMeasure DiaNozzle {
             get {
@@ -11051,6 +11146,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum bend angle setting. 
         /// </summary>
 		[Description("Minimum bend angle setting.")]
+		[ComponentElement]
 		[XmlElement("bendSettingsMn")]
         public PlaneAngleMeasure BendSettingsMin {
             get {
@@ -11068,6 +11164,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum bend angle setting. 
         /// </summary>
 		[Description("Maximum bend angle setting.")]
+		[ComponentElement]
 		[XmlElement("bendSettingsMx")]
         public PlaneAngleMeasure BendSettingsMax {
             get {
@@ -11156,6 +11253,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum flow rate. 
         /// </summary>
 		[Description("Minimum flow rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateMn")]
         public VolumeFlowRateMeasure FlowrateMin {
             get {
@@ -11173,6 +11271,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum flow rate. 
         /// </summary>
 		[Description("Maximum flow rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateMx")]
         public VolumeFlowRateMeasure FlowrateMax {
             get {
@@ -11190,6 +11289,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum Temperature. 
         /// </summary>
 		[Description("Maximum Temperature.")]
+		[ComponentElement]
 		[XmlElement("tempMx")]
         public ThermodynamicTemperatureMeasure TempMax {
             get {
@@ -11207,6 +11307,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Equivalent inner diameter. 
         /// </summary>
 		[Description("Equivalent inner diameter.")]
+		[ComponentElement]
 		[XmlElement("idEquv")]
         public LengthMeasure IdEquv {
             get {
@@ -11224,6 +11325,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Sensor object. 
         /// </summary>
 		[Description("Sensor object.")]
+		[RecurringElement]
 		[XmlElement("sensor")]
         public List<Sensor> Sensor {
             get {
@@ -11312,6 +11414,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Up set force. 
         /// </summary>
 		[Description("Up set force.")]
+		[ComponentElement]
 		[XmlElement("forUpSet")]
         public ForceMeasure ForUpSet {
             get {
@@ -11329,6 +11432,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Down set force. 
         /// </summary>
 		[Description("Down set force.")]
+		[ComponentElement]
 		[XmlElement("forDownSet")]
         public ForceMeasure ForDownSet {
             get {
@@ -11346,6 +11450,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Up trip force. 
         /// </summary>
 		[Description("Up trip force.")]
+		[ComponentElement]
 		[XmlElement("forUpTrip")]
         public ForceMeasure ForUpTrip {
             get {
@@ -11363,6 +11468,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Down trip force. 
         /// </summary>
 		[Description("Down trip force.")]
+		[ComponentElement]
 		[XmlElement("forDownTrip")]
         public ForceMeasure ForDownTrip {
             get {
@@ -11380,6 +11486,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pump open force. 
         /// </summary>
 		[Description("Pump open force.")]
+		[ComponentElement]
 		[XmlElement("forPmpOpen")]
         public ForceMeasure ForPmpOpen {
             get {
@@ -11397,6 +11504,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Seal friction force. 
         /// </summary>
 		[Description("Seal friction force.")]
+		[ComponentElement]
 		[XmlElement("forSealFric")]
         public ForceMeasure ForSealFric {
             get {
@@ -11555,6 +11663,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Internal diameter of object. 
         /// </summary>
 		[Description("Internal diameter of object.")]
+		[ComponentElement]
 		[XmlElement("id")]
         public LengthMeasure InnerDiameter {
             get {
@@ -11572,6 +11681,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outside diameter of the body of the item. 
         /// </summary>
 		[Description("Outside diameter of the body of the item.")]
+		[ComponentElement]
 		[XmlElement("od")]
         public LengthMeasure OuterDiameter {
             get {
@@ -11589,6 +11699,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of the item. 
         /// </summary>
 		[Description("Length of the item.")]
+		[ComponentElement]
 		[XmlElement("len")]
         public LengthMeasure Len {
             get {
@@ -11623,6 +11734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Thread size. 
         /// </summary>
 		[Description("Thread size.")]
+		[ComponentElement]
 		[XmlElement("sizeThread")]
         public LengthMeasure SizeThread {
             get {
@@ -11640,6 +11752,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Yield stress of steel - worn stress. 
         /// </summary>
 		[Description("Yield stress of steel - worn stress.")]
+		[ComponentElement]
 		[XmlElement("tensYield")]
         public PressureMeasure TensYield {
             get {
@@ -11657,6 +11770,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Torque at which yield occurs.
         /// </summary>
 		[Description("Torque at which yield occurs.")]
+		[ComponentElement]
 		[XmlElement("tqYield")]
         public MomentOfForceMeasure TorqueYield {
             get {
@@ -11709,6 +11823,7 @@ namespace Energistics.DataAccess.WITSML141
         /// For bending stiffness ratio. 
         /// </summary>
 		[Description("For bending stiffness ratio.")]
+		[ComponentElement]
 		[XmlElement("criticalCrossSection")]
         public AreaMeasure CriticalCrossSection {
             get {
@@ -11726,6 +11841,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Leak pressure rating. 
         /// </summary>
 		[Description("Leak pressure rating.")]
+		[ComponentElement]
 		[XmlElement("presLeak")]
         public PressureMeasure PresLeak {
             get {
@@ -11743,6 +11859,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Make up torque. 
         /// </summary>
 		[Description("Make up torque.")]
+		[ComponentElement]
 		[XmlElement("tqMakeup")]
         public MomentOfForceMeasure TorqueMakeup {
             get {
@@ -11794,6 +11911,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11901,6 +12019,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Nozzle diameter. 
         /// </summary>
 		[Description("Nozzle diameter.")]
+		[ComponentElement]
 		[XmlElement("diaNozzle")]
         public LengthMeasure DiaNozzle {
             get {
@@ -11953,6 +12072,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of the nozzle. 
         /// </summary>
 		[Description("Length of the nozzle.")]
+		[ComponentElement]
 		[XmlElement("len")]
         public LengthMeasure Len {
             get {
@@ -12021,6 +12141,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -12147,6 +12268,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Internal diameter of object.")]
+		[ComponentElement]
 		[XmlElement("id")]
         public LengthMeasure InnerDiameter {
             get {
@@ -12165,6 +12287,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Outside diameter of the body of the item.")]
+		[ComponentElement]
 		[XmlElement("od")]
         public LengthMeasure OuterDiameter {
             get {
@@ -12182,6 +12305,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum outside diameter.
         /// </summary>
 		[Description("Maximum outside diameter.")]
+		[ComponentElement]
 		[XmlElement("odMx")]
         public LengthMeasure OuterDiameterMax {
             get {
@@ -12200,6 +12324,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Length of the item.")]
+		[ComponentElement]
 		[XmlElement("len")]
         public LengthMeasure Len {
             get {
@@ -12217,6 +12342,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average length of joint for tubulars. 
         /// </summary>
 		[Description("Average length of joint for tubulars.")]
+		[ComponentElement]
 		[XmlElement("lenJointAv")]
         public LengthMeasure LenJointAverage {
             get {
@@ -12269,6 +12395,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight per unit length. 
         /// </summary>
 		[Description("Weight per unit length.")]
+		[ComponentElement]
 		[XmlElement("wtPerLen")]
         public MassPerLengthMeasure WeightPerLen {
             get {
@@ -12303,6 +12430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum pass through diameter. 
         /// </summary>
 		[Description("Minimum pass through diameter.")]
+		[ComponentElement]
 		[XmlElement("odDrift")]
         public LengthMeasure OuterDiameterDrift {
             get {
@@ -12320,6 +12448,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Yield stress of steel - worn stress. 
         /// </summary>
 		[Description("Yield stress of steel - worn stress.")]
+		[ComponentElement]
 		[XmlElement("tensYield")]
         public PressureMeasure TensYield {
             get {
@@ -12337,6 +12466,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Torque at which yield occurs.
         /// </summary>
 		[Description("Torque at which yield occurs.")]
+		[ComponentElement]
 		[XmlElement("tqYield")]
         public MomentOfForceMeasure TorqueYield {
             get {
@@ -12354,6 +12484,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fatigue endurance limit. 
         /// </summary>
 		[Description("Fatigue endurance limit.")]
+		[ComponentElement]
 		[XmlElement("stressFatig")]
         public PressureMeasure StressFatig {
             get {
@@ -12371,6 +12502,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fish neck length. 
         /// </summary>
 		[Description("Fish neck length.")]
+		[ComponentElement]
 		[XmlElement("lenFishneck")]
         public LengthMeasure LenFishneck {
             get {
@@ -12388,6 +12520,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fish neck inside diameter. 
         /// </summary>
 		[Description("Fish neck inside diameter.")]
+		[ComponentElement]
 		[XmlElement("idFishneck")]
         public LengthMeasure InnerDiameterFishneck {
             get {
@@ -12405,6 +12538,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fish neck outside diameter. 
         /// </summary>
 		[Description("Fish neck outside diameter.")]
+		[ComponentElement]
 		[XmlElement("odFishneck")]
         public LengthMeasure OuterDiameterFishneck {
             get {
@@ -12422,6 +12556,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Closed end displacement. 
         /// </summary>
 		[Description("Closed end displacement.")]
+		[ComponentElement]
 		[XmlElement("disp")]
         public VolumeMeasure Disp {
             get {
@@ -12439,6 +12574,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Burst pressure. 
         /// </summary>
 		[Description("Burst pressure.")]
+		[ComponentElement]
 		[XmlElement("presBurst")]
         public PressureMeasure PresBurst {
             get {
@@ -12456,6 +12592,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Collapse pressure. 
         /// </summary>
 		[Description("Collapse pressure.")]
+		[ComponentElement]
 		[XmlElement("presCollapse")]
         public PressureMeasure PresCollapse {
             get {
@@ -12490,6 +12627,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wall thickness wear (commonly in percent). 
         /// </summary>
 		[Description("Wall thickness wear (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("wearWall")]
         public LengthPerLengthMeasure WearWall {
             get {
@@ -12507,6 +12645,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wall thickness. 
         /// </summary>
 		[Description("Wall thickness.")]
+		[ComponentElement]
 		[XmlElement("thickWall")]
         public LengthMeasure ThickWall {
             get {
@@ -12559,6 +12698,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bending stiffness of tubular. 
         /// </summary>
 		[Description("Bending stiffness of tubular.")]
+		[ComponentElement]
 		[XmlElement("bendStiffness")]
         public ForcePerLengthMeasure BendStiffness {
             get {
@@ -12576,6 +12716,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Axial stiffness of tubular. 
         /// </summary>
 		[Description("Axial stiffness of tubular.")]
+		[ComponentElement]
 		[XmlElement("axialStiffness")]
         public ForcePerLengthMeasure AxialStiffness {
             get {
@@ -12593,6 +12734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Torsional stiffness of tubular. 
         /// </summary>
 		[Description("Torsional stiffness of tubular.")]
+		[ComponentElement]
 		[XmlElement("torsionalStiffness")]
         public ForcePerLengthMeasure TorsionalStiffness {
             get {
@@ -12645,6 +12787,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum dogleg severity. 
         /// </summary>
 		[Description("Maximum dogleg severity.")]
+		[ComponentElement]
 		[XmlElement("doglegMx")]
         public AnglePerLengthMeasure DoglegMax {
             get {
@@ -12696,6 +12839,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the component tool. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the component tool. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -12713,6 +12857,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bit object. 
         /// </summary>
 		[Description("Bit object.")]
+		[ComponentElement]
 		[XmlElement("bitRecord")]
         public BitRecord BitRecord {
             get {
@@ -12730,6 +12875,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total area of nozzles. 
         /// </summary>
 		[Description("Total area of nozzles.")]
+		[ComponentElement]
 		[XmlElement("areaNozzleFlow")]
         public AreaMeasure AreaNozzleFlow {
             get {
@@ -12747,6 +12893,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of nozzle objects. Examples of items that have nozzles are bit, hole opener, circulation sub, jetting sub, pressure relief sub. 
         /// </summary>
 		[Description("Set of nozzle objects.  Examples of items that have nozzles are bit, hole opener, circulation sub, jetting sub, pressure relief sub.")]
+		[RecurringElement]
 		[XmlElement("nozzle")]
         public List<Nozzle> Nozzle {
             get {
@@ -12764,6 +12911,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Connection object. 
         /// </summary>
 		[Description("Connection object.")]
+		[RecurringElement]
 		[XmlElement("connection")]
         public List<Connection> Connection {
             get {
@@ -12798,6 +12946,7 @@ namespace Energistics.DataAccess.WITSML141
         /// MWD (measurement while drilling) tool object. 
         /// </summary>
 		[Description("MWD (measurement while drilling) tool object.")]
+		[ComponentElement]
 		[XmlElement("mwdTool")]
         public MwdTool MwdTool {
             get {
@@ -12832,6 +12981,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Stabilizer object. 
         /// </summary>
 		[Description("Stabilizer object.")]
+		[RecurringElement]
 		[XmlElement("stabilizer")]
         public List<Stabilizer> Stabilizer {
             get {
@@ -12849,6 +12999,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bend object. 
         /// </summary>
 		[Description("Bend object.")]
+		[RecurringElement]
 		[XmlElement("bend")]
         public List<Bend> Bend {
             get {
@@ -12883,6 +13034,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rotary Steerable Tool. 
         /// </summary>
 		[Description("Rotary Steerable Tool.")]
+		[ComponentElement]
 		[XmlElement("rotarySteerableTool")]
         public RotarySteerableTool RotarySteerableTool {
             get {
@@ -12934,6 +13086,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -13198,6 +13351,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -13288,6 +13442,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Diameter of drilled hole.")]
+		[ComponentElement]
 		[XmlElement("diaBit")]
         public LengthMeasure DiaBit {
             get {
@@ -13305,6 +13460,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum hole or tubing which bit will pass through (for bi-center bits). 
         /// </summary>
 		[Description("Minimum hole or tubing which bit will pass through (for bi-center bits).")]
+		[ComponentElement]
 		[XmlElement("diaPassThru")]
         public LengthMeasure DiaPassThru {
             get {
@@ -13322,6 +13478,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of pilot bit (for bi-center bits). 
         /// </summary>
 		[Description("Diameter of pilot bit (for bi-center bits).")]
+		[ComponentElement]
 		[XmlElement("diaPilot")]
         public LengthMeasure DiaPilot {
             get {
@@ -13391,6 +13548,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bit cost in local currency. 
         /// </summary>
 		[Description("Bit cost in local currency.")]
+		[ComponentElement]
 		[XmlElement("cost")]
         public Cost Cost {
             get {
@@ -13935,6 +14093,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -14240,6 +14399,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum hole size generated by assembly. 
         /// </summary>
 		[Description("Maximum hole size generated by assembly.")]
+		[ComponentElement]
 		[XmlElement("diaHoleAssy")]
         public LengthMeasure DiaHoleAssy {
             get {
@@ -14257,6 +14417,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Container element for the tubular component elements. 
         /// </summary>
 		[Description("Container element for the tubular component elements.")]
+		[RecurringElement]
 		[XmlElement("tubularComponent")]
         public List<TubularComponent> TubularComponent {
             get {
@@ -14274,6 +14435,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -14399,6 +14561,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A pointer to the trajectory within the wellbore.")]
+		[ComponentElement]
 		[XmlElement("trajectoryReference")]
         public RefNameString TrajectoryReference {
             get {
@@ -14416,6 +14579,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the wellbore that contains the trajectoryReference. This is not needed unless the trajectory is outside the context of a common parent wellbore.
         /// </summary>
 		[Description("A pointer to the wellbore that contains the trajectoryReference. This is not needed unless the trajectory is outside the  context of a common parent wellbore.")]
+		[ComponentElement]
 		[XmlElement("wellboreParent")]
         public RefNameString WellboreParent {
             get {
@@ -14644,6 +14808,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum measured depth of this object. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("Minimum measured depth of this object. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("mdMn")]
         public MeasuredDepthCoord MDMin {
             get {
@@ -14661,6 +14826,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum measured depth of this object. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("Maximum measured depth of this object. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("mdMx")]
         public MeasuredDepthCoord MDMax {
             get {
@@ -14695,6 +14861,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Magnetic declination used to correct a Magnetic North referenced azimuth to a True North azimuth. Magnetic declination angles are measured positive clockwise from True North to Magnetic North (or negative in the anti-clockwise direction). To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added. Starting value if stations have individual values. 
         /// </summary>
 		[Description("Magnetic declination used to correct a Magnetic North referenced azimuth  to a True North azimuth.  Magnetic declination angles are measured positive clockwise  from True North to Magnetic North (or negative in the anti-clockwise direction).  To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.  Starting value if stations have individual values.")]
+		[ComponentElement]
 		[XmlElement("magDeclUsed")]
         public PlaneAngleMeasure MagDeclUsed {
             get {
@@ -14712,6 +14879,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED - use gridConUsed. Grid correction used to correct a survey. Starting value if stations have individual values.
         /// </summary>
 		[Description("DEPRECATED - use gridConUsed. Grid correction used to correct a survey.  Starting value if stations have individual values.")]
+		[ComponentElement]
 		[XmlElement("gridCorUsed")]
         public PlaneAngleMeasure GridCorUsed {
             get {
@@ -14729,6 +14897,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Magnetic declination used to correct a Magnetic North referenced azimuth to a True North azimuth. Magnetic declination angles are measured positive clockwise from True North to Magnetic North (or negative in the anti-clockwise direction). To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added. Starting value if stations have individual values.
         /// </summary>
 		[Description("Magnetic declination used to correct a Magnetic North referenced azimuth  to a True North azimuth.  Magnetic declination angles are measured positive clockwise  from True North to Magnetic North (or negative in the anti-clockwise direction).  To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added. Starting value if stations have individual values.")]
+		[ComponentElement]
 		[XmlElement("gridConUsed")]
         public PlaneAngleMeasure GridConUsed {
             get {
@@ -14746,6 +14915,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Azimuth used for vertical section plot/computations.
         /// </summary>
 		[Description("Azimuth used for vertical section plot/computations.")]
+		[ComponentElement]
 		[XmlElement("aziVertSect")]
         public PlaneAngleMeasure AziVertSect {
             get {
@@ -14763,6 +14933,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Origin north-south used for vertical section plot/computations.
         /// </summary>
 		[Description("Origin north-south used for vertical section plot/computations.")]
+		[ComponentElement]
 		[XmlElement("dispNsVertSectOrig")]
         public LengthMeasure DispNSVertSectOrig {
             get {
@@ -14780,6 +14951,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Origin east-west used for vertical section plot/computations.
         /// </summary>
 		[Description("Origin east-west used for vertical section plot/computations.")]
+		[ComponentElement]
 		[XmlElement("dispEwVertSectOrig")]
         public LengthMeasure DispEWVertSectOrig {
             get {
@@ -14937,6 +15109,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Container element for trajectory station elements. This is an API "data-node" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("Container element for trajectory station elements. This is an API \"data-node\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[RecurringElement]
 		[XmlElement("trajectoryStation")]
         public List<TrajectoryStation> TrajectoryStation {
             get {
@@ -14954,6 +15127,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -15078,6 +15252,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the intended target of this station. 
         /// </summary>
 		[Description("A pointer to the intended target of this station.")]
+		[ComponentElement]
 		[XmlElement("target")]
         public RefNameString Target {
             get {
@@ -15183,6 +15358,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Measured depth of measurement from the drill datum. This is an API \"node-index\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -15200,6 +15376,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vertical depth of the measurements. 
         /// </summary>
 		[Description("Vertical depth of the measurements.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -15217,6 +15394,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole inclination, measured from vertical. 
         /// </summary>
 		[Description("Hole inclination, measured from vertical.")]
+		[ComponentElement]
 		[XmlElement("incl")]
         public PlaneAngleMeasure Incl {
             get {
@@ -15234,6 +15412,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole azimuth. Corrected to wells azimuth reference. 
         /// </summary>
 		[Description("Hole azimuth. Corrected to wells azimuth reference.")]
+		[ComponentElement]
 		[XmlElement("azi")]
         public PlaneAngleMeasure Azi {
             get {
@@ -15251,6 +15430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Toolface angle (magnetic). 
         /// </summary>
 		[Description("Toolface angle (magnetic).")]
+		[ComponentElement]
 		[XmlElement("mtf")]
         public PlaneAngleMeasure Mtf {
             get {
@@ -15268,6 +15448,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Toolface angle (gravity). 
         /// </summary>
 		[Description("Toolface angle (gravity).")]
+		[ComponentElement]
 		[XmlElement("gtf")]
         public PlaneAngleMeasure Gtf {
             get {
@@ -15285,6 +15466,7 @@ namespace Energistics.DataAccess.WITSML141
         /// North-south offset, positive to the North. This is relative to wellLocation with a North axis orientation of aziRef. If a displacement with respect to a different point is desired then define a localCRS and specify local coordinates in location.
         /// </summary>
 		[Description("North-south offset, positive to the North.  This is relative to wellLocation with a North axis orientation of aziRef. If a displacement with respect to a different point is desired then define a localCRS and specify local coordinates in location.")]
+		[ComponentElement]
 		[XmlElement("dispNs")]
         public LengthMeasure DispNS {
             get {
@@ -15302,6 +15484,7 @@ namespace Energistics.DataAccess.WITSML141
         /// East-west offset, positive to the East. This is relative to wellLocation with a North axis orientation of aziRef. If a displacement with respect to a different point is desired then define a localCRS and specify local coordinates in location. 
         /// </summary>
 		[Description("East-west offset, positive to the East. This is relative to wellLocation with a North axis orientation of aziRef.  If a displacement with respect to a different point is desired then define a localCRS and specify local coordinates in location.")]
+		[ComponentElement]
 		[XmlElement("dispEw")]
         public LengthMeasure DispEW {
             get {
@@ -15319,6 +15502,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance along vertical section azimuth plane. 
         /// </summary>
 		[Description("Distance along vertical section azimuth plane.")]
+		[ComponentElement]
 		[XmlElement("vertSect")]
         public LengthMeasure VertSect {
             get {
@@ -15336,6 +15520,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Dogleg severity. 
         /// </summary>
 		[Description("Dogleg severity.")]
+		[ComponentElement]
 		[XmlElement("dls")]
         public AnglePerLengthMeasure DoglegSeverity {
             get {
@@ -15353,6 +15538,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Turn rate, radius of curvature computation. 
         /// </summary>
 		[Description("Turn rate, radius of curvature computation.")]
+		[ComponentElement]
 		[XmlElement("rateTurn")]
         public AnglePerLengthMeasure RateTurn {
             get {
@@ -15370,6 +15556,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Build Rate, radius of curvature computation. 
         /// </summary>
 		[Description("Build Rate, radius of curvature computation.")]
+		[ComponentElement]
 		[XmlElement("rateBuild")]
         public AnglePerLengthMeasure RateBuild {
             get {
@@ -15387,6 +15574,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Delta measured depth from previous station. 
         /// </summary>
 		[Description("Delta measured depth from previous station.")]
+		[ComponentElement]
 		[XmlElement("mdDelta")]
         public LengthMeasure MDDelta {
             get {
@@ -15404,6 +15592,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Delta true vertical depth from previous station. 
         /// </summary>
 		[Description("Delta true vertical depth from previous station.")]
+		[ComponentElement]
 		[XmlElement("tvdDelta")]
         public LengthMeasure TvdDelta {
             get {
@@ -15439,6 +15628,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Reference to the toolErrorModel object used to compute covariance matrix.
         /// </summary>
 		[Description("Reference to the toolErrorModel object used to compute covariance matrix.")]
+		[ComponentElement]
 		[XmlElement("iscwsaToolErrorModel")]
         public RefNameString IscwsaToolErrorModel {
             get {
@@ -15456,6 +15646,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Survey tool gravity uncertainty. 
         /// </summary>
 		[Description("Survey tool gravity uncertainty.")]
+		[ComponentElement]
 		[XmlElement("gravTotalUncert")]
         public AccelerationLinearMeasure GravTotalUncert {
             get {
@@ -15473,6 +15664,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Survey tool dip uncertainty. 
         /// </summary>
 		[Description("Survey tool dip uncertainty.")]
+		[ComponentElement]
 		[XmlElement("dipAngleUncert")]
         public PlaneAngleMeasure DipAngleUncert {
             get {
@@ -15490,6 +15682,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Survey tool magnetic uncertainty. 
         /// </summary>
 		[Description("Survey tool magnetic uncertainty.")]
+		[ComponentElement]
 		[XmlElement("magTotalUncert")]
         public MagneticInductionMeasure MagTotalUncert {
             get {
@@ -15857,6 +16050,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gravitational field theoretical/reference value. 
         /// </summary>
 		[Description("Gravitational field theoretical/reference value.")]
+		[ComponentElement]
 		[XmlElement("gravTotalFieldReference")]
         public AccelerationLinearMeasure GravTotalFieldReference {
             get {
@@ -15874,6 +16068,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Geomagnetic field theoretical/reference value. 
         /// </summary>
 		[Description("Geomagnetic field theoretical/reference value.")]
+		[ComponentElement]
 		[XmlElement("magTotalFieldReference")]
         public MagneticInductionMeasure MagTotalFieldReference {
             get {
@@ -15891,6 +16086,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Magnetic dip angle theoretical/reference value. 
         /// </summary>
 		[Description("Magnetic dip angle theoretical/reference value.")]
+		[ComponentElement]
 		[XmlElement("magDipAngleReference")]
         public PlaneAngleMeasure MagDipAngleReference {
             get {
@@ -16062,6 +16258,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The 2D coordinates of the item. Note that within the context of trajectory, the "original" coordinates are inherently local coordinates as defined above.
         /// </summary>
 		[Description("The 2D coordinates of the item.  Note that within the context of trajectory, the \"original\" coordinates are inherently local coordinates as defined above.")]
+		[RecurringElement]
 		[XmlElement("location")]
         public List<Location> Location {
             get {
@@ -16096,6 +16293,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -16113,6 +16311,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -16185,6 +16384,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Uncorrected gravitational field strength measured in axial direction. 
         /// </summary>
 		[Description("Uncorrected gravitational field strength measured in axial direction.")]
+		[ComponentElement]
 		[XmlElement("gravAxialRaw")]
         public AccelerationLinearMeasure GravAxialRaw {
             get {
@@ -16202,6 +16402,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Uncorrected gravitational field strength measured in transverse direction. 
         /// </summary>
 		[Description("Uncorrected gravitational field strength measured in transverse direction.")]
+		[ComponentElement]
 		[XmlElement("gravTran1Raw")]
         public AccelerationLinearMeasure GravTran1Raw {
             get {
@@ -16219,6 +16420,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Uncorrected gravitational field strength measured in transverse direction, approximately normal to tran1. 
         /// </summary>
 		[Description("Uncorrected gravitational field strength measured in transverse direction,  approximately normal to tran1.")]
+		[ComponentElement]
 		[XmlElement("gravTran2Raw")]
         public AccelerationLinearMeasure GravTran2Raw {
             get {
@@ -16236,6 +16438,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Uncorrected magnetic field strength measured in axial direction. 
         /// </summary>
 		[Description("Uncorrected magnetic field strength measured in axial direction.")]
+		[ComponentElement]
 		[XmlElement("magAxialRaw")]
         public MagneticInductionMeasure MagAxialRaw {
             get {
@@ -16253,6 +16456,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Uncorrected magnetic field strength measured in transverse direction. 
         /// </summary>
 		[Description("Uncorrected magnetic field strength measured in transverse direction.")]
+		[ComponentElement]
 		[XmlElement("magTran1Raw")]
         public MagneticInductionMeasure MagTran1Raw {
             get {
@@ -16270,6 +16474,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Uncorrected magnetic field strength measured in transverse direction, approximately normal to tran1. 
         /// </summary>
 		[Description("Uncorrected magnetic field strength measured in transverse direction,  approximately normal to tran1.")]
+		[ComponentElement]
 		[XmlElement("magTran2Raw")]
         public MagneticInductionMeasure MagTran2Raw {
             get {
@@ -16324,6 +16529,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calculated gravitational field strength correction. 
         /// </summary>
 		[Description("Calculated gravitational field strength correction.")]
+		[ComponentElement]
 		[XmlElement("gravAxialAccelCor")]
         public AccelerationLinearMeasure GravAxialAccelCor {
             get {
@@ -16341,6 +16547,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The correction applied to a cross-axial (direction 1) component of the Earths gravitational field.
         /// </summary>
 		[Description("The correction applied to a cross-axial (direction 1) component  of the Earths gravitational field.")]
+		[ComponentElement]
 		[XmlElement("gravTran1AccelCor")]
         public AccelerationLinearMeasure GravTran1AccelCor {
             get {
@@ -16358,6 +16565,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The correction applied to a cross-axial (direction 2) component of the Earths gravitational field.
         /// </summary>
 		[Description("The correction applied to a cross-axial (direction 2) component  of the Earths gravitational field.")]
+		[ComponentElement]
 		[XmlElement("gravTran2AccelCor")]
         public AccelerationLinearMeasure GravTran2AccelCor {
             get {
@@ -16375,6 +16583,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Axial magnetic drillstring correction. 
         /// </summary>
 		[Description("Axial magnetic drillstring correction.")]
+		[ComponentElement]
 		[XmlElement("magAxialDrlstrCor")]
         public MagneticInductionMeasure MagAxialDrlstrCor {
             get {
@@ -16392,6 +16601,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cross-axial magnetic correction. 
         /// </summary>
 		[Description("Cross-axial magnetic correction.")]
+		[ComponentElement]
 		[XmlElement("magTran1DrlstrCor")]
         public MagneticInductionMeasure MagTran1DrlstrCor {
             get {
@@ -16409,6 +16619,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cross-axial magnetic correction. 
         /// </summary>
 		[Description("Cross-axial magnetic correction.")]
+		[ComponentElement]
 		[XmlElement("magTran2DrlstrCor")]
         public MagneticInductionMeasure MagTran2DrlstrCor {
             get {
@@ -16426,6 +16637,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cross-axial (direction 1) magnetic correction due to multi-station analysis process.
         /// </summary>
 		[Description("Cross-axial (direction 1) magnetic correction due to multi-station analysis process.")]
+		[ComponentElement]
 		[XmlElement("magTran1MSACor")]
         public MagneticInductionMeasure MagTran1MSACor {
             get {
@@ -16443,6 +16655,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cross-axial (direction 2) magnetic correction due to multi-station analysis process.
         /// </summary>
 		[Description("Cross-axial (direction 2) magnetic correction due to multi-station analysis process.")]
+		[ComponentElement]
 		[XmlElement("magTran2MSACor")]
         public MagneticInductionMeasure MagTran2MSACor {
             get {
@@ -16460,6 +16673,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Axial magnetic correction due to multi-station analysis process.
         /// </summary>
 		[Description("Axial magnetic correction due to multi-station analysis process.")]
+		[ComponentElement]
 		[XmlElement("magAxialMSACor")]
         public MagneticInductionMeasure MagAxialMSACor {
             get {
@@ -16477,6 +16691,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calculated sag correction to inclination. 
         /// </summary>
 		[Description("Calculated sag correction to inclination.")]
+		[ComponentElement]
 		[XmlElement("sagIncCor")]
         public PlaneAngleMeasure SagIncCor {
             get {
@@ -16494,6 +16709,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calculated cosag correction to azimuth.
         /// </summary>
 		[Description("Calculated cosag correction to azimuth.")]
+		[ComponentElement]
 		[XmlElement("sagAziCor")]
         public PlaneAngleMeasure SagAziCor {
             get {
@@ -16511,6 +16727,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Magnetic declination used to correct a Magnetic North referenced azimuth to a True North azimuth. Magnetic declination angles are measured positive clockwise from True North to Magnetic North (or negative in the anti-clockwise direction). To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.
         /// </summary>
 		[Description("Magnetic declination used to correct a Magnetic North referenced azimuth  to a True North azimuth.  Magnetic declination angles are measured positive clockwise  from True North to Magnetic North (or negative in the anti-clockwise direction).  To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.")]
+		[ComponentElement]
 		[XmlElement("stnMagDeclUsed")]
         public PlaneAngleMeasure StnMagDeclUsed {
             get {
@@ -16528,6 +16745,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED - use stnGridConUsed. Grid Correction (Meridian convergence). The angle between True North and Grid North. Grid Correction is positive when True North is west of Grid North. The correction is added to the raw observation, thus yielding a reduced or corrected observation that can go into the subsequent calculations.
         /// </summary>
 		[Description("DEPRECATED - use stnGridConUsed. Grid Correction (Meridian convergence). The angle between  True North and Grid North. Grid Correction is positive when True North  is west of Grid North. The correction is added to the raw observation,  thus yielding a reduced or corrected observation that can go into  the subsequent calculations.")]
+		[ComponentElement]
 		[XmlElement("stnGridCorUsed")]
         public PlaneAngleMeasure StnGridCorUsed {
             get {
@@ -16545,6 +16763,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Magnetic declination used to correct a Magnetic North referenced azimuth to a True North azimuth. Magnetic declination angles are measured positive clockwise from True North to Magnetic North (or negative in the anti-clockwise direction). To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.
         /// </summary>
 		[Description("Magnetic declination used to correct a Magnetic North referenced azimuth  to a True North azimuth.  Magnetic declination angles are measured positive clockwise  from True North to Magnetic North (or negative in the anti-clockwise direction).  To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.")]
+		[ComponentElement]
 		[XmlElement("stnGridConUsed")]
         public PlaneAngleMeasure StnGridConUsed {
             get {
@@ -16562,6 +16781,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Offset relative to bit. 
         /// </summary>
 		[Description("Offset relative to bit.")]
+		[ComponentElement]
 		[XmlElement("dirSensorOffset")]
         public LengthMeasure DirSensorOffset {
             get {
@@ -16616,6 +16836,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calculated total intensity of the geomagnetic field as sum of BGGM, IFR and local field. 
         /// </summary>
 		[Description("Calculated total intensity of the geomagnetic field as sum of BGGM,  IFR and local field.")]
+		[ComponentElement]
 		[XmlElement("magTotalFieldCalc")]
         public MagneticInductionMeasure MagTotalFieldCalc {
             get {
@@ -16633,6 +16854,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calculated magnetic dip (inclination), the angle between the horizontal and the geomagnetic field (positive down, res .001). 
         /// </summary>
 		[Description("Calculated magnetic dip (inclination), the angle between the horizontal  and the geomagnetic field (positive down, res .001).")]
+		[ComponentElement]
 		[XmlElement("magDipAngleCalc")]
         public PlaneAngleMeasure MagDipAngleCalc {
             get {
@@ -16650,6 +16872,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calculated total gravitational field. 
         /// </summary>
 		[Description("Calculated total gravitational field.")]
+		[ComponentElement]
 		[XmlElement("gravTotalFieldCalc")]
         public AccelerationLinearMeasure GravTotalFieldCalc {
             get {
@@ -16704,6 +16927,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Covariance north north. 
         /// </summary>
 		[Description("Covariance north north.")]
+		[ComponentElement]
 		[XmlElement("varianceNN")]
         public AreaMeasure VarianceNN {
             get {
@@ -16721,6 +16945,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Crossvariance north east. 
         /// </summary>
 		[Description("Crossvariance north east.")]
+		[ComponentElement]
 		[XmlElement("varianceNE")]
         public AreaMeasure VarianceNE {
             get {
@@ -16738,6 +16963,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Crossvariance north vertical. 
         /// </summary>
 		[Description("Crossvariance north vertical.")]
+		[ComponentElement]
 		[XmlElement("varianceNVert")]
         public AreaMeasure VarianceNVert {
             get {
@@ -16755,6 +16981,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Covariance east east. 
         /// </summary>
 		[Description("Covariance east east.")]
+		[ComponentElement]
 		[XmlElement("varianceEE")]
         public AreaMeasure VarianceEE {
             get {
@@ -16772,6 +16999,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Crossvariance east vertical. 
         /// </summary>
 		[Description("Crossvariance east vertical.")]
+		[ComponentElement]
 		[XmlElement("varianceEVert")]
         public AreaMeasure VarianceEVert {
             get {
@@ -16789,6 +17017,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Covariance vertical vertical. 
         /// </summary>
 		[Description("Covariance vertical vertical.")]
+		[ComponentElement]
 		[XmlElement("varianceVertVert")]
         public AreaMeasure VarianceVertVert {
             get {
@@ -16806,6 +17035,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bias north. 
         /// </summary>
 		[Description("Bias north.")]
+		[ComponentElement]
 		[XmlElement("biasN")]
         public LengthMeasure BiasN {
             get {
@@ -16823,6 +17053,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bias east. 
         /// </summary>
 		[Description("Bias east.")]
+		[ComponentElement]
 		[XmlElement("biasE")]
         public LengthMeasure BiasE {
             get {
@@ -16840,6 +17071,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bias vertical. The coordinate system is set up in a right-handed configuration which makes the vertical direction increasing (i.e., positive) downwards.
         /// </summary>
 		[Description("Bias vertical. The coordinate system is set up in a right-handed  configuration which makes the vertical direction increasing (i.e., positive) downwards.")]
+		[ComponentElement]
 		[XmlElement("biasVert")]
         public LengthMeasure BiasVert {
             get {
@@ -16913,6 +17145,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A pointer to the trajectory within the parent wellbore. This trajectory contains the trajectoryStation.")]
+		[ComponentElement]
 		[XmlElement("trajectoryParent")]
         public RefNameString TrajectoryParent {
             get {
@@ -16930,6 +17163,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the wellbore that contains the trajectory. This is not needed unless the trajectory is outside the context of a common parent wellbore.
         /// </summary>
 		[Description("A pointer to the wellbore that contains the trajectory. This is not needed unless the trajectory is outside the  context of a common parent wellbore.")]
+		[ComponentElement]
 		[XmlElement("wellboreParent")]
         public RefNameString WellboreParent {
             get {
@@ -17098,6 +17332,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -17294,6 +17529,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Describes what measurement(s) the error variance(s) apply to.")]
+		[RecurringElement]
 		[XmlElement("errorCoefficient")]
         public List<IscwsaErrorCoefficient> ErrorCoefficient {
             get {
@@ -17311,6 +17547,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Operating mode that is valid for this error term. In the absence of this element assume Stationary.
         /// </summary>
 		[Description("Operating mode that is valid for this error term. In the absence of this element assume Stationary.")]
+		[RecurringElement]
 		[XmlElement("operatingMode")]
         public List<SurveyToolOperatingMode> OperatingMode {
             get {
@@ -17328,6 +17565,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -17472,6 +17710,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -17580,6 +17819,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -17652,6 +17892,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Variable names used within a function. Each parameter name must be unique within the context of this nomenclature.
         /// </summary>
 		[Description("Variable names used within a function. Each parameter name must be unique within the context of this nomenclature.")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<IscwsaNameAndDescription> Parameter {
             get {
@@ -17669,6 +17910,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mathmatical function used to generate error term values from parameters. Each function name must be unique within the context of this nomenclature.
         /// </summary>
 		[Description("Mathmatical function used to generate error term values from parameters. Each function name must be unique within the context of this nomenclature.")]
+		[RecurringElement]
 		[XmlElement("function")]
         public List<IscwsaNameAndDescription> Function {
             get {
@@ -17686,6 +17928,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Numerical constant used by functions. Each constant name must be unique within the context of this nomenclature.
         /// </summary>
 		[Description("Numerical constant used by functions. Each constant name must be unique within the context of this nomenclature.")]
+		[RecurringElement]
 		[XmlElement("constant")]
         public List<IscwsaNomenclatureConstant> Constant {
             get {
@@ -17773,6 +18016,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines the nomenclature used in the error terms.
         /// </summary>
 		[Description("Defines the nomenclature used in the error terms.")]
+		[ComponentElement]
 		[XmlElement("nomenclature")]
         public IscwsaNomenclature Nomenclature {
             get {
@@ -17790,6 +18034,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines an error term.
         /// </summary>
 		[Description("Defines an error term.")]
+		[RecurringElement]
 		[XmlElement("errorTerm")]
         public List<IscwsaErrorTerm> ErrorTerm {
             get {
@@ -17807,6 +18052,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -18037,6 +18283,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A pointer to the errorTerm represented by this value. This term must exist in the toolErrorTermSet referenced by the parent of this node. The same term may only be referenced once in the model.")]
+		[ComponentElement]
 		[XmlElement("term")]
         public RefNameString Term {
             get {
@@ -18108,6 +18355,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The value of the error term in this model. The unit of measure must be in the set allowed by the  measure class of the referenced error term.")]
+		[ComponentElement]
 		[XmlElement("value")]
         public MeasureOrQuantity Value {
             get {
@@ -18142,6 +18390,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -18232,6 +18481,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inclination at which gyro initialization occurs.
         /// </summary>
 		[Description("Inclination at which gyro initialization occurs.")]
+		[ComponentElement]
 		[XmlElement("gyroInitialization")]
         public PlaneAngleMeasure GyroInitialization {
             get {
@@ -18249,6 +18499,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum length of continuous survey before re-initialisation.
         /// </summary>
 		[Description("Maximum length of continuous survey before re-initialisation.")]
+		[ComponentElement]
 		[XmlElement("gyroReinitializationDistance")]
         public LengthMeasure GyroReinitializationDistance {
             get {
@@ -18336,6 +18587,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Speed at which the tool traverses the wellbore during continuous survey.
         /// </summary>
 		[Description("Speed at which the tool traverses the wellbore during continuous survey.")]
+		[ComponentElement]
 		[XmlElement("gyroRunningSpeed")]
         public VelocityMeasure GyroRunningSpeed {
             get {
@@ -18409,6 +18661,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Inclination at which mode commences.")]
+		[ComponentElement]
 		[XmlElement("start")]
         public PlaneAngleMeasure Start {
             get {
@@ -18427,6 +18680,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Inclination at which mode terminates.")]
+		[ComponentElement]
 		[XmlElement("end")]
         public PlaneAngleMeasure End {
             get {
@@ -18444,6 +18698,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Running speed for continuous surveys.
         /// </summary>
 		[Description("Running speed for continuous surveys.")]
+		[ComponentElement]
 		[XmlElement("speed")]
         public VelocityMeasure Speed {
             get {
@@ -18461,6 +18716,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time between survey samples for continuous surveys.
         /// </summary>
 		[Description("Time between survey samples for continuous surveys.")]
+		[ComponentElement]
 		[XmlElement("sampleRate")]
         public TimeMeasure SampleRate {
             get {
@@ -18478,6 +18734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -18567,6 +18824,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The least value the constraint may take.
         /// </summary>
 		[Description("The least value the constraint may take.")]
+		[ComponentElement]
 		[XmlElement("min")]
         public GenericMeasure Min {
             get {
@@ -18584,6 +18842,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The greatest value the constraint may take.
         /// </summary>
 		[Description("The greatest value the constraint may take.")]
+		[ComponentElement]
 		[XmlElement("max")]
         public GenericMeasure Max {
             get {
@@ -18618,6 +18877,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -18740,6 +19000,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The operating condition for this tool. If not specified then stationary should be assumed.
         /// </summary>
 		[Description("The operating condition for this tool.  If not specified then stationary should be assumed.")]
+		[RecurringElement]
 		[XmlElement("operatingCondition")]
         public List<IscwsaSurveyToolOperatingCondition> OperatingCondition {
             get {
@@ -18757,6 +19018,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The operating interval for this tool. If not specified then stationary should be assumed.
         /// </summary>
 		[Description("The operating interval for this tool.  If not specified then stationary should be assumed.")]
+		[RecurringElement]
 		[XmlElement("operatingInterval")]
         public List<IscwsaSurveyToolOperatingInterval> OperatingInterval {
             get {
@@ -18791,6 +19053,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Reference to the toolErrorTermSet object that contains the error terms used in this model.
         /// </summary>
 		[Description("Reference to the toolErrorTermSet object that  contains the error terms used in this model.")]
+		[ComponentElement]
 		[XmlElement("useErrorTermSet")]
         public RefNameString UseErrorTermSet {
             get {
@@ -18809,6 +19072,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Value for an error term that is part of the model.")]
+		[RecurringElement]
 		[XmlElement("errorTermValue")]
         public List<IscwsaErrorTermValue> ErrorTermValue {
             get {
@@ -18826,6 +19090,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -18950,6 +19215,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of straight line section or radius of arc for continuous curve section. 
         /// </summary>
 		[Description("Length of straight line section or radius of arc for continuous curve section.")]
+		[ComponentElement]
 		[XmlElement("lenRadius")]
         public LengthMeasure LenRadius {
             get {
@@ -18967,6 +19233,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Direction of straight line section or radius of arc for continuous curve section. 
         /// </summary>
 		[Description("Direction of straight line section or radius of arc for continuous curve section.")]
+		[ComponentElement]
 		[XmlElement("angleArc")]
         public PlaneAngleMeasure AngleArc {
             get {
@@ -18984,6 +19251,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Height of target above center point at the start of the section. In the case of an arc, the thickness above should vary linearly with the arc length. 
         /// </summary>
 		[Description("Height of target above center point at the start of the section.   In the case of an arc, the thickness above should vary linearly with the arc length.")]
+		[ComponentElement]
 		[XmlElement("thickAbove")]
         public LengthMeasure ThickAbove {
             get {
@@ -19001,6 +19269,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Depth of target below center point at the start of the section. In the case of an arc, the thickness below should vary linearly with the arc length. 
         /// </summary>
 		[Description("Depth of target below center point at the start of the section.   In the case of an arc, the thickness below should vary linearly with the arc length.")]
+		[ComponentElement]
 		[XmlElement("thickBelow")]
         public LengthMeasure ThickBelow {
             get {
@@ -19018,6 +19287,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The 2D coordinates of the item at the start of the section. This is redundant information and can be computed by starting at the section origin and applying the sequence of angleArcs and lenRadius. 
         /// </summary>
 		[Description("The 2D coordinates of the item at the start of the section.   This is redundant information and can be computed by starting at the section origin and applying  the sequence of angleArcs and lenRadius.")]
+		[RecurringElement]
 		[XmlElement("location")]
         public List<Location> Location {
             get {
@@ -19035,6 +19305,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -19159,6 +19430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the parent target. This represents a relationship between a drillers and geological target. 
         /// </summary>
 		[Description("A pointer to the parent target. This represents a relationship  between a drillers and geological target.")]
+		[ComponentElement]
 		[XmlElement("parentTarget")]
         public RefNameString ParentTarget {
             get {
@@ -19176,6 +19448,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Northing of target center point in map coordinates. 
         /// </summary>
 		[Description("Northing of target center point in map coordinates.")]
+		[ComponentElement]
 		[XmlElement("dispNsCenter")]
         public LengthMeasure DispNSCenter {
             get {
@@ -19193,6 +19466,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Easting of target center point in map coordinates. 
         /// </summary>
 		[Description("Easting of target center point in map coordinates.")]
+		[ComponentElement]
 		[XmlElement("dispEwCenter")]
         public LengthMeasure DispEWCenter {
             get {
@@ -19210,6 +19484,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vertical depth of the measurements. 
         /// </summary>
 		[Description("Vertical depth of the measurements.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -19227,6 +19502,7 @@ namespace Energistics.DataAccess.WITSML141
         /// North-south offset of target intercept point from shape center. 
         /// </summary>
 		[Description("North-south offset of target intercept point from shape center.")]
+		[ComponentElement]
 		[XmlElement("dispNsOffset")]
         public LengthMeasure DispNSOffset {
             get {
@@ -19244,6 +19520,7 @@ namespace Energistics.DataAccess.WITSML141
         /// East-west offset of target intercept point from shape center. 
         /// </summary>
 		[Description("East-west offset of target intercept point from shape center.")]
+		[ComponentElement]
 		[XmlElement("dispEwOffset")]
         public LengthMeasure DispEWOffset {
             get {
@@ -19261,6 +19538,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Height of target above center point. 
         /// </summary>
 		[Description("Height of target above center point.")]
+		[ComponentElement]
 		[XmlElement("thickAbove")]
         public LengthMeasure ThickAbove {
             get {
@@ -19278,6 +19556,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Depth of target below center point. 
         /// </summary>
 		[Description("Depth of target below center point.")]
+		[ComponentElement]
 		[XmlElement("thickBelow")]
         public LengthMeasure ThickBelow {
             get {
@@ -19295,6 +19574,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Angle of dip with respect to horizontal. 
         /// </summary>
 		[Description("Angle of dip with respect to horizontal.")]
+		[ComponentElement]
 		[XmlElement("dip")]
         public PlaneAngleMeasure Dip {
             get {
@@ -19312,6 +19592,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Direction of dip with respect to north azimuth reference. 
         /// </summary>
 		[Description("Direction of dip with respect to north azimuth reference.")]
+		[ComponentElement]
 		[XmlElement("strike")]
         public PlaneAngleMeasure Strike {
             get {
@@ -19329,6 +19610,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Direction of target geometry with respect to north azimuth reference. 
         /// </summary>
 		[Description("Direction of target geometry with respect to north azimuth reference.")]
+		[ComponentElement]
 		[XmlElement("rotation")]
         public PlaneAngleMeasure Rotation {
             get {
@@ -19346,6 +19628,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance from center to perimeter in rotation direction. This may be ignored depending on the value of typeTargetScope.
         /// </summary>
 		[Description("Distance from center to perimeter in rotation direction.   This may be ignored depending on the value of typeTargetScope.")]
+		[ComponentElement]
 		[XmlElement("lenMajorAxis")]
         public LengthMeasure LenMajorAxis {
             get {
@@ -19363,6 +19646,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance from center to perimeter at 90 deg to rotation direction. This may be ignored depending on the value of typeTargetScope. 
         /// </summary>
 		[Description("Distance from center to perimeter at 90 deg to rotation direction.   This may be ignored depending on the value of typeTargetScope.")]
+		[ComponentElement]
 		[XmlElement("widMinorAxis")]
         public LengthMeasure WidMinorAxis {
             get {
@@ -19415,6 +19699,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Origin north-south used as starting point for sections, mandatory parameter when sections are used.. 
         /// </summary>
 		[Description("Origin north-south used as starting point for sections, mandatory parameter when sections are used..")]
+		[ComponentElement]
 		[XmlElement("dispNsSectOrig")]
         public LengthMeasure DispNSSectOrig {
             get {
@@ -19432,6 +19717,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Origin east-west used as starting point for sections, mandatory parameter when sections are used. 
         /// </summary>
 		[Description("Origin east-west used as starting point for sections, mandatory parameter when sections are used.")]
+		[ComponentElement]
 		[XmlElement("dispEwSectOrig")]
         public LengthMeasure DispEWSectOrig {
             get {
@@ -19519,6 +19805,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The 2D coordinates of the item at the start of the section. The location object is mandatory for the first section starting point. 
         /// </summary>
 		[Description("The 2D coordinates of the item at the start of the  section. The location object is mandatory for the first section starting point.")]
+		[RecurringElement]
 		[XmlElement("location")]
         public List<Location> Location {
             get {
@@ -19536,6 +19823,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Sections describing target. These may be ignored depending on the value of typeTargetScope. 
         /// </summary>
 		[Description("Sections describing target. These may be ignored depending on the value of typeTargetScope.")]
+		[RecurringElement]
 		[XmlElement("targetSection")]
         public List<TargetSection> TargetSection {
             get {
@@ -19553,6 +19841,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -19713,6 +20002,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Hole measured depth at which the survey run will begin/began.")]
+		[ComponentElement]
 		[XmlElement("mdStart")]
         public MeasuredDepthCoord MDStart {
             get {
@@ -19731,6 +20021,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Hole measured depth at which the survey run will end/ended.")]
+		[ComponentElement]
 		[XmlElement("mdEnd")]
         public MeasuredDepthCoord MDEnd {
             get {
@@ -19854,6 +20145,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum allowable depth frequency for survey stations for this survey run. 
         /// </summary>
 		[Description("Maximum allowable depth frequency for survey stations for this survey run.")]
+		[ComponentElement]
 		[XmlElement("frequencyMx")]
         public LengthMeasure FrequencyMax {
             get {
@@ -19923,6 +20215,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -20135,6 +20428,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Survey section object. 
         /// </summary>
 		[Description("Survey section object.")]
+		[RecurringElement]
 		[XmlElement("surveySection")]
         public List<SurveySection> SurveySection {
             get {
@@ -20152,6 +20446,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -20293,6 +20588,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the top perforation.
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("mdPerforationsTop")]
         public MeasuredDepthCoord MDPerforationsTop {
             get {
@@ -20310,6 +20606,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the bottom perforation.
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("mdPerforationsBottom")]
         public MeasuredDepthCoord MDPerforationsBottom {
             get {
@@ -20327,6 +20624,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of the top perforation.
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdPerforationsTop")]
         public WellVerticalDepthCoord TvdPerforationsTop {
             get {
@@ -20344,6 +20642,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of the bottom perforation.
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdPerforationsBottom")]
         public WellVerticalDepthCoord TvdPerforationsBottom {
             get {
@@ -20396,6 +20695,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The size of the perforations.
         /// </summary>
 		[Description("The size of the perforations.")]
+		[ComponentElement]
 		[XmlElement("size")]
         public LengthMeasure Size {
             get {
@@ -20413,6 +20713,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The number of perforation holes per length across the treatment interval. Used to describe but not limited to the configuration of perforating guns or the placement of perforations (holes, slots, openings ...) in the wellbore, and is often abbreviated to spf (shots per foot).
         /// </summary>
 		[Description("The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement  of perforations (holes, slots, openings ...) in the wellbore, and is often  abbreviated to spf (shots per foot).")]
+		[ComponentElement]
 		[XmlElement("densityPerforation")]
         public PerLengthMeasure DensityPerforation {
             get {
@@ -20430,6 +20731,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The radial distribution of successive perforations around the wellbore axis. Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.
         /// </summary>
 		[Description("The radial distribution of successive perforations around the wellbore axis.  Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.")]
+		[ComponentElement]
 		[XmlElement("phasingPerforation")]
         public PlaneAngleMeasure PhasingPerforation {
             get {
@@ -20482,6 +20784,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The friction pressure for the perforation set.
         /// </summary>
 		[Description("The friction pressure for the perforation set.")]
+		[ComponentElement]
 		[XmlElement("frictionPres")]
         public PressureMeasure FrictionPres {
             get {
@@ -20534,6 +20837,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -20606,6 +20910,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at top of interval.
         /// </summary>
 		[Description("Measured depth at top of interval.")]
+		[ComponentElement]
 		[XmlElement("mdLithTop")]
         public MeasuredDepthCoord MDLithTop {
             get {
@@ -20623,6 +20928,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at base of interval.
         /// </summary>
 		[Description("Measured depth at base of interval.")]
+		[ComponentElement]
 		[XmlElement("mdLithBottom")]
         public MeasuredDepthCoord MDLithBottom {
             get {
@@ -20640,6 +20946,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Formation permeability, a measurement of the ability of a fluid to flow through a rock. Commonly measured in milliDarcys (1m2 = 0.000000000000986923 Darcy).
         /// </summary>
 		[Description("Formation permeability, a measurement of the ability of a fluid to flow  through a rock. Commonly measured in milliDarcys (1m2 = 0.000000000000986923 Darcy).")]
+		[ComponentElement]
 		[XmlElement("lithFormationPermeability")]
         public PermeabilityRockMeasure LithFormationPermeability {
             get {
@@ -20657,6 +20964,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Young's modulus (E) is a measure of the stiffness of an isotropic elastic material. It is also known as the Young modulus, modulus of elasticity, elastic modulus (though Young's modulus is actually one of several elastic moduli such as the bulk modulus and the shear modulus) or tensile modulus. It is defined as the ratio of the uniaxial stress over the uniaxial strain.
         /// </summary>
 		[Description("Young's modulus (E) is a measure of the stiffness of an isotropic elastic material. It is also known as the Young modulus, modulus of elasticity, elastic modulus (though Young's modulus is actually one  of several elastic moduli such as the bulk modulus and the shear modulus) or tensile modulus. It is  defined as the ratio of the uniaxial stress over the uniaxial strain.")]
+		[ComponentElement]
 		[XmlElement("lithYoungsModulus")]
         public PressureMeasure LithYoungsModulus {
             get {
@@ -20674,6 +20982,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Refers to the pressure of fluids held within a soil or rock, in gaps between particles formation porosity.
         /// </summary>
 		[Description("Refers to the pressure of fluids held within a soil or rock, in gaps  between particles formation porosity.")]
+		[ComponentElement]
 		[XmlElement("lithPorePres")]
         public PressureMeasure LithPorePres {
             get {
@@ -20691,6 +21000,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Net pay is computed. It is the thickness of rock that can deliver hydrocarbons to the wellbore formation.
         /// </summary>
 		[Description("Net pay is computed. It is the thickness of rock that can deliver hydrocarbons  to the wellbore formation.")]
+		[ComponentElement]
 		[XmlElement("lithNetPayThickness")]
         public LengthMeasure LithNetPayThickness {
             get {
@@ -20725,6 +21035,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the top of the formation.
         /// </summary>
 		[Description("Measured depth of the top of the formation.")]
+		[ComponentElement]
 		[XmlElement("mdGrossPayTop")]
         public MeasuredDepthCoord MDGrossPayTop {
             get {
@@ -20742,6 +21053,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the bottom of the formation.
         /// </summary>
 		[Description("Measured depth of the bottom of the formation.")]
+		[ComponentElement]
 		[XmlElement("mdGrossPayBottom")]
         public MeasuredDepthCoord MDGrossPayBottom {
             get {
@@ -20759,6 +21071,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total thickness of the interval being treated, whether or not it is productive.
         /// </summary>
 		[Description("The total thickness of the interval being treated, whether or  not it is productive.")]
+		[ComponentElement]
 		[XmlElement("grossPayThickness")]
         public LengthMeasure GrossPayThickness {
             get {
@@ -20776,6 +21089,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The thickness of the most productive part of the interval. Net pay is a subset of the gross.
         /// </summary>
 		[Description("The thickness of the most productive part of the interval.  Net pay is a subset of the gross.")]
+		[ComponentElement]
 		[XmlElement("netPayThickness")]
         public LengthMeasure NetPayThickness {
             get {
@@ -20793,6 +21107,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pore pressure of the net pay.
         /// </summary>
 		[Description("The pore pressure of the net pay.")]
+		[ComponentElement]
 		[XmlElement("netPayPorePres")]
         public PressureMeasure NetPayPorePres {
             get {
@@ -20810,6 +21125,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume change of the fluid in the net pay when pressure is applied.
         /// </summary>
 		[Description("The volume change of the fluid in the net pay when pressure is applied.")]
+		[ComponentElement]
 		[XmlElement("netPayFluidCompressibility")]
         public CompressibilityMeasure NetPayFluidCompressibility {
             get {
@@ -20827,6 +21143,7 @@ namespace Energistics.DataAccess.WITSML141
         /// With respect to the net pay, a measurement of the internal resistance of a fluid to flow against itself. Expressed as the ratio of shear stress to shear rate.
         /// </summary>
 		[Description("With respect to the net pay, a measurement of the internal resistance of a fluid to flow against itself. Expressed as the ratio of shear stress to shear rate.")]
+		[ComponentElement]
 		[XmlElement("netPayFluidViscosity")]
         public DynamicViscosityMeasure NetPayFluidViscosity {
             get {
@@ -20861,6 +21178,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The permeability of the net pay.
         /// </summary>
 		[Description("The permeability of the net pay.")]
+		[ComponentElement]
 		[XmlElement("netPayFormationPermeability")]
         public PermeabilityRockMeasure NetPayFormationPermeability {
             get {
@@ -20878,6 +21196,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The ratio of the relative contraction strain, or transverse strain (normal to the applied load), divided by the relative extension strain, or axial strain (in the direction of the applied load).
         /// </summary>
 		[Description("The ratio of the relative contraction strain, or transverse strain (normal to the applied load),  divided by the relative extension strain, or axial strain (in the direction of the applied load).")]
+		[ComponentElement]
 		[XmlElement("lithPoissonsRatio")]
         public DimensionlessMeasure LithPoissonsRatio {
             get {
@@ -20895,6 +21214,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Porosity of the net pay formation.
         /// </summary>
 		[Description("Porosity of the net pay formation.")]
+		[ComponentElement]
 		[XmlElement("netPayFormationPorosity")]
         public VolumePerVolumeMeasurePercent NetPayFormationPorosity {
             get {
@@ -20912,6 +21232,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Permeability of the formation.
         /// </summary>
 		[Description("Permeability of the formation.")]
+		[ComponentElement]
 		[XmlElement("formationPermeability")]
         public PermeabilityRockMeasure FormationPermeability {
             get {
@@ -20929,6 +21250,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Porosity of the formation.
         /// </summary>
 		[Description("Porosity of the formation.")]
+		[ComponentElement]
 		[XmlElement("formationPorosity")]
         public VolumePerVolumeMeasurePercent FormationPorosity {
             get {
@@ -20963,6 +21285,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -21053,6 +21376,7 @@ namespace Energistics.DataAccess.WITSML141
         /// bottomholeRate property
         /// </summary>
 		[Description("Bottomhole flow rate for the specific step.")]
+		[ComponentElement]
 		[XmlElement("bottomholeRate")]
         public VolumeFlowRateMeasure BottomholeRate {
             get {
@@ -21070,6 +21394,7 @@ namespace Energistics.DataAccess.WITSML141
         /// pres property
         /// </summary>
 		[Description("Surface pressure measured for the specific step.")]
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -21087,6 +21412,7 @@ namespace Energistics.DataAccess.WITSML141
         /// pipeFriction property
         /// </summary>
 		[Description("Calculated pipe friction for the specific step.")]
+		[ComponentElement]
 		[XmlElement("pipeFriction")]
         public PressureMeasure PipeFriction {
             get {
@@ -21104,6 +21430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// entryFriction property
         /// </summary>
 		[Description("Calculated entry friction accounting for perforation and near  wellbore restrictions for the specific step.")]
+		[ComponentElement]
 		[XmlElement("entryFriction")]
         public PressureMeasure EntryFriction {
             get {
@@ -21121,6 +21448,7 @@ namespace Energistics.DataAccess.WITSML141
         /// perfFriction property
         /// </summary>
 		[Description("Calculated perforation friction for the specific step.")]
+		[ComponentElement]
 		[XmlElement("perfFriction")]
         public PressureMeasure PerfFriction {
             get {
@@ -21138,6 +21466,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nearWellboreFriction property
         /// </summary>
 		[Description("Calculated Near WellBore friction loss.")]
+		[ComponentElement]
 		[XmlElement("nearWellboreFriction")]
         public PressureMeasure NearWellboreFriction {
             get {
@@ -21155,6 +21484,7 @@ namespace Energistics.DataAccess.WITSML141
         /// surfaceRate property
         /// </summary>
 		[Description("Surface rate entering the well for the specific step.")]
+		[ComponentElement]
 		[XmlElement("surfaceRate")]
         public VolumeFlowRateMeasure SurfaceRate {
             get {
@@ -21172,6 +21502,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -21244,6 +21575,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The initial shutin pressure.
         /// </summary>
 		[Description("The initial shutin pressure.")]
+		[ComponentElement]
 		[XmlElement("initialShutinPres")]
         public PressureMeasure InitialShutinPres {
             get {
@@ -21261,6 +21593,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of the fluid at the bottom of the hole adjusting for bottomhole temperature and pressure during the step test.
         /// </summary>
 		[Description("The density of the fluid at the bottom of the hole adjusting for bottomhole  temperature and pressure during the step test.")]
+		[ComponentElement]
 		[XmlElement("bottomholeFluidDensity")]
         public DensityMeasure BottomholeFluidDensity {
             get {
@@ -21278,6 +21611,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of the injection point or perforation.
         /// </summary>
 		[Description("Diameter of the injection point or perforation.")]
+		[ComponentElement]
 		[XmlElement("diameterEntryHole")]
         public LengthMeasure DiameterEntryHole {
             get {
@@ -21400,6 +21734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The data related to a particular step in the step down test.
         /// </summary>
 		[Description("The data related to a particular step in the step down test.")]
+		[RecurringElement]
 		[XmlElement("step")]
         public List<StimTestStep> Step {
             get {
@@ -21417,6 +21752,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -21489,6 +21825,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The time required for the fracture width to become zero.
         /// </summary>
 		[Description("The time required for the fracture width to become zero.")]
+		[ComponentElement]
 		[XmlElement("fractureCloseDuration")]
         public TimeMeasure FractureCloseDuration {
             get {
@@ -21506,6 +21843,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure when the fracture width becomes zero.
         /// </summary>
 		[Description("The pressure when the fracture width becomes zero.")]
+		[ComponentElement]
 		[XmlElement("fractureClosePres")]
         public PressureMeasure FractureClosePres {
             get {
@@ -21523,6 +21861,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -21595,6 +21934,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An analysis method used for this FET test.
         /// </summary>
 		[Description("An analysis method used for this FET test.")]
+		[RecurringElement]
 		[XmlElement("analysisMethod")]
         public List<StimAnalysisMethod> AnalysisMethod {
             get {
@@ -21682,6 +22022,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The end of the pressure dependent leakoff portion of the fluid efficiency test.
         /// </summary>
 		[Description("The end of the pressure dependent leakoff portion of the fluid efficiency test.")]
+		[ComponentElement]
 		[XmlElement("endPdlDuration")]
         public TimeMeasure EndPdlDuration {
             get {
@@ -21699,6 +22040,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The time at which the fracture effectively closes without proppant in place.
         /// </summary>
 		[Description("The time at which the fracture effectively closes without proppant in place.")]
+		[ComponentElement]
 		[XmlElement("fractureCloseDuration")]
         public TimeMeasure FractureCloseDuration {
             get {
@@ -21716,6 +22058,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure at which the fracture effectively closes without proppant in place.
         /// </summary>
 		[Description("The pressure at which the fracture effectively closes without proppant in place.")]
+		[ComponentElement]
 		[XmlElement("fractureClosePres")]
         public PressureMeasure FractureClosePres {
             get {
@@ -21733,6 +22076,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The fracture pressure limit for an unfractured formation is the fracture initiation pressure. This is typically considered the upper bound for the minimum horizontal stress or closure pressure. A step rate test is used to determine the fracture extension pressure.
         /// </summary>
 		[Description("The fracture pressure limit for an unfractured formation is the fracture initiation pressure. This is typically considered the upper bound for the minimum horizontal stress or closure pressure. A step rate test is used to determine the fracture extension pressure.")]
+		[ComponentElement]
 		[XmlElement("fractureExtensionPres")]
         public PressureMeasure FractureExtensionPres {
             get {
@@ -21750,6 +22094,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The difference between the fracture extension pressure and the pressure that exists in the fracture.
         /// </summary>
 		[Description("The difference between the fracture extension pressure and the pressure that  exists in the fracture.")]
+		[ComponentElement]
 		[XmlElement("netPres")]
         public PressureMeasure NetPres {
             get {
@@ -21767,6 +22112,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure of the liquids in the formation pores.
         /// </summary>
 		[Description("The pressure of the liquids in the formation pores.")]
+		[ComponentElement]
 		[XmlElement("porePres")]
         public PressureMeasure PorePres {
             get {
@@ -21784,6 +22130,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The Horner plot is used to determine if pseudo-radial flow developed during pressure decline. If a semi-log straight line is observed and the line can be extrapolated to a reasonable value of reservoir pressure, radial or pseudo-radial flow may be affecting the decline behavior. This suggests that the fracture is already closed and that data beyond the point of influence need not be considered in the evaluation of closure.
         /// </summary>
 		[Description("The Horner plot is used to determine if pseudo-radial flow developed during pressure decline.  If a semi-log straight line is observed and the line can be extrapolated to a reasonable value of reservoir pressure, radial or pseudo-radial flow may be affecting the decline behavior.  This suggests that the fracture is already closed and that data beyond the point of influence  need not be considered in the evaluation of closure.")]
+		[ComponentElement]
 		[XmlElement("pseudoRadialPres")]
         public PressureMeasure PseudoRadialPres {
             get {
@@ -21801,6 +22148,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fracture length is the length of the fracture tip to tip; fracture half length, the length of one wing of a fracture from the wellbore to the tip.
         /// </summary>
 		[Description("Fracture length is the length of the fracture tip to tip; fracture half length,  the length of one wing of a fracture from the wellbore to the tip.")]
+		[ComponentElement]
 		[XmlElement("fractureLength")]
         public LengthMeasure FractureLength {
             get {
@@ -21818,6 +22166,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The width of a fracture at the wellbore. Hydraulic frac width is generated by frac fluid viscosity and/or pump rate (i.e., horsepower).
         /// </summary>
 		[Description("The width of a fracture at the wellbore. Hydraulic frac width is  generated by frac fluid viscosity and/or pump rate (i.e., horsepower).")]
+		[ComponentElement]
 		[XmlElement("fractureWidth")]
         public LengthMeasure FractureWidth {
             get {
@@ -21835,6 +22184,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.
         /// </summary>
 		[Description("A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.")]
+		[ComponentElement]
 		[XmlElement("fluidEfficiency")]
         public VolumePerVolumeMeasurePercent FluidEfficiency {
             get {
@@ -21887,6 +22237,7 @@ namespace Energistics.DataAccess.WITSML141
         /// That permeability which remains after a fractured formation has closed, allowing the the formation fracture face to be pressurized before the fracture is mechanically reopened.
         /// </summary>
 		[Description("That permeability which remains after a fractured formation has closed, allowing the  the formation fracture face to be pressurized before the fracture is mechanically reopened.")]
+		[ComponentElement]
 		[XmlElement("residualPermeability")]
         public PermeabilityRockMeasure ResidualPermeability {
             get {
@@ -21904,6 +22255,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -21976,6 +22328,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure of the step test.
         /// </summary>
 		[Description("The pressure of the step test.")]
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -21993,6 +22346,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The flow of the fluid at the bottomhole.
         /// </summary>
 		[Description("The flow of the fluid at the bottomhole.")]
+		[ComponentElement]
 		[XmlElement("bottomholeRate")]
         public VolumeFlowRateMeasure BottomholeRate {
             get {
@@ -22010,6 +22364,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -22082,6 +22437,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pressure and fluid rate data reading.
         /// </summary>
 		[Description("A pressure and fluid rate data reading.")]
+		[RecurringElement]
 		[XmlElement("presMeasurement")]
         public List<StimPressureFlowRate> PresMeasurement {
             get {
@@ -22099,6 +22455,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure necessary to extend the fracture once initiated. The fracture extension pressure may rise slightly with increasing fracture length and/or height because of friction pressure drop down the length of the fracture.
         /// </summary>
 		[Description("The pressure necessary to extend the fracture once initiated.  The fracture extension pressure may rise slightly with increasing fracture length and/or  height because of friction pressure drop down the length of the fracture.")]
+		[ComponentElement]
 		[XmlElement("fractureExtensionPres")]
         public PressureMeasure FractureExtensionPres {
             get {
@@ -22116,6 +22473,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -22397,6 +22755,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The time between the shutin time and the pump on time.
         /// </summary>
 		[Description("The time between the shutin time and the pump on time.")]
+		[ComponentElement]
 		[XmlElement("pumpDuration")]
         public TimeMeasure PumpDuration {
             get {
@@ -22414,6 +22773,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average bottomhole treatment pressure.
         /// </summary>
 		[Description("Average bottomhole treatment pressure.")]
+		[ComponentElement]
 		[XmlElement("avgBottomholeTreatmentPres")]
         public PressureMeasure AvgBottomholeTreatmentPres {
             get {
@@ -22431,6 +22791,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bottomhole hydrostatic pressure.
         /// </summary>
 		[Description("Bottomhole hydrostatic pressure.")]
+		[ComponentElement]
 		[XmlElement("bottomholeHydrostaticPres")]
         public PressureMeasure BottomholeHydrostaticPres {
             get {
@@ -22448,6 +22809,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure at which gas begins to break out of an under saturated oil and form a free gas phase in the matrix or a gas cap.
         /// </summary>
 		[Description("The pressure at which gas begins to break out of an under saturated oil and form a  free gas phase in the matrix or a gas cap.")]
+		[ComponentElement]
 		[XmlElement("bubblePointPres")]
         public PressureMeasure BubblePointPres {
             get {
@@ -22465,6 +22827,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure when the fracture width becoms zero.
         /// </summary>
 		[Description("The pressure when the fracture width becoms zero.")]
+		[ComponentElement]
 		[XmlElement("fractureClosePres")]
         public PressureMeasure FractureClosePres {
             get {
@@ -22482,6 +22845,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure loss due to fluid friction with the pipe while a fluid is being pumped.
         /// </summary>
 		[Description("The pressure loss due to fluid friction with the pipe while a fluid is being pumped.")]
+		[ComponentElement]
 		[XmlElement("frictionPres")]
         public PressureMeasure FrictionPres {
             get {
@@ -22499,6 +22863,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Initial shutin pressure.
         /// </summary>
 		[Description("Initial shutin pressure.")]
+		[ComponentElement]
 		[XmlElement("initialShutinPres")]
         public PressureMeasure InitialShutinPres {
             get {
@@ -22516,6 +22881,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure of the liquids in the formation pores.
         /// </summary>
 		[Description("The pressure of the liquids in the formation pores.")]
+		[ComponentElement]
 		[XmlElement("porePres")]
         public PressureMeasure PorePres {
             get {
@@ -22533,6 +22899,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average bottomhole treatment flow rate.
         /// </summary>
 		[Description("Average bottomhole treatment flow rate.")]
+		[ComponentElement]
 		[XmlElement("avgBottomholeTreatmentRate")]
         public VolumeFlowRateMeasure AvgBottomholeTreatmentRate {
             get {
@@ -22550,6 +22917,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of the fluid.
         /// </summary>
 		[Description("The density of the fluid.")]
+		[ComponentElement]
 		[XmlElement("fluidDensity")]
         public DensityMeasure FluidDensity {
             get {
@@ -22567,6 +22935,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base fluid volume entering equipment.
         /// </summary>
 		[Description("Base fluid volume entering equipment.")]
+		[ComponentElement]
 		[XmlElement("baseFluidVol")]
         public VolumeMeasure BaseFluidVol {
             get {
@@ -22584,6 +22953,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume of fluid in the wellbore.
         /// </summary>
 		[Description("The volume of fluid in the wellbore.")]
+		[ComponentElement]
 		[XmlElement("wellboreVolume")]
         public VolumeMeasure WellboreVolume {
             get {
@@ -22601,6 +22971,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the wellbore to its injection point.
         /// </summary>
 		[Description("The measured depth of the wellbore to its injection point.")]
+		[ComponentElement]
 		[XmlElement("mdSurface")]
         public MeasuredDepthCoord MDSurface {
             get {
@@ -22618,6 +22989,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the bottom of the hole.
         /// </summary>
 		[Description("The measured depth of the bottom of the hole.")]
+		[ComponentElement]
 		[XmlElement("mdBottomhole")]
         public MeasuredDepthCoord MDBottomhole {
             get {
@@ -22635,6 +23007,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the middle perforation.
         /// </summary>
 		[Description("The measured depth of the middle perforation.")]
+		[ComponentElement]
 		[XmlElement("mdMidPerforation")]
         public MeasuredDepthCoord MDMidPerforation {
             get {
@@ -22652,6 +23025,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth of the middle perforation.
         /// </summary>
 		[Description("The true vertical depth of the middle perforation.")]
+		[ComponentElement]
 		[XmlElement("tvdMidPerforation")]
         public WellVerticalDepthCoord TvdMidPerforation {
             get {
@@ -22669,6 +23043,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The constant earth temperature at a given depth specific to a region.
         /// </summary>
 		[Description("The constant earth temperature at a given depth specific to a region.")]
+		[ComponentElement]
 		[XmlElement("surfaceTemperature")]
         public ThermodynamicTemperatureMeasure SurfaceTemperature {
             get {
@@ -22686,6 +23061,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Static bottomhole temperature.
         /// </summary>
 		[Description("Static bottomhole temperature.")]
+		[ComponentElement]
 		[XmlElement("bottomholeTemperature")]
         public ThermodynamicTemperatureMeasure BottomholeTemperature {
             get {
@@ -22703,6 +23079,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Temperature of the fluid at the surface.
         /// </summary>
 		[Description("Temperature of the fluid at the surface.")]
+		[ComponentElement]
 		[XmlElement("surfaceFluidTemperature")]
         public ThermodynamicTemperatureMeasure SurfaceFluidTemperature {
             get {
@@ -22720,6 +23097,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume change of a fluid when pressure is applied.
         /// </summary>
 		[Description("The volume change of a fluid when pressure is applied.")]
+		[ComponentElement]
 		[XmlElement("fluidCompressibility")]
         public CompressibilityMeasure FluidCompressibility {
             get {
@@ -22737,6 +23115,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume change of a reservoir material when pressure is applied.
         /// </summary>
 		[Description("The volume change of a reservoir material when pressure is applied.")]
+		[ComponentElement]
 		[XmlElement("reservoirTotalCompressibility")]
         public CompressibilityMeasure ReservoirTotalCompressibility {
             get {
@@ -22824,6 +23203,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The heat required to raise one unit mass of a substance by one degree.
         /// </summary>
 		[Description("The heat required to raise one unit mass of a substance by one degree.")]
+		[ComponentElement]
 		[XmlElement("fluidSpecificHeat")]
         public SpecificHeatCapacityMeasure FluidSpecificHeat {
             get {
@@ -22841,6 +23221,7 @@ namespace Energistics.DataAccess.WITSML141
         /// In physics, thermal conductivity is the property of a material describing its ability to conduct heat. It appears primarily in Fourier's Law for heat conduction. Thermal conductivity is measured in watts per kelvin-meter. Multiplied by a temperature difference (in kelvins) and an area (in square meters), and divided by a thickness (in meters), the thermal conductivity predicts the rate of energy loss (in watts) through a piece of material.
         /// </summary>
 		[Description("In physics, thermal conductivity is the property of a material describing its ability to conduct heat.  It appears primarily in Fourier's Law for heat conduction. Thermal conductivity is measured in watts per kelvin-meter.  Multiplied by a temperature difference (in kelvins) and an area (in square meters), and divided by a  thickness (in meters), the thermal conductivity predicts the rate of energy loss (in watts) through a piece of material.")]
+		[ComponentElement]
 		[XmlElement("fluidThermalConductivity")]
         public ThermalConductivityMeasure FluidThermalConductivity {
             get {
@@ -22858,6 +23239,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Dimensional response to temperature change is expressed by its coefficient of thermal expansion. When the temperature of a substance changes, the energy that is stored in the intermolecular bonds between atoms changes. When the stored energy increases, so does the length of the molecular bonds. As a result, solids typically expand in response to heating and contract on cooling. The degree of expansion divided by the change in temperature is called the material's coefficient of thermal expansion and generally varies with temperature.
         /// </summary>
 		[Description("Dimensional response to temperature change is expressed by its coefficient of thermal expansion. When the temperature of a substance changes, the energy that is stored in the intermolecular bonds  between atoms changes. When the stored energy increases, so does the length of the molecular bonds.  As a result, solids typically expand in response to heating and contract on cooling.  The degree of expansion divided by the change in temperature is called the material's coefficient  of thermal expansion and generally varies with temperature.")]
+		[ComponentElement]
 		[XmlElement("fluidThermalExpansionCoefficient")]
         public ThermalVolumetricExpansionMeasure FluidThermalExpansionCoefficient {
             get {
@@ -22875,6 +23257,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.
         /// </summary>
 		[Description("A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.")]
+		[ComponentElement]
 		[XmlElement("fluidEfficiency")]
         public VolumePerVolumeMeasurePercent FluidEfficiency {
             get {
@@ -22892,6 +23275,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Foam quality percentage of foam for the job during the stimulation services.
         /// </summary>
 		[Description("Foam quality percentage of foam for the job during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("foamQuality")]
         public VolumePerVolumeMeasurePercent FoamQuality {
             get {
@@ -22909,6 +23293,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume of the pad divided by the (volume of the pad + the volume of the proppant laden fluid).
         /// </summary>
 		[Description("The volume of the pad divided by the (volume of the pad + the volume of the proppant laden fluid).")]
+		[ComponentElement]
 		[XmlElement("percentPad")]
         public VolumePerVolumeMeasurePercent PercentPad {
             get {
@@ -22996,6 +23381,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An injection test, plotted pressure against injection rate, where a curve deflection and change of slope indicates the fracture breakdown pressure.
         /// </summary>
 		[Description("An injection test, plotted pressure against injection rate, where a curve deflection and change of slope indicates the fracture breakdown pressure.")]
+		[RecurringElement]
 		[XmlElement("stepRateTest")]
         public List<StimStepTest> StepRateTest {
             get {
@@ -23013,6 +23399,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A diagnostic test determining fluid efficiency.
         /// </summary>
 		[Description("A diagnostic test determining fluid efficiency.")]
+		[RecurringElement]
 		[XmlElement("fluidEfficiencyTest")]
         public List<StimFetTest> FluidEfficiencyTest {
             get {
@@ -23030,6 +23417,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A diagnostic test involving flowing a well back after treatment.
         /// </summary>
 		[Description("A diagnostic test involving flowing a well back after treatment.")]
+		[RecurringElement]
 		[XmlElement("pumpFlowBackTest")]
         public List<StimPumpFlowBackTest> PumpFlowBackTest {
             get {
@@ -23047,6 +23435,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An injection test involving multiple steps of injection rate and pressure, where a curve deflection and change of slope indicates the fracture breakdown pressure.
         /// </summary>
 		[Description("An injection test involving multiple steps of injection rate and pressure, where a curve deflection and change of slope indicates the fracture breakdown pressure.")]
+		[RecurringElement]
 		[XmlElement("stepDownTest")]
         public List<StimStepDownTest> StepDownTest {
             get {
@@ -23064,6 +23453,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23241,6 +23631,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23366,6 +23757,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of the additive used.
         /// </summary>
 		[Description("Volume of the additive used.")]
+		[ComponentElement]
 		[XmlElement("weight")]
         public MassMeasure Weight {
             get {
@@ -23490,6 +23882,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of the liquid additive used.
         /// </summary>
 		[Description("Volume of the liquid additive used.")]
+		[ComponentElement]
 		[XmlElement("volume")]
         public VolumeMeasure Volume {
             get {
@@ -23507,6 +23900,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The mass of the dry additive used.
         /// </summary>
 		[Description("The mass of the dry additive used.")]
+		[ComponentElement]
 		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
@@ -23524,6 +23918,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -23613,6 +24008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of fluid.
         /// </summary>
 		[Description("Volume of fluid.")]
+		[ComponentElement]
 		[XmlElement("fluidVol")]
         public VolumeMeasure FluidVol {
             get {
@@ -23647,6 +24043,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Additives used in the fluid.
         /// </summary>
 		[Description("Additives used in the fluid.")]
+		[RecurringElement]
 		[XmlElement("additive")]
         public List<StimAdditive> Additive {
             get {
@@ -23681,6 +24078,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of the fluid.
         /// </summary>
 		[Description("The density of the fluid.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -24031,6 +24429,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total pumping time for this stage.
         /// </summary>
 		[Description("Total pumping time for this stage.")]
+		[ComponentElement]
 		[XmlElement("pumpTime")]
         public TimeMeasure PumpTime {
             get {
@@ -24048,6 +24447,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting liquid pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Starting liquid pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("startRateSurfaceLiquid")]
         public VolumeFlowRateMeasure StartRateSurfaceLiquid {
             get {
@@ -24065,6 +24465,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final liquid pump rate in volume per time at the surface..
         /// </summary>
 		[Description("Final liquid pump rate in volume per time at the surface..")]
+		[ComponentElement]
 		[XmlElement("endRateSurfaceLiquid")]
         public VolumeFlowRateMeasure EndRateSurfaceLiquid {
             get {
@@ -24082,6 +24483,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average liquid pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Average liquid pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("avgRateSurfaceLiquid")]
         public VolumeFlowRateMeasure AvgRateSurfaceLiquid {
             get {
@@ -24099,6 +24501,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting carbon dioxide pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Starting carbon dioxide pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("startRateSurfaceCO2")]
         public VolumeFlowRateMeasure StartRateSurfaceCO2 {
             get {
@@ -24116,6 +24519,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final carbon dioxide pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Final carbon dioxide pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("endRateSurfaceCO2")]
         public VolumeFlowRateMeasure EndRateSurfaceCO2 {
             get {
@@ -24133,6 +24537,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average carbon dioxide pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Average carbon dioxide pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("avgRateSurfaceCO2")]
         public VolumeFlowRateMeasure AvgRateSurfaceCO2 {
             get {
@@ -24150,6 +24555,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting nitrogen pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Starting nitrogen pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("startStdRateSurfaceN2")]
         public StandardVolumePerTimeMeasure StartStdRateSurfaceN2 {
             get {
@@ -24167,6 +24573,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final nitrogen pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Final nitrogen pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("endStdRateSurfaceN2")]
         public StandardVolumePerTimeMeasure EndStdRateSurfaceN2 {
             get {
@@ -24184,6 +24591,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average nitrogen pump rate in volume per time at the surface.
         /// </summary>
 		[Description("Average nitrogen pump rate in volume per time at the surface.")]
+		[ComponentElement]
 		[XmlElement("avgStdRateSurfaceN2")]
         public StandardVolumePerTimeMeasure AvgStdRateSurfaceN2 {
             get {
@@ -24201,6 +24609,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting surface pressure.
         /// </summary>
 		[Description("Starting surface pressure.")]
+		[ComponentElement]
 		[XmlElement("startPresSurface")]
         public PressureMeasure StartPresSurface {
             get {
@@ -24218,6 +24627,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final surface pressure.
         /// </summary>
 		[Description("Final surface pressure.")]
+		[ComponentElement]
 		[XmlElement("endPresSurface")]
         public PressureMeasure EndPresSurface {
             get {
@@ -24235,6 +24645,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average surface pressure.
         /// </summary>
 		[Description("Average surface pressure.")]
+		[ComponentElement]
 		[XmlElement("averagePresSurface")]
         public PressureMeasure AveragePresSurface {
             get {
@@ -24252,6 +24663,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting pump rate in volume per time at bottomhole.
         /// </summary>
 		[Description("Starting pump rate in volume per time at bottomhole.")]
+		[ComponentElement]
 		[XmlElement("startPumpRateBottomhole")]
         public VolumeFlowRateMeasure StartPumpRateBottomhole {
             get {
@@ -24269,6 +24681,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final pump rate in volume per time at bottomhole.
         /// </summary>
 		[Description("Final pump rate in volume per time at bottomhole.")]
+		[ComponentElement]
 		[XmlElement("endPumpRateBottomhole")]
         public VolumeFlowRateMeasure EndPumpRateBottomhole {
             get {
@@ -24286,6 +24699,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average pump rate in volume per time at bottomhole.
         /// </summary>
 		[Description("Average pump rate in volume per time at bottomhole.")]
+		[ComponentElement]
 		[XmlElement("avgPumpRateBottomhole")]
         public VolumeFlowRateMeasure AvgPumpRateBottomhole {
             get {
@@ -24303,6 +24717,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting bottomhole pressure.
         /// </summary>
 		[Description("Starting bottomhole pressure.")]
+		[ComponentElement]
 		[XmlElement("startPresBottomhole")]
         public PressureMeasure StartPresBottomhole {
             get {
@@ -24320,6 +24735,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final bottomhole pressure.
         /// </summary>
 		[Description("Final bottomhole pressure.")]
+		[ComponentElement]
 		[XmlElement("endPresBottomhole")]
         public PressureMeasure EndPresBottomhole {
             get {
@@ -24337,6 +24753,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average bottomhole pressure.
         /// </summary>
 		[Description("Average bottomhole pressure.")]
+		[ComponentElement]
 		[XmlElement("averagePresBottomhole")]
         public PressureMeasure AveragePresBottomhole {
             get {
@@ -24354,6 +24771,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The beginning proppant concentration at the surface.
         /// </summary>
 		[Description("The beginning proppant concentration at the surface.")]
+		[ComponentElement]
 		[XmlElement("startProppantConcSurface")]
         public DensityMeasure StartProppantConcSurface {
             get {
@@ -24371,6 +24789,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The final proppant concentration at the surface.
         /// </summary>
 		[Description("The final proppant concentration at the surface.")]
+		[ComponentElement]
 		[XmlElement("endProppantConcSurface")]
         public DensityMeasure EndProppantConcSurface {
             get {
@@ -24388,6 +24807,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average proppant concentration at the surface.
         /// </summary>
 		[Description("The average proppant concentration at the surface.")]
+		[ComponentElement]
 		[XmlElement("avgProppantConcSurface")]
         public DensityMeasure AvgProppantConcSurface {
             get {
@@ -24405,6 +24825,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The beginning proppant concentration bottomhole.
         /// </summary>
 		[Description("The beginning proppant concentration bottomhole.")]
+		[ComponentElement]
 		[XmlElement("startProppantConcBottomhole")]
         public DensityMeasure StartProppantConcBottomhole {
             get {
@@ -24422,6 +24843,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The final proppant concentration bottomhole.
         /// </summary>
 		[Description("The final proppant concentration bottomhole.")]
+		[ComponentElement]
 		[XmlElement("endProppantConcBottomhole")]
         public DensityMeasure EndProppantConcBottomhole {
             get {
@@ -24439,6 +24861,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average proppant concentration bottomhole.
         /// </summary>
 		[Description("The average proppant concentration bottomhole.")]
+		[ComponentElement]
 		[XmlElement("avgProppantConcBottomhole")]
         public DensityMeasure AvgProppantConcBottomhole {
             get {
@@ -24456,6 +24879,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting nitrogen foam rate.
         /// </summary>
 		[Description("Starting nitrogen foam rate.")]
+		[ComponentElement]
 		[XmlElement("startFoamRateN2")]
         public VolumeFlowRateMeasure StartFoamRateN2 {
             get {
@@ -24473,6 +24897,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final nitrogen foam rate.
         /// </summary>
 		[Description("Final nitrogen foam rate.")]
+		[ComponentElement]
 		[XmlElement("endFoamRateN2")]
         public VolumeFlowRateMeasure EndFoamRateN2 {
             get {
@@ -24490,6 +24915,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Starting carbon dioxide foam rate.
         /// </summary>
 		[Description("Starting carbon dioxide foam rate.")]
+		[ComponentElement]
 		[XmlElement("startFoamRateCO2")]
         public VolumeFlowRateMeasure StartFoamRateCO2 {
             get {
@@ -24507,6 +24933,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final carbon dioxide foam rate.
         /// </summary>
 		[Description("Final carbon dioxide foam rate.")]
+		[ComponentElement]
 		[XmlElement("endFoamRateCO2")]
         public VolumeFlowRateMeasure EndFoamRateCO2 {
             get {
@@ -24524,6 +24951,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The stage volume of the base stage.
         /// </summary>
 		[Description("The stage volume of the base stage.")]
+		[ComponentElement]
 		[XmlElement("fluidVolBase")]
         public VolumeMeasure FluidVolBase {
             get {
@@ -24541,6 +24969,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume of the slurry (dirty) stage.
         /// </summary>
 		[Description("The volume of the slurry (dirty) stage.")]
+		[ComponentElement]
 		[XmlElement("fluidVolSlurry")]
         public VolumeMeasure FluidVolSlurry {
             get {
@@ -24558,6 +24987,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The starting slurry rate.
         /// </summary>
 		[Description("The starting slurry rate.")]
+		[ComponentElement]
 		[XmlElement("slurryRateBegin")]
         public VolumeFlowRateMeasure SlurryRateBegin {
             get {
@@ -24575,6 +25005,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The endinging slurry rate.
         /// </summary>
 		[Description("The endinging slurry rate.")]
+		[ComponentElement]
 		[XmlElement("slurryRateEnd")]
         public VolumeFlowRateMeasure SlurryRateEnd {
             get {
@@ -24592,6 +25023,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The mass of the proppant at the wellhead.
         /// </summary>
 		[Description("The mass of the proppant at the wellhead.")]
+		[ComponentElement]
 		[XmlElement("proppantMassWellHead")]
         public MassMeasure ProppantMassWellHead {
             get {
@@ -24609,6 +25041,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The mass of the proppant.
         /// </summary>
 		[Description("The mass of the proppant.")]
+		[ComponentElement]
 		[XmlElement("proppantMass")]
         public MassMeasure ProppantMass {
             get {
@@ -24626,6 +25059,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pumping pressure.
         /// </summary>
 		[Description("Maximum pumping pressure.")]
+		[ComponentElement]
 		[XmlElement("maxPres")]
         public PressureMeasure MaxPres {
             get {
@@ -24643,6 +25077,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum slurry rate.
         /// </summary>
 		[Description("Maximum slurry rate.")]
+		[ComponentElement]
 		[XmlElement("maxSlurryRate")]
         public VolumeFlowRateMeasure MaxSlurryRate {
             get {
@@ -24660,6 +25095,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum rate at the wellhead.
         /// </summary>
 		[Description("Maximum rate at the wellhead.")]
+		[ComponentElement]
 		[XmlElement("maxWellheadRate")]
         public VolumeFlowRateMeasure MaxWellheadRate {
             get {
@@ -24677,6 +25113,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum nitrogen rate recorded at for the annulus injection for the zone of interest during the stimulation services.
         /// </summary>
 		[Description("Maximum nitrogen rate recorded at for the annulus injection for the  zone of interest during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxN2StdRate")]
         public StandardVolumePerTimeMeasure MaxN2StdRate {
             get {
@@ -24694,6 +25131,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum carbon dioxide flow rate recorded for the annulus injection for the zone of interest during the stimulation services.
         /// </summary>
 		[Description("Maximum carbon dioxide flow rate recorded for the annulus injection for the zone of  interest during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxCO2LiquidRate")]
         public VolumeFlowRateMeasure MaxCO2LiquidRate {
             get {
@@ -24711,6 +25149,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Stage maximum proppant concentration at the wellhead for the stage during the stimulation services.
         /// </summary>
 		[Description("Stage maximum proppant concentration at the wellhead for the stage  during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxPropConc")]
         public DensityMeasure MaxPropConc {
             get {
@@ -24728,6 +25167,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum proppant concentration exiting equipment for the stage during the stimulation services.
         /// </summary>
 		[Description("Maximum proppant concentration exiting equipment for the stage  during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxSlurryPropConc")]
         public DensityMeasure MaxSlurryPropConc {
             get {
@@ -24745,6 +25185,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average proppant concentration at the wellhead for the stage during the stimulation services.
         /// </summary>
 		[Description("Average proppant concentration at the wellhead for the  stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgPropConc")]
         public DensityMeasure AvgPropConc {
             get {
@@ -24762,6 +25203,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average proppant concentration exiting equipment for the stage during the stimulation services.
         /// </summary>
 		[Description("Average proppant concentration exiting equipment for the stage  during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgSlurryPropConc")]
         public DensityMeasure AvgSlurryPropConc {
             get {
@@ -24779,6 +25221,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average fluid temperature during the stage.
         /// </summary>
 		[Description("Average fluid temperature during the stage.")]
+		[ComponentElement]
 		[XmlElement("avgTemperature")]
         public ThermodynamicTemperatureMeasure AvgTemperature {
             get {
@@ -24796,6 +25239,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Internal Gas Phase percentage of foam for the stage during the stimulation services.
         /// </summary>
 		[Description("Internal Gas Phase percentage of foam for the stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgInternalPhaseFraction")]
         public VolumePerVolumeMeasurePercent AvgInternalPhaseFraction {
             get {
@@ -24813,6 +25257,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base quality percentage of foam for the stage during the stimulation services.
         /// </summary>
 		[Description("Base quality percentage of foam for the stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgBaseFluidQuality")]
         public VolumePerVolumeMeasurePercent AvgBaseFluidQuality {
             get {
@@ -24830,6 +25275,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base quality nitrogen percentage of foam for the stage during the stimulation services.
         /// </summary>
 		[Description("Base quality nitrogen percentage of foam for the stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgN2BaseFluidQuality")]
         public VolumePerVolumeMeasurePercent AvgN2BaseFluidQuality {
             get {
@@ -24847,6 +25293,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base quality carbon dioxide percent of foam for the stage during the stimulation services.
         /// </summary>
 		[Description("Base quality carbon dioxide percent of foam for the stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgCO2BaseFluidQuality")]
         public VolumePerVolumeMeasurePercent AvgCO2BaseFluidQuality {
             get {
@@ -24864,6 +25311,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hydraulic horse power used for stage.
         /// </summary>
 		[Description("Hydraulic horse power used for stage.")]
+		[ComponentElement]
 		[XmlElement("avgHydraulicPower")]
         public PowerMeasure AvgHydraulicPower {
             get {
@@ -24881,6 +25329,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average base fluid rate.
         /// </summary>
 		[Description("Average base fluid rate.")]
+		[ComponentElement]
 		[XmlElement("avgBaseFluidRate")]
         public VolumeFlowRateMeasure AvgBaseFluidRate {
             get {
@@ -24898,6 +25347,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average slurry rate.
         /// </summary>
 		[Description("Average slurry rate.")]
+		[ComponentElement]
 		[XmlElement("avgSlurryRate")]
         public VolumeFlowRateMeasure AvgSlurryRate {
             get {
@@ -24915,6 +25365,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average wellhead rate.
         /// </summary>
 		[Description("Average wellhead rate.")]
+		[ComponentElement]
 		[XmlElement("avgWellheadRate")]
         public VolumeFlowRateMeasure AvgWellheadRate {
             get {
@@ -24932,6 +25383,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average nitrogen rate.
         /// </summary>
 		[Description("Average nitrogen rate.")]
+		[ComponentElement]
 		[XmlElement("avgN2StdRate")]
         public StandardVolumePerTimeMeasure AvgN2StdRate {
             get {
@@ -24949,6 +25401,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average carbon dioxide rate.
         /// </summary>
 		[Description("Average carbon dioxide rate.")]
+		[ComponentElement]
 		[XmlElement("avgCO2Rate")]
         public VolumeFlowRateMeasure AvgCO2Rate {
             get {
@@ -24966,6 +25419,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base fluid volume entering equipment.
         /// </summary>
 		[Description("Base fluid volume entering equipment.")]
+		[ComponentElement]
 		[XmlElement("baseFluidVol")]
         public VolumeMeasure BaseFluidVol {
             get {
@@ -24983,6 +25437,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Slurry volume exiting equipment (assumption that this will enter well).
         /// </summary>
 		[Description("Slurry volume exiting equipment (assumption that this will enter well).")]
+		[ComponentElement]
 		[XmlElement("slurryVol")]
         public VolumeMeasure SlurryVol {
             get {
@@ -25000,6 +25455,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Slurry volume entering the well.
         /// </summary>
 		[Description("Slurry volume entering the well.")]
+		[ComponentElement]
 		[XmlElement("wellheadVol")]
         public VolumeMeasure WellheadVol {
             get {
@@ -25017,6 +25473,7 @@ namespace Energistics.DataAccess.WITSML141
         /// PMax prediction allows the tool assembly to be designed with expected pressures. It determines maximum allowable surface pressure and is typically calculated as a single number by which the pressure relief valves are set. This variable is the average of all the pmax pressures calculated for this stage.
         /// </summary>
 		[Description("PMax prediction allows the tool assembly to be designed with expected pressures. It determines maximum allowable surface pressure and is typically calculated as a single number by which the pressure relief valves are set. This variable is the average of all the pmax pressures calculated for this stage.")]
+		[ComponentElement]
 		[XmlElement("maxPmaxPacPres")]
         public PressureMeasure MaxPmaxPacPres {
             get {
@@ -25034,6 +25491,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum allowable pressure for the zone of interest with respect to the bottomhole assembly during the stimulation services.
         /// </summary>
 		[Description("Maximum allowable pressure for the zone of interest with respect to the bottomhole assembly during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxPmaxWeaklinkPres")]
         public PressureMeasure MaxPmaxWeaklinkPres {
             get {
@@ -25051,6 +25509,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum gel mixing rate entering the flow stream for the stage.
         /// </summary>
 		[Description("Maximum gel mixing rate entering the flow stream for the stage.")]
+		[ComponentElement]
 		[XmlElement("maxGelRate")]
         public VolumeFlowRateMeasure MaxGelRate {
             get {
@@ -25068,6 +25527,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum oil mixing rate entering the flow stream for the stage.
         /// </summary>
 		[Description("Maximum oil mixing rate entering the flow stream for the stage.")]
+		[ComponentElement]
 		[XmlElement("maxOilRate")]
         public VolumeFlowRateMeasure MaxOilRate {
             get {
@@ -25085,6 +25545,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum acid mixing rate entering the flow stream for the stage.
         /// </summary>
 		[Description("Maximum acid mixing rate entering the flow stream for the stage.")]
+		[ComponentElement]
 		[XmlElement("maxAcidRate")]
         public VolumeFlowRateMeasure MaxAcidRate {
             get {
@@ -25102,6 +25563,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average gel mixing rate entering the flow stream for the stage.
         /// </summary>
 		[Description("Average gel mixing rate entering the flow stream for the stage.")]
+		[ComponentElement]
 		[XmlElement("avgGelRate")]
         public VolumeFlowRateMeasure AvgGelRate {
             get {
@@ -25119,6 +25581,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average oil mixing rate entering the flow stream for the stage.
         /// </summary>
 		[Description("Average oil mixing rate entering the flow stream for the stage.")]
+		[ComponentElement]
 		[XmlElement("avgOilRate")]
         public VolumeFlowRateMeasure AvgOilRate {
             get {
@@ -25136,6 +25599,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average acid mixing rate entering the flow stream for the stage.
         /// </summary>
 		[Description("Average acid mixing rate entering the flow stream for the stage.")]
+		[ComponentElement]
 		[XmlElement("avgAcidRate")]
         public VolumeFlowRateMeasure AvgAcidRate {
             get {
@@ -25153,6 +25617,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel fluid volume for the stage during the stimulation services.
         /// </summary>
 		[Description("Gel fluid volume for the stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("gelVolume")]
         public VolumeMeasure GelVolume {
             get {
@@ -25170,6 +25635,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Oil fluid volume for the stage during the stimulation services.
         /// </summary>
 		[Description("Oil fluid volume for the stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("oilVolume")]
         public VolumeMeasure OilVolume {
             get {
@@ -25187,6 +25653,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Acid fluid volume for the stage during the stimulation services.
         /// </summary>
 		[Description("Acid fluid volume for the stage during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("acidVolume")]
         public VolumeMeasure AcidVolume {
             get {
@@ -25204,6 +25671,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base fluid volume recorded after equipment set to bypass.
         /// </summary>
 		[Description("Base fluid volume recorded after equipment set to bypass.")]
+		[ComponentElement]
 		[XmlElement("baseFluidBypassVol")]
         public VolumeMeasure BaseFluidBypassVol {
             get {
@@ -25256,6 +25724,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The fluid used for this stage of the stimulation job.
         /// </summary>
 		[Description("The fluid used for this stage of the stimulation job.")]
+		[ComponentElement]
 		[XmlElement("stageFluid")]
         public StimFluid StageFluid {
             get {
@@ -25273,6 +25742,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -25362,6 +25832,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The inside diameter of the tubular used.
         /// </summary>
 		[Description("The inside diameter of the tubular used.")]
+		[ComponentElement]
 		[XmlElement("id")]
         public LengthMeasure Id {
             get {
@@ -25379,6 +25850,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The outside diameter of the tubular used.
         /// </summary>
 		[Description("The outside diameter of the tubular used.")]
+		[ComponentElement]
 		[XmlElement("od")]
         public LengthMeasure OuterDiameter {
             get {
@@ -25396,6 +25868,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The weight per length of the tubular.
         /// </summary>
 		[Description("The weight per length of the tubular.")]
+		[ComponentElement]
 		[XmlElement("weight")]
         public MassPerLengthMeasure Weight {
             get {
@@ -25413,6 +25886,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the top of the tubular.
         /// </summary>
 		[Description("The measured depth of the top of the tubular.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -25430,6 +25904,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the bottom of the tubular.
         /// </summary>
 		[Description("The measured depth of the bottom of the tubular.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -25447,6 +25922,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth of the top of the tubular.
         /// </summary>
 		[Description("The true vertical depth of the top of the tubular.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -25464,6 +25940,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth of the bottom of the tubular.
         /// </summary>
 		[Description("The true vertical depth of the bottom of the tubular.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -25481,6 +25958,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume per length of the tubular.
         /// </summary>
 		[Description("The volume per length of the tubular.")]
+		[ComponentElement]
 		[XmlElement("volumeFactor")]
         public VolumePerLengthMeasure VolumeFactor {
             get {
@@ -25498,6 +25976,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -25622,6 +26101,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pressure.
         /// </summary>
 		[Description("Maximum pressure.")]
+		[ComponentElement]
 		[XmlElement("maxTreatmentPres")]
         public PressureMeasure MaxTreatmentPres {
             get {
@@ -25639,6 +26119,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum dirty rate.
         /// </summary>
 		[Description("Maximum dirty rate.")]
+		[ComponentElement]
 		[XmlElement("maxSlurryRate")]
         public VolumeFlowRateMeasure MaxSlurryRate {
             get {
@@ -25656,6 +26137,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum rate at the wellhead.
         /// </summary>
 		[Description("Maximum rate at the wellhead.")]
+		[ComponentElement]
 		[XmlElement("maxWellheadRate")]
         public VolumeFlowRateMeasure MaxWellheadRate {
             get {
@@ -25673,6 +26155,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum nitrogen rate recorded at for the annulus injection for the Zone of interest during the stimulation services.
         /// </summary>
 		[Description("Maximum nitrogen rate recorded at for the annulus injection for  the Zone of interest during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxN2StdRate")]
         public StandardVolumePerTimeMeasure MaxN2StdRate {
             get {
@@ -25690,6 +26173,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum carbon dioxide flow rate recorded for the annulus injection for the zone of interest during the stimulation services.
         /// </summary>
 		[Description("Maximum carbon dioxide flow rate recorded for the annulus injection for the  zone of interest during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxCO2LiquidRate")]
         public VolumeFlowRateMeasure MaxCO2LiquidRate {
             get {
@@ -25707,6 +26191,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum gel flow rate during the stimulation services.
         /// </summary>
 		[Description("Maximum gel flow rate during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxGelRate")]
         public VolumeFlowRateMeasure MaxGelRate {
             get {
@@ -25724,6 +26209,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum oil flow rate during the stimulation services.
         /// </summary>
 		[Description("Maximum oil flow rate during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxOilRate")]
         public VolumeFlowRateMeasure MaxOilRate {
             get {
@@ -25741,6 +26227,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum acid flow rate during the stimulation services.
         /// </summary>
 		[Description("Maximum acid flow rate during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxAcidRate")]
         public VolumeFlowRateMeasure MaxAcidRate {
             get {
@@ -25758,6 +26245,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum proppant concentration at the wellhead.
         /// </summary>
 		[Description("Maximum proppant concentration at the wellhead.")]
+		[ComponentElement]
 		[XmlElement("maxPropConc")]
         public DensityMeasure MaxPropConc {
             get {
@@ -25775,6 +26263,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum proppant concentration exiting equipment.
         /// </summary>
 		[Description("Maximum proppant concentration exiting equipment.")]
+		[ComponentElement]
 		[XmlElement("maxSlurryPropConc")]
         public DensityMeasure MaxSlurryPropConc {
             get {
@@ -25792,6 +26281,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average pressure.
         /// </summary>
 		[Description("Average pressure.")]
+		[ComponentElement]
 		[XmlElement("avgTreatPres")]
         public PressureMeasure AvgTreatPres {
             get {
@@ -25809,6 +26299,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average base fluid flow rate.
         /// </summary>
 		[Description("Average base fluid flow rate.")]
+		[ComponentElement]
 		[XmlElement("avgBaseFluidRate")]
         public VolumeFlowRateMeasure AvgBaseFluidRate {
             get {
@@ -25826,6 +26317,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average slurry flow rate.
         /// </summary>
 		[Description("Average slurry flow rate.")]
+		[ComponentElement]
 		[XmlElement("avgSlurryRate")]
         public VolumeFlowRateMeasure AvgSlurryRate {
             get {
@@ -25843,6 +26335,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average wellhead rate.
         /// </summary>
 		[Description("Average wellhead rate.")]
+		[ComponentElement]
 		[XmlElement("avgWellheadRate")]
         public VolumeFlowRateMeasure AvgWellheadRate {
             get {
@@ -25860,6 +26353,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average nitrigen rate.
         /// </summary>
 		[Description("Average nitrigen rate.")]
+		[ComponentElement]
 		[XmlElement("avgN2StdRate")]
         public StandardVolumePerTimeMeasure AvgN2StdRate {
             get {
@@ -25877,6 +26371,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average carbon dioxide rate.
         /// </summary>
 		[Description("Average carbon dioxide rate.")]
+		[ComponentElement]
 		[XmlElement("avgCO2LiquidRate")]
         public VolumeFlowRateMeasure AvgCO2LiquidRate {
             get {
@@ -25894,6 +26389,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average gel mixing rate entering the flow stream for the flow path.
         /// </summary>
 		[Description("Average gel mixing rate entering the flow stream for the flow path.")]
+		[ComponentElement]
 		[XmlElement("avgGelRate")]
         public VolumeFlowRateMeasure AvgGelRate {
             get {
@@ -25911,6 +26407,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average oil mixing rate entering the flow stream for the flow path.
         /// </summary>
 		[Description("Average oil mixing rate entering the flow stream for the flow path.")]
+		[ComponentElement]
 		[XmlElement("avgOilRate")]
         public VolumeFlowRateMeasure AvgOilRate {
             get {
@@ -25928,6 +26425,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average acid mixing rate entering the flow stream for the flow path.
         /// </summary>
 		[Description("Average acid mixing rate entering the flow stream for the flow path.")]
+		[ComponentElement]
 		[XmlElement("avgAcidRate")]
         public VolumeFlowRateMeasure AvgAcidRate {
             get {
@@ -25945,6 +26443,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average proppant concentration at the wellhead.
         /// </summary>
 		[Description("Average proppant concentration at the wellhead.")]
+		[ComponentElement]
 		[XmlElement("avgPropConc")]
         public DensityMeasure AvgPropConc {
             get {
@@ -25962,6 +26461,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average proppant concentration exiting equipment.
         /// </summary>
 		[Description("Average proppant concentration exiting equipment.")]
+		[ComponentElement]
 		[XmlElement("avgSlurryPropConc")]
         public DensityMeasure AvgSlurryPropConc {
             get {
@@ -25979,6 +26479,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average fluid temperature during the stimulation services for this flow path.
         /// </summary>
 		[Description("Average fluid temperature during the stimulation services for this flow path.")]
+		[ComponentElement]
 		[XmlElement("avgTemperature")]
         public ThermodynamicTemperatureMeasure AvgTemperature {
             get {
@@ -26031,6 +26532,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base fluid quality percentage of foam for the flowpath during the stimulation services.
         /// </summary>
 		[Description("Base fluid quality percentage of foam for the flowpath during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgBaseFluidQuality")]
         public VolumePerVolumeMeasurePercent AvgBaseFluidQuality {
             get {
@@ -26048,6 +26550,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base fluid quality nitrogen percentage of foam for the flowpath during the stimulation services.
         /// </summary>
 		[Description("Base fluid quality nitrogen percentage of foam for the flowpath during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgN2BaseFluidQuality")]
         public VolumePerVolumeMeasurePercent AvgN2BaseFluidQuality {
             get {
@@ -26065,6 +26568,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base fluid quality carbon dioxide percentage of foam for the flowpath during the stimulation services.
         /// </summary>
 		[Description("Base fluid quality carbon dioxide percentage of foam for the flowpath during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgCO2BaseFluidQuality")]
         public VolumePerVolumeMeasurePercent AvgCO2BaseFluidQuality {
             get {
@@ -26082,6 +26586,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hydraulic horse power used for flowpath.
         /// </summary>
 		[Description("Hydraulic horse power used for flowpath.")]
+		[ComponentElement]
 		[XmlElement("avgHydraulicPower")]
         public PowerMeasure AvgHydraulicPower {
             get {
@@ -26099,6 +26604,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base fluid volume entering equipment.
         /// </summary>
 		[Description("Base fluid volume entering equipment.")]
+		[ComponentElement]
 		[XmlElement("baseFluidVol")]
         public VolumeMeasure BaseFluidVol {
             get {
@@ -26116,6 +26622,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Dirty volume exiting equipment (assumption that this will enter well).
         /// </summary>
 		[Description("Dirty volume exiting equipment (assumption that this will enter well).")]
+		[ComponentElement]
 		[XmlElement("slurryVol")]
         public VolumeMeasure SlurryVol {
             get {
@@ -26133,6 +26640,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluid volume entering the well.
         /// </summary>
 		[Description("Fluid volume entering the well.")]
+		[ComponentElement]
 		[XmlElement("wellheadVol")]
         public VolumeMeasure WellheadVol {
             get {
@@ -26150,6 +26658,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Nitrogen volume.
         /// </summary>
 		[Description("Nitrogen volume.")]
+		[ComponentElement]
 		[XmlElement("stdVolN2")]
         public StandardVolumeMeasure StdVolN2 {
             get {
@@ -26167,6 +26676,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The mass of carbon dioxide used.
         /// </summary>
 		[Description("The mass of carbon dioxide used.")]
+		[ComponentElement]
 		[XmlElement("massCO2")]
         public MassMeasure MassCO2 {
             get {
@@ -26184,6 +26694,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel fluid volume for the flowpath during the stimulation services.
         /// </summary>
 		[Description("Gel fluid volume for the flowpath during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("gelVol")]
         public VolumeMeasure GelVol {
             get {
@@ -26201,6 +26712,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Oil fluid volume for the flowpath during the stimulation services.
         /// </summary>
 		[Description("Oil fluid volume for the flowpath during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("oilVol")]
         public VolumeMeasure OilVol {
             get {
@@ -26218,6 +26730,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Acid fluid volume for the flowpath during the stimulation services.
         /// </summary>
 		[Description("Acid fluid volume for the flowpath during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("acidVol")]
         public VolumeMeasure AcidVol {
             get {
@@ -26235,6 +26748,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Base volume recorded after equipment set to bypass.
         /// </summary>
 		[Description("Base volume recorded after equipment set to bypass.")]
+		[ComponentElement]
 		[XmlElement("baseFluidBypassVol")]
         public VolumeMeasure BaseFluidBypassVol {
             get {
@@ -26252,6 +26766,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The mass of proppant used.
         /// </summary>
 		[Description("The mass of proppant used.")]
+		[ComponentElement]
 		[XmlElement("propMass")]
         public MassMeasure PropMass {
             get {
@@ -26269,6 +26784,7 @@ namespace Energistics.DataAccess.WITSML141
         /// PMax prediction allows the tool assembly to be designed with expected pressures. It determines maximum allowable surface pressure and is typically calculated as a single number by which the pressure relief valves are set. This variable is the maximum of all the pmax pressures calculated for this flow path. 
         /// </summary>
 		[Description("PMax prediction allows the tool assembly to be designed with expected pressures. It determines maximum allowable surface pressure and is typically calculated as a single number by which the pressure relief valves are set. This variable is the maximum of all the pmax pressures calculated for this flow path.")]
+		[ComponentElement]
 		[XmlElement("maxPmaxPacPres")]
         public PressureMeasure MaxPmaxPacPres {
             get {
@@ -26286,6 +26802,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum allowable pressure for the zone of interest with respect to the bottomhole assembly during the stimulation services.
         /// </summary>
 		[Description("Maximum allowable pressure for the zone of interest with respect to the bottomhole assembly during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("maxPmaxWeaklinkPres")]
         public PressureMeasure MaxPmaxWeaklinkPres {
             get {
@@ -26303,6 +26820,7 @@ namespace Energistics.DataAccess.WITSML141
         /// PMax prediction allows the tool assembly to be designed with expected pressures. It determines maximum allowable surface pressure and is typically calculated as a single number by which the pressure relief valves are set. This variable is the average of all the pmax pressures calculated for this flow path.
         /// </summary>
 		[Description("PMax prediction allows the tool assembly to be designed with expected pressures.  It determines maximum allowable surface pressure and is typically calculated as a single number by which the pressure relief valves are set. This variable is the average of all the pmax pressures calculated for this flow path.")]
+		[ComponentElement]
 		[XmlElement("avgPmaxPacPres")]
         public PressureMeasure AvgPmaxPacPres {
             get {
@@ -26320,6 +26838,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average allowable pressure for the zone of interest with respect to the bottomhole assembly during the stimulation services.
         /// </summary>
 		[Description("Average allowable pressure for the zone of interest with respect  to the bottomhole assembly during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgPmaxWeaklinkPres")]
         public PressureMeasure AvgPmaxWeaklinkPres {
             get {
@@ -26337,6 +26856,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure 5 minutes after shutin.
         /// </summary>
 		[Description("The pressure 5 minutes after shutin.")]
+		[ComponentElement]
 		[XmlElement("shutinPres5Min")]
         public PressureMeasure ShutinPres5Min {
             get {
@@ -26354,6 +26874,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure 10 minutes after shutin.
         /// </summary>
 		[Description("The pressure 10 minutes after shutin.")]
+		[ComponentElement]
 		[XmlElement("shutinPres10Min")]
         public PressureMeasure ShutinPres10Min {
             get {
@@ -26371,6 +26892,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure 15 minutes after shutin.
         /// </summary>
 		[Description("The pressure 15 minutes after shutin.")]
+		[ComponentElement]
 		[XmlElement("shutinPres15Min")]
         public PressureMeasure ShutinPres15Min {
             get {
@@ -26388,6 +26910,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure at which the formation broke.
         /// </summary>
 		[Description("The pressure at which the formation broke.")]
+		[ComponentElement]
 		[XmlElement("breakDownPres")]
         public PressureMeasure BreakDownPres {
             get {
@@ -26405,6 +26928,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume of the pad divided by the (volume of the pad + the volume of the proppant laden fluid).
         /// </summary>
 		[Description("The volume of the pad divided by the (volume of the pad + the volume   of the proppant laden fluid).")]
+		[ComponentElement]
 		[XmlElement("percentPad")]
         public VolumePerVolumeMeasurePercent PercentPad {
             get {
@@ -26422,6 +26946,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The formation fracture gradient for this treatment interval.
         /// </summary>
 		[Description("The formation fracture gradient for this treatment interval.")]
+		[ComponentElement]
 		[XmlElement("fractureGradient")]
         public ForcePerVolumeMeasure FractureGradient {
             get {
@@ -26509,6 +27034,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The tubulars used for this flowpath.
         /// </summary>
 		[Description("The tubulars used for this flowpath.")]
+		[RecurringElement]
 		[XmlElement("tubular")]
         public List<StimTubular> Tubular {
             get {
@@ -26526,6 +27052,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The set of stages for this flowpath.
         /// </summary>
 		[Description("The set of stages for this flowpath.")]
+		[RecurringElement]
 		[XmlElement("jobStage")]
         public List<StimJobStage> JobStage {
             get {
@@ -26543,6 +27070,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Events which happened during treatment of this flowpath.
         /// </summary>
 		[Description("Events which happened during treatment of this flowpath.")]
+		[RecurringElement]
 		[XmlElement("jobEvent")]
         public List<StimEvent> JobEvent {
             get {
@@ -26560,6 +27088,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -26633,6 +27162,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The shutin pressure.")]
+		[ComponentElement]
 		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -26651,6 +27181,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The time span after shutin at which the pressure was measured.")]
+		[ComponentElement]
 		[XmlElement("timeAfterShutin")]
         public TimeMeasure TimeAfterShutin {
             get {
@@ -26668,6 +27199,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -26759,6 +27291,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The mass of the proppant used.")]
+		[ComponentElement]
 		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
@@ -26776,6 +27309,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -26989,6 +27523,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the top of the formation.
         /// </summary>
 		[Description("Measured depth of the top of the formation.")]
+		[ComponentElement]
 		[XmlElement("mdFormationTop")]
         public MeasuredDepthCoord MDFormationTop {
             get {
@@ -27006,6 +27541,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the bottom of the formation.
         /// </summary>
 		[Description("Measured depth of the bottom of the formation.")]
+		[ComponentElement]
 		[XmlElement("mdFormationBottom")]
         public MeasuredDepthCoord MDFormationBottom {
             get {
@@ -27023,6 +27559,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of the top of the formation.
         /// </summary>
 		[Description("True vertical depth of the top of the formation.")]
+		[ComponentElement]
 		[XmlElement("tvdFormationTop")]
         public WellVerticalDepthCoord TvdFormationTop {
             get {
@@ -27040,6 +27577,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of the bottom of the formation.
         /// </summary>
 		[Description("True vertical depth of the bottom of the formation.")]
+		[ComponentElement]
 		[XmlElement("tvdFormationBottom")]
         public WellVerticalDepthCoord TvdFormationBottom {
             get {
@@ -27074,6 +27612,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The diameter of the open hole.
         /// </summary>
 		[Description("The diameter of the open hole.")]
+		[ComponentElement]
 		[XmlElement("openHoleDiameter")]
         public LengthMeasure OpenHoleDiameter {
             get {
@@ -27091,6 +27630,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the top open hole.
         /// </summary>
 		[Description("Measured depth of the top open hole.")]
+		[ComponentElement]
 		[XmlElement("mdOpenHoleTop")]
         public MeasuredDepthCoord MDOpenHoleTop {
             get {
@@ -27108,6 +27648,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the bottom open hole.
         /// </summary>
 		[Description("Measured depth of the bottom open hole.")]
+		[ComponentElement]
 		[XmlElement("mdOpenHoleBottom")]
         public MeasuredDepthCoord MDOpenHoleBottom {
             get {
@@ -27125,6 +27666,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of the top open hole.
         /// </summary>
 		[Description("True vertical depth of the top open hole.")]
+		[ComponentElement]
 		[XmlElement("tvdOpenHoleTop")]
         public WellVerticalDepthCoord TvdOpenHoleTop {
             get {
@@ -27142,6 +27684,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of the bottom open hole.
         /// </summary>
 		[Description("True vertical depth of the bottom open hole.")]
+		[ComponentElement]
 		[XmlElement("tvdOpenHoleBottom")]
         public WellVerticalDepthCoord TvdOpenHoleBottom {
             get {
@@ -27159,6 +27702,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total friction pressure loss.
         /// </summary>
 		[Description("The total friction pressure loss.")]
+		[ComponentElement]
 		[XmlElement("totalFrictionPresLoss")]
         public PressureMeasure TotalFrictionPresLoss {
             get {
@@ -27176,6 +27720,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total pumping time for the treatment treatment interval.
         /// </summary>
 		[Description("The total pumping time for the treatment treatment interval.")]
+		[ComponentElement]
 		[XmlElement("totalPumpTime")]
         public TimeMeasure TotalPumpTime {
             get {
@@ -27193,6 +27738,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The highest tubing pressure of any stage for the treatment interval.
         /// </summary>
 		[Description("The highest tubing pressure of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("maxPresTubing")]
         public PressureMeasure MaxPresTubing {
             get {
@@ -27210,6 +27756,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The highest casing pressure of any stage for the treatment interval.
         /// </summary>
 		[Description("The highest casing pressure of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("maxPresCasing")]
         public PressureMeasure MaxPresCasing {
             get {
@@ -27227,6 +27774,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The highest annulus pressure of any stage for the treatment interval.
         /// </summary>
 		[Description("The highest annulus pressure of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("maxPresAnnulus")]
         public PressureMeasure MaxPresAnnulus {
             get {
@@ -27244,6 +27792,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum tubing fluid pumping rate of any stage for the treatment interval.
         /// </summary>
 		[Description("Maximum tubing fluid pumping rate of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("maxFluidRateTubing")]
         public VolumeFlowRateMeasure MaxFluidRateTubing {
             get {
@@ -27261,6 +27810,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum casing fluid pumping rate of any stage for the treatment interval.
         /// </summary>
 		[Description("Maximum casing fluid pumping rate of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("maxFluidRateCasing")]
         public VolumeFlowRateMeasure MaxFluidRateCasing {
             get {
@@ -27278,6 +27828,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum annulus fluid pumping rate of any stage for the treatment interval.
         /// </summary>
 		[Description("Maximum annulus fluid pumping rate of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("maxFluidRateAnnulus")]
         public VolumeFlowRateMeasure MaxFluidRateAnnulus {
             get {
@@ -27295,6 +27846,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average tubing pressure of any stage for the treatment interval.
         /// </summary>
 		[Description("The average tubing pressure of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("avgPresTubing")]
         public PressureMeasure AvgPresTubing {
             get {
@@ -27312,6 +27864,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average casing pressure of any stage for the treatment interval.
         /// </summary>
 		[Description("The average casing pressure of any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("avgPresCasing")]
         public PressureMeasure AvgPresCasing {
             get {
@@ -27329,6 +27882,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average annulus pressure for any stage for the treatment interval.
         /// </summary>
 		[Description("The average annulus pressure for any stage for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("avgPresAnnulus")]
         public PressureMeasure AvgPresAnnulus {
             get {
@@ -27346,6 +27900,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The pressure at which the formation fractures and accepts injected fluid.
         /// </summary>
 		[Description("The pressure at which the formation fractures and accepts injected fluid.")]
+		[ComponentElement]
 		[XmlElement("breakDownPres")]
         public PressureMeasure BreakDownPres {
             get {
@@ -27363,6 +27918,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average pressure for the treatment interval across stages for all flowpaths for the treatment.
         /// </summary>
 		[Description("The average pressure for the treatment interval across stages for all flowpaths for the treatment.")]
+		[ComponentElement]
 		[XmlElement("averagePres")]
         public PressureMeasure AveragePres {
             get {
@@ -27380,6 +27936,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average base fluid pumping rate of all stages for the treatment interval.
         /// </summary>
 		[Description("Average base fluid pumping rate of all stages for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("avgBaseFluidReturnRate")]
         public VolumeFlowRateMeasure AvgBaseFluidReturnRate {
             get {
@@ -27397,6 +27954,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average slurry pumping rate of all stages for the treatment interval.
         /// </summary>
 		[Description("Average slurry pumping rate of all stages for the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("avgSlurryReturnRate")]
         public VolumeFlowRateMeasure AvgSlurryReturnRate {
             get {
@@ -27414,6 +27972,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average bottomhole treatment flow rate.
         /// </summary>
 		[Description("Average bottomhole treatment flow rate.")]
+		[ComponentElement]
 		[XmlElement("avgBottomholeRate")]
         public VolumeFlowRateMeasure AvgBottomholeRate {
             get {
@@ -27431,6 +27990,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume pumped for the interval.
         /// </summary>
 		[Description("Total volume pumped for the interval.")]
+		[ComponentElement]
 		[XmlElement("totalVolume")]
         public VolumeMeasure TotalVolume {
             get {
@@ -27448,6 +28008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum proppant concentration on the surface.
         /// </summary>
 		[Description("The maximum proppant concentration on the surface.")]
+		[ComponentElement]
 		[XmlElement("maxProppantConcSurface")]
         public DensityMeasure MaxProppantConcSurface {
             get {
@@ -27465,6 +28026,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum proppant concentration at the bottom of the wellbore.
         /// </summary>
 		[Description("The maximum proppant concentration at the bottom of the wellbore.")]
+		[ComponentElement]
 		[XmlElement("maxProppantConcBottomhole")]
         public DensityMeasure MaxProppantConcBottomhole {
             get {
@@ -27482,6 +28044,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average proppant concentration on the surface.
         /// </summary>
 		[Description("The average proppant concentration on the surface.")]
+		[ComponentElement]
 		[XmlElement("avgProppantConcSurface")]
         public DensityMeasure AvgProppantConcSurface {
             get {
@@ -27499,6 +28062,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average proppant concentration at the bottom of the hole.
         /// </summary>
 		[Description("The average proppant concentration at the bottom of the hole.")]
+		[ComponentElement]
 		[XmlElement("avgProppantConcBottomhole")]
         public DensityMeasure AvgProppantConcBottomhole {
             get {
@@ -27516,6 +28080,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The proppant concentration at the perforations.
         /// </summary>
 		[Description("The proppant concentration at the perforations.")]
+		[ComponentElement]
 		[XmlElement("perfproppantConc")]
         public DensityMeasure PerfproppantConc {
             get {
@@ -27533,6 +28098,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total mass of proppant used in the interval.
         /// </summary>
 		[Description("The total mass of proppant used in the interval.")]
+		[ComponentElement]
 		[XmlElement("totalProppantMass")]
         public MassMeasure TotalProppantMass {
             get {
@@ -27550,6 +28116,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total mass of a particular proppant used in an interval.
         /// </summary>
 		[Description("The total mass of a particular proppant used in an interval.")]
+		[RecurringElement]
 		[XmlElement("totalProppantUsage")]
         public List<StimProppantUsage> TotalProppantUsage {
             get {
@@ -27567,6 +28134,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total proppant mass used as a percent of the design mass.
         /// </summary>
 		[Description("Total proppant mass used as a percent of the design mass.")]
+		[ComponentElement]
 		[XmlElement("percentProppantPumped")]
         public VolumePerVolumeMeasurePercent PercentProppantPumped {
             get {
@@ -27584,6 +28152,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The weight of proppant left in the wellbore after pumping has stopped.
         /// </summary>
 		[Description("The weight of proppant left in the wellbore after pumping has stopped.")]
+		[ComponentElement]
 		[XmlElement("wellboreProppantMass")]
         public MassMeasure WellboreProppantMass {
             get {
@@ -27601,6 +28170,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Name of the proppant used for the treatment interval.
         /// </summary>
 		[Description("Name of the proppant used for the treatment interval.")]
+		[RecurringElement]
 		[XmlElement("proppantName")]
         public List<String> ProppantName {
             get {
@@ -27618,6 +28188,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The weight of proppant placed in the formation.
         /// </summary>
 		[Description("The weight of proppant placed in the formation.")]
+		[ComponentElement]
 		[XmlElement("formationProppantMass")]
         public MassMeasure FormationProppantMass {
             get {
@@ -27670,6 +28241,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of nitrogen used in the treatment interval.
         /// </summary>
 		[Description("Volume of nitrogen used in the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("totalN2StdVolume")]
         public StandardVolumeMeasure TotalN2StdVolume {
             get {
@@ -27687,6 +28259,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mass of carbon dioxide used in the treatment interval.
         /// </summary>
 		[Description("Mass of carbon dioxide used in the treatment interval.")]
+		[ComponentElement]
 		[XmlElement("totalCO2Mass")]
         public MassMeasure TotalCO2Mass {
             get {
@@ -27704,6 +28277,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The names of the each fluid used in this interval.
         /// </summary>
 		[Description("The names of the each fluid used in this interval.")]
+		[RecurringElement]
 		[XmlElement("fluidName")]
         public List<String> FluidName {
             get {
@@ -27721,6 +28295,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The formation fracture gradient for this treatment interval.
         /// </summary>
 		[Description("The formation fracture gradient for this treatment interval.")]
+		[ComponentElement]
 		[XmlElement("fractureGradient")]
         public ForcePerVolumeMeasure FractureGradient {
             get {
@@ -27738,6 +28313,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The formation fracture gradient for this treatment interval after treatment.
         /// </summary>
 		[Description("The formation fracture gradient for this treatment interval after treatment.")]
+		[ComponentElement]
 		[XmlElement("finalFractureGradient")]
         public ForcePerVolumeMeasure FinalFractureGradient {
             get {
@@ -27755,6 +28331,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The initial shutin pressure.
         /// </summary>
 		[Description("The initial shutin pressure.")]
+		[ComponentElement]
 		[XmlElement("initialShutinPres")]
         public PressureMeasure InitialShutinPres {
             get {
@@ -27772,6 +28349,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The final shutin pressure at a timespan after shutin.
         /// </summary>
 		[Description("The final shutin pressure at a timespan after shutin.")]
+		[RecurringElement]
 		[XmlElement("shutinPres")]
         public List<StimShutInPressure> ShutinPres {
             get {
@@ -27789,6 +28367,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The screen out pressure.
         /// </summary>
 		[Description("The screen out pressure.")]
+		[ComponentElement]
 		[XmlElement("screenOutPres")]
         public PressureMeasure ScreenOutPres {
             get {
@@ -27806,6 +28385,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Carbon dioxide hydraulic horsepower ordered for the interval.
         /// </summary>
 		[Description("Carbon dioxide hydraulic horsepower ordered for the interval.")]
+		[ComponentElement]
 		[XmlElement("hhpOrderedCO2")]
         public PowerMeasure HhpOrderedCO2 {
             get {
@@ -27823,6 +28403,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluid hydraulic horsepower ordered for the interval.
         /// </summary>
 		[Description("Fluid hydraulic horsepower ordered for the interval.")]
+		[ComponentElement]
 		[XmlElement("hhpOrderedFluid")]
         public PowerMeasure HhpOrderedFluid {
             get {
@@ -27840,6 +28421,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Carbon dioxide hydraulic horsepower actually used for the interval.
         /// </summary>
 		[Description("Carbon dioxide hydraulic horsepower actually used for the interval.")]
+		[ComponentElement]
 		[XmlElement("hhpUsedCO2")]
         public PowerMeasure HhpUsedCO2 {
             get {
@@ -27857,6 +28439,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluid hydraulic horsepower actually used for the interval.
         /// </summary>
 		[Description("Fluid hydraulic horsepower actually used for the interval.")]
+		[ComponentElement]
 		[XmlElement("hhpUsedFluid")]
         public PowerMeasure HhpUsedFluid {
             get {
@@ -27874,6 +28457,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The size of the perforation balls used.
         /// </summary>
 		[Description("The size of the perforation balls used.")]
+		[ComponentElement]
 		[XmlElement("perfBallSize")]
         public LengthMeasure PerfBallSize {
             get {
@@ -27926,6 +28510,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average fracture width created during the treatment during the stimulation services.
         /// </summary>
 		[Description("Average fracture width created during the treatment during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("avgFractureWidth")]
         public LengthMeasure AvgFractureWidth {
             get {
@@ -27943,6 +28528,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average conductivity of fracture created during the treatment supported by proppant during the stimulation services Hydraulic conductivity, symbolically represented as K, is a property of vascular plants, soil or rock, that describes the ease with which water can move through pore spaces or fractures. It depends on the intrinsic permeability of the material and on the degree of saturation. Saturated hydraulic conductivity, Ksat, describes water movement through saturated media.
         /// </summary>
 		[Description("Average conductivity of fracture created during the treatment supported by proppant  during the stimulation services Hydraulic conductivity, symbolically represented as K, is a property of vascular plants, soil or rock, that describes the ease with which water can move through pore spaces or fractures. It depends on the intrinsic permeability of the material and on the degree of saturation. Saturated hydraulic conductivity, Ksat, describes water movement through saturated media.")]
+		[ComponentElement]
 		[XmlElement("avgConductivity")]
         public VelocityMeasure AvgConductivity {
             get {
@@ -27960,6 +28546,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The difference between the pressure which holds a fracture closed (minimal principal stress) and that pressure which is necessary to open the fracture.
         /// </summary>
 		[Description("The difference between the pressure which holds a fracture closed (minimal principal stress) and that pressure which is necessary to open the fracture.")]
+		[ComponentElement]
 		[XmlElement("netPres")]
         public PressureMeasure NetPres {
             get {
@@ -27977,6 +28564,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An analysis parameter used in hydraulic fracture design to indicate the pressure at which the fracture effectively closes without proppant in place.
         /// </summary>
 		[Description("An analysis parameter used in hydraulic fracture design to indicate the pressure at which the fracture effectively closes without proppant in place.")]
+		[ComponentElement]
 		[XmlElement("closurePres")]
         public PressureMeasure ClosurePres {
             get {
@@ -27994,6 +28582,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Delta time recorded for the closure of the fracture to occur during the stimulation services.
         /// </summary>
 		[Description("Delta time recorded for the closure of the fracture to occur during the stimulation services.")]
+		[ComponentElement]
 		[XmlElement("closureDuration")]
         public TimeMeasure ClosureDuration {
             get {
@@ -28011,6 +28600,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The flow paths of this stimulation job treatment interval.
         /// </summary>
 		[Description("The flow paths of this stimulation job treatment interval.")]
+		[RecurringElement]
 		[XmlElement("flowPath")]
         public List<StimFlowPath> FlowPath {
             get {
@@ -28028,6 +28618,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pumping diagnostics session.
         /// </summary>
 		[Description("A pumping diagnostics session.")]
+		[RecurringElement]
 		[XmlElement("pdatSession")]
         public List<StimPdatSession> PdatSession {
             get {
@@ -28045,6 +28636,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Reservoir Interval Component Schema.
         /// </summary>
 		[Description("Reservoir Interval Component Schema.")]
+		[RecurringElement]
 		[XmlElement("reservoirInterval")]
         public List<StimReservoirInterval> ReservoirInterval {
             get {
@@ -28062,6 +28654,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A set of perforations being stimulated.
         /// </summary>
 		[Description("A set of perforations being stimulated.")]
+		[RecurringElement]
 		[XmlElement("perforationInterval")]
         public List<StimPerforationSet> PerforationInterval {
             get {
@@ -28079,6 +28672,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average static temperature of the wellbore injection point(s) or formation at equilibrium (steady state) with no fluid or tool movement, allowing for equilibrium conditions at the wellbore injection point; (BHST: bottom hole static temperature). 
         /// </summary>
 		[Description("The average static temperature of the  wellbore injection point(s) or formation at equilibrium (steady state)  with no fluid or tool movement, allowing for equilibrium conditions at  the wellbore injection point; (BHST: bottom hole static temperature).")]
+		[ComponentElement]
 		[XmlElement("avgBHStaticTemperature")]
         public ThermodynamicTemperatureMeasure AvgBHStaticTemperature {
             get {
@@ -28096,6 +28690,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The average measured or calculated temperature of the wellbore during the treating with well fluid injection or circulation of the wellbore at the point of interest. Point of interest is generally the injection point or region of interest for the test or treatment.
         /// </summary>
 		[Description("The average measured or calculated temperature  of the wellbore during the treating with well fluid injection or  circulation of the wellbore at the point of interest. Point of interest  is generally the injection point or region of interest for the test  or treatment.")]
+		[ComponentElement]
 		[XmlElement("avgBHTreatingTemperature")]
         public ThermodynamicTemperatureMeasure AvgBHTreatingTemperature {
             get {
@@ -28113,6 +28708,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Additives used in the fluid.
         /// </summary>
 		[Description("Additives used in the fluid.")]
+		[RecurringElement]
 		[XmlElement("additive")]
         public List<StimAdditive> Additive {
             get {
@@ -28130,6 +28726,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -28483,6 +29080,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total pumping time.
         /// </summary>
 		[Description("The total pumping time.")]
+		[ComponentElement]
 		[XmlElement("totalPumpTime")]
         public TimeMeasure TotalPumpTime {
             get {
@@ -28500,6 +29098,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pressure encountered during the job.
         /// </summary>
 		[Description("Maximum pressure encountered during the job.")]
+		[ComponentElement]
 		[XmlElement("maxJobPres")]
         public PressureMeasure MaxJobPres {
             get {
@@ -28517,6 +29116,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum job fluid pumping rate of any treatment interval of any stage.
         /// </summary>
 		[Description("Maximum job fluid pumping rate of any treatment interval of any stage.")]
+		[ComponentElement]
 		[XmlElement("maxFluidRate")]
         public VolumeFlowRateMeasure MaxFluidRate {
             get {
@@ -28534,6 +29134,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average pressure encountered of all treatment interval of any stage.
         /// </summary>
 		[Description("Average pressure encountered of all treatment interval of any stage.")]
+		[ComponentElement]
 		[XmlElement("avgJobPres")]
         public PressureMeasure AvgJobPres {
             get {
@@ -28551,6 +29152,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume pumped for all treatments.
         /// </summary>
 		[Description("Total volume pumped for all treatments.")]
+		[ComponentElement]
 		[XmlElement("totalJobVolume")]
         public VolumeMeasure TotalJobVolume {
             get {
@@ -28568,6 +29170,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total weight of proppant used for the stimulation job.
         /// </summary>
 		[Description("Total weight of proppant used for the stimulation job.")]
+		[ComponentElement]
 		[XmlElement("totalProppantWt")]
         public MassMeasure TotalProppantWeight {
             get {
@@ -28585,6 +29188,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Name of a proppant used for the stimulation job.
         /// </summary>
 		[Description("Name of a proppant used for the stimulation job.")]
+		[RecurringElement]
 		[XmlElement("proppantName")]
         public List<String> ProppantName {
             get {
@@ -28637,6 +29241,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume of nitrogen used in the stimulation job.
         /// </summary>
 		[Description("Total volume of nitrogen used in the stimulation job.")]
+		[ComponentElement]
 		[XmlElement("totalN2StdVolume")]
         public StandardVolumeMeasure TotalN2StdVolume {
             get {
@@ -28654,6 +29259,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total mass of carbon dioxide used in the stimulation job.
         /// </summary>
 		[Description("Total mass of carbon dioxide used in the stimulation job.")]
+		[ComponentElement]
 		[XmlElement("totalCO2Mass")]
         public MassMeasure TotalCO2Mass {
             get {
@@ -28671,6 +29277,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hydraulic horsepower ordered for the stimulation job.
         /// </summary>
 		[Description("Hydraulic horsepower ordered for the stimulation job.")]
+		[ComponentElement]
 		[XmlElement("hhpOrdered")]
         public PowerMeasure HhpOrdered {
             get {
@@ -28688,6 +29295,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hydraulic horsepower actually used for the stimulation job.
         /// </summary>
 		[Description("Hydraulic horsepower actually used for the stimulation job.")]
+		[ComponentElement]
 		[XmlElement("hhpUsed")]
         public PowerMeasure HhpUsed {
             get {
@@ -28740,6 +29348,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Percentage of fluid volume in the fracture at the end of pumping.
         /// </summary>
 		[Description("Percentage of fluid volume in the fracture at the end of pumping.")]
+		[ComponentElement]
 		[XmlElement("fluidEfficiency")]
         public VolumePerVolumeMeasurePercent FluidEfficiency {
             get {
@@ -28757,6 +29366,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure recorded on fluid returning to surface.
         /// </summary>
 		[Description("Pressure recorded on fluid returning to surface.")]
+		[ComponentElement]
 		[XmlElement("flowBackPres")]
         public PressureMeasure FlowBackPres {
             get {
@@ -28774,6 +29384,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rate recorded on fluid returning to surface.
         /// </summary>
 		[Description("Rate recorded on fluid returning to surface.")]
+		[ComponentElement]
 		[XmlElement("flowBackRate")]
         public VolumeFlowRateMeasure FlowBackRate {
             get {
@@ -28791,6 +29402,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume recorded on fluid returning to surface.
         /// </summary>
 		[Description("Volume recorded on fluid returning to surface.")]
+		[ComponentElement]
 		[XmlElement("flowBackVolume")]
         public VolumeMeasure FlowBackVolume {
             get {
@@ -28843,6 +29455,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bottomhole static temperature for the job.
         /// </summary>
 		[Description("Bottomhole static temperature for the job.")]
+		[ComponentElement]
 		[XmlElement("bottomholeStaticTemperature")]
         public ThermodynamicTemperatureMeasure BottomholeStaticTemperature {
             get {
@@ -28860,6 +29473,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Expected or calculated bottomhole treating temperature for the job.
         /// </summary>
 		[Description("Expected or calculated bottomhole treating temperature for the job.")]
+		[ComponentElement]
 		[XmlElement("treatingBottomholeTemperature")]
         public ThermodynamicTemperatureMeasure TreatingBottomholeTemperature {
             get {
@@ -28877,6 +29491,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An interval for the stimulation job.
         /// </summary>
 		[Description("An interval for the stimulation job.")]
+		[RecurringElement]
 		[XmlElement("jobInterval")]
         public List<StimJobInterval> JobInterval {
             get {
@@ -28894,6 +29509,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -29019,6 +29635,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Along hole measured depth of measurement from the drill datum.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -29036,6 +29653,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of Lithology records for the Interval 
         /// </summary>
 		[Description("Set of Lithology records for the Interval")]
+		[ComponentElement]
 		[XmlElement("lithology")]
         public Lithology Lithology {
             get {
@@ -29104,6 +29722,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -29212,6 +29831,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is "interpreted" only 100% is allowed. If "core" or "cuttings" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the "undifferentiated" code should be used to fill out to 100%. 
         /// </summary>
 		[Description("The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is \"interpreted\" only 100% is allowed. If \"core\" or \"cuttings\" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the \"undifferentiated\" code should be used to fill out to 100%.")]
+		[ComponentElement]
 		[XmlElement("lithPc")]
         public VolumePerVolumeMeasurePercent LithPercent {
             get {
@@ -29524,6 +30144,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
         [Obsolete()]
 		[Description("DEPRECATED. This entry for shale density should not be used.  Shale densities should be entered in the Shale Density in cs_geologyInterval.")]
+		[ComponentElement]
 		[XmlElement("densShale")]
         public DensityMeasure DensShale {
             get {
@@ -29541,6 +30162,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A single qualifier from the Qualifier enum table for graphical representation in the Lithology columns. In mudlogging terms, a qualifier is a graphical symbol in the Interpreted Lithology column of the Formation Evaluation Log (aka "the mudlog"). In addition to the major lithologies (e.g., sand, shale, etc) existing in the sample, other minerals (present as accessories or inclusions e.g. chert, pyrite, glauconite) and fossils (forams, oyster shells, bryozoans, etc.) may exist and their abundance is generally categorized using ranges such as Trace. These additional minerals and fossils can be of disproportionately great diagnostic and descriptive value. For example,qualifiers can be used to indicate facies changes, marker beds or something that impacted drilling conditions. These qualifiers (representing accessories, inclusions and/or fossils) are used to rapidly and graphically indicate to the recipient of the mudlog that a significant lithological event was encountered while drilling the well. The qualifier can also be used in creating the structured descriptions. 
         /// </summary>
 		[Description("A single qualifier from the Qualifier enum table for graphical representation in the Lithology columns. In mudlogging terms, a qualifier is a graphical symbol in the Interpreted Lithology column of the Formation Evaluation Log (aka \"the mudlog\"). In addition to the major lithologies (e.g., sand, shale, etc) existing in the sample, other minerals (present as accessories or inclusions e.g. chert, pyrite, glauconite) and fossils (forams, oyster shells, bryozoans, etc.) may exist and their abundance is generally categorized using ranges such as Trace. These additional minerals and fossils can be of disproportionately great diagnostic and descriptive value. For example,qualifiers can be used to indicate facies changes, marker beds or something that impacted drilling conditions. These qualifiers (representing accessories, inclusions and/or fossils) are used to rapidly and graphically indicate to the recipient of the mudlog that a significant lithological event was encountered while drilling the well. The qualifier can also be used in creating the structured descriptions.")]
+		[RecurringElement]
 		[XmlElement("qualifier")]
         public List<Qualifier> Qualifier {
             get {
@@ -29558,6 +30180,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -29649,6 +30272,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval. If mdTop and mdBottom are not given then the qualifier is deemed to exist over the  depth range of the parent geologyInterval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -29667,6 +30291,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The measured depth at the bottom of the interval represented by the qualifier.  A point can be indicated by specifying bottom=top. This must be within the range of the parent geologic interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -29684,6 +30309,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The relative abundance of the qualifier estimated based on a "visual area" basis by inspecting the cuttings spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect to either display the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.) 
         /// </summary>
 		[Description("The relative abundance of the qualifier estimated based on a \"visual area\" basis by inspecting the cuttings  spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect  to either display  the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)")]
+		[ComponentElement]
 		[XmlElement("abundance")]
         public VolumePerVolumeMeasurePercent Abundance {
             get {
@@ -29736,6 +30362,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -29879,6 +30506,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Visible Stain (commonly in percent). 
         /// </summary>
 		[Description("Visible Stain (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("stainPc")]
         public AreaPerAreaMeasure StainPercent {
             get {
@@ -29914,6 +30542,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Natural fluorescence (commonly in percent). 
         /// </summary>
 		[Description("Natural fluorescence (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("natFlorPc")]
         public AreaPerAreaMeasure NatFlorPercent {
             get {
@@ -30477,6 +31106,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Tool reference measured depth. 
         /// </summary>
 		[Description("Tool reference measured depth.")]
+		[ComponentElement]
 		[XmlElement("mdToolReference")]
         public MeasuredDepthCoord MDToolReference {
             get {
@@ -30512,6 +31142,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Measured depth of core.")]
+		[ComponentElement]
 		[XmlElement("mdCore")]
         public MeasuredDepthCoord MDCore {
             get {
@@ -30597,6 +31228,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole diameter. 
         /// </summary>
 		[Description("Hole diameter.")]
+		[ComponentElement]
 		[XmlElement("diaHole")]
         public LengthMeasure DiaHole {
             get {
@@ -30614,6 +31246,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of plugs. 
         /// </summary>
 		[Description("Diameter of plugs.")]
+		[ComponentElement]
 		[XmlElement("diaPlug")]
         public LengthMeasure DiaPlug {
             get {
@@ -30841,6 +31474,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of plug sample descriptions. 
         /// </summary>
 		[Description("Set of plug sample descriptions.")]
+		[RecurringElement]
 		[XmlElement("swcSample")]
         public List<SwcSample> SwcSample {
             get {
@@ -30858,6 +31492,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -31034,6 +31669,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A reference to an object that is defined within the context of a wellbore.
         /// </summary>
 		[Description("A reference to an object that is defined within the context of a wellbore.")]
+		[ComponentElement]
 		[XmlElement("objectReference")]
         public RefObjectString ObjectReference {
             get {
@@ -31139,6 +31775,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The personnel afected by the risk.
         /// </summary>
 		[Description("The personnel afected by the risk.")]
+		[RecurringElement]
 		[XmlElement("affectedPersonnel")]
         public List<RiskAffectedPersonnel> AffectedPersonnel {
             get {
@@ -31226,6 +31863,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured Depth at start of activity.
         /// </summary>
 		[Description("Measured Depth at start of activity.")]
+		[ComponentElement]
 		[XmlElement("mdHoleStart")]
         public MeasuredDepthCoord MDHoleStart {
             get {
@@ -31243,6 +31881,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured Depth at end of activity.
         /// </summary>
 		[Description("Measured Depth at end of activity.")]
+		[ComponentElement]
 		[XmlElement("mdHoleEnd")]
         public MeasuredDepthCoord MDHoleEnd {
             get {
@@ -31260,6 +31899,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True Vertical Depth at start of activity.
         /// </summary>
 		[Description("True Vertical Depth at start of activity.")]
+		[ComponentElement]
 		[XmlElement("tvdHoleStart")]
         public WellVerticalDepthCoord TvdHoleStart {
             get {
@@ -31277,6 +31917,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True Vertical Depth at end of activity.
         /// </summary>
 		[Description("True Vertical Depth at end of activity.")]
+		[ComponentElement]
 		[XmlElement("tvdHoleEnd")]
         public WellVerticalDepthCoord TvdHoleEnd {
             get {
@@ -31294,6 +31935,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of bit at start of activity.
         /// </summary>
 		[Description("Measured depth of bit at start of activity.")]
+		[ComponentElement]
 		[XmlElement("mdBitStart")]
         public MeasuredDepthCoord MDBitStart {
             get {
@@ -31311,6 +31953,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of bit at end of activity.
         /// </summary>
 		[Description("Measured depth of bit at end of activity.")]
+		[ComponentElement]
 		[XmlElement("mdBitEnd")]
         public MeasuredDepthCoord MDBitEnd {
             get {
@@ -31328,6 +31971,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole diameter. 
         /// </summary>
 		[Description("Hole diameter.")]
+		[ComponentElement]
 		[XmlElement("diaHole")]
         public LengthMeasure DiaHole {
             get {
@@ -31485,6 +32129,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Plan of action to ensure the risk does not materialize.
         /// </summary>
 		[Description("Plan of action to ensure the risk does not materialize.")]
+		[RecurringElement]
 		[XmlElement("mitigation")]
         public List<String> Mitigation {
             get {
@@ -31502,6 +32147,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -31754,6 +32400,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure rating of the item. 
         /// </summary>
 		[Description("Pressure rating of the item.")]
+		[ComponentElement]
 		[XmlElement("presRating")]
         public PressureMeasure PresRating {
             get {
@@ -32069,6 +32716,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of standpipe. 
         /// </summary>
 		[Description("Inner diameter of standpipe.")]
+		[ComponentElement]
 		[XmlElement("idStandpipe")]
         public LengthMeasure InnerDiameterStandpipe {
             get {
@@ -32086,6 +32734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of standpipe. 
         /// </summary>
 		[Description("Length of standpipe.")]
+		[ComponentElement]
 		[XmlElement("lenStandpipe")]
         public LengthMeasure LenStandpipe {
             get {
@@ -32103,6 +32752,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of kelly hose. 
         /// </summary>
 		[Description("Inner diameter of kelly hose.")]
+		[ComponentElement]
 		[XmlElement("idHose")]
         public LengthMeasure InnerDiameterHose {
             get {
@@ -32120,6 +32770,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of kelly hose. 
         /// </summary>
 		[Description("Length of kelly hose.")]
+		[ComponentElement]
 		[XmlElement("lenHose")]
         public LengthMeasure LenHose {
             get {
@@ -32137,6 +32788,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of swivel. 
         /// </summary>
 		[Description("Inner diameter of swivel.")]
+		[ComponentElement]
 		[XmlElement("idSwivel")]
         public LengthMeasure InnerDiameterSwivel {
             get {
@@ -32154,6 +32806,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of swivel. 
         /// </summary>
 		[Description("Length of swivel.")]
+		[ComponentElement]
 		[XmlElement("lenSwivel")]
         public LengthMeasure LenSwivel {
             get {
@@ -32171,6 +32824,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of kelly hose. 
         /// </summary>
 		[Description("Inner diameter of kelly hose.")]
+		[ComponentElement]
 		[XmlElement("idKelly")]
         public LengthMeasure InnerDiameterKelly {
             get {
@@ -32188,6 +32842,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of kelly. 
         /// </summary>
 		[Description("Length of kelly.")]
+		[ComponentElement]
 		[XmlElement("lenKelly")]
         public LengthMeasure LenKelly {
             get {
@@ -32205,6 +32860,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of surface iron. 
         /// </summary>
 		[Description("Inner diameter of surface iron.")]
+		[ComponentElement]
 		[XmlElement("idSurfaceIron")]
         public LengthMeasure InnerDiameterSurfaceIron {
             get {
@@ -32222,6 +32878,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of surface iron. 
         /// </summary>
 		[Description("Length of surface iron.")]
+		[ComponentElement]
 		[XmlElement("lenSurfaceIron")]
         public LengthMeasure LenSurfaceIron {
             get {
@@ -32239,6 +32896,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Height of surface iron. 
         /// </summary>
 		[Description("Height of surface iron.")]
+		[ComponentElement]
 		[XmlElement("htSurfaceIron")]
         public LengthMeasure HeightSurfaceIron {
             get {
@@ -32256,6 +32914,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Inner diameter of pump discharge line. 
         /// </summary>
 		[Description("Coiled tubing - Inner diameter of pump discharge line.")]
+		[ComponentElement]
 		[XmlElement("idDischargeLine")]
         public LengthMeasure InnerDiameterDischargeLine {
             get {
@@ -32273,6 +32932,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Length of pump discharge line. 
         /// </summary>
 		[Description("Coiled tubing - Length of pump discharge line.")]
+		[ComponentElement]
 		[XmlElement("lenDischargeLine")]
         public LengthMeasure LenDischargeLine {
             get {
@@ -32308,6 +32968,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Specifies the OD of the coiled tubing reel. 
         /// </summary>
 		[Description("Coiled tubing - Specifies the OD of the coiled tubing reel.")]
+		[ComponentElement]
 		[XmlElement("odReel")]
         public LengthMeasure OuterDiameterReel {
             get {
@@ -32325,6 +32986,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Outer diameter of the reel core that the coiled tubing is wrapped around. 
         /// </summary>
 		[Description("Coiled tubing - Outer diameter of the reel core that the coiled tubing is wrapped around.")]
+		[ComponentElement]
 		[XmlElement("odCore")]
         public LengthMeasure OuterDiameterCore {
             get {
@@ -32342,6 +33004,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Width of the reel core. This is the inside dimension. 
         /// </summary>
 		[Description("Coiled tubing - Width of the reel core. This is the inside dimension.")]
+		[ComponentElement]
 		[XmlElement("widReelWrap")]
         public LengthMeasure WidReelWrap {
             get {
@@ -32359,6 +33022,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Length of the coiled tubing remaining on the reel. 
         /// </summary>
 		[Description("Coiled tubing - Length of the coiled tubing remaining on the reel.")]
+		[ComponentElement]
 		[XmlElement("lenReel")]
         public LengthMeasure LenReel {
             get {
@@ -32411,6 +33075,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing -The length of tubing from the end of the coil reel to the rotary kelly bushing. Basically we define what is in the hole and on the reel. This measurement takes into account the 20 or so feet of tubing that is being straightened and shoved through the injector head. 
         /// </summary>
 		[Description("Coiled tubing -The length of tubing from the end of the coil reel to the rotary kelly bushing.  Basically we define what is in the hole and on the reel.  This measurement takes into account  the 20 or so feet of tubing that is being straightened and shoved through the injector head.")]
+		[ComponentElement]
 		[XmlElement("htInjStk")]
         public LengthMeasure HeightInjStk {
             get {
@@ -32463,6 +33128,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Outer diameter of the umbilical. 
         /// </summary>
 		[Description("Coiled tubing - Outer diameter of the umbilical.")]
+		[ComponentElement]
 		[XmlElement("odUmbilical")]
         public LengthMeasure OuterDiameterUmbilical {
             get {
@@ -32480,6 +33146,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing - Length of the umbilical. 
         /// </summary>
 		[Description("Coiled tubing - Length of the umbilical.")]
+		[ComponentElement]
 		[XmlElement("lenUmbilical")]
         public LengthMeasure LenUmbilical {
             get {
@@ -32497,6 +33164,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Top drive - Inner diameter of top stack. 
         /// </summary>
 		[Description("Top drive - Inner diameter of top stack.")]
+		[ComponentElement]
 		[XmlElement("idTopStk")]
         public LengthMeasure InnerDiameterTopStk {
             get {
@@ -32514,6 +33182,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Top drive - The distance that the mud travels from the end of the standpipe hose to the drill pipe connection at the bottom of the top drive. We are measuring the distance that the mud will flow through the top drive. 
         /// </summary>
 		[Description("Top drive - The distance that the mud travels from the end of the standpipe  hose to the drill pipe connection at the bottom of the top drive. We are measuring the  distance that the mud will flow through the top drive.")]
+		[ComponentElement]
 		[XmlElement("htTopStk")]
         public LengthMeasure HeightTopStk {
             get {
@@ -32531,6 +33200,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Height of flange. If you select Top Drive Stackup Height, Swivel and Kelly are disabled so that you can specify the top-drive rotary system. 
         /// </summary>
 		[Description("Height of flange. If you select Top Drive Stackup Height, Swivel and Kelly are disabled so that you can specify the top-drive rotary system.")]
+		[ComponentElement]
 		[XmlElement("htFlange")]
         public LengthMeasure HeightFlange {
             get {
@@ -32723,6 +33393,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Height of separator. 
         /// </summary>
 		[Description("Height of separator.")]
+		[ComponentElement]
 		[XmlElement("height")]
         public LengthMeasure Height {
             get {
@@ -32740,6 +33411,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of separator. 
         /// </summary>
 		[Description("Length of separator.")]
+		[ComponentElement]
 		[XmlElement("len")]
         public LengthMeasure Len {
             get {
@@ -32757,6 +33429,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Internal diameter of object. 
         /// </summary>
 		[Description("Internal diameter of object.")]
+		[ComponentElement]
 		[XmlElement("id")]
         public LengthMeasure InnerDiameter {
             get {
@@ -32774,6 +33447,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pump rate at which the unit will efficiently operate. 
         /// </summary>
 		[Description("Maximum pump rate at which the unit will efficiently operate.")]
+		[ComponentElement]
 		[XmlElement("capFlow")]
         public VolumeFlowRateMeasure CapFlow {
             get {
@@ -32791,6 +33465,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Flow area of separator. 
         /// </summary>
 		[Description("Flow area of separator.")]
+		[ComponentElement]
 		[XmlElement("areaSeparatorFlow")]
         public AreaMeasure AreaSeparatorFlow {
             get {
@@ -32808,6 +33483,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Depth of trip-tank fluid level to provide back pressure against separator flow. 
         /// </summary>
 		[Description("Depth of trip-tank fluid level to provide back pressure against separator flow.")]
+		[ComponentElement]
 		[XmlElement("htMudSeal")]
         public LengthMeasure HeightMudSeal {
             get {
@@ -32825,6 +33501,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Internal diameter of inlet line. 
         /// </summary>
 		[Description("Internal diameter of inlet line.")]
+		[ComponentElement]
 		[XmlElement("idInlet")]
         public LengthMeasure InnerDiameterInlet {
             get {
@@ -32842,6 +33519,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Internal diameter of vent line. 
         /// </summary>
 		[Description("Internal diameter of vent line.")]
+		[ComponentElement]
 		[XmlElement("idVentLine")]
         public LengthMeasure InnerDiameterVentLine {
             get {
@@ -32859,6 +33537,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of vent line. 
         /// </summary>
 		[Description("Length of vent line.")]
+		[ComponentElement]
 		[XmlElement("lenVentLine")]
         public LengthMeasure LenVentLine {
             get {
@@ -32876,6 +33555,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Safe gas separating capacity. 
         /// </summary>
 		[Description("Safe gas separating capacity.")]
+		[ComponentElement]
 		[XmlElement("capGasSep")]
         public VolumeFlowRateMeasure CapGasSep {
             get {
@@ -32893,6 +33573,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gas vent rate at which the vent line pressure drop exceeds the hydrostatic head due to the mud seal. 
         /// </summary>
 		[Description("Gas vent rate at which the vent line pressure drop exceeds the hydrostatic  head due to the mud seal.")]
+		[ComponentElement]
 		[XmlElement("capBlowdown")]
         public VolumeFlowRateMeasure CapBlowdown {
             get {
@@ -32910,6 +33591,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure rating of the item. 
         /// </summary>
 		[Description("Pressure rating of the item.")]
+		[ComponentElement]
 		[XmlElement("presRating")]
         public PressureMeasure PresRating {
             get {
@@ -32927,6 +33609,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Temperature rating of separator. 
         /// </summary>
 		[Description("Temperature rating of separator.")]
+		[ComponentElement]
 		[XmlElement("tempRating")]
         public ThermodynamicTemperatureMeasure TempRating {
             get {
@@ -32944,6 +33627,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the degasser. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the degasser. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -32961,6 +33645,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -33188,6 +33873,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the hydrocyclone. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the hydrocyclone. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -33205,6 +33891,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -33398,6 +34085,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pump rate at which the unit will efficiently operate. 
         /// </summary>
 		[Description("Maximum pump rate at which the unit will efficiently operate.")]
+		[ComponentElement]
 		[XmlElement("capFlow")]
         public VolumeFlowRateMeasure CapFlow {
             get {
@@ -33432,6 +34120,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the centrifuge. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the centrifuge. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -33449,6 +34138,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -33782,6 +34472,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pump rate at which the unit will efficiently operate. 
         /// </summary>
 		[Description("Maximum pump rate at which the unit will efficiently operate.")]
+		[ComponentElement]
 		[XmlElement("capFlow")]
         public VolumeFlowRateMeasure CapFlow {
             get {
@@ -33816,6 +34507,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum mesh size. 
         /// </summary>
 		[Description("Minimum mesh size.")]
+		[ComponentElement]
 		[XmlElement("sizeMeshMn")]
         public LengthMeasure SizeMeshMin {
             get {
@@ -33833,6 +34525,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the shaker. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the shaker. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -33850,6 +34543,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -34131,6 +34825,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rod outer diameter. 
         /// </summary>
 		[Description("Rod outer diameter.")]
+		[ComponentElement]
 		[XmlElement("odRod")]
         public LengthMeasure OuterDiameterRod {
             get {
@@ -34149,6 +34844,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Inner diameter of the pump liner.")]
+		[ComponentElement]
 		[XmlElement("idLiner")]
         public LengthMeasure LinerSize {
             get {
@@ -34202,6 +34898,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Efficiency of the pump. 
         /// </summary>
 		[Description("Efficiency of the pump.")]
+		[ComponentElement]
 		[XmlElement("eff")]
         public RelativePowerMeasure Eff {
             get {
@@ -34219,6 +34916,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Stroke length. 
         /// </summary>
 		[Description("Stroke length.")]
+		[ComponentElement]
 		[XmlElement("lenStroke")]
         public LengthMeasure LenStroke {
             get {
@@ -34236,6 +34934,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pump pressure. 
         /// </summary>
 		[Description("Maximum pump pressure.")]
+		[ComponentElement]
 		[XmlElement("presMx")]
         public PressureMeasure PresMax {
             get {
@@ -34253,6 +34952,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum hydraulics horsepower. 
         /// </summary>
 		[Description("Maximum hydraulics horsepower.")]
+		[ComponentElement]
 		[XmlElement("powHydMx")]
         public PowerMeasure PowHydMax {
             get {
@@ -34270,6 +34970,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum Speed. 
         /// </summary>
 		[Description("Maximum Speed.")]
+		[ComponentElement]
 		[XmlElement("spmMx")]
         public AnglePerTimeMeasure SpmMax {
             get {
@@ -34288,6 +34989,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Pump displacement.")]
+		[ComponentElement]
 		[XmlElement("displacement")]
         public VolumeMeasure Displacement {
             get {
@@ -34305,6 +35007,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pulsation dampener pressure. 
         /// </summary>
 		[Description("Pulsation dampener pressure.")]
+		[ComponentElement]
 		[XmlElement("presDamp")]
         public PressureMeasure PresDamp {
             get {
@@ -34322,6 +35025,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pulsation dampener volume. 
         /// </summary>
 		[Description("Pulsation dampener volume.")]
+		[ComponentElement]
 		[XmlElement("volDamp")]
         public VolumeMeasure VolDamp {
             get {
@@ -34339,6 +35043,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum mechanical power. 
         /// </summary>
 		[Description("Maximum mechanical power.")]
+		[ComponentElement]
 		[XmlElement("powMechMx")]
         public PowerMeasure PowMechMax {
             get {
@@ -34356,6 +35061,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the pump. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the pump. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -34373,6 +35079,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -34534,6 +35241,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Maximum pit capacity.")]
+		[ComponentElement]
 		[XmlElement("capMx")]
         public VolumeMeasure CapMax {
             get {
@@ -34638,6 +35346,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the pit. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the pit. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -34655,6 +35364,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -34780,6 +35490,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter that tubulars can pass thru. 
         /// </summary>
 		[Description("Inner diameter that tubulars can pass thru.")]
+		[ComponentElement]
 		[XmlElement("idPassThru")]
         public LengthMeasure InnerDiameterPassThru {
             get {
@@ -34797,6 +35508,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Working rating pressure of the component. 
         /// </summary>
 		[Description("Working rating pressure of the component.")]
+		[ComponentElement]
 		[XmlElement("presWork")]
         public PressureMeasure PresWork {
             get {
@@ -34814,6 +35526,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum diameter of component it will seal. 
         /// </summary>
 		[Description("Minimum diameter of component it will seal.")]
+		[ComponentElement]
 		[XmlElement("diaCloseMn")]
         public LengthMeasure DiaCloseMin {
             get {
@@ -34831,6 +35544,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum diameter of component it will seal. 
         /// </summary>
 		[Description("Maximum diameter of component it will seal.")]
+		[ComponentElement]
 		[XmlElement("diaCloseMx")]
         public LengthMeasure DiaCloseMax {
             get {
@@ -34901,6 +35615,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -35077,6 +35792,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the blow out preventer. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the blow out preventer. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -35111,6 +35827,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Size of connection to Blow Out Preventer. 
         /// </summary>
 		[Description("Size of connection to Blow Out Preventer.")]
+		[ComponentElement]
 		[XmlElement("sizeConnectionBop")]
         public LengthMeasure SizeConnectionBop {
             get {
@@ -35129,6 +35846,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Maximum Pressure rating of Blow Out Preventer.")]
+		[ComponentElement]
 		[XmlElement("presBopRating")]
         public PressureMeasure PresBopRating {
             get {
@@ -35147,6 +35865,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Maximum tubulars passable through Blow Out Preventer.")]
+		[ComponentElement]
 		[XmlElement("sizeBopSys")]
         public LengthMeasure SizeBopSys {
             get {
@@ -35199,6 +35918,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of Booster Line. 
         /// </summary>
 		[Description("Inner diameter of Booster Line.")]
+		[ComponentElement]
 		[XmlElement("idBoosterLine")]
         public LengthMeasure InnerDiameterBoosterLine {
             get {
@@ -35216,6 +35936,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outer diameter of Booster Line. 
         /// </summary>
 		[Description("Outer diameter of Booster Line.")]
+		[ComponentElement]
 		[XmlElement("odBoosterLine")]
         public LengthMeasure OuterDiameterBoosterLine {
             get {
@@ -35233,6 +35954,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of Booster Line along riser. 
         /// </summary>
 		[Description("Length of Booster Line along riser.")]
+		[ComponentElement]
 		[XmlElement("lenBoosterLine")]
         public LengthMeasure LenBoosterLine {
             get {
@@ -35250,6 +35972,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of Surface Line. 
         /// </summary>
 		[Description("Inner diameter of Surface Line.")]
+		[ComponentElement]
 		[XmlElement("idSurfLine")]
         public LengthMeasure InnerDiameterSurfLine {
             get {
@@ -35267,6 +35990,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outer diameter of Surface Line. 
         /// </summary>
 		[Description("Outer diameter of Surface Line.")]
+		[ComponentElement]
 		[XmlElement("odSurfLine")]
         public LengthMeasure OuterDiameterSurfLine {
             get {
@@ -35284,6 +36008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of Choke Line along riser. 
         /// </summary>
 		[Description("Length of Choke Line along riser.")]
+		[ComponentElement]
 		[XmlElement("lenSurfLine")]
         public LengthMeasure LenSurfLine {
             get {
@@ -35301,6 +36026,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of Choke Line. 
         /// </summary>
 		[Description("Inner diameter of Choke Line.")]
+		[ComponentElement]
 		[XmlElement("idChkLine")]
         public LengthMeasure InnerDiameterChkLine {
             get {
@@ -35318,6 +36044,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outer diameter of Choke Line. 
         /// </summary>
 		[Description("Outer diameter of Choke Line.")]
+		[ComponentElement]
 		[XmlElement("odChkLine")]
         public LengthMeasure OuterDiameterChkLine {
             get {
@@ -35335,6 +36062,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of Choke Line along riser. 
         /// </summary>
 		[Description("Length of Choke Line along riser.")]
+		[ComponentElement]
 		[XmlElement("lenChkLine")]
         public LengthMeasure LenChkLine {
             get {
@@ -35352,6 +36080,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inner diameter of Kill Line. 
         /// </summary>
 		[Description("Inner diameter of Kill Line.")]
+		[ComponentElement]
 		[XmlElement("idKillLine")]
         public LengthMeasure InnerDiameterKillLine {
             get {
@@ -35369,6 +36098,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Outer diameter of Kill Line. 
         /// </summary>
 		[Description("Outer diameter of Kill Line.")]
+		[ComponentElement]
 		[XmlElement("odKillLine")]
         public LengthMeasure OuterDiameterKillLine {
             get {
@@ -35386,6 +36116,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of Kill Line. 
         /// </summary>
 		[Description("Length of Kill Line.")]
+		[ComponentElement]
 		[XmlElement("lenKillLine")]
         public LengthMeasure LenKillLine {
             get {
@@ -35403,6 +36134,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Container element for Blow Out Preventer component schema elements. 
         /// </summary>
 		[Description("Container element for Blow Out Preventer component schema elements.")]
+		[RecurringElement]
 		[XmlElement("bopComponent")]
         public List<BopComponent> BopComponent {
             get {
@@ -35438,6 +36170,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of diverter. 
         /// </summary>
 		[Description("Diameter of diverter.")]
+		[ComponentElement]
 		[XmlElement("diaDiverter")]
         public LengthMeasure DiaDiverter {
             get {
@@ -35455,6 +36188,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Working rating pressure of the component. 
         /// </summary>
 		[Description("Working rating pressure of the component.")]
+		[ComponentElement]
 		[XmlElement("presWorkDiverter")]
         public PressureMeasure PresWorkDiverter {
             get {
@@ -35489,6 +36223,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Accumulator fluid capacity. 
         /// </summary>
 		[Description("Accumulator fluid capacity.")]
+		[ComponentElement]
 		[XmlElement("capAccFluid")]
         public VolumeMeasure CapAccFluid {
             get {
@@ -35506,6 +36241,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Accumulator pre-charge pressure. 
         /// </summary>
 		[Description("Accumulator pre-charge pressure.")]
+		[ComponentElement]
 		[XmlElement("presAccPreCharge")]
         public PressureMeasure PresAccPreCharge {
             get {
@@ -35523,6 +36259,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Accumulator pre-charge volume
         /// </summary>
 		[Description("Accumulator pre-charge volume")]
+		[ComponentElement]
 		[XmlElement("volAccPreCharge")]
         public VolumeMeasure VolAccPreCharge {
             get {
@@ -35540,6 +36277,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Accumulator operating pressure rating. 
         /// </summary>
 		[Description("Accumulator operating pressure rating.")]
+		[ComponentElement]
 		[XmlElement("presAccOpRating")]
         public PressureMeasure PresAccOperatingRating {
             get {
@@ -35608,6 +36346,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Choke manifold pressure. 
         /// </summary>
 		[Description("Choke manifold pressure.")]
+		[ComponentElement]
 		[XmlElement("presChokeManifold")]
         public PressureMeasure PresChokeManifold {
             get {
@@ -35938,6 +36677,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum hole depth rating for the rig. 
         /// </summary>
 		[Description("Maximum hole depth rating for the rig.")]
+		[ComponentElement]
 		[XmlElement("ratingDrillDepth")]
         public LengthMeasure RatingDrillDepth {
             get {
@@ -35955,6 +36695,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Working water depth capability of rig. 
         /// </summary>
 		[Description("Working water depth capability of rig.")]
+		[ComponentElement]
 		[XmlElement("ratingWaterDepth")]
         public LengthMeasure RatingWaterDepth {
             get {
@@ -36007,6 +36748,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Air gap from Rig Floor to ground or mean sea level depending on location. 
         /// </summary>
 		[Description("Air gap from Rig Floor to ground or mean sea level depending on location.")]
+		[ComponentElement]
 		[XmlElement("airGap")]
         public LengthMeasure AirGap {
             get {
@@ -36094,6 +36836,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Blow out preventer description and components. 
         /// </summary>
 		[Description("Blow out preventer description and components.")]
+		[ComponentElement]
 		[XmlElement("bop")]
         public Bop Bop {
             get {
@@ -36111,6 +36854,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pit equipment for the rig. 
         /// </summary>
 		[Description("Pit equipment for the rig.")]
+		[RecurringElement]
 		[XmlElement("pit")]
         public List<Pit> Pit {
             get {
@@ -36128,6 +36872,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Drilling fluid (mud/cement) pumping units for the rig. 
         /// </summary>
 		[Description("Drilling fluid (mud/cement) pumping units for the rig.")]
+		[RecurringElement]
 		[XmlElement("pump")]
         public List<Pump> Pump {
             get {
@@ -36145,6 +36890,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud cleaning shaker equipment for the rig. 
         /// </summary>
 		[Description("Mud cleaning shaker equipment for the rig.")]
+		[RecurringElement]
 		[XmlElement("shaker")]
         public List<Shaker> Shaker {
             get {
@@ -36162,6 +36908,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud cleaning centrifuge equipment for the rig. 
         /// </summary>
 		[Description("Mud cleaning centrifuge equipment for the rig.")]
+		[RecurringElement]
 		[XmlElement("centrifuge")]
         public List<Centrifuge> Centrifuge {
             get {
@@ -36179,6 +36926,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud cleaning hydrocyclone equipment for the rig. 
         /// </summary>
 		[Description("Mud cleaning hydrocyclone equipment for the rig.")]
+		[RecurringElement]
 		[XmlElement("hydrocyclone")]
         public List<Hydrocyclone> Hydrocyclone {
             get {
@@ -36196,6 +36944,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud de-gasser equipment for the rig. 
         /// </summary>
 		[Description("Mud de-gasser equipment for the rig.")]
+		[RecurringElement]
 		[XmlElement("degasser")]
         public List<Degasser> Degasser {
             get {
@@ -36300,6 +37049,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum support load applied to derrick structure. 
         /// </summary>
 		[Description("Maximum support load applied to derrick structure.")]
+		[ComponentElement]
 		[XmlElement("ratingDerrick")]
         public ForceMeasure RatingDerrick {
             get {
@@ -36317,6 +37067,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Height of derrick. 
         /// </summary>
 		[Description("Height of derrick.")]
+		[ComponentElement]
 		[XmlElement("htDerrick")]
         public LengthMeasure HeightDerrick {
             get {
@@ -36334,6 +37085,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum hookload rating. 
         /// </summary>
 		[Description("Maximum hookload rating.")]
+		[ComponentElement]
 		[XmlElement("ratingHkld")]
         public ForceMeasure RatingHookload {
             get {
@@ -36351,6 +37103,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Derrick wind capacity. 
         /// </summary>
 		[Description("Derrick wind capacity.")]
+		[ComponentElement]
 		[XmlElement("capWindDerrick")]
         public VelocityMeasure CapWindDerrick {
             get {
@@ -36368,6 +37121,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Block weight. 
         /// </summary>
 		[Description("Block weight.")]
+		[ComponentElement]
 		[XmlElement("wtBlock")]
         public ForceMeasure WeightBlock {
             get {
@@ -36385,6 +37139,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight rating of the travelling block. 
         /// </summary>
 		[Description("Weight rating of the travelling block.")]
+		[ComponentElement]
 		[XmlElement("ratingBlock")]
         public ForceMeasure RatingBlock {
             get {
@@ -36454,6 +37209,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight rating of the hook. 
         /// </summary>
 		[Description("Weight rating of the hook.")]
+		[ComponentElement]
 		[XmlElement("ratingHook")]
         public ForceMeasure RatingHook {
             get {
@@ -36471,6 +37227,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Drill line diameter. 
         /// </summary>
 		[Description("Drill line diameter.")]
+		[ComponentElement]
 		[XmlElement("sizeDrillLine")]
         public LengthMeasure SizeDrillLine {
             get {
@@ -36523,6 +37280,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Draw works horse power. 
         /// </summary>
 		[Description("Draw works horse power.")]
+		[ComponentElement]
 		[XmlElement("powerDrawWorks")]
         public PowerMeasure PowerDrawWorks {
             get {
@@ -36540,6 +37298,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight rating of the drawworks. 
         /// </summary>
 		[Description("Weight rating of the drawworks.")]
+		[ComponentElement]
 		[XmlElement("ratingDrawWorks")]
         public ForceMeasure RatingDrawWorks {
             get {
@@ -36608,6 +37367,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum swivel rating. 
         /// </summary>
 		[Description("Maximum swivel rating.")]
+		[ComponentElement]
 		[XmlElement("ratingSwivel")]
         public ForceMeasure RatingSwivel {
             get {
@@ -36677,6 +37437,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Work string rotational torque rating. 
         /// </summary>
 		[Description("Work string rotational torque rating.")]
+		[ComponentElement]
 		[XmlElement("ratingTqRotSys")]
         public MomentOfForceMeasure RatingTorqueRotSys {
             get {
@@ -36694,6 +37455,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rotary size opening. 
         /// </summary>
 		[Description("Rotary size opening.")]
+		[ComponentElement]
 		[XmlElement("rotSizeOpening")]
         public LengthMeasure RotSizeOpening {
             get {
@@ -36711,6 +37473,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Work string rotational torque rating. 
         /// </summary>
 		[Description("Work string rotational torque rating.")]
+		[ComponentElement]
 		[XmlElement("ratingRotSystem")]
         public ForceMeasure RatingRotSystem {
             get {
@@ -36762,6 +37525,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bulk/dry mud storage capacity. 
         /// </summary>
 		[Description("Bulk/dry mud storage capacity.")]
+		[ComponentElement]
 		[XmlElement("capBulkMud")]
         public VolumeMeasure CapBulkMud {
             get {
@@ -36779,6 +37543,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Liquid mud storage capacity. 
         /// </summary>
 		[Description("Liquid mud storage capacity.")]
+		[ComponentElement]
 		[XmlElement("capLiquidMud")]
         public VolumeMeasure CapLiquidMud {
             get {
@@ -36796,6 +37561,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Drill water capacity. 
         /// </summary>
 		[Description("Drill water capacity.")]
+		[ComponentElement]
 		[XmlElement("capDrillWater")]
         public VolumeMeasure CapDrillWater {
             get {
@@ -36813,6 +37579,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Potable water capacity. 
         /// </summary>
 		[Description("Potable water capacity.")]
+		[ComponentElement]
 		[XmlElement("capPotableWater")]
         public VolumeMeasure CapPotableWater {
             get {
@@ -36830,6 +37597,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fuel capacity. 
         /// </summary>
 		[Description("Fuel capacity.")]
+		[ComponentElement]
 		[XmlElement("capFuel")]
         public VolumeMeasure CapFuel {
             get {
@@ -36847,6 +37615,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Capacity of builk cement. 
         /// </summary>
 		[Description("Capacity of builk cement.")]
+		[ComponentElement]
 		[XmlElement("capBulkCement")]
         public VolumeMeasure CapBulkCement {
             get {
@@ -37143,6 +37912,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Variable deck load maximum (offshore rigs only). 
         /// </summary>
 		[Description("Variable deck load maximum (offshore rigs only).")]
+		[ComponentElement]
 		[XmlElement("varDeckLdMx")]
         public ForceMeasure VarDeckLoadMax {
             get {
@@ -37160,6 +37930,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Variable deck load storm rating (offshore rigs only). 
         /// </summary>
 		[Description("Variable deck load storm rating (offshore rigs only).")]
+		[ComponentElement]
 		[XmlElement("vdlStorm")]
         public ForceMeasure VdlStorm {
             get {
@@ -37247,6 +38018,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum motion compensation. 
         /// </summary>
 		[Description("Minimum motion compensation.")]
+		[ComponentElement]
 		[XmlElement("motionCompensationMn")]
         public ForceMeasure MotionCompensationMin {
             get {
@@ -37264,6 +38036,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum motion compensation. 
         /// </summary>
 		[Description("Maximum motion compensation.")]
+		[ComponentElement]
 		[XmlElement("motionCompensationMx")]
         public ForceMeasure MotionCompensationMax {
             get {
@@ -37281,6 +38054,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of motion compensation provided by equipment. 
         /// </summary>
 		[Description("Length of motion compensation provided by equipment.")]
+		[ComponentElement]
 		[XmlElement("strokeMotionCompensation")]
         public LengthMeasure StrokeMotionCompensation {
             get {
@@ -37298,6 +38072,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Riser angle limit. 
         /// </summary>
 		[Description("Riser angle limit.")]
+		[ComponentElement]
 		[XmlElement("riserAngleLimit")]
         public PlaneAngleMeasure RiserAngleLimit {
             get {
@@ -37315,6 +38090,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum allowable heave. 
         /// </summary>
 		[Description("Maximum allowable heave.")]
+		[ComponentElement]
 		[XmlElement("heaveMx")]
         public LengthMeasure HeaveMax {
             get {
@@ -37368,6 +38144,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -37527,6 +38304,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Atmospheric pressure. 
         /// </summary>
 		[Description("Atmospheric pressure.")]
+		[ComponentElement]
 		[XmlElement("barometricPressure")]
         public PressureMeasure BarometricPressure {
             get {
@@ -37580,6 +38358,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum temperature above ground. Temperature of the atmosphere. 
         /// </summary>
 		[Description("Minimum temperature above ground. Temperature of the atmosphere.")]
+		[ComponentElement]
 		[XmlElement("tempSurfaceMn")]
         public ThermodynamicTemperatureMeasure TempSurfaceMin {
             get {
@@ -37597,6 +38376,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum temperature above ground. 
         /// </summary>
 		[Description("Maximum temperature above ground.")]
+		[ComponentElement]
 		[XmlElement("tempSurfaceMx")]
         public ThermodynamicTemperatureMeasure TempSurfaceMax {
             get {
@@ -37614,6 +38394,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A measure of the combined chilling effect of wind and low temperature on living things, also named chill factor, e.g., according to US weather service table, an air temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 degF. 
         /// </summary>
 		[Description("A measure of the combined chilling effect of wind and low temperature on  living things, also named chill factor, e.g., according to US weather service table, an air  temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 degF.")]
+		[ComponentElement]
 		[XmlElement("tempWindChill")]
         public ThermodynamicTemperatureMeasure TempWindChill {
             get {
@@ -37631,6 +38412,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Sea temperature. 
         /// </summary>
 		[Description("Sea temperature.")]
+		[ComponentElement]
 		[XmlElement("tempsea")]
         public ThermodynamicTemperatureMeasure Tempsea {
             get {
@@ -37648,6 +38430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Horizontal visibility. 
         /// </summary>
 		[Description("Horizontal visibility.")]
+		[ComponentElement]
 		[XmlElement("visibility")]
         public LengthMeasure Visibility {
             get {
@@ -37665,6 +38448,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The direction from which the waves are coming, measured from true north. 
         /// </summary>
 		[Description("The direction from which the waves are coming, measured from true north.")]
+		[ComponentElement]
 		[XmlElement("aziWave")]
         public PlaneAngleMeasure AziWave {
             get {
@@ -37682,6 +38466,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average height of the waves. 
         /// </summary>
 		[Description("Average height of the waves.")]
+		[ComponentElement]
 		[XmlElement("htWave")]
         public LengthMeasure HeightWave {
             get {
@@ -37699,6 +38484,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An average of the higher 1/3 of the wave heights passing during a sample period (typically 20 to 30 minutes). 
         /// </summary>
 		[Description("An average of the higher 1/3 of the wave heights passing during a   sample period (typically 20 to 30 minutes).")]
+		[ComponentElement]
 		[XmlElement("significantWave")]
         public LengthMeasure SignificantWave {
             get {
@@ -37716,6 +38502,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum wave height.
         /// </summary>
 		[Description("The maximum wave height.")]
+		[ComponentElement]
 		[XmlElement("maxWave")]
         public LengthMeasure MaxWave {
             get {
@@ -37733,6 +38520,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The elapsed time between the passing of two wave tops. 
         /// </summary>
 		[Description("The elapsed time between the passing of two wave tops.")]
+		[ComponentElement]
 		[XmlElement("periodWave")]
         public TimeMeasure PeriodWave {
             get {
@@ -37750,6 +38538,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The direction from which the wind is blowing, measured from true north. 
         /// </summary>
 		[Description("The direction from which the wind is blowing, measured from true north.")]
+		[ComponentElement]
 		[XmlElement("aziWind")]
         public PlaneAngleMeasure AziWind {
             get {
@@ -37767,6 +38556,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wind speed. 
         /// </summary>
 		[Description("Wind speed.")]
+		[ComponentElement]
 		[XmlElement("velWind")]
         public VelocityMeasure VelWind {
             get {
@@ -37801,6 +38591,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Amount of precipitation. 
         /// </summary>
 		[Description("Amount of precipitation.")]
+		[ComponentElement]
 		[XmlElement("amtPrecip")]
         public LengthMeasure AmtPrecip {
             get {
@@ -37835,6 +38626,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Height of cloud cover. 
         /// </summary>
 		[Description("Height of cloud cover.")]
+		[ComponentElement]
 		[XmlElement("ceilingCloud")]
         public LengthMeasure CeilingCloud {
             get {
@@ -37852,6 +38644,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Current speed. 
         /// </summary>
 		[Description("Current speed.")]
+		[ComponentElement]
 		[XmlElement("currentSea")]
         public VelocityMeasure CurrentSea {
             get {
@@ -37869,6 +38662,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Azimuth of current. 
         /// </summary>
 		[Description("Azimuth of current.")]
+		[ComponentElement]
 		[XmlElement("aziCurrentSea")]
         public PlaneAngleMeasure AziCurrentSea {
             get {
@@ -37903,6 +38697,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -38115,6 +38910,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -38257,6 +39053,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total time worked by the company (commonly in hours). 
         /// </summary>
 		[Description("Total time worked by the company (commonly in hours).")]
+		[ComponentElement]
 		[XmlElement("totalTime")]
         public TimeMeasure TotalTime {
             get {
@@ -38274,6 +39071,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -38590,6 +39388,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Number of hours lost due to incident. 
         /// </summary>
 		[Description("Number of hours lost due to incident.")]
+		[ComponentElement]
 		[XmlElement("eTimLostGross")]
         public TimeMeasure ETimeLostGross {
             get {
@@ -38607,6 +39406,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gross estimate of cost incurred due to incident. 
         /// </summary>
 		[Description("Gross estimate of cost incurred due to incident.")]
+		[ComponentElement]
 		[XmlElement("costLostGross")]
         public Cost CostLostGross {
             get {
@@ -38641,6 +39441,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -38713,6 +39514,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Incident free duration (commonly in days). 
         /// </summary>
 		[Description("Incident free duration (commonly in days).")]
+		[ComponentElement]
 		[XmlElement("daysIncFree")]
         public TimeMeasure DaysIncFree {
             get {
@@ -38730,6 +39532,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Incident report occurrences description. 
         /// </summary>
 		[Description("Incident report occurrences description.")]
+		[RecurringElement]
 		[XmlElement("incident")]
         public List<Incident> Incident {
             get {
@@ -38782,6 +39585,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Last casing pressure test pressure. 
         /// </summary>
 		[Description("Last casing pressure test pressure.")]
+		[ComponentElement]
 		[XmlElement("presLastCsg")]
         public PressureMeasure PresLastCsg {
             get {
@@ -38869,6 +39673,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Standpipe manifold pressure tested to. 
         /// </summary>
 		[Description("Standpipe manifold pressure tested to.")]
+		[ComponentElement]
 		[XmlElement("presStdPipe")]
         public PressureMeasure PresStdPipe {
             get {
@@ -38886,6 +39691,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Kelly hose pressure tested to. 
         /// </summary>
 		[Description("Kelly hose pressure tested to.")]
+		[ComponentElement]
 		[XmlElement("presKellyHose")]
         public PressureMeasure PresKellyHose {
             get {
@@ -38903,6 +39709,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Blow out preventer diverter pressure tested to. 
         /// </summary>
 		[Description("Blow out preventer diverter pressure tested to.")]
+		[ComponentElement]
 		[XmlElement("presDiverter")]
         public PressureMeasure PresDiverter {
             get {
@@ -38920,6 +39727,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Blow out preventer annular preventer pressure tested to. 
         /// </summary>
 		[Description("Blow out preventer annular preventer pressure tested to.")]
+		[ComponentElement]
 		[XmlElement("presAnnular")]
         public PressureMeasure PresAnnular {
             get {
@@ -38937,6 +39745,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Blow out preventer ram pressure tested to. 
         /// </summary>
 		[Description("Blow out preventer ram pressure tested to.")]
+		[ComponentElement]
 		[XmlElement("presRams")]
         public PressureMeasure PresRams {
             get {
@@ -38954,6 +39763,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Choke line pressure tested to. 
         /// </summary>
 		[Description("Choke line pressure tested to.")]
+		[ComponentElement]
 		[XmlElement("presChokeLine")]
         public PressureMeasure PresChokeLine {
             get {
@@ -38971,6 +39781,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Choke line manifold pressure tested to. 
         /// </summary>
 		[Description("Choke line manifold pressure tested to.")]
+		[ComponentElement]
 		[XmlElement("presChokeMan")]
         public PressureMeasure PresChokeMan {
             get {
@@ -39373,6 +40184,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Daily whole mud discarded. 
         /// </summary>
 		[Description("Daily whole mud discarded.")]
+		[ComponentElement]
 		[XmlElement("fluidDischarged")]
         public VolumeMeasure FluidDischarged {
             get {
@@ -39390,6 +40202,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of cuttings discharged. 
         /// </summary>
 		[Description("Volume of cuttings discharged.")]
+		[ComponentElement]
 		[XmlElement("volCtgDischarged")]
         public VolumeMeasure VolCtgDischarged {
             get {
@@ -39407,6 +40220,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Oil on cuttings daily discharge. 
         /// </summary>
 		[Description("Oil on cuttings daily discharge.")]
+		[ComponentElement]
 		[XmlElement("volOilCtgDischarge")]
         public VolumeMeasure VolOilCtgDischarge {
             get {
@@ -39424,6 +40238,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of sanitary waste discharged. 
         /// </summary>
 		[Description("Volume of sanitary waste discharged.")]
+		[ComponentElement]
 		[XmlElement("wasteDischarged")]
         public VolumeMeasure WasteDischarged {
             get {
@@ -39600,6 +40415,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mesh size in the X direction. 
         /// </summary>
 		[Description("Mesh size in the X direction.")]
+		[ComponentElement]
 		[XmlElement("meshX")]
         public LengthMeasure MeshX {
             get {
@@ -39617,6 +40433,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mesh size in the Y direction. 
         /// </summary>
 		[Description("Mesh size in the Y direction.")]
+		[ComponentElement]
 		[XmlElement("meshY")]
         public LengthMeasure MeshY {
             get {
@@ -39668,6 +40485,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Shaker screen cut point - the maximum size that will pass through the screen.
         /// </summary>
 		[Description("Shaker screen cut point - the maximum size that  will pass through the screen.")]
+		[ComponentElement]
 		[XmlElement("cutPoint")]
         public LengthMeasure CutPoint {
             get {
@@ -39723,6 +40541,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A pointer to the shaker that is characterized by this report.")]
+		[ComponentElement]
 		[XmlElement("shaker")]
         public RefNameString Shaker {
             get {
@@ -39740,6 +40559,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole measured depth at time of measurement. 
         /// </summary>
 		[Description("Hole measured depth at time of measurement.")]
+		[ComponentElement]
 		[XmlElement("mdHole")]
         public MeasuredDepthCoord MDHole {
             get {
@@ -39792,6 +40612,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hours run for this operation. 
         /// </summary>
 		[Description("Hours run for this operation.")]
+		[ComponentElement]
 		[XmlElement("hoursRun")]
         public TimeMeasure HoursRun {
             get {
@@ -39809,6 +40630,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Percent of screen covered by cuttings. 
         /// </summary>
 		[Description("Percent of screen covered by cuttings.")]
+		[ComponentElement]
 		[XmlElement("pcScreenCovered")]
         public AreaPerAreaMeasure PercentScreenCovered {
             get {
@@ -39843,6 +40665,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -39951,6 +40774,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("This is a pointer to the corresponding pump on the rig.")]
+		[ComponentElement]
 		[XmlElement("pump")]
         public RefPositiveCount Pump {
             get {
@@ -40003,6 +40827,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Liner size. 
         /// </summary>
 		[Description("Liner size.")]
+		[ComponentElement]
 		[XmlElement("idLiner")]
         public LengthMeasure LinerSize {
             get {
@@ -40020,6 +40845,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Stroke Length. 
         /// </summary>
 		[Description("Stroke Length.")]
+		[ComponentElement]
 		[XmlElement("lenStroke")]
         public LengthMeasure LenStroke {
             get {
@@ -40038,6 +40864,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Pump rate (Strokes per minute).")]
+		[ComponentElement]
 		[XmlElement("rateStroke")]
         public AnglePerTimeMeasure RateStroke {
             get {
@@ -40056,6 +40883,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Pump pressure recorded.")]
+		[ComponentElement]
 		[XmlElement("pressure")]
         public PressureMeasure Pressure {
             get {
@@ -40073,6 +40901,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pump efficiency. 
         /// </summary>
 		[Description("Pump efficiency.")]
+		[ComponentElement]
 		[XmlElement("pcEfficiency")]
         public RelativePowerMeasure PercentEfficiency {
             get {
@@ -40090,6 +40919,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pump output (incl. for efficiency). 
         /// </summary>
 		[Description("Pump output (incl. for efficiency).")]
+		[ComponentElement]
 		[XmlElement("pumpOutput")]
         public VolumeFlowRateMeasure PumpOutput {
             get {
@@ -40107,6 +40937,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Along hole measured depth of measurement from the drill datum. 
         /// </summary>
 		[Description("Along hole measured depth of measurement from the drill datum.")]
+		[ComponentElement]
 		[XmlElement("mdBit")]
         public MeasuredDepthCoord MDBit {
             get {
@@ -40124,6 +40955,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -40289,6 +41121,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vector of the tension on anchors #1 to #n. For this usage the name attribute is irrelevant because the semantics are carried in the element name. The index attribute represents which anchor is being described.
         /// </summary>
 		[Description("Vector of the tension on anchors #1 to #n.   For this usage the name attribute is irrelevant because the semantics are carried in the element name. The index attribute represents which anchor is being described.")]
+		[RecurringElement]
 		[XmlElement("anchorTension")]
         public List<IndexedObject> AnchorTension {
             get {
@@ -40306,6 +41139,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vector of the angles of the anchors #1 to #n. 
         /// </summary>
 		[Description("Vector of the angles of the anchors #1 to #n.")]
+		[RecurringElement]
 		[XmlElement("anchorAngle")]
         public List<IndexedObject> AnchorAngle {
             get {
@@ -40323,6 +41157,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Direction, relative to true north, to which the rig is facing. 
         /// </summary>
 		[Description("Direction, relative to true north, to which the rig is facing.")]
+		[ComponentElement]
 		[XmlElement("rigHeading")]
         public PlaneAngleMeasure RigHeading {
             get {
@@ -40340,6 +41175,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum amplitude of the vertical motion of the rig. 
         /// </summary>
 		[Description("Maximum amplitude of the vertical motion of the rig.")]
+		[ComponentElement]
 		[XmlElement("rigHeave")]
         public LengthMeasure RigHeave {
             get {
@@ -40357,6 +41193,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measure of the fore-aft rotational movement of the rig due the combined effects of wind and waves; measured as the angle from horizontal 
         /// </summary>
 		[Description("Measure of the fore-aft rotational movement of the rig due the combined  effects of wind and waves; measured as the angle from horizontal")]
+		[ComponentElement]
 		[XmlElement("rigPitchAngle")]
         public PlaneAngleMeasure RigPitchAngle {
             get {
@@ -40374,6 +41211,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measure of the side-to-side rotational movement of the rig due the combined effects of wind and waves; measured as the angle from vertical 
         /// </summary>
 		[Description("Measure of the side-to-side rotational movement of the rig due the combined  effects of wind and waves; measured as the angle from vertical")]
+		[ComponentElement]
 		[XmlElement("rigRollAngle")]
         public PlaneAngleMeasure RigRollAngle {
             get {
@@ -40391,6 +41229,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Angle of the marine riser with the vertical. 
         /// </summary>
 		[Description("Angle of the marine riser with the vertical.")]
+		[ComponentElement]
 		[XmlElement("riserAngle")]
         public PlaneAngleMeasure RiserAngle {
             get {
@@ -40408,6 +41247,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Direction of the marine riser. 
         /// </summary>
 		[Description("Direction of the marine riser.")]
+		[ComponentElement]
 		[XmlElement("riserDirection")]
         public PlaneAngleMeasure RiserDirection {
             get {
@@ -40425,6 +41265,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Tension of the marine riser. 
         /// </summary>
 		[Description("Tension of the marine riser.")]
+		[ComponentElement]
 		[XmlElement("riserTension")]
         public ForceMeasure RiserTension {
             get {
@@ -40442,6 +41283,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Current temporary load on the rig deck. 
         /// </summary>
 		[Description("Current temporary load on the rig deck.")]
+		[ComponentElement]
 		[XmlElement("variableDeckLoad")]
         public ForceMeasure VariableDeckLoad {
             get {
@@ -40459,6 +41301,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total deck load. 
         /// </summary>
 		[Description("Total deck load.")]
+		[ComponentElement]
 		[XmlElement("totalDeckLoad")]
         public ForceMeasure TotalDeckLoad {
             get {
@@ -40476,6 +41319,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Direction of the guide base. 
         /// </summary>
 		[Description("Direction of the guide base.")]
+		[ComponentElement]
 		[XmlElement("guideBaseAngle")]
         public PlaneAngleMeasure GuideBaseAngle {
             get {
@@ -40493,6 +41337,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Angle between riser and blow out preventer at the flex joint. 
         /// </summary>
 		[Description("Angle between riser and blow out preventer at the flex joint.")]
+		[ComponentElement]
 		[XmlElement("ballJointAngle")]
         public PlaneAngleMeasure BallJointAngle {
             get {
@@ -40510,6 +41355,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Direction of the ball joint. 
         /// </summary>
 		[Description("Direction of the ball joint.")]
+		[ComponentElement]
 		[XmlElement("ballJointDirection")]
         public PlaneAngleMeasure BallJointDirection {
             get {
@@ -40527,6 +41373,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Horizontal displacement of the rig relative to the wellhead. 
         /// </summary>
 		[Description("Horizontal displacement of the rig relative to the wellhead.")]
+		[ComponentElement]
 		[XmlElement("offsetRig")]
         public LengthMeasure OffsetRig {
             get {
@@ -40544,6 +41391,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Load carried by leg of jackup. 
         /// </summary>
 		[Description("Load carried by leg of jackup.")]
+		[ComponentElement]
 		[XmlElement("loadLeg1")]
         public ForceMeasure LoadLeg1 {
             get {
@@ -40561,6 +41409,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Load carried by leg of jackup. 
         /// </summary>
 		[Description("Load carried by leg of jackup.")]
+		[ComponentElement]
 		[XmlElement("loadLeg2")]
         public ForceMeasure LoadLeg2 {
             get {
@@ -40578,6 +41427,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Load carried by leg of jackup. 
         /// </summary>
 		[Description("Load carried by leg of jackup.")]
+		[ComponentElement]
 		[XmlElement("loadLeg3")]
         public ForceMeasure LoadLeg3 {
             get {
@@ -40595,6 +41445,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Load carried by leg of jackup. 
         /// </summary>
 		[Description("Load carried by leg of jackup.")]
+		[ComponentElement]
 		[XmlElement("loadLeg4")]
         public ForceMeasure LoadLeg4 {
             get {
@@ -40612,6 +41463,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Penetration of leg into seabed. 
         /// </summary>
 		[Description("Penetration of leg into seabed.")]
+		[ComponentElement]
 		[XmlElement("penetrationLeg1")]
         public LengthMeasure PenetrationLeg1 {
             get {
@@ -40629,6 +41481,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Penetration of leg into seabed. 
         /// </summary>
 		[Description("Penetration of leg into seabed.")]
+		[ComponentElement]
 		[XmlElement("penetrationLeg2")]
         public LengthMeasure PenetrationLeg2 {
             get {
@@ -40646,6 +41499,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Penetration of leg into seabed 
         /// </summary>
 		[Description("Penetration of leg into seabed")]
+		[ComponentElement]
 		[XmlElement("penetrationLeg3")]
         public LengthMeasure PenetrationLeg3 {
             get {
@@ -40663,6 +41517,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Penetration of leg into seabed 
         /// </summary>
 		[Description("Penetration of leg into seabed")]
+		[ComponentElement]
 		[XmlElement("penetrationLeg4")]
         public LengthMeasure PenetrationLeg4 {
             get {
@@ -40680,6 +41535,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vessel displacement (in water). 
         /// </summary>
 		[Description("Vessel displacement (in water).")]
+		[ComponentElement]
 		[XmlElement("dispRig")]
         public LengthMeasure DispRig {
             get {
@@ -40697,6 +41553,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mean draft at mid-section. 
         /// </summary>
 		[Description("Mean draft at mid-section.")]
+		[ComponentElement]
 		[XmlElement("meanDraft")]
         public LengthMeasure MeanDraft {
             get {
@@ -40814,6 +41671,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Price per item unit, assume same currency for all items. 
         /// </summary>
 		[Description("Price per item unit, assume same currency for all items.")]
+		[ComponentElement]
 		[XmlElement("pricePerUnit")]
         public Cost PricePerUnit {
             get {
@@ -41006,6 +41864,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cost for the product for the interval. 
         /// </summary>
 		[Description("Cost for the product for the interval.")]
+		[ComponentElement]
 		[XmlElement("costItem")]
         public Cost CostItem {
             get {
@@ -41058,6 +41917,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -41130,6 +41990,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud lost at shakers (at surface). 
         /// </summary>
 		[Description("Volume of mud lost at shakers (at surface).")]
+		[ComponentElement]
 		[XmlElement("volLostShakerSurf")]
         public VolumeMeasure VolLostShakerSurf {
             get {
@@ -41147,6 +42008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud lost in mud cleaning equipment (at surface). 
         /// </summary>
 		[Description("Volume of mud lost in mud cleaning equipment (at surface).")]
+		[ComponentElement]
 		[XmlElement("volLostMudCleanerSurf")]
         public VolumeMeasure VolLostMudCleanerSurf {
             get {
@@ -41164,6 +42026,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud lost in pit room (at surface). 
         /// </summary>
 		[Description("Volume of mud lost in pit room (at surface).")]
+		[ComponentElement]
 		[XmlElement("volLostPitsSurf")]
         public VolumeMeasure VolLostPitsSurf {
             get {
@@ -41181,6 +42044,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud lost while tripping (at surface). 
         /// </summary>
 		[Description("Volume of mud lost while tripping (at surface).")]
+		[ComponentElement]
 		[XmlElement("volLostTrippingSurf")]
         public VolumeMeasure VolLostTrippingSurf {
             get {
@@ -41198,6 +42062,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Surface volume lost other location. 
         /// </summary>
 		[Description("Surface volume lost other location.")]
+		[ComponentElement]
 		[XmlElement("volLostOtherSurf")]
         public VolumeMeasure VolLostOtherSurf {
             get {
@@ -41215,6 +42080,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume of mud lost at surface. 
         /// </summary>
 		[Description("Total volume of mud lost at surface.")]
+		[ComponentElement]
 		[XmlElement("volTotMudLostSurf")]
         public VolumeMeasure VolTotMudLostSurf {
             get {
@@ -41232,6 +42098,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud volume lost downhole while circulating. 
         /// </summary>
 		[Description("Mud volume lost downhole while circulating.")]
+		[ComponentElement]
 		[XmlElement("volLostCircHole")]
         public VolumeMeasure VolLostCircHole {
             get {
@@ -41249,6 +42116,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud volume lost downhole while running casing. 
         /// </summary>
 		[Description("Mud volume lost downhole while running casing.")]
+		[ComponentElement]
 		[XmlElement("volLostCsgHole")]
         public VolumeMeasure VolLostCsgHole {
             get {
@@ -41266,6 +42134,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud volume lost downhole while cementing. 
         /// </summary>
 		[Description("Mud volume lost downhole while cementing.")]
+		[ComponentElement]
 		[XmlElement("volLostCmtHole")]
         public VolumeMeasure VolLostCmtHole {
             get {
@@ -41283,6 +42152,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud volume lost downhole behind casing. 
         /// </summary>
 		[Description("Mud volume lost downhole behind casing.")]
+		[ComponentElement]
 		[XmlElement("volLostBhdCsgHole")]
         public VolumeMeasure VolLostBhdCsgHole {
             get {
@@ -41300,6 +42170,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud volume lost downhole during abandonment. 
         /// </summary>
 		[Description("Mud volume lost downhole during abandonment.")]
+		[ComponentElement]
 		[XmlElement("volLostAbandonHole")]
         public VolumeMeasure VolLostAbandonHole {
             get {
@@ -41317,6 +42188,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud volume lost downhole from other location. 
         /// </summary>
 		[Description("Mud volume lost downhole from other location.")]
+		[ComponentElement]
 		[XmlElement("volLostOtherHole")]
         public VolumeMeasure VolLostOtherHole {
             get {
@@ -41334,6 +42206,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume of mud lost downhole. 
         /// </summary>
 		[Description("Total volume of mud lost downhole.")]
+		[ComponentElement]
 		[XmlElement("volTotMudLostHole")]
         public VolumeMeasure VolTotMudLostHole {
             get {
@@ -41388,6 +42261,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume of mud at start of report interval (including pits and hole). 
         /// </summary>
 		[Description("Total volume of mud at start of report interval (including pits and hole).")]
+		[ComponentElement]
 		[XmlElement("volTotMudStart")]
         public VolumeMeasure VolTotMudStart {
             get {
@@ -41405,6 +42279,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud dumped. 
         /// </summary>
 		[Description("Volume of mud dumped.")]
+		[ComponentElement]
 		[XmlElement("volMudDumped")]
         public VolumeMeasure VolMudDumped {
             get {
@@ -41422,6 +42297,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud received from mud warehouse. 
         /// </summary>
 		[Description("Volume of mud received from mud warehouse.")]
+		[ComponentElement]
 		[XmlElement("volMudReceived")]
         public VolumeMeasure VolMudReceived {
             get {
@@ -41439,6 +42315,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud returned to mud warehouse. 
         /// </summary>
 		[Description("Volume of mud returned to mud warehouse.")]
+		[ComponentElement]
 		[XmlElement("volMudReturned")]
         public VolumeMeasure VolMudReturned {
             get {
@@ -41473,6 +42350,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud built. 
         /// </summary>
 		[Description("Volume of mud built.")]
+		[ComponentElement]
 		[XmlElement("volMudBuilt")]
         public VolumeMeasure VolMudBuilt {
             get {
@@ -41490,6 +42368,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud contained within active string. 
         /// </summary>
 		[Description("Volume of mud contained within active string.")]
+		[ComponentElement]
 		[XmlElement("volMudString")]
         public VolumeMeasure VolMudString {
             get {
@@ -41507,6 +42386,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud contained in casing annulus. 
         /// </summary>
 		[Description("Volume of mud contained in casing annulus.")]
+		[ComponentElement]
 		[XmlElement("volMudCasing")]
         public VolumeMeasure VolMudCasing {
             get {
@@ -41524,6 +42404,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud contained in open hole annulus. 
         /// </summary>
 		[Description("Volume of mud contained in open hole annulus.")]
+		[ComponentElement]
 		[XmlElement("volMudHole")]
         public VolumeMeasure VolMudHole {
             get {
@@ -41541,6 +42422,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of mud contained in riser section annulus. 
         /// </summary>
 		[Description("Volume of mud contained in riser section annulus.")]
+		[ComponentElement]
 		[XmlElement("volMudRiser")]
         public VolumeMeasure VolMudRiser {
             get {
@@ -41558,6 +42440,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume of mud at the end of the report interval (including pits and hole). 
         /// </summary>
 		[Description("Total volume of mud at the end of the report interval (including pits and hole).")]
+		[ComponentElement]
 		[XmlElement("volTotMudEnd")]
         public VolumeMeasure VolTotMudEnd {
             get {
@@ -41613,6 +42496,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("This is a pointer to the corresponding pit on the rig.")]
+		[ComponentElement]
 		[XmlElement("pit")]
         public RefPositiveCount Pit {
             get {
@@ -41666,6 +42550,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Volume of fluid in pit.")]
+		[ComponentElement]
 		[XmlElement("volPit")]
         public VolumeMeasure VolPit {
             get {
@@ -41683,6 +42568,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Density of fluid in pit. 
         /// </summary>
 		[Description("Density of fluid in pit.")]
+		[ComponentElement]
 		[XmlElement("densFluid")]
         public DensityMeasure DensFluid {
             get {
@@ -41718,6 +42604,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Funnel viscosity in seconds. 
         /// </summary>
 		[Description("Funnel viscosity in seconds.")]
+		[ComponentElement]
 		[XmlElement("visFunnel")]
         public TimeMeasure VisFunnel {
             get {
@@ -41735,6 +42622,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -41826,6 +42714,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("This is a pointer to the corresponding pump on the rig.")]
+		[ComponentElement]
 		[XmlElement("pump")]
         public RefPositiveCount Pump {
             get {
@@ -41862,6 +42751,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Pump stroke rate.")]
+		[ComponentElement]
 		[XmlElement("rateStroke")]
         public AnglePerTimeMeasure RateStroke {
             get {
@@ -41880,6 +42770,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Recorded pump pressure for the stroke rate.")]
+		[ComponentElement]
 		[XmlElement("presRecorded")]
         public PressureMeasure PresRecorded {
             get {
@@ -41897,6 +42788,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Along hole measured depth of measurement from the drill datum. 
         /// </summary>
 		[Description("Along hole measured depth of measurement from the drill datum.")]
+		[ComponentElement]
 		[XmlElement("mdBit")]
         public MeasuredDepthCoord MDBit {
             get {
@@ -41914,6 +42806,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -42095,6 +42988,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cost per cost item, assume same currency.
         /// </summary>
 		[Description("Cost per cost item, assume same currency.")]
+		[ComponentElement]
 		[XmlElement("costPerItem")]
         public Cost CostPerItem {
             get {
@@ -42200,6 +43094,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Cost for the item for this record.")]
+		[ComponentElement]
 		[XmlElement("costAmount")]
         public Cost CostAmount {
             get {
@@ -42338,6 +43233,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
+		[RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -42459,6 +43355,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -42583,6 +43480,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the rig utilized in this reporting period. 
         /// </summary>
 		[Description("A pointer to the rig utilized in this reporting period.")]
+		[ComponentElement]
 		[XmlElement("rig")]
         public RefNameString Rig {
             get {
@@ -42618,6 +43516,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time from start of Operations (commonly in days). 
         /// </summary>
 		[Description("Time from start of Operations (commonly in days).")]
+		[ComponentElement]
 		[XmlElement("eTimStart")]
         public TimeMeasure ETimeStart {
             get {
@@ -42635,6 +43534,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time since bit broke ground (commonly in days). 
         /// </summary>
 		[Description("Time since bit broke ground (commonly in days).")]
+		[ComponentElement]
 		[XmlElement("eTimSpud")]
         public TimeMeasure ETimeSpud {
             get {
@@ -42652,6 +43552,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time rig on location (commonly in days). 
         /// </summary>
 		[Description("Time rig on location (commonly in days).")]
+		[ComponentElement]
 		[XmlElement("eTimLoc")]
         public TimeMeasure ETimeLoc {
             get {
@@ -42669,6 +43570,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore Measured Depth. 
         /// </summary>
 		[Description("Wellbore Measured Depth.")]
+		[ComponentElement]
 		[XmlElement("mdReport")]
         public MeasuredDepthCoord MDReport {
             get {
@@ -42686,6 +43588,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore True Vertical Depth. 
         /// </summary>
 		[Description("Wellbore True Vertical Depth.")]
+		[ComponentElement]
 		[XmlElement("tvdReport")]
         public WellVerticalDepthCoord TvdReport {
             get {
@@ -42703,6 +43606,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled since last report. 
         /// </summary>
 		[Description("Distance drilled since last report.")]
+		[ComponentElement]
 		[XmlElement("distDrill")]
         public LengthMeasure DistDrill {
             get {
@@ -42720,6 +43624,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Drilling time. 
         /// </summary>
 		[Description("Drilling time.")]
+		[ComponentElement]
 		[XmlElement("eTimDrill")]
         public TimeMeasure ETimeDrill {
             get {
@@ -42737,6 +43642,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of plan for this day number. 
         /// </summary>
 		[Description("Measured depth of plan for this day number.")]
+		[ComponentElement]
 		[XmlElement("mdPlanned")]
         public MeasuredDepthCoord MDPlanned {
             get {
@@ -42754,6 +43660,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average Rate of Penetration through Interval. 
         /// </summary>
 		[Description("Average Rate of Penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropAv")]
         public VelocityMeasure RopAverage {
             get {
@@ -42771,6 +43678,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rate of penetration at report time. 
         /// </summary>
 		[Description("Rate of penetration at report time.")]
+		[ComponentElement]
 		[XmlElement("ropCurrent")]
         public VelocityMeasure RopCurrent {
             get {
@@ -42839,6 +43747,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent rotary drilling for report interval. 
         /// </summary>
 		[Description("Time spent rotary drilling for report interval.")]
+		[ComponentElement]
 		[XmlElement("eTimDrillRot")]
         public TimeMeasure ETimeDrillRot {
             get {
@@ -42856,6 +43765,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent slide drilling from start of bit run. 
         /// </summary>
 		[Description("Time spent slide drilling from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("eTimDrillSlid")]
         public TimeMeasure ETimeDrillSlid {
             get {
@@ -42873,6 +43783,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent circulating from start of bit run. 
         /// </summary>
 		[Description("Time spent circulating from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("eTimCirc")]
         public TimeMeasure ETimeCirc {
             get {
@@ -42890,6 +43801,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent reaming from start of bit run. 
         /// </summary>
 		[Description("Time spent reaming from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("eTimReam")]
         public TimeMeasure ETimeReam {
             get {
@@ -42907,6 +43819,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent with no DD work (commonly in hours). 
         /// </summary>
 		[Description("Time spent with no DD work (commonly in hours).")]
+		[ComponentElement]
 		[XmlElement("eTimHold")]
         public TimeMeasure ETimeHold {
             get {
@@ -42924,6 +43837,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent steering bottom hole assembly (commonly in hours). 
         /// </summary>
 		[Description("Time spent steering bottom hole assembly (commonly in hours).")]
+		[ComponentElement]
 		[XmlElement("eTimSteering")]
         public TimeMeasure ETimeSteering {
             get {
@@ -42941,6 +43855,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled - rotating. 
         /// </summary>
 		[Description("Distance drilled - rotating.")]
+		[ComponentElement]
 		[XmlElement("distDrillRot")]
         public LengthMeasure DistDrillRot {
             get {
@@ -42958,6 +43873,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled - sliding. 
         /// </summary>
 		[Description("Distance drilled - sliding.")]
+		[ComponentElement]
 		[XmlElement("distDrillSlid")]
         public LengthMeasure DistDrillSlid {
             get {
@@ -42975,6 +43891,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance reamed. 
         /// </summary>
 		[Description("Distance reamed.")]
+		[ComponentElement]
 		[XmlElement("distReam")]
         public LengthMeasure DistReam {
             get {
@@ -42992,6 +43909,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance covered while holding angle with a steerable drilling assembly. 
         /// </summary>
 		[Description("Distance covered while holding angle with a steerable drilling assembly.")]
+		[ComponentElement]
 		[XmlElement("distHold")]
         public LengthMeasure DistHold {
             get {
@@ -43009,6 +43927,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance covered while actively steering with a steerable drilling assembly. 
         /// </summary>
 		[Description("Distance covered while actively steering with a steerable drilling assembly.")]
+		[ComponentElement]
 		[XmlElement("distSteering")]
         public LengthMeasure DistSteering {
             get {
@@ -43166,6 +44085,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Activity breakdown, multiple for many activities. 
         /// </summary>
 		[Description("Activity breakdown, multiple for many activities.")]
+		[RecurringElement]
 		[XmlElement("activity")]
         public List<Activity> Activity {
             get {
@@ -43183,6 +44103,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average bottom hole assembly parameters for report duration or actual instances of bottom hole assembly operations. 
         /// </summary>
 		[Description("Average bottom hole assembly parameters for report duration or actual instances of bottom hole assembly operations.")]
+		[RecurringElement]
 		[XmlElement("drillingParams")]
         public List<DrillingParams> DrillingParams {
             get {
@@ -43200,6 +44121,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Record of actual hole geometry at report time. 
         /// </summary>
 		[Description("Record of actual hole geometry at report time.")]
+		[ComponentElement]
 		[XmlElement("wbGeometry")]
         public WellboreGeometry WellboreGeometry {
             get {
@@ -43217,6 +44139,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cost item for the report interval. 
         /// </summary>
 		[Description("Cost item for the report interval.")]
+		[RecurringElement]
 		[XmlElement("dayCost")]
         public List<DayCost> DayCost {
             get {
@@ -43234,6 +44157,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Survey station recorded during the report interval. 
         /// </summary>
 		[Description("Survey station recorded during the report interval.")]
+		[RecurringElement]
 		[XmlElement("trajectoryStation")]
         public List<TrajectoryStation> TrajectoryStation {
             get {
@@ -43251,6 +44175,7 @@ namespace Energistics.DataAccess.WITSML141
         /// One fluid record. 
         /// </summary>
 		[Description("One fluid record.")]
+		[RecurringElement]
 		[XmlElement("fluid")]
         public List<Fluid> Fluid {
             get {
@@ -43268,6 +44193,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Slow circulation rate pressure test for well control operations. 
         /// </summary>
 		[Description("Slow circulation rate pressure test for well control operations.")]
+		[RecurringElement]
 		[XmlElement("scr")]
         public List<Scr> Scr {
             get {
@@ -43285,6 +44211,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pit volume record for the report interval. 
         /// </summary>
 		[Description("Pit volume record for the report interval.")]
+		[RecurringElement]
 		[XmlElement("pitVolume")]
         public List<PitVolume> PitVolume {
             get {
@@ -43319,6 +44246,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud inventory item and cost for the report interval. 
         /// </summary>
 		[Description("Mud inventory item and cost for the report interval.")]
+		[RecurringElement]
 		[XmlElement("mudInventory")]
         public List<Inventory> MudInventory {
             get {
@@ -43336,6 +44264,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bulk item usage and cost. 
         /// </summary>
 		[Description("Bulk item usage and cost.")]
+		[RecurringElement]
 		[XmlElement("bulk")]
         public List<Inventory> Bulk {
             get {
@@ -43353,6 +44282,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average rig response readings for the day. 
         /// </summary>
 		[Description("Average rig response readings for the day.")]
+		[ComponentElement]
 		[XmlElement("rigResponse")]
         public RigResponse RigResponse {
             get {
@@ -43370,6 +44300,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pump rate/pressure reading. 
         /// </summary>
 		[Description("Pump rate/pressure reading.")]
+		[RecurringElement]
 		[XmlElement("pumpOp")]
         public List<PumpOp> PumpOperating {
             get {
@@ -43387,6 +44318,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Container element for shaker operation elements. 
         /// </summary>
 		[Description("Container element for shaker operation elements.")]
+		[RecurringElement]
 		[XmlElement("shakerOp")]
         public List<ShakerOp> ShakerOperating {
             get {
@@ -43404,6 +44336,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Health, safety and environmental information. 
         /// </summary>
 		[Description("Health, safety and environmental information.")]
+		[ComponentElement]
 		[XmlElement("hse")]
         public Hse Hse {
             get {
@@ -43421,6 +44354,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Personnel records. 
         /// </summary>
 		[Description("Personnel records.")]
+		[RecurringElement]
 		[XmlElement("personnel")]
         public List<Personnel> Personnel {
             get {
@@ -43438,6 +44372,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Support craft object container element. 
         /// </summary>
 		[Description("Support craft object container element.")]
+		[RecurringElement]
 		[XmlElement("supportCraft")]
         public List<SupportCraft> SupportCraft {
             get {
@@ -43455,6 +44390,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Metrological readings for the day. 
         /// </summary>
 		[Description("Metrological readings for the day.")]
+		[RecurringElement]
 		[XmlElement("weather")]
         public List<Weather> Weather {
             get {
@@ -43489,6 +44425,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Daily Cost. 
         /// </summary>
 		[Description("Daily Cost.")]
+		[ComponentElement]
 		[XmlElement("costDay")]
         public Cost CostDay {
             get {
@@ -43506,6 +44443,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Daily Mud Cost. 
         /// </summary>
 		[Description("Daily Mud Cost.")]
+		[ComponentElement]
 		[XmlElement("costDayMud")]
         public Cost CostDayMud {
             get {
@@ -43523,6 +44461,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole diameter. 
         /// </summary>
 		[Description("Hole diameter.")]
+		[ComponentElement]
 		[XmlElement("diaHole")]
         public LengthMeasure DiaHole {
             get {
@@ -43591,6 +44530,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of last casing. 
         /// </summary>
 		[Description("Diameter of last casing.")]
+		[ComponentElement]
 		[XmlElement("diaCsgLast")]
         public LengthMeasure DiaCsgLast {
             get {
@@ -43608,6 +44548,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of last casing. 
         /// </summary>
 		[Description("Measured depth of last casing.")]
+		[ComponentElement]
 		[XmlElement("mdCsgLast")]
         public MeasuredDepthCoord MDCsgLast {
             get {
@@ -43625,6 +44566,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of last casing. 
         /// </summary>
 		[Description("True vertical depth of last casing.")]
+		[ComponentElement]
 		[XmlElement("tvdCsgLast")]
         public WellVerticalDepthCoord TvdCsgLast {
             get {
@@ -43642,6 +44584,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of leak off test point. 
         /// </summary>
 		[Description("True vertical depth of leak off test point.")]
+		[ComponentElement]
 		[XmlElement("tvdLot")]
         public WellVerticalDepthCoord TvdLot {
             get {
@@ -43659,6 +44602,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Leak off test equivalent mud weight. 
         /// </summary>
 		[Description("Leak off test equivalent mud weight.")]
+		[ComponentElement]
 		[XmlElement("presLotEmw")]
         public DensityMeasure PresLotEmw {
             get {
@@ -43676,6 +44620,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Kick tolerance pressure. 
         /// </summary>
 		[Description("Kick tolerance pressure.")]
+		[ComponentElement]
 		[XmlElement("presKickTol")]
         public PressureMeasure PresKickTol {
             get {
@@ -43693,6 +44638,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Kick tolerance volume. 
         /// </summary>
 		[Description("Kick tolerance volume.")]
+		[ComponentElement]
 		[XmlElement("volKickTol")]
         public VolumeMeasure VolKickTol {
             get {
@@ -43710,6 +44656,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum allowable shut-in casing pressure. 
         /// </summary>
 		[Description("Maximum allowable shut-in casing pressure.")]
+		[ComponentElement]
 		[XmlElement("maasp")]
         public PressureMeasure Maasp {
             get {
@@ -43727,6 +44674,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the tubular (assembly) used in this report period. This represents a foreign key to tubular. 
         /// </summary>
 		[Description("A pointer to the tubular (assembly) used in this report period. This represents a foreign key to tubular.")]
+		[ComponentElement]
 		[XmlElement("tubular")]
         public RefNameString Tubular {
             get {
@@ -43795,6 +44743,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -43989,6 +44938,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The activity duration (commonly in hours). 
         /// </summary>
 		[Description("The activity duration (commonly in hours).")]
+		[ComponentElement]
 		[XmlElement("duration")]
         public TimeMeasure Duration {
             get {
@@ -44006,6 +44956,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth to the drilling operation.
         /// </summary>
 		[Description("The measured depth to the drilling operation.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -44023,6 +44974,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True Vertical Depth to the drilling operation.
         /// </summary>
 		[Description("True Vertical Depth to the drilling operation.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -44092,6 +45044,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A proprietary code used to define rig activity. The name of the proprietary system should be defined in the namingSystem attribute.
         /// </summary>
 		[Description("A proprietary code used to define rig activity. The name of the proprietary system should be defined in the namingSystem attribute.")]
+		[RecurringElement]
 		[XmlElement("proprietaryCode")]
         public List<NameStruct> ProprietaryCode {
             get {
@@ -44161,6 +45114,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured Depth at start of activity. 
         /// </summary>
 		[Description("Measured Depth at start of activity.")]
+		[ComponentElement]
 		[XmlElement("mdHoleStart")]
         public MeasuredDepthCoord MDHoleStart {
             get {
@@ -44178,6 +45132,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True Vertical Depth at start of activity 
         /// </summary>
 		[Description("True Vertical Depth at start of activity")]
+		[ComponentElement]
 		[XmlElement("tvdHoleStart")]
         public WellVerticalDepthCoord TvdHoleStart {
             get {
@@ -44195,6 +45150,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured Depth at end of activity. 
         /// </summary>
 		[Description("Measured Depth at end of activity.")]
+		[ComponentElement]
 		[XmlElement("mdHoleEnd")]
         public MeasuredDepthCoord MDHoleEnd {
             get {
@@ -44212,6 +45168,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True Vertical Depth at end of activity. 
         /// </summary>
 		[Description("True Vertical Depth at end of activity.")]
+		[ComponentElement]
 		[XmlElement("tvdHoleEnd")]
         public WellVerticalDepthCoord TvdHoleEnd {
             get {
@@ -44229,6 +45186,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of bit at start of activity. 
         /// </summary>
 		[Description("Measured depth of bit at start of activity.")]
+		[ComponentElement]
 		[XmlElement("mdBitStart")]
         public MeasuredDepthCoord MDBitStart {
             get {
@@ -44246,6 +45204,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of bit at end of activity. 
         /// </summary>
 		[Description("Measured depth of bit at end of activity.")]
+		[ComponentElement]
 		[XmlElement("mdBitEnd")]
         public MeasuredDepthCoord MDBitEnd {
             get {
@@ -44332,6 +45291,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the tubular related to this activity.
         /// </summary>
 		[Description("A pointer to the tubular related to this activity.")]
+		[ComponentElement]
 		[XmlElement("tubular")]
         public RefNameString Tubular {
             get {
@@ -44471,6 +45431,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -44637,6 +45598,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Operating time spent by bit for run.")]
+		[ComponentElement]
 		[XmlElement("eTimOpBit")]
         public TimeMeasure ETimeOperatingBit {
             get {
@@ -44654,6 +45616,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at start. 
         /// </summary>
 		[Description("Measured depth at start.")]
+		[ComponentElement]
 		[XmlElement("mdHoleStart")]
         public MeasuredDepthCoord MDHoleStart {
             get {
@@ -44672,6 +45635,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Measured depth at stop.")]
+		[ComponentElement]
 		[XmlElement("mdHoleStop")]
         public MeasuredDepthCoord MDHoleStop {
             get {
@@ -44689,6 +45653,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the tubular assembly. 
         /// </summary>
 		[Description("A pointer to the tubular assembly.")]
+		[ComponentElement]
 		[XmlElement("tubular")]
         public RefNameString Tubular {
             get {
@@ -44706,6 +45671,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hookload - rotating. 
         /// </summary>
 		[Description("Hookload - rotating.")]
+		[ComponentElement]
 		[XmlElement("hkldRot")]
         public ForceMeasure HookloadRot {
             get {
@@ -44723,6 +45689,7 @@ namespace Energistics.DataAccess.WITSML141
         /// hkldUp-hkldRot. 
         /// </summary>
 		[Description("hkldUp-hkldRot.")]
+		[ComponentElement]
 		[XmlElement("overPull")]
         public ForceMeasure OverPull {
             get {
@@ -44740,6 +45707,7 @@ namespace Energistics.DataAccess.WITSML141
         /// hkldRot-hkldDown. 
         /// </summary>
 		[Description("hkldRot-hkldDown.")]
+		[ComponentElement]
 		[XmlElement("slackOff")]
         public ForceMeasure SlackOff {
             get {
@@ -44757,6 +45725,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hookload - string moving up. 
         /// </summary>
 		[Description("Hookload - string moving up.")]
+		[ComponentElement]
 		[XmlElement("hkldUp")]
         public ForceMeasure HookloadUp {
             get {
@@ -44774,6 +45743,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hookload - string moving down. 
         /// </summary>
 		[Description("Hookload - string moving down.")]
+		[ComponentElement]
 		[XmlElement("hkldDn")]
         public ForceMeasure HookloadDown {
             get {
@@ -44791,6 +45761,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average Torque - on bottom. 
         /// </summary>
 		[Description("Average Torque - on bottom.")]
+		[ComponentElement]
 		[XmlElement("tqOnBotAv")]
         public MomentOfForceMeasure TorqueOnBotAverage {
             get {
@@ -44808,6 +45779,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum torque - on bottom. 
         /// </summary>
 		[Description("Maximum torque - on bottom.")]
+		[ComponentElement]
 		[XmlElement("tqOnBotMx")]
         public MomentOfForceMeasure TorqueOnBotMax {
             get {
@@ -44825,6 +45797,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum torque - on bottom. 
         /// </summary>
 		[Description("Minimum torque - on bottom.")]
+		[ComponentElement]
 		[XmlElement("tqOnBotMn")]
         public MomentOfForceMeasure TorqueOnBotMin {
             get {
@@ -44842,6 +45815,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average torque - off bottom. 
         /// </summary>
 		[Description("Average torque - off bottom.")]
+		[ComponentElement]
 		[XmlElement("tqOffBotAv")]
         public MomentOfForceMeasure TorqueOffBotAverage {
             get {
@@ -44859,6 +45833,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average torque - downhole. 
         /// </summary>
 		[Description("Average torque - downhole.")]
+		[ComponentElement]
 		[XmlElement("tqDhAv")]
         public MomentOfForceMeasure TorqueDownholeAverage {
             get {
@@ -44876,6 +45851,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight above jars. 
         /// </summary>
 		[Description("Weight above jars.")]
+		[ComponentElement]
 		[XmlElement("wtAboveJar")]
         public ForceMeasure WeightAboveJar {
             get {
@@ -44893,6 +45869,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight below jars. 
         /// </summary>
 		[Description("Weight below jars.")]
+		[ComponentElement]
 		[XmlElement("wtBelowJar")]
         public ForceMeasure WeightBelowJar {
             get {
@@ -44910,6 +45887,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud density. 
         /// </summary>
 		[Description("Mud density.")]
+		[ComponentElement]
 		[XmlElement("wtMud")]
         public DensityMeasure WeightMud {
             get {
@@ -44927,6 +45905,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pump flow rate. 
         /// </summary>
 		[Description("Pump flow rate.")]
+		[ComponentElement]
 		[XmlElement("flowratePump")]
         public VolumeFlowRateMeasure FlowratePump {
             get {
@@ -44944,6 +45923,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bit hydraulic. 
         /// </summary>
 		[Description("Bit hydraulic.")]
+		[ComponentElement]
 		[XmlElement("powBit")]
         public PowerMeasure PowBit {
             get {
@@ -44961,6 +45941,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bit nozzle average velocity. 
         /// </summary>
 		[Description("Bit nozzle average velocity.")]
+		[ComponentElement]
 		[XmlElement("velNozzleAv")]
         public VelocityMeasure VelNozzleAverage {
             get {
@@ -44978,6 +45959,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure drop in bit. 
         /// </summary>
 		[Description("Pressure drop in bit.")]
+		[ComponentElement]
 		[XmlElement("presDropBit")]
         public PressureMeasure PresDropBit {
             get {
@@ -44995,6 +45977,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent on hold from start of bit run. 
         /// </summary>
 		[Description("Time spent on hold from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("cTimHold")]
         public TimeMeasure CTimHold {
             get {
@@ -45012,6 +45995,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent steering from start of bit run. 
         /// </summary>
 		[Description("Time spent steering from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("cTimSteering")]
         public TimeMeasure CTimSteering {
             get {
@@ -45029,6 +46013,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent rotary drilling from start of bit run. 
         /// </summary>
 		[Description("Time spent rotary drilling from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("cTimDrillRot")]
         public TimeMeasure CTimDrillRot {
             get {
@@ -45046,6 +46031,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent slide drilling from start of bit run. 
         /// </summary>
 		[Description("Time spent slide drilling from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("cTimDrillSlid")]
         public TimeMeasure CTimDrillSlid {
             get {
@@ -45063,6 +46049,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent circulating from start of bit run. 
         /// </summary>
 		[Description("Time spent circulating from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("cTimCirc")]
         public TimeMeasure CTimCirc {
             get {
@@ -45080,6 +46067,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent reaming from start of bit run. 
         /// </summary>
 		[Description("Time spent reaming from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("cTimReam")]
         public TimeMeasure CTimReam {
             get {
@@ -45097,6 +46085,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled - rotating. 
         /// </summary>
 		[Description("Distance drilled - rotating.")]
+		[ComponentElement]
 		[XmlElement("distDrillRot")]
         public LengthMeasure DistDrillRot {
             get {
@@ -45114,6 +46103,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled - sliding 
         /// </summary>
 		[Description("Distance drilled - sliding")]
+		[ComponentElement]
 		[XmlElement("distDrillSlid")]
         public LengthMeasure DistDrillSlid {
             get {
@@ -45131,6 +46121,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance reamed. 
         /// </summary>
 		[Description("Distance reamed.")]
+		[ComponentElement]
 		[XmlElement("distReam")]
         public LengthMeasure DistReam {
             get {
@@ -45148,6 +46139,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance covered while holding angle with a steerable drilling assembly. 
         /// </summary>
 		[Description("Distance covered while holding angle with a steerable drilling assembly.")]
+		[ComponentElement]
 		[XmlElement("distHold")]
         public LengthMeasure DistHold {
             get {
@@ -45165,6 +46157,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance covered while actively steering with a steerable drilling assembly. 
         /// </summary>
 		[Description("Distance covered while actively steering with a steerable drilling assembly.")]
+		[ComponentElement]
 		[XmlElement("distSteering")]
         public LengthMeasure DistSteering {
             get {
@@ -45182,6 +46175,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average turn rate (commonly in rpm) through Interval. 
         /// </summary>
 		[Description("Average turn rate (commonly in rpm) through Interval.")]
+		[ComponentElement]
 		[XmlElement("rpmAv")]
         public AnglePerTimeMeasure RpmAverage {
             get {
@@ -45199,6 +46193,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum turn rate (commonly in rpm). 
         /// </summary>
 		[Description("Maximum turn rate (commonly in rpm).")]
+		[ComponentElement]
 		[XmlElement("rpmMx")]
         public AnglePerTimeMeasure RpmMax {
             get {
@@ -45216,6 +46211,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum turn rate (commonly in rpm). 
         /// </summary>
 		[Description("Minimum turn rate (commonly in rpm).")]
+		[ComponentElement]
 		[XmlElement("rpmMn")]
         public AnglePerTimeMeasure RpmMin {
             get {
@@ -45233,6 +46229,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average turn rate (commonly in rpm) downhole. 
         /// </summary>
 		[Description("Average turn rate (commonly in rpm) downhole.")]
+		[ComponentElement]
 		[XmlElement("rpmAvDh")]
         public AnglePerTimeMeasure RpmAverageDownhole {
             get {
@@ -45250,6 +46247,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average rate of penetration through Interval. 
         /// </summary>
 		[Description("Average rate of penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropAv")]
         public VelocityMeasure RopAverage {
             get {
@@ -45267,6 +46265,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum rate of penetration through Interval. 
         /// </summary>
 		[Description("Maximum rate of penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropMx")]
         public VelocityMeasure RopMax {
             get {
@@ -45284,6 +46283,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum rate of penetration through Interval. 
         /// </summary>
 		[Description("Minimum rate of penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropMn")]
         public VelocityMeasure RopMin {
             get {
@@ -45301,6 +46301,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Surface weight on bit - average through interval. 
         /// </summary>
 		[Description("Surface weight on bit - average through interval.")]
+		[ComponentElement]
 		[XmlElement("wobAv")]
         public ForceMeasure WobAverage {
             get {
@@ -45318,6 +46319,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight on bit - maximum. 
         /// </summary>
 		[Description("Weight on bit - maximum.")]
+		[ComponentElement]
 		[XmlElement("wobMx")]
         public ForceMeasure WobMax {
             get {
@@ -45335,6 +46337,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight on bit - minimum. 
         /// </summary>
 		[Description("Weight on bit - minimum.")]
+		[ComponentElement]
 		[XmlElement("wobMn")]
         public ForceMeasure WobMin {
             get {
@@ -45352,6 +46355,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight on bit - average downhole. 
         /// </summary>
 		[Description("Weight on bit - average downhole.")]
+		[ComponentElement]
 		[XmlElement("wobAvDh")]
         public ForceMeasure WobAverageDownhole {
             get {
@@ -45403,6 +46407,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Azimuth at start measured depth. 
         /// </summary>
 		[Description("Azimuth at start measured depth.")]
+		[ComponentElement]
 		[XmlElement("aziTop")]
         public PlaneAngleMeasure AziTop {
             get {
@@ -45420,6 +46425,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Azimuth at stop measured depth. 
         /// </summary>
 		[Description("Azimuth at stop measured depth.")]
+		[ComponentElement]
 		[XmlElement("aziBottom")]
         public PlaneAngleMeasure AziBottom {
             get {
@@ -45437,6 +46443,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inclination at start measured depth. 
         /// </summary>
 		[Description("Inclination at start measured depth.")]
+		[ComponentElement]
 		[XmlElement("inclStart")]
         public PlaneAngleMeasure InclStart {
             get {
@@ -45454,6 +46461,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum inclination. 
         /// </summary>
 		[Description("Maximum inclination.")]
+		[ComponentElement]
 		[XmlElement("inclMx")]
         public PlaneAngleMeasure InclMax {
             get {
@@ -45471,6 +46479,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum inclination. 
         /// </summary>
 		[Description("Minimum inclination.")]
+		[ComponentElement]
 		[XmlElement("inclMn")]
         public PlaneAngleMeasure InclMin {
             get {
@@ -45488,6 +46497,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Inclination at stop measured depth. 
         /// </summary>
 		[Description("Inclination at stop measured depth.")]
+		[ComponentElement]
 		[XmlElement("inclStop")]
         public PlaneAngleMeasure InclStop {
             get {
@@ -45505,6 +46515,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum mud temperature downhole during run. 
         /// </summary>
 		[Description("Maximum mud temperature downhole during run.")]
+		[ComponentElement]
 		[XmlElement("tempMudDhMx")]
         public ThermodynamicTemperatureMeasure TempMudDownholeMax {
             get {
@@ -45522,6 +46533,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average pump pressure. 
         /// </summary>
 		[Description("Average pump pressure.")]
+		[ComponentElement]
 		[XmlElement("presPumpAv")]
         public PressureMeasure PresPumpAverage {
             get {
@@ -45539,6 +46551,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Flow rate at bit. 
         /// </summary>
 		[Description("Flow rate at bit.")]
+		[ComponentElement]
 		[XmlElement("flowrateBit")]
         public VolumeFlowRateMeasure FlowrateBit {
             get {
@@ -45643,6 +46656,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -45733,6 +46747,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at bottom. 
         /// </summary>
 		[Description("Measured depth at bottom.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -45750,6 +46765,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Air gap. 
         /// </summary>
 		[Description("Air gap.")]
+		[ComponentElement]
 		[XmlElement("gapAir")]
         public LengthMeasure GapAir {
             get {
@@ -45767,6 +46783,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Water depth. 
         /// </summary>
 		[Description("Water depth.")]
+		[ComponentElement]
 		[XmlElement("depthWaterMean")]
         public LengthMeasure DepthWaterMean {
             get {
@@ -45784,6 +46801,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore geometry section object. 
         /// </summary>
 		[Description("Wellbore geometry section object.")]
+		[RecurringElement]
 		[XmlElement("wbGeometrySection")]
         public List<WellboreGeometrySection> WellboreGeometrySection {
             get {
@@ -45907,6 +46925,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth where the fluid readings were recorded.
         /// </summary>
 		[Description("The measured depth where the fluid readings were recorded.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -45924,6 +46943,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth where the fluid readings were recorded.
         /// </summary>
 		[Description("The true vertical depth where the fluid readings were recorded.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -45941,6 +46961,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum pressure rating of the blow out preventer.
         /// </summary>
 		[Description("Maximum pressure rating of the blow out preventer.")]
+		[ComponentElement]
 		[XmlElement("presBopRating")]
         public PressureMeasure PresBopRating {
             get {
@@ -45993,6 +47014,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluid density. 
         /// </summary>
 		[Description("Fluid density.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -46010,6 +47032,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Funnel viscosity in seconds. 
         /// </summary>
 		[Description("Funnel viscosity in seconds.")]
+		[ComponentElement]
 		[XmlElement("visFunnel")]
         public TimeMeasure VisFunnel {
             get {
@@ -46027,6 +47050,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Funnel viscosity temperature. 
         /// </summary>
 		[Description("Funnel viscosity temperature.")]
+		[ComponentElement]
 		[XmlElement("tempVis")]
         public ThermodynamicTemperatureMeasure TempVis {
             get {
@@ -46044,6 +47068,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Plastic viscosity. 
         /// </summary>
 		[Description("Plastic viscosity.")]
+		[ComponentElement]
 		[XmlElement("pv")]
         public DynamicViscosityMeasure PV {
             get {
@@ -46061,6 +47086,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Yield point (Bingham and Herschel Bulkley models). 
         /// </summary>
 		[Description("Yield point (Bingham and Herschel Bulkley models).")]
+		[ComponentElement]
 		[XmlElement("yp")]
         public PressureMeasure YP {
             get {
@@ -46078,6 +47104,7 @@ namespace Energistics.DataAccess.WITSML141
         /// 10 second gels. 
         /// </summary>
 		[Description("10 second gels.")]
+		[ComponentElement]
 		[XmlElement("gel10Sec")]
         public PressureMeasure Gel10Sec {
             get {
@@ -46095,6 +47122,7 @@ namespace Energistics.DataAccess.WITSML141
         /// 10 minute gels. 
         /// </summary>
 		[Description("10 minute gels.")]
+		[ComponentElement]
 		[XmlElement("gel10Min")]
         public PressureMeasure Gel10Min {
             get {
@@ -46112,6 +47140,7 @@ namespace Energistics.DataAccess.WITSML141
         /// 30 minute gels. 
         /// </summary>
 		[Description("30 minute gels.")]
+		[ComponentElement]
 		[XmlElement("gel30Min")]
         public PressureMeasure Gel30Min {
             get {
@@ -46129,6 +47158,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Filter cake thickness at low (normal) temperature and pressure. 
         /// </summary>
 		[Description("Filter cake thickness at low (normal) temperature and pressure.")]
+		[ComponentElement]
 		[XmlElement("filterCakeLtlp")]
         public LengthMeasure FilterCakeLtlp {
             get {
@@ -46146,6 +47176,7 @@ namespace Energistics.DataAccess.WITSML141
         /// API water loss (low temperature and pressure mud filtrate measurement) (volume per 30min). 
         /// </summary>
 		[Description("API water loss (low temperature and pressure mud filtrate measurement) (volume per 30min).")]
+		[ComponentElement]
 		[XmlElement("filtrateLtlp")]
         public VolumeMeasure FiltrateLtlp {
             get {
@@ -46163,6 +47194,7 @@ namespace Energistics.DataAccess.WITSML141
         /// High temperature high pressure (HTHP) temperature. 
         /// </summary>
 		[Description("High temperature high pressure (HTHP) temperature.")]
+		[ComponentElement]
 		[XmlElement("tempHthp")]
         public ThermodynamicTemperatureMeasure TempHthp {
             get {
@@ -46180,6 +47212,7 @@ namespace Energistics.DataAccess.WITSML141
         /// High temperature high pressure (HTHP) pressure. 
         /// </summary>
 		[Description("High temperature high pressure (HTHP) pressure.")]
+		[ComponentElement]
 		[XmlElement("presHthp")]
         public PressureMeasure PresHthp {
             get {
@@ -46197,6 +47230,7 @@ namespace Energistics.DataAccess.WITSML141
         /// High temperature high pressure (HTHP) filtrate (volume per 30min). 
         /// </summary>
 		[Description("High temperature high pressure (HTHP) filtrate (volume per 30min).")]
+		[ComponentElement]
 		[XmlElement("filtrateHthp")]
         public VolumeMeasure FiltrateHthp {
             get {
@@ -46214,6 +47248,7 @@ namespace Energistics.DataAccess.WITSML141
         /// High temperature high pressure (HTHP) Filter cake thickness. 
         /// </summary>
 		[Description("High temperature high pressure (HTHP) Filter cake thickness.")]
+		[ComponentElement]
 		[XmlElement("filterCakeHthp")]
         public LengthMeasure FilterCakeHthp {
             get {
@@ -46231,6 +47266,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Solids percentage from retort (commonly in percent). 
         /// </summary>
 		[Description("Solids percentage from retort (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("solidsPc")]
         public VolumePerVolumeMeasure SolidsPercent {
             get {
@@ -46248,6 +47284,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Water content (commonly in percent). 
         /// </summary>
 		[Description("Water content (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("waterPc")]
         public VolumePerVolumeMeasure WaterPercent {
             get {
@@ -46265,6 +47302,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Oil content from retort (commonly in percent). 
         /// </summary>
 		[Description("Oil content from retort (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("oilPc")]
         public VolumePerVolumeMeasure OilPercent {
             get {
@@ -46282,6 +47320,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Sand content (commonly in percent). 
         /// </summary>
 		[Description("Sand content (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("sandPc")]
         public VolumePerVolumeMeasure SandPercent {
             get {
@@ -46299,6 +47338,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Low gravity solids (%). 
         /// </summary>
 		[Description("Low gravity solids (%).")]
+		[ComponentElement]
 		[XmlElement("solidsLowGravPc")]
         public VolumePerVolumeMeasure SolidsLowGravPercent {
             get {
@@ -46316,6 +47356,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Solids content (calculated) (commonly in percent). 
         /// </summary>
 		[Description("Solids content (calculated) (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("solidsCalcPc")]
         public VolumePerVolumeMeasure SolidsCalcPercent {
             get {
@@ -46333,6 +47374,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Barite content (commonly in percent). 
         /// </summary>
 		[Description("Barite content (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("baritePc")]
         public VolumePerVolumeMeasure BaritePercent {
             get {
@@ -46350,6 +47392,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Lost circulation material. 
         /// </summary>
 		[Description("Lost circulation material.")]
+		[ComponentElement]
 		[XmlElement("lcm")]
         public DensityMeasure Lcm {
             get {
@@ -46367,6 +47410,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cation exchange capacity (CEC) of the mud sample as measured by methylene blue titration (MBT). 
         /// </summary>
 		[Description("Cation exchange capacity (CEC) of the mud sample as measured by methylene blue titration (MBT).")]
+		[ComponentElement]
 		[XmlElement("mbt")]
         public EquivalentPerMassMeasure Mbt {
             get {
@@ -46419,6 +47463,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud pH measurement temperature. 
         /// </summary>
 		[Description("Mud pH measurement temperature.")]
+		[ComponentElement]
 		[XmlElement("tempPh")]
         public ThermodynamicTemperatureMeasure TempPH {
             get {
@@ -46436,6 +47481,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Phenolphthalein alkalinity of whole mud. 
         /// </summary>
 		[Description("Phenolphthalein alkalinity of whole mud.")]
+		[ComponentElement]
 		[XmlElement("pm")]
         public VolumeMeasure Pm {
             get {
@@ -46453,6 +47499,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Phenolphthalein alkalinity of mud filtrate. 
         /// </summary>
 		[Description("Phenolphthalein alkalinity of mud filtrate.")]
+		[ComponentElement]
 		[XmlElement("pmFiltrate")]
         public VolumeMeasure PmFiltrate {
             get {
@@ -46470,6 +47517,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Methyl orange alkalinity of filtrate. 
         /// </summary>
 		[Description("Methyl orange alkalinity of filtrate.")]
+		[ComponentElement]
 		[XmlElement("mf")]
         public VolumeMeasure Mf {
             get {
@@ -46487,6 +47535,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud alkalinity P1 from alternate alkalinity method (volume in ml of 0.02N acid to reach the phenolphthalein endpoint). 
         /// </summary>
 		[Description("Mud alkalinity P1 from alternate alkalinity method (volume in ml of 0.02N acid  to reach the phenolphthalein endpoint).")]
+		[ComponentElement]
 		[XmlElement("alkalinityP1")]
         public VolumeMeasure AlkalinityP1 {
             get {
@@ -46504,6 +47553,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud alkalinity P2 from alternate alkalinity method (volume in ml of 0.02N acid to titrate the reagent mixture to the phenolphthalein endpoint). 
         /// </summary>
 		[Description("Mud alkalinity P2 from alternate alkalinity method (volume in ml of 0.02N acid to titrate the reagent mixture to the phenolphthalein endpoint).")]
+		[ComponentElement]
 		[XmlElement("alkalinityP2")]
         public VolumeMeasure AlkalinityP2 {
             get {
@@ -46521,6 +47571,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Chloride content. 
         /// </summary>
 		[Description("Chloride content.")]
+		[ComponentElement]
 		[XmlElement("chloride")]
         public DensityMeasure Chloride {
             get {
@@ -46538,6 +47589,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calcium content. 
         /// </summary>
 		[Description("Calcium content.")]
+		[ComponentElement]
 		[XmlElement("calcium")]
         public DensityMeasure Calcium {
             get {
@@ -46555,6 +47607,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Magnesium content. 
         /// </summary>
 		[Description("Magnesium content.")]
+		[ComponentElement]
 		[XmlElement("magnesium")]
         public DensityMeasure Magnesium {
             get {
@@ -46572,6 +47625,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Potassium content. 
         /// </summary>
 		[Description("Potassium content.")]
+		[ComponentElement]
 		[XmlElement("potassium")]
         public DensityMeasure Potassium {
             get {
@@ -46589,6 +47643,7 @@ namespace Energistics.DataAccess.WITSML141
         /// One or more sets of rheometer readings at given temperature and pressure. 
         /// </summary>
 		[Description("One or more sets of rheometer readings at given temperature and pressure.")]
+		[RecurringElement]
 		[XmlElement("rheometer")]
         public List<Rheometer> Rheometer {
             get {
@@ -46606,6 +47661,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Brine content (commonly in percent). 
         /// </summary>
 		[Description("Brine content (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("brinePc")]
         public VolumePerVolumeMeasure BrinePercent {
             get {
@@ -46623,6 +47679,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Lime content. 
         /// </summary>
 		[Description("Lime content.")]
+		[ComponentElement]
 		[XmlElement("lime")]
         public DensityMeasure Lime {
             get {
@@ -46640,6 +47697,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measurement of the emulsion stability and oil-wetting capability in oil-based muds. 
         /// </summary>
 		[Description("Measurement of the emulsion stability and oil-wetting capability in oil-based muds.")]
+		[ComponentElement]
 		[XmlElement("electStab")]
         public ElectricPotentialMeasure ElectStab {
             get {
@@ -46657,6 +47715,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calcium chloride content. 
         /// </summary>
 		[Description("Calcium chloride content.")]
+		[ComponentElement]
 		[XmlElement("calciumChloride")]
         public DensityMeasure CalciumChloride {
             get {
@@ -46743,6 +47802,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Solids high gravity (commonly in percent). 
         /// </summary>
 		[Description("Solids high gravity (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("solidsHiGravPc")]
         public VolumePerVolumeMeasure SolidsHiGravPercent {
             get {
@@ -46760,6 +47820,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Polymers present in mud system. 
         /// </summary>
 		[Description("Polymers present in mud system.")]
+		[ComponentElement]
 		[XmlElement("polymer")]
         public VolumePerVolumeMeasure Polymer {
             get {
@@ -46794,6 +47855,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Solids corrected for Chloride content (commonly in percent). 
         /// </summary>
 		[Description("Solids corrected for Chloride content (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("solCorPc")]
         public VolumePerVolumeMeasure SolCorPercent {
             get {
@@ -46811,6 +47873,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Oil on Cuttings. 
         /// </summary>
 		[Description("Oil on Cuttings.")]
+		[ComponentElement]
 		[XmlElement("oilCtg")]
         public MassConcentrationMeasure OilCtg {
             get {
@@ -46828,6 +47891,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total calcium hardness. 
         /// </summary>
 		[Description("Total calcium hardness.")]
+		[ComponentElement]
 		[XmlElement("hardnessCa")]
         public MassConcentrationMeasure HardnessCA {
             get {
@@ -46845,6 +47909,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Sulfide content. 
         /// </summary>
 		[Description("Sulfide content.")]
+		[ComponentElement]
 		[XmlElement("sulfide")]
         public DensityMeasure Sulfide {
             get {
@@ -46879,6 +47944,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -46951,6 +48017,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rheometer temperature. 
         /// </summary>
 		[Description("Rheometer temperature.")]
+		[ComponentElement]
 		[XmlElement("tempRheom")]
         public ThermodynamicTemperatureMeasure TempRheom {
             get {
@@ -46968,6 +48035,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rheometer pressure. 
         /// </summary>
 		[Description("Rheometer pressure.")]
+		[ComponentElement]
 		[XmlElement("presRheom")]
         public PressureMeasure PresRheom {
             get {
@@ -47195,6 +48263,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -47361,6 +48430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A reference to an object that is defined within the  context of the specified wellbore.")]
+		[ComponentElement]
 		[XmlElement("objectReference")]
         public RefObjectString ObjectReference {
             get {
@@ -47414,6 +48484,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("sequence1")]
         public ObjectSequence Sequence1 {
             get {
@@ -47430,7 +48501,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Defines secondary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType. A value for sequence2 can only be given if a value is given for sequence1.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("sequence2")]
         public ObjectSequence Sequence2 {
             get {
@@ -47447,7 +48518,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Defines tertiary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType. A value for sequence3 can only be given if a value is given for sequence2.
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("sequence3")]
         public ObjectSequence Sequence3 {
             get {
@@ -47465,6 +48536,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
 		[Description("The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("rangeMin")]
         public GenericMeasure RangeMin {
             get {
@@ -47482,6 +48554,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
 		[Description("The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("rangeMax")]
         public GenericMeasure RangeMax {
             get {
@@ -47586,6 +48659,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A measured depth related to this group. This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.
         /// </summary>
 		[Description("A measured depth related to this group.  This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.")]
+		[ComponentElement]
 		[XmlElement("referenceDepth")]
         public MeasuredDepthCoord ReferenceDepth {
             get {
@@ -47638,6 +48712,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Any extra parameter data related to the group. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
 		[Description("Any extra parameter data related to the group.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
+		[RecurringElement]
 		[XmlElement("param")]
         public List<IndexedObject> Param {
             get {
@@ -47655,6 +48730,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -47866,6 +48942,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Any extra parameter data. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
 		[Description("Any extra parameter data.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
+		[RecurringElement]
 		[XmlElement("param")]
         public List<IndexedObject> Param {
             get {
@@ -47884,6 +48961,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("References a specific data-object that is a member of this group.")]
+		[RecurringElement]
 		[XmlElement("memberObject")]
         public List<MemberObject> MemberObject {
             get {
@@ -47901,6 +48979,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -48079,6 +49158,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The measured depth at a point or at the top of an interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -48097,6 +49177,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The bottom of an interval along the borehole. A point interval should be indicated by setting mdTop=mdBottom.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -48246,6 +49327,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -48581,6 +49663,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The minimum mdTop value for this object. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("The minimum mdTop value for this object. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("startMd")]
         public MeasuredDepthCoord StartMD {
             get {
@@ -48598,6 +49681,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum mdTop value for this object. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("The maximum mdTop value for this object. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("endMd")]
         public MeasuredDepthCoord EndMD {
             get {
@@ -48615,6 +49699,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A foreign key to a related Log. This is a pointer to a log that is related to the mud log. The log may or may not have been created as a result of the mudlogging process. The log must represent the same well and wellbore as the mud log.
         /// </summary>
 		[Description("A foreign key to a related Log. This is a pointer to a log that is related to the mud log. The log may or may not have been created as a result of  the mudlogging process. The log must represent the same  well and wellbore as the mud log.")]
+		[RecurringElement]
 		[XmlElement("relatedLog")]
         public List<RefNameString> RelatedLog {
             get {
@@ -48632,6 +49717,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A single mud log parameter.
         /// </summary>
 		[Description("A single mud log parameter.")]
+		[RecurringElement]
 		[XmlElement("parameter")]
         public List<MudLogParameter> Parameter {
             get {
@@ -48649,6 +49735,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of geology and drilling information records for the wellbore. This is an API "data-node" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("Set of geology and drilling information records for the wellbore. This is an API \"data-node\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[RecurringElement]
 		[XmlElement("geologyInterval")]
         public List<GeologyInterval> GeologyInterval {
             get {
@@ -48666,6 +49753,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -48809,6 +49897,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Measured depth at top of interval. This is an API \"node-index\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -48827,6 +49916,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Measured depth at base of interval. A point interval should be indicated by setting mdTop=mdBottom. This is an API \"node-index\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -48879,6 +49969,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at top of the section. 
         /// </summary>
 		[Description("True vertical depth at top of the section.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -48896,6 +49987,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at base of interval. 
         /// </summary>
 		[Description("True vertical depth at base of interval.")]
+		[ComponentElement]
 		[XmlElement("tvdBase")]
         public WellVerticalDepthCoord TvdBase {
             get {
@@ -48913,6 +50005,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average rate of penetration through Interval. 
         /// </summary>
 		[Description("Average rate of penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropAv")]
         public VelocityMeasure RopAverage {
             get {
@@ -48930,6 +50023,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum rate of penetration through Interval. 
         /// </summary>
 		[Description("Minimum rate of penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropMn")]
         public VelocityMeasure RopMin {
             get {
@@ -48947,6 +50041,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum rate of penetration through Interval. 
         /// </summary>
 		[Description("Maximum rate of penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropMx")]
         public VelocityMeasure RopMax {
             get {
@@ -48964,6 +50059,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Surface weight on bit - average through interval. 
         /// </summary>
 		[Description("Surface weight on bit - average through interval.")]
+		[ComponentElement]
 		[XmlElement("wobAv")]
         public ForceMeasure WobAverage {
             get {
@@ -48981,6 +50077,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average torque through interval. 
         /// </summary>
 		[Description("Average torque through interval.")]
+		[ComponentElement]
 		[XmlElement("tqAv")]
         public MomentOfForceMeasure TorqueAverage {
             get {
@@ -48998,6 +50095,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average current through interval. This is the raw measurement from which the average torque could be calculated.
         /// </summary>
 		[Description("Average current through interval.  This is the raw measurement from which the average torque could be calculated.")]
+		[ComponentElement]
 		[XmlElement("currentAv")]
         public ElectricCurrentMeasure CurrentAverage {
             get {
@@ -49015,6 +50113,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average turn rate through interval (commonly in rpm). 
         /// </summary>
 		[Description("Average turn rate through interval (commonly in rpm).")]
+		[ComponentElement]
 		[XmlElement("rpmAv")]
         public AnglePerTimeMeasure RpmAverage {
             get {
@@ -49032,6 +50131,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average mud density in through interval. 
         /// </summary>
 		[Description("Average mud density in through interval.")]
+		[ComponentElement]
 		[XmlElement("wtMudAv")]
         public DensityMeasure WeightMudAverage {
             get {
@@ -49049,6 +50149,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average effective circulating density at TD through Interval. 
         /// </summary>
 		[Description("Average effective circulating density at TD through Interval.")]
+		[ComponentElement]
 		[XmlElement("ecdTdAv")]
         public DensityMeasure EcdTdAverage {
             get {
@@ -49101,6 +50202,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of lithology records for the Interval. 
         /// </summary>
 		[Description("Set of lithology records for the Interval.")]
+		[RecurringElement]
 		[XmlElement("lithology")]
         public List<Lithology> Lithology {
             get {
@@ -49169,6 +50271,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Sample bulk density for the interval. 
         /// </summary>
 		[Description("Sample bulk density for the interval.")]
+		[ComponentElement]
 		[XmlElement("densBulk")]
         public DensityMeasure DensBulk {
             get {
@@ -49186,6 +50289,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Shale density for the interval. 
         /// </summary>
 		[Description("Shale density for the interval.")]
+		[ComponentElement]
 		[XmlElement("densShale")]
         public DensityMeasure DensShale {
             get {
@@ -49203,6 +50307,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calcimetry calcite percentage. 
         /// </summary>
 		[Description("Calcimetry calcite percentage.")]
+		[ComponentElement]
 		[XmlElement("calcite")]
         public VolumePerVolumeMeasure Calcite {
             get {
@@ -49220,6 +50325,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calcimetry dolomite percentage. 
         /// </summary>
 		[Description("Calcimetry dolomite percentage.")]
+		[ComponentElement]
 		[XmlElement("dolomite")]
         public VolumePerVolumeMeasure Dolomite {
             get {
@@ -49237,6 +50343,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cuttings cationic exchange capacity. 
         /// </summary>
 		[Description("Cuttings cationic exchange capacity.")]
+		[ComponentElement]
 		[XmlElement("cec")]
         public EquivalentPerMassMeasure Cec {
             get {
@@ -49254,6 +50361,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.
         /// </summary>
 		[Description("Fluorescence as measured using a device licensed for the  Quantitative Fluorescence Technique.")]
+		[ComponentElement]
 		[XmlElement("qft")]
         public IlluminanceMeasure Qft {
             get {
@@ -49271,6 +50379,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calcimetry stabilized percentage. 
         /// </summary>
 		[Description("Calcimetry stabilized percentage.")]
+		[ComponentElement]
 		[XmlElement("calcStab")]
         public VolumePerVolumeMeasure CalcStab {
             get {
@@ -49289,6 +50398,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
         [Obsolete()]
 		[Description("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.")]
+		[RecurringElement]
 		[XmlElement("nameFormation")]
         public List<String> NameFormation {
             get {
@@ -49306,6 +50416,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Name of lithostratigraphy, regionally dependent.
         /// </summary>
 		[Description("Name of lithostratigraphy, regionally dependent.")]
+		[RecurringElement]
 		[XmlElement("lithostratigraphic")]
         public List<LithostratigraphyStruct> Lithostratigraphic {
             get {
@@ -49323,6 +50434,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Chronostratigraphic classification. 
         /// </summary>
 		[Description("Chronostratigraphic classification.")]
+		[RecurringElement]
 		[XmlElement("chronostratigraphic")]
         public List<ChronostratigraphyStruct> Chronostratigraphic {
             get {
@@ -49340,6 +50452,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Minimum size. 
         /// </summary>
 		[Description("Minimum size.")]
+		[ComponentElement]
 		[XmlElement("sizeMn")]
         public LengthMeasure SizeMin {
             get {
@@ -49357,6 +50470,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum size. 
         /// </summary>
 		[Description("Maximum size.")]
+		[ComponentElement]
 		[XmlElement("sizeMx")]
         public LengthMeasure SizeMax {
             get {
@@ -49374,6 +50488,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Plug length. 
         /// </summary>
 		[Description("Plug length.")]
+		[ComponentElement]
 		[XmlElement("lenPlug")]
         public LengthMeasure LenPlug {
             get {
@@ -49493,6 +50608,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -49600,6 +50716,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at top of Interval. 
         /// </summary>
 		[Description("Measured depth at top of Interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -49617,6 +50734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at base of interval. 
         /// </summary>
 		[Description("Measured depth at base of interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -49634,6 +50752,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud density in (active pits). 
         /// </summary>
 		[Description("Mud density in (active pits).")]
+		[ComponentElement]
 		[XmlElement("wtMudIn")]
         public DensityMeasure WeightMudIn {
             get {
@@ -49651,6 +50770,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud density out (flowline). 
         /// </summary>
 		[Description("Mud density out (flowline).")]
+		[ComponentElement]
 		[XmlElement("wtMudOut")]
         public DensityMeasure WeightMudOut {
             get {
@@ -49686,6 +50806,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Chromatograph cycle time. Commonly in seconds. 
         /// </summary>
 		[Description("Chromatograph cycle time. Commonly in seconds.")]
+		[ComponentElement]
 		[XmlElement("eTimChromCycle")]
         public TimeMeasure ETimeChromCycle {
             get {
@@ -49738,6 +50859,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Methane (C1) ppm (average). 
         /// </summary>
 		[Description("Methane (C1) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("methAv")]
         public VolumePerVolumeMeasure MethAverage {
             get {
@@ -49755,6 +50877,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Methane (C1) ppm (minimum). 
         /// </summary>
 		[Description("Methane (C1) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("methMn")]
         public VolumePerVolumeMeasure MethMin {
             get {
@@ -49772,6 +50895,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Methane (C1) ppm (maximum). 
         /// </summary>
 		[Description("Methane (C1) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("methMx")]
         public VolumePerVolumeMeasure MethMax {
             get {
@@ -49789,6 +50913,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Ethane (C2) ppm (average). 
         /// </summary>
 		[Description("Ethane (C2) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("ethAv")]
         public VolumePerVolumeMeasure EthAverage {
             get {
@@ -49806,6 +50931,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Ethane (C2) ppm (minimum). 
         /// </summary>
 		[Description("Ethane (C2) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("ethMn")]
         public VolumePerVolumeMeasure EthMin {
             get {
@@ -49823,6 +50949,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Ethane (C2) ppm (maximum). 
         /// </summary>
 		[Description("Ethane (C2) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("ethMx")]
         public VolumePerVolumeMeasure EthMax {
             get {
@@ -49840,6 +50967,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Propane (C3) ppm (average). 
         /// </summary>
 		[Description("Propane (C3) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("propAv")]
         public VolumePerVolumeMeasure PropAverage {
             get {
@@ -49857,6 +50985,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Propane (C3) ppm (minimum). 
         /// </summary>
 		[Description("Propane (C3) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("propMn")]
         public VolumePerVolumeMeasure PropMin {
             get {
@@ -49874,6 +51003,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Propane (C3) ppm (maximum). 
         /// </summary>
 		[Description("Propane (C3) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("propMx")]
         public VolumePerVolumeMeasure PropMax {
             get {
@@ -49891,6 +51021,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Butane (iC4) ppm (average). 
         /// </summary>
 		[Description("iso-Butane (iC4) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("ibutAv")]
         public VolumePerVolumeMeasure IbutAverage {
             get {
@@ -49908,6 +51039,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Butane (iC4) ppm (minimum). 
         /// </summary>
 		[Description("iso-Butane (iC4) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("ibutMn")]
         public VolumePerVolumeMeasure IbutMin {
             get {
@@ -49925,6 +51057,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Butane (iC4) ppm (maximum). 
         /// </summary>
 		[Description("iso-Butane (iC4) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("ibutMx")]
         public VolumePerVolumeMeasure IbutMax {
             get {
@@ -49942,6 +51075,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Butane (nC4) ppm (average). 
         /// </summary>
 		[Description("nor-Butane (nC4) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("nbutAv")]
         public VolumePerVolumeMeasure NbutAverage {
             get {
@@ -49959,6 +51093,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Butane (nC4) ppm (minimum). 
         /// </summary>
 		[Description("nor-Butane (nC4) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("nbutMn")]
         public VolumePerVolumeMeasure NbutMin {
             get {
@@ -49976,6 +51111,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Butane (nC4) ppm (maximum). 
         /// </summary>
 		[Description("nor-Butane (nC4) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("nbutMx")]
         public VolumePerVolumeMeasure NbutMax {
             get {
@@ -49993,6 +51129,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Pentane (iC5) ppm (average). 
         /// </summary>
 		[Description("iso-Pentane (iC5) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("ipentAv")]
         public VolumePerVolumeMeasure IpentAverage {
             get {
@@ -50010,6 +51147,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Pentane (iC5) ppm (minimum). 
         /// </summary>
 		[Description("iso-Pentane (iC5) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("ipentMn")]
         public VolumePerVolumeMeasure IpentMin {
             get {
@@ -50027,6 +51165,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Pentane (iC5) ppm (maximum). 
         /// </summary>
 		[Description("iso-Pentane (iC5) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("ipentMx")]
         public VolumePerVolumeMeasure IpentMax {
             get {
@@ -50044,6 +51183,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Pentane (nC5) ppm (average). 
         /// </summary>
 		[Description("nor-Pentane (nC5) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("npentAv")]
         public VolumePerVolumeMeasure NpentAverage {
             get {
@@ -50061,6 +51201,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Pentane (nC5) ppm (minimum). 
         /// </summary>
 		[Description("nor-Pentane (nC5) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("npentMn")]
         public VolumePerVolumeMeasure NpentMin {
             get {
@@ -50078,6 +51219,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Pentane (nC5) ppm (maximum). 
         /// </summary>
 		[Description("nor-Pentane (nC5) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("npentMx")]
         public VolumePerVolumeMeasure NpentMax {
             get {
@@ -50095,6 +51237,7 @@ namespace Energistics.DataAccess.WITSML141
         /// neo-Pentane (eC5) ppm (average). 
         /// </summary>
 		[Description("neo-Pentane (eC5) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("epentAv")]
         public VolumePerVolumeMeasure EpentAverage {
             get {
@@ -50112,6 +51255,7 @@ namespace Energistics.DataAccess.WITSML141
         /// neo-Pentane (eC5) ppm (minimum). 
         /// </summary>
 		[Description("neo-Pentane (eC5) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("epentMn")]
         public VolumePerVolumeMeasure EpentMin {
             get {
@@ -50129,6 +51273,7 @@ namespace Energistics.DataAccess.WITSML141
         /// neo-Pentane (eC5) ppm (maximum). 
         /// </summary>
 		[Description("neo-Pentane (eC5) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("epentMx")]
         public VolumePerVolumeMeasure EpentMax {
             get {
@@ -50146,6 +51291,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Hexane (iC6) ppm (average). 
         /// </summary>
 		[Description("iso-Hexane (iC6) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("ihexAv")]
         public VolumePerVolumeMeasure IhexAverage {
             get {
@@ -50163,6 +51309,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Hexane (iC6) ppm (minimum). 
         /// </summary>
 		[Description("iso-Hexane (iC6) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("ihexMn")]
         public VolumePerVolumeMeasure IhexMin {
             get {
@@ -50180,6 +51327,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Hexane (iC6) ppm (maximum). 
         /// </summary>
 		[Description("iso-Hexane (iC6) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("ihexMx")]
         public VolumePerVolumeMeasure IhexMax {
             get {
@@ -50197,6 +51345,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Hexane (nC6) ppm (average). 
         /// </summary>
 		[Description("nor-Hexane (nC6) ppm (average).")]
+		[ComponentElement]
 		[XmlElement("nhexAv")]
         public VolumePerVolumeMeasure NhexAverage {
             get {
@@ -50214,6 +51363,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Hexane (nC6) ppm (minimum). 
         /// </summary>
 		[Description("nor-Hexane (nC6) ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("nhexMn")]
         public VolumePerVolumeMeasure NhexMin {
             get {
@@ -50231,6 +51381,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Hexane (nC6) ppm (maximum). 
         /// </summary>
 		[Description("nor-Hexane (nC6) ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("nhexMx")]
         public VolumePerVolumeMeasure NhexMax {
             get {
@@ -50248,6 +51399,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Carbon Dioxide ppm (average). 
         /// </summary>
 		[Description("Carbon Dioxide ppm (average).")]
+		[ComponentElement]
 		[XmlElement("co2Av")]
         public VolumePerVolumeMeasure Co2Average {
             get {
@@ -50265,6 +51417,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Carbon Dioxide ppm (minimum). 
         /// </summary>
 		[Description("Carbon Dioxide ppm (minimum).")]
+		[ComponentElement]
 		[XmlElement("co2Mn")]
         public VolumePerVolumeMeasure Co2Min {
             get {
@@ -50282,6 +51435,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Carbon Dioxide ppm (maximum). 
         /// </summary>
 		[Description("Carbon Dioxide ppm (maximum).")]
+		[ComponentElement]
 		[XmlElement("co2Mx")]
         public VolumePerVolumeMeasure Co2Max {
             get {
@@ -50299,6 +51453,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hydrogen Sulfide (average) ppm. 
         /// </summary>
 		[Description("Hydrogen Sulfide (average) ppm.")]
+		[ComponentElement]
 		[XmlElement("h2sAv")]
         public VolumePerVolumeMeasure H2sAverage {
             get {
@@ -50316,6 +51471,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hydrogen Sulfide (minimum) ppm. 
         /// </summary>
 		[Description("Hydrogen Sulfide (minimum) ppm.")]
+		[ComponentElement]
 		[XmlElement("h2sMn")]
         public VolumePerVolumeMeasure H2sMin {
             get {
@@ -50333,6 +51489,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hydrogen Sulfide (maximum) ppm. 
         /// </summary>
 		[Description("Hydrogen Sulfide (maximum) ppm.")]
+		[ComponentElement]
 		[XmlElement("h2sMx")]
         public VolumePerVolumeMeasure H2sMax {
             get {
@@ -50350,6 +51507,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Acetylene. 
         /// </summary>
 		[Description("Acetylene.")]
+		[ComponentElement]
 		[XmlElement("acetylene")]
         public VolumePerVolumeMeasure Acetylene {
             get {
@@ -50404,6 +51562,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average total gas. 
         /// </summary>
 		[Description("Average total gas.")]
+		[ComponentElement]
 		[XmlElement("gasAv")]
         public VolumePerVolumeMeasure GasAverage {
             get {
@@ -50421,6 +51580,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Peak gas reading. 
         /// </summary>
 		[Description("Peak gas reading.")]
+		[ComponentElement]
 		[XmlElement("gasPeak")]
         public VolumePerVolumeMeasure GasPeak {
             get {
@@ -50473,6 +51633,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Background gas reading. 
         /// </summary>
 		[Description("Background gas reading.")]
+		[ComponentElement]
 		[XmlElement("gasBackgnd")]
         public VolumePerVolumeMeasure GasBackgnd {
             get {
@@ -50490,6 +51651,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Connection gas (average). 
         /// </summary>
 		[Description("Connection gas (average).")]
+		[ComponentElement]
 		[XmlElement("gasConAv")]
         public VolumePerVolumeMeasure GasConAverage {
             get {
@@ -50507,6 +51669,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Connection gas (maximum). 
         /// </summary>
 		[Description("Connection gas (maximum).")]
+		[ComponentElement]
 		[XmlElement("gasConMx")]
         public VolumePerVolumeMeasure GasConMax {
             get {
@@ -50524,6 +51687,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Trip gas last reading. 
         /// </summary>
 		[Description("Trip gas last reading.")]
+		[ComponentElement]
 		[XmlElement("gasTrip")]
         public VolumePerVolumeMeasure GasTrip {
             get {
@@ -50852,6 +52016,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A reference to an object that is defined within the context of a wellbore.
         /// </summary>
 		[Description("A reference to an object that is defined within the  context of a wellbore.")]
+		[ComponentElement]
 		[XmlElement("objectReference")]
         public RefObjectString ObjectReference {
             get {
@@ -50869,6 +52034,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A reference to an sub-object that is defined within the context of the object referenced by objectReference. This should only refer to recurring components of a growing object.
         /// </summary>
 		[Description("A reference to an sub-object that is defined within the  context of the object referenced by objectReference. This should only refer to recurring components of a growing object.")]
+		[ComponentElement]
 		[XmlElement("subObjectReference")]
         public RefObjectString SubObjectReference {
             get {
@@ -50956,6 +52122,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Along hole measured depth of measurement from the drill datum. 
         /// </summary>
 		[Description("Along hole measured depth of measurement from the drill datum.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -50973,6 +52140,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Along hole measured depth of measurement from the drill datum. 
         /// </summary>
 		[Description("Along hole measured depth of measurement from the drill datum.")]
+		[ComponentElement]
 		[XmlElement("mdBit")]
         public MeasuredDepthCoord MDBit {
             get {
@@ -51025,6 +52193,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Any extra numeric data. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
 		[Description("Any extra numeric data. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
+		[RecurringElement]
 		[XmlElement("param")]
         public List<IndexedObject> Param {
             get {
@@ -51112,6 +52281,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -51272,6 +52442,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The actual data corresponding to the curves defined in the "mnemonicList" element. Normally a comma delimited list of data values (see dataDelimiter) with one value for each curve on the log (e.g., "xxx,yyy, zzz"). For array curves, the value of the array curve will be a space delimited list of values that are contained within the commas that delimit the value for that curve (e.g., "xxx,aa bb cc,zzz"). This essentially represents one row of a table where the curve mnemonics represent the column headings. This is an API "data-node" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("The actual data corresponding to the curves defined in  the \"mnemonicList\" element. Normally a comma delimited list of data values (see dataDelimiter) with one  value for each curve on the log (e.g., \"xxx,yyy, zzz\"). For array curves, the value of the array curve will be a space delimited list of values that are contained within the commas that delimit the value for that curve (e.g., \"xxx,aa bb cc,zzz\"). This essentially represents one row of a table where the curve  mnemonics represent the column headings. This is an API \"data-node\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[RecurringElement]
 		[XmlElement("data")]
         public List<String> Data {
             get {
@@ -51475,6 +52646,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -51641,6 +52813,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The curve name.   This must be unique for all curves in a log. The naming authority for the mnemonic can be catptured in the namingSystem attribute. Since both the mnemonic and uid have similar requirements within the context  of a WITSML server, the uid can be derived from the mnemonic (e.g., by converting blank to underscore).")]
+		[ComponentElement]
 		[XmlElement("mnemonic")]
         public ShortNameStruct Mnemonic {
             get {
@@ -51727,6 +52900,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Name alias for this trace. The naming authority for the mnemonic can be catptured in the namingSystem attribute.
         /// </summary>
 		[Description("Name alias for this trace. The naming authority for the mnemonic can be catptured in the namingSystem attribute.")]
+		[ComponentElement]
 		[XmlElement("mnemAlias")]
         public ShortNameStruct MnemAlias {
             get {
@@ -51796,6 +52970,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the wellDatum that represents the values of this trace. This is only relevant for measured depths, vertical depths or elevations.
         /// </summary>
 		[Description("A pointer to the wellDatum that represents the values of this trace. This is only relevant for measured depths, vertical depths or elevations.")]
+		[ComponentElement]
 		[XmlElement("wellDatum")]
         public RefNameString WellDatum {
             get {
@@ -51813,6 +52988,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The minimum index value of any valid data point in the curve. Null values are excluded from this determination. The value is the same regardless of the direction of the curve. This is an API "column-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("The minimum index value of any valid data point in the curve.  Null values are excluded from this determination. The value is the same regardless of the direction of the curve.  This is an API \"column-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("minIndex")]
         public GenericMeasure MinIndex {
             get {
@@ -51830,6 +53006,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum index value of any valid data point in the curve. Null values are excluded from this determination. The value is the same regardless of the direction of the curve. This is an API "column-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("The maximum index value of any valid data point in the curve.  Null values are excluded from this determination. The value is the same regardless of the direction of the curve. This is an API \"column-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("maxIndex")]
         public GenericMeasure MaxIndex {
             get {
@@ -51934,6 +53111,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Offset of sensor from a downhole equipment vertical reference (the drill bit, for MWD logs; the tool zero reference for wireline logs). This element is only informative (log values are presented at actual depth, not requiring subtraction of an offset).
         /// </summary>
 		[Description("Offset of sensor from a downhole equipment vertical reference (the drill bit, for MWD logs;  the tool zero reference for wireline logs).  This element is only informative (log values are presented at actual depth, not requiring subtraction of an offset).")]
+		[ComponentElement]
 		[XmlElement("sensorOffset")]
         public LengthMeasure SensorOffset {
             get {
@@ -51968,6 +53146,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Data density of sample in samples per length unit. 
         /// </summary>
 		[Description("Data density of sample in samples per length unit.")]
+		[ComponentElement]
 		[XmlElement("densData")]
         public PerLengthMeasure DensData {
             get {
@@ -52073,6 +53252,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Indicates that the curve is an array curve (i.e., multi-valued samples), and provides meta data by which an axis of the array can be understood. A separate definition is required for each axis of an N-dimensional array.
         /// </summary>
 		[Description("Indicates that the curve is an array curve (i.e., multi-valued samples),  and provides meta data by which an axis of the array can be understood. A separate definition is required for each axis of an N-dimensional array.")]
+		[RecurringElement]
 		[XmlElement("axisDefinition")]
         public List<AxisDefinition> AxisDefinition {
             get {
@@ -52090,6 +53270,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -52512,6 +53693,7 @@ namespace Energistics.DataAccess.WITSML141
         /// When the log header defines the direction as "Increasing", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as "Decreasing", the startIndex is the starting (maximum) index value at which the first non-null data point is located. Either a quantity index set (start and end) or a date time index set must be given. If both sets are given then "indexType" and "indexCurve" must represent an elapsed time from "startDateTimeIndex". This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("When the log header defines the direction as \"Increasing\",  the startIndex is the starting (minimum) index value at which the first non-null data point is located.  When the log header defines the direction as \"Decreasing\", the startIndex  is the starting (maximum) index value at which the first non-null data point is located. Either a quantity index set (start and end) or a date time index set must be given. If both sets are given then \"indexType\" and  \"indexCurve\" must represent an elapsed time from \"startDateTimeIndex\". This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("startIndex")]
         public GenericMeasure StartIndex {
             get {
@@ -52529,6 +53711,7 @@ namespace Energistics.DataAccess.WITSML141
         /// When the log header defines the direction as "Increasing", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("When the log header defines the direction as \"Increasing\", the endIndex  is the ending (maximum) index value at which the last non-null data point is located.   When the log header defines the direction as Decreasing, the endIndex is the ending  (minimum) index value at which the last non-null data point is located. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[ComponentElement]
 		[XmlElement("endIndex")]
         public GenericMeasure EndIndex {
             get {
@@ -52546,6 +53729,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The sampling increment. Set to zero for unequal sampling. A non-zero value indicates that the data is regularly sampled even if it has an explicit index curve. If it is zero or not given then assume that it is non-regular even though it may be regular. The problem is that writers generally cannot guarantee the regularity of the log until after they have finished processing it For curves that are originally sampled at a constant increment, this value should be retained because calculated values may have cumulative errors.
         /// </summary>
 		[Description("The sampling increment. Set to zero for unequal sampling. A non-zero value indicates that the data is regularly sampled even if it has an explicit index curve. If it is zero or not given then assume that it is non-regular even though it may be regular. The problem is that writers generally cannot guarantee the regularity of the log until after they have finished processing it For curves that are originally sampled at a constant increment, this value should be retained because calculated values may have cumulative errors.")]
+		[ComponentElement]
 		[XmlElement("stepIncrement")]
         public RatioGenericMeasure StepIncrement {
             get {
@@ -52703,6 +53887,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Log parameters. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats. A parameter name of "multipass" represents a boolean values ("true" or "false"). A "multipass" parameter value of "true" asserts that the object contains values for bhaRunNumber (or runNumber), passNumber and direction.
         /// </summary>
 		[Description("Log parameters.   For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats. A parameter name of \"multipass\" represents a boolean values (\"true\" or \"false\"). A \"multipass\" parameter value of \"true\" asserts that the object contains values for  bhaRunNumber (or runNumber), passNumber and direction.")]
+		[RecurringElement]
 		[XmlElement("logParam")]
         public List<IndexedObject> LogParam {
             get {
@@ -52720,6 +53905,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Container element for the log curve information. This is an API "column-definition" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Description("Container element for the log curve information.  This is an API \"column-definition\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
+		[RecurringElement]
 		[XmlElement("logCurveInfo")]
         public List<LogCurveInfo> LogCurveInfo {
             get {
@@ -52737,6 +53923,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Container for one or more "rows" of log data. The use of more than one logData node represents a sparse view of the actual data and is contrained for use in the WITSML API for adding and updating sparse data. Any other usage should utilize only one instance of logData.
         /// </summary>
 		[Description("Container for one or more \"rows\" of log data. The use of more than one logData node represents a sparse view of the actual data and  is contrained for use in the WITSML API for adding and updating sparse data.  Any other usage should utilize only one instance of logData.")]
+		[RecurringElement]
 		[XmlElement("logData")]
         public List<LogData> LogData {
             get {
@@ -52754,6 +53941,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -52930,6 +54118,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Prognosed measured depth. 
         /// </summary>
 		[Description("Prognosed measured depth.")]
+		[ComponentElement]
 		[XmlElement("mdPrognosed")]
         public MeasuredDepthCoord MDPrognosed {
             get {
@@ -52947,6 +54136,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Prognosed true vertical depth. 
         /// </summary>
 		[Description("Prognosed true vertical depth.")]
+		[ComponentElement]
 		[XmlElement("tvdPrognosed")]
         public WellVerticalDepthCoord TvdPrognosed {
             get {
@@ -52965,6 +54155,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Sampled measured depth at top of marker.")]
+		[ComponentElement]
 		[XmlElement("mdTopSample")]
         public MeasuredDepthCoord MDTopSample {
             get {
@@ -52982,6 +54173,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Sampled true vertical depth at top of marker. 
         /// </summary>
 		[Description("Sampled true vertical depth at top of marker.")]
+		[ComponentElement]
 		[XmlElement("tvdTopSample")]
         public WellVerticalDepthCoord TvdTopSample {
             get {
@@ -52999,6 +54191,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vertical thickness.
         /// </summary>
 		[Description("Vertical thickness.")]
+		[ComponentElement]
 		[XmlElement("thicknessBed")]
         public LengthMeasure ThicknessBed {
             get {
@@ -53016,6 +54209,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Formation exposed along the wellbore. 
         /// </summary>
 		[Description("Formation exposed along the wellbore.")]
+		[ComponentElement]
 		[XmlElement("thicknessApparent")]
         public LengthMeasure ThicknessApparent {
             get {
@@ -53033,6 +54227,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True Stratigraphic thickness.
         /// </summary>
 		[Description("True Stratigraphic thickness.")]
+		[ComponentElement]
 		[XmlElement("thicknessPerpen")]
         public LengthMeasure ThicknessPerpen {
             get {
@@ -53050,6 +54245,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Logged measured depth at top of marker. 
         /// </summary>
 		[Description("Logged measured depth at top of marker.")]
+		[ComponentElement]
 		[XmlElement("mdLogSample")]
         public MeasuredDepthCoord MDLogSample {
             get {
@@ -53067,6 +54263,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Logged true vertical depth at top of marker. 
         /// </summary>
 		[Description("Logged true vertical depth at top of marker.")]
+		[ComponentElement]
 		[XmlElement("tvdLogSample")]
         public WellVerticalDepthCoord TvdLogSample {
             get {
@@ -53084,6 +54281,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Angle of dip with respect to horizontal. 
         /// </summary>
 		[Description("Angle of dip with respect to horizontal.")]
+		[ComponentElement]
 		[XmlElement("dip")]
         public PlaneAngleMeasure Dip {
             get {
@@ -53101,6 +54299,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Interpreted downdip direction. 
         /// </summary>
 		[Description("Interpreted downdip direction.")]
+		[ComponentElement]
 		[XmlElement("dipDirection")]
         public PlaneAngleMeasure DipDirection {
             get {
@@ -53118,6 +54317,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Lithostratigraphic classification. 
         /// </summary>
 		[Description("Lithostratigraphic classification.")]
+		[ComponentElement]
 		[XmlElement("lithostratigraphic")]
         public LithostratigraphyStruct Lithostratigraphic {
             get {
@@ -53135,6 +54335,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Chronostratigraphic classification. 
         /// </summary>
 		[Description("Chronostratigraphic classification.")]
+		[ComponentElement]
 		[XmlElement("chronostratigraphic")]
         public ChronostratigraphyStruct Chronostratigraphic {
             get {
@@ -53187,6 +54388,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -53382,6 +54584,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Along hole measured depth of measurement from the drill datum.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -53399,6 +54602,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vertical depth of the measurements. 
         /// </summary>
 		[Description("Vertical depth of the measurements.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -53451,6 +54655,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A Fluid record. 
         /// </summary>
 		[Description("A Fluid record.")]
+		[RecurringElement]
 		[XmlElement("fluid")]
         public List<Fluid> Fluid {
             get {
@@ -53468,6 +54673,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -53662,6 +54868,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the top of the interval. 
         /// </summary>
 		[Description("Measured depth at the top of the interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -53679,6 +54886,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the bottom of the test interval. 
         /// </summary>
 		[Description("Measured depth at the bottom of the test interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -53696,6 +54904,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the top of the interval. 
         /// </summary>
 		[Description("True vertical depth at the top of the interval.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -53713,6 +54922,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the bottom of the interval. 
         /// </summary>
 		[Description("True vertical depth at the bottom of the interval.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -53730,6 +54940,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The highest gas reading. 
         /// </summary>
 		[Description("The highest gas reading.")]
+		[ComponentElement]
 		[XmlElement("gasHigh")]
         public VolumePerVolumeMeasure GasHigh {
             get {
@@ -53747,6 +54958,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The lowest gas reading. 
         /// </summary>
 		[Description("The lowest gas reading.")]
+		[ComponentElement]
 		[XmlElement("gasLow")]
         public VolumePerVolumeMeasure GasLow {
             get {
@@ -53764,6 +54976,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Methane (C1) concentration. 
         /// </summary>
 		[Description("Methane (C1) concentration.")]
+		[ComponentElement]
 		[XmlElement("meth")]
         public VolumePerVolumeMeasure Meth {
             get {
@@ -53781,6 +54994,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Ethane (C2) concentration. 
         /// </summary>
 		[Description("Ethane (C2) concentration.")]
+		[ComponentElement]
 		[XmlElement("eth")]
         public VolumePerVolumeMeasure Eth {
             get {
@@ -53798,6 +55012,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Propane (C3) concentration. 
         /// </summary>
 		[Description("Propane (C3) concentration.")]
+		[ComponentElement]
 		[XmlElement("prop")]
         public VolumePerVolumeMeasure Prop {
             get {
@@ -53815,6 +55030,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Butane (iC4) concentration. 
         /// </summary>
 		[Description("iso-Butane (iC4) concentration.")]
+		[ComponentElement]
 		[XmlElement("ibut")]
         public VolumePerVolumeMeasure Ibut {
             get {
@@ -53832,6 +55048,7 @@ namespace Energistics.DataAccess.WITSML141
         /// nor-Butane (nC4) concentration. 
         /// </summary>
 		[Description("nor-Butane (nC4) concentration.")]
+		[ComponentElement]
 		[XmlElement("nbut")]
         public VolumePerVolumeMeasure Nbut {
             get {
@@ -53849,6 +55066,7 @@ namespace Energistics.DataAccess.WITSML141
         /// iso-Pentane (iC5) concentration. 
         /// </summary>
 		[Description("iso-Pentane (iC5) concentration.")]
+		[ComponentElement]
 		[XmlElement("ipent")]
         public VolumePerVolumeMeasure Ipent {
             get {
@@ -53866,6 +55084,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -54008,6 +55227,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the top of the perforation interval. 
         /// </summary>
 		[Description("Measured depth at the top of the perforation interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -54025,6 +55245,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the bottom of the perforation interval. 
         /// </summary>
 		[Description("Measured depth at the bottom of the perforation interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -54042,6 +55263,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the top of the perforation interval. 
         /// </summary>
 		[Description("True vertical depth at the top of the perforation interval.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -54059,6 +55281,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the bottom of the perforation interval. 
         /// </summary>
 		[Description("True vertical depth at the bottom of the perforation interval.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -54076,6 +55299,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -54183,6 +55407,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the top of the formation. 
         /// </summary>
 		[Description("Measured depth at the top of the formation.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -54200,6 +55425,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the top of the formation. 
         /// </summary>
 		[Description("True vertical depth at the top of the formation.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -54234,6 +55460,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -54341,6 +55568,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth to the well inflow entry point. 
         /// </summary>
 		[Description("The measured depth to the well inflow entry point.")]
+		[ComponentElement]
 		[XmlElement("mdInflow")]
         public MeasuredDepthCoord MDInflow {
             get {
@@ -54358,6 +55586,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth to the well inflow entery point. 
         /// </summary>
 		[Description("The true vertical depth to the well inflow entery point.")]
+		[ComponentElement]
 		[XmlElement("tvdInflow")]
         public WellVerticalDepthCoord TvdInflow {
             get {
@@ -54428,6 +55657,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A proprietary code used to define rig activity. The name of the proprietary system should be defined in the namingSystem attribute.
         /// </summary>
 		[Description("A proprietary code used to define rig activity. The name of the proprietary system should be defined in the namingSystem attribute.")]
+		[RecurringElement]
 		[XmlElement("proprietaryCode")]
         public List<NameStruct> ProprietaryCode {
             get {
@@ -54462,6 +55692,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The amount of time lost because of the well control incident. Commonly specified in hours.
         /// </summary>
 		[Description("The amount of time lost because of the well control incident. Commonly specified in hours.")]
+		[ComponentElement]
 		[XmlElement("eTimLost")]
         public TimeMeasure ETimeLost {
             get {
@@ -54514,6 +55745,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The drill bit nominal outside diameter at time of well control incident.
         /// </summary>
 		[Description("The drill bit nominal outside diameter at time of well control incident.")]
+		[ComponentElement]
 		[XmlElement("diaBit")]
         public LengthMeasure DiaBit {
             get {
@@ -54531,6 +55763,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of bit at the time of the well control incident.
         /// </summary>
 		[Description("The measured depth of bit at the time of the well control incident.")]
+		[ComponentElement]
 		[XmlElement("mdBit")]
         public MeasuredDepthCoord MDBit {
             get {
@@ -54548,6 +55781,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of the drilling fluid.
         /// </summary>
 		[Description("The density of the drilling fluid.")]
+		[ComponentElement]
 		[XmlElement("wtMud")]
         public DensityMeasure WeightMud {
             get {
@@ -54566,6 +55800,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The equivalent mud weight value of the pore pressure reading.")]
+		[ComponentElement]
 		[XmlElement("porePressure")]
         public DensityMeasure PorePressure {
             get {
@@ -54583,6 +55818,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of the last installed casing. 
         /// </summary>
 		[Description("Diameter of the last installed casing.")]
+		[ComponentElement]
 		[XmlElement("diaCsgLast")]
         public LengthMeasure DiaCsgLast {
             get {
@@ -54600,6 +55836,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of last casing. 
         /// </summary>
 		[Description("Measured depth of last casing.")]
+		[ComponentElement]
 		[XmlElement("mdCsgLast")]
         public MeasuredDepthCoord MDCsgLast {
             get {
@@ -54617,6 +55854,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The gained volume of drilling fluid due to well kick.
         /// </summary>
 		[Description("The gained volume of drilling fluid due to well kick.")]
+		[ComponentElement]
 		[XmlElement("volMudGained")]
         public VolumeMeasure VolMudGained {
             get {
@@ -54634,6 +55872,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The shut in casing pressure. 
         /// </summary>
 		[Description("The shut in casing pressure.")]
+		[ComponentElement]
 		[XmlElement("presShutInCasing")]
         public PressureMeasure PresShutInCasing {
             get {
@@ -54651,6 +55890,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The actual pressure in the drill pipe when the rams are closed around it.
         /// </summary>
 		[Description("The actual pressure in the drill pipe when the rams are closed around it.")]
+		[ComponentElement]
 		[XmlElement("presShutInDrill")]
         public PressureMeasure PresShutInDrill {
             get {
@@ -54755,6 +55995,7 @@ namespace Energistics.DataAccess.WITSML141
         /// the temperature at the bottom of the wellbore. 
         /// </summary>
 		[Description("the temperature at the bottom of the wellbore.")]
+		[ComponentElement]
 		[XmlElement("tempBottom")]
         public ThermodynamicTemperatureMeasure TempBottom {
             get {
@@ -54772,6 +56013,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum pressure that the choke valve can be exposed to.
         /// </summary>
 		[Description("The maximum pressure that the choke valve can be exposed to.")]
+		[ComponentElement]
 		[XmlElement("presMaxChoke")]
         public PressureMeasure PresMaxChoke {
             get {
@@ -54806,6 +56048,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -54913,6 +56156,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth to the operation end point due to failure.
         /// </summary>
 		[Description("The measured depth to the operation end point due to failure.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -54930,6 +56174,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth to the operation end point due to failure.
         /// </summary>
 		[Description("The true vertical depth to the operation end point due to failure.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -54964,6 +56209,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The missed production time due to equipment failure. 
         /// </summary>
 		[Description("The missed production time due to equipment failure.")]
+		[ComponentElement]
 		[XmlElement("eTimMissProduction")]
         public TimeMeasure ETimeMissProduction {
             get {
@@ -55033,6 +56279,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -55140,6 +56387,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the top of the lithology interval. 
         /// </summary>
 		[Description("Measured depth at the top of the lithology interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -55157,6 +56405,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the bottom of the lithology interval. 
         /// </summary>
 		[Description("Measured depth at the bottom of the lithology interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -55174,6 +56423,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the top of the lithology interval. 
         /// </summary>
 		[Description("True vertical depth at the top of the lithology interval.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -55191,6 +56441,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the bottom of the lithology interval. 
         /// </summary>
 		[Description("True vertical depth at the bottom of the lithology interval.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -55242,6 +56493,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -55349,6 +56601,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of the wireline formation test. 
         /// </summary>
 		[Description("Measured depth of the wireline formation test.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -55366,6 +56619,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of the wireline formation test. 
         /// </summary>
 		[Description("True vertical depth of the wireline formation test.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -55383,6 +56637,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The formation pore pressure. The pressure of fluids within the pores of a reservoir, usually hydrostatic pressure, or the pressure exerted by a column of water from the formation's depth to sea level.
         /// </summary>
 		[Description("The formation pore pressure. The pressure of fluids within the pores of a reservoir, usually hydrostatic pressure,  or the pressure exerted by a column of water from the formation's depth to sea level.")]
+		[ComponentElement]
 		[XmlElement("presPore")]
         public PressureMeasure PresPore {
             get {
@@ -55435,6 +56690,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth where the fluid sample was taken. 
         /// </summary>
 		[Description("Measured depth where the fluid sample was taken.")]
+		[ComponentElement]
 		[XmlElement("mdSample")]
         public MeasuredDepthCoord MDSample {
             get {
@@ -55469,6 +56725,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of hydrocarbon component of the fluid sample. 
         /// </summary>
 		[Description("The density of hydrocarbon component of the fluid sample.")]
+		[ComponentElement]
 		[XmlElement("densityHC")]
         public DensityMeasure DensityHC {
             get {
@@ -55486,6 +56743,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The volume of the fluid sample. 
         /// </summary>
 		[Description("The volume of the fluid sample.")]
+		[ComponentElement]
 		[XmlElement("volumeSample")]
         public VolumeMeasure VolumeSample {
             get {
@@ -55520,6 +56778,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -55697,6 +56956,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the top of the test interval. 
         /// </summary>
 		[Description("Measured depth at the top of the test interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -55714,6 +56974,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the bottom of the test interval. 
         /// </summary>
 		[Description("Measured depth at the bottom of the test interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -55731,6 +56992,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the top of the test interval. 
         /// </summary>
 		[Description("True vertical depth at the top of the test interval.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -55748,6 +57010,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the bottom of the test interval. 
         /// </summary>
 		[Description("True vertical depth at the bottom of the test interval.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -55765,6 +57028,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The diameter of the choke opening. 
         /// </summary>
 		[Description("The diameter of the choke opening.")]
+		[ComponentElement]
 		[XmlElement("chokeOrificeSize")]
         public LengthMeasure ChokeOrificeSize {
             get {
@@ -55782,6 +57046,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of the produced oil. 
         /// </summary>
 		[Description("The density of the produced oil.")]
+		[ComponentElement]
 		[XmlElement("densityOil")]
         public DensityMeasure DensityOil {
             get {
@@ -55799,6 +57064,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of the produced water. 
         /// </summary>
 		[Description("The density of the produced water.")]
+		[ComponentElement]
 		[XmlElement("densityWater")]
         public DensityMeasure DensityWater {
             get {
@@ -55816,6 +57082,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The density of the produced gas. 
         /// </summary>
 		[Description("The density of the produced gas.")]
+		[ComponentElement]
 		[XmlElement("densityGas")]
         public DensityMeasure DensityGas {
             get {
@@ -55833,6 +57100,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum rate at which oil was produced. 
         /// </summary>
 		[Description("The maximum rate at which oil was produced.")]
+		[ComponentElement]
 		[XmlElement("flowRateOil")]
         public VolumeFlowRateMeasure FlowRateOil {
             get {
@@ -55850,6 +57118,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum rate at which water was produced. 
         /// </summary>
 		[Description("The maximum rate at which water was produced.")]
+		[ComponentElement]
 		[XmlElement("flowRateWater")]
         public VolumeFlowRateMeasure FlowRateWater {
             get {
@@ -55867,6 +57136,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The maximum rate at which gas was produced. 
         /// </summary>
 		[Description("The maximum rate at which gas was produced.")]
+		[ComponentElement]
 		[XmlElement("flowRateGas")]
         public VolumeFlowRateMeasure FlowRateGas {
             get {
@@ -55884,6 +57154,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The final shut in pressure. 
         /// </summary>
 		[Description("The final shut in pressure.")]
+		[ComponentElement]
 		[XmlElement("presShutIn")]
         public PressureMeasure PresShutIn {
             get {
@@ -55901,6 +57172,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The final flowing pressure. 
         /// </summary>
 		[Description("The final flowing pressure.")]
+		[ComponentElement]
 		[XmlElement("presFlowing")]
         public PressureMeasure PresFlowing {
             get {
@@ -55918,6 +57190,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The final bottom hole pressure. 
         /// </summary>
 		[Description("The final bottom hole pressure.")]
+		[ComponentElement]
 		[XmlElement("presBottom")]
         public PressureMeasure PresBottom {
             get {
@@ -55935,6 +57208,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The ratio of the volume of gas to the volume of oil. 
         /// </summary>
 		[Description("The ratio of the volume of gas to the volume of oil.")]
+		[ComponentElement]
 		[XmlElement("gasOilRatio")]
         public VolumePerVolumeMeasure GasOilRatio {
             get {
@@ -55952,6 +57226,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The relative amount of water per amount of oil. 
         /// </summary>
 		[Description("The relative amount of water per amount of oil.")]
+		[ComponentElement]
 		[XmlElement("waterOilRatio")]
         public VolumePerVolumeMeasure WaterOilRatio {
             get {
@@ -55969,6 +57244,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The relative amount of chloride in the produced water. 
         /// </summary>
 		[Description("The relative amount of chloride in the produced water.")]
+		[ComponentElement]
 		[XmlElement("chloride")]
         public MassConcentrationMeasure Chloride {
             get {
@@ -55986,6 +57262,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The relative amount of CO2 gas. 
         /// </summary>
 		[Description("The relative amount of CO2 gas.")]
+		[ComponentElement]
 		[XmlElement("carbonDioxide")]
         public MassConcentrationMeasure CarbonDioxide {
             get {
@@ -56003,6 +57280,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The relative amount of H2S gas. 
         /// </summary>
 		[Description("The relative amount of H2S gas.")]
+		[ComponentElement]
 		[XmlElement("hydrogenSulfide")]
         public MassConcentrationMeasure HydrogenSulfide {
             get {
@@ -56020,6 +57298,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total amount of oil produced. This includes oil that was disposed of (e.g., burned).
         /// </summary>
 		[Description("The total amount of oil produced. This includes oil that was disposed of (e.g., burned).")]
+		[ComponentElement]
 		[XmlElement("volOilTotal")]
         public VolumeMeasure VolOilTotal {
             get {
@@ -56037,6 +57316,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total amount of gas produced. This includes gas that was disposed of (e.g., burned).
         /// </summary>
 		[Description("The total amount of gas produced. This includes gas that was disposed of (e.g., burned).")]
+		[ComponentElement]
 		[XmlElement("volGasTotal")]
         public VolumeMeasure VolGasTotal {
             get {
@@ -56054,6 +57334,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total amount of water produced. This includes water that was disposed of.
         /// </summary>
 		[Description("The total amount of water produced. This includes water that was disposed of.")]
+		[ComponentElement]
 		[XmlElement("volWaterTotal")]
         public VolumeMeasure VolWaterTotal {
             get {
@@ -56071,6 +57352,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The total amount of produced oil that was stored.
         /// </summary>
 		[Description("The total amount of produced oil that was stored.")]
+		[ComponentElement]
 		[XmlElement("volOilStored")]
         public VolumeMeasure VolOilStored {
             get {
@@ -56088,6 +57370,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -56212,6 +57495,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the top of the cored interval. 
         /// </summary>
 		[Description("Measured depth at the top of the cored interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -56229,6 +57513,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the bottom of the cored interval. 
         /// </summary>
 		[Description("Measured depth at the bottom of the cored interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -56246,6 +57531,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the top of the cored interval. 
         /// </summary>
 		[Description("True vertical depth at the top of the cored interval.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -56263,6 +57549,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the bottom of the cored interval. 
         /// </summary>
 		[Description("True vertical depth at the bottom of the cored interval.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -56280,6 +57567,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of core recovered. 
         /// </summary>
 		[Description("Length of core recovered.")]
+		[ComponentElement]
 		[XmlElement("lenRecovered")]
         public LengthMeasure LenRecovered {
             get {
@@ -56297,6 +57585,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The relative amount of core recovered. 
         /// </summary>
 		[Description("The relative amount of core recovered.")]
+		[ComponentElement]
 		[XmlElement("recoverPc")]
         public VolumePerVolumeMeasurePercent RecoverPercent {
             get {
@@ -56314,6 +57603,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of core barrel. 
         /// </summary>
 		[Description("Length of core barrel.")]
+		[ComponentElement]
 		[XmlElement("lenBarrel")]
         public LengthMeasure LenBarrel {
             get {
@@ -56383,6 +57673,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -56525,6 +57816,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the top of the logged interval. 
         /// </summary>
 		[Description("Measured depth at the top of the logged interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -56542,6 +57834,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at the bottom of the logged interval. 
         /// </summary>
 		[Description("Measured depth at the bottom of the logged interval.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -56559,6 +57852,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the top of the logged interval. 
         /// </summary>
 		[Description("True vertical depth at the top of the logged interval.")]
+		[ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -56576,6 +57870,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth at the bottom of the logged interval. 
         /// </summary>
 		[Description("True vertical depth at the bottom of the logged interval.")]
+		[ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -56695,6 +57990,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth to the temperature measurement tool. 
         /// </summary>
 		[Description("Measured depth to the temperature measurement tool.")]
+		[ComponentElement]
 		[XmlElement("mdTempTool")]
         public MeasuredDepthCoord MDTempTool {
             get {
@@ -56712,6 +58008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth to the temperature measurement tool. 
         /// </summary>
 		[Description("True vertical depth to the temperature measurement tool.")]
+		[ComponentElement]
 		[XmlElement("tvdTempTool")]
         public WellVerticalDepthCoord TvdTempTool {
             get {
@@ -56729,6 +58026,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -56820,6 +58118,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Measured depth of measurement from the drill datum.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -56837,6 +58136,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Vertical depth of the measurements. 
         /// </summary>
 		[Description("Vertical depth of the measurements.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -56854,6 +58154,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole inclination, measured from vertical. 
         /// </summary>
 		[Description("Hole inclination, measured from vertical.")]
+		[ComponentElement]
 		[XmlElement("incl")]
         public PlaneAngleMeasure Incl {
             get {
@@ -56871,6 +58172,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole azimuth. Corrected to wells azimuth reference. 
         /// </summary>
 		[Description("Hole azimuth. Corrected to wells azimuth reference.")]
+		[ComponentElement]
 		[XmlElement("azi")]
         public PlaneAngleMeasure Azi {
             get {
@@ -56888,6 +58190,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance along vertical section azimuth plane. 
         /// </summary>
 		[Description("Distance along vertical section azimuth plane.")]
+		[ComponentElement]
 		[XmlElement("vertSect")]
         public LengthMeasure VertSect {
             get {
@@ -56905,6 +58208,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Dogleg severity. 
         /// </summary>
 		[Description("Dogleg severity.")]
+		[ComponentElement]
 		[XmlElement("dls")]
         public AnglePerLengthMeasure DoglegSeverity {
             get {
@@ -56922,6 +58226,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The 2D coordinates of the item. Note that within the context of trajectory, the "original" coordinates are inherently local coordinates as defined above.
         /// </summary>
 		[Description("The 2D coordinates of the item.  Note that within the context of trajectory, the \"original\" coordinates are inherently local coordinates as defined above.")]
+		[RecurringElement]
 		[XmlElement("location")]
         public List<Location> Location {
             get {
@@ -56939,6 +58244,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -57123,6 +58429,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The equivalent mud weight value of the pore pressure reading.")]
+		[ComponentElement]
 		[XmlElement("equivalentMudWeight")]
         public DensityMeasure EquivalentMudWeight {
             get {
@@ -57175,6 +58482,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth where the readings were recorded.
         /// </summary>
 		[Description("The measured depth where the readings were recorded.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -57192,6 +58500,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth where the readings were recorded.
         /// </summary>
 		[Description("The true vertical depth where the readings were recorded.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -57209,6 +58518,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -57316,6 +58626,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore measured depth at the end of the report period.
         /// </summary>
 		[Description("Wellbore measured depth at the end of the report period.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -57333,6 +58644,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore true vertical depth at the end of the report.
         /// </summary>
 		[Description("Wellbore true vertical depth at the end of the report.")]
+		[ComponentElement]
 		[XmlElement("tvd")]
         public WellVerticalDepthCoord Tvd {
             get {
@@ -57350,6 +58662,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured plug back depth.
         /// </summary>
 		[Description("The measured plug back depth.")]
+		[ComponentElement]
 		[XmlElement("mdPlugTop")]
         public MeasuredDepthCoord MDPlugTop {
             get {
@@ -57367,6 +58680,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole nominal inside diameter. 
         /// </summary>
 		[Description("Hole nominal inside diameter.")]
+		[ComponentElement]
 		[XmlElement("diaHole")]
         public LengthMeasure DiaHole {
             get {
@@ -57384,6 +58698,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth to the start of the current hole diameter.
         /// </summary>
 		[Description("The measured depth to the start of the current hole diameter.")]
+		[ComponentElement]
 		[XmlElement("mdDiaHoleStart")]
         public MeasuredDepthCoord MDDiaHoleStart {
             get {
@@ -57401,6 +58716,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pilot hole nominal inside diameter at reporting time. 
         /// </summary>
 		[Description("Pilot hole nominal inside diameter at reporting time.")]
+		[ComponentElement]
 		[XmlElement("diaPilot")]
         public LengthMeasure DiaPilot {
             get {
@@ -57418,6 +58734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The planned measured depth of the pilot hole.
         /// </summary>
 		[Description("The planned measured depth of the pilot hole.")]
+		[ComponentElement]
 		[XmlElement("mdDiaPilotPlan")]
         public MeasuredDepthCoord MDDiaPilotPlan {
             get {
@@ -57435,6 +58752,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The planned true vertical depth of the pilot hole.
         /// </summary>
 		[Description("The planned true vertical depth of the pilot hole.")]
+		[ComponentElement]
 		[XmlElement("tvdDiaPilotPlan")]
         public WellVerticalDepthCoord TvdDiaPilotPlan {
             get {
@@ -57487,6 +58805,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth to the kickoff point of the wellbore.
         /// </summary>
 		[Description("Measured depth to the kickoff point of the wellbore.")]
+		[ComponentElement]
 		[XmlElement("mdKickoff")]
         public MeasuredDepthCoord MDKickoff {
             get {
@@ -57504,6 +58823,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth to the kickoff point of the wellbore.
         /// </summary>
 		[Description("True vertical depth to the kickoff point of the wellbore.")]
+		[ComponentElement]
 		[XmlElement("tvdKickoff")]
         public MeasuredDepthCoord TvdKickoff {
             get {
@@ -57521,6 +58841,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The name of the parent wellbore. This is the wellbore from which the current wellbore kickedoff.
         /// </summary>
 		[Description("The name of the parent wellbore. This is the wellbore from which the current wellbore kickedoff.")]
+		[RecurringElement]
 		[XmlElement("parentWellbore")]
         public List<WellAlias> ParentWellbore {
             get {
@@ -57538,6 +58859,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured formation strength. This should be the final measurement before the end of the report period.
         /// </summary>
 		[Description("The measured formation strength.  This should be the final measurement before the end of the report period.")]
+		[ComponentElement]
 		[XmlElement("strengthForm")]
         public DensityMeasure StrengthForm {
             get {
@@ -57555,6 +58877,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The measured depth of the formation strength measuement.
         /// </summary>
 		[Description("The measured depth of the formation strength measuement.")]
+		[ComponentElement]
 		[XmlElement("mdStrengthForm")]
         public MeasuredDepthCoord MDStrengthForm {
             get {
@@ -57572,6 +58895,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The true vertical depth of the formation strength measuement.
         /// </summary>
 		[Description("The true vertical depth of the formation strength measuement.")]
+		[ComponentElement]
 		[XmlElement("tvdStrengthForm")]
         public WellVerticalDepthCoord TvdStrengthForm {
             get {
@@ -57589,6 +58913,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Diameter of last casing. 
         /// </summary>
 		[Description("Diameter of last casing.")]
+		[ComponentElement]
 		[XmlElement("diaCsgLast")]
         public LengthMeasure DiaCsgLast {
             get {
@@ -57606,6 +58931,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of last casing. 
         /// </summary>
 		[Description("Measured depth of last casing.")]
+		[ComponentElement]
 		[XmlElement("mdCsgLast")]
         public MeasuredDepthCoord MDCsgLast {
             get {
@@ -57623,6 +58949,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of last casing. 
         /// </summary>
 		[Description("True vertical depth of last casing.")]
+		[ComponentElement]
 		[XmlElement("tvdCsgLast")]
         public WellVerticalDepthCoord TvdCsgLast {
             get {
@@ -57675,6 +59002,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of plan for this day number (report period). 
         /// </summary>
 		[Description("Measured depth of plan for this day number (report period).")]
+		[ComponentElement]
 		[XmlElement("mdPlanned")]
         public MeasuredDepthCoord MDPlanned {
             get {
@@ -57692,6 +59020,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled during this reporting period. This should be measured along the centerline of the wellbore.
         /// </summary>
 		[Description("Distance drilled during this reporting period.   This should be measured along the centerline of the wellbore.")]
+		[ComponentElement]
 		[XmlElement("distDrill")]
         public LengthMeasure DistDrill {
             get {
@@ -57709,6 +59038,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Elevation of the rotary kelly bushing. 
         /// </summary>
 		[Description("Elevation of the rotary kelly bushing.")]
+		[ComponentElement]
 		[XmlElement("elevKelly")]
         public WellElevationCoord ElevKelly {
             get {
@@ -57760,6 +59090,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rate of penetration at the end of the reporting period. 
         /// </summary>
 		[Description("Rate of penetration at the end of the reporting period.")]
+		[ComponentElement]
 		[XmlElement("ropCurrent")]
         public VelocityMeasure RopCurrent {
             get {
@@ -57777,6 +59108,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the rig utilized in this reporting period. 
         /// </summary>
 		[Description("A pointer to the rig utilized in this reporting period.")]
+		[ComponentElement]
 		[XmlElement("rig")]
         public RefNameString Rig {
             get {
@@ -57794,6 +59126,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time from start of Operations (commonly in days). 
         /// </summary>
 		[Description("Time from start of Operations (commonly in days).")]
+		[ComponentElement]
 		[XmlElement("eTimStart")]
         public TimeMeasure ETimeStart {
             get {
@@ -57811,6 +59144,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time since bit broke ground (commonly in days). 
         /// </summary>
 		[Description("Time since bit broke ground (commonly in days).")]
+		[ComponentElement]
 		[XmlElement("eTimSpud")]
         public TimeMeasure ETimeSpud {
             get {
@@ -57828,6 +59162,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time rig on location (commonly in days). 
         /// </summary>
 		[Description("Time rig on location (commonly in days).")]
+		[ComponentElement]
 		[XmlElement("eTimLoc")]
         public TimeMeasure ETimeLoc {
             get {
@@ -57845,6 +59180,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Drilling time. 
         /// </summary>
 		[Description("Drilling time.")]
+		[ComponentElement]
 		[XmlElement("eTimDrill")]
         public TimeMeasure ETimeDrill {
             get {
@@ -57862,6 +59198,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average Rate of Penetration through Interval. 
         /// </summary>
 		[Description("Average Rate of Penetration through Interval.")]
+		[ComponentElement]
 		[XmlElement("ropAv")]
         public VelocityMeasure RopAverage {
             get {
@@ -57930,6 +59267,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent rotary drilling for report interval. 
         /// </summary>
 		[Description("Time spent rotary drilling for report interval.")]
+		[ComponentElement]
 		[XmlElement("eTimDrillRot")]
         public TimeMeasure ETimeDrillRot {
             get {
@@ -57947,6 +59285,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent slide drilling from start of bit run. 
         /// </summary>
 		[Description("Time spent slide drilling from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("eTimDrillSlid")]
         public TimeMeasure ETimeDrillSlid {
             get {
@@ -57964,6 +59303,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent circulating from start of bit run. 
         /// </summary>
 		[Description("Time spent circulating from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("eTimCirc")]
         public TimeMeasure ETimeCirc {
             get {
@@ -57981,6 +59321,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent reaming from start of bit run. 
         /// </summary>
 		[Description("Time spent reaming from start of bit run.")]
+		[ComponentElement]
 		[XmlElement("eTimReam")]
         public TimeMeasure ETimeReam {
             get {
@@ -57998,6 +59339,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent with no DD work (commonly in hours). 
         /// </summary>
 		[Description("Time spent with no DD work (commonly in hours).")]
+		[ComponentElement]
 		[XmlElement("eTimHold")]
         public TimeMeasure ETimeHold {
             get {
@@ -58015,6 +59357,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time spent steering bottom hole assembly (commonly in hours). 
         /// </summary>
 		[Description("Time spent steering bottom hole assembly (commonly in hours).")]
+		[ComponentElement]
 		[XmlElement("eTimSteering")]
         public TimeMeasure ETimeSteering {
             get {
@@ -58032,6 +59375,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled - rotating. 
         /// </summary>
 		[Description("Distance drilled - rotating.")]
+		[ComponentElement]
 		[XmlElement("distDrillRot")]
         public LengthMeasure DistDrillRot {
             get {
@@ -58049,6 +59393,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance drilled - sliding. 
         /// </summary>
 		[Description("Distance drilled - sliding.")]
+		[ComponentElement]
 		[XmlElement("distDrillSlid")]
         public LengthMeasure DistDrillSlid {
             get {
@@ -58066,6 +59411,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance reamed. 
         /// </summary>
 		[Description("Distance reamed.")]
+		[ComponentElement]
 		[XmlElement("distReam")]
         public LengthMeasure DistReam {
             get {
@@ -58083,6 +59429,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance covered while holding angle with a steerable drilling assembly. 
         /// </summary>
 		[Description("Distance covered while holding angle with a steerable drilling assembly.")]
+		[ComponentElement]
 		[XmlElement("distHold")]
         public LengthMeasure DistHold {
             get {
@@ -58100,6 +59447,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Distance covered while actively steering with a steerable drilling assembly. 
         /// </summary>
 		[Description("Distance covered while actively steering with a steerable drilling assembly.")]
+		[ComponentElement]
 		[XmlElement("distSteering")]
         public LengthMeasure DistSteering {
             get {
@@ -58274,6 +59622,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Daily Cost. 
         /// </summary>
 		[Description("Daily Cost.")]
+		[ComponentElement]
 		[XmlElement("costDay")]
         public Cost CostDay {
             get {
@@ -58291,6 +59640,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Daily Mud Cost. 
         /// </summary>
 		[Description("Daily Mud Cost.")]
+		[ComponentElement]
 		[XmlElement("costDayMud")]
         public Cost CostDayMud {
             get {
@@ -58325,6 +59675,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of leak off test point. 
         /// </summary>
 		[Description("True vertical depth of leak off test point.")]
+		[ComponentElement]
 		[XmlElement("tvdLot")]
         public WellVerticalDepthCoord TvdLot {
             get {
@@ -58342,6 +59693,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Leak off test equivalent mud weight. 
         /// </summary>
 		[Description("Leak off test equivalent mud weight.")]
+		[ComponentElement]
 		[XmlElement("presLotEmw")]
         public DensityMeasure PresLotEmw {
             get {
@@ -58359,6 +59711,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Kick tolerance pressure. 
         /// </summary>
 		[Description("Kick tolerance pressure.")]
+		[ComponentElement]
 		[XmlElement("presKickTol")]
         public PressureMeasure PresKickTol {
             get {
@@ -58376,6 +59729,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Kick tolerance volume. 
         /// </summary>
 		[Description("Kick tolerance volume.")]
+		[ComponentElement]
 		[XmlElement("volKickTol")]
         public VolumeMeasure VolKickTol {
             get {
@@ -58393,6 +59747,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum allowable shut-in casing pressure. 
         /// </summary>
 		[Description("Maximum allowable shut-in casing pressure.")]
+		[ComponentElement]
 		[XmlElement("maasp")]
         public PressureMeasure Maasp {
             get {
@@ -58410,6 +59765,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the tubular (assembly) used in this report period. This represents a foreign key to tubular. 
         /// </summary>
 		[Description("A pointer to the tubular (assembly) used in this report period. This represents a foreign key to tubular.")]
+		[ComponentElement]
 		[XmlElement("tubular")]
         public RefNameString Tubular {
             get {
@@ -58427,6 +59783,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -58535,6 +59892,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -58643,6 +60001,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -58854,6 +60213,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A name of the fixed or movable facility being used to drill the wellbore.
         /// </summary>
 		[Description("A name of the fixed or movable facility being used to drill the wellbore.")]
+		[RecurringElement]
 		[XmlElement("rigAlias")]
         public List<Alias> RigAlias {
             get {
@@ -59066,6 +60426,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An alternative name of the well (in a naming system). The above well name should be included in the list of aliases so that its origin can be known.
         /// </summary>
 		[Description("An alternative name of the well (in a naming system). The above well name should be included in the list of aliases so that its origin can be known.")]
+		[ComponentElement]
 		[XmlElement("wellAlias")]
         public WellAlias WellAlias {
             get {
@@ -59083,6 +60444,7 @@ namespace Energistics.DataAccess.WITSML141
         /// An alternative name of the wellbore (in a naming system). The above well name should be included in the list of aliases so that its origin can be known.
         /// </summary>
 		[Description("An alternative name of the wellbore (in a naming system). The above well name should be included in the list of aliases so that its origin can be known.")]
+		[RecurringElement]
 		[XmlElement("wellboreAlias")]
         public List<WellAlias> WellboreAlias {
             get {
@@ -59100,6 +60462,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines a vertical datum used for measured depths, vertical depths or elevations. This must be specified if one of the aforementioned coordinate values are included in the report. This only applies to this report and is generally a copy of the same information from the well object.
         /// </summary>
 		[Description("Defines a vertical datum used for  measured depths, vertical depths or elevations. This must be specified if one of the aforementioned coordinate values are included in the report. This only applies to this report and is generally a copy of the same information from the well object.")]
+		[RecurringElement]
 		[XmlElement("wellDatum")]
         public List<WellDatum> WellDatum {
             get {
@@ -59117,6 +60480,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines a coordinate reference system used by coordinates within this report. This must be specified if coordinate values are included in the report (i.e., in a survey station location). This only applies to this report and is generally a copy of the same information from the well object.
         /// </summary>
 		[Description("Defines a coordinate reference system used by  coordinates within this report. This must be specified if coordinate values are included in the report  (i.e., in a survey station location). This only applies to this report and is generally a copy of the same information from the well object.")]
+		[RecurringElement]
 		[XmlElement("wellCRS")]
         public List<WellCRS> WellCRS {
             get {
@@ -59134,6 +60498,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a wellbore. The well is represented by the original wellbore.
         /// </summary>
 		[Description("General information about a wellbore. The well is  represented by the original wellbore.")]
+		[ComponentElement]
 		[XmlElement("wellboreInfo")]
         public DrillReportWellboreInfo WellboreInfo {
             get {
@@ -59151,6 +60516,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General status information.
         /// </summary>
 		[Description("General status information.")]
+		[RecurringElement]
 		[XmlElement("statusInfo")]
         public List<DrillReportStatusInfo> StatusInfo {
             get {
@@ -59168,6 +60534,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about a bit.
         /// </summary>
 		[Description("Information about a bit.")]
+		[RecurringElement]
 		[XmlElement("bitRecord")]
         public List<BitRecord> BitRecord {
             get {
@@ -59185,6 +60552,7 @@ namespace Energistics.DataAccess.WITSML141
         /// One fluid record. 
         /// </summary>
 		[Description("One fluid record.")]
+		[RecurringElement]
 		[XmlElement("fluid")]
         public List<Fluid> Fluid {
             get {
@@ -59202,6 +60570,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the pore pressure.
         /// </summary>
 		[Description("Information about the pore pressure.")]
+		[RecurringElement]
 		[XmlElement("porePressure")]
         public List<DrillReportPorePressure> PorePressure {
             get {
@@ -59219,6 +60588,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A description of what happened from the end of report to an alternative time before the end of the next report. This is intended to allow a preliminary description of what happened from the end of the report (commonly midnight) until the time of submission of a preliminary report (commonly 6:00 in the morning).
         /// </summary>
 		[Description("A description of what happened from the end of report  to an alternative time before the end of the next report.  This is intended to allow a preliminary description  of what happened from the end of the report (commonly midnight) until the time of submission of a preliminary report (commonly 6:00 in the morning).")]
+		[ComponentElement]
 		[XmlElement("extendedReport")]
         public TimestampedCommentString ExtendedReport {
             get {
@@ -59236,6 +60606,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A survey station recorded during the report interval. 
         /// </summary>
 		[Description("A survey station recorded during the report interval.")]
+		[RecurringElement]
 		[XmlElement("surveyStation")]
         public List<DrillReportSurveyStation> SurveyStation {
             get {
@@ -59253,6 +60624,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Activity breakdown, multiple for many activities. 
         /// </summary>
 		[Description("Activity breakdown, multiple for many activities.")]
+		[RecurringElement]
 		[XmlElement("activity")]
         public List<Activity> Activity {
             get {
@@ -59270,6 +60642,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a log.
         /// </summary>
 		[Description("General information about a log.")]
+		[RecurringElement]
 		[XmlElement("logInfo")]
         public List<DrillReportLogInfo> LogInfo {
             get {
@@ -59287,6 +60660,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a core.
         /// </summary>
 		[Description("General information about a core.")]
+		[RecurringElement]
 		[XmlElement("coreInfo")]
         public List<DrillReportCoreInfo> CoreInfo {
             get {
@@ -59304,6 +60678,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a production well test.
         /// </summary>
 		[Description("General information about a production well test.")]
+		[RecurringElement]
 		[XmlElement("wellTestInfo")]
         public List<DrillReportWellTestInfo> WellTestInfo {
             get {
@@ -59321,6 +60696,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a wireline formation test.
         /// </summary>
 		[Description("General information about a wireline formation test.")]
+		[RecurringElement]
 		[XmlElement("formTestInfo")]
         public List<DrillReportFormTestInfo> FormTestInfo {
             get {
@@ -59338,6 +60714,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about the lithology and shows in an interval.
         /// </summary>
 		[Description("General information about the lithology and shows in an interval.")]
+		[RecurringElement]
 		[XmlElement("lithShowInfo")]
         public List<DrillReportLithShowInfo> LithShowInfo {
             get {
@@ -59355,6 +60732,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about equipment failure.
         /// </summary>
 		[Description("General information about equipment failure.")]
+		[RecurringElement]
 		[XmlElement("equipFailureInfo")]
         public List<DrillReportEquipFailureInfo> EquipFailureInfo {
             get {
@@ -59372,6 +60750,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a well control incident.
         /// </summary>
 		[Description("General information about a well control incident.")]
+		[RecurringElement]
 		[XmlElement("controlIncidentInfo")]
         public List<DrillReportControlIncidentInfo> ControlIncidentInfo {
             get {
@@ -59389,6 +60768,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a well control incident.
         /// </summary>
 		[Description("General information about a well control incident.")]
+		[RecurringElement]
 		[XmlElement("stratInfo")]
         public List<DrillReportStratInfo> StratInfo {
             get {
@@ -59406,6 +60786,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a well control incident.
         /// </summary>
 		[Description("General information about a well control incident.")]
+		[RecurringElement]
 		[XmlElement("perfInfo")]
         public List<DrillReportPerfInfo> PerfInfo {
             get {
@@ -59423,6 +60804,7 @@ namespace Energistics.DataAccess.WITSML141
         /// General information about a gas reading.
         /// </summary>
 		[Description("General information about a gas reading.")]
+		[RecurringElement]
 		[XmlElement("gasReadingInfo")]
         public List<DrillReportGasReadingInfo> GasReadingInfo {
             get {
@@ -59440,6 +60822,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -59616,6 +60999,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Top depth of core interval. 
         /// </summary>
 		[Description("Top depth of core interval.")]
+		[ComponentElement]
 		[XmlElement("mdCoreTop")]
         public MeasuredDepthCoord MDCoreTop {
             get {
@@ -59633,6 +61017,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bottom depth of core interval. 
         /// </summary>
 		[Description("Bottom depth of core interval.")]
+		[ComponentElement]
 		[XmlElement("mdCoreBottom")]
         public MeasuredDepthCoord MDCoreBottom {
             get {
@@ -59840,6 +61225,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of core barrel. 
         /// </summary>
 		[Description("Length of core barrel.")]
+		[ComponentElement]
 		[XmlElement("lenBarrel")]
         public LengthMeasure LenBarrel {
             get {
@@ -59874,6 +61260,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Core bit outer diameter. 
         /// </summary>
 		[Description("Core bit outer diameter.")]
+		[ComponentElement]
 		[XmlElement("diaBit")]
         public LengthMeasure DiaBit {
             get {
@@ -59891,6 +61278,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Core cut diameter. 
         /// </summary>
 		[Description("Core cut diameter.")]
+		[ComponentElement]
 		[XmlElement("diaCore")]
         public LengthMeasure DiaCore {
             get {
@@ -59908,6 +61296,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cored interval length. 
         /// </summary>
 		[Description("Cored interval length.")]
+		[ComponentElement]
 		[XmlElement("lenCored")]
         public LengthMeasure LenCored {
             get {
@@ -59925,6 +61314,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Length of core recovered. 
         /// </summary>
 		[Description("Length of core recovered.")]
+		[ComponentElement]
 		[XmlElement("lenRecovered")]
         public LengthMeasure LenRecovered {
             get {
@@ -59942,6 +61332,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Calculate recovery (commonly in percent). 
         /// </summary>
 		[Description("Calculate recovery (commonly in percent).")]
+		[ComponentElement]
 		[XmlElement("recoverPc")]
         public VolumePerVolumeMeasure RecoverPercent {
             get {
@@ -59959,6 +61350,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore inclination over cored interval. 
         /// </summary>
 		[Description("Wellbore inclination over cored interval.")]
+		[ComponentElement]
 		[XmlElement("inclHole")]
         public PlaneAngleMeasure InclHole {
             get {
@@ -60079,6 +61471,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of Geological intervals, descriptions, gas readings for the cored interval. 
         /// </summary>
 		[Description("Set of Geological intervals, descriptions, gas readings for the cored  interval.")]
+		[ComponentElement]
 		[XmlElement("geologyInterval")]
         public GeologyInterval GeologyInterval {
             get {
@@ -60113,6 +61506,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -60360,6 +61754,7 @@ namespace Energistics.DataAccess.WITSML141
         /// See the API specification for a description of the use of this data.
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[ComponentElement]
 		[XmlElement("startIndex")]
         public GenericMeasure StartIndex {
             get {
@@ -60377,6 +61772,7 @@ namespace Energistics.DataAccess.WITSML141
         /// See the API specification for a description of the use of this data.
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[ComponentElement]
 		[XmlElement("endIndex")]
         public GenericMeasure EndIndex {
             get {
@@ -60481,6 +61877,7 @@ namespace Energistics.DataAccess.WITSML141
         /// See the API specification for a description of the use of this data.
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -60673,6 +62070,7 @@ namespace Energistics.DataAccess.WITSML141
         /// See the API specification for a description of the use of this data.
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[RecurringElement]
 		[XmlElement("changeHistory")]
         public List<ChangeHistory> ChangeHistory {
             get {
@@ -60690,6 +62088,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -60832,6 +62231,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test pressure. 
         /// </summary>
 		[Description("Test pressure.")]
+		[ComponentElement]
 		[XmlElement("presTest")]
         public PressureMeasure PresTest {
             get {
@@ -60849,6 +62249,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Elapsed tome to perform the test. 
         /// </summary>
 		[Description("Elapsed tome to perform the test.")]
+		[ComponentElement]
 		[XmlElement("eTimTest")]
         public TimeMeasure ETimeTest {
             get {
@@ -61041,6 +62442,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Cement bond Log under pressure. 
         /// </summary>
 		[Description("Cement bond Log under pressure.")]
+		[ComponentElement]
 		[XmlElement("cblPres")]
         public PressureMeasure CblPres {
             get {
@@ -61093,6 +62495,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hours before logging run after cement run. 
         /// </summary>
 		[Description("Hours before logging run after cement run.")]
+		[ComponentElement]
 		[XmlElement("eTimCementLog")]
         public TimeMeasure ETimeCementLog {
             get {
@@ -61110,6 +62513,7 @@ namespace Energistics.DataAccess.WITSML141
         /// PIT/LOT formation breakdown gradient or absolute pressure. 
         /// </summary>
 		[Description("PIT/LOT formation breakdown gradient or absolute pressure.")]
+		[ComponentElement]
 		[XmlElement("formPit")]
         public ForcePerVolumeMeasure FormPit {
             get {
@@ -61144,6 +62548,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hours between end of cement job-start of PIT. 
         /// </summary>
 		[Description("Hours between end of cement job-start of PIT.")]
+		[ComponentElement]
 		[XmlElement("eTimPitStart")]
         public TimeMeasure ETimePitStart {
             get {
@@ -61161,6 +62566,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at top of cement. 
         /// </summary>
 		[Description("Measured depth at top of cement.")]
+		[ComponentElement]
 		[XmlElement("mdCementTop")]
         public MeasuredDepthCoord MDCementTop {
             get {
@@ -61335,6 +62741,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The distance to the top of the liner. 
         /// </summary>
 		[Description("The distance to the top of the liner.")]
+		[ComponentElement]
 		[XmlElement("linerTop")]
         public LengthMeasure LinerTop {
             get {
@@ -61352,6 +62759,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Liner overlap length. 
         /// </summary>
 		[Description("Liner overlap length.")]
+		[ComponentElement]
 		[XmlElement("linerLap")]
         public LengthMeasure LinerLap {
             get {
@@ -61369,6 +62777,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hours before liner top test. 
         /// </summary>
 		[Description("Hours before liner top test.")]
+		[ComponentElement]
 		[XmlElement("eTimBeforeTest")]
         public TimeMeasure ETimeBeforeTest {
             get {
@@ -61403,6 +62812,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Equivalent mud weight. Negative Test? 
         /// </summary>
 		[Description("Equivalent mud weight. Negative Test?")]
+		[ComponentElement]
 		[XmlElement("testNegativeEmw")]
         public DensityMeasure TestNegativeEmw {
             get {
@@ -61437,6 +62847,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Equivalent mud weight. Positive Test or absolute pressure . 
         /// </summary>
 		[Description("Equivalent mud weight. Positive Test or absolute pressure .")]
+		[ComponentElement]
 		[XmlElement("testPositiveEmw")]
         public DensityMeasure TestPositiveEmw {
             get {
@@ -61489,6 +62900,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth to diverter tool. 
         /// </summary>
 		[Description("Measured depth to diverter tool.")]
+		[ComponentElement]
 		[XmlElement("mdDVTool")]
         public MeasuredDepthCoord MDDVTool {
             get {
@@ -61596,6 +63008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Additive density. 
         /// </summary>
 		[Description("Additive density.")]
+		[ComponentElement]
 		[XmlElement("densAdd")]
         public DensityMeasure DensAdd {
             get {
@@ -61709,6 +63122,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Additive Amount.")]
+		[ComponentElement]
 		[XmlElement("additive")]
         public MassMeasure Additive {
             get {
@@ -61726,6 +63140,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -61798,6 +63213,7 @@ namespace Energistics.DataAccess.WITSML141
         /// (Elapsed time period during the fluid is pumped. 
         /// </summary>
 		[Description("(Elapsed time period during the fluid is pumped.")]
+		[ComponentElement]
 		[XmlElement("eTimPump")]
         public TimeMeasure ETimePump {
             get {
@@ -61815,6 +63231,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rate fluid is pumped. 0 means it is a pause. 
         /// </summary>
 		[Description("Rate fluid is pumped. 0 means it is a pause.")]
+		[ComponentElement]
 		[XmlElement("ratePump")]
         public VolumeFlowRateMeasure RatePump {
             get {
@@ -61832,6 +63249,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume pumped = eTimPump * ratePump. 
         /// </summary>
 		[Description("Volume pumped = eTimPump * ratePump.")]
+		[ComponentElement]
 		[XmlElement("volPump")]
         public VolumeMeasure VolPump {
             get {
@@ -61884,6 +63302,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Back pressure applied during pumping stage. 
         /// </summary>
 		[Description("Back pressure applied during pumping stage.")]
+		[ComponentElement]
 		[XmlElement("presBack")]
         public PressureMeasure PresBack {
             get {
@@ -61901,6 +63320,7 @@ namespace Energistics.DataAccess.WITSML141
         /// If shutdown event, the elapsed time duration. 
         /// </summary>
 		[Description("If shutdown event, the elapsed time duration.")]
+		[ComponentElement]
 		[XmlElement("eTimShutdown")]
         public TimeMeasure ETimeShutdown {
             get {
@@ -62078,6 +63498,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at top of slurry placement. 
         /// </summary>
 		[Description("Measured depth at top of slurry placement.")]
+		[ComponentElement]
 		[XmlElement("mdFluidTop")]
         public MeasuredDepthCoord MDFluidTop {
             get {
@@ -62095,6 +63516,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at bottom of slurry placement. 
         /// </summary>
 		[Description("Measured depth at bottom of slurry placement.")]
+		[ComponentElement]
 		[XmlElement("mdFluidBottom")]
         public MeasuredDepthCoord MDFluidBottom {
             get {
@@ -62129,6 +63551,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Water volume. 
         /// </summary>
 		[Description("Water volume.")]
+		[ComponentElement]
 		[XmlElement("volWater")]
         public VolumeMeasure VolWater {
             get {
@@ -62146,6 +63569,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of cement. 
         /// </summary>
 		[Description("Volume of cement.")]
+		[ComponentElement]
 		[XmlElement("volCement")]
         public VolumeMeasure VolCement {
             get {
@@ -62163,6 +63587,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mix Water Ratio. 
         /// </summary>
 		[Description("Mix Water Ratio.")]
+		[ComponentElement]
 		[XmlElement("ratioMixWater")]
         public SpecificVolumeMeasure RatioMixWater {
             get {
@@ -62180,6 +63605,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluid/Slurry Volume. 
         /// </summary>
 		[Description("Fluid/Slurry Volume.")]
+		[ComponentElement]
 		[XmlElement("volFluid")]
         public VolumeMeasure VolFluid {
             get {
@@ -62214,6 +63640,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Excess Percent. 
         /// </summary>
 		[Description("Excess Percent.")]
+		[ComponentElement]
 		[XmlElement("excessPc")]
         public VolumePerVolumeMeasure ExcessPercent {
             get {
@@ -62231,6 +63658,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Slurry Yield. 
         /// </summary>
 		[Description("Slurry Yield.")]
+		[ComponentElement]
 		[XmlElement("volYield")]
         public SpecificVolumeMeasure VolYield {
             get {
@@ -62248,6 +63676,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Fluid density. 
         /// </summary>
 		[Description("Fluid density.")]
+		[ComponentElement]
 		[XmlElement("density")]
         public DensityMeasure Density {
             get {
@@ -62265,6 +63694,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Equals 1 - Porosity. 
         /// </summary>
 		[Description("Equals 1 - Porosity.")]
+		[ComponentElement]
 		[XmlElement("solidVolumeFraction")]
         public VolumePerVolumeMeasure SolidVolumeFraction {
             get {
@@ -62282,6 +63712,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume Pumped. 
         /// </summary>
 		[Description("Volume Pumped.")]
+		[ComponentElement]
 		[XmlElement("volPumped")]
         public VolumeMeasure VolPumped {
             get {
@@ -62299,6 +63730,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Other Volume. 
         /// </summary>
 		[Description("Other Volume.")]
+		[ComponentElement]
 		[XmlElement("volOther")]
         public VolumeMeasure VolOther {
             get {
@@ -62334,6 +63766,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Viscosity (Newtonian) or Plastic Viscosity if Bingham. 
         /// </summary>
 		[Description("Viscosity (Newtonian) or Plastic Viscosity if Bingham.")]
+		[ComponentElement]
 		[XmlElement("vis")]
         public DynamicViscosityMeasure Vis {
             get {
@@ -62351,6 +63784,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Yield point (Bingham and Herschel Bulkley models). 
         /// </summary>
 		[Description("Yield point (Bingham and Herschel Bulkley models).")]
+		[ComponentElement]
 		[XmlElement("yp")]
         public PressureMeasure YP {
             get {
@@ -62368,6 +63802,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Power Law index (Power Law and HB). 
         /// </summary>
 		[Description("Power Law index (Power Law and HB).")]
+		[ComponentElement]
 		[XmlElement("n")]
         public DimensionlessMeasure N {
             get {
@@ -62385,6 +63820,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Consistency index (Power Law and HB). 
         /// </summary>
 		[Description("Consistency index (Power Law and HB).")]
+		[ComponentElement]
 		[XmlElement("k")]
         public DimensionlessMeasure K {
             get {
@@ -62402,6 +63838,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel reading after 10 seconds. 
         /// </summary>
 		[Description("Gel reading after 10 seconds.")]
+		[ComponentElement]
 		[XmlElement("gel10SecReading")]
         public PlaneAngleMeasure Gel10SecReading {
             get {
@@ -62419,6 +63856,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel strength after 10 seconds. 
         /// </summary>
 		[Description("Gel strength after 10 seconds.")]
+		[ComponentElement]
 		[XmlElement("gel10SecStrength")]
         public PressureMeasure Gel10SecStrength {
             get {
@@ -62436,6 +63874,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel reading after 1 minute. 
         /// </summary>
 		[Description("Gel reading after 1 minute.")]
+		[ComponentElement]
 		[XmlElement("gel1MinReading")]
         public PlaneAngleMeasure Gel1MinReading {
             get {
@@ -62453,6 +63892,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel strength after 1 minute. 
         /// </summary>
 		[Description("Gel strength after 1 minute.")]
+		[ComponentElement]
 		[XmlElement("gel1MinStrength")]
         public PressureMeasure Gel1MinStrength {
             get {
@@ -62470,6 +63910,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel reading after 10 minutes. 
         /// </summary>
 		[Description("Gel reading after 10 minutes.")]
+		[ComponentElement]
 		[XmlElement("gel10MinReading")]
         public PlaneAngleMeasure Gel10MinReading {
             get {
@@ -62487,6 +63928,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gel strength after 10 minutes. 
         /// </summary>
 		[Description("Gel strength after 10 minutes.")]
+		[ComponentElement]
 		[XmlElement("gel10MinStrength")]
         public PressureMeasure Gel10MinStrength {
             get {
@@ -62522,6 +63964,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Density of base fluid. 
         /// </summary>
 		[Description("Density of base fluid.")]
+		[ComponentElement]
 		[XmlElement("densBaseFluid")]
         public DensityMeasure DensBaseFluid {
             get {
@@ -62574,6 +64017,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mass of dry blend: the blend is made of different solid additives: the volume is not constant. 
         /// </summary>
 		[Description("Mass of dry blend: the blend is made of different solid additives: the volume is not constant.")]
+		[ComponentElement]
 		[XmlElement("massDryBlend")]
         public MassMeasure MassDryBlend {
             get {
@@ -62591,6 +64035,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Density of Dry blend. 
         /// </summary>
 		[Description("Density of Dry blend.")]
+		[ComponentElement]
 		[XmlElement("densDryBlend")]
         public DensityMeasure DensDryBlend {
             get {
@@ -62608,6 +64053,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Weight of a sack of dry blend. 
         /// </summary>
 		[Description("Weight of a sack of dry blend.")]
+		[ComponentElement]
 		[XmlElement("massSackDryBlend")]
         public MassMeasure MassSackDryBlend {
             get {
@@ -62625,6 +64071,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Additives can be added in slurry but also in spacers, washes, mud. 
         /// </summary>
 		[Description("Additives can be added in slurry but also in spacers, washes, mud.")]
+		[RecurringElement]
 		[XmlElement("cementAdditive")]
         public List<CementAdditive> CementAdditive {
             get {
@@ -62694,6 +64141,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of gas used for foam job. 
         /// </summary>
 		[Description("Volume of gas used for foam job.")]
+		[ComponentElement]
 		[XmlElement("volGasFoam")]
         public VolumeMeasure VolGasFoam {
             get {
@@ -62711,6 +64159,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Constant gas ratio method ratio 
         /// </summary>
 		[Description("Constant gas ratio method ratio")]
+		[ComponentElement]
 		[XmlElement("ratioConstGasMethodAv")]
         public VolumePerVolumeMeasure RatioConstGasMethodAverage {
             get {
@@ -62728,6 +64177,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Constant gas ratio method average density. 
         /// </summary>
 		[Description("Constant gas ratio method average density.")]
+		[ComponentElement]
 		[XmlElement("densConstGasMethod")]
         public DensityMeasure DensConstGasMethod {
             get {
@@ -62745,6 +64195,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Constant gas ratio method initial method ratio. 
         /// </summary>
 		[Description("Constant gas ratio method initial method ratio.")]
+		[ComponentElement]
 		[XmlElement("ratioConstGasMethodStart")]
         public VolumePerVolumeMeasure RatioConstGasMethodStart {
             get {
@@ -62762,6 +64213,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Constant gas ratio method final method ratio. 
         /// </summary>
 		[Description("Constant gas ratio method final method ratio.")]
+		[ComponentElement]
 		[XmlElement("ratioConstGasMethodEnd")]
         public VolumePerVolumeMeasure RatioConstGasMethodEnd {
             get {
@@ -62779,6 +64231,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Constant gas ratio method average density. 
         /// </summary>
 		[Description("Constant gas ratio method average density.")]
+		[ComponentElement]
 		[XmlElement("densConstGasFoam")]
         public DensityMeasure DensConstGasFoam {
             get {
@@ -62796,6 +64249,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test thickening time. 
         /// </summary>
 		[Description("Test thickening time.")]
+		[ComponentElement]
 		[XmlElement("eTimThickening")]
         public TimeMeasure ETimeThickening {
             get {
@@ -62813,6 +64267,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test thickening temperature. 
         /// </summary>
 		[Description("Test thickening temperature.")]
+		[ComponentElement]
 		[XmlElement("tempThickening")]
         public ThermodynamicTemperatureMeasure TempThickening {
             get {
@@ -62830,6 +64285,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test thickening pressure. 
         /// </summary>
 		[Description("Test thickening pressure.")]
+		[ComponentElement]
 		[XmlElement("presTestThickening")]
         public PressureMeasure PresTestThickening {
             get {
@@ -62847,6 +64303,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test thickening consistency/slurry viscosity - Bearden Consistency (Bc) 0 to 100. 
         /// </summary>
 		[Description("Test thickening consistency/slurry viscosity - Bearden Consistency (Bc) 0 to 100.")]
+		[ComponentElement]
 		[XmlElement("consTestThickening")]
         public DimensionlessMeasure ConsTestThickening {
             get {
@@ -62864,6 +64321,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test free water na: = mL/250ML. 
         /// </summary>
 		[Description("Test free water na: = mL/250ML.")]
+		[ComponentElement]
 		[XmlElement("pcFreeWater")]
         public VolumePerVolumeMeasure PercentFreeWater {
             get {
@@ -62881,6 +64339,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test free water temperature. 
         /// </summary>
 		[Description("Test free water temperature.")]
+		[ComponentElement]
 		[XmlElement("tempFreeWater")]
         public ThermodynamicTemperatureMeasure TempFreeWater {
             get {
@@ -62898,6 +64357,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test fluid loss. 
         /// </summary>
 		[Description("Test fluid loss.")]
+		[ComponentElement]
 		[XmlElement("volTestFluidLoss")]
         public VolumeMeasure VolTestFluidLoss {
             get {
@@ -62915,6 +64375,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test fluid loss temperature. 
         /// </summary>
 		[Description("Test fluid loss temperature.")]
+		[ComponentElement]
 		[XmlElement("tempFluidLoss")]
         public ThermodynamicTemperatureMeasure TempFluidLoss {
             get {
@@ -62932,6 +64393,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test Fluid loss pressure. 
         /// </summary>
 		[Description("Test Fluid loss pressure.")]
+		[ComponentElement]
 		[XmlElement("presTestFluidLoss")]
         public PressureMeasure PresTestFluidLoss {
             get {
@@ -62949,6 +64411,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test Fluid loss: dehydrating test period, used to compute the API Fluid Loss. 
         /// </summary>
 		[Description("Test Fluid loss: dehydrating test period, used to compute the API Fluid Loss.")]
+		[ComponentElement]
 		[XmlElement("timeFluidLoss")]
         public TimeMeasure TimeFluidLoss {
             get {
@@ -62966,6 +64429,7 @@ namespace Energistics.DataAccess.WITSML141
         /// API Fluid Loss = 2 * volTestFluidLoss * SQRT(30/timefluidloss). 
         /// </summary>
 		[Description("API Fluid Loss = 2 * volTestFluidLoss * SQRT(30/timefluidloss).")]
+		[ComponentElement]
 		[XmlElement("volAPIFluidLoss")]
         public VolumeMeasure VolAPIFluidLoss {
             get {
@@ -62983,6 +64447,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Compressive strength time 1. 
         /// </summary>
 		[Description("Compressive strength time 1.")]
+		[ComponentElement]
 		[XmlElement("eTimComprStren1")]
         public TimeMeasure ETimeComprStren1 {
             get {
@@ -63000,6 +64465,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Compressive strength time 2. 
         /// </summary>
 		[Description("Compressive strength time 2.")]
+		[ComponentElement]
 		[XmlElement("eTimComprStren2")]
         public TimeMeasure ETimeComprStren2 {
             get {
@@ -63017,6 +64483,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Compressive strength pressure 1. 
         /// </summary>
 		[Description("Compressive strength pressure 1.")]
+		[ComponentElement]
 		[XmlElement("presComprStren1")]
         public PressureMeasure PresComprStren1 {
             get {
@@ -63034,6 +64501,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Compressive strength pressure 2. 
         /// </summary>
 		[Description("Compressive strength pressure 2.")]
+		[ComponentElement]
 		[XmlElement("presComprStren2")]
         public PressureMeasure PresComprStren2 {
             get {
@@ -63051,6 +64519,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Compressive strength temperature 1. 
         /// </summary>
 		[Description("Compressive strength temperature 1.")]
+		[ComponentElement]
 		[XmlElement("tempComprStren1")]
         public ThermodynamicTemperatureMeasure TempComprStren1 {
             get {
@@ -63068,6 +64537,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Compressive strength temperature 2. 
         /// </summary>
 		[Description("Compressive strength temperature 2.")]
+		[ComponentElement]
 		[XmlElement("tempComprStren2")]
         public ThermodynamicTemperatureMeasure TempComprStren2 {
             get {
@@ -63085,6 +64555,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Slurry density at pressure. 
         /// </summary>
 		[Description("Slurry density at pressure.")]
+		[ComponentElement]
 		[XmlElement("densAtPres")]
         public DensityMeasure DensAtPres {
             get {
@@ -63102,6 +64573,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume reserved. 
         /// </summary>
 		[Description("Volume reserved.")]
+		[ComponentElement]
 		[XmlElement("volReserved")]
         public VolumeMeasure VolReserved {
             get {
@@ -63119,6 +64591,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total Slurry Volume. 
         /// </summary>
 		[Description("Total Slurry Volume.")]
+		[ComponentElement]
 		[XmlElement("volTotSlurry")]
         public VolumeMeasure VolTotSlurry {
             get {
@@ -63349,6 +64822,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at top of interval. 
         /// </summary>
 		[Description("Measured depth at top of interval.")]
+		[ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -63366,6 +64840,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of base of cement. 
         /// </summary>
 		[Description("Measured depth of base of cement.")]
+		[ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -63383,6 +64858,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Excess volume. 
         /// </summary>
 		[Description("Excess volume.")]
+		[ComponentElement]
 		[XmlElement("volExcess")]
         public VolumeMeasure VolExcess {
             get {
@@ -63400,6 +64876,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Average displacement rate. 
         /// </summary>
 		[Description("Average displacement rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateDisplaceAv")]
         public VolumeFlowRateMeasure FlowrateDisplaceAverage {
             get {
@@ -63417,6 +64894,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Maximum displacement rate. 
         /// </summary>
 		[Description("Maximum displacement rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateDisplaceMx")]
         public VolumeFlowRateMeasure FlowrateDisplaceMax {
             get {
@@ -63434,6 +64912,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final displacement pressure. 
         /// </summary>
 		[Description("Final displacement pressure.")]
+		[ComponentElement]
 		[XmlElement("presDisplace")]
         public PressureMeasure PresDisplace {
             get {
@@ -63451,6 +64930,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of returns. 
         /// </summary>
 		[Description("Volume of returns.")]
+		[ComponentElement]
 		[XmlElement("volReturns")]
         public VolumeMeasure VolReturns {
             get {
@@ -63468,6 +64948,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud circulation elapsed time before the job. 
         /// </summary>
 		[Description("Mud circulation elapsed time before the job.")]
+		[ComponentElement]
 		[XmlElement("eTimMudCirculation")]
         public TimeMeasure ETimeMudCirculation {
             get {
@@ -63485,6 +64966,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Rate mud circulated during stage. 
         /// </summary>
 		[Description("Rate mud circulated during stage.")]
+		[ComponentElement]
 		[XmlElement("flowrateMudCirc")]
         public VolumeFlowRateMeasure FlowrateMudCirc {
             get {
@@ -63502,6 +64984,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud circulation pressure. 
         /// </summary>
 		[Description("Mud circulation pressure.")]
+		[ComponentElement]
 		[XmlElement("presMudCirc")]
         public PressureMeasure PresMudCirc {
             get {
@@ -63519,6 +65002,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Final displacement pump rate. 
         /// </summary>
 		[Description("Final displacement pump rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateEnd")]
         public VolumeFlowRateMeasure FlowrateEnd {
             get {
@@ -63536,6 +65020,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Displaced Mud, washes and spacers, cements, displacement mud. 
         /// </summary>
 		[Description("Displaced Mud, washes and spacers, cements, displacement mud.")]
+		[ComponentElement]
 		[XmlElement("cementingFluid")]
         public CementingFluid CementingFluid {
             get {
@@ -63640,6 +65125,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of string (multi-stage cement job). 
         /// </summary>
 		[Description("Measured depth of string (multi-stage cement job).")]
+		[ComponentElement]
 		[XmlElement("mdString")]
         public MeasuredDepthCoord MDString {
             get {
@@ -63657,6 +65143,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of tool (multi-stage cement job. 
         /// </summary>
 		[Description("Measured depth of tool (multi-stage cement job.")]
+		[ComponentElement]
 		[XmlElement("mdTool")]
         public MeasuredDepthCoord MDTool {
             get {
@@ -63674,6 +65161,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of CoilTubing (multi-stage cement job. 
         /// </summary>
 		[Description("Measured depth of CoilTubing (multi-stage cement job.")]
+		[ComponentElement]
 		[XmlElement("mdCoilTbg")]
         public MeasuredDepthCoord MDCoilTbg {
             get {
@@ -63691,6 +65179,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume inside casing. 
         /// </summary>
 		[Description("Total volume inside casing.")]
+		[ComponentElement]
 		[XmlElement("volCsgIn")]
         public VolumeMeasure VolCsgIn {
             get {
@@ -63708,6 +65197,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total volume outside casing for this stage placement. 
         /// </summary>
 		[Description("Total volume outside casing for this stage placement.")]
+		[ComponentElement]
 		[XmlElement("volCsgOut")]
         public VolumeMeasure VolCsgOut {
             get {
@@ -63760,6 +65250,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Tail pipe size (diameter). 
         /// </summary>
 		[Description("Tail pipe size (diameter).")]
+		[ComponentElement]
 		[XmlElement("diaTailPipe")]
         public LengthMeasure DiaTailPipe {
             get {
@@ -63812,6 +65303,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Tubing pressure at start of job (not coiled tubing). 
         /// </summary>
 		[Description("Tubing pressure at start of job (not coiled tubing).")]
+		[ComponentElement]
 		[XmlElement("presTbgStart")]
         public PressureMeasure PresTbgStart {
             get {
@@ -63829,6 +65321,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Tubing pressure at end of job. 
         /// </summary>
 		[Description("Tubing pressure at end of job.")]
+		[ComponentElement]
 		[XmlElement("presTbgEnd")]
         public PressureMeasure PresTbgEnd {
             get {
@@ -63846,6 +65339,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Casing pressure at start of job. 
         /// </summary>
 		[Description("Casing pressure at start of job.")]
+		[ComponentElement]
 		[XmlElement("presCsgStart")]
         public PressureMeasure PresCsgStart {
             get {
@@ -63863,6 +65357,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Casing pressure at end of job. 
         /// </summary>
 		[Description("Casing pressure at end of job.")]
+		[ComponentElement]
 		[XmlElement("presCsgEnd")]
         public PressureMeasure PresCsgEnd {
             get {
@@ -63880,6 +65375,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Constant back pressure applied while pumping the job (can be supersede by a back pressure per pumping stage) 
         /// </summary>
 		[Description("Constant back pressure applied while pumping the job (can be supersede by a back pressure per pumping stage)")]
+		[ComponentElement]
 		[XmlElement("presBackPressure")]
         public PressureMeasure PresBackPressure {
             get {
@@ -63897,6 +65393,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure CTU start. 
         /// </summary>
 		[Description("Pressure CTU start.")]
+		[ComponentElement]
 		[XmlElement("presCoilTbgStart")]
         public PressureMeasure PresCoilTbgStart {
             get {
@@ -63914,6 +65411,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure CTU end 
         /// </summary>
 		[Description("Pressure CTU end")]
+		[ComponentElement]
 		[XmlElement("presCoilTbgEnd")]
         public PressureMeasure PresCoilTbgEnd {
             get {
@@ -63931,6 +65429,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Breakdown pressure. 
         /// </summary>
 		[Description("Breakdown pressure.")]
+		[ComponentElement]
 		[XmlElement("presBreakDown")]
         public PressureMeasure PresBreakDown {
             get {
@@ -63948,6 +65447,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Breakdown rate. 
         /// </summary>
 		[Description("Breakdown rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateBreakDown")]
         public VolumeFlowRateMeasure FlowrateBreakDown {
             get {
@@ -63965,6 +65465,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Squeeze pressure average. 
         /// </summary>
 		[Description("Squeeze pressure average.")]
+		[ComponentElement]
 		[XmlElement("presSqueezeAv")]
         public PressureMeasure PresSqueezeAverage {
             get {
@@ -63982,6 +65483,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Squeeze pressure final. 
         /// </summary>
 		[Description("Squeeze pressure final.")]
+		[ComponentElement]
 		[XmlElement("presSqueezeEnd")]
         public PressureMeasure PresSqueezeEnd {
             get {
@@ -64034,6 +65536,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Squeeze pressure left on pipe. 
         /// </summary>
 		[Description("Squeeze pressure left on pipe.")]
+		[ComponentElement]
 		[XmlElement("presSqueeze")]
         public PressureMeasure PresSqueeze {
             get {
@@ -64051,6 +65554,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Time pressure held. 
         /// </summary>
 		[Description("Time pressure held.")]
+		[ComponentElement]
 		[XmlElement("eTimPresHeld")]
         public TimeMeasure ETimePresHeld {
             get {
@@ -64068,6 +65572,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Squeeze job average rate. 
         /// </summary>
 		[Description("Squeeze job average rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateSqueezeAv")]
         public VolumeFlowRateMeasure FlowrateSqueezeAverage {
             get {
@@ -64085,6 +65590,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Squeeze job maximum rate. 
         /// </summary>
 		[Description("Squeeze job maximum rate.")]
+		[ComponentElement]
 		[XmlElement("flowrateSqueezeMx")]
         public VolumeFlowRateMeasure FlowrateSqueezeMax {
             get {
@@ -64102,6 +65608,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pump rate at start of job. 
         /// </summary>
 		[Description("Pump rate at start of job.")]
+		[ComponentElement]
 		[XmlElement("flowratePumpStart")]
         public VolumeFlowRateMeasure FlowratePumpStart {
             get {
@@ -64119,6 +65626,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pump rate at end of job. 
         /// </summary>
 		[Description("Pump rate at end of job.")]
+		[ComponentElement]
 		[XmlElement("flowratePumpEnd")]
         public VolumeFlowRateMeasure FlowratePumpEnd {
             get {
@@ -64206,6 +65714,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Circulate out measured depth. 
         /// </summary>
 		[Description("Circulate out measured depth.")]
+		[ComponentElement]
 		[XmlElement("mdCircOut")]
         public MeasuredDepthCoord MDCircOut {
             get {
@@ -64223,6 +65732,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Circulate prior to start of job. 
         /// </summary>
 		[Description("Circulate prior to start of job.")]
+		[ComponentElement]
 		[XmlElement("volCircPrior")]
         public VolumeMeasure VolCircPrior {
             get {
@@ -64257,6 +65767,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud density. 
         /// </summary>
 		[Description("Mud density.")]
+		[ComponentElement]
 		[XmlElement("wtMud")]
         public DensityMeasure WeightMud {
             get {
@@ -64274,6 +65785,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Funnel viscosity in seconds (in hole at start of job). 
         /// </summary>
 		[Description("Funnel viscosity in seconds (in hole at start of job).")]
+		[ComponentElement]
 		[XmlElement("visFunnelMud")]
         public TimeMeasure VisFunnelMud {
             get {
@@ -64291,6 +65803,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Plastic viscosity (in hole at start of job). 
         /// </summary>
 		[Description("Plastic viscosity (in hole at start of job).")]
+		[ComponentElement]
 		[XmlElement("pvMud")]
         public DynamicViscosityMeasure PVMud {
             get {
@@ -64308,6 +65821,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Yield point (in hole at start of job). 
         /// </summary>
 		[Description("Yield point (in hole at start of job).")]
+		[ComponentElement]
 		[XmlElement("ypMud")]
         public PressureMeasure YPMud {
             get {
@@ -64325,6 +65839,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gels-10Sec (in hole at start of job). 
         /// </summary>
 		[Description("Gels-10Sec (in hole at start of job).")]
+		[ComponentElement]
 		[XmlElement("gel10Sec")]
         public PressureMeasure Gel10Sec {
             get {
@@ -64342,6 +65857,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Gels-10Min (in hole at start of job). 
         /// </summary>
 		[Description("Gels-10Min (in hole at start of job).")]
+		[ComponentElement]
 		[XmlElement("gel10Min")]
         public PressureMeasure Gel10Min {
             get {
@@ -64359,6 +65875,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bottom hole circulating temperature. 
         /// </summary>
 		[Description("Bottom hole circulating temperature.")]
+		[ComponentElement]
 		[XmlElement("tempBHCT")]
         public ThermodynamicTemperatureMeasure TempBHCT {
             get {
@@ -64376,6 +65893,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Bottom hole temperature static. 
         /// </summary>
 		[Description("Bottom hole temperature static.")]
+		[ComponentElement]
 		[XmlElement("tempBHST")]
         public ThermodynamicTemperatureMeasure TempBHST {
             get {
@@ -64619,6 +66137,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure prior to bumping plug / pressure at end of displacement 
         /// </summary>
 		[Description("Pressure prior to bumping plug / pressure at end of displacement")]
+		[ComponentElement]
 		[XmlElement("presPriorBump")]
         public PressureMeasure PresPriorBump {
             get {
@@ -64636,6 +66155,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure plug bumped. 
         /// </summary>
 		[Description("Pressure plug bumped.")]
+		[ComponentElement]
 		[XmlElement("presBump")]
         public PressureMeasure PresBump {
             get {
@@ -64653,6 +66173,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pressure held to. 
         /// </summary>
 		[Description("Pressure held to.")]
+		[ComponentElement]
 		[XmlElement("presHeld")]
         public PressureMeasure PresHeld {
             get {
@@ -64705,6 +66226,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total mud lost. 
         /// </summary>
 		[Description("Total mud lost.")]
+		[ComponentElement]
 		[XmlElement("volMudLost")]
         public VolumeMeasure VolMudLost {
             get {
@@ -64739,6 +66261,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Density of displacement fluid. 
         /// </summary>
 		[Description("Density of displacement fluid.")]
+		[ComponentElement]
 		[XmlElement("densDisplaceFluid")]
         public DensityMeasure DensDisplaceFluid {
             get {
@@ -64756,6 +66279,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Volume of displacement fluid. 
         /// </summary>
 		[Description("Volume of displacement fluid.")]
+		[ComponentElement]
 		[XmlElement("volDisplaceFluid")]
         public VolumeMeasure VolDisplaceFluid {
             get {
@@ -64773,6 +66297,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -65001,6 +66526,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Wellbore Geometry of annulus. 
         /// </summary>
 		[Description("Wellbore Geometry of annulus.")]
+		[ComponentElement]
 		[XmlElement("holeConfig")]
         public WellboreGeometry HoleConfig {
             get {
@@ -65104,6 +66630,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Water depth if offshore. The distance from mean sea level to water bottom. 
         /// </summary>
 		[Description("Water depth if offshore. The distance from mean sea level to water bottom.")]
+		[ComponentElement]
 		[XmlElement("mdWater")]
         public LengthMeasure MDWater {
             get {
@@ -65191,6 +66718,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Duration for waiting on cement to set. 
         /// </summary>
 		[Description("Duration for waiting on cement to set.")]
+		[ComponentElement]
 		[XmlElement("woc")]
         public TimeMeasure Woc {
             get {
@@ -65208,6 +66736,7 @@ namespace Energistics.DataAccess.WITSML141
         /// If Plug, measured depth of top of plug. 
         /// </summary>
 		[Description("If Plug, measured depth of top of plug.")]
+		[ComponentElement]
 		[XmlElement("mdPlugTop")]
         public MeasuredDepthCoord MDPlugTop {
             get {
@@ -65225,6 +66754,7 @@ namespace Energistics.DataAccess.WITSML141
         /// If Plug, measured depth of bottom of plug. 
         /// </summary>
 		[Description("If Plug, measured depth of bottom of plug.")]
+		[ComponentElement]
 		[XmlElement("mdPlugBot")]
         public MeasuredDepthCoord MDPlugBot {
             get {
@@ -65242,6 +66772,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth at bottom of hole. 
         /// </summary>
 		[Description("Measured depth at bottom of hole.")]
+		[ComponentElement]
 		[XmlElement("mdHole")]
         public MeasuredDepthCoord MDHole {
             get {
@@ -65259,6 +66790,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of previous shoe. 
         /// </summary>
 		[Description("Measured depth of previous shoe.")]
+		[ComponentElement]
 		[XmlElement("mdShoe")]
         public MeasuredDepthCoord MDShoe {
             get {
@@ -65276,6 +66808,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True Vertical Depth of previous shoe. 
         /// </summary>
 		[Description("True Vertical Depth of previous shoe.")]
+		[ComponentElement]
 		[XmlElement("tvdShoe")]
         public WellVerticalDepthCoord TvdShoe {
             get {
@@ -65293,6 +66826,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of cement string shoe. 
         /// </summary>
 		[Description("Measured depth of cement string shoe.")]
+		[ComponentElement]
 		[XmlElement("mdStringSet")]
         public MeasuredDepthCoord MDStringSet {
             get {
@@ -65310,6 +66844,7 @@ namespace Energistics.DataAccess.WITSML141
         /// True vertical depth of cement string shoe. 
         /// </summary>
 		[Description("True vertical depth of cement string shoe.")]
+		[ComponentElement]
 		[XmlElement("tvdStringSet")]
         public WellVerticalDepthCoord TvdStringSet {
             get {
@@ -65327,6 +66862,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of stages for the job (usually 1 or 2). 
         /// </summary>
 		[Description("Set of stages for the job (usually 1 or 2).")]
+		[RecurringElement]
 		[XmlElement("cementStage")]
         public List<CementStage> CementStage {
             get {
@@ -65517,6 +67053,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Measured depth of squeeze. 
         /// </summary>
 		[Description("Measured depth of squeeze.")]
+		[ComponentElement]
 		[XmlElement("mdSqueeze")]
         public MeasuredDepthCoord MDSqueeze {
             get {
@@ -65673,6 +67210,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pipe rotation rate (commonly in rpm). 
         /// </summary>
 		[Description("Pipe rotation rate (commonly in rpm).")]
+		[ComponentElement]
 		[XmlElement("rpmPipe")]
         public AnglePerTimeMeasure RpmPipe {
             get {
@@ -65690,6 +67228,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pipe rotation initial torque. 
         /// </summary>
 		[Description("Pipe rotation initial torque.")]
+		[ComponentElement]
 		[XmlElement("tqInitPipeRot")]
         public MomentOfForceMeasure TorqueInitPipeRot {
             get {
@@ -65707,6 +67246,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pipe rotation average torque. 
         /// </summary>
 		[Description("Pipe rotation average torque.")]
+		[ComponentElement]
 		[XmlElement("tqPipeAv")]
         public MomentOfForceMeasure TorquePipeAverage {
             get {
@@ -65724,6 +67264,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pipe rotation maximum torque. 
         /// </summary>
 		[Description("Pipe rotation maximum torque.")]
+		[ComponentElement]
 		[XmlElement("tqPipeMx")]
         public MomentOfForceMeasure TorquePipeMax {
             get {
@@ -65811,6 +67352,7 @@ namespace Energistics.DataAccess.WITSML141
         /// String up weight during reciprocation. 
         /// </summary>
 		[Description("String up weight during reciprocation.")]
+		[ComponentElement]
 		[XmlElement("overPull")]
         public ForceMeasure OverPull {
             get {
@@ -65828,6 +67370,7 @@ namespace Energistics.DataAccess.WITSML141
         /// String down weight during reciprocation. 
         /// </summary>
 		[Description("String down weight during reciprocation.")]
+		[ComponentElement]
 		[XmlElement("slackOff")]
         public ForceMeasure SlackOff {
             get {
@@ -65845,6 +67388,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pipe reciprocation RPM. 
         /// </summary>
 		[Description("Pipe reciprocation RPM.")]
+		[ComponentElement]
 		[XmlElement("rpmPipeRecip")]
         public AnglePerTimeMeasure RpmPipeRecip {
             get {
@@ -65862,6 +67406,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Pipe reciprocation stroke length. 
         /// </summary>
 		[Description("Pipe reciprocation stroke length.")]
+		[ComponentElement]
 		[XmlElement("lenPipeRecipStroke")]
         public LengthMeasure LenPipeRecipStroke {
             get {
@@ -65914,6 +67459,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -66091,6 +67637,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("This represents a foreign key to the tubular (assembly)  that was utilized in this run.")]
+		[ComponentElement]
 		[XmlElement("tubular")]
         public RefNameString Tubular {
             get {
@@ -66248,6 +67795,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Planned dogleg severity. 
         /// </summary>
 		[Description("Planned dogleg severity.")]
+		[ComponentElement]
 		[XmlElement("planDogleg")]
         public AnglePerLengthMeasure PlanDogleg {
             get {
@@ -66265,6 +67813,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Actual dogleg severity. 
         /// </summary>
 		[Description("Actual dogleg severity.")]
+		[ComponentElement]
 		[XmlElement("actDogleg")]
         public AnglePerLengthMeasure ActDogleg {
             get {
@@ -66282,6 +67831,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Actual dogleg severity - Maximum. 
         /// </summary>
 		[Description("Actual dogleg severity - Maximum.")]
+		[ComponentElement]
 		[XmlElement("actDoglegMx")]
         public AnglePerLengthMeasure ActDoglegMax {
             get {
@@ -66420,6 +67970,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Drilling parameters. 
         /// </summary>
 		[Description("Drilling parameters.")]
+		[RecurringElement]
 		[XmlElement("drillingParams")]
         public List<DrillingParams> DrillingParams {
             get {
@@ -66437,6 +67988,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -66612,6 +68164,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A reference to an object that is defined within the context of the specified wellbore.
         /// </summary>
 		[Description("A reference to an object that is defined within the  context of the specified wellbore.")]
+		[ComponentElement]
 		[XmlElement("objectReference")]
         public RefObjectString ObjectReference {
             get {
@@ -66629,6 +68182,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A reference to an sub-object that is defined within the context of the object referenced by objectReference. This should only refer to recurring components of a growing object.
         /// </summary>
 		[Description("A reference to an sub-object that is defined within the  context of the object referenced by objectReference. This should only refer to recurring components of a growing object.")]
+		[ComponentElement]
 		[XmlElement("subObjectReference")]
         public RefObjectString SubObjectReference {
             get {
@@ -66646,6 +68200,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Along hole measured depth represented by the attachment. 
         /// </summary>
 		[Description("Along hole measured depth represented by the attachment.")]
+		[ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -66663,6 +68218,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Along hole measured depth of the bit. 
         /// </summary>
 		[Description("Along hole measured depth of the bit.")]
+		[ComponentElement]
 		[XmlElement("mdBit")]
         public MeasuredDepthCoord MDBit {
             get {
@@ -66680,6 +68236,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Any extra numeric data. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
 		[Description("Any extra numeric data.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
+		[RecurringElement]
 		[XmlElement("param")]
         public List<IndexedObject> Param {
             get {
@@ -66749,6 +68306,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("The actual attachment content.")]
+		[RecurringElement]
 		[XmlElement("content", DataType="base64Binary")]
         public Byte[] Content {
             get {
@@ -66766,6 +68324,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
+		[ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -66957,7 +68516,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -67116,6 +68675,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
+		[RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -67295,6 +68855,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("An identifier for the document. This is  intended to be unique within the context of the NamingSystem.")]
+		[ComponentElement]
 		[XmlElement("documentName")]
         public NameStruct DocumentName {
             get {
@@ -67312,6 +68873,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
         /// </summary>
 		[Description("Zero or more alternate names for the document.  These names do not need to be unique within the naming system.")]
+		[RecurringElement]
 		[XmlElement("documentAlias")]
         public List<NameStruct> DocumentAlias {
             get {
@@ -67364,6 +68926,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
         /// </summary>
 		[Description("A document class. Examples of classes would be a  metadata classification or a set of keywords.")]
+		[RecurringElement]
 		[XmlElement("documentClass")]
         public List<NameStruct> DocumentClass {
             get {
@@ -67398,6 +68961,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the security to be applied to this file. More than one classification can be given.
         /// </summary>
 		[Description("Information about the security to be applied to  this file. More than one classification can be given.")]
+		[RecurringElement]
 		[XmlElement("securityInformation")]
         public List<DocumentSecurityInfo> SecurityInformation {
             get {
@@ -67432,6 +68996,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A collection of events that can document the history of the data.
         /// </summary>
 		[Description("A collection of events that can document the  history of the data.")]
+		[RecurringElement]
 		[XmlArrayItem("event")]
         [XmlArray("auditTrail")]
         public List<DocumentEvent> AuditTrail {
@@ -67520,6 +69085,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -67600,6 +69166,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -67680,6 +69247,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -67760,6 +69328,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -67840,6 +69409,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -67920,6 +69490,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance.
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68000,6 +69571,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance.
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68080,6 +69652,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68160,6 +69733,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68240,6 +69814,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance.
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68320,6 +69895,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68400,6 +69976,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68480,6 +70057,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68560,6 +70138,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68640,6 +70219,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance.
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68720,6 +70300,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68800,6 +70381,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68880,6 +70462,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -68960,6 +70543,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69040,6 +70624,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69120,6 +70705,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69200,6 +70786,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69280,6 +70867,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69359,6 +70947,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69439,6 +71028,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69519,6 +71109,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Information about the XML message instance. 
         /// </summary>
 		[Description("Information about the XML message instance.")]
+		[ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -69599,6 +71190,7 @@ namespace Energistics.DataAccess.WITSML141
         /// capClient property
         /// </summary>
 		[Description("Defines the singular Client Capabilities (capClient) element; only one can be specified.")]
+		[ComponentElement]
 		[XmlElement("capClient")]
         public CapClient CapClient {
             get {
@@ -69912,7 +71504,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// capServer property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("capServer")]
         public CapServer CapServer {
             get {
@@ -70103,6 +71695,7 @@ namespace Energistics.DataAccess.WITSML141
         /// growingTimeoutPeriod property
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[RecurringElement]
 		[XmlElement("growingTimeoutPeriod")]
         public List<GrowingTimeoutPeriod> GrowingTimeoutPeriod {
             get {
@@ -70242,6 +71835,7 @@ namespace Energistics.DataAccess.WITSML141
         /// function property
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[RecurringElement]
 		[XmlElement("function")]
         public List<Function> Function {
             get {
@@ -70406,6 +72000,7 @@ namespace Energistics.DataAccess.WITSML141
         /// dataObject property
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[RecurringElement]
 		[XmlElement("dataObject")]
         public List<ObjectWithConstraint> DataObject {
             get {

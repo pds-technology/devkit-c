@@ -1073,12 +1073,12 @@ namespace Energistics.Generator
             if (nested)
             {
                 init();
-                sb.Append("[Object]");
+                sb.Append("[ComponentElement]");
             }
             else if (propType.IsArray && !propType.Name.StartsWith("obj_", StringComparison.CurrentCultureIgnoreCase))
             {
                 init();
-                sb.Append("[Collection]");
+                sb.Append("[RecurringElement]");
             }
 
             return sb.ToString();

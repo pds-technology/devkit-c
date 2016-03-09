@@ -88,7 +88,6 @@
     <Compile Include="AbstractWebServiceConnection.cs" />
     <Compile Include="COMPLETION100\DataObjects.cs" />
     <Compile Include="COMPLETION100\GeneratedEnumValues.cs" />
-    <Compile Include="CustomValidationAttributes.cs" />
     <Compile Include="Documentation\Generating.cs" />
     <Compile Include="Documentation\GettingStarted.cs" />
     <Compile Include="Documentation\MainPage.cs" />
@@ -128,6 +127,9 @@
     <Compile Include="PRODMLWebServiceConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EnergisticsConverter.cs" />
+    <Compile Include="Validation\ComponentElementAttribute.cs" />
+    <Compile Include="Validation\DataObjectValidator.cs" />
+    <Compile Include="Validation\RecurringElementAttribute.cs" />
     <Compile Include="WITSML131\DataObjects.cs" />
     <Compile Include="WITSML131\GeneratedEnumValues.cs" />
     <Compile Include="WITSML131\WMLP.cs" />
