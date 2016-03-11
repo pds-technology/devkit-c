@@ -138,7 +138,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -932,6 +932,7 @@ namespace Energistics.DataAccess.RESQML201
         /// TimeSeries property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("TimeSeries")]
         public DataObjectReference TimeSeries {
             get {
@@ -1201,7 +1202,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// DataObject property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("DataObject")]
         public DataObjectReference DataObject {
             get {
@@ -1456,7 +1457,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// DataObject property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("DataObject")]
         public DataObjectReference DataObject {
             get {
@@ -1561,6 +1562,7 @@ namespace Energistics.DataAccess.RESQML201
         /// TimeSeries property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("TimeSeries")]
         public DataObjectReference TimeSeries {
             get {
@@ -1750,7 +1752,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Property property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Property")]
         public DataObjectReference Property {
             get {
@@ -1837,7 +1839,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// HdfProxy property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("HdfProxy")]
         public DataObjectReference HdfProxy {
             get {
@@ -2849,7 +2851,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -3234,7 +3236,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -3391,7 +3393,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Origin property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Origin")]
         public Point3d Origin {
             get {
@@ -3534,7 +3536,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Offset property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Offset")]
         public Point3d Offset {
             get {
@@ -3867,7 +3869,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// LocalPropertyKind1 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("LocalPropertyKind")]
         public DataObjectReference LocalPropertyKind1 {
             get {
@@ -4047,6 +4049,7 @@ namespace Energistics.DataAccess.RESQML201
         /// OuterRing property
         /// </summary>
 		[Description("The extension of a representation patch. Inside the ring, the representation patch is defined, outside it is not.  BUSINESS RULE: Must be a reference to a polyline, either a single polyline representation or a subrepresentation. Must be closed.")]
+		[ComponentElement]
 		[XmlElement("OuterRing")]
         public DataObjectReference OuterRing {
             get {
@@ -4153,6 +4156,7 @@ namespace Energistics.DataAccess.RESQML201
         /// ParentTrajectory property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ParentTrajectory")]
         public DataObjectReference ParentTrajectory {
             get {
@@ -4224,6 +4228,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Geometry property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Geometry")]
         public AbstractGeometry Geometry {
             get {
@@ -4307,6 +4312,7 @@ namespace Energistics.DataAccess.RESQML201
         /// LocalCrs property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("LocalCrs")]
         public DataObjectReference LocalCrs {
             get {
@@ -4397,7 +4403,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -4648,7 +4654,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// SeismicCoordinates property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("SeismicCoordinates")]
         public AbstractSeismicCoordinates SeismicCoordinates {
             get {
@@ -4686,6 +4692,7 @@ namespace Energistics.DataAccess.RESQML201
         /// SeismicSupport property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("SeismicSupport")]
         public DataObjectReference SeismicSupport {
             get {
@@ -5628,6 +5635,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Geometry property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
@@ -5699,6 +5707,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Geometry property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
@@ -5809,6 +5818,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Geometry property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
@@ -5896,6 +5906,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Geometry property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
@@ -6305,6 +6316,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("List of columns for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: The length of the first list-of-lists array must match the splitPillarCount.")]
+		[ComponentElement]
 		[XmlElement("ColumnsPerSplitPillar")]
         public ResqmlJaggedArray ColumnsPerSplitPillar {
             get {
@@ -6468,6 +6480,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Definition of the split column edges in terms of the pillars per split column edge. Pillar count per edge is usually 2, but the list-of-lists construction is used to allow split column edges to be defined by more than 2 pillars.")]
+		[ComponentElement]
 		[XmlElement("PillarsPerSplitColumnEdge")]
         public ResqmlJaggedArray PillarsPerSplitColumnEdge {
             get {
@@ -6577,6 +6590,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Definition of the truncation faces is in terms of an ordered list of nodes. Node indexing is EXTENDED, i.e., is based on the list of untruncated grid nodes (always first) plus the split nodes (if any) and the truncation face nodes. Relative order of split nodes and truncation face nodes is set by the pillar indices.")]
+		[ComponentElement]
 		[XmlElement("NodesPerTruncationFace")]
         public ResqmlJaggedArray NodesPerTruncationFace {
             get {
@@ -6613,6 +6627,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Local cell face index for those faces which are retained from the parent cell in the definition of the truncation cell.  The use of a local cell face index, e.g., 0...5 for an IJK cell, can be used even if the face indices have not been defined.")]
+		[ComponentElement]
 		[XmlElement("LocalFacesPerCell")]
         public ResqmlJaggedArray LocalFacesPerCell {
             get {
@@ -6631,6 +6646,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Truncation face index for the additional cell faces which are required to complete the definition of the truncation cell.  The resulting local cell face index follows the local faces per cell list, followed by the truncation faces in the order within the list-of-lists constructions.")]
+		[ComponentElement]
 		[XmlElement("TruncationFacesPerCell")]
         public ResqmlJaggedArray TruncationFacesPerCell {
             get {
@@ -6791,6 +6807,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("List of nodes per face. node count per face can be obtained from the offsets in the first list of list array.  BUSINESS RULE: faceCount must match the length of the first list of list array.")]
+		[ComponentElement]
 		[XmlElement("NodesPerFace")]
         public ResqmlJaggedArray NodesPerFace {
             get {
@@ -6809,6 +6826,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("List of faces per cell. face count per cell can be obtained from the offsets in the first list of list array.  BUSINESS RULE: cellCount must match the length of the first list of list array.")]
+		[ComponentElement]
 		[XmlElement("FacesPerCell")]
         public ResqmlJaggedArray FacesPerCell {
             get {
@@ -7093,7 +7111,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// NodesPerCell1 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("NodesPerCell")]
         public ResqmlJaggedArray NodesPerCell1 {
             get {
@@ -7417,6 +7435,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("List of pillars for each column. The pillars define the corners of each column.  The number of pillars per column can be obtained from the offsets in the first list of list array.  BUSINESS RULE: The length of the first array in the list of list construction should equal the columnCount.")]
+		[ComponentElement]
 		[XmlElement("PillarsPerColumn")]
         public ResqmlJaggedArray PillarsPerColumn {
             get {
@@ -7506,6 +7525,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Definition of the column edges in terms of the pillars per column edge. Pillar count per edge is usually 2, but the list-of-lists construction is used to allow column edges to be defined by more than 2 pillars.")]
+		[ComponentElement]
 		[XmlElement("PillarsPerColumnEdge")]
         public ResqmlJaggedArray PillarsPerColumnEdge {
             get {
@@ -7597,6 +7617,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Cell indices for each of the split nodes. Used to implicitly define cell geometry. List-of-lists construction used to support split nodes shared between multiple cells.")]
+		[ComponentElement]
 		[XmlElement("CellsPerSplitNode")]
         public ResqmlJaggedArray CellsPerSplitNode {
             get {
@@ -7794,6 +7815,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Association of faces with the split edges, used to infer continuity of property, geometry, or interpretation with an attachment kind of edges.")]
+		[ComponentElement]
 		[XmlElement("FacesPerSplitEdge")]
         public ResqmlJaggedArray FacesPerSplitEdge {
             get {
@@ -7885,6 +7907,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Column indices for each of the split coordinate lines. Used to implicitly define column and cell geometry. List-of-lists construction used to support shared coordinate lines.")]
+		[ComponentElement]
 		[XmlElement("ColumnsPerSplitCoordinateLine")]
         public ResqmlJaggedArray ColumnsPerSplitCoordinateLine {
             get {
@@ -8081,6 +8104,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Represents property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Represents")]
         public DataObjectReference Represents {
             get {
@@ -8372,7 +8396,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Representation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Representation")]
         public DataObjectReference Representation {
             get {
@@ -8494,7 +8518,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Geometry property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Geometry")]
         public AbstractGeometry Geometry {
             get {
@@ -8620,6 +8644,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("Indices for the interpretations for each connection, if any. The use of a Resqml jagged array allows zero or more than one interpretation to be associated with a single connection.")]
+		[ComponentElement]
 		[XmlElement("InterpretationIndices")]
         public ResqmlJaggedArray InterpretationIndices {
             get {
@@ -8710,6 +8735,7 @@ namespace Energistics.DataAccess.RESQML201
         /// StratigraphicOrganization property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("StratigraphicOrganization")]
         public DataObjectReference StratigraphicOrganization {
             get {
@@ -8961,6 +8987,7 @@ namespace Energistics.DataAccess.RESQML201
         /// StratigraphicOrganization property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("StratigraphicOrganization")]
         public DataObjectReference StratigraphicOrganization {
             get {
@@ -9299,7 +9326,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// OverlapVolume property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("OverlapVolume")]
         public OverlapVolume OverlapVolume {
             get {
@@ -9427,7 +9454,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ParentGrid property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
@@ -9513,7 +9540,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ParentGrid property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
@@ -9582,7 +9609,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ParentGrid property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
@@ -9670,6 +9697,7 @@ namespace Energistics.DataAccess.RESQML201
         /// FluidOrganization property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("FluidOrganization")]
         public DataObjectReference FluidOrganization {
             get {
@@ -9948,6 +9976,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Representation property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Representation")]
         public DataObjectReference Representation {
             get {
@@ -10144,6 +10173,7 @@ namespace Energistics.DataAccess.RESQML201
         /// TimeSeries property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("TimeSeries")]
         public DataObjectReference TimeSeries {
             get {
@@ -10215,7 +10245,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// HasOccuredDuring property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("HasOccuredDuring")]
         public TimeInterval HasOccuredDuring {
             get {
@@ -10270,6 +10300,7 @@ namespace Energistics.DataAccess.RESQML201
         /// ChronoBottom property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ChronoBottom")]
         public DataObjectReference ChronoBottom {
             get {
@@ -10287,6 +10318,7 @@ namespace Energistics.DataAccess.RESQML201
         /// ChronoTop property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ChronoTop")]
         public DataObjectReference ChronoTop {
             get {
@@ -10454,6 +10486,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Unit property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Unit")]
         public DataObjectReference Unit {
             get {
@@ -10526,6 +10559,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Unit property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Unit")]
         public DataObjectReference Unit {
             get {
@@ -10615,6 +10649,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Horizon property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Horizon")]
         public DataObjectReference Horizon {
             get {
@@ -10687,6 +10722,7 @@ namespace Energistics.DataAccess.RESQML201
         /// RockFluidUnit property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("RockFluidUnit")]
         public DataObjectReference RockFluidUnit {
             get {
@@ -10777,7 +10813,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// PartOf property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("PartOf")]
         public DataObjectReference PartOf {
             get {
@@ -10866,7 +10902,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// DirectObject property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("DirectObject")]
         public ContactElementReference DirectObject {
             get {
@@ -10900,7 +10936,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Subject property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Subject")]
         public ContactElementReference Subject {
             get {
@@ -11010,6 +11046,7 @@ namespace Energistics.DataAccess.RESQML201
         /// WitsmlWell property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("WitsmlWell")]
         public DataObjectReference WitsmlWell {
             get {
@@ -11027,6 +11064,7 @@ namespace Energistics.DataAccess.RESQML201
         /// WitsmlWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("WitsmlWellbore")]
         public DataObjectReference WitsmlWellbore {
             get {
@@ -18997,7 +19035,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Parent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Parent")]
         public DataObjectReference Parent {
             get {
@@ -19015,6 +19053,7 @@ namespace Energistics.DataAccess.RESQML201
         /// ActivityDescriptor property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ActivityDescriptor")]
         public DataObjectReference ActivityDescriptor {
             get {
@@ -19067,6 +19106,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("The location of the md reference point relative to a local CRS.")]
+		[ComponentElement]
 		[XmlElement("Location")]
         public Point3d Location {
             get {
@@ -19101,6 +19141,7 @@ namespace Energistics.DataAccess.RESQML201
         /// LocalCrs property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("LocalCrs")]
         public DataObjectReference LocalCrs {
             get {
@@ -19229,7 +19270,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -19246,7 +19287,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// LocalCrs property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("LocalCrs")]
         public DataObjectReference LocalCrs {
             get {
@@ -19359,6 +19400,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Lookup property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Lookup")]
         public DataObjectReference Lookup {
             get {
@@ -20212,6 +20254,7 @@ namespace Energistics.DataAccess.RESQML201
         /// WitsmlFormationMarker property
         /// </summary>
 		[Description("Optional WITSML wellbore reference of the well marker frame.")]
+		[ComponentElement]
 		[XmlElement("WitsmlFormationMarker")]
         public DataObjectReference WitsmlFormationMarker {
             get {
@@ -20228,7 +20271,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Interpretation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Interpretation")]
         public DataObjectReference Interpretation {
             get {
@@ -20294,7 +20337,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// RepresentedInterpretation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("RepresentedInterpretation")]
         public DataObjectReference RepresentedInterpretation {
             get {
@@ -20867,6 +20910,7 @@ namespace Energistics.DataAccess.RESQML201
         /// WitsmlTrajectory property
         /// </summary>
 		[Description("Pointer to the WITSML trajectory that is contained in the referenced wellbore. (For information about WITSML well and wellbore references, see the definition for RESQML technical feature, WellboreFeature).")]
+		[ComponentElement]
 		[XmlElement("WitsmlTrajectory")]
         public DataObjectReference WitsmlTrajectory {
             get {
@@ -20884,6 +20928,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Geometry property
         /// </summary>
 		[Description("Explicit geometry is not required for vertical wells")]
+		[ComponentElement]
 		[XmlElement("Geometry")]
         public AbstractParametricLineGeometry Geometry {
             get {
@@ -20901,6 +20946,7 @@ namespace Energistics.DataAccess.RESQML201
         /// MdDatum property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("MdDatum")]
         public DataObjectReference MDDatum {
             get {
@@ -20917,7 +20963,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// DeviationSurvey property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("DeviationSurvey")]
         public DataObjectReference DeviationSurvey {
             get {
@@ -20934,7 +20980,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ParentIntersection property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ParentIntersection")]
         public WellboreTrajectoryParentIntersection ParentIntersection {
             get {
@@ -21006,6 +21052,7 @@ namespace Energistics.DataAccess.RESQML201
         /// WitsmlLogReference property
         /// </summary>
 		[Description("The reference to the equivalent WITSML well log.")]
+		[ComponentElement]
 		[XmlElement("WitsmlLogReference")]
         public DataObjectReference WitsmlLogReference {
             get {
@@ -21022,7 +21069,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// IntervalStratigraphiUnits property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("IntervalStratigraphiUnits")]
         public IntervalStratigraphicUnits IntervalStratigraphiUnits {
             get {
@@ -21039,7 +21086,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// CellFluidPhaseUnits property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("CellFluidPhaseUnits")]
         public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
@@ -21057,6 +21104,7 @@ namespace Energistics.DataAccess.RESQML201
         /// Trajectory property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Trajectory")]
         public DataObjectReference Trajectory {
             get {
@@ -21229,7 +21277,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// WitsmlDeviationSurvey property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("WitsmlDeviationSurvey")]
         public DataObjectReference WitsmlDeviationSurvey {
             get {
@@ -21320,6 +21368,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[Required]
 		[Description("XYZ location of the first station of the deviation survey.")]
+		[ComponentElement]
 		[XmlElement("FirstStationLocation")]
         public Point3d FirstStationLocation {
             get {
@@ -21391,6 +21440,7 @@ namespace Energistics.DataAccess.RESQML201
         /// MdDatum property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("MdDatum")]
         public DataObjectReference MDDatum {
             get {
@@ -21458,6 +21508,7 @@ namespace Energistics.DataAccess.RESQML201
         /// SupportingRepresentation property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -21527,6 +21578,7 @@ namespace Energistics.DataAccess.RESQML201
         /// SupportingRepresentation property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -21616,6 +21668,7 @@ namespace Energistics.DataAccess.RESQML201
         /// BasedOn property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("BasedOn")]
         public DataObjectReference BasedOn {
             get {
@@ -21917,7 +21970,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// CellFluidPhaseUnits property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("CellFluidPhaseUnits")]
         public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
@@ -21951,7 +22004,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// CellStratigraphicUnits property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("CellStratigraphicUnits")]
         public CellStratigraphicUnits CellStratigraphicUnits {
             get {
@@ -22005,7 +22058,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// IntervalStratigraphicUnits property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("IntervalStratigraphicUnits")]
         public IntervalStratigraphicUnits IntervalStratigraphicUnits {
             get {
@@ -22522,7 +22575,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Activation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Activation")]
         public Activation Activation {
             get {
@@ -22642,7 +22695,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// InterpretedFeature property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("InterpretedFeature")]
         public DataObjectReference InterpretedFeature {
             get {
@@ -22659,7 +22712,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// HasOccuredDuring property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("HasOccuredDuring")]
         public TimeInterval HasOccuredDuring {
             get {
@@ -22986,7 +23039,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// StratigraphicColumn property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("StratigraphicColumn")]
         public DataObjectReference StratigraphicColumn {
             get {
@@ -23003,7 +23056,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Structure property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Structure")]
         public DataObjectReference Structure {
             get {
@@ -23020,7 +23073,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// Fluid property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Fluid")]
         public DataObjectReference Fluid {
             get {
@@ -23419,7 +23472,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// IsOccurrenceOf property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("IsOccurrenceOf")]
         public DataObjectReference IsOccurrenceOf {
             get {
@@ -24073,7 +24126,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// IsPartOf property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("IsPartOf")]
         public DataObjectReference IsPartOf {
             get {
@@ -24122,7 +24175,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// WitsmlWellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("WitsmlWellbore")]
         public WitsmlWellboreReference WitsmlWellbore {
             get {
@@ -24300,7 +24353,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// AbsoluteAge property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("AbsoluteAge")]
         public Timestamp AbsoluteAge {
             get {
@@ -24401,7 +24454,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ChronostratigraphicBottom property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ChronostratigraphicBottom")]
         public DataObjectReference ChronostratigraphicBottom {
             get {
@@ -24418,7 +24471,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ChronostratigraphicTop property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ChronostratigraphicTop")]
         public DataObjectReference ChronostratigraphicTop {
             get {
@@ -24469,6 +24522,7 @@ namespace Energistics.DataAccess.RESQML201
         /// FluidBoundaryBottom property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("FluidBoundaryBottom")]
         public DataObjectReference FluidBoundaryBottom {
             get {
@@ -24486,6 +24540,7 @@ namespace Energistics.DataAccess.RESQML201
         /// FluidBoundaryTop property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("FluidBoundaryTop")]
         public DataObjectReference FluidBoundaryTop {
             get {
@@ -24537,7 +24592,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// TimeSeriesParentage property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("TimeSeriesParentage")]
         public TimeSeriesParentage TimeSeriesParentage {
             get {

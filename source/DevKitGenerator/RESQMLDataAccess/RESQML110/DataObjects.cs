@@ -9212,6 +9212,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A pointer to a specific timestamp in a timestep list.
         /// </summary>
 		[Description("A pointer to a specific timestamp in a timestep list.")]
+		[ComponentElement]
 		[XmlElement("timeStep")]
         public ResqmlRefTimeStep TimeStep {
             get {
@@ -18361,6 +18362,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A definition of the global vertical (seismic two-way) time CRS for the model. This will be defined relative to the global vertical (length) CRS. All local vertical time systems will be defined relative to this system.
         /// </summary>
 		[Description("A definition of the global vertical (seismic two-way) time CRS for the model. This will be defined relative to the global vertical (length) CRS. All local vertical time systems will be defined relative to this system.")]
+		[ComponentElement]
 		[XmlElement("globalTimeCRS")]
         public ResqmlGlobalTimeCRS GlobalTimeCRS {
             get {
@@ -19569,6 +19571,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
         /// </summary>
 		[Description("The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.")]
+		[ComponentElement]
 		[XmlElement("fileCreationInformation")]
         public DocumentFileCreation FileCreationInformation {
             get {
@@ -19729,6 +19732,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Required]
 		[Description("Information about a single resqmlDocument.")]
+		[RecurringElement]
 		[XmlElement("resqmlDocument")]
         public List<ResqmlDocument> ResqmlDocument {
             get {

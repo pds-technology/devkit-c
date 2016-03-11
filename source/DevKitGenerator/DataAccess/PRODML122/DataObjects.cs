@@ -9768,6 +9768,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the wellbore that contains the reference datum. This should be specified if a measured depth is given.
         /// </summary>
 		[Description("A pointer to the wellbore that contains the reference datum. This should be specified if a measured depth is given.")]
+		[ComponentElement]
 		[XmlElement("wellbore")]
         public RefWellWellbore Wellbore {
             get {
@@ -9785,6 +9786,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A pointer to the rig that contains the device used as a reference datum. The rig may be associated with a wellbore in another well (e.g., pattern drilling using a rig on a track).
         /// </summary>
 		[Description("A pointer to the rig that contains the device used  as a reference datum. The rig may be associated with a wellbore in another well (e.g., pattern drilling using a rig on a track).")]
+		[ComponentElement]
 		[XmlElement("rig")]
         public RefWellWellboreRig Rig {
             get {
@@ -11443,6 +11445,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines a value threshold window and the time duration where values (within the time range of dTimMin to dTimMax) were within that window.
         /// </summary>
 		[Description("Defines a value threshold window and the time duration where values  (within the time range of dTimMin to dTimMax) were within that window.")]
+		[ComponentElement]
 		[XmlElement("timeAtThreshold")]
         public TimeSeriesThreshold TimeAtThreshold {
             get {
@@ -15868,6 +15871,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A reference to the source flow whose volumes are used to determine the volumes within this target product stream based on the split factor.
         /// </summary>
 		[Description("A reference to the source flow whose volumes are used to determine the volumes within this target product stream based on the split factor.")]
+		[ComponentElement]
 		[XmlElement("sourceFlow")]
         public RefProductFlow SourceFlow {
             get {
@@ -17290,6 +17294,7 @@ namespace Energistics.DataAccess.PRODML122
         /// A second facility related to this flow. For a production flow, this would represent a role of 'produced for'. For an import flow, this would represent a role of 'inport from'. For an export flow, this would represent a role of 'export to'.
         /// </summary>
 		[Description("A second facility related to this flow.  For a production flow, this would represent a role of 'produced for'. For an import flow, this would represent a role of 'inport from'. For an export flow, this would represent a role of 'export to'.")]
+		[ComponentElement]
 		[XmlElement("relatedFacility")]
         public ProductVolumeRelatedFacility RelatedFacility {
             get {
@@ -22342,6 +22347,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("An offshore location using the North Sea Offshore  terminology.")]
+		[ComponentElement]
 		[XmlElement("northSeaOffshore")]
         public NorthSeaOffshore NorthSeaOffshore {
             get {
@@ -36674,6 +36680,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+		[ComponentElement]
 		[XmlElement("fluidDataQuality")]
         public FluidResultDataQuality FluidDataQuality {
             get {
@@ -42548,6 +42555,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
         /// </summary>
 		[Description("The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.")]
+		[ComponentElement]
 		[XmlElement("fileCreationInformation")]
         public DocumentFileCreation FileCreationInformation {
             get {
@@ -42724,6 +42732,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single Wireline Formation Test (WFT).
         /// </summary>
 		[Description("Information about a single Wireline Formation Test (WFT).")]
+		[RecurringElement]
 		[XmlElement("wftRun")]
         public List<WftRun> WftRun {
             get {
@@ -42804,6 +42813,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single well test.
         /// </summary>
 		[Description("Information about a single well test.")]
+		[RecurringElement]
 		[XmlElement("wellTest")]
         public List<WellTest> WellTest {
             get {
@@ -42884,6 +42894,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Statistics about a single range of time. This is a VIEW of the time series data and represents derived information about that series. As such, it is not persisted and cannot be added, updated or deleted from a persistent server. The statistics view uses the same identity (including uid) as the time series data object.
         /// </summary>
 		[Description("Statistics about a single range of time. This is a VIEW of the time series data and represents derived information about that series. As such, it is not persisted and cannot be added, updated or deleted from a persistent server. The statistics view uses the same identity (including uid) as the time series data object.")]
+		[RecurringElement]
 		[XmlElement("timeSeriesStatistic")]
         public List<TimeSeriesStatistic> TimeSeriesStatistic {
             get {
@@ -42946,6 +42957,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single time series.
         /// </summary>
 		[Description("Information about a single time series.")]
+		[RecurringElement]
 		[XmlElement("timeSeriesData")]
         public List<TimeSeriesData> TimeSeriesData {
             get {
@@ -43464,6 +43476,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single productVolume. 
         /// </summary>
 		[Description("Information about a single productVolume.")]
+		[RecurringElement]
 		[XmlElement("productVolume")]
         public List<ProductVolume> ProductVolume {
             get {
@@ -43545,6 +43558,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Information about a single productionOperation.")]
+		[RecurringElement]
 		[XmlElement("productionOperation")]
         public List<ProductionOperation> ProductionOperation {
             get {
@@ -43625,6 +43639,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single Product Flow Model. 
         /// </summary>
 		[Description("Information about a single Product Flow Model.")]
+		[RecurringElement]
 		[XmlElement("productFlowModel")]
         public List<ProductFlowModel> ProductFlowModel {
             get {
@@ -43705,6 +43720,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single Fluid Sample. 
         /// </summary>
 		[Description("Information about a single Fluid Sample.")]
+		[RecurringElement]
 		[XmlElement("fluidSample")]
         public List<FluidSample> FluidSample {
             get {
@@ -43785,6 +43801,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single Fluid Analysis Result. 
         /// </summary>
 		[Description("Information about a single Fluid Analysis Result.")]
+		[RecurringElement]
 		[XmlElement("fluidAnalysisResult")]
         public List<FluidAnalysisResult> FluidAnalysisResult {
             get {
@@ -43865,6 +43882,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Information about a single Fluid Analysis. 
         /// </summary>
 		[Description("Information about a single Fluid Analysis.")]
+		[RecurringElement]
 		[XmlElement("fluidAnalysis")]
         public List<FluidAnalysis> FluidAnalysis {
             get {
@@ -43946,6 +43964,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Main wrapper for all the distributed temperature survey information about the measurement. Note that this object must be accompanied by a wellLog object in order to be complete.")]
+		[RecurringElement]
 		[XmlElement("dtsMeasurement")]
         public List<DtsMeasurement> DtsMeasurement {
             get {
@@ -44027,6 +44046,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Required]
 		[Description("Main wrapper for all the distributed temperature survey  information about the installed system. Note that this can serve as a standalone  object for messages that are not part of the WITSML server architecture.")]
+		[RecurringElement]
 		[XmlElement("dtsInstalledSystem")]
         public List<DtsInstalledSystem> DtsInstalledSystem {
             get {

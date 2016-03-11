@@ -91,6 +91,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Citation property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -833,7 +834,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// BeginEvent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("BeginEvent")]
         public EventRefInfo BeginEvent {
             get {
@@ -850,7 +851,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// EndEvent property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("EndEvent")]
         public EventRefInfo EndEvent {
             get {
@@ -4364,6 +4365,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Cluster property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Cluster")]
         public DataObjectReference Cluster {
             get {
@@ -4929,6 +4931,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Log property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Log")]
         public DataObjectReference Log {
             get {
@@ -18976,7 +18979,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Log property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Log")]
         public DataObjectReference Log {
             get {
@@ -19693,7 +19696,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ObjectReference property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ObjectReference")]
         public DataObjectReference ObjectReference {
             get {
@@ -29890,7 +29893,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// SourceStation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("SourceStation")]
         public RefWellboreTrajectoryStation SourceStation {
             get {
@@ -38037,7 +38040,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ReferenceWellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -41286,6 +41289,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -41393,7 +41397,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -41734,7 +41738,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -42318,7 +42322,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -42441,7 +42445,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -43065,7 +43069,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -43519,7 +43523,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -43845,7 +43849,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ChannelReference property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ChannelReference")]
         public DataObjectReference ChannelReference {
             get {
@@ -43897,7 +43901,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ObjectReference property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ObjectReference")]
         public DataObjectReference ObjectReference {
             get {
@@ -48559,7 +48563,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -61002,7 +61006,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// HoleOpener property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("HoleOpener")]
         public HoleOpener HoleOpener {
             get {
@@ -61418,7 +61422,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public RefWellWellbore Wellbore {
             get {
@@ -61435,7 +61439,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Rig property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Rig")]
         public RefWellWellboreRig Rig {
             get {
@@ -62943,6 +62947,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -63153,6 +63158,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWell property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWell")]
         public DataObjectReference ReferenceWell {
             get {
@@ -63892,6 +63898,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
 		[Description("Information regarding well the job was performed on.")]
+		[ComponentElement]
 		[XmlElement("Well")]
         public DataObjectReference Well {
             get {
@@ -63909,6 +63916,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Log property
         /// </summary>
 		[Description("Low Frequency Log Data. To be Referenced from Stages")]
+		[ComponentElement]
 		[XmlElement("Log")]
         public StimLogLibrary Log {
             get {
@@ -63994,7 +64002,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// StimLogLibrary property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("StimLogLibrary")]
         public StimLogLibrary StimLogLibrary {
             get {
@@ -65530,6 +65538,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Log property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Log")]
         public DataObjectReference Log {
             get {
@@ -65564,6 +65573,7 @@ namespace Energistics.DataAccess.WITSML200
         /// StimJobDiversion property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("StimJobDiversion")]
         public StimJobDiversion StimJobDiversion {
             get {
@@ -66307,7 +66317,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ObjectReference property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ObjectReference")]
         public DataObjectReference ObjectReference {
             get {
@@ -66325,6 +66335,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -67990,7 +68001,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// SurfaceEquipment property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("SurfaceEquipment")]
         public SurfaceEquipment SurfaceEquipment {
             get {
@@ -68040,7 +68051,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -68057,7 +68068,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// FormationMarker property
         /// </summary>
-		
+		[RecurringElement]
 		[XmlElement("FormationMarker")]
         public List<FormationMarker> FormationMarker {
             get {
@@ -68158,7 +68169,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// TvdReferenceTrajectory property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("TvdReferenceTrajectory")]
         public DataObjectReference TvdReferenceTrajectory {
             get {
@@ -68209,7 +68220,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -69155,7 +69166,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ReferenceWellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -70263,7 +70274,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ReferenceWellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -70348,7 +70359,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// WbGeometry property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("WbGeometry")]
         public DataObjectReference WellboreGeometry {
             get {
@@ -70862,7 +70873,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ReferenceWellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -70879,7 +70890,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ParentTrajectory property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ParentTrajectory")]
         public DataObjectReference ParentTrajectory {
             get {
@@ -71003,6 +71014,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWell property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWell")]
         public DataObjectReference ReferenceWell {
             get {
@@ -71121,7 +71133,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -71188,7 +71200,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation1 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation1 {
             get {
@@ -71222,7 +71234,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -71272,7 +71284,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation1 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation1 {
             get {
@@ -71306,7 +71318,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -71356,7 +71368,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation1 property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation1 {
             get {
@@ -71390,7 +71402,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -71728,6 +71740,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Wellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -71745,6 +71758,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ChannelSet property
         /// </summary>
 		[Required]
+		[RecurringElement]
 		[XmlElement("ChannelSet")]
         public List<ChannelSet> ChannelSet {
             get {
@@ -71796,6 +71810,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Channel property
         /// </summary>
 		[Required]
+		[RecurringElement]
 		[XmlElement("Channel")]
         public List<Channel> Channel {
             get {
@@ -72255,7 +72270,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -73090,7 +73105,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ReferenceWellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -73107,7 +73122,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// HoleConfig property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("HoleConfig")]
         public DataObjectReference HoleConfig {
             get {
@@ -73830,7 +73845,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// CementJob property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("CementJob")]
         public DataObjectReference CementJob {
             get {
@@ -73931,7 +73946,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Wellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -74266,6 +74281,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Wellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("Wellbore")]
         public DataObjectReference Wellbore {
             get {
@@ -74282,7 +74298,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Tubular property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Tubular")]
         public DataObjectReference Tubular {
             get {
@@ -74424,6 +74440,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -74771,6 +74788,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -75063,6 +75081,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -75223,6 +75242,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ObjectReference property
         /// </summary>
 		[Description("A reference to an object that is defined within the context of the specified wellbore.")]
+		[ComponentElement]
 		[XmlElement("ObjectReference")]
         public DataObjectReference ObjectReference {
             get {
@@ -75258,6 +75278,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWellbore property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWellbore")]
         public DataObjectReference ReferenceWellbore {
             get {
@@ -75771,6 +75792,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ReferenceWell property
         /// </summary>
 		[Required]
+		[ComponentElement]
 		[XmlElement("ReferenceWell")]
         public DataObjectReference ReferenceWell {
             get {
@@ -75787,7 +75809,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ParentWellbore property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ParentWellbore")]
         public DataObjectReference ParentWellbore {
             get {
@@ -76357,7 +76379,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// WellPublicLandSurveySystemLocation property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("WellPublicLandSurveySystemLocation")]
         public PublicLandSurveySystem WellPublicLandSurveySystemLocation {
             get {
@@ -76628,7 +76650,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ReferencedData property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ReferencedData")]
         public DataObjectReference ReferencedData {
             get {

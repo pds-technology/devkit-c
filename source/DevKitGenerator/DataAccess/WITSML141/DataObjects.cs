@@ -6620,6 +6620,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Township, section, range, quarter, and footage calls for USA Public Land Survey System.
         /// </summary>
 		[Description("Township, section, range, quarter, and footage calls for USA Public Land Survey System.")]
+		[ComponentElement]
 		[XmlElement("wellPublicLandSurveySystemLocation")]
         public PublicLandSurveySystem WellPublicLandSurveySystemLocation {
             get {
@@ -6878,6 +6879,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the wellbore that contains the reference datum. This should be specified if a measured depth is given.
         /// </summary>
 		[Description("A pointer to the wellbore that contains the reference datum. This should be specified if a measured depth is given.")]
+		[ComponentElement]
 		[XmlElement("wellbore")]
         public RefWellWellbore Wellbore {
             get {
@@ -6895,6 +6897,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the rig that contains the device used as a reference datum. The rig may be associated with a wellbore in another well (e.g., pattern drilling using a rig on a track).
         /// </summary>
 		[Description("A pointer to the rig that contains the device used  as a reference datum. The rig may be associated with a wellbore in another well (e.g., pattern drilling using a rig on a track).")]
+		[ComponentElement]
 		[XmlElement("rig")]
         public RefWellWellboreRig Rig {
             get {
@@ -14721,6 +14724,7 @@ namespace Energistics.DataAccess.WITSML141
         /// If a trajectory is tied into another trajectory, a pointer to the parent trajectory. The trajectory may be in another wellbore.
         /// </summary>
 		[Description("If a trajectory is tied into another trajectory,  a pointer to the parent trajectory.   The trajectory may be in another wellbore.")]
+		[ComponentElement]
 		[XmlElement("parentTrajectory")]
         public RefWellboreTrajectory ParentTrajectory {
             get {
@@ -16276,6 +16280,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the trajectoryStation from which this station was derived. The trajectoryStation may be in another wellbore.
         /// </summary>
 		[Description("A pointer to the trajectoryStation from which this station was derived. The trajectoryStation may be in another wellbore.")]
+		[ComponentElement]
 		[XmlElement("sourceStation")]
         public RefWellboreTrajectoryStation SourceStation {
             get {
@@ -17999,6 +18004,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The definitive source for this set of error terms.
         /// </summary>
 		[Description("The definitive source for this set of error terms.")]
+		[ComponentElement]
 		[XmlElement("authorization")]
         public IscwsaAuthorizationData Authorization {
             get {
@@ -18966,6 +18972,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The definitive source, authority, status and version of this model.
         /// </summary>
 		[Description("The definitive source, authority, status and version of this model.")]
+		[ComponentElement]
 		[XmlElement("authorization")]
         public IscwsaAuthorizationData Authorization {
             get {
@@ -19036,6 +19043,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Values related to the tool running conditions that influence the variance generation.
         /// </summary>
 		[Description("Values related to the tool running conditions that influence  the variance generation.")]
+		[ComponentElement]
 		[XmlElement("modelParameters")]
         public IscwsaModelParameters ModelParameters {
             get {
@@ -24061,6 +24069,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Proppants used in the fluid.
         /// </summary>
 		[Description("Proppants used in the fluid.")]
+		[ComponentElement]
 		[XmlElement("proppant")]
         public StimProppant Proppant {
             get {
@@ -29671,6 +29680,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Show description for the plug. 
         /// </summary>
 		[Description("Show description for the plug.")]
+		[ComponentElement]
 		[XmlElement("show")]
         public Show Show {
             get {
@@ -36962,6 +36972,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Coiled tubing specific equipment configuration. 
         /// </summary>
 		[Description("Coiled tubing specific equipment configuration.")]
+		[ComponentElement]
 		[XmlElement("surfaceEquipment")]
         public SurfaceEquipment SurfaceEquipment {
             get {
@@ -50220,6 +50231,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Show record through the Interval. 
         /// </summary>
 		[Description("Show record through the Interval.")]
+		[ComponentElement]
 		[XmlElement("show")]
         public Show Show {
             get {
@@ -50237,6 +50249,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Chromatographic break down for the interval. 
         /// </summary>
 		[Description("Chromatographic break down for the interval.")]
+		[ComponentElement]
 		[XmlElement("chromatograph")]
         public Chromatograph Chromatograph {
             get {
@@ -66880,6 +66893,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Test results post-job. 
         /// </summary>
 		[Description("Test results post-job.")]
+		[ComponentElement]
 		[XmlElement("cementTest")]
         public CementTest CementTest {
             get {
@@ -68944,6 +68958,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
         /// </summary>
 		[Description("The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.")]
+		[ComponentElement]
 		[XmlElement("fileCreationInformation")]
         public DocumentFileCreation FileCreationInformation {
             get {
@@ -69104,6 +69119,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Information about a single wellbore. A wellbore is a unique, oriented path from the bottom of a drilled  borehole to the surface of the Earth. The path must not overlap or cross itself.")]
+		[RecurringElement]
 		[XmlElement("wellbore")]
         public List<Wellbore> Wellbore {
             get {
@@ -69185,6 +69201,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("Information about a single well. A well is a unique surface location from which wellbores are drilled  into the Earth for the purpose of either (1) finding or producing  underground resources; or (2) providing services related to the  production of underground resources.")]
+		[RecurringElement]
 		[XmlElement("well")]
         public List<Well> Well {
             get {
@@ -69266,6 +69283,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single wellbore geometry.")]
+		[RecurringElement]
 		[XmlElement("wbGeometry")]
         public List<StandAloneWellboreGeometry> WellboreGeometry {
             get {
@@ -69347,6 +69365,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single tubular (assembly).  This represents the \"transient\" assemblies used in drilling a well as opposed to the \"fixed\" assemblies (see wbGeometry).")]
+		[RecurringElement]
 		[XmlElement("tubular")]
         public List<Tubular> Tubular {
             get {
@@ -69428,6 +69447,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single trajectory.")]
+		[RecurringElement]
 		[XmlElement("trajectory")]
         public List<Trajectory> Trajectory {
             get {
@@ -69509,6 +69529,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single error term set.")]
+		[RecurringElement]
 		[XmlElement("toolErrorTermSet")]
         public List<ToolErrorTermSet> ToolErrorTermSet {
             get {
@@ -69590,6 +69611,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single error Term Source.")]
+		[RecurringElement]
 		[XmlElement("toolErrorModel")]
         public List<ToolErrorModel> ToolErrorModel {
             get {
@@ -69671,6 +69693,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single target.")]
+		[RecurringElement]
 		[XmlElement("target")]
         public List<Target> Target {
             get {
@@ -69752,6 +69775,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single survey program .")]
+		[RecurringElement]
 		[XmlElement("surveyProgram")]
         public List<SurveyProgram> SurveyProgram {
             get {
@@ -69833,6 +69857,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single well stimulation job.")]
+		[RecurringElement]
 		[XmlElement("stimJob")]
         public List<StimJob> StimJob {
             get {
@@ -69914,6 +69939,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single sidewall core.")]
+		[RecurringElement]
 		[XmlElement("sidewallCore")]
         public List<SidewallCore> SidewallCore {
             get {
@@ -69995,6 +70021,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single risk.")]
+		[RecurringElement]
 		[XmlElement("risk")]
         public List<Risk> Risk {
             get {
@@ -70076,6 +70103,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single rig.")]
+		[RecurringElement]
 		[XmlElement("rig")]
         public List<Rig> Rig {
             get {
@@ -70157,6 +70185,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single operations report.")]
+		[RecurringElement]
 		[XmlElement("opsReport")]
         public List<OpsReport> OpsReport {
             get {
@@ -70238,6 +70267,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single objectGroup Object")]
+		[RecurringElement]
 		[XmlElement("objectGroup")]
         public List<ObjectGroup> ObjectGroup {
             get {
@@ -70319,6 +70349,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single mud log.")]
+		[RecurringElement]
 		[XmlElement("mudLog")]
         public List<MudLog> MudLog {
             get {
@@ -70400,6 +70431,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single message.")]
+		[RecurringElement]
 		[XmlElement("message")]
         public List<Message> Message {
             get {
@@ -70481,6 +70513,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single log.")]
+		[RecurringElement]
 		[XmlElement("log")]
         public List<Log> Log {
             get {
@@ -70562,6 +70595,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single formation marker.")]
+		[RecurringElement]
 		[XmlElement("formationMarker")]
         public List<FormationMarker> FormationMarker {
             get {
@@ -70643,6 +70677,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single fluids report.")]
+		[RecurringElement]
 		[XmlElement("fluidsReport")]
         public List<FluidsReport> FluidsReport {
             get {
@@ -70724,6 +70759,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single drilling report.")]
+		[RecurringElement]
 		[XmlElement("drillReport")]
         public List<DrillReport> DrillReport {
             get {
@@ -70805,6 +70841,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single conventional core.")]
+		[RecurringElement]
 		[XmlElement("convCore")]
         public List<ConvCore> ConvCore {
             get {
@@ -70885,6 +70922,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines a singular changeLog object.
         /// </summary>
 		[Description("Defines a singular changeLog object.")]
+		[RecurringElement]
 		[XmlElement("changeLog")]
         public List<ChangeLog> ChangeLog {
             get {
@@ -70966,6 +71004,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single cement job.")]
+		[RecurringElement]
 		[XmlElement("cementJob")]
         public List<CementJob> CementJob {
             get {
@@ -71047,6 +71086,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single bottom hole assembly run.  This represents the period beginning when the BHA enters the hole until it leaves the hole.")]
+		[RecurringElement]
 		[XmlElement("bhaRun")]
         public List<BhaRun> BhaRun {
             get {
@@ -71128,6 +71168,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Required]
 		[Description("A single attachment Object")]
+		[RecurringElement]
 		[XmlElement("attachment")]
         public List<Attachment> Attachment {
             get {
@@ -71260,6 +71301,7 @@ namespace Energistics.DataAccess.WITSML141
         /// contact property
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[ComponentElement]
 		[XmlElement("contact")]
         public Contact Contact {
             get {
@@ -71574,6 +71616,7 @@ namespace Energistics.DataAccess.WITSML141
         /// contact property
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
+		[ComponentElement]
 		[XmlElement("contact")]
         public Contact Contact {
             get {

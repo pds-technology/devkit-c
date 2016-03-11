@@ -17593,6 +17593,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
         /// </summary>
 		[Description("The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.")]
+		[ComponentElement]
 		[XmlElement("fileCreationInformation")]
         public DocumentFileCreation FileCreationInformation {
             get {
@@ -17753,6 +17754,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("Information about a wellbore completion.")]
+		[RecurringElement]
 		[XmlElement("wellCompletion")]
         public List<WellCompletion> WellCompletion {
             get {
@@ -17834,6 +17836,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("The non-contextual elements for general event ledger information.")]
+		[RecurringElement]
 		[XmlElement("wellCMLedger")]
         public List<WellCMLedger> WellCMLedger {
             get {
@@ -17915,6 +17918,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("Wellbore completion type")]
+		[RecurringElement]
 		[XmlElement("wellboreCompletion")]
         public List<WellboreCompletion> WellboreCompletion {
             get {
@@ -17996,6 +18000,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Required]
 		[Description("Information about a downhole equipment")]
+		[RecurringElement]
 		[XmlElement("downholeComponent")]
         public List<DownholeComponent> DownholeComponent {
             get {

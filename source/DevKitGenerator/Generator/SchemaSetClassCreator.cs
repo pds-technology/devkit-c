@@ -1087,13 +1087,17 @@ namespace Energistics.Generator
             }
 
             var propType = property.PropertyType;
-            var nested = propType.GetProperties().Any(p => p.IsDefined(typeof(XmlElementAttribute), false) || p.IsDefined(typeof(XmlAttributeAttribute), false));
+            var nested = propType.GetProperties()
+                .Any(p => p.IsDefined(typeof(XmlElementAttribute), false) || 
+                          p.IsDefined(typeof(XmlAttributeAttribute), false) ||
+                          p.IsDefined(typeof(ValidationAttribute), false));
+
             if (nested)
             {
                 init();
                 sb.Append("[ComponentElement]");
             }
-            else if (propType.IsArray && !propType.Name.StartsWith("obj_", StringComparison.CurrentCultureIgnoreCase))
+            else if (propType.IsArray)
             {
                 init();
                 sb.Append("[RecurringElement]");
