@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -10,6 +11,7 @@ namespace Energistics.SchemaGatherer
     /// can also be serialized and deserialized to and from XML.
     /// </summary>
     /// <seealso cref="System.Xml.Serialization.IXmlSerializable" />
+    [Serializable]
     public struct Timestamp : IXmlSerializable
     {
         private DateTimeOffset value;
@@ -90,16 +92,16 @@ namespace Energistics.SchemaGatherer
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" />, is equal to this instance.
         /// </summary>
-        /// <param name="o">The <see cref="System.Object" /> to compare with this instance.</param>
+        /// <param name="other">The <see cref="System.Object" /> to compare with this instance.</param>
         /// <returns>
         ///   <c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.
         /// </returns>
-        public override bool Equals(object o)
+        public override bool Equals(object other)
         {
-            if (o is Timestamp)
-                return value.Equals(((Timestamp)o).value);
-            else if (o is DateTimeOffset)
-                return value.Equals((DateTimeOffset)o);
+            if (other is Timestamp)
+                return value.Equals(((Timestamp)other).value);
+            else if (other is DateTimeOffset)
+                return value.Equals((DateTimeOffset)other);
             else
                 return false;
         }
@@ -137,7 +139,7 @@ namespace Energistics.SchemaGatherer
         public void ReadXml(XmlReader reader)
         {
             var text = reader.ReadElementString();
-            value = DateTimeOffset.ParseExact(text, format: "o", formatProvider: null);
+            value = DateTimeOffset.Parse(text, formatProvider: null, styles: DateTimeStyles.RoundtripKind);
         }
 
         /// <summary>
@@ -146,7 +148,7 @@ namespace Energistics.SchemaGatherer
         /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public override string ToString()
         {
-            return value.ToString(format: "o");
+            return ToString(format: "o");
         }
 
         /// <summary>
@@ -165,7 +167,7 @@ namespace Energistics.SchemaGatherer
         /// <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
         public void WriteXml(XmlWriter writer)
         {
-            writer.WriteString(value.ToString(format: "o"));
+            writer.WriteString(ToString());
         }
     }
 }
