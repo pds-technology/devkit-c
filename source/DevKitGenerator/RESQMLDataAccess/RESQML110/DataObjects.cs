@@ -8939,9 +8939,8 @@ namespace Energistics.DataAccess.RESQML110
         /// A timestamp. The order within the aggregate must be retained.
         /// </summary>
 		[Description("A timestamp. The order within the aggregate must be retained.")]
-		[RecurringElement]
 		[XmlElement("timeStep")]
-        public List<DateTime> TimeStep {
+        public Timestamp? TimeStep {
             get {
                 return timeStepField;
             } 
@@ -8951,19 +8950,8 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private List<DateTime> timeStepField; 
+        private Timestamp? timeStepField; 
 
-        /// <summary>
-        /// A timestamp. The order within the aggregate must be retained.
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return TimeStep;
-			}
-        }
 		/// <summary>
         /// uid property
         /// </summary>
@@ -18929,7 +18917,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -18940,7 +18928,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -19158,7 +19146,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -19169,7 +19157,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -19284,7 +19272,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
 		[Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public DateTime? FileCreationDate {
+        public Timestamp? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -19294,7 +19282,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? fileCreationDateField; 
+        private Timestamp? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -19519,7 +19507,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public DateTime? DocumentDate {
+        public Timestamp? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -19530,7 +19518,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? documentDateField; 
+        private Timestamp? documentDateField; 
 
 		/// <summary>
         /// documentDateSpecified property

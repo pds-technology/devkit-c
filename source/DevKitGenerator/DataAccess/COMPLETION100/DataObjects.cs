@@ -160,7 +160,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Field date.")]
 		[XmlElement("effectiveDate")]
-        public DateTime? EffectiveDate {
+        public Timestamp? EffectiveDate {
             get {
                 return effectiveDateField;
             } 
@@ -171,7 +171,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? effectiveDateField; 
+        private Timestamp? effectiveDateField; 
 
 		/// <summary>
         /// effectiveDateSpecified property
@@ -195,7 +195,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Expiration date")]
 		[XmlElement("expiredDate")]
-        public DateTime? ExpiredDate {
+        public Timestamp? ExpiredDate {
             get {
                 return expiredDateField;
             } 
@@ -206,7 +206,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? expiredDateField; 
+        private Timestamp? expiredDateField; 
 
 		/// <summary>
         /// expiredDateSpecified property
@@ -282,7 +282,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		
 		[XmlElement("statusDate")]
-        public DateTime? StatusDate {
+        public Timestamp? StatusDate {
             get {
                 return statusDateField;
             } 
@@ -293,7 +293,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? statusDateField; 
+        private Timestamp? statusDateField; 
 
 		/// <summary>
         /// statusDateSpecified property
@@ -476,7 +476,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the start date of status")]
 		[XmlElement("startDate")]
-        public DateTime? StartDate {
+        public Timestamp? StartDate {
             get {
                 return startDateField;
             } 
@@ -487,7 +487,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? startDateField; 
+        private Timestamp? startDateField; 
 
 		/// <summary>
         /// startDateSpecified property
@@ -511,7 +511,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the end date of status")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -522,7 +522,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -4043,7 +4043,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("When the data was created at the persistent data store.  This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimCreation")]
-        public DateTime? DateTimeCreation {
+        public Timestamp? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -4054,7 +4054,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? dTimCreationField; 
+        private Timestamp? dTimCreationField; 
 
 		/// <summary>
         /// dTimCreationSpecified property
@@ -4078,7 +4078,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimLastChange")]
-        public DateTime? DateTimeLastChange {
+        public Timestamp? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -4089,7 +4089,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? dTimLastChangeField; 
+        private Timestamp? dTimLastChangeField; 
 
 		/// <summary>
         /// dTimLastChangeSpecified property
@@ -4638,7 +4638,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -4649,7 +4649,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -5403,7 +5403,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMin")]
-        public DateTime? RangeDateTimeMin {
+        public Timestamp? RangeDateTimeMin {
             get {
                 return rangeDateTimeMinField;
             } 
@@ -5414,7 +5414,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? rangeDateTimeMinField; 
+        private Timestamp? rangeDateTimeMinField; 
 
 		/// <summary>
         /// rangeDateTimeMinSpecified property
@@ -5438,7 +5438,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMax")]
-        public DateTime? RangeDateTimeMax {
+        public Timestamp? RangeDateTimeMax {
             get {
                 return rangeDateTimeMaxField;
             } 
@@ -5449,7 +5449,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? rangeDateTimeMaxField; 
+        private Timestamp? rangeDateTimeMaxField; 
 
 		/// <summary>
         /// rangeDateTimeMaxSpecified property
@@ -5508,7 +5508,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("A date and time related to this group.  This does not necessarily represent an actual index within a growing-object. The significance of this time is defined by the groupType.")]
 		[XmlElement("referenceDateTime")]
-        public DateTime? ReferenceDateTime {
+        public Timestamp? ReferenceDateTime {
             get {
                 return referenceDateTimeField;
             } 
@@ -5519,7 +5519,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? referenceDateTimeField; 
+        private Timestamp? referenceDateTimeField; 
 
 		/// <summary>
         /// referenceDateTimeSpecified property
@@ -5906,7 +5906,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("When the tag was installed in or on the item.")]
 		[XmlElement("installationDate")]
-        public DateTime? InstallationDate {
+        public Timestamp? InstallationDate {
             get {
                 return installationDateField;
             } 
@@ -5917,7 +5917,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? installationDateField; 
+        private Timestamp? installationDateField; 
 
 		/// <summary>
         /// installationDateSpecified property
@@ -9676,7 +9676,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -9687,7 +9687,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -9711,7 +9711,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Date and time that activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -9722,7 +9722,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -10665,7 +10665,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The start date of status and allocation factor")]
 		[XmlElement("startDate")]
-        public DateTime? StartDate {
+        public Timestamp? StartDate {
             get {
                 return startDateField;
             } 
@@ -10676,7 +10676,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? startDateField; 
+        private Timestamp? startDateField; 
 
 		/// <summary>
         /// startDateSpecified property
@@ -10700,7 +10700,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The end date of status and allocation factor")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -10711,7 +10711,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -10985,7 +10985,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("install/pull date")]
 		[XmlElement("eventDate")]
-        public DateTime? EventDate {
+        public Timestamp? EventDate {
             get {
                 return eventDateField;
             } 
@@ -10996,7 +10996,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? eventDateField; 
+        private Timestamp? eventDateField; 
 
 		/// <summary>
         /// eventDateSpecified property
@@ -11092,7 +11092,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the start date of status")]
 		[XmlElement("startDate")]
-        public DateTime? StartDate {
+        public Timestamp? StartDate {
             get {
                 return startDateField;
             } 
@@ -11103,7 +11103,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? startDateField; 
+        private Timestamp? startDateField; 
 
 		/// <summary>
         /// startDateSpecified property
@@ -11127,7 +11127,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the end date of status")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -11138,7 +11138,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -12180,7 +12180,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Completion Date")]
 		[XmlElement("wellboreCompletionDate")]
-        public DateTime? WellboreCompletionDate {
+        public Timestamp? WellboreCompletionDate {
             get {
                 return wellboreCompletionDateField;
             } 
@@ -12191,7 +12191,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? wellboreCompletionDateField; 
+        private Timestamp? wellboreCompletionDateField; 
 
 		/// <summary>
         /// wellboreCompletionDateSpecified property
@@ -12339,7 +12339,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		
 		[XmlElement("statusDate")]
-        public DateTime? StatusDate {
+        public Timestamp? StatusDate {
             get {
                 return statusDateField;
             } 
@@ -12350,7 +12350,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? statusDateField; 
+        private Timestamp? statusDateField; 
 
 		/// <summary>
         /// statusDateSpecified property
@@ -16431,7 +16431,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The install date of downhole string.")]
 		[XmlElement("stringInstallDate")]
-        public DateTime? StringInstallDate {
+        public Timestamp? StringInstallDate {
             get {
                 return stringInstallDateField;
             } 
@@ -16442,7 +16442,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? stringInstallDateField; 
+        private Timestamp? stringInstallDateField; 
 
 		/// <summary>
         /// stringInstallDateSpecified property
@@ -16735,7 +16735,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date range specification: start date")]
 		[XmlElement("startDate")]
-        public DateTime? StartDate {
+        public Timestamp? StartDate {
             get {
                 return startDateField;
             } 
@@ -16746,7 +16746,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? startDateField; 
+        private Timestamp? startDateField; 
 
 		/// <summary>
         /// startDateSpecified property
@@ -16770,7 +16770,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date range specification: end date")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -16781,7 +16781,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -17180,7 +17180,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -17191,7 +17191,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -17306,7 +17306,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		[Required]
 		[Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public DateTime? FileCreationDate {
+        public Timestamp? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -17316,7 +17316,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? fileCreationDateField; 
+        private Timestamp? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -17541,7 +17541,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public DateTime? DocumentDate {
+        public Timestamp? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -17552,7 +17552,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime? documentDateField; 
+        private Timestamp? documentDateField; 
 
 		/// <summary>
         /// documentDateSpecified property

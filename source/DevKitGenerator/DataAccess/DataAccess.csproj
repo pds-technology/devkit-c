@@ -127,6 +127,7 @@
     <Compile Include="PRODMLWebServiceConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EnergisticsConverter.cs" />
+    <Compile Include="Timestamp.cs" />
     <Compile Include="Validation\ComponentElementAttribute.cs" />
     <Compile Include="Validation\WitsmlValidationResult.cs" />
     <Compile Include="Validation\DataObjectValidator.cs" />

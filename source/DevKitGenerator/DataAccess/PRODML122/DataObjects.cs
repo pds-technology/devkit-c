@@ -153,7 +153,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("Sampling  start time.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -164,7 +164,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -188,7 +188,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("Sampling  end time.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -199,7 +199,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -3738,7 +3738,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -3749,7 +3749,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -3773,7 +3773,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -3784,7 +3784,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -4047,7 +4047,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -4058,7 +4058,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -4647,7 +4647,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time when the data collection started for this test.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -4658,7 +4658,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -4682,7 +4682,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time when the data collection ended for this test.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -4693,7 +4693,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -4827,7 +4827,7 @@ namespace Energistics.DataAccess.PRODML122
 		[Required]
 		[Description("Date and time of the start of the event.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -4837,7 +4837,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// The time duration of the event.
@@ -4971,7 +4971,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time when the data collection started for this station.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -4982,7 +4982,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -5006,7 +5006,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time when the data collection completed for this station.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -5017,7 +5017,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -5435,7 +5435,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time when the data collection started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -5446,7 +5446,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -5470,7 +5470,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time when the data collection completed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -5481,7 +5481,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -5754,7 +5754,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("When the data was created at the persistent data store.  In a query template, a specified value will be interpreted by the server as a request for dTimCreation values that are greater-than the specified value.")]
 		[XmlElement("dTimCreation")]
-        public DateTime? DateTimeCreation {
+        public Timestamp? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -5765,7 +5765,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimCreationField; 
+        private Timestamp? dTimCreationField; 
 
 		/// <summary>
         /// dTimCreationSpecified property
@@ -5789,7 +5789,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user).")]
 		[XmlElement("dTimLastChange")]
-        public DateTime? DateTimeLastChange {
+        public Timestamp? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -5800,7 +5800,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimLastChangeField; 
+        private Timestamp? dTimLastChangeField; 
 
 		/// <summary>
         /// dTimLastChangeSpecified property
@@ -8726,7 +8726,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The definition of the \"current time\" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the \"most recent\" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
 		[XmlElement("dTimCurrent")]
-        public DateTime? DateTimeCurrent {
+        public Timestamp? DateTimeCurrent {
             get {
                 return dTimCurrentField;
             } 
@@ -8737,7 +8737,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimCurrentField; 
+        private Timestamp? dTimCurrentField; 
 
 		/// <summary>
         /// dTimCurrentSpecified property
@@ -8779,7 +8779,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date-time of well test.")]
 		[XmlElement("testDate")]
-        public DateTime? TestDate {
+        public Timestamp? TestDate {
             get {
                 return testDateField;
             } 
@@ -8790,7 +8790,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? testDateField; 
+        private Timestamp? testDateField; 
 
 		/// <summary>
         /// testDateSpecified property
@@ -8814,7 +8814,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date-time of the previous well test.")]
 		[XmlElement("previousTestDate")]
-        public DateTime? PreviousTestDate {
+        public Timestamp? PreviousTestDate {
             get {
                 return previousTestDateField;
             } 
@@ -8825,7 +8825,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? previousTestDateField; 
+        private Timestamp? previousTestDateField; 
 
 		/// <summary>
         /// previousTestDateSpecified property
@@ -8849,7 +8849,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date-time of the last valid well test.")]
 		[XmlElement("lastValidTest")]
-        public DateTime? LastValidTest {
+        public Timestamp? LastValidTest {
             get {
                 return lastValidTestField;
             } 
@@ -8860,7 +8860,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? lastValidTestField; 
+        private Timestamp? lastValidTestField; 
 
 		/// <summary>
         /// lastValidTestSpecified property
@@ -15564,7 +15564,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time where the comment begins to be valid.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -15575,7 +15575,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -15599,7 +15599,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time where the comment is no longer valid.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -15610,7 +15610,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -17313,7 +17313,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("A timestamp representing the version of this data.  A flow (same port and products) with a more recent timestamp will represent  the \"current\" version.")]
 		[XmlElement("version")]
-        public DateTime? Version {
+        public Timestamp? Version {
             get {
                 return versionField;
             } 
@@ -17324,7 +17324,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? versionField; 
+        private Timestamp? versionField; 
 
 		/// <summary>
         /// versionSpecified property
@@ -18554,7 +18554,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time at which the parameter applies. If no time is specified then the value is static.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -18565,7 +18565,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -18589,7 +18589,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time at which the parameter no longer applies. The \"active\" time interval is inclusive of this point. If dTimEnd is given then dTim shall also be given.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -18600,7 +18600,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -19221,7 +19221,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("A timestamp representing the version of this data.  A parameter set with a more recent timestamp will represent  the \"current\" version.")]
 		[XmlElement("version")]
-        public DateTime? Version {
+        public Timestamp? Version {
             get {
                 return versionField;
             } 
@@ -19232,7 +19232,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? versionField; 
+        private Timestamp? versionField; 
 
 		/// <summary>
         /// versionSpecified property
@@ -20779,7 +20779,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The definition of the \"current time\" index for this report. The current time index is a server query parameter which requests the  selection of a single node from a recurring \"period\" set  (e.g., the data related to one point in a time series). For the purposes of this parameter, a \"period\" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
 		[XmlElement("dTimCurrent")]
-        public DateTime? DateTimeCurrent {
+        public Timestamp? DateTimeCurrent {
             get {
                 return dTimCurrentField;
             } 
@@ -20790,7 +20790,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimCurrentField; 
+        private Timestamp? dTimCurrentField; 
 
 		/// <summary>
         /// dTimCurrentSpecified property
@@ -22545,7 +22545,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The beginning date and time that the comment represents.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -22556,7 +22556,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -22580,7 +22580,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The ending date and time that the comment represents.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -22591,7 +22591,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -22723,7 +22723,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time that the vessel arrived.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -22734,7 +22734,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -22758,7 +22758,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time that the vessel left.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -22769,7 +22769,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -23132,7 +23132,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The beginning date and time that the information represents.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -23143,7 +23143,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -23167,7 +23167,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The ending date and time that the comment represents.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -23178,7 +23178,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -23398,7 +23398,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time when the alarms went off.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -23409,7 +23409,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -23609,7 +23609,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The time the shutdown started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -23620,7 +23620,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -23644,7 +23644,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The time the shutdown ended.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -23655,7 +23655,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -24564,7 +24564,7 @@ namespace Energistics.DataAccess.PRODML122
 		[Required]
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -24574,7 +24574,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// Name of company that supplied the data. 
@@ -26569,7 +26569,7 @@ namespace Energistics.DataAccess.PRODML122
 		[Required]
 		[Description("The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -26579,7 +26579,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// A textual description of the purpose of the plan.
@@ -26713,7 +26713,7 @@ namespace Energistics.DataAccess.PRODML122
 		[Required]
 		[Description("The timestamp associated with the change. All changes must use this timestamp.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -26723,7 +26723,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// A textual reason for the change.
@@ -26838,7 +26838,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time that the sensor was activated on the port.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -26849,7 +26849,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -26873,7 +26873,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time that the sensor was deactivated on the port.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -26884,7 +26884,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -27249,7 +27249,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time that the connection was activated.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -27260,7 +27260,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -27284,7 +27284,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time that the connection was terminated.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -27295,7 +27295,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -28893,7 +28893,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time of the start of validity for this model.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -28904,7 +28904,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -28928,7 +28928,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time of the termination of validity for this model.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -28939,7 +28939,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -37688,7 +37688,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The definition of the \"current time\" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the \"most recent\" (at or before the specified time) measurement for a well. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
 		[XmlElement("dTimCurrent")]
-        public DateTime? DateTimeCurrent {
+        public Timestamp? DateTimeCurrent {
             get {
                 return dTimCurrentField;
             } 
@@ -37699,7 +37699,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimCurrentField; 
+        private Timestamp? dTimCurrentField; 
 
 		/// <summary>
         /// dTimCurrentSpecified property
@@ -37741,7 +37741,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date and time associated with the measurement.  This will normally be the start of the run.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -37752,7 +37752,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -38210,7 +38210,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The dateTime of the run.")]
 		[XmlElement("dTimRun")]
-        public DateTime? DateTimeRun {
+        public Timestamp? DateTimeRun {
             get {
                 return dTimRunField;
             } 
@@ -38221,7 +38221,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? dTimRunField; 
+        private Timestamp? dTimRunField; 
 
 		/// <summary>
         /// dTimRunSpecified property
@@ -39481,7 +39481,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("When the tag was installed in or on the item.")]
 		[XmlElement("installationDate")]
-        public DateTime? InstallationDate {
+        public Timestamp? InstallationDate {
             get {
                 return installationDateField;
             } 
@@ -39492,7 +39492,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? installationDateField; 
+        private Timestamp? installationDateField; 
 
 		/// <summary>
         /// installationDateSpecified property
@@ -42235,7 +42235,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -42246,7 +42246,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -42361,7 +42361,7 @@ namespace Energistics.DataAccess.PRODML122
 		[Required]
 		[Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public DateTime? FileCreationDate {
+        public Timestamp? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -42371,7 +42371,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? fileCreationDateField; 
+        private Timestamp? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -42503,7 +42503,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public DateTime? DocumentDate {
+        public Timestamp? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -42514,7 +42514,7 @@ namespace Energistics.DataAccess.PRODML122
             }
         }
 
-        private DateTime? documentDateField; 
+        private Timestamp? documentDateField; 
 
 		/// <summary>
         /// documentDateSpecified property

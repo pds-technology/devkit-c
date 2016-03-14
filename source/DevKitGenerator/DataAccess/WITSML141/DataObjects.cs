@@ -375,7 +375,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of wellbore kickoff.")]
 		[XmlElement("dTimKickoff")]
-        public DateTime? DateTimeKickoff {
+        public Timestamp? DateTimeKickoff {
             get {
                 return dTimKickoffField;
             } 
@@ -386,7 +386,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimKickoffField; 
+        private Timestamp? dTimKickoffField; 
 
 		/// <summary>
         /// dTimKickoffSpecified property
@@ -4232,7 +4232,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the data was created at the persistent data store.  This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimCreation")]
-        public DateTime? DateTimeCreation {
+        public Timestamp? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -4243,7 +4243,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimCreationField; 
+        private Timestamp? dTimCreationField; 
 
 		/// <summary>
         /// dTimCreationSpecified property
@@ -4267,7 +4267,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimLastChange")]
-        public DateTime? DateTimeLastChange {
+        public Timestamp? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -4278,7 +4278,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimLastChangeField; 
+        private Timestamp? dTimLastChangeField; 
 
 		/// <summary>
         /// dTimLastChangeSpecified property
@@ -4734,7 +4734,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -4745,7 +4745,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -6080,7 +6080,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time license  was issued.")]
 		[XmlElement("dTimLicense")]
-        public DateTime? DateTimeLicense {
+        public Timestamp? DateTimeLicense {
             get {
                 return dTimLicenseField;
             } 
@@ -6091,7 +6091,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimLicenseField; 
+        private Timestamp? dTimLicenseField; 
 
 		/// <summary>
         /// dTimLicenseSpecified property
@@ -6461,7 +6461,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which well was spudded.")]
 		[XmlElement("dTimSpud")]
-        public DateTime? DateTimeSpud {
+        public Timestamp? DateTimeSpud {
             get {
                 return dTimSpudField;
             } 
@@ -6472,7 +6472,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimSpudField; 
+        private Timestamp? dTimSpudField; 
 
 		/// <summary>
         /// dTimSpudSpecified property
@@ -6496,7 +6496,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which well was plugged and abandoned.")]
 		[XmlElement("dTimPa")]
-        public DateTime? DateTimePluggedAndAbandoned {
+        public Timestamp? DateTimePluggedAndAbandoned {
             get {
                 return dTimPaField;
             } 
@@ -6507,7 +6507,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPaField; 
+        private Timestamp? dTimPaField; 
 
 		/// <summary>
         /// dTimPaSpecified property
@@ -8954,7 +8954,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Time report generated.")]
 		[XmlElement("dTimReport")]
-        public DateTime? DateTimeReport {
+        public Timestamp? DateTimeReport {
             get {
                 return dTimReportField;
             } 
@@ -8964,7 +8964,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimReportField; 
+        private Timestamp? dTimReportField; 
 
         /// <summary>
         /// Measured depth at bottom. 
@@ -13269,7 +13269,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the tag was installed in or on the item.")]
 		[XmlElement("installationDate")]
-        public DateTime? InstallationDate {
+        public Timestamp? InstallationDate {
             get {
                 return installationDateField;
             } 
@@ -13280,7 +13280,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? installationDateField; 
+        private Timestamp? installationDateField; 
 
 		/// <summary>
         /// installationDateSpecified property
@@ -14743,7 +14743,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start date and time of trajectory station measurements. Note that this is NOT a server query parameter.")]
 		[XmlElement("dTimTrajStart")]
-        public DateTime? DateTimeTrajStart {
+        public Timestamp? DateTimeTrajStart {
             get {
                 return dTimTrajStartField;
             } 
@@ -14754,7 +14754,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimTrajStartField; 
+        private Timestamp? dTimTrajStartField; 
 
 		/// <summary>
         /// dTimTrajStartSpecified property
@@ -14778,7 +14778,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("End date and time of trajectory station measurements. Note that this is NOT a server query parameter.")]
 		[XmlElement("dTimTrajEnd")]
-        public DateTime? DateTimeTrajEnd {
+        public Timestamp? DateTimeTrajEnd {
             get {
                 return dTimTrajEndField;
             } 
@@ -14789,7 +14789,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimTrajEndField; 
+        private Timestamp? dTimTrajEndField; 
 
 		/// <summary>
         /// dTimTrajEndSpecified property
@@ -15275,7 +15275,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the station was measured or created.")]
 		[XmlElement("dTimStn")]
-        public DateTime? DateTimeStn {
+        public Timestamp? DateTimeStn {
             get {
                 return dTimStnField;
             } 
@@ -15286,7 +15286,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStnField; 
+        private Timestamp? dTimStnField; 
 
 		/// <summary>
         /// dTimStnSpecified property
@@ -20367,7 +20367,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time trajectory program was created or edited.")]
 		[XmlElement("dTimTrajProg")]
-        public DateTime? DateTimeTrajProg {
+        public Timestamp? DateTimeTrajProg {
             get {
                 return dTimTrajProgField;
             } 
@@ -20378,7 +20378,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimTrajProgField; 
+        private Timestamp? dTimTrajProgField; 
 
 		/// <summary>
         /// dTimTrajProgSpecified property
@@ -21961,7 +21961,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start time for the fluid efficiency test (FET).")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -21972,7 +21972,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -21996,7 +21996,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("End time for the fluid efficiency test.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -22007,7 +22007,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -22624,7 +22624,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time pumping began.")]
 		[XmlElement("dTimPumpOn")]
-        public DateTime? DateTimePumpOn {
+        public Timestamp? DateTimePumpOn {
             get {
                 return dTimPumpOnField;
             } 
@@ -22635,7 +22635,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPumpOnField; 
+        private Timestamp? dTimPumpOnField; 
 
 		/// <summary>
         /// dTimPumpOnSpecified property
@@ -22659,7 +22659,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time pumping ended.")]
 		[XmlElement("dTimPumpOff")]
-        public DateTime? DateTimePumpOff {
+        public Timestamp? DateTimePumpOff {
             get {
                 return dTimPumpOffField;
             } 
@@ -22670,7 +22670,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPumpOffField; 
+        private Timestamp? dTimPumpOffField; 
 
 		/// <summary>
         /// dTimPumpOffSpecified property
@@ -22694,7 +22694,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which a well ceases flowing and the valves are closed.")]
 		[XmlElement("dTimWellShutin")]
-        public DateTime? DateTimeWellShutin {
+        public Timestamp? DateTimeWellShutin {
             get {
                 return dTimWellShutinField;
             } 
@@ -22705,7 +22705,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimWellShutinField; 
+        private Timestamp? dTimWellShutinField; 
 
 		/// <summary>
         /// dTimWellShutinSpecified property
@@ -22729,7 +22729,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time when the fluid in the fracture is completely leaked off  into the formation and the fracture closes on its faces.")]
 		[XmlElement("dTimFractureClose")]
-        public DateTime? DateTimeFractureClose {
+        public Timestamp? DateTimeFractureClose {
             get {
                 return dTimFractureCloseField;
             } 
@@ -22740,7 +22740,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimFractureCloseField; 
+        private Timestamp? dTimFractureCloseField; 
 
 		/// <summary>
         /// dTimFractureCloseSpecified property
@@ -23553,7 +23553,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date time of this event.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -23564,7 +23564,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -24369,7 +24369,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date time of start of this stimulation stage.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -24380,7 +24380,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -24404,7 +24404,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date time of end of this stimulation stage.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -24415,7 +24415,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -27446,7 +27446,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Starting date and time for the stimulation treatment interval.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -27457,7 +27457,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -27481,7 +27481,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Ending date and time for the stimulation treatment interval.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -27492,7 +27492,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -28985,7 +28985,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which the stimulation contractor arrives on location.")]
 		[XmlElement("dTimArrival")]
-        public DateTime? DateTimeArrival {
+        public Timestamp? DateTimeArrival {
             get {
                 return dTimArrivalField;
             } 
@@ -28996,7 +28996,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimArrivalField; 
+        private Timestamp? dTimArrivalField; 
 
 		/// <summary>
         /// dTimArrivalSpecified property
@@ -29020,7 +29020,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start date and time of well stimulation Job.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -29031,7 +29031,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -29055,7 +29055,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Ending date and time of well stimulation job.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -29066,7 +29066,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -31047,7 +31047,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time logging suite run in the hole.")]
 		[XmlElement("dTimToolRun")]
-        public DateTime? DateTimeToolRun {
+        public Timestamp? DateTimeToolRun {
             get {
                 return dTimToolRunField;
             } 
@@ -31058,7 +31058,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimToolRunField; 
+        private Timestamp? dTimToolRunField; 
 
 		/// <summary>
         /// dTimToolRunSpecified property
@@ -31082,7 +31082,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time logging suite pulled out of the hole.")]
 		[XmlElement("dTimToolPull")]
-        public DateTime? DateTimeToolPull {
+        public Timestamp? DateTimeToolPull {
             get {
                 return dTimToolPullField;
             } 
@@ -31093,7 +31093,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimToolPullField; 
+        private Timestamp? dTimToolPullField; 
 
 		/// <summary>
         /// dTimToolPullSpecified property
@@ -31804,7 +31804,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -31815,7 +31815,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -31839,7 +31839,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -31850,7 +31850,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -33300,7 +33300,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public DateTime? DateTimeInstall {
+        public Timestamp? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -33311,7 +33311,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimInstallField; 
+        private Timestamp? dTimInstallField; 
 
 		/// <summary>
         /// dTimInstallSpecified property
@@ -33335,7 +33335,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public DateTime? DateTimeRemove {
+        public Timestamp? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -33346,7 +33346,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRemoveField; 
+        private Timestamp? dTimRemoveField; 
 
 		/// <summary>
         /// dTimRemoveSpecified property
@@ -33763,7 +33763,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public DateTime? DateTimeInstall {
+        public Timestamp? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -33774,7 +33774,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimInstallField; 
+        private Timestamp? dTimInstallField; 
 
 		/// <summary>
         /// dTimInstallSpecified property
@@ -33798,7 +33798,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public DateTime? DateTimeRemove {
+        public Timestamp? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -33809,7 +33809,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRemoveField; 
+        private Timestamp? dTimRemoveField; 
 
 		/// <summary>
         /// dTimRemoveSpecified property
@@ -34009,7 +34009,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public DateTime? DateTimeInstall {
+        public Timestamp? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -34020,7 +34020,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimInstallField; 
+        private Timestamp? dTimInstallField; 
 
 		/// <summary>
         /// dTimInstallSpecified property
@@ -34044,7 +34044,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public DateTime? DateTimeRemove {
+        public Timestamp? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -34055,7 +34055,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRemoveField; 
+        private Timestamp? dTimRemoveField; 
 
 		/// <summary>
         /// dTimRemoveSpecified property
@@ -34274,7 +34274,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public DateTime? DateTimeInstall {
+        public Timestamp? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -34285,7 +34285,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimInstallField; 
+        private Timestamp? dTimInstallField; 
 
 		/// <summary>
         /// dTimInstallSpecified property
@@ -34309,7 +34309,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public DateTime? DateTimeRemove {
+        public Timestamp? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -34320,7 +34320,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRemoveField; 
+        private Timestamp? dTimRemoveField; 
 
 		/// <summary>
         /// dTimRemoveSpecified property
@@ -34679,7 +34679,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of pump installation.")]
 		[XmlElement("dTimInstall")]
-        public DateTime? DateTimeInstall {
+        public Timestamp? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -34690,7 +34690,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimInstallField; 
+        private Timestamp? dTimInstallField; 
 
 		/// <summary>
         /// dTimInstallSpecified property
@@ -34714,7 +34714,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the pump was removed.")]
 		[XmlElement("dTimRemove")]
-        public DateTime? DateTimeRemove {
+        public Timestamp? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -34725,7 +34725,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRemoveField; 
+        private Timestamp? dTimRemoveField; 
 
 		/// <summary>
         /// dTimRemoveSpecified property
@@ -35181,7 +35181,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public DateTime? DateTimeInstall {
+        public Timestamp? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -35192,7 +35192,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimInstallField; 
+        private Timestamp? dTimInstallField; 
 
 		/// <summary>
         /// dTimInstallSpecified property
@@ -35216,7 +35216,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public DateTime? DateTimeRemove {
+        public Timestamp? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -35227,7 +35227,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRemoveField; 
+        private Timestamp? dTimRemoveField; 
 
 		/// <summary>
         /// dTimRemoveSpecified property
@@ -35733,7 +35733,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public DateTime? DateTimeInstall {
+        public Timestamp? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -35744,7 +35744,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimInstallField; 
+        private Timestamp? dTimInstallField; 
 
 		/// <summary>
         /// dTimInstallSpecified property
@@ -35768,7 +35768,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal Date.")]
 		[XmlElement("dTimRemove")]
-        public DateTime? DateTimeRemove {
+        public Timestamp? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -35779,7 +35779,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRemoveField; 
+        private Timestamp? dTimRemoveField; 
 
 		/// <summary>
         /// dTimRemoveSpecified property
@@ -36777,7 +36777,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time rig operations started, or date and time object created.")]
 		[XmlElement("dTimStartOp")]
-        public DateTime? DateTimeStartOperating {
+        public Timestamp? DateTimeStartOperating {
             get {
                 return dTimStartOpField;
             } 
@@ -36788,7 +36788,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartOpField; 
+        private Timestamp? dTimStartOpField; 
 
 		/// <summary>
         /// dTimStartOpSpecified property
@@ -36812,7 +36812,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time rig operations ended (May be NULL for active rig).")]
 		[XmlElement("dTimEndOp")]
-        public DateTime? DateTimeEndOperating {
+        public Timestamp? DateTimeEndOperating {
             get {
                 return dTimEndOpField;
             } 
@@ -36823,7 +36823,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndOpField; 
+        private Timestamp? dTimEndOpField; 
 
 		/// <summary>
         /// dTimEndOpSpecified property
@@ -38282,7 +38282,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -38292,7 +38292,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// Name of company that supplied the data. 
@@ -38835,7 +38835,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when vehicle arrived at rig site.")]
 		[XmlElement("dTimArrived")]
-        public DateTime? DateTimeArrived {
+        public Timestamp? DateTimeArrived {
             get {
                 return dTimArrivedField;
             } 
@@ -38846,7 +38846,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimArrivedField; 
+        private Timestamp? dTimArrivedField; 
 
 		/// <summary>
         /// dTimArrivedSpecified property
@@ -38870,7 +38870,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when vehicle departed rig site.")]
 		[XmlElement("dTimDeparted")]
-        public DateTime? DateTimeDeparted {
+        public Timestamp? DateTimeDeparted {
             get {
                 return dTimDepartedField;
             } 
@@ -38881,7 +38881,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimDepartedField; 
+        private Timestamp? dTimDepartedField; 
 
 		/// <summary>
         /// dTimDepartedSpecified property
@@ -39157,7 +39157,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -39167,7 +39167,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// Name of person who prepared incident report. 
@@ -39562,7 +39562,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last casing pressure test date and time.")]
 		[XmlElement("lastCsgPresTest")]
-        public DateTime? LastCsgPresTest {
+        public Timestamp? LastCsgPresTest {
             get {
                 return lastCsgPresTestField;
             } 
@@ -39573,7 +39573,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastCsgPresTestField; 
+        private Timestamp? lastCsgPresTestField; 
 
 		/// <summary>
         /// lastCsgPresTestSpecified property
@@ -39615,7 +39615,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last blow out preventer pressure test.")]
 		[XmlElement("lastBopPresTest")]
-        public DateTime? LastBopPresTest {
+        public Timestamp? LastBopPresTest {
             get {
                 return lastBopPresTestField;
             } 
@@ -39626,7 +39626,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastBopPresTestField; 
+        private Timestamp? lastBopPresTestField; 
 
 		/// <summary>
         /// lastBopPresTestSpecified property
@@ -39650,7 +39650,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Next blow out preventer pressure test.")]
 		[XmlElement("nextBopPresTest")]
-        public DateTime? NextBopPresTest {
+        public Timestamp? NextBopPresTest {
             get {
                 return nextBopPresTestField;
             } 
@@ -39661,7 +39661,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? nextBopPresTestField; 
+        private Timestamp? nextBopPresTestField; 
 
 		/// <summary>
         /// nextBopPresTestSpecified property
@@ -39811,7 +39811,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last fire or boat drill.")]
 		[XmlElement("lastFireBoatDrill")]
-        public DateTime? LastFireBoatDrill {
+        public Timestamp? LastFireBoatDrill {
             get {
                 return lastFireBoatDrillField;
             } 
@@ -39822,7 +39822,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastFireBoatDrillField; 
+        private Timestamp? lastFireBoatDrillField; 
 
 		/// <summary>
         /// lastFireBoatDrillSpecified property
@@ -39846,7 +39846,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last abandonment drill.")]
 		[XmlElement("lastAbandonDrill")]
-        public DateTime? LastAbandonDrill {
+        public Timestamp? LastAbandonDrill {
             get {
                 return lastAbandonDrillField;
             } 
@@ -39857,7 +39857,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastAbandonDrillField; 
+        private Timestamp? lastAbandonDrillField; 
 
 		/// <summary>
         /// lastAbandonDrillSpecified property
@@ -39881,7 +39881,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last rig inspection/check.")]
 		[XmlElement("lastRigInspection")]
-        public DateTime? LastRigInspection {
+        public Timestamp? LastRigInspection {
             get {
                 return lastRigInspectionField;
             } 
@@ -39892,7 +39892,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastRigInspectionField; 
+        private Timestamp? lastRigInspectionField; 
 
 		/// <summary>
         /// lastRigInspectionSpecified property
@@ -39916,7 +39916,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last safety meeting.")]
 		[XmlElement("lastSafetyMeeting")]
-        public DateTime? LastSafetyMeeting {
+        public Timestamp? LastSafetyMeeting {
             get {
                 return lastSafetyMeetingField;
             } 
@@ -39927,7 +39927,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastSafetyMeetingField; 
+        private Timestamp? lastSafetyMeetingField; 
 
 		/// <summary>
         /// lastSafetyMeetingSpecified property
@@ -39951,7 +39951,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last safety inspection.")]
 		[XmlElement("lastSafetyInspection")]
-        public DateTime? LastSafetyInspection {
+        public Timestamp? LastSafetyInspection {
             get {
                 return lastSafetyInspectionField;
             } 
@@ -39962,7 +39962,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastSafetyInspectionField; 
+        private Timestamp? lastSafetyInspectionField; 
 
 		/// <summary>
         /// lastSafetyInspectionSpecified property
@@ -39986,7 +39986,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last trip drill.")]
 		[XmlElement("lastTripDrill")]
-        public DateTime? LastTripDrill {
+        public Timestamp? LastTripDrill {
             get {
                 return lastTripDrillField;
             } 
@@ -39997,7 +39997,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastTripDrillField; 
+        private Timestamp? lastTripDrillField; 
 
 		/// <summary>
         /// lastTripDrillSpecified property
@@ -40021,7 +40021,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last diverter drill.")]
 		[XmlElement("lastDiverterDrill")]
-        public DateTime? LastDiverterDrill {
+        public Timestamp? LastDiverterDrill {
             get {
                 return lastDiverterDrillField;
             } 
@@ -40032,7 +40032,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastDiverterDrillField; 
+        private Timestamp? lastDiverterDrillField; 
 
 		/// <summary>
         /// lastDiverterDrillSpecified property
@@ -40056,7 +40056,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last blow out preventer drill.")]
 		[XmlElement("lastBopDrill")]
-        public DateTime? LastBopDrill {
+        public Timestamp? LastBopDrill {
             get {
                 return lastBopDrillField;
             } 
@@ -40067,7 +40067,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? lastBopDrillField; 
+        private Timestamp? lastBopDrillField; 
 
 		/// <summary>
         /// lastBopDrillSpecified property
@@ -40322,7 +40322,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -40333,7 +40333,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -40357,7 +40357,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -40368,7 +40368,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -40589,7 +40589,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -40600,7 +40600,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -40750,7 +40750,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -40761,7 +40761,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -42526,7 +42526,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -42537,7 +42537,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -42708,7 +42708,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -42718,7 +42718,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// This is a pointer to the corresponding pump on the rig.
@@ -43511,7 +43511,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -43521,7 +43521,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// Time from start of Operations (commonly in days). 
@@ -44880,7 +44880,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -44891,7 +44891,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -44915,7 +44915,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -44926,7 +44926,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
 		/// <summary>
         /// dTimEndSpecified property
@@ -46742,7 +46742,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Time report generated.")]
 		[XmlElement("dTimReport")]
-        public DateTime? DateTimeReport {
+        public Timestamp? DateTimeReport {
             get {
                 return dTimReportField;
             } 
@@ -46752,7 +46752,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimReportField; 
+        private Timestamp? dTimReportField; 
 
         /// <summary>
         /// Measured depth at bottom. 
@@ -46902,7 +46902,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The time when fluid readings were recorded.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -46913,7 +46913,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -48584,7 +48584,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMin")]
-        public DateTime? RangeDateTimeMin {
+        public Timestamp? RangeDateTimeMin {
             get {
                 return rangeDateTimeMinField;
             } 
@@ -48595,7 +48595,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? rangeDateTimeMinField; 
+        private Timestamp? rangeDateTimeMinField; 
 
 		/// <summary>
         /// rangeDateTimeMinSpecified property
@@ -48619,7 +48619,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMax")]
-        public DateTime? RangeDateTimeMax {
+        public Timestamp? RangeDateTimeMax {
             get {
                 return rangeDateTimeMaxField;
             } 
@@ -48630,7 +48630,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? rangeDateTimeMaxField; 
+        private Timestamp? rangeDateTimeMaxField; 
 
 		/// <summary>
         /// rangeDateTimeMaxSpecified property
@@ -48689,7 +48689,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("A date and time related to this group.  This does not necessarily represent an actual index within a growing-object. The significance of this time is defined by the groupType.")]
 		[XmlElement("referenceDateTime")]
-        public DateTime? ReferenceDateTime {
+        public Timestamp? ReferenceDateTime {
             get {
                 return referenceDateTimeField;
             } 
@@ -48700,7 +48700,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? referenceDateTimeField; 
+        private Timestamp? referenceDateTimeField; 
 
 		/// <summary>
         /// referenceDateTimeSpecified property
@@ -49134,7 +49134,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The data and time related to the parameter. The time refers to the top of the interval.")]
 		[XmlElement("dTime")]
-        public DateTime? DTime {
+        public Timestamp? DTime {
             get {
                 return dTimeField;
             } 
@@ -49145,7 +49145,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimeField; 
+        private Timestamp? dTimeField; 
 
 		/// <summary>
         /// dTimeSpecified property
@@ -49412,7 +49412,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the data was created at the persistent data store.  This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimCreation")]
-        public DateTime? DateTimeCreation {
+        public Timestamp? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -49423,7 +49423,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimCreationField; 
+        private Timestamp? dTimCreationField; 
 
 		/// <summary>
         /// dTimCreationSpecified property
@@ -49447,7 +49447,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimLastChange")]
-        public DateTime? DateTimeLastChange {
+        public Timestamp? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -49458,7 +49458,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimLastChangeField; 
+        private Timestamp? dTimLastChangeField; 
 
 		/// <summary>
         /// dTimLastChangeSpecified property
@@ -49606,7 +49606,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -49617,7 +49617,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -49946,7 +49946,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.  The time refers to the top of the interval.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -49957,7 +49957,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -50695,7 +50695,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the gas sample was processed.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -50706,7 +50706,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -50838,7 +50838,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Chromatograph integrator report time, format may be variable due to recording equipment")]
 		[XmlElement("chromIntRpt")]
-        public DateTime? ChromIntRpt {
+        public Timestamp? ChromIntRpt {
             get {
                 return chromIntRptField;
             } 
@@ -50849,7 +50849,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? chromIntRptField; 
+        private Timestamp? chromIntRptField; 
 
 		/// <summary>
         /// chromIntRptSpecified property
@@ -52067,7 +52067,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -52077,7 +52077,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// A code used to define rig activity.
@@ -53038,7 +53038,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The minimum index value of any valid data point in the curve.  Null values are excluded from this determination. The value is the same regardless of the direction of the curve. This is an API \"column-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("minDateTimeIndex")]
-        public DateTime? MinDateTimeIndex {
+        public Timestamp? MinDateTimeIndex {
             get {
                 return minDateTimeIndexField;
             } 
@@ -53049,7 +53049,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? minDateTimeIndexField; 
+        private Timestamp? minDateTimeIndexField; 
 
 		/// <summary>
         /// minDateTimeIndexSpecified property
@@ -53073,7 +53073,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The maximum index value of any valid data point in the curve.  Null values are excluded from this determination. The value is the same regardless of the direction of the curve. This is an API \"column-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("maxDateTimeIndex")]
-        public DateTime? MaxDateTimeIndex {
+        public Timestamp? MaxDateTimeIndex {
             get {
                 return maxDateTimeIndexField;
             } 
@@ -53084,7 +53084,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? maxDateTimeIndexField; 
+        private Timestamp? maxDateTimeIndexField; 
 
 		/// <summary>
         /// maxDateTimeIndexSpecified property
@@ -53619,7 +53619,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the log was created.")]
 		[XmlElement("creationDate")]
-        public DateTime? CreationDate {
+        public Timestamp? CreationDate {
             get {
                 return creationDateField;
             } 
@@ -53630,7 +53630,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? creationDateField; 
+        private Timestamp? creationDateField; 
 
 		/// <summary>
         /// creationDateSpecified property
@@ -53761,7 +53761,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the log header defines the direction as \"Increasing\",  the startIndex is the starting (minimum) index value at which the first non-null data point is located.  When the log header defines the direction as \"Decreasing\", the startIndex  is the starting (maximum) index value at which the first non-null data point is located. Either a quantity index set (start and end) or a date time index set must be given. If both sets are given then \"indexType\" and  \"indexCurve\" must represent an elapsed time from \"startDateTimeIndex\". This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("startDateTimeIndex")]
-        public DateTime? StartDateTimeIndex {
+        public Timestamp? StartDateTimeIndex {
             get {
                 return startDateTimeIndexField;
             } 
@@ -53772,7 +53772,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? startDateTimeIndexField; 
+        private Timestamp? startDateTimeIndexField; 
 
 		/// <summary>
         /// startDateTimeIndexSpecified property
@@ -53796,7 +53796,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the log header defines the direction as \"Increasing\", the endIndex  is the ending (maximum) index value at which the last non-null data point is located.   When the log header defines the direction as Decreasing, the endIndex is the ending  (minimum) index value at which the last non-null data point is located.  This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("endDateTimeIndex")]
-        public DateTime? EndDateTimeIndex {
+        public Timestamp? EndDateTimeIndex {
             get {
                 return endDateTimeIndexField;
             } 
@@ -53807,7 +53807,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? endDateTimeIndexField; 
+        private Timestamp? endDateTimeIndexField; 
 
 		/// <summary>
         /// endDateTimeIndexSpecified property
@@ -54580,7 +54580,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -54590,7 +54590,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// Along hole measured depth of measurement from the drill datum. 
@@ -54812,7 +54812,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of the gas reading.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -54823,7 +54823,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -55171,7 +55171,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the well perforation interval is opened.")]
 		[XmlElement("dTimOpen")]
-        public DateTime? DateTimeOpen {
+        public Timestamp? DateTimeOpen {
             get {
                 return dTimOpenField;
             } 
@@ -55182,7 +55182,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimOpenField; 
+        private Timestamp? dTimOpenField; 
 
 		/// <summary>
         /// dTimOpenSpecified property
@@ -55206,7 +55206,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the well perforation interval is closed.")]
 		[XmlElement("dTimClose")]
-        public DateTime? DateTimeClose {
+        public Timestamp? DateTimeClose {
             get {
                 return dTimCloseField;
             } 
@@ -55217,7 +55217,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimCloseField; 
+        private Timestamp? dTimCloseField; 
 
 		/// <summary>
         /// dTimCloseSpecified property
@@ -55386,7 +55386,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which a preliminary zonation is established.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -55397,7 +55397,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -55547,7 +55547,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of the well control incident.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -55558,7 +55558,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -55724,7 +55724,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which control of the well is regained.")]
 		[XmlElement("dTimRegained")]
-        public DateTime? DateTimeRegained {
+        public Timestamp? DateTimeRegained {
             get {
                 return dTimRegainedField;
             } 
@@ -55735,7 +55735,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRegainedField; 
+        private Timestamp? dTimRegainedField; 
 
 		/// <summary>
         /// dTimRegainedSpecified property
@@ -56135,7 +56135,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the equipment failed.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -56146,7 +56146,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -56241,7 +56241,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the production equipment was  repaired and ready for production.")]
 		[XmlElement("dTimRepair")]
-        public DateTime? DateTimeRepair {
+        public Timestamp? DateTimeRepair {
             get {
                 return dTimRepairField;
             } 
@@ -56252,7 +56252,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRepairField; 
+        private Timestamp? dTimRepairField; 
 
 		/// <summary>
         /// dTimRepairSpecified property
@@ -56366,7 +56366,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the well test was completed.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -56377,7 +56377,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -56580,7 +56580,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the wireline formation test was completed.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -56591,7 +56591,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -56865,7 +56865,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the well test was completed.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -56876,7 +56876,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -57457,7 +57457,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the core was completed.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -57468,7 +57468,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -57760,7 +57760,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time that the log was completed.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -57771,7 +57771,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -58114,7 +58114,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("The date at which the directional survey took place.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -58124,7 +58124,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// Measured depth of measurement from the drill datum. 
@@ -58461,7 +58461,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at the reading was made.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -58472,7 +58472,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -58605,7 +58605,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("the date and time that for which the well status is reported.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -58616,7 +58616,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
 		/// <summary>
         /// dTimSpecified property
@@ -60088,7 +60088,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which the well was spudded.  This is when the well drilling equipment begin to bore into  the earth's surface for the purpose of drilling a well.")]
 		[XmlElement("dTimSpud")]
-        public DateTime? DateTimeSpud {
+        public Timestamp? DateTimeSpud {
             get {
                 return dTimSpudField;
             } 
@@ -60099,7 +60099,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimSpudField; 
+        private Timestamp? dTimSpudField; 
 
 		/// <summary>
         /// dTimSpudSpecified property
@@ -60123,7 +60123,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which the well was predrilled.  This is when the well drilling equipment begin to bore into  the earth's surface for the purpose of drilling a well.")]
 		[XmlElement("dTimPreSpud")]
-        public DateTime? DateTimePreSpud {
+        public Timestamp? DateTimePreSpud {
             get {
                 return dTimPreSpudField;
             } 
@@ -60134,7 +60134,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPreSpudField; 
+        private Timestamp? dTimPreSpudField; 
 
 		/// <summary>
         /// dTimPreSpudSpecified property
@@ -60335,7 +60335,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time of the start of the reporting period.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -60345,7 +60345,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// Date and time end of the reporting period. Report periods are commonly 24 hour periods. 
@@ -60353,7 +60353,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("Date and time end of the reporting period. Report periods are commonly 24 hour periods.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -60363,7 +60363,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// The kind of report version. For example, a preliminary version.
@@ -60405,7 +60405,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time of the report creation. A later timestamp indicates a newer version. In order to update values in a report a full  updated copy of the original report should be submitted.")]
 		[XmlElement("createDate")]
-        public DateTime? CreateDate {
+        public Timestamp? CreateDate {
             get {
                 return createDateField;
             } 
@@ -60416,7 +60416,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? createDateField; 
+        private Timestamp? createDateField; 
 
 		/// <summary>
         /// createDateSpecified property
@@ -61049,7 +61049,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when coring commenced (cutting new core).")]
 		[XmlElement("dTimCoreStart")]
-        public DateTime? DateTimeCoreStart {
+        public Timestamp? DateTimeCoreStart {
             get {
                 return dTimCoreStartField;
             } 
@@ -61060,7 +61060,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimCoreStartField; 
+        private Timestamp? dTimCoreStartField; 
 
 		/// <summary>
         /// dTimCoreStartSpecified property
@@ -61084,7 +61084,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when coring complete (end of cutting new core).")]
 		[XmlElement("dTimCoreEnd")]
-        public DateTime? DateTimeCoreEnd {
+        public Timestamp? DateTimeCoreEnd {
             get {
                 return dTimCoreEndField;
             } 
@@ -61095,7 +61095,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimCoreEndField; 
+        private Timestamp? dTimCoreEndField; 
 
 		/// <summary>
         /// dTimCoreEndSpecified property
@@ -61646,7 +61646,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("dTimChange")]
-        public DateTime? DateTimeChange {
+        public Timestamp? DateTimeChange {
             get {
                 return dTimChangeField;
             } 
@@ -61656,7 +61656,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimChangeField; 
+        private Timestamp? dTimChangeField; 
 
         /// <summary>
         /// See the API specification for a description of the use of this data.
@@ -61804,7 +61804,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("startDateTimeIndex")]
-        public DateTime? StartDateTimeIndex {
+        public Timestamp? StartDateTimeIndex {
             get {
                 return startDateTimeIndexField;
             } 
@@ -61815,7 +61815,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? startDateTimeIndexField; 
+        private Timestamp? startDateTimeIndexField; 
 
 		/// <summary>
         /// startDateTimeIndexSpecified property
@@ -61839,7 +61839,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("endDateTimeIndex")]
-        public DateTime? EndDateTimeIndex {
+        public Timestamp? EndDateTimeIndex {
             get {
                 return endDateTimeIndexField;
             } 
@@ -61850,7 +61850,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? endDateTimeIndexField; 
+        private Timestamp? endDateTimeIndexField; 
 
 		/// <summary>
         /// endDateTimeIndexSpecified property
@@ -64696,7 +64696,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when mixing started.")]
 		[XmlElement("dTimMixStart")]
-        public DateTime? DateTimeMixStart {
+        public Timestamp? DateTimeMixStart {
             get {
                 return dTimMixStartField;
             } 
@@ -64707,7 +64707,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimMixStartField; 
+        private Timestamp? dTimMixStartField; 
 
 		/// <summary>
         /// dTimMixStartSpecified property
@@ -64731,7 +64731,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Datetime at start of pumping cement.")]
 		[XmlElement("dTimPumpStart")]
-        public DateTime? DateTimePumpStart {
+        public Timestamp? DateTimePumpStart {
             get {
                 return dTimPumpStartField;
             } 
@@ -64742,7 +64742,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPumpStartField; 
+        private Timestamp? dTimPumpStartField; 
 
 		/// <summary>
         /// dTimPumpStartSpecified property
@@ -64766,7 +64766,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Datetime at end of pumping cement.")]
 		[XmlElement("dTimPumpEnd")]
-        public DateTime? DateTimePumpEnd {
+        public Timestamp? DateTimePumpEnd {
             get {
                 return dTimPumpEndField;
             } 
@@ -64777,7 +64777,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPumpEndField; 
+        private Timestamp? dTimPumpEndField; 
 
 		/// <summary>
         /// dTimPumpEndSpecified property
@@ -64801,7 +64801,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when displacing cement started.")]
 		[XmlElement("dTimDisplaceStart")]
-        public DateTime? DateTimeDisplaceStart {
+        public Timestamp? DateTimeDisplaceStart {
             get {
                 return dTimDisplaceStartField;
             } 
@@ -64812,7 +64812,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimDisplaceStartField; 
+        private Timestamp? dTimDisplaceStartField; 
 
 		/// <summary>
         /// dTimDisplaceStartSpecified property
@@ -66488,7 +66488,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of Cement Job.")]
 		[XmlElement("dTimJob")]
-        public DateTime? DateTimeJob {
+        public Timestamp? DateTimeJob {
             get {
                 return dTimJobField;
             } 
@@ -66499,7 +66499,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimJobField; 
+        private Timestamp? dTimJobField; 
 
 		/// <summary>
         /// dTimJobSpecified property
@@ -66946,7 +66946,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that cement plug was set.")]
 		[XmlElement("dTimPlugSet")]
-        public DateTime? DateTimePlugSet {
+        public Timestamp? DateTimePlugSet {
             get {
                 return dTimPlugSetField;
             } 
@@ -66957,7 +66957,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPlugSetField; 
+        private Timestamp? dTimPlugSetField; 
 
 		/// <summary>
         /// dTimPlugSetSpecified property
@@ -67016,7 +67016,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that cement was drilled out.")]
 		[XmlElement("dTimCementDrillOut")]
-        public DateTime? DateTimeCementDrillOut {
+        public Timestamp? DateTimeCementDrillOut {
             get {
                 return dTimCementDrillOutField;
             } 
@@ -67027,7 +67027,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimCementDrillOutField; 
+        private Timestamp? dTimCementDrillOutField; 
 
 		/// <summary>
         /// dTimCementDrillOutSpecified property
@@ -67086,7 +67086,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of squeeze.")]
 		[XmlElement("dTimSqueeze")]
-        public DateTime? DateTimeSqueeze {
+        public Timestamp? DateTimeSqueeze {
             get {
                 return dTimSqueezeField;
             } 
@@ -67097,7 +67097,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimSqueezeField; 
+        private Timestamp? dTimSqueezeField; 
 
 		/// <summary>
         /// dTimSqueezeSpecified property
@@ -67155,7 +67155,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Pipe rotation start time.")]
 		[XmlElement("dTimPipeRotStart")]
-        public DateTime? DateTimePipeRotStart {
+        public Timestamp? DateTimePipeRotStart {
             get {
                 return dTimPipeRotStartField;
             } 
@@ -67166,7 +67166,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPipeRotStartField; 
+        private Timestamp? dTimPipeRotStartField; 
 
 		/// <summary>
         /// dTimPipeRotStartSpecified property
@@ -67190,7 +67190,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Pipe rotation end time.")]
 		[XmlElement("dTimPipeRotEnd")]
-        public DateTime? DateTimePipeRotEnd {
+        public Timestamp? DateTimePipeRotEnd {
             get {
                 return dTimPipeRotEndField;
             } 
@@ -67201,7 +67201,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimPipeRotEndField; 
+        private Timestamp? dTimPipeRotEndField; 
 
 		/// <summary>
         /// dTimPipeRotEndSpecified property
@@ -67297,7 +67297,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at start of pipe reciprocation.")]
 		[XmlElement("dTimRecipStart")]
-        public DateTime? DateTimeRecipStart {
+        public Timestamp? DateTimeRecipStart {
             get {
                 return dTimRecipStartField;
             } 
@@ -67308,7 +67308,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRecipStartField; 
+        private Timestamp? dTimRecipStartField; 
 
 		/// <summary>
         /// dTimRecipStartSpecified property
@@ -67332,7 +67332,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at end of pipe reciprocation.")]
 		[XmlElement("dTimRecipEnd")]
-        public DateTime? DateTimeRecipEnd {
+        public Timestamp? DateTimeRecipEnd {
             get {
                 return dTimRecipEndField;
             } 
@@ -67343,7 +67343,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimRecipEndField; 
+        private Timestamp? dTimRecipEndField; 
 
 		/// <summary>
         /// dTimRecipEndSpecified property
@@ -67670,7 +67670,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -67681,7 +67681,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
 		/// <summary>
         /// dTimStartSpecified property
@@ -67705,7 +67705,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities stopped.")]
 		[XmlElement("dTimStop")]
-        public DateTime? DateTimeStop {
+        public Timestamp? DateTimeStop {
             get {
                 return dTimStopField;
             } 
@@ -67716,7 +67716,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStopField; 
+        private Timestamp? dTimStopField; 
 
 		/// <summary>
         /// dTimStopSpecified property
@@ -67740,7 +67740,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start on bottom - date and time.")]
 		[XmlElement("dTimStartDrilling")]
-        public DateTime? DateTimeStartDrilling {
+        public Timestamp? DateTimeStartDrilling {
             get {
                 return dTimStartDrillingField;
             } 
@@ -67751,7 +67751,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStartDrillingField; 
+        private Timestamp? dTimStartDrillingField; 
 
 		/// <summary>
         /// dTimStartDrillingSpecified property
@@ -67775,7 +67775,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start off bottom - date and time.")]
 		[XmlElement("dTimStopDrilling")]
-        public DateTime? DateTimeStopDrilling {
+        public Timestamp? DateTimeStopDrilling {
             get {
                 return dTimStopDrillingField;
             } 
@@ -67786,7 +67786,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? dTimStopDrillingField; 
+        private Timestamp? dTimStopDrillingField; 
 
 		/// <summary>
         /// dTimStopDrillingSpecified property
@@ -68638,7 +68638,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -68649,7 +68649,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
 		/// <summary>
         /// endDateSpecified property
@@ -68764,7 +68764,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
 		[Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public DateTime? FileCreationDate {
+        public Timestamp? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -68774,7 +68774,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? fileCreationDateField; 
+        private Timestamp? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -68906,7 +68906,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public DateTime? DocumentDate {
+        public Timestamp? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -68917,7 +68917,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private DateTime? documentDateField; 
+        private Timestamp? documentDateField; 
 
 		/// <summary>
         /// documentDateSpecified property

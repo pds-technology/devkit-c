@@ -297,10 +297,19 @@ namespace Energistics.SchemaGatherer
             //var minExclusive = facets.OfType<XmlSchemaMinExclusiveFacet>().FirstOrDefault();
             //var maxExclusive = facets.OfType<XmlSchemaMaxExclusiveFacet>().FirstOrDefault();
 
-            if (pattern != null && memberProperty.Type.BaseType == typeof(String).FullName)
+            if (pattern != null)
             {
-                memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
-                    new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
+                if (memberProperty.Type.BaseType == typeof(String).FullName)
+                {
+                    memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
+                        new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
+                }
+                else if (memberProperty.Type.BaseType == typeof(DateTime).FullName)
+                {
+                    var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
+                    memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
+                    memberProperty.Type = memberField.Type;
+                }
             }
 
             if (maxLength != null && memberProperty.Type.BaseType == typeof(String).FullName)
@@ -336,6 +345,12 @@ namespace Energistics.SchemaGatherer
         private static CodeMemberProperty GetMemberProperty(CodeTypeDeclaration typeDeclaration, string propertyName)
         {
             return typeDeclaration.Members.OfType<CodeMemberProperty>()
+                .FirstOrDefault(x => x.Name == propertyName);
+        }
+
+        private static CodeMemberField GetMemberField(CodeTypeDeclaration typeDeclaration, string propertyName)
+        {
+            return typeDeclaration.Members.OfType<CodeMemberField>()
                 .FirstOrDefault(x => x.Name == propertyName);
         }
 
