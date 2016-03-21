@@ -104,6 +104,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The ID of the sample cylinder in which this sample was collected.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The ID of the sample cylinder in which this sample was collected.")]
         public string sampleCylinderId {
             get {
@@ -116,6 +117,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A name assigned to the acquisition.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name assigned to the acquisition.")]
         public string name {
             get {
@@ -128,6 +130,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The kind of sample acquisition.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The kind of sample acquisition.")]
         public string kind {
             get {
@@ -186,6 +189,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Comments created by the field engineers collecting the sample.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments created by the field engineers collecting the sample.")]
         public string fieldComment {
             get {
@@ -198,6 +202,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Comments created by the engineers analysing the sample.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments created by the engineers analysing the sample.")]
         public string interpretationComment {
             get {
@@ -210,6 +215,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An identifier for the fluid collected as part of this acquistion.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the fluid collected as part of this acquistion.")]
         public string sampleId {
             get {
@@ -222,6 +228,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An identifier for the slot in the sample carrier where the sample was acquired.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the slot in the sample carrier where the sample was acquired.")]
         public string sampleCarrierSlotId {
             get {
@@ -234,6 +241,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An identifier for the formation tester tool section that acquired the sample.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the formation tester tool section that acquired the sample.")]
         public string toolSectionId {
             get {
@@ -246,6 +254,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An identifier for the sample bottle that was used for this acquisition.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the sample bottle that was used for this acquisition.")]
         public string bottleId {
             get {
@@ -258,6 +267,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A description of the kind of bottle used, for example whether the bottle is pressurized with Nitrogen or not.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("A description of the kind of bottle used, for example whether the bottle is press" +
             "urized with Nitrogen or not.")]
         public string bottleConfiguration {
@@ -283,6 +293,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The expected kind of the sample, typically oil, water or gas.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The expected kind of the sample, typically oil, water or gas.")]
         public string grossFluidKind {
             get {
@@ -3721,6 +3732,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of a proprietary method which generally  represents a specialization of a result kind.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The name of a proprietary method which generally  represents a specialization of " +
             "a result kind.")]
         public string method {
@@ -4002,6 +4014,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mnemonic of the curve in the referenced log or wellLog.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The mnemonic of the curve in the referenced log or wellLog.")]
         public string mnemonic {
             get {
@@ -4298,6 +4311,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual description of the extension.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
         public string description {
             get {
@@ -5134,6 +5148,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the parameter.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the parameter.")]
         public string name {
             get {
@@ -5505,6 +5520,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment about the event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the event.")]
         public string comment {
             get {
@@ -5719,6 +5735,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A description of the station.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of the station.")]
         public string description {
             get {
@@ -5923,6 +5940,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the Wireline Formation Test (WFT).</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the Wireline Formation Test" +
             " (WFT).")]
         public string nameWell {
@@ -5937,6 +5955,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the Wireline Formation Test (WFT).</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the Wireline Formation " +
             "Test (WFT).")]
         public string nameWellbore {
@@ -5951,6 +5970,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the Wireline Formation Test (WFT).</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the Wireline Formation Test (WFT).")]
         public string name {
             get {
@@ -5998,6 +6018,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Name of contractor who provided the service.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of contractor who provided the service.")]
         public string serviceCompany {
             get {
@@ -6084,6 +6105,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A description of the run.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of the run.")]
         public string description {
             get {
@@ -6233,6 +6255,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An identifier to indicate the data originator. This identifies the server that or" +
             "iginally created  the object and thus most of the uids in the object (but not  n" +
             "ecessarily the uids of the parents). This is typically a url.")]
@@ -6318,6 +6341,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The category of the service related to the creation of the object.  For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime,  the combination of "uidWell", "uidWellbore", "idSub" and commonData's "serviceCategory"  must be unique. That is, the Store Interface will only retain one realtime   for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY  being the object selector.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute(@"The category of the service related to the creation of the object.  For example, ""mud log service"", ""cement service"", ""LWD service"", ""rig service"", ""drilling service"". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime,  the combination of ""uidWell"", ""uidWellbore"", ""idSub"" and commonData's ""serviceCategory""  must be unique. That is, the Store Interface will only retain one realtime   for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY  being the object selector.")]
         public string serviceCategory {
             get {
@@ -6330,6 +6354,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -8002,6 +8027,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The tool used for the validation operation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The tool used for the validation operation.")]
         public string tool {
             get {
@@ -8014,6 +8040,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The method used for the validation operation..</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The method used for the validation operation..")]
         public string method {
             get {
@@ -8026,6 +8053,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment about the operation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the operation.")]
         public string comment {
             get {
@@ -8175,6 +8203,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the well test.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the well test.")]
         public string nameWell {
             get {
@@ -8188,6 +8217,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well test.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well test.")]
         public string name {
             get {
@@ -8351,6 +8381,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of well production test.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of well production test.")]
         public string testType {
             get {
@@ -8805,6 +8836,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The human understandable contextual name of the reference datum.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The human understandable contextual name of the reference datum.")]
         public string name {
             get {
@@ -8855,6 +8887,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).</summary>
         [System.Xml.Serialization.XmlElementAttribute("kind")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute(@"Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         public string[] kind {
             get {
@@ -8932,6 +8965,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A contextual description of the well reference datum.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A contextual description of the well reference datum.")]
         public string comment {
             get {
@@ -9337,6 +9371,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A Comment, generally given to help the reader  interpret the coordinates if the CRS and the chosen pair do not make them clear.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A Comment, generally given to help the reader  interpret the coordinates if the C" +
             "RS and the chosen pair do not make them clear.")]
         public string description {
@@ -9761,6 +9796,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the time series.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the time series.")]
         public string name {
             get {
@@ -9786,6 +9822,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("If the time series is a measure then this specifies the unit of measure. The unit" +
             " acronym must be chosen from the list that is valid for the measure class. If th" +
             "is is specified then the measure class must be specified.")]
@@ -9823,6 +9860,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment about the time series.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the time series.")]
         public string comment {
             get {
@@ -10299,6 +10337,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the time series.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the time series.")]
         public string name {
             get {
@@ -10324,6 +10363,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("If the time series is a measure then this specifies the unit of measure. The unit" +
             " acronym must be chosen from the list that is valid for the measure class. If th" +
             "is is specified then the measure class must be specified.")]
@@ -10361,6 +10401,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment about the time series.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the time series.")]
         public string comment {
             get {
@@ -10564,6 +10605,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An account identifier for the balance.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("An account identifier for the balance.")]
         public string accountNumber {
             get {
@@ -12027,6 +12069,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the destination.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the destination.")]
         public string name {
             get {
@@ -12062,6 +12105,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The country of the destination.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The country of the destination.")]
         public string country {
             get {
@@ -12142,6 +12186,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A cargo identifier for the product.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A cargo identifier for the product.")]
         public string cargoNumber {
             get {
@@ -12178,6 +12223,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the shipper</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the shipper")]
         public string shipper {
             get {
@@ -13198,6 +13244,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An XPATH to the target value within the message  containing this XPATH value.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An XPATH to the target value within the message  containing this XPATH value.")]
         public string target {
             get {
@@ -13210,6 +13257,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The level of the alert.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The level of the alert.")]
         public string level {
             get {
@@ -13222,6 +13270,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of alert. For example "off specification".</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of alert. For example \"off specification\".")]
         public string type {
             get {
@@ -13234,6 +13283,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual decription of the alert.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual decription of the alert.")]
         public string description {
             get {
@@ -13273,6 +13323,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the person providing the comment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the person providing the comment.")]
         public string who {
             get {
@@ -13285,6 +13336,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The role of the person providing the comment. This is the role of the person within the context of comment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The role of the person providing the comment. This is the role of the person with" +
             "in the context of comment.")]
         public string role {
@@ -13345,6 +13397,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The relevant comment.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("The relevant comment.")]
         public string remark {
             get {
@@ -14726,6 +14779,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of this flow within the context of this report. This might reflect some combination of the kind of flow, port, qualifier and related facility.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of this flow within the context of this report. This might reflect some " +
             "combination of the kind of flow, port, qualifier and related facility.")]
         public string name {
@@ -14902,6 +14956,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Identifies the source of the version.  This will commonly be the name of the software which created the version.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Identifies the source of the version.  This will commonly be the name of the soft" +
             "ware which created the version.")]
         public string versionSource {
@@ -16045,6 +16100,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the variable in this curve.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The name of the variable in this curve.")]
         public string parameter {
             get {
@@ -16096,6 +16152,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The unit of measure of the variable. The unit of measure must match a unit allowed by the measure class.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the variable. The unit of measure must match a unit allowe" +
             "d by the measure class.")]
         public string unit {
@@ -16351,6 +16408,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Identifies the source of the version.  This will commonly be the name of the software which created the version.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Identifies the source of the version.  This will commonly be the name of the soft" +
             "ware which created the version.")]
         public string versionSource {
@@ -16425,6 +16483,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment about the parameter.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the parameter.")]
         public string comment {
             get {
@@ -18201,6 +18260,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The human contextual name of the business unit.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The human contextual name of the business unit.")]
         public string name {
             get {
@@ -18213,6 +18273,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual description of the business unit.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the business unit.")]
         public string description {
             get {
@@ -18404,6 +18465,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of report.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of report.")]
         public string kind {
             get {
@@ -18823,6 +18885,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the business associate.  This can be the name of a person, business, group, etc.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the business associate.  This can be the name of a person, business, " +
             "group, etc.")]
         public string name {
@@ -18985,6 +19048,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A general comment. This should not  be used to carry semantic information. This is not  intended to be machine interpretable.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment. This should not  be used to carry semantic information. This i" +
             "s not  intended to be machine interpretable.")]
         public string comment {
@@ -19017,6 +19081,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A name prefix. Such as, Dr, Ms, Miss, Mr, etc.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name prefix. Such as, Dr, Ms, Miss, Mr, etc.")]
         public string prefix {
             get {
@@ -19030,6 +19095,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The persons first name.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The persons first name.")]
         public string first {
             get {
@@ -19042,6 +19108,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The persons middle name or initial name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The persons middle name or initial name.")]
         public string middle {
             get {
@@ -19055,6 +19122,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The persons last or given name.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The persons last or given name.")]
         public string last {
             get {
@@ -19068,6 +19136,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A name suffix. Such as Esq, Phd, etc.</summary>
         [System.Xml.Serialization.XmlElementAttribute("suffix")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name suffix. Such as Esq, Phd, etc.")]
         public string[] suffix {
             get {
@@ -19111,6 +19180,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The Name line of an address.  If missing, use the Name of the business associate.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The Name line of an address.  If missing, use the Name of the business associate." +
             "")]
         public string name {
@@ -19126,6 +19196,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the "name" and "city" lines. This may be repeated  for up to four, ordered lines.</summary>
         [System.Xml.Serialization.XmlElementAttribute("street")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The Street is a generic term for the  middle lines of an address. They may be a s" +
             "treet address, PO Box, Suite number, or any lines that come  between the \"name\" " +
             "and \"city\" lines. This may be repeated  for up to four, ordered lines.")]
@@ -19141,6 +19212,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The City for the business associate's  address</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The City for the business associate\'s  address")]
         public string city {
             get {
@@ -19178,6 +19250,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The Country may be included. Although  this is optional, it is probably required for most uses.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The Country may be included. Although  this is optional, it is probably required " +
             "for most uses.")]
         public string country {
@@ -19191,6 +19264,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A postal code, if appropriate for the country.  In the USA this would be the five or nine digit zip code.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A postal code, if appropriate for the country.  In the USA this would be the five" +
             " or nine digit zip code.")]
         public string postalCode {
@@ -19536,6 +19610,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the country.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the country.")]
         public string country {
             get {
@@ -19548,6 +19623,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The state of province within the country.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The state of province within the country.")]
         public string state {
             get {
@@ -19584,6 +19660,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An general comment that further explains the  offshore location.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An general comment that further explains the  offshore location.")]
         public string comment {
             get {
@@ -19613,6 +19690,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A general meaning of Area. It may be as  general as 'UK North Sea' or 'Viosca Knoll'. The user community must agree on the meaning of this element.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A general meaning of Area. It may be as  general as \'UK North Sea\' or \'Viosca Kno" +
             "ll\'. The user community must agree on the meaning of this element.")]
         public string areaName {
@@ -19628,6 +19706,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.</summary>
         [System.Xml.Serialization.XmlElementAttribute("blockID")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
         public string[] blockID {
             get {
@@ -19653,6 +19732,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An general comment that further explains the  offshore location.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An general comment that further explains the  offshore location.")]
         public string comment {
             get {
@@ -19680,6 +19760,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An optional, uncontrolled value, which may be  used to describe the general area of offshore North Sea in which the  point is located.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An optional, uncontrolled value, which may be  used to describe the general area " +
             "of offshore North Sea in which the  point is located.")]
         public string areaName {
@@ -19694,6 +19775,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The number or letter of the quadrant in  the North Sea.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The number or letter of the quadrant in  the North Sea.")]
         public string quadrant {
             get {
@@ -19816,6 +19898,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A comment about the operation and/or the activities  within the operation.</summary>
         [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the operation and/or the activities  within the operation.")]
         public string[] comment {
             get {
@@ -19943,6 +20026,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Name of the cargo vessel for the installation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the cargo vessel for the installation.")]
         public string vesselName {
             get {
@@ -20001,6 +20085,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Name of the captain of the vessel.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the captain of the vessel.")]
         public string captain {
             get {
@@ -20013,6 +20098,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>the cargo identifier.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("the cargo identifier.")]
         public string cargoNumber {
             get {
@@ -20049,6 +20135,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Description of cargo on the vessel.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Description of cargo on the vessel.")]
         public string cargo {
             get {
@@ -20301,6 +20388,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A general comment on marine activity in the area</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment on marine activity in the area")]
         public string generalComment {
             get {
@@ -20313,6 +20401,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Name of supply vessel for the installation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of supply vessel for the installation.")]
         public string supplyShip {
             get {
@@ -20325,6 +20414,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Name of standby vessel for the installation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of standby vessel for the installation.")]
         public string standbyVessel {
             get {
@@ -20463,6 +20553,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The area where the alarm went off.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The area where the alarm went off.")]
         public string area {
             get {
@@ -20475,6 +20566,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of alarm that went off.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of alarm that went off.")]
         public string type {
             get {
@@ -20487,6 +20579,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The reason for the alarm going off.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The reason for the alarm going off.")]
         public string reason {
             get {
@@ -20499,6 +20592,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A general comment relevant for the alarm.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment relevant for the alarm.")]
         public string comment {
             get {
@@ -20583,6 +20677,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A general description of the shutdown with reason and  other relevant information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A general description of the shutdown with reason and  other relevant information" +
             ".")]
         public string description {
@@ -20764,6 +20859,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An identifier of the point from which the sample was taken.  This is an uncontrolled string value, which should be as descriptive as possible.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An identifier of the point from which the sample was taken.  This is an uncontrol" +
             "led string value, which should be as descriptive as possible.")]
         public string samplePoint {
@@ -21316,6 +21412,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Name of company that supplied the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of company that supplied the data.")]
         public string agency {
             get {
@@ -21524,6 +21621,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Type of precipitation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of precipitation.")]
         public string typePrecip {
             get {
@@ -21548,6 +21646,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Description of cloud cover.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description of cloud cover.")]
         public string coverCloud {
             get {
@@ -21596,6 +21695,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -22057,6 +22157,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual description of safety considerations.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of safety considerations.")]
         public string safetyDescription {
             get {
@@ -22477,6 +22578,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of report.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of report.")]
         public string kind {
             get {
@@ -22741,6 +22843,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name assigned to the plan.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name assigned to the plan.")]
         public string name {
             get {
@@ -22766,6 +22869,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual description of the purpose of the plan.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the purpose of the plan.")]
         public string purpose {
             get {
@@ -22837,6 +22941,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A name assigned to the change.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name assigned to the change.")]
         public string name {
             get {
@@ -22862,6 +22967,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual reason for the change.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual reason for the change.")]
         public string reason {
             get {
@@ -23044,6 +23150,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark associated with this property.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this property.")]
         public string comment {
             get {
@@ -23329,6 +23436,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Defines the node to which this port is connected. Only two ports should be actively connected to the same node at the same point in time. That is, a port should only be connected to one other port. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one node is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Defines the node to which this port is connected. Only two ports should be actively connected to the same node at the same point in time. That is, a port should only be connected to one other port. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one node is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
         public string node {
             get {
@@ -23341,6 +23449,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of a network plan. This indicates a planned connection. The connected port must be part of the same plan or be an actual. Not specified indicates an actual connection.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of a network plan. This indicates a planned connection. The connected po" +
             "rt must be part of the same plan or be an actual. Not specified indicates an act" +
             "ual connection.")]
@@ -23401,6 +23510,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark associated with this connection, possibly including a reason for termination.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this connection, possibly including a reason" +
             " for termination.")]
         public string comment {
@@ -23476,6 +23586,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the port within the context of the Product Flow Unit.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the port within the context of the Product Flow Unit.")]
         public string name {
             get {
@@ -23488,6 +23599,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of a network plan. This indicates a planned port. All child network components must all be planned and be part of the same plan. The parent unit must be part of the same plan or be an actual. Not specified indicates an actual port.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of a network plan. This indicates a planned port. All child network comp" +
             "onents must all be planned and be part of the same plan. The parent unit must be" +
             " part of the same plan or be an actual. Not specified indicates an actual port.")]
@@ -23613,6 +23725,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark associated with this port.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this port.")]
         public string comment {
             get {
@@ -23813,6 +23926,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark associated with this property.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this property.")]
         public string comment {
             get {
@@ -23888,6 +24002,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the Product Flow Unit within the  context of the Product Flow Network.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Product Flow Unit within the  context of the Product Flow Network" +
             ".")]
         public string name {
@@ -23901,6 +24016,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.")]
         public string planName {
             get {
@@ -24039,6 +24155,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark associated with this unit.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this unit.")]
         public string comment {
             get {
@@ -24103,6 +24220,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the external port within the context of  the current Product Flow Network.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the external port within the context of  the current Product Flow Net" +
             "work.")]
         public string name {
@@ -24156,6 +24274,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the  same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an "exposed" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the  same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an ""exposed"" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port.")]
         public string connectedNode {
             get {
@@ -24168,6 +24287,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark about the port.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark about the port.")]
         public string comment {
             get {
@@ -24238,6 +24358,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the Product Flow Network. This must be unique within the context of the overall Product Flow Model.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Product Flow Network. This must be unique within the context of t" +
             "he overall Product Flow Model.")]
         public string name {
@@ -24251,6 +24372,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.")]
         public string planName {
             get {
@@ -24287,6 +24409,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark about the network.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark about the network.")]
         public string comment {
             get {
@@ -24523,6 +24646,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the Product Flow Model.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Product Flow Model.")]
         public string name {
             get {
@@ -24673,6 +24797,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A descriptive remark about the model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark about the model.")]
         public string comment {
             get {
@@ -24790,6 +24915,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the Fluid Sample.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Fluid Sample.")]
         public string name {
             get {
@@ -24802,6 +24928,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string sampleBottle {
             get {
@@ -24927,6 +25054,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The test identifier.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The test identifier.")]
         public string testId {
             get {
@@ -24939,6 +25067,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The test run number (e.g., for an RFT)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The test run number (e.g., for an RFT)")]
         public string testRun {
             get {
@@ -24951,6 +25080,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the company which ran the test.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the company which ran the test.")]
         public string testProvider {
             get {
@@ -25058,6 +25188,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string sampleDisposition {
             get {
@@ -25093,6 +25224,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string comment {
             get {
@@ -25293,6 +25425,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
         public string description {
             get {
@@ -28974,6 +29107,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string componentName {
             get {
                 return this.componentNameField;
@@ -29737,6 +29871,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string source {
             get {
                 return this.sourceField;
@@ -29747,6 +29882,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         public string purpose {
             get {
                 return this.purposeField;
@@ -29870,6 +30006,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Human recognizable context for the fluid sample that was analyzed.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the fluid sample that was analyzed.")]
         public string nameFluidSample {
             get {
@@ -29882,6 +30019,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Human recognizable context for the fluid analysis that produced this result.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the fluid analysis that produced this result.")]
         public string nameFluidAnalysis {
             get {
@@ -29895,6 +30033,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the Fluid Analysis Result.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Fluid Analysis Result.")]
         public string name {
             get {
@@ -30202,6 +30341,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string analysisDescription {
             get {
@@ -30214,6 +30354,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string analysisPurpose {
             get {
@@ -30412,6 +30553,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the Fluid Analysis.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Fluid Analysis.")]
         public string name {
             get {
@@ -30460,6 +30602,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the application that was run by the user.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the application that was run by the user.")]
         public string applicationName {
             get {
@@ -30472,6 +30615,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The version of the application that was run by the user.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The version of the application that was run by the user.")]
         public string applicationVersion {
             get {
@@ -30484,6 +30628,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string analysisCompany {
             get {
@@ -30496,6 +30641,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the analyst or user who is responsible for the results.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the analyst or user who is responsible for the results.")]
         public string personName {
             get {
@@ -30508,6 +30654,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string reportIdentifier {
             get {
@@ -30544,6 +30691,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public string reportLocation {
             get {
@@ -30636,6 +30784,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of processing used to create the new log.</summary>
         [System.Xml.Serialization.XmlElementAttribute("processing")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The kind of processing used to create the new log.")]
         public string[] processing {
             get {
@@ -30673,6 +30822,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual comment about the processing.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual comment about the processing.")]
         public string comment {
             get {
@@ -30730,6 +30880,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A name of the error.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name of the error.")]
         public string name {
             get {
@@ -30742,6 +30893,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A code, or other id, for the error.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A code, or other id, for the error.")]
         public string id {
             get {
@@ -30754,6 +30906,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A description of the error.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of the error.")]
         public string description {
             get {
@@ -30848,6 +31001,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -30861,6 +31015,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the dts.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the dts.")]
         public string nameWellbore {
             get {
@@ -30874,6 +31029,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the dts.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the dts.")]
         public string name {
             get {
@@ -31407,6 +31563,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A general comment about the OTDR run.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment about the OTDR run.")]
         public string comment {
             get {
@@ -31634,6 +31791,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A name which can be used to reference the pumping activity.  In general, a pumping activity does not have a natural name, so that this element  will not be often used.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name which can be used to reference the pumping activity.  In general, a pumpin" +
             "g activity does not have a natural name, so that this element  will not be often" +
             " used.")]
@@ -31684,6 +31842,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The person in charge of the pumping activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The person in charge of the pumping activity.")]
         public string engineerName {
             get {
@@ -31696,6 +31855,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The company that performed the pumping activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The company that performed the pumping activity.")]
         public string serviceCompany {
             get {
@@ -31708,6 +31868,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of fluid used in the pump.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of fluid used in the pump.")]
         public string pumpFluidType {
             get {
@@ -31720,6 +31881,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of fluid used in the control line.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of fluid used in the control line.")]
         public string controlLineFluid {
             get {
@@ -31732,6 +31894,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The direction of the pumping.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The direction of the pumping.")]
         public string pumpDirection {
             get {
@@ -31744,6 +31907,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of end seal on the fiber.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of end seal on the fiber.")]
         public string fiberEndSeal {
             get {
@@ -31756,6 +31920,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of cable meter.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of cable meter.")]
         public string cableMeterType {
             get {
@@ -31768,6 +31933,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The serial number of the cable meter.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The serial number of the cable meter.")]
         public string cableMeterSerialNumber {
             get {
@@ -31872,6 +32038,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A name, unique within the context of the well, for an  instrument box cable to hook to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name, unique within the context of the well, for an  instrument box cable to ho" +
             "ok to.")]
         public string name {
@@ -31885,6 +32052,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Any description of the node that may be useful in  identifying the hookup.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any description of the node that may be useful in  identifying the hookup.")]
         public string description {
             get {
@@ -31976,6 +32144,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The business associate that performed the calibration.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The business associate that performed the calibration.")]
         public string calibratedBy {
             get {
@@ -31988,6 +32157,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>This may be a standard protocol, or a software application.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("This may be a standard protocol, or a software application.")]
         public string calibrationProtocol {
             get {
@@ -32015,6 +32185,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Any remarks that may be useful, regarding the calibration information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any remarks that may be useful, regarding the calibration information.")]
         public string remarks {
             get {
@@ -32165,6 +32336,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The physical identification string of the equipment tag.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The physical identification string of the equipment tag.")]
         public string name {
             get {
@@ -32259,6 +32431,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the company that installed the tag.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the company that installed the tag.")]
         public string installationCompany {
             get {
@@ -32271,6 +32444,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Reference to a manufacturers or installers installation  description, code, or method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("Reference to a manufacturers or installers installation  description, code, or me" +
             "thod.")]
         public string mountingCode {
@@ -32284,6 +32458,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment or remark about the tag.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment or remark about the tag.")]
         public string comment {
             get {
@@ -32458,6 +32633,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A name for the instrument box. This can be used to access  the instrument box.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name for the instrument box. This can be used to access  the instrument box.")]
         public string name {
             get {
@@ -32470,6 +32646,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The ultimate manufacturer of the instrument box.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The ultimate manufacturer of the instrument box.")]
         public string manufacturer {
             get {
@@ -32506,6 +32683,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of instrument box used.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of instrument box used.")]
         public string type {
             get {
@@ -32533,6 +32711,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The version of the software installed in the instrument box.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The version of the software installed in the instrument box.")]
         public string softwareVersion {
             get {
@@ -32598,6 +32777,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The cable used to test the instrument box.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The cable used to test the instrument box.")]
         public string testCable {
             get {
@@ -32610,6 +32790,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The offset setting applied to the instrument box based on  the factory or bench calibration.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The offset setting applied to the instrument box based on  the factory or bench c" +
             "alibration.")]
         public string offset {
@@ -32784,6 +32965,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The company that installed the instrument box in the wellbore  measurement system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The company that installed the instrument box in the wellbore  measurement system" +
             ".")]
         public string installationCompany {
@@ -32895,6 +33077,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The business associate that performed the calibration.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The business associate that performed the calibration.")]
         public string calibratedBy {
             get {
@@ -32907,6 +33090,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>This may be a standard protocol, or a software application.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("This may be a standard protocol, or a software application.")]
         public string calibrationProtocol {
             get {
@@ -32934,6 +33118,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Any remarks that may be useful, regarding the calibration information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any remarks that may be useful, regarding the calibration information.")]
         public string remarks {
             get {
@@ -33228,6 +33413,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A human understandable name for the fiber. This is used for  identification of the instance.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A human understandable name for the fiber. This is used for  identification of th" +
             "e instance.")]
         public string name {
@@ -33268,6 +33454,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of coating on the fiber.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of coating on the fiber.")]
         public string coating {
             get {
@@ -33280,6 +33467,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of jacket covering the fiber.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of jacket covering the fiber.")]
         public string jacket {
             get {
@@ -33372,6 +33560,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The spool number located on the particular spool.  The spool number may contain alphanumeric characters.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The spool number located on the particular spool.  The spool number may contain a" +
             "lphanumeric characters.")]
         public string spoolNumberTag {
@@ -33422,6 +33611,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A fiber may go through several manufacturers for its various  parts. The supplier is the final company in the chain that supplies the fiber  to the end user.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A fiber may go through several manufacturers for its various  parts. The supplier" +
             " is the final company in the chain that supplies the fiber  to the end user.")]
         public string supplier {
@@ -33435,6 +33625,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The model number (alphanumeric) that is used by the supplier  to reference the type of fiber that is supplied to the user.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The model number (alphanumeric) that is used by the supplier  to reference the ty" +
             "pe of fiber that is supplied to the user.")]
         public string supplierModelNumber {
@@ -33568,6 +33759,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The company that installed the fiber in the wellbore.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The company that installed the fiber in the wellbore.")]
         public string installationCompany {
             get {
@@ -33743,6 +33935,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -33756,6 +33949,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the installed system.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the installed system.")]
         public string nameWellbore {
             get {
@@ -33769,6 +33963,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Human recognizable context for the dts.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the dts.")]
         public string name {
             get {
@@ -33890,6 +34085,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The configuration of the fiber installation. Example values  would be linear, linear with gauge, J, U.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The configuration of the fiber installation. Example values  would be linear, lin" +
             "ear with gauge, J, U.")]
         public string fiberConfiguration {
@@ -34218,6 +34414,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The security class in which this document is  classified. Examples would be confi" +
             "dential, partner confidential,  tight. The meaning of the class is determined by" +
             " the System in which  it is defined.")]
@@ -34232,6 +34429,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The security classification system.  This gives context to the meaning of the Class value.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The security classification system.  This gives context to the meaning of the Cla" +
             "ss value.")]
         public string securitySystem {
@@ -34268,6 +34466,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A general comment to further define the security  class.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment to further define the security  class.")]
         public string comment {
             get {
@@ -34336,6 +34535,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If appropriate, the software that created the file.  This is a free form string, " +
             "and may include whatever information  is deemed relevant.")]
         public string softwareName {
@@ -34349,6 +34549,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The person or business associate that created  the file.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The person or business associate that created  the file.")]
         public string fileCreator {
             get {
@@ -34361,6 +34562,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Any comment that would be useful to further  explain the creation of this instance document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any comment that would be useful to further  explain the creation of this instanc" +
             "e document.")]
         public string comment {
@@ -34499,6 +34701,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A free-form string that allows a disclaimer to  accompany the information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A free-form string that allows a disclaimer to  accompany the information.")]
         public string disclaimer {
             get {
@@ -34524,6 +34727,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The owner of the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The owner of the data.")]
         public string owner {
             get {
@@ -34548,6 +34752,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An optional comment about the document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An optional comment about the document.")]
         public string comment {
             get {
@@ -34826,6 +35031,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of report.  This should define and constrain the expected content of the report.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of report.  This should define and constrain the expected content of the" +
             " report.")]
         public string kind {
@@ -34939,6 +35145,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A textual comment about the report.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual comment about the report.")]
         public string comment {
             get {
@@ -34951,6 +35158,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The current report version.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The current report version.")]
         public string reportVersion {
             get {

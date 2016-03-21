@@ -78,6 +78,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the completion.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the completion.")]
         public string nameWell {
             get {
@@ -91,6 +92,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Human recognizable context for the completion.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the completion.")]
         public string name {
             get {
@@ -103,6 +105,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Field ID.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Field ID.")]
         public string fieldID {
             get {
@@ -115,6 +118,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Field code.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Field code.")]
         public string fieldCode {
             get {
@@ -127,6 +131,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Field type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Field type.")]
         public string fieldType {
             get {
@@ -185,6 +190,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Documents exploration and production rights</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Documents exploration and production rights")]
         public string E_P_RightsID {
             get {
@@ -453,6 +459,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The description about the status</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("The description about the status")]
         public string comment {
             get {
@@ -4460,6 +4467,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An identifier to indicate the data originator. This identifies the server that or" +
             "iginally created  the object and thus most of the uids in the object (but not  n" +
             "ecessarily the uids of the parents). This is typically a url.")]
@@ -4548,6 +4556,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The category of the service related to the creation of the object.  For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service".</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The category of the service related to the creation of the object.  For example, " +
             "\"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling ser" +
             "vice\".")]
@@ -4562,6 +4571,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -4935,6 +4945,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>A textual description of the extension.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
         public string description {
             get {
@@ -6347,6 +6358,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The physical identification string of the equipment tag.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The physical identification string of the equipment tag.")]
         public string name {
             get {
@@ -6441,6 +6453,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The name of the company that installed the tag.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the company that installed the tag.")]
         public string installationCompany {
             get {
@@ -6453,6 +6466,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Reference to a manufacturers or installers installation  description, code, or method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("Reference to a manufacturers or installers installation  description, code, or me" +
             "thod.")]
         public string mountingCode {
@@ -6466,6 +6480,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>A comment or remark about the tag.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment or remark about the tag.")]
         public string comment {
             get {
@@ -6701,6 +6716,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>AFE number that this cost item applies to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("AFE number that this cost item applies to.")]
         public string numAFE {
             get {
@@ -6792,6 +6808,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The kind of cost item specified (e.g., rig dayrate, joints casing).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
         public string itemKind {
             get {
@@ -6863,6 +6880,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Invoice number for cost item, bill sent to Operator.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Invoice number for cost item, bill sent to Operator.")]
         public string numInvoice {
             get {
@@ -6875,6 +6893,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Purchase order number, provided by Operator.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Purchase order number, provided by Operator.")]
         public string numPO {
             get {
@@ -6887,6 +6906,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Field Ticket number, issued by service company on location.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Field Ticket number, issued by service company on location.")]
         public string numTicket {
             get {
@@ -6961,6 +6981,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Serial number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Serial number.")]
         public string numSerial {
             get {
@@ -6973,6 +6994,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Name of vendor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of vendor.")]
         public string nameVendor {
             get {
@@ -6998,6 +7020,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Name of pool/reservoir that this cost item can be accounted to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of pool/reservoir that this cost item can be accounted to.")]
         public string pool {
             get {
@@ -8417,6 +8440,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] stringEquipmentRefID {
             get {
                 return this.stringEquipmentRefIDField;
@@ -8452,6 +8477,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] stringEquipmentRefID {
             get {
                 return this.stringEquipmentRefIDField;
@@ -8491,6 +8518,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] stringEquipmentRefID {
             get {
                 return this.stringEquipmentRefIDField;
@@ -8524,6 +8553,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("perforationSetRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] perforationSetRefID {
             get {
                 return this.perforationSetRefIDField;
@@ -8720,6 +8751,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Well name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Well name.")]
         public string nameWell {
             get {
@@ -8732,6 +8764,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Wellbore name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Wellbore name.")]
         public string nameWellbore {
             get {
@@ -8744,6 +8777,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Ledger name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Ledger name.")]
         public string name {
             get {
@@ -8756,6 +8790,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Parent event reference id.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Parent event reference id.")]
         public string parentEventID {
             get {
@@ -8874,6 +8910,8 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Rig reference id.</summary>
         [System.Xml.Serialization.XmlElementAttribute("rigID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Rig reference id.")]
         public string[] rigID {
             get {
@@ -8945,6 +8983,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Extension event for work order id.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Extension event for work order id.")]
         public string workOrderID {
             get {
@@ -8983,6 +9022,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Service company or business</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Service company or business")]
         public string businessAssociate {
             get {
@@ -8995,6 +9035,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Name or information about person responsible who is implementing the service or job.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name or information about person responsible who is implementing the service or j" +
             "ob.")]
         public string responsiblePerson {
@@ -9008,6 +9049,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Contact name or person to get in touch with. Might not necessarily be the person responsible.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Contact name or person to get in touch with. Might not necessarily be the person " +
             "responsible.")]
         public string contact {
@@ -9126,6 +9168,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Phase (large activity classification) e.g. Drill Surface Hole.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("Phase (large activity classification) e.g. Drill Surface Hole.")]
         public string phase {
             get {
@@ -9150,6 +9193,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Comment on this ledger</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comment on this ledger")]
         public string comment {
             get {
@@ -9199,6 +9243,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Description of this ledger</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Description of this ledger")]
         public string description {
             get {
@@ -10072,6 +10117,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string stringEquipmentRefUID {
             get {
                 return this.stringEquipmentRefUIDField;
@@ -10156,6 +10203,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -10344,6 +10393,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>A remark about the interval over this period of time</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A remark about the interval over this period of time")]
         public string comment {
             get {
@@ -10452,6 +10502,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The referencing eventledger ID</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The referencing eventledger ID")]
         public string eventRefID {
             get {
@@ -10638,6 +10690,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The description about the status</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("The description about the status")]
         public string comment {
             get {
@@ -10707,6 +10760,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string perforationSetRefID {
             get {
                 return this.perforationSetRefIDField;
@@ -10791,6 +10846,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -10856,6 +10913,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string boreholeStringRefID {
             get {
                 return this.boreholeStringRefIDField;
@@ -10940,6 +10999,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -11005,6 +11066,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string downholeStringRefID {
             get {
                 return this.downholeStringRefIDField;
@@ -11089,6 +11152,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -11257,6 +11322,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the completion.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the completion.")]
         public string nameWell {
             get {
@@ -11270,6 +11336,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the completion.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the completion.")]
         public string nameWellbore {
             get {
@@ -11283,6 +11350,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well completion that contains the completion.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well completion that contains the completion.")]
         public string nameWellCompletion {
             get {
@@ -11295,6 +11363,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Preferred name</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Preferred name")]
         public string name {
             get {
@@ -11307,6 +11376,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>CompletionNo, etc API14</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("CompletionNo, etc API14")]
         public string wellboreCompletionNo {
             get {
@@ -11319,6 +11389,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Preferred alias name</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Preferred alias name")]
         public string wellboreCompletionAlias {
             get {
@@ -11365,6 +11436,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>API suffix.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("API suffix.")]
         public string suffixAPI {
             get {
@@ -15647,6 +15719,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The name of downhole string.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of downhole string.")]
         public string name {
             get {
@@ -15682,6 +15755,8 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The name of parent string.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of parent string.")]
         public string parentStringsName {
             get {
@@ -15954,6 +16029,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well.")]
         public string nameWell {
             get {
@@ -15967,6 +16043,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Human recognizable context for the downhole equipment.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the downhole equipment.")]
         public string name {
             get {
@@ -16246,6 +16323,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The security class in which this document is  classified. Examples would be confi" +
             "dential, partner confidential,  tight. The meaning of the class is determined by" +
             " the System in which  it is defined.")]
@@ -16260,6 +16338,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The security classification system.  This gives context to the meaning of the Class value.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The security classification system.  This gives context to the meaning of the Cla" +
             "ss value.")]
         public string securitySystem {
@@ -16296,6 +16375,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>A general comment to further define the security  class.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment to further define the security  class.")]
         public string comment {
             get {
@@ -16364,6 +16444,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If appropriate, the software that created the file.  This is a free form string, " +
             "and may include whatever information  is deemed relevant.")]
         public string softwareName {
@@ -16377,6 +16458,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The person or business associate that created  the file.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The person or business associate that created  the file.")]
         public string fileCreator {
             get {
@@ -16389,6 +16471,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Any comment that would be useful to further  explain the creation of this instance document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any comment that would be useful to further  explain the creation of this instanc" +
             "e document.")]
         public string comment {
@@ -16562,6 +16645,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>A free-form string that allows a disclaimer to  accompany the information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A free-form string that allows a disclaimer to  accompany the information.")]
         public string disclaimer {
             get {
@@ -16587,6 +16671,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>The owner of the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The owner of the data.")]
         public string owner {
             get {
@@ -16599,6 +16684,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>An optional comment about the document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An optional comment about the document.")]
         public string comment {
             get {

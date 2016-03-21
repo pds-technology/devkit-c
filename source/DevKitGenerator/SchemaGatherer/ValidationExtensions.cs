@@ -304,7 +304,7 @@ namespace Energistics.SchemaGatherer
                     memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
                         new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
                 }
-                else if (memberProperty.Type.BaseType == typeof(DateTime).FullName)
+                else if (memberProperty.Type.BaseType == typeof(DateTime).FullName && pattern.Value != ".+")
                 {
                     var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
                     memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
@@ -357,16 +357,18 @@ namespace Energistics.SchemaGatherer
         private static IEnumerable<XmlSchemaFacet> GetElementRestrictions(XmlSchemaElement schemaElement)
         {
             var elementType = schemaElement.ElementSchemaType as XmlSchemaSimpleType;
-            var facets = Enumerable.Empty<XmlSchemaFacet>();
+            var facets = new List<XmlSchemaFacet>();
 
-            if (elementType != null)
+            while (elementType != null)
             {
                 var restrictions = elementType.Content as XmlSchemaSimpleTypeRestriction;
 
                 if (restrictions != null)
                 {
-                    facets = restrictions.Facets.OfType<XmlSchemaFacet>();
+                    facets.AddRange(restrictions.Facets.OfType<XmlSchemaFacet>());
                 }
+
+                elementType = elementType.BaseXmlSchemaType as XmlSchemaSimpleType;
             }
 
             return facets;

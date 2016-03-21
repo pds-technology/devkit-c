@@ -94,6 +94,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -112,6 +113,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore.")]
 		[XmlElement("name")]
         public String Name {
@@ -147,6 +149,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Operator borehole number. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Operator borehole number.")]
 		[XmlElement("number")]
         public String Number {
@@ -164,6 +167,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// API suffix. 
         /// </summary>
+		[StringLength(64)]
 		[Description("API suffix.")]
 		[XmlElement("suffixAPI")]
         public String SuffixAPI {
@@ -181,6 +185,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Government assigned number. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Government assigned number.")]
 		[XmlElement("numGovt")]
         public String NumGovt {
@@ -4213,6 +4218,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// An identifier to indicate the data originator. This identifies the server that originally created the object and thus most of the uids in the object (but not necessarily the uids of the parents). This is typically a url. 
         /// </summary>
+		[StringLength(64)]
 		[Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
 		[XmlElement("sourceName")]
         public String SourceName {
@@ -4335,6 +4341,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The category of the service related to the creation of the object. For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". 
         /// </summary>
+		[StringLength(50)]
 		[Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\".")]
 		[XmlElement("serviceCategory")]
         public String ServiceCategory {
@@ -4352,6 +4359,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -4855,6 +4863,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A textual description of the extension.
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the extension.")]
 		[XmlElement("description")]
         public String Description {
@@ -5077,6 +5086,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the point. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the point.")]
 		[XmlElement("name")]
         public String Name {
@@ -5094,6 +5104,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The kind of point. For example, 'well reference point', 'platform reference point', 'sea surface', 'sea bottom'. 
         /// </summary>
+		[StringLength(50)]
 		[Description("The kind of point. For example,  'well reference point', 'platform reference point', 'sea surface', 'sea bottom'.")]
 		[XmlElement("type")]
         public String Type {
@@ -5166,6 +5177,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A textual description of the point. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("A textual description of the point.")]
 		[XmlElement("description")]
         public String Description {
@@ -5617,6 +5629,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A Comment, generally given to help the reader interpret the coordinates if the CRS and the chosen pair do not make them clear.
         /// </summary>
+		[StringLength(256)]
 		[Description("A Comment, generally given to help the reader  interpret the coordinates if the CRS and the chosen pair do not make them clear.")]
 		[XmlElement("description")]
         public String Description {
@@ -6010,6 +6023,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well.")]
 		[XmlElement("name")]
         public String Name {
@@ -6027,6 +6041,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Legal name of the well. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Legal name of the well.")]
 		[XmlElement("nameLegal")]
         public String NameLegal {
@@ -6044,6 +6059,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// License number of the well. 
         /// </summary>
+		[StringLength(64)]
 		[Description("License number of the well.")]
 		[XmlElement("numLicense")]
         public String NumLicense {
@@ -6061,6 +6077,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Government assigned well number. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Government assigned well number.")]
 		[XmlElement("numGovt")]
         public String NumGovt {
@@ -6113,6 +6130,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of the field in which the well is located. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of the field in which the well is located.")]
 		[XmlElement("field")]
         public String Field {
@@ -6130,6 +6148,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Country in which well is located. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Country in which well is located.")]
 		[XmlElement("country")]
         public String Country {
@@ -6147,6 +6166,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// State or province in which well is located. 
         /// </summary>
+		[StringLength(32)]
 		[Description("State or province in which well is located.")]
 		[XmlElement("state")]
         public String State {
@@ -6164,6 +6184,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// County in which the well is located. 
         /// </summary>
+		[StringLength(32)]
 		[Description("County in which the well is located.")]
 		[XmlElement("county")]
         public String County {
@@ -6181,6 +6202,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Geo-political region. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Geo-political region.")]
 		[XmlElement("region")]
         public String Region {
@@ -6198,6 +6220,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Geo-political district name. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Geo-political district name.")]
 		[XmlElement("district")]
         public String District {
@@ -6215,6 +6238,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Block name in which well is located. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Block name in which well is located.")]
 		[XmlElement("block")]
         public String Block {
@@ -6233,6 +6257,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The time zone in which well is located. It is the deviation in hours and minutes from UTC. This should be the normal time zone at the well and not a seasonally adjusted value such as daylight savings time.
         /// </summary>
 		[Required]
+		[RegularExpression("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
 		[Description("The time zone in which well is located.   It is the deviation in hours and minutes from UTC. This should be the normal time zone at the well and not a seasonally  adjusted value such as daylight savings time.")]
 		[XmlElement("timeZone")]
         public String TimeZone {
@@ -6250,6 +6275,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Operator company name. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Operator company name.")]
 		[XmlElement("operator")]
         public String Operator {
@@ -6267,6 +6293,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Division of operator company. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Division of operator company.")]
 		[XmlElement("operatorDiv")]
         public String OperatorDivision {
@@ -6302,6 +6329,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// American Petroleum Institute well number. 
         /// </summary>
+		[StringLength(32)]
 		[Description("American Petroleum Institute well number.")]
 		[XmlElement("numAPI")]
         public String NumAPI {
@@ -6763,6 +6791,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The human understandable contextual name of the reference datum.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The human understandable contextual name of the reference datum.")]
 		[XmlElement("name")]
         public String Name {
@@ -6860,6 +6889,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Since various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).
         /// </summary>
+		[StringLength(50)]
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
 		[RecurringElement]
 		[XmlElement("kind")]
@@ -6968,6 +6998,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A contextual description of the well reference datum.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A contextual description of the well reference datum.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -7336,6 +7367,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the system. For a geodetic system this is commonly the name of the datum. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the system.  For a geodetic system this is commonly the name of the datum.")]
 		[XmlElement("name")]
         public String Name {
@@ -7496,6 +7528,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A textual description of the system. 
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the system.")]
 		[XmlElement("description")]
         public String Description {
@@ -8898,6 +8931,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -8916,6 +8950,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the wellbore geometry. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the wellbore geometry.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -8934,6 +8969,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore geometry. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore geometry.")]
 		[XmlElement("name")]
         public String Name {
@@ -9327,6 +9363,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Material grade for the tubular section. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Material grade for the tubular section.")]
 		[XmlElement("grade")]
         public String Grade {
@@ -10032,6 +10069,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -10226,6 +10264,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -11719,6 +11758,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Thread type from API RP7G, 5CT. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Thread type from API RP7G, 5CT.")]
 		[XmlElement("typeThread")]
         public String TypeThread {
@@ -12092,6 +12132,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Nozzle orientation. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Nozzle orientation.")]
 		[XmlElement("orientation")]
         public String Orientation {
@@ -12252,6 +12293,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of item and details. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Description of item and details.")]
 		[XmlElement("description")]
         public String Description {
@@ -12415,6 +12457,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Material grade for the tubular section. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Material grade for the tubular section.")]
 		[XmlElement("grade")]
         public String Grade {
@@ -12612,6 +12655,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Service class. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Service class.")]
 		[XmlElement("classService")]
         public String ClassService {
@@ -12807,6 +12851,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of vendor. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of vendor.")]
 		[XmlElement("vendor")]
         public String Vendor {
@@ -12824,6 +12869,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Component name from manufacturer. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Component name from manufacturer.")]
 		[XmlElement("model")]
         public String Model {
@@ -13020,6 +13066,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Hole opener object. 
         /// </summary>
 		[Description("Hole opener object.")]
+		[ComponentElement]
 		[XmlElement("holeOpener")]
         public HoleOpener HoleOpener {
             get {
@@ -13162,6 +13209,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The physical identification string of the equipment tag.
         /// </summary>
 		[Required]
+		[StringLength(50)]
 		[Description("The physical identification string of the equipment tag.")]
 		[XmlElement("name")]
         public String Name {
@@ -13302,6 +13350,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the company that installed the tag. 
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the company that installed the tag.")]
 		[XmlElement("installationCompany")]
         public String InstallationCompany {
@@ -13319,6 +13368,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Reference to a manufacturers or installers installation description, code, or method. 
         /// </summary>
+		[StringLength(50)]
 		[Description("Reference to a manufacturers or installers installation  description, code, or method.")]
 		[XmlElement("mountingCode")]
         public String MountingCode {
@@ -13336,6 +13386,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A comment or remark about the tag.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment or remark about the tag.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -13426,6 +13477,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Bit number and rerun number e.g. "4.1" for the first rerun of bit 4. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Bit number and rerun number e.g. \"4.1\" for the first rerun of bit 4.")]
 		[XmlElement("numBit")]
         public String NumBit {
@@ -13498,6 +13550,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -13568,6 +13621,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The manufacturers code for the bit. 
         /// </summary>
+		[StringLength(32)]
 		[Description("The manufacturers code for the bit.")]
 		[XmlElement("codeMfg")]
         public String CodeMfg {
@@ -13585,6 +13639,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// IADC bit code. 
         /// </summary>
+		[StringLength(32)]
 		[Description("IADC bit code.")]
 		[XmlElement("codeIADC")]
         public String CodeIADC {
@@ -13709,6 +13764,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Row and cone numbers for items which need location information (e.g. Cracked Cone, Lost Cone etc). 
         /// </summary>
+		[StringLength(32)]
 		[Description("Row and cone numbers for items which need location information (e.g. Cracked Cone, Lost Cone etc).")]
 		[XmlElement("condInitLocation")]
         public String CondInitLocation {
@@ -13745,6 +13801,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Condition of bit gauge in 1/16 of an inch. I = in gauge, else number of 16ths out of gauge. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Condition of bit gauge in 1/16 of an inch. I = in gauge, else number of 16ths out of gauge.")]
 		[XmlElement("condInitGauge")]
         public String CondInitGauge {
@@ -13762,6 +13819,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Other comments on bit condition from IADC list (BitDullCode in standard list). 
         /// </summary>
+		[StringLength(32)]
 		[Description("Other comments on bit condition from IADC list (BitDullCode in standard list).")]
 		[XmlElement("condInitOther")]
         public String CondInitOther {
@@ -13921,6 +13979,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Row and cone numbers for items which need location information (e.g. Cracked Cone, Lost Cone etc). 
         /// </summary>
+		[StringLength(32)]
 		[Description("Row and cone numbers for items which need location information (e.g. Cracked Cone, Lost Cone etc).")]
 		[XmlElement("condFinalLocation")]
         public String CondFinalLocation {
@@ -13957,6 +14016,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Condition of bit gauge in 1/16 of a inch. I = in gauge, else number of 16ths out of gauge. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Condition of bit gauge in 1/16 of a inch. I = in gauge, else number of 16ths out of gauge.")]
 		[XmlElement("condFinalGauge")]
         public String CondFinalGauge {
@@ -13974,6 +14034,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Other comments on bit condition from IADC list (BitDullCode in Standard LISTS). 
         /// </summary>
+		[StringLength(32)]
 		[Description("Other comments on bit condition from IADC list (BitDullCode in Standard LISTS).")]
 		[XmlElement("condFinalOther")]
         public String CondFinalOther {
@@ -14026,6 +14087,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Bit drive type (Motor, rotary table etc). 
         /// </summary>
+		[StringLength(32)]
 		[Description("Bit drive type (Motor, rotary table etc).")]
 		[XmlElement("drive")]
         public String Drive {
@@ -14260,6 +14322,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -14278,6 +14341,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the tubular. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the tubular.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -14296,6 +14360,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the tubular (assembly). 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the tubular (assembly).")]
 		[XmlElement("name")]
         public String Name {
@@ -14635,6 +14700,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -14653,6 +14719,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the trajectory. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the trajectory.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -14671,6 +14738,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the trajectory. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the trajectory.")]
 		[XmlElement("name")]
         public String Name {
@@ -14847,6 +14915,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of contractor who provided the service.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of contractor who provided the service.")]
 		[XmlElement("serviceCompany")]
         public String ServiceCompany {
@@ -15326,6 +15395,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The type of tool used for the measurements.
         /// </summary>
+		[StringLength(50)]
 		[Description("The type of tool used for the measurements.")]
 		[XmlElement("typeSurveyTool")]
         public String TypeSurveyTool {
@@ -15343,6 +15413,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The type of algorithm used in the position calculation.
         /// </summary>
+		[StringLength(50)]
 		[Description("The type of algorithm used in the position calculation.")]
 		[XmlElement("calcAlgorithm")]
         public String CalcAlgorithm {
@@ -15614,6 +15685,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Tool error model used to compute covariance matrix. 
         /// </summary>
         [Obsolete()]
+		[StringLength(4000)]
 		[Description("DEPRECATED. Tool error model used to compute covariance matrix.")]
 		[XmlElement("modelToolError")]
         public String ModelToolError {
@@ -16107,6 +16179,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Geomagnetic model used. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Geomagnetic model used.")]
 		[XmlElement("magModelUsed")]
         public String MagModelUsed {
@@ -16124,6 +16197,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Current valid interval for the geomagnetic model used. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Current valid interval for the geomagnetic model used.")]
 		[XmlElement("magModelValid")]
         public String MagModelValid {
@@ -16141,6 +16215,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Gravitational model used. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Gravitational model used.")]
 		[XmlElement("geoModelUsed")]
         public String GeoModelUsed {
@@ -17131,6 +17206,8 @@ namespace Energistics.DataAccess.WITSML141
         /// A pointer to the trajectoryStation within the parent trajectory. This is a special case where we only use a uid for the pointer. The natural identity of a station is its physical characteristics (e.g., md).
         /// </summary>
 		[Required]
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[Description("A pointer to the trajectoryStation within the parent trajectory. This is a special case where we only use a uid for the pointer. The natural identity of a station is its physical characteristics (e.g., md).")]
 		[XmlElement("stationReference")]
         public String StationReference {
@@ -17410,6 +17487,7 @@ namespace Energistics.DataAccess.WITSML141
         /// This is the unique mnemonic for this term. For example, "ABIX" or "DECR".
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("This is the unique mnemonic for this term.  For example, \"ABIX\" or \"DECR\".")]
 		[XmlElement("name")]
         public String Name {
@@ -17498,6 +17576,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human-readable name for the term, may be presented in application software. E.g., "MWD: X-Acceleromter Bias with Z-Axis Corr."
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human-readable name for the term, may be presented in  application software. E.g., \"MWD: X-Acceleromter Bias with Z-Axis Corr.\"")]
 		[XmlElement("label")]
         public String Label {
@@ -17515,6 +17594,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Human-readable name for the term, may be presented in application software. E.g., "MWD: X-Acceleromter Bias with Z-Axis Corr."
         /// </summary>
+		[StringLength(4000)]
 		[Description("Human-readable name for the term, may be presented in  application software. E.g., \"MWD: X-Acceleromter Bias with Z-Axis Corr.\"")]
 		[XmlElement("description")]
         public String Description {
@@ -17643,6 +17723,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The name of the constant.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the constant.")]
 		[XmlElement("name")]
         public String Name {
@@ -17679,6 +17760,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The unit of measure of the constant. This value must match an acronym from the WITSML unit of measure dictionary.
         /// </summary>
 		[Required]
+		[StringLength(24)]
 		[Description("The unit of measure of the constant. This value must match an acronym from the WITSML unit of measure dictionary.")]
 		[XmlElement("unit")]
         public String Unit {
@@ -17697,6 +17779,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A textual description of the constant.
         /// </summary>
 		[Required]
+		[StringLength(4000)]
 		[Description("A textual description of the constant.")]
 		[XmlElement("description")]
         public String Description {
@@ -17788,6 +17871,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The name of the item.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the item.")]
 		[XmlElement("name")]
         public String Name {
@@ -17806,6 +17890,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A textual description of the item.
         /// </summary>
 		[Required]
+		[StringLength(4000)]
 		[Description("A textual description of the item.")]
 		[XmlElement("description")]
         public String Description {
@@ -17986,6 +18071,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human-readable name for the set of terms.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human-readable name for the set of terms.")]
 		[XmlElement("name")]
         public String Name {
@@ -18146,6 +18232,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Person responsible for the information.
         /// </summary>
+		[StringLength(64)]
 		[Description("Person responsible for the information.")]
 		[XmlElement("author")]
         public String Author {
@@ -18163,6 +18250,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Source from which the information is derived.
         /// </summary>
+		[StringLength(64)]
 		[Description("Source from which the information is derived.")]
 		[XmlElement("source")]
         public String Source {
@@ -18181,6 +18269,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Person or collective body responsible for authorizing the information.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Person or collective body responsible for authorizing the information.")]
 		[XmlElement("authority")]
         public String Authority {
@@ -18216,6 +18305,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Version name or number.
         /// </summary>
+		[StringLength(64)]
 		[Description("Version name or number.")]
 		[XmlElement("version")]
         public String Version {
@@ -18233,6 +18323,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A comment about the object. This should include information regarding the derivation of the information.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment about the object.  This should include information regarding the derivation of the information.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -18378,6 +18469,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A textual comment about this error term value.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A textual comment about this error term value.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -18812,6 +18904,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A particular constraint.
         /// </summary>
+		[StringLength(64)]
 		[Description("A particular constraint.")]
 		[XmlElement("parameter")]
         public String Parameter {
@@ -18865,6 +18958,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A fixed value that the constraint must take.
         /// </summary>
+		[StringLength(32)]
 		[Description("A fixed value that the constraint must take.")]
 		[XmlElement("value")]
         public String Value {
@@ -18954,6 +19048,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human-readable name for the model.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human-readable name for the model.")]
 		[XmlElement("name")]
         public String Name {
@@ -18989,6 +19084,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The type of tool used for the measurements. This is the same list as defined for a trajectoryStation.
         /// </summary>
+		[StringLength(50)]
 		[Description("The type of tool used for the measurements.   This is the same list as defined for a trajectoryStation.")]
 		[XmlElement("typeSurveyTool")]
         public String TypeSurveyTool {
@@ -19384,6 +19480,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -19402,6 +19499,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the target. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the target.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -19420,6 +19518,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the target. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the target.")]
 		[XmlElement("name")]
         public String Name {
@@ -19991,6 +20090,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of survey program section. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of survey program section.")]
 		[XmlElement("name")]
         public String Name {
@@ -20047,6 +20147,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Company who will run / has run sruvey tool. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Company who will run / has run sruvey tool.")]
 		[XmlElement("nameSurveyCompany")]
         public String NameSurveyCompany {
@@ -20065,6 +20166,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Name of survey tool to be used / used for this section. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Name of survey tool to be used / used for this section.")]
 		[XmlElement("nameTool")]
         public String NameTool {
@@ -20083,6 +20185,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Type of tool used. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Type of tool used.")]
 		[XmlElement("typeTool")]
         public String TypeTool {
@@ -20100,6 +20203,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Error model used to calculate ellipses of uncertainty. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Error model used to calculate ellipses of uncertainty.")]
 		[XmlElement("modelError")]
         public String ModelError {
@@ -20205,6 +20309,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -20294,6 +20399,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -20312,6 +20418,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the survey program. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the survey program.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -20330,6 +20437,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the survey program. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the survey program.")]
 		[XmlElement("name")]
         public String Name {
@@ -20400,6 +20508,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of engineer. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of engineer.")]
 		[XmlElement("engineer")]
         public String Engineer {
@@ -20578,6 +20687,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The type of perforation and/or how the perforation was created.
         /// </summary>
+		[StringLength(32)]
 		[Description("The type of perforation and/or how the perforation was created.")]
 		[XmlElement("type")]
         public String Type {
@@ -21025,6 +21135,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A name for the formation lithology.
         /// </summary>
+		[StringLength(64)]
 		[Description("A name for the formation lithology.")]
 		[XmlElement("lithName")]
         public String LithName {
@@ -21168,6 +21279,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name used for the net pay zone.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name used for the net pay zone.")]
 		[XmlElement("netPayName")]
         public String NetPayName {
@@ -21275,6 +21387,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of the formation.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of the formation.")]
 		[XmlElement("nameFormation")]
         public String NameFormation {
@@ -22553,6 +22666,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the session.
         /// </summary>
+		[StringLength(32)]
 		[Description("The name of the session.")]
 		[XmlElement("name")]
         public String Name {
@@ -22570,6 +22684,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description of the session.
         /// </summary>
+		[StringLength(256)]
 		[Description("A description of the session.")]
 		[XmlElement("description")]
         public String Description {
@@ -23586,6 +23701,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A short description of the event.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A short description of the event.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -23712,6 +23828,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Proppant name.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Proppant name.")]
 		[XmlElement("name")]
         public String Name {
@@ -23782,6 +23899,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The size of the sieve through which a proppant will pass. Measures the fineness of the grind.
         /// </summary>
+		[StringLength(32)]
 		[Description("The size of the sieve through which a proppant will pass.   Measures the fineness of the grind.")]
 		[XmlElement("sieveSize")]
         public String SieveSize {
@@ -23837,6 +23955,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Additive name.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Additive name.")]
 		[XmlElement("name")]
         public String Name {
@@ -23998,6 +24117,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the fluid.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the fluid.")]
 		[XmlElement("name")]
         public String Name {
@@ -24033,6 +24153,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Source of the water used in the fluid. 256 char max size.
         /// </summary>
+		[StringLength(256)]
 		[Description("Source of the water used in the fluid. 256 char max size.")]
 		[XmlElement("waterSource")]
         public String WaterSource {
@@ -24139,6 +24260,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The purpose of the fluid.
         /// </summary>
+		[StringLength(256)]
 		[Description("The purpose of the fluid.")]
 		[XmlElement("purpose")]
         public String Purpose {
@@ -24156,6 +24278,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The description of the fluid.
         /// </summary>
+		[StringLength(256)]
 		[Description("The description of the fluid.")]
 		[XmlElement("description")]
         public String Description {
@@ -24173,6 +24296,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The supplier of the fluid.
         /// </summary>
+		[StringLength(64)]
 		[Description("The supplier of the fluid.")]
 		[XmlElement("supplier")]
         public String Supplier {
@@ -24315,6 +24439,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A human readable name for the stage.
         /// </summary>
+		[StringLength(64)]
 		[Description("A human readable name for the stage.")]
 		[XmlElement("name")]
         public String Name {
@@ -24332,6 +24457,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A short description of the stage.
         /// </summary>
+		[StringLength(256)]
 		[Description("A short description of the stage.")]
 		[XmlElement("description")]
         public String Description {
@@ -25823,6 +25949,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The type of tubular (e.g., casing, tubing, liner, packer, open hole, other).
         /// </summary>
+		[StringLength(32)]
 		[Description("The type of tubular (e.g., casing, tubing, liner, packer, open hole, other).")]
 		[XmlElement("type")]
         public String Type {
@@ -26075,6 +26202,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A human readable name for the flow path.
         /// </summary>
+		[StringLength(64)]
 		[Description("A human readable name for the flow path.")]
 		[XmlElement("name")]
         public String Name {
@@ -26092,6 +26220,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A short description of the flow path.
         /// </summary>
+		[StringLength(256)]
 		[Description("A short description of the flow path.")]
 		[XmlElement("description")]
         public String Description {
@@ -27281,6 +27410,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The name of the proppant.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the proppant.")]
 		[XmlElement("name")]
         public String Name {
@@ -27391,6 +27521,8 @@ namespace Energistics.DataAccess.WITSML141
         /// Identifier for the stimulation treatment interval unique to the stimulation job.
         /// </summary>
 		[Required]
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[Description("Identifier for the stimulation treatment interval unique to the stimulation job.")]
 		[XmlElement("uidTreatmentInterval")]
         public String UidTreatmentInterval {
@@ -27409,6 +27541,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well stimulation treatment name.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well stimulation treatment name.")]
 		[XmlElement("name")]
         public String Name {
@@ -27514,6 +27647,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the formation being stimulated.
         /// </summary>
+		[StringLength(4000)]
 		[Description("The name of the formation being stimulated.")]
 		[XmlElement("formationName")]
         public String FormationName {
@@ -27603,6 +27737,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A name for the open hole. To be used for open hole completions.
         /// </summary>
+		[StringLength(64)]
 		[Description("A name for the open hole. To be used for open hole completions.")]
 		[XmlElement("openHoleName")]
         public String OpenHoleName {
@@ -28178,6 +28313,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of the proppant used for the treatment interval.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of the proppant used for the treatment interval.")]
 		[RecurringElement]
 		[XmlElement("proppantName")]
@@ -28285,6 +28421,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The names of the each fluid used in this interval.
         /// </summary>
+		[StringLength(64)]
 		[Description("The names of the each fluid used in this interval.")]
 		[RecurringElement]
 		[XmlElement("fluidName")]
@@ -28806,6 +28943,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -28824,6 +28962,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -28842,6 +28981,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well stimulation job.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well stimulation job.")]
 		[XmlElement("name")]
         public String Name {
@@ -28860,6 +29000,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Type of well stimulation job.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Type of well stimulation job.")]
 		[XmlElement("kind")]
         public String Kind {
@@ -28913,6 +29054,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Name of the well stimulation contractor.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Name of the well stimulation contractor.")]
 		[XmlElement("serviceCompany")]
         public String ServiceCompany {
@@ -28930,6 +29072,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of service company supervisor.
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of service company supervisor.")]
 		[XmlElement("supervisor")]
         public String Supervisor {
@@ -28948,6 +29091,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The API or equivalent identifier number for the well.
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("The API or equivalent identifier number for the well.")]
 		[XmlElement("apiNumber")]
         public String ApiNumber {
@@ -28966,6 +29110,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Customer or company name.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Customer or company name.")]
 		[XmlElement("customerName")]
         public String CustomerName {
@@ -29196,6 +29341,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of a proppant used for the stimulation job.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of a proppant used for the stimulation job.")]
 		[RecurringElement]
 		[XmlElement("proppantName")]
@@ -29697,6 +29843,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of formation penetrated. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of formation penetrated.")]
 		[XmlElement("nameFormation")]
         public String NameFormation {
@@ -29714,6 +29861,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -29858,6 +30006,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Free text sample description of item and details, using a structured approach as per AAPG and Shell style, or specific operator descriptive hierarchy typically in the order of Rock Type, Qualifier,colour, Texture, Cement matrix type, compaction, Fracture, accessories, fossils, structure porosity, Shows. This should be blank if a structured approach to creating the description is used. Example clastic descriptions: SST, qtz, wh lt gy grn, m - c g, well sort, subrnd-subang, sub sph - sph, grst tex, wk calc cmt, fria, glauc rr mica, gd vis por, patchy dk brn oil stn, wk yel dir fluor, bri yel cut fluor, instant blooming yel-wh crush cut fluor, dk brn cut col. Example carbonate description: LST; wh buff lt brn, m-c g, bioclastic grst, xln cmt, hd, ang brk, tr pyr, poor vis por. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Free text sample description of item and details, using a structured approach as per AAPG and Shell style, or specific operator descriptive hierarchy typically in the order of Rock Type, Qualifier,colour, Texture, Cement matrix type, compaction, Fracture, accessories, fossils, structure porosity, Shows. This should be blank if a structured approach to creating the description is used. Example clastic descriptions: SST, qtz, wh lt gy grn, m - c g, well sort, subrnd-subang, sub sph - sph, grst tex, wk calc cmt, fria, glauc rr mica, gd vis por, patchy dk brn oil stn, wk yel dir fluor, bri yel cut fluor, instant blooming yel-wh crush cut fluor, dk brn cut col. Example carbonate description: LST; wh buff lt brn, m-c g, bioclastic grst, xln cmt, hd, ang brk, tr pyr, poor vis por.")]
 		[XmlElement("description")]
         public String Description {
@@ -29876,6 +30025,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Lithology classification description. (In the past this was intended to distinguish between alternative classification schemes such as Dunham or Folk. This is no longer necessary with the classifications included in Lithology Type)
         /// </summary>
         [Obsolete()]
+		[StringLength(32)]
 		[Description("DEPRECATED. Lithology classification description. (In the past this was intended to distinguish between alternative classification schemes such as Dunham or Folk. This is no longer necessary with the classifications included in Lithology Type)")]
 		[XmlElement("lithClass")]
         public String LithClass {
@@ -29894,6 +30044,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Use sizeGrain below. Granulometry.
         /// </summary>
         [Obsolete()]
+		[StringLength(32)]
 		[Description("DEPRECATED. Use sizeGrain below. Granulometry.")]
 		[XmlElement("grainType")]
         public String GrainType {
@@ -29912,6 +30063,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Dunham / Embry and Klovan limestone classification. No longer used, as the terms are available as alternates for carbonates within the Lithology type. i.e. A Dunham defined lithology will be plotted graphically as a limestone, but the Dunham terminology will be available to use in a structured description. 
         /// </summary>
         [Obsolete()]
+		[StringLength(32)]
 		[Description("DEPRECATED. Dunham / Embry and Klovan limestone classification. No longer used, as the terms are available as alternates for carbonates within the Lithology type. i.e. A Dunham defined lithology will be plotted graphically as a limestone, but the Dunham terminology will be available to use in a structured description.")]
 		[XmlElement("dunhamClass")]
         public String DunhamClass {
@@ -29947,6 +30099,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often "feather-edge" appearance on breaking), friable, dull, earthy, chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular, sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur) 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often \"feather-edge\" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
 		[XmlElement("texture")]
         public String Texture {
@@ -29964,6 +30117,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.) 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)")]
 		[XmlElement("hardness")]
         public String Hardness {
@@ -29981,6 +30135,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard. 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.")]
 		[XmlElement("compaction")]
         public String Compaction {
@@ -29998,6 +30153,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite. Size ranges in millimeter (or micrometer) and Inches. LT 256 mm LT 10.1 in "boulder"; 64-256 mm 2.5-10.1 in "cobble"; 32-64 mm 1.26-2.5 in "very coarse gravel"; 16-32 mm 0.63-1.26 in "coarse gravel"; 8-16 mm 0.31-0.63 in "medium gravel"; 4-8 mm 0.157-0.31 in "fine gravel"; 2-4 mm 0.079-0.157 in "very fine gravel"; 1-2 mm 0.039-0.079 in "very coarse sand"; 0.5-1 mm 0.020-0.039 in "coarse sand"; 0.25-0.5 mm 0.010-0.020 in "medium sand"; 125-250 um 0.0049-0.010 in "fine sand"; 62.5-125 um 0.0025-0.0049 in "very fine sand"; 3.90625-62.5 um 0.00015-0.0025 in "silt"; LT 3.90625 um LT 0.00015 in "clay"; LT 1 um LT 0.000039 in "colloid" 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in \"boulder\"; 64-256 mm2.5-10.1 in\"cobble\"; 32-64 mm1.26-2.5 in\"very coarse gravel\"; 16-32 mm0.63-1.26 in\"coarse gravel\"; 8-16 mm0.31-0.63 in\"medium gravel\"; 4-8 mm0.157-0.31 in\"fine gravel\"; 2-4 mm0.079-0.157 in\"very fine gravel\"; 1-2 mm0.039-0.079 in\"very coarse sand\"; 0.5-1 mm0.020-0.039 in\"coarse sand\"; 0.25-0.5 mm0.010-0.020 in\"medium sand\"; 125-250 um0.0049-0.010 in\"fine sand\"; 62.5-125 um0.0025-0.0049 in\"very fine sand\"; 3.90625-62.5 um0.00015-0.0025 in\"silt\"; LT 3.90625 umLT 0.00015 in\"clay\"; LT 1 umLT 0.000039 in \"colloid\"")]
 		[XmlElement("sizeGrain")]
         public String SizeGrain {
@@ -30015,6 +30171,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded. 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.")]
 		[XmlElement("roundness")]
         public String Roundness {
@@ -30032,6 +30189,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical")]
 		[XmlElement("sphericity")]
         public String Sphericity {
@@ -30049,6 +30207,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted. 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
 		[XmlElement("sorting")]
         public String Sorting {
@@ -30101,6 +30260,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none" 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% \"good\" 10 to 15% \"fair\" 5 to 10% \"poor\" LT 5% \"trace\" 0 \"none\"")]
 		[XmlElement("porosityVisible")]
         public String PorosityVisible {
@@ -30118,6 +30278,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous. 
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
 		[XmlElement("porosityFabric")]
         public String PorosityFabric {
@@ -30135,6 +30296,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.
         /// </summary>
+		[StringLength(32)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.")]
 		[XmlElement("permeability")]
         public String Permeability {
@@ -30337,6 +30499,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. This prior useage for a specific terminology is suggested to no longer be used, as the intent should be to avoid encoding proprietary terms. But, for the sake of interoperability, proprietary descriptive use of a specific term for a percentage, should be derived from the abundance % by the end users' visualization application, using the end users' terminology. (i.e. if 1 less than or equal to 1% = Rare Trace or equivalent terminology for the specific operator; this can be mapped in the end user application, but is redundant to be encoded in the standard.)
         /// </summary>
         [Obsolete()]
+		[StringLength(50)]
 		[Description("DEPRECATED. This prior useage for a specific terminology is suggested to no longer be used, as the intent should be to avoid encoding proprietary terms. But, for the sake of interoperability, proprietary descriptive use of a specific term for a percentage, should be derived from the abundance % by the end users' visualization application, using the end users' terminology. (i.e. if 1 less than or equal to  1% = Rare Trace or equivalent terminology for the specific operator; this can be mapped in the end user application, but is redundant to be encoded in the standard.)")]
 		[XmlElement("abundanceCode")]
         public String AbundanceCode {
@@ -30354,6 +30517,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A textual description of the qualifier.
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the qualifier.")]
 		[XmlElement("description")]
         public String Description {
@@ -30905,6 +31069,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Free format show description. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Free format show description.")]
 		[XmlElement("showDesc")]
         public String ShowDesc {
@@ -30922,6 +31087,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Impregnated lithology. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Impregnated lithology.")]
 		[XmlElement("impregnatedLitho")]
         public String ImpregnatedLitho {
@@ -30939,6 +31105,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of any hydrocarbon type odors smelled. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description of any hydrocarbon type odors smelled.")]
 		[XmlElement("odor")]
         public String Odor {
@@ -30992,6 +31159,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -31010,6 +31178,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the sidewall core. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the sidewall core.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -31028,6 +31197,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the sidewall core. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the sidewall core.")]
 		[XmlElement("name")]
         public String Name {
@@ -31133,6 +31303,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Reference log information. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Reference log information.")]
 		[XmlElement("coreReferenceLog")]
         public String CoreReferenceLog {
@@ -31169,6 +31340,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of contractor who provided the service. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of contractor who provided the service.")]
 		[XmlElement("serviceCompany")]
         public String ServiceCompany {
@@ -31186,6 +31358,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Analysis company 
         /// </summary>
+		[StringLength(64)]
 		[Description("Analysis company")]
 		[XmlElement("analysisContractor")]
         public String AnalysisContractor {
@@ -31203,6 +31376,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of engineer analyzing sidewall core samples. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of engineer analyzing sidewall core samples.")]
 		[XmlElement("analysisBy")]
         public String AnalysisBy {
@@ -31220,6 +31394,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Sidewall coring tool description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Sidewall coring tool description.")]
 		[XmlElement("sidewallCoringTool")]
         public String SidewallCoringTool {
@@ -31625,6 +31800,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -31643,6 +31819,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the risk. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the risk.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -31661,6 +31838,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the risk. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the risk.")]
 		[XmlElement("name")]
         public String Name {
@@ -31767,6 +31945,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Custom string to further categorize the risk.
         /// </summary>
+		[StringLength(50)]
 		[Description("Custom string to further categorize the risk.")]
 		[XmlElement("extendCategory")]
         public String ExtendCategory {
@@ -32070,6 +32249,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// summary description of risk.
         /// </summary>
+		[StringLength(256)]
 		[Description("summary description of risk.")]
 		[XmlElement("summary")]
         public String Summary {
@@ -32087,6 +32267,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Complete description of Risk.
         /// </summary>
+		[StringLength(256)]
 		[Description("Complete description of Risk.")]
 		[XmlElement("details")]
         public String Details {
@@ -32104,6 +32285,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Details for identifing the Risk.
         /// </summary>
+		[StringLength(256)]
 		[Description("Details for identifing the Risk.")]
 		[XmlElement("identification")]
         public String Identification {
@@ -32121,6 +32303,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Plan of action if the Risk materializes.
         /// </summary>
+		[StringLength(256)]
 		[Description("Plan of action if the Risk materializes.")]
 		[XmlElement("contingency")]
         public String Contingency {
@@ -32138,6 +32321,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Plan of action to ensure the risk does not materialize.
         /// </summary>
+		[StringLength(256)]
 		[Description("Plan of action to ensure the risk does not materialize.")]
 		[RecurringElement]
 		[XmlElement("mitigation")]
@@ -32392,6 +32576,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of item and details. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Description of item and details.")]
 		[XmlElement("description")]
         public String Description {
@@ -33264,6 +33449,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -33281,6 +33467,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturers designated model. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturers designated model.")]
 		[XmlElement("model")]
         public String Model {
@@ -33368,6 +33555,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description for the type of object. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description for the type of object.")]
 		[XmlElement("type")]
         public String Type {
@@ -33385,6 +33573,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Contractor/owner. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Contractor/owner.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -33727,6 +33916,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -33744,6 +33934,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturers designated model. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturers designated model.")]
 		[XmlElement("model")]
         public String Model {
@@ -33831,6 +34022,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description for the type of object. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description for the type of object.")]
 		[XmlElement("type")]
         public String Type {
@@ -33848,6 +34040,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Cones description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Cones description.")]
 		[XmlElement("descCone")]
         public String DescCone {
@@ -33865,6 +34058,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Contractor/owner. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Contractor/owner.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -33973,6 +34167,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -33990,6 +34185,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturers designated model. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturers designated model.")]
 		[XmlElement("model")]
         public String Model {
@@ -34077,6 +34273,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description for the type of object. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description for the type of object.")]
 		[XmlElement("type")]
         public String Type {
@@ -34112,6 +34309,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Contractor/owner. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Contractor/owner.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -34221,6 +34419,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the shaker.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the shaker.")]
 		[XmlElement("name")]
         public String Name {
@@ -34238,6 +34437,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -34255,6 +34455,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturers designated model. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturers designated model.")]
 		[XmlElement("model")]
         public String Model {
@@ -34342,6 +34543,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description for the type of object. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description for the type of object.")]
 		[XmlElement("type")]
         public String Type {
@@ -34359,6 +34561,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Shaker location on rig. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Shaker location on rig.")]
 		[XmlElement("locationShaker")]
         public String LocationShaker {
@@ -34499,6 +34702,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Contractor/owner. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Contractor/owner.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -34643,6 +34847,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -34660,6 +34865,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturers designated model. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturers designated model.")]
 		[XmlElement("model")]
         public String Model {
@@ -34747,6 +34953,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Contractor/owner. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Contractor/owner.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -35268,6 +35475,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Contractor/owner. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Contractor/owner.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -35697,6 +35905,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -35714,6 +35923,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturers designated model. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturers designated model.")]
 		[XmlElement("model")]
         public String Model {
@@ -35819,6 +36029,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of connection to Blow Out Preventer. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of connection to Blow Out Preventer.")]
 		[XmlElement("typeConnectionBop")]
         public String TypeConnectionBop {
@@ -36215,6 +36426,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of accumulator/description. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Type of accumulator/description.")]
 		[XmlElement("accumulator")]
         public String Accumulator {
@@ -36304,6 +36516,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Blow Out Preventer Control System. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Blow Out Preventer Control System.")]
 		[XmlElement("typeControlManifold")]
         public String TypeControlManifold {
@@ -36321,6 +36534,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of control system. 
         /// </summary>
+		[StringLength(256)]
 		[Description("Description of control system.")]
 		[XmlElement("descControlManifold")]
         public String DescControlManifold {
@@ -36338,6 +36552,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of choke manifold. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Type of choke manifold.")]
 		[XmlElement("typeChokeManifold")]
         public String TypeChokeManifold {
@@ -36409,6 +36624,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -36427,6 +36643,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the rig. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the rig.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -36445,6 +36662,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the rig. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the rig.")]
 		[XmlElement("name")]
         public String Name {
@@ -36462,6 +36680,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Contractor/owner. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Contractor/owner.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -36514,6 +36733,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -36567,6 +36787,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Rig classification. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Rig classification.")]
 		[XmlElement("classRig")]
         public String ClassRig {
@@ -36584,6 +36805,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Rig approvals/certification. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Rig approvals/certification.")]
 		[XmlElement("approvals")]
         public String Approvals {
@@ -36601,6 +36823,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Rig registration location. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Rig registration location.")]
 		[XmlElement("registration")]
         public String Registration {
@@ -36618,6 +36841,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Rig telephone number. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Rig telephone number.")]
 		[XmlElement("telNumber")]
         public String TelNumber {
@@ -36635,6 +36859,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Rig fax number. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Rig fax number.")]
 		[XmlElement("faxNumber")]
         public String FaxNumber {
@@ -36652,6 +36877,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Rig Email address. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Rig Email address.")]
 		[XmlElement("emailAddress")]
         public String EmailAddress {
@@ -36669,6 +36895,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of contact person. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of contact person.")]
 		[XmlElement("nameContact")]
         public String NameContact {
@@ -37202,6 +37429,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of hook. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of hook.")]
 		[XmlElement("typeHook")]
         public String TypeHook {
@@ -37326,6 +37554,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of the drawworks motor. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description of the drawworks motor.")]
 		[XmlElement("motorDrawWorks")]
         public String MotorDrawWorks {
@@ -37343,6 +37572,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Rig brake description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Rig brake description.")]
 		[XmlElement("descBrake")]
         public String DescBrake {
@@ -37360,6 +37590,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of Swivel. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of Swivel.")]
 		[XmlElement("typeSwivel")]
         public String TypeSwivel {
@@ -37430,6 +37661,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of rotating system. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description of rotating system.")]
 		[XmlElement("descRotSystem")]
         public String DescRotSystem {
@@ -37501,6 +37733,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of slow circulation rates system. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description of slow circulation rates system.")]
 		[XmlElement("scrSystem")]
         public String ScrSystem {
@@ -37518,6 +37751,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of pipe handling system. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of pipe handling system.")]
 		[XmlElement("pipeHandlingSystem")]
         public String PipeHandlingSystem {
@@ -37643,6 +37877,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Power system. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Power system.")]
 		[XmlElement("mainEngine")]
         public String MainEngine {
@@ -37678,6 +37913,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of cement unit on the rig. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of cement unit on the rig.")]
 		[XmlElement("cementUnit")]
         public String CementUnit {
@@ -37835,6 +38071,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Mooring type. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Mooring type.")]
 		[XmlElement("moorType")]
         public String MoorType {
@@ -38297,6 +38534,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of company that supplied the data. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of company that supplied the data.")]
 		[XmlElement("agency")]
         public String Agency {
@@ -38584,6 +38822,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of precipitation. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of precipitation.")]
 		[XmlElement("typePrecip")]
         public String TypePrecip {
@@ -38619,6 +38858,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of cloud cover. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description of cloud cover.")]
 		[XmlElement("coverCloud")]
         public String CoverCloud {
@@ -38690,6 +38930,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -38781,6 +39022,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for support craft. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for support craft.")]
 		[XmlElement("name")]
         public String Name {
@@ -38903,6 +39145,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -38993,6 +39236,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of company. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of company.")]
 		[XmlElement("company")]
         public String Company {
@@ -39172,6 +39416,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of person who prepared incident report. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of person who prepared incident report.")]
 		[XmlElement("reporter")]
         public String Reporter {
@@ -39347,6 +39592,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Accident description. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Accident description.")]
 		[XmlElement("descAccident")]
         public String DescAccident {
@@ -39364,6 +39610,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Remedial action description. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Remedial action description.")]
 		[XmlElement("remedialActionDesc")]
         public String RemedialActionDesc {
@@ -39381,6 +39628,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Cause description. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Cause description.")]
 		[XmlElement("causeDesc")]
         public String CauseDesc {
@@ -39434,6 +39682,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of company that caused incident. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of company that caused incident.")]
 		[XmlElement("responsibleCompany")]
         public String ResponsibleCompany {
@@ -40266,6 +40515,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -40461,6 +40711,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer / supplier of the item. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Manufacturer / supplier of the item.")]
 		[XmlElement("manufacturer")]
         public String Manufacturer {
@@ -40478,6 +40729,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturers designated model. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturers designated model.")]
 		[XmlElement("model")]
         public String Model {
@@ -40659,6 +40911,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of shaker screen records for the operation. 
         /// </summary>
 		[Description("Set of shaker screen records for the operation.")]
+		[ComponentElement]
 		[XmlElement("shakerScreen")]
         public ShakerScreen ShakerScreen {
             get {
@@ -41619,6 +41872,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Name or type of inventory item. 
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("Name or type of inventory item.")]
 		[XmlElement("name")]
         public String Name {
@@ -42889,6 +43143,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// AFE number that this cost item applies to. 
         /// </summary>
+		[StringLength(32)]
 		[Description("AFE number that this cost item applies to.")]
 		[XmlElement("numAFE")]
         public String NumAFE {
@@ -43016,6 +43271,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The kind of cost item specified (e.g., rig dayrate, joints casing). 
         /// </summary>
+		[StringLength(24)]
 		[Description("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
 		[XmlElement("itemKind")]
         public String ItemKind {
@@ -43122,6 +43378,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Invoice number for cost item, bill sent to Operator. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Invoice number for cost item, bill sent to Operator.")]
 		[XmlElement("numInvoice")]
         public String NumInvoice {
@@ -43139,6 +43396,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Purchase order number, provided by Operator. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Purchase order number, provided by Operator.")]
 		[XmlElement("numPO")]
         public String NumPO {
@@ -43156,6 +43414,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Field Ticket number, issued by service company on location. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Field Ticket number, issued by service company on location.")]
 		[XmlElement("numTicket")]
         public String NumTicket {
@@ -43261,6 +43520,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Serial number. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Serial number.")]
 		[XmlElement("numSerial")]
         public String NumSerial {
@@ -43278,6 +43538,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of vendor. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of vendor.")]
 		[XmlElement("nameVendor")]
         public String NameVendor {
@@ -43313,6 +43574,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of pool/reservoir that this cost item can be accounted to. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of pool/reservoir that this cost item can be accounted to.")]
 		[XmlElement("pool")]
         public String Pool {
@@ -43437,6 +43699,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -43455,6 +43718,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the operations report. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the operations report.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -43473,6 +43737,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the operations report. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the operations report.")]
 		[XmlElement("name")]
         public String Name {
@@ -43706,6 +43971,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of operator rig supervisor. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of operator rig supervisor.")]
 		[XmlElement("supervisor")]
         public String Supervisor {
@@ -43723,6 +43989,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Nae of Engineer. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Nae of Engineer.")]
 		[XmlElement("engineer")]
         public String Engineer {
@@ -43740,6 +44007,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of operator wellsite geologist. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of operator wellsite geologist.")]
 		[XmlElement("geologist")]
         public String Geologist {
@@ -44418,6 +44686,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// AFE (authorization for expenditure) number that this cost item applies to. 
         /// </summary>
+		[StringLength(32)]
 		[Description("AFE (authorization for expenditure) number that this cost item applies to.")]
 		[XmlElement("numAFE")]
         public String NumAFE {
@@ -44489,6 +44758,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Hole condition description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Hole condition description.")]
 		[XmlElement("conditionHole")]
         public String ConditionHole {
@@ -44506,6 +44776,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Lithology for the Interval. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Lithology for the Interval.")]
 		[XmlElement("lithology")]
         public String Lithology {
@@ -44523,6 +44794,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of formation. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of formation.")]
 		[XmlElement("nameFormation")]
         public String NameFormation {
@@ -44702,6 +44974,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// 24 hour summary description. 
         /// </summary>
+		[StringLength(256)]
 		[Description("24 hour summary description.")]
 		[XmlElement("sum24Hr")]
         public String Sum24Hr {
@@ -44719,6 +44992,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Forecast for next 24 hrs. 
         /// </summary>
+		[StringLength(256)]
 		[Description("Forecast for next 24 hrs.")]
 		[XmlElement("forecast24Hr")]
         public String Forecast24Hr {
@@ -44736,6 +45010,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Current status description. 
         /// </summary>
+		[StringLength(256)]
 		[Description("Current status description.")]
 		[XmlElement("statusCurrent")]
         public String StatusCurrent {
@@ -45002,6 +45277,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Phase (large activity classification) e.g. Drill Surface Hole. 
         /// </summary>
+		[StringLength(50)]
 		[Description("Phase (large activity classification) e.g. Drill Surface Hole.")]
 		[XmlElement("phase")]
         public String Phase {
@@ -45072,6 +45348,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Custom string to further define an activity. 
         /// </summary>
+		[StringLength(50)]
 		[Description("Custom string to further define an activity.")]
 		[XmlElement("detailActivity")]
         public String DetailActivity {
@@ -45232,6 +45509,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Finish, interrupted, failed, etc. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Finish, interrupted, failed, etc.")]
 		[XmlElement("state")]
         public String State {
@@ -45284,6 +45562,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Operator company name. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Operator company name.")]
 		[XmlElement("operator")]
         public String Operator {
@@ -45424,6 +45703,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and Remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and Remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -46383,6 +46663,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Reason for trip. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Reason for trip.")]
 		[XmlElement("reasonTrip")]
         public String ReasonTrip {
@@ -46400,6 +46681,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Objective of bottom hole assembly. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Objective of bottom hole assembly.")]
 		[XmlElement("objectiveBha")]
         public String ObjectiveBha {
@@ -46649,6 +46931,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -46866,6 +47149,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description for the type of fluid. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description for the type of fluid.")]
 		[XmlElement("type")]
         public String Type {
@@ -46883,6 +47167,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Sample location. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Sample location.")]
 		[XmlElement("locationSample")]
         public String LocationSample {
@@ -47743,6 +48028,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of company. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of company.")]
 		[XmlElement("company")]
         public String Company {
@@ -47760,6 +48046,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Engineer name 
         /// </summary>
+		[StringLength(64)]
 		[Description("Engineer name")]
 		[XmlElement("engineer")]
         public String Engineer {
@@ -47848,6 +48135,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of polymers present in mud system. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of polymers present in mud system.")]
 		[XmlElement("polyType")]
         public String PolyType {
@@ -47937,6 +48225,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -48812,6 +49101,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -48830,6 +49120,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the objectGroup represents the wellbore.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the  objectGroup represents the wellbore.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -48848,6 +49139,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the objectGroup.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the objectGroup.")]
 		[XmlElement("name")]
         public String Name {
@@ -48866,6 +49158,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Defines the type of group.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Defines the type of group.")]
 		[XmlElement("groupType")]
         public String GroupType {
@@ -48883,6 +49176,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// This is a free-form text field to extend groupType for custom implementations.
         /// </summary>
+		[StringLength(64)]
 		[Description("This is a free-form text field to extend groupType for custom implementations.")]
 		[XmlElement("groupSubtype")]
         public String GroupSubtype {
@@ -48935,6 +49229,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description of attachment
         /// </summary>
+		[StringLength(4000)]
 		[Description("A description of attachment")]
 		[XmlElement("description")]
         public String Description {
@@ -49516,6 +49811,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -49534,6 +49830,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the mud log. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the mud log.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -49552,6 +49849,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the mud log. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the mud log.")]
 		[XmlElement("name")]
         public String Name {
@@ -49639,6 +49937,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of the company recording the information. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of the company recording the information.")]
 		[XmlElement("mudLogCompany")]
         public String MudLogCompany {
@@ -49656,6 +49955,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Concatenated names of mud loggers constructing the log. 
         /// </summary>
+		[StringLength(256)]
 		[Description("Concatenated names of mud loggers constructing the log.")]
 		[XmlElement("mudLogEngineers")]
         public String MudLogEngineers {
@@ -50410,6 +50710,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation. 
         /// </summary>
         [Obsolete()]
+		[StringLength(64)]
 		[Description("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.")]
 		[RecurringElement]
 		[XmlElement("nameFormation")]
@@ -50518,6 +50819,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of item and details. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Description of item and details.")]
 		[XmlElement("description")]
         public String Description {
@@ -50535,6 +50837,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Sample treatment : cutting fluid. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Sample treatment : cutting fluid.")]
 		[XmlElement("cuttingFluid")]
         public String CuttingFluid {
@@ -50552,6 +50855,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Sample treatment : cleaning method. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Sample treatment : cleaning method.")]
 		[XmlElement("cleaningMethod")]
         public String CleaningMethod {
@@ -50569,6 +50873,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Sample treatment : drying method. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Sample treatment : drying method.")]
 		[XmlElement("dryingMethod")]
         public String DryingMethod {
@@ -50586,6 +50891,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -51975,6 +52281,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -51993,6 +52300,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the message. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the message.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -52011,6 +52319,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the risk. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the risk.")]
 		[XmlElement("name")]
         public String Name {
@@ -52117,6 +52426,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Custom string to further define an activity. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Custom string to further define an activity.")]
 		[XmlElement("detailActivity")]
         public String DetailActivity {
@@ -52188,6 +52498,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Message text. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Message text.")]
 		[XmlElement("messageText")]
         public String MessageText {
@@ -52545,6 +52856,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the array axis.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the array axis.")]
 		[XmlElement("name")]
         public String Name {
@@ -52562,6 +52874,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The property type by which the array axis is classified.
         /// </summary>
+		[StringLength(64)]
 		[Description("The property type by which the array axis is classified.")]
 		[XmlElement("propertyType")]
         public String PropertyType {
@@ -52579,6 +52892,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A string representing the units of measure of the axis values.
         /// </summary>
+		[StringLength(24)]
 		[Description("A string representing the units of measure of the axis values.")]
 		[XmlElement("uom")]
         public String Uom {
@@ -52843,6 +53157,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The curve classification obtained from a lookup in the vendors mnemonic catalog.
         /// </summary>
+		[StringLength(256)]
 		[Description("The curve classification obtained from a lookup in the vendors  mnemonic catalog.")]
 		[XmlElement("classWitsml")]
         public String ClassWitsml {
@@ -52895,6 +53210,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Unit of measurement of the data values. 
         /// </summary>
+		[StringLength(24)]
 		[Description("Unit of measurement of the data values.")]
 		[XmlElement("unit")]
         public String Unit {
@@ -52930,6 +53246,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// An empty string is the default representation of a null value for a curve (i.e., when the null value representation is not explicitly defined). If a null value is defined in the logCurveInfo, it overrides any null value specified at the logHeader level. An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a legacy format without having to scan the data to insure that the null pattern does not exist in the data. 
         /// </summary>
+		[StringLength(32)]
 		[Description("An empty string is the default representation of a null value for a  curve (i.e., when the null value representation is not explicitly defined).  If a null value is defined in the logCurveInfo, it overrides any null value specified at the  logHeader level. An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a  legacy format without having to scan the data to insure that the null pattern  does not exist in the data.")]
 		[XmlElement("nullValue")]
         public String NullValue {
@@ -53106,6 +53423,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of the curve. 
         /// </summary>
+		[StringLength(256)]
 		[Description("Description of the curve.")]
 		[XmlElement("curveDescription")]
         public String CurveDescription {
@@ -53141,6 +53459,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Data source, could be tool name/id. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Data source, could be tool name/id.")]
 		[XmlElement("dataSource")]
         public String DataSource {
@@ -53354,6 +53673,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -53372,6 +53692,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the log. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the log.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -53390,6 +53711,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the log. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the log.")]
 		[XmlElement("name")]
         public String Name {
@@ -53512,6 +53834,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the grouping represented by curves in this log. A group represents a named combination of curves and the curves in a particular log should be represented in that list.
         /// </summary>
+		[StringLength(50)]
 		[Description("The name of the grouping represented by curves in this log. A group represents a named combination of curves and the curves in a particular log should be represented in that list.")]
 		[XmlElement("dataGroup")]
         public String DataGroup {
@@ -53529,6 +53852,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of contractor who provided the service. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of contractor who provided the service.")]
 		[XmlElement("serviceCompany")]
         public String ServiceCompany {
@@ -53652,6 +53976,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of item and details. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Description of item and details.")]
 		[XmlElement("description")]
         public String Description {
@@ -53865,6 +54190,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The mnemonic of the index curve. Duplicate index values can exist in a log but a change of direction is not allowed. If a change of direction is required then a new log must be created. Some servers may eliminate (i.e., overwrite) duplicate indexes. The data values associated with this curve represent an API "node-index" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("The mnemonic of the index curve. Duplicate index values can exist in a log but a change of direction is not allowed. If a change of direction is required then a new log must be created. Some servers may eliminate (i.e., overwrite) duplicate indexes. The data values associated with this curve represent an API \"node-index\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("indexCurve")]
         public String IndexCurve {
@@ -53882,6 +54208,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// An empty string is the default representation of a null value for a curve (i.e. when the null value representation is not explicitly defined). If a null value representation is defined for a log, this becomes the default for all curves in that log (but can be overridden at the curve level). An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a legacy format without having to scan the data to insure that the null pattern does not exist in the data. 
         /// </summary>
+		[StringLength(32)]
 		[Description("An empty string is the default representation of a null value for a  curve (i.e. when the null value representation is not explicitly defined).  If a null value representation is defined for a log, this becomes the default for all curves in that log (but can be overridden at the curve level).   An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a  legacy format without having to scan the data to insure that the null pattern  does not exist in the data.")]
 		[XmlElement("nullValue")]
         public String NullValue {
@@ -54077,6 +54404,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -54095,6 +54423,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the formation marker. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the formation marker.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -54113,6 +54442,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the formation marker. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the formation marker.")]
 		[XmlElement("name")]
         public String Name {
@@ -54366,6 +54696,7 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation. 
         /// </summary>
         [Obsolete()]
+		[StringLength(64)]
 		[Description("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.")]
 		[XmlElement("nameFormation")]
         public String NameFormation {
@@ -54383,6 +54714,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Description of item and details. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Description of item and details.")]
 		[XmlElement("description")]
         public String Description {
@@ -54524,6 +54856,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -54542,6 +54875,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the fluids report. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the fluids report.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -54560,6 +54894,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the fluids report. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the fluids report.")]
 		[XmlElement("name")]
         public String Name {
@@ -55455,6 +55790,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A lithological description of the geological formation at the given depth.
         /// </summary>
+		[StringLength(256)]
 		[Description("A lithological description of the geological formation at the given depth.")]
 		[XmlElement("description")]
         public String Description {
@@ -55687,6 +56023,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Custom string to further define an activity. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Custom string to further define an activity.")]
 		[XmlElement("detailActivity")]
         public String DetailActivity {
@@ -55990,6 +56327,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The lithological description of a geological formation at the incident depth.
         /// </summary>
+		[StringLength(256)]
 		[Description("The lithological description of a geological formation at the incident depth.")]
 		[XmlElement("formation")]
         public String Formation {
@@ -56043,6 +56381,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description of the well control incident.
         /// </summary>
+		[StringLength(256)]
 		[Description("A description of the well control incident.")]
 		[XmlElement("description")]
         public String Description {
@@ -56204,6 +56543,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The classification of the equipment that failed.
         /// </summary>
+		[StringLength(64)]
 		[Description("The classification of the equipment that failed.")]
 		[XmlElement("equipClass")]
         public String EquipClass {
@@ -56274,6 +56614,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description that gives a information about the equipment failure. 
         /// </summary>
+		[StringLength(256)]
 		[Description("A description that gives a information about the equipment failure.")]
 		[XmlElement("description")]
         public String Description {
@@ -56471,6 +56812,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A textual description of any shows in the interval. 
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of any shows in the interval.")]
 		[XmlElement("show")]
         public String Show {
@@ -56488,6 +56830,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description that gives a geological/lithological description/evaluation of the interval. 
         /// </summary>
+		[StringLength(256)]
 		[Description("A description that gives a geological/lithological  description/evaluation of the interval.")]
 		[XmlElement("lithology")]
         public String Lithology {
@@ -56720,6 +57063,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The dominate component in the fluid sample. 
         /// </summary>
+		[StringLength(50)]
 		[Description("The dominate component in the fluid sample.")]
 		[XmlElement("dominateComponent")]
         public String DominateComponent {
@@ -56773,6 +57117,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description that describes the wireline formation test in more detail. 
         /// </summary>
+		[StringLength(256)]
 		[Description("A description that describes the wireline formation test in more detail.")]
 		[XmlElement("description")]
         public String Description {
@@ -57490,6 +57835,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Core identification number. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Core identification number.")]
 		[XmlElement("coreNumber")]
         public String CoreNumber {
@@ -57668,6 +58014,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// General core description. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("General core description.")]
 		[XmlElement("coreDescription")]
         public String CoreDescription {
@@ -57811,6 +58158,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of contractor who provided the service. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of contractor who provided the service.")]
 		[XmlElement("serviceCompany")]
         public String ServiceCompany {
@@ -57900,6 +58248,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description of the logging tool. 
         /// </summary>
+		[StringLength(50)]
 		[Description("A description of the logging tool.")]
 		[XmlElement("tool")]
         public String Tool {
@@ -59068,6 +59417,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A summary that sumarizes the activities performed and the status of the ongoing activities from the reporting period.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A summary that sumarizes the activities performed  and the status of the ongoing activities from the reporting period.")]
 		[XmlElement("sum24Hr")]
         public String Sum24Hr {
@@ -59085,6 +59435,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A summary that sumarizes the planned activities the next reporting period. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("A summary that sumarizes the planned activities the next reporting period.")]
 		[XmlElement("forecast24Hr")]
         public String Forecast24Hr {
@@ -59228,6 +59579,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of operator rig supervisor. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of operator rig supervisor.")]
 		[XmlElement("supervisor")]
         public String Supervisor {
@@ -59245,6 +59597,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Nae of Engineer. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Nae of Engineer.")]
 		[XmlElement("engineer")]
         public String Engineer {
@@ -59262,6 +59615,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of operator wellsite geologist. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of operator wellsite geologist.")]
 		[XmlElement("geologist")]
         public String Geologist {
@@ -59617,6 +59971,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// AFE (authorization for expenditure) number that this cost item applies to. 
         /// </summary>
+		[StringLength(32)]
 		[Description("AFE (authorization for expenditure) number that this cost item applies to.")]
 		[XmlElement("numAFE")]
         public String NumAFE {
@@ -59670,6 +60025,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Hole condition description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Hole condition description.")]
 		[XmlElement("conditionHole")]
         public String ConditionHole {
@@ -59869,6 +60225,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A human contextual name of a well. This should (hopefully) be unique within the context of the naming system.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("A human contextual name of a well.  This should (hopefully) be unique within the context of the naming system.")]
 		[XmlElement("name")]
         public String Name {
@@ -59978,6 +60335,7 @@ namespace Energistics.DataAccess.WITSML141
         /// A human contextual name of an item. This should (hopefully) be unique within the context of the naming system.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("A human contextual name of an item.  This should (hopefully) be unique within the context of the naming system.")]
 		[XmlElement("name")]
         public String Name {
@@ -59996,6 +60354,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The naming system under which the item is defined. Knowledge of the naming system may allow the hame to be parsed for embeded information.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The naming system under which the  item is defined. Knowledge of the naming system may allow the hame to be parsed for embeded information.")]
 		[XmlElement("namingSystem")]
         public String NamingSystem {
@@ -60191,6 +60550,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the drilling Operator company. 
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the drilling Operator company.")]
 		[XmlElement("operator")]
         public String Operator {
@@ -60208,6 +60568,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The name of the drilling Contractor company. 
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the drilling Contractor company.")]
 		[XmlElement("drillContractor")]
         public String DrillContractor {
@@ -60279,6 +60640,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -60297,6 +60659,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the drilling report. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the drilling report.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -60315,6 +60678,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the drilling report. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the drilling report.")]
 		[XmlElement("name")]
         public String Name {
@@ -60958,6 +61322,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -60976,6 +61341,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the conventional core. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the conventional core.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -60994,6 +61360,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the conventional core. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the conventional core.")]
 		[XmlElement("name")]
         public String Name {
@@ -61117,6 +61484,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Manufacturer core reference. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Manufacturer core reference.")]
 		[XmlElement("coreReference")]
         public String CoreReference {
@@ -61134,6 +61502,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of coring contractor. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of coring contractor.")]
 		[XmlElement("coringContractor")]
         public String CoringContractor {
@@ -61151,6 +61520,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of analysis company. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of analysis company.")]
 		[XmlElement("analysisContractor")]
         public String AnalysisContractor {
@@ -61168,6 +61538,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Core barrel type. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Core barrel type.")]
 		[XmlElement("coreBarrel")]
         public String CoreBarrel {
@@ -61220,6 +61591,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Core inner barrel type. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Core inner barrel type.")]
 		[XmlElement("innerBarrelType")]
         public String InnerBarrelType {
@@ -61255,6 +61627,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Core bit type. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Core bit type.")]
 		[XmlElement("coreBitType")]
         public String CoreBitType {
@@ -61415,6 +61788,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Method to catch core - fiberglass barrel, conventional, etc. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Method to catch core - fiberglass barrel, conventional, etc.")]
 		[XmlElement("coreMethod")]
         public String CoreMethod {
@@ -61432,6 +61806,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Preservation method description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Preservation method description.")]
 		[XmlElement("coreTreatmentMethod")]
         public String CoreTreatmentMethod {
@@ -61449,6 +61824,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Mud type in use when cutting core. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Mud type in use when cutting core.")]
 		[XmlElement("coreFluidUsed")]
         public String CoreFluidUsed {
@@ -61466,6 +61842,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of formation penetrated. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of formation penetrated.")]
 		[XmlElement("nameFormation")]
         public String NameFormation {
@@ -61501,6 +61878,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// General core description. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("General core description.")]
 		[XmlElement("coreDescription")]
         public String CoreDescription {
@@ -61749,6 +62127,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// See the API specification for a description of the use of this data.
         /// </summary>
+		[StringLength(4000)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("changeInfo")]
         public String ChangeInfo {
@@ -61872,6 +62251,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// See the API specification for a description of the use of this data.
         /// </summary>
+		[StringLength(4000)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("mnemonics")]
         public String Mnemonics {
@@ -61960,6 +62340,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Human recognizable contextual name for a Well. This should match the value of element nameWell in the changed object. If the changed object is well then this value will not be defined. This is required for objects which are a direct or indirect child of a well.
         /// </summary>
+		[StringLength(64)]
 		[Description("Human recognizable contextual name for a Well. This should match the value of element nameWell in the changed object. If the changed object is well then this value will not be defined. This is required for objects which are a direct or indirect child of a well.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -61977,6 +62358,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Human recognizable contextual name for the Wellbore. This should match the value of element nameWellbore in the changed object. If the changed object is well or wellbore then this value will not be defined. This is required for objects which are a direct or indirect child of a wellbore.
         /// </summary>
+		[StringLength(64)]
 		[Description("Human recognizable contextual name for the Wellbore. This should match the value of element nameWellbore in the changed object. If the changed object is well or wellbore then this value will not be defined. This is required for objects which are a direct or indirect child of a wellbore.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -61995,6 +62377,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable contextual name for the object. This should match the value of the name element in the changed object.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable contextual name for the object. This should match the value of the name element in the changed object.")]
 		[XmlElement("nameObject")]
         public String NameObject {
@@ -62013,6 +62396,7 @@ namespace Energistics.DataAccess.WITSML141
         /// The schema name of the (singular) object that changed. For example, "trajectory".
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The schema name of the (singular) object that changed. For example, \"trajectory\".")]
 		[XmlElement("objectType")]
         public String ObjectType {
@@ -62030,6 +62414,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// See the API specification for a description of the use of this data.
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("sourceName")]
         public String SourceName {
@@ -62065,6 +62450,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// See the API specification for a description of the use of this data.
         /// </summary>
+		[StringLength(4000)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("lastChangeInfo")]
         public String LastChangeInfo {
@@ -62543,6 +62929,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Tool name for PIT. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Tool name for PIT.")]
 		[XmlElement("toolCompanyPit")]
         public String ToolCompanyPit {
@@ -62596,6 +62983,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Method to determine cement top. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Method to determine cement top.")]
 		[XmlElement("topCementMethod")]
         public String TopCementMethod {
@@ -62736,6 +63124,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Method used to determine if cement job unsuccessful. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Method used to determine if cement job unsuccessful.")]
 		[XmlElement("failureMethod")]
         public String FailureMethod {
@@ -62807,6 +63196,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Test negative tool for Liner top seal. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Test negative tool for Liner top seal.")]
 		[XmlElement("testNegativeTool")]
         public String TestNegativeTool {
@@ -62842,6 +63232,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Test Positive Tool for liner top seal. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Test Positive Tool for liner top seal.")]
 		[XmlElement("testPositiveTool")]
         public String TestPositiveTool {
@@ -62968,6 +63359,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Additive name. 
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("Additive name.")]
 		[XmlElement("nameAdd")]
         public String NameAdd {
@@ -62985,6 +63377,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Additive type or Function (Retarder, Visosifier, Weighting agent). 
         /// </summary>
+		[StringLength(32)]
 		[Description("Additive type or Function (Retarder, Visosifier, Weighting agent).")]
 		[XmlElement("typeAdd")]
         public String TypeAdd {
@@ -63350,6 +63743,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Comments and Remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and Remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -63475,6 +63869,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Purpose description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Purpose description.")]
 		[XmlElement("purpose")]
         public String Purpose {
@@ -63546,6 +63941,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Water Source Description. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Water Source Description.")]
 		[XmlElement("sourceWater")]
         public String SourceWater {
@@ -63636,6 +64032,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Set of (Time / Rate / Back Pressure). 
         /// </summary>
 		[Description("Set of (Time / Rate / Back Pressure).")]
+		[ComponentElement]
 		[XmlElement("cementPumpSchedule")]
         public CementPumpSchedule CementPumpSchedule {
             get {
@@ -63994,6 +64391,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of dry blend. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of dry blend.")]
 		[XmlElement("dryBlendName")]
         public String DryBlendName {
@@ -64136,6 +64534,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Gas type used for foam job. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Gas type used for foam job.")]
 		[XmlElement("typeGasFoam")]
         public String TypeGasFoam {
@@ -64677,6 +65076,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Stage type. 
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("Stage type.")]
 		[XmlElement("typeStage")]
         public String TypeStage {
@@ -65085,6 +65485,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Squeeze objective. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Squeeze objective.")]
 		[XmlElement("squeezeObj")]
         public String SqueezeObj {
@@ -65762,6 +66163,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of mud in hole. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of mud in hole.")]
 		[XmlElement("typeOriginalMud")]
         public String TypeOriginalMud {
@@ -65923,6 +66325,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Method to estimate excess volume. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Method to estimate excess volume.")]
 		[XmlElement("volExcessMethod")]
         public String VolExcessMethod {
@@ -65940,6 +66343,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Mix method. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Mix method.")]
 		[XmlElement("mixMethod")]
         public String MixMethod {
@@ -65957,6 +66361,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Method by which density is measured. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Method by which density is measured.")]
 		[XmlElement("densMeasBy")]
         public String DensMeasBy {
@@ -66256,6 +66661,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Displacement fluid name. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Displacement fluid name.")]
 		[XmlElement("fluidDisplace")]
         public String FluidDisplace {
@@ -66381,6 +66787,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -66399,6 +66806,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the cement job. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the cement job.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -66417,6 +66825,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the cement job. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the cement job.")]
 		[XmlElement("name")]
         public String Name {
@@ -66469,6 +66878,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Job configuration. 
         /// </summary>
+		[StringLength(256)]
 		[Description("Job configuration.")]
 		[XmlElement("jobConfig")]
         public String JobConfig {
@@ -66521,6 +66931,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name for the cemented string 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name for the cemented string")]
 		[XmlElement("nameCementedString")]
         public String NameCementedString {
@@ -66556,6 +66967,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name for the cement work string 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name for the cement work string")]
 		[XmlElement("nameWorkString")]
         public String NameWorkString {
@@ -66573,6 +66985,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of cementing contractor. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of cementing contractor.")]
 		[XmlElement("contractor")]
         public String Contractor {
@@ -66590,6 +67003,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Cementing engineer. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Cementing engineer.")]
 		[XmlElement("cementEngr")]
         public String CementEngr {
@@ -66910,6 +67324,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Plug type. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Plug type.")]
 		[XmlElement("typePlug")]
         public String TypePlug {
@@ -66927,6 +67342,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name for the cementing string 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name for the cementing string")]
 		[XmlElement("nameCementString")]
         public String NameCementString {
@@ -67049,6 +67465,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Type of squeeze. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of squeeze.")]
 		[XmlElement("typeSqueeze")]
         public String TypeSqueeze {
@@ -67119,6 +67536,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Tool Company. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Tool Company.")]
 		[XmlElement("toolCompany")]
         public String ToolCompany {
@@ -67136,6 +67554,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Cement tool type. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Cement tool type.")]
 		[XmlElement("typeTool")]
         public String TypeTool {
@@ -67596,6 +68015,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -67614,6 +68034,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the wellbore that contains the bottom hole assembly. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the bottom hole assembly.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -67632,6 +68053,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the run. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the run.")]
 		[XmlElement("name")]
         public String Name {
@@ -67897,6 +68319,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Bit run number. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Bit run number.")]
 		[XmlElement("numBitRun")]
         public String NumBitRun {
@@ -67949,6 +68372,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Reason for trip. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Reason for trip.")]
 		[XmlElement("reasonTrip")]
         public String ReasonTrip {
@@ -67966,6 +68390,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Objective of bottom hole assembly. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Objective of bottom hole assembly.")]
 		[XmlElement("objectiveBha")]
         public String ObjectiveBha {
@@ -68125,6 +68550,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the well that contains the wellbore. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the wellbore.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -68142,6 +68568,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Human recognizable context for the wellbore that contains the (sub) object that is represented by the attachment. If no wellbore is specified then the attachment represents the well. If a wellbore is specified but no other object is specified then the attachment represents the wellbore. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the (sub) object that is represented by the attachment. If no wellbore is specified then the attachment represents the well. If a wellbore is specified but no other object is specified then the  attachment represents the wellbore.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -68160,6 +68587,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Human recognizable context for the attachment. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the attachment.")]
 		[XmlElement("name")]
         public String Name {
@@ -68267,6 +68695,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A file name associated with the attachment.
         /// </summary>
+		[StringLength(64)]
 		[Description("A file name associated with the attachment.")]
 		[XmlElement("fileName")]
         public String FileName {
@@ -68284,6 +68713,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A description of attachment
         /// </summary>
+		[StringLength(4000)]
 		[Description("A description of attachment")]
 		[XmlElement("description")]
         public String Description {
@@ -68301,6 +68731,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The file type.
         /// </summary>
+		[StringLength(64)]
 		[Description("The file type.")]
 		[XmlElement("fileType")]
         public String FileType {
@@ -68602,6 +69033,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The security class in which this document is classified. Examples would be confidential, partner confidential, tight. The meaning of the class is determined by the System in which it is defined.
         /// </summary>
+		[StringLength(50)]
 		[Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
         public String Class {
@@ -68619,6 +69051,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The security classification system. This gives context to the meaning of the Class value.
         /// </summary>
+		[StringLength(50)]
 		[Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
         public String SecuritySystem {
@@ -68671,6 +69104,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A general comment to further define the security class.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -68779,6 +69213,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
         /// </summary>
+		[StringLength(64)]
 		[Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
         public String SoftwareName {
@@ -68796,6 +69231,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The person or business associate that created the file.
         /// </summary>
+		[StringLength(64)]
 		[Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
         public String FileCreator {
@@ -68813,6 +69249,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Any comment that would be useful to further explain the creation of this instance document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -68993,6 +69430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// A free-form string that allows a disclaimer to accompany the information.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A free-form string that allows a disclaimer to  accompany the information.")]
 		[XmlElement("disclaimer")]
         public String Disclaimer {
@@ -69029,6 +69467,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The owner of the data.
         /// </summary>
+		[StringLength(64)]
 		[Description("The owner of the data.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -69046,6 +69485,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// An optional comment about the document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("An optional comment about the document.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -71336,6 +71776,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// name property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("name")]
         public String Name {
@@ -71353,6 +71794,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// vendor property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("vendor")]
         public String Vendor {
@@ -71370,6 +71812,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// version property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("version")]
         public String Version {
@@ -71387,6 +71830,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// schemaVersion property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("schemaVersion")]
         public String SchemaVersion {
@@ -71458,6 +71902,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// name property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("name")]
         public String Name {
@@ -71493,6 +71938,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// phone property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("phone")]
         public String Phone {
@@ -71651,6 +72097,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// name property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("name")]
         public String Name {
@@ -71668,6 +72115,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// vendor property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("vendor")]
         public String Vendor {
@@ -71685,6 +72133,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// version property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("version")]
         public String Version {
@@ -71702,6 +72151,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// schemaVersion property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("schemaVersion")]
         public String SchemaVersion {
@@ -71860,6 +72310,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// compressionMethod property
         /// </summary>
+		[StringLength(64)]
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("compressionMethod")]
         public String CompressionMethod {

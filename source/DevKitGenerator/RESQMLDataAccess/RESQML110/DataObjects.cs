@@ -3647,6 +3647,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A textual description of the extension.
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the extension.")]
 		[XmlElement("description")]
         public String Description {
@@ -3895,6 +3896,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A string value.
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("A string value.")]
 		[XmlElement("stringValue")]
         public String StringValue {
@@ -19038,6 +19040,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A textual description of the extension.
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the extension.")]
 		[XmlElement("description")]
         public String Description {
@@ -19110,6 +19113,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The security class in which this document is classified. Examples would be confidential, partner confidential, tight. The meaning of the class is determined by the System in which it is defined.
         /// </summary>
+		[StringLength(40)]
 		[Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
         public String Class {
@@ -19127,6 +19131,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The security classification system. This gives context to the meaning of the Class value.
         /// </summary>
+		[StringLength(40)]
 		[Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
         public String SecuritySystem {
@@ -19179,6 +19184,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A general comment to further define the security class.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -19287,6 +19293,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
         /// </summary>
+		[StringLength(64)]
 		[Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
         public String SoftwareName {
@@ -19304,6 +19311,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The person or business associate that created the file.
         /// </summary>
+		[StringLength(64)]
 		[Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
         public String FileCreator {
@@ -19321,6 +19329,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Any comment that would be useful to further explain the creation of this instance document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -19594,6 +19603,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A free-form string that allows a disclaimer to accompany the information.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A free-form string that allows a disclaimer to  accompany the information.")]
 		[XmlElement("disclaimer")]
         public String Disclaimer {
@@ -19630,6 +19640,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The owner of the data.
         /// </summary>
+		[StringLength(64)]
 		[Description("The owner of the data.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -19647,6 +19658,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// An optional comment about the document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("An optional comment about the document.")]
 		[XmlElement("comment")]
         public String Comment {

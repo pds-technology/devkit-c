@@ -963,6 +963,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MeasureClass property
         /// </summary>
+		[StringLength(40)]
 		[Description("The kind of the measure. For example, \"length\". This should be specified if the value requires a unit of measure.")]
 		[XmlElement("MeasureClass")]
         public String MeasureClass {
@@ -1161,6 +1162,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// PhysicalStatus property
         /// </summary>
+		[StringLength(40)]
 		[Description("The physical status of an interval (e.g., open, closed, proposed)")]
 		[XmlElement("PhysicalStatus")]
         public String PhysicalStatus {
@@ -1340,6 +1342,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// PerforationStatus property
         /// </summary>
+		[StringLength(40)]
 		[Description("perforation status")]
 		[XmlElement("PerforationStatus")]
         public String PerforationStatus {
@@ -2179,6 +2182,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Status property
         /// </summary>
+		[StringLength(64)]
 		[Description("Completion status")]
 		[XmlElement("Status")]
         public String Status {
@@ -14871,6 +14875,7 @@ namespace Energistics.DataAccess.WITSML200
         /// NumberingScheme property
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("The format or encoding specification of the equipment tag.  The tag may contain may different pieces of information and knowledge of that  information is inherent in the specification.  The \"identification string\" is a mandatory part of the information in a tag.")]
 		[XmlElement("NumberingScheme")]
         public String NumberingScheme {
@@ -14888,6 +14893,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Technology property
         /// </summary>
+		[StringLength(40)]
 		[Description("Identifies the general type of identifier on an item.  If multiple identifiers exist on an item, a separate description set for each identifier should be created.   For example, a joint of casing may have a barcode label on it along with a painted-on code and an RFID tag attached or embedded into the coupling.  The barcode label may in turn be an RFID equipped label. This particular scenario would require populating five nameTags to fully describe and decode all the possible identifiers as follows: 'tagged' - RFID tag embedded in the coupling, 'label'  - Serial number printed on the label, 'tagged' - RFID tag embedded into the label, 'label'  - Barcode printed on the label, 'painted'- Mill number painted on the pipe body.")]
 		[XmlElement("Technology")]
         public String Technology {
@@ -14905,6 +14911,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Location property
         /// </summary>
+		[StringLength(40)]
 		[Description("An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item.  This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener.  'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item.  Most non-downhole tools will use either 'body', 'other' or not specified as the location tends to lose value with smaller or non threaded items.")]
 		[XmlElement("Location")]
         public String Location {
@@ -28972,6 +28979,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// TypeSurveyTool property
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of tool used for the measurements.")]
 		[XmlElement("TypeSurveyTool")]
         public String TypeSurveyTool {
@@ -28989,6 +28997,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// CalcAlgorithm property
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of algorithm used in the position calculation.")]
 		[XmlElement("CalcAlgorithm")]
         public String CalcAlgorithm {
@@ -41093,6 +41102,7 @@ namespace Energistics.DataAccess.WITSML200
         /// StringType property
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("An enumeration type defined in equipmentCatelog, the \"DownholeStringEnum\"                     contains valid option of \"case\",\"rod\",\"tubing\", \"otherString\".")]
 		[XmlElement("StringType")]
         public String StringType {
@@ -41110,6 +41120,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// SubStringType property
         /// </summary>
+		[StringLength(40)]
 		[Description("An enumeration type define for express further string type etc. \"SurfaceCasing\", \"IntermediaCasing\", \"productionCasing\".")]
 		[XmlElement("SubStringType")]
         public String SubStringType {
@@ -42049,6 +42060,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Kind property
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("The type of qualifier.")]
 		[XmlElement("Kind")]
         public String Kind {
@@ -43033,6 +43045,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Kind property
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.")]
 		[XmlElement("Kind")]
         public String Kind {
@@ -43248,6 +43261,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MatrixCement property
         /// </summary>
+		[StringLength(40)]
 		[Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. \"calcite\" (Common) \"dolomite\", \"ankerite\" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, \"siderite\" (Sherwood sandstones, southern UK typical Siderite cements), \"quartz\" (grain to grain contact cementation or secondary quartz deposition), \"kaolinite\", \"illite\" (eg. Village Fields North Sea), \"smectite\",\"chlorite\" (Teg, Algeria.)")]
 		[XmlElement("MatrixCement")]
         public String MatrixCement {
@@ -49910,6 +49924,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MudSubClass property
         /// </summary>
+		[StringLength(40)]
 		[Description("Mud Subtype at event occurrence.")]
 		[XmlElement("MudSubClass")]
         public String MudSubClass {
@@ -54147,6 +54162,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ActivityCode property
         /// </summary>
+		[StringLength(40)]
 		[Description("A code used to define rig activity.")]
 		[XmlElement("ActivityCode")]
         public String ActivityCode {
@@ -56470,6 +56486,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ActivityCode property
         /// </summary>
+		[StringLength(40)]
 		[Description("A code used to define rig activity.")]
 		[XmlElement("ActivityCode")]
         public String ActivityCode {
@@ -62435,6 +62452,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Section property
         /// </summary>
 		[RegularExpression("[+]?([1-9]|[1-2][0-9]|3[0-6])\\.?[0-9]?")]
+		[StringLength(64)]
 		[Description("Section number.")]
 		[XmlElement("Section")]
         public String Section {
@@ -62453,6 +62471,7 @@ namespace Energistics.DataAccess.WITSML200
         /// QuarterSection property
         /// </summary>
 		[RegularExpression("(NE|NW|SW|SE|N2|S2|E2|W2|C|LT[0-9]{2,2}|TR[a-zA-Z0-9]{1,2}){1,3}")]
+		[StringLength(64)]
 		[Description("The location of the well within the section,  with the primary component listed first. Spot location will be made some from combination of the following codes: NE, NW, SW, SE, N2, S2, E2, W2, C (center quarter),  LTxx (where xx represents a two digit lot designation),  TRzz (where zz represents a one or two character trac designation).  Free format will allow for entries such as NESW (southwest quarter of northeast quarter),  E2NESE (southeast quarter of northeast quarter of east half), CNE (northeast quarter of center quarter), etc.")]
 		[XmlElement("QuarterSection")]
         public String QuarterSection {
@@ -62471,6 +62490,7 @@ namespace Energistics.DataAccess.WITSML200
         /// QuarterTownship property
         /// </summary>
 		[RegularExpression("NE|NW|SW|SE")]
+		[StringLength(64)]
 		[Description("Quarter township.")]
 		[XmlElement("QuarterTownship")]
         public String QuarterTownship {
@@ -62878,7 +62898,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// CurrentStatus property
         /// </summary>
-		
+		[StringLength(64)]
 		[XmlElement("CurrentStatus")]
         public String CurrentStatus {
             get {
@@ -63106,7 +63126,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// CurrentStatus property
         /// </summary>
-		
+		[StringLength(64)]
 		[XmlElement("CurrentStatus")]
         public String CurrentStatus {
             get {
@@ -76042,6 +76062,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
 		[RegularExpression("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
+		[StringLength(64)]
 		[Description("The time zone in which well is located.   It is the deviation in hours and minutes from UTC. This should be the normal time zone at the well and not a seasonally  adjusted value such as daylight savings time.")]
 		[XmlElement("TimeZone")]
         public String TimeZone {

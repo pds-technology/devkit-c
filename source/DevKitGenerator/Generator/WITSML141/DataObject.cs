@@ -132,6 +132,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -145,6 +146,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore.")]
         public string name {
             get {
@@ -169,6 +171,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Operator borehole number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Operator borehole number.")]
         public string number {
             get {
@@ -181,6 +184,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>API suffix.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("API suffix.")]
         public string suffixAPI {
             get {
@@ -193,6 +197,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Government assigned number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Government assigned number.")]
         public string numGovt {
             get {
@@ -4829,6 +4834,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An identifier to indicate the data originator. This identifies the server that or" +
             "iginally created  the object and thus most of the uids in the object (but not  n" +
             "ecessarily the uids of the parents). This is typically a url.")]
@@ -4917,6 +4923,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The category of the service related to the creation of the object.  For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service".</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The category of the service related to the creation of the object.  For example, " +
             "\"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling ser" +
             "vice\".")]
@@ -4931,6 +4938,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -5265,6 +5273,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A textual description of the extension.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
         public string description {
             get {
@@ -6127,6 +6136,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the point.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the point.")]
         public string name {
             get {
@@ -6139,6 +6149,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The kind of point. For example,  'well reference point', 'platform reference point', 'sea surface', 'sea bottom'.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The kind of point. For example,  \'well reference point\', \'platform reference poin" +
             "t\', \'sea surface\', \'sea bottom\'.")]
         public string type {
@@ -6191,6 +6202,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A textual description of the point.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the point.")]
         public string description {
             get {
@@ -6325,6 +6337,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A Comment, generally given to help the reader  interpret the coordinates if the CRS and the chosen pair do not make them clear.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A Comment, generally given to help the reader  interpret the coordinates if the C" +
             "RS and the chosen pair do not make them clear.")]
         public string description {
@@ -6860,6 +6873,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well.")]
         public string name {
             get {
@@ -6872,6 +6886,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Legal name of the well.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Legal name of the well.")]
         public string nameLegal {
             get {
@@ -6884,6 +6899,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>License number of the well.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("License number of the well.")]
         public string numLicense {
             get {
@@ -6896,6 +6912,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Government assigned well number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Government assigned well number.")]
         public string numGovt {
             get {
@@ -6931,6 +6948,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of the field in which the well is located.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the field in which the well is located.")]
         public string field {
             get {
@@ -6943,6 +6961,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Country in which well is located.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Country in which well is located.")]
         public string country {
             get {
@@ -6955,6 +6974,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>State or province in which well is located.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("State or province in which well is located.")]
         public string state {
             get {
@@ -6967,6 +6987,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>County in which the well is located.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("County in which the well is located.")]
         public string county {
             get {
@@ -6979,6 +7000,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Geo-political region.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Geo-political region.")]
         public string region {
             get {
@@ -6991,6 +7013,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Geo-political district name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Geo-political district name.")]
         public string district {
             get {
@@ -7003,6 +7026,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Block name in which well is located.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Block name in which well is located.")]
         public string block {
             get {
@@ -7016,6 +7040,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The time zone in which well is located.   It is the deviation in hours and minutes from UTC. This should be the normal time zone at the well and not a seasonally  adjusted value such as daylight savings time.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
         [System.ComponentModel.DescriptionAttribute("The time zone in which well is located.   It is the deviation in hours and minute" +
             "s from UTC. This should be the normal time zone at the well and not a seasonally" +
             "  adjusted value such as daylight savings time.")]
@@ -7030,6 +7055,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Operator company name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Operator company name.")]
         public string @operator {
             get {
@@ -7042,6 +7068,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Division of operator company.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Division of operator company.")]
         public string operatorDiv {
             get {
@@ -7066,6 +7093,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>American Petroleum Institute well number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("American Petroleum Institute well number.")]
         public string numAPI {
             get {
@@ -7476,6 +7504,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The human understandable contextual name of the reference datum.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The human understandable contextual name of the reference datum.")]
         public string name {
             get {
@@ -7526,6 +7555,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).</summary>
         [System.Xml.Serialization.XmlElementAttribute("kind")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute(@"Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         public string[] kind {
             get {
@@ -7603,6 +7633,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A contextual description of the well reference datum.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A contextual description of the well reference datum.")]
         public string comment {
             get {
@@ -7862,6 +7893,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the system.  For a geodetic system this is commonly the name of the datum.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the system.  For a geodetic system this is commonl" +
             "y the name of the datum.")]
         public string name {
@@ -7902,6 +7934,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A textual description of the system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the system.")]
         public string description {
             get {
@@ -9327,6 +9360,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -9340,6 +9374,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the wellbore geometry.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the wellbore geometry.")]
         public string nameWellbore {
             get {
@@ -9353,6 +9388,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore geometry.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore geometry.")]
         public string name {
             get {
@@ -9642,6 +9678,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Material grade for the tubular section.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Material grade for the tubular section.")]
         public string grade {
             get {
@@ -10181,6 +10218,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -11450,6 +11488,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -12653,6 +12692,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Thread type from API RP7G, 5CT.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Thread type from API RP7G, 5CT.")]
         public string typeThread {
             get {
@@ -12930,6 +12970,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Nozzle orientation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Nozzle orientation.")]
         public string orientation {
             get {
@@ -13146,6 +13187,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of item and details.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Description of item and details.")]
         public string description {
             get {
@@ -13256,6 +13298,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Material grade for the tubular section.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Material grade for the tubular section.")]
         public string grade {
             get {
@@ -13388,6 +13431,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Service class.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Service class.")]
         public string classService {
             get {
@@ -13518,6 +13562,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of vendor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of vendor.")]
         public string vendor {
             get {
@@ -13530,6 +13575,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Component name from manufacturer.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Component name from manufacturer.")]
         public string model {
             get {
@@ -14440,6 +14486,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The physical identification string of the equipment tag.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The physical identification string of the equipment tag.")]
         public string name {
             get {
@@ -14534,6 +14581,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the company that installed the tag.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the company that installed the tag.")]
         public string installationCompany {
             get {
@@ -14546,6 +14594,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Reference to a manufacturers or installers installation  description, code, or method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("Reference to a manufacturers or installers installation  description, code, or me" +
             "thod.")]
         public string mountingCode {
@@ -14559,6 +14608,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A comment or remark about the tag.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment or remark about the tag.")]
         public string comment {
             get {
@@ -14781,6 +14831,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Bit number and rerun number e.g. "4.1" for the first rerun of bit 4.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Bit number and rerun number e.g. \"4.1\" for the first rerun of bit 4.")]
         public string numBit {
             get {
@@ -14830,6 +14881,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -14877,6 +14929,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The manufacturers code for the bit.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The manufacturers code for the bit.")]
         public string codeMfg {
             get {
@@ -14889,6 +14942,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>IADC bit code.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("IADC bit code.")]
         public string codeIADC {
             get {
@@ -14972,6 +15026,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Row and cone numbers for items which need location information (e.g. Cracked Cone, Lost Cone etc).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Row and cone numbers for items which need location information (e.g. Cracked Cone" +
             ", Lost Cone etc).")]
         public string condInitLocation {
@@ -14999,6 +15054,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Condition of bit gauge in 1/16 of an inch. I = in gauge, else number of 16ths out of gauge.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Condition of bit gauge in 1/16 of an inch. I = in gauge, else number of 16ths out" +
             " of gauge.")]
         public string condInitGauge {
@@ -15012,6 +15068,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Other comments on bit condition from IADC list (BitDullCode in standard list).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Other comments on bit condition from IADC list (BitDullCode in standard list).")]
         public string condInitOther {
             get {
@@ -15118,6 +15175,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Row and cone numbers for items which need location information (e.g. Cracked Cone, Lost Cone etc).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Row and cone numbers for items which need location information (e.g. Cracked Cone" +
             ", Lost Cone etc).")]
         public string condFinalLocation {
@@ -15145,6 +15203,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Condition of bit gauge in 1/16 of a inch. I = in gauge, else number of 16ths out of gauge.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Condition of bit gauge in 1/16 of a inch. I = in gauge, else number of 16ths out " +
             "of gauge.")]
         public string condFinalGauge {
@@ -15158,6 +15217,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Other comments on bit condition from IADC list (BitDullCode in Standard LISTS).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Other comments on bit condition from IADC list (BitDullCode in Standard LISTS).")]
         public string condFinalOther {
             get {
@@ -15193,6 +15253,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Bit drive type (Motor, rotary table etc).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Bit drive type (Motor, rotary table etc).")]
         public string drive {
             get {
@@ -15527,6 +15588,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -15540,6 +15602,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the tubular.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the tubular.")]
         public string nameWellbore {
             get {
@@ -15553,6 +15616,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the tubular (assembly).</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the tubular (assembly).")]
         public string name {
             get {
@@ -15886,6 +15950,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -15899,6 +15964,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the trajectory.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the trajectory.")]
         public string nameWellbore {
             get {
@@ -15912,6 +15978,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the trajectory.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the trajectory.")]
         public string name {
             get {
@@ -16036,6 +16103,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of contractor who provided the service.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of contractor who provided the service.")]
         public string serviceCompany {
             get {
@@ -16477,6 +16545,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The type of tool used for the measurements.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The type of tool used for the measurements.")]
         public string typeSurveyTool {
             get {
@@ -16489,6 +16558,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The type of algorithm used in the position calculation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The type of algorithm used in the position calculation.")]
         public string calcAlgorithm {
             get {
@@ -16678,6 +16748,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>DEPRECATED. Tool error model used to compute covariance matrix.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Tool error model used to compute covariance matrix.")]
         public string modelToolError {
             get {
@@ -17011,6 +17082,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Geomagnetic model used.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Geomagnetic model used.")]
         public string magModelUsed {
             get {
@@ -17023,6 +17095,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Current valid interval for the geomagnetic model used.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Current valid interval for the geomagnetic model used.")]
         public string magModelValid {
             get {
@@ -17035,6 +17108,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Gravitational model used.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Gravitational model used.")]
         public string geoModelUsed {
             get {
@@ -17963,6 +18037,8 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>A pointer to the trajectoryStation within the parent trajectory. This is a special case where we only use a uid for the pointer. The natural identity of a station is its physical characteristics (e.g., md).</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A pointer to the trajectoryStation within the parent trajectory. This is a specia" +
             "l case where we only use a uid for the pointer. The natural identity of a statio" +
             "n is its physical characteristics (e.g., md).")]
@@ -18124,6 +18200,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>This is the unique mnemonic for this term.  For example, "ABIX" or "DECR".</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("This is the unique mnemonic for this term.  For example, \"ABIX\" or \"DECR\".")]
         public string name {
             get {
@@ -18184,6 +18261,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human-readable name for the term, may be presented in  application software. E.g., "MWD: X-Acceleromter Bias with Z-Axis Corr."</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human-readable name for the term, may be presented in  application software. E.g." +
             ", \"MWD: X-Acceleromter Bias with Z-Axis Corr.\"")]
         public string label {
@@ -18197,6 +18275,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Human-readable name for the term, may be presented in  application software. E.g., "MWD: X-Acceleromter Bias with Z-Axis Corr."</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Human-readable name for the term, may be presented in  application software. E.g." +
             ", \"MWD: X-Acceleromter Bias with Z-Axis Corr.\"")]
         public string description {
@@ -18343,6 +18422,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The name of the constant.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the constant.")]
         public string name {
             get {
@@ -18369,6 +18449,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The unit of measure of the constant. This value must match an acronym from the WITSML unit of measure dictionary.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the constant. This value must match an acronym from the WI" +
             "TSML unit of measure dictionary.")]
         public string unit {
@@ -18383,6 +18464,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>A textual description of the constant.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the constant.")]
         public string description {
             get {
@@ -18439,6 +18521,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The name of the item.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the item.")]
         public string name {
             get {
@@ -18452,6 +18535,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>A textual description of the item.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the item.")]
         public string description {
             get {
@@ -18571,6 +18655,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human-readable name for the set of terms.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human-readable name for the set of terms.")]
         public string name {
             get {
@@ -18678,6 +18763,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Person responsible for the information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Person responsible for the information.")]
         public string author {
             get {
@@ -18690,6 +18776,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Source from which the information is derived.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Source from which the information is derived.")]
         public string source {
             get {
@@ -18703,6 +18790,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Person or collective body responsible for authorizing the information.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Person or collective body responsible for authorizing the information.")]
         public string authority {
             get {
@@ -18728,6 +18816,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Version name or number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Version name or number.")]
         public string version {
             get {
@@ -18740,6 +18829,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A comment about the object.  This should include information regarding the derivation of the information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the object.  This should include information regarding the deriva" +
             "tion of the information.")]
         public string comment {
@@ -18865,6 +18955,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A textual comment about this error term value.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual comment about this error term value.")]
         public string comment {
             get {
@@ -19204,6 +19295,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A particular constraint.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A particular constraint.")]
         public string parameter {
             get {
@@ -19240,6 +19332,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A fixed value that the constraint must take.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("A fixed value that the constraint must take.")]
         public string value {
             get {
@@ -19310,6 +19403,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human-readable name for the model.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human-readable name for the model.")]
         public string name {
             get {
@@ -19334,6 +19428,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The type of tool used for the measurements.   This is the same list as defined for a trajectoryStation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The type of tool used for the measurements.   This is the same list as defined fo" +
             "r a trajectoryStation.")]
         public string typeSurveyTool {
@@ -19685,6 +19780,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -19698,6 +19794,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the target.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the target.")]
         public string nameWellbore {
             get {
@@ -19711,6 +19808,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the target.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the target.")]
         public string name {
             get {
@@ -20179,6 +20277,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of survey program section.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of survey program section.")]
         public string name {
             get {
@@ -20218,6 +20317,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Company who will run / has run sruvey tool.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Company who will run / has run sruvey tool.")]
         public string nameSurveyCompany {
             get {
@@ -20231,6 +20331,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Name of survey tool to be used / used for this section.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of survey tool to be used / used for this section.")]
         public string nameTool {
             get {
@@ -20244,6 +20345,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Type of tool used.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Type of tool used.")]
         public string typeTool {
             get {
@@ -20256,6 +20358,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Error model used to calculate ellipses of uncertainty.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Error model used to calculate ellipses of uncertainty.")]
         public string modelError {
             get {
@@ -20327,6 +20430,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -20403,6 +20507,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -20416,6 +20521,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the survey program.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the survey program.")]
         public string nameWellbore {
             get {
@@ -20429,6 +20535,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the survey program.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the survey program.")]
         public string name {
             get {
@@ -20477,6 +20584,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of engineer.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of engineer.")]
         public string engineer {
             get {
@@ -20623,6 +20731,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The type of perforation and/or how the perforation was created.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The type of perforation and/or how the perforation was created.")]
         public string type {
             get {
@@ -20958,6 +21067,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A name for the formation lithology.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name for the formation lithology.")]
         public string lithName {
             get {
@@ -21057,6 +21167,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name used for the net pay zone.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name used for the net pay zone.")]
         public string netPayName {
             get {
@@ -21131,6 +21242,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of the formation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the formation.")]
         public string nameFormation {
             get {
@@ -22181,6 +22293,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the session.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The name of the session.")]
         public string name {
             get {
@@ -22193,6 +22306,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description of the session.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A description of the session.")]
         public string description {
             get {
@@ -22887,6 +23001,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A short description of the event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A short description of the event.")]
         public string comment {
             get {
@@ -22968,6 +23083,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Proppant name.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Proppant name.")]
         public string name {
             get {
@@ -23015,6 +23131,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The size of the sieve through which a proppant will pass.   Measures the fineness of the grind.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The size of the sieve through which a proppant will pass.   Measures the fineness" +
             " of the grind.")]
         public string sieveSize {
@@ -23069,6 +23186,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Additive name.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Additive name.")]
         public string name {
             get {
@@ -23516,6 +23634,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the fluid.")]
         public string name {
             get {
@@ -23540,6 +23659,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Source of the water used in the fluid. 256 char max size.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Source of the water used in the fluid. 256 char max size.")]
         public string waterSource {
             get {
@@ -23612,6 +23732,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The purpose of the fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The purpose of the fluid.")]
         public string purpose {
             get {
@@ -23624,6 +23745,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The description of the fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The description of the fluid.")]
         public string description {
             get {
@@ -23636,6 +23758,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The supplier of the fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The supplier of the fluid.")]
         public string supplier {
             get {
@@ -24026,6 +24149,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A human readable name for the stage.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A human readable name for the stage.")]
         public string name {
             get {
@@ -24038,6 +24162,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A short description of the stage.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A short description of the stage.")]
         public string description {
             get {
@@ -25179,6 +25304,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The type of tubular (e.g., casing, tubing, liner, packer, open hole, other).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The type of tubular (e.g., casing, tubing, liner, packer, open hole, other).")]
         public string type {
             get {
@@ -25455,6 +25581,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A human readable name for the flow path.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A human readable name for the flow path.")]
         public string name {
             get {
@@ -25467,6 +25594,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A short description of the flow path.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A short description of the flow path.")]
         public string description {
             get {
@@ -26296,6 +26424,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The name of the proppant.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the proppant.")]
         public string name {
             get {
@@ -26511,6 +26640,8 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Identifier for the stimulation treatment interval unique to the stimulation job.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Identifier for the stimulation treatment interval unique to the stimulation job.")]
         public string uidTreatmentInterval {
             get {
@@ -26524,6 +26655,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well stimulation treatment name.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well stimulation treatment name.")]
         public string name {
             get {
@@ -26595,6 +26727,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the formation being stimulated.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("The name of the formation being stimulated.")]
         public string formationName {
             get {
@@ -26655,6 +26788,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A name for the open hole. To be used for open hole completions.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name for the open hole. To be used for open hole completions.")]
         public string openHoleName {
             get {
@@ -27042,6 +27176,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Name of the proppant used for the treatment interval.</summary>
         [System.Xml.Serialization.XmlElementAttribute("proppantName")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the proppant used for the treatment interval.")]
         public string[] proppantName {
             get {
@@ -27114,6 +27249,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The names of the each fluid used in this interval.</summary>
         [System.Xml.Serialization.XmlElementAttribute("fluidName")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The names of the each fluid used in this interval.")]
         public string[] fluidName {
             get {
@@ -27554,6 +27690,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -27567,6 +27704,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWellbore {
             get {
@@ -27580,6 +27718,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well stimulation job.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well stimulation job.")]
         public string name {
             get {
@@ -27593,6 +27732,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Type of well stimulation job.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Type of well stimulation job.")]
         public string kind {
             get {
@@ -27630,6 +27770,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Name of the well stimulation contractor.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the well stimulation contractor.")]
         public string serviceCompany {
             get {
@@ -27642,6 +27783,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of service company supervisor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of service company supervisor.")]
         public string supervisor {
             get {
@@ -27655,6 +27797,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The API or equivalent identifier number for the well.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The API or equivalent identifier number for the well.")]
         public string apiNumber {
             get {
@@ -27668,6 +27811,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Customer or company name.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Customer or company name.")]
         public string customerName {
             get {
@@ -27822,6 +27966,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Name of a proppant used for the stimulation job.</summary>
         [System.Xml.Serialization.XmlElementAttribute("proppantName")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of a proppant used for the stimulation job.")]
         public string[] proppantName {
             get {
@@ -28240,6 +28385,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of formation penetrated.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of formation penetrated.")]
         public string nameFormation {
             get {
@@ -28252,6 +28398,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -28386,6 +28533,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Free text sample description of item and details, using a structured approach as per AAPG and Shell style, or specific operator descriptive hierarchy typically in the order of Rock Type, Qualifier,colour, Texture, Cement matrix type, compaction, Fracture, accessories, fossils, structure porosity, Shows. This should be blank if a structured approach to creating the description is used. Example clastic descriptions: SST, qtz, wh lt gy grn, m - c g, well sort, subrnd-subang, sub sph - sph, grst tex, wk calc cmt, fria, glauc rr mica, gd vis por, patchy dk brn oil stn, wk yel dir fluor, bri yel cut fluor, instant blooming yel-wh crush cut fluor, dk brn cut col. Example carbonate description: LST; wh buff lt brn, m-c g, bioclastic grst, xln cmt, hd, ang brk, tr pyr, poor vis por.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute(@"Free text sample description of item and details, using a structured approach as per AAPG and Shell style, or specific operator descriptive hierarchy typically in the order of Rock Type, Qualifier,colour, Texture, Cement matrix type, compaction, Fracture, accessories, fossils, structure porosity, Shows. This should be blank if a structured approach to creating the description is used. Example clastic descriptions: SST, qtz, wh lt gy grn, m - c g, well sort, subrnd-subang, sub sph - sph, grst tex, wk calc cmt, fria, glauc rr mica, gd vis por, patchy dk brn oil stn, wk yel dir fluor, bri yel cut fluor, instant blooming yel-wh crush cut fluor, dk brn cut col. Example carbonate description: LST; wh buff lt brn, m-c g, bioclastic grst, xln cmt, hd, ang brk, tr pyr, poor vis por.")]
         public string description {
             get {
@@ -28398,6 +28546,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>DEPRECATED. Lithology classification description. (In the past this was intended to distinguish between alternative classification schemes such as Dunham or Folk. This is no longer necessary with the classifications included in Lithology Type)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Lithology classification description. (In the past this was intended " +
             "to distinguish between alternative classification schemes such as Dunham or Folk" +
             ". This is no longer necessary with the classifications included in Lithology Typ" +
@@ -28413,6 +28562,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>DEPRECATED. Use sizeGrain below. Granulometry.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use sizeGrain below. Granulometry.")]
         public string grainType {
             get {
@@ -28425,6 +28575,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>DEPRECATED. Dunham / Embry and Klovan limestone classification. No longer used, as the terms are available as alternates for carbonates within the Lithology type. i.e. A Dunham defined lithology will be plotted graphically as a limestone, but the Dunham terminology will be available to use in a structured description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Dunham / Embry and Klovan limestone classification. No longer used, as the terms are available as alternates for carbonates within the Lithology type. i.e. A Dunham defined lithology will be plotted graphically as a limestone, but the Dunham terminology will be available to use in a structured description.")]
         public string dunhamClass {
             get {
@@ -28450,6 +28601,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often "feather-edge" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often ""feather-edge"" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
         public string texture {
             get {
@@ -28462,6 +28614,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be us" +
             "ed as mineral hardness is not typically recorded. What is recorded is typically " +
             "compaction. It is retained though for use defined as per Mohs scale of mineral h" +
@@ -28477,6 +28630,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not c" +
             "ompacted, slightly compacted, compacted, strongly compacted, friable, indurated," +
             " hard.")]
@@ -28491,6 +28645,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in "boulder"; 64-256 mm2.5-10.1 in"cobble"; 32-64 mm1.26-2.5 in"very coarse gravel"; 16-32 mm0.63-1.26 in"coarse gravel"; 8-16 mm0.31-0.63 in"medium gravel"; 4-8 mm0.157-0.31 in"fine gravel"; 2-4 mm0.079-0.157 in"very fine gravel"; 1-2 mm0.039-0.079 in"very coarse sand"; 0.5-1 mm0.020-0.039 in"coarse sand"; 0.25-0.5 mm0.010-0.020 in"medium sand"; 125-250 um0.0049-0.010 in"fine sand"; 62.5-125 um0.0025-0.0049 in"very fine sand"; 3.90625-62.5 um0.00015-0.0025 in"silt"; LT 3.90625 umLT 0.00015 in"clay"; LT 1 umLT 0.000039 in "colloid"</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in ""boulder""; 64-256 mm2.5-10.1 in""cobble""; 32-64 mm1.26-2.5 in""very coarse gravel""; 16-32 mm0.63-1.26 in""coarse gravel""; 8-16 mm0.31-0.63 in""medium gravel""; 4-8 mm0.157-0.31 in""fine gravel""; 2-4 mm0.079-0.157 in""very fine gravel""; 1-2 mm0.039-0.079 in""very coarse sand""; 0.5-1 mm0.020-0.039 in""coarse sand""; 0.25-0.5 mm0.010-0.020 in""medium sand""; 125-250 um0.0049-0.010 in""fine sand""; 62.5-125 um0.0025-0.0049 in""very fine sand""; 3.90625-62.5 um0.00015-0.0025 in""silt""; LT 3.90625 umLT 0.00015 in""clay""; LT 1 umLT 0.000039 in ""colloid""")]
         public string sizeGrain {
             get {
@@ -28503,6 +28658,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 " +
             "Roundness (roundness refers to modal size class). very angular, angular, subangu" +
             "lar, subrounded, rounded, well rounded.")]
@@ -28517,6 +28673,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size" +
             " class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very el" +
             "ongated, elongated, slightly elongated, slightly spherical, spherical, very sphe" +
@@ -28532,6 +28689,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
         public string sorting {
             get {
@@ -28567,6 +28725,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none"</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% ""good"" 10 to 15% ""fair"" 5 to 10% ""poor"" LT 5% ""trace"" 0 ""none""")]
         public string porosityVisible {
             get {
@@ -28579,6 +28738,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
         public string porosityFabric {
             get {
@@ -28591,6 +28751,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2" +
             ".5. In future these would benefit from quantification. tight, slightly, fairly, " +
             "highly.")]
@@ -29292,6 +29453,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>DEPRECATED. This prior useage for a specific terminology is suggested to no longer be used, as the intent should be to avoid encoding proprietary terms. But, for the sake of interoperability, proprietary descriptive use of a specific term for a percentage, should be derived from the abundance % by the end users' visualization application, using the end users' terminology. (i.e. if 1 less than or equal to  1% = Rare Trace or equivalent terminology for the specific operator; this can be mapped in the end user application, but is redundant to be encoded in the standard.)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. This prior useage for a specific terminology is suggested to no longer be used, as the intent should be to avoid encoding proprietary terms. But, for the sake of interoperability, proprietary descriptive use of a specific term for a percentage, should be derived from the abundance % by the end users' visualization application, using the end users' terminology. (i.e. if 1 less than or equal to  1% = Rare Trace or equivalent terminology for the specific operator; this can be mapped in the end user application, but is redundant to be encoded in the standard.)")]
         public string abundanceCode {
             get {
@@ -29304,6 +29466,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A textual description of the qualifier.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the qualifier.")]
         public string description {
             get {
@@ -30763,6 +30926,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Free format show description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Free format show description.")]
         public string showDesc {
             get {
@@ -30775,6 +30939,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Impregnated lithology.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Impregnated lithology.")]
         public string impregnatedLitho {
             get {
@@ -30787,6 +30952,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of any hydrocarbon type odors smelled.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description of any hydrocarbon type odors smelled.")]
         public string odor {
             get {
@@ -30968,6 +31134,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -30981,6 +31148,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the sidewall core.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the sidewall core.")]
         public string nameWellbore {
             get {
@@ -30994,6 +31162,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the sidewall core.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the sidewall core.")]
         public string name {
             get {
@@ -31064,6 +31233,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Reference log information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Reference log information.")]
         public string coreReferenceLog {
             get {
@@ -31089,6 +31259,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of contractor who provided the service.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of contractor who provided the service.")]
         public string serviceCompany {
             get {
@@ -31101,6 +31272,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Analysis company</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Analysis company")]
         public string analysisContractor {
             get {
@@ -31113,6 +31285,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of engineer analyzing sidewall core samples.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of engineer analyzing sidewall core samples.")]
         public string analysisBy {
             get {
@@ -31125,6 +31298,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Sidewall coring tool description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Sidewall coring tool description.")]
         public string sidewallCoringTool {
             get {
@@ -31457,6 +31631,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -31470,6 +31645,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the risk.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the risk.")]
         public string nameWellbore {
             get {
@@ -31483,6 +31659,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the risk.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the risk.")]
         public string name {
             get {
@@ -31556,6 +31733,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Custom string to further categorize the risk.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("Custom string to further categorize the risk.")]
         public string extendCategory {
             get {
@@ -31759,6 +31937,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>summary description of risk.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("summary description of risk.")]
         public string summary {
             get {
@@ -31771,6 +31950,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Complete description of Risk.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Complete description of Risk.")]
         public string details {
             get {
@@ -31783,6 +31963,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Details for identifing the Risk.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Details for identifing the Risk.")]
         public string identification {
             get {
@@ -31795,6 +31976,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Plan of action if the Risk materializes.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Plan of action if the Risk materializes.")]
         public string contingency {
             get {
@@ -31808,6 +31990,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Plan of action to ensure the risk does not materialize.</summary>
         [System.Xml.Serialization.XmlElementAttribute("mitigation")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Plan of action to ensure the risk does not materialize.")]
         public string[] mitigation {
             get {
@@ -32659,6 +32842,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of item and details.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Description of item and details.")]
         public string description {
             get {
@@ -33297,6 +33481,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -33309,6 +33494,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturers designated model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturers designated model.")]
         public string model {
             get {
@@ -33367,6 +33553,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description for the type of object.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description for the type of object.")]
         public string type {
             get {
@@ -33379,6 +33566,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Contractor/owner.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Contractor/owner.")]
         public string owner {
             get {
@@ -33622,6 +33810,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -33634,6 +33823,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturers designated model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturers designated model.")]
         public string model {
             get {
@@ -33692,6 +33882,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description for the type of object.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description for the type of object.")]
         public string type {
             get {
@@ -33704,6 +33895,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Cones description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Cones description.")]
         public string descCone {
             get {
@@ -33716,6 +33908,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Contractor/owner.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Contractor/owner.")]
         public string owner {
             get {
@@ -33802,6 +33995,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -33814,6 +34008,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturers designated model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturers designated model.")]
         public string model {
             get {
@@ -33872,6 +34067,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description for the type of object.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description for the type of object.")]
         public string type {
             get {
@@ -33896,6 +34092,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Contractor/owner.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Contractor/owner.")]
         public string owner {
             get {
@@ -34001,6 +34198,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the shaker.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the shaker.")]
         public string name {
             get {
@@ -34013,6 +34211,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -34025,6 +34224,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturers designated model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturers designated model.")]
         public string model {
             get {
@@ -34083,6 +34283,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description for the type of object.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description for the type of object.")]
         public string type {
             get {
@@ -34095,6 +34296,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Shaker location on rig.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Shaker location on rig.")]
         public string locationShaker {
             get {
@@ -34189,6 +34391,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Contractor/owner.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Contractor/owner.")]
         public string owner {
             get {
@@ -34332,6 +34535,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -34344,6 +34548,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturers designated model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturers designated model.")]
         public string model {
             get {
@@ -34402,6 +34607,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Contractor/owner.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Contractor/owner.")]
         public string owner {
             get {
@@ -34787,6 +34993,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Contractor/owner.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Contractor/owner.")]
         public string owner {
             get {
@@ -35233,6 +35440,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -35245,6 +35453,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturers designated model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturers designated model.")]
         public string model {
             get {
@@ -35318,6 +35527,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of connection to Blow Out Preventer.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of connection to Blow Out Preventer.")]
         public string typeConnectionBop {
             get {
@@ -35586,6 +35796,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of accumulator/description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Type of accumulator/description.")]
         public string accumulator {
             get {
@@ -35646,6 +35857,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Blow Out Preventer Control System.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Blow Out Preventer Control System.")]
         public string typeControlManifold {
             get {
@@ -35658,6 +35870,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of control system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Description of control system.")]
         public string descControlManifold {
             get {
@@ -35670,6 +35883,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of choke manifold.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Type of choke manifold.")]
         public string typeChokeManifold {
             get {
@@ -35912,6 +36126,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -35925,6 +36140,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the rig.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the rig.")]
         public string nameWellbore {
             get {
@@ -35938,6 +36154,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the rig.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the rig.")]
         public string name {
             get {
@@ -35950,6 +36167,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Contractor/owner.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Contractor/owner.")]
         public string owner {
             get {
@@ -35985,6 +36203,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -36021,6 +36240,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Rig classification.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Rig classification.")]
         public string classRig {
             get {
@@ -36033,6 +36253,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Rig approvals/certification.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Rig approvals/certification.")]
         public string approvals {
             get {
@@ -36045,6 +36266,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Rig registration location.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Rig registration location.")]
         public string registration {
             get {
@@ -36057,6 +36279,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Rig telephone number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Rig telephone number.")]
         public string telNumber {
             get {
@@ -36069,6 +36292,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Rig fax number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Rig fax number.")]
         public string faxNumber {
             get {
@@ -36081,6 +36305,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Rig Email address.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Rig Email address.")]
         public string emailAddress {
             get {
@@ -36093,6 +36318,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of contact person.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of contact person.")]
         public string nameContact {
             get {
@@ -36454,6 +36680,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of hook.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of hook.")]
         public string typeHook {
             get {
@@ -36537,6 +36764,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of the drawworks motor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description of the drawworks motor.")]
         public string motorDrawWorks {
             get {
@@ -36549,6 +36777,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Rig brake description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Rig brake description.")]
         public string descBrake {
             get {
@@ -36561,6 +36790,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of Swivel.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of Swivel.")]
         public string typeSwivel {
             get {
@@ -36608,6 +36838,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of rotating system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description of rotating system.")]
         public string descRotSystem {
             get {
@@ -36656,6 +36887,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of slow circulation rates system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description of slow circulation rates system.")]
         public string scrSystem {
             get {
@@ -36668,6 +36900,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of pipe handling system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of pipe handling system.")]
         public string pipeHandlingSystem {
             get {
@@ -36752,6 +36985,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Power system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Power system.")]
         public string mainEngine {
             get {
@@ -36777,6 +37011,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of cement unit on the rig.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of cement unit on the rig.")]
         public string cementUnit {
             get {
@@ -36881,6 +37116,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Mooring type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Mooring type.")]
         public string moorType {
             get {
@@ -37336,6 +37572,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of company that supplied the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of company that supplied the data.")]
         public string agency {
             get {
@@ -37532,6 +37769,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of precipitation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of precipitation.")]
         public string typePrecip {
             get {
@@ -37556,6 +37794,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of cloud cover.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description of cloud cover.")]
         public string coverCloud {
             get {
@@ -37604,6 +37843,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -37672,6 +37912,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for support craft.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for support craft.")]
         public string name {
             get {
@@ -37753,6 +37994,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -37849,6 +38091,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of company.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of company.")]
         public string company {
             get {
@@ -37995,6 +38238,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of person who prepared incident report.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of person who prepared incident report.")]
         public string reporter {
             get {
@@ -38113,6 +38357,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Accident description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Accident description.")]
         public string descAccident {
             get {
@@ -38125,6 +38370,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Remedial action description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Remedial action description.")]
         public string remedialActionDesc {
             get {
@@ -38137,6 +38383,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Cause description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Cause description.")]
         public string causeDesc {
             get {
@@ -38173,6 +38420,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of company that caused incident.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of company that caused incident.")]
         public string responsibleCompany {
             get {
@@ -38799,6 +39047,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -38935,6 +39184,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer / supplier of the item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer / supplier of the item.")]
         public string manufacturer {
             get {
@@ -38947,6 +39197,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturers designated model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturers designated model.")]
         public string model {
             get {
@@ -39789,6 +40040,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Name or type of inventory item.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name or type of inventory item.")]
         public string name {
             get {
@@ -40712,6 +40964,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>AFE number that this cost item applies to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("AFE number that this cost item applies to.")]
         public string numAFE {
             get {
@@ -40803,6 +41056,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The kind of cost item specified (e.g., rig dayrate, joints casing).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
         public string itemKind {
             get {
@@ -40874,6 +41128,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Invoice number for cost item, bill sent to Operator.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Invoice number for cost item, bill sent to Operator.")]
         public string numInvoice {
             get {
@@ -40886,6 +41141,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Purchase order number, provided by Operator.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Purchase order number, provided by Operator.")]
         public string numPO {
             get {
@@ -40898,6 +41154,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Field Ticket number, issued by service company on location.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Field Ticket number, issued by service company on location.")]
         public string numTicket {
             get {
@@ -40972,6 +41229,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Serial number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Serial number.")]
         public string numSerial {
             get {
@@ -40984,6 +41242,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of vendor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of vendor.")]
         public string nameVendor {
             get {
@@ -41009,6 +41268,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of pool/reservoir that this cost item can be accounted to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of pool/reservoir that this cost item can be accounted to.")]
         public string pool {
             get {
@@ -41238,6 +41498,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -41251,6 +41512,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the operations report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the operations report.")]
         public string nameWellbore {
             get {
@@ -41264,6 +41526,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the operations report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the operations report.")]
         public string name {
             get {
@@ -41421,6 +41684,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of operator rig supervisor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of operator rig supervisor.")]
         public string supervisor {
             get {
@@ -41433,6 +41697,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Nae of Engineer.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Nae of Engineer.")]
         public string engineer {
             get {
@@ -41445,6 +41710,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of operator wellsite geologist.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of operator wellsite geologist.")]
         public string geologist {
             get {
@@ -41912,6 +42178,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>AFE (authorization for expenditure) number that this cost item applies to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("AFE (authorization for expenditure) number that this cost item applies to.")]
         public string numAFE {
             get {
@@ -41960,6 +42227,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Hole condition description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Hole condition description.")]
         public string conditionHole {
             get {
@@ -41972,6 +42240,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Lithology for the Interval.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Lithology for the Interval.")]
         public string lithology {
             get {
@@ -41984,6 +42253,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of formation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of formation.")]
         public string nameFormation {
             get {
@@ -42105,6 +42375,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>24 hour summary description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("24 hour summary description.")]
         public string sum24Hr {
             get {
@@ -42117,6 +42388,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Forecast for next 24 hrs.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Forecast for next 24 hrs.")]
         public string forecast24Hr {
             get {
@@ -42129,6 +42401,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Current status description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Current status description.")]
         public string statusCurrent {
             get {
@@ -42365,6 +42638,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Phase (large activity classification) e.g. Drill Surface Hole.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("Phase (large activity classification) e.g. Drill Surface Hole.")]
         public string phase {
             get {
@@ -42414,6 +42688,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Custom string to further define an activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("Custom string to further define an activity.")]
         public string detailActivity {
             get {
@@ -42521,6 +42796,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Finish, interrupted, failed, etc.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Finish, interrupted, failed, etc.")]
         public string state {
             get {
@@ -42556,6 +42832,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Operator company name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Operator company name.")]
         public string @operator {
             get {
@@ -42650,6 +42927,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and Remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and Remarks.")]
         public string comments {
             get {
@@ -44228,6 +44506,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Reason for trip.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Reason for trip.")]
         public string reasonTrip {
             get {
@@ -44240,6 +44519,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Objective of bottom hole assembly.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Objective of bottom hole assembly.")]
         public string objectiveBha {
             get {
@@ -44406,6 +44686,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -44843,6 +45124,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description for the type of fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description for the type of fluid.")]
         public string type {
             get {
@@ -44855,6 +45137,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Sample location.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Sample location.")]
         public string locationSample {
             get {
@@ -45434,6 +45717,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of company.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of company.")]
         public string company {
             get {
@@ -45446,6 +45730,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Engineer name</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Engineer name")]
         public string engineer {
             get {
@@ -45505,6 +45790,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of polymers present in mud system.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of polymers present in mud system.")]
         public string polyType {
             get {
@@ -45565,6 +45851,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -46228,6 +46515,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -46241,6 +46529,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the  objectGroup represents the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the  objectGroup represents the wellbore.")]
         public string nameWellbore {
             get {
@@ -46254,6 +46543,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the objectGroup.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the objectGroup.")]
         public string name {
             get {
@@ -46267,6 +46557,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Defines the type of group.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Defines the type of group.")]
         public string groupType {
             get {
@@ -46279,6 +46570,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>This is a free-form text field to extend groupType for custom implementations.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("This is a free-form text field to extend groupType for custom implementations.")]
         public string groupSubtype {
             get {
@@ -46315,6 +46607,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description of attachment</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of attachment")]
         public string description {
             get {
@@ -46864,6 +47157,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -46877,6 +47171,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the mud log.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the mud log.")]
         public string nameWellbore {
             get {
@@ -46890,6 +47185,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the mud log.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the mud log.")]
         public string name {
             get {
@@ -46948,6 +47244,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of the company recording the information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the company recording the information.")]
         public string mudLogCompany {
             get {
@@ -46960,6 +47257,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Concatenated names of mud loggers constructing the log.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Concatenated names of mud loggers constructing the log.")]
         public string mudLogEngineers {
             get {
@@ -47562,6 +47860,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.</summary>
         [System.Xml.Serialization.XmlElementAttribute("nameFormation")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to b" +
             "e replaced by lithostratigraphic with kind=formation.")]
         public string[] nameFormation {
@@ -47637,6 +47936,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of item and details.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Description of item and details.")]
         public string description {
             get {
@@ -47649,6 +47949,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Sample treatment : cutting fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Sample treatment : cutting fluid.")]
         public string cuttingFluid {
             get {
@@ -47661,6 +47962,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Sample treatment : cleaning method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Sample treatment : cleaning method.")]
         public string cleaningMethod {
             get {
@@ -47673,6 +47975,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Sample treatment : drying method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Sample treatment : drying method.")]
         public string dryingMethod {
             get {
@@ -47685,6 +47988,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
         public string comments {
             get {
@@ -48780,6 +49084,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -48793,6 +49098,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the message.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the message.")]
         public string nameWellbore {
             get {
@@ -48806,6 +49112,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the risk.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the risk.")]
         public string name {
             get {
@@ -48880,6 +49187,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Custom string to further define an activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Custom string to further define an activity.")]
         public string detailActivity {
             get {
@@ -48929,6 +49237,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Message text.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Message text.")]
         public string messageText {
             get {
@@ -49234,6 +49543,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the array axis.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the array axis.")]
         public string name {
             get {
@@ -49246,6 +49556,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The property type by which the array axis is classified.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The property type by which the array axis is classified.")]
         public string propertyType {
             get {
@@ -49258,6 +49569,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A string representing the units of measure of the axis values.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("A string representing the units of measure of the axis values.")]
         public string uom {
             get {
@@ -49448,6 +49760,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The curve classification obtained from a lookup in the vendors  mnemonic catalog.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The curve classification obtained from a lookup in the vendors  mnemonic catalog." +
             "")]
         public string classWitsml {
@@ -49485,6 +49798,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Unit of measurement of the data values.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("Unit of measurement of the data values.")]
         public string unit {
             get {
@@ -49510,6 +49824,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>An empty string is the default representation of a null value for a  curve (i.e., when the null value representation is not explicitly defined).  If a null value is defined in the logCurveInfo, it overrides any null value specified at the  logHeader level. An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a  legacy format without having to scan the data to insure that the null pattern  does not exist in the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"An empty string is the default representation of a null value for a  curve (i.e., when the null value representation is not explicitly defined).  If a null value is defined in the logCurveInfo, it overrides any null value specified at the  logHeader level. An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a  legacy format without having to scan the data to insure that the null pattern  does not exist in the data.")]
         public string nullValue {
             get {
@@ -49630,6 +49945,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of the curve.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Description of the curve.")]
         public string curveDescription {
             get {
@@ -49657,6 +49973,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Data source, could be tool name/id.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Data source, could be tool name/id.")]
         public string dataSource {
             get {
@@ -49952,6 +50269,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -49965,6 +50283,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the log.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the log.")]
         public string nameWellbore {
             get {
@@ -49978,6 +50297,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the log.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the log.")]
         public string name {
             get {
@@ -50062,6 +50382,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the grouping represented by curves in this log. A group represents a named combination of curves and the curves in a particular log should be represented in that list.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The name of the grouping represented by curves in this log. A group represents a " +
             "named combination of curves and the curves in a particular log should be represe" +
             "nted in that list.")]
@@ -50076,6 +50397,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of contractor who provided the service.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of contractor who provided the service.")]
         public string serviceCompany {
             get {
@@ -50162,6 +50484,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of item and details.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Description of item and details.")]
         public string description {
             get {
@@ -50307,6 +50630,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The mnemonic of the index curve. Duplicate index values can exist in a log but a change of direction is not allowed. If a change of direction is required then a new log must be created. Some servers may eliminate (i.e., overwrite) duplicate indexes. The data values associated with this curve represent an API "node-index" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"The mnemonic of the index curve. Duplicate index values can exist in a log but a change of direction is not allowed. If a change of direction is required then a new log must be created. Some servers may eliminate (i.e., overwrite) duplicate indexes. The data values associated with this curve represent an API ""node-index"" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
         public string indexCurve {
             get {
@@ -50319,6 +50643,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>An empty string is the default representation of a null value for a  curve (i.e. when the null value representation is not explicitly defined).  If a null value representation is defined for a log, this becomes the default for all curves in that log (but can be overridden at the curve level).   An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a  legacy format without having to scan the data to insure that the null pattern  does not exist in the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute(@"An empty string is the default representation of a null value for a  curve (i.e. when the null value representation is not explicitly defined).  If a null value representation is defined for a log, this becomes the default for all curves in that log (but can be overridden at the curve level).   An empty string is always a valid null value representation in the comma delimited list. An empty string is not a valid null value representation within a space delimited array. Specifying a null value also makes it easier to transform data back to a  legacy format without having to scan the data to insure that the null pattern  does not exist in the data.")]
         public string nullValue {
             get {
@@ -50509,6 +50834,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -50522,6 +50848,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the formation marker.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the formation marker.")]
         public string nameWellbore {
             get {
@@ -50535,6 +50862,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the formation marker.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the formation marker.")]
         public string name {
             get {
@@ -50704,6 +51032,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to b" +
             "e replaced by lithostratigraphic with kind=formation.")]
         public string nameFormation {
@@ -50717,6 +51046,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Description of item and details.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Description of item and details.")]
         public string description {
             get {
@@ -50832,6 +51162,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -50845,6 +51176,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the fluids report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the fluids report.")]
         public string nameWellbore {
             get {
@@ -50858,6 +51190,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the fluids report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the fluids report.")]
         public string name {
             get {
@@ -51489,6 +51822,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A lithological description of the geological formation at the given depth.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A lithological description of the geological formation at the given depth.")]
         public string description {
             get {
@@ -51695,6 +52029,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Custom string to further define an activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Custom string to further define an activity.")]
         public string detailActivity {
             get {
@@ -51898,6 +52233,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The lithological description of a geological formation at the incident depth.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The lithological description of a geological formation at the incident depth.")]
         public string formation {
             get {
@@ -51934,6 +52270,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description of the well control incident.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A description of the well control incident.")]
         public string description {
             get {
@@ -52137,6 +52474,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The classification of the equipment that failed.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The classification of the equipment that failed.")]
         public string equipClass {
             get {
@@ -52185,6 +52523,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description that gives a information about the equipment failure.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A description that gives a information about the equipment failure.")]
         public string description {
             get {
@@ -52323,6 +52662,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A textual description of any shows in the interval.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of any shows in the interval.")]
         public string show {
             get {
@@ -52335,6 +52675,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description that gives a geological/lithological  description/evaluation of the interval.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A description that gives a geological/lithological  description/evaluation of the" +
             " interval.")]
         public string lithology {
@@ -52508,6 +52849,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The dominate component in the fluid sample.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The dominate component in the fluid sample.")]
         public string dominateComponent {
             get {
@@ -52544,6 +52886,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description that describes the wireline formation test in more detail.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A description that describes the wireline formation test in more detail.")]
         public string description {
             get {
@@ -53106,6 +53449,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Core identification number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Core identification number.")]
         public string coreNumber {
             get {
@@ -53225,6 +53569,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>General core description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("General core description.")]
         public string coreDescription {
             get {
@@ -53361,6 +53706,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of contractor who provided the service.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of contractor who provided the service.")]
         public string serviceCompany {
             get {
@@ -53421,6 +53767,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description of the logging tool.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("A description of the logging tool.")]
         public string tool {
             get {
@@ -54315,6 +54662,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A summary that sumarizes the activities performed  and the status of the ongoing activities from the reporting period.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A summary that sumarizes the activities performed  and the status of the ongoing " +
             "activities from the reporting period.")]
         public string sum24Hr {
@@ -54328,6 +54676,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A summary that sumarizes the planned activities the next reporting period.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A summary that sumarizes the planned activities the next reporting period.")]
         public string forecast24Hr {
             get {
@@ -54424,6 +54773,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of operator rig supervisor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of operator rig supervisor.")]
         public string supervisor {
             get {
@@ -54436,6 +54786,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Nae of Engineer.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Nae of Engineer.")]
         public string engineer {
             get {
@@ -54448,6 +54799,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of operator wellsite geologist.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of operator wellsite geologist.")]
         public string geologist {
             get {
@@ -54684,6 +55036,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>AFE (authorization for expenditure) number that this cost item applies to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("AFE (authorization for expenditure) number that this cost item applies to.")]
         public string numAFE {
             get {
@@ -54720,6 +55073,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Hole condition description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Hole condition description.")]
         public string conditionHole {
             get {
@@ -54849,6 +55203,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>A human contextual name of a well.  This should (hopefully) be unique within the context of the naming system.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A human contextual name of a well.  This should (hopefully) be unique within the " +
             "context of the naming system.")]
         public string name {
@@ -54969,6 +55324,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>A human contextual name of an item.  This should (hopefully) be unique within the context of the naming system.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A human contextual name of an item.  This should (hopefully) be unique within the" +
             " context of the naming system.")]
         public string name {
@@ -54983,6 +55339,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The naming system under which the  item is defined. Knowledge of the naming system may allow the hame to be parsed for embeded information.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The naming system under which the  item is defined. Knowledge of the naming syste" +
             "m may allow the hame to be parsed for embeded information.")]
         public string namingSystem {
@@ -55123,6 +55480,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the drilling Operator company.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the drilling Operator company.")]
         public string @operator {
             get {
@@ -55135,6 +55493,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The name of the drilling Contractor company.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the drilling Contractor company.")]
         public string drillContractor {
             get {
@@ -55242,6 +55601,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -55255,6 +55615,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the drilling report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the drilling report.")]
         public string nameWellbore {
             get {
@@ -55268,6 +55629,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the drilling report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the drilling report.")]
         public string name {
             get {
@@ -55809,6 +56171,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -55822,6 +56185,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the conventional core.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the conventional core.")]
         public string nameWellbore {
             get {
@@ -55835,6 +56199,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the conventional core.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the conventional core.")]
         public string name {
             get {
@@ -55917,6 +56282,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Manufacturer core reference.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Manufacturer core reference.")]
         public string coreReference {
             get {
@@ -55929,6 +56295,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of coring contractor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of coring contractor.")]
         public string coringContractor {
             get {
@@ -55941,6 +56308,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of analysis company.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of analysis company.")]
         public string analysisContractor {
             get {
@@ -55953,6 +56321,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Core barrel type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Core barrel type.")]
         public string coreBarrel {
             get {
@@ -55988,6 +56357,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Core inner barrel type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Core inner barrel type.")]
         public string innerBarrelType {
             get {
@@ -56012,6 +56382,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Core bit type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Core bit type.")]
         public string coreBitType {
             get {
@@ -56120,6 +56491,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Method to catch core - fiberglass barrel, conventional, etc.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Method to catch core - fiberglass barrel, conventional, etc.")]
         public string coreMethod {
             get {
@@ -56132,6 +56504,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Preservation method description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Preservation method description.")]
         public string coreTreatmentMethod {
             get {
@@ -56144,6 +56517,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Mud type in use when cutting core.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Mud type in use when cutting core.")]
         public string coreFluidUsed {
             get {
@@ -56156,6 +56530,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of formation penetrated.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of formation penetrated.")]
         public string nameFormation {
             get {
@@ -56180,6 +56555,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>General core description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("General core description.")]
         public string coreDescription {
             get {
@@ -56370,6 +56746,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string changeInfo {
             get {
@@ -56452,6 +56829,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string mnemonics {
             get {
@@ -56543,6 +56921,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Human recognizable contextual name for a Well. This should match the value of element nameWell in the changed object. If the changed object is well then this value will not be defined. This is required for objects which are a direct or indirect child of a well.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Human recognizable contextual name for a Well. This should match the value of element nameWell in the changed object. If the changed object is well then this value will not be defined. This is required for objects which are a direct or indirect child of a well.")]
         public string nameWell {
             get {
@@ -56555,6 +56934,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Human recognizable contextual name for the Wellbore. This should match the value of element nameWellbore in the changed object. If the changed object is well or wellbore then this value will not be defined. This is required for objects which are a direct or indirect child of a wellbore.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Human recognizable contextual name for the Wellbore. This should match the value of element nameWellbore in the changed object. If the changed object is well or wellbore then this value will not be defined. This is required for objects which are a direct or indirect child of a wellbore.")]
         public string nameWellbore {
             get {
@@ -56568,6 +56948,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable contextual name for the object. This should match the value of the name element in the changed object.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable contextual name for the object. This should match the value of" +
             " the name element in the changed object.")]
         public string nameObject {
@@ -56582,6 +56963,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The schema name of the (singular) object that changed. For example, "trajectory".</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The schema name of the (singular) object that changed. For example, \"trajectory\"." +
             "")]
         public string objectType {
@@ -56595,6 +56977,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string sourceName {
             get {
@@ -56620,6 +57003,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string lastChangeInfo {
             get {
@@ -57013,6 +57397,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Tool name for PIT.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Tool name for PIT.")]
         public string toolCompanyPit {
             get {
@@ -57049,6 +57434,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Method to determine cement top.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Method to determine cement top.")]
         public string topCementMethod {
             get {
@@ -57144,6 +57530,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Method used to determine if cement job unsuccessful.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Method used to determine if cement job unsuccessful.")]
         public string failureMethod {
             get {
@@ -57192,6 +57579,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Test negative tool for Liner top seal.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Test negative tool for Liner top seal.")]
         public string testNegativeTool {
             get {
@@ -57216,6 +57604,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Test Positive Tool for liner top seal.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Test Positive Tool for liner top seal.")]
         public string testPositiveTool {
             get {
@@ -57301,6 +57690,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Additive name.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Additive name.")]
         public string nameAdd {
             get {
@@ -57313,6 +57703,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Additive type or Function (Retarder, Visosifier, Weighting agent).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Additive type or Function (Retarder, Visosifier, Weighting agent).")]
         public string typeAdd {
             get {
@@ -57511,6 +57902,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Comments and Remarks.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and Remarks.")]
         public string comments {
             get {
@@ -57718,6 +58110,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Purpose description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Purpose description.")]
         public string purpose {
             get {
@@ -57767,6 +58160,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Water Source Description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Water Source Description.")]
         public string sourceWater {
             get {
@@ -58069,6 +58463,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of dry blend.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of dry blend.")]
         public string dryBlendName {
             get {
@@ -58167,6 +58562,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Gas type used for foam job.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Gas type used for foam job.")]
         public string typeGasFoam {
             get {
@@ -58705,6 +59101,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Stage type.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Stage type.")]
         public string typeStage {
             get {
@@ -58977,6 +59374,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Squeeze objective.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Squeeze objective.")]
         public string squeezeObj {
             get {
@@ -59428,6 +59826,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of mud in hole.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of mud in hole.")]
         public string typeOriginalMud {
             get {
@@ -59536,6 +59935,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Method to estimate excess volume.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Method to estimate excess volume.")]
         public string volExcessMethod {
             get {
@@ -59548,6 +59948,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Mix method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Mix method.")]
         public string mixMethod {
             get {
@@ -59560,6 +59961,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Method by which density is measured.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Method by which density is measured.")]
         public string densMeasBy {
             get {
@@ -59758,6 +60160,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Displacement fluid name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Displacement fluid name.")]
         public string fluidDisplace {
             get {
@@ -59964,6 +60367,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -59977,6 +60381,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the cement job.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the cement job.")]
         public string nameWellbore {
             get {
@@ -59990,6 +60395,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the cement job.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the cement job.")]
         public string name {
             get {
@@ -60025,6 +60431,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Job configuration.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Job configuration.")]
         public string jobConfig {
             get {
@@ -60060,6 +60467,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name for the cemented string</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name for the cemented string")]
         public string nameCementedString {
             get {
@@ -60084,6 +60492,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name for the cement work string</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name for the cement work string")]
         public string nameWorkString {
             get {
@@ -60096,6 +60505,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name of cementing contractor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of cementing contractor.")]
         public string contractor {
             get {
@@ -60108,6 +60518,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Cementing engineer.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Cementing engineer.")]
         public string cementEngr {
             get {
@@ -60322,6 +60733,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Plug type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Plug type.")]
         public string typePlug {
             get {
@@ -60334,6 +60746,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Name for the cementing string</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name for the cementing string")]
         public string nameCementString {
             get {
@@ -60415,6 +60828,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Type of squeeze.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of squeeze.")]
         public string typeSqueeze {
             get {
@@ -60462,6 +60876,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Tool Company.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Tool Company.")]
         public string toolCompany {
             get {
@@ -60474,6 +60889,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Cement tool type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Cement tool type.")]
         public string typeTool {
             get {
@@ -60848,6 +61264,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -60861,6 +61278,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the bottom hole assembly.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the bottom hole assembl" +
             "y.")]
         public string nameWellbore {
@@ -60875,6 +61293,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the run.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the run.")]
         public string name {
             get {
@@ -61052,6 +61471,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Bit run number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Bit run number.")]
         public string numBitRun {
             get {
@@ -61087,6 +61507,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Reason for trip.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Reason for trip.")]
         public string reasonTrip {
             get {
@@ -61099,6 +61520,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Objective of bottom hole assembly.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Objective of bottom hole assembly.")]
         public string objectiveBha {
             get {
@@ -61252,6 +61674,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
         public string nameWell {
             get {
@@ -61264,6 +61687,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Human recognizable context for the wellbore that contains the (sub) object that is represented by the attachment. If no wellbore is specified then the attachment represents the well. If a wellbore is specified but no other object is specified then the  attachment represents the wellbore.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Human recognizable context for the wellbore that contains the (sub) object that is represented by the attachment. If no wellbore is specified then the attachment represents the well. If a wellbore is specified but no other object is specified then the  attachment represents the wellbore.")]
         public string nameWellbore {
             get {
@@ -61277,6 +61701,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Human recognizable context for the attachment.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the attachment.")]
         public string name {
             get {
@@ -61355,6 +61780,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A file name associated with the attachment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A file name associated with the attachment.")]
         public string fileName {
             get {
@@ -61367,6 +61793,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A description of attachment</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of attachment")]
         public string description {
             get {
@@ -61379,6 +61806,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The file type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The file type.")]
         public string fileType {
             get {
@@ -61576,6 +62004,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The security class in which this document is  classified. Examples would be confi" +
             "dential, partner confidential,  tight. The meaning of the class is determined by" +
             " the System in which  it is defined.")]
@@ -61590,6 +62019,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The security classification system.  This gives context to the meaning of the Class value.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("The security classification system.  This gives context to the meaning of the Cla" +
             "ss value.")]
         public string securitySystem {
@@ -61626,6 +62056,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A general comment to further define the security  class.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment to further define the security  class.")]
         public string comment {
             get {
@@ -61694,6 +62125,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If appropriate, the software that created the file.  This is a free form string, " +
             "and may include whatever information  is deemed relevant.")]
         public string softwareName {
@@ -61707,6 +62139,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The person or business associate that created  the file.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The person or business associate that created  the file.")]
         public string fileCreator {
             get {
@@ -61719,6 +62152,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Any comment that would be useful to further  explain the creation of this instance document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any comment that would be useful to further  explain the creation of this instanc" +
             "e document.")]
         public string comment {
@@ -61855,6 +62289,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>A free-form string that allows a disclaimer to  accompany the information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A free-form string that allows a disclaimer to  accompany the information.")]
         public string disclaimer {
             get {
@@ -61880,6 +62315,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The owner of the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The owner of the data.")]
         public string owner {
             get {
@@ -61892,6 +62328,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>An optional comment about the document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An optional comment about the document.")]
         public string comment {
             get {
@@ -63483,6 +63920,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string name {
             get {
@@ -63495,6 +63933,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string vendor {
             get {
@@ -63507,6 +63946,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string version {
             get {
@@ -63519,6 +63959,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string schemaVersion {
             get {
@@ -63559,6 +64000,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string name {
             get {
@@ -63584,6 +64026,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string phone {
             get {
@@ -63707,6 +64150,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string name {
             get {
@@ -63719,6 +64163,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string vendor {
             get {
@@ -63731,6 +64176,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string version {
             get {
@@ -63743,6 +64189,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string schemaVersion {
             get {
@@ -63850,6 +64297,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>See the API specification for a description of the use of this data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
         public string compressionMethod {
             get {

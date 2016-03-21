@@ -338,6 +338,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>User descriptive comments about the object. Intended for end-user use (human readable); not necessarily meant to be used by software.  This is the equivalent of the ISO 19115 abstract.CharacterString  Legacy DCGroup - description</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("User descriptive comments about the object. Intended for end-user use (human read" +
             "able); not necessarily meant to be used by software.  This is the equivalent of " +
             "the ISO 19115 abstract.CharacterString  Legacy DCGroup - description")]
@@ -352,6 +353,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute(@"Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject")]
         public string DescriptiveKeywords {
             get {

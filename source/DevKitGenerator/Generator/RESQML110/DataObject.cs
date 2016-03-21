@@ -1864,6 +1864,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>A textual description of the extension.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
         public string description {
             get {
@@ -2734,6 +2735,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <remarks/>
         /// <summary>A string value.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A string value.")]
         public string stringValue {
             get {
@@ -13213,6 +13215,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>A textual description of the extension.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
         public string description {
             get {
@@ -13261,6 +13264,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The security class in which this document is  classified. Examples would be confi" +
             "dential, partner confidential,  tight. The meaning of the class is determined by" +
             " the System in which  it is defined.")]
@@ -13275,6 +13279,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The security classification system.  This gives context to the meaning of the Class value.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The security classification system.  This gives context to the meaning of the Cla" +
             "ss value.")]
         public string securitySystem {
@@ -13311,6 +13316,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>A general comment to further define the security  class.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment to further define the security  class.")]
         public string comment {
             get {
@@ -13379,6 +13385,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If appropriate, the software that created the file.  This is a free form string, " +
             "and may include whatever information  is deemed relevant.")]
         public string softwareName {
@@ -13392,6 +13399,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The person or business associate that created  the file.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The person or business associate that created  the file.")]
         public string fileCreator {
             get {
@@ -13404,6 +13412,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>Any comment that would be useful to further  explain the creation of this instance document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any comment that would be useful to further  explain the creation of this instanc" +
             "e document.")]
         public string comment {
@@ -13577,6 +13586,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>A free-form string that allows a disclaimer to  accompany the information.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A free-form string that allows a disclaimer to  accompany the information.")]
         public string disclaimer {
             get {
@@ -13602,6 +13612,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The owner of the data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The owner of the data.")]
         public string owner {
             get {
@@ -13614,6 +13625,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>An optional comment about the document.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An optional comment about the document.")]
         public string comment {
             get {

@@ -72,6 +72,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the well that contains the completion. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the completion.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -90,6 +91,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the completion. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the completion.")]
 		[XmlElement("name")]
         public String Name {
@@ -107,6 +109,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// fieldID property
         /// </summary>
+		[StringLength(64)]
 		[Description("Field ID.")]
 		[XmlElement("fieldID")]
         public String FieldID {
@@ -124,6 +127,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// fieldCode property
         /// </summary>
+		[StringLength(64)]
 		[Description("Field code.")]
 		[XmlElement("fieldCode")]
         public String FieldCode {
@@ -141,6 +145,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// fieldType property
         /// </summary>
+		[StringLength(64)]
 		[Description("Field type.")]
 		[XmlElement("fieldType")]
         public String FieldType {
@@ -228,6 +233,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// E_P_RightsID property
         /// </summary>
+		[StringLength(64)]
 		[Description("Documents exploration and production rights")]
 		[XmlElement("E_P_RightsID")]
         public String E_P_RightsID {
@@ -580,6 +586,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The description about the status
         /// </summary>
+		[StringLength(4000)]
 		[Description("The description about the status")]
 		[XmlElement("comment")]
         public String Comment {
@@ -4024,6 +4031,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// An identifier to indicate the data originator. This identifies the server that originally created the object and thus most of the uids in the object (but not necessarily the uids of the parents). This is typically a url. 
         /// </summary>
+		[StringLength(64)]
 		[Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
 		[XmlElement("sourceName")]
         public String SourceName {
@@ -4146,6 +4154,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The category of the service related to the creation of the object. For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". 
         /// </summary>
+		[StringLength(40)]
 		[Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\".")]
 		[XmlElement("serviceCategory")]
         public String ServiceCategory {
@@ -4163,6 +4172,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -4759,6 +4769,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// A textual description of the extension.
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the extension.")]
 		[XmlElement("description")]
         public String Description {
@@ -5799,6 +5810,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The physical identification string of the equipment tag.
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("The physical identification string of the equipment tag.")]
 		[XmlElement("name")]
         public String Name {
@@ -5939,6 +5951,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The name of the company that installed the tag. 
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the company that installed the tag.")]
 		[XmlElement("installationCompany")]
         public String InstallationCompany {
@@ -5956,6 +5969,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Reference to a manufacturers or installers installation description, code, or method. 
         /// </summary>
+		[StringLength(40)]
 		[Description("Reference to a manufacturers or installers installation  description, code, or method.")]
 		[XmlElement("mountingCode")]
         public String MountingCode {
@@ -5973,6 +5987,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// A comment or remark about the tag.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment or remark about the tag.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -6156,6 +6171,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// AFE number that this cost item applies to. 
         /// </summary>
+		[StringLength(32)]
 		[Description("AFE number that this cost item applies to.")]
 		[XmlElement("numAFE")]
         public String NumAFE {
@@ -6283,6 +6299,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The kind of cost item specified (e.g., rig dayrate, joints casing). 
         /// </summary>
+		[StringLength(24)]
 		[Description("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
 		[XmlElement("itemKind")]
         public String ItemKind {
@@ -6389,6 +6406,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Invoice number for cost item, bill sent to Operator. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Invoice number for cost item, bill sent to Operator.")]
 		[XmlElement("numInvoice")]
         public String NumInvoice {
@@ -6406,6 +6424,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Purchase order number, provided by Operator. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Purchase order number, provided by Operator.")]
 		[XmlElement("numPO")]
         public String NumPO {
@@ -6423,6 +6442,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Field Ticket number, issued by service company on location. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Field Ticket number, issued by service company on location.")]
 		[XmlElement("numTicket")]
         public String NumTicket {
@@ -6528,6 +6548,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Serial number. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Serial number.")]
 		[XmlElement("numSerial")]
         public String NumSerial {
@@ -6545,6 +6566,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Name of vendor. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of vendor.")]
 		[XmlElement("nameVendor")]
         public String NameVendor {
@@ -6580,6 +6602,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Name of pool/reservoir that this cost item can be accounted to. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of pool/reservoir that this cost item can be accounted to.")]
 		[XmlElement("pool")]
         public String Pool {
@@ -9248,6 +9271,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
@@ -9320,6 +9344,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
@@ -9392,6 +9417,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
@@ -9443,6 +9469,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// perforationSetRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("perforationSetRefID")]
         public List<String> PerforationSetRefID {
@@ -9606,6 +9633,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Well name.
         /// </summary>
+		[StringLength(64)]
 		[Description("Well name.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -9623,6 +9651,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Wellbore name.
         /// </summary>
+		[StringLength(64)]
 		[Description("Wellbore name.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -9640,6 +9669,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Ledger name.
         /// </summary>
+		[StringLength(64)]
 		[Description("Ledger name.")]
 		[XmlElement("name")]
         public String Name {
@@ -9657,6 +9687,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Parent event reference id.
         /// </summary>
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[Description("Parent event reference id.")]
 		[XmlElement("parentEventID")]
         public String ParentEventID {
@@ -9833,6 +9865,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Rig reference id.
         /// </summary>
+		[StringLength(64)]
 		[Description("Rig reference id.")]
 		[RecurringElement]
 		[XmlElement("rigID")]
@@ -9939,6 +9972,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for work order id.
         /// </summary>
+		[StringLength(64)]
 		[Description("Extension event for work order id.")]
 		[XmlElement("workOrderID")]
         public String WorkOrderID {
@@ -9992,6 +10026,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Service company or business
         /// </summary>
+		[StringLength(64)]
 		[Description("Service company or business")]
 		[XmlElement("businessAssociate")]
         public String BusinessAssociate {
@@ -10009,6 +10044,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Name or information about person responsible who is implementing the service or job.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name or information about person responsible who is implementing the service or job.")]
 		[XmlElement("responsiblePerson")]
         public String ResponsiblePerson {
@@ -10026,6 +10062,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Contact name or person to get in touch with. Might not necessarily be the person responsible.
         /// </summary>
+		[StringLength(64)]
 		[Description("Contact name or person to get in touch with. Might not necessarily be the person responsible.")]
 		[XmlElement("contact")]
         public String Contact {
@@ -10201,6 +10238,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Phase (large activity classification) e.g. Drill Surface Hole.
         /// </summary>
+		[StringLength(40)]
 		[Description("Phase (large activity classification) e.g. Drill Surface Hole.")]
 		[XmlElement("phase")]
         public String Phase {
@@ -10236,6 +10274,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Comment on this ledger
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comment on this ledger")]
 		[XmlElement("comment")]
         public String Comment {
@@ -10306,6 +10345,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Description of this ledger
         /// </summary>
+		[StringLength(4000)]
 		[Description("Description of this ledger")]
 		[XmlElement("description")]
         public String Description {
@@ -10413,7 +10453,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefUID property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[XmlElement("stringEquipmentRefUID")]
         public String StringEquipmentRefUID {
             get {
@@ -10538,6 +10579,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -10805,6 +10847,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// A remark about the interval over this period of time
         /// </summary>
+		[StringLength(4000)]
 		[Description("A remark about the interval over this period of time")]
 		[XmlElement("comment")]
         public String Comment {
@@ -10878,6 +10921,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The referencing event was initailized
         /// </summary>
 		[Description("The referencing event was initailized")]
+		[ComponentElement]
 		[XmlElement("beginEvent")]
         public EventRefInfo BeginEvent {
             get {
@@ -10895,6 +10939,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The referencing event when the even was end
         /// </summary>
 		[Description("The referencing event when the even was end")]
+		[ComponentElement]
 		[XmlElement("endEvent")]
         public EventRefInfo EndEvent {
             get {
@@ -10966,6 +11011,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The referencing eventledger ID
         /// </summary>
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[Description("The referencing eventledger ID")]
 		[XmlElement("eventRefID")]
         public String EventRefID {
@@ -11232,6 +11279,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The description about the status
         /// </summary>
+		[StringLength(4000)]
 		[Description("The description about the status")]
 		[XmlElement("comment")]
         public String Comment {
@@ -11304,7 +11352,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// perforationSetRefID property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[XmlElement("perforationSetRefID")]
         public String PerforationSetRefID {
             get {
@@ -11429,6 +11478,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -11519,7 +11569,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// boreholeStringRefID property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[XmlElement("boreholeStringRefID")]
         public String BoreholeStringRefID {
             get {
@@ -11644,6 +11695,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -11734,7 +11786,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// downholeStringRefID property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[XmlElement("downholeStringRefID")]
         public String DownholeStringRefID {
             get {
@@ -11859,6 +11912,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
+		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -12057,6 +12111,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// nameWell property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the completion.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -12075,6 +12130,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// nameWellbore property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the completion.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -12093,6 +12149,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// nameWellCompletion property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well completion that contains the completion.")]
 		[XmlElement("nameWellCompletion")]
         public String NameWellCompletion {
@@ -12110,6 +12167,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// name property
         /// </summary>
+		[StringLength(64)]
 		[Description("Preferred name")]
 		[XmlElement("name")]
         public String Name {
@@ -12127,6 +12185,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// wellboreCompletionNo property
         /// </summary>
+		[StringLength(64)]
 		[Description("CompletionNo, etc API14")]
 		[XmlElement("wellboreCompletionNo")]
         public String WellboreCompletionNo {
@@ -12144,6 +12203,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// wellboreCompletionAlias property
         /// </summary>
+		[StringLength(64)]
 		[Description("Preferred alias name")]
 		[XmlElement("wellboreCompletionAlias")]
         public String WellboreCompletionAlias {
@@ -12213,6 +12273,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// suffixAPI property
         /// </summary>
+		[StringLength(64)]
 		[Description("API suffix.")]
 		[XmlElement("suffixAPI")]
         public String SuffixAPI {
@@ -16412,6 +16473,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// name property
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of downhole string.")]
 		[XmlElement("name")]
         public String Name {
@@ -16464,6 +16526,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// parentStringsName property
         /// </summary>
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[Description("The name of parent string.")]
 		[XmlElement("parentStringsName")]
         public String ParentStringsName {
@@ -16698,6 +16762,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the well.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -16716,6 +16781,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the downhole equipment.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the downhole equipment.")]
 		[XmlElement("name")]
         public String Name {
@@ -17144,6 +17210,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The security class in which this document is classified. Examples would be confidential, partner confidential, tight. The meaning of the class is determined by the System in which it is defined.
         /// </summary>
+		[StringLength(40)]
 		[Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
         public String Class {
@@ -17161,6 +17228,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The security classification system. This gives context to the meaning of the Class value.
         /// </summary>
+		[StringLength(40)]
 		[Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
         public String SecuritySystem {
@@ -17213,6 +17281,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// A general comment to further define the security class.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -17321,6 +17390,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
         /// </summary>
+		[StringLength(64)]
 		[Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
         public String SoftwareName {
@@ -17338,6 +17408,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The person or business associate that created the file.
         /// </summary>
+		[StringLength(64)]
 		[Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
         public String FileCreator {
@@ -17355,6 +17426,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Any comment that would be useful to further explain the creation of this instance document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -17628,6 +17700,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// A free-form string that allows a disclaimer to accompany the information.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A free-form string that allows a disclaimer to  accompany the information.")]
 		[XmlElement("disclaimer")]
         public String Disclaimer {
@@ -17664,6 +17737,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// The owner of the data.
         /// </summary>
+		[StringLength(64)]
 		[Description("The owner of the data.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -17681,6 +17755,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// An optional comment about the document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("An optional comment about the document.")]
 		[XmlElement("comment")]
         public String Comment {

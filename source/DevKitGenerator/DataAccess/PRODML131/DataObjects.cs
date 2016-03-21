@@ -102,6 +102,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The ID of the sample cylinder in which this sample was collected.
         /// </summary>
+		[StringLength(64)]
 		[Description("The ID of the sample cylinder in which this sample was collected.")]
 		[XmlElement("sampleCylinderId")]
         public String SampleCylinderId {
@@ -119,6 +120,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A name assigned to the acquisition.
         /// </summary>
+		[StringLength(64)]
 		[Description("A name assigned to the acquisition.")]
 		[XmlElement("name")]
         public String Name {
@@ -136,6 +138,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The kind of sample acquisition.
         /// </summary>
+		[StringLength(40)]
 		[Description("The kind of sample acquisition.")]
 		[XmlElement("kind")]
         public String Kind {
@@ -223,6 +226,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Comments created by the field engineers collecting the sample.
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments created by the field engineers collecting the sample.")]
 		[XmlElement("fieldComment")]
         public String FieldComment {
@@ -240,6 +244,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Comments created by the engineers analysing the sample.
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments created by the engineers analysing the sample.")]
 		[XmlElement("interpretationComment")]
         public String InterpretationComment {
@@ -257,6 +262,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An identifier for the fluid collected as part of this acquistion.
         /// </summary>
+		[StringLength(32)]
 		[Description("An identifier for the fluid collected as part of this acquistion.")]
 		[XmlElement("sampleId")]
         public String SampleId {
@@ -274,6 +280,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An identifier for the slot in the sample carrier where the sample was acquired.
         /// </summary>
+		[StringLength(32)]
 		[Description("An identifier for the slot in the sample carrier where the sample was acquired.")]
 		[XmlElement("sampleCarrierSlotId")]
         public String SampleCarrierSlotId {
@@ -291,6 +298,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An identifier for the formation tester tool section that acquired the sample.
         /// </summary>
+		[StringLength(32)]
 		[Description("An identifier for the formation tester tool section that acquired the sample.")]
 		[XmlElement("toolSectionId")]
         public String ToolSectionId {
@@ -308,6 +316,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An identifier for the sample bottle that was used for this acquisition.
         /// </summary>
+		[StringLength(32)]
 		[Description("An identifier for the sample bottle that was used for this acquisition.")]
 		[XmlElement("bottleId")]
         public String BottleId {
@@ -325,6 +334,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A description of the kind of bottle used, for example whether the bottle is pressurized with Nitrogen or not.
         /// </summary>
+		[StringLength(32)]
 		[Description("A description of the kind of bottle used, for example whether the bottle is pressurized with Nitrogen or not.")]
 		[XmlElement("bottleConfiguration")]
         public String BottleConfiguration {
@@ -360,6 +370,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The expected kind of the sample, typically oil, water or gas.
         /// </summary>
+		[StringLength(32)]
 		[Description("The expected kind of the sample, typically oil, water or gas.")]
 		[XmlElement("grossFluidKind")]
         public String GrossFluidKind {
@@ -3434,6 +3445,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of a proprietary method which generally represents a specialization of a result kind.
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("The name of a proprietary method which generally  represents a specialization of a result kind.")]
 		[XmlElement("method")]
         public String Method {
@@ -3781,6 +3793,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The mnemonic of the curve in the referenced log or wellLog.
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("The mnemonic of the curve in the referenced log or wellLog.")]
 		[XmlElement("mnemonic")]
         public String Mnemonic {
@@ -4230,6 +4243,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual description of the extension.
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the extension.")]
 		[XmlElement("description")]
         public String Description {
@@ -4398,6 +4412,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the parameter.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the parameter.")]
 		[XmlElement("name")]
         public String Name {
@@ -4923,6 +4938,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A comment about the event.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment about the event.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -5175,6 +5191,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A description of the station.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A description of the station.")]
 		[XmlElement("description")]
         public String Description {
@@ -5372,6 +5389,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Human recognizable context for the well that contains the Wireline Formation Test (WFT). 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the Wireline Formation Test (WFT).")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -5390,6 +5408,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Human recognizable context for the wellbore that contains the Wireline Formation Test (WFT). 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the wellbore that contains the Wireline Formation Test (WFT).")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
@@ -5408,6 +5427,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Human recognizable context for the Wireline Formation Test (WFT). 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the Wireline Formation Test (WFT).")]
 		[XmlElement("name")]
         public String Name {
@@ -5478,6 +5498,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Name of contractor who provided the service.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of contractor who provided the service.")]
 		[XmlElement("serviceCompany")]
         public String ServiceCompany {
@@ -5601,6 +5622,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A description of the run.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A description of the run.")]
 		[XmlElement("description")]
         public String Description {
@@ -5797,6 +5819,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An identifier to indicate the data originator. This identifies the server that originally created the object and thus most of the uids in the object (but not necessarily the uids of the parents). This is typically a url. 
         /// </summary>
+		[StringLength(64)]
 		[Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
 		[XmlElement("sourceName")]
         public String SourceName {
@@ -5919,6 +5942,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The category of the service related to the creation of the object. For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime, the combination of "uidWell", "uidWellbore", "idSub" and commonData's "serviceCategory" must be unique. That is, the Store Interface will only retain one realtime for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY being the object selector.
         /// </summary>
+		[StringLength(40)]
 		[Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime,  the combination of \"uidWell\", \"uidWellbore\", \"idSub\" and commonData's \"serviceCategory\"  must be unique. That is, the Store Interface will only retain one realtime   for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY  being the object selector.")]
 		[XmlElement("serviceCategory")]
         public String ServiceCategory {
@@ -5936,6 +5960,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -8610,6 +8635,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The tool used for the validation operation.
         /// </summary>
+		[StringLength(64)]
 		[Description("The tool used for the validation operation.")]
 		[XmlElement("tool")]
         public String Tool {
@@ -8627,6 +8653,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The method used for the validation operation..
         /// </summary>
+		[StringLength(64)]
 		[Description("The method used for the validation operation..")]
 		[XmlElement("method")]
         public String Method {
@@ -8644,6 +8671,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A comment about the operation.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment about the operation.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -9077,6 +9105,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A Comment, generally given to help the reader interpret the coordinates if the CRS and the chosen pair do not make them clear.
         /// </summary>
+		[StringLength(256)]
 		[Description("A Comment, generally given to help the reader  interpret the coordinates if the CRS and the chosen pair do not make them clear.")]
 		[XmlElement("description")]
         public String Description {
@@ -9444,6 +9473,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The human understandable contextual name of the reference datum.
         /// </summary>
+		[StringLength(64)]
 		[Description("The human understandable contextual name of the reference datum.")]
 		[XmlElement("name")]
         public String Name {
@@ -9541,6 +9571,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Since various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).
         /// </summary>
+		[StringLength(40)]
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
 		[RecurringElement]
 		[XmlElement("kind")]
@@ -9649,6 +9680,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A contextual description of the well reference datum.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A contextual description of the well reference datum.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -10100,6 +10132,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Human recognizable context for the well that contains the well test. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well that contains the well test.")]
 		[XmlElement("nameWell")]
         public String NameWell {
@@ -10118,6 +10151,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Human recognizable context for the well test. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the well test.")]
 		[XmlElement("name")]
         public String Name {
@@ -10364,6 +10398,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of well production test.
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of well production test.")]
 		[XmlElement("testType")]
         public String TestType {
@@ -11154,6 +11189,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Human recognizable context for the time series.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the time series.")]
 		[XmlElement("name")]
         public String Name {
@@ -11189,6 +11225,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.
         /// </summary>
+		[StringLength(24)]
 		[Description("If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.")]
 		[XmlElement("unit")]
         public String Unit {
@@ -11241,6 +11278,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A comment about the time series.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment about the time series.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -12047,6 +12085,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Human recognizable context for the time series. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Human recognizable context for the time series.")]
 		[XmlElement("name")]
         public String Name {
@@ -12082,6 +12121,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.
         /// </summary>
+		[StringLength(24)]
 		[Description("If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.")]
 		[XmlElement("unit")]
         public String Unit {
@@ -12134,6 +12174,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A comment about the time series.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment about the time series.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -12431,6 +12472,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An account identifier for the balance.
         /// </summary>
+		[StringLength(40)]
 		[Description("An account identifier for the balance.")]
 		[XmlElement("accountNumber")]
         public String AccountNumber {
@@ -14099,6 +14141,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the destination.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the destination.")]
 		[XmlElement("name")]
         public String Name {
@@ -14151,6 +14194,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The country of the destination.
         /// </summary>
+		[StringLength(64)]
 		[Description("The country of the destination.")]
 		[XmlElement("country")]
         public String Country {
@@ -14240,6 +14284,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A cargo identifier for the product.
         /// </summary>
+		[StringLength(40)]
 		[Description("A cargo identifier for the product.")]
 		[XmlElement("cargoNumber")]
         public String CargoNumber {
@@ -14292,6 +14337,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the shipper
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the shipper")]
 		[XmlElement("shipper")]
         public String Shipper {
@@ -14310,6 +14356,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the destination of the product.
         /// </summary>
 		[Description("Defines the destination of the product.")]
+		[ComponentElement]
 		[XmlElement("destination")]
         public ProductVolumeDestination Destination {
             get {
@@ -15378,6 +15425,7 @@ namespace Energistics.DataAccess.PRODML131
         /// An indication of some sort of abnormal condition relative the values in this period.
         /// </summary>
 		[Description("An indication of some sort of abnormal condition relative the values in this period.")]
+		[ComponentElement]
 		[XmlElement("alert")]
         public ProductVolumeAlert Alert {
             get {
@@ -15485,6 +15533,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An XPATH to the target value within the message containing this XPATH value.
         /// </summary>
+		[StringLength(4000)]
 		[Description("An XPATH to the target value within the message  containing this XPATH value.")]
 		[XmlElement("target")]
         public String Target {
@@ -15502,6 +15551,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The level of the alert.
         /// </summary>
+		[StringLength(40)]
 		[Description("The level of the alert.")]
 		[XmlElement("level")]
         public String Level {
@@ -15519,6 +15569,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of alert. For example "off specification".
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of alert. For example \"off specification\".")]
 		[XmlElement("type")]
         public String Type {
@@ -15536,6 +15587,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual decription of the alert.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A textual decription of the alert.")]
 		[XmlElement("description")]
         public String Description {
@@ -15590,6 +15642,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the person providing the comment.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the person providing the comment.")]
 		[XmlElement("who")]
         public String Who {
@@ -15607,6 +15660,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The role of the person providing the comment. This is the role of the person within the context of comment.
         /// </summary>
+		[StringLength(40)]
 		[Description("The role of the person providing the comment. This is the role of the person within the context of comment.")]
 		[XmlElement("role")]
         public String Role {
@@ -15695,6 +15749,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The relevant comment.
         /// </summary>
 		[Required]
+		[StringLength(4000)]
 		[Description("The relevant comment.")]
 		[XmlElement("remark")]
         public String Remark {
@@ -17161,6 +17216,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of this flow within the context of this report. This might reflect some combination of the kind of flow, port, qualifier and related facility.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of this flow within the context of this report. This might reflect some combination of the kind of flow, port, qualifier and related facility.")]
 		[XmlElement("name")]
         public String Name {
@@ -17408,6 +17464,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Identifies the source of the version. This will commonly be the name of the software which created the version. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Identifies the source of the version.  This will commonly be the name of the software which created the version.")]
 		[XmlElement("versionSource")]
         public String VersionSource {
@@ -18818,6 +18875,7 @@ namespace Energistics.DataAccess.PRODML131
         /// An indication of some sort of abnormal condition relative this parameter.
         /// </summary>
 		[Description("An indication of some sort of abnormal condition relative this parameter.")]
+		[ComponentElement]
 		[XmlElement("alert")]
         public ProductVolumeAlert Alert {
             get {
@@ -18926,6 +18984,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the variable in this curve.
         /// </summary>
 		[Required]
+		[StringLength(40)]
 		[Description("The name of the variable in this curve.")]
 		[XmlElement("parameter")]
         public String Parameter {
@@ -18997,6 +19056,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The unit of measure of the variable. The unit of measure must match a unit allowed by the measure class.
         /// </summary>
 		[Required]
+		[StringLength(24)]
 		[Description("The unit of measure of the variable. The unit of measure must match a unit allowed by the measure class.")]
 		[XmlElement("unit")]
         public String Unit {
@@ -19316,6 +19376,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Identifies the source of the version. This will commonly be the name of the software which created the version. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Identifies the source of the version.  This will commonly be the name of the software which created the version.")]
 		[XmlElement("versionSource")]
         public String VersionSource {
@@ -19422,6 +19483,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A comment about the parameter.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment about the parameter.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -20049,6 +20111,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of report.
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of report.")]
 		[XmlElement("kind")]
         public String Kind {
@@ -20383,6 +20446,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The geographic context of the report.
         /// </summary>
 		[Description("The geographic context of the report.")]
+		[ComponentElement]
 		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
@@ -20685,6 +20749,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the business associate. This can be the name of a person, business, group, etc.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the business associate.  This can be the name of a person, business, group, etc.")]
 		[XmlElement("name")]
         public String Name {
@@ -20899,6 +20964,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A general comment. This should not be used to carry semantic information. This is not intended to be machine interpretable. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("A general comment. This should not  be used to carry semantic information. This is not  intended to be machine interpretable.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -20953,6 +21019,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A name prefix. Such as, Dr, Ms, Miss, Mr, etc.
         /// </summary>
+		[StringLength(64)]
 		[Description("A name prefix. Such as, Dr, Ms, Miss, Mr, etc.")]
 		[XmlElement("prefix")]
         public String Prefix {
@@ -20971,6 +21038,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The persons first name.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The persons first name.")]
 		[XmlElement("first")]
         public String First {
@@ -20988,6 +21056,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The persons middle name or initial name.
         /// </summary>
+		[StringLength(64)]
 		[Description("The persons middle name or initial name.")]
 		[XmlElement("middle")]
         public String Middle {
@@ -21006,6 +21075,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The persons last or given name.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The persons last or given name.")]
 		[XmlElement("last")]
         public String Last {
@@ -21023,6 +21093,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A name suffix. Such as Esq, Phd, etc.
         /// </summary>
+		[StringLength(64)]
 		[Description("A name suffix. Such as Esq, Phd, etc.")]
 		[RecurringElement]
 		[XmlElement("suffix")]
@@ -21078,6 +21149,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// name property
         /// </summary>
+		[StringLength(64)]
 		[Description("The Name line of an address.  If missing, use the Name of the business associate.")]
 		[XmlElement("name")]
         public String Name {
@@ -21096,6 +21168,7 @@ namespace Energistics.DataAccess.PRODML131
         /// street property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the \"name\" and \"city\" lines. This may be repeated  for up to four, ordered lines.")]
 		[RecurringElement]
 		[XmlElement("street")]
@@ -21115,6 +21188,7 @@ namespace Energistics.DataAccess.PRODML131
         /// city property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The City for the business associate's  address")]
 		[XmlElement("city")]
         public String City {
@@ -21219,6 +21293,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The Country may be included. Although this is optional, it is probably required for most uses.
         /// </summary>
+		[StringLength(64)]
 		[Description("The Country may be included. Although  this is optional, it is probably required for most uses.")]
 		[XmlElement("country")]
         public String Country {
@@ -21236,6 +21311,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A postal code, if appropriate for the country. In the USA this would be the five or nine digit zip code.
         /// </summary>
+		[StringLength(40)]
 		[Description("A postal code, if appropriate for the country.  In the USA this would be the five or nine digit zip code.")]
 		[XmlElement("postalCode")]
         public String PostalCode {
@@ -21684,6 +21760,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the country.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the country.")]
 		[XmlElement("country")]
         public String Country {
@@ -21701,6 +21778,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The state of province within the country.
         /// </summary>
+		[StringLength(64)]
 		[Description("The state of province within the country.")]
 		[XmlElement("state")]
         public String State {
@@ -21754,6 +21832,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An general comment that further explains the offshore location.
         /// </summary>
+		[StringLength(4000)]
 		[Description("An general comment that further explains the  offshore location.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -21808,6 +21887,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A general meaning of Area. It may be as general as 'UK North Sea' or 'Viosca Knoll'. The user community must agree on the meaning of this element.
         /// </summary>
+		[StringLength(64)]
 		[Description("A general meaning of Area. It may be as  general as 'UK North Sea' or 'Viosca Knoll'. The user community must agree on the meaning of this element.")]
 		[XmlElement("areaName")]
         public String AreaName {
@@ -21826,6 +21906,7 @@ namespace Energistics.DataAccess.PRODML131
         /// A block ID that can more tightly locate the object. The BlockID should be an identifying name or code. The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
 		[RecurringElement]
 		[XmlElement("blockID")]
@@ -21863,6 +21944,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An general comment that further explains the offshore location.
         /// </summary>
+		[StringLength(4000)]
 		[Description("An general comment that further explains the  offshore location.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -21917,6 +21999,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An optional, uncontrolled value, which may be used to describe the general area of offshore North Sea in which the point is located.
         /// </summary>
+		[StringLength(64)]
 		[Description("An optional, uncontrolled value, which may be  used to describe the general area of offshore North Sea in which the  point is located.")]
 		[XmlElement("areaName")]
         public String AreaName {
@@ -21935,6 +22018,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The number or letter of the quadrant in the North Sea.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The number or letter of the quadrant in  the North Sea.")]
 		[XmlElement("quadrant")]
         public String Quadrant {
@@ -22025,6 +22109,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The human contextual name of the business unit.
         /// </summary>
+		[StringLength(64)]
 		[Description("The human contextual name of the business unit.")]
 		[XmlElement("name")]
         public String Name {
@@ -22042,6 +22127,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual description of the business unit.
         /// </summary>
+		[StringLength(256)]
 		[Description("A textual description of the business unit.")]
 		[XmlElement("description")]
         public String Description {
@@ -22675,6 +22761,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A comment about the operation and/or the activities within the operation.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A comment about the operation and/or the activities  within the operation.")]
 		[RecurringElement]
 		[XmlElement("comment")]
@@ -22766,6 +22853,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Name of the cargo vessel for the installation.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of the cargo vessel for the installation.")]
 		[XmlElement("vesselName")]
         public String VesselName {
@@ -22853,6 +22941,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Name of the captain of the vessel.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of the captain of the vessel.")]
 		[XmlElement("captain")]
         public String Captain {
@@ -22870,6 +22959,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// the cargo identifier.
         /// </summary>
+		[StringLength(40)]
 		[Description("the cargo identifier.")]
 		[XmlElement("cargoNumber")]
         public String CargoNumber {
@@ -22922,6 +23012,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Description of cargo on the vessel.
         /// </summary>
+		[StringLength(256)]
 		[Description("Description of cargo on the vessel.")]
 		[XmlElement("cargo")]
         public String Cargo {
@@ -23262,6 +23353,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A general comment on marine activity in the area
         /// </summary>
+		[StringLength(4000)]
 		[Description("A general comment on marine activity in the area")]
 		[XmlElement("generalComment")]
         public String GeneralComment {
@@ -23279,6 +23371,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Name of supply vessel for the installation.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of supply vessel for the installation.")]
 		[XmlElement("supplyShip")]
         public String SupplyShip {
@@ -23296,6 +23389,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Name of standby vessel for the installation.
         /// </summary>
+		[StringLength(64)]
 		[Description("Name of standby vessel for the installation.")]
 		[XmlElement("standbyVessel")]
         public String StandbyVessel {
@@ -23493,6 +23587,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The area where the alarm went off.
         /// </summary>
+		[StringLength(64)]
 		[Description("The area where the alarm went off.")]
 		[XmlElement("area")]
         public String Area {
@@ -23510,6 +23605,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of alarm that went off.
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of alarm that went off.")]
 		[XmlElement("type")]
         public String Type {
@@ -23527,6 +23623,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The reason for the alarm going off.
         /// </summary>
+		[StringLength(256)]
 		[Description("The reason for the alarm going off.")]
 		[XmlElement("reason")]
         public String Reason {
@@ -23544,6 +23641,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A general comment relevant for the alarm.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A general comment relevant for the alarm.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -23652,6 +23750,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A general description of the shutdown with reason and other relevant information. 
         /// </summary>
+		[StringLength(256)]
 		[Description("A general description of the shutdown with reason and  other relevant information.")]
 		[XmlElement("description")]
         public String Description {
@@ -23884,6 +23983,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An identifier of the point from which the sample was taken. This is an uncontrolled string value, which should be as descriptive as possible.
         /// </summary>
+		[StringLength(64)]
 		[Description("An identifier of the point from which the sample was taken.  This is an uncontrolled string value, which should be as descriptive as possible.")]
 		[XmlElement("samplePoint")]
         public String SamplePoint {
@@ -24641,6 +24741,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Name of company that supplied the data. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Name of company that supplied the data.")]
 		[XmlElement("agency")]
         public String Agency {
@@ -24946,6 +25047,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Type of precipitation. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Type of precipitation.")]
 		[XmlElement("typePrecip")]
         public String TypePrecip {
@@ -24981,6 +25083,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Description of cloud cover. 
         /// </summary>
+		[StringLength(32)]
 		[Description("Description of cloud cover.")]
 		[XmlElement("coverCloud")]
         public String CoverCloud {
@@ -25052,6 +25155,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Comments and remarks. 
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
@@ -25642,6 +25746,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual description of safety considerations.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A textual description of safety considerations.")]
 		[XmlElement("safetyDescription")]
         public String SafetyDescription {
@@ -26182,6 +26287,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of report.
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of report.")]
 		[XmlElement("kind")]
         public String Kind {
@@ -26381,6 +26487,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The geographic context of the report.
         /// </summary>
 		[Description("The geographic context of the report.")]
+		[ComponentElement]
 		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
@@ -26609,6 +26716,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the Product Flow Model.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the Product Flow Model.")]
 		[XmlElement("name")]
         public String Name {
@@ -26823,6 +26931,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark about the model.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the model.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -27078,6 +27187,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the Product Flow Network. This must be unique within the context of the overall Product Flow Model.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the Product Flow Network. This must be unique within the context of the overall Product Flow Model.")]
 		[XmlElement("name")]
         public String Name {
@@ -27095,6 +27205,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.")]
 		[XmlElement("planName")]
         public String PlanName {
@@ -27149,6 +27260,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark about the network.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the network.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -27313,6 +27425,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the external port within the context of the current Product Flow Network.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the external port within the context of  the current Product Flow Network.")]
 		[XmlElement("name")]
         public String Name {
@@ -27384,6 +27497,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an "exposed" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port. 
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the  same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an \"exposed\" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port.")]
 		[XmlElement("connectedNode")]
         public String ConnectedNode {
@@ -27401,6 +27515,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark about the port.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the port.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -27491,6 +27606,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the Product Flow Unit within the context of the Product Flow Network.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the Product Flow Unit within the  context of the Product Flow Network.")]
 		[XmlElement("name")]
         public String Name {
@@ -27508,6 +27624,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.")]
 		[XmlElement("planName")]
         public String PlanName {
@@ -27687,6 +27804,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark associated with this unit.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark associated with this unit.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -27911,6 +28029,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark associated with this property.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark associated with this property.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -28237,6 +28356,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the port within the context of the Product Flow Unit.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the port within the context of the Product Flow Unit.")]
 		[XmlElement("name")]
         public String Name {
@@ -28254,6 +28374,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of a network plan. This indicates a planned port. All child network components must all be planned and be part of the same plan. The parent unit must be part of the same plan or be an actual. Not specified indicates an actual port.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of a network plan. This indicates a planned port. All child network components must all be planned and be part of the same plan. The parent unit must be part of the same plan or be an actual. Not specified indicates an actual port.")]
 		[XmlElement("planName")]
         public String PlanName {
@@ -28415,6 +28536,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark associated with this port.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark associated with this port.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -28506,6 +28628,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the node to which this port is connected. Only two ports should be actively connected to the same node at the same point in time. That is, a port should only be connected to one other port. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network. Any node that is internally connected to only one node is presumably a candidate to be connected to an external node. The behavior of ports connected at a common node is as follows: a) There is no pressure drop across the node. All ports connected to the node have the same pressure. That is, there is an assumption of steady state fluid flow. b) Conservation of mass exists across the node. The mass into the node via all connected ports equals the mass out of the node via all connected ports. c) The flow direction of a port connected to the node may be transient. That is, flow direction may change toward any port if the relative internal pressure of the Product Flow Units change and a new steady state is achieved.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("Defines the node to which this port is connected. Only two ports should be actively connected to the same node at the same point in time. That is, a port should only be connected to one other port. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one node is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
 		[XmlElement("node")]
         public String Node {
@@ -28523,6 +28646,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of a network plan. This indicates a planned connection. The connected port must be part of the same plan or be an actual. Not specified indicates an actual connection.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of a network plan. This indicates a planned connection. The connected port must be part of the same plan or be an actual. Not specified indicates an actual connection.")]
 		[XmlElement("planName")]
         public String PlanName {
@@ -28610,6 +28734,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark associated with this connection, possibly including a reason for termination.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark associated with this connection, possibly including a reason for termination.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -28860,6 +28985,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark associated with this property.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark associated with this property.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -28951,6 +29077,7 @@ namespace Energistics.DataAccess.PRODML131
         /// A name assigned to the change.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("A name assigned to the change.")]
 		[XmlElement("name")]
         public String Name {
@@ -28986,6 +29113,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual reason for the change.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A textual reason for the change.")]
 		[XmlElement("reason")]
         public String Reason {
@@ -29077,6 +29205,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name assigned to the plan.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name assigned to the plan.")]
 		[XmlElement("name")]
         public String Name {
@@ -29112,6 +29241,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual description of the purpose of the plan.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A textual description of the purpose of the plan.")]
 		[XmlElement("purpose")]
         public String Purpose {
@@ -29219,6 +29349,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the Fluid Sample.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the Fluid Sample.")]
 		[XmlElement("name")]
         public String Name {
@@ -29236,6 +29367,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(64)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("sampleBottle")]
         public String SampleBottle {
@@ -29413,6 +29545,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The test identifier.
         /// </summary>
+		[StringLength(40)]
 		[Description("The test identifier.")]
 		[XmlElement("testId")]
         public String TestId {
@@ -29430,6 +29563,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The test run number (e.g., for an RFT)
         /// </summary>
+		[StringLength(40)]
 		[Description("The test run number (e.g., for an RFT)")]
 		[XmlElement("testRun")]
         public String TestRun {
@@ -29447,6 +29581,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the company which ran the test.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the company which ran the test.")]
 		[XmlElement("testProvider")]
         public String TestProvider {
@@ -29606,6 +29741,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(256)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("sampleDisposition")]
         public String SampleDisposition {
@@ -29658,6 +29794,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(4000)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("comment")]
         public String Comment {
@@ -29818,6 +29955,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(256)]
 		[Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("description")]
         public String Description {
@@ -35496,6 +35634,7 @@ namespace Energistics.DataAccess.PRODML131
         /// componentName property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[XmlElement("componentName")]
         public String ComponentName {
             get {
@@ -36141,7 +36280,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// source property
         /// </summary>
-		
+		[StringLength(64)]
 		[XmlElement("source")]
         public String Source {
             get {
@@ -36158,7 +36297,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// purpose property
         /// </summary>
-		
+		[StringLength(256)]
 		[XmlElement("purpose")]
         public String Purpose {
             get {
@@ -36210,6 +36349,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Human recognizable context for the fluid sample that was analyzed. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Human recognizable context for the fluid sample that was analyzed.")]
 		[XmlElement("nameFluidSample")]
         public String NameFluidSample {
@@ -36227,6 +36367,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Human recognizable context for the fluid analysis that produced this result. 
         /// </summary>
+		[StringLength(64)]
 		[Description("Human recognizable context for the fluid analysis that produced this result.")]
 		[XmlElement("nameFluidAnalysis")]
         public String NameFluidAnalysis {
@@ -36245,6 +36386,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the Fluid Analysis Result.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the Fluid Analysis Result.")]
 		[XmlElement("name")]
         public String Name {
@@ -36707,6 +36849,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(256)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("analysisDescription")]
         public String AnalysisDescription {
@@ -36724,6 +36867,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(256)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("analysisPurpose")]
         public String AnalysisPurpose {
@@ -37067,6 +37211,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the Fluid Analysis.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name of the Fluid Analysis.")]
 		[XmlElement("name")]
         public String Name {
@@ -37164,6 +37309,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the application that was run by the user.
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the application that was run by the user.")]
 		[XmlElement("applicationName")]
         public String ApplicationName {
@@ -37181,6 +37327,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The version of the application that was run by the user.
         /// </summary>
+		[StringLength(64)]
 		[Description("The version of the application that was run by the user.")]
 		[XmlElement("applicationVersion")]
         public String ApplicationVersion {
@@ -37198,6 +37345,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(64)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("analysisCompany")]
         public String AnalysisCompany {
@@ -37215,6 +37363,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the analyst or user who is responsible for the results. 
         /// </summary>
+		[StringLength(64)]
 		[Description("The name of the analyst or user who is responsible for the results.")]
 		[XmlElement("personName")]
         public String PersonName {
@@ -37232,6 +37381,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(64)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("reportIdentifier")]
         public String ReportIdentifier {
@@ -37284,6 +37434,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+		[StringLength(256)]
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("reportLocation")]
         public String ReportLocation {
@@ -37391,6 +37542,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name for this OTDR.
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("The name for this OTDR.")]
 		[XmlElement("name")]
         public String Name {
@@ -38473,6 +38625,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of coating on the fiber.
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of coating on the fiber.")]
 		[XmlElement("coating")]
         public String Coating {
@@ -38490,6 +38643,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of jacket covering the fiber.
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of jacket covering the fiber.")]
 		[XmlElement("jacket")]
         public String Jacket {
@@ -38507,6 +38661,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Property of the fiber core.
         /// </summary>
+		[StringLength(40)]
 		[Description("Property of the fiber core.")]
 		[XmlElement("coreType")]
         public String CoreType {
@@ -38542,6 +38697,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The spool number of the particular spool from which this fiber segement was taken. The spool number may contain alphanumeric characters. 
         /// </summary>
+		[StringLength(40)]
 		[Description("The spool number of the particular spool from which this fiber segement was taken. The spool number may contain alphanumeric characters.")]
 		[XmlElement("spoolNumberTag")]
         public String SpoolNumberTag {
@@ -40028,6 +40184,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The business associate that performed the calibration.
         /// </summary>
+		[StringLength(64)]
 		[Description("The business associate that performed the calibration.")]
 		[XmlElement("calibratedBy")]
         public String CalibratedBy {
@@ -40045,6 +40202,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// This may be a standard protocol, or a software application.
         /// </summary>
+		[StringLength(64)]
 		[Description("This may be a standard protocol, or a software application.")]
 		[XmlElement("calibrationProtocol")]
         public String CalibrationProtocol {
@@ -40080,6 +40238,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Any remarks that may be useful, regarding the calibration information.
         /// </summary>
+		[StringLength(4000)]
 		[Description("Any remarks that may be useful, regarding the calibration information.")]
 		[XmlElement("remarks")]
         public String Remarks {
@@ -40302,6 +40461,7 @@ namespace Energistics.DataAccess.PRODML131
         /// A textual description of the patch cord
         /// </summary>
 		[Required]
+		[StringLength(4000)]
 		[Description("A textual description of the patch cord")]
 		[XmlElement("description")]
         public String Description {
@@ -40695,6 +40855,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark about the facility mapping
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the facility mapping")]
 		[RecurringElement]
 		[XmlElement("comment")]
@@ -40885,6 +41046,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark about the facility mapping
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the facility mapping")]
 		[XmlElement("comment")]
         public String Comment {
@@ -41047,6 +41209,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark about the defect found on this location
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the defect found on this location")]
 		[RecurringElement]
 		[XmlElement("comment")]
@@ -41510,6 +41673,7 @@ namespace Energistics.DataAccess.PRODML131
         /// name property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[Description("A human understandable name for the fiber. This is used for  identification of the instance.")]
 		[XmlElement("name")]
         public String Name {
@@ -41819,6 +41983,7 @@ namespace Energistics.DataAccess.PRODML131
         /// indexMnemonic property
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("This is the mnemonic of the channel in the InterpretedData which represents the index to the data (expected to be a length along the facility (e.g., wellbore, pipeline) being measured.")]
 		[XmlElement("indexMnemonic")]
         public String IndexMnemonic {
@@ -41854,6 +42019,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// comment property
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the interpretation log")]
 		[XmlElement("comment")]
         public String Comment {
@@ -42088,6 +42254,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// preferredInterpretationID property
         /// </summary>
+		[RegularExpression("[^ ]*")]
+		[StringLength(64)]
 		[Description("Where there is a set of dtsInterpretedData logs that are generated from the same measurement (each log having gone through a different post-processing type, for example), if there is one log that is ‘preferred’ for additional business decisions (while the other ones were merely what-if scenarios), then this preferred log in the collection of child dtsInterpretedData can be flagged by referencing its UID with this element.")]
 		[XmlElement("preferredInterpretationID")]
         public String PreferredInterpretationID {
@@ -42234,6 +42402,7 @@ namespace Energistics.DataAccess.PRODML131
         /// indexMnemonic property
         /// </summary>
 		[Required]
+		[StringLength(32)]
 		[Description("This is the mnemonic of the channel in the MeasuredTraceSet which represents the index to the data (expected to be a length along the facility (e.g., wellbore, pipeline) being measured.")]
 		[XmlElement("indexMnemonic")]
         public String IndexMnemonic {
@@ -42305,6 +42474,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// comment property
         /// </summary>
+		[StringLength(4000)]
 		[Description("A descriptive remark about the measured trace set")]
 		[XmlElement("comment")]
         public String Comment {
@@ -42412,6 +42582,7 @@ namespace Energistics.DataAccess.PRODML131
         /// name property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -42837,6 +43008,7 @@ namespace Energistics.DataAccess.PRODML131
         /// name property
         /// </summary>
 		[Required]
+		[StringLength(64)]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -42997,6 +43169,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// comment property
         /// </summary>
+		[StringLength(4000)]
 		[Description("Comment about this installed system.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -43158,6 +43331,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Type of facility where the fiber is deployed
         /// </summary>
+		[StringLength(40)]
 		[Description("Type of facility where the fiber is deployed")]
 		[XmlElement("kind")]
         public String Kind {
@@ -43194,6 +43368,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The geographical information about the facility.
         /// </summary>
 		[Description("The geographical information about the facility.")]
+		[ComponentElement]
 		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
@@ -43496,6 +43671,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The security class in which this document is classified. Examples would be confidential, partner confidential, tight. The meaning of the class is determined by the System in which it is defined.
         /// </summary>
+		[StringLength(40)]
 		[Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
         public String Class {
@@ -43513,6 +43689,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The security classification system. This gives context to the meaning of the Class value.
         /// </summary>
+		[StringLength(40)]
 		[Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
         public String SecuritySystem {
@@ -43565,6 +43742,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A general comment to further define the security class.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -43673,6 +43851,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
         /// </summary>
+		[StringLength(64)]
 		[Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
         public String SoftwareName {
@@ -43690,6 +43869,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The person or business associate that created the file.
         /// </summary>
+		[StringLength(64)]
 		[Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
         public String FileCreator {
@@ -43707,6 +43887,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Any comment that would be useful to further explain the creation of this instance document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -43887,6 +44068,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A free-form string that allows a disclaimer to accompany the information.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A free-form string that allows a disclaimer to  accompany the information.")]
 		[XmlElement("disclaimer")]
         public String Disclaimer {
@@ -43923,6 +44105,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The owner of the data.
         /// </summary>
+		[StringLength(64)]
 		[Description("The owner of the data.")]
 		[XmlElement("owner")]
         public String Owner {
@@ -43957,6 +44140,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An optional comment about the document.
         /// </summary>
+		[StringLength(4000)]
 		[Description("An optional comment about the document.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -44316,6 +44500,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The type of report. This should define and constrain the expected content of the report.
         /// </summary>
+		[StringLength(40)]
 		[Description("The type of report.  This should define and constrain the expected content of the report.")]
 		[XmlElement("kind")]
         public String Kind {
@@ -44475,6 +44660,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual comment about the report.
         /// </summary>
+		[StringLength(4000)]
 		[Description("A textual comment about the report.")]
 		[XmlElement("comment")]
         public String Comment {
@@ -44492,6 +44678,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The current report version.
         /// </summary>
+		[StringLength(40)]
 		[Description("The current report version.")]
 		[XmlElement("reportVersion")]
         public String ReportVersion {
@@ -44599,6 +44786,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The geographic context of the report.
         /// </summary>
 		[Description("The geographic context of the report.")]
+		[ComponentElement]
 		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
