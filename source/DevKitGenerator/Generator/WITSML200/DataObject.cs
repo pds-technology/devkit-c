@@ -304,7 +304,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] GeologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -1336,7 +1335,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] GeologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -1455,7 +1453,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] GeologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -1574,7 +1571,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] GeologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -46291,7 +46287,6 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).</summary>
         [System.Xml.Serialization.XmlElementAttribute("Kind")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         public string[] Kind {
             get {
@@ -50179,7 +50174,6 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Plan of action to ensure the risk does not materialize.</summary>
         [System.Xml.Serialization.XmlElementAttribute("Mitigation")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Plan of action to ensure the risk does not materialize.")]
         public string[] Mitigation {
             get {

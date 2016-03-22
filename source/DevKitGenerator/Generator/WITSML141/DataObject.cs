@@ -7555,7 +7555,6 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).</summary>
         [System.Xml.Serialization.XmlElementAttribute("kind")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute(@"Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         public string[] kind {
             get {
@@ -27176,7 +27175,6 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Name of the proppant used for the treatment interval.</summary>
         [System.Xml.Serialization.XmlElementAttribute("proppantName")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the proppant used for the treatment interval.")]
         public string[] proppantName {
             get {
@@ -27249,7 +27247,6 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>The names of the each fluid used in this interval.</summary>
         [System.Xml.Serialization.XmlElementAttribute("fluidName")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The names of the each fluid used in this interval.")]
         public string[] fluidName {
             get {
@@ -27966,7 +27963,6 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Name of a proppant used for the stimulation job.</summary>
         [System.Xml.Serialization.XmlElementAttribute("proppantName")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of a proppant used for the stimulation job.")]
         public string[] proppantName {
             get {
@@ -31990,7 +31986,6 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>Plan of action to ensure the risk does not materialize.</summary>
         [System.Xml.Serialization.XmlElementAttribute("mitigation")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Plan of action to ensure the risk does not materialize.")]
         public string[] mitigation {
             get {
@@ -47860,7 +47855,6 @@ namespace Energistics.Generator.WITSML141 {
         /// <remarks/>
         /// <summary>DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.</summary>
         [System.Xml.Serialization.XmlElementAttribute("nameFormation")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to b" +
             "e replaced by lithostratigraphic with kind=formation.")]
         public string[] nameFormation {

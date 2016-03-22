@@ -418,7 +418,6 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A WITSML data object (well, wellbore, etc)  which is supported by this Server/Publisher for this function.</summary>
         [System.Xml.Serialization.XmlElementAttribute("dataObject")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A WITSML data object (well, wellbore, etc)  which is supported by this Server/Pub" +
             "lisher for this function.")]
         public string[] dataObject {
@@ -12100,7 +12099,6 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Name of formation penetrated.</summary>
         [System.Xml.Serialization.XmlElementAttribute("nameFormation")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of formation penetrated.")]
         public string[] nameFormation {
             get {
@@ -12114,7 +12112,6 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Name of formation, regionally dependent.</summary>
         [System.Xml.Serialization.XmlElementAttribute("lithostratigraphic")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of formation, regionally dependent.")]
         public string[] lithostratigraphic {
             get {
@@ -12128,7 +12125,6 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Chronostratigraphic classification.</summary>
         [System.Xml.Serialization.XmlElementAttribute("chronostratigraphic")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Chronostratigraphic classification.")]
         public string[] chronostratigraphic {
             get {
@@ -36833,7 +36829,6 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Plan of action to ensure the risk does not materialize.</summary>
         [System.Xml.Serialization.XmlElementAttribute("mitigation")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Plan of action to ensure the risk does not materialize.")]
         public string[] mitigation {
             get {
@@ -47532,7 +47527,6 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).</summary>
         [System.Xml.Serialization.XmlElementAttribute("kind")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute(@"Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         public string[] kind {
             get {

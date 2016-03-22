@@ -8941,8 +8941,9 @@ namespace Energistics.DataAccess.RESQML110
         /// A timestamp. The order within the aggregate must be retained.
         /// </summary>
 		[Description("A timestamp. The order within the aggregate must be retained.")]
+		[RecurringElement]
 		[XmlElement("timeStep")]
-        public Timestamp? TimeStep {
+        public List<DateTime> TimeStep {
             get {
                 return timeStepField;
             } 
@@ -8952,8 +8953,19 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Timestamp? timeStepField; 
+        private List<DateTime> timeStepField; 
 
+        /// <summary>
+        /// A timestamp. The order within the aggregate must be retained.
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return TimeStep;
+			}
+        }
 		/// <summary>
         /// uid property
         /// </summary>

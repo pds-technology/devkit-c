@@ -430,7 +430,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("GeologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -1611,7 +1610,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("GeologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -1790,7 +1788,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("GeologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -1969,7 +1966,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("GeologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -61366,7 +61362,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Kind property
         /// </summary>
-		[StringLength(64)]
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
 		[RecurringElement]
 		[XmlElement("Kind")]
@@ -66318,7 +66313,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Mitigation property
         /// </summary>
-		[StringLength(2000)]
 		[Description("Plan of action to ensure the risk does not materialize.")]
 		[RecurringElement]
 		[XmlElement("Mitigation")]

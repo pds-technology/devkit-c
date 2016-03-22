@@ -604,7 +604,6 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// dataObject property
         /// </summary>
-		[StringLength(64)]
 		[Description("A WITSML data object (well, wellbore, etc)  which is supported by this Server/Publisher for this function.")]
 		[RecurringElement]
 		[XmlElement("dataObject")]
@@ -14435,7 +14434,6 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Name of formation penetrated. 
         /// </summary>
-		[StringLength(64)]
 		[Description("Name of formation penetrated.")]
 		[RecurringElement]
 		[XmlElement("nameFormation")]
@@ -14454,7 +14452,6 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Name of formation, regionally dependent. 
         /// </summary>
-		[StringLength(64)]
 		[Description("Name of formation, regionally dependent.")]
 		[RecurringElement]
 		[XmlElement("lithostratigraphic")]
@@ -14473,7 +14470,6 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Chronostratigraphic classification. 
         /// </summary>
-		[StringLength(64)]
 		[Description("Chronostratigraphic classification.")]
 		[RecurringElement]
 		[XmlElement("chronostratigraphic")]
@@ -43687,7 +43683,6 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Plan of action to ensure the risk does not materialize.
         /// </summary>
-		[StringLength(256)]
 		[Description("Plan of action to ensure the risk does not materialize.")]
 		[RecurringElement]
 		[XmlElement("mitigation")]
@@ -53934,7 +53929,6 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Since various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).
         /// </summary>
-		[StringLength(50)]
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
 		[RecurringElement]
 		[XmlElement("kind")]

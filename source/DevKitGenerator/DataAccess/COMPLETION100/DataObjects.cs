@@ -9271,7 +9271,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
@@ -9344,7 +9343,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
@@ -9417,7 +9415,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// stringEquipmentRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("stringEquipmentRefID")]
         public List<String> StringEquipmentRefID {
@@ -9469,7 +9466,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// perforationSetRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("perforationSetRefID")]
         public List<String> PerforationSetRefID {
@@ -9865,7 +9861,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Rig reference id.
         /// </summary>
-		[StringLength(64)]
 		[Description("Rig reference id.")]
 		[RecurringElement]
 		[XmlElement("rigID")]
@@ -10579,7 +10574,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -11478,7 +11472,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -11695,7 +11688,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
@@ -11912,7 +11904,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// geologyFeatureRefID property
         /// </summary>
-		[StringLength(64)]
 		[RecurringElement]
 		[XmlElement("geologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {

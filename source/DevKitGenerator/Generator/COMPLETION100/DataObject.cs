@@ -8440,8 +8440,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] stringEquipmentRefID {
             get {
                 return this.stringEquipmentRefIDField;
@@ -8477,8 +8475,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] stringEquipmentRefID {
             get {
                 return this.stringEquipmentRefIDField;
@@ -8518,8 +8514,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] stringEquipmentRefID {
             get {
                 return this.stringEquipmentRefIDField;
@@ -8553,8 +8547,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("perforationSetRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] perforationSetRefID {
             get {
                 return this.perforationSetRefIDField;
@@ -8910,8 +8902,6 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Rig reference id.</summary>
         [System.Xml.Serialization.XmlElementAttribute("rigID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Rig reference id.")]
         public string[] rigID {
             get {
@@ -10203,8 +10193,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -10846,8 +10834,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -10999,8 +10985,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -11152,8 +11136,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string[] geologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;

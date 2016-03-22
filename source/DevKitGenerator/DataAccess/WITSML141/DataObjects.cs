@@ -6889,7 +6889,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Since various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).
         /// </summary>
-		[StringLength(50)]
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
 		[RecurringElement]
 		[XmlElement("kind")]
@@ -28313,7 +28312,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of the proppant used for the treatment interval.
         /// </summary>
-		[StringLength(64)]
 		[Description("Name of the proppant used for the treatment interval.")]
 		[RecurringElement]
 		[XmlElement("proppantName")]
@@ -28421,7 +28419,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The names of the each fluid used in this interval.
         /// </summary>
-		[StringLength(64)]
 		[Description("The names of the each fluid used in this interval.")]
 		[RecurringElement]
 		[XmlElement("fluidName")]
@@ -29341,7 +29338,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Name of a proppant used for the stimulation job.
         /// </summary>
-		[StringLength(64)]
 		[Description("Name of a proppant used for the stimulation job.")]
 		[RecurringElement]
 		[XmlElement("proppantName")]
@@ -32321,7 +32317,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Plan of action to ensure the risk does not materialize.
         /// </summary>
-		[StringLength(256)]
 		[Description("Plan of action to ensure the risk does not materialize.")]
 		[RecurringElement]
 		[XmlElement("mitigation")]
@@ -50710,7 +50705,6 @@ namespace Energistics.DataAccess.WITSML141
         /// DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation. 
         /// </summary>
         [Obsolete()]
-		[StringLength(64)]
 		[Description("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.")]
 		[RecurringElement]
 		[XmlElement("nameFormation")]

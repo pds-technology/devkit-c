@@ -5787,7 +5787,7 @@ namespace Energistics.Generator.RESQML110 {
         
         private cs_resqmlExtensionNameValue[] extensionNameValueField;
         
-        private Energistics.SchemaGatherer.Timestamp timeStepField;
+        private System.DateTime[] timeStepField;
         
         private string uidField;
         
@@ -5919,7 +5919,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>A timestamp. The order within the aggregate must be retained.</summary>
         [System.Xml.Serialization.XmlElementAttribute("timeStep")]
         [System.ComponentModel.DescriptionAttribute("A timestamp. The order within the aggregate must be retained.")]
-        public Energistics.SchemaGatherer.Timestamp timeStep {
+        public System.DateTime[] timeStep {
             get {
                 return this.timeStepField;
             }

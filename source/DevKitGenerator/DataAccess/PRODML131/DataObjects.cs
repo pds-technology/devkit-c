@@ -9571,7 +9571,6 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Since various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).
         /// </summary>
-		[StringLength(40)]
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
 		[RecurringElement]
 		[XmlElement("kind")]
@@ -21093,7 +21092,6 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A name suffix. Such as Esq, Phd, etc.
         /// </summary>
-		[StringLength(64)]
 		[Description("A name suffix. Such as Esq, Phd, etc.")]
 		[RecurringElement]
 		[XmlElement("suffix")]
@@ -21168,7 +21166,6 @@ namespace Energistics.DataAccess.PRODML131
         /// street property
         /// </summary>
 		[Required]
-		[StringLength(64)]
 		[Description("The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the \"name\" and \"city\" lines. This may be repeated  for up to four, ordered lines.")]
 		[RecurringElement]
 		[XmlElement("street")]
@@ -21906,7 +21903,6 @@ namespace Energistics.DataAccess.PRODML131
         /// A block ID that can more tightly locate the object. The BlockID should be an identifying name or code. The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.
         /// </summary>
 		[Required]
-		[StringLength(64)]
 		[Description("A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
 		[RecurringElement]
 		[XmlElement("blockID")]
@@ -22761,7 +22757,6 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A comment about the operation and/or the activities within the operation.
         /// </summary>
-		[StringLength(4000)]
 		[Description("A comment about the operation and/or the activities  within the operation.")]
 		[RecurringElement]
 		[XmlElement("comment")]
@@ -40855,7 +40850,6 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A descriptive remark about the facility mapping
         /// </summary>
-		[StringLength(4000)]
 		[Description("A descriptive remark about the facility mapping")]
 		[RecurringElement]
 		[XmlElement("comment")]
@@ -41176,8 +41170,9 @@ namespace Energistics.DataAccess.PRODML131
         /// Date when the defect was detected
         /// </summary>
 		[Description("Date when the defect was detected")]
+		[RecurringElement]
 		[XmlElement("timeStart")]
-        public Timestamp? TimeStart {
+        public List<DateTime> TimeStart {
             get {
                 return timeStartField;
             } 
@@ -41187,14 +41182,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Timestamp? timeStartField; 
+        private List<DateTime> timeStartField; 
 
         /// <summary>
         /// Date when the defect was no longer detected (or was corrected)
         /// </summary>
 		[Description("Date when the defect was no longer detected (or was corrected)")]
+		[RecurringElement]
 		[XmlElement("timeEnd")]
-        public Timestamp? TimeEnd {
+        public List<DateTime> TimeEnd {
             get {
                 return timeEndField;
             } 
@@ -41204,12 +41200,11 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Timestamp? timeEndField; 
+        private List<DateTime> timeEndField; 
 
         /// <summary>
         /// A descriptive remark about the defect found on this location
         /// </summary>
-		[StringLength(4000)]
 		[Description("A descriptive remark about the defect found on this location")]
 		[RecurringElement]
 		[XmlElement("comment")]

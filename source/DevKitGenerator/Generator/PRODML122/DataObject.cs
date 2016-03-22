@@ -8887,7 +8887,6 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).</summary>
         [System.Xml.Serialization.XmlElementAttribute("kind")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute(@"Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         public string[] kind {
             get {
@@ -19136,7 +19135,6 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A name suffix. Such as Esq, Phd, etc.</summary>
         [System.Xml.Serialization.XmlElementAttribute("suffix")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name suffix. Such as Esq, Phd, etc.")]
         public string[] suffix {
             get {
@@ -19196,7 +19194,6 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the "name" and "city" lines. This may be repeated  for up to four, ordered lines.</summary>
         [System.Xml.Serialization.XmlElementAttribute("street")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The Street is a generic term for the  middle lines of an address. They may be a s" +
             "treet address, PO Box, Suite number, or any lines that come  between the \"name\" " +
             "and \"city\" lines. This may be repeated  for up to four, ordered lines.")]
@@ -19706,7 +19703,6 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.</summary>
         [System.Xml.Serialization.XmlElementAttribute("blockID")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
         public string[] blockID {
             get {
@@ -19898,7 +19894,6 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A comment about the operation and/or the activities  within the operation.</summary>
         [System.Xml.Serialization.XmlElementAttribute("comment")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the operation and/or the activities  within the operation.")]
         public string[] comment {
             get {
@@ -30784,7 +30779,6 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of processing used to create the new log.</summary>
         [System.Xml.Serialization.XmlElementAttribute("processing")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The kind of processing used to create the new log.")]
         public string[] processing {
             get {

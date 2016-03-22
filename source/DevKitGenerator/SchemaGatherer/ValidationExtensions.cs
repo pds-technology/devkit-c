@@ -269,7 +269,7 @@ namespace Energistics.SchemaGatherer
                     AddRequiredAttribute(typeDeclaration, memberProperty);
                 }
 
-                if (restrictions.Any())
+                if (restrictions.Any() && memberProperty.Type.ArrayElementType == null)
                 {
                     AddValidationAttributes(typeDeclaration, memberProperty, restrictions);
                 }
