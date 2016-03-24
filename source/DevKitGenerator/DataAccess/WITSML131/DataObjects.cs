@@ -1953,7 +1953,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -2904,7 +2904,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -17917,7 +17917,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -18285,7 +18285,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(50)]
         [XmlText]
         public String Value {
             get {
@@ -18560,7 +18560,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {

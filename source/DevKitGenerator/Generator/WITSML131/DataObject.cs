@@ -1364,6 +1364,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -2015,6 +2016,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -15313,6 +15315,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -15527,6 +15530,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         public string Value {
             get {
                 return this.valueField;
@@ -15693,6 +15697,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;

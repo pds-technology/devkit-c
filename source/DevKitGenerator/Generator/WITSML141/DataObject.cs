@@ -595,6 +595,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -5084,6 +5085,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
         public string Value {
             get {
                 return this.valueField;
@@ -9290,6 +9292,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         public string Value {
             get {
                 return this.valueField;
@@ -43779,6 +43782,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -48923,6 +48927,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -48992,6 +48997,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -64473,6 +64479,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;

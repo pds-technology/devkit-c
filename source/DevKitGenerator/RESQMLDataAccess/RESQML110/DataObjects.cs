@@ -955,7 +955,7 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -19435,7 +19435,7 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {

@@ -269,9 +269,28 @@ namespace Energistics.SchemaGatherer
                     AddRequiredAttribute(typeDeclaration, memberProperty);
                 }
 
-                if (restrictions.Any() && memberProperty.Type.ArrayElementType == null)
+                if (restrictions.Any())
                 {
-                    AddValidationAttributes(typeDeclaration, memberProperty, restrictions);
+                    if (memberProperty.Type.ArrayElementType == null)
+                    {
+                        AddValidationAttributes(typeDeclaration, memberProperty, restrictions);
+                    }
+                    else
+                    {
+                        var baseTypeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
+                            .FirstOrDefault(x => x.Name == memberProperty.Type.BaseType);
+
+                        if (baseTypeDeclaration != null)
+                        {
+                            var xmlTextProperty = baseTypeDeclaration.Members.OfType<CodeMemberProperty>()
+                                .FirstOrDefault(x => Has<XmlTextAttribute>(x));
+
+                            if (xmlTextProperty != null)
+                            {
+                                AddValidationAttributes(baseTypeDeclaration, xmlTextProperty, restrictions);
+                            }
+                        }
+                    }
                 }
 
                 AddDescriptionAttribute(typeDeclaration, memberProperty, GetAnnotation(element));
@@ -299,7 +318,7 @@ namespace Energistics.SchemaGatherer
 
             if (pattern != null)
             {
-                if (memberProperty.Type.BaseType == typeof(String).FullName)
+                if (memberProperty.Type.BaseType == typeof(String).FullName && !Has<RegularExpressionAttribute>(memberProperty))
                 {
                     memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
                         new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
@@ -312,13 +331,13 @@ namespace Energistics.SchemaGatherer
                 }
             }
 
-            if (maxLength != null && memberProperty.Type.BaseType == typeof(String).FullName)
+            if (maxLength != null && memberProperty.Type.BaseType == typeof(String).FullName && !Has<StringLengthAttribute>(memberProperty))
             {
                 memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(StringLengthAttribute).FullName,
                     new CodeAttributeArgument(new CodePrimitiveExpression(Int32.Parse(maxLength.Value)))));
             }
 
-            if (minInclusive != null && maxInclusive != null)
+            if (minInclusive != null && maxInclusive != null && !Has<RangeAttribute>(memberProperty))
             {
                 memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RangeAttribute).FullName,
                     new CodeAttributeArgument(new CodePrimitiveExpression(Double.Parse(minInclusive.Value))),
@@ -328,18 +347,21 @@ namespace Energistics.SchemaGatherer
 
         private static void AddDescriptionAttribute(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, string description)
         {
-            var hasDescription = memberProperty.CustomAttributes
-                .OfType<CodeAttributeDeclaration>()
-                .Where(x => x.Name == typeof(DescriptionAttribute).FullName)
-                .Any();
-
-            if (!String.IsNullOrEmpty(description) && !hasDescription)
+            if (!String.IsNullOrEmpty(description) && !Has<DescriptionAttribute>(memberProperty))
             {
                 memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(DescriptionAttribute).FullName,
                     new CodeAttributeArgument(new CodePrimitiveExpression(description))));
 
                 memberProperty.Comments.Add(new CodeCommentStatement("<summary>" + description + "</summary>", true));
             }
+        }
+
+        private static bool Has<T>(CodeMemberProperty memberProperty)
+        {
+            return memberProperty.CustomAttributes
+                .OfType<CodeAttributeDeclaration>()
+                .Where(x => x.Name == typeof(T).FullName)
+                .Any();
         }
 
         private static CodeMemberProperty GetMemberProperty(CodeTypeDeclaration typeDeclaration, string propertyName)
@@ -356,22 +378,38 @@ namespace Energistics.SchemaGatherer
 
         private static IEnumerable<XmlSchemaFacet> GetElementRestrictions(XmlSchemaElement schemaElement)
         {
-            var elementType = schemaElement.ElementSchemaType as XmlSchemaSimpleType;
             var facets = new List<XmlSchemaFacet>();
 
+            GetElementTypeRestrictions(facets, schemaElement.ElementSchemaType as XmlSchemaSimpleType);
+
+            var complexType = schemaElement.ElementSchemaType as XmlSchemaComplexType;
+            if (complexType != null)
+            {
+                GetElementTypeRestrictions(facets, complexType.BaseXmlSchemaType as XmlSchemaSimpleType);
+            }
+
+            return facets;
+        }
+
+        private static void GetElementTypeRestrictions(List<XmlSchemaFacet> facets, XmlSchemaSimpleType elementType)
+        {
             while (elementType != null)
             {
                 var restrictions = elementType.Content as XmlSchemaSimpleTypeRestriction;
 
                 if (restrictions != null)
                 {
-                    facets.AddRange(restrictions.Facets.OfType<XmlSchemaFacet>());
+                    foreach (var facet in restrictions.Facets.OfType<XmlSchemaFacet>())
+                    {
+                        if (!facets.Any(x => x.GetType() == facet.GetType()))
+                        {
+                            facets.Add(facet);
+                        }
+                    }
                 }
 
                 elementType = elementType.BaseXmlSchemaType as XmlSchemaSimpleType;
             }
-
-            return facets;
         }
 
         private static string GetAnnotation(XmlSchemaAnnotated annotated)

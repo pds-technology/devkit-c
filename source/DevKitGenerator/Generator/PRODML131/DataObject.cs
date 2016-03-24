@@ -401,6 +401,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -4176,6 +4177,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -6496,6 +6498,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
         public string Value {
             get {
                 return this.valueField;
@@ -8959,6 +8962,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -10155,6 +10159,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string Value {
             get {
                 return this.valueField;
@@ -14461,6 +14466,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;
@@ -19094,6 +19100,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         public string Value {
             get {
                 return this.valueField;
@@ -19190,6 +19197,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         public string Value {
             get {
                 return this.valueField;
@@ -31903,6 +31911,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         public string Value {
             get {
                 return this.valueField;
@@ -32890,6 +32899,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string Value {
             get {
                 return this.valueField;

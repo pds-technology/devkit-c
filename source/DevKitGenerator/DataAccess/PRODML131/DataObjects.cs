@@ -554,7 +554,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -4011,7 +4011,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -6125,7 +6125,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[RegularExpression("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
         [XmlText]
         public String Value {
             get {
@@ -10078,7 +10078,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -11705,7 +11705,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(4000)]
         [XmlText]
         public String Value {
             get {
@@ -17161,7 +17161,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -21576,7 +21576,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(40)]
         [XmlText]
         public String Value {
             get {
@@ -21703,7 +21703,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(40)]
         [XmlText]
         public String Value {
             get {
@@ -38930,7 +38930,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(40)]
         [XmlText]
         public String Value {
             get {
@@ -40383,7 +40383,7 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// Value property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlText]
         public String Value {
             get {
