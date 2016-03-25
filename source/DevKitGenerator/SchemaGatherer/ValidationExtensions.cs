@@ -19,6 +19,8 @@ namespace Energistics.SchemaGatherer
     /// </summary>
     public static class ValidationExtensions
     {
+        private static readonly bool useCustomTimestamp = bool.Parse(SchemaGatherer.GetAppSetting("INCLUDE_CUSTOM_TIMESTAMP_USAGE"));
+
         /// <summary>
         /// Generates the data objects with code DOM.
         /// </summary>
@@ -325,9 +327,12 @@ namespace Energistics.SchemaGatherer
                 }
                 else if (memberProperty.Type.BaseType == typeof(DateTime).FullName && pattern.Value != ".+")
                 {
-                    var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
-                    memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
-                    memberProperty.Type = memberField.Type;
+                    if (useCustomTimestamp)
+                    {
+                        var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
+                        memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
+                        memberProperty.Type = memberField.Type;
+                    }
                 }
             }
 
