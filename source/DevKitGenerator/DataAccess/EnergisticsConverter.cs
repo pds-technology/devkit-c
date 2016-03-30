@@ -80,8 +80,8 @@ using System.Xml.Serialization;
 using System.Xml.Xsl;
 using System.Xml;
 using System.Reflection;
-using System.Text.RegularExpressions;
-using System.Xml.Serialization;
+using System.Text.RegularExpressions; 
+using System.Collections;
 namespace Energistics.DataAccess
 {
     /// <summary>
@@ -135,10 +135,10 @@ namespace Energistics.DataAccess
         {
             if (encoding != null)
             {
+                //ArraySetting(ref obj); fixed by specific field
                 Type type = obj.GetType();
-                var serializer = new XmlSerializer(obj.GetType());
-                //fixing memory leaks.
-                //var serializer = new XmlSerializer(obj.GetType(), GetXmlRootAttribute(type));
+                var serializer = new XmlSerializer(obj.GetType()); 
+               // var serializer = new XmlSerializer(obj.GetType(), GetXmlRootAttribute(type));
                 
                 using (var memstream = new MemoryStream())
                 {
@@ -198,11 +198,12 @@ namespace Energistics.DataAccess
         /// <returns>The Energistics object</returns>
         public static T XmlToObject<T>(string xml, Encoding encoding)
         {
+            
             if (encoding != null)
             {
                 Type type = typeof(T);
-                var serializer = new XmlSerializer(type, GetXmlRootAttribute(type));
-               
+                //var serializer = new XmlSerializer(type, GetXmlRootAttribute(type));
+                var serializer = new XmlSerializer(type);
                 if (type.Name == "ResqmlDocument")
                 {
                     // Find all arrays of numbers, and removes extra whitespace so that .net can parse
@@ -225,6 +226,119 @@ namespace Energistics.DataAccess
             return default(T);
         }
 
+
+        private static Boolean CleanArray(ref Object obj)
+        {
+                Boolean result = false;
+            if(obj==null) return false;
+            if (obj.GetType().GetProperties().Length <= 0) return false;
+           // if (obj.GetType() == typeof(String)) return false;
+            else
+            {
+                if (typeof(IEnumerable).IsAssignableFrom(obj.GetType()))
+                {
+                    if ((obj.GetType().IsGenericType) || (obj.GetType().IsArray))
+                    {
+                        System.Collections.Generic.IEnumerable<Object> listObj = (System.Collections.Generic.IEnumerable<Object>)obj;
+
+                        if (listObj.GetEnumerator().MoveNext())
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            obj = null;
+                            return true;
+                        }
+                    }
+                }
+
+                else
+                {
+                    MemberInfo[] mis = obj.GetType().GetMembers();
+                    for (int j = 0; j < mis.Length; j++)
+                    {
+                        MemberInfo pi = obj.GetType().GetMember(mis[j].Name)[0];
+
+                        if (pi.MemberType == MemberTypes.Property)
+                        {
+                                try
+                                {
+                                    Object subObj = ((PropertyInfo)pi).GetValue(obj, null);
+                                    if (subObj != null)
+                                    {
+                                        if (subObj.GetType() != obj.GetType())
+                                            if (CleanArray(ref subObj))
+                                            {
+                                                ((PropertyInfo)pi).SetValue(obj, subObj, null);
+                                                result = true;
+                                            }
+                                    }
+                                }
+                                catch (Exception e) { Console.WriteLine(e.Message); };                            
+                        }
+
+                    }
+
+                    /*
+                    PropertyInfo[] pros = obj.GetType().GetProperties();
+                    for (int i = 0; i < pros.Length; i++)
+                    {
+                        for (int j = 0; j < pros[i].GetAccessors().Length; j++)
+                        {
+                            MethodInfo mi = pros[i].GetAccessors()[j];
+                            Object subObj= mi.Invoke(obj,null);
+                            CleanArray(subObj);
+                        }
+                    }
+                     */
+                }
+            }
+                    return result;
+        }
+
+
+
+        private static void ArraySetting(ref Object xmlObject)
+        {
+            MemberInfo[] mis = xmlObject.GetType().GetMembers();
+            for (int j = 0; j < mis.Length; j++)
+            {
+                MemberInfo pi = xmlObject.GetType().GetMember(mis[j].Name)[0];
+
+                if (pi.MemberType == MemberTypes.Property)
+                {
+                    try
+                    {
+                        Object subObj = ((PropertyInfo)pi).GetValue(xmlObject, null);
+
+                        if ((subObj != null) && (subObj.GetType() != xmlObject.GetType()))
+                            CleanArray(ref subObj); 
+                            ((PropertyInfo)pi).SetValue(xmlObject, subObj, null);
+                    }
+                    catch (Exception) { };
+
+                }
+
+            }
+            /*
+            PropertyInfo[] pros = xmlObject.GetType().GetProperties();
+            for (int i = 0; i < pros.Length; i++)
+            {
+                for (int j = 0; j < pros[i].GetAccessors().Length; j++)
+                {
+                    MethodInfo mi = pros[i].GetAccessors()[j];
+                    try
+                    {
+                        Object subObj = mi.Invoke(xmlObject, null);
+                        CleanArray(ref subObj);
+                    }
+                    catch(Exception){}
+                }
+            }
+             */
+
+        }
         internal static string XsiTypeCleaner(Match match)
         {
             string xsiType = match.Groups[1].Value;

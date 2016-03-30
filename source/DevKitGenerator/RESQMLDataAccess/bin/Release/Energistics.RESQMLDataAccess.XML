@@ -4453,14 +4453,14 @@
             This class represents the Date_PropertyType xsd type.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.Date_PropertyType.DateTimeSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.Date_PropertyType.dateTimeSpecified">
             <summary>
-            Boolean to indicate if DateTime has been set. Used for serialization.
+            bool to indicate if DateTime has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.Date_PropertyType.DateSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.Date_PropertyType.dateSpecified">
             <summary>
-            Boolean to indicate if Date has been set. Used for serialization.
+            bool to indicate if Date has been set. Used for serialization.
             </summary>
         </member>
         <member name="M:Energistics.DataAccess.RESQML200.ComponentSchemas.Date_PropertyType.NotifyPropertyChanged(System.String)">
@@ -5078,19 +5078,19 @@
             This class represents the GeodeticCRSType xsd type.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.GeodeticCRSType.CartesianCSSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.GeodeticCRSType.cartesianCSSpecified">
             <summary>
-            Boolean to indicate if CartesianCS has been set. Used for serialization.
+            bool to indicate if CartesianCS has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.GeodeticCRSType.EllipsoidalCSSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.GeodeticCRSType.ellipsoidalCSSpecified">
             <summary>
-            Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
+            bool to indicate if EllipsoidalCS has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.GeodeticCRSType.SphericalCSSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.GeodeticCRSType.sphericalCSSpecified">
             <summary>
-            Boolean to indicate if SphericalCS has been set. Used for serialization.
+            bool to indicate if SphericalCS has been set. Used for serialization.
             </summary>
         </member>
         <member name="P:Energistics.DataAccess.RESQML200.ComponentSchemas.GeodeticCRSType.CartesianCS">
@@ -5459,19 +5459,19 @@
             This class represents the SecondDefiningParameter xsd type.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.SecondDefiningParameter.InverseFlatteningSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.SecondDefiningParameter.inverseFlatteningSpecified">
             <summary>
-            Boolean to indicate if InverseFlattening has been set. Used for serialization.
+            bool to indicate if InverseFlattening has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.SecondDefiningParameter.IsSphereSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.SecondDefiningParameter.isSphereSpecified">
             <summary>
-            Boolean to indicate if IsSphere has been set. Used for serialization.
+            bool to indicate if IsSphere has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.SecondDefiningParameter.SemiMinorAxisSpecified">
+        <member name="F:Energistics.DataAccess.RESQML200.ComponentSchemas.SecondDefiningParameter.semiMinorAxisSpecified">
             <summary>
-            Boolean to indicate if SemiMinorAxis has been set. Used for serialization.
+            bool to indicate if SemiMinorAxis has been set. Used for serialization.
             </summary>
         </member>
         <member name="M:Energistics.DataAccess.RESQML200.ComponentSchemas.SecondDefiningParameter.NotifyPropertyChanged(System.String)">
@@ -22629,14 +22629,14 @@
             This class represents the Date_PropertyType xsd type.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.Date_PropertyType.DateSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.Date_PropertyType.dateSpecified">
             <summary>
-            Boolean to indicate if Date has been set. Used for serialization.
+            bool to indicate if Date has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.Date_PropertyType.DateTimeSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.Date_PropertyType.dateTimeSpecified">
             <summary>
-            Boolean to indicate if DateTime has been set. Used for serialization.
+            bool to indicate if DateTime has been set. Used for serialization.
             </summary>
         </member>
         <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.Date_PropertyType.NotifyPropertyChanged(System.String)">
@@ -23254,19 +23254,19 @@
             This class represents the GeodeticCRSType xsd type.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.GeodeticCRSType.EllipsoidalCSSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.GeodeticCRSType.ellipsoidalCSSpecified">
             <summary>
-            Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
+            bool to indicate if EllipsoidalCS has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.GeodeticCRSType.SphericalCSSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.GeodeticCRSType.sphericalCSSpecified">
             <summary>
-            Boolean to indicate if SphericalCS has been set. Used for serialization.
+            bool to indicate if SphericalCS has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.GeodeticCRSType.CartesianCSSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.GeodeticCRSType.cartesianCSSpecified">
             <summary>
-            Boolean to indicate if CartesianCS has been set. Used for serialization.
+            bool to indicate if CartesianCS has been set. Used for serialization.
             </summary>
         </member>
         <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.GeodeticCRSType.EllipsoidalCS">
@@ -23635,19 +23635,19 @@
             This class represents the SecondDefiningParameter xsd type.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefiningParameter.InverseFlatteningSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefiningParameter.inverseFlatteningSpecified">
             <summary>
-            Boolean to indicate if InverseFlattening has been set. Used for serialization.
+            bool to indicate if InverseFlattening has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefiningParameter.SemiMinorAxisSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefiningParameter.semiMinorAxisSpecified">
             <summary>
-            Boolean to indicate if SemiMinorAxis has been set. Used for serialization.
+            bool to indicate if SemiMinorAxis has been set. Used for serialization.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefiningParameter.IsSphereSpecified">
+        <member name="F:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefiningParameter.isSphereSpecified">
             <summary>
-            Boolean to indicate if IsSphere has been set. Used for serialization.
+            bool to indicate if IsSphere has been set. Used for serialization.
             </summary>
         </member>
         <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefiningParameter.NotifyPropertyChanged(System.String)">

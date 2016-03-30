@@ -132,6 +132,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool DownholeComponentSpecified
+         {
+            get {
+                return downholeComponentField.Count>0?true:false;
+            } 
+         }
         private List<DownholeComponent> downholeComponentField; 
 
 
@@ -223,6 +230,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool DocumentAliasSpecified
+         {
+            get {
+                return documentAliasField.Count>0?true:false;
+            } 
+         }
         private List<NameStruct> documentAliasField; 
 
 
@@ -237,7 +251,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 documentDateField = value;
-                this.DocumentDateSpecified = true;
+             if(value!=null) 
+                 this.DocumentDateSpecified = true;
                 NotifyPropertyChanged("DocumentDate");
             }
         }
@@ -279,6 +294,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool DocumentClassSpecified
+         {
+            get {
+                return documentClassField.Count>0?true:false;
+            } 
+         }
         private List<NameStruct> documentClassField; 
 
 
@@ -315,6 +337,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool SecurityInformationSpecified
+         {
+            get {
+                return securityInformationField.Count>0?true:false;
+            } 
+         }
         private List<DocumentSecurityInfo> securityInformationField; 
 
 
@@ -352,6 +381,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool AuditTrailSpecified
+         {
+            get {
+                return auditTrailField.Count>0?true:false;
+            } 
+         }
         private List<DocumentEvent> auditTrailField; 
 
 
@@ -638,7 +674,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 effectiveDateField = value;
-                this.EffectiveDateSpecified = true;
+             if(value!=null) 
+                 this.EffectiveDateSpecified = true;
                 NotifyPropertyChanged("EffectiveDate");
             }
         }
@@ -676,7 +713,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 expiredDateField = value;
-                this.ExpiredDateSpecified = true;
+             if(value!=null) 
+                 this.ExpiredDateSpecified = true;
                 NotifyPropertyChanged("ExpiredDate");
             }
         }
@@ -732,7 +770,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 currentStatusField = value;
-                this.CurrentStatusSpecified = true;
+             if(value!=null) 
+                 this.CurrentStatusSpecified = true;
                 NotifyPropertyChanged("CurrentStatus");
             }
         }
@@ -770,7 +809,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 statusDateField = value;
-                this.StatusDateSpecified = true;
+             if(value!=null) 
+                 this.StatusDateSpecified = true;
                 NotifyPropertyChanged("StatusDate");
             }
         }
@@ -812,6 +852,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool StatusHistorySpecified
+         {
+            get {
+                return statusHistoryField.Count>0?true:false;
+            } 
+         }
         private List<CompletionStatusHistory> statusHistoryField; 
 
 
@@ -942,7 +989,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -980,7 +1028,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-                this.StartDateSpecified = true;
+             if(value!=null) 
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
@@ -1018,7 +1067,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -1813,7 +1863,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 numeratorField = value;
-                this.NumeratorSpecified = true;
+             if(value!=null) 
+                 this.NumeratorSpecified = true;
                 NotifyPropertyChanged("Numerator");
             }
         }
@@ -1851,7 +1902,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 denominatorField = value;
-                this.DenominatorSpecified = true;
+             if(value!=null) 
+                 this.DenominatorSpecified = true;
                 NotifyPropertyChanged("Denominator");
             }
         }
@@ -2161,7 +2213,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 northDirectionField = value;
-                this.NorthDirectionSpecified = true;
+             if(value!=null) 
+                 this.NorthDirectionSpecified = true;
                 NotifyPropertyChanged("NorthDirection");
             }
         }
@@ -5100,7 +5153,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimCreationField = value;
-                this.DateTimeCreationSpecified = true;
+             if(value!=null) 
+                 this.DateTimeCreationSpecified = true;
                 NotifyPropertyChanged("DateTimeCreation");
             }
         }
@@ -5138,7 +5192,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimLastChangeField = value;
-                this.DateTimeLastChangeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeLastChangeSpecified = true;
                 NotifyPropertyChanged("DateTimeLastChange");
             }
         }
@@ -5176,7 +5231,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 itemStateField = value;
-                this.ItemStateSpecified = true;
+             if(value!=null) 
+                 this.ItemStateSpecified = true;
                 NotifyPropertyChanged("ItemState");
             }
         }
@@ -5254,6 +5310,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool AcquisitionTimeZoneSpecified
+         {
+            get {
+                return acquisitionTimeZoneField.Count>0?true:false;
+            } 
+         }
         private List<TimestampedTimeZone> acquisitionTimeZoneField; 
 
 
@@ -5286,7 +5349,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 privateGroupOnlyField = value;
-                this.PrivateGroupOnlySpecified = true;
+             if(value!=null) 
+                 this.PrivateGroupOnlySpecified = true;
                 NotifyPropertyChanged("PrivateGroupOnly");
             }
         }
@@ -5346,6 +5410,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -5427,7 +5498,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -5636,6 +5708,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool AnySpecified
+         {
+            get {
+                return AnyField.Count>0?true:false;
+            } 
+         }
         private List<XmlElement> AnyField; 
 
 
@@ -5750,7 +5829,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -5806,7 +5886,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 indexField = value;
-                this.IndexSpecified = true;
+             if(value!=null) 
+                 this.IndexSpecified = true;
                 NotifyPropertyChanged("Index");
             }
         }
@@ -5844,7 +5925,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -6073,6 +6155,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool AnySpecified
+         {
+            get {
+                return AnyField.Count>0?true:false;
+            } 
+         }
         private List<XmlElement> AnyField; 
 
 
@@ -6449,7 +6538,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 indexTypeField = value;
-                this.IndexTypeSpecified = true;
+             if(value!=null) 
+                 this.IndexTypeSpecified = true;
                 NotifyPropertyChanged("IndexType");
             }
         }
@@ -6577,7 +6667,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 rangeDateTimeMinField = value;
-                this.RangeDateTimeMinSpecified = true;
+             if(value!=null) 
+                 this.RangeDateTimeMinSpecified = true;
                 NotifyPropertyChanged("RangeDateTimeMin");
             }
         }
@@ -6615,7 +6706,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 rangeDateTimeMaxField = value;
-                this.RangeDateTimeMaxSpecified = true;
+             if(value!=null) 
+                 this.RangeDateTimeMaxSpecified = true;
                 NotifyPropertyChanged("RangeDateTimeMax");
             }
         }
@@ -6689,7 +6781,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 referenceDateTimeField = value;
-                this.ReferenceDateTimeSpecified = true;
+             if(value!=null) 
+                 this.ReferenceDateTimeSpecified = true;
                 NotifyPropertyChanged("ReferenceDateTime");
             }
         }
@@ -6731,6 +6824,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ParamSpecified
+         {
+            get {
+                return paramField.Count>0?true:false;
+            } 
+         }
         private List<IndexedObject> paramField; 
 
 
@@ -6749,6 +6849,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -6934,6 +7041,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ParticipantsSpecified
+         {
+            get {
+                return participantField.Count>0?true:false;
+            } 
+         }
         private List<MemberObject> participantField; 
 
 
@@ -6952,6 +7066,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtNameValuesSpecified
+         {
+            get {
+                return extNameValuesField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extNameValuesField; 
 
 
@@ -7048,7 +7169,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 technologyField = value;
-                this.TechnologySpecified = true;
+             if(value!=null) 
+                 this.TechnologySpecified = true;
                 NotifyPropertyChanged("Technology");
             }
         }
@@ -7086,7 +7208,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 locationField = value;
-                this.LocationSpecified = true;
+             if(value!=null) 
+                 this.LocationSpecified = true;
                 NotifyPropertyChanged("Location");
             }
         }
@@ -7124,7 +7247,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 installationDateField = value;
-                this.InstallationDateSpecified = true;
+             if(value!=null) 
+                 this.InstallationDateSpecified = true;
                 NotifyPropertyChanged("InstallationDate");
             }
         }
@@ -7220,6 +7344,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -7545,7 +7676,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 itemSizeField = value;
-                this.ItemSizeSpecified = true;
+             if(value!=null) 
+                 this.ItemSizeSpecified = true;
                 NotifyPropertyChanged("ItemSize");
             }
         }
@@ -7583,7 +7715,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 qtyItemField = value;
-                this.QtyItemSpecified = true;
+             if(value!=null) 
+                 this.QtyItemSpecified = true;
                 NotifyPropertyChanged("QtyItem");
             }
         }
@@ -7693,7 +7826,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isCarryOverField = value;
-                this.IsCarryOverSpecified = true;
+             if(value!=null) 
+                 this.IsCarryOverSpecified = true;
                 NotifyPropertyChanged("IsCarryOver");
             }
         }
@@ -7731,7 +7865,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isRentalField = value;
-                this.IsRentalSpecified = true;
+             if(value!=null) 
+                 this.IsRentalSpecified = true;
                 NotifyPropertyChanged("IsRental");
             }
         }
@@ -7773,6 +7908,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool NameTagSpecified
+         {
+            get {
+                return nameTagField.Count>0?true:false;
+            } 
+         }
         private List<NameTag> nameTagField; 
 
 
@@ -7859,7 +8001,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 estimatedField = value;
-                this.EstimatedSpecified = true;
+             if(value!=null) 
+                 this.EstimatedSpecified = true;
                 NotifyPropertyChanged("Estimated");
             }
         }
@@ -7901,6 +8044,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -8019,6 +8169,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -8119,6 +8276,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -8179,7 +8343,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 stageNumberField = value;
-                this.StageNumberSpecified = true;
+             if(value!=null) 
+                 this.StageNumberSpecified = true;
                 NotifyPropertyChanged("StageNumber");
             }
         }
@@ -8343,7 +8508,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 conveyanceMethodField = value;
-                this.ConveyanceMethodSpecified = true;
+             if(value!=null) 
+                 this.ConveyanceMethodSpecified = true;
                 NotifyPropertyChanged("ConveyanceMethod");
             }
         }
@@ -8381,7 +8547,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 shotsPlannedField = value;
-                this.ShotsPlannedSpecified = true;
+             if(value!=null) 
+                 this.ShotsPlannedSpecified = true;
                 NotifyPropertyChanged("ShotsPlanned");
             }
         }
@@ -8437,7 +8604,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 shotsMisfiredField = value;
-                this.ShotsMisfiredSpecified = true;
+             if(value!=null) 
+                 this.ShotsMisfiredSpecified = true;
                 NotifyPropertyChanged("ShotsMisfired");
             }
         }
@@ -8727,7 +8895,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 gunLeftInHoleField = value;
-                this.GunLeftInHoleSpecified = true;
+             if(value!=null) 
+                 this.GunLeftInHoleSpecified = true;
                 NotifyPropertyChanged("GunLeftInHole");
             }
         }
@@ -8769,6 +8938,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -8851,6 +9027,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool PerforatingSpecified
+         {
+            get {
+                return perforatingField.Count>0?true:false;
+            } 
+         }
         private List<Perforating> perforatingField; 
 
 
@@ -8983,7 +9166,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isNoChargeToProducerField = value;
-                this.IsNoChargeToProducerSpecified = true;
+             if(value!=null) 
+                 this.IsNoChargeToProducerSpecified = true;
                 NotifyPropertyChanged("IsNoChargeToProducer");
             }
         }
@@ -9043,6 +9227,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -9121,7 +9312,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimeNextTestDateField = value;
-                this.DTimeNextTestDateSpecified = true;
+             if(value!=null) 
+                 this.DTimeNextTestDateSpecified = true;
                 NotifyPropertyChanged("DTimeNextTestDate");
             }
         }
@@ -9195,7 +9387,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isSuccessField = value;
-                this.IsSuccessSpecified = true;
+             if(value!=null) 
+                 this.IsSuccessSpecified = true;
                 NotifyPropertyChanged("IsSuccess");
             }
         }
@@ -9507,6 +9700,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -9643,6 +9843,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -9725,6 +9932,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -9843,6 +10057,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -9943,6 +10164,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -10043,6 +10271,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -10161,6 +10396,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -10243,6 +10485,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -10338,9 +10587,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CementExtension cementExtensionField; 
         /// <summary>
-        /// Boolean to indicate if CementExtension has been set. Used for serialization.
+        /// bool to indicate if CementExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean CementExtensionSpecified = false; 
+        private bool cementExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool CementExtensionSpecified
+         {
+            get {
+                return cementExtensionSpecified;
+            } 
+            set {
+                cementExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for clean fill
@@ -10370,9 +10629,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CleanFillExtension cleanFillExtensionField; 
         /// <summary>
-        /// Boolean to indicate if CleanFillExtension has been set. Used for serialization.
+        /// bool to indicate if CleanFillExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean CleanFillExtensionSpecified = false; 
+        private bool cleanFillExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool CleanFillExtensionSpecified
+         {
+            get {
+                return cleanFillExtensionSpecified;
+            } 
+            set {
+                cleanFillExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for directional survey
@@ -10402,9 +10671,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DirectionalSurveyExtension directionalSurveyExtensionField; 
         /// <summary>
-        /// Boolean to indicate if DirectionalSurveyExtension has been set. Used for serialization.
+        /// bool to indicate if DirectionalSurveyExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean DirectionalSurveyExtensionSpecified = false; 
+        private bool directionalSurveyExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool DirectionalSurveyExtensionSpecified
+         {
+            get {
+                return directionalSurveyExtensionSpecified;
+            } 
+            set {
+                directionalSurveyExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for lost circulation
@@ -10434,9 +10713,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LostCirculationExtension lostCirculationExtensionField; 
         /// <summary>
-        /// Boolean to indicate if LostCirculationExtension has been set. Used for serialization.
+        /// bool to indicate if LostCirculationExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean LostCirculationExtensionSpecified = false; 
+        private bool lostCirculationExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool LostCirculationExtensionSpecified
+         {
+            get {
+                return lostCirculationExtensionSpecified;
+            } 
+            set {
+                lostCirculationExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for bottom hole pressure
@@ -10466,9 +10755,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private BHPExtension BHPExtensionField; 
         /// <summary>
-        /// Boolean to indicate if BHPExtension has been set. Used for serialization.
+        /// bool to indicate if BHPExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean BHPExtensionSpecified = false; 
+        private bool bHPExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool BHPExtensionSpecified
+         {
+            get {
+                return bHPExtensionSpecified;
+            } 
+            set {
+                bHPExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for acidizing and fracturing
@@ -10498,9 +10797,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private AcidizefracExtension acidizeFracExtensionField; 
         /// <summary>
-        /// Boolean to indicate if AcidizeFracExtension has been set. Used for serialization.
+        /// bool to indicate if AcidizeFracExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean AcidizeFracExtensionSpecified = false; 
+        private bool acidizeFracExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool AcidizeFracExtensionSpecified
+         {
+            get {
+                return acidizeFracExtensionSpecified;
+            } 
+            set {
+                acidizeFracExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for job
@@ -10530,9 +10839,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private JobExtension jobExtensionField; 
         /// <summary>
-        /// Boolean to indicate if JobExtension has been set. Used for serialization.
+        /// bool to indicate if JobExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean JobExtensionSpecified = false; 
+        private bool jobExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool JobExtensionSpecified
+         {
+            get {
+                return jobExtensionSpecified;
+            } 
+            set {
+                jobExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for pressure test
@@ -10562,9 +10881,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PressureTestExtension pressureTestExtensionField; 
         /// <summary>
-        /// Boolean to indicate if PressureTestExtension has been set. Used for serialization.
+        /// bool to indicate if PressureTestExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean PressureTestExtensionSpecified = false; 
+        private bool pressureTestExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool PressureTestExtensionSpecified
+         {
+            get {
+                return pressureTestExtensionSpecified;
+            } 
+            set {
+                pressureTestExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for waiting on
@@ -10594,9 +10923,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private WaitingOnExtension waitingOnExtensionField; 
         /// <summary>
-        /// Boolean to indicate if WaitingOnExtension has been set. Used for serialization.
+        /// bool to indicate if WaitingOnExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean WaitingOnExtensionSpecified = false; 
+        private bool waitingOnExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool WaitingOnExtensionSpecified
+         {
+            get {
+                return waitingOnExtensionSpecified;
+            } 
+            set {
+                waitingOnExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for perforating event
@@ -10626,9 +10965,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerforatingExtension perforationExtensionField; 
         /// <summary>
-        /// Boolean to indicate if PerforationExtension has been set. Used for serialization.
+        /// bool to indicate if PerforationExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean PerforationExtensionSpecified = false; 
+        private bool perforationExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool PerforationExtensionSpecified
+         {
+            get {
+                return perforationExtensionSpecified;
+            } 
+            set {
+                perforationExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for fluid report
@@ -10658,9 +11007,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private FluidReportExtension fluidReportExtensionField; 
         /// <summary>
-        /// Boolean to indicate if FluidReportExtension has been set. Used for serialization.
+        /// bool to indicate if FluidReportExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean FluidReportExtensionSpecified = false; 
+        private bool fluidReportExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool FluidReportExtensionSpecified
+         {
+            get {
+                return fluidReportExtensionSpecified;
+            } 
+            set {
+                fluidReportExtensionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Extension event for downhole component
@@ -10690,9 +11049,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DownholeExtension downholeExtensionField; 
         /// <summary>
-        /// Boolean to indicate if DownholeExtension has been set. Used for serialization.
+        /// bool to indicate if DownholeExtension has been set. Used for serialization.
         /// </summary>
-        private Boolean DownholeExtensionSpecified = false; 
+        private bool downholeExtensionSpecified = false; 
+         [XmlIgnore]
+         public bool DownholeExtensionSpecified
+         {
+            get {
+                return downholeExtensionSpecified;
+            } 
+            set {
+                downholeExtensionSpecified= value;
+            } 
+         }
 
 
 
@@ -10757,6 +11126,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool StringEquipmentRefIDSpecified
+         {
+            get {
+                return stringEquipmentRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> stringEquipmentRefIDField; 
 
 
@@ -10839,6 +11215,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool StringEquipmentRefIDSpecified
+         {
+            get {
+                return stringEquipmentRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> stringEquipmentRefIDField; 
 
 
@@ -10921,6 +11304,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool StringEquipmentRefIDSpecified
+         {
+            get {
+                return stringEquipmentRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> stringEquipmentRefIDField; 
 
 
@@ -10939,6 +11329,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool BoreholeStringRefSpecified
+         {
+            get {
+                return boreholeStringRefField.Count>0?true:false;
+            } 
+         }
         private List<BoreholeStringRef> boreholeStringRefField; 
 
 
@@ -10957,6 +11354,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool DownholeStringsRefSpecified
+         {
+            get {
+                return downholeStringsRefField.Count>0?true:false;
+            } 
+         }
         private List<DownholeStringRef> downholeStringsRefField; 
 
 
@@ -10975,6 +11379,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool PerforationSetRefIDSpecified
+         {
+            get {
+                return perforationSetRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> perforationSetRefIDField; 
 
 
@@ -11056,7 +11467,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 classField = value;
-                this.ClassSpecified = true;
+             if(value!=null) 
+                 this.ClassSpecified = true;
                 NotifyPropertyChanged("Class");
             }
         }
@@ -11227,7 +11639,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -11265,7 +11678,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -11357,7 +11771,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 eventOrderField = value;
-                this.EventOrderSpecified = true;
+             if(value!=null) 
+                 this.EventOrderSpecified = true;
                 NotifyPropertyChanged("EventOrder");
             }
         }
@@ -11399,6 +11814,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool RigIDSpecified
+         {
+            get {
+                return rigIDField.Count>0?true:false;
+            } 
+         }
         private List<String> rigIDField; 
 
 
@@ -11413,7 +11835,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 activityCodeField = value;
-                this.ActivityCodeSpecified = true;
+             if(value!=null) 
+                 this.ActivityCodeSpecified = true;
                 NotifyPropertyChanged("ActivityCode");
             }
         }
@@ -11469,7 +11892,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isPlanField = value;
-                this.IsPlanSpecified = true;
+             if(value!=null) 
+                 this.IsPlanSpecified = true;
                 NotifyPropertyChanged("IsPlan");
             }
         }
@@ -11547,6 +11971,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool EventExtensionSpecified
+         {
+            get {
+                return eventExtensionField.Count>0?true:false;
+            } 
+         }
         private List<EventExtension> eventExtensionField; 
 
 
@@ -11619,6 +12050,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool CostSpecified
+         {
+            get {
+                return costField.Count>0?true:false;
+            } 
+         }
         private List<DayCost> costField; 
 
 
@@ -11633,7 +12071,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 nonproductiveField = value;
-                this.NonproductiveSpecified = true;
+             if(value!=null) 
+                 this.NonproductiveSpecified = true;
                 NotifyPropertyChanged("Nonproductive");
             }
         }
@@ -11671,7 +12110,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 troubleField = value;
-                this.TroubleSpecified = true;
+             if(value!=null) 
+                 this.TroubleSpecified = true;
                 NotifyPropertyChanged("Trouble");
             }
         }
@@ -11709,7 +12149,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 preventiveMaintenanceField = value;
-                this.PreventiveMaintenanceSpecified = true;
+             if(value!=null) 
+                 this.PreventiveMaintenanceSpecified = true;
                 NotifyPropertyChanged("PreventiveMaintenance");
             }
         }
@@ -11747,7 +12188,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 unplannedField = value;
-                this.UnplannedSpecified = true;
+             if(value!=null) 
+                 this.UnplannedSpecified = true;
                 NotifyPropertyChanged("Unplanned");
             }
         }
@@ -11843,6 +12285,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -12103,6 +12552,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool IntervalStatusHistorySpecified
+         {
+            get {
+                return intervalStatusHistoryField.Count>0?true:false;
+            } 
+         }
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
 
@@ -12139,6 +12595,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool GeologyFeatureRefIDSpecified
+         {
+            get {
+                return geologyFeatureRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> geologyFeatureRefIDField; 
 
 
@@ -12157,6 +12620,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -12235,7 +12705,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 physicalStatusField = value;
-                this.PhysicalStatusSpecified = true;
+             if(value!=null) 
+                 this.PhysicalStatusSpecified = true;
                 NotifyPropertyChanged("PhysicalStatus");
             }
         }
@@ -12273,7 +12744,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-                this.StartDateSpecified = true;
+             if(value!=null) 
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
@@ -12311,7 +12783,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -12385,7 +12858,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 allocationFactorField = value;
-                this.AllocationFactorSpecified = true;
+             if(value!=null) 
+                 this.AllocationFactorSpecified = true;
                 NotifyPropertyChanged("AllocationFactor");
             }
         }
@@ -12545,6 +13019,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -12623,7 +13104,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 eventDateField = value;
-                this.EventDateSpecified = true;
+             if(value!=null) 
+                 this.EventDateSpecified = true;
                 NotifyPropertyChanged("EventDate");
             }
         }
@@ -12707,7 +13189,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 perforationStatusField = value;
-                this.PerforationStatusSpecified = true;
+             if(value!=null) 
+                 this.PerforationStatusSpecified = true;
                 NotifyPropertyChanged("PerforationStatus");
             }
         }
@@ -12745,7 +13228,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-                this.StartDateSpecified = true;
+             if(value!=null) 
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
@@ -12783,7 +13267,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -12857,7 +13342,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 allocationFactorField = value;
-                this.AllocationFactorSpecified = true;
+             if(value!=null) 
+                 this.AllocationFactorSpecified = true;
                 NotifyPropertyChanged("AllocationFactor");
             }
         }
@@ -13071,6 +13557,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool PerforationStatusHistorySpecified
+         {
+            get {
+                return perforationStatusHistoryField.Count>0?true:false;
+            } 
+         }
         private List<PerforationStatusHistory> perforationStatusHistoryField; 
 
 
@@ -13107,6 +13600,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool GeologyFeatureRefIDSpecified
+         {
+            get {
+                return geologyFeatureRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> geologyFeatureRefIDField; 
 
 
@@ -13125,6 +13625,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -13297,6 +13804,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool IntervalStatusHistorySpecified
+         {
+            get {
+                return intervalStatusHistoryField.Count>0?true:false;
+            } 
+         }
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
 
@@ -13333,6 +13847,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool GeologyFeatureRefIDSpecified
+         {
+            get {
+                return geologyFeatureRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> geologyFeatureRefIDField; 
 
 
@@ -13351,6 +13872,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -13523,6 +14051,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool IntervalStatusHistorySpecified
+         {
+            get {
+                return intervalStatusHistoryField.Count>0?true:false;
+            } 
+         }
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
 
@@ -13559,6 +14094,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool GeologyFeatureRefIDSpecified
+         {
+            get {
+                return geologyFeatureRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> geologyFeatureRefIDField; 
 
 
@@ -13577,6 +14119,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -13659,6 +14208,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool GravelPackIntervalSpecified
+         {
+            get {
+                return gravelPackIntervalField.Count>0?true:false;
+            } 
+         }
         private List<GravelPackInterval> gravelPackIntervalField; 
 
 
@@ -13677,6 +14233,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool OpenHoleIntervalSpecified
+         {
+            get {
+                return openHoleIntervalField.Count>0?true:false;
+            } 
+         }
         private List<OpenHoleInterval> openHoleIntervalField; 
 
 
@@ -13695,6 +14258,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool PerforationSetIntervalSpecified
+         {
+            get {
+                return perforationSetIntervalField.Count>0?true:false;
+            } 
+         }
         private List<PerforationSetInterval> perforationSetIntervalField; 
 
 
@@ -13713,6 +14283,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool SlotsIntervalSpecified
+         {
+            get {
+                return slotsIntervalField.Count>0?true:false;
+            } 
+         }
         private List<SlotsInterval> slotsIntervalField; 
 
 
@@ -13882,6 +14459,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool EvenHistorySpecified
+         {
+            get {
+                return evenHistoryField.Count>0?true:false;
+            } 
+         }
         private List<EventInfo> evenHistoryField; 
 
 
@@ -13896,7 +14480,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 wellboreCompletionDateField = value;
-                this.WellboreCompletionDateSpecified = true;
+             if(value!=null) 
+                 this.WellboreCompletionDateSpecified = true;
                 NotifyPropertyChanged("WellboreCompletionDate");
             }
         }
@@ -14024,7 +14609,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 currentStatusField = value;
-                this.CurrentStatusSpecified = true;
+             if(value!=null) 
+                 this.CurrentStatusSpecified = true;
                 NotifyPropertyChanged("CurrentStatus");
             }
         }
@@ -14062,7 +14648,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 statusDateField = value;
-                this.StatusDateSpecified = true;
+             if(value!=null) 
+                 this.StatusDateSpecified = true;
                 NotifyPropertyChanged("StatusDate");
             }
         }
@@ -14104,6 +14691,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool StatusHistorySpecified
+         {
+            get {
+                return statusHistoryField.Count>0?true:false;
+            } 
+         }
         private List<CompletionStatusHistory> statusHistoryField; 
 
 
@@ -14292,6 +14886,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool BoreholeStringRefIDSpecified
+         {
+            get {
+                return boreholeStringRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> boreholeStringRefIDField; 
 
 
@@ -14310,6 +14911,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool DownholeStringRefIDSpecified
+         {
+            get {
+                return downholeStringRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> downholeStringRefIDField; 
 
 
@@ -14486,7 +15094,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 holeCountField = value;
-                this.HoleCountSpecified = true;
+             if(value!=null) 
+                 this.HoleCountSpecified = true;
                 NotifyPropertyChanged("HoleCount");
             }
         }
@@ -14524,7 +15133,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 frictionFactorField = value;
-                this.FrictionFactorSpecified = true;
+             if(value!=null) 
+                 this.FrictionFactorSpecified = true;
                 NotifyPropertyChanged("FrictionFactor");
             }
         }
@@ -14580,7 +15190,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dischargeCoefficientField = value;
-                this.DischargeCoefficientSpecified = true;
+             if(value!=null) 
+                 this.DischargeCoefficientSpecified = true;
                 NotifyPropertyChanged("DischargeCoefficient");
             }
         }
@@ -14618,7 +15229,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 perforationToolField = value;
-                this.PerforationToolSpecified = true;
+             if(value!=null) 
+                 this.PerforationToolSpecified = true;
                 NotifyPropertyChanged("PerforationTool");
             }
         }
@@ -14710,7 +15322,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 perforationDateField = value;
-                this.PerforationDateSpecified = true;
+             if(value!=null) 
+                 this.PerforationDateSpecified = true;
                 NotifyPropertyChanged("PerforationDate");
             }
         }
@@ -14974,7 +15587,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 holeCountField = value;
-                this.HoleCountSpecified = true;
+             if(value!=null) 
+                 this.HoleCountSpecified = true;
                 NotifyPropertyChanged("HoleCount");
             }
         }
@@ -15034,6 +15648,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -15148,7 +15769,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 slotCountField = value;
-                this.SlotCountSpecified = true;
+             if(value!=null) 
+                 this.SlotCountSpecified = true;
                 NotifyPropertyChanged("SlotCount");
             }
         }
@@ -15208,6 +15830,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -15512,7 +16141,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isSerializedField = value;
-                this.IsSerializedSpecified = true;
+             if(value!=null) 
+                 this.IsSerializedSpecified = true;
                 NotifyPropertyChanged("IsSerialized");
             }
         }
@@ -15622,7 +16252,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 gradeField = value;
-                this.GradeSpecified = true;
+             if(value!=null) 
+                 this.GradeSpecified = true;
                 NotifyPropertyChanged("Grade");
             }
         }
@@ -15678,7 +16309,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 coatingLinerappliedField = value;
-                this.CoatingLinerappliedSpecified = true;
+             if(value!=null) 
+                 this.CoatingLinerappliedSpecified = true;
                 NotifyPropertyChanged("CoatingLinerapplied");
             }
         }
@@ -15716,7 +16348,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 outsideCoatingField = value;
-                this.OutsideCoatingSpecified = true;
+             if(value!=null) 
+                 this.OutsideCoatingSpecified = true;
                 NotifyPropertyChanged("OutsideCoating");
             }
         }
@@ -15754,7 +16387,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 insideCoatingField = value;
-                this.InsideCoatingSpecified = true;
+             if(value!=null) 
+                 this.InsideCoatingSpecified = true;
                 NotifyPropertyChanged("InsideCoating");
             }
         }
@@ -16102,6 +16736,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool PropertySpecified
+         {
+            get {
+                return propertyField.Count>0?true:false;
+            } 
+         }
         private List<ExtPropNameValue> propertyField; 
 
 
@@ -16120,6 +16761,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool SlotAsManufacturedSpecified
+         {
+            get {
+                return slotAsManufacturedField.Count>0?true:false;
+            } 
+         }
         private List<PerfSlot> slotAsManufacturedField; 
 
 
@@ -16138,6 +16786,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool HoleAsManufacturedSpecified
+         {
+            get {
+                return holeAsManufacturedField.Count>0?true:false;
+            } 
+         }
         private List<PerfHole> holeAsManufacturedField; 
 
 
@@ -16174,6 +16829,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -16270,7 +16932,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 geologyTypeField = value;
-                this.GeologyTypeSpecified = true;
+             if(value!=null) 
+                 this.GeologyTypeSpecified = true;
                 NotifyPropertyChanged("GeologyType");
             }
         }
@@ -16402,6 +17065,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -16498,7 +17168,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 typeBoreholeField = value;
-                this.TypeBoreholeSpecified = true;
+             if(value!=null) 
+                 this.TypeBoreholeSpecified = true;
                 NotifyPropertyChanged("TypeBorehole");
             }
         }
@@ -16666,6 +17337,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -16784,6 +17462,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool BoreholeSpecified
+         {
+            get {
+                return boreholeField.Count>0?true:false;
+            } 
+         }
         private List<Borehole> boreholeField; 
 
 
@@ -16802,6 +17487,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool GeologyFeatureSpecified
+         {
+            get {
+                return geologyFeatureField.Count>0?true:false;
+            } 
+         }
         private List<GeologyFeature> geologyFeatureField; 
 
 
@@ -16821,6 +17513,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool AccessoriesSpecified
+         {
+            get {
+                return accessoriesField.Count>0?true:false;
+            } 
+         }
         private List<StringEquipment> accessoriesField; 
 
 
@@ -16917,7 +17616,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 equipmentTypeField = value;
-                this.EquipmentTypeSpecified = true;
+             if(value!=null) 
+                 this.EquipmentTypeSpecified = true;
                 NotifyPropertyChanged("EquipmentType");
             }
         }
@@ -16977,6 +17677,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool EquipmentEventHistorySpecified
+         {
+            get {
+                return equipmentEventHistoryField.Count>0?true:false;
+            } 
+         }
         private List<EventInfo> equipmentEventHistoryField; 
 
 
@@ -17099,7 +17806,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 countField = value;
-                this.CountSpecified = true;
+             if(value!=null) 
+                 this.CountSpecified = true;
                 NotifyPropertyChanged("Count");
             }
         }
@@ -17245,7 +17953,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 outsideStringField = value;
-                this.OutsideStringSpecified = true;
+             if(value!=null) 
+                 this.OutsideStringSpecified = true;
                 NotifyPropertyChanged("OutsideString");
             }
         }
@@ -17287,6 +17996,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool InsideComponentSpecified
+         {
+            get {
+                return insideComponentField.Count>0?true:false;
+            } 
+         }
         private List<RefContainer> insideComponentField; 
 
 
@@ -17305,6 +18021,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool OutsideComponentSpecified
+         {
+            get {
+                return outsideComponentField.Count>0?true:false;
+            } 
+         }
         private List<RefContainer> outsideComponentField; 
 
 
@@ -17409,7 +18132,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isLinetoSurfaceField = value;
-                this.IsLinetoSurfaceSpecified = true;
+             if(value!=null) 
+                 this.IsLinetoSurfaceSpecified = true;
                 NotifyPropertyChanged("IsLinetoSurface");
             }
         }
@@ -17447,7 +18171,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isCentralizedField = value;
-                this.IsCentralizedSpecified = true;
+             if(value!=null) 
+                 this.IsCentralizedSpecified = true;
                 NotifyPropertyChanged("IsCentralized");
             }
         }
@@ -17485,7 +18210,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 hasScratchersField = value;
-                this.HasScratchersSpecified = true;
+             if(value!=null) 
+                 this.HasScratchersSpecified = true;
                 NotifyPropertyChanged("HasScratchers");
             }
         }
@@ -17527,6 +18253,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ConnectionNextSpecified
+         {
+            get {
+                return connectionNextField.Count>0?true:false;
+            } 
+         }
         private List<EquipmentConnection> connectionNextField; 
 
 
@@ -17546,6 +18279,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool AssemblySpecified
+         {
+            get {
+                return assemblyField.Count>0?true:false;
+            } 
+         }
         private List<StringEquipment> assemblyField; 
 
 
@@ -17564,6 +18304,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool PerforationSetRefIDSpecified
+         {
+            get {
+                return perforationSetRefIDField.Count>0?true:false;
+            } 
+         }
         private List<String> perforationSetRefIDField; 
 
 
@@ -17618,6 +18365,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -17996,7 +18750,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 positionField = value;
-                this.PositionSpecified = true;
+             if(value!=null) 
+                 this.PositionSpecified = true;
                 NotifyPropertyChanged("Position");
             }
         }
@@ -18128,6 +18883,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -18230,9 +18992,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CasingConnectionType? casingConnectionTypeField; 
         /// <summary>
-        /// Boolean to indicate if CasingConnectionType has been set. Used for serialization.
+        /// bool to indicate if CasingConnectionType has been set. Used for serialization.
         /// </summary>
-        private Boolean CasingConnectionTypeSpecified = false; 
+        private bool casingConnectionTypeSpecified = false; 
+         [XmlIgnore]
+         public bool CasingConnectionTypeSpecified
+         {
+            get {
+                return casingConnectionTypeSpecified;
+            } 
+            set {
+                casingConnectionTypeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The connection type of rod
@@ -18251,9 +19023,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private RodConnectionType? rodConnectionTypeField; 
         /// <summary>
-        /// Boolean to indicate if RodConnectionType has been set. Used for serialization.
+        /// bool to indicate if RodConnectionType has been set. Used for serialization.
         /// </summary>
-        private Boolean RodConnectionTypeSpecified = false; 
+        private bool rodConnectionTypeSpecified = false; 
+         [XmlIgnore]
+         public bool RodConnectionTypeSpecified
+         {
+            get {
+                return rodConnectionTypeSpecified;
+            } 
+            set {
+                rodConnectionTypeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The other connection type which is used for other tools
@@ -18272,9 +19054,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private OtherConnectionType? otherConnectionTypeField; 
         /// <summary>
-        /// Boolean to indicate if OtherConnectionType has been set. Used for serialization.
+        /// bool to indicate if OtherConnectionType has been set. Used for serialization.
         /// </summary>
-        private Boolean OtherConnectionTypeSpecified = false; 
+        private bool otherConnectionTypeSpecified = false; 
+         [XmlIgnore]
+         public bool OtherConnectionTypeSpecified
+         {
+            get {
+                return otherConnectionTypeSpecified;
+            } 
+            set {
+                otherConnectionTypeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The connection type of tubing
@@ -18293,9 +19085,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private TubingConnectionType? tubingConnectionTypeField; 
         /// <summary>
-        /// Boolean to indicate if TubingConnectionType has been set. Used for serialization.
+        /// bool to indicate if TubingConnectionType has been set. Used for serialization.
         /// </summary>
-        private Boolean TubingConnectionTypeSpecified = false; 
+        private bool tubingConnectionTypeSpecified = false; 
+         [XmlIgnore]
+         public bool TubingConnectionTypeSpecified
+         {
+            get {
+                return tubingConnectionTypeSpecified;
+            } 
+            set {
+                tubingConnectionTypeSpecified= value;
+            } 
+         }
 
 
 
@@ -18310,7 +19112,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 connectionFormField = value;
-                this.ConnectionFormSpecified = true;
+             if(value!=null) 
+                 this.ConnectionFormSpecified = true;
                 NotifyPropertyChanged("ConnectionForm");
             }
         }
@@ -18429,7 +19232,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 subStringTypeField = value;
-                this.SubStringTypeSpecified = true;
+             if(value!=null) 
+                 this.SubStringTypeSpecified = true;
                 NotifyPropertyChanged("SubStringType");
             }
         }
@@ -18485,7 +19289,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 stringInstallDateField = value;
-                this.StringInstallDateSpecified = true;
+             if(value!=null) 
+                 this.StringInstallDateSpecified = true;
                 NotifyPropertyChanged("StringInstallDate");
             }
         }
@@ -18600,6 +19405,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool StringEquipmentSetSpecified
+         {
+            get {
+                return stringEquipmentSetField.Count>0?true:false;
+            } 
+         }
         private List<StringEquipment> stringEquipmentSetField; 
 
 
@@ -18619,6 +19431,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool AccessoriesSpecified
+         {
+            get {
+                return accessoriesField.Count>0?true:false;
+            } 
+         }
         private List<StringEquipment> accessoriesField; 
 
 
@@ -18655,6 +19474,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -18802,7 +19628,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-                this.StartDateSpecified = true;
+             if(value!=null) 
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
@@ -18840,7 +19667,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -18901,6 +19729,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool BoreholeStringSetSpecified
+         {
+            get {
+                return boreholeStringSetField.Count>0?true:false;
+            } 
+         }
         private List<BoreholeString> boreholeStringSetField; 
 
 
@@ -18920,6 +19755,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool DownholeStringSetSpecified
+         {
+            get {
+                return downholeStringSetField.Count>0?true:false;
+            } 
+         }
         private List<DownholeString> downholeStringSetField; 
 
 
@@ -18939,6 +19781,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool EquipmentSetSpecified
+         {
+            get {
+                return equipmentSetField.Count>0?true:false;
+            } 
+         }
         private List<Equipment> equipmentSetField; 
 
 
@@ -18958,6 +19807,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool PerforationSetsSpecified
+         {
+            get {
+                return perforationSetsField.Count>0?true:false;
+            } 
+         }
         private List<PerforationSet> perforationSetsField; 
 
 
@@ -19164,6 +20020,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -19278,7 +20141,8 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -19338,6 +20202,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+                return extensionNameValueField.Count>0?true:false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -19554,6 +20425,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool WellCompletionSpecified
+         {
+            get {
+                return wellCompletionField.Count>0?true:false;
+            } 
+         }
         private List<WellCompletion> wellCompletionField; 
 
 
@@ -19643,6 +20521,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool WellCMLedgerSpecified
+         {
+            get {
+                return wellCMLedgerField.Count>0?true:false;
+            } 
+         }
         private List<WellCMLedger> wellCMLedgerField; 
 
 
@@ -19732,6 +20617,13 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         [XmlIgnore]
+         public bool WellboreCompletionSpecified
+         {
+            get {
+                return wellboreCompletionField.Count>0?true:false;
+            } 
+         }
         private List<WellboreCompletion> wellboreCompletionField; 
 
 

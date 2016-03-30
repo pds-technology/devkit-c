@@ -5,4 +5,3 @@ C:\projects\source\DevKitGenerator\Generator\bin\Debug\Energistics.SchemaGathere
 C:\projects\source\DevKitGenerator\Generator\bin\Debug\Energistics.SchemaGatherer.pdb
 C:\projects\source\DevKitGenerator\Generator\obj\x86\Debug\Energistics.Generator.exe
 C:\projects\source\DevKitGenerator\Generator\obj\x86\Debug\Energistics.Generator.pdb
-C:\projects\source\DevKitGenerator\Generator\obj\x86\Debug\Generator.csprojResolveAssemblyReference.cache

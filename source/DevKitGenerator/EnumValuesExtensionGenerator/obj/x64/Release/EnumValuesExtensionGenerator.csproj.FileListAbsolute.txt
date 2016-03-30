@@ -6,3 +6,4 @@ C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\x64\Release\
 C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\bin\x64\Release\Energistics.DataAccess.xml
 C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\obj\x64\Release\EnumValuesExtensionGenerator.exe
 C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\obj\x64\Release\EnumValuesExtensionGenerator.pdb
+C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\obj\x64\Release\EnumValuesExtensionGenerator.csprojResolveAssemblyReference.cache

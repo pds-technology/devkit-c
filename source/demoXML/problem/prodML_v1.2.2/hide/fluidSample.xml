@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
+<fluidSamples
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series  
+			../xsd_schemas/obj_fluidSample.xsd" 
+	version="1.2.0.0(PRODML)">
+	<fluidSample  uid="Sample_2">
+		<name>Sample 2</name>
+		<sampleType>synthetic</sampleType>
+		<reservoirFluidType>black oil</reservoirFluidType>
+		<acquisitionDate>2003-07-10</acquisitionDate>
+		<acquisitionMD uom="ft">3200</acquisitionMD>
+		<acquisitionTemperature uom="degF">250</acquisitionTemperature>
+		<acquisitionGORStd uom="ft3/bbl">750</acquisitionGORStd>
+	</fluidSample>
+</fluidSamples>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<prodml:dtsInstalledSystems xmlns:prodml="http://www.prodml.org/schemas/1series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.prodml.org/schemas/1series  ../../../doc/Standards/DataSchema/prodML_v1.3/prodml_v1.3_data/xsd_schemas/obj_dtsInstalledSystem.xsd">
+<prodml:dtsInstalledSystems xmlns:prodml="http://www.prodml.org/schemas/1series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../../doc/Standards/DataSchema/prodML_v1.3/prodml_v1.3_data/xsd_schemas/obj_dtsInstalledSystem.xsd">
 	<prodml:documentInfo>
 		<prodml:documentName>Installed System</prodml:documentName>
 	</prodml:documentInfo>

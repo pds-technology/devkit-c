@@ -783,6 +783,10 @@ namespace Energistics.Generator
             return sb.ToString();
         }
 
+        String getPrivateFieldName(String name)
+        {
+           return name.Substring(0,1).ToLower() + name.Substring(1, name.Length - 1);
+        }
         /// <summary>
         /// Gets the body of a property. Handles properties that are part of a ordered sequence as well as
         /// the special "FieldSpecified" boolean flags.
@@ -826,7 +830,7 @@ namespace Energistics.Generator
                 }
 
                 string wrapperClassName = RenameClass(attr.Type);
-
+                string propertyName = getPrivateFieldName(publicPropName) + "Specified";
                 sb.AppendLine("                " + privateFieldName + " = value;");
              
                 sb.AppendLine("                " + publicPropName + "Specified = (value!=null);");
@@ -837,20 +841,31 @@ namespace Energistics.Generator
              
                 sb.AppendLine("        private " + wrapperClassName + (IsNullable(attr.Type) ? "?" : String.Empty) + array + " " + privateFieldName + "; ");
                 sb.AppendLine("        /// <summary>");
-                sb.AppendLine("        /// Boolean to indicate if " + publicPropName + " has been set. Used for serialization.");
+                sb.AppendLine("        /// bool to indicate if " + publicPropName + " has been set. Used for serialization.");
                 sb.AppendLine("        /// </summary>");
                 //sb.AppendLine("        [XmlIgnore]");
-                sb.AppendLine("        private Boolean " + publicPropName + "Specified = false; ");
-
+                sb.AppendLine("        private bool " + propertyName +" = false; ");
+                
+                //here we need to need the specified property.
+                sb.AppendLine("         [XmlIgnore]");
+                sb.AppendLine("         public bool " + publicPropName + "Specified");
+                sb.AppendLine("         {");
+                sb.AppendLine("            get {");
+                sb.AppendLine("                return " + propertyName + ";");
+                sb.AppendLine("            } ");
+                sb.AppendLine("            set {");
+                sb.AppendLine("                " + propertyName + "= value;");
+                sb.AppendLine("            } ");
+                sb.AppendLine("         }");
                 string realClassName = RenameClass(attr.Type);
 
                 return sb.ToString();
             }
             else
             {
+                //this section has run for every field in classes.
                 string specifiedBool = RenameProperty(property) + "Specified";
                 string privateFieldName = property.Name + "Field";
-                
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("{");
                 sb.AppendLine("            get {");
@@ -861,14 +876,37 @@ namespace Energistics.Generator
                 if (type.GetProperty(property.Name + "Specified") != null)
                 {
                     // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
-                    sb.AppendLine("                this." + specifiedBool + " = true;");
+                    sb.AppendLine("             if(value!=null) ");
+                    sb.AppendLine("                 this." + specifiedBool + " = true;");
                 }
                 sb.AppendLine("                NotifyPropertyChanged(\"" + RenameProperty(property) + "\");");
                 sb.AppendLine("            }");
                 sb.AppendLine("        }");
                 sb.AppendLine();
+                
+                // create the Sepcified field for array list. thus prevent the nil output in xml.
+                // from the research, there is two ways to prevent the null : 1. bool xxxSpecified property 2. ShouldSerializexxx() method
+                if (IsArray(type, property))
+                {
+      
+                    sb.AppendLine("         [XmlIgnore]");
+                    sb.AppendLine("         public bool " + specifiedBool);
+                    sb.AppendLine("         {");
+                    sb.AppendLine("            get {");
+                    if (property.PropertyType == typeof(Byte)||property.PropertyType == typeof(Byte[]))
+                    {
+                        sb.AppendLine("                return " + privateFieldName + ".Length>0?true:false;");
+                    } 
+                    else
+                    {
+                        sb.AppendLine("                return " + privateFieldName + ".Count>0?true:false;");
+                    }
+                    sb.AppendLine("            } ");
+                    sb.AppendLine("         }");
+                }
                 sb.AppendLine("        private " + RenameClass(property.PropertyType) + MakePropertyNullable(property) + " " + privateFieldName + ((property.PropertyType == typeof(String) && privateFieldName == "versionField" && !string.IsNullOrEmpty(versionString)) ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
 
+                
                 return sb.ToString();
             }
         }
@@ -952,7 +990,16 @@ namespace Energistics.Generator
             }
             else
             {
-                return String.Format("[XmlElement(\"{0}\")]", property.Name);
+                    object[] elementAttr = property.GetCustomAttributes(typeof(XmlElementAttribute), false);
+                    if(elementAttr.Length > 0)
+                    {
+					   XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
+                       return GetXmlElementAttrTag(xmlElemAttr, property);
+                    }
+                    else
+                    {
+                        return String.Format("[XmlElement(\"{0}\")]", property.Name);
+                    } 
             }
         }
         
@@ -989,7 +1036,9 @@ namespace Energistics.Generator
             string array = GetArrayString(type, attr);
            
             sb.AppendLine("        " + GetDescription(type, attr.ElementName, extraDesc));
-            sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
+            //make sure the type is specify in xmlelement annoatation , otherwise the xml output is invalidate.
+            sb.AppendLine("        " + GetXmlElementAttrTag(attr, property));
+           // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
             sb.AppendLine("        public " + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property));
             
         }
@@ -1025,6 +1074,16 @@ namespace Energistics.Generator
                 }
             }
             return array;
+        }
+
+        public bool IsArray(Type type, PropertyInfo property)
+        {
+            string className = RenameClass(type);
+            if (property.PropertyType.IsArray)
+            {
+                    return true;
+            }
+            return false;
         }
                 
         public bool IsItemsList(Type type, PropertyInfo property)
@@ -1134,19 +1193,21 @@ namespace Energistics.Generator
         public string GetXmlElementAttrTag(XmlElementAttribute xmlElemAttr, PropertyInfo property)
         {
             string elementName = String.IsNullOrEmpty(xmlElemAttr.ElementName) ? property.Name : xmlElemAttr.ElementName;
-
-            string xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"",elementName);
+           
+       
+           string xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"",elementName);
 
             if (!String.IsNullOrEmpty(xmlElemAttr.Namespace))
             {
                 xmlElementAttrTag += String.Format(", Namespace=\"{0}\"", xmlElemAttr.Namespace);
             }
-
+            
             if (!String.IsNullOrEmpty(xmlElemAttr.DataType))
             {
                 xmlElementAttrTag += String.Format(", DataType=\"{0}\"", xmlElemAttr.DataType);
             }
 
+           
             xmlElementAttrTag += ")]";
 
             return xmlElementAttrTag;

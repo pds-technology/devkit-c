@@ -4,4 +4,3 @@ C:\projects\source\DevKitGenerator\DataAccess\bin\Release\Energistics.DataAccess
 C:\projects\source\DevKitGenerator\DataAccess\bin\Release\HDF5DotNet.dll
 C:\projects\source\DevKitGenerator\DataAccess\obj\Release\Energistics.DataAccess.dll
 C:\projects\source\DevKitGenerator\DataAccess\obj\Release\Energistics.DataAccess.pdb
-C:\projects\source\DevKitGenerator\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache

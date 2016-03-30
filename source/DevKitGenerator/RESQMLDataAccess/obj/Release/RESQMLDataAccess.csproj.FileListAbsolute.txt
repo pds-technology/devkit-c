@@ -7,3 +7,4 @@ C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.Data
 C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Release\Energistics.DataAccess.xml
 C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Release\Energistics.RESQMLDataAccess.dll
 C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Release\Energistics.RESQMLDataAccess.pdb
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Release\RESQMLDataAccess.csprojResolveAssemblyReference.cache
