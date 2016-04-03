@@ -28,7 +28,7 @@ namespace Energistics.SchemaGatherer
         /// <param name="targetXmlFile">The target XML file.</param>
         /// <param name="nameSpace">The name space.</param>
         /// <param name="sourceFolder">The source folder.</param>
-        public static void GenerateDataObjectsWithCodeDom(string targetFolder, string targetXmlFile, string nameSpace, string sourceFolder)
+        public static void GenerateDataObjectsWithCodeDom(string targetFolder, string targetXmlFile, string nameSpace, string sourceFolder, string standardFamily, string dataSchemaVersion, List<string> dataObjects)
         {
             var includeSchemas = new Dictionary<string, XmlSchema>();
             var schemas = CompileXmlSchemas(targetXmlFile, sourceFolder, includeSchemas);
@@ -60,7 +60,7 @@ namespace Energistics.SchemaGatherer
                 ImportXmlSchema(schema, importer, exporter);
             }
 
-            AddValidationAttributes(codeNamespace, schemas);
+            AddValidationAttributes(codeNamespace, schemas, standardFamily, dataSchemaVersion, dataObjects);
 
             using (var writer = new StreamWriter(outputFile, false, Encoding.UTF8))
             {
@@ -199,22 +199,20 @@ namespace Energistics.SchemaGatherer
             }
         }
 
-        private static void AddValidationAttributes(CodeNamespace codeNamespace, IEnumerable<XmlSchema> schemas)
+        private static void AddValidationAttributes(CodeNamespace codeNamespace, IEnumerable<XmlSchema> schemas, string standardFamily, string dataSchemaVersion, List<string> dataObjects)
         {
             var types = new List<string>();
 
             foreach (XmlSchema schema in schemas)
             {
-                var schemaElement = schema.Elements.Values.Cast<XmlSchemaElement>().FirstOrDefault();
-
-                if (schemaElement != null)
+                foreach (var schemaElement in schema.Elements.Values.Cast<XmlSchemaElement>().Where(x => x != null))
                 {
-                    AddValidationAttributes(codeNamespace, schemaElement, types);
+                    AddValidationAttributes(codeNamespace, schemaElement, standardFamily, dataSchemaVersion, dataObjects, types);
                 }
             }
         }
 
-        private static void AddValidationAttributes(CodeNamespace codeNamespace, XmlSchemaElement schemaElement, List<string> types)
+        private static void AddValidationAttributes(CodeNamespace codeNamespace, XmlSchemaElement schemaElement, string standardFamily, string dataSchemaVersion, List<string> dataObjects, List<string> types)
         {
             var typeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
                 .FirstOrDefault(x => x.Name == schemaElement.SchemaTypeName.Name);
@@ -226,6 +224,9 @@ namespace Energistics.SchemaGatherer
                 var schemaType = schemaElement.ElementSchemaType as XmlSchemaComplexType;
                 if (schemaType != null)
                 {
+                    if (dataObjects.Contains(typeDeclaration.Name))
+                        AddEnergisticsDataObjectAttribute(codeNamespace, typeDeclaration, standardFamily, dataSchemaVersion);
+
                     foreach (var attribute in schemaType.AttributeUses.Values.OfType<XmlSchemaAttribute>())
                     {
                         AddAttributeValidation(codeNamespace, typeDeclaration, attribute);
@@ -242,11 +243,17 @@ namespace Energistics.SchemaGatherer
                         {
                             AddElementValidation(codeNamespace, typeDeclaration, element);
 
-                            AddValidationAttributes(codeNamespace, element, types);
+                            AddValidationAttributes(codeNamespace, element, standardFamily, dataSchemaVersion, dataObjects, types);
                         }
                     }
                 }
             }
+        }
+
+        private static void AddEnergisticsDataObjectAttribute(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, string standardFamily, string dataSchemaVersion)
+        {
+            typeDeclaration.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(EnergisticsDataObjectAttribute).FullName,
+                new CodeAttributeArgument(new CodePrimitiveExpression(standardFamily)), new CodeAttributeArgument(new CodePrimitiveExpression(dataSchemaVersion))));
         }
 
         private static void AddAttributeValidation(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, XmlSchemaAttribute attribute)

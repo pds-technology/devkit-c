@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.COMPLETION100.ComponentSchemas;
 using Energistics.DataAccess.COMPLETION100.ReferenceData;
+using Energistics.DataAccess.Reflection;
 using Energistics.DataAccess.Validation;
 
 namespace Energistics.DataAccess.COMPLETION100
@@ -30,7 +31,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/schemas/abstract")]
     [System.Xml.Serialization.XmlRootAttribute("abstractDataObject", Namespace="http://www.energistics.org/schemas/abstract", IsNullable=false)]
-    [Description("This class represents the abstractObject xsd type.")]
+	[Description("This class represents the abstractObject xsd type.")]
     public abstract partial class AbstractObject : Object, INotifyPropertyChanged
     {
 
@@ -64,6 +65,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCompletion", Namespace="http://www.witsml.org/schemas/1series")]
+	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("The non-contextual content of a well completion object.")]
     public partial class WellCompletion : Object, IWellObject, INotifyPropertyChanged
     {
@@ -72,8 +74,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the well that contains the completion. 
         /// </summary>
 		[Required]
-		[StringLength(64)]
-		[Description("Human recognizable context for the well that contains the completion.")]
+        [StringLength(64)]
+        [Description("Human recognizable context for the well that contains the completion.")]
 		[XmlElement("nameWell")]
         public String NameWell {
             get {
@@ -91,8 +93,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the completion. 
         /// </summary>
 		[Required]
-		[StringLength(64)]
-		[Description("Human recognizable context for the completion.")]
+        [StringLength(64)]
+        [Description("Human recognizable context for the completion.")]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -110,7 +112,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// fieldID property
         /// </summary>
 		[StringLength(64)]
-		[Description("Field ID.")]
+        [Description("Field ID.")]
 		[XmlElement("fieldID")]
         public String FieldID {
             get {
@@ -128,7 +130,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// fieldCode property
         /// </summary>
 		[StringLength(64)]
-		[Description("Field code.")]
+        [Description("Field code.")]
 		[XmlElement("fieldCode")]
         public String FieldCode {
             get {
@@ -146,7 +148,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// fieldType property
         /// </summary>
 		[StringLength(64)]
-		[Description("Field type.")]
+        [Description("Field type.")]
 		[XmlElement("fieldType")]
         public String FieldType {
             get {
@@ -178,11 +180,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? effectiveDateField; 
 
-		/// <summary>
+        /// <summary>
         /// effectiveDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EffectiveDateSpecified {
             get {
                 return effectiveDateSpecifiedField;
@@ -213,11 +215,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? expiredDateField; 
 
-		/// <summary>
+        /// <summary>
         /// expiredDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ExpiredDateSpecified {
             get {
                 return expiredDateSpecifiedField;
@@ -234,7 +236,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// E_P_RightsID property
         /// </summary>
 		[StringLength(64)]
-		[Description("Documents exploration and production rights")]
+        [Description("Documents exploration and production rights")]
 		[XmlElement("E_P_RightsID")]
         public String E_P_RightsID {
             get {
@@ -266,11 +268,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CompletionStatus? currentStatusField; 
 
-		/// <summary>
+        /// <summary>
         /// currentStatusSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean CurrentStatusSpecified {
             get {
                 return currentStatusSpecifiedField;
@@ -301,11 +303,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? statusDateField; 
 
-		/// <summary>
+        /// <summary>
         /// statusDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StatusDateSpecified {
             get {
                 return statusDateSpecifiedField;
@@ -339,7 +341,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects. 
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -438,7 +440,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CompletionStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the CompletionStatusHistory xsd type.")]
+	[Description("This class represents the CompletionStatusHistory xsd type.")]
     public partial class CompletionStatusHistory : Object, INotifyPropertyChanged
     {
 
@@ -460,11 +462,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CompletionStatus? statusField; 
 
-		/// <summary>
+        /// <summary>
         /// statusSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StatusSpecified {
             get {
                 return statusSpecifiedField;
@@ -495,11 +497,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? startDateField; 
 
-		/// <summary>
+        /// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -530,11 +532,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? endDateField; 
 
-		/// <summary>
+        /// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -551,7 +553,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured bottom of perforation
         /// </summary>
 		[Description("The measured bottom of perforation")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -569,7 +571,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured top of perforation
         /// </summary>
 		[Description("The measured top of perforation")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -587,7 +589,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The description about the status
         /// </summary>
 		[StringLength(4000)]
-		[Description("The description about the status")]
+        [Description("The description about the status")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -652,7 +654,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="measuredDepthCoord", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the measuredDepthCoord xsd type.")]
+	[Description("This class represents the measuredDepthCoord xsd type.")]
     public partial class MeasuredDepthCoord : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -781,14 +783,14 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the abstractMeasure xsd type.")]
+	[Description("This class represents the abstractMeasure xsd type.")]
     public abstract partial class AbstractMeasure : Object, INotifyPropertyChanged
     {
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		
+        
         [XmlText]
         public Double Value {
             get {
@@ -835,7 +837,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="footageEastWest", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the footageEastWest xsd type.")]
+	[Description("This class represents the footageEastWest xsd type.")]
     public partial class FootageEastWest : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -912,7 +914,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="footageNorthSouth", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the footageNorthSouth xsd type.")]
+	[Description("This class represents the footageNorthSouth xsd type.")]
     public partial class FootageNorthSouth : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -989,7 +991,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="wellElevationCoord", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the wellElevationCoord xsd type.")]
+	[Description("This class represents the wellElevationCoord xsd type.")]
     public partial class WellElevationCoord : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1066,7 +1068,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="wellVerticalDepthCoord", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the wellVerticalDepthCoord xsd type.")]
+	[Description("This class represents the wellVerticalDepthCoord xsd type.")]
     public partial class WellVerticalDepthCoord : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1143,7 +1145,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ratioGenericMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the ratioGenericMeasure xsd type.")]
+	[Description("This class represents the ratioGenericMeasure xsd type.")]
     public partial class RatioGenericMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1207,11 +1209,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double numeratorField; 
 
-		/// <summary>
+        /// <summary>
         /// numeratorSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean NumeratorSpecified {
             get {
                 return numeratorSpecifiedField;
@@ -1243,11 +1245,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double denominatorField; 
 
-		/// <summary>
+        /// <summary>
         /// denominatorSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DenominatorSpecified {
             get {
                 return denominatorSpecifiedField;
@@ -1274,7 +1276,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="genericMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the genericMeasure xsd type.")]
+	[Description("This class represents the genericMeasure xsd type.")]
     public partial class GenericMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1333,7 +1335,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="measureOrQuantity", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the measureOrQuantity xsd type.")]
+	[Description("This class represents the measureOrQuantity xsd type.")]
     public partial class MeasureOrQuantity : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1392,7 +1394,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumePerVolumeMeasurePercent", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the volumePerVolumeMeasurePercent xsd type.")]
+	[Description("This class represents the volumePerVolumeMeasurePercent xsd type.")]
     public partial class VolumePerVolumeMeasurePercent : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1451,7 +1453,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="yAxisAzimuth", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the yAxisAzimuth xsd type.")]
+	[Description("This class represents the yAxisAzimuth xsd type.")]
     public partial class YAxisAzimuth : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1515,11 +1517,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private AziRef northDirectionField; 
 
-		/// <summary>
+        /// <summary>
         /// northDirectionSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean NorthDirectionSpecified {
             get {
                 return northDirectionSpecifiedField;
@@ -1546,7 +1548,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumePerVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the volumePerVolumeMeasure xsd type.")]
+	[Description("This class represents the volumePerVolumeMeasure xsd type.")]
     public partial class VolumePerVolumeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1605,7 +1607,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumePerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the volumePerLengthMeasure xsd type.")]
+	[Description("This class represents the volumePerLengthMeasure xsd type.")]
     public partial class VolumePerLengthMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1664,7 +1666,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumeFlowRateMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the volumeFlowRateMeasure xsd type.")]
+	[Description("This class represents the volumeFlowRateMeasure xsd type.")]
     public partial class VolumeFlowRateMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1723,7 +1725,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="volumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the volumeMeasure xsd type.")]
+	[Description("This class represents the volumeMeasure xsd type.")]
     public partial class VolumeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1782,7 +1784,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="velocityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the velocityMeasure xsd type.")]
+	[Description("This class represents the velocityMeasure xsd type.")]
     public partial class VelocityMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1841,7 +1843,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="timeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the timeMeasure xsd type.")]
+	[Description("This class represents the timeMeasure xsd type.")]
     public partial class TimeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1900,7 +1902,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="thermodynamicTemperatureMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the thermodynamicTemperatureMeasure xsd type.")]
+	[Description("This class represents the thermodynamicTemperatureMeasure xsd type.")]
     public partial class ThermodynamicTemperatureMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -1959,7 +1961,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="thermalVolumetricExpansionMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the thermalVolumetricExpansionMeasure xsd type.")]
+	[Description("This class represents the thermalVolumetricExpansionMeasure xsd type.")]
     public partial class ThermalVolumetricExpansionMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2018,7 +2020,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="thermalConductivityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the thermalConductivityMeasure xsd type.")]
+	[Description("This class represents the thermalConductivityMeasure xsd type.")]
     public partial class ThermalConductivityMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2077,7 +2079,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="standardVolumePerTimeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the standardVolumePerTimeMeasure xsd type.")]
+	[Description("This class represents the standardVolumePerTimeMeasure xsd type.")]
     public partial class StandardVolumePerTimeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2136,7 +2138,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="standardVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the standardVolumeMeasure xsd type.")]
+	[Description("This class represents the standardVolumeMeasure xsd type.")]
     public partial class StandardVolumeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2195,7 +2197,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="specificVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the specificVolumeMeasure xsd type.")]
+	[Description("This class represents the specificVolumeMeasure xsd type.")]
     public partial class SpecificVolumeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2254,7 +2256,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="specificHeatCapacityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the specificHeatCapacityMeasure xsd type.")]
+	[Description("This class represents the specificHeatCapacityMeasure xsd type.")]
     public partial class SpecificHeatCapacityMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2313,7 +2315,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="relativePowerMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the relativePowerMeasure xsd type.")]
+	[Description("This class represents the relativePowerMeasure xsd type.")]
     public partial class RelativePowerMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2372,7 +2374,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="pressureMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the pressureMeasure xsd type.")]
+	[Description("This class represents the pressureMeasure xsd type.")]
     public partial class PressureMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2431,7 +2433,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="powerMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the powerMeasure xsd type.")]
+	[Description("This class represents the powerMeasure xsd type.")]
     public partial class PowerMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2490,7 +2492,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="planeAngleMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the planeAngleMeasure xsd type.")]
+	[Description("This class represents the planeAngleMeasure xsd type.")]
     public partial class PlaneAngleMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2549,7 +2551,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="permeabilityRockMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the permeabilityRockMeasure xsd type.")]
+	[Description("This class represents the permeabilityRockMeasure xsd type.")]
     public partial class PermeabilityRockMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2608,7 +2610,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="perLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the perLengthMeasure xsd type.")]
+	[Description("This class represents the perLengthMeasure xsd type.")]
     public partial class PerLengthMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2667,7 +2669,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="momentOfForceMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the momentOfForceMeasure xsd type.")]
+	[Description("This class represents the momentOfForceMeasure xsd type.")]
     public partial class MomentOfForceMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2726,7 +2728,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="massPerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the massPerLengthMeasure xsd type.")]
+	[Description("This class represents the massPerLengthMeasure xsd type.")]
     public partial class MassPerLengthMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2785,7 +2787,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="massMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the massMeasure xsd type.")]
+	[Description("This class represents the massMeasure xsd type.")]
     public partial class MassMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2844,7 +2846,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="massConcentrationMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the massConcentrationMeasure xsd type.")]
+	[Description("This class represents the massConcentrationMeasure xsd type.")]
     public partial class MassConcentrationMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2903,7 +2905,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="magneticInductionMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the magneticInductionMeasure xsd type.")]
+	[Description("This class represents the magneticInductionMeasure xsd type.")]
     public partial class MagneticInductionMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -2962,7 +2964,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="lengthPerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the lengthPerLengthMeasure xsd type.")]
+	[Description("This class represents the lengthPerLengthMeasure xsd type.")]
     public partial class LengthPerLengthMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3021,7 +3023,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="lengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the lengthMeasure xsd type.")]
+	[Description("This class represents the lengthMeasure xsd type.")]
     public partial class LengthMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3080,7 +3082,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="illuminanceMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the illuminanceMeasure xsd type.")]
+	[Description("This class represents the illuminanceMeasure xsd type.")]
     public partial class IlluminanceMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3139,7 +3141,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="forcePerVolumeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the forcePerVolumeMeasure xsd type.")]
+	[Description("This class represents the forcePerVolumeMeasure xsd type.")]
     public partial class ForcePerVolumeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3198,7 +3200,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="forcePerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the forcePerLengthMeasure xsd type.")]
+	[Description("This class represents the forcePerLengthMeasure xsd type.")]
     public partial class ForcePerLengthMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3257,7 +3259,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="forceMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the forceMeasure xsd type.")]
+	[Description("This class represents the forceMeasure xsd type.")]
     public partial class ForceMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3316,7 +3318,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="equivalentPerMassMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the equivalentPerMassMeasure xsd type.")]
+	[Description("This class represents the equivalentPerMassMeasure xsd type.")]
     public partial class EquivalentPerMassMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3375,7 +3377,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="electricPotentialMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the electricPotentialMeasure xsd type.")]
+	[Description("This class represents the electricPotentialMeasure xsd type.")]
     public partial class ElectricPotentialMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3434,7 +3436,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="electricCurrentMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the electricCurrentMeasure xsd type.")]
+	[Description("This class represents the electricCurrentMeasure xsd type.")]
     public partial class ElectricCurrentMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3493,7 +3495,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="dynamicViscosityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the dynamicViscosityMeasure xsd type.")]
+	[Description("This class represents the dynamicViscosityMeasure xsd type.")]
     public partial class DynamicViscosityMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3552,7 +3554,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="dimensionlessMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the dimensionlessMeasure xsd type.")]
+	[Description("This class represents the dimensionlessMeasure xsd type.")]
     public partial class DimensionlessMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3611,7 +3613,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="densityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the densityMeasure xsd type.")]
+	[Description("This class represents the densityMeasure xsd type.")]
     public partial class DensityMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3670,7 +3672,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="compressibilityMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the compressibilityMeasure xsd type.")]
+	[Description("This class represents the compressibilityMeasure xsd type.")]
     public partial class CompressibilityMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3729,7 +3731,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="areaPerAreaMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the areaPerAreaMeasure xsd type.")]
+	[Description("This class represents the areaPerAreaMeasure xsd type.")]
     public partial class AreaPerAreaMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3788,7 +3790,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="areaMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the areaMeasure xsd type.")]
+	[Description("This class represents the areaMeasure xsd type.")]
     public partial class AreaMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3847,7 +3849,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="anglePerTimeMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the anglePerTimeMeasure xsd type.")]
+	[Description("This class represents the anglePerTimeMeasure xsd type.")]
     public partial class AnglePerTimeMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3906,7 +3908,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="anglePerLengthMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the anglePerLengthMeasure xsd type.")]
+	[Description("This class represents the anglePerLengthMeasure xsd type.")]
     public partial class AnglePerLengthMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -3965,7 +3967,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="accelerationLinearMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the accelerationLinearMeasure xsd type.")]
+	[Description("This class represents the accelerationLinearMeasure xsd type.")]
     public partial class AccelerationLinearMeasure : AbstractMeasure, INotifyPropertyChanged
     {
         /// <summary>
@@ -4024,7 +4026,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_commonData", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description(" WITSML - Common Data Component Schema ")]
+	[Description(" WITSML - Common Data Component Schema ")]
     public partial class CommonData : Object, INotifyPropertyChanged
     {
 
@@ -4032,7 +4034,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// An identifier to indicate the data originator. This identifies the server that originally created the object and thus most of the uids in the object (but not necessarily the uids of the parents). This is typically a url. 
         /// </summary>
 		[StringLength(64)]
-		[Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
+        [Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
 		[XmlElement("sourceName")]
         public String SourceName {
             get {
@@ -4064,11 +4066,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? dTimCreationField; 
 
-		/// <summary>
+        /// <summary>
         /// dTimCreationSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DateTimeCreationSpecified {
             get {
                 return dTimCreationSpecifiedField;
@@ -4099,11 +4101,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? dTimLastChangeField; 
 
-		/// <summary>
+        /// <summary>
         /// dTimLastChangeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DateTimeLastChangeSpecified {
             get {
                 return dTimLastChangeSpecifiedField;
@@ -4134,11 +4136,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ItemState? itemStateField; 
 
-		/// <summary>
+        /// <summary>
         /// itemStateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ItemStateSpecified {
             get {
                 return itemStateSpecifiedField;
@@ -4155,7 +4157,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The category of the service related to the creation of the object. For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". 
         /// </summary>
 		[StringLength(40)]
-		[Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\".")]
+        [Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\".")]
 		[XmlElement("serviceCategory")]
         public String ServiceCategory {
             get {
@@ -4173,7 +4175,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Comments and remarks. 
         /// </summary>
 		[StringLength(4000)]
-		[Description("Comments and remarks.")]
+        [Description("Comments and remarks.")]
 		[XmlElement("comments")]
         public String Comments {
             get {
@@ -4191,7 +4193,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The local time zone of the original acquisition date-time values. It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.
         /// </summary>
 		[Description("The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("acquisitionTimeZone")]
         public List<TimestampedTimeZone> AcquisitionTimeZone {
             get {
@@ -4209,7 +4211,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object. Depth coordinates that do not specify a datum attribute shall be assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.
         /// </summary>
 		[Description("A pointer to the default wellDatum for measured depth coordinates, vertical depth coordinates and elevation coordinates in this object.  Depth coordinates that do not specify a datum attribute shall be  assumed to be measured relative to this default vertical datum. The referenced wellDatum must be defined within the well object associated with this object.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("defaultDatum")]
         public RefNameString DefaultDatum {
             get {
@@ -4241,11 +4243,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? privateGroupOnlyField; 
 
-		/// <summary>
+        /// <summary>
         /// privateGroupOnlySpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean PrivateGroupOnlySpecified {
             get {
                 return privateGroupOnlySpecifiedField;
@@ -4279,7 +4281,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -4326,7 +4328,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="timestampedTimeZone", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the timestampedTimeZone xsd type.")]
+	[Description("This class represents the timestampedTimeZone xsd type.")]
     public partial class TimestampedTimeZone : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -4370,11 +4372,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime dTimField; 
 
-		/// <summary>
+        /// <summary>
         /// dTimSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
@@ -4387,10 +4389,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean dTimSpecifiedField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		[RegularExpression("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
+        [RegularExpression("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
         [XmlText]
         public String Value {
             get {
@@ -4437,7 +4439,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="refNameString", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the refNameString xsd type.")]
+	[Description("This class represents the refNameString xsd type.")]
     public partial class RefNameString : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -4480,10 +4482,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidRefField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		
+        
         [XmlText]
         public String Value {
             get {
@@ -4530,7 +4532,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionAny", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("WITSML - Extension Schema. The intent is to allow standard WITSML schema extensions which will validate in older clients or servers. A client or server can ignore any schema that it does not recognize. New versions will modify specific elements to replace this type with a type that adds new elements, including another element with this type.")]
+	[Description("WITSML - Extension Schema. The intent is to allow standard WITSML schema extensions which will validate in older clients or servers. A client or server can ignore any schema that it does not recognize. New versions will modify specific elements to replace this type with a type that adds new elements, including another element with this type.")]
     public partial class ExtensionAny : Object, INotifyPropertyChanged
     {
 
@@ -4584,7 +4586,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
+	[Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
     public partial class ExtensionNameValue : Object, INotifyPropertyChanged
     {
 
@@ -4592,7 +4594,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size. For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the WITSML SIG Technical Team before use.
         /// </summary>
 		[Required]
-		[Description("The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  WITSML SIG Technical Team before use.")]
+        [Description("The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  WITSML SIG Technical Team before use.")]
 		[XmlElement("name")]
         public ExtensionName Name {
             get {
@@ -4610,8 +4612,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The value of the extension. This may also include a uom attribute. The content should conform to constraints defined by the data type.
         /// </summary>
 		[Required]
-		[Description("The value of the extension.  This may also include a uom attribute.  The content should conform to constraints defined by the data type.")]
-		[ComponentElement]
+        [Description("The value of the extension.  This may also include a uom attribute.  The content should conform to constraints defined by the data type.")]
+        [ComponentElement]
 		[XmlElement("value")]
         public Extensionvalue Value {
             get {
@@ -4629,7 +4631,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The underlying XML type of the value.
         /// </summary>
 		[Required]
-		[Description("The underlying XML type of the value.")]
+        [Description("The underlying XML type of the value.")]
 		[XmlElement("dataType")]
         public PrimitiveType? DataType {
             get {
@@ -4661,11 +4663,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? dTimField; 
 
-		/// <summary>
+        /// <summary>
         /// dTimSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
@@ -4682,7 +4684,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured depth associated with the value.
         /// </summary>
 		[Description("The measured depth associated with the value.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
@@ -4714,11 +4716,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? indexField; 
 
-		/// <summary>
+        /// <summary>
         /// indexSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IndexSpecified {
             get {
                 return indexSpecifiedField;
@@ -4749,11 +4751,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private MeasureClass measureClassField; 
 
-		/// <summary>
+        /// <summary>
         /// measureClassSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
@@ -4770,7 +4772,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A textual description of the extension.
         /// </summary>
 		[StringLength(256)]
-		[Description("A textual description of the extension.")]
+        [Description("A textual description of the extension.")]
 		[XmlElement("description")]
         public String Description {
             get {
@@ -4835,7 +4837,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="extensionvalue", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the extensionvalue xsd type.")]
+	[Description("This class represents the extensionvalue xsd type.")]
     public partial class Extensionvalue : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -4880,10 +4882,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uomField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		
+        
         [XmlText]
         public String Value {
             get {
@@ -4930,7 +4932,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_customData", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_customData xsd type.")]
+	[Description("This class represents the cs_customData xsd type.")]
     public partial class CustomData : Object, INotifyPropertyChanged
     {
 
@@ -4984,7 +4986,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="indexedObject", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the indexedObject xsd type.")]
+	[Description("This class represents the indexedObject xsd type.")]
     public partial class IndexedObject : Object, IDataObject, INotifyPropertyChanged
     {
         /// <summary>
@@ -5101,10 +5103,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		[StringLength(40)]
+        [StringLength(40)]
         [XmlText]
         public String Value {
             get {
@@ -5151,7 +5153,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="refObjectString", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the refObjectString xsd type.")]
+	[Description("This class represents the refObjectString xsd type.")]
     public partial class RefObjectString : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -5212,10 +5214,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidRefField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		
+        
         [XmlText]
         public String Value {
             get {
@@ -5262,7 +5264,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_memberObject", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Defines a member of an objectGroup.")]
+	[Description("Defines a member of an objectGroup.")]
     public partial class MemberObject : Object, INotifyPropertyChanged
     {
 
@@ -5270,8 +5272,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A reference to an object that is defined within the context of the specified wellbore.
         /// </summary>
 		[Required]
-		[Description("A reference to an object that is defined within the  context of the specified wellbore.")]
-		[ComponentElement]
+        [Description("A reference to an object that is defined within the  context of the specified wellbore.")]
+        [ComponentElement]
 		[XmlElement("objectReference")]
         public RefObjectString ObjectReference {
             get {
@@ -5303,11 +5305,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private LogIndexType? indexTypeField; 
 
-		/// <summary>
+        /// <summary>
         /// indexTypeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IndexTypeSpecified {
             get {
                 return indexTypeSpecifiedField;
@@ -5324,8 +5326,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.
         /// </summary>
 		[Required]
-		[Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
-		[ComponentElement]
+        [Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
+        [ComponentElement]
 		[XmlElement("sequence1")]
         public ObjectSequence Sequence1 {
             get {
@@ -5377,7 +5379,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
 		[Description("The minimum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("rangeMin")]
         public GenericMeasure RangeMin {
             get {
@@ -5395,7 +5397,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.
         /// </summary>
 		[Description("The maximum growing-object index value that applies to this group. The significance of this range is defined by the groupType.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("rangeMax")]
         public GenericMeasure RangeMax {
             get {
@@ -5427,11 +5429,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? rangeDateTimeMinField; 
 
-		/// <summary>
+        /// <summary>
         /// rangeDateTimeMinSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean RangeDateTimeMinSpecified {
             get {
                 return rangeDateTimeMinSpecifiedField;
@@ -5462,11 +5464,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? rangeDateTimeMaxField; 
 
-		/// <summary>
+        /// <summary>
         /// rangeDateTimeMaxSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean RangeDateTimeMaxSpecified {
             get {
                 return rangeDateTimeMaxSpecifiedField;
@@ -5500,7 +5502,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A measured depth related to this group. This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.
         /// </summary>
 		[Description("A measured depth related to this group.  This does not necessarily represent an actual depth within a growing-object. The significance of this depth is defined by the groupType.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("referenceDepth")]
         public MeasuredDepthCoord ReferenceDepth {
             get {
@@ -5532,11 +5534,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? referenceDateTimeField; 
 
-		/// <summary>
+        /// <summary>
         /// referenceDateTimeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ReferenceDateTimeSpecified {
             get {
                 return referenceDateTimeSpecifiedField;
@@ -5553,7 +5555,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Any extra parameter data related to the group. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
 		[Description("Any extra parameter data related to the group.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("param")]
         public List<IndexedObject> Param {
             get {
@@ -5571,7 +5573,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -5636,7 +5638,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="objectSequence", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the objectSequence xsd type.")]
+	[Description("This class represents the objectSequence xsd type.")]
     public partial class ObjectSequence : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -5679,10 +5681,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String descriptionField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		
+        
         [XmlText]
         public Int16 Value {
             get {
@@ -5729,7 +5731,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_participant", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on WITSML objects used")]
+	[Description("Information on WITSML objects used")]
     public partial class Participant : Object, INotifyPropertyChanged
     {
 
@@ -5737,7 +5739,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of involved participants.
         /// </summary>
 		[Description("A collection of involved participants.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("participant")]
         public List<MemberObject> Participants {
             get {
@@ -5755,7 +5757,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extNameValues")]
         public List<ExtensionNameValue> ExtNameValues {
             get {
@@ -5802,7 +5804,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_nameTag", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("WITSML - Equipment NameTag Schema")]
+	[Description("WITSML - Equipment NameTag Schema")]
     public partial class NameTag : Object, IDataObject, INotifyPropertyChanged
     {
 
@@ -5810,8 +5812,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The physical identification string of the equipment tag.
         /// </summary>
 		[Required]
-		[StringLength(40)]
-		[Description("The physical identification string of the equipment tag.")]
+        [StringLength(40)]
+        [Description("The physical identification string of the equipment tag.")]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -5829,7 +5831,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The format or encoding specification of the equipment tag. The tag may contain may different pieces of information and knowledge of that information is inherent in the specification. The "identification string" is a mandatory part of the information in a tag.
         /// </summary>
 		[Required]
-		[Description("The format or encoding specification of the equipment tag.  The tag may contain may different pieces of information and knowledge of that  information is inherent in the specification.  The \"identification string\" is a mandatory part of the information in a tag.")]
+        [Description("The format or encoding specification of the equipment tag.  The tag may contain may different pieces of information and knowledge of that  information is inherent in the specification.  The \"identification string\" is a mandatory part of the information in a tag.")]
 		[XmlElement("numberingScheme")]
         public NameTagNumberingScheme NumberingScheme {
             get {
@@ -5861,11 +5863,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private NameTagTechnology technologyField; 
 
-		/// <summary>
+        /// <summary>
         /// technologySpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean TechnologySpecified {
             get {
                 return technologySpecifiedField;
@@ -5896,11 +5898,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private NameTagLocation locationField; 
 
-		/// <summary>
+        /// <summary>
         /// locationSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean LocationSpecified {
             get {
                 return locationSpecifiedField;
@@ -5931,11 +5933,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? installationDateField; 
 
-		/// <summary>
+        /// <summary>
         /// installationDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean InstallationDateSpecified {
             get {
                 return installationDateSpecifiedField;
@@ -5952,7 +5954,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The name of the company that installed the tag. 
         /// </summary>
 		[StringLength(64)]
-		[Description("The name of the company that installed the tag.")]
+        [Description("The name of the company that installed the tag.")]
 		[XmlElement("installationCompany")]
         public String InstallationCompany {
             get {
@@ -5970,7 +5972,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Reference to a manufacturers or installers installation description, code, or method. 
         /// </summary>
 		[StringLength(40)]
-		[Description("Reference to a manufacturers or installers installation  description, code, or method.")]
+        [Description("Reference to a manufacturers or installers installation  description, code, or method.")]
 		[XmlElement("mountingCode")]
         public String MountingCode {
             get {
@@ -5988,7 +5990,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A comment or remark about the tag.
         /// </summary>
 		[StringLength(4000)]
-		[Description("A comment or remark about the tag.")]
+        [Description("A comment or remark about the tag.")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -6006,7 +6008,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -6071,7 +6073,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cost", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cost xsd type.")]
+	[Description("This class represents the cost xsd type.")]
     public partial class Cost : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -6114,10 +6116,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String currencyField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		
+        
         [XmlText]
         public Double Value {
             get {
@@ -6164,7 +6166,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dayCost", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description(" WITSML - Day Cost Component Schema ")]
+	[Description(" WITSML - Day Cost Component Schema ")]
     public partial class DayCost : Object, INotifyPropertyChanged
     {
 
@@ -6172,7 +6174,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// AFE number that this cost item applies to. 
         /// </summary>
 		[StringLength(32)]
-		[Description("AFE number that this cost item applies to.")]
+        [Description("AFE number that this cost item applies to.")]
 		[XmlElement("numAFE")]
         public String NumAFE {
             get {
@@ -6190,7 +6192,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Cost group code. 
         /// </summary>
 		[StringLength(16)]
-		[Description("Cost group code.")]
+        [Description("Cost group code.")]
 		[XmlElement("costGroup")]
         public String CostGroup {
             get {
@@ -6208,8 +6210,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Cost class code. 
         /// </summary>
 		[Required]
-		[StringLength(16)]
-		[Description("Cost class code.")]
+        [StringLength(16)]
+        [Description("Cost class code.")]
 		[XmlElement("costClass")]
         public String CostClass {
             get {
@@ -6227,8 +6229,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Cost code. 
         /// </summary>
 		[Required]
-		[StringLength(16)]
-		[Description("Cost code.")]
+        [StringLength(16)]
+        [Description("Cost code.")]
 		[XmlElement("costCode")]
         public String CostCode {
             get {
@@ -6246,7 +6248,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Cost subcode. 
         /// </summary>
 		[StringLength(16)]
-		[Description("Cost subcode.")]
+        [Description("Cost subcode.")]
 		[XmlElement("costSubCode")]
         public String CostSubCode {
             get {
@@ -6264,7 +6266,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Description of cost item. 
         /// </summary>
 		[StringLength(64)]
-		[Description("Description of cost item.")]
+        [Description("Description of cost item.")]
 		[XmlElement("costItemDescription")]
         public String CostItemDescription {
             get {
@@ -6282,7 +6284,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Cost per cost item, assume same currency.
         /// </summary>
 		[Description("Cost per cost item, assume same currency.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("costPerItem")]
         public Cost CostPerItem {
             get {
@@ -6300,7 +6302,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The kind of cost item specified (e.g., rig dayrate, joints casing). 
         /// </summary>
 		[StringLength(24)]
-		[Description("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
+        [Description("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
 		[XmlElement("itemKind")]
         public String ItemKind {
             get {
@@ -6332,11 +6334,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? itemSizeField; 
 
-		/// <summary>
+        /// <summary>
         /// itemSizeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ItemSizeSpecified {
             get {
                 return itemSizeSpecifiedField;
@@ -6367,11 +6369,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? qtyItemField; 
 
-		/// <summary>
+        /// <summary>
         /// qtyItemSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean QtyItemSpecified {
             get {
                 return qtyItemSpecifiedField;
@@ -6388,8 +6390,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Cost for the item for this record. 
         /// </summary>
 		[Required]
-		[Description("Cost for the item for this record.")]
-		[ComponentElement]
+        [Description("Cost for the item for this record.")]
+        [ComponentElement]
 		[XmlElement("costAmount")]
         public Cost CostAmount {
             get {
@@ -6407,7 +6409,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Invoice number for cost item, bill sent to Operator. 
         /// </summary>
 		[StringLength(32)]
-		[Description("Invoice number for cost item, bill sent to Operator.")]
+        [Description("Invoice number for cost item, bill sent to Operator.")]
 		[XmlElement("numInvoice")]
         public String NumInvoice {
             get {
@@ -6425,7 +6427,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Purchase order number, provided by Operator. 
         /// </summary>
 		[StringLength(32)]
-		[Description("Purchase order number, provided by Operator.")]
+        [Description("Purchase order number, provided by Operator.")]
 		[XmlElement("numPO")]
         public String NumPO {
             get {
@@ -6443,7 +6445,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Field Ticket number, issued by service company on location. 
         /// </summary>
 		[StringLength(32)]
-		[Description("Field Ticket number, issued by service company on location.")]
+        [Description("Field Ticket number, issued by service company on location.")]
 		[XmlElement("numTicket")]
         public String NumTicket {
             get {
@@ -6475,11 +6477,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isCarryOverField; 
 
-		/// <summary>
+        /// <summary>
         /// isCarryOverSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsCarryOverSpecified {
             get {
                 return isCarryOverSpecifiedField;
@@ -6510,11 +6512,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isRentalField; 
 
-		/// <summary>
+        /// <summary>
         /// isRentalSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsRentalSpecified {
             get {
                 return isRentalSpecifiedField;
@@ -6531,7 +6533,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("nameTag")]
         public List<NameTag> NameTag {
             get {
@@ -6549,7 +6551,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Serial number. 
         /// </summary>
 		[StringLength(32)]
-		[Description("Serial number.")]
+        [Description("Serial number.")]
 		[XmlElement("numSerial")]
         public String NumSerial {
             get {
@@ -6567,7 +6569,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Name of vendor. 
         /// </summary>
 		[StringLength(32)]
-		[Description("Name of vendor.")]
+        [Description("Name of vendor.")]
 		[XmlElement("nameVendor")]
         public String NameVendor {
             get {
@@ -6585,7 +6587,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Vendor number. 
         /// </summary>
 		[StringLength(16)]
-		[Description("Vendor number.")]
+        [Description("Vendor number.")]
 		[XmlElement("numVendor")]
         public String NumVendor {
             get {
@@ -6603,7 +6605,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Name of pool/reservoir that this cost item can be accounted to. 
         /// </summary>
 		[StringLength(64)]
-		[Description("Name of pool/reservoir that this cost item can be accounted to.")]
+        [Description("Name of pool/reservoir that this cost item can be accounted to.")]
 		[XmlElement("pool")]
         public String Pool {
             get {
@@ -6635,11 +6637,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? estimatedField; 
 
-		/// <summary>
+        /// <summary>
         /// estimatedSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EstimatedSpecified {
             get {
                 return estimatedSpecifiedField;
@@ -6656,7 +6658,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -6721,7 +6723,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_downholeExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on downhole related to this event.")]
+	[Description("Information on downhole related to this event.")]
     public partial class DownholeExtension : Object, INotifyPropertyChanged
     {
 
@@ -6809,7 +6811,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidReportExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on fluid report event.")]
+	[Description("Information on fluid report event.")]
     public partial class FluidReportExtension : Object, INotifyPropertyChanged
     {
 
@@ -6897,7 +6899,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforating", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on the perforating job.")]
+	[Description("Information on the perforating job.")]
     public partial class Perforating : Object, INotifyPropertyChanged
     {
 
@@ -6919,11 +6921,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? stageNumberField; 
 
-		/// <summary>
+        /// <summary>
         /// stageNumberSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StageNumberSpecified {
             get {
                 return stageNumberSpecifiedField;
@@ -7073,11 +7075,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerfConveyanceMethod? conveyanceMethodField; 
 
-		/// <summary>
+        /// <summary>
         /// conveyanceMethodSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ConveyanceMethodSpecified {
             get {
                 return conveyanceMethodSpecifiedField;
@@ -7108,11 +7110,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? shotsPlannedField; 
 
-		/// <summary>
+        /// <summary>
         /// shotsPlannedSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ShotsPlannedSpecified {
             get {
                 return shotsPlannedSpecifiedField;
@@ -7160,11 +7162,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? shotsMisfiredField; 
 
-		/// <summary>
+        /// <summary>
         /// shotsMisfiredSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ShotsMisfiredSpecified {
             get {
                 return shotsMisfiredSpecifiedField;
@@ -7433,11 +7435,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? gunLeftInHoleField; 
 
-		/// <summary>
+        /// <summary>
         /// gunLeftInHoleSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean GunLeftInHoleSpecified {
             get {
                 return gunLeftInHoleSpecifiedField;
@@ -7500,7 +7502,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforatingExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on the perforating event.")]
+	[Description("Information on the perforating event.")]
     public partial class PerforatingExtension : Object, INotifyPropertyChanged
     {
 
@@ -7588,7 +7590,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_waitingOnExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on waiting event.")]
+	[Description("Information on waiting event.")]
     public partial class WaitingOnExtension : Object, INotifyPropertyChanged
     {
 
@@ -7661,11 +7663,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isNoChargeToProducerField; 
 
-		/// <summary>
+        /// <summary>
         /// isNoChargeToProducerSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsNoChargeToProducerSpecified {
             get {
                 return isNoChargeToProducerSpecifiedField;
@@ -7745,7 +7747,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_pressureTestExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on pressure test event.")]
+	[Description("Information on pressure test event.")]
     public partial class PressureTestExtension : Object, INotifyPropertyChanged
     {
 
@@ -7784,11 +7786,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? dTimeNextTestDateField; 
 
-		/// <summary>
+        /// <summary>
         /// dTimeNextTestDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DTimeNextTestDateSpecified {
             get {
                 return dTimeNextTestDateSpecifiedField;
@@ -7853,11 +7855,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isSuccessField; 
 
-		/// <summary>
+        /// <summary>
         /// isSuccessSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsSuccessSpecified {
             get {
                 return isSuccessSpecifiedField;
@@ -8175,7 +8177,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_jobExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on the job event.")]
+	[Description("Information on the job event.")]
     public partial class JobExtension : Object, INotifyPropertyChanged
     {
 
@@ -8297,7 +8299,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_acidizefracExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on fractionation event.")]
+	[Description("Information on fractionation event.")]
     public partial class AcidizefracExtension : Object, INotifyPropertyChanged
     {
 
@@ -8385,7 +8387,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_BHPExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on bottom hole pressure during this event.")]
+	[Description("Information on bottom hole pressure during this event.")]
     public partial class BHPExtension : Object, INotifyPropertyChanged
     {
 
@@ -8473,7 +8475,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_lostCirculationExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on lost circulation event.")]
+	[Description("Information on lost circulation event.")]
     public partial class LostCirculationExtension : Object, INotifyPropertyChanged
     {
 
@@ -8561,7 +8563,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_directionalSurveyExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on directional survey event.")]
+	[Description("Information on directional survey event.")]
     public partial class DirectionalSurveyExtension : Object, INotifyPropertyChanged
     {
 
@@ -8649,7 +8651,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_cleanFillExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on clean fill event.")]
+	[Description("Information on clean fill event.")]
     public partial class CleanFillExtension : Object, INotifyPropertyChanged
     {
 
@@ -8754,7 +8756,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_cementExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on cement job event.")]
+	[Description("Information on cement job event.")]
     public partial class CementExtension : Object, INotifyPropertyChanged
     {
 
@@ -8842,7 +8844,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_eventExtension", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("WITSML - event extension schema")]
+	[Description("WITSML - event extension schema")]
     public partial class EventExtension : Object, INotifyPropertyChanged
     {
 
@@ -9264,7 +9266,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="downholeStringRef", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the downholeStringRef xsd type.")]
+	[Description("This class represents the downholeStringRef xsd type.")]
     public partial class DownholeStringRef : Object, INotifyPropertyChanged
     {
 
@@ -9336,7 +9338,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="boreholeStringRef", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the boreholeStringRef xsd type.")]
+	[Description("This class represents the boreholeStringRef xsd type.")]
     public partial class BoreholeStringRef : Object, INotifyPropertyChanged
     {
 
@@ -9408,7 +9410,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="downholeComponentRef", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the downholeComponentRef xsd type.")]
+	[Description("This class represents the downholeComponentRef xsd type.")]
     public partial class DownholeComponentRef : Object, INotifyPropertyChanged
     {
 
@@ -9513,7 +9515,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="eventType", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the eventType xsd type.")]
+	[Description("This class represents the eventType xsd type.")]
     public partial class EventType : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -9557,11 +9559,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EventClassType classField; 
 
-		/// <summary>
+        /// <summary>
         /// classSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ClassSpecified {
             get {
                 return classSpecifiedField;
@@ -9574,10 +9576,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean classSpecifiedField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		
+        
         [XmlText]
         public String Value {
             get {
@@ -9622,6 +9624,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCMLedger", Namespace="http://www.witsml.org/schemas/1series")]
+	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("This class represents the obj_wellCMLedger xsd type.")]
     public partial class WellCMLedger : Object, IWellboreObject, INotifyPropertyChanged
     {
@@ -9630,7 +9633,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Well name.
         /// </summary>
 		[StringLength(64)]
-		[Description("Well name.")]
+        [Description("Well name.")]
 		[XmlElement("nameWell")]
         public String NameWell {
             get {
@@ -9648,7 +9651,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Wellbore name.
         /// </summary>
 		[StringLength(64)]
-		[Description("Wellbore name.")]
+        [Description("Wellbore name.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
             get {
@@ -9666,7 +9669,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Ledger name.
         /// </summary>
 		[StringLength(64)]
-		[Description("Ledger name.")]
+        [Description("Ledger name.")]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -9684,8 +9687,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Parent event reference id.
         /// </summary>
 		[RegularExpression("[^ ]*")]
-		[StringLength(64)]
-		[Description("Parent event reference id.")]
+        [StringLength(64)]
+        [Description("Parent event reference id.")]
 		[XmlElement("parentEventID")]
         public String ParentEventID {
             get {
@@ -9717,11 +9720,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? dTimStartField; 
 
-		/// <summary>
+        /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
@@ -9752,11 +9755,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? dTimEndField; 
 
-		/// <summary>
+        /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
@@ -9773,7 +9776,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The activity duration (commonly in hours).
         /// </summary>
 		[Description("The activity duration (commonly in hours).")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("duration")]
         public TimeMeasure Duration {
             get {
@@ -9791,7 +9794,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Measured depth at Top of Interval.
         /// </summary>
 		[Description("Measured depth at Top of Interval.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -9809,7 +9812,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Measured depth at bottom of the section.
         /// </summary>
 		[Description("Measured depth at bottom of the section.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -9841,11 +9844,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? eventOrderField; 
 
-		/// <summary>
+        /// <summary>
         /// eventOrderSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EventOrderSpecified {
             get {
                 return eventOrderSpecifiedField;
@@ -9862,7 +9865,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Rig reference id.
         /// </summary>
 		[Description("Rig reference id.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("rigID")]
         public List<String> RigID {
             get {
@@ -9894,11 +9897,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ActivityCode activityCodeField; 
 
-		/// <summary>
+        /// <summary>
         /// activityCodeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ActivityCodeSpecified {
             get {
                 return activityCodeSpecifiedField;
@@ -9915,7 +9918,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Comment on type of this event, either referring to a job type or an activity type e.g. a safety meeting. 
         /// </summary>
 		[Description("Comment on type of this event, either referring to a job type or an  activity type e.g. a safety meeting.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("type")]
         public EventType Type {
             get {
@@ -9947,11 +9950,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isPlanField; 
 
-		/// <summary>
+        /// <summary>
         /// isPlanSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsPlanSpecified {
             get {
                 return isPlanSpecifiedField;
@@ -9968,7 +9971,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extension event for work order id.
         /// </summary>
 		[StringLength(64)]
-		[Description("Extension event for work order id.")]
+        [Description("Extension event for work order id.")]
 		[XmlElement("workOrderID")]
         public String WorkOrderID {
             get {
@@ -9986,7 +9989,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using downholeComponentExtension.
         /// </summary>
 		[Description("this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using downholeComponentExtension.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("downholeComponentRef")]
         public DownholeComponentRef DownholeComponentRef {
             get {
@@ -10004,7 +10007,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Event extensions
         /// </summary>
 		[Description("Event extensions")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("eventExtension")]
         public List<EventExtension> EventExtension {
             get {
@@ -10022,7 +10025,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Service company or business
         /// </summary>
 		[StringLength(64)]
-		[Description("Service company or business")]
+        [Description("Service company or business")]
 		[XmlElement("businessAssociate")]
         public String BusinessAssociate {
             get {
@@ -10040,7 +10043,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Name or information about person responsible who is implementing the service or job.
         /// </summary>
 		[StringLength(64)]
-		[Description("Name or information about person responsible who is implementing the service or job.")]
+        [Description("Name or information about person responsible who is implementing the service or job.")]
 		[XmlElement("responsiblePerson")]
         public String ResponsiblePerson {
             get {
@@ -10058,7 +10061,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Contact name or person to get in touch with. Might not necessarily be the person responsible.
         /// </summary>
 		[StringLength(64)]
-		[Description("Contact name or person to get in touch with. Might not necessarily be the person responsible.")]
+        [Description("Contact name or person to get in touch with. Might not necessarily be the person responsible.")]
 		[XmlElement("contact")]
         public String Contact {
             get {
@@ -10076,7 +10079,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The job or event cost detail.
         /// </summary>
 		[Description("The job or event cost detail.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("cost")]
         public List<DayCost> Cost {
             get {
@@ -10108,11 +10111,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? nonproductiveField; 
 
-		/// <summary>
+        /// <summary>
         /// nonproductiveSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean NonproductiveSpecified {
             get {
                 return nonproductiveSpecifiedField;
@@ -10143,11 +10146,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? troubleField; 
 
-		/// <summary>
+        /// <summary>
         /// troubleSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean TroubleSpecified {
             get {
                 return troubleSpecifiedField;
@@ -10178,11 +10181,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? preventiveMaintenanceField; 
 
-		/// <summary>
+        /// <summary>
         /// preventiveMaintenanceSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean PreventiveMaintenanceSpecified {
             get {
                 return preventiveMaintenanceSpecifiedField;
@@ -10213,11 +10216,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? unplannedField; 
 
-		/// <summary>
+        /// <summary>
         /// unplannedSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean UnplannedSpecified {
             get {
                 return unplannedSpecifiedField;
@@ -10234,7 +10237,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Phase (large activity classification) e.g. Drill Surface Hole.
         /// </summary>
 		[StringLength(40)]
-		[Description("Phase (large activity classification) e.g. Drill Surface Hole.")]
+        [Description("Phase (large activity classification) e.g. Drill Surface Hole.")]
 		[XmlElement("phase")]
         public String Phase {
             get {
@@ -10252,7 +10255,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Participant points to the involved witsmlobjects
         /// </summary>
 		[Description("Participant points to the involved witsmlobjects")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("participant")]
         public Participant Participants {
             get {
@@ -10270,7 +10273,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Comment on this ledger
         /// </summary>
 		[StringLength(4000)]
-		[Description("Comment on this ledger")]
+        [Description("Comment on this ledger")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -10288,7 +10291,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10306,7 +10309,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -10341,7 +10344,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Description of this ledger
         /// </summary>
 		[StringLength(4000)]
-		[Description("Description of this ledger")]
+        [Description("Description of this ledger")]
 		[XmlElement("description")]
         public String Description {
             get {
@@ -10441,7 +10444,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_slotsInterval", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_slotsInterval xsd type.")]
+	[Description("This class represents the cs_slotsInterval xsd type.")]
     public partial class SlotsInterval : Object, INotifyPropertyChanged
     {
 
@@ -10449,7 +10452,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// stringEquipmentRefUID property
         /// </summary>
 		[RegularExpression("[^ ]*")]
-		[StringLength(64)]
+        [StringLength(64)]
 		[XmlElement("stringEquipmentRefUID")]
         public String StringEquipmentRefUID {
             get {
@@ -10467,7 +10470,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -10485,7 +10488,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -10503,7 +10506,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -10521,7 +10524,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -10539,7 +10542,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// intervalStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("intervalStatusHistory")]
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
@@ -10557,7 +10560,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -10592,7 +10595,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10657,7 +10660,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_intervalStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on the status history in the interval")]
+	[Description("Information on the status history in the interval")]
     public partial class IntervalStatusHistory : Object, INotifyPropertyChanged
     {
 
@@ -10679,11 +10682,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PhysicalStatus? physicalStatusField; 
 
-		/// <summary>
+        /// <summary>
         /// physicalStatusSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean PhysicalStatusSpecified {
             get {
                 return physicalStatusSpecifiedField;
@@ -10714,11 +10717,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? startDateField; 
 
-		/// <summary>
+        /// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -10749,11 +10752,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? endDateField; 
 
-		/// <summary>
+        /// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -10770,7 +10773,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured top depth of the interval
         /// </summary>
 		[Description("The measured top depth of the interval")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -10788,7 +10791,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured bottom depth of the interval
         /// </summary>
 		[Description("The measured bottom depth of the interval")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -10806,7 +10809,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// defines the proportional amount of fluid from the well completion that is flowing through this interval whithin a wellbore
         /// </summary>
 		[Range(0, 1)]
-		[Description("defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore")]
+        [Description("defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore")]
 		[XmlElement("allocationFactor")]
         public Double? AllocationFactor {
             get {
@@ -10821,11 +10824,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? allocationFactorField; 
 
-		/// <summary>
+        /// <summary>
         /// allocationFactorSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean AllocationFactorSpecified {
             get {
                 return allocationFactorSpecifiedField;
@@ -10842,7 +10845,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A remark about the interval over this period of time
         /// </summary>
 		[StringLength(4000)]
-		[Description("A remark about the interval over this period of time")]
+        [Description("A remark about the interval over this period of time")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -10907,7 +10910,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_eventInfo", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Event information type")]
+	[Description("Event information type")]
     public partial class EventInfo : Object, INotifyPropertyChanged
     {
 
@@ -10915,7 +10918,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The referencing event was initailized
         /// </summary>
 		[Description("The referencing event was initailized")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("beginEvent")]
         public EventRefInfo BeginEvent {
             get {
@@ -10933,7 +10936,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The referencing event when the even was end
         /// </summary>
 		[Description("The referencing event when the even was end")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("endEvent")]
         public EventRefInfo EndEvent {
             get {
@@ -10951,7 +10954,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -10998,7 +11001,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_eventRefInfo", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Event reference collection")]
+	[Description("Event reference collection")]
     public partial class EventRefInfo : Object, INotifyPropertyChanged
     {
 
@@ -11006,8 +11009,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The referencing eventledger ID
         /// </summary>
 		[RegularExpression("[^ ]*")]
-		[StringLength(64)]
-		[Description("The referencing eventledger ID")]
+        [StringLength(64)]
+        [Description("The referencing eventledger ID")]
 		[XmlElement("eventRefID")]
         public String EventRefID {
             get {
@@ -11039,11 +11042,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? eventDateField; 
 
-		/// <summary>
+        /// <summary>
         /// eventDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EventDateSpecified {
             get {
                 return eventDateSpecifiedField;
@@ -11089,7 +11092,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on collection of perforation status history")]
+	[Description("Information on collection of perforation status history")]
     public partial class PerforationStatusHistory : Object, INotifyPropertyChanged
     {
 
@@ -11111,11 +11114,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerforationStatus? perforationStatusField; 
 
-		/// <summary>
+        /// <summary>
         /// perforationStatusSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean PerforationStatusSpecified {
             get {
                 return perforationStatusSpecifiedField;
@@ -11146,11 +11149,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? startDateField; 
 
-		/// <summary>
+        /// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -11181,11 +11184,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? endDateField; 
 
-		/// <summary>
+        /// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -11202,7 +11205,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured top of perforation
         /// </summary>
 		[Description("The measured top of perforation")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11220,7 +11223,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The measured bottom of perforation
         /// </summary>
 		[Description("The measured bottom of perforation")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11238,7 +11241,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// defines the proportional amount of fluid from the well completion that is flowing through this interval whithin a wellbore
         /// </summary>
 		[Range(0, 1)]
-		[Description("defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore")]
+        [Description("defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore")]
 		[XmlElement("allocationFactor")]
         public Double? AllocationFactor {
             get {
@@ -11253,11 +11256,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? allocationFactorField; 
 
-		/// <summary>
+        /// <summary>
         /// allocationFactorSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean AllocationFactorSpecified {
             get {
                 return allocationFactorSpecifiedField;
@@ -11274,7 +11277,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The description about the status
         /// </summary>
 		[StringLength(4000)]
-		[Description("The description about the status")]
+        [Description("The description about the status")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -11339,7 +11342,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSetInterval", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_perforationSetInterval xsd type.")]
+	[Description("This class represents the cs_perforationSetInterval xsd type.")]
     public partial class PerforationSetInterval : Object, INotifyPropertyChanged
     {
 
@@ -11347,7 +11350,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// perforationSetRefID property
         /// </summary>
 		[RegularExpression("[^ ]*")]
-		[StringLength(64)]
+        [StringLength(64)]
 		[XmlElement("perforationSetRefID")]
         public String PerforationSetRefID {
             get {
@@ -11365,7 +11368,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11383,7 +11386,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11401,7 +11404,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -11419,7 +11422,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -11437,7 +11440,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// perforationStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("perforationStatusHistory")]
         public List<PerforationStatusHistory> PerforationStatusHistory {
             get {
@@ -11455,7 +11458,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -11490,7 +11493,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11555,7 +11558,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_openHoleInterval", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_openHoleInterval xsd type.")]
+	[Description("This class represents the cs_openHoleInterval xsd type.")]
     public partial class OpenHoleInterval : Object, INotifyPropertyChanged
     {
 
@@ -11563,7 +11566,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// boreholeStringRefID property
         /// </summary>
 		[RegularExpression("[^ ]*")]
-		[StringLength(64)]
+        [StringLength(64)]
 		[XmlElement("boreholeStringRefID")]
         public String BoreholeStringRefID {
             get {
@@ -11581,7 +11584,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11599,7 +11602,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11617,7 +11620,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -11635,7 +11638,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -11653,7 +11656,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// intervalStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("intervalStatusHistory")]
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
@@ -11671,7 +11674,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -11706,7 +11709,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11771,7 +11774,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_gravelPackInterval", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_gravelPackInterval xsd type.")]
+	[Description("This class represents the cs_gravelPackInterval xsd type.")]
     public partial class GravelPackInterval : Object, INotifyPropertyChanged
     {
 
@@ -11779,7 +11782,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// downholeStringRefID property
         /// </summary>
 		[RegularExpression("[^ ]*")]
-		[StringLength(64)]
+        [StringLength(64)]
 		[XmlElement("downholeStringRefID")]
         public String DownholeStringRefID {
             get {
@@ -11797,7 +11800,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -11815,7 +11818,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -11833,7 +11836,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth of the top perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -11851,7 +11854,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth of the bottom perforation.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -11869,7 +11872,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// intervalStatusHistory property
         /// </summary>
 		[Description("The contactInterval history information")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("intervalStatusHistory")]
         public List<IntervalStatusHistory> IntervalStatusHistory {
             get {
@@ -11887,7 +11890,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// eventHistory property
         /// </summary>
 		[Description("The contactInterval event information")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("eventHistory")]
         public EventInfo EventHistory {
             get {
@@ -11922,7 +11925,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -11987,7 +11990,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_contactIntervalSet", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on collection of contact intervals")]
+	[Description("Information on collection of contact intervals")]
     public partial class ContactIntervalSet : Object, INotifyPropertyChanged
     {
 
@@ -11995,7 +11998,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// gravelPack interval 
         /// </summary>
 		[Description("gravelPack interval")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("gravelPackInterval")]
         public List<GravelPackInterval> GravelPackInterval {
             get {
@@ -12013,7 +12016,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// cs_openHole interval 
         /// </summary>
 		[Description("cs_openHole interval")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("openHoleInterval")]
         public List<OpenHoleInterval> OpenHoleInterval {
             get {
@@ -12031,7 +12034,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// perforation interval 
         /// </summary>
 		[Description("perforation interval")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("perforationSetInterval")]
         public List<PerforationSetInterval> PerforationSetInterval {
             get {
@@ -12049,7 +12052,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// cs_slots interval 
         /// </summary>
 		[Description("cs_slots interval")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("slotsInterval")]
         public List<SlotsInterval> SlotsInterval {
             get {
@@ -12094,6 +12097,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellboreCompletion", Namespace="http://www.witsml.org/schemas/1series")]
+	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("This class represents the obj_wellboreCompletion xsd type.")]
     public partial class WellboreCompletion : Object, IWellboreObject, INotifyPropertyChanged
     {
@@ -12102,8 +12106,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// nameWell property
         /// </summary>
 		[Required]
-		[StringLength(64)]
-		[Description("Human recognizable context for the well that contains the completion.")]
+        [StringLength(64)]
+        [Description("Human recognizable context for the well that contains the completion.")]
 		[XmlElement("nameWell")]
         public String NameWell {
             get {
@@ -12121,8 +12125,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// nameWellbore property
         /// </summary>
 		[Required]
-		[StringLength(64)]
-		[Description("Human recognizable context for the wellbore that contains the completion.")]
+        [StringLength(64)]
+        [Description("Human recognizable context for the wellbore that contains the completion.")]
 		[XmlElement("nameWellbore")]
         public String NameWellbore {
             get {
@@ -12140,8 +12144,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// nameWellCompletion property
         /// </summary>
 		[Required]
-		[StringLength(64)]
-		[Description("Human recognizable context for the well completion that contains the completion.")]
+        [StringLength(64)]
+        [Description("Human recognizable context for the well completion that contains the completion.")]
 		[XmlElement("nameWellCompletion")]
         public String NameWellCompletion {
             get {
@@ -12159,7 +12163,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// name property
         /// </summary>
 		[StringLength(64)]
-		[Description("Preferred name")]
+        [Description("Preferred name")]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -12177,7 +12181,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// wellboreCompletionNo property
         /// </summary>
 		[StringLength(64)]
-		[Description("CompletionNo, etc API14")]
+        [Description("CompletionNo, etc API14")]
 		[XmlElement("wellboreCompletionNo")]
         public String WellboreCompletionNo {
             get {
@@ -12195,7 +12199,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// wellboreCompletionAlias property
         /// </summary>
 		[StringLength(64)]
-		[Description("Preferred alias name")]
+        [Description("Preferred alias name")]
 		[XmlElement("wellboreCompletionAlias")]
         public String WellboreCompletionAlias {
             get {
@@ -12244,11 +12248,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? wellboreCompletionDateField; 
 
-		/// <summary>
+        /// <summary>
         /// wellboreCompletionDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean WellboreCompletionDateSpecified {
             get {
                 return wellboreCompletionDateSpecifiedField;
@@ -12265,7 +12269,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// suffixAPI property
         /// </summary>
 		[StringLength(64)]
-		[Description("API suffix.")]
+        [Description("API suffix.")]
 		[XmlElement("suffixAPI")]
         public String SuffixAPI {
             get {
@@ -12283,7 +12287,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth at top of interval.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -12301,7 +12305,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth at base of interval.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -12319,7 +12323,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdTop property
         /// </summary>
 		[Description("True vertical depth at top of the section.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdTop")]
         public WellVerticalDepthCoord TvdTop {
             get {
@@ -12337,7 +12341,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// tvdBottom property
         /// </summary>
 		[Description("True vertical depth at bottom of the section.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("tvdBottom")]
         public WellVerticalDepthCoord TvdBottom {
             get {
@@ -12369,11 +12373,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private CompletionStatus? currentStatusField; 
 
-		/// <summary>
+        /// <summary>
         /// currentStatusSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean CurrentStatusSpecified {
             get {
                 return currentStatusSpecifiedField;
@@ -12404,11 +12408,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? statusDateField; 
 
-		/// <summary>
+        /// <summary>
         /// statusDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StatusDateSpecified {
             get {
                 return statusDateSpecifiedField;
@@ -12442,7 +12446,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// contactIntervalSet property
         /// </summary>
 		[Description("A collection of contact interval information")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("contactIntervalSet")]
         public ContactIntervalSet ContactIntervalSet {
             get {
@@ -12460,7 +12464,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -12595,7 +12599,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSet", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_perforationSet xsd type.")]
+	[Description("This class represents the cs_perforationSet xsd type.")]
     public partial class PerforationSet : Object, INotifyPropertyChanged
     {
 
@@ -12804,11 +12808,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? holeCountField; 
 
-		/// <summary>
+        /// <summary>
         /// holeCountSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean HoleCountSpecified {
             get {
                 return holeCountSpecifiedField;
@@ -12839,11 +12843,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? frictionFactorField; 
 
-		/// <summary>
+        /// <summary>
         /// frictionFactorSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean FrictionFactorSpecified {
             get {
                 return frictionFactorSpecifiedField;
@@ -12891,11 +12895,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Double? dischargeCoefficientField; 
 
-		/// <summary>
+        /// <summary>
         /// dischargeCoefficientSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DischargeCoefficientSpecified {
             get {
                 return dischargeCoefficientSpecifiedField;
@@ -12926,11 +12930,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private PerforationToolType? perforationToolField; 
 
-		/// <summary>
+        /// <summary>
         /// perforationToolSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean PerforationToolSpecified {
             get {
                 return perforationToolSpecifiedField;
@@ -13012,11 +13016,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private DateTime? perforationDateField; 
 
-		/// <summary>
+        /// <summary>
         /// perforationDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean PerforationDateSpecified {
             get {
                 return perforationDateSpecifiedField;
@@ -13097,7 +13101,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perfHole", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on the perforated hole")]
+	[Description("Information on the perforated hole")]
     public partial class PerfHole : Object, INotifyPropertyChanged
     {
 
@@ -13255,11 +13259,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? holeCountField; 
 
-		/// <summary>
+        /// <summary>
         /// holeCountSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean HoleCountSpecified {
             get {
                 return holeCountSpecifiedField;
@@ -13339,7 +13343,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perfSlot", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on slot resulting from perforation")]
+	[Description("Information on slot resulting from perforation")]
     public partial class PerfSlot : Object, INotifyPropertyChanged
     {
 
@@ -13412,11 +13416,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? slotCountField; 
 
-		/// <summary>
+        /// <summary>
         /// slotCountSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean SlotCountSpecified {
             get {
                 return slotCountSpecifiedField;
@@ -13496,7 +13500,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extPropNameValue", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Name-value extensions for the equipment property")]
+	[Description("Name-value extensions for the equipment property")]
     public partial class ExtPropNameValue : Object, INotifyPropertyChanged
     {
 
@@ -13567,7 +13571,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipment", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_equipment xsd type.")]
+	[Description("This class represents the cs_equipment xsd type.")]
     public partial class Equipment : Object, INotifyPropertyChanged
     {
 
@@ -13742,11 +13746,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isSerializedField; 
 
-		/// <summary>
+        /// <summary>
         /// isSerializedSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsSerializedSpecified {
             get {
                 return isSerializedSpecifiedField;
@@ -13845,11 +13849,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private GradeType? gradeField; 
 
-		/// <summary>
+        /// <summary>
         /// gradeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean GradeSpecified {
             get {
                 return gradeSpecifiedField;
@@ -13897,11 +13901,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? coatingLinerappliedField; 
 
-		/// <summary>
+        /// <summary>
         /// coatingLinerappliedSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean CoatingLinerappliedSpecified {
             get {
                 return coatingLinerappliedSpecifiedField;
@@ -13932,11 +13936,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Coating? outsideCoatingField; 
 
-		/// <summary>
+        /// <summary>
         /// outsideCoatingSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean OutsideCoatingSpecified {
             get {
                 return outsideCoatingSpecifiedField;
@@ -13967,11 +13971,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Coating? insideCoatingField; 
 
-		/// <summary>
+        /// <summary>
         /// insideCoatingSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean InsideCoatingSpecified {
             get {
                 return insideCoatingSpecifiedField;
@@ -14409,7 +14413,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_geologyFeature", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Geology features found in the location of the borehole string.  ")]
+	[Description("Geology features found in the location of the borehole string.  ")]
     public partial class GeologyFeature : Object, IDataObject, INotifyPropertyChanged
     {
 
@@ -14448,11 +14452,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private GeologyType? geologyTypeField; 
 
-		/// <summary>
+        /// <summary>
         /// geologyTypeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean GeologyTypeSpecified {
             get {
                 return geologyTypeSpecifiedField;
@@ -14618,7 +14622,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_borehole", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on the borehole")]
+	[Description("Information on the borehole")]
     public partial class Borehole : Object, IDataObject, INotifyPropertyChanged
     {
 
@@ -14657,11 +14661,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private BoreholeType? typeBoreholeField; 
 
-		/// <summary>
+        /// <summary>
         /// typeBoreholeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean TypeBoreholeSpecified {
             get {
                 return typeBoreholeSpecifiedField;
@@ -14861,7 +14865,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_boreholeString", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_boreholeString xsd type.")]
+	[Description("This class represents the cs_boreholeString xsd type.")]
     public partial class BoreholeString : Object, IDataObject, INotifyPropertyChanged
     {
 
@@ -15020,7 +15024,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stringEquipment", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_stringEquipment xsd type.")]
+	[Description("This class represents the cs_stringEquipment xsd type.")]
     public partial class StringEquipment : Object, IDataObject, INotifyPropertyChanged
     {
 
@@ -15042,11 +15046,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private EquipmentType? equipmentTypeField; 
 
-		/// <summary>
+        /// <summary>
         /// equipmentTypeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EquipmentTypeSpecified {
             get {
                 return equipmentTypeSpecifiedField;
@@ -15213,11 +15217,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Int16? countField; 
 
-		/// <summary>
+        /// <summary>
         /// countSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean CountSpecified {
             get {
                 return countSpecifiedField;
@@ -15350,11 +15354,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? outsideStringField; 
 
-		/// <summary>
+        /// <summary>
         /// outsideStringSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean OutsideStringSpecified {
             get {
                 return outsideStringSpecifiedField;
@@ -15504,11 +15508,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isLinetoSurfaceField; 
 
-		/// <summary>
+        /// <summary>
         /// isLinetoSurfaceSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsLinetoSurfaceSpecified {
             get {
                 return isLinetoSurfaceSpecifiedField;
@@ -15539,11 +15543,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? isCentralizedField; 
 
-		/// <summary>
+        /// <summary>
         /// isCentralizedSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean IsCentralizedSpecified {
             get {
                 return isCentralizedSpecifiedField;
@@ -15574,11 +15578,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Boolean? hasScratchersField; 
 
-		/// <summary>
+        /// <summary>
         /// hasScratchersSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean HasScratchersSpecified {
             get {
                 return hasScratchersSpecifiedField;
@@ -15797,7 +15801,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_refContainer", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information on containing or contained component  ")]
+	[Description("Information on containing or contained component  ")]
     public partial class RefContainer : Object, INotifyPropertyChanged
     {
 
@@ -15902,7 +15906,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipmentConnection", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information detailing the connection between 2 components")]
+	[Description("Information detailing the connection between 2 components")]
     public partial class EquipmentConnection : Connection, INotifyPropertyChanged
     {
 
@@ -16026,11 +16030,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ConnectionFormType? connectionFormField; 
 
-		/// <summary>
+        /// <summary>
         /// connectionFormSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean ConnectionFormSpecified {
             get {
                 return connectionFormSpecifiedField;
@@ -16093,7 +16097,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_connection", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description(" WITSML - Tubular Connection Component Schema ")]
+	[Description(" WITSML - Tubular Connection Component Schema ")]
     public partial class Connection : Object, INotifyPropertyChanged
     {
 
@@ -16234,11 +16238,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private ConnectionPosition? positionField; 
 
-		/// <summary>
+        /// <summary>
         /// positionSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean PositionSpecified {
             get {
                 return positionSpecifiedField;
@@ -16404,7 +16408,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_downholeString", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the cs_downholeString xsd type.")]
+	[Description("This class represents the cs_downholeString xsd type.")]
     public partial class DownholeString : Object, IDataObject, INotifyPropertyChanged
     {
 
@@ -16412,7 +16416,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// stringType property
         /// </summary>
 		[Required]
-		[Description("An enumeration type defined in equipmentCatelog, the \"DownholeStringEnum\"                     contains valid option of \"case\",\"rod\",\"tubing\", \"otherString\".")]
+        [Description("An enumeration type defined in equipmentCatelog, the \"DownholeStringEnum\"                     contains valid option of \"case\",\"rod\",\"tubing\", \"otherString\".")]
 		[XmlElement("stringType")]
         public DownholeStringType? StringType {
             get {
@@ -16444,11 +16448,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private SubStringType? subStringTypeField; 
 
-		/// <summary>
+        /// <summary>
         /// subStringTypeSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean SubStringTypeSpecified {
             get {
                 return subStringTypeSpecifiedField;
@@ -16465,7 +16469,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// name property
         /// </summary>
 		[StringLength(64)]
-		[Description("The name of downhole string.")]
+        [Description("The name of downhole string.")]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -16497,11 +16501,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? stringInstallDateField; 
 
-		/// <summary>
+        /// <summary>
         /// stringInstallDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StringInstallDateSpecified {
             get {
                 return stringInstallDateSpecifiedField;
@@ -16518,8 +16522,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// parentStringsName property
         /// </summary>
 		[RegularExpression("[^ ]*")]
-		[StringLength(64)]
-		[Description("The name of parent string.")]
+        [StringLength(64)]
+        [Description("The name of parent string.")]
 		[XmlElement("parentStringsName")]
         public String ParentStringsName {
             get {
@@ -16537,7 +16541,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdTop property
         /// </summary>
 		[Description("Measured depth at Top of Interval")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
@@ -16555,7 +16559,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// mdBottom property
         /// </summary>
 		[Description("Measured depth at bottom of the section")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
@@ -16573,7 +16577,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// axisOffset property
         /// </summary>
 		[Description("the distance from the sibling string.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("axisOffset")]
         public LengthMeasure AxisOffset {
             get {
@@ -16591,7 +16595,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// stringEquipmentSet property
         /// </summary>
 		[Description("the list of equipment in the string. each equipment is liner connected and carry the rest of weight")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlArrayItem("stringEquipment")]
         [XmlArray("stringEquipmentSet")]
         public List<StringEquipment> StringEquipmentSet {
@@ -16610,7 +16614,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// accessories property
         /// </summary>
 		[Description("the accessories equipment of the string. It locates in the downhole string, but it is not equipment which liner connected in string (from top to down), and it is not carraying the weight of string")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlArrayItem("accessory")]
         [XmlArray("accessories")]
         public List<StringEquipment> Accessories {
@@ -16646,7 +16650,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// extensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -16745,6 +16749,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_downholeComponent", Namespace="http://www.witsml.org/schemas/1series")]
+	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("The non-contextual content of a WITSML downhole component object.")]
     public partial class DownholeComponent : Object, IWellObject, INotifyPropertyChanged
     {
@@ -16753,8 +16758,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the well.
         /// </summary>
 		[Required]
-		[StringLength(64)]
-		[Description("Human recognizable context for the well.")]
+        [StringLength(64)]
+        [Description("Human recognizable context for the well.")]
 		[XmlElement("nameWell")]
         public String NameWell {
             get {
@@ -16772,8 +16777,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Human recognizable context for the downhole equipment.
         /// </summary>
 		[Required]
-		[StringLength(64)]
-		[Description("Human recognizable context for the downhole equipment.")]
+        [StringLength(64)]
+        [Description("Human recognizable context for the downhole equipment.")]
 		[XmlElement("name")]
         public String Name {
             get {
@@ -16805,11 +16810,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? startDateField; 
 
-		/// <summary>
+        /// <summary>
         /// startDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean StartDateSpecified {
             get {
                 return startDateSpecifiedField;
@@ -16840,11 +16845,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? endDateField; 
 
-		/// <summary>
+        /// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -16861,7 +16866,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// This section contains wellhead information, and is composed of string equipment
         /// </summary>
 		[Description("This section contains wellhead information, and is composed of string equipment")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("wellHead")]
         public DownholeString WellHead {
             get {
@@ -16879,7 +16884,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// This section contains bore hole string information including flow interval 
         /// </summary>
 		[Description("This section contains bore hole string information including flow interval")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlArrayItem("boreholeString")]
         [XmlArray("boreholeStringSet")]
         public List<BoreholeString> BoreholeStringSet {
@@ -16898,7 +16903,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The linear downhole string equipment
         /// </summary>
 		[Description("The linear downhole string equipment")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlArrayItem("downholeString")]
         [XmlArray("downholeStringSet")]
         public List<DownholeString> DownholeStringSet {
@@ -16917,7 +16922,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of equipment / component
         /// </summary>
 		[Description("A collection of equipment / component")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlArrayItem("equipment")]
         [XmlArray("equipmentSet")]
         public List<Equipment> EquipmentSet {
@@ -16936,7 +16941,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of contact interval information
         /// </summary>
 		[Description("A collection of contact interval information")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlArrayItem("perforationSet")]
         [XmlArray("perforationSets")]
         public List<PerforationSet> PerforationSets {
@@ -16955,7 +16960,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A container element that contains elements that are common to all data objects.
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
@@ -17054,7 +17059,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("An event type captures the basic information about an event that has affected the data.")]
+	[Description("An event type captures the basic information about an event that has affected the data.")]
     public partial class DocumentEvent : Object, INotifyPropertyChanged
     {
 
@@ -17194,7 +17199,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
+	[Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
     public partial class DocumentSecurityInfo : Object, INotifyPropertyChanged
     {
 
@@ -17202,7 +17207,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The security class in which this document is classified. Examples would be confidential, partner confidential, tight. The meaning of the class is determined by the System in which it is defined.
         /// </summary>
 		[StringLength(40)]
-		[Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
+        [Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
         public String Class {
             get {
@@ -17220,7 +17225,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The security classification system. This gives context to the meaning of the Class value.
         /// </summary>
 		[StringLength(40)]
-		[Description("The security classification system.  This gives context to the meaning of the Class value.")]
+        [Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
         public String SecuritySystem {
             get {
@@ -17252,11 +17257,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? endDateField; 
 
-		/// <summary>
+        /// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean EndDateSpecified {
             get {
                 return endDateSpecifiedField;
@@ -17273,7 +17278,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A general comment to further define the security class.
         /// </summary>
 		[StringLength(4000)]
-		[Description("A general comment to further define the security  class.")]
+        [Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -17291,7 +17296,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
@@ -17356,7 +17361,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentFileCreation", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("A block of information about the creation of the XML file. This is different than the creation of the data that is included within the file.")]
+	[Description("A block of information about the creation of the XML file. This is different than the creation of the data that is included within the file.")]
     public partial class DocumentFileCreation : Object, INotifyPropertyChanged
     {
 
@@ -17364,7 +17369,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The date and time that the file was created.
         /// </summary>
 		[Required]
-		[Description("The date and time that the file was created.")]
+        [Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
         public Timestamp? FileCreationDate {
             get {
@@ -17382,7 +17387,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
         /// </summary>
 		[StringLength(64)]
-		[Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
+        [Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
         public String SoftwareName {
             get {
@@ -17400,7 +17405,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The person or business associate that created the file.
         /// </summary>
 		[StringLength(64)]
-		[Description("The person or business associate that created  the file.")]
+        [Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
         public String FileCreator {
             get {
@@ -17418,7 +17423,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Any comment that would be useful to further explain the creation of this instance document.
         /// </summary>
 		[StringLength(4000)]
-		[Description("Any comment that would be useful to further  explain the creation of this instance document.")]
+        [Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -17465,7 +17470,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="nameStruct", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("This class represents the nameStruct xsd type.")]
+	[Description("This class represents the nameStruct xsd type.")]
     public partial class NameStruct : Object, INotifyPropertyChanged
     {
         /// <summary>
@@ -17508,10 +17513,10 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String namingSystemField; 
 
-		/// <summary>
+        /// <summary>
         /// Value property
         /// </summary>
-		[StringLength(64)]
+        [StringLength(64)]
         [XmlText]
         public String Value {
             get {
@@ -17558,7 +17563,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentInfo", Namespace="http://www.witsml.org/schemas/1series")]
-    [Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
+	[Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
     public partial class DocumentInfo : Object, INotifyPropertyChanged
     {
 
@@ -17566,8 +17571,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// An identifier for the document. This is intended to be unique within the context of the NamingSystem.
         /// </summary>
 		[Required]
-		[Description("An identifier for the document. This is  intended to be unique within the context of the NamingSystem.")]
-		[ComponentElement]
+        [Description("An identifier for the document. This is  intended to be unique within the context of the NamingSystem.")]
+        [ComponentElement]
 		[XmlElement("documentName")]
         public NameStruct DocumentName {
             get {
@@ -17585,7 +17590,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
         /// </summary>
 		[Description("Zero or more alternate names for the document.  These names do not need to be unique within the naming system.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("documentAlias")]
         public List<NameStruct> DocumentAlias {
             get {
@@ -17617,11 +17622,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private Timestamp? documentDateField; 
 
-		/// <summary>
+        /// <summary>
         /// documentDateSpecified property
         /// </summary>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
         public Boolean DocumentDateSpecified {
             get {
                 return documentDateSpecifiedField;
@@ -17638,7 +17643,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
         /// </summary>
 		[Description("A document class. Examples of classes would be a  metadata classification or a set of keywords.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("documentClass")]
         public List<NameStruct> DocumentClass {
             get {
@@ -17656,7 +17661,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
         /// </summary>
 		[Description("The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("fileCreationInformation")]
         public DocumentFileCreation FileCreationInformation {
             get {
@@ -17674,7 +17679,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the security to be applied to this file. More than one classification can be given.
         /// </summary>
 		[Description("Information about the security to be applied to  this file. More than one classification can be given.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlElement("securityInformation")]
         public List<DocumentSecurityInfo> SecurityInformation {
             get {
@@ -17692,7 +17697,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A free-form string that allows a disclaimer to accompany the information.
         /// </summary>
 		[StringLength(4000)]
-		[Description("A free-form string that allows a disclaimer to  accompany the information.")]
+        [Description("A free-form string that allows a disclaimer to  accompany the information.")]
 		[XmlElement("disclaimer")]
         public String Disclaimer {
             get {
@@ -17710,7 +17715,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// A collection of events that can document the history of the data.
         /// </summary>
 		[Description("A collection of events that can document the  history of the data.")]
-		[RecurringElement]
+        [RecurringElement]
 		[XmlArrayItem("event")]
         [XmlArray("auditTrail")]
         public List<DocumentEvent> AuditTrail {
@@ -17729,7 +17734,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The owner of the data.
         /// </summary>
 		[StringLength(64)]
-		[Description("The owner of the data.")]
+        [Description("The owner of the data.")]
 		[XmlElement("owner")]
         public String Owner {
             get {
@@ -17747,7 +17752,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// An optional comment about the document.
         /// </summary>
 		[StringLength(4000)]
-		[Description("An optional comment about the document.")]
+        [Description("An optional comment about the document.")]
 		[XmlElement("comment")]
         public String Comment {
             get {
@@ -17793,7 +17798,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("wellCompletions", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-    [Description("The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an s to the singular name.")]
+	[Description("The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an s to the singular name.")]
     public partial class WellCompletionList : AbstractObject, IEnergisticsCollection, INotifyPropertyChanged
     {
 
@@ -17801,7 +17806,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the well completion.
         /// </summary>
 		[Description("Information about the well completion.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -17819,8 +17824,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about a wellbore completion.
         /// </summary>
 		[Required]
-		[Description("Information about a wellbore completion.")]
-		[RecurringElement]
+        [Description("Information about a wellbore completion.")]
+        [RecurringElement]
 		[XmlElement("wellCompletion")]
         public List<WellCompletion> WellCompletion {
             get {
@@ -17875,7 +17880,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("wellCMLedgers", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-    [Description("This class represents the obj_wellCMLedgers xsd type.")]
+	[Description("This class represents the obj_wellCMLedgers xsd type.")]
     public partial class WellCMLedgerList : AbstractObject, IEnergisticsCollection, INotifyPropertyChanged
     {
 
@@ -17883,7 +17888,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the event ledger instance.
         /// </summary>
 		[Description("Information about the event ledger instance.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -17901,8 +17906,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The non-contextual elements for general event ledger information.
         /// </summary>
 		[Required]
-		[Description("The non-contextual elements for general event ledger information.")]
-		[RecurringElement]
+        [Description("The non-contextual elements for general event ledger information.")]
+        [RecurringElement]
 		[XmlElement("wellCMLedger")]
         public List<WellCMLedger> WellCMLedger {
             get {
@@ -17957,7 +17962,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("wellboreCompletions", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-    [Description("Information on wellbore completion collection.")]
+	[Description("Information on wellbore completion collection.")]
     public partial class WellboreCompletionList : AbstractObject, IEnergisticsCollection, INotifyPropertyChanged
     {
 
@@ -17965,7 +17970,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the downhole component.
         /// </summary>
 		[Description("Information about the downhole component.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -17983,8 +17988,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Wellbore completion type
         /// </summary>
 		[Required]
-		[Description("Wellbore completion type")]
-		[RecurringElement]
+        [Description("Wellbore completion type")]
+        [RecurringElement]
 		[XmlElement("wellboreCompletion")]
         public List<WellboreCompletion> WellboreCompletion {
             get {
@@ -18039,7 +18044,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("downholeComponents", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-    [Description("This class represents the obj_downholeComponents xsd type.")]
+	[Description("This class represents the obj_downholeComponents xsd type.")]
     public partial class DownholeComponentList : AbstractObject, IEnergisticsCollection, INotifyPropertyChanged
     {
 
@@ -18047,7 +18052,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about the downhole component.
         /// </summary>
 		[Description("Information about the downhole component.")]
-		[ComponentElement]
+        [ComponentElement]
 		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
@@ -18065,8 +18070,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Information about a downhole equipment
         /// </summary>
 		[Required]
-		[Description("Information about a downhole equipment")]
-		[RecurringElement]
+        [Description("Information about a downhole equipment")]
+        [RecurringElement]
 		[XmlElement("downholeComponent")]
         public List<DownholeComponent> DownholeComponent {
             get {

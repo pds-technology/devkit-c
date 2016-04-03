@@ -127,6 +127,8 @@
     <Compile Include="PRODMLWebServiceConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EnergisticsConverter.cs" />
+    <Compile Include="Reflection\EnergisticsDataObjectAttribute.cs" />
+    <Compile Include="Reflection\StandardFamily.cs" />
     <Compile Include="Timestamp.cs" />
     <Compile Include="Validation\ComponentElementAttribute.cs" />
     <Compile Include="Validation\WitsmlValidationResult.cs" />
@@ -167,7 +169,7 @@
     <PostBuildEvent>copy $(TargetDir)Energistics.DataAccess.dll $(SolutionDir)..\DevKit\Assemblies
 copy $(TargetDir)Energistics.DataAccess.xml $(SolutionDir)..\DevKit\Assemblies
 copy $(TargetDir)Energistics.DataAccess.pdb $(SolutionDir)..\DevKit\Assemblies
-xcopy /s /y "$(SolutionDir)packages\HDF5DotNet.x64.1.8.9\lib\net40\*.*"  "$(SolutionDir)..\DevKit\Assemblies"</PostBuildEvent>
+xcopy /s /y "$(SolutionDir)packages\HDF5DotNet.x86.1.8.9\lib\net40\*.*"  "$(SolutionDir)..\DevKit\Assemblies"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

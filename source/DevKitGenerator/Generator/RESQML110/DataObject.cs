@@ -10008,6 +10008,7 @@ namespace Energistics.Generator.RESQML110 {
         private CI_OnLineFunctionCode_PropertyType functionField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public URL_PropertyType linkage {
             get {
                 return this.linkageField;
@@ -10590,6 +10591,7 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CI_RoleCode_PropertyType role {
             get {
                 return this.roleField;
@@ -10695,6 +10697,7 @@ namespace Energistics.Generator.RESQML110 {
         private CI_DateTypeCode_PropertyType dateTypeField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Date_PropertyType date {
             get {
                 return this.dateField;
@@ -10705,6 +10708,7 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CI_DateTypeCode_PropertyType dateType {
             get {
                 return this.dateTypeField;
@@ -10821,6 +10825,7 @@ namespace Energistics.Generator.RESQML110 {
         private CharacterString_PropertyType iSSNField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CharacterString_PropertyType title {
             get {
                 return this.titleField;
@@ -10843,6 +10848,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("date")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CI_Date_PropertyType[] date {
             get {
                 return this.dateField;
@@ -11074,6 +11080,7 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CharacterString_PropertyType code {
             get {
                 return this.codeField;
@@ -11359,6 +11366,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("result")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DQ_Result_PropertyType[] result {
             get {
                 return this.resultField;
@@ -11510,6 +11518,7 @@ namespace Energistics.Generator.RESQML110 {
         private SC_CRS_PropertyType verticalCRSField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Real_PropertyType minimumValue {
             get {
                 return this.minimumValueField;
@@ -11520,6 +11529,7 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Real_PropertyType maximumValue {
             get {
                 return this.maximumValueField;
@@ -11530,6 +11540,7 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SC_CRS_PropertyType verticalCRS {
             get {
                 return this.verticalCRSField;
@@ -12279,6 +12290,7 @@ namespace Energistics.Generator.RESQML110 {
         private TM_Primitive_PropertyType extentField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TM_Primitive_PropertyType extent {
             get {
                 return this.extentField;
@@ -12747,6 +12759,7 @@ namespace Energistics.Generator.RESQML110 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "1.1.0.0")]
     public partial class obj_resqmlDocument {
         
         private dublinCoreString titleField;

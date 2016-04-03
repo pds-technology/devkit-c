@@ -5925,6 +5925,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_wftRun {
         
         private string nameWellField;
@@ -9061,6 +9062,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_wellTest {
         
         private string nameWellField;
@@ -9778,6 +9780,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_timeSeriesStatistic {
         
         private string nameField;
@@ -10350,6 +10353,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_timeSeriesData {
         
         private string nameField;
@@ -18029,6 +18033,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_productVolume {
         
         private nameStruct nameField;
@@ -22527,6 +22532,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_productionOperation {
         
         private nameStruct nameField;
@@ -22861,6 +22867,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_productFlowModel {
         
         private string nameField;
@@ -24887,6 +24894,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_fluidSample {
         
         private string nameField;
@@ -29959,6 +29967,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_fluidAnalysisResult {
         
         private string nameFluidSampleField;
@@ -30553,6 +30562,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_fluidAnalysis {
         
         private string nameField;
@@ -33733,6 +33743,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_fiberOpticalPath {
         
         private string nameField;
@@ -34421,6 +34432,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_dtsMeasurement {
         
         private string nameField;
@@ -34697,6 +34709,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_dtsInstrumentBox {
         
         private grp_dtsInstrumentBox grp_dtsInstrumentBoxField;
@@ -34762,6 +34775,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_dtsInstalledSystem {
         
         private string nameField;
@@ -35792,6 +35806,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("report", Namespace="http://www.prodml.org/schemas/1series", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "1.3.1")]
     public partial class obj_report : abstractObject {
         
         private string kindField;

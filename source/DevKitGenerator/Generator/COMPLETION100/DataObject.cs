@@ -35,6 +35,7 @@ namespace Energistics.Generator.COMPLETION100 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("COMPLETION", "1.0")]
     public partial class obj_wellCompletion {
         
         private string nameWellField;
@@ -8653,6 +8654,7 @@ namespace Energistics.Generator.COMPLETION100 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("COMPLETION", "1.0")]
     public partial class obj_wellCMLedger {
         
         private string nameWellField;
@@ -11249,6 +11251,7 @@ namespace Energistics.Generator.COMPLETION100 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("COMPLETION", "1.0")]
     public partial class obj_wellboreCompletion {
         
         private string nameWellField;
@@ -15978,6 +15981,7 @@ namespace Energistics.Generator.COMPLETION100 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("COMPLETION", "1.0")]
     public partial class obj_downholeComponent {
         
         private string nameWellField;

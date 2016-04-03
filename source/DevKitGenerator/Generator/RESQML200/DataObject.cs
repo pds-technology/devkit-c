@@ -9143,6 +9143,7 @@ namespace Energistics.Generator.RESQML200 {
         private CI_OnLineFunctionCode_PropertyType functionField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public URL_PropertyType linkage {
             get {
                 return this.linkageField;
@@ -9725,6 +9726,7 @@ namespace Energistics.Generator.RESQML200 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CI_RoleCode_PropertyType role {
             get {
                 return this.roleField;
@@ -9830,6 +9832,7 @@ namespace Energistics.Generator.RESQML200 {
         private CI_DateTypeCode_PropertyType dateTypeField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Date_PropertyType date {
             get {
                 return this.dateField;
@@ -9840,6 +9843,7 @@ namespace Energistics.Generator.RESQML200 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CI_DateTypeCode_PropertyType dateType {
             get {
                 return this.dateTypeField;
@@ -9956,6 +9960,7 @@ namespace Energistics.Generator.RESQML200 {
         private CharacterString_PropertyType iSSNField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CharacterString_PropertyType title {
             get {
                 return this.titleField;
@@ -9978,6 +9983,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("date")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CI_Date_PropertyType[] date {
             get {
                 return this.dateField;
@@ -10209,6 +10215,7 @@ namespace Energistics.Generator.RESQML200 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CharacterString_PropertyType code {
             get {
                 return this.codeField;
@@ -10494,6 +10501,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("result")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DQ_Result_PropertyType[] result {
             get {
                 return this.resultField;
@@ -10645,6 +10653,7 @@ namespace Energistics.Generator.RESQML200 {
         private SC_CRS_PropertyType verticalCRSField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Real_PropertyType minimumValue {
             get {
                 return this.minimumValueField;
@@ -10655,6 +10664,7 @@ namespace Energistics.Generator.RESQML200 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Real_PropertyType maximumValue {
             get {
                 return this.maximumValueField;
@@ -10665,6 +10675,7 @@ namespace Energistics.Generator.RESQML200 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SC_CRS_PropertyType verticalCRS {
             get {
                 return this.verticalCRSField;
@@ -11490,6 +11501,7 @@ namespace Energistics.Generator.RESQML200 {
         private TM_Primitive_PropertyType extentField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TM_Primitive_PropertyType extent {
             get {
                 return this.extentField;
@@ -12164,6 +12176,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("MdDatum", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_MdDatum : AbstractResqmlDataObject {
         
         private Point3d locationField;
@@ -12443,6 +12456,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("CategoricalProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_CategoricalProperty : AbstractValuesProperty {
         
         private DataObjectReference lookupField;
@@ -12466,6 +12480,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("DiscreteProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_DiscreteProperty : AbstractValuesProperty {
         
         private string[] minimumValueField;
@@ -12508,6 +12523,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("CommentProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_CommentProperty : AbstractValuesProperty {
         
         private string languageField;
@@ -12533,6 +12549,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("ContinuousProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_ContinuousProperty : AbstractValuesProperty {
         
         private double[] minimumValueField;
@@ -17911,6 +17928,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("PointsProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_PointsProperty : AbstractProperty {
         
         private PatchOfPoints[] patchOfPointsField;
@@ -17935,6 +17953,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("PropertySet", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_PropertySet : AbstractResqmlDataObject {
         
         private TimeSetKind timeSetKindField;
@@ -18049,6 +18068,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("StringTableLookup", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_StringTableLookup : AbstractPropertyLookup {
         
         private StringLookup[] valueField;
@@ -18073,6 +18093,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("DoubleTableLookup", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_DoubleTableLookup : AbstractPropertyLookup {
         
         private DoubleLookup[] valueField;
@@ -18097,6 +18118,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("PropertyKind", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_PropertyKind : AbstractResqmlDataObject {
         
         private string namingSystemField;
@@ -18453,6 +18475,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("Grid2dSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_Grid2dSetRepresentation : AbstractSurfaceRepresentation {
         
         private Grid2dPatch[] grid2dPatchField;
@@ -18477,6 +18500,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("Grid2dRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_Grid2dRepresentation : AbstractSurfaceRepresentation {
         
         private Grid2dPatch grid2dPatchField;
@@ -18500,6 +18524,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("PlaneSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_PlaneSetRepresentation : AbstractSurfaceRepresentation {
         
         private AbstractPlaneGeometry[] planesField;
@@ -18524,6 +18549,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("TriangulatedSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_TriangulatedSetRepresentation : AbstractSurfaceRepresentation {
         
         private TrianglePatch[] trianglePatchField;
@@ -18548,6 +18574,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("PolylineRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_PolylineRepresentation : AbstractRepresentation {
         
         private LineRole lineRoleField;
@@ -18655,6 +18682,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("PolylineSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_PolylineSetRepresentation : AbstractRepresentation {
         
         private LineRole lineRoleField;
@@ -18704,6 +18732,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("PointSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_PointSetRepresentation : AbstractRepresentation {
         
         private NodePatch[] nodePatchField;
@@ -18728,6 +18757,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("WellboreTrajectoryRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_WellboreTrajectoryRepresentation : AbstractRepresentation {
         
         private double startMdField;
@@ -18894,6 +18924,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("WellboreFrameRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_WellboreFrameRepresentation : AbstractRepresentation {
         
         private string nodeCountField;
@@ -18987,6 +19018,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("WellboreMarkerFrameRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_WellboreMarkerFrameRepresentation : obj_WellboreFrameRepresentation {
         
         private WellboreMarker[] wellboreMarkerField;
@@ -19011,6 +19043,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("BlockedWellboreRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_BlockedWellboreRepresentation : obj_WellboreFrameRepresentation {
         
         private string cellCountField;
@@ -19099,6 +19132,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("DeviationSurveyRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_DeviationSurveyRepresentation : AbstractRepresentation {
         
         private DataObjectReference witsmlDeviationSurveyField;
@@ -19270,6 +19304,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("SubRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_SubRepresentation : AbstractRepresentation {
         
         private AdditionalGridTopology additionalGridTopologyField;
@@ -19319,6 +19354,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("RedefinedGeometryRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_RedefinedGeometryRepresentation : AbstractRepresentation {
         
         private PatchOfGeometry[] patchOfGeometryField;
@@ -19360,6 +19396,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("RepresentationSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_RepresentationSetRepresentation : AbstractRepresentation {
         
         private bool isHomogeneousField;
@@ -19399,6 +19436,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("SealedVolumeFrameworkRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_SealedVolumeFrameworkRepresentation : obj_RepresentationSetRepresentation {
         
         private DataObjectReference basedOnField;
@@ -19474,6 +19512,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("SealedSurfaceFrameworkRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_SealedSurfaceFrameworkRepresentation : AbstractSurfaceFrameworkRepresentation {
         
         private SealedContactRepresentationPart[] sealedContactRepresentationField;
@@ -19497,6 +19536,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("NonSealedSurfaceFrameworkRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_NonSealedSurfaceFrameworkRepresentation : AbstractSurfaceFrameworkRepresentation {
         
         private AbstractContactRepresentationPart[] nonSealedContactRepresentationField;
@@ -19520,6 +19560,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GridConnectionSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GridConnectionSetRepresentation : AbstractRepresentation {
         
         private string countField;
@@ -19704,6 +19745,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("IjkGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_IjkGridRepresentation : AbstractColumnLayerGridRepresentation {
         
         private string niField;
@@ -19799,6 +19841,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("UnstructuredColumnLayerGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_UnstructuredColumnLayerGridRepresentation : AbstractColumnLayerGridRepresentation {
         
         private string columnCountField;
@@ -19873,6 +19916,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("TruncatedIjkGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_TruncatedIjkGridRepresentation : AbstractTruncatedColumnLayerGridRepresentation {
         
         private string niField;
@@ -19928,6 +19972,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("TruncatedUnstructuredColumnLayerGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_TruncatedUnstructuredColumnLayerGridRepresentation : AbstractTruncatedColumnLayerGridRepresentation {
         
         private string columnCountField;
@@ -19967,6 +20012,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GpGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GpGridRepresentation : AbstractGridRepresentation {
         
         private GpGridColumnLayerGrid[] columnLayerGridField;
@@ -20003,6 +20049,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("UnstructuredGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_UnstructuredGridRepresentation : AbstractGridRepresentation {
         
         private string cellCountField;
@@ -20041,6 +20088,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("RepresentationIdentitySet", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_RepresentationIdentitySet : AbstractResqmlDataObject {
         
         private RepresentationIdentity[] representationIdentityField;
@@ -20065,6 +20113,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("LocalGridSet", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_LocalGridSet : AbstractResqmlDataObject {
         
         private Activation activationField;
@@ -20101,6 +20150,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicColumn", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_StratigraphicColumn : AbstractResqmlDataObject {
         
         private DataObjectReference[] ranksField;
@@ -20206,6 +20256,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GeologicUnitInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GeologicUnitInterpretation : AbstractFeatureInterpretation {
         
         private GeologicUnitComposition geologicUnitCompositionField;
@@ -20332,6 +20383,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicUnitInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_StratigraphicUnitInterpretation : obj_GeologicUnitInterpretation {
         
         private DepositionMode depositionModeField;
@@ -20418,6 +20470,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GeobodyInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GeobodyInterpretation : obj_GeologicUnitInterpretation {
         
         private Geobody3dShape geobody3dShapeField;
@@ -20496,6 +20549,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("RockFluidUnitInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_RockFluidUnitInterpretation : obj_GeologicUnitInterpretation {
         
         private Phase phaseField;
@@ -20552,6 +20606,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("EarthModelInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_EarthModelInterpretation : AbstractFeatureInterpretation {
         
         private DataObjectReference[] stratigraphicOccurrencesField;
@@ -20614,6 +20669,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("BoundaryFeatureInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_BoundaryFeatureInterpretation : AbstractFeatureInterpretation {
     }
     
@@ -20624,6 +20680,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("HorizonInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_HorizonInterpretation : obj_BoundaryFeatureInterpretation {
         
         private BoundaryRelation[] boundaryRelationField;
@@ -20714,6 +20771,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("FaultInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_FaultInterpretation : obj_BoundaryFeatureInterpretation {
         
         private bool isListricField;
@@ -20801,6 +20859,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GeobodyBoundaryInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GeobodyBoundaryInterpretation : obj_BoundaryFeatureInterpretation {
         
         private BoundaryRelation[] boundaryRelationField;
@@ -20824,6 +20883,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("WellboreInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_WellboreInterpretation : AbstractFeatureInterpretation {
         
         private bool isDrilledField;
@@ -20849,6 +20909,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GenericFeatureInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GenericFeatureInterpretation : AbstractFeatureInterpretation {
     }
     
@@ -20927,6 +20988,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicOccurrenceInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_StratigraphicOccurrenceInterpretation : AbstractStratigraphicOrganizationInterpretation {
         
         private DataObjectReference isOccurrenceOfField;
@@ -20962,6 +21024,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicColumnRankInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_StratigraphicColumnRankInterpretation : AbstractStratigraphicOrganizationInterpretation {
         
         private string indexField;
@@ -21000,6 +21063,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("StructuralOrganizationInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_StructuralOrganizationInterpretation : AbstractOrganizationInterpretation {
         
         private OrderingCriteria orderingCriteriaField;
@@ -21088,6 +21152,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("RockFluidOrganizationInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_RockFluidOrganizationInterpretation : AbstractOrganizationInterpretation {
         
         private RockFluidUnitInterpretationIndex rockFluidUnitIndexField;
@@ -21111,6 +21176,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GlobalChronostratigraphicColumn", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GlobalChronostratigraphicColumn : AbstractResqmlDataObject {
         
         private ChronostratigraphicRank[] chronostratigraphicColumnComponentField;
@@ -21191,6 +21257,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("SeismicLatticeFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_SeismicLatticeFeature : AbstractSeismicSurveyFeature {
         
         private string crosslineCountField;
@@ -21320,6 +21387,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("SeismicLineFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_SeismicLineFeature : AbstractSeismicSurveyFeature {
         
         private string firstTraceIndexField;
@@ -21390,6 +21458,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("SeismicLineSetFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_SeismicLineSetFeature : AbstractSeismicSurveyFeature {
     }
     
@@ -21400,6 +21469,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("WellboreFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_WellboreFeature : AbstractTechnicalFeature {
         
         private WitsmlWellboreReference witsmlWellboreField;
@@ -21422,6 +21492,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("FrontierFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_FrontierFeature : AbstractTechnicalFeature {
     }
     
@@ -21450,6 +21521,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("OrganizationFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_OrganizationFeature : AbstractGeologicFeature {
         
         private OrganizationKind organizationKindField;
@@ -21496,6 +21568,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("BoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_BoundaryFeature : AbstractGeologicFeature {
     }
     
@@ -21506,6 +21579,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("TectonicBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_TectonicBoundaryFeature : obj_BoundaryFeature {
         
         private TectonicBoundaryKind tectonicBoundaryKindField;
@@ -21542,6 +21616,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GeneticBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GeneticBoundaryFeature : obj_BoundaryFeature {
         
         private GeneticBoundaryKind geneticBoundaryKindField;
@@ -21591,6 +21666,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("FluidBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_FluidBoundaryFeature : obj_BoundaryFeature {
         
         private FluidContact fluidContactField;
@@ -21617,6 +21693,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GeologicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GeologicUnitFeature : AbstractGeologicFeature {
     }
     
@@ -21627,6 +21704,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("GeobodyFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_GeobodyFeature : obj_GeologicUnitFeature {
     }
     
@@ -21637,6 +21715,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_StratigraphicUnitFeature : obj_GeologicUnitFeature {
         
         private DataObjectReference chronostratigraphicBottomField;
@@ -21671,6 +21750,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("RockFluidUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_RockFluidUnitFeature : obj_GeologicUnitFeature {
         
         private Phase phaseField;
@@ -21720,6 +21800,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("TimeSeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_TimeSeries : AbstractResqmlDataObject {
         
         private Timestamp[] timeField;
@@ -21921,6 +22002,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("LocalDepth3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_LocalDepth3dCrs : AbstractLocal3dCrs {
     }
     
@@ -21931,6 +22013,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("LocalTime3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public partial class obj_LocalTime3dCrs : AbstractLocal3dCrs {
         
         private TimeUom timeUomField;
@@ -22049,6 +22132,11 @@ namespace Energistics.Generator.RESQML200 {
         private string mimeTypeField;
         
         /// <remarks/>
+        /// <summary>IAMF registered, if one exists, or a free text field. Needs documentation on seismic especially.  MIME type for HDF proxy is : application/x-hdf5 (by RESQML convention).</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("IAMF registered, if one exists, or a free text field. Needs documentation on seis" +
+            "mic especially.  MIME type for HDF proxy is : application/x-hdf5 (by RESQML conv" +
+            "ention).")]
         public string MimeType {
             get {
                 return this.mimeTypeField;

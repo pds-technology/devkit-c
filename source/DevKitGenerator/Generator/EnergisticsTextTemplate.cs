@@ -23,7 +23,7 @@ namespace Energistics.Generator
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+    #line 1 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
     public partial class EnergisticsTextTemplate : EnergisticsTextTemplateBase
     {
@@ -34,14 +34,14 @@ namespace Energistics.Generator
         public virtual string TransformText()
         {
             
-            #line 3 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 3 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(SchemaSetClassCreator.GetLicenseText()));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 18 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 18 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     SchemaSetClassCreator generator = new SchemaSetClassCreator(mlPath, mlVersion, enumClassNames, versionString);
 
@@ -61,29 +61,29 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.");
             
-            #line 32 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 32 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mlVersion));
             
             #line default
             #line hidden
             this.Write(".ComponentSchemas;\r\nusing Energistics.DataAccess.");
             
-            #line 33 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 33 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mlVersion));
             
             #line default
             #line hidden
-            this.Write(".ReferenceData;\r\nusing Energistics.DataAccess.Validation;\r\n\r\nnamespace Energistic" +
-                    "s.DataAccess.");
+            this.Write(".ReferenceData;\r\nusing Energistics.DataAccess.Reflection;\r\nusing Energistics.Data" +
+                    "Access.Validation;\r\n\r\nnamespace Energistics.DataAccess.");
             
-            #line 36 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 37 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mlVersion));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n    #region Classes\r\n");
             
-            #line 39 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 40 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     foreach (Type type in generator.Classes)
     {
@@ -95,7 +95,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    namespace ComponentSchemas \r\n    {\r\n");
             
-            #line 47 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 48 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -104,14 +104,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    /// <summary>\r\n    /// ");
             
-            #line 51 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 52 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type)));
             
             #line default
             #line hidden
             this.Write("\r\n    /// </summary>\r\n");
             
-            #line 53 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 54 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         foreach (XmlIncludeAttribute include in type.GetCustomAttributes(typeof(XmlIncludeAttribute), false))
         {
@@ -121,14 +121,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.Xml.Serialization.XmlIncludeAttribute(typeof(");
             
-            #line 57 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 58 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(include.Type)));
             
             #line default
             #line hidden
             this.Write("))]\r\n");
             
-            #line 58 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 59 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -137,14 +137,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.CodeDom.Compiler.GeneratedCodeAttribute(\"");
             
-            #line 61 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 62 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Assembly.GetExecutingAssembly().GetName().Name));
             
             #line default
             #line hidden
             this.Write("\", \"");
             
-            #line 61 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 62 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Assembly.GetExecutingAssembly().GetName().Version));
             
             #line default
@@ -153,7 +153,7 @@ using Energistics.DataAccess.");
                     "roughAttribute()]\r\n    [System.ComponentModel.DesignerCategoryAttribute(\"code\")]" +
                     "\r\n");
             
-            #line 65 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 66 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     if(generator.GetXmlRootName(type) != null)
     {
@@ -163,28 +163,28 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.Xml.Serialization.XmlTypeAttribute(Namespace=\"");
             
-            #line 69 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 70 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\")]\r\n    [System.Xml.Serialization.XmlRootAttribute(\"");
             
-            #line 70 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 71 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlRootName(type)));
             
             #line default
             #line hidden
             this.Write("\", Namespace=\"");
             
-            #line 70 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 71 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\", IsNullable=false)]\r\n");
             
-            #line 71 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 72 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     }
     else
@@ -195,71 +195,78 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    [System.Xml.Serialization.XmlTypeAttribute(TypeName=\"");
             
-            #line 76 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 77 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.Name));
             
             #line default
             #line hidden
             this.Write("\", Namespace=\"");
             
-            #line 76 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 77 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\")]\r\n");
             
-            #line 77 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 78 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     }
 
             
             #line default
             #line hidden
-            this.Write("    [Description(\"");
+            this.Write("\t");
             
-            #line 80 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 81 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetEnergisticsDataObjectAttribute(type)));
+            
+            #line default
+            #line hidden
+            this.Write("[Description(\"");
+            
+            #line 81 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type).Replace("\"", "")));
             
             #line default
             #line hidden
             this.Write("\")]\r\n    public");
             
-            #line 81 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 82 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.IsAbstract ? " abstract" : string.Empty));
             
             #line default
             #line hidden
             this.Write(" partial class ");
             
-            #line 81 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 82 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type)));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 81 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 82 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))));
             
             #line default
             #line hidden
             
-            #line 81 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 82 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)));
             
             #line default
             #line hidden
             this.Write(", INotifyPropertyChanged\r\n    {\r\n");
             
-            #line 83 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 84 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetConstructor(type)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 84 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 85 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
         
         foreach (var property in type.GetProperties())
         {
@@ -271,16 +278,16 @@ using Energistics.DataAccess.");
             
             #line default
             #line hidden
-            this.Write("\t\t");
+            this.Write("        ");
             
-            #line 92 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 93 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
-            this.Write("\r\n        [XmlIgnore]\r\n\t\t[Browsable(false)]\r\n");
+            this.Write("\r\n        [XmlIgnore]\r\n        [Browsable(false)]\r\n");
             
-            #line 95 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 96 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
                 }
                 else
@@ -290,23 +297,23 @@ using Energistics.DataAccess.");
             
             #line default
             #line hidden
-            this.Write("\t\t");
+            this.Write("        ");
             
-            #line 101 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 102 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
-            this.Write("\r\n\t\t");
+            this.Write("\r\n        ");
             
-            #line 102 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 103 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetValidationAttributes(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n        [XmlText]\r\n");
             
-            #line 104 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 105 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
                 }
 				else if (property.GetCustomAttributes(typeof(XmlElementAttribute), false).Length > 1)
@@ -316,14 +323,14 @@ using Energistics.DataAccess.");
             #line default
             #line hidden
             
-            #line 109 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 110 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.ExpandChoiceAttributes(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 110 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 111 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 				    
 					continue;
 				}
@@ -340,28 +347,28 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        ");
             
-            #line 121 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 122 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n\t\t");
             
-            #line 122 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 123 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetValidationAttributes(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n\t\t");
             
-            #line 123 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 124 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlElementAttrTag(xmlElemAttr, property)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 124 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 125 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
                     }
                     else
@@ -376,48 +383,48 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("\t\t");
             
-            #line 133 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 134 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n\t\t");
             
-            #line 134 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 135 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetValidationAttributes(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n        [XmlAttribute(\"");
             
-            #line 135 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 136 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.IsNullOrEmpty(attribute.AttributeName) ? property.Name : attribute.AttributeName));
             
             #line default
             #line hidden
             this.Write("\"");
             
-            #line 135 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 136 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(attribute.Form.HasFlag(XmlSchemaForm.Qualified) ? ", Form = System.Xml.Schema.XmlSchemaForm.Qualified" : String.Empty));
             
             #line default
             #line hidden
             
-            #line 135 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 136 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.IsNullOrEmpty(attribute.Namespace) ? String.Empty : String.Format(", Namespace = \"{0}\"", attribute.Namespace)));
             
             #line default
             #line hidden
             this.Write(")]\r\n\t\t");
             
-            #line 136 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 137 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetSurrogate(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 137 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 138 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
                       
                         }
                         else
@@ -428,28 +435,28 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        ");
             
-            #line 142 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 143 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n\t\t");
             
-            #line 143 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 144 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetValidationAttributes(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n\t\t");
             
-            #line 144 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 145 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlElementOrXmlArray(type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 145 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 146 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 						}
                     }
                 }
@@ -461,34 +468,34 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        public ");
             
-            #line 151 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 152 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(property.PropertyType)));
             
             #line default
             #line hidden
             
-            #line 151 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 152 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.MakePropertyNullable(property)));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 151 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 152 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameProperty(property)));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 151 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 152 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetGetterSetter(null, type, property)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 152 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 153 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
                 if (generator.IsItemsList(type, property)) {
 
@@ -497,7 +504,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        ");
             
-            #line 155 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 156 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, property.Name)));
             
             #line default
@@ -505,14 +512,14 @@ using Energistics.DataAccess.");
             this.Write("\r\n        [XmlIgnore]\t\t\r\n        public IList Items\r\n        {\r\n\t\t    get\r\n\t\t\t{\r\n" +
                     "\t\t\t    return ");
             
-            #line 161 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 162 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameProperty(property)));
             
             #line default
             #line hidden
             this.Write(";\r\n\t\t\t}\r\n        }\r\n");
             
-            #line 164 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 165 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
 				}
             }
@@ -523,7 +530,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("\r\n");
             
-            #line 170 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 171 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
       if (type.BaseType == typeof(Object)) { 
 
@@ -551,7 +558,7 @@ using Energistics.DataAccess.");
         #endregion INotifyPropertyChanged Members
 ");
             
-            #line 191 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 192 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
   } 
 
@@ -560,7 +567,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    } //here\r\n");
             
-            #line 195 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 196 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         if(!type.Name.StartsWith("obj_") && !type.Name.Equals("abstractObject"))
         {
@@ -570,7 +577,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    }\r\n");
             
-            #line 200 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 201 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -579,7 +586,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("\r\n");
             
-            #line 204 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 205 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     }
 
@@ -588,7 +595,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("    #endregion\r\n\r\n    #region Enumerations\r\n    namespace ReferenceData {\r\n");
             
-            #line 211 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 212 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
     foreach (Type type in generator.Enums)
     {
@@ -600,7 +607,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        /// <summary>\r\n        /// ");
             
-            #line 218 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 219 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type)));
             
             #line default
@@ -609,28 +616,28 @@ using Energistics.DataAccess.");
                     "(\"xsd\", \"4.0.30319.1\")]\r\n        [System.SerializableAttribute()]\r\n        [Syst" +
                     "em.Xml.Serialization.XmlTypeAttribute(Namespace=\"");
             
-            #line 222 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 223 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetXmlNamespace(type)));
             
             #line default
             #line hidden
             this.Write("\")]\r\n        [Description(\"");
             
-            #line 223 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 224 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type).Replace("\"", "")));
             
             #line default
             #line hidden
             this.Write("\")]\r\n        public enum ");
             
-            #line 224 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 225 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type)));
             
             #line default
             #line hidden
             this.Write(" \r\n        {\r\n");
             
-            #line 226 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 227 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         FieldInfo[] fields = type.GetFields(BindingFlags.Static | BindingFlags.GetField | BindingFlags.Public);
 
@@ -644,14 +651,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        ");
             
-            #line 233 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 234 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetDescription(type, field.Name)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 234 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 235 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
             if(enumAttributes.Length > 0)
             {
@@ -662,14 +669,14 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("          [XmlEnum(\"");
             
-            #line 238 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 239 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.IsNullOrEmpty(field.Name) ? field.Name : attribute.Name));
             
             #line default
             #line hidden
             this.Write("\")]\r\n");
             
-            #line 239 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 240 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
             }
 
@@ -678,20 +685,20 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("          ");
             
-            #line 241 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 242 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(generator.GetEnumName(field.Name)));
             
             #line default
             #line hidden
             
-            #line 241 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 242 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(i == fields.Length - 1 ? string.Empty : ","));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 242 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 243 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         }
 
@@ -700,7 +707,7 @@ using Energistics.DataAccess.");
             #line hidden
             this.Write("        }\r\n");
             
-            #line 246 "C:\Projects\Repos\DevKit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
+            #line 247 "C:\projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
         } // end if
     } // end for

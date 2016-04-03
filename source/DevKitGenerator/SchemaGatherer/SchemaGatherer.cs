@@ -74,9 +74,11 @@
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -202,7 +204,11 @@ namespace Energistics.SchemaGatherer
                 enumProdList = GetAppSetting(setName + "_ENUMVALPRODML_PATH");
             string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
             string wsdlPath = GetAppSetting(setName + "_WSDL");
-        
+            string dataSchemaVersion = GetAppSetting(setName + "_VERSION_STRING");
+
+            List<string> dataObjectSchemas = new List<string>();
+            List<string> apiSchemas = new List<string>();
+            List<string> supportingSchemas = new List<string>();        
 
             if( !Directory.Exists(targetFolder) ) {
                 Directory.CreateDirectory(targetFolder);
@@ -212,7 +218,8 @@ namespace Energistics.SchemaGatherer
                 Console.WriteLine("{0} doesn't exist", sourceFolder);
                 return;
             }
-            
+
+            GetSchemas(setName, abstractXsd, enumList, wsdlPath, sourceFolder, dataObjectSchemas, apiSchemas, supportingSchemas);
 
                 string targetXmlFile = targetFolder + @"\out2.xml";                                                
                 string newTypeCatalog = targetFolder + @"\new_typ_catalog.xsd";
@@ -225,44 +232,12 @@ namespace Energistics.SchemaGatherer
                     sw.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
                     sw.WriteLine("<xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>");
                     sw.WriteLine("  <generateClasses language='CS' namespace='" + nameSpace + "'>");
-                    if (!String.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
+                    foreach (string schema in supportingSchemas)
                     {
-                        sw.WriteLine("    <schema>" + abstractXsd + "</schema>");
+                        sw.WriteLine("    <schema>" + schema + "</schema>");
                     }
 
-                    if (setName.StartsWith("RESQML"))
-                    {
-                        if(setName.StartsWith("RESQML1"))
-                        {
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd") + "</schema>"); 
-                            if(enumList.Length>0)
-                                sw.WriteLine("    <schema>" + Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd") + "</schema>"); 
-                        }
-                        else
-                          if(setName.StartsWith("RESQML2"))
-                        { 
-                            // we also need to include all xsd file in common v2.
-                            foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
-                            {
-                                sw.WriteLine("    <schema>" + f + "</schema>");
-                            }
-                        }
-                    }
-                    else if (setName.StartsWith("WITSML2"))
-                    {
-                        // we also need to include all xsd file in common v2.
-                        foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
-                        {
-                            sw.WriteLine("    <schema>" + f + "</schema>");
-                        }
-                    }
-                    else
+                    if (!setName.StartsWith("RESQML") && !setName.StartsWith("WITSML2"))
                     {
                         if(setName.StartsWith("COMPLETION"))
                         {
@@ -274,20 +249,14 @@ namespace Energistics.SchemaGatherer
                         ProcessEnumValuesXml(sourceFolder + @"\typ_catalogProdml.xsd", newTypeCatalogProdml, enumProdList, sw);
                     }
 
-                    if (!String.IsNullOrEmpty(wsdlPath))
+                    foreach (string schema in apiSchemas)
                     {
-                        foreach (string f in Directory.GetFiles(wsdlPath, "obj*.xsd", SearchOption.AllDirectories))
-                        {
-                            sw.WriteLine("    <schema>" + f + "</schema>");
-                        }
+                        sw.WriteLine("    <schema>" + schema + "</schema>");
                     }
 
-                    foreach (string f in Directory.GetFiles(sourceFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
+                    foreach (string schema in dataObjectSchemas)
                     {
-                        if (!f.Contains("obj_coordinateReferenceSystem.xsd"))
-                        {
-                            sw.WriteLine("    <schema>" + f + "</schema>");
-                        }
+                        sw.WriteLine("    <schema>" + schema + "</schema>");
                     }
 
                     sw.WriteLine("  </generateClasses>");
@@ -298,13 +267,78 @@ namespace Energistics.SchemaGatherer
                 bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
                 if (addValidation)
                 {
-                    ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder);
+                    List<string> dataObjects = dataObjectSchemas.Select(x => Path.GetFileNameWithoutExtension(x)).ToList();
+                    
+                    // Strip out numbers from the family name
+                    string standardFamily = Regex.Replace(setName, @"\d", String.Empty);
+
+                    // Strip out anything not a digit or a '.'
+                    dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", String.Empty);
+                    ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects);
                 }
                 else
                 {
                     GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
                 }
             }
+
+        private static void GetSchemas(string setName, string abstractXsd, string enumList, string wsdlPath, string sourceFolder, List<string> dataObjectSchemas, List<string> apiSchemas, List<string> supportingSchemas)
+        {
+            if (!String.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
+            {
+                supportingSchemas.Add(abstractXsd);
+            }
+
+            if (setName.StartsWith("RESQML"))
+            {
+                if (setName.StartsWith("RESQML1"))
+                {
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd"));
+                    if (enumList.Length > 0)
+                        supportingSchemas.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
+                }
+                else
+                    if (setName.StartsWith("RESQML2"))
+                {
+                    // we also need to include all xsd file in common v2.
+                    foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
+                    {
+                        supportingSchemas.Add(f);
+                    }
+                }
+            }
+            else if (setName.StartsWith("WITSML2"))
+            {
+                // we also need to include all xsd file in common v2.
+                foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
+                {
+                    supportingSchemas.Add(f);
+                }
+            }
+
+            if (!String.IsNullOrEmpty(wsdlPath))
+            {
+                foreach (string f in Directory.GetFiles(wsdlPath, "obj*.xsd", SearchOption.AllDirectories))
+                {
+                    apiSchemas.Add(f);
+                }
+            }
+
+            foreach (string f in Directory.GetFiles(sourceFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
+            {
+                if (!f.Contains("obj_coordinateReferenceSystem.xsd"))
+                {
+                    dataObjectSchemas.Add(f);
+                }
+            }
+        }
+
 
         private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
         {

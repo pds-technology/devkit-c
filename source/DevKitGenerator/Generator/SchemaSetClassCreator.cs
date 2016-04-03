@@ -84,6 +84,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Serialization;
+using Energistics.SchemaGatherer;
 
 namespace Energistics.Generator
 {
@@ -1017,6 +1018,24 @@ namespace Energistics.Generator
             }
         }
 
+        /// <summary>
+        /// Get the EnergisticsDataObject attribute string for the specified type.
+        /// </summary>
+        /// <param name="type">The type to create the attribute for.</param>
+        /// <returns>A populated EnergisticsDataObject if the incoming type has this attribute.  The emptry string otherwise.</returns>
+        public string GetEnergisticsDataObjectAttribute(Type type)
+        {
+            bool addValidation = bool.Parse(SchemaGatherer.SchemaGatherer.GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
+            if (!addValidation)
+                return string.Empty;
+
+            var attributes = type.GetCustomAttributes(typeof(EnergisticsDataObjectAttribute), false);
+            if (attributes.Length == 0)
+                return String.Empty;
+
+            var attribute = ((EnergisticsDataObjectAttribute)attributes[0]);
+            return "[" + nameof(EnergisticsDataObjectAttribute) + "(StandardFamily." + attribute.StandardFamily + ", \"" + attribute.DataSchemaVersion + "\")]" + Environment.NewLine + "    ";
+        }
 
         /// <summary>
         /// Gets validation attributes to the property.
@@ -1039,7 +1058,7 @@ namespace Energistics.Generator
             Action init = () =>
             {
                 if (sb.Length > 0)
-                    sb.AppendLine().Append("\t\t");
+                    sb.AppendLine().Append("        ");
             };
 
             var reqs = property.GetCustomAttributes(typeof(RequiredAttribute), false);
@@ -1105,7 +1124,6 @@ namespace Energistics.Generator
 
             return sb.ToString();
         }
-
 
         /// <summary>
         /// Used by ExpandChoiceAttributes

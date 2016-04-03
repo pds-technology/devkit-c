@@ -31,6 +31,7 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.<#=mlVersion#>.ComponentSchemas;
 using Energistics.DataAccess.<#=mlVersion#>.ReferenceData;
+using Energistics.DataAccess.Reflection;
 using Energistics.DataAccess.Validation;
 
 namespace Energistics.DataAccess.<#=mlVersion#>
@@ -77,7 +78,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 <#
     }
 #>
-    [Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
+	<#=generator.GetEnergisticsDataObjectAttribute(type)#>[Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
     public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#><#=generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)#>, INotifyPropertyChanged
     {
 <#=generator.GetConstructor(type)#>
@@ -89,17 +90,17 @@ namespace Energistics.DataAccess.<#=mlVersion#>
                 if(property.GetCustomAttributes(typeof(XmlIgnoreAttribute), false).Length > 0)
                 {
 #>
-		<#=generator.GetDescription(type, property.Name)#>
+        <#=generator.GetDescription(type, property.Name)#>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
 <#
                 }
                 else
                 if(property.GetCustomAttributes(typeof(XmlTextAttribute), false).Length > 0)
                 {
 #>
-		<#=generator.GetDescription(type, property.Name)#>
-		<#=generator.GetValidationAttributes(type, property)#>
+        <#=generator.GetDescription(type, property.Name)#>
+        <#=generator.GetValidationAttributes(type, property)#>
         [XmlText]
 <#
                 }

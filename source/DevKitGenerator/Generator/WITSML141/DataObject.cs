@@ -57,6 +57,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_wellbore {
         
         private string nameWellField;
@@ -6788,6 +6789,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_well {
         
         private string nameField;
@@ -9331,6 +9333,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_wbGeometry {
         
         private string nameWellField;
@@ -15555,6 +15558,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_tubular {
         
         private string nameWellField;
@@ -15881,6 +15885,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_trajectory {
         
         private string nameWellField;
@@ -18638,6 +18643,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_toolErrorTermSet {
         
         private string nameField;
@@ -19378,6 +19384,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_toolErrorModel {
         
         private string nameField;
@@ -19715,6 +19722,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_target {
         
         private string nameWellField;
@@ -20476,6 +20484,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_surveyProgram {
         
         private string nameWellField;
@@ -27595,6 +27604,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_stimJob {
         
         private string nameWellField;
@@ -31060,6 +31070,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_sidewallCore {
         
         private string nameWellField;
@@ -31555,6 +31566,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_risk {
         
         private string nameWellField;
@@ -35911,6 +35923,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_rig {
         
         private string nameWellField;
@@ -41333,6 +41346,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_opsReport {
         
         private string nameWellField;
@@ -46479,6 +46493,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_objectGroup {
         
         private string nameWellField;
@@ -47113,6 +47128,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_mudLog {
         
         private string nameWellField;
@@ -49033,6 +49049,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_message {
         
         private string nameWellField;
@@ -50186,6 +50203,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_log {
         
         private string nameWellField;
@@ -50783,6 +50801,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_formationMarker {
         
         private string nameWellField;
@@ -51129,6 +51148,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_fluidsReport {
         
         private string nameWellField;
@@ -55524,6 +55544,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_drillReport {
         
         private string nameWellField;
@@ -56092,6 +56113,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_convCore {
         
         private string nameWellField;
@@ -56889,6 +56911,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_changeLog {
         
         private string nameWellField;
@@ -60228,6 +60251,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_cementJob {
         
         private string nameWellField;
@@ -61203,6 +61227,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_bhaRun {
         
         private string nameWellField;
@@ -61635,6 +61660,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_attachment {
         
         private string nameWellField;
