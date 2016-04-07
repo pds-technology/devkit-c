@@ -73,6 +73,7 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -99,7 +100,7 @@ namespace Energistics.SchemaGatherer
                 return 1;
             }
 
-            foreach (string set in GetAppSetting("SETS").Split(new Char[] { ',' }))
+            foreach (string set in GetAppSetting("SETS").Split(','))
             {
                 ProcessEnergisticsSchemas(set);
             }
@@ -116,7 +117,7 @@ namespace Energistics.SchemaGatherer
             VerifyPath("ENERGY_ML_GENERATOR_PROJ_PATH");
             VerifyPath("MS_SDK");
 
-            foreach (string setname in GetAppSetting("SETS").Split(new Char[] { ',' }))
+            foreach (string setname in GetAppSetting("SETS").Split(','))
             {
                 
                 String set = setname.Trim();
@@ -202,13 +203,12 @@ namespace Energistics.SchemaGatherer
             string enumProdList ="";
             if(setName.Contains("PRODML"))
                 enumProdList = GetAppSetting(setName + "_ENUMVALPRODML_PATH");
-            string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
-            string wsdlPath = GetAppSetting(setName + "_WSDL");
             string dataSchemaVersion = GetAppSetting(setName + "_VERSION_STRING");
 
             List<string> dataObjectSchemas = new List<string>();
             List<string> apiSchemas = new List<string>();
-            List<string> supportingSchemas = new List<string>();        
+            List<string> supportingSchemas = new List<string>();     
+            Dictionary<string, string> schemaSubstitutions = new Dictionary<string, string>();
 
             if( !Directory.Exists(targetFolder) ) {
                 Directory.CreateDirectory(targetFolder);
@@ -219,72 +219,77 @@ namespace Energistics.SchemaGatherer
                 return;
             }
 
-            GetSchemas(setName, abstractXsd, enumList, wsdlPath, sourceFolder, dataObjectSchemas, apiSchemas, supportingSchemas);
+            GetSchemas(setName, enumList, sourceFolder, dataObjectSchemas, apiSchemas, supportingSchemas, schemaSubstitutions);
 
-                string targetXmlFile = targetFolder + @"\out2.xml";                                                
-                string newTypeCatalog = targetFolder + @"\new_typ_catalog.xsd";
-                string newTypeCatalogProdml = targetFolder + @"\typ_catalogProdml.xsd";
-                
+            string targetXmlFile = targetFolder + @"\out2.xml";
+            string newTypeCatalog = targetFolder + @"\new_typ_catalog.xsd";
+            string newTypeCatalogProdml = targetFolder + @"\typ_catalogProdml.xsd";
 
 
-                using (StreamWriter sw = new StreamWriter(targetXmlFile))
+
+            using (StreamWriter sw = new StreamWriter(targetXmlFile))
+            {
+                sw.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+                sw.WriteLine("<xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>");
+                sw.WriteLine("  <generateClasses language='CS' namespace='" + nameSpace + "'>");
+                foreach (string schema in supportingSchemas)
                 {
-                    sw.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
-                    sw.WriteLine("<xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>");
-                    sw.WriteLine("  <generateClasses language='CS' namespace='" + nameSpace + "'>");
-                    foreach (string schema in supportingSchemas)
-                    {
-                        sw.WriteLine("    <schema>" + schema + "</schema>");
-                    }
-
-                    if (!setName.StartsWith("RESQML") && !setName.StartsWith("WITSML2"))
-                    {
-                        if(setName.StartsWith("COMPLETION"))
-                        {
-                            ProcessEnumValuesXml(sourceFolder + @"\typ_catalogCompletion.xsd", newTypeCatalog, enumList, sw);
-
-                            ProcessEnumValuesXml(sourceFolder + @"\cs_equipmentCatalog.xsd", newTypeCatalog, enumList, sw);
-                        }
-                        ProcessEnumValuesXml(sourceFolder + @"\typ_catalog.xsd", newTypeCatalog, enumList, sw);
-                        ProcessEnumValuesXml(sourceFolder + @"\typ_catalogProdml.xsd", newTypeCatalogProdml, enumProdList, sw);
-                    }
-
-                    foreach (string schema in apiSchemas)
-                    {
-                        sw.WriteLine("    <schema>" + schema + "</schema>");
-                    }
-
-                    foreach (string schema in dataObjectSchemas)
-                    {
-                        sw.WriteLine("    <schema>" + schema + "</schema>");
-                    }
-
-                    sw.WriteLine("  </generateClasses>");
-                    sw.WriteLine("</xsd>");
-                
+                    sw.WriteLine("    <schema>" + schema + "</schema>");
                 }
 
-                bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
-                if (addValidation)
+                if (!setName.StartsWith("RESQML") && !setName.StartsWith("WITSML2"))
                 {
-                    List<string> dataObjects = dataObjectSchemas.Select(x => Path.GetFileNameWithoutExtension(x)).ToList();
-                    
-                    // Strip out numbers from the family name
-                    string standardFamily = Regex.Replace(setName, @"\d", String.Empty);
+                    if (setName.StartsWith("COMPLETION"))
+                    {
+                        ProcessEnumValuesXml(sourceFolder + @"\typ_catalogCompletion.xsd", newTypeCatalog, enumList, sw);
 
-                    // Strip out anything not a digit or a '.'
-                    dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", String.Empty);
-                    ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects);
+                        ProcessEnumValuesXml(sourceFolder + @"\cs_equipmentCatalog.xsd", newTypeCatalog, enumList, sw);
+                    }
+                    ProcessEnumValuesXml(sourceFolder + @"\typ_catalog.xsd", newTypeCatalog, enumList, sw);
+                    ProcessEnumValuesXml(sourceFolder + @"\typ_catalogProdml.xsd", newTypeCatalogProdml, enumProdList, sw);
+                    schemaSubstitutions.Add(newTypeCatalog, sourceFolder + @"\typ_catalog.xsd");
+                    schemaSubstitutions.Add(newTypeCatalogProdml, sourceFolder + @"\typ_catalogProdml.xsd");
                 }
-                else
+
+                foreach (string schema in apiSchemas)
                 {
-                    GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
+                    sw.WriteLine("    <schema>" + schema + "</schema>");
                 }
+
+                foreach (string schema in dataObjectSchemas)
+                {
+                    sw.WriteLine("    <schema>" + schema + "</schema>");
+                }
+
+                sw.WriteLine("  </generateClasses>");
+                sw.WriteLine("</xsd>");
+
             }
 
-        private static void GetSchemas(string setName, string abstractXsd, string enumList, string wsdlPath, string sourceFolder, List<string> dataObjectSchemas, List<string> apiSchemas, List<string> supportingSchemas)
+            bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
+            if (addValidation)
+            {
+                List<string> dataObjects = dataObjectSchemas.Select(Path.GetFileNameWithoutExtension).ToList();
+
+                // Strip out numbers from the family name
+                string standardFamily = Regex.Replace(setName, @"\d", string.Empty);
+
+                // Strip out anything not a digit or a '.'
+                dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
+                ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
+            }
+            else
+            {
+                GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
+            }
+        }
+
+        private static void GetSchemas(string setName, string enumList, string sourceFolder, List<string> dataObjectSchemas, List<string> apiSchemas, List<string> supportingSchemas, Dictionary<string, string> schemaSubstitutions)
         {
-            if (!String.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
+            string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
+            string wsdlPath = GetAppSetting(setName + "_WSDL");
+
+            if (!string.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
             {
                 supportingSchemas.Add(abstractXsd);
             }
@@ -295,7 +300,10 @@ namespace Energistics.SchemaGatherer
                 {
                     supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd"));
                     if (enumList.Length > 0)
+                    {
                         supportingSchemas.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"));
+                        schemaSubstitutions.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"), sourceFolder + @"\typ_catalog.xsd");
+                    }
                     supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
                     supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
                     supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
@@ -322,7 +330,7 @@ namespace Energistics.SchemaGatherer
                 }
             }
 
-            if (!String.IsNullOrEmpty(wsdlPath))
+            if (!string.IsNullOrEmpty(wsdlPath))
             {
                 foreach (string f in Directory.GetFiles(wsdlPath, "obj*.xsd", SearchOption.AllDirectories))
                 {
@@ -385,7 +393,7 @@ namespace Energistics.SchemaGatherer
                 }
             }
         }
-        
+
 
         /// <summary>
         /// Parses enumValues.xml and inserts the values into typ_catalog.xsd
@@ -396,58 +404,57 @@ namespace Energistics.SchemaGatherer
         /// <param name="sw">StreamWriter to write results to</param>
         private static void ProcessEnumValuesXml(string typeCatalog, string newTypeCatalog, string enumList, StreamWriter sw)
         {
-            if (File.Exists(typeCatalog))
+            if (!File.Exists(typeCatalog)) return;
+
+            string contents = File.ReadAllText(typeCatalog);
+
+            string restrictString = "<xsd:restriction base=\"witsml:abstractTypeEnum\">";
+            if (!contents.Contains(restrictString))
             {
-                string contents = File.ReadAllText(typeCatalog);
-
-                string restrictString = "<xsd:restriction base=\"witsml:abstractTypeEnum\">";
-                if (!contents.Contains(restrictString))
-                {
-                    restrictString = restrictString.Replace("witsml", "prodml");
-                }
-
-                contents = contents.Replace(restrictString.Substring(0, restrictString.Length - 1) + "/>", restrictString + "\n\t\t</xsd:restriction>");
-
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(enumList);
-
-                XmlNodeList nodes = xmlDoc.GetElementsByTagName("enumList");
-                foreach (XmlNode node in nodes)
-                {
-                    string name = node["name"].InnerText;
-
-                    StringBuilder restriction = new StringBuilder();
-                    foreach (XmlNode attr in node.ChildNodes)
-                    {
-                        if (attr.Name == "value")
-                        {
-                            string valName = attr["name"].InnerText;
-                            string valDesc = (attr["description"] != null) ? attr["description"].InnerText : String.Empty;
-                            valDesc = valDesc.Replace("&", "&amp;");
-                            valDesc = valDesc.Replace("<", "&lt;");
-                            valDesc = valDesc.Replace(">", "&gt;");
-
-                            restriction.AppendLine(String.Format("\t\t\t<xsd:enumeration value=\"{0}\">", valName));
-                            restriction.AppendLine("\t\t\t\t<xsd:annotation>");
-                            restriction.AppendLine(String.Format("\t\t\t\t\t<xsd:documentation>{0}</xsd:documentation>", valDesc));
-                            restriction.AppendLine("\t\t\t\t</xsd:annotation>");
-                            restriction.AppendLine("\t\t\t</xsd:enumeration>");
-                        }
-                    }
-
-                    int simpleTypeLoc = contents.IndexOf(String.Format("<xsd:simpleType name=\"{0}\"", name));
-                    if (simpleTypeLoc >= 0)
-                    {
-                        int locRestrictString = contents.IndexOf(restrictString, simpleTypeLoc);
-                        contents = contents.Insert(locRestrictString + restrictString.Length + 2, restriction.ToString());
-                    }
-
-                }
-
-                File.WriteAllText(newTypeCatalog, contents);
-
-                sw.WriteLine("    <schema>" + newTypeCatalog + "</schema>");
+                restrictString = restrictString.Replace("witsml", "prodml");
             }
+
+            contents = contents.Replace(restrictString.Substring(0, restrictString.Length - 1) + "/>", restrictString + "\n\t\t</xsd:restriction>");
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(enumList);
+
+            XmlNodeList nodes = xmlDoc.GetElementsByTagName("enumList");
+            foreach (XmlNode node in nodes)
+            {
+                string name = node["name"].InnerText;
+
+                StringBuilder restriction = new StringBuilder();
+                foreach (XmlNode attr in node.ChildNodes)
+                {
+                    if (attr.Name == "value")
+                    {
+                        string valName = attr["name"].InnerText;
+                        string valDesc = (attr["description"] != null) ? attr["description"].InnerText : String.Empty;
+                        valDesc = valDesc.Replace("&", "&amp;");
+                        valDesc = valDesc.Replace("<", "&lt;");
+                        valDesc = valDesc.Replace(">", "&gt;");
+
+                        restriction.AppendLine(String.Format("\t\t\t<xsd:enumeration value=\"{0}\">", valName));
+                        restriction.AppendLine("\t\t\t\t<xsd:annotation>");
+                        restriction.AppendLine(String.Format("\t\t\t\t\t<xsd:documentation>{0}</xsd:documentation>", valDesc));
+                        restriction.AppendLine("\t\t\t\t</xsd:annotation>");
+                        restriction.AppendLine("\t\t\t</xsd:enumeration>");
+                    }
+                }
+
+                int simpleTypeLoc = contents.IndexOf(String.Format("<xsd:simpleType name=\"{0}\"", name));
+                if (simpleTypeLoc >= 0)
+                {
+                    int locRestrictString = contents.IndexOf(restrictString, simpleTypeLoc);
+                    contents = contents.Insert(locRestrictString + restrictString.Length + 2, restriction.ToString());
+                }
+
+            }
+
+            File.WriteAllText(newTypeCatalog, contents);
+
+            sw.WriteLine("    <schema>" + newTypeCatalog + "</schema>");
         }
     }
 }

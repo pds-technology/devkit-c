@@ -25,16 +25,16 @@ namespace Energistics.SchemaGatherer
         /// Generates the data objects with code DOM.
         /// </summary>
         /// <param name="targetFolder">The target folder.</param>
-        /// <param name="targetXmlFile">The target XML file.</param>
+        /// <param name="targetXmlFile">The target XML file specifying the list of top-level schemas to process.</param>
         /// <param name="nameSpace">The name space.</param>
-        /// <param name="sourceFolder">The source folder.</param>
+        /// <param name="dataSchemaRootFolder">The root folder for the data schemas.</param>
         /// <param name="standardFamily">The standard family.</param>
         /// <param name="dataSchemaVersion">The data schema version.</param>
         /// <param name="dataObjects">The data objects.</param>
-        public static void GenerateDataObjectsWithCodeDom(string targetFolder, string targetXmlFile, string nameSpace, string sourceFolder, string standardFamily, string dataSchemaVersion, List<string> dataObjects)
+        /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the top-level schemas are to be substituted for.</param>
+        public static void GenerateDataObjectsWithCodeDom(string targetFolder, string targetXmlFile, string nameSpace, string dataSchemaRootFolder, string standardFamily, string dataSchemaVersion, List<string> dataObjects, Dictionary<string, string> schemaSubstitutions)
         {
-            var includeSchemas = new Dictionary<string, XmlSchema>();
-            var schemas = CompileXmlSchemas(targetXmlFile, sourceFolder, includeSchemas);
+            var schemas = LoadAndCompileAllSchemas(targetXmlFile, dataSchemaRootFolder, schemaSubstitutions);
 
             var codeProvider = CodeDomProvider.CreateProvider("CS");
             var codeNamespace = new CodeNamespace(nameSpace);
@@ -54,11 +54,6 @@ namespace Energistics.SchemaGatherer
             UpdateGeneratedCodeAttribute(exporter, version);
 
             foreach (XmlSchema schema in schemas)
-            {
-                ImportXmlSchema(schema, importer, exporter);
-            }
-
-            foreach (XmlSchema schema in includeSchemas.Values)
             {
                 ImportXmlSchema(schema, importer, exporter);
             }
@@ -95,163 +90,220 @@ namespace Energistics.SchemaGatherer
             }
         }
 
-        private static XmlSchemas CompileXmlSchemas(string targetXmlFile, string sourceFolder, Dictionary<string, XmlSchema> includeSchemas)
+        /// <summary>
+        /// Gets the paths to top level schemas in the specified XML file.
+        /// </summary>
+        /// <param name="targetXmlFile">The target XML file.</param>
+        /// <returns>The list of distinct top-level schema paths.</returns>
+        private static IEnumerable<string> GetTopLevelSchemaPaths(string targetXmlFile)
         {
-            var ns = XNamespace.Get("http://microsoft.com/dotnet/tools/xsd/");
             var doc = XDocument.Load(targetXmlFile);
+            if (doc.Root == null) return null;
 
-            var schemaUris = new Dictionary<XmlSchema, string>();
-            var files = new List<string>();
-            var schemas = new XmlSchemas();
+            var ns = XNamespace.Get("http://microsoft.com/dotnet/tools/xsd/");
+            var elements = doc.Root.Elements(ns + "generateClasses");
 
-            foreach (var schema in doc.Root.Element(ns + "generateClasses").Elements(ns + "schema"))
-            {
-                var path = schema.Value.ToLowerInvariant();
-
-                if (files.Contains(path))
-                {
-                    continue;
-                }
-
-                using (var stream = File.OpenRead(path))
-                {
-                    var xsd = XmlSchema.Read(stream, null);
-                    schemas.Add(xsd, new Uri(path));
-                    includeSchemas.Add(path, xsd);
-                    schemaUris.Add(xsd, path);
-                    files.Add(path);
-
-                    if (path.EndsWith("typ_catalog.xsd"))
-                    {
-                        path = Path.Combine(sourceFolder, "typ_catalog.xsd").ToLowerInvariant();
-                        includeSchemas.Add(path, xsd);
-                        schemaUris[xsd] = path;
-                    }
-                    if (path.EndsWith("typ_catalogprodml.xsd"))
-                    {
-                        path = Path.Combine(sourceFolder, "typ_catalogprodml.xsd").ToLowerInvariant();
-                        includeSchemas.Add(path, xsd);
-                        schemaUris[xsd] = path;
-                    }
-                }
-            }
-
-            foreach (XmlSchema schema in schemas)
-            {
-                if (String.IsNullOrWhiteSpace(schema.TargetNamespace))
-                {
-                    schema.TargetNamespace = null;
-                }
-
-                var uri = schemaUris[schema];
-                LoadSchemaIncludes(schema, includeSchemas, sourceFolder, uri);
-            }
-
-            schemas.Compile(null, true);
-
-            return schemas;
+            return
+                elements.Elements(ns + "schema")
+                    .Select(schema => schema.Value.ToLowerInvariant()).Distinct();
         }
 
-        private static void LoadSchemaIncludes(XmlSchema schema, Dictionary<string, XmlSchema> includeSchemas, string sourceFolder, string topPath)
+        /// <summary>
+        /// Loads the schema from the specified path and sets its SourceUri.
+        /// </summary>
+        /// <param name="schemaPath">The path to the schema to load.</param>
+        /// <returns>The loaded schema.</returns>
+        private static XmlSchema LoadSchema(string schemaPath)
         {
-            foreach (XmlSchemaExternal include in schema.Includes)
+            using (var stream = File.OpenRead(schemaPath))
             {
-                var location = include.SchemaLocation;
+                var schema = XmlSchema.Read(stream, null);
+                schema.SourceUri = Path.GetFullPath(schemaPath).ToLowerInvariant();
 
-                if ((include is XmlSchemaImport) || string.IsNullOrWhiteSpace(location))
-                {
-                    continue;
-                }
-
-                var lower = Path.Combine(Path.GetDirectoryName(topPath), location).ToLowerInvariant();
-
-                if (!File.Exists(lower))
-                {
-                    lower = Path.Combine(sourceFolder, location).ToLowerInvariant();
-                }
-
-                if (lower == topPath)
-                {
-                    include.Schema = new XmlSchema
-                    {
-                        TargetNamespace = schema.TargetNamespace
-                    };
-                    include.SchemaLocation = null;
-                    return;
-                }
-
-                XmlSchema item;
-
-                if (!includeSchemas.TryGetValue(lower, out item) && File.Exists(lower))
-                {
-                    using (var stream = File.OpenRead(lower))
-                    {
-                        item = XmlSchema.Read(stream, null);
-                        includeSchemas.Add(lower, item);
-                        LoadSchemaIncludes(item, includeSchemas, sourceFolder, topPath);
-                    }
-                }
-
-                if (includeSchemas.TryGetValue(lower, out item))
-                {
-                    include.Schema = item;
-                    include.SchemaLocation = null;
-                }
+                return schema;
             }
         }
 
-        private static void AddValidationAttributes(CodeNamespace codeNamespace, IEnumerable<XmlSchema> schemas, string standardFamily, string dataSchemaVersion, List<string> dataObjects)
+        /// <summary>
+        /// Loads the top level schemas from the specified XML file.
+        /// </summary>
+        /// <param name="targetXmlFile">The target XML file specifying the list of top-level schemas to process.</param>
+        /// <returns>A collection of the loaded top-level schemas.</returns>
+        private static XmlSchemas LoadTopLevelSchemas(string targetXmlFile)
+        {
+            var topLevelSchemas = new XmlSchemas();
+
+            foreach (var schemaPath in GetTopLevelSchemaPaths(targetXmlFile))
+            {
+                topLevelSchemas.Add(LoadSchema(schemaPath));
+            }
+
+            return topLevelSchemas;
+        }
+
+        /// <summary>
+        /// Gets a mapping from schema paths to loaded schemas.  This takes into account the supplied
+        /// mapping from top-level schemas to included schemas that they are to be substituted for.
+        /// </summary>
+        /// <param name="topLevelSchemas">The top level schemas that have been loaded.</param>
+        /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the top-level schemas are to be substituted for.</param>
+        /// <returns>A mapping from paths to loaded schemas.  The keys are paths to loaded top-level schemas and included schemas with a top-level schema substitute.  The values are the schema to use for that path.</returns>
+        private static Dictionary<string, XmlSchema> GetLoadedSchemasWithSbustituations(IEnumerable<XmlSchema> topLevelSchemas, Dictionary<string, string> schemaSubstitutions)
+        {
+            // Make sure type mappings are case insensitive.
+            schemaSubstitutions = new Dictionary<string, string>(schemaSubstitutions, StringComparer.InvariantCultureIgnoreCase);
+
+            var loadedSchemas = new Dictionary<string, XmlSchema>();
+            foreach (var topLevelSchema in topLevelSchemas)
+            {
+                loadedSchemas.Add(topLevelSchema.SourceUri, topLevelSchema);
+
+                // If this top-level schema is a substitute for an included schema,
+                // add a mapping from the included schema's path to the top-level schema
+                string alias;
+                if (schemaSubstitutions.TryGetValue(topLevelSchema.SourceUri, out alias))
+                {
+                    loadedSchemas.Add(alias.ToLowerInvariant(), topLevelSchema);
+                }
+            }
+
+            return loadedSchemas;
+        }
+
+
+        /// <summary>
+        /// Loads and compiles all schemas specified in the target XML file.
+        /// </summary>
+        /// <param name="targetXmlFile">The target XML file specifying the list of top-level schemas to process.</param>
+        /// <param name="dataSchemaRootFolder">The root folder for the data schemas.</param>
+        /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the top-level schemas are to be substituted for.</param>
+        /// <returns></returns>
+        private static XmlSchemas LoadAndCompileAllSchemas(string targetXmlFile, string dataSchemaRootFolder, Dictionary<string, string> schemaSubstitutions)
+        {
+            XmlSchemas topLevelSchemas = LoadTopLevelSchemas(targetXmlFile);
+            var loadedSchemas = GetLoadedSchemasWithSbustituations(topLevelSchemas, schemaSubstitutions);
+            LoadIncludesFromAllSchemas(topLevelSchemas, dataSchemaRootFolder, loadedSchemas);
+
+            topLevelSchemas.Compile(null, true);
+
+            return topLevelSchemas;
+        }
+
+        /// <summary>
+        /// Loads the includes from all schemas.
+        /// </summary>
+        /// <param name="topLevelSchemas">The top-level schemas.</param>
+        /// <param name="dataSchemaRootFolder">The data schema root folder.</param>
+        /// <param name="loadedSchemas">The mapping for schema paths to schemas that have already been loaded or have substitutes loaded.</param>
+        private static void LoadIncludesFromAllSchemas(IEnumerable<XmlSchema> topLevelSchemas, string dataSchemaRootFolder, IDictionary<string, XmlSchema> loadedSchemas)
+        {
+            foreach (var topLevelSchema in topLevelSchemas)
+            {
+                LoadIncludesFromSchema(topLevelSchema, loadedSchemas, dataSchemaRootFolder);
+            }
+        }
+
+        /// <summary>
+        /// Gets the path to an included schema.
+        /// </summary>
+        /// <param name="externalSchema">The external schema.</param>
+        /// <param name="parentSchema">The parent schema.</param>
+        /// <param name="dataSchemaRootFolder">The data schema root folder.</param>
+        /// <returns>The path to the included schema.</returns>
+        private static string GetPathToExternalSchema(XmlSchemaExternal externalSchema, XmlSchemaObject parentSchema, string dataSchemaRootFolder)
+        {
+            if (string.IsNullOrEmpty(parentSchema.SourceUri))
+                return string.Empty;
+
+            var location = externalSchema.SchemaLocation;
+            var parentSchemaFolder = Path.GetDirectoryName(parentSchema.SourceUri);
+            if (string.IsNullOrEmpty(parentSchemaFolder))
+                return string.Empty;
+
+            var path = Path.Combine(parentSchemaFolder, location).ToLowerInvariant();
+
+            if (!File.Exists(path))
+                path = Path.Combine(dataSchemaRootFolder, location).ToLowerInvariant();
+
+            return path;
+        }
+
+        /// <summary>
+        /// Loads the includes from the specified parent schema.
+        /// </summary>
+        /// <param name="parentSchema">The parent schema.</param>
+        /// <param name="loadedSchemas">The loaded schemas.</param>
+        /// <param name="dataSchemaRootFolder">The data schema root folder.</param>
+        private static void LoadIncludesFromSchema(XmlSchema parentSchema, IDictionary<string, XmlSchema> loadedSchemas, string dataSchemaRootFolder)
+        {
+            foreach (var include in parentSchema.Includes)
+            {
+                var externalSchema = include as XmlSchemaExternal;
+                if (externalSchema == null || externalSchema is XmlSchemaImport || string.IsNullOrWhiteSpace(externalSchema.SchemaLocation))
+                    continue;
+
+                var path = GetPathToExternalSchema(externalSchema, parentSchema, dataSchemaRootFolder);
+
+                XmlSchema includedSchema;
+                if (!loadedSchemas.TryGetValue(path, out includedSchema) && File.Exists(path))
+                {
+                    includedSchema = LoadSchema(path);
+                    loadedSchemas.Add(path, includedSchema);
+
+                    LoadIncludesFromSchema(includedSchema, loadedSchemas, dataSchemaRootFolder);
+                }
+
+                externalSchema.Schema = includedSchema;
+                externalSchema.SchemaLocation = null;
+            }
+        }
+
+        private static void AddValidationAttributes(CodeNamespace codeNamespace, IEnumerable<XmlSchema> schemas, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects)
         {
             var types = new List<string>();
 
-            foreach (XmlSchema schema in schemas)
+            foreach (var schemaElement in schemas.SelectMany(schema => schema.Elements.Values.Cast<XmlSchemaElement>().Where(x => x != null)))
             {
-                foreach (var schemaElement in schema.Elements.Values.Cast<XmlSchemaElement>().Where(x => x != null))
-                {
-                    AddValidationAttributes(codeNamespace, schemaElement, standardFamily, dataSchemaVersion, dataObjects, types);
-                }
+                AddValidationAttributes(codeNamespace, schemaElement, standardFamily, dataSchemaVersion, dataObjects, types);
             }
         }
 
-        private static void AddValidationAttributes(CodeNamespace codeNamespace, XmlSchemaElement schemaElement, string standardFamily, string dataSchemaVersion, List<string> dataObjects, List<string> types)
+        private static void AddValidationAttributes(CodeNamespace codeNamespace, XmlSchemaElement schemaElement, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects, ICollection<string> types)
         {
             var typeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
                 .FirstOrDefault(x => x.Name == schemaElement.SchemaTypeName.Name);
 
-            if (typeDeclaration != null && !types.Contains(typeDeclaration.Name))
+            if (typeDeclaration == null || types.Contains(typeDeclaration.Name)) return;
+
+            types.Add(typeDeclaration.Name);
+
+            var schemaType = schemaElement.ElementSchemaType as XmlSchemaComplexType;
+            if (schemaType == null) return;
+
+            if (dataObjects.Contains(typeDeclaration.Name))
+                AddEnergisticsDataObjectAttribute(typeDeclaration, standardFamily, dataSchemaVersion);
+
+            foreach (var attribute in schemaType.AttributeUses.Values.OfType<XmlSchemaAttribute>())
             {
-                types.Add(typeDeclaration.Name);
+                AddAttributeValidation(typeDeclaration, attribute);
+            }
 
-                var schemaType = schemaElement.ElementSchemaType as XmlSchemaComplexType;
-                if (schemaType != null)
-                {
-                    if (dataObjects.Contains(typeDeclaration.Name))
-                        AddEnergisticsDataObjectAttribute(typeDeclaration, standardFamily, dataSchemaVersion);
+            var schemaSequence = schemaType.ContentTypeParticle as XmlSchemaSequence;
+            if (schemaSequence == null) return;
 
-                    foreach (var attribute in schemaType.AttributeUses.Values.OfType<XmlSchemaAttribute>())
-                    {
-                        AddAttributeValidation(typeDeclaration, attribute);
-                    }
+            var elements = schemaSequence.Items.OfType<XmlSchemaSequence>()
+                .SelectMany(x => x.Items.OfType<XmlSchemaElement>())
+                .Union(schemaSequence.Items.OfType<XmlSchemaElement>());
 
-                    var schemaSequence = schemaType.ContentTypeParticle as XmlSchemaSequence;
-                    if (schemaSequence != null)
-                    {
-                        var elements = schemaSequence.Items.OfType<XmlSchemaSequence>()
-                            .SelectMany(x => x.Items.OfType<XmlSchemaElement>())
-                            .Union(schemaSequence.Items.OfType<XmlSchemaElement>());
+            foreach (var element in elements)
+            {
+                AddElementValidation(codeNamespace, typeDeclaration, element);
 
-                        foreach (var element in elements)
-                        {
-                            AddElementValidation(codeNamespace, typeDeclaration, element);
-
-                            AddValidationAttributes(codeNamespace, element, standardFamily, dataSchemaVersion, dataObjects, types);
-                        }
-                    }
-                }
+                AddValidationAttributes(codeNamespace, element, standardFamily, dataSchemaVersion, dataObjects, types);
             }
         }
 
-        private static void AddEnergisticsDataObjectAttribute(CodeTypeDeclaration typeDeclaration, string standardFamily, string dataSchemaVersion)
+        private static void AddEnergisticsDataObjectAttribute(CodeTypeMember typeDeclaration, string standardFamily, string dataSchemaVersion)
         {
             typeDeclaration.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(EnergisticsDataObjectAttribute).FullName,
                 new CodeAttributeArgument(new CodePrimitiveExpression(standardFamily)), new CodeAttributeArgument(new CodePrimitiveExpression(dataSchemaVersion))));
@@ -272,35 +324,34 @@ namespace Energistics.SchemaGatherer
             var memberProperty = GetMemberProperty(typeDeclaration, element.Name);
             var restrictions = GetElementRestrictions(element).ToList();
 
-            if (memberProperty != null)
+            if (memberProperty == null) return;
+
+            if (element.MinOccurs > 0)
             {
-                if (element.MinOccurs > 0)
-                {
-                    AddRequiredAttribute(memberProperty);
-                }
-
-                if (restrictions.Any())
-                {
-                    if (memberProperty.Type.ArrayElementType == null)
-                    {
-                        AddValidationAttributes(typeDeclaration, memberProperty, restrictions);
-                    }
-                    else
-                    {
-                        var baseTypeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
-                            .FirstOrDefault(x => x.Name == memberProperty.Type.BaseType);
-
-                        var xmlTextProperty = baseTypeDeclaration?.Members.OfType<CodeMemberProperty>().FirstOrDefault(Has<XmlTextAttribute>);
-
-                        if (xmlTextProperty != null)
-                        {
-                            AddValidationAttributes(baseTypeDeclaration, xmlTextProperty, restrictions);
-                        }
-                    }
-                }
-
-                AddDescriptionAttribute(memberProperty, GetAnnotation(element));
+                AddRequiredAttribute(memberProperty);
             }
+
+            if (restrictions.Any())
+            {
+                if (memberProperty.Type.ArrayElementType == null)
+                {
+                    AddValidationAttributes(typeDeclaration, memberProperty, restrictions);
+                }
+                else
+                {
+                    var baseTypeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
+                        .FirstOrDefault(x => x.Name == memberProperty.Type.BaseType);
+
+                    var xmlTextProperty = baseTypeDeclaration?.Members.OfType<CodeMemberProperty>().FirstOrDefault(Has<XmlTextAttribute>);
+
+                    if (xmlTextProperty != null)
+                    {
+                        AddValidationAttributes(baseTypeDeclaration, xmlTextProperty, restrictions);
+                    }
+                }
+            }
+
+            AddDescriptionAttribute(memberProperty, GetAnnotation(element));
         }
 
         private static void AddRequiredAttribute(CodeTypeMember memberProperty)
@@ -338,14 +389,14 @@ namespace Energistics.SchemaGatherer
             if (maxLength != null && memberProperty.Type.BaseType == typeof(string).FullName && !Has<StringLengthAttribute>(memberProperty))
             {
                 memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(StringLengthAttribute).FullName,
-                    new CodeAttributeArgument(new CodePrimitiveExpression(Int32.Parse(maxLength.Value)))));
+                    new CodeAttributeArgument(new CodePrimitiveExpression(int.Parse(maxLength.Value)))));
             }
 
             if (minInclusive != null && maxInclusive != null && !Has<RangeAttribute>(memberProperty))
             {
                 memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RangeAttribute).FullName,
-                    new CodeAttributeArgument(new CodePrimitiveExpression(Double.Parse(minInclusive.Value))),
-                    new CodeAttributeArgument(new CodePrimitiveExpression(Double.Parse(maxInclusive.Value)))));
+                    new CodeAttributeArgument(new CodePrimitiveExpression(double.Parse(minInclusive.Value))),
+                    new CodeAttributeArgument(new CodePrimitiveExpression(double.Parse(maxInclusive.Value)))));
             }
         }
 
@@ -393,7 +444,7 @@ namespace Energistics.SchemaGatherer
             return facets;
         }
 
-        private static void GetElementTypeRestrictions(List<XmlSchemaFacet> facets, XmlSchemaSimpleType elementType)
+        private static void GetElementTypeRestrictions(ICollection<XmlSchemaFacet> facets, XmlSchemaSimpleType elementType)
         {
             while (elementType != null)
             {
@@ -401,12 +452,9 @@ namespace Energistics.SchemaGatherer
 
                 if (restrictions != null)
                 {
-                    foreach (var facet in restrictions.Facets.OfType<XmlSchemaFacet>())
+                    foreach (var facet in restrictions.Facets.OfType<XmlSchemaFacet>().Where(facet => facets.All(x => x.GetType() != facet.GetType())))
                     {
-                        if (facets.All(x => x.GetType() != facet.GetType()))
-                        {
-                            facets.Add(facet);
-                        }
+                        facets.Add(facet);
                     }
                 }
 
