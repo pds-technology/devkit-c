@@ -36,7 +36,7 @@ namespace Energistics.DataAccess.Validation
                 if (results.Count > 0)
                     return results.FirstOrDefault();
 
-                var dataObj = obj as IDataObject;
+                var dataObj = obj as IUniqueId;
                 if (dataObj != null)
                 {
                     var uid = dataObj.Uid;

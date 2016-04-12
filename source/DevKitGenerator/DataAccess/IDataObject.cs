@@ -76,15 +76,21 @@
 namespace Energistics.DataAccess
 {
     /// <summary>
-    /// Represents a Energistics data object.
+    /// Represents a Uid Object
     /// </summary>
-    public interface IDataObject
+    public interface IUniqueId
     {
         /// <summary>
         /// Gets or sets the unique object identifier.
         /// </summary>
         string Uid { get; set; }
+    }
 
+    /// <summary>
+    /// Represents a Energistics data object.
+    /// </summary>
+    public interface IDataObject : IUniqueId
+    {
         /// <summary>
         /// Gets or sets the data object name.
         /// </summary>

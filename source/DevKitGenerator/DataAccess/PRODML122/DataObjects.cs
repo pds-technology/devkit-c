@@ -3359,7 +3359,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftTestResult", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A single result derived from analysis of formation tester data.")]
-    public partial class WftTestResult : Object, INotifyPropertyChanged
+    public partial class WftTestResult : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3579,7 +3579,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftTestData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A reference to a set of formation tester data that was recorded.")]
-    public partial class WftTestData : Object, INotifyPropertyChanged
+    public partial class WftTestData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3706,7 +3706,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftCurveSection", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Points to an interval on a curve in a log (or wellLog).")]
-    public partial class WftCurveSection : Object, INotifyPropertyChanged
+    public partial class WftCurveSection : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3998,7 +3998,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
-    public partial class ExtensionNameValue : Object, INotifyPropertyChanged
+    public partial class ExtensionNameValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4490,7 +4490,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftResultRef", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This defines a set of pointers which collectively identify a particular outputParameter beginning at a point in the hierarchy. Which combination of pointers is needed depends on the starting point.")]
-    public partial class WftResultRef : Object, INotifyPropertyChanged
+    public partial class WftResultRef : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4637,7 +4637,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about a single formation tester test.")]
-    public partial class WftTest : Object, INotifyPropertyChanged
+    public partial class WftTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4816,7 +4816,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftEvent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Captures information about an event that occurred.")]
-    public partial class WftEvent : Object, INotifyPropertyChanged
+    public partial class WftEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4962,7 +4962,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftStation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about a single station in a wireline formation tester run.")]
-    public partial class WftStation : Object, INotifyPropertyChanged
+    public partial class WftStation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6570,7 +6570,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestInjectionTestData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestInjectionTestData xsd type.")]
-    public partial class WellTestInjectionTestData : Object, INotifyPropertyChanged
+    public partial class WellTestInjectionTestData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6813,7 +6813,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestInterval", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestInterval xsd type.")]
-    public partial class WellTestInterval : Object, INotifyPropertyChanged
+    public partial class WellTestInterval : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -7575,7 +7575,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestPointData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Well test data gathered at points in the wellbore.")]
-    public partial class WellTestPointData : Object, INotifyPropertyChanged
+    public partial class WellTestPointData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8185,7 +8185,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestProductionTestData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestProductionTestData xsd type.")]
-    public partial class WellTestProductionTestData : Object, INotifyPropertyChanged
+    public partial class WellTestProductionTestData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8498,7 +8498,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestValidationOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestValidationOperation xsd type.")]
-    public partial class WellTestValidationOperation : Object, INotifyPropertyChanged
+    public partial class WellTestValidationOperation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10362,7 +10362,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_location", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML Location Component Schema This is a location that is expressed in terms of 2D coordinates. In order that the location be understood, the coordinate reference system (CRS) must be known. The survey location is given by a pair of tagged values. The pairs may be: (1) latitude/longitude, (2) easting/northing, (3) westing/southing, (4) projectedX/projectedY, or (5) localX/localY. The appropriate pair must be chosen for the data.")]
-    public partial class Location : Object, INotifyPropertyChanged
+    public partial class Location : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12244,7 +12244,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBalanceEvent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Captures information about an event related to a product balance.")]
-    public partial class ProductVolumeBalanceEvent : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBalanceEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12353,7 +12353,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBalanceDetail", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Balance Detail Schema.")]
-    public partial class ProductVolumeBalanceDetail : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBalanceDetail : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12571,7 +12571,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_volumeValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A possibly temperature and pressure corrected volume value.")]
-    public partial class VolumeValue : Object, INotifyPropertyChanged
+    public partial class VolumeValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12749,7 +12749,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeComponentContent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Component Content Component Schema.")]
-    public partial class ProductVolumeComponentContent : Object, INotifyPropertyChanged
+    public partial class ProductVolumeComponentContent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13594,7 +13594,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_flowRateValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A possibly temperature and pressure corrected flow rate value.")]
-    public partial class FlowRateValue : Object, INotifyPropertyChanged
+    public partial class FlowRateValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13754,7 +13754,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumePortDifference", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_productVolumePortDifference xsd type.")]
-    public partial class ProductVolumePortDifference : Object, INotifyPropertyChanged
+    public partial class ProductVolumePortDifference : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13917,7 +13917,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_densityValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A possibly temperature and pressure corrected desity value.")]
-    public partial class DensityValue : Object, INotifyPropertyChanged
+    public partial class DensityValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14185,7 +14185,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBalanceSet", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Balance Set Schema.")]
-    public partial class ProductVolumeBalanceSet : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBalanceSet : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14400,7 +14400,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumePeriod", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Period Component Schema.")]
-    public partial class ProductVolumePeriod : Object, INotifyPropertyChanged
+    public partial class ProductVolumePeriod : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15578,7 +15578,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_datedComment", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A general timestamped comment structure.")]
-    public partial class DatedComment : Object, INotifyPropertyChanged
+    public partial class DatedComment : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15851,7 +15851,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeProduct", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Product Component Schema.")]
-    public partial class ProductVolumeProduct : Object, INotifyPropertyChanged
+    public partial class ProductVolumeProduct : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18518,7 +18518,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_curveData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_curveData xsd type.")]
-    public partial class CurveData : Object, INotifyPropertyChanged
+    public partial class CurveData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18607,7 +18607,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeParameterValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Parameter Value Component Schema.")]
-    public partial class ProductVolumeParameterValue : Object, INotifyPropertyChanged
+    public partial class ProductVolumeParameterValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18901,7 +18901,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_curveDefinition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The definition of a curve.")]
-    public partial class CurveDefinition : Object, INotifyPropertyChanged
+    public partial class CurveDefinition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19083,7 +19083,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeParameterSet", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Facility Parameter Set Component Schema.")]
-    public partial class ProductVolumeParameterSet : Object, INotifyPropertyChanged
+    public partial class ProductVolumeParameterSet : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19510,7 +19510,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeFacility", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Report Facility Component Schema.")]
-    public partial class ProductVolumeFacility : Object, INotifyPropertyChanged
+    public partial class ProductVolumeFacility : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19994,7 +19994,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBusinessAccountInfo", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume component schema for defining account information.")]
-    public partial class ProductVolumeBusinessAccountInfo : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBusinessAccountInfo : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20118,7 +20118,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBusinessOwnershipShare", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume component schema for defining ownership shares.")]
-    public partial class ProductVolumeBusinessOwnershipShare : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBusinessOwnershipShare : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20277,7 +20277,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBusinessSubUnit", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume component schema for defining ownership shares of business units.")]
-    public partial class ProductVolumeBusinessSubUnit : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBusinessSubUnit : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20558,7 +20558,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productVolume", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a WITSML Product Volume object.")]
-    public partial class ProductVolume : Object, INotifyPropertyChanged
+    public partial class ProductVolume : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22590,7 +22590,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationOperationalComment", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Operational Comments Component Schema.")]
-    public partial class ProductionOperationOperationalComment : Object, INotifyPropertyChanged
+    public partial class ProductionOperationOperationalComment : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22786,7 +22786,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationCargoShipOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Infomation about a cargo ship operation.")]
-    public partial class ProductionOperationCargoShipOperation : Object, INotifyPropertyChanged
+    public partial class ProductionOperationCargoShipOperation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23216,7 +23216,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationMarineOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Infomation about a marine operation.")]
-    public partial class ProductionOperationMarineOperation : Object, INotifyPropertyChanged
+    public partial class ProductionOperationMarineOperation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23485,7 +23485,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationAlarm", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A structure to record informaion about a single alarm.")]
-    public partial class ProductionOperationAlarm : Object, INotifyPropertyChanged
+    public partial class ProductionOperationAlarm : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23665,7 +23665,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationShutdown", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Infomation about a shutdown event.")]
-    public partial class ProductionOperationShutdown : Object, INotifyPropertyChanged
+    public partial class ProductionOperationShutdown : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23916,7 +23916,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationWaterCleaningQuality", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about the contaminants in water, and the general water quality. The values are measured from a sample, which is described below. Values measured from other samples should be given in different instances of the type.")]
-    public partial class ProductionOperationWaterCleaningQuality : Object, INotifyPropertyChanged
+    public partial class ProductionOperationWaterCleaningQuality : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24275,7 +24275,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationThirdPartyProcessing", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Production losses due to Third Party Processing.")]
-    public partial class ProductionOperationThirdPartyProcessing : Object, INotifyPropertyChanged
+    public partial class ProductionOperationThirdPartyProcessing : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24656,7 +24656,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationWeather", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Operations Weather Component Schema")]
-    public partial class ProductionOperationWeather : Object, INotifyPropertyChanged
+    public partial class ProductionOperationWeather : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25358,7 +25358,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationSafety", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Safety Component Schema.")]
-    public partial class ProductionOperationSafety : Object, INotifyPropertyChanged
+    public partial class ProductionOperationSafety : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25485,7 +25485,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationHSE", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Operational Health, Safety and Environment Component Schema.")]
-    public partial class ProductionOperationHSE : Object, INotifyPropertyChanged
+    public partial class ProductionOperationHSE : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25933,7 +25933,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationInstallationReport", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML -Installation Report Component Schema")]
-    public partial class ProductionOperationInstallationReport : Object, INotifyPropertyChanged
+    public partial class ProductionOperationInstallationReport : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -26166,7 +26166,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productionOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a WITSML Production Operation object.")]
-    public partial class ProductionOperation : Object, INotifyPropertyChanged
+    public partial class ProductionOperation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -26925,7 +26925,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowExpectedPortProperty", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Expected Property Component Schema.")]
-    public partial class ProductFlowExpectedPortProperty : Object, INotifyPropertyChanged
+    public partial class ProductFlowExpectedPortProperty : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -27176,7 +27176,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowQualifierExpected", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Defines an expected combination of kinds.")]
-    public partial class ProductFlowQualifierExpected : Object, INotifyPropertyChanged
+    public partial class ProductFlowQualifierExpected : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -27320,7 +27320,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_connectedNode", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Connected Node Component Schema.")]
-    public partial class ConnectedNode : Object, INotifyPropertyChanged
+    public partial class ConnectedNode : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -27881,7 +27881,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowExpectedUnitProperty", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Defines expected properties of a facility represented by a unit.")]
-    public partial class ProductFlowExpectedUnitProperty : Object, INotifyPropertyChanged
+    public partial class ProductFlowExpectedUnitProperty : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28815,7 +28815,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowExternalReference", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A reference to an external port within a different Product Flow Model. This value represents a foreign key from one element to another.")]
-    public partial class ProductFlowExternalReference : Object, INotifyPropertyChanged
+    public partial class ProductFlowExternalReference : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29837,7 +29837,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultContaminant", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultContaminant xsd type.")]
-    public partial class FluidResultContaminant : Object, INotifyPropertyChanged
+    public partial class FluidResultContaminant : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29964,7 +29964,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSeparatorTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSeparatorTestStep xsd type.")]
-    public partial class FluidResultSeparatorTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultSeparatorTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30749,7 +30749,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultPhaseComposition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultPhaseComposition xsd type.")]
-    public partial class FluidResultPhaseComposition : Object, INotifyPropertyChanged
+    public partial class FluidResultPhaseComposition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30855,7 +30855,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultCompositeComposition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultCompositeComposition xsd type.")]
-    public partial class FluidResultCompositeComposition : Object, INotifyPropertyChanged
+    public partial class FluidResultCompositeComposition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30996,7 +30996,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSeparatorTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSeparatorTest xsd type.")]
-    public partial class FluidResultSeparatorTest : Object, INotifyPropertyChanged
+    public partial class FluidResultSeparatorTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31208,7 +31208,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultTransportTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultTransportTestStep xsd type.")]
-    public partial class FluidResultTransportTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultTransportTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31932,7 +31932,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultTransportPropertiesTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultTransportPropertiesTest xsd type.")]
-    public partial class FluidResultTransportPropertiesTest : Object, INotifyPropertyChanged
+    public partial class FluidResultTransportPropertiesTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32039,7 +32039,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultJCurveTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultJCurveTestStep xsd type.")]
-    public partial class FluidResultJCurveTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultJCurveTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32575,7 +32575,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultJCurveTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultJCurveTest xsd type.")]
-    public partial class FluidResultJCurveTest : Object, INotifyPropertyChanged
+    public partial class FluidResultJCurveTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32863,7 +32863,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultDifferentialLiberationTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultDifferentialLiberationTestStep xsd type.")]
-    public partial class FluidResultDifferentialLiberationTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultDifferentialLiberationTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33473,7 +33473,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultDifferentialLiberationTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultDifferentialLiberationTest xsd type.")]
-    public partial class FluidResultDifferentialLiberationTest : Object, INotifyPropertyChanged
+    public partial class FluidResultDifferentialLiberationTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33676,7 +33676,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultCvdTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultCvdTestStep xsd type.")]
-    public partial class FluidResultCvdTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultCvdTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34178,7 +34178,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultConstantVolumeDepletionTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultConstantVolumeDepletionTest xsd type.")]
-    public partial class FluidResultConstantVolumeDepletionTest : Object, INotifyPropertyChanged
+    public partial class FluidResultConstantVolumeDepletionTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34398,7 +34398,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultCceTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultCceTestStep xsd type.")]
-    public partial class FluidResultCceTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultCceTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34928,7 +34928,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultConstantCompositionExpansionTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultConstantCompositionExpansionTest xsd type.")]
-    public partial class FluidResultConstantCompositionExpansionTest : Object, INotifyPropertyChanged
+    public partial class FluidResultConstantCompositionExpansionTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -35148,7 +35148,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSaturationTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSaturationTestStep xsd type.")]
-    public partial class FluidResultSaturationTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultSaturationTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -35351,7 +35351,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSaturationTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSaturationTest xsd type.")]
-    public partial class FluidResultSaturationTest : Object, INotifyPropertyChanged
+    public partial class FluidResultSaturationTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -35551,7 +35551,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultComposition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultComposition xsd type.")]
-    public partial class FluidResultComposition : Object, INotifyPropertyChanged
+    public partial class FluidResultComposition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -37479,7 +37479,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsProcessedWellLog", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Captures information about one processed wellLog.")]
-    public partial class DtsProcessedWellLog : Object, INotifyPropertyChanged
+    public partial class DtsProcessedWellLog : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -38204,7 +38204,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsSingleInstalledPoint", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A set of points recorded during the installation process. The information can include the length along the fiber, the measured depth, and a type of point.")]
-    public partial class DtsSingleInstalledPoint : Object, INotifyPropertyChanged
+    public partial class DtsSingleInstalledPoint : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -38349,7 +38349,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsOtdr", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This records the result arrays, along with context information, from an Optical Time Domain Reflectometry (OTDR) run. The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber. The actual data values are recorded in a wellLog object, which is referenced in a subelement.")]
-    public partial class DtsOtdr : Object, INotifyPropertyChanged
+    public partial class DtsOtdr : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -38530,7 +38530,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsPumpLogRow", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The pump log row are elements defined in the sequence below.")]
-    public partial class DtsPumpLogRow : Object, INotifyPropertyChanged
+    public partial class DtsPumpLogRow : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -39218,7 +39218,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsInstrumentBoxCalibration", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is an extension of the general cs_dtsCalibration, and allows for specific parameters associated with an instrument box. The two additional parameters are the offset temperature calibration, and the slope calibration. These allow for a linear shift in temperature vs measurements. Additional offset and slope calibrations may be performed at measurement time.")]
-    public partial class DtsInstrumentBoxCalibration : Object, INotifyPropertyChanged
+    public partial class DtsInstrumentBoxCalibration : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -40452,7 +40452,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsCalibration", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is a general type that allows a calibration date, business associate, and many name/value pairs.")]
-    public partial class DtsCalibration : Object, INotifyPropertyChanged
+    public partial class DtsCalibration : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -40632,7 +40632,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsOneWayLoss", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The The power loss for one way travel of a beam of light, usually measured in decibels per unit length. It is necessary to include both the value (and its unit) and the wavelength. The wavelength varies with the refractive index, while the frequency remains constant. The wavelength given to specify this type is the wavelength in a vacuum (refractive index = 1).")]
-    public partial class DtsOneWayLoss : Object, INotifyPropertyChanged
+    public partial class DtsOneWayLoss : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -40760,7 +40760,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsRefractiveIndex", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The refractive index of a material depends on the frequency or wavelength of the light. Hence it is necessary to include both the value (a unitless number) and the frequency or wavelength. The frequency will be a quantity type with a frequency unit, such as Hz, kHz, or MHz. The wavelength will be a quantity type with a length unit, such as m, cm, um, in, or ft.")]
-    public partial class DtsRefractiveIndex : Object, INotifyPropertyChanged
+    public partial class DtsRefractiveIndex : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42259,7 +42259,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("An event type captures the basic information about an event that has affected the data.")]
-    public partial class DocumentEvent : Object, INotifyPropertyChanged
+    public partial class DocumentEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42399,7 +42399,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
-    public partial class DocumentSecurityInfo : Object, INotifyPropertyChanged
+    public partial class DocumentSecurityInfo : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>

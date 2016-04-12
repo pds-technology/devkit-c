@@ -18241,42 +18241,42 @@
             DataObject property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices">
             <summary>
             This class represents the TimeIndices xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList.TimeIndexCount">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices.TimeIndexCount">
             <summary>
             TimeIndexCount property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList.TimeIndexStart">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices.TimeIndexStart">
             <summary>
             TimeIndexStart property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList.SimulatorTimeStep">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices.SimulatorTimeStep">
             <summary>
             SimulatorTimeStep property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList.UseInterval">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices.UseInterval">
             <summary>
             UseInterval property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList.TimeSeries">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices.TimeSeries">
             <summary>
             TimeSeries property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndiceList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.TimeIndices.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -18646,53 +18646,53 @@
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValueList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValues">
             <summary>
             This class represents the PatchOfValues xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValueList.RepresentationPatchIndex">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValues.RepresentationPatchIndex">
             <summary>
             RepresentationPatchIndex property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValueList.Values">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValues.Values">
             <summary>
             Values property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValueList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValues.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValueList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfValues.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPointList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPoints">
             <summary>
             This class represents the PatchOfPoints xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPointList.RepresentationPatchIndex">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPoints.RepresentationPatchIndex">
             <summary>
             RepresentationPatchIndex property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPointList.Points">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPoints.Points">
             <summary>
             Points property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPointList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPoints.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPointList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchOfPoints.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -18805,32 +18805,32 @@
             ParametricLineIntersections property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersectionList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersections">
             <summary>
             This class represents the ParametricLineIntersections xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersectionList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersections.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersectionList.IntersectionLinePairs">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersections.IntersectionLinePairs">
             <summary>
             IntersectionLinePairs property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersectionList.ParameterValuePairs">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersections.ParameterValuePairs">
             <summary>
             ParameterValuePairs property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersectionList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersections.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersectionList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ParametricLineIntersections.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -19088,63 +19088,63 @@
             Kind property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellboreList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellbores">
             <summary>
             This class represents the StreamlineWellbores xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellboreList.InjectorPerLine">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellbores.InjectorPerLine">
             <summary>
             InjectorPerLine property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellboreList.ProducerPerLine">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellbores.ProducerPerLine">
             <summary>
             ProducerPerLine property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellboreList.WellboreTrajectoryRepresentation">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellbores.WellboreTrajectoryRepresentation">
             <summary>
             WellboreTrajectoryRepresentation property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellboreList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellbores.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellboreList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.StreamlineWellbores.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundarieList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundaries">
             <summary>
             This class represents the PatchBoundaries xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundarieList.InnerRing">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundaries.InnerRing">
             <summary>
             InnerRing property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundarieList.OuterRing">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundaries.OuterRing">
             <summary>
             OuterRing property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundarieList.ReferencedPatch">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundaries.ReferencedPatch">
             <summary>
             ReferencedPatch property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundarieList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundaries.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundarieList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.PatchBoundaries.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -19323,58 +19323,58 @@
             SeismicCoordinates property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinateList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinates">
             <summary>
             This class represents the AbstractSeismicCoordinates xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinateList.SeismicSupport">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinates.SeismicSupport">
             <summary>
             SeismicSupport property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinateList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinates.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinateList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractSeismicCoordinates.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic2dCoordinateList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic2dCoordinates">
             <summary>
             This class represents the Seismic2dCoordinates xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic2dCoordinateList.LineAbscissa">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic2dCoordinates.LineAbscissa">
             <summary>
             LineAbscissa property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic2dCoordinateList.VerticalCoordinates">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic2dCoordinates.VerticalCoordinates">
             <summary>
             VerticalCoordinates property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinateList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinates">
             <summary>
             This class represents the Seismic3dCoordinates xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinateList.CrosslineCoordinates">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinates.CrosslineCoordinates">
             <summary>
             CrosslineCoordinates property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinateList.InlineCoordinates">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinates.InlineCoordinates">
             <summary>
             InlineCoordinates property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinateList.VerticalCoordinates">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Seismic3dCoordinates.VerticalCoordinates">
             <summary>
             VerticalCoordinates property
             </summary>
@@ -19389,32 +19389,32 @@
             AdditionalGridPoints property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPointList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPoints">
             <summary>
             This class represents the AdditionalGridPoints xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPointList.RepresentationPatchIndex">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPoints.RepresentationPatchIndex">
             <summary>
             RepresentationPatchIndex property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPointList.Attachment">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPoints.Attachment">
             <summary>
             Attachment property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPointList.Points">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPoints.Points">
             <summary>
             Points property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPointList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPoints.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPointList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AdditionalGridPoints.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -19556,42 +19556,42 @@
             IntervalGridCells property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells">
             <summary>
             This class represents the IntervalGridCells xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList.CellCount">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells.CellCount">
             <summary>
             CellCount property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList.GridIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells.GridIndices">
             <summary>
             GridIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList.CellIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells.CellIndices">
             <summary>
             CellIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList.LocalFacePairPerCellIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells.LocalFacePairPerCellIndices">
             <summary>
             LocalFacePairPerCellIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList.Grids">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells.Grids">
             <summary>
             Grids property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCellList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalGridCells.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -19717,27 +19717,27 @@
             ElementIndices property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndiceList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndices">
             <summary>
             This class represents the ElementIndices xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndiceList.IndexableElement">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndices.IndexableElement">
             <summary>
             IndexableElement property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndiceList.Indices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndices.Indices">
             <summary>
             Indices property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndiceList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndices.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndiceList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ElementIndices.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -19793,37 +19793,37 @@
             IjGaps property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGapList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGaps">
             <summary>
             This class represents the IjGaps xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGapList.SplitPillarCount">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGaps.SplitPillarCount">
             <summary>
             SplitPillarCount property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGapList.ParentPillarIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGaps.ParentPillarIndices">
             <summary>
             ParentPillarIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGapList.ColumnsPerSplitPillar">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGaps.ColumnsPerSplitPillar">
             <summary>
             ColumnsPerSplitPillar property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGapList.IjSplitColumnEdges">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGaps.IjSplitColumnEdges">
             <summary>
             IjSplitColumnEdges property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGapList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGaps.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGapList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IjGaps.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -19855,27 +19855,27 @@
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdgeList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdges">
             <summary>
             This class represents the IjSplitColumnEdges xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdgeList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdges.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdgeList.PillarsPerSplitColumnEdge">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdges.PillarsPerSplitColumnEdge">
             <summary>
             PillarsPerSplitColumnEdge property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdgeList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdges.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdgeList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IjSplitColumnEdges.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -19986,27 +19986,27 @@
             SubnodeTopology property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaceList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaces">
             <summary>
             This class represents the UnstructuredGridHingeNodeFaces xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaceList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaces.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaceList.FaceIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaces.FaceIndices">
             <summary>
             FaceIndices property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaceList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaces.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaceList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredGridHingeNodeFaces.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -20027,27 +20027,27 @@
             NodesPerCell property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.EdgeList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.Edges">
             <summary>
             This class represents the Edges xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.EdgeList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Edges.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.EdgeList.NodesPerEdge">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Edges.NodesPerEdge">
             <summary>
             NodesPerEdge property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.EdgeList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.Edges.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.EdgeList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.Edges.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -20175,27 +20175,27 @@
             ColumnEdges property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdgeList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdges">
             <summary>
             This class represents the UnstructuredColumnEdges xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdgeList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdges.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdgeList.PillarsPerColumnEdge">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdges.PillarsPerColumnEdge">
             <summary>
             PillarsPerColumnEdge property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdgeList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdges.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdgeList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.UnstructuredColumnEdges.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -20226,135 +20226,135 @@
             SplitFaces property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaceList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaces">
             <summary>
             This class represents the SplitFaces xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaceList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaces.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaceList.ParentFaceIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaces.ParentFaceIndices">
             <summary>
             ParentFaceIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaceList.CellIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaces.CellIndices">
             <summary>
             CellIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaceList.SplitEdges">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaces.SplitEdges">
             <summary>
             SplitEdges property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaceList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaces.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaceList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitFaces.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdgeList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdges">
             <summary>
             This class represents the SplitEdges xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdgeList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdges.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdgeList.ParentEdgeIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdges.ParentEdgeIndices">
             <summary>
             ParentEdgeIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdgeList.FacesPerSplitEdge">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdges.FacesPerSplitEdge">
             <summary>
             FacesPerSplitEdge property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdgeList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdges.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdgeList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.SplitEdges.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLineList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLines">
             <summary>
             This class represents the ColumnLayerSplitCoordinateLines xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLineList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLines.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLineList.PillarIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLines.PillarIndices">
             <summary>
             PillarIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLineList.ColumnsPerSplitCoordinateLine">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLines.ColumnsPerSplitCoordinateLine">
             <summary>
             ColumnsPerSplitCoordinateLine property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLineList.SplitColumnEdges">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLines.SplitColumnEdges">
             <summary>
             SplitColumnEdges property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLineList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLines.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLineList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitCoordinateLines.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdgeList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdges">
             <summary>
             This class represents the ColumnLayerSplitColumnEdges xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdgeList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdges.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdgeList.ParentColumnEdgeIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdges.ParentColumnEdgeIndices">
             <summary>
             ParentColumnEdgeIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdgeList.ColumnPerSplitColumnEdge">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdges.ColumnPerSplitColumnEdge">
             <summary>
             ColumnPerSplitColumnEdge property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdgeList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdges.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdgeList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ColumnLayerSplitColumnEdges.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -20550,79 +20550,79 @@
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretationList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretations">
             <summary>
             This class represents the ConnectionInterpretations xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretationList.InterpretationIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretations.InterpretationIndices">
             <summary>
             InterpretationIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretationList.FeatureInterpretation">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretations.FeatureInterpretation">
             <summary>
             FeatureInterpretation property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretationList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretations.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretationList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ConnectionInterpretations.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnitList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnits">
             <summary>
             This class represents the IntervalStratigraphicUnits xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnitList.UnitIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnits.UnitIndices">
             <summary>
             UnitIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnitList.StratigraphicOrganization">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnits.StratigraphicOrganization">
             <summary>
             StratigraphicOrganization property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnitList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnits.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnitList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalStratigraphicUnits.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.KGapList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.KGaps">
             <summary>
             This class represents the KGaps xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.KGapList.Count">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.KGaps.Count">
             <summary>
             Count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.KGapList.GapAfterLayer">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.KGaps.GapAfterLayer">
             <summary>
             GapAfterLayer property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.KGapList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.KGaps.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.KGapList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.KGaps.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -20664,63 +20664,63 @@
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnitList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnits">
             <summary>
             This class represents the CellStratigraphicUnits xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnitList.UnitIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnits.UnitIndices">
             <summary>
             UnitIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnitList.StratigraphicOrganization">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnits.StratigraphicOrganization">
             <summary>
             StratigraphicOrganization property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnitList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnits.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnitList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.CellStratigraphicUnits.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.Intervals">
             <summary>
             This class represents the Intervals xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalList.IntervalCount">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Intervals.IntervalCount">
             <summary>
             IntervalCount property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalList.ParentCountPerInterval">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Intervals.ParentCountPerInterval">
             <summary>
             ParentCountPerInterval property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalList.ChildCountPerInterval">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Intervals.ChildCountPerInterval">
             <summary>
             ChildCountPerInterval property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalList.ChildCellWeights">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.Intervals.ChildCellWeights">
             <summary>
             ChildCellWeights property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.Intervals.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.IntervalList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.Intervals.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -20900,27 +20900,27 @@
             IRegrid property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnitList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnits">
             <summary>
             This class represents the CellFluidPhaseUnits xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnitList.PhaseUnitIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnits.PhaseUnitIndices">
             <summary>
             PhaseUnitIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnitList.FluidOrganization">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnits.FluidOrganization">
             <summary>
             FluidOrganization property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnitList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnits.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnitList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.CellFluidPhaseUnits.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -21544,28 +21544,28 @@
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractVerticalCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractVerticalCrs">
             <summary>
             This class represents the AbstractVerticalCrs xsd type.
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractVerticalCrList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractVerticalCrs.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractVerticalCrList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractVerticalCrs.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalUnknownCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalUnknownCrs">
             <summary>
             This class represents the VerticalUnknownCrs xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalUnknownCrList.Unknown">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalUnknownCrs.Unknown">
             <summary>
             Unknown property
             </summary>
@@ -23579,22 +23579,22 @@
             secondDefiningParameter property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.StandAloneSecondDefiningParameter">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefParameter">
             <summary>
             This class represents the secondDefiningParameter xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.StandAloneSecondDefiningParameter.SecondDefiningParameter">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefParameter.SecondDefiningParameter">
             <summary>
             SecondDefiningParameter property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.StandAloneSecondDefiningParameter.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefParameter.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.StandAloneSecondDefiningParameter.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.SecondDefParameter.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -23872,28 +23872,28 @@
             EpsgCode property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractProjectedCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractProjectedCrs">
             <summary>
             This class represents the AbstractProjectedCrs xsd type.
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractProjectedCrList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractProjectedCrs.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractProjectedCrList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractProjectedCrs.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedUnknownCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedUnknownCrs">
             <summary>
             This class represents the ProjectedUnknownCrs xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedUnknownCrList.Unknown">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedUnknownCrs.Unknown">
             <summary>
             Unknown property
             </summary>
@@ -23939,32 +23939,32 @@
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAliaList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAlias">
             <summary>
             This class represents the ObjectAlias xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAliaList.Identifier">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAlias.Identifier">
             <summary>
             Identifier property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAliaList.Description">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAlias.Description">
             <summary>
             Description property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAliaList.Authority">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAlias.Authority">
             <summary>
             authority property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAliaList.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAlias.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAliaList.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML201.ComponentSchemas.ObjectAlias.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
@@ -24245,102 +24245,102 @@
             This class represents the AbstractGeologicFeature xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs">
             <summary>
             This class represents the AbstractLocal3dCrs xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.YOffset">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.YOffset">
             <summary>
             YOffset property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.ZOffset">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.ZOffset">
             <summary>
             ZOffset property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.ArealRotation">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.ArealRotation">
             <summary>
             ArealRotation property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.ProjectedAxisOrder">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.ProjectedAxisOrder">
             <summary>
             ProjectedAxisOrder property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.ProjectedUom">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.ProjectedUom">
             <summary>
             ProjectedUom property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.VerticalUom">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.VerticalUom">
             <summary>
             VerticalUom property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.XOffset">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.XOffset">
             <summary>
             XOffset property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.ZIncreasingDownward">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.ZIncreasingDownward">
             <summary>
             ZIncreasingDownward property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.VerticalCrs">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.VerticalCrs">
             <summary>
             VerticalCrs property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrList.ProjectedCrs">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.AbstractLocal3dCrs.ProjectedCrs">
             <summary>
             ProjectedCrs property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrs">
             <summary>
             This class represents the VerticalCrs xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrList.Direction">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrs.Direction">
             <summary>
             Direction property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrList.AbstractVerticalCrs">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrs.AbstractVerticalCrs">
             <summary>
             AbstractVerticalCrs property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrList.Uom">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.VerticalCrs.Uom">
             <summary>
             uom property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrs">
             <summary>
             This class represents the ProjectedCrs xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrList.AxisOrder">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrs.AxisOrder">
             <summary>
             AxisOrder property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrList.AbstractProjectedCrs">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrs.AbstractProjectedCrs">
             <summary>
             AbstractProjectedCrs property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrList.Uom">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrs.Uom">
             <summary>
             uom property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrList.UomSpecified">
+        <member name="P:Energistics.DataAccess.RESQML201.ComponentSchemas.ProjectedCrs.UomSpecified">
             <summary>
             uomSpecified property
             </summary>
@@ -24405,17 +24405,17 @@
             Lookup property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.CategoricalPropertySerieList">
+        <member name="T:Energistics.DataAccess.RESQML201.CategoricalPropertySeries">
             <summary>
             This class represents the obj_CategoricalPropertySeries xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.CategoricalPropertySerieList.RealizationIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.CategoricalPropertySeries.RealizationIndices">
             <summary>
             RealizationIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.CategoricalPropertySerieList.SeriesTimeIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.CategoricalPropertySeries.SeriesTimeIndices">
             <summary>
             SeriesTimeIndices property
             </summary>
@@ -24435,17 +24435,17 @@
             MaximumValue property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.DiscretePropertySerieList">
+        <member name="T:Energistics.DataAccess.RESQML201.DiscretePropertySeries">
             <summary>
             This class represents the obj_DiscretePropertySeries xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.DiscretePropertySerieList.RealizationIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.DiscretePropertySeries.RealizationIndices">
             <summary>
             RealizationIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.DiscretePropertySerieList.SeriesTimeIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.DiscretePropertySeries.SeriesTimeIndices">
             <summary>
             SeriesTimeIndices property
             </summary>
@@ -24460,17 +24460,17 @@
             Language property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.CommentPropertySerieList">
+        <member name="T:Energistics.DataAccess.RESQML201.CommentPropertySeries">
             <summary>
             This class represents the obj_CommentPropertySeries xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.CommentPropertySerieList.RealizationIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.CommentPropertySeries.RealizationIndices">
             <summary>
             RealizationIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.CommentPropertySerieList.SeriesTimeIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.CommentPropertySeries.SeriesTimeIndices">
             <summary>
             SeriesTimeIndices property
             </summary>
@@ -24495,17 +24495,17 @@
             UOM property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ContinuousPropertySerieList">
+        <member name="T:Energistics.DataAccess.RESQML201.ContinuousPropertySeries">
             <summary>
             This class represents the obj_ContinuousPropertySeries xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ContinuousPropertySerieList.RealizationIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ContinuousPropertySeries.RealizationIndices">
             <summary>
             RealizationIndices property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.ContinuousPropertySerieList.SeriesTimeIndices">
+        <member name="P:Energistics.DataAccess.RESQML201.ContinuousPropertySeries.SeriesTimeIndices">
             <summary>
             SeriesTimeIndices property
             </summary>
@@ -25682,37 +25682,32 @@
             FluidBoundaryTop property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.TimeSerieList">
+        <member name="T:Energistics.DataAccess.RESQML201.TimeSeries">
             <summary>
             This class represents the obj_TimeSeries xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.TimeSerieList.Time">
+        <member name="P:Energistics.DataAccess.RESQML201.TimeSeries.Time">
             <summary>
             Time property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.TimeSerieList.Items">
-            <summary>
-            Time property
-            </summary>
-        </member>
-        <member name="P:Energistics.DataAccess.RESQML201.TimeSerieList.TimeSeriesParentage">
+        <member name="P:Energistics.DataAccess.RESQML201.TimeSeries.TimeSeriesParentage">
             <summary>
             TimeSeriesParentage property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.LocalDepth3dCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.LocalDepth3dCrs">
             <summary>
             This class represents the obj_LocalDepth3dCrs xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.LocalTime3dCrList">
+        <member name="T:Energistics.DataAccess.RESQML201.LocalTime3dCrs">
             <summary>
             This class represents the obj_LocalTime3dCrs xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML201.LocalTime3dCrList.TimeUom">
+        <member name="P:Energistics.DataAccess.RESQML201.LocalTime3dCrs.TimeUom">
             <summary>
             TimeUom property
             </summary>
@@ -33167,142 +33162,142 @@
             edge property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList">
+        <member name="T:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements">
             <summary>
             This class represents the IndexableElements xsd enumeration.
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.cells">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.cells">
             <summary>
             cells property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.columnedges">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.columnedges">
             <summary>
             columnedges property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.columns">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.columns">
             <summary>
             columns property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.contacts">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.contacts">
             <summary>
             contacts property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.coordinatelines">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.coordinatelines">
             <summary>
             coordinatelines property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.edges">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.edges">
             <summary>
             edges property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.edgespercolumn">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.edgespercolumn">
             <summary>
             edgespercolumn property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.enumeratedelements">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.enumeratedelements">
             <summary>
             enumeratedelements property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.faces">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.faces">
             <summary>
             faces property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.facespercell">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.facespercell">
             <summary>
             facespercell property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.intervaledges">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.intervaledges">
             <summary>
             intervaledges property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.intervals">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.intervals">
             <summary>
             intervals property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.I0">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.I0">
             <summary>
             I0 property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.I0edges">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.I0edges">
             <summary>
             I0edges property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.J0">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.J0">
             <summary>
             J0 property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.J0edges">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.J0edges">
             <summary>
             J0edges property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.layers">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.layers">
             <summary>
             layers property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.nodes">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.nodes">
             <summary>
             nodes property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.nodespercell">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.nodespercell">
             <summary>
             nodespercell property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.nodesperedge">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.nodesperedge">
             <summary>
             nodesperedge property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.nodesperface">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.nodesperface">
             <summary>
             nodesperface property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.patches">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.patches">
             <summary>
             patches property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.pillars">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.pillars">
             <summary>
             pillars property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.regions">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.regions">
             <summary>
             regions property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.representation">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.representation">
             <summary>
             representation property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.subnodes">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.subnodes">
             <summary>
             subnodes property
             </summary>
         </member>
-        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElementList.triangles">
+        <member name="F:Energistics.DataAccess.RESQML201.ReferenceData.IndexableElements.triangles">
             <summary>
             triangles property
             </summary>

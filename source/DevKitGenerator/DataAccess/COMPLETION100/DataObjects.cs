@@ -441,7 +441,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CompletionStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the CompletionStatusHistory xsd type.")]
-    public partial class CompletionStatusHistory : Object, INotifyPropertyChanged
+    public partial class CompletionStatusHistory : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4587,7 +4587,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
-    public partial class ExtensionNameValue : Object, INotifyPropertyChanged
+    public partial class ExtensionNameValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -5265,7 +5265,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_memberObject", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Defines a member of an objectGroup.")]
-    public partial class MemberObject : Object, INotifyPropertyChanged
+    public partial class MemberObject : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6167,7 +6167,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dayCost", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Day Cost Component Schema ")]
-    public partial class DayCost : Object, INotifyPropertyChanged
+    public partial class DayCost : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10445,7 +10445,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_slotsInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_slotsInterval xsd type.")]
-    public partial class SlotsInterval : Object, INotifyPropertyChanged
+    public partial class SlotsInterval : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10661,7 +10661,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_intervalStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information on the status history in the interval")]
-    public partial class IntervalStatusHistory : Object, INotifyPropertyChanged
+    public partial class IntervalStatusHistory : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11093,7 +11093,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information on collection of perforation status history")]
-    public partial class PerforationStatusHistory : Object, INotifyPropertyChanged
+    public partial class PerforationStatusHistory : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11343,7 +11343,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSetInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_perforationSetInterval xsd type.")]
-    public partial class PerforationSetInterval : Object, INotifyPropertyChanged
+    public partial class PerforationSetInterval : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11559,7 +11559,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_openHoleInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_openHoleInterval xsd type.")]
-    public partial class OpenHoleInterval : Object, INotifyPropertyChanged
+    public partial class OpenHoleInterval : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11775,7 +11775,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_gravelPackInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_gravelPackInterval xsd type.")]
-    public partial class GravelPackInterval : Object, INotifyPropertyChanged
+    public partial class GravelPackInterval : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12600,7 +12600,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSet", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_perforationSet xsd type.")]
-    public partial class PerforationSet : Object, INotifyPropertyChanged
+    public partial class PerforationSet : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13572,7 +13572,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipment", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_equipment xsd type.")]
-    public partial class Equipment : Object, INotifyPropertyChanged
+    public partial class Equipment : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15907,7 +15907,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipmentConnection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information detailing the connection between 2 components")]
-    public partial class EquipmentConnection : Connection, INotifyPropertyChanged
+    public partial class EquipmentConnection : Connection, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16098,7 +16098,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_connection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Tubular Connection Component Schema ")]
-    public partial class Connection : Object, INotifyPropertyChanged
+    public partial class Connection : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17060,7 +17060,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("An event type captures the basic information about an event that has affected the data.")]
-    public partial class DocumentEvent : Object, INotifyPropertyChanged
+    public partial class DocumentEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17200,7 +17200,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
-    public partial class DocumentSecurityInfo : Object, INotifyPropertyChanged
+    public partial class DocumentSecurityInfo : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>

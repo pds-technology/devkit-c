@@ -459,6 +459,11 @@ namespace Energistics.Generator
                 return ", IDataObject";
             }
 
+            else if (properties.Contains("uid"))
+            {
+                return ", IUniqueId";
+            }
+
             return string.Empty;
         }
 
