@@ -895,11 +895,15 @@ namespace Energistics.Generator
                     sb.AppendLine("            get {");
                     if (property.PropertyType == typeof(Byte)||property.PropertyType == typeof(Byte[]))
                     {
+                        sb.AppendLine("             if("+privateFieldName +"!=null)");
                         sb.AppendLine("                return " + privateFieldName + ".Length>0?true:false;");
+                        sb.AppendLine("             else return false;");
                     } 
                     else
                     {
+                        sb.AppendLine("             if(" + privateFieldName + "!=null)");
                         sb.AppendLine("                return " + privateFieldName + ".Count>0?true:false;");
+                        sb.AppendLine("             else return false;");
                     }
                     sb.AppendLine("            } ");
                     sb.AppendLine("         }");

@@ -154,7 +154,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DtsInstalledSystemSpecified
          {
             get {
+             if(dtsInstalledSystemField!=null)
                 return dtsInstalledSystemField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsInstalledSystem> dtsInstalledSystemField; 
@@ -252,7 +254,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DocumentAliasSpecified
          {
             get {
+             if(documentAliasField!=null)
                 return documentAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> documentAliasField; 
@@ -316,7 +320,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DocumentClassSpecified
          {
             get {
+             if(documentClassField!=null)
                 return documentClassField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> documentClassField; 
@@ -359,7 +365,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SecurityInformationSpecified
          {
             get {
+             if(securityInformationField!=null)
                 return securityInformationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DocumentSecurityInfo> securityInformationField; 
@@ -403,7 +411,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool AuditTrailSpecified
          {
             get {
+             if(auditTrailField!=null)
                 return auditTrailField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DocumentEvent> auditTrailField; 
@@ -943,7 +953,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ResultSpecified
          {
             get {
+             if(resultField!=null)
                 return resultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftTestResult> resultField; 
@@ -968,7 +980,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TestRefSpecified
          {
             get {
+             if(testRefField!=null)
                 return testRefField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefNameString> testRefField; 
@@ -993,7 +1007,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TestDataSpecified
          {
             get {
+             if(testDataField!=null)
                 return testDataField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftTestData> testDataField; 
@@ -1018,7 +1034,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -4469,7 +4487,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TestDataSpecified
          {
             get {
+             if(testDataField!=null)
                 return testDataField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftTestData> testDataField; 
@@ -4494,7 +4514,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool InputParameterSpecified
          {
             get {
+             if(inputParameterField!=null)
                 return inputParameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftInOutParameter> inputParameterField; 
@@ -4519,7 +4541,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool OutputParameterSpecified
          {
             get {
+             if(outputParameterField!=null)
                 return outputParameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftInOutParameter> outputParameterField; 
@@ -4544,7 +4568,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool InputResultRefSpecified
          {
             get {
+             if(inputResultRefField!=null)
                 return inputResultRefField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftResultRef> inputResultRefField; 
@@ -4569,7 +4595,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -4676,7 +4704,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CurveSectionSpecified
          {
             get {
+             if(curveSectionField!=null)
                 return curveSectionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftCurveSection> curveSectionField; 
@@ -4701,7 +4731,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftInOutParameter> parameterField; 
@@ -4726,7 +4758,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -4929,7 +4963,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -5590,7 +5626,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -5929,7 +5967,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ResultSpecified
          {
             get {
+             if(resultField!=null)
                 return resultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftTestResult> resultField; 
@@ -5954,7 +5994,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -6115,7 +6157,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -6390,7 +6434,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool LogRefSpecified
          {
             get {
+             if(logRefField!=null)
                 return logRefField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefObjectString> logRefField; 
@@ -6415,7 +6461,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool EventSpecified
          {
             get {
+             if(eventField!=null)
                 return eventField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftEvent> eventField; 
@@ -6440,7 +6488,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TestSpecified
          {
             get {
+             if(testField!=null)
                 return testField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftTest> testField; 
@@ -6465,7 +6515,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SampleAcquisitionSpecified
          {
             get {
+             if(sampleAcquisitionField!=null)
                 return sampleAcquisitionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftSampleAcquisition> sampleAcquisitionField; 
@@ -6490,7 +6542,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ResultSpecified
          {
             get {
+             if(resultField!=null)
                 return resultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftTestResult> resultField; 
@@ -6533,7 +6587,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -6880,7 +6936,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool StationSpecified
          {
             get {
+             if(stationField!=null)
                 return stationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftStation> stationField; 
@@ -6905,7 +6963,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ResultSpecified
          {
             get {
+             if(resultField!=null)
                 return resultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftTestResult> resultField; 
@@ -6930,7 +6990,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -7260,7 +7322,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool AcquisitionTimeZoneSpecified
          {
             get {
+             if(acquisitionTimeZoneField!=null)
                 return acquisitionTimeZoneField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TimestampedTimeZone> acquisitionTimeZoneField; 
@@ -7303,7 +7367,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -7498,7 +7564,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool AnySpecified
          {
             get {
+             if(AnyField!=null)
                 return AnyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<XmlElement> AnyField; 
@@ -7569,7 +7637,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool AnySpecified
          {
             get {
+             if(AnyField!=null)
                 return AnyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<XmlElement> AnyField; 
@@ -8349,7 +8419,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TestedFormationSpecified
          {
             get {
+             if(testedFormationField!=null)
                 return testedFormationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> testedFormationField; 
@@ -9831,7 +9903,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TestIntervalSpecified
          {
             get {
+             if(testIntervalField!=null)
                 return testIntervalField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellTestInterval> testIntervalField; 
@@ -9910,7 +9984,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PointDataSpecified
          {
             get {
+             if(pointDataField!=null)
                 return pointDataField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellTestPointData> pointDataField; 
@@ -10814,7 +10890,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ValidationOperationSpecified
          {
             get {
+             if(validationOperationField!=null)
                 return validationOperationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellTestValidationOperation> validationOperationField; 
@@ -11214,7 +11292,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool WellAliasSpecified
          {
             get {
+             if(wellAliasField!=null)
                 return wellAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> wellAliasField; 
@@ -11239,7 +11319,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool WellDatumSpecified
          {
             get {
+             if(wellDatumField!=null)
                 return wellDatumField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellDatum> wellDatumField; 
@@ -11511,7 +11593,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool KindSpecified
          {
             get {
+             if(kindField!=null)
                 return kindField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> kindField; 
@@ -11644,7 +11728,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -12564,7 +12650,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType> ItemsElementNameField; 
@@ -12646,7 +12734,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -13088,7 +13178,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool KeySpecified
          {
             get {
+             if(keyField!=null)
                 return keyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<KeywordValueStruct> keyField; 
@@ -14066,7 +14158,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool KeySpecified
          {
             get {
+             if(keyField!=null)
                 return keyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<KeywordValueStruct> keyField; 
@@ -14348,7 +14442,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -14509,7 +14605,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool EventSpecified
          {
             get {
+             if(eventField!=null)
                 return eventField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeBalanceEvent> eventField; 
@@ -14534,7 +14632,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VolumeValueSpecified
          {
             get {
+             if(volumeValueField!=null)
                 return volumeValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeValue> volumeValueField; 
@@ -14559,7 +14659,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SampleAnalysisResultSpecified
          {
             get {
+             if(sampleAnalysisResultField!=null)
                 return sampleAnalysisResultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefNameString> sampleAnalysisResultField; 
@@ -14584,7 +14686,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ComponentContentSpecified
          {
             get {
+             if(componentContentField!=null)
                 return componentContentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeComponentContent> componentContentField; 
@@ -14609,7 +14713,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -14833,7 +14939,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -15087,7 +15195,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VolumeValueSpecified
          {
             get {
+             if(volumeValueField!=null)
                 return volumeValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeValue> volumeValueField; 
@@ -15148,7 +15258,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FlowRateValueSpecified
          {
             get {
+             if(flowRateValueField!=null)
                 return flowRateValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FlowRateValue> flowRateValueField; 
@@ -15245,7 +15357,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PortDiffSpecified
          {
             get {
+             if(portDiffField!=null)
                 return portDiffField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumePortDifference> portDiffField; 
@@ -15396,7 +15510,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DensityValueSpecified
          {
             get {
+             if(densityValueField!=null)
                 return densityValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DensityValue> densityValueField; 
@@ -15730,7 +15846,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -15936,7 +16054,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -16115,7 +16235,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -16321,7 +16443,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -16663,7 +16787,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool BalanceDetailSpecified
          {
             get {
+             if(balanceDetailField!=null)
                 return balanceDetailField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeBalanceDetail> balanceDetailField; 
@@ -16688,7 +16814,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -17031,7 +17159,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType8> ItemsElementNameField; 
@@ -17164,7 +17294,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VolumeValueSpecified
          {
             get {
+             if(volumeValueField!=null)
                 return volumeValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeValue> volumeValueField; 
@@ -17225,7 +17357,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FlowRateValueSpecified
          {
             get {
+             if(flowRateValueField!=null)
                 return flowRateValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FlowRateValue> flowRateValueField; 
@@ -17322,7 +17456,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PortDiffSpecified
          {
             get {
+             if(portDiffField!=null)
                 return portDiffField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumePortDifference> portDiffField; 
@@ -17473,7 +17609,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DensityValueSpecified
          {
             get {
+             if(densityValueField!=null)
                 return densityValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DensityValue> densityValueField; 
@@ -17807,7 +17945,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ComponentContentSpecified
          {
             get {
+             if(componentContentField!=null)
                 return componentContentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeComponentContent> componentContentField; 
@@ -17832,7 +17972,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool BalanceSetSpecified
          {
             get {
+             if(balanceSetField!=null)
                 return balanceSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeBalanceSet> balanceSetField; 
@@ -17875,7 +18017,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> commentField; 
@@ -17900,7 +18044,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -18239,7 +18385,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -18611,7 +18759,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VolumeValueSpecified
          {
             get {
+             if(volumeValueField!=null)
                 return volumeValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeValue> volumeValueField; 
@@ -18672,7 +18822,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FlowRateValueSpecified
          {
             get {
+             if(flowRateValueField!=null)
                 return flowRateValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FlowRateValue> flowRateValueField; 
@@ -18769,7 +18921,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PortDiffSpecified
          {
             get {
+             if(portDiffField!=null)
                 return portDiffField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumePortDifference> portDiffField; 
@@ -18920,7 +19074,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DensityValueSpecified
          {
             get {
+             if(densityValueField!=null)
                 return densityValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DensityValue> densityValueField; 
@@ -19254,7 +19410,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ComponentContentSpecified
          {
             get {
+             if(componentContentField!=null)
                 return componentContentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeComponentContent> componentContentField; 
@@ -19279,7 +19437,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PeriodSpecified
          {
             get {
+             if(periodField!=null)
                 return periodField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumePeriod> periodField; 
@@ -19304,7 +19464,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> commentField; 
@@ -19329,7 +19491,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -19916,7 +20080,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FacilityAliasSpecified
          {
             get {
+             if(facilityAliasField!=null)
                 return facilityAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> facilityAliasField; 
@@ -20220,7 +20386,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VolumeValueSpecified
          {
             get {
+             if(volumeValueField!=null)
                 return volumeValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeValue> volumeValueField; 
@@ -20281,7 +20449,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FlowRateValueSpecified
          {
             get {
+             if(flowRateValueField!=null)
                 return flowRateValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FlowRateValue> flowRateValueField; 
@@ -20378,7 +20548,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PortDiffSpecified
          {
             get {
+             if(portDiffField!=null)
                 return portDiffField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumePortDifference> portDiffField; 
@@ -20529,7 +20701,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DensityValueSpecified
          {
             get {
+             if(densityValueField!=null)
                 return densityValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DensityValue> densityValueField; 
@@ -20863,7 +21037,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ProductSpecified
          {
             get {
+             if(productField!=null)
                 return productField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeProduct> productField; 
@@ -20888,7 +21064,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> commentField; 
@@ -20913,7 +21091,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -21282,7 +21462,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool IndexSpecified
          {
             get {
+             if(indexField!=null)
                 return indexField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Double> indexField; 
@@ -21307,7 +21489,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ValueSpecified
          {
             get {
+             if(valueField!=null)
                 return valueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Double> valueField; 
@@ -21666,7 +21850,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -21866,7 +22052,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -22066,7 +22254,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CurveDefinitionSpecified
          {
             get {
+             if(curveDefinitionField!=null)
                 return curveDefinitionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CurveDefinition> curveDefinitionField; 
@@ -22304,7 +22494,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeParameterValue> parameterField; 
@@ -22347,7 +22539,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -22490,7 +22684,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FacilityAliasSpecified
          {
             get {
+             if(facilityAliasField!=null)
                 return facilityAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> facilityAliasField; 
@@ -22551,7 +22747,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContextFacilitySpecified
          {
             get {
+             if(contextFacilityField!=null)
                 return contextFacilityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FacilityIdentifierStruct> contextFacilityField; 
@@ -22807,7 +23005,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DowntimeReasonSpecified
          {
             get {
+             if(downtimeReasonField!=null)
                 return downtimeReasonField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> downtimeReasonField; 
@@ -22832,7 +23032,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ParameterSetSpecified
          {
             get {
+             if(parameterSetField!=null)
                 return parameterSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeParameterSet> parameterSetField; 
@@ -22857,7 +23059,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FlowSpecified
          {
             get {
+             if(flowField!=null)
                 return flowField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeFlow> flowField; 
@@ -22882,7 +23086,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> commentField; 
@@ -22907,7 +23113,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23053,7 +23261,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23238,7 +23448,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23411,7 +23623,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23554,7 +23768,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SubUnitSpecified
          {
             get {
+             if(subUnitField!=null)
                 return subUnitField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeBusinessSubUnit> subUnitField; 
@@ -23579,7 +23795,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23701,7 +23919,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContextFacilitySpecified
          {
             get {
+             if(contextFacilityField!=null)
                 return contextFacilityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FacilityIdentifierStruct> contextFacilityField; 
@@ -23957,7 +24177,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType7> ItemsElementNameField; 
@@ -24321,7 +24543,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool BusinessUnitSpecified
          {
             get {
+             if(businessUnitField!=null)
                 return businessUnitField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeBusinessUnit> businessUnitField; 
@@ -24346,7 +24570,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FacilitySpecified
          {
             get {
+             if(facilityField!=null)
                 return facilityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolumeFacility> facilityField; 
@@ -24487,7 +24713,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool RoleSpecified
          {
             get {
+             if(roleField!=null)
                 return roleField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> roleField; 
@@ -24530,7 +24758,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool AliasSpecified
          {
             get {
+             if(aliasField!=null)
                 return aliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> aliasField; 
@@ -24555,7 +24785,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool AddressSpecified
          {
             get {
+             if(addressField!=null)
                 return addressField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GeneralAddress> addressField; 
@@ -24580,7 +24812,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PhoneNumberSpecified
          {
             get {
+             if(phoneNumberField!=null)
                 return phoneNumberField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PhoneNumberStruct> phoneNumberField; 
@@ -24605,7 +24839,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool EmailSpecified
          {
             get {
+             if(emailField!=null)
                 return emailField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EmailQualifierStruct> emailField; 
@@ -24630,7 +24866,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContactPreferenceSpecified
          {
             get {
+             if(contactPreferenceField!=null)
                 return contactPreferenceField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ContactPreference> contactPreferenceField; 
@@ -24673,7 +24911,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContactSpecified
          {
             get {
+             if(contactField!=null)
                 return contactField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefNameString> contactField; 
@@ -24873,7 +25113,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SuffixSpecified
          {
             get {
+             if(suffixField!=null)
                 return suffixField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> suffixField; 
@@ -24962,7 +25204,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool StreetSpecified
          {
             get {
+             if(streetField!=null)
                 return streetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> streetField; 
@@ -25161,7 +25405,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -25791,7 +26037,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool BlockIDSpecified
          {
             get {
+             if(blockIDField!=null)
                 return blockIDField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> blockIDField; 
@@ -26115,7 +26363,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> commentField; 
@@ -26140,7 +26390,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -26580,7 +26832,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> commentField; 
@@ -26605,7 +26859,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -26826,7 +27082,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SupplyShipCommentSpecified
          {
             get {
+             if(supplyShipCommentField!=null)
                 return supplyShipCommentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> supplyShipCommentField; 
@@ -26851,7 +27109,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool StandbyVesselCommentSpecified
          {
             get {
+             if(standbyVesselCommentField!=null)
                 return standbyVesselCommentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> standbyVesselCommentField; 
@@ -26876,7 +27136,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool BasketMovementSpecified
          {
             get {
+             if(basketMovementField!=null)
                 return basketMovementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> basketMovementField; 
@@ -26901,7 +27163,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ActivitySpecified
          {
             get {
+             if(activityField!=null)
                 return activityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> activityField; 
@@ -26926,7 +27190,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -27126,7 +27392,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -27383,7 +27651,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ActivitySpecified
          {
             get {
+             if(activityField!=null)
                 return activityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> activityField; 
@@ -27408,7 +27678,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -27773,7 +28045,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> commentField; 
@@ -27798,7 +28072,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -27941,7 +28217,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -28030,7 +28308,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VolumeAndReasonSpecified
          {
             get {
+             if(volumeAndReasonField!=null)
                 return volumeAndReasonField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<LostVolumeAndReason> volumeAndReasonField; 
@@ -28055,7 +28335,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ThirdPartyProcessingSpecified
          {
             get {
+             if(thirdPartyProcessingField!=null)
                 return thirdPartyProcessingField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationThirdPartyProcessing> thirdPartyProcessingField; 
@@ -28162,7 +28444,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool WaterCleaningQualitySpecified
          {
             get {
+             if(waterCleaningQualityField!=null)
                 return waterCleaningQualityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationWaterCleaningQuality> waterCleaningQualityField; 
@@ -28187,7 +28471,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ShutdownSpecified
          {
             get {
+             if(shutdownField!=null)
                 return shutdownField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationShutdown> shutdownField; 
@@ -28212,7 +28498,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool AlarmSpecified
          {
             get {
+             if(alarmField!=null)
                 return alarmField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationAlarm> alarmField; 
@@ -28237,7 +28525,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool MarineOperationSpecified
          {
             get {
+             if(marineOperationField!=null)
                 return marineOperationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationMarineOperation> marineOperationField; 
@@ -28262,7 +28552,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CargoShipOperationSpecified
          {
             get {
+             if(cargoShipOperationField!=null)
                 return cargoShipOperationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationCargoShipOperation> cargoShipOperationField; 
@@ -28287,7 +28579,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool OperationalCommentSpecified
          {
             get {
+             if(operationalCommentField!=null)
                 return operationalCommentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationOperationalComment> operationalCommentField; 
@@ -28811,7 +29105,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -29113,7 +29409,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SafetyCountSpecified
          {
             get {
+             if(safetyCountField!=null)
                 return safetyCountField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SafetyCount> safetyCountField; 
@@ -29138,7 +29436,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CommentSpecified
          {
             get {
+             if(commentField!=null)
                 return commentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DatedComment> commentField; 
@@ -29163,7 +29463,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -29480,7 +29782,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SafetySpecified
          {
             get {
+             if(safetyField!=null)
                 return safetyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationSafety> safetyField; 
@@ -29505,7 +29809,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool WeatherSpecified
          {
             get {
+             if(weatherField!=null)
                 return weatherField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationWeather> weatherField; 
@@ -29530,7 +29836,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -29816,7 +30124,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CrewCountSpecified
          {
             get {
+             if(crewCountField!=null)
                 return crewCountField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CrewCount> crewCountField; 
@@ -29895,7 +30205,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool OperationalHSESpecified
          {
             get {
+             if(operationalHSEField!=null)
                 return operationalHSEField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationHSE> operationalHSEField; 
@@ -29938,7 +30250,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -30060,7 +30374,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContextFacilitySpecified
          {
             get {
+             if(contextFacilityField!=null)
                 return contextFacilityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FacilityIdentifierStruct> contextFacilityField; 
@@ -30277,7 +30593,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType6> ItemsElementNameField; 
@@ -30470,7 +30788,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool InstallationReportSpecified
          {
             get {
+             if(installationReportField!=null)
                 return installationReportField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperationInstallationReport> installationReportField; 
@@ -30647,7 +30967,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ChangeLogSpecified
          {
             get {
+             if(changeLogField!=null)
                 return changeLogField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowChangeLog> changeLogField; 
@@ -30672,7 +30994,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -30815,7 +31139,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -31000,7 +31326,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TagAliasSpecified
          {
             get {
+             if(tagAliasField!=null)
                 return tagAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> tagAliasField; 
@@ -31061,7 +31389,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExpectedFlowProductSpecified
          {
             get {
+             if(expectedFlowProductField!=null)
                 return expectedFlowProductField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowQualifierExpected> expectedFlowProductField; 
@@ -31104,7 +31434,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -31250,7 +31582,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool QualifierSpecified
          {
             get {
+             if(qualifierField!=null)
                 return qualifierField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FlowQualifier> qualifierField; 
@@ -31275,7 +31609,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -31496,7 +31832,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -31657,7 +31995,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FacilityAliasSpecified
          {
             get {
+             if(facilityAliasField!=null)
                 return facilityAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> facilityAliasField; 
@@ -31721,7 +32061,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ConnectedNodeSpecified
          {
             get {
+             if(connectedNodeField!=null)
                 return connectedNodeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ConnectedNode> connectedNodeField; 
@@ -31746,7 +32088,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExpectedFlowProductSpecified
          {
             get {
+             if(expectedFlowProductField!=null)
                 return expectedFlowProductField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowQualifierExpected> expectedFlowProductField; 
@@ -31771,7 +32115,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExpectedFlowPropertySpecified
          {
             get {
+             if(expectedFlowPropertyField!=null)
                 return expectedFlowPropertyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowExpectedPortProperty> expectedFlowPropertyField; 
@@ -31814,7 +32160,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -32105,7 +32453,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TagAliasSpecified
          {
             get {
+             if(tagAliasField!=null)
                 return tagAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> tagAliasField; 
@@ -32184,7 +32534,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -32381,7 +32733,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FacilityAliasSpecified
          {
             get {
+             if(facilityAliasField!=null)
                 return facilityAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> facilityAliasField; 
@@ -32406,7 +32760,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContextFacilitySpecified
          {
             get {
+             if(contextFacilityField!=null)
                 return contextFacilityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FacilityIdentifierStruct> contextFacilityField; 
@@ -32431,7 +32787,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExpectedPropertySpecified
          {
             get {
+             if(expectedPropertyField!=null)
                 return expectedPropertyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowExpectedUnitProperty> expectedPropertyField; 
@@ -32474,7 +32832,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PortSpecified
          {
             get {
+             if(portField!=null)
                 return portField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowPort> portField; 
@@ -32517,7 +32877,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -32717,7 +33079,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -32897,7 +33261,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PortSpecified
          {
             get {
+             if(portField!=null)
                 return portField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowlExternalPort> portField; 
@@ -32922,7 +33288,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool UnitSpecified
          {
             get {
+             if(unitField!=null)
                 return unitField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowUnit> unitField; 
@@ -32947,7 +33315,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ChangeLogSpecified
          {
             get {
+             if(changeLogField!=null)
                 return changeLogField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowChangeLog> changeLogField; 
@@ -32972,7 +33342,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PlanSpecified
          {
             get {
+             if(planField!=null)
                 return planField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowNetworkPlan> planField; 
@@ -32997,7 +33369,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -33158,7 +33532,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -33280,7 +33656,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContextFacilitySpecified
          {
             get {
+             if(contextFacilityField!=null)
                 return contextFacilityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FacilityIdentifierStruct> contextFacilityField; 
@@ -33437,7 +33815,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExternalConnectSpecified
          {
             get {
+             if(externalConnectField!=null)
                 return externalConnectField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowExternalReference> externalConnectField; 
@@ -33462,7 +33842,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool NetworkSpecified
          {
             get {
+             if(networkField!=null)
                 return networkField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowNetwork> networkField; 
@@ -33729,7 +34111,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FacilityAliasSpecified
          {
             get {
+             if(facilityAliasField!=null)
                 return facilityAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> facilityAliasField; 
@@ -35077,7 +35461,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool Items1ElementNameSpecified
          {
             get {
+             if(Items1ElementNameField!=null)
                 return Items1ElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Items1ChoiceType1> Items1ElementNameField; 
@@ -35102,7 +35488,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VaporCompositionSpecified
          {
             get {
+             if(vaporCompositionField!=null)
                 return vaporCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
@@ -35127,7 +35515,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool LiquidCompositionSpecified
          {
             get {
+             if(liquidCompositionField!=null)
                 return liquidCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
@@ -35152,7 +35542,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CompositeCompositionSpecified
          {
             get {
+             if(compositeCompositionField!=null)
                 return compositeCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
@@ -35637,7 +36029,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SeparatorTestStepSpecified
          {
             get {
+             if(separatorTestStepField!=null)
                 return separatorTestStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultSeparatorTestStep> separatorTestStepField; 
@@ -36538,7 +36932,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType5> ItemsElementNameField; 
@@ -36563,7 +36959,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VaporCompositionSpecified
          {
             get {
+             if(vaporCompositionField!=null)
                 return vaporCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
@@ -36588,7 +36986,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool LiquidCompositionSpecified
          {
             get {
+             if(liquidCompositionField!=null)
                 return liquidCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
@@ -36613,7 +37013,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CompositeCompositionSpecified
          {
             get {
+             if(compositeCompositionField!=null)
                 return compositeCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
@@ -36741,7 +37143,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TransportTestStepSpecified
          {
             get {
+             if(transportTestStepField!=null)
                 return transportTestStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultTransportTestStep> transportTestStepField; 
@@ -37340,7 +37744,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType4> ItemsElementNameField; 
@@ -37365,7 +37771,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VaporCompositionSpecified
          {
             get {
+             if(vaporCompositionField!=null)
                 return vaporCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
@@ -37390,7 +37798,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool LiquidCompositionSpecified
          {
             get {
+             if(liquidCompositionField!=null)
                 return liquidCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
@@ -37415,7 +37825,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CompositeCompositionSpecified
          {
             get {
+             if(compositeCompositionField!=null)
                 return compositeCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
@@ -37754,7 +38166,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool JcrvTestStepSpecified
          {
             get {
+             if(jcrvTestStepField!=null)
                 return jcrvTestStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultJCurveTestStep> jcrvTestStepField; 
@@ -38413,7 +38827,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType3> ItemsElementNameField; 
@@ -38438,7 +38854,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VaporCompositionSpecified
          {
             get {
+             if(vaporCompositionField!=null)
                 return vaporCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
@@ -38463,7 +38881,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool LiquidCompositionSpecified
          {
             get {
+             if(liquidCompositionField!=null)
                 return liquidCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
@@ -38488,7 +38908,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CompositeCompositionSpecified
          {
             get {
+             if(compositeCompositionField!=null)
                 return compositeCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
@@ -38737,7 +39159,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DLTestStepSpecified
          {
             get {
+             if(dlTestStepField!=null)
                 return dlTestStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultDifferentialLiberationTestStep> dlTestStepField; 
@@ -39300,7 +39724,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType2> ItemsElementNameField; 
@@ -39325,7 +39751,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VaporCompositionSpecified
          {
             get {
+             if(vaporCompositionField!=null)
                 return vaporCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
@@ -39350,7 +39778,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool LiquidCompositionSpecified
          {
             get {
+             if(liquidCompositionField!=null)
                 return liquidCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
@@ -39375,7 +39805,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CompositeCompositionSpecified
          {
             get {
+             if(compositeCompositionField!=null)
                 return compositeCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
@@ -39642,7 +40074,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CvdTestStepSpecified
          {
             get {
+             if(cvdTestStepField!=null)
                 return cvdTestStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCvdTestStep> cvdTestStepField; 
@@ -39942,7 +40376,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType1> ItemsElementNameField; 
@@ -40231,7 +40667,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool Items1ElementNameSpecified
          {
             get {
+             if(Items1ElementNameField!=null)
                 return Items1ElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Items1ChoiceType> Items1ElementNameField; 
@@ -40256,7 +40694,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool VaporCompositionSpecified
          {
             get {
+             if(vaporCompositionField!=null)
                 return vaporCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
@@ -40281,7 +40721,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool LiquidCompositionSpecified
          {
             get {
+             if(liquidCompositionField!=null)
                 return liquidCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
@@ -40306,7 +40748,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CompositeCompositionSpecified
          {
             get {
+             if(compositeCompositionField!=null)
                 return compositeCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
@@ -40573,7 +41017,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool CceTestStepSpecified
          {
             get {
+             if(cceTestStepField!=null)
                 return cceTestStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultCceTestStep> cceTestStepField; 
@@ -40943,7 +41389,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool SaturationTestStepSpecified
          {
             get {
+             if(saturationTestStepField!=null)
                 return saturationTestStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultSaturationTestStep> saturationTestStepField; 
@@ -41723,7 +42171,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool BinaryInteractionCoefficientSpecified
          {
             get {
+             if(binaryInteractionCoefficientField!=null)
                 return binaryInteractionCoefficientField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<BinaryInteractionCoefficient> binaryInteractionCoefficientField; 
@@ -42521,7 +42971,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FluidSampleCompositionSpecified
          {
             get {
+             if(fluidSampleCompositionField!=null)
                 return fluidSampleCompositionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultComposition> fluidSampleCompositionField; 
@@ -42765,7 +43217,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FluidSampleContaminantSpecified
          {
             get {
+             if(fluidSampleContaminantField!=null)
                 return fluidSampleContaminantField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidResultContaminant> fluidSampleContaminantField; 
@@ -43289,7 +43743,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ProcessingSpecified
          {
             get {
+             if(processingField!=null)
                 return processingField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> processingField; 
@@ -43368,7 +43824,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -43511,7 +43969,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -43891,7 +44351,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ErrorReportSpecified
          {
             get {
+             if(errorReportField!=null)
                 return errorReportField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsErrorReport> errorReportField; 
@@ -43916,7 +44378,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ProcessedLogSpecified
          {
             get {
+             if(processedLogField!=null)
                 return processedLogField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsProcessedWellLog> processedLogField; 
@@ -44150,7 +44614,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -44350,7 +44816,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -44565,7 +45033,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -44997,7 +45467,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool PumpLogSpecified
          {
             get {
+             if(pumpLogField!=null)
                 return pumpLogField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsPumpLogRow> pumpLogField; 
@@ -45022,7 +45494,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -45129,7 +45603,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -45293,7 +45769,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CalibrationParameter> parameterField; 
@@ -45372,7 +45850,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -45791,7 +46271,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -45973,7 +46455,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -46016,7 +46500,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FactoryCalibrationSpecified
          {
             get {
+             if(factoryCalibrationField!=null)
                 return factoryCalibrationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsInstrumentBoxCalibration> factoryCalibrationField; 
@@ -46149,7 +46635,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> parameterField; 
@@ -46174,7 +46662,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -46518,7 +47008,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -46664,7 +47156,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CalibrationParameter> parameterField; 
@@ -46707,7 +47201,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -46850,7 +47346,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -46993,7 +47491,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -47221,7 +47721,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TypeSpecified
          {
             get {
+             if(typeField!=null)
                 return typeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TypeOptionalClassString> typeField; 
@@ -47336,7 +47838,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool RefractiveIndexSpecified
          {
             get {
+             if(refractiveIndexField!=null)
                 return refractiveIndexField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsRefractiveIndex> refractiveIndexField; 
@@ -47361,7 +47865,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool OneWayLossSpecified
          {
             get {
+             if(oneWayLossField!=null)
                 return oneWayLossField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsOneWayLoss> oneWayLossField; 
@@ -47386,7 +47892,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> parameterField; 
@@ -47522,7 +48030,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FactoryCalibrationSpecified
          {
             get {
+             if(factoryCalibrationField!=null)
                 return factoryCalibrationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsCalibration> factoryCalibrationField; 
@@ -47547,7 +48057,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool InstallationHistorySpecified
          {
             get {
+             if(installationHistoryField!=null)
                 return installationHistoryField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefNameString> installationHistoryField; 
@@ -47572,7 +48084,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -47775,7 +48289,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FiberSpecified
          {
             get {
+             if(fiberField!=null)
                 return fiberField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsFiber> fiberField; 
@@ -48223,7 +48739,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FiberEndPointSpecified
          {
             get {
+             if(fiberEndPointField!=null)
                 return fiberEndPointField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsFiberEndPoint> fiberEndPointField; 
@@ -48267,7 +48785,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool WellboreFiberSchematicSpecified
          {
             get {
+             if(wellboreFiberSchematicField!=null)
                 return wellboreFiberSchematicField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsSingleInstalledPoint> wellboreFiberSchematicField; 
@@ -48328,7 +48848,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool OtdrInstallationTestSpecified
          {
             get {
+             if(otdrInstallationTestField!=null)
                 return otdrInstallationTestField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsOtdr> otdrInstallationTestField; 
@@ -48353,7 +48875,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool InstallationCalibrationSpecified
          {
             get {
+             if(installationCalibrationField!=null)
                 return installationCalibrationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsCalibration> installationCalibrationField; 
@@ -48684,7 +49208,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -48866,7 +49392,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -49089,7 +49617,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool WftRunSpecified
          {
             get {
+             if(wftRunField!=null)
                 return wftRunField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WftRun> wftRunField; 
@@ -49185,7 +49715,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool WellTestSpecified
          {
             get {
+             if(wellTestField!=null)
                 return wellTestField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellTest> wellTestField; 
@@ -49281,7 +49813,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TimeSeriesStatisticSpecified
          {
             get {
+             if(timeSeriesStatisticField!=null)
                 return timeSeriesStatisticField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TimeSeriesStatistic> timeSeriesStatisticField; 
@@ -49359,7 +49893,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool TimeSeriesDataSpecified
          {
             get {
+             if(timeSeriesDataField!=null)
                 return timeSeriesDataField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TimeSeriesData> timeSeriesDataField; 
@@ -49701,7 +50237,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ContextFacilitySpecified
          {
             get {
+             if(contextFacilityField!=null)
                 return contextFacilityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FacilityIdentifierStruct> contextFacilityField; 
@@ -49935,7 +50473,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ProductVolumeSpecified
          {
             get {
+             if(productVolumeField!=null)
                 return productVolumeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductVolume> productVolumeField; 
@@ -50031,7 +50571,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ProductionOperationSpecified
          {
             get {
+             if(productionOperationField!=null)
                 return productionOperationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductionOperation> productionOperationField; 
@@ -50127,7 +50669,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool ProductFlowModelSpecified
          {
             get {
+             if(productFlowModelField!=null)
                 return productFlowModelField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ProductFlowModel> productFlowModelField; 
@@ -50223,7 +50767,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FluidSampleSpecified
          {
             get {
+             if(fluidSampleField!=null)
                 return fluidSampleField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidSample> fluidSampleField; 
@@ -50319,7 +50865,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FluidAnalysisResultSpecified
          {
             get {
+             if(fluidAnalysisResultField!=null)
                 return fluidAnalysisResultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidAnalysisResult> fluidAnalysisResultField; 
@@ -50415,7 +50963,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool FluidAnalysisSpecified
          {
             get {
+             if(fluidAnalysisField!=null)
                 return fluidAnalysisField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidAnalysis> fluidAnalysisField; 
@@ -50511,7 +51061,9 @@ namespace Energistics.DataAccess.PRODML122
          public bool DtsMeasurementSpecified
          {
             get {
+             if(dtsMeasurementField!=null)
                 return dtsMeasurementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DtsMeasurement> dtsMeasurementField; 

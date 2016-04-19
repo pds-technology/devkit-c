@@ -296,7 +296,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool AliasesSpecified
          {
             get {
+             if(AliasesField!=null)
                 return AliasesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ObjectAliaList> AliasesField; 
@@ -668,7 +670,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool KeyConstraintSpecified
          {
             get {
+             if(KeyConstraintField!=null)
                 return KeyConstraintField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> KeyConstraintField; 
@@ -711,7 +715,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool AllowedKindSpecified
          {
             get {
+             if(AllowedKindField!=null)
                 return AllowedKindField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ParameterKind> AllowedKindField; 
@@ -844,7 +850,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool DefaultValueSpecified
          {
             get {
+             if(DefaultValueField!=null)
                 return DefaultValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AbstractActivityParameter> DefaultValueField; 
@@ -1000,7 +1008,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool KeySpecified
          {
             get {
+             if(KeyField!=null)
                 return KeyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AbstractParameterKey> KeyField; 
@@ -2729,7 +2739,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool OffsetSpecified
          {
             get {
+             if(OffsetField!=null)
                 return OffsetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DoubleConstantArray> OffsetField; 
@@ -2883,7 +2895,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool OffsetSpecified
          {
             get {
+             if(OffsetField!=null)
                 return OffsetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IntegerConstantArray> OffsetField; 
@@ -4145,7 +4159,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool OffsetSpecified
          {
             get {
+             if(OffsetField!=null)
                 return OffsetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Point3dOffset> OffsetField; 
@@ -4806,7 +4822,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool WellboreTrajectoryRepresentationSpecified
          {
             get {
+             if(WellboreTrajectoryRepresentationField!=null)
                 return WellboreTrajectoryRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> WellboreTrajectoryRepresentationField; 
@@ -4877,7 +4895,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool InnerRingSpecified
          {
             get {
+             if(InnerRingField!=null)
                 return InnerRingField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> InnerRingField; 
@@ -5515,7 +5535,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool PlaneSpecified
          {
             get {
+             if(PlaneField!=null)
                 return PlaneField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<List<Point3d>> PlaneField; 
@@ -5905,7 +5927,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool AdditionalGridPointsSpecified
          {
             get {
+             if(AdditionalGridPointsField!=null)
                 return AdditionalGridPointsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AdditionalGridPointList> AdditionalGridPointsField; 
@@ -6254,7 +6278,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool VariableSubnodesSpecified
          {
             get {
+             if(VariableSubnodesField!=null)
                 return VariableSubnodesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VariableSubnodePatch> VariableSubnodesField; 
@@ -6279,7 +6305,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool UniformSubnodesSpecified
          {
             get {
+             if(UniformSubnodesField!=null)
                 return UniformSubnodesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<UniformSubnodePatch> UniformSubnodesField; 
@@ -6350,7 +6378,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ColumnSubnodesSpecified
          {
             get {
+             if(ColumnSubnodesField!=null)
                 return ColumnSubnodesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ColumnSubnodePatch> ColumnSubnodesField; 
@@ -6805,7 +6835,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool GridsSpecified
          {
             get {
+             if(GridsField!=null)
                 return GridsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> GridsField; 
@@ -7147,7 +7179,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool SplitEdgePatchSpecified
          {
             get {
+             if(SplitEdgePatchField!=null)
                 return SplitEdgePatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EdgePatch> SplitEdgePatchField; 
@@ -7352,7 +7386,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ElementIndicesSpecified
          {
             get {
+             if(ElementIndicesField!=null)
                 return ElementIndicesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ElementIndiceList> ElementIndicesField; 
@@ -9606,7 +9642,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool InternalShellsSpecified
          {
             get {
+             if(InternalShellsField!=null)
                 return InternalShellsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeShell> InternalShellsField; 
@@ -9731,7 +9769,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool MacroFacesSpecified
          {
             get {
+             if(MacroFacesField!=null)
                 return MacroFacesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<OrientedMacroFace> MacroFacesField; 
@@ -10053,7 +10093,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ContactSpecified
          {
             get {
+             if(ContactField!=null)
                 return ContactField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ContactPatch> ContactField; 
@@ -10105,7 +10147,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ContactSpecified
          {
             get {
+             if(ContactField!=null)
                 return ContactField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ContactPatch> ContactField; 
@@ -10293,7 +10337,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool FeatureInterpretationSpecified
          {
             get {
+             if(FeatureInterpretationField!=null)
                 return FeatureInterpretationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> FeatureInterpretationField; 
@@ -10564,7 +10610,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool IjkGridPatchSpecified
          {
             get {
+             if(IjkGridPatchField!=null)
                 return IjkGridPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GpGridIjkGridPatch> IjkGridPatchField; 
@@ -10589,7 +10637,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool UnstructuredColumnLayerGridPatchSpecified
          {
             get {
+             if(UnstructuredColumnLayerGridPatchField!=null)
                 return UnstructuredColumnLayerGridPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GpGridUnstructuredColumnLayerGridPatch> UnstructuredColumnLayerGridPatchField; 
@@ -11917,7 +11967,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ElementIdentitySpecified
          {
             get {
+             if(ElementIdentityField!=null)
                 return ElementIdentityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ElementIdentity> ElementIdentityField; 
@@ -12088,7 +12140,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ThrowSpecified
          {
             get {
+             if(ThrowField!=null)
                 return ThrowField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ThrowKind> ThrowField; 
@@ -12814,7 +12868,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool WithSpecified
          {
             get {
+             if(WithField!=null)
                 return WithField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> WithField; 
@@ -12965,7 +13021,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ContainsSpecified
          {
             get {
+             if(ContainsField!=null)
                 return ContainsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> ContainsField; 
@@ -13753,7 +13811,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool NameSpecified
          {
             get {
+             if(nameField!=null)
                 return nameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CodeType> nameField; 
@@ -14064,7 +14124,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool DomainOfValiditySpecified
          {
             get {
+             if(domainOfValidityField!=null)
                 return domainOfValidityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DomainOfValidity> domainOfValidityField; 
@@ -14089,7 +14151,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ScopeSpecified
          {
             get {
+             if(scopeField!=null)
                 return scopeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> scopeField; 
@@ -14296,7 +14360,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool AxisSpecified
          {
             get {
+             if(axisField!=null)
                 return axisField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CoordinateSystemAxisPropertyType> axisField; 
@@ -15029,7 +15095,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool RelatedTimeSpecified
          {
             get {
+             if(relatedTimeField!=null)
                 return relatedTimeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RelatedTimeType> relatedTimeField; 
@@ -15269,7 +15337,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ScopeSpecified
          {
             get {
+             if(scopeField!=null)
                 return scopeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> scopeField; 
@@ -15312,7 +15382,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool CoordinateOperationAccuracySpecified
          {
             get {
+             if(coordinateOperationAccuracyField!=null)
                 return coordinateOperationAccuracyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CoordinateOperationAccuracy> coordinateOperationAccuracyField; 
@@ -15616,7 +15688,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool GeographicElementSpecified
          {
             get {
+             if(geographicElementField!=null)
                 return geographicElementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EX_GeographicExtent_PropertyType> geographicElementField; 
@@ -15641,7 +15715,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool TemporalElementSpecified
          {
             get {
+             if(temporalElementField!=null)
                 return temporalElementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EX_TemporalExtent_PropertyType> temporalElementField; 
@@ -15666,7 +15742,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool VerticalElementSpecified
          {
             get {
+             if(verticalElementField!=null)
                 return verticalElementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EX_VerticalExtent_PropertyType> verticalElementField; 
@@ -16577,7 +16655,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool DeliveryPointSpecified
          {
             get {
+             if(deliveryPointField!=null)
                 return deliveryPointField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> deliveryPointField; 
@@ -16674,7 +16754,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ElectronicMailAddressSpecified
          {
             get {
+             if(electronicMailAddressField!=null)
                 return electronicMailAddressField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> electronicMailAddressField; 
@@ -16727,7 +16809,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool VoiceSpecified
          {
             get {
+             if(voiceField!=null)
                 return voiceField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> voiceField; 
@@ -16752,7 +16836,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool FacsimileSpecified
          {
             get {
+             if(facsimileField!=null)
                 return facsimileField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> facsimileField; 
@@ -17815,7 +17901,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool AlternateTitleSpecified
          {
             get {
+             if(alternateTitleField!=null)
                 return alternateTitleField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> alternateTitleField; 
@@ -17840,7 +17928,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool DateSpecified
          {
             get {
+             if(dateField!=null)
                 return dateField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CI_Date_PropertyType> dateField; 
@@ -17901,7 +17991,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool IdentifierSpecified
          {
             get {
+             if(identifierField!=null)
                 return identifierField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<MD_Identifier_PropertyType> identifierField; 
@@ -17926,7 +18018,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool CitedResponsiblePartySpecified
          {
             get {
+             if(citedResponsiblePartyField!=null)
                 return citedResponsiblePartyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CI_ResponsibleParty_PropertyType> citedResponsiblePartyField; 
@@ -17951,7 +18045,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool PresentationFormSpecified
          {
             get {
+             if(presentationFormField!=null)
                 return presentationFormField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CI_PresentationFormCode_PropertyType> presentationFormField; 
@@ -18741,7 +18837,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool NameOfMeasureSpecified
          {
             get {
+             if(nameOfMeasureField!=null)
                 return nameOfMeasureField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> nameOfMeasureField; 
@@ -18856,7 +18954,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool DateTimeSpecified
          {
             get {
+             if(dateTimeField!=null)
                 return dateTimeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DateTime_PropertyType> dateTimeField; 
@@ -18881,7 +18981,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ResultSpecified
          {
             get {
+             if(resultField!=null)
                 return resultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DQ_Result_PropertyType> resultField; 
@@ -20371,7 +20473,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ScopeSpecified
          {
             get {
+             if(scopeField!=null)
                 return scopeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> scopeField; 
@@ -22069,7 +22173,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool AnySpecified
          {
             get {
+             if(AnyField!=null)
                 return AnyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<XmlElement> AnyField; 
@@ -22667,7 +22773,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ExtraMetadataSpecified
          {
             get {
+             if(ExtraMetadataField!=null)
                 return ExtraMetadataField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameValuePair> ExtraMetadataField; 
@@ -22717,7 +22825,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ParameterSpecified
          {
             get {
+             if(ParameterField!=null)
                 return ParameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ParameterTemplate> ParameterField; 
@@ -22801,7 +22911,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ParameterSpecified
          {
             get {
+             if(ParameterField!=null)
                 return ParameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AbstractActivityParameter> ParameterField; 
@@ -23135,7 +23247,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool PatchOfValuesSpecified
          {
             get {
+             if(PatchOfValuesField!=null)
                 return PatchOfValuesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PatchOfValueList> PatchOfValuesField; 
@@ -23160,7 +23274,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool FacetSpecified
          {
             get {
+             if(FacetField!=null)
                 return FacetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PropertyKindFacet> FacetField; 
@@ -23314,7 +23430,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool MinimumValueSpecified
          {
             get {
+             if(MinimumValueField!=null)
                 return MinimumValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> MinimumValueField; 
@@ -23339,7 +23457,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool MaximumValueSpecified
          {
             get {
+             if(MaximumValueField!=null)
                 return MaximumValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> MaximumValueField; 
@@ -23550,7 +23670,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool MinimumValueSpecified
          {
             get {
+             if(MinimumValueField!=null)
                 return MinimumValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Double> MinimumValueField; 
@@ -23575,7 +23697,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool MaximumValueSpecified
          {
             get {
+             if(MaximumValueField!=null)
                 return MaximumValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Double> MaximumValueField; 
@@ -23700,7 +23824,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool PatchOfPointsSpecified
          {
             get {
+             if(PatchOfPointsField!=null)
                 return PatchOfPointsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PatchOfPointList> PatchOfPointsField; 
@@ -23802,7 +23928,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ParentSetSpecified
          {
             get {
+             if(ParentSetField!=null)
                 return ParentSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> ParentSetField; 
@@ -23827,7 +23955,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool PropertiesSpecified
          {
             get {
+             if(PropertiesField!=null)
                 return PropertiesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> PropertiesField; 
@@ -23927,7 +24057,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ValueSpecified
          {
             get {
+             if(ValueField!=null)
                 return ValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StringLookup> ValueField; 
@@ -23996,7 +24128,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ValueSpecified
          {
             get {
+             if(ValueField!=null)
                 return ValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DoubleLookup> ValueField; 
@@ -24531,7 +24665,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool BoundariesSpecified
          {
             get {
+             if(BoundariesField!=null)
                 return BoundariesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PatchBoundarieList> BoundariesField; 
@@ -24581,7 +24717,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool Grid2dPatchSpecified
          {
             get {
+             if(Grid2dPatchField!=null)
                 return Grid2dPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Grid2dPatch> Grid2dPatchField; 
@@ -24670,7 +24808,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool PlanesSpecified
          {
             get {
+             if(PlanesField!=null)
                 return PlanesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AbstractPlaneGeometry> PlanesField; 
@@ -24718,7 +24858,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool TrianglePatchSpecified
          {
             get {
+             if(TrianglePatchField!=null)
                 return TrianglePatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TrianglePatch> TrianglePatchField; 
@@ -24903,7 +25045,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool LinePatchSpecified
          {
             get {
+             if(LinePatchField!=null)
                 return LinePatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PolylineSetPatch> LinePatchField; 
@@ -24951,7 +25095,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool NodePatchSpecified
          {
             get {
+             if(NodePatchField!=null)
                 return NodePatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NodePatch> NodePatchField; 
@@ -25340,7 +25486,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool WellboreMarkerSpecified
          {
             get {
+             if(WellboreMarkerField!=null)
                 return WellboreMarkerField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellboreMarker> WellboreMarkerField; 
@@ -25460,7 +25608,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool GridSpecified
          {
             get {
+             if(GridField!=null)
                 return GridField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> GridField; 
@@ -25765,7 +25915,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool SubRepresentationPatchSpecified
          {
             get {
+             if(SubRepresentationPatchField!=null)
                 return SubRepresentationPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SubRepresentationPatch> SubRepresentationPatchField; 
@@ -25813,7 +25965,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool PatchOfGeometrySpecified
          {
             get {
+             if(PatchOfGeometryField!=null)
                 return PatchOfGeometryField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PatchOfGeometry> PatchOfGeometryField; 
@@ -25905,7 +26059,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool RepresentationSpecified
          {
             get {
+             if(RepresentationField!=null)
                 return RepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> RepresentationField; 
@@ -25971,7 +26127,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ShellsSpecified
          {
             get {
+             if(ShellsField!=null)
                 return ShellsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeShell> ShellsField; 
@@ -25996,7 +26154,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool RegionsSpecified
          {
             get {
+             if(RegionsField!=null)
                 return RegionsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<VolumeRegion> RegionsField; 
@@ -26050,7 +26210,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ContactIdentitySpecified
          {
             get {
+             if(ContactIdentityField!=null)
                 return ContactIdentityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ContactIdentity> ContactIdentityField; 
@@ -26100,7 +26262,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool SealedContactRepresentationSpecified
          {
             get {
+             if(SealedContactRepresentationField!=null)
                 return SealedContactRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SealedContactRepresentationPart> SealedContactRepresentationField; 
@@ -26148,7 +26312,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool NonSealedContactRepresentationSpecified
          {
             get {
+             if(NonSealedContactRepresentationField!=null)
                 return NonSealedContactRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AbstractContactRepresentationPart> NonSealedContactRepresentationField; 
@@ -26286,7 +26452,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool GridSpecified
          {
             get {
+             if(GridField!=null)
                 return GridField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> GridField; 
@@ -26894,7 +27062,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ColumnLayerGridSpecified
          {
             get {
+             if(ColumnLayerGridField!=null)
                 return ColumnLayerGridField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GpGridColumnLayerGrid> ColumnLayerGridField; 
@@ -26919,7 +27089,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool UnstructuredGridPatchSpecified
          {
             get {
+             if(UnstructuredGridPatchField!=null)
                 return UnstructuredGridPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GpGridUnstructuredGridPatch> UnstructuredGridPatchField; 
@@ -27026,7 +27198,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool RepresentationIdentitySpecified
          {
             get {
+             if(RepresentationIdentityField!=null)
                 return RepresentationIdentityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RepresentationIdentity> RepresentationIdentityField; 
@@ -27092,7 +27266,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ChildGridSpecified
          {
             get {
+             if(ChildGridField!=null)
                 return ChildGridField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> ChildGridField; 
@@ -27140,7 +27316,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool RanksSpecified
          {
             get {
+             if(RanksField!=null)
                 return RanksField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> RanksField; 
@@ -27632,7 +27810,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool StratigraphicOccurrencesSpecified
          {
             get {
+             if(StratigraphicOccurrencesField!=null)
                 return StratigraphicOccurrencesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> StratigraphicOccurrencesField; 
@@ -27763,7 +27943,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool BoundaryRelationSpecified
          {
             get {
+             if(BoundaryRelationField!=null)
                 return BoundaryRelationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<BoundaryRelation> BoundaryRelationField; 
@@ -27943,7 +28125,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ThrowInterpretationSpecified
          {
             get {
+             if(ThrowInterpretationField!=null)
                 return ThrowInterpretationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FaultThrow> ThrowInterpretationField; 
@@ -27991,7 +28175,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool BoundaryRelationSpecified
          {
             get {
+             if(BoundaryRelationField!=null)
                 return BoundaryRelationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<BoundaryRelation> BoundaryRelationField; 
@@ -28115,7 +28301,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ContactInterpretationSpecified
          {
             get {
+             if(ContactInterpretationField!=null)
                 return ContactInterpretationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AbstractContactInterpretationPart> ContactInterpretationField; 
@@ -28232,7 +28420,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool GeologicUnitIndexSpecified
          {
             get {
+             if(GeologicUnitIndexField!=null)
                 return GeologicUnitIndexField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GeologicUnitInterpretationIndex> GeologicUnitIndexField; 
@@ -28298,7 +28488,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool StratigraphicUnitsSpecified
          {
             get {
+             if(StratigraphicUnitsField!=null)
                 return StratigraphicUnitsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StratigraphicUnitInterpretationIndex> StratigraphicUnitsField; 
@@ -28364,7 +28556,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool FaultsSpecified
          {
             get {
+             if(FaultsField!=null)
                 return FaultsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> FaultsField; 
@@ -28389,7 +28583,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool HorizonsSpecified
          {
             get {
+             if(HorizonsField!=null)
                 return HorizonsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<HorizonInterpretationIndex> HorizonsField; 
@@ -28414,7 +28610,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool SidesSpecified
          {
             get {
+             if(SidesField!=null)
                 return SidesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> SidesField; 
@@ -28439,7 +28637,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool TopFrontierSpecified
          {
             get {
+             if(TopFrontierField!=null)
                 return TopFrontierField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> TopFrontierField; 
@@ -28464,7 +28664,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool BottomFrontierSpecified
          {
             get {
+             if(BottomFrontierField!=null)
                 return BottomFrontierField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DataObjectReference> BottomFrontierField; 
@@ -28553,7 +28755,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool ChronostratigraphicColumnComponentSpecified
          {
             get {
+             if(ChronostratigraphicColumnComponentField!=null)
                 return ChronostratigraphicColumnComponentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ChronostratigraphicRank> ChronostratigraphicColumnComponentField; 
@@ -29623,7 +29827,9 @@ namespace Energistics.DataAccess.RESQML201
          public bool TimeSpecified
          {
             get {
+             if(TimeField!=null)
                 return TimeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Timestamp> TimeField; 

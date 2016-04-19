@@ -617,7 +617,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool GrowingTimeoutPeriodSpecified
          {
             get {
+             if(growingTimeoutPeriodField!=null)
                 return growingTimeoutPeriodField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GrowingTimeoutPeriod> growingTimeoutPeriodField; 
@@ -777,7 +779,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FunctionSpecified
          {
             get {
+             if(functionField!=null)
                 return functionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Function> functionField; 
@@ -967,7 +971,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DataObjectSpecified
          {
             get {
+             if(dataObjectField!=null)
                 return dataObjectField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ObjectWithConstraint> dataObjectField; 
@@ -1328,7 +1334,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AttachmentSpecified
          {
             get {
+             if(attachmentField!=null)
                 return attachmentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Attachment> attachmentField; 
@@ -1426,7 +1434,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DocumentAliasSpecified
          {
             get {
+             if(documentAliasField!=null)
                 return documentAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> documentAliasField; 
@@ -1490,7 +1500,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DocumentClassSpecified
          {
             get {
+             if(documentClassField!=null)
                 return documentClassField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> documentClassField; 
@@ -1533,7 +1545,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SecurityInformationSpecified
          {
             get {
+             if(securityInformationField!=null)
                 return securityInformationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DocumentSecurityInfo> securityInformationField; 
@@ -1577,7 +1591,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AuditTrailSpecified
          {
             get {
+             if(auditTrailField!=null)
                 return auditTrailField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DocumentEvent> auditTrailField; 
@@ -1998,7 +2014,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -6446,7 +6464,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -6658,7 +6678,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParamSpecified
          {
             get {
+             if(paramField!=null)
                 return paramField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> paramField; 
@@ -6737,7 +6759,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ContentSpecified
          {
             get {
+             if(contentField!=null)
                 return contentField.Length>0?true:false;
+             else return false;
             } 
          }
         private Byte[] contentField; 
@@ -7365,7 +7389,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AcquisitionTimeZoneSpecified
          {
             get {
+             if(acquisitionTimeZoneField!=null)
                 return acquisitionTimeZoneField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TimestampedTimeZone> acquisitionTimeZoneField; 
@@ -7465,7 +7491,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -7763,7 +7791,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AnySpecified
          {
             get {
+             if(AnyField!=null)
                 return AnyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<XmlElement> AnyField; 
@@ -7834,7 +7864,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AnySpecified
          {
             get {
+             if(AnyField!=null)
                 return AnyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<XmlElement> AnyField; 
@@ -7921,7 +7953,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellboreSpecified
          {
             get {
+             if(wellboreField!=null)
                 return wellboreField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Wellbore> wellboreField; 
@@ -8709,7 +8743,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellSpecified
          {
             get {
+             if(wellField!=null)
                 return wellField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Well> wellField; 
@@ -9365,7 +9401,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellDatumSpecified
          {
             get {
+             if(wellDatumField!=null)
                 return wellDatumField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellDatum> wellDatumField; 
@@ -9426,7 +9464,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellLocationSpecified
          {
             get {
+             if(wellLocationField!=null)
                 return wellLocationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Location> wellLocationField; 
@@ -9469,7 +9509,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ReferencePointSpecified
          {
             get {
+             if(referencePointField!=null)
                 return referencePointField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ReferencePoint> referencePointField; 
@@ -9494,7 +9536,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellCRSSpecified
          {
             get {
+             if(wellCRSField!=null)
                 return wellCRSField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellCRS> wellCRSField; 
@@ -9740,7 +9784,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool KindSpecified
          {
             get {
+             if(kindField!=null)
                 return kindField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> kindField; 
@@ -9873,7 +9919,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -10676,7 +10724,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType> ItemsElementNameField; 
@@ -10758,7 +10808,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -11250,7 +11302,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LocationSpecified
          {
             get {
+             if(locationField!=null)
                 return locationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Location> locationField; 
@@ -11293,7 +11347,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -11614,7 +11670,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -12917,7 +12975,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> parameterField; 
@@ -13004,7 +13064,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellboreGeometrySpecified
          {
             get {
+             if(wbGeometryField!=null)
                 return wbGeometryField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StandAloneWellboreGeometry> wbGeometryField; 
@@ -13207,7 +13269,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellboreGeometrySectionSpecified
          {
             get {
+             if(wbGeometrySectionField!=null)
                 return wbGeometrySectionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellboreGeometrySection> wbGeometrySectionField; 
@@ -13645,7 +13709,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -13750,7 +13816,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TubularSpecified
          {
             get {
+             if(tubularField!=null)
                 return tubularField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Tubular> tubularField; 
@@ -13995,7 +14063,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TubularComponentSpecified
          {
             get {
+             if(tubularComponentField!=null)
                 return tubularComponentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TubularComponent> tubularComponentField; 
@@ -14793,7 +14863,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -14854,7 +14926,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NozzleSpecified
          {
             get {
+             if(nozzleField!=null)
                 return nozzleField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Nozzle> nozzleField; 
@@ -14879,7 +14953,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ConnectionSpecified
          {
             get {
+             if(connectionField!=null)
                 return connectionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Connection> connectionField; 
@@ -14958,7 +15034,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool StabilizerSpecified
          {
             get {
+             if(stabilizerField!=null)
                 return stabilizerField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Stabilizer> stabilizerField; 
@@ -14983,7 +15061,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool BendSpecified
          {
             get {
+             if(bendField!=null)
                 return bendField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Bend> bendField; 
@@ -15080,7 +15160,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -15376,7 +15458,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -16176,7 +16260,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -16536,7 +16622,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -16880,7 +16968,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -17309,7 +17399,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SensorSpecified
          {
             get {
+             if(sensorField!=null)
                 return sensorField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Sensor> sensorField; 
@@ -17527,7 +17619,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -18376,7 +18470,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -18537,7 +18633,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -19236,7 +19334,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SensorSpecified
          {
             get {
+             if(sensorField!=null)
                 return sensorField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Sensor> sensorField; 
@@ -19359,7 +19459,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TrajectorySpecified
          {
             get {
+             if(trajectoryField!=null)
                 return trajectoryField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Trajectory> trajectoryField; 
@@ -19943,7 +20045,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TrajectoryStationSpecified
          {
             get {
+             if(trajectoryStationField!=null)
                 return trajectoryStationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TrajectoryStation> trajectoryStationField; 
@@ -21247,7 +21351,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LocationSpecified
          {
             get {
+             if(locationField!=null)
                 return locationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Location> locationField; 
@@ -21308,7 +21414,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -22291,7 +22399,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ToolErrorTermSetSpecified
          {
             get {
+             if(toolErrorTermSetField!=null)
                 return toolErrorTermSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ToolErrorTermSet> toolErrorTermSetField; 
@@ -22422,7 +22532,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ErrorTermSpecified
          {
             get {
+             if(errorTermField!=null)
                 return errorTermField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaErrorTerm> errorTermField; 
@@ -22699,7 +22811,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaNameAndDescription> parameterField; 
@@ -22724,7 +22838,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FunctionSpecified
          {
             get {
+             if(functionField!=null)
                 return functionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaNameAndDescription> functionField; 
@@ -22749,7 +22865,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ConstantSpecified
          {
             get {
+             if(constantField!=null)
                 return constantField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaNomenclatureConstant> constantField; 
@@ -22856,7 +22974,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23017,7 +23137,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23238,7 +23360,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ErrorCoefficientSpecified
          {
             get {
+             if(errorCoefficientField!=null)
                 return errorCoefficientField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaErrorCoefficient> errorCoefficientField; 
@@ -23263,7 +23387,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool OperatingModeSpecified
          {
             get {
+             if(operatingModeField!=null)
                 return operatingModeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SurveyToolOperatingMode> operatingModeField; 
@@ -23288,7 +23414,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23534,7 +23662,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -23639,7 +23769,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ToolErrorModelSpecified
          {
             get {
+             if(toolErrorModelField!=null)
                 return toolErrorModelField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ToolErrorModel> toolErrorModelField; 
@@ -23770,7 +23902,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool OperatingConditionSpecified
          {
             get {
+             if(operatingConditionField!=null)
                 return operatingConditionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaSurveyToolOperatingCondition> operatingConditionField; 
@@ -23795,7 +23929,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool OperatingIntervalSpecified
          {
             get {
+             if(operatingIntervalField!=null)
                 return operatingIntervalField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaSurveyToolOperatingInterval> operatingIntervalField; 
@@ -23856,7 +23992,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ErrorTermValueSpecified
          {
             get {
+             if(errorTermValueField!=null)
                 return errorTermValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IscwsaErrorTermValue> errorTermValueField; 
@@ -24051,7 +24189,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -24230,7 +24370,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -24626,7 +24768,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -24731,7 +24875,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TargetSpecified
          {
             get {
+             if(targetField!=null)
                 return targetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Target> targetField; 
@@ -25249,7 +25395,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LocationSpecified
          {
             get {
+             if(locationField!=null)
                 return locationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Location> locationField; 
@@ -25274,7 +25422,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TargetSectionSpecified
          {
             get {
+             if(targetSectionField!=null)
                 return targetSectionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TargetSection> targetSectionField; 
@@ -25541,7 +25691,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LocationSpecified
          {
             get {
+             if(locationField!=null)
                 return locationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Location> locationField; 
@@ -25566,7 +25718,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -25671,7 +25825,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SurveyProgramSpecified
          {
             get {
+             if(surveyProgramField!=null)
                 return surveyProgramField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SurveyProgram> surveyProgramField; 
@@ -25895,7 +26051,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SurveySectionSpecified
          {
             get {
+             if(surveySectionField!=null)
                 return surveySectionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SurveySection> surveySectionField; 
@@ -26312,7 +26470,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -26417,7 +26577,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool StimJobSpecified
          {
             get {
+             if(stimJobField!=null)
                 return stimJobField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimJob> stimJobField; 
@@ -26902,7 +27064,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ProppantNameSpecified
          {
             get {
+             if(proppantNameField!=null)
                 return proppantNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> proppantNameField; 
@@ -27224,7 +27388,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool JobIntervalSpecified
          {
             get {
+             if(jobIntervalField!=null)
                 return jobIntervalField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimJobInterval> jobIntervalField; 
@@ -28127,7 +28293,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TotalProppantUsageSpecified
          {
             get {
+             if(totalProppantUsageField!=null)
                 return totalProppantUsageField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimProppantUsage> totalProppantUsageField; 
@@ -28188,7 +28356,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ProppantNameSpecified
          {
             get {
+             if(proppantNameField!=null)
                 return proppantNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> proppantNameField; 
@@ -28306,7 +28476,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FluidNameSpecified
          {
             get {
+             if(fluidNameField!=null)
                 return fluidNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> fluidNameField; 
@@ -28385,7 +28557,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ShutinPresSpecified
          {
             get {
+             if(shutinPresField!=null)
                 return shutinPresField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimShutInPressure> shutinPresField; 
@@ -28647,7 +28821,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FlowPathSpecified
          {
             get {
+             if(flowPathField!=null)
                 return flowPathField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimFlowPath> flowPathField; 
@@ -28672,7 +28848,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PdatSessionSpecified
          {
             get {
+             if(pdatSessionField!=null)
                 return pdatSessionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimPdatSession> pdatSessionField; 
@@ -28697,7 +28875,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ReservoirIntervalSpecified
          {
             get {
+             if(reservoirIntervalField!=null)
                 return reservoirIntervalField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimReservoirInterval> reservoirIntervalField; 
@@ -28722,7 +28902,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PerforationIntervalSpecified
          {
             get {
+             if(perforationIntervalField!=null)
                 return perforationIntervalField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimPerforationSet> perforationIntervalField; 
@@ -28783,7 +28965,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AdditiveSpecified
          {
             get {
+             if(additiveField!=null)
                 return additiveField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimAdditive> additiveField; 
@@ -28808,7 +28992,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -28933,7 +29119,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -29058,7 +29246,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -30146,7 +30336,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TubularSpecified
          {
             get {
+             if(tubularField!=null)
                 return tubularField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimTubular> tubularField; 
@@ -30171,7 +30363,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool JobStageSpecified
          {
             get {
+             if(jobStageField!=null)
                 return jobStageField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimJobStage> jobStageField; 
@@ -30196,7 +30390,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool JobEventSpecified
          {
             get {
+             if(jobEventField!=null)
                 return jobEventField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimEvent> jobEventField; 
@@ -30221,7 +30417,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -30472,7 +30670,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -32028,7 +32228,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -32171,7 +32373,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AdditiveSpecified
          {
             get {
+             if(additiveField!=null)
                 return additiveField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimAdditive> additiveField; 
@@ -32542,7 +32746,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -32884,7 +33090,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -33846,7 +34054,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool StepRateTestSpecified
          {
             get {
+             if(stepRateTestField!=null)
                 return stepRateTestField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimStepTest> stepRateTestField; 
@@ -33871,7 +34081,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FluidEfficiencyTestSpecified
          {
             get {
+             if(fluidEfficiencyTestField!=null)
                 return fluidEfficiencyTestField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimFetTest> fluidEfficiencyTestField; 
@@ -33896,7 +34108,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PumpFlowBackTestSpecified
          {
             get {
+             if(pumpFlowBackTestField!=null)
                 return pumpFlowBackTestField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimPumpFlowBackTest> pumpFlowBackTestField; 
@@ -33921,7 +34135,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool StepDownTestSpecified
          {
             get {
+             if(stepDownTestField!=null)
                 return stepDownTestField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimStepDownTest> stepDownTestField; 
@@ -33946,7 +34162,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -34035,7 +34253,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PresMeasurementSpecified
          {
             get {
+             if(presMeasurementField!=null)
                 return presMeasurementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimPressureFlowRate> presMeasurementField; 
@@ -34078,7 +34298,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -34203,7 +34425,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -34292,7 +34516,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AnalysisMethodSpecified
          {
             get {
+             if(analysisMethodField!=null)
                 return analysisMethodField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimAnalysisMethod> analysisMethodField; 
@@ -34632,7 +34858,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -34757,7 +34985,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -35017,7 +35247,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool StepSpecified
          {
             get {
+             if(stepField!=null)
                 return stepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StimTestStep> stepField; 
@@ -35042,7 +35274,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -35275,7 +35509,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -35742,7 +35978,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -36110,7 +36348,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -36215,7 +36455,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SidewallCoreSpecified
          {
             get {
+             if(sidewallCoreField!=null)
                 return sidewallCoreField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SidewallCore> sidewallCoreField; 
@@ -36820,7 +37062,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SwcSampleSpecified
          {
             get {
+             if(swcSampleField!=null)
                 return swcSampleField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SwcSample> swcSampleField; 
@@ -37069,7 +37313,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -37543,7 +37789,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool QualifierSpecified
          {
             get {
+             if(qualifierField!=null)
                 return qualifierField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Qualifier> qualifierField; 
@@ -37568,7 +37816,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -37766,7 +38016,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -38460,7 +38712,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool RiskSpecified
          {
             get {
+             if(riskField!=null)
                 return riskField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Risk> riskField; 
@@ -38702,7 +38956,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AffectedPersonnelSpecified
          {
             get {
+             if(affectedPersonnelField!=null)
                 return affectedPersonnelField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RiskAffectedPersonnel> affectedPersonnelField; 
@@ -39081,7 +39337,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool MitigationSpecified
          {
             get {
+             if(mitigationField!=null)
                 return mitigationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> mitigationField; 
@@ -39256,7 +39514,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool RigSpecified
          {
             get {
+             if(rigField!=null)
                 return rigField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Rig> rigField; 
@@ -39816,7 +40076,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PitSpecified
          {
             get {
+             if(pitField!=null)
                 return pitField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Pit> pitField; 
@@ -39841,7 +40103,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PumpSpecified
          {
             get {
+             if(pumpField!=null)
                 return pumpField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Pump> pumpField; 
@@ -39866,7 +40130,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ShakerSpecified
          {
             get {
+             if(shakerField!=null)
                 return shakerField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Shaker> shakerField; 
@@ -39891,7 +40157,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool CentrifugeSpecified
          {
             get {
+             if(centrifugeField!=null)
                 return centrifugeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Centrifuge> centrifugeField; 
@@ -39916,7 +40184,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool HydrocycloneSpecified
          {
             get {
+             if(hydrocycloneField!=null)
                 return hydrocycloneField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Hydrocyclone> hydrocycloneField; 
@@ -39941,7 +40211,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DegasserSpecified
          {
             get {
+             if(degasserField!=null)
                 return degasserField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Degasser> degasserField; 
@@ -41459,7 +41731,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -41811,7 +42085,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool BopComponentSpecified
          {
             get {
+             if(bopComponentField!=null)
                 return bopComponentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<BopComponent> bopComponentField; 
@@ -42284,7 +42560,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -42583,7 +42861,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -42608,7 +42888,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -43162,7 +43444,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -43187,7 +43471,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -43615,7 +43901,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -43640,7 +43928,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -43897,7 +44187,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -43922,7 +44214,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -44179,7 +44473,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -44204,7 +44500,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -44677,7 +44975,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -44702,7 +45002,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -45729,7 +46031,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool OpsReportSpecified
          {
             get {
+             if(opsReportField!=null)
                 return opsReportField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<OpsReport> opsReportField; 
@@ -46484,7 +46788,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ActivitySpecified
          {
             get {
+             if(activityField!=null)
                 return activityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Activity> activityField; 
@@ -46509,7 +46815,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DrillingParamsSpecified
          {
             get {
+             if(drillingParamsField!=null)
                 return drillingParamsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillingParams> drillingParamsField; 
@@ -46552,7 +46860,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DayCostSpecified
          {
             get {
+             if(dayCostField!=null)
                 return dayCostField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DayCost> dayCostField; 
@@ -46577,7 +46887,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool TrajectoryStationSpecified
          {
             get {
+             if(trajectoryStationField!=null)
                 return trajectoryStationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<TrajectoryStation> trajectoryStationField; 
@@ -46602,7 +46914,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FluidSpecified
          {
             get {
+             if(fluidField!=null)
                 return fluidField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Fluid> fluidField; 
@@ -46627,7 +46941,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ScrSpecified
          {
             get {
+             if(scrField!=null)
                 return scrField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Scr> scrField; 
@@ -46652,7 +46968,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PitVolumeSpecified
          {
             get {
+             if(pitVolumeField!=null)
                 return pitVolumeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PitVolume> pitVolumeField; 
@@ -46695,7 +47013,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool MudInventorySpecified
          {
             get {
+             if(mudInventoryField!=null)
                 return mudInventoryField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Inventory> mudInventoryField; 
@@ -46720,7 +47040,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool BulkSpecified
          {
             get {
+             if(bulkField!=null)
                 return bulkField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Inventory> bulkField; 
@@ -46763,7 +47085,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PumpOperatingSpecified
          {
             get {
+             if(pumpOpField!=null)
                 return pumpOpField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<PumpOp> pumpOpField; 
@@ -46788,7 +47112,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ShakerOperatingSpecified
          {
             get {
+             if(shakerOpField!=null)
                 return shakerOpField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ShakerOp> shakerOpField; 
@@ -46831,7 +47157,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PersonnelSpecified
          {
             get {
+             if(personnelField!=null)
                 return personnelField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Personnel> personnelField; 
@@ -46856,7 +47184,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SupportCraftSpecified
          {
             get {
+             if(supportCraftField!=null)
                 return supportCraftField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SupportCraft> supportCraftField; 
@@ -46881,7 +47211,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WeatherSpecified
          {
             get {
+             if(weatherField!=null)
                 return weatherField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Weather> weatherField; 
@@ -47571,7 +47903,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ProprietaryCodeSpecified
          {
             get {
+             if(proprietaryCodeField!=null)
                 return proprietaryCodeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> proprietaryCodeField; 
@@ -47989,7 +48323,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -49146,7 +49482,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -49307,7 +49645,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellboreGeometrySectionSpecified
          {
             get {
+             if(wbGeometrySectionField!=null)
                 return wbGeometrySectionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellboreGeometrySection> wbGeometrySectionField; 
@@ -49750,7 +50090,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameTagSpecified
          {
             get {
+             if(nameTagField!=null)
                 return nameTagField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameTag> nameTagField; 
@@ -49886,7 +50228,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -50776,7 +51120,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool RheometerSpecified
          {
             get {
+             if(rheometerField!=null)
                 return rheometerField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Rheometer> rheometerField; 
@@ -51092,7 +51438,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -51451,7 +51799,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -51648,7 +51998,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -51969,7 +52321,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -52936,7 +53290,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -53025,7 +53381,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AnchorTensionSpecified
          {
             get {
+             if(anchorTensionField!=null)
                 return anchorTensionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> anchorTensionField; 
@@ -53050,7 +53408,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AnchorAngleSpecified
          {
             get {
+             if(anchorAngleField!=null)
                 return anchorAngleField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> anchorAngleField; 
@@ -53757,7 +54117,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -53975,7 +54337,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -54335,7 +54699,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool IncidentSpecified
          {
             get {
+             if(incidentField!=null)
                 return incidentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Incident> incidentField; 
@@ -55504,7 +55870,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -55686,7 +56054,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -55928,7 +56298,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -56452,7 +56824,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -56557,7 +56931,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ObjectGroupSpecified
          {
             get {
+             if(objectGroupField!=null)
                 return objectGroupField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ObjectGroup> objectGroupField; 
@@ -56781,7 +57157,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParamSpecified
          {
             get {
+             if(paramField!=null)
                 return paramField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> paramField; 
@@ -56806,7 +57184,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool MemberObjectSpecified
          {
             get {
+             if(memberObjectField!=null)
                 return memberObjectField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<MemberObject> memberObjectField; 
@@ -57265,7 +57645,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParamSpecified
          {
             get {
+             if(paramField!=null)
                 return paramField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> paramField; 
@@ -57290,7 +57672,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -57498,7 +57882,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool MudLogSpecified
          {
             get {
+             if(mudLogField!=null)
                 return mudLogField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<MudLog> mudLogField; 
@@ -57779,7 +58165,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool RelatedLogSpecified
          {
             get {
+             if(relatedLogField!=null)
                 return relatedLogField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefNameString> relatedLogField; 
@@ -57804,7 +58192,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParameterSpecified
          {
             get {
+             if(parameterField!=null)
                 return parameterField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<MudLogParameter> parameterField; 
@@ -57829,7 +58219,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool GeologyIntervalSpecified
          {
             get {
+             if(geologyIntervalField!=null)
                 return geologyIntervalField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<GeologyInterval> geologyIntervalField; 
@@ -58255,7 +58647,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -58798,7 +59192,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LithologySpecified
          {
             get {
+             if(lithologyField!=null)
                 return lithologyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Lithology> lithologyField; 
@@ -59004,7 +59400,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool NameFormationSpecified
          {
             get {
+             if(nameFormationField!=null)
                 return nameFormationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> nameFormationField; 
@@ -59029,7 +59427,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LithostratigraphicSpecified
          {
             get {
+             if(lithostratigraphicField!=null)
                 return lithostratigraphicField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<LithostratigraphyStruct> lithostratigraphicField; 
@@ -59054,7 +59454,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ChronostratigraphicSpecified
          {
             get {
+             if(chronostratigraphicField!=null)
                 return chronostratigraphicField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ChronostratigraphyStruct> chronostratigraphicField; 
@@ -59241,7 +59643,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -60685,7 +61089,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool MessageSpecified
          {
             get {
+             if(messageField!=null)
                 return messageField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Message> messageField; 
@@ -60999,7 +61405,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParamSpecified
          {
             get {
+             if(paramField!=null)
                 return paramField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> paramField; 
@@ -61252,7 +61660,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LogSpecified
          {
             get {
+             if(logField!=null)
                 return logField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Log> logField; 
@@ -61911,7 +62321,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LogParamSpecified
          {
             get {
+             if(logParamField!=null)
                 return logParamField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<IndexedObject> logParamField; 
@@ -61936,7 +62348,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LogCurveInfoSpecified
          {
             get {
+             if(logCurveInfoField!=null)
                 return logCurveInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<LogCurveInfo> logCurveInfoField; 
@@ -61961,7 +62375,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LogDataSpecified
          {
             get {
+             if(logDataField!=null)
                 return logDataField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<LogData> logDataField; 
@@ -62588,7 +63004,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool AxisDefinitionSpecified
          {
             get {
+             if(axisDefinitionField!=null)
                 return axisDefinitionField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AxisDefinition> axisDefinitionField; 
@@ -62613,7 +63031,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -62980,7 +63400,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -63105,7 +63527,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DataSpecified
          {
             get {
+             if(dataField!=null)
                 return dataField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> dataField; 
@@ -63192,7 +63616,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FormationMarkerSpecified
          {
             get {
+             if(formationMarkerField!=null)
                 return formationMarkerField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FormationMarker> formationMarkerField; 
@@ -63744,7 +64170,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FluidsReportSpecified
          {
             get {
+             if(fluidsReportField!=null)
                 return fluidsReportField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<FluidsReport> fluidsReportField; 
@@ -63968,7 +64396,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FluidSpecified
          {
             get {
+             if(fluidField!=null)
                 return fluidField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Fluid> fluidField; 
@@ -64143,7 +64573,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DrillReportSpecified
          {
             get {
+             if(drillReportField!=null)
                 return drillReportField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReport> drillReportField; 
@@ -64406,7 +64838,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellboreAliasSpecified
          {
             get {
+             if(wellboreAliasField!=null)
                 return wellboreAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellAlias> wellboreAliasField; 
@@ -64431,7 +64865,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellDatumSpecified
          {
             get {
+             if(wellDatumField!=null)
                 return wellDatumField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellDatum> wellDatumField; 
@@ -64456,7 +64892,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellCRSSpecified
          {
             get {
+             if(wellCRSField!=null)
                 return wellCRSField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellCRS> wellCRSField; 
@@ -64499,7 +64937,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool StatusInfoSpecified
          {
             get {
+             if(statusInfoField!=null)
                 return statusInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportStatusInfo> statusInfoField; 
@@ -64524,7 +64964,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool BitRecordSpecified
          {
             get {
+             if(bitRecordField!=null)
                 return bitRecordField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<BitRecord> bitRecordField; 
@@ -64549,7 +64991,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FluidSpecified
          {
             get {
+             if(fluidField!=null)
                 return fluidField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Fluid> fluidField; 
@@ -64574,7 +65018,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PorePressureSpecified
          {
             get {
+             if(porePressureField!=null)
                 return porePressureField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportPorePressure> porePressureField; 
@@ -64617,7 +65063,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool SurveyStationSpecified
          {
             get {
+             if(surveyStationField!=null)
                 return surveyStationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportSurveyStation> surveyStationField; 
@@ -64642,7 +65090,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ActivitySpecified
          {
             get {
+             if(activityField!=null)
                 return activityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Activity> activityField; 
@@ -64667,7 +65117,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LogInfoSpecified
          {
             get {
+             if(logInfoField!=null)
                 return logInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportLogInfo> logInfoField; 
@@ -64692,7 +65144,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool CoreInfoSpecified
          {
             get {
+             if(coreInfoField!=null)
                 return coreInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportCoreInfo> coreInfoField; 
@@ -64717,7 +65171,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool WellTestInfoSpecified
          {
             get {
+             if(wellTestInfoField!=null)
                 return wellTestInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportWellTestInfo> wellTestInfoField; 
@@ -64742,7 +65198,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool FormTestInfoSpecified
          {
             get {
+             if(formTestInfoField!=null)
                 return formTestInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportFormTestInfo> formTestInfoField; 
@@ -64767,7 +65225,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LithShowInfoSpecified
          {
             get {
+             if(lithShowInfoField!=null)
                 return lithShowInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportLithShowInfo> lithShowInfoField; 
@@ -64792,7 +65252,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool EquipFailureInfoSpecified
          {
             get {
+             if(equipFailureInfoField!=null)
                 return equipFailureInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportEquipFailureInfo> equipFailureInfoField; 
@@ -64817,7 +65279,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ControlIncidentInfoSpecified
          {
             get {
+             if(controlIncidentInfoField!=null)
                 return controlIncidentInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportControlIncidentInfo> controlIncidentInfoField; 
@@ -64842,7 +65306,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool StratInfoSpecified
          {
             get {
+             if(stratInfoField!=null)
                 return stratInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportStratInfo> stratInfoField; 
@@ -64867,7 +65333,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool PerfInfoSpecified
          {
             get {
+             if(perfInfoField!=null)
                 return perfInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportPerfInfo> perfInfoField; 
@@ -64892,7 +65360,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool GasReadingInfoSpecified
          {
             get {
+             if(gasReadingInfoField!=null)
                 return gasReadingInfoField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillReportGasReadingInfo> gasReadingInfoField; 
@@ -65087,7 +65557,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -65329,7 +65801,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool RigAliasSpecified
          {
             get {
+             if(rigAliasField!=null)
                 return rigAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Alias> rigAliasField; 
@@ -65436,7 +65910,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -65783,7 +66259,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ParentWellboreSpecified
          {
             get {
+             if(parentWellboreField!=null)
                 return parentWellboreField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<WellAlias> parentWellboreField; 
@@ -66759,7 +67237,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -66959,7 +67439,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -67277,7 +67759,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool LocationSpecified
          {
             get {
+             if(locationField!=null)
                 return locationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Location> locationField; 
@@ -67302,7 +67786,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -67656,7 +68142,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType1> ItemsElementNameField; 
@@ -67717,7 +68205,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -68046,7 +68536,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -68666,7 +69158,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -68977,7 +69471,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -69213,7 +69709,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -69470,7 +69968,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -69691,7 +70191,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ProprietaryCodeSpecified
          {
             get {
+             if(proprietaryCodeField!=null)
                 return proprietaryCodeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> proprietaryCodeField; 
@@ -70103,7 +70605,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -70285,7 +70789,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -70524,7 +71030,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -70907,7 +71415,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -71012,7 +71522,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ConvCoreSpecified
          {
             get {
+             if(convCoreField!=null)
                 return convCoreField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ConvCore> convCoreField; 
@@ -71827,7 +72339,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ChangeLogSpecified
          {
             get {
+             if(changeLogField!=null)
                 return changeLogField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ChangeLog> changeLogField; 
@@ -72030,7 +72544,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ChangeHistorySpecified
          {
             get {
+             if(changeHistoryField!=null)
                 return changeHistoryField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ChangeHistory> changeHistoryField; 
@@ -72471,7 +72987,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -72576,7 +73094,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool CementJobSpecified
          {
             get {
+             if(cementJobField!=null)
                 return cementJobField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CementJob> cementJobField; 
@@ -73172,7 +73692,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool CementStageSpecified
          {
             get {
+             if(cementStageField!=null)
                 return cementStageField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CementStage> cementStageField; 
@@ -75677,7 +76199,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -76453,7 +76977,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool CementAdditiveSpecified
          {
             get {
+             if(cementAdditiveField!=null)
                 return cementAdditiveField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CementAdditive> cementAdditiveField; 
@@ -77468,7 +77994,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -78351,7 +78879,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool BhaRunSpecified
          {
             get {
+             if(bhaRunField!=null)
                 return bhaRunField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<BhaRun> bhaRunField; 
@@ -78842,7 +79372,9 @@ namespace Energistics.DataAccess.WITSML141
          public bool DrillingParamsSpecified
          {
             get {
+             if(drillingParamsField!=null)
                 return drillingParamsField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DrillingParams> drillingParamsField; 

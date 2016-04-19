@@ -843,7 +843,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType> ItemsElementNameField; 
@@ -987,7 +989,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TextSpecified
          {
             get {
+             if(TextField!=null)
                 return TextField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> TextField; 
@@ -1172,7 +1176,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool NameSpecified
          {
             get {
+             if(nameField!=null)
                 return nameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CodeType> nameField; 
@@ -1483,7 +1489,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool DomainOfValiditySpecified
          {
             get {
+             if(domainOfValidityField!=null)
                 return domainOfValidityField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DomainOfValidity> domainOfValidityField; 
@@ -1508,7 +1516,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ScopeSpecified
          {
             get {
+             if(scopeField!=null)
                 return scopeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> scopeField; 
@@ -1986,7 +1996,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool AxisSpecified
          {
             get {
+             if(axisField!=null)
                 return axisField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CoordinateSystemAxisPropertyType> axisField; 
@@ -2377,7 +2389,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool RelatedTimeSpecified
          {
             get {
+             if(relatedTimeField!=null)
                 return relatedTimeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RelatedTimeType> relatedTimeField; 
@@ -2905,7 +2919,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool InteriorSpecified
          {
             get {
+             if(interiorField!=null)
                 return interiorField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<AbstractRingPropertyType> interiorField; 
@@ -3217,7 +3233,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TextSpecified
          {
             get {
+             if(TextField!=null)
                 return TextField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> TextField; 
@@ -3310,7 +3328,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ScopeSpecified
          {
             get {
+             if(scopeField!=null)
                 return scopeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> scopeField; 
@@ -3635,7 +3655,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool GeographicElementSpecified
          {
             get {
+             if(geographicElementField!=null)
                 return geographicElementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EX_GeographicExtent_PropertyType> geographicElementField; 
@@ -3660,7 +3682,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TemporalElementSpecified
          {
             get {
+             if(temporalElementField!=null)
                 return temporalElementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EX_TemporalExtent_PropertyType> temporalElementField; 
@@ -3685,7 +3709,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool VerticalElementSpecified
          {
             get {
+             if(verticalElementField!=null)
                 return verticalElementField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<EX_VerticalExtent_PropertyType> verticalElementField; 
@@ -4596,7 +4622,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool DeliveryPointSpecified
          {
             get {
+             if(deliveryPointField!=null)
                 return deliveryPointField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> deliveryPointField; 
@@ -4693,7 +4721,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ElectronicMailAddressSpecified
          {
             get {
+             if(electronicMailAddressField!=null)
                 return electronicMailAddressField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> electronicMailAddressField; 
@@ -4746,7 +4776,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool VoiceSpecified
          {
             get {
+             if(voiceField!=null)
                 return voiceField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> voiceField; 
@@ -4771,7 +4803,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool FacsimileSpecified
          {
             get {
+             if(facsimileField!=null)
                 return facsimileField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> facsimileField; 
@@ -5834,7 +5868,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool AlternateTitleSpecified
          {
             get {
+             if(alternateTitleField!=null)
                 return alternateTitleField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> alternateTitleField; 
@@ -5859,7 +5895,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool DateSpecified
          {
             get {
+             if(dateField!=null)
                 return dateField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CI_Date_PropertyType> dateField; 
@@ -5920,7 +5958,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool IdentifierSpecified
          {
             get {
+             if(identifierField!=null)
                 return identifierField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<MD_Identifier_PropertyType> identifierField; 
@@ -5945,7 +5985,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool CitedResponsiblePartySpecified
          {
             get {
+             if(citedResponsiblePartyField!=null)
                 return citedResponsiblePartyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CI_ResponsibleParty_PropertyType> citedResponsiblePartyField; 
@@ -5970,7 +6012,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PresentationFormSpecified
          {
             get {
+             if(presentationFormField!=null)
                 return presentationFormField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CI_PresentationFormCode_PropertyType> presentationFormField; 
@@ -6760,7 +6804,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool NameOfMeasureSpecified
          {
             get {
+             if(nameOfMeasureField!=null)
                 return nameOfMeasureField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CharacterString_PropertyType> nameOfMeasureField; 
@@ -6875,7 +6921,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool DateTimeSpecified
          {
             get {
+             if(dateTimeField!=null)
                 return dateTimeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DateTime_PropertyType> dateTimeField; 
@@ -6900,7 +6948,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ResultSpecified
          {
             get {
+             if(resultField!=null)
                 return resultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DQ_Result_PropertyType> resultField; 
@@ -7610,7 +7660,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ScopeSpecified
          {
             get {
+             if(scopeField!=null)
                 return scopeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<String> scopeField; 
@@ -7653,7 +7705,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool CoordinateOperationAccuracySpecified
          {
             get {
+             if(coordinateOperationAccuracyField!=null)
                 return coordinateOperationAccuracyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<CoordinateOperationAccuracy> coordinateOperationAccuracyField; 
@@ -9710,7 +9764,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ResqmlDocumentSpecified
          {
             get {
+             if(resqmlDocumentField!=null)
                 return resqmlDocumentField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlDocument> resqmlDocumentField; 
@@ -9808,7 +9864,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool DocumentAliasSpecified
          {
             get {
+             if(documentAliasField!=null)
                 return documentAliasField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> documentAliasField; 
@@ -9872,7 +9930,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool DocumentClassSpecified
          {
             get {
+             if(documentClassField!=null)
                 return documentClassField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<NameStruct> documentClassField; 
@@ -9915,7 +9975,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool SecurityInformationSpecified
          {
             get {
+             if(securityInformationField!=null)
                 return securityInformationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DocumentSecurityInfo> securityInformationField; 
@@ -9959,7 +10021,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool AuditTrailSpecified
          {
             get {
+             if(auditTrailField!=null)
                 return auditTrailField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DocumentEvent> auditTrailField; 
@@ -10380,7 +10444,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -11040,7 +11106,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ExtensionNameValue> extensionNameValueField; 
@@ -11289,7 +11357,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PropertyKindSetSpecified
          {
             get {
+             if(propertyKindSetField!=null)
                 return propertyKindSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<StandAloneResqmlPropertyKind> propertyKindSetField; 
@@ -11502,7 +11572,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool Local3dCRSSpecified
          {
             get {
+             if(local3dCRSField!=null)
                 return local3dCRSField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlLocal3dCRS> local3dCRSField; 
@@ -12093,7 +12165,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -12247,7 +12321,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -12336,7 +12412,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool AnySpecified
          {
             get {
+             if(AnyField!=null)
                 return AnyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<XmlElement> AnyField; 
@@ -12726,7 +12804,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -13081,7 +13161,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ItemsElementNameSpecified
          {
             get {
+             if(ItemsElementNameField!=null)
                 return ItemsElementNameField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ItemsChoiceType1> ItemsElementNameField; 
@@ -13124,7 +13206,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -13316,7 +13400,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PropertyGroupSpecified
          {
             get {
+             if(propertyGroupField!=null)
                 return propertyGroupField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlPropertyGroup> propertyGroupField; 
@@ -13341,7 +13427,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TimeStepListSpecified
          {
             get {
+             if(timeStepListField!=null)
                 return timeStepListField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlTimeStepList> timeStepListField; 
@@ -13556,7 +13644,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -13635,7 +13725,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool MemberPropertySpecified
          {
             get {
+             if(memberPropertyField!=null)
                 return memberPropertyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefGlobalNameString> memberPropertyField; 
@@ -13678,7 +13770,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -13993,7 +14087,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -14036,7 +14132,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -14061,7 +14159,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TimeStepSpecified
          {
             get {
+             if(timeStepField!=null)
                 return timeStepField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DateTime> timeStepField; 
@@ -14162,7 +14262,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool HorizonSpecified
          {
             get {
+             if(horizonField!=null)
                 return horizonField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlHorizon> horizonField; 
@@ -14187,7 +14289,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool FaultSpecified
          {
             get {
+             if(faultField!=null)
                 return faultField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlFault> faultField; 
@@ -14212,7 +14316,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BinGridSpecified
          {
             get {
+             if(binGridField!=null)
                 return binGridField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlBinGrid> binGridField; 
@@ -14431,7 +14537,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -14474,7 +14582,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -14563,7 +14673,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool HorizonInterpretationSpecified
          {
             get {
+             if(horizonInterpretationField!=null)
                 return horizonInterpretationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlHorizonInterpretation> horizonInterpretationField; 
@@ -14763,7 +14875,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -14806,7 +14920,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -14895,7 +15011,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool Grid2dRepresentationSpecified
          {
             get {
+             if(grid2dRepresentationField!=null)
                 return grid2dRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlGrid2dRepresentation> grid2dRepresentationField; 
@@ -14920,7 +15038,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TriangulatedRepresentationSpecified
          {
             get {
+             if(triangulatedRepresentationField!=null)
                 return triangulatedRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlTriangulatedRepresentation> triangulatedRepresentationField; 
@@ -14945,7 +15065,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PointSetRepresentationSpecified
          {
             get {
+             if(pointSetRepresentationField!=null)
                 return pointSetRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlPointSetRepresentation> pointSetRepresentationField; 
@@ -14970,7 +15092,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool HybridGridRepresentationSpecified
          {
             get {
+             if(hybridGridRepresentationField!=null)
                 return hybridGridRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlHybridGridRepresentation> hybridGridRepresentationField; 
@@ -14995,7 +15119,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool WellMarkerRepresentationSpecified
          {
             get {
+             if(wellMarkerRepresentationField!=null)
                 return wellMarkerRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlWellMarkerRepresentation> wellMarkerRepresentationField; 
@@ -15203,7 +15329,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -15264,7 +15392,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -15353,7 +15483,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool Grid2dPatchSpecified
          {
             get {
+             if(grid2dPatchField!=null)
                 return grid2dPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlGrid2dPatch> grid2dPatchField; 
@@ -15743,7 +15875,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ArraySpecified
          {
             get {
+             if(arrayField!=null)
                 return arrayField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Double> arrayField; 
@@ -15826,7 +15960,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ContinuousPropertyValuesSpecified
          {
             get {
+             if(continuousPropertyValuesField!=null)
                 return continuousPropertyValuesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlContinuousPropertyValues> continuousPropertyValuesField; 
@@ -15851,7 +15987,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool DiscretePropertyValuesSpecified
          {
             get {
+             if(discretePropertyValuesField!=null)
                 return discretePropertyValuesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlDiscretePropertyValues> discretePropertyValuesField; 
@@ -15876,7 +16014,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool CategoricalPropertyValuesSpecified
          {
             get {
+             if(categoricalPropertyValuesField!=null)
                 return categoricalPropertyValuesField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlCategoricalPropertyValues> categoricalPropertyValuesField; 
@@ -16097,7 +16237,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -16290,7 +16432,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -16810,7 +16954,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ArraySpecified
          {
             get {
+             if(arrayField!=null)
                 return arrayField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SByte> arrayField; 
@@ -16893,7 +17039,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ArraySpecified
          {
             get {
+             if(arrayField!=null)
                 return arrayField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Single> arrayField; 
@@ -17015,7 +17163,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ArraySpecified
          {
             get {
+             if(arrayField!=null)
                 return arrayField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Int32> arrayField; 
@@ -17137,7 +17287,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ArraySpecified
          {
             get {
+             if(arrayField!=null)
                 return arrayField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Int64> arrayField; 
@@ -17259,7 +17411,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ArraySpecified
          {
             get {
+             if(arrayField!=null)
                 return arrayField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Int16> arrayField; 
@@ -17495,7 +17649,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool StringLookupSpecified
          {
             get {
+             if(stringLookupField!=null)
                 return stringLookupField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlStringLookup> stringLookupField; 
@@ -17838,7 +17994,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PillarSetPatchSpecified
          {
             get {
+             if(pillarSetPatchField!=null)
                 return pillarSetPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlPillarSetPatch> pillarSetPatchField; 
@@ -18056,7 +18214,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool VrtxSpecified
          {
             get {
+             if(vrtxField!=null)
                 return vrtxField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Point3d> vrtxField; 
@@ -18273,7 +18433,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool Point3dSetSpecified
          {
             get {
+             if(point3dSetField!=null)
                 return point3dSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlWellMarker> point3dSetField; 
@@ -18736,7 +18898,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TriangulatedPatchSpecified
          {
             get {
+             if(triangulatedPatchField!=null)
                 return triangulatedPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlTriangulatedPatch> triangulatedPatchField; 
@@ -19002,7 +19166,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool SplitEdgeSpecified
          {
             get {
+             if(splitEdgeField!=null)
                 return splitEdgeField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<SplitEdge> splitEdgeField; 
@@ -19155,7 +19321,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TrglSpecified
          {
             get {
+             if(trglField!=null)
                 return trglField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Triangle> trglField; 
@@ -19326,7 +19494,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PointSetPatchSpecified
          {
             get {
+             if(pointSetPatchField!=null)
                 return pointSetPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlPointSetPatch> pointSetPatchField; 
@@ -19526,7 +19696,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TriangulatedPatchSpecified
          {
             get {
+             if(triangulatedPatchField!=null)
                 return triangulatedPatchField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlTriangulatedPatch> triangulatedPatchField; 
@@ -19578,7 +19750,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool Grid2dRepresentationSpecified
          {
             get {
+             if(grid2dRepresentationField!=null)
                 return grid2dRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlGrid2dRepresentation> grid2dRepresentationField; 
@@ -19603,7 +19777,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool TriangulatedRepresentationSpecified
          {
             get {
+             if(triangulatedRepresentationField!=null)
                 return triangulatedRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlTriangulatedRepresentation> triangulatedRepresentationField; 
@@ -19628,7 +19804,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PillarSetRepresentationSpecified
          {
             get {
+             if(pillarSetRepresentationField!=null)
                 return pillarSetRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlPillarSetRepresentation> pillarSetRepresentationField; 
@@ -19653,7 +19831,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool PointSetRepresentationSpecified
          {
             get {
+             if(pointSetRepresentationField!=null)
                 return pointSetRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlPointSetRepresentation> pointSetRepresentationField; 
@@ -19678,7 +19858,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool WellMarkerRepresentationSpecified
          {
             get {
+             if(wellMarkerRepresentationField!=null)
                 return wellMarkerRepresentationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlWellMarkerRepresentation> wellMarkerRepresentationField; 
@@ -19730,7 +19912,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool FaultInterpretationSpecified
          {
             get {
+             if(faultInterpretationField!=null)
                 return faultInterpretationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlFaultInterpretation> faultInterpretationField; 
@@ -19926,7 +20110,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -20185,7 +20371,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -20275,7 +20463,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BlockedWellboreSetSpecified
          {
             get {
+             if(blockedWellboreSetField!=null)
                 return blockedWellboreSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlIJKBlockedWellbore> blockedWellboreSetField; 
@@ -20301,7 +20491,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool NonStandardAdjacencySetSpecified
          {
             get {
+             if(nonStandardAdjacencySetField!=null)
                 return nonStandardAdjacencySetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlIJKNonStandardAdjacency> nonStandardAdjacencySetField; 
@@ -20327,7 +20519,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool GridSetSpecified
          {
             get {
+             if(gridSetField!=null)
                 return gridSetField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlRootIJKGrid> gridSetField; 
@@ -20542,7 +20736,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -20621,7 +20817,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool Grid3dGUIDSpecified
          {
             get {
+             if(grid3dGUIDField!=null)
                 return grid3dGUIDField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefGlobalNameString> grid3dGUIDField; 
@@ -20646,7 +20844,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool GridIJKCellSpecified
          {
             get {
+             if(gridIJKCellField!=null)
                 return gridIJKCellField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlGridIJKCell> gridIJKCellField; 
@@ -20707,7 +20907,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -21140,7 +21342,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -21249,7 +21453,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool Grid3dGUIDSpecified
          {
             get {
+             if(grid3dGUIDField!=null)
                 return grid3dGUIDField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<RefGlobalNameString> grid3dGUIDField; 
@@ -21310,7 +21516,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -21773,7 +21981,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool BibliographicCitationSpecified
          {
             get {
+             if(bibliographicCitationField!=null)
                 return bibliographicCitationField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<DublinCoreString> bibliographicCitationField; 
@@ -21972,7 +22182,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool GapAfterLayerSpecified
          {
             get {
+             if(gapAfterLayerField!=null)
                 return gapAfterLayerField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Int16> gapAfterLayerField; 
@@ -22195,7 +22407,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool ExtensionNameValueSpecified
          {
             get {
+             if(extensionNameValueField!=null)
                 return extensionNameValueField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
@@ -22284,7 +22498,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool LocalIJKGridSpecified
          {
             get {
+             if(localIJKGridField!=null)
                 return localIJKGridField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlLocalIJKGrid> localIJKGridField; 
@@ -23341,7 +23557,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool OmittedCellSpecified
          {
             get {
+             if(omittedCellField!=null)
                 return omittedCellField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<ResqmlCellIndex> omittedCellField; 
@@ -23412,7 +23630,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool CountSpecified
          {
             get {
+             if(countField!=null)
                 return countField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Int16> countField; 
@@ -23437,7 +23657,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool WeightSpecified
          {
             get {
+             if(weightField!=null)
                 return weightField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<Single> weightField; 
@@ -23608,7 +23830,9 @@ namespace Energistics.DataAccess.RESQML110
          public bool AnySpecified
          {
             get {
+             if(AnyField!=null)
                 return AnyField.Count>0?true:false;
+             else return false;
             } 
          }
         private List<XmlElement> AnyField; 

@@ -1,7 +1,0 @@
-C:\projects\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.XML
-C:\projects\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.dll
-C:\projects\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.pdb
-C:\projects\source\DevKitGenerator\DataAccess\bin\Debug\HDF5DotNet.dll
-C:\projects\source\DevKitGenerator\DataAccess\obj\Debug\Energistics.DataAccess.dll
-C:\projects\source\DevKitGenerator\DataAccess\obj\Debug\Energistics.DataAccess.pdb
-C:\projects\source\DevKitGenerator\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

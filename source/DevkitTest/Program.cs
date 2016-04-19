@@ -80,7 +80,7 @@ namespace DevkitTest
 
         static void Main(string[] args)
         {
-
+            testWitsmlObject();
             String assemblyName = "Energistics.DataAccess";
             // if webservice is up, can use this line to test the webservice
             //Console.WriteLine("Test the WITSML WebServiceAPI ... ");
@@ -193,6 +193,24 @@ namespace DevkitTest
 
             }
 
+        }
+
+        static void testWitsmlObject()
+        {
+            Energistics.DataAccess.WITSML141.WellList wells = new Energistics.DataAccess.WITSML141.WellList();
+            Energistics.DataAccess.WITSML141.Well well = new Energistics.DataAccess.WITSML141.Well{ Name="well", TimeZone="-06:00", StatusWell= Energistics.DataAccess.WITSML141.ReferenceData.WellStatus.abandoned};
+            wells.Well = new List<Energistics.DataAccess.WITSML141.Well>();
+            wells.Well.Add(well);
+            String xml = EnergisticsConverter.ObjectToXml(wells);
+            if (ValidXmlDoc(new StringReader(xml), "WITSML1.4.1.1", "http://www.witsml.org/schemas/1series"))
+            {
+                Console.WriteLine("validate the xml input successfully!");
+            }
+            else
+            {
+                Console.WriteLine("validate the xml input failed!");
+            }
+            Console.WriteLine(xml);
         }
 
         static void testProdmlWebService()

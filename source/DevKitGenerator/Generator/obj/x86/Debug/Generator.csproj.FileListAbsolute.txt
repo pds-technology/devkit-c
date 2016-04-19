@@ -1,7 +1,0 @@
-C:\projects\source\DevKitGenerator\Generator\bin\Debug\Energistics.Generator.exe.config
-C:\projects\source\DevKitGenerator\Generator\bin\Debug\Energistics.Generator.exe
-C:\projects\source\DevKitGenerator\Generator\bin\Debug\Energistics.Generator.pdb
-C:\projects\source\DevKitGenerator\Generator\bin\Debug\Energistics.SchemaGatherer.exe
-C:\projects\source\DevKitGenerator\Generator\bin\Debug\Energistics.SchemaGatherer.pdb
-C:\projects\source\DevKitGenerator\Generator\obj\x86\Debug\Energistics.Generator.exe
-C:\projects\source\DevKitGenerator\Generator\obj\x86\Debug\Energistics.Generator.pdb
