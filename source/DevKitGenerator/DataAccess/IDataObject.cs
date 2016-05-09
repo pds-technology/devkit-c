@@ -2,7 +2,7 @@
 // License notice
 //  
 // Standards DevKit, version 2.0
-// Copyright 2012 ExxonMobil Upstream Research Company
+// Copyright 2016 Petrotechnical Data Systems
 // 
 // Third Party Software
 // 
