@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <description>$description$</description>
+    <projectUrl>http://www.energistics.org/</projectUrl>
+    <licenseUrl>http://www.energistics.org/product-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="bin/$configuration$/$id$.dll" target="lib" />
+    <file src="bin/$configuration$/$id$.pdb" target="lib" />
+    <file src="bin/$configuration$/$id$.xml" target="lib" />
+  </files>
+</package>

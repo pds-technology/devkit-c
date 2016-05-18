@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DataAccessSigningKey.snk" />
+    <None Include="DataAccess.nuspec" />
     <None Include="Documentation\DoxygenConfiguration" />
     <None Include="packages.config" />
   </ItemGroup>

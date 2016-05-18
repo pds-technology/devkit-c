@@ -82,9 +82,9 @@ using System;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Energistics.DataAccess")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Energistics Standards DevKit")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Energistics")]
 [assembly: AssemblyProduct("Standards DevKit")]
 [assembly: AssemblyCopyright("Copyright 2011 ExxonMobil Upstream Research Company")]
 [assembly: AssemblyTrademark("")]
