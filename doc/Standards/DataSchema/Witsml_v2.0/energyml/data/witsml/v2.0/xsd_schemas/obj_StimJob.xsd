@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--                                                         -->
+	<xsd:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--                                                         -->
+	<xsd:include schemaLocation="WitsmlCommon.xsd"/>
+	<xsd:include schemaLocation="StimJob.xsd"/>
+	<!--                                                         -->
+	<xsd:element name="StimJob" type="witsml:obj_StimJob" substitutionGroup="eml:AbstractDataObject"/>
+</xsd:schema>

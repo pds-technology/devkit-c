@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" elementFormDefault="qualified" version="2.0">
+	<!--														-->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	<xs:annotation>
+		<xs:documentation>FluidsReport Schema.</xs:documentation>
+	</xs:annotation>
+	<!--														-->
+	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--														-->
+	<xs:include schemaLocation="WitsmlCommon.xsd"/>
+	<xs:include schemaLocation="DrillReport.xsd"/>
+	<xs:include schemaLocation="Wellbore.xsd"/>
+	<xs:complexType name="Fluid">
+		<xs:annotation>
+			<xs:documentation>WITSML - fluids component schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Description for the type of fluid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LocationSample" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Sample location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The time when fluid readings were recorded.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth where the fluid readings were recorded.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The true vertical depth where the fluid readings were recorded.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresBopRating" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Maximum pressure rating of the blow out preventer.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MudClass" type="witsml:MudClass" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The class of the drilling fluid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Density" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Fluid density.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VisFunnel" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Funnel viscosity in seconds.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TempVis" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Funnel viscosity temperature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Pv" type="eml:DynamicViscosityMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Plastic viscosity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Yp" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Yield point (Bingham and Herschel Bulkley models).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gel10Sec" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>10 second gels.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gel10Min" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>10 minute gels.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gel30Min" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>30 minute gels.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FilterCakeLtlp" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Filter cake thickness at low (normal) temperature and pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FiltrateLtlp" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>API water loss (low temperature and pressure mud filtrate measurement) (volume per 30min).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TempHthp" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>High temperature high pressure (HTHP) temperature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresHthp" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>High temperature high pressure (HTHP) pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FiltrateHthp" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>High temperature high pressure (HTHP) filtrate (volume per 30min).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FilterCakeHthp" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>High temperature high pressure (HTHP) Filter cake thickness.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SolidsPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Solids percentage from retort (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WaterPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Water content (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OilPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Oil content from retort (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SandPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Sand content (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SolidsLowGravPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Low gravity solids (%).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SolidsCalcPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Solids content (calculated) (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BaritePc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Barite content (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Lcm" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Lost circulation material.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Mbt" type="eml:GenericMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cation exchange capacity (CEC) of the mud sample as measured by methylene blue titration (MBT).
+
+NOTE: This is temporarily set to be a GenericMeasure with no unit validation, pending addition of CEC units to the Energistics UoM spec.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ph" type="xs:double" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Mud pH.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TempPh" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Mud pH measurement temperature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Pm" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Phenolphthalein alkalinity of whole mud.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PmFiltrate" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Phenolphthalein alkalinity of mud filtrate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Mf" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Methyl orange alkalinity of filtrate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlkalinityP1" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Mud alkalinity P1 from alternate alkalinity method (volume in ml of 0.02N acid 
+to reach the phenolphthalein endpoint).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlkalinityP2" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Mud alkalinity P2 from alternate alkalinity method (volume in ml of 0.02N acid
+to titrate the reagent mixture to the phenolphthalein endpoint).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Chloride" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Chloride content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Calcium" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Calcium content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Magnesium" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Magnesium content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Potassium" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Potassium content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BrinePc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Brine content (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Lime" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Lime content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ElectStab" type="eml:ElectricPotentialDifferenceMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measurement of the emulsion stability and oil-wetting capability in oil-based muds.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CalciumChloride" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Calcium chloride content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Company" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Name of company.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Engineer" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Engineer name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Asg" type="xs:double" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Average specific gravity of solids.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SolidsHiGravPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Solids high gravity (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Polymer" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Polymers present in mud system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PolyType" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of polymers present in mud system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SolCorPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Solids corrected for Chloride content (commonly in percent).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OilCtg" type="eml:MassPerMassMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Oil on Cuttings.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HardnessCa" type="eml:MassPerMassMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Total calcium hardness.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sulfide" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Sulfide content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comments" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Comments and remarks.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Rheometer" type="witsml:Rheometer" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="RheometerViscosity">
+		<xs:sequence>
+			<xs:element name="Speed" type="eml:AngularVelocityMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Rotational speed of the rheometer, typically in RPM.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Viscosity" type="xs:double" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The raw reading from a rheometer. This could be - but is not necessarily - a viscosity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="MudClass">
+		<xs:annotation>
+			<xs:documentation>Defines the class of a drilling fluid.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="water based">
+				<xs:annotation>
+					<xs:documentation>A drilling fluid in which water is the continuous phase.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="oil based">
+				<xs:annotation>
+					<xs:documentation>A drilling fluid in which oil is the continuous phase.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="other">
+				<xs:annotation>
+					<xs:documentation>A drilling fluid in which neither water nor oil is the continous phase.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pneumatic">
+				<xs:annotation>
+					<xs:documentation>A drilling fluid which is gas-based.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="obj_FluidsReport">
+		<xs:annotation>
+			<xs:documentation>The fluidsReport object is used to capture an analysis of the drilling mud. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="DTim" type="eml:TimeStamp" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Date and time the information is related to.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Along hole measured depth of measurement from the drill datum.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Vertical depth of the measurements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NumReport" type="xs:int" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Fluids report number.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Fluid" type="witsml:Fluid" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

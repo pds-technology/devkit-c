@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.0">
+	<!--														-->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	<xs:annotation>
+		<xs:documentation>WellboreCompletion Schema</xs:documentation>
+	</xs:annotation>
+	<!--														-->
+	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--														-->
+	<xs:include schemaLocation="DownholeComponent.xsd"/>
+	<xs:include schemaLocation="WellCompletion.xsd"/>
+	<xs:include schemaLocation="Wellbore.xsd"/>
+	<xs:complexType name="obj_WellboreCompletion">
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="NameWellCompletion" type="eml:String64" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Human recognizable context for the well completion that contains the completion.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WellboreCompletionNo" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>CompletionNo, etc API14</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WellboreCompletionAlias" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Preferred alias name</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="WellboreCompletionDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Completion Date</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SuffixAPI" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>API suffix.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CompletionMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Overall measured depth interval for this wellbore completion.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CompletionTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Overall true vertical depth interval for this wellbore completion.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CurrentStatus" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="StatusDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="StatusHistory" type="witsml:CompletionStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="ContactIntervalSet" type="witsml:ContactIntervalSet" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="uidWellCompletion" use="optional" type="eml:String64"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ContactIntervalSet">
+		<xs:annotation>
+			<xs:documentation>Information on collection of contact intervals</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SlotsInterval" type="witsml:SlotsInterval" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="OpenHoleInterval" type="witsml:OpenHoleInterval" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="PerforationSetInterval" type="witsml:PerforationSetInterval" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GravelPackInterval" type="witsml:GravelPackInterval" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GravelPackInterval">
+		<xs:sequence>
+			<xs:element name="DownholeStringRefID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="GravelPackMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Gravel packed measured depth interval for this completion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GravelPackTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Gravel packed true vertical depth interval for this completion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The contactInterval event information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StatusHistory" type="witsml:IntervalStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="IntervalStatusHistory">
+		<xs:annotation>
+			<xs:documentation>Information on the status history in the interval</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PhysicalStatus" type="witsml:PhysicalStatus" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The physical status of an interval (e.g., open, closed, proposed)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The start date of status and allocation factor</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The end date of status and allocation factor</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StatusMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval over which this status is valid for the given time frame.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AllocationFactor" type="witsml:NonNegativeFraction" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>defines the proportional amount of fluid from the well completion 
+that is flowing through this interval whithin a wellbore</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comment" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A remark about the interval over this period of time</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="PhysicalStatus">
+		<xs:annotation>
+			<xs:documentation>These values represent the physical status of an interval.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum"/>
+	</xs:simpleType>
+	<xs:simpleType name="NonNegativeFraction">
+		<xs:annotation>
+			<xs:documentation>A floating point value between zero (inclusive) and one (inclusive)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:double">
+			<xs:pattern value=".+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="OpenHoleInterval">
+		<xs:sequence>
+			<xs:element name="BoreholeStringRefID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="OpenHoleMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Open hole measured depth interval for this completion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OpenHoleTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Open hole true vertical depth interval for this completion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The contactInterval event information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StatusHistory" type="witsml:IntervalStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="PerforationSetInterval">
+		<xs:sequence>
+			<xs:element name="PerforationSetRefID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PerforationSetMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Overall measured depth interval for this perforation set.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationSetTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Overall true vertical depth interval for this perforation set.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The contactInterval event information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationStatusHistory" type="witsml:PerforationStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="PerforationStatusHistory">
+		<xs:annotation>
+			<xs:documentation>Information on collection of perforation status history</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PerforationStatus" type="witsml:PerforationStatus" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>perforation status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the start date of status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the end date of status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Overall measured depth interval for this perforated interval..</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Overall true vertical depth interval for this perforated interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AllocationFactor" type="witsml:NonNegativeFraction" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>defines the proportional amount of fluid from the well completion 
+that is flowing through this interval whithin a wellbore</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comment" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The description about the status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="PerforationStatus">
+		<xs:annotation>
+			<xs:documentation>These values represent the status of a perforation.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum"/>
+	</xs:simpleType>
+	<xs:complexType name="SlotsInterval">
+		<xs:sequence>
+			<xs:element name="StringEquipmentRefUID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="SlottedMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Slotted measured depth interval for this completion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SlottedTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Slotted true vertical depth interval for this completion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The contactInterval event information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StatusHistory" type="witsml:IntervalStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+</xs:schema>

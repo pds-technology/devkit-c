@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.0">
+	<!--														-->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	<xs:annotation>
+		<xs:documentation>WellCompletion Schema</xs:documentation>
+	</xs:annotation>
+	<!--														-->
+	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--														-->
+	<xs:include schemaLocation="Well.xsd"/>
+	<xs:complexType name="obj_WellCompletion">
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="FieldID" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Field ID.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FieldCode" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Field code.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FieldType" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Field type.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EffectiveDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Field date.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ExpiredDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Expiration date</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="E_P_RightsID" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Documents exploration and production rights</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CurrentStatus" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="StatusDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="StatusHistory" type="witsml:CompletionStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="ReferenceWell" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="CompletionStatus">
+		<xs:annotation>
+			<xs:documentation>These values represent the status of a wellbore completion.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:String64"/>
+	</xs:simpleType>
+	<xs:complexType name="CompletionStatusHistory">
+		<xs:annotation>
+			<xs:documentation>Information on collection of Completion StatusHistory</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Status" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Completion status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the start date of status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the end date of status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval between the top and the base of the perforations.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comment" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The description about the status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+</xs:schema>

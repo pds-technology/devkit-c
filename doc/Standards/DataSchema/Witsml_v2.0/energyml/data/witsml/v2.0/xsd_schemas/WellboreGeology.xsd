@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" elementFormDefault="qualified" version="2.0">
+	<!--														-->
+	<xs:include schemaLocation="Wellbore.xsd"/>
+	<!--														-->
+	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<xs:simpleType name="MatrixCementType">
+		<xs:annotation>
+			<xs:documentation>Lithology matrix/cement description. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum"/>
+	</xs:simpleType>
+	<xs:complexType name="CuttingsIntervalShow">
+		<xs:annotation>
+			<xs:documentation>WITSML Geology Show Component Schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ShowRating" type="witsml:ShowRating" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Show Rating.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StainColor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Visible Stain Color.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StainDistr" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Visible Stain Distribution.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StainPc" type="eml:AreaPerAreaMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Visible Stain (commonly in percent).  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutSpeed" type="witsml:ShowSpeed" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut speed.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutColor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut color.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutStrength" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut strength.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutForm" type="witsml:ShowLevel" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut formulation.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutLevel" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut level (Faint, Bright, etc.).  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutFlorForm" type="witsml:ShowLevel" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut fluorescence form.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutFlorColor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut fluorescence color.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutFlorStrength" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut fluorescence strength.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutFlorSpeed" type="witsml:ShowSpeed" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut fluorescence speed.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CutFlorLevel" type="witsml:ShowFluorescence" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cut fluorescence level.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NatFlorColor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Natural Fluorescence Color.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NatFlorPc" type="eml:AreaPerAreaMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Natural fluorescence (commonly in percent).  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NatFlorLevel" type="witsml:ShowFluorescence" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Natural fluorescence level.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NatFlorDesc" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Natural fluorescence description.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ResidueColor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Residue color.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ImpregnatedLitho" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Impregnated lithology.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Odor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Description of any hydrocarbon type odors smelled.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CuttingFluid" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Description of any hydrocarbon type odors smelled</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="obj_WellboreGeology">
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>[maintained by the server] The interval which contains the minimum and maximum measured depths for all wellbore geology types under this wellbore geology entry.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ShowIntervalSet" type="witsml:obj_ShowEvaluation" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="InterpretedGeologyIntervalSet" type="witsml:obj_InterpretedGeology" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="CuttingsIntervalSet" type="witsml:obj_CuttingsGeology" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="obj_ShowEvaluation">
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>[maintained by the server] The interval which contains the minimum and maximum measured depths for all show intervals in this show evaluation.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EvaluatedIntervalShow" type="witsml:ShowEvaluationInterval" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="LithologyKind">
+		<xs:restriction base="eml:TypeEnum"/>
+	</xs:simpleType>
+	<xs:complexType name="obj_InterpretedGeology">
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>[maintained by the server] The interval which contains the minimum and maximum measured depths for all interpreted intervals in this interpreted geology.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="GeologicIntervalInterpreted" type="witsml:InterpretedGeologyInterval" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LithostratigraphicUnit">
+		<xs:annotation>
+			<xs:documentation>The name of a lithostratigraphy, with the "kind" attribute specifying the lithostratigraphic unit-hierarchy (Group, Formation, Member or Bed). The entry at each level is free text for the local lithostratigraphy at that level in the hierarchy. If a single hierarchy is defined, it is assumed this is at the Formation level in the hierarchy and kind=formation should be used for the entry.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eml:String64">
+				<xs:attribute name="authority" use="optional" type="eml:String64"/>
+				<xs:attribute name="kind" use="optional" type="witsml:LithostratigraphicRank"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LithologyQualifier">
+		<xs:annotation>
+			<xs:documentation>WITSML - lithology qualifier Component Schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Kind" type="witsml:LithologyQualifierKind" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The type of qualifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Abundance" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The relative abundance of the qualifier estimated based on a "visual area" basis by inspecting the cuttings  spread out
+on the shaker table prior to washing, or in the sample tray after washing.
+This represents the upper bound of the observed range, and is in the following increments at the upper bound.
+1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5%
+and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%).
+The end user can then elect  to either display  the %, or map then to an operator specific term or coding,
+i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A textual description of the qualifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="CuttingsIntervalLithology">
+		<xs:annotation>
+			<xs:documentation>Container for Lithology items in this interval.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Kind" type="witsml:LithologyKind" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The geological name for the type of lithology from the enum table listing a 
+					subset of the OneGeology / CGI defined formation types.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LithPc" type="eml:VolumePerVolumeMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The lithology represents the portion of the sampled interval this lithology type relates to.
+					The total of the lithologies within an interval should add up to 100 percent.
+					If LithologySource in cs-geology is "interpreted" only 100% is allowed.
+					If "core" or "cuttings" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100.
+					Ideally the input application should enforce a total of 100% for every defined depth interval.
+					If the total for a depth interval does not add up to 100%, the "undifferentiated" code should be used to fill out to 100%.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CodeLith" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A custom Lithology encoding sceme if desired.
+					(It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item). 
+					The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards.
+					The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100).
+					Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21.
+					However the NPD is also working through Energistics/Ceasar to potentially change this useage.)
+					This should not be used for mnemonics, as those vary by operator, and if an abbreviation is 
+					required a local look up table should be used by the rendering client, based on Lithology Type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Color" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors.
+					with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow,
+					modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Texture" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6.
+					crystalline, (often "feather-edge" appearance on breaking),  friable, dull, earthy, 
+					chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,  
+					sucrosic, (often exhibits capillary imbibition).
+					e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Hardness" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Mineral hardness.
+					(Typically this will rarely be used as mineral hardness is not typically recorded.
+					What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Compaction" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5.
+					not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SizeGrain" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology grain size description.
+					Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite. 
+					Size ranges in millimeter (or micrometer) and Inches.
+					LT 256 mm		LT 10.1 in 		"boulder";
+					64-256 mm		2.5-10.1 in		"cobble";
+					32-64 mm		1.26-2.5 in		"very coarse gravel";
+					16-32 mm		0.63-1.26 in		"coarse gravel";
+					8-16 mm			0.31-0.63 in		"medium gravel";
+					4-8 mm			0.157-0.31 in		"fine gravel";
+					2-4 mm			0.079-0.157 in		"very fine gravel";
+					1-2 mm			0.039-0.079 in		"very coarse sand";
+					0.5-1 mm		0.020-0.039 in		"coarse sand";
+					0.25-0.5 mm		0.010-0.020 in		"medium sand";
+					125-250 um		0.0049-0.010 in		"fine sand";
+					62.5-125 um		0.0025-0.0049 in	"very fine sand";
+					3.90625-62.5 um		0.00015-0.0025 in	"silt";
+					LT 3.90625 um		LT 0.00015 in		"clay";
+					LT 1 um			LT 0.000039 in	 	"colloid"
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Roundness" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class).
+					very angular, angular, subangular, subrounded, rounded, well rounded.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sphericity" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity.
+					very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sorting" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting.
+					very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MatrixCement" type="witsml:MatrixCementType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table.
+					eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation,
+					"siderite" (Sherwood sandstones, southern UK typical Siderite cements), "quartz" (grain to grain contact cementation or secondary quartz deposition),
+					"kaolinite", "illite" (eg. Village Fields North Sea), "smectite","chlorite" (Teg, Algeria.)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PorosityVisible" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description.
+					Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates.
+					The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors.
+					When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none"
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PorosityFabric" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2.
+					intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal,
+					intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Permeability" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5.
+					In future these would benefit from quantification. tight, slightly, fairly, highly.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Shows" type="witsml:CuttingsIntervalShow" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Qualifier" type="witsml:LithologyQualifier" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="LithologyQualifierKind">
+		<xs:restriction base="eml:TypeEnum"/>
+	</xs:simpleType>
+	<xs:simpleType name="ShowFluorescence">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="faint"/>
+			<xs:enumeration value="bright"/>
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ShowSpeed">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="slow"/>
+			<xs:enumeration value="moderately fast"/>
+			<xs:enumeration value="fast"/>
+			<xs:enumeration value="instantaneous"/>
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ShowEvaluationInterval">
+		<xs:annotation>
+			<xs:documentation>WITSML Geology Show Component Schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth interval over which the show is evaluated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ShowFluid" type="witsml:ShowFluid" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ShowRating" type="witsml:ShowRating" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Show Rating.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="GeochronologicalRank">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="eon"/>
+			<xs:enumeration value="era"/>
+			<xs:enumeration value="period"/>
+			<xs:enumeration value="epoch"/>
+			<xs:enumeration value="age"/>
+			<xs:enumeration value="chron"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="InterpretedIntervalLithology">
+		<xs:annotation>
+			<xs:documentation>Container for Lithology items in this interval.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Kind" type="witsml:LithologyKind" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The geological name for the type of lithology from the enum table listing a 
+					subset of the OneGeology / CGI defined formation types.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CodeLith" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A custom Lithology encoding sceme if desired.
+					(It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item). 
+					The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards.
+					The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100).
+					Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21.
+					However the NPD is also working through Energistics/Ceasar to potentially change this useage.)
+					This should not be used for mnemonics, as those vary by operator, and if an abbreviation is 
+					required a local look up table should be used by the rendering client, based on Lithology Type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Color" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors.
+					with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow,
+					modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Texture" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6.
+					crystalline, (often "feather-edge" appearance on breaking),  friable, dull, earthy, 
+					chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,  
+					sucrosic, (often exhibits capillary imbibition).
+					e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Hardness" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Mineral hardness.
+					(Typically this will rarely be used as mineral hardness is not typically recorded.
+					What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Compaction" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5.
+					not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SizeGrain" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology grain size description.
+					Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite. 
+					Size ranges in millimeter (or micrometer) and Inches.
+					LT 256 mm		LT 10.1 in 		"boulder";
+					64-256 mm		2.5-10.1 in		"cobble";
+					32-64 mm		1.26-2.5 in		"very coarse gravel";
+					16-32 mm		0.63-1.26 in		"coarse gravel";
+					8-16 mm			0.31-0.63 in		"medium gravel";
+					4-8 mm			0.157-0.31 in		"fine gravel";
+					2-4 mm			0.079-0.157 in		"very fine gravel";
+					1-2 mm			0.039-0.079 in		"very coarse sand";
+					0.5-1 mm		0.020-0.039 in		"coarse sand";
+					0.25-0.5 mm		0.010-0.020 in		"medium sand";
+					125-250 um		0.0049-0.010 in		"fine sand";
+					62.5-125 um		0.0025-0.0049 in	"very fine sand";
+					3.90625-62.5 um		0.00015-0.0025 in	"silt";
+					LT 3.90625 um		LT 0.00015 in		"clay";
+					LT 1 um			LT 0.000039 in	 	"colloid"
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Roundness" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class).
+					very angular, angular, subangular, subrounded, rounded, well rounded.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sorting" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting.
+					very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sphericity" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity.
+					very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MatrixCement" type="witsml:MatrixCementType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table.
+					eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation,
+					"siderite" (Sherwood sandstones, southern UK typical Siderite cements), "quartz" (grain to grain contact cementation or secondary quartz deposition),
+					"kaolinite", "illite" (eg. Village Fields North Sea), "smectite","chlorite" (Teg, Algeria.)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PorosityVisible" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description.
+					Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates.
+					The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors.
+					When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none"
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PorosityFabric" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2.
+					intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal,
+					intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Permeability" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5.
+					In future these would benefit from quantification. tight, slightly, fairly, highly.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Qualifier" type="witsml:LithologyQualifier" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="CuttingsGeologyInterval">
+		<xs:annotation>
+			<xs:documentation>Maximum size.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth interval which is represented by the cuttings described here.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="DensBulk" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Sample bulk density for the interval.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DensShale" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Shale density for the interval. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Calcite" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Calcimetry calcite percentage.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CalcStab" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Calcimetry stabilized percentage.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Cec" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeasure</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Dolomite" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Calcimetry dolomite percentage.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SizeMn" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Minimum size.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SizeMax" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Qft" type="eml:IlluminanceMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CleaningMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Sample treatment: cleaning method.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DryingMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Sample treatment: drying method.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CuttingsIntervalLithology" type="witsml:CuttingsIntervalLithology" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+	</xs:complexType>
+	<xs:element name="part_EvaluatedIntervalShow" type="witsml:ShowEvaluationInterval"/>
+	<xs:complexType name="obj_CuttingsGeology">
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>[maintained by the server] The interval which contains the minimum and maximum measured depths for all cuttings intervals in this cuttings geology.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CuttingsInterval" type="witsml:CuttingsGeologyInterval" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="part_InterpretedGeologyInterval" type="witsml:InterpretedGeologyInterval"/>
+	<xs:complexType name="InterpretedGeologyInterval">
+		<xs:sequence>
+			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth interval which is described by this interpreted geology.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="GeochronologicalUnit" type="witsml:GeochronologicalUnit" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="LithostratigraphicUnit" type="witsml:LithostratigraphicUnit" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="InterpretedLithology" type="witsml:InterpretedIntervalLithology" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="LithostratigraphicRank">
+		<xs:annotation>
+			<xs:documentation>Specifies the unit of lithostratigraphy.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="group">
+				<xs:annotation>
+					<xs:documentation>A succession of two or more contiguous or associated formations with significant and diagnostic lithologic properties in common.
+Formations need not be aggregated into groups unless doing so provides a useful means of simplifying stratigraphic classification
+in certain regions or certain intervals.
+Thickness of a stratigraphic succession is not a valid reason for defining a unit as a group rather than a formation.
+The component formations of a group need not be everywhere the same.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="formation">
+				<xs:annotation>
+					<xs:documentation>The primary formal unit of lithostratigraphic classification.
+Formations are the only formal lithostratigraphic units into which the stratigraphic column everywhere
+should be divided completely on the basis of lithology.
+The contrast in lithology between formations required to justify their establishment varies with
+the complexity of the geology of a region and the detail needed for geologic mapping and to work out its geologic history.
+No formation is considered justifiable and useful that cannot be delineated at the scale of geologic mapping practiced in the region.
+The thickness of formations may range from less than a meter to several thousand meters.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="member">
+				<xs:annotation>
+					<xs:documentation>The formal lithostratigraphic unit next in rank below a formation.
+It possesses lithologic properties distinguishing it from adjacent parts of the formation.
+No fixed standard is required for the extent and thickness of a member.
+A formation need not be divided into members unless a useful purpose is thus served.
+Some formations may be completely divided into members; others may have only certain parts designated as members.
+A member may extend from one formation to another.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bed">
+				<xs:annotation>
+					<xs:documentation>The smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically
+distinguishable from other layers above and below.
+Customarily only distinctive beds (key beds, marker beds) particularly useful for stratigraphic purposes
+are given proper names and considered formal lithostratigraphic units.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GeochronologicalUnit">
+		<xs:restriction base="eml:String64"/>
+	</xs:simpleType>
+	<xs:simpleType name="ShowLevel">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="blooming"/>
+			<xs:enumeration value="streaming"/>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ShowRating">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="very poor"/>
+			<xs:enumeration value="poor"/>
+			<xs:enumeration value="fair"/>
+			<xs:enumeration value="good"/>
+			<xs:enumeration value="very good"/>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+					in normal situations. All reasonable attempts should be made to determine
+					the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ShowFluid">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="gas"/>
+			<xs:enumeration value="oil"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="part_CuttingsInterval" type="witsml:CuttingsGeologyInterval"/>
+	<!--														-->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	</xs:schema>

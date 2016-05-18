@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--                                                         -->
+	<xsd:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--                                                         -->
+	<xsd:include schemaLocation="WitsmlCommon.xsd"/>
+	<!--                                                         -->
+	<xs:include schemaLocation="obj_Attachment.xsd"/>
+	<xs:include schemaLocation="obj_BhaRun.xsd"/>
+	<xs:include schemaLocation="obj_CementJob.xsd"/>
+	<xs:include schemaLocation="obj_CementJobEvaluation.xsd"/>
+	<xs:include schemaLocation="obj_DrillReport.xsd"/>
+	<xs:include schemaLocation="obj_FluidsReport.xsd"/>
+	<xs:include schemaLocation="obj_Channel.xsd"/>
+	<xs:include schemaLocation="obj_ChannelSet.xsd"/>
+	<xs:include schemaLocation="obj_Log.xsd"/>
+	<xs:include schemaLocation="obj_DepthRegImage.xsd"/>
+	<xs:include schemaLocation="obj_OpsReport.xsd"/>
+	<xs:include schemaLocation="obj_Rig.xsd"/>
+	<xs:include schemaLocation="obj_Risk.xsd"/>
+	<xs:include schemaLocation="obj_StimJob.xsd"/>
+	<xs:include schemaLocation="obj_StimPerforationCluster.xsd"/>
+	<xs:include schemaLocation="obj_StimJobStage.xsd"/>
+	<xs:include schemaLocation="obj_ToolErrorModel.xsd"/>
+	<xs:include schemaLocation="obj_ToolErrorTermSet.xsd"/>
+	<xs:include schemaLocation="obj_Trajectory.xsd"/>
+	<xs:include schemaLocation="obj_Tubular.xsd"/>
+	<xs:include schemaLocation="obj_Well.xsd"/>
+	<xs:include schemaLocation="obj_Wellbore.xsd"/>
+	<xs:include schemaLocation="obj_WellboreGeometry.xsd"/>
+	<xs:include schemaLocation="obj_WellboreGeology.xsd"/>
+	<xs:include schemaLocation="obj_CuttingsGeology.xsd"/>
+	<xs:include schemaLocation="obj_InterpretedGeology.xsd"/>
+	<xs:include schemaLocation="obj_ShowEvaluation.xsd"/>
+	<xs:include schemaLocation="obj_WellboreMarker.xsd"/>
+	<xs:include schemaLocation="obj_WellboreMarkerSet.xsd"/>
+	<xs:include schemaLocation="obj_WellCompletion.xsd"/>
+	<xs:include schemaLocation="obj_WellboreCompletion.xsd"/>
+	<xs:include schemaLocation="obj_DownholeComponent.xsd"/>
+	<xs:include schemaLocation="obj_WellCMLedger.xsd"/>
+</xsd:schema>

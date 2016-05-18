@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.0">
+	<!--														-->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	<xs:annotation>
+		<xs:documentation>Well Schema</xs:documentation>
+	</xs:annotation>
+	<!--														-->
+	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--														-->
+	<xs:include schemaLocation="WitsmlCommon.xsd"/>
+	<xs:simpleType name="PrincipalMeridian">
+		<xs:annotation>
+			<xs:documentation>Principal Meridians for United States Public Land Surveys.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="1st Principal Meridian">
+				<xs:annotation>
+					<xs:documentation>Indiana, Ohio</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2nd Principal Meridian">
+				<xs:annotation>
+					<xs:documentation>Indiana</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3rd Principal Meridian">
+				<xs:annotation>
+					<xs:documentation>Illinois</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4th Principal Meridian">
+				<xs:annotation>
+					<xs:documentation>Illinois, Wisconsin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5th Principal Meridian">
+				<xs:annotation>
+					<xs:documentation>Iowa, Missouri, Arkansas</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6th Principal Meridian">
+				<xs:annotation>
+					<xs:documentation>Kansas, Nebraska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Black Hills Meridian">
+				<xs:annotation>
+					<xs:documentation>South Dakota</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Boise Meridian">
+				<xs:annotation>
+					<xs:documentation>idaho</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Chickasaw Meridian">
+				<xs:annotation>
+					<xs:documentation>Mississippi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Choctaw Meridian">
+				<xs:annotation>
+					<xs:documentation>Mississippi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Cimarron Meridian">
+				<xs:annotation>
+					<xs:documentation>Texas</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Copper River Meridian">
+				<xs:annotation>
+					<xs:documentation>Alaska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fairbanks Meridian">
+				<xs:annotation>
+					<xs:documentation>Alaska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Gila and Salt River Meridian">
+				<xs:annotation>
+					<xs:documentation>Arizona</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Humboldt Meridian">
+				<xs:annotation>
+					<xs:documentation>California</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Huntsville Meridian">
+				<xs:annotation>
+					<xs:documentation>Alabama</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indian Meridian">
+				<xs:annotation>
+					<xs:documentation>Oklahome</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Kateel River Meridian">
+				<xs:annotation>
+					<xs:documentation>Alaska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Lousiana Meridian">
+				<xs:annotation>
+					<xs:documentation>Lousiana</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Michigan Meridian">
+				<xs:annotation>
+					<xs:documentation>Michigan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Montana Meridian">
+				<xs:annotation>
+					<xs:documentation>Montana</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Mount Diablo Meridian">
+				<xs:annotation>
+					<xs:documentation>California</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Navajo Meridian">
+				<xs:annotation>
+					<xs:documentation>Arizona portion of Navajo nation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="New Mexico Meridian">
+				<xs:annotation>
+					<xs:documentation>New Mexico</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Saint Helena Meridian">
+				<xs:annotation>
+					<xs:documentation>Louisiana</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Saint Stephens Meridian">
+				<xs:annotation>
+					<xs:documentation>Alabama</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Salt Lake Meridian">
+				<xs:annotation>
+					<xs:documentation>Utah</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="San Bernardo Meridian">
+				<xs:annotation>
+					<xs:documentation>California</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Seward Meridian">
+				<xs:annotation>
+					<xs:documentation>Alaska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Tallahassee Meridian">
+				<xs:annotation>
+					<xs:documentation>Floridia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Uintah Meridian">
+				<xs:annotation>
+					<xs:documentation>Utah</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Umiat Meridian">
+				<xs:annotation>
+					<xs:documentation>Alaska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ute Meridian">
+				<xs:annotation>
+					<xs:documentation>Colorado</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Washington Meridian">
+				<xs:annotation>
+					<xs:documentation>Mississippi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Williamette Meridian">
+				<xs:annotation>
+					<xs:documentation>Washington</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Wind River Meridian">
+				<xs:annotation>
+					<xs:documentation>Wyoming</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EastOrWest">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="east">
+				<xs:annotation>
+					<xs:documentation>East of something.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="west">
+				<xs:annotation>
+					<xs:documentation>West of something.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NorthOrSouth">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="north">
+				<xs:annotation>
+					<xs:documentation>North of something.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="south">
+				<xs:annotation>
+					<xs:documentation>South of something.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SectionNumber">
+		<xs:annotation>
+			<xs:documentation>Sections are numbered "1" through "36." Irregular sections may be designated with a single value after a decimal point. USA Public Land Survey System.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:String64">
+			<xs:pattern value="[+]?([1-9]|[1-2][0-9]|3[0-6])\.?[0-9]?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PublicLandSurveySystemQuarterSection">
+		<xs:annotation>
+			<xs:documentation>Some combination of NE,NW,SW,SE,N2,S2,E2,W2,C,TRxx,LTnn. USA Public Land Survey System.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:String64">
+			<xs:pattern value="(NE|NW|SW|SE|N2|S2|E2|W2|C|LT[0-9]{2,2}|TR[a-zA-Z0-9]{1,2}){1,3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PublicLandSurveySystemQuarterTownship">
+		<xs:annotation>
+			<xs:documentation>Designates a particular quarter of a township. USA Public Land Survey System.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:String64">
+			<xs:pattern value="NE|NW|SW|SE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="FootageNorthSouth">
+		<xs:annotation>
+			<xs:documentation>The distance to a one minute boundary on the north or south of a point.
+USA Public Land Survey System.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="optional" type="eml:LengthUom"/>
+				<xs:attribute name="ref" use="optional" type="witsml:NorthOrSouth"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="FootageEastWest">
+		<xs:annotation>
+			<xs:documentation>The distance to a one minute boundary on the east or west of a point.
+USA Public Land Survey System.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="optional" type="eml:LengthUom"/>
+				<xs:attribute name="ref" use="optional" type="witsml:EastOrWest"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReferencePoint">
+		<xs:annotation>
+			<xs:documentation>WITSML - Reference Point Component Schema.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Human recognizable context for the point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Type" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The kind of point. For example, 
+'well reference point', 'platform reference point', 'sea surface',
+'sea bottom'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasuredDepth" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth coordinate of this reference point.
+Positive moving toward the bottomhole from the measured depth datum.
+This should be given when the reference is "downhole", such as an ocean 
+bottom template, or when the reference point is also used as a vertical well datum.
+The measured depth value can be used to determine if the reference point
+and a vertical well datum are at the same point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A textual description of the point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Elevation" type="witsml:WellElevationCoord" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Location" type="witsml:AbstractWellLocation" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="GeodeticWellLocation">
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractWellLocation">
+				<xs:sequence>
+					<xs:element name="Latitude" type="xs:double" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Longitude" type="xs:double" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Crs" type="eml:AbstractGeodeticCrs" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProjectedWellLocation">
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractWellLocation">
+				<xs:sequence>
+					<xs:element name="X" type="xs:double" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Y" type="xs:double" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Crs" type="eml:AbstractProjectedCrs" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="obj_Well">
+		<xs:annotation>
+			<xs:documentation>The well object is used to capture the general information about a well. This might sometimes be called a well header. All information which is the same for all wellbores (sidetracks) is contained in the well object.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="NameLegal" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Legal name of the well.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NumLicense" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>License number of the well.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NumGovt" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Government assigned well number.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DTimLicense" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Date and time license  was issued.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Field" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Name of the field in which the well is located.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Country" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Country in which well is located.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="State" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>State or province in which well is located.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="County" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>County in which the well is located.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Region" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Geo-political region.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="District" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Geo-political district name.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Block" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Block name in which well is located.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TimeZone" type="witsml:TimeZone" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The time zone in which well is located.  
+It is the deviation in hours and minutes from UTC.
+This should be the normal time zone at the well and not a seasonally 
+adjusted value such as daylight savings time.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Operator" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Operator company name.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="OperatorDiv" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Division of operator company.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="OriginalOperator" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Original operator of the well. This may be different than the current operator.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PcInterest" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Interest for Operator. Commonly in percent.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NumAPI" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>American Petroleum Institute well number.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="StatusWell" type="eml:WellStatus" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>POSC Well status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PurposeWell" type="witsml:WellPurpose" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>POSC well purpose.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FluidWell" type="witsml:WellFluid" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>POSC well fluid. The type of fluid being produced from or injected 
+into a well facility.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DirectionWell" type="witsml:WellDirection" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>POSC well direction. The direction of flow of the fluids in a well facility
+(generally, injected or produced, or some combination).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DTimSpud" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Date and time at which well was spudded.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DTimPa" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Date and time at which well was plugged and abandoned.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WaterDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Depth of water (not land rigs).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="GeographicLocationWGS84" type="witsml:GeodeticWellLocation" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The latitude (in coordinate1) and longitude (in coordinate2) of the well location in the WGS84 coordinate system (equivalent to EPSG:4326). Units are in decimal degrees.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WellLocation" type="witsml:AbstractWellLocation" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="WellPublicLandSurveySystemLocation" type="witsml:PublicLandSurveySystem" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="ReferencePoint" type="witsml:ReferencePoint" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="WellheadElevation" type="witsml:WellElevationCoord" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="WellDatum" type="witsml:WellDatum" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="GroundElevation" type="witsml:WellElevationCoord" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="WellPurpose">
+		<xs:annotation>
+			<xs:documentation>These values represent the classification of a well or wellbore by the purpose for which it was initially drilled.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="appraisal">
+				<xs:annotation>
+					<xs:documentation>A well drilled into a formation shown to be potentially productive of oil or gas by an earlier well for the purpose of obtaining more information about the reservoir. Also known as a delineation well.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="appraisal -- confirmation appraisal">
+				<xs:annotation>
+					<xs:documentation>An appraisal well, generally drilled in a location interpreted to be in the reservoir, whose purpose is to confirm the interpretation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="appraisal -- exploratory appraisal">
+				<xs:annotation>
+					<xs:documentation>An appraisal well, generally drilled in an area unknown to be part of the reservoir, whose purpose is to determine the extent of the reservoir.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exploration">
+				<xs:annotation>
+					<xs:documentation>An exploratory well drilled in an unproved area to test for a new field, a new pay, a deeper reservoir, or a shallower reservoir. Also known as a wildcat.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exploration -- deeper-pool wildcat">
+				<xs:annotation>
+					<xs:documentation>An exploratory well drilled to search for additional pools of hydrocarbon in close proximity to known pools of hydrocarbon but at a deeper stratigraphic levels than the known pools.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exploration -- new-field wildcat">
+				<xs:annotation>
+					<xs:documentation>An exploratory well drilled to search for an occurrence of hydrocarbon at a relatively considerable distance outside the limits of known pools of hydrocarbon, as those limits were understood at the time.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exploration -- new-pool wildcat">
+				<xs:annotation>
+					<xs:documentation>An exploratory well drilled to search for additional pools of hydrocarbon in close proximity and at the same stratigraphic level as known pools.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exploration -- outpost wildcat">
+				<xs:annotation>
+					<xs:documentation>An exploratory well drilled to search for additional pools of hydrocarbon or to extend the limits of a known pool by searching in the same interval at some distance from a known pool.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exploration -- shallower-pool wildcat">
+				<xs:annotation>
+					<xs:documentation>An exploratory well drilled to search for additional pools of hydrocarbon in close proximity, but at a shallower stratigraphic levels than the known pools.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="development">
+				<xs:annotation>
+					<xs:documentation>A well drilled in a zone in an area already proved productive.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="development -- infill development">
+				<xs:annotation>
+					<xs:documentation>A development well drilled to fill in between established wells, usually part of a drilling program to reduce the spacing between wells to increase production.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="development -- injector">
+				<xs:annotation>
+					<xs:documentation>A development well drilled with the intent of injecting fluids into the reservoir for the purpose of improving reservoir production.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="development -- producer">
+				<xs:annotation>
+					<xs:documentation>A development well drilled with the intent of producing fluids.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fluid storage">
+				<xs:annotation>
+					<xs:documentation>A well drilled for storing fluids - generally either hydrocarbons or waste disposal.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fluid storage -- gas storage">
+				<xs:annotation>
+					<xs:documentation>A well drilled with the intent of injecting gas into the reservoir rock as a storage facility.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc">
+				<xs:annotation>
+					<xs:documentation>A well drilled with the intent of providing a general service as opposed to producing or injecting fluids. Examples of such services are geologic tests, pressure relief (for blowouts), and monitoring and observation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc -- borehole re-acquisition">
+				<xs:annotation>
+					<xs:documentation>A service well drilled to intersect another well below the surface for the purpose of extending the life of a well whose surface borehole has been lost or damaged.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc -- observation">
+				<xs:annotation>
+					<xs:documentation>A service well drilled for the purpose of monitoring fluids in a reservoir, or observing some other subsurface phenomena. Also called a monitor well.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc -- relief">
+				<xs:annotation>
+					<xs:documentation>A service well drilled with the specific purpose to provide communication at some point below the surface to another well which is out of control.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc -- research">
+				<xs:annotation>
+					<xs:documentation>A well drilled with the purpose of obtaining information on the stratigraphy, on drilling practices, for logging tests, or other such purpose. It is not expected to find economic reserves of hydrocarbons.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc -- research -- drill test">
+				<xs:annotation>
+					<xs:documentation>A research well drilled to test the suitablity of a particular type of equipment or drilling practice.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc -- research -- strat test">
+				<xs:annotation>
+					<xs:documentation>A research well drilled for the purpose of gathering geologic information on the stratigraphy of an area. A C.O.S.T. well would be included in this category.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="general srvc -- waste disposal">
+				<xs:annotation>
+					<xs:documentation>A service well drilled for the purpose of injection of sewage, industrial waste, or other waste fluids into the subsurface for disposal.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mineral">
+				<xs:annotation>
+					<xs:documentation>A non-oil and gas E and P well drilled for the purpose of locating and/or extracting a mineral from the subsurface, usually through the injection and/or extraction of mineral-bearing fluids.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WellFluid">
+		<xs:annotation>
+			<xs:documentation>The type of fluid being produced from or injected into a well facility.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="air">
+				<xs:annotation>
+					<xs:documentation>This is generally an injected fluid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="condensate">
+				<xs:annotation>
+					<xs:documentation>Liquid hydrocarbons produced with natural gas 
+that are separated from the gas by cooling and various other means. 
+Condensate generally has an API gravity of 50 degrees to 120 degrees 
+and is water white, straw, or bluish in color. It is the liquid 
+recovery from a well classified as a gas well. It is generally 
+dissolved in the gaseous state under reservoir conditions but 
+separates as a liquid either in passing up the hole or at the 
+surface. These hydrocarbons, from associated and nonassociated 
+gas well gas, normally are recovered from lease separators or 
+field facilities by mechanical separation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="dry">
+				<xs:annotation>
+					<xs:documentation>The well facility is classified as a dry well. 
+It has not been, nor will it be used to produce or inject any fluids.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gas">
+				<xs:annotation>
+					<xs:documentation>The well is classified as a gas well, producing 
+or injecting a hydrocarbon gas. The gas is generally methane, 
+but may have a mixture of other gases also.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gas-water">
+				<xs:annotation>
+					<xs:documentation>The well facility is classified as producing 
+both gas and water. This classification is to be used when the 
+produced stream flow is a mixture of gas and water. When a facility 
+produces gas and water in separate streams, it should be classified 
+twice as gas and as water.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="non HC gas">
+				<xs:annotation>
+					<xs:documentation>The well produces or injects non hydrocarbon 
+gases. Typical other gases would be helium and carbon dioxide.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="non HC gas -- CO2">
+				<xs:annotation>
+					<xs:documentation>Carbon Dioxide gas.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="oil">
+				<xs:annotation>
+					<xs:documentation>The liquid hydrocarbon, generally referred 
+to as crude oil.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="oil-gas">
+				<xs:annotation>
+					<xs:documentation>The well facility is classified as producing 
+both gas and oil. This classification is to be used when the produced 
+stream flow is a mixture of oil and gas. When a facility produces 
+oil and gas in separate streams, it should be classified twice as 
+oil and as gas.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="oil-water">
+				<xs:annotation>
+					<xs:documentation>The well facility is classified as producing 
+both oil and water. This classification is to be used when the 
+produced stream flow is a mixture of oil and water. When a facility 
+produces oil and water in separate streams, it should be classified 
+twice as oil and as water.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="steam">
+				<xs:annotation>
+					<xs:documentation>The gaseous state of water. This is generally an 
+injected fluid, but it is possible that some hydrothermal wells 
+produce steam.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="water">
+				<xs:annotation>
+					<xs:documentation>The well is classified as a water well without 
+distinguishing between brine or fresh water.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="water -- brine">
+				<xs:annotation>
+					<xs:documentation>The well facility is classified as producing 
+or injecting salt water.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="water -- fresh water">
+				<xs:annotation>
+					<xs:documentation>The well facility is classified as producing 
+fresh water that is capable of use for drinking or crop irrigation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WellDirection">
+		<xs:annotation>
+			<xs:documentation>The direction of flow of the fluids in a well facility (generally, injected or produced, or some combination).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="huff-n-puff">
+				<xs:annotation>
+					<xs:documentation>The well facility alternately injects (usually 
+a steam or hot fluid) and produces.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="injector">
+				<xs:annotation>
+					<xs:documentation>The well facility is injecting fluids into the 
+subsurface.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="producer">
+				<xs:annotation>
+					<xs:documentation>The well facility is producing fluids from the 
+subsurface.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="uncertain">
+				<xs:annotation>
+					<xs:documentation>The flow direction of the fluids is variable, 
+but not on a regular basis as is the case with the huff-n-puff 
+flow.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="WellElevationCoord">
+		<xs:annotation>
+			<xs:documentation>A vertical (gravity based) elevation coordinate within the context of a well. Positive moving upward from the reference datum.  All coordinates with the same datum (and same uom) can be considered to be in the same Coordinate Reference System and are thus directly comparable.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="optional" type="eml:LengthUom"/>
+				<xs:attribute name="datum" use="optional" type="eml:String64"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="WellDatum">
+		<xs:annotation>
+			<xs:documentation>Defines the vertical datums associated with elevation, vertical depth 
+and measured depth coordinates within the context of a well.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The human understandable contextual name of the reference datum.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Code" type="witsml:ElevCodeEnum" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The code value that represents the type of reference datum. 
+This may represent a point on a device (e.g., kelly bushing) or it may represent 
+a vertical reference datum (e.g., mean sea level).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Kind" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Since various activities may use different points as 
+measurement datums, it is useful to characterize the point based on its usage. 
+A well reference datum may have more than one such characterization. 
+For example, it may be the datum used by the driller and logger for measuring 
+their depths. Example usage values would be 'permanent','driller', 'logger'
+'WRP' (well reference point) and 'SRP' (site reference point).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasuredDepth" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth coordinate of this reference datum
+as measured from another datum. The measured depth datum should either be the same as
+the elevation datum or it should be relatable to the elevation datum through other datums.
+Positive moving toward the bottomhole from the measured depth datum.
+This should be given when a local reference is "downhole", 
+such as a kickoff point or ocean bottom template, and the borehole may not be vertical.
+If a Depth is given then an Elevation should also be given.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comment" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A contextual description of the well reference datum.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Wellbore" type="witsml:RefWellWellbore" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Rig" type="witsml:RefWellWellboreRig" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Elevation" type="witsml:WellElevationCoord" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="HorizontalLocation" type="witsml:AbstractWellLocation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Crs" type="eml:AbstractVerticalCrs" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Points to one of the optional for a geodetic vertical CRS, Allows the datum to be positioned in real-world space.l</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="ElevCodeEnum">
+		<xs:annotation>
+			<xs:documentation>The type of local or permanent reference datum for vertical gravity based (i.e., elevation and vertical depth) and measured depth coordinates within the context of a well. This list includes local points (e.g., kelly bushing) used as a datum and vertical reference datums (e.g., mean sea level).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="CF">
+				<xs:annotation>
+					<xs:documentation>casing flange: A flange affixed to the top of the 
+casing string used to attach production equipment.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CV">
+				<xs:annotation>
+					<xs:documentation>crown valve</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DF">
+				<xs:annotation>
+					<xs:documentation>derrick floor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GL">
+				<xs:annotation>
+					<xs:documentation>ground level</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KB">
+				<xs:annotation>
+					<xs:documentation>kelly bushing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RB">
+				<xs:annotation>
+					<xs:documentation>rotary bushing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RT">
+				<xs:annotation>
+					<xs:documentation>rotary table</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SF">
+				<xs:annotation>
+					<xs:documentation>sea floor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LAT">
+				<xs:annotation>
+					<xs:documentation>Lowest Astronomical Tide. The lowest tide level
+over the duration of the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SL">
+				<xs:annotation>
+					<xs:documentation>Mean Sea Level - A tidal datum. The arithmetic mean 
+of hourly heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MHHW">
+				<xs:annotation>
+					<xs:documentation>Mean Higher High Water - A tidal datum. The average of 
+the higher high water height of each tidal day observed over the National 
+Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MHW">
+				<xs:annotation>
+					<xs:documentation>Mean High Water - A tidal datum. The average of all the 
+high water heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MLLW">
+				<xs:annotation>
+					<xs:documentation>Mean Lower Low Water -  A tidal datum. The average of the 
+lower low water height of each tidal day observed over the National Tidal 
+Datum Epoch (19 years ).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MLW">
+				<xs:annotation>
+					<xs:documentation>Mean Low Water - A tidal datum. The average of all the 
+low water heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MTL">
+				<xs:annotation>
+					<xs:documentation>Mean Tide Level - A tidal datum. The arithmetic mean of mean 
+high water and mean low water. Same as half-tide level.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KO">
+				<xs:annotation>
+					<xs:documentation>kickoff point</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="RefWellWellbore">
+		<xs:annotation>
+			<xs:documentation>Data that represents a foreign key to a wellbore.
+The wellbore may be defined within the context of another well.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="WellboreReference" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer the wellbore with which there is a relationship.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WellParent" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer to the well that contains the wellboreReference.
+This is not needed unless the referenced wellbore is outside the 
+context of a common parent well.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RefWellWellboreRig">
+		<xs:annotation>
+			<xs:documentation>A reference to a rig within a wellbore.
+The wellbore may be defined within the context of another well.
+This value represents a foreign key from one node to another.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="RigReference" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer to the rig with which there is a relationship.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WellboreParent" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer to the wellbore that contains the rigReference.
+This is not needed unless the referenced rig is outside the 
+context of a common parent wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WellParent" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer to the well that contains the wellboreParent.
+This is not needed unless the referenced wellbore is outside the 
+context of a common parent well.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AbstractWellLocation" abstract="true">
+		<xs:annotation>
+			<xs:documentation>WITSML Location Component Schema This is a location that is expressed in terms of 2D coordinates. In order that the location be understood, the coordinate reference system (CRS) must be known. The survey location is given by a pair of tagged values. The pairs may be: (1) latitude/longitude, (2) easting/northing, (3) westing/southing, (4) projectedX/projectedY, or (5) localX/localY. The appropriate pair must be chosen for the data.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Original" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Flag indicating (if "true" or "1") that this pair of values was 
+the original data given for the location. If the pair of values was 
+calculated from an original pair of values, this flag should be "false" (or "0"), 
+or not present.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A Comment, generally given to help the reader 
+interpret the coordinates if the CRS and the chosen pair do not make them clear.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="PublicLandSurveySystem">
+		<xs:sequence>
+			<xs:element name="PrincipalMeridian" type="witsml:PrincipalMeridian" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Principal meridian for this location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Range" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Range number.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RangeDir" type="witsml:EastOrWest" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Range direction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Township" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Township number.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TownshipDir" type="witsml:NorthOrSouth" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Township direction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Section" type="witsml:SectionNumber" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Section number.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="QuarterSection" type="witsml:PublicLandSurveySystemQuarterSection" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The location of the well within the section, 
+with the primary component listed first. Spot location will be made some from combination
+of the following codes: NE, NW, SW, SE, N2, S2, E2, W2, C (center quarter), 
+LTxx (where xx represents a two digit lot designation), 
+TRzz (where zz represents a one or two character trac designation). 
+Free format will allow for entries such as NESW (southwest quarter of northeast quarter), 
+E2NESE (southeast quarter of northeast quarter of east half), CNE (northeast quarter of center quarter), etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="QuarterTownship" type="witsml:PublicLandSurveySystemQuarterTownship" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Quarter township.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FootageNS" type="witsml:FootageNorthSouth" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="FootageEW" type="witsml:FootageEastWest" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

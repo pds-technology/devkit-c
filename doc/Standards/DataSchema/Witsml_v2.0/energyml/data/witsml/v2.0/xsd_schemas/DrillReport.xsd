@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.0">
+	<!--														-->
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	<xs:annotation>
+		<xs:documentation>DrillReport Schema.</xs:documentation>
+	</xs:annotation>
+	<!--														-->
+	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--														-->
+	<xs:include schemaLocation="Tubular.xsd"/>
+	<xs:include schemaLocation="WitsmlCommon.xsd"/>
+	<xs:include schemaLocation="Wellbore.xsd"/>
+	<xs:include schemaLocation="FluidsReport.xsd"/>
+	<xs:include schemaLocation="Well.xsd"/>
+	<xs:simpleType name="GasPeakType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="circulating background gas"/>
+			<xs:enumeration value="connection gas"/>
+			<xs:enumeration value="drilling background gas"/>
+			<xs:enumeration value="drilling gas peak"/>
+			<xs:enumeration value="flow check gas"/>
+			<xs:enumeration value="no readings"/>
+			<xs:enumeration value="other"/>
+			<xs:enumeration value="shut down gas"/>
+			<xs:enumeration value="trip gas"/>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="obj_DrillReport">
+		<xs:annotation>
+			<xs:documentation>The drillReport object is used to capture a daily drilling report focused on reporting from the operator to partners or to a governmental agency. See the opsReport object for a similar report whose focus is service company to operator.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="DTimStart" type="eml:TimeStamp" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Date and time of the start of the reporting period.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DTimEnd" type="eml:TimeStamp" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Date and time end of the reporting period.
+Report periods are commonly 24 hour periods.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="VersionKind" type="witsml:OpsReportVersion" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The kind of report version. For example, a 
+preliminary version.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CreateDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The date and time of the report creation. A later timestamp
+indicates a newer version. In order to update values in a report a full 
+updated copy of the original report should be submitted.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WellDatum" type="witsml:WellDatum" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Defines a vertical datum used for 
+measured depths, vertical depths or elevations.
+This must be specified if one of the aforementioned coordinate
+values are included in the report. This only applies to this report
+and is generally a copy of the same information from the well object.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="BitRecord" type="witsml:BitRecord" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Information about a bit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DrillActivity" type="witsml:DrillActivity" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="LogInfo" type="witsml:DrillReportLogInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="CoreInfo" type="witsml:DrillReportCoreInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="WellTestInfo" type="witsml:DrillReportWellTestInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="FormTestInfo" type="witsml:DrillReportFormTestInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="LithShowInfo" type="witsml:DrillReportLithShowInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="EquipFailureInfo" type="witsml:DrillReportEquipFailureInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="ControlIncidentInfo" type="witsml:DrillReportControlIncidentInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="StratInfo" type="witsml:DrillReportStratInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="PerfInfo" type="witsml:DrillReportPerfInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="GasReadingInfo" type="witsml:DrillReportGasReadingInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="WellAlias" type="eml:ObjectAlias" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="WellboreAlias" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="WellboreInfo" type="witsml:DrillReportWellboreInfo" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="StatusInfo" type="witsml:DrillReportStatusInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="Fluid" type="witsml:Fluid" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="PorePressure" type="witsml:DrillReportPorePressure" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="ExtendedReport" type="witsml:TimestampedCommentString" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="SurveyStation" type="witsml:DrillReportSurveyStation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="OpsReportVersion">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="preliminary">
+				<xs:annotation>
+					<xs:documentation>A preliminary report that has not yet been approved by the drilling operator.
+This report is normally issued at the beginning of the work day (e.g., 6:00 am) before</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="normal">
+				<xs:annotation>
+					<xs:documentation>A normal daily staus report that has been approved by the drilling operator.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="final">
+				<xs:annotation>
+					<xs:documentation>A report that represents the final definitive status for the well.
+This report is normally issued some period of time (e.g., 6 months) after the completion of drilling.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DrillReportWellboreInfo">
+		<xs:annotation>
+			<xs:documentation>General information about a wellbore for a drill operations report.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DTimSpud" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time at which the well was spudded. 
+This is when the well drilling equipment begin to bore into 
+the earth's surface for the purpose of drilling a well.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTimPreSpud" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time at which the well was predrilled. 
+This is when the well drilling equipment begin to bore into 
+the earth's surface for the purpose of drilling a well.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateDrillComplete" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date when the drilling activity is completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Operator" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the drilling Operator company.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DrillContractor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the drilling Contractor company.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RigAlias" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DrillReportStatusInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the date and time that for which the well status is reported.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Wellbore measured depth at the end of the report period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Wellbore true vertical depth at the end of the report.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdPlugTop" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured plug back depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DiaHole" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Hole nominal inside diameter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdDiaHoleStart" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth to the start of the current hole diameter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DiaPilot" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Pilot hole nominal inside diameter at reporting time.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdDiaPilotPlan" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The planned measured depth of the pilot hole.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdDiaPilotPlan" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The planned true vertical depth of the pilot hole.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeWellbore" type="witsml:WellboreType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdKickoff" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth to the kickoff point of the wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdKickoff" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth to the kickoff point of the wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StrengthForm" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured formation strength. This should be the final measurement before the end of the report period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdStrengthForm" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth of the formation strength measuement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdStrengthForm" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The true vertical depth of the formation strength measuement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DiaCsgLast" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Diameter of last casing.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdCsgLast" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of last casing.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdCsgLast" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth of last casing.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresTestType" type="witsml:PresTestType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The type of pressure test that was run during this reporting period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdPlanned" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of plan for this day number (report period).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistDrill" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Distance drilled during this reporting period.  
+This should be measured along the centerline of the wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sum24Hr" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A summary that sumarizes the activities performed 
+and the status of the ongoing activities from the reporting period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Forecast24Hr" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A summary that sumarizes the planned activities the next reporting period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RopCurrent" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Rate of penetration at the end of the reporting period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Rig" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer to the rig utilized in this reporting period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimStart" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time from start of Operations (commonly in days).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimSpud" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time since bit broke ground (commonly in days).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimLoc" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time rig on location (commonly in days).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimDrill" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Drilling time.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RopAv" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Average Rate of Penetration through Interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Supervisor" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Name of operator rig supervisor.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Engineer" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Nae of Engineer.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Geologist" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Name of operator wellsite geologist.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimDrillRot" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time spent rotary drilling for report interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimDrillSlid" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time spent slide drilling from start of bit run.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimCirc" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time spent circulating from start of bit run.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimReam" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time spent reaming from start of bit run.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimHold" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time spent with no DD work (commonly in hours).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimSteering" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time spent steering bottom hole assembly (commonly in hours).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistDrillRot" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Distance drilled - rotating.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistDrillSlid" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Distance drilled - sliding.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistReam" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Distance reamed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistHold" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Distance covered while holding angle with a steerable drilling assembly.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistSteering" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Distance covered while actively steering with a steerable drilling assembly.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumPob" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Total number of personnel on board.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumContract" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Number of contractor personnel on board.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumOperator" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Number of Operator personnel on board.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumService" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Number of service company personnel on board.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumAFE" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>AFE (authorization for expenditure) number that this cost item applies to.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ConditionHole" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Hole condition description.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdLot" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth of leak off test point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresLotEmw" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Leak off test equivalent mud weight.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresKickTol" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Kick tolerance pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolKickTol" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Kick tolerance volume.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Maasp" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Maximum allowable shut-in casing pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tubular" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer to the tubular (assembly) used in this report period.
+This represents a foreign key to tubular.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ParentWellbore" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ElevKelly" type="witsml:WellElevationCoord" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CostDay" type="witsml:Cost" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CostDayMud" type="witsml:Cost" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="PresTestType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="leak off test">
+				<xs:annotation>
+					<xs:documentation>A leakoff test is usually conducted immediately 
+after drilling below a new casing shoe. During the test, the well is 
+shut in and fluid is pumped into the wellbore gradually to increase 
+the pressure that the formation experiences.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="formation integrity test">
+				<xs:annotation>
+					<xs:documentation>If the formation is not able to withstand the 
+given pressure, the result of the test is the strength of the 
+formation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Rheometer">
+		<xs:annotation>
+			<xs:documentation>WITSML - Rheometer Component Schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TempRheom" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Rheometer temperature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresRheom" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Rheometer pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Viscosity" type="witsml:RheometerViscosity" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillReportPorePressure">
+		<xs:sequence>
+			<xs:element name="ReadingKind" type="witsml:ReadingKind" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Was the reading measured or estimated</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EquivalentMudWeight" type="eml:MassPerVolumeMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The equivalent mud weight value of the pore pressure reading.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time at the reading was made.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth where the readings were recorded.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The true vertical depth where the readings were recorded.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="ReadingKind">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="measured">
+				<xs:annotation>
+					<xs:documentation>The reading was measured.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="estimated">
+				<xs:annotation>
+					<xs:documentation>The reading was estimated.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TimestampedCommentString">
+		<xs:annotation>
+			<xs:documentation>A timestamped textual description.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eml:String2000">
+				<xs:attribute name="dTim" use="optional" type="eml:TimeStamp"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="DrillReportSurveyStation">
+		<xs:annotation>
+			<xs:documentation>WITSML - Trajectory Station Component Schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date at which the directional survey took place.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of measurement from the drill datum.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Vertical depth of the measurements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Incl" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Hole inclination, measured from vertical.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Azi" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Hole azimuth. Corrected to wells azimuth reference.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VertSect" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Distance along vertical section azimuth plane.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Dls" type="eml:AnglePerLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Dogleg severity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Location" type="witsml:AbstractWellLocation" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillActivity">
+		<xs:annotation>
+			<xs:documentation>WITSML - Operations Activity Component Schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DTimStart" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time that activities started.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTimEnd" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time that activities were completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Duration" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The activity duration (commonly in hours).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth to the drilling operation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True Vertical Depth to the drilling operation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Phase" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Phase (large activity classification) e.g. Drill Surface Hole.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityCode" type="witsml:DrillActivityCode" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A code used to define rig activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DetailActivity" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Custom string to further define an activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeActivityClass" type="witsml:DrillActivityClassType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Classifier (Planned, Unplanned, Downtime).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval over which the activity was conducted.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth interval over which the activity was conducted.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BitMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Range of bit measured depths over which the activity occurred.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="State" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Finish, interrupted, failed, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StateDetailActivity" type="witsml:StateDetailActivity" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The outcome of the detailed activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Operator" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Operator company name.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tubular" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A pointer to the tubular related to this activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Optimum" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Is the activity optimum.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Productive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Does activity bring closer to objective.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ItemState" type="witsml:ItemState" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The item state for the data object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comments" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Comments and Remarks.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProprietaryCode" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="DrillActivityCode">
+		<xs:annotation>
+			<xs:documentation>Activity codes. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum"/>
+	</xs:simpleType>
+	<xs:simpleType name="DrillActivityClassType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="planned"/>
+			<xs:enumeration value="unplanned"/>
+			<xs:enumeration value="downtime"/>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StateDetailActivity">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="injury">
+				<xs:annotation>
+					<xs:documentation>Personnel injury in connection with drilling and/or drilling 
+related operations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="operation failed">
+				<xs:annotation>
+					<xs:documentation>Operation failed to achieve objective.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kick">
+				<xs:annotation>
+					<xs:documentation>Formation fluid invading the wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="circulation loss">
+				<xs:annotation>
+					<xs:documentation>Circulation lost to the formation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mud loss">
+				<xs:annotation>
+					<xs:documentation>Circulation impossible due to plugging or failure of equipment.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="stuck equipment">
+				<xs:annotation>
+					<xs:documentation>Equipment got stuck in the hole.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="equipment failure">
+				<xs:annotation>
+					<xs:documentation>Equipment failure occurred.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="equipment hang">
+				<xs:annotation>
+					<xs:documentation>Operations had to be aborted due to a hang of operation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="success">
+				<xs:annotation>
+					<xs:documentation>Operation achieved objective.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ItemState">
+		<xs:annotation>
+			<xs:documentation>These values represent the state of a WITSML object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="actual">
+				<xs:annotation>
+					<xs:documentation>Actual data measured or entered at the well site.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="model">
+				<xs:annotation>
+					<xs:documentation>Model data used for "what if" calculations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="plan">
+				<xs:annotation>
+					<xs:documentation>A planned object. That is, one which is expected to be executed in the future.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DrillReportLogInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date and time that the log was completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RunNumber" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Log run number. 
+For measurement while drilling, this should be the 
+bottom hole assembly number.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ServiceCompany" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Name of contractor who provided the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LoggedMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval from the top to the base of the interval logged.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LoggedTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth interval from the top to the base of the interval logged.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tool" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A description of the logging tool.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdTempTool" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth to the temperature measurement tool.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdTempTool" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth to the temperature measurement tool.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BottomHoleTemperature" type="witsml:AbstractBottomHoleTemperature" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillReportCoreInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time that the core was completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoreNumber" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Core identification number.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoredMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cored interval expressed as measured depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoredTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cored interval expressed as true vertical depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LenRecovered" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Length of core recovered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RecoverPc" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The relative amount of core recovered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LenBarrel" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Length of core barrel.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InnerBarrelType" type="witsml:InnerBarrelType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Core inner barrel type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoreDescription" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>General core description.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="InnerBarrelType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="undifferented">
+				<xs:annotation>
+					<xs:documentation>A pipe that is located inside a core barrel to hold the core sample.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="aluminum">
+				<xs:annotation>
+					<xs:documentation>An inner core barrel made of aluminium.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gel">
+				<xs:annotation>
+					<xs:documentation>An inner core barrel that that seals off the core 
+sample using gel as the sealing material.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fiberglass">
+				<xs:annotation>
+					<xs:documentation>An inner core barrel made of glass fiber reinforced plastic.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DrillReportWellTestInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time that the well test was completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TestType" type="witsml:WellTestType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The type of well test.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TestNumber" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The number of the well test.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TestMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Test interval expressed as measured depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TestTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Test interval expressed as true vertical depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChokeOrificeSize" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The diameter of the choke opening.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DensityOil" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The density of the produced oil.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DensityWater" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The density of the produced water.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DensityGas" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The density of the produced gas.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FlowRateOil" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The maximum rate at which oil was produced.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FlowRateWater" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The maximum rate at which water was produced.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FlowRateGas" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The maximum rate at which gas was produced.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresShutIn" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The final shut in pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresFlowing" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The final flowing pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresBottom" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The final bottom hole pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GasOilRatio" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The ratio of the volume of gas to the volume of oil.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WaterOilRatio" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The relative amount of water per amount of oil.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Chloride" type="eml:MassPerMassMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The relative amount of chloride in the produced water.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CarbonDioxide" type="eml:MassPerMassMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The relative amount of CO2 gas.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HydrogenSulfide" type="eml:MassPerMassMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The relative amount of H2S gas.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolOilTotal" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The total amount of oil produced. This includes oil that
+was disposed of (e.g., burned).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolGasTotal" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The total amount of gas produced. This includes gas that
+was disposed of (e.g., burned).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolWaterTotal" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The total amount of water produced. This includes water that
+was disposed of.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolOilStored" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The total amount of produced oil that was stored.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="WellTestType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="drill stem test">
+				<xs:annotation>
+					<xs:documentation>A test to determine the productive capacity, pressure, 
+permeability or extent (or a combination of these) of a hydrocarbon reservoir, 
+with the drillstring still in the hole.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="production test">
+				<xs:annotation>
+					<xs:documentation>A test to determine the daily rate of oil, gas, and water 
+production from a (potential) reservoir.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DrillReportFormTestInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time that the wireline formation test was completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of the wireline formation test.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth of the wireline formation test.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresPore" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The formation pore pressure.
+The pressure of fluids within the pores of a reservoir, usually hydrostatic pressure, 
+or the pressure exerted by a column of water from the formation's depth to sea level.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GoodSeal" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True ("true" or "1") indicates that there was a good seal for the wireline formation test.
+False ("false" or "0") or not given indicates otherwise.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdSample" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth where the fluid sample was taken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DominateComponent" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The dominate component in the fluid sample.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DensityHC" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The density of hydrocarbon component of the fluid sample.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolumeSample" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The volume of the fluid sample.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A description that describes the wireline formation test in more detail.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillReportLithShowInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time that the well test was completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ShowMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval over which the show appears.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ShowTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth interval over which the show appears.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Show" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A textual description of any shows in the interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Lithology" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A description that gives a geological/lithological 
+description/evaluation of the interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillReportEquipFailureInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time that the equipment failed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth to the operation end point due to failure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tvd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The true vertical depth to the operation end point due to failure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EquipClass" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The classification of the equipment that failed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimMissProduction" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The missed production time due to equipment failure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTimRepair" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date and time at which the production equipment was 
+repaired and ready for production.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A description that gives a information about the equipment failure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillReportControlIncidentInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time of the well control incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdInflow" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth to the well inflow entry point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdInflow" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The true vertical depth to the well inflow entery point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Phase" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Phase (large activity classification) e.g. Drill Surface Hole.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityCode" type="witsml:DrillActivityCode" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A code used to define rig activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DetailActivity" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Custom string to further define an activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimLost" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The amount of time lost because of the well control incident. Commonly specified in hours.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTimRegained" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date and time at which control of the well is regained.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DiaBit" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The drill bit nominal outside diameter at time of well control incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdBit" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The measured depth of bit at the time of the well control incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WtMud" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The density of the drilling fluid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PorePressure" type="eml:MassPerVolumeMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The equivalent mud weight value of the pore pressure reading.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DiaCsgLast" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Diameter of the last installed casing.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdCsgLast" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of last casing.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolMudGained" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The gained volume of drilling fluid due to well kick.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresShutInCasing" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The shut in casing pressure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresShutInDrill" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The actual pressure in the drill pipe when the rams are closed around it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncidentType" type="witsml:WellControlIncidentType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The type of well control incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="KillingType" type="witsml:WellKillingProcedureType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The type of well control incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Formation" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The lithological description of a geological formation at the incident depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TempBottom" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the temperature at the bottom of the wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresMaxChoke" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The maximum pressure that the choke valve can be exposed to.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A description of the well control incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProprietaryCode" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:simpleType name="WellControlIncidentType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="shallow gas kick">
+				<xs:annotation>
+					<xs:documentation>An well control incident where shallow gas is flowing incidently 
+into a well being drilled.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="water kick">
+				<xs:annotation>
+					<xs:documentation>An well control incident where water is flowing incidently 
+into a well being drilled.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="oil kick">
+				<xs:annotation>
+					<xs:documentation>An well control incident where crude oil is flowing incidently 
+into a well being drilled.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gas kick">
+				<xs:annotation>
+					<xs:documentation>An well control incident where gas is flowing incidently 
+into a well being drilled.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WellKillingProcedureType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="drillers method">
+				<xs:annotation>
+					<xs:documentation>A well killing procedure that is presecribing circulation the 
+kick fluids out of the well and then circulating a higher density kill mud through 
+the kill line into the well through an adjustable choke.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="wait and weight">
+				<xs:annotation>
+					<xs:documentation>A well killing procedure that is presecribing circulating heavier 
+kill mud while a constant downhole pressure is maintained by pressure relief through 
+a choke.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bullheading">
+				<xs:annotation>
+					<xs:documentation>A well killing procedure that is prescribing pumping of kill 
+weight fluid down the tubing and forcing the wellbore fluids back into the formation 
+through the perforations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lubricate and bleed">
+				<xs:annotation>
+					<xs:documentation>A well killing procedure that is prescribing to pump a volume of 
+killing fluid corresponding to half the volume of the well tubing into the well, 
+observing the well for 30 - 60 minutes and wait for the tubing head pressure to 
+drop, then pump additional killing fluid into the well and when the wellhead 
+pressure does not exceed 200 psi above observed tubing head pressure bleed off 
+gas from the tubing at high rate.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="forward circulation">
+				<xs:annotation>
+					<xs:documentation>A well killing procedure that is prescribing a drilling fluid 
+circulation down the tubing, through a circulation device (or out the end of a 
+work string/coiled tubing) and up the annulus.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="reverse circulation">
+				<xs:annotation>
+					<xs:documentation>A well killing procedure that is prescribing a drilling fluid 
+circulation down the completion annulus, workstring annulus or pipe annulus and 
+taking returns up the tubing, workstring or pipe.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DrillReportStratInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time at which a preliminary zonation is established.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdTop" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth at the top of the formation. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TvdTop" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth at the top of the formation. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A lithological description of the geological formation at the given depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillReportPerfInfo">
+		<xs:sequence>
+			<xs:element name="DTimOpen" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date and time at which the well perforation interval is opened.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTimClose" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date and time at which the well perforation interval is closed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval between the top and the base of the perforations.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth interval between the top and the base of the perforations.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="DrillReportGasReadingInfo">
+		<xs:sequence>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time of the gas reading.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReadingType" type="witsml:GasPeakType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of gas reading.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GasReadingMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval over which the gas reading was conducted.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GasReadingTvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth interval over which the gas reading was conducted.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GasHigh" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The highest gas reading.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GasLow" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The lowest gas reading.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Meth" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Methane (C1) concentration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Eth" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Ethane (C2) concentration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Prop" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Propane (C3) concentration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ibut" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>iso-Butane (iC4) concentration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Nbut" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>nor-Butane (nC4) concentration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ipent" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>iso-Pentane (iC5) concentration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="AbstractBottomHoleTemperature" abstract="true">
+		<xs:sequence minOccurs="0" maxOccurs="1"/>
+	</xs:complexType>
+	<xs:complexType name="BottomHoleCirculatingTemperature">
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractBottomHoleTemperature">
+				<xs:sequence minOccurs="0" maxOccurs="1"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BottomHoleStaticTemperature">
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractBottomHoleTemperature">
+				<xs:sequence minOccurs="0" maxOccurs="1">
+					<xs:element name="eTimStatic" type="eml:TimeMeasure" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
