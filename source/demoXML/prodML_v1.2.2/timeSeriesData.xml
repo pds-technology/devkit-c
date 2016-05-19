@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
 <!--    		Example of time series data 		  -->
-<timeSeriesDatas 
-	xmlns="http://www.prodml.org/schemas/1series" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.prodml.org/schemas/1series  ../xsd_schemas/obj_timeSeriesData.xsd" 
-	version="1.2.0.0(PRODML)">
+<timeSeriesDatas xmlns="http://www.prodml.org/schemas/1series" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2.0.0(PRODML)" xsi:schemaLocation="http://www.prodml.org/schemas/1series ../../../doc/Standards/DataSchema/prodML_v1.2.2/prodml_v1.2.2_data/xsd_schemas/obj_timeSeriesData.xsd">
 	<timeSeriesData uid="ts-123">
 		<name>measured prodml://gary/mine/2736</name>
 		<key keyword="asset identifier">prodml://mysite.mycompany.com/well/22b/wellbore/1/bottomhole/2736</key>

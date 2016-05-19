@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
+<!--    		Example of time series data 		  -->
+<timeSeriesDatas 
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series  ../xsd_schemas/obj_timeSeriesData.xsd" 
+	version="1.2.0.0(PRODML)">
+	<timeSeriesData uid="ts-123">
+		<name>measured prodml://gary/mine/2736</name>
+		<key keyword="asset identifier">prodml://mysite.mycompany.com/well/22b/wellbore/1/bottomhole/2736</key>
+		<key keyword="qualifier">measured</key>
+		<key keyword="subqualifier">maximum</key>
+		<unit>psi</unit>
+		<measureClass>pressure</measureClass>
+		<comment>example pressure series</comment>
+		<doubleValue dTim="2008-10-31T12:00:00.000Z" status="bad calibration">19.999</doubleValue>
+		<doubleValue dTim="2008-10-31T12:00:01.000Z">11.2</doubleValue>
+		<doubleValue dTim="2008-10-31T12:00:02.000Z">11.3</doubleValue>
+	</timeSeriesData>
+	<timeSeriesData uid="ts-456">
+		<name>measured prodml://gary/mine/9999</name>
+		<key keyword="asset identifier">prodml://mysite.mycompany.com/well/22b/wellhead/9999</key>
+		<key keyword="qualifier">target</key>
+		<key keyword="product">gas</key>
+		<unit>m3/s</unit>
+		<measureClass>volume flow rate</measureClass>
+		<comment>example flow rate series</comment>
+		<doubleValue dTim="2008-10-31T12:00:00.000Z">2000.1</doubleValue>
+		<doubleValue dTim="2008-11-01T12:00:00.000Z">2010.02</doubleValue>
+		<doubleValue dTim="2008-11-02T12:00:00.000Z">2020.11</doubleValue>
+	</timeSeriesData>
+	<timeSeriesData uid="ts-789">
+		<name>simulated prodml://gary/mine/8888</name>
+		<key keyword="asset identifier">prodml://mysite.mycompany.com/well/22b/gas-lift-valve/8888</key>
+		<key keyword="qualifier">simulated</key>
+		<comment>example valve status series</comment>
+		<stringValue dTim="2008-10-31T12:00:00.000Z">open</stringValue>
+		<stringValue dTim="2008-11-01T12:00:00.000Z">closed</stringValue>
+		<stringValue dTim="2008-11-02T12:00:00.000Z">open</stringValue>
+	</timeSeriesData>
+</timeSeriesDatas>

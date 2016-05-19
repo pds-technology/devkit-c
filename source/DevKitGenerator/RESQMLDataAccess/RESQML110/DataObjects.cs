@@ -83,6 +83,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool AnySpecified
+         {
+            get {
+             if(AnyField!=null)
+                return AnyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<XmlElement> AnyField; 
 
 
@@ -296,9 +305,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlSplitNodeReference[] splitNodeReferenceField; 
         /// <summary>
-        /// Boolean to indicate if SplitNodeReference has been set. Used for serialization.
+        /// bool to indicate if SplitNodeReference has been set. Used for serialization.
         /// </summary>
-        private Boolean SplitNodeReferenceSpecified = false; 
+        private bool splitNodeReferenceSpecified = false; 
+         [XmlIgnore]
+         public bool SplitNodeReferenceSpecified
+         {
+            get {
+                return splitNodeReferenceSpecified;
+            } 
+            set {
+                splitNodeReferenceSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A set of points that are split. There must be splitNodeCount points in the aggregate. If you set this property, you must also set SplitNodeReference.
@@ -318,9 +337,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlPoint3dSet splitNodeSetField; 
         /// <summary>
-        /// Boolean to indicate if SplitNodeSet has been set. Used for serialization.
+        /// bool to indicate if SplitNodeSet has been set. Used for serialization.
         /// </summary>
-        private Boolean SplitNodeSetSpecified = false; 
+        private bool splitNodeSetSpecified = false; 
+         [XmlIgnore]
+         public bool SplitNodeSetSpecified
+         {
+            get {
+                return splitNodeSetSpecified;
+            } 
+            set {
+                splitNodeSetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -341,9 +370,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup ijkGridHdfGroupField; 
         /// <summary>
-        /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
+        /// bool to indicate if IjkGridHdfGroup has been set. Used for serialization.
         /// </summary>
-        private Boolean IjkGridHdfGroupSpecified = false; 
+        private bool ijkGridHdfGroupSpecified = false; 
+         [XmlIgnore]
+         public bool IjkGridHdfGroupSpecified
+         {
+            get {
+                return ijkGridHdfGroupSpecified;
+            } 
+            set {
+                ijkGridHdfGroupSpecified= value;
+            } 
+         }
 
 
 
@@ -452,6 +491,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool VrtxSpecified
+         {
+            get {
+             if(vrtxField!=null)
+                return vrtxField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Point3d> vrtxField; 
 
 
@@ -722,9 +770,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlSplitLineReference[] splitLineReferenceField; 
         /// <summary>
-        /// Boolean to indicate if SplitLineReference has been set. Used for serialization.
+        /// bool to indicate if SplitLineReference has been set. Used for serialization.
         /// </summary>
-        private Boolean SplitLineReferenceSpecified = false; 
+        private bool splitLineReferenceSpecified = false; 
+         [XmlIgnore]
+         public bool SplitLineReferenceSpecified
+         {
+            get {
+                return splitLineReferenceSpecified;
+            } 
+            set {
+                splitLineReferenceSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a set of node points on coordinate lines, organized by layer. There are "nk+gapCount+1" layers of nodes. Each layer has "(NI+1)*(NJ+1)+splitLineCount" node points. Here gapCount is the number of k layer gaps and splitLineCount is the number of additional DISTINCT lines. This data ordering facilitates K-slabbing of data sets and is shared between the XML and the HDF representations. In a layer, the first "(NI+1)*(NJ+1)" nodes are shared between columns of adjacent cells unless otherwise indicated. The lines are ordered according to a zero-based line_index defined by: (I-startIndexI)+(NI+1)*(J-startIndexJ) where I = I direction line coordinate for a column of cells. Minimum value=startIndexI, count=NI+1. J = J direction line coordinate for a column of cells. Minimum value=startIndexJ, count=NJ+1. The line I corresponds to the ICORN=0 side of cell I, and so the count of I is NI+1; Similarly for J. The next splitLineCount nodes are placed on the additional lines as indicated by the splitLineReferences in the order defined by the reference element in splitLineReference. The first additional line will be located at (NI+1)*(NJ+1) (assuming a zero-based index). There must be nk+gapCount+1 nodes on each line. For a line whose kind is "null" the values should be "NaN". For the additional lines, the line kind will never be "null". . If you set this property, you must also set SplitLineReference.
@@ -744,9 +802,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlPoint3dSet lineSetField; 
         /// <summary>
-        /// Boolean to indicate if LineSet has been set. Used for serialization.
+        /// bool to indicate if LineSet has been set. Used for serialization.
         /// </summary>
-        private Boolean LineSetSpecified = false; 
+        private bool lineSetSpecified = false; 
+         [XmlIgnore]
+         public bool LineSetSpecified
+         {
+            get {
+                return lineSetSpecified;
+            } 
+            set {
+                lineSetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -767,9 +835,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup ijkGridHdfGroupField; 
         /// <summary>
-        /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
+        /// bool to indicate if IjkGridHdfGroup has been set. Used for serialization.
         /// </summary>
-        private Boolean IjkGridHdfGroupSpecified = false; 
+        private bool ijkGridHdfGroupSpecified = false; 
+         [XmlIgnore]
+         public bool IjkGridHdfGroupSpecified
+         {
+            get {
+                return ijkGridHdfGroupSpecified;
+            } 
+            set {
+                ijkGridHdfGroupSpecified= value;
+            } 
+         }
 
 
 
@@ -1111,6 +1189,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool CountSpecified
+         {
+            get {
+             if(countField!=null)
+                return countField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Int16> countField; 
 
 		/// <summary>
@@ -1129,6 +1216,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool WeightSpecified
+         {
+            get {
+             if(weightField!=null)
+                return weightField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Single> weightField; 
 
 
@@ -1234,6 +1330,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool OmittedCellSpecified
+         {
+            get {
+             if(omittedCellField!=null)
+                return omittedCellField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlCellIndex> omittedCellField; 
 
 
@@ -1426,6 +1531,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -1548,9 +1662,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ShortValueList gridTopologyFlagsField; 
         /// <summary>
-        /// Boolean to indicate if GridTopologyFlags has been set. Used for serialization.
+        /// bool to indicate if GridTopologyFlags has been set. Used for serialization.
         /// </summary>
-        private Boolean GridTopologyFlagsSpecified = false; 
+        private bool gridTopologyFlagsSpecified = false; 
+         [XmlIgnore]
+         public bool GridTopologyFlagsSpecified
+         {
+            get {
+                return gridTopologyFlagsSpecified;
+            } 
+            set {
+                gridTopologyFlagsSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the gridTopologyFlags array data in an HDF5 formatted file.
@@ -1570,9 +1694,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup ijkGridHdfGroupField; 
         /// <summary>
-        /// Boolean to indicate if IjkGridHdfGroup has been set. Used for serialization.
+        /// bool to indicate if IjkGridHdfGroup has been set. Used for serialization.
         /// </summary>
-        private Boolean IjkGridHdfGroupSpecified = false; 
+        private bool ijkGridHdfGroupSpecified = false; 
+         [XmlIgnore]
+         public bool IjkGridHdfGroupSpecified
+         {
+            get {
+                return ijkGridHdfGroupSpecified;
+            } 
+            set {
+                ijkGridHdfGroupSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -1590,6 +1724,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool GapAfterLayerSpecified
+         {
+            get {
+             if(gapAfterLayerField!=null)
+                return gapAfterLayerField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Int16> gapAfterLayerField; 
 
         /// <summary>
@@ -1794,6 +1937,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -2072,7 +2224,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 nullValueField = value;
-                this.NullValueSpecified = true;
+             if(value!=null) 
+                 this.NullValueSpecified = true;
                 NotifyPropertyChanged("NullValue");
             }
         }
@@ -2112,6 +2265,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+            get {
+             if(arrayField!=null)
+                return arrayField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Int16> arrayField; 
 
         /// <summary>
@@ -2178,6 +2340,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ContinuousPropertyValuesSpecified
+         {
+            get {
+             if(continuousPropertyValuesField!=null)
+                return continuousPropertyValuesField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlContinuousPropertyValues> continuousPropertyValuesField; 
 
         /// <summary>
@@ -2196,6 +2367,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool DiscretePropertyValuesSpecified
+         {
+            get {
+             if(discretePropertyValuesField!=null)
+                return discretePropertyValuesField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlDiscretePropertyValues> discretePropertyValuesField; 
 
         /// <summary>
@@ -2214,6 +2394,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool CategoricalPropertyValuesSpecified
+         {
+            get {
+             if(categoricalPropertyValuesField!=null)
+                return categoricalPropertyValuesField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlCategoricalPropertyValues> categoricalPropertyValuesField; 
 
 
@@ -2306,9 +2495,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup hdfRepresentationField; 
         /// <summary>
-        /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
+        /// bool to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        private Boolean HdfRepresentationSpecified = false; 
+        private bool hdfRepresentationSpecified = false; 
+         [XmlIgnore]
+         public bool HdfRepresentationSpecified
+         {
+            get {
+                return hdfRepresentationSpecified;
+            } 
+            set {
+                hdfRepresentationSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Captures the array of values in an XML representation.
@@ -2327,9 +2526,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlContinuousValues xmlRepresentationField; 
         /// <summary>
-        /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
+        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
         /// </summary>
-        private Boolean XmlRepresentationSpecified = false; 
+        private bool xmlRepresentationSpecified = false; 
+         [XmlIgnore]
+         public bool XmlRepresentationSpecified
+         {
+            get {
+                return xmlRepresentationSpecified;
+            } 
+            set {
+                xmlRepresentationSpecified= value;
+            } 
+         }
 
 
 
@@ -2367,9 +2576,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ByteValueList byteValuesField; 
         /// <summary>
-        /// Boolean to indicate if ByteValues has been set. Used for serialization.
+        /// bool to indicate if ByteValues has been set. Used for serialization.
         /// </summary>
-        private Boolean ByteValuesSpecified = false; 
+        private bool byteValuesSpecified = false; 
+         [XmlIgnore]
+         public bool ByteValuesSpecified
+         {
+            get {
+                return byteValuesSpecified;
+            } 
+            set {
+                byteValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of double values.
@@ -2388,9 +2607,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DoubleValueList doubleValuesField; 
         /// <summary>
-        /// Boolean to indicate if DoubleValues has been set. Used for serialization.
+        /// bool to indicate if DoubleValues has been set. Used for serialization.
         /// </summary>
-        private Boolean DoubleValuesSpecified = false; 
+        private bool doubleValuesSpecified = false; 
+         [XmlIgnore]
+         public bool DoubleValuesSpecified
+         {
+            get {
+                return doubleValuesSpecified;
+            } 
+            set {
+                doubleValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of float values.
@@ -2409,9 +2638,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private FloatValueList floatValuesField; 
         /// <summary>
-        /// Boolean to indicate if FloatValues has been set. Used for serialization.
+        /// bool to indicate if FloatValues has been set. Used for serialization.
         /// </summary>
-        private Boolean FloatValuesSpecified = false; 
+        private bool floatValuesSpecified = false; 
+         [XmlIgnore]
+         public bool FloatValuesSpecified
+         {
+            get {
+                return floatValuesSpecified;
+            } 
+            set {
+                floatValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of int values.
@@ -2430,9 +2669,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private IntValueList intValuesField; 
         /// <summary>
-        /// Boolean to indicate if IntValues has been set. Used for serialization.
+        /// bool to indicate if IntValues has been set. Used for serialization.
         /// </summary>
-        private Boolean IntValuesSpecified = false; 
+        private bool intValuesSpecified = false; 
+         [XmlIgnore]
+         public bool IntValuesSpecified
+         {
+            get {
+                return intValuesSpecified;
+            } 
+            set {
+                intValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of long values.
@@ -2451,9 +2700,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private LongValueList longValuesField; 
         /// <summary>
-        /// Boolean to indicate if LongValues has been set. Used for serialization.
+        /// bool to indicate if LongValues has been set. Used for serialization.
         /// </summary>
-        private Boolean LongValuesSpecified = false; 
+        private bool longValuesSpecified = false; 
+         [XmlIgnore]
+         public bool LongValuesSpecified
+         {
+            get {
+                return longValuesSpecified;
+            } 
+            set {
+                longValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of short values.
@@ -2472,9 +2731,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ShortValueList shortValuesField; 
         /// <summary>
-        /// Boolean to indicate if ShortValues has been set. Used for serialization.
+        /// bool to indicate if ShortValues has been set. Used for serialization.
         /// </summary>
-        private Boolean ShortValuesSpecified = false; 
+        private bool shortValuesSpecified = false; 
+         [XmlIgnore]
+         public bool ShortValuesSpecified
+         {
+            get {
+                return shortValuesSpecified;
+            } 
+            set {
+                shortValuesSpecified= value;
+            } 
+         }
 
 
 
@@ -2507,7 +2776,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 nullValueField = value;
-                this.NullValueSpecified = true;
+             if(value!=null) 
+                 this.NullValueSpecified = true;
                 NotifyPropertyChanged("NullValue");
             }
         }
@@ -2547,6 +2817,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+            get {
+             if(arrayField!=null)
+                return arrayField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<SByte> arrayField; 
 
         /// <summary>
@@ -2613,6 +2892,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+            get {
+             if(arrayField!=null)
+                return arrayField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Double> arrayField; 
 
         /// <summary>
@@ -2679,6 +2967,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+            get {
+             if(arrayField!=null)
+                return arrayField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Single> arrayField; 
 
         /// <summary>
@@ -2741,7 +3038,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 nullValueField = value;
-                this.NullValueSpecified = true;
+             if(value!=null) 
+                 this.NullValueSpecified = true;
                 NotifyPropertyChanged("NullValue");
             }
         }
@@ -2781,6 +3079,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+            get {
+             if(arrayField!=null)
+                return arrayField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Int32> arrayField; 
 
         /// <summary>
@@ -2843,7 +3150,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 nullValueField = value;
-                this.NullValueSpecified = true;
+             if(value!=null) 
+                 this.NullValueSpecified = true;
                 NotifyPropertyChanged("NullValue");
             }
         }
@@ -2883,6 +3191,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+            get {
+             if(arrayField!=null)
+                return arrayField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Int64> arrayField; 
 
         /// <summary>
@@ -2989,9 +3306,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ByteValueList byteValuesField; 
         /// <summary>
-        /// Boolean to indicate if ByteValues has been set. Used for serialization.
+        /// bool to indicate if ByteValues has been set. Used for serialization.
         /// </summary>
-        private Boolean ByteValuesSpecified = false; 
+        private bool byteValuesSpecified = false; 
+         [XmlIgnore]
+         public bool ByteValuesSpecified
+         {
+            get {
+                return byteValuesSpecified;
+            } 
+            set {
+                byteValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of int values.
@@ -3010,9 +3337,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private IntValueList intValuesField; 
         /// <summary>
-        /// Boolean to indicate if IntValues has been set. Used for serialization.
+        /// bool to indicate if IntValues has been set. Used for serialization.
         /// </summary>
-        private Boolean IntValuesSpecified = false; 
+        private bool intValuesSpecified = false; 
+         [XmlIgnore]
+         public bool IntValuesSpecified
+         {
+            get {
+                return intValuesSpecified;
+            } 
+            set {
+                intValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of long values.
@@ -3031,9 +3368,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private LongValueList longValuesField; 
         /// <summary>
-        /// Boolean to indicate if LongValues has been set. Used for serialization.
+        /// bool to indicate if LongValues has been set. Used for serialization.
         /// </summary>
-        private Boolean LongValuesSpecified = false; 
+        private bool longValuesSpecified = false; 
+         [XmlIgnore]
+         public bool LongValuesSpecified
+         {
+            get {
+                return longValuesSpecified;
+            } 
+            set {
+                longValuesSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines a space delimited list of short values.
@@ -3052,9 +3399,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ShortValueList shortValuesField; 
         /// <summary>
-        /// Boolean to indicate if ShortValues has been set. Used for serialization.
+        /// bool to indicate if ShortValues has been set. Used for serialization.
         /// </summary>
-        private Boolean ShortValuesSpecified = false; 
+        private bool shortValuesSpecified = false; 
+         [XmlIgnore]
+         public bool ShortValuesSpecified
+         {
+            get {
+                return shortValuesSpecified;
+            } 
+            set {
+                shortValuesSpecified= value;
+            } 
+         }
 
 
 
@@ -3229,6 +3586,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -3249,9 +3615,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private String resqmlKindField; 
         /// <summary>
-        /// Boolean to indicate if ResqmlKind has been set. Used for serialization.
+        /// bool to indicate if ResqmlKind has been set. Used for serialization.
         /// </summary>
-        private Boolean ResqmlKindSpecified = false; 
+        private bool resqmlKindSpecified = false; 
+         [XmlIgnore]
+         public bool ResqmlKindSpecified
+         {
+            get {
+                return resqmlKindSpecified;
+            } 
+            set {
+                resqmlKindSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A pointer to the locally defined property which represents these values. Note that all local kinds must directly or indirectly be specialized from a standard RESQML kind.
@@ -3271,9 +3647,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private RefGlobalNameString localKindField; 
         /// <summary>
-        /// Boolean to indicate if LocalKind has been set. Used for serialization.
+        /// bool to indicate if LocalKind has been set. Used for serialization.
         /// </summary>
-        private Boolean LocalKindSpecified = false; 
+        private bool localKindSpecified = false; 
+         [XmlIgnore]
+         public bool LocalKindSpecified
+         {
+            get {
+                return localKindSpecified;
+            } 
+            set {
+                localKindSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -3311,9 +3697,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DateTime? timestampField; 
         /// <summary>
-        /// Boolean to indicate if Timestamp has been set. Used for serialization.
+        /// bool to indicate if Timestamp has been set. Used for serialization.
         /// </summary>
-        private Boolean TimestampSpecified = false; 
+        private bool timestampSpecified = false; 
+         [XmlIgnore]
+         public bool TimestampSpecified
+         {
+            get {
+                return timestampSpecified;
+            } 
+            set {
+                timestampSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The date and time related to the property.
@@ -3333,9 +3729,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlRefTimeStep timeStepField; 
         /// <summary>
-        /// Boolean to indicate if TimeStep has been set. Used for serialization.
+        /// bool to indicate if TimeStep has been set. Used for serialization.
         /// </summary>
-        private Boolean TimeStepSpecified = false; 
+        private bool timeStepSpecified = false; 
+         [XmlIgnore]
+         public bool TimeStepSpecified
+         {
+            get {
+                return timeStepSpecified;
+            } 
+            set {
+                timeStepSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -3370,6 +3776,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -3516,6 +3931,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool AnySpecified
+         {
+            get {
+             if(AnyField!=null)
+                return AnyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<XmlElement> AnyField; 
 
 
@@ -3621,7 +4045,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -3830,6 +4255,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool StringLookupSpecified
+         {
+            get {
+             if(stringLookupField!=null)
+                return stringLookupField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlStringLookup> stringLookupField; 
 
         /// <summary>
@@ -3849,9 +4283,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup hdfRepresentationField; 
         /// <summary>
-        /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
+        /// bool to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        private Boolean HdfRepresentationSpecified = false; 
+        private bool hdfRepresentationSpecified = false; 
+         [XmlIgnore]
+         public bool HdfRepresentationSpecified
+         {
+            get {
+                return hdfRepresentationSpecified;
+            } 
+            set {
+                hdfRepresentationSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Captures the array of values in an XML representation.
@@ -3870,9 +4314,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlDiscreteValues xmlRepresentationField; 
         /// <summary>
-        /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
+        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
         /// </summary>
-        private Boolean XmlRepresentationSpecified = false; 
+        private bool xmlRepresentationSpecified = false; 
+         [XmlIgnore]
+         public bool XmlRepresentationSpecified
+         {
+            get {
+                return xmlRepresentationSpecified;
+            } 
+            set {
+                xmlRepresentationSpecified= value;
+            } 
+         }
 
 
 
@@ -4038,9 +4492,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup hdfRepresentationField; 
         /// <summary>
-        /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
+        /// bool to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        private Boolean HdfRepresentationSpecified = false; 
+        private bool hdfRepresentationSpecified = false; 
+         [XmlIgnore]
+         public bool HdfRepresentationSpecified
+         {
+            get {
+                return hdfRepresentationSpecified;
+            } 
+            set {
+                hdfRepresentationSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Captures the array of values in an XML representation.
@@ -4059,9 +4523,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlDiscreteValues xmlRepresentationField; 
         /// <summary>
-        /// Boolean to indicate if XmlRepresentation has been set. Used for serialization.
+        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
         /// </summary>
-        private Boolean XmlRepresentationSpecified = false; 
+        private bool xmlRepresentationSpecified = false; 
+         [XmlIgnore]
+         public bool XmlRepresentationSpecified
+         {
+            get {
+                return xmlRepresentationSpecified;
+            } 
+            set {
+                xmlRepresentationSpecified= value;
+            } 
+         }
 
 
 
@@ -4097,6 +4571,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool LocalIJKGridSpecified
+         {
+            get {
+             if(localIJKGridField!=null)
+                return localIJKGridField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlLocalIJKGrid> localIJKGridField; 
 
         /// <summary>
@@ -4270,9 +4753,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlExplicitCornerPointGridRepresentation explicitCornerPointGridField; 
         /// <summary>
-        /// Boolean to indicate if ExplicitCornerPointGrid has been set. Used for serialization.
+        /// bool to indicate if ExplicitCornerPointGrid has been set. Used for serialization.
         /// </summary>
-        private Boolean ExplicitCornerPointGridSpecified = false; 
+        private bool explicitCornerPointGridSpecified = false; 
+         [XmlIgnore]
+         public bool ExplicitCornerPointGridSpecified
+         {
+            get {
+                return explicitCornerPointGridSpecified;
+            } 
+            set {
+                explicitCornerPointGridSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Structured IJK grid refinement.
@@ -4291,9 +4784,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlIJKGridRefinement ijkGridRefinementField; 
         /// <summary>
-        /// Boolean to indicate if IjkGridRefinement has been set. Used for serialization.
+        /// bool to indicate if IjkGridRefinement has been set. Used for serialization.
         /// </summary>
-        private Boolean IjkGridRefinementSpecified = false; 
+        private bool ijkGridRefinementSpecified = false; 
+         [XmlIgnore]
+         public bool IjkGridRefinementSpecified
+         {
+            get {
+                return ijkGridRefinementSpecified;
+            } 
+            set {
+                ijkGridRefinementSpecified= value;
+            } 
+         }
 
 
 
@@ -4672,6 +5175,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -4709,9 +5221,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlGridIJKCellFacePair[] gridIJKCellFacePairField; 
         /// <summary>
-        /// Boolean to indicate if GridIJKCellFacePair has been set. Used for serialization.
+        /// bool to indicate if GridIJKCellFacePair has been set. Used for serialization.
         /// </summary>
-        private Boolean GridIJKCellFacePairSpecified = false; 
+        private bool gridIJKCellFacePairSpecified = false; 
+         [XmlIgnore]
+         public bool GridIJKCellFacePairSpecified
+         {
+            get {
+                return gridIJKCellFacePairSpecified;
+            } 
+            set {
+                gridIJKCellFacePairSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the cell-face-pair array data in an HDF5 formatted file.
@@ -4731,9 +5253,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup hdfRepresentationField; 
         /// <summary>
-        /// Boolean to indicate if HdfRepresentation has been set. Used for serialization.
+        /// bool to indicate if HdfRepresentation has been set. Used for serialization.
         /// </summary>
-        private Boolean HdfRepresentationSpecified = false; 
+        private bool hdfRepresentationSpecified = false; 
+         [XmlIgnore]
+         public bool HdfRepresentationSpecified
+         {
+            get {
+                return hdfRepresentationSpecified;
+            } 
+            set {
+                hdfRepresentationSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -4751,6 +5283,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool Grid3dGUIDSpecified
+         {
+            get {
+             if(grid3dGUIDField!=null)
+                return grid3dGUIDField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RefGlobalNameString> grid3dGUIDField; 
 
         /// <summary>
@@ -4802,6 +5343,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -5186,6 +5736,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -5254,6 +5813,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool Grid3dGUIDSpecified
+         {
+            get {
+             if(grid3dGUIDField!=null)
+                return grid3dGUIDField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RefGlobalNameString> grid3dGUIDField; 
 
         /// <summary>
@@ -5271,6 +5839,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool GridIJKCellSpecified
+         {
+            get {
+             if(gridIJKCellField!=null)
+                return gridIJKCellField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlGridIJKCell> gridIJKCellField; 
 
         /// <summary>
@@ -5322,6 +5899,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -5489,6 +6075,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BlockedWellboreSetSpecified
+         {
+            get {
+             if(blockedWellboreSetField!=null)
+                return blockedWellboreSetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlIJKBlockedWellbore> blockedWellboreSetField; 
 
         /// <summary>
@@ -5508,6 +6103,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool NonStandardAdjacencySetSpecified
+         {
+            get {
+             if(nonStandardAdjacencySetField!=null)
+                return nonStandardAdjacencySetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlIJKNonStandardAdjacency> nonStandardAdjacencySetField; 
 
         /// <summary>
@@ -5527,6 +6131,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool GridSetSpecified
+         {
+            get {
+             if(gridSetField!=null)
+                return gridSetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlRootIJKGrid> gridSetField; 
 
 
@@ -5717,6 +6330,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -5969,6 +6591,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -6062,9 +6693,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlPoint3dSet pillarSetField; 
         /// <summary>
-        /// Boolean to indicate if PillarSet has been set. Used for serialization.
+        /// bool to indicate if PillarSet has been set. Used for serialization.
         /// </summary>
-        private Boolean PillarSetSpecified = false; 
+        private bool pillarSetSpecified = false; 
+         [XmlIgnore]
+         public bool PillarSetSpecified
+         {
+            get {
+                return pillarSetSpecified;
+            } 
+            set {
+                pillarSetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -6084,9 +6725,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup pillarSetHdfGroupField; 
         /// <summary>
-        /// Boolean to indicate if PillarSetHdfGroup has been set. Used for serialization.
+        /// bool to indicate if PillarSetHdfGroup has been set. Used for serialization.
         /// </summary>
-        private Boolean PillarSetHdfGroupSpecified = false; 
+        private bool pillarSetHdfGroupSpecified = false; 
+         [XmlIgnore]
+         public bool PillarSetHdfGroupSpecified
+         {
+            get {
+                return pillarSetHdfGroupSpecified;
+            } 
+            set {
+                pillarSetHdfGroupSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -6241,7 +6892,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 xField = value;
-                this.XSpecified = true;
+             if(value!=null) 
+                 this.XSpecified = true;
                 NotifyPropertyChanged("X");
             }
         }
@@ -6276,7 +6928,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 yField = value;
-                this.YSpecified = true;
+             if(value!=null) 
+                 this.YSpecified = true;
                 NotifyPropertyChanged("Y");
             }
         }
@@ -6311,7 +6964,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 zField = value;
-                this.ZSpecified = true;
+             if(value!=null) 
+                 this.ZSpecified = true;
                 NotifyPropertyChanged("Z");
             }
         }
@@ -6503,6 +7157,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool Point3dSetSpecified
+         {
+            get {
+             if(point3dSetField!=null)
+                return point3dSetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlWellMarker> point3dSetField; 
 
         /// <summary>
@@ -6596,9 +7259,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlPoint3dSet point3dSetField; 
         /// <summary>
-        /// Boolean to indicate if Point3dSet has been set. Used for serialization.
+        /// bool to indicate if Point3dSet has been set. Used for serialization.
         /// </summary>
-        private Boolean Point3dSetSpecified = false; 
+        private bool point3dSetSpecified = false; 
+         [XmlIgnore]
+         public bool Point3dSetSpecified
+         {
+            get {
+                return point3dSetSpecified;
+            } 
+            set {
+                point3dSetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -6618,9 +7291,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup pointSetHdfGroupField; 
         /// <summary>
-        /// Boolean to indicate if PointSetHdfGroup has been set. Used for serialization.
+        /// bool to indicate if PointSetHdfGroup has been set. Used for serialization.
         /// </summary>
-        private Boolean PointSetHdfGroupSpecified = false; 
+        private bool pointSetHdfGroupSpecified = false; 
+         [XmlIgnore]
+         public bool PointSetHdfGroupSpecified
+         {
+            get {
+                return pointSetHdfGroupSpecified;
+            } 
+            set {
+                pointSetHdfGroupSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -6711,6 +7394,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool SplitEdgeSpecified
+         {
+            get {
+             if(splitEdgeField!=null)
+                return splitEdgeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<SplitEdge> splitEdgeField; 
 
 
@@ -6838,6 +7530,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TrglSpecified
+         {
+            get {
+             if(trglField!=null)
+                return trglField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Triangle> trglField; 
 
 
@@ -6986,9 +7687,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlPoint3dSet point3dSetField; 
         /// <summary>
-        /// Boolean to indicate if Point3dSet has been set. Used for serialization.
+        /// bool to indicate if Point3dSet has been set. Used for serialization.
         /// </summary>
-        private Boolean Point3dSetSpecified = false; 
+        private bool point3dSetSpecified = false; 
+         [XmlIgnore]
+         public bool Point3dSetSpecified
+         {
+            get {
+                return point3dSetSpecified;
+            } 
+            set {
+                point3dSetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A set of triangles in the mesh. A triangle is defined by specifying the "vertex index" of each corner. A corner shall not be defined as "NaN". The aggregate of triangles defines the mesh. There is no semantic meaning to the triangle sequence order except that properties are assigned to the triangles based on the order. This order is called the "face index". The first triangle has an index of zero. If you set this property, you must also set Point3dSet, SplitEdgeNodeIndexSet.
@@ -7008,9 +7719,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlTriangleSet triangleNodeIndexSetField; 
         /// <summary>
-        /// Boolean to indicate if TriangleNodeIndexSet has been set. Used for serialization.
+        /// bool to indicate if TriangleNodeIndexSet has been set. Used for serialization.
         /// </summary>
-        private Boolean TriangleNodeIndexSetSpecified = false; 
+        private bool triangleNodeIndexSetSpecified = false; 
+         [XmlIgnore]
+         public bool TriangleNodeIndexSetSpecified
+         {
+            get {
+                return triangleNodeIndexSetSpecified;
+            } 
+            set {
+                triangleNodeIndexSetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A set of split edges. There is no semantics assigned to the order of the edges. If you set this property, you must also set Point3dSet, TriangleNodeIndexSet.
@@ -7030,9 +7751,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlSplitEdgeSet splitEdgeNodeIndexSetField; 
         /// <summary>
-        /// Boolean to indicate if SplitEdgeNodeIndexSet has been set. Used for serialization.
+        /// bool to indicate if SplitEdgeNodeIndexSet has been set. Used for serialization.
         /// </summary>
-        private Boolean SplitEdgeNodeIndexSetSpecified = false; 
+        private bool splitEdgeNodeIndexSetSpecified = false; 
+         [XmlIgnore]
+         public bool SplitEdgeNodeIndexSetSpecified
+         {
+            get {
+                return splitEdgeNodeIndexSetSpecified;
+            } 
+            set {
+                splitEdgeNodeIndexSetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -7054,9 +7785,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup triangulatedHdfGroupField; 
         /// <summary>
-        /// Boolean to indicate if TriangulatedHdfGroup has been set. Used for serialization.
+        /// bool to indicate if TriangulatedHdfGroup has been set. Used for serialization.
         /// </summary>
-        private Boolean TriangulatedHdfGroupSpecified = false; 
+        private bool triangulatedHdfGroupSpecified = false; 
+         [XmlIgnore]
+         public bool TriangulatedHdfGroupSpecified
+         {
+            get {
+                return triangulatedHdfGroupSpecified;
+            } 
+            set {
+                triangulatedHdfGroupSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -7277,9 +8018,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DoubleValueList zValueDatasetField; 
         /// <summary>
-        /// Boolean to indicate if ZValueDataset has been set. Used for serialization.
+        /// bool to indicate if ZValueDataset has been set. Used for serialization.
         /// </summary>
-        private Boolean ZValueDatasetSpecified = false; 
+        private bool zValueDatasetSpecified = false; 
+         [XmlIgnore]
+         public bool ZValueDatasetSpecified
+         {
+            get {
+                return zValueDatasetSpecified;
+            } 
+            set {
+                zValueDatasetSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -7299,9 +8050,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlHdfGroup grid2dHdfGroupField; 
         /// <summary>
-        /// Boolean to indicate if Grid2dHdfGroup has been set. Used for serialization.
+        /// bool to indicate if Grid2dHdfGroup has been set. Used for serialization.
         /// </summary>
-        private Boolean Grid2dHdfGroupSpecified = false; 
+        private bool grid2dHdfGroupSpecified = false; 
+         [XmlIgnore]
+         public bool Grid2dHdfGroupSpecified
+         {
+            get {
+                return grid2dHdfGroupSpecified;
+            } 
+            set {
+                grid2dHdfGroupSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -7534,6 +8295,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -7585,6 +8355,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -7659,6 +8438,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PillarSetPatchSpecified
+         {
+            get {
+             if(pillarSetPatchField!=null)
+                return pillarSetPatchField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlPillarSetPatch> pillarSetPatchField; 
 
 
@@ -7752,6 +8540,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TriangulatedPatchSpecified
+         {
+            get {
+             if(triangulatedPatchField!=null)
+                return triangulatedPatchField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlTriangulatedPatch> triangulatedPatchField; 
 
 
@@ -7789,6 +8586,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PointSetPatchSpecified
+         {
+            get {
+             if(pointSetPatchField!=null)
+                return pointSetPatchField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlPointSetPatch> pointSetPatchField; 
 
 
@@ -7826,6 +8632,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TriangulatedPatchSpecified
+         {
+            get {
+             if(triangulatedPatchField!=null)
+                return triangulatedPatchField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlTriangulatedPatch> triangulatedPatchField; 
 
 
@@ -7863,6 +8678,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool Grid2dPatchSpecified
+         {
+            get {
+             if(grid2dPatchField!=null)
+                return grid2dPatchField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlGrid2dPatch> grid2dPatchField; 
 
 
@@ -8036,6 +8860,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -8070,6 +8903,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -8143,6 +8985,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool Grid2dRepresentationSpecified
+         {
+            get {
+             if(grid2dRepresentationField!=null)
+                return grid2dRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlGrid2dRepresentation> grid2dRepresentationField; 
 
         /// <summary>
@@ -8161,6 +9012,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TriangulatedRepresentationSpecified
+         {
+            get {
+             if(triangulatedRepresentationField!=null)
+                return triangulatedRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlTriangulatedRepresentation> triangulatedRepresentationField; 
 
         /// <summary>
@@ -8179,6 +9039,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PillarSetRepresentationSpecified
+         {
+            get {
+             if(pillarSetRepresentationField!=null)
+                return pillarSetRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlPillarSetRepresentation> pillarSetRepresentationField; 
 
         /// <summary>
@@ -8197,6 +9066,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PointSetRepresentationSpecified
+         {
+            get {
+             if(pointSetRepresentationField!=null)
+                return pointSetRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlPointSetRepresentation> pointSetRepresentationField; 
 
         /// <summary>
@@ -8215,6 +9093,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool WellMarkerRepresentationSpecified
+         {
+            get {
+             if(wellMarkerRepresentationField!=null)
+                return wellMarkerRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlWellMarkerRepresentation> wellMarkerRepresentationField; 
 
 
@@ -8251,6 +9138,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool Grid2dRepresentationSpecified
+         {
+            get {
+             if(grid2dRepresentationField!=null)
+                return grid2dRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlGrid2dRepresentation> grid2dRepresentationField; 
 
         /// <summary>
@@ -8269,6 +9165,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TriangulatedRepresentationSpecified
+         {
+            get {
+             if(triangulatedRepresentationField!=null)
+                return triangulatedRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlTriangulatedRepresentation> triangulatedRepresentationField; 
 
         /// <summary>
@@ -8287,6 +9192,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PointSetRepresentationSpecified
+         {
+            get {
+             if(pointSetRepresentationField!=null)
+                return pointSetRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlPointSetRepresentation> pointSetRepresentationField; 
 
         /// <summary>
@@ -8305,6 +9219,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool HybridGridRepresentationSpecified
+         {
+            get {
+             if(hybridGridRepresentationField!=null)
+                return hybridGridRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlHybridGridRepresentation> hybridGridRepresentationField; 
 
         /// <summary>
@@ -8323,6 +9246,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool WellMarkerRepresentationSpecified
+         {
+            get {
+             if(wellMarkerRepresentationField!=null)
+                return wellMarkerRepresentationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlWellMarkerRepresentation> wellMarkerRepresentationField; 
 
 
@@ -8496,6 +9428,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -8530,6 +9471,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -8603,6 +9553,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool FaultInterpretationSpecified
+         {
+            get {
+             if(faultInterpretationField!=null)
+                return faultInterpretationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlFaultInterpretation> faultInterpretationField; 
 
 
@@ -8639,6 +9598,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool HorizonInterpretationSpecified
+         {
+            get {
+             if(horizonInterpretationField!=null)
+                return horizonInterpretationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlHorizonInterpretation> horizonInterpretationField; 
 
 
@@ -8675,6 +9643,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool HorizonSpecified
+         {
+            get {
+             if(horizonField!=null)
+                return horizonField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlHorizon> horizonField; 
 
         /// <summary>
@@ -8693,6 +9670,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool FaultSpecified
+         {
+            get {
+             if(faultField!=null)
+                return faultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlFault> faultField; 
 
         /// <summary>
@@ -8711,6 +9697,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BinGridSpecified
+         {
+            get {
+             if(binGridField!=null)
+                return binGridField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlBinGrid> binGridField; 
 
 
@@ -8901,6 +9896,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -8936,6 +9940,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
         /// <summary>
@@ -8954,6 +9967,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TimeStepSpecified
+         {
+            get {
+             if(timeStepField!=null)
+                return timeStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DateTime> timeStepField; 
 
         /// <summary>
@@ -9174,6 +10196,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -9246,6 +10277,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool MemberPropertySpecified
+         {
+            get {
+             if(memberPropertyField!=null)
+                return memberPropertyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RefGlobalNameString> memberPropertyField; 
 
         /// <summary>
@@ -9281,6 +10321,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -9354,6 +10403,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PropertyGroupSpecified
+         {
+            get {
+             if(propertyGroupField!=null)
+                return propertyGroupField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlPropertyGroup> propertyGroupField; 
 
         /// <summary>
@@ -9372,6 +10430,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TimeStepListSpecified
+         {
+            get {
+             if(timeStepListField!=null)
+                return timeStepListField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlTimeStepList> timeStepListField; 
 
 
@@ -9562,6 +10629,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -9617,9 +10693,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlPropertyKind resqmlKindField; 
         /// <summary>
-        /// Boolean to indicate if ResqmlKind has been set. Used for serialization.
+        /// bool to indicate if ResqmlKind has been set. Used for serialization.
         /// </summary>
-        private Boolean ResqmlKindSpecified = false; 
+        private bool resqmlKindSpecified = false; 
+         [XmlIgnore]
+         public bool ResqmlKindSpecified
+         {
+            get {
+                return resqmlKindSpecified;
+            } 
+            set {
+                resqmlKindSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The parent RESQML standard property which this specializes. The semantics of this property is a specialization of the specified standard property. For properties which have a unit of measure, the parent kind will indirectly specify the single unit of measure which must be utilized for the property values.
@@ -9640,9 +10726,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlPropertyKind parentResqmlKindField; 
         /// <summary>
-        /// Boolean to indicate if ParentResqmlKind has been set. Used for serialization.
+        /// bool to indicate if ParentResqmlKind has been set. Used for serialization.
         /// </summary>
-        private Boolean ParentResqmlKindSpecified = false; 
+        private bool parentResqmlKindSpecified = false; 
+         [XmlIgnore]
+         public bool ParentResqmlKindSpecified
+         {
+            get {
+                return parentResqmlKindSpecified;
+            } 
+            set {
+                parentResqmlKindSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A pointer to parent locally defined property. The semantics of this property is a specialization of the specified local property. Note that all local kinds must directly or indirectly be related to a standard RESQML standard kind.
@@ -9663,9 +10759,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private RefGlobalNameString parentLocalKindField; 
         /// <summary>
-        /// Boolean to indicate if ParentLocalKind has been set. Used for serialization.
+        /// bool to indicate if ParentLocalKind has been set. Used for serialization.
         /// </summary>
-        private Boolean ParentLocalKindSpecified = false; 
+        private bool parentLocalKindSpecified = false; 
+         [XmlIgnore]
+         public bool ParentLocalKindSpecified
+         {
+            get {
+                return parentLocalKindSpecified;
+            } 
+            set {
+                parentLocalKindSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -9705,9 +10811,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ResqmlUnitOfMeasure unitOfMeasureField; 
         /// <summary>
-        /// Boolean to indicate if UnitOfMeasure has been set. Used for serialization.
+        /// bool to indicate if UnitOfMeasure has been set. Used for serialization.
         /// </summary>
-        private Boolean UnitOfMeasureSpecified = false; 
+        private bool unitOfMeasureSpecified = false; 
+         [XmlIgnore]
+         public bool UnitOfMeasureSpecified
+         {
+            get {
+                return unitOfMeasureSpecified;
+            } 
+            set {
+                unitOfMeasureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The dimensional analysis of the unit of measure. For example, a meter (m) would be of class "L", which represents length. Note that angle is considered to be dimensionless ratio of length. Note that solid angle is considered to be dimensionless ratio of area. The following nomenclature is used: A = angle (SI unit = radian) B = luminous intensity (SI unit = candela) C = electrical current (SI unit = ampere) K = thermodynamic temperature (SI unit = kelvin) L = length (SI unit = metre) M = mass (SI unit = kilogram) N = amount of substance (SI unit = mole) S = solid angle (SI unit = steradian) T = time (SI unit = second) 1 = dimensionless 2 = squared (e.g., "M2") 3 = cubed 4 = 4th power 5 = 5th power 6 = 6th power 7 = 7th power 8 = 8th power / = division ratio(X) = A dimensionless ratio of another dimension. For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the equivalent of "L2/L2". This is only used when the underlying dimension would otherwise be "1". The values may be broken into numerator and denominator separated by a slash "/" but multiple slashes must not be used. A slash must not terminate the string. For example, length per time would be indicated by "L/T" A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component. The number "1" will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). The number "1" must not be used as a denominator because it is implied (e.g., "M" impiles "M/1"). For consistency, the items within a numerator or denominator are listed in alphabetical order (e.g., LM - not ML). If you set this property, you must also set UnitOfMeasure.
@@ -9729,9 +10845,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private String dimensionalClassField; 
         /// <summary>
-        /// Boolean to indicate if DimensionalClass has been set. Used for serialization.
+        /// bool to indicate if DimensionalClass has been set. Used for serialization.
         /// </summary>
-        private Boolean DimensionalClassSpecified = false; 
+        private bool dimensionalClassSpecified = false; 
+         [XmlIgnore]
+         public bool DimensionalClassSpecified
+         {
+            get {
+                return dimensionalClassSpecified;
+            } 
+            set {
+                dimensionalClassSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The minimum value allowed for the discrete property. If you set this property, you must also set MaximumValue.
@@ -9753,9 +10879,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private Int64? minimumValueField; 
         /// <summary>
-        /// Boolean to indicate if MinimumValue has been set. Used for serialization.
+        /// bool to indicate if MinimumValue has been set. Used for serialization.
         /// </summary>
-        private Boolean MinimumValueSpecified = false; 
+        private bool minimumValueSpecified = false; 
+         [XmlIgnore]
+         public bool MinimumValueSpecified
+         {
+            get {
+                return minimumValueSpecified;
+            } 
+            set {
+                minimumValueSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The maximum value allowed for the discrete property. If you set this property, you must also set MinimumValue.
@@ -9777,9 +10913,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private Int64? maximumValueField; 
         /// <summary>
-        /// Boolean to indicate if MaximumValue has been set. Used for serialization.
+        /// bool to indicate if MaximumValue has been set. Used for serialization.
         /// </summary>
-        private Boolean MaximumValueSpecified = false; 
+        private bool maximumValueSpecified = false; 
+         [XmlIgnore]
+         public bool MaximumValueSpecified
+         {
+            get {
+                return maximumValueSpecified;
+            } 
+            set {
+                maximumValueSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A value allowed for the categorical property.
@@ -9802,9 +10948,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private String[] enumValueField; 
         /// <summary>
-        /// Boolean to indicate if EnumValue has been set. Used for serialization.
+        /// bool to indicate if EnumValue has been set. Used for serialization.
         /// </summary>
-        private Boolean EnumValueSpecified = false; 
+        private bool enumValueSpecified = false; 
+         [XmlIgnore]
+         public bool EnumValueSpecified
+         {
+            get {
+                return enumValueSpecified;
+            } 
+            set {
+                enumValueSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -9822,6 +10978,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType1> ItemsElementNameField; 
 
         /// <summary>
@@ -9856,6 +11021,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -10064,6 +11238,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool BibliographicCitationSpecified
+         {
+            get {
+             if(bibliographicCitationField!=null)
+                return bibliographicCitationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DublinCoreString> bibliographicCitationField; 
 
         /// <summary>
@@ -10149,7 +11332,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 timeOriginField = value;
-                this.TimeOriginSpecified = true;
+             if(value!=null) 
+                 this.TimeOriginSpecified = true;
                 NotifyPropertyChanged("TimeOrigin");
             }
         }
@@ -10206,6 +11390,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -10339,7 +11532,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A URN to a well-known Vertical CRS.
         /// </summary>
-        [XmlElement("srsName")]
+        [XmlElement("srsName", DataType="anyURI")]
         public String SrsName {
             get {
                 return srsNameField;
@@ -10354,14 +11547,24 @@ namespace Energistics.DataAccess.RESQML110
 
         private String srsNameField; 
         /// <summary>
-        /// Boolean to indicate if SrsName has been set. Used for serialization.
+        /// bool to indicate if SrsName has been set. Used for serialization.
         /// </summary>
-        private Boolean SrsNameSpecified = false; 
+        private bool srsNameSpecified = false; 
+         [XmlIgnore]
+         public bool SrsNameSpecified
+         {
+            get {
+                return srsNameSpecified;
+            } 
+            set {
+                srsNameSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// VerticalCRS property
         /// </summary>
-        [XmlElement("VerticalCRS")]
+        [XmlElement("VerticalCRS", Namespace="http://www.opengis.net/gml/3.2")]
         public VerticalCRSType VerticalCRS {
             get {
                 return VerticalCRSField;
@@ -10375,9 +11578,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private VerticalCRSType VerticalCRSField; 
         /// <summary>
-        /// Boolean to indicate if VerticalCRS has been set. Used for serialization.
+        /// bool to indicate if VerticalCRS has been set. Used for serialization.
         /// </summary>
-        private Boolean VerticalCRSSpecified = false; 
+        private bool verticalCRSSpecified = false; 
+         [XmlIgnore]
+         public bool VerticalCRSSpecified
+         {
+            get {
+                return verticalCRSSpecified;
+            } 
+            set {
+                verticalCRSSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -10618,6 +11831,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool AxisSpecified
+         {
+            get {
+             if(axisField!=null)
+                return axisField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CoordinateSystemAxisPropertyType> axisField; 
 
 		/// <summary>
@@ -10632,7 +11854,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 aggregationTypeField = value;
-                this.AggregationTypeSpecified = true;
+             if(value!=null) 
+                 this.AggregationTypeSpecified = true;
                 NotifyPropertyChanged("AggregationType");
             }
         }
@@ -10793,7 +12016,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 minimumValueField = value;
-                this.MinimumValueSpecified = true;
+             if(value!=null) 
+                 this.MinimumValueSpecified = true;
                 NotifyPropertyChanged("MinimumValue");
             }
         }
@@ -10828,7 +12052,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 maximumValueField = value;
-                this.MaximumValueSpecified = true;
+             if(value!=null) 
+                 this.MaximumValueSpecified = true;
                 NotifyPropertyChanged("MaximumValue");
             }
         }
@@ -11248,6 +12473,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool NameSpecified
+         {
+            get {
+             if(nameField!=null)
+                return nameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CodeType> nameField; 
 
 		/// <summary>
@@ -11509,6 +12743,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool RelatedTimeSpecified
+         {
+            get {
+             if(relatedTimeField!=null)
+                return relatedTimeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RelatedTimeType> relatedTimeField; 
 
 
@@ -11541,7 +12784,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 relativePositionField = value;
-                this.RelativePositionSpecified = true;
+             if(value!=null) 
+                 this.RelativePositionSpecified = true;
                 NotifyPropertyChanged("RelativePosition");
             }
         }
@@ -11843,6 +13087,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TextSpecified
+         {
+            get {
+             if(TextField!=null)
+                return TextField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> TextField; 
 
 
@@ -11935,6 +13188,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool InteriorSpecified
+         {
+            get {
+             if(interiorField!=null)
+                return interiorField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<AbstractRingPropertyType> interiorField; 
 
 
@@ -12028,9 +13290,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DirectPositionType posField; 
         /// <summary>
-        /// Boolean to indicate if Pos has been set. Used for serialization.
+        /// bool to indicate if Pos has been set. Used for serialization.
         /// </summary>
-        private Boolean PosSpecified = false; 
+        private bool posSpecified = false; 
+         [XmlIgnore]
+         public bool PosSpecified
+         {
+            get {
+                return posSpecified;
+            } 
+            set {
+                posSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// posList property
@@ -12049,9 +13321,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DirectPositionListType posListField; 
         /// <summary>
-        /// Boolean to indicate if PosList has been set. Used for serialization.
+        /// bool to indicate if PosList has been set. Used for serialization.
         /// </summary>
-        private Boolean PosListSpecified = false; 
+        private bool posListSpecified = false; 
+         [XmlIgnore]
+         public bool PosListSpecified
+         {
+            get {
+                return posListSpecified;
+            } 
+            set {
+                posListSpecified= value;
+            } 
+         }
 
 
 
@@ -12142,6 +13424,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TextSpecified
+         {
+            get {
+             if(TextField!=null)
+                return TextField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> TextField; 
 
 
@@ -12347,9 +13638,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DirectPositionType lowerCornerField; 
         /// <summary>
-        /// Boolean to indicate if LowerCorner has been set. Used for serialization.
+        /// bool to indicate if LowerCorner has been set. Used for serialization.
         /// </summary>
-        private Boolean LowerCornerSpecified = false; 
+        private bool lowerCornerSpecified = false; 
+         [XmlIgnore]
+         public bool LowerCornerSpecified
+         {
+            get {
+                return lowerCornerSpecified;
+            } 
+            set {
+                lowerCornerSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// pos property
@@ -12368,9 +13669,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DirectPositionType posField; 
         /// <summary>
-        /// Boolean to indicate if Pos has been set. Used for serialization.
+        /// bool to indicate if Pos has been set. Used for serialization.
         /// </summary>
-        private Boolean PosSpecified = false; 
+        private bool posSpecified = false; 
+         [XmlIgnore]
+         public bool PosSpecified
+         {
+            get {
+                return posSpecified;
+            } 
+            set {
+                posSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// upperCorner property
@@ -12389,9 +13700,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DirectPositionType upperCornerField; 
         /// <summary>
-        /// Boolean to indicate if UpperCorner has been set. Used for serialization.
+        /// bool to indicate if UpperCorner has been set. Used for serialization.
         /// </summary>
-        private Boolean UpperCornerSpecified = false; 
+        private bool upperCornerSpecified = false; 
+         [XmlIgnore]
+         public bool UpperCornerSpecified
+         {
+            get {
+                return upperCornerSpecified;
+            } 
+            set {
+                upperCornerSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -12409,6 +13730,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType> ItemsElementNameField; 
 
 		/// <summary>
@@ -12857,9 +14187,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private MeasureType inverseFlatteningField; 
         /// <summary>
-        /// Boolean to indicate if InverseFlattening has been set. Used for serialization.
+        /// bool to indicate if InverseFlattening has been set. Used for serialization.
         /// </summary>
-        private Boolean InverseFlatteningSpecified = false; 
+        private bool inverseFlatteningSpecified = false; 
+         [XmlIgnore]
+         public bool InverseFlatteningSpecified
+         {
+            get {
+                return inverseFlatteningSpecified;
+            } 
+            set {
+                inverseFlatteningSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// isSphere property
@@ -12878,9 +14218,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private Boolean? isSphereField; 
         /// <summary>
-        /// Boolean to indicate if IsSphere has been set. Used for serialization.
+        /// bool to indicate if IsSphere has been set. Used for serialization.
         /// </summary>
-        private Boolean IsSphereSpecified = false; 
+        private bool isSphereSpecified = false; 
+         [XmlIgnore]
+         public bool IsSphereSpecified
+         {
+            get {
+                return isSphereSpecified;
+            } 
+            set {
+                isSphereSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// semiMinorAxis property
@@ -12899,9 +14249,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private LengthType semiMinorAxisField; 
         /// <summary>
-        /// Boolean to indicate if SemiMinorAxis has been set. Used for serialization.
+        /// bool to indicate if SemiMinorAxis has been set. Used for serialization.
         /// </summary>
-        private Boolean SemiMinorAxisSpecified = false; 
+        private bool semiMinorAxisSpecified = false; 
+         [XmlIgnore]
+         public bool SemiMinorAxisSpecified
+         {
+            get {
+                return semiMinorAxisSpecified;
+            } 
+            set {
+                semiMinorAxisSpecified= value;
+            } 
+         }
 
 
 
@@ -13012,6 +14372,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ScopeSpecified
+         {
+            get {
+             if(scopeField!=null)
+                return scopeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> scopeField; 
 
         /// <summary>
@@ -13042,7 +14411,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 realizationEpochField = value;
-                this.RealizationEpochSpecified = true;
+             if(value!=null) 
+                 this.RealizationEpochSpecified = true;
                 NotifyPropertyChanged("RealizationEpoch");
             }
         }
@@ -13190,6 +14560,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool GeographicElementSpecified
+         {
+            get {
+             if(geographicElementField!=null)
+                return geographicElementField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<EX_GeographicExtent_PropertyType> geographicElementField; 
 
         /// <summary>
@@ -13207,6 +14586,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool TemporalElementSpecified
+         {
+            get {
+             if(temporalElementField!=null)
+                return temporalElementField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<EX_TemporalExtent_PropertyType> temporalElementField; 
 
         /// <summary>
@@ -13224,6 +14612,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool VerticalElementSpecified
+         {
+            get {
+             if(verticalElementField!=null)
+                return verticalElementField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<EX_VerticalExtent_PropertyType> verticalElementField; 
 
 
@@ -14104,6 +15501,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool DeliveryPointSpecified
+         {
+            get {
+             if(deliveryPointField!=null)
+                return deliveryPointField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CharacterString_PropertyType> deliveryPointField; 
 
         /// <summary>
@@ -14189,6 +15595,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ElectronicMailAddressSpecified
+         {
+            get {
+             if(electronicMailAddressField!=null)
+                return electronicMailAddressField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CharacterString_PropertyType> electronicMailAddressField; 
 
 
@@ -14225,6 +15640,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool VoiceSpecified
+         {
+            get {
+             if(voiceField!=null)
+                return voiceField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CharacterString_PropertyType> voiceField; 
 
         /// <summary>
@@ -14242,6 +15666,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool FacsimileSpecified
+         {
+            get {
+             if(facsimileField!=null)
+                return facsimileField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CharacterString_PropertyType> facsimileField; 
 
 
@@ -14975,9 +16408,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private String DateField; 
         /// <summary>
-        /// Boolean to indicate if Date has been set. Used for serialization.
+        /// bool to indicate if Date has been set. Used for serialization.
         /// </summary>
-        private Boolean DateSpecified = false; 
+        private bool dateSpecified = false; 
+         [XmlIgnore]
+         public bool DateSpecified
+         {
+            get {
+                return dateSpecified;
+            } 
+            set {
+                dateSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// DateTime property
@@ -14996,9 +16439,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private DateTime? DateTimeField; 
         /// <summary>
-        /// Boolean to indicate if DateTime has been set. Used for serialization.
+        /// bool to indicate if DateTime has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeSpecified = false; 
+        private bool dateTimeSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeSpecified
+         {
+            get {
+                return dateTimeSpecified;
+            } 
+            set {
+                dateTimeSpecified= value;
+            } 
+         }
 
 
 		/// <summary>
@@ -15162,6 +16615,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool AlternateTitleSpecified
+         {
+            get {
+             if(alternateTitleField!=null)
+                return alternateTitleField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CharacterString_PropertyType> alternateTitleField; 
 
         /// <summary>
@@ -15180,6 +16642,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool DateSpecified
+         {
+            get {
+             if(dateField!=null)
+                return dateField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CI_Date_PropertyType> dateField; 
 
         /// <summary>
@@ -15231,6 +16702,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool IdentifierSpecified
+         {
+            get {
+             if(identifierField!=null)
+                return identifierField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<MD_Identifier_PropertyType> identifierField; 
 
         /// <summary>
@@ -15248,6 +16728,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool CitedResponsiblePartySpecified
+         {
+            get {
+             if(citedResponsiblePartyField!=null)
+                return citedResponsiblePartyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CI_ResponsibleParty_PropertyType> citedResponsiblePartyField; 
 
         /// <summary>
@@ -15265,6 +16754,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PresentationFormSpecified
+         {
+            get {
+             if(presentationFormField!=null)
+                return presentationFormField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CI_PresentationFormCode_PropertyType> presentationFormField; 
 
         /// <summary>
@@ -15963,6 +17461,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool NameOfMeasureSpecified
+         {
+            get {
+             if(nameOfMeasureField!=null)
+                return nameOfMeasureField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CharacterString_PropertyType> nameOfMeasureField; 
 
         /// <summary>
@@ -16065,6 +17572,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool DateTimeSpecified
+         {
+            get {
+             if(dateTimeField!=null)
+                return dateTimeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DateTime_PropertyType> dateTimeField; 
 
         /// <summary>
@@ -16083,6 +17599,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ResultSpecified
+         {
+            get {
+             if(resultField!=null)
+                return resultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DQ_Result_PropertyType> resultField; 
 
 
@@ -16611,6 +18136,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool DomainOfValiditySpecified
+         {
+            get {
+             if(domainOfValidityField!=null)
+                return domainOfValidityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DomainOfValidity> domainOfValidityField; 
 
         /// <summary>
@@ -16628,6 +18162,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ScopeSpecified
+         {
+            get {
+             if(scopeField!=null)
+                return scopeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> scopeField; 
 
 
@@ -16666,9 +18209,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private CartesianCSPropertyType cartesianCSField; 
         /// <summary>
-        /// Boolean to indicate if CartesianCS has been set. Used for serialization.
+        /// bool to indicate if CartesianCS has been set. Used for serialization.
         /// </summary>
-        private Boolean CartesianCSSpecified = false; 
+        private bool cartesianCSSpecified = false; 
+         [XmlIgnore]
+         public bool CartesianCSSpecified
+         {
+            get {
+                return cartesianCSSpecified;
+            } 
+            set {
+                cartesianCSSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// ellipsoidalCS property
@@ -16687,9 +18240,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private EllipsoidalCSPropertyType ellipsoidalCSField; 
         /// <summary>
-        /// Boolean to indicate if EllipsoidalCS has been set. Used for serialization.
+        /// bool to indicate if EllipsoidalCS has been set. Used for serialization.
         /// </summary>
-        private Boolean EllipsoidalCSSpecified = false; 
+        private bool ellipsoidalCSSpecified = false; 
+         [XmlIgnore]
+         public bool EllipsoidalCSSpecified
+         {
+            get {
+                return ellipsoidalCSSpecified;
+            } 
+            set {
+                ellipsoidalCSSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// sphericalCS property
@@ -16708,9 +18271,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private SphericalCSPropertyType sphericalCSField; 
         /// <summary>
-        /// Boolean to indicate if SphericalCS has been set. Used for serialization.
+        /// bool to indicate if SphericalCS has been set. Used for serialization.
         /// </summary>
-        private Boolean SphericalCSSpecified = false; 
+        private bool sphericalCSSpecified = false; 
+         [XmlIgnore]
+         public bool SphericalCSSpecified
+         {
+            get {
+                return sphericalCSSpecified;
+            } 
+            set {
+                sphericalCSSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -17459,6 +19032,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ScopeSpecified
+         {
+            get {
+             if(scopeField!=null)
+                return scopeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> scopeField; 
 
         /// <summary>
@@ -17493,6 +19075,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool CoordinateOperationAccuracySpecified
+         {
+            get {
+             if(coordinateOperationAccuracyField!=null)
+                return coordinateOperationAccuracyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CoordinateOperationAccuracy> coordinateOperationAccuracyField; 
 
         /// <summary>
@@ -18221,7 +19812,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A URN to a well-known Projected CRS.
         /// </summary>
-        [XmlElement("srsName")]
+        [XmlElement("srsName", DataType="anyURI")]
         public String SrsName {
             get {
                 return srsNameField;
@@ -18236,14 +19827,24 @@ namespace Energistics.DataAccess.RESQML110
 
         private String srsNameField; 
         /// <summary>
-        /// Boolean to indicate if SrsName has been set. Used for serialization.
+        /// bool to indicate if SrsName has been set. Used for serialization.
         /// </summary>
-        private Boolean SrsNameSpecified = false; 
+        private bool srsNameSpecified = false; 
+         [XmlIgnore]
+         public bool SrsNameSpecified
+         {
+            get {
+                return srsNameSpecified;
+            } 
+            set {
+                srsNameSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// ProjectedCRS property
         /// </summary>
-        [XmlElement("ProjectedCRS")]
+        [XmlElement("ProjectedCRS", Namespace="http://www.opengis.net/gml/3.2")]
         public ProjectedCRSType ProjectedCRS {
             get {
                 return ProjectedCRSField;
@@ -18257,9 +19858,19 @@ namespace Energistics.DataAccess.RESQML110
 
         private ProjectedCRSType ProjectedCRSField; 
         /// <summary>
-        /// Boolean to indicate if ProjectedCRS has been set. Used for serialization.
+        /// bool to indicate if ProjectedCRS has been set. Used for serialization.
         /// </summary>
-        private Boolean ProjectedCRSSpecified = false; 
+        private bool projectedCRSSpecified = false; 
+         [XmlIgnore]
+         public bool ProjectedCRSSpecified
+         {
+            get {
+                return projectedCRSSpecified;
+            } 
+            set {
+                projectedCRSSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -18408,6 +20019,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool Local3dCRSSpecified
+         {
+            get {
+             if(local3dCRSField!=null)
+                return local3dCRSField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlLocal3dCRS> local3dCRSField; 
 
 
@@ -18619,6 +20239,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool PropertyKindSetSpecified
+         {
+            get {
+             if(propertyKindSetField!=null)
+                return propertyKindSetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<StandAloneResqmlPropertyKind> propertyKindSetField; 
 
         /// <summary>
@@ -18828,6 +20457,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -18951,7 +20589,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -19004,7 +20643,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 indexField = value;
-                this.IndexSpecified = true;
+             if(value!=null) 
+                 this.IndexSpecified = true;
                 NotifyPropertyChanged("Index");
             }
         }
@@ -19039,7 +20679,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -19183,7 +20824,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -19241,6 +20883,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -19535,6 +21186,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool DocumentAliasSpecified
+         {
+            get {
+             if(documentAliasField!=null)
+                return documentAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> documentAliasField; 
 
         /// <summary>
@@ -19548,7 +21208,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 documentDateField = value;
-                this.DocumentDateSpecified = true;
+             if(value!=null) 
+                 this.DocumentDateSpecified = true;
                 NotifyPropertyChanged("DocumentDate");
             }
         }
@@ -19588,6 +21249,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool DocumentClassSpecified
+         {
+            get {
+             if(documentClassField!=null)
+                return documentClassField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> documentClassField; 
 
         /// <summary>
@@ -19624,6 +21294,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool SecurityInformationSpecified
+         {
+            get {
+             if(securityInformationField!=null)
+                return securityInformationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DocumentSecurityInfo> securityInformationField; 
 
         /// <summary>
@@ -19661,6 +21340,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool AuditTrailSpecified
+         {
+            get {
+             if(auditTrailField!=null)
+                return auditTrailField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DocumentEvent> auditTrailField; 
 
         /// <summary>
@@ -19770,6 +21458,15 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+         [XmlIgnore]
+         public bool ResqmlDocumentSpecified
+         {
+            get {
+             if(resqmlDocumentField!=null)
+                return resqmlDocumentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ResqmlDocument> resqmlDocumentField; 
 
         /// <summary>

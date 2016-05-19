@@ -1,8 +1,0 @@
-C:\projects\source\DevKitGenerator\Generator\bin\Release\Energistics.Generator.exe.config
-C:\projects\source\DevKitGenerator\Generator\bin\Release\Energistics.Generator.exe
-C:\projects\source\DevKitGenerator\Generator\bin\Release\Energistics.Generator.pdb
-C:\projects\source\DevKitGenerator\Generator\bin\Release\Energistics.SchemaGatherer.exe
-C:\projects\source\DevKitGenerator\Generator\bin\Release\Energistics.SchemaGatherer.pdb
-C:\projects\source\DevKitGenerator\Generator\obj\x86\Release\Energistics.Generator.exe
-C:\projects\source\DevKitGenerator\Generator\obj\x86\Release\Energistics.Generator.pdb
-C:\projects\source\DevKitGenerator\Generator\obj\x86\Release\Generator.csprojResolveAssemblyReference.cache

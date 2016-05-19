@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
+<fluidAnalysiss
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series  
+			../xsd_schemas/obj_fluidAnalysis.xsd" 
+	version="1.2.0.0(PRODML)">
+	<fluidAnalysis uid="Analysis_2">
+		<name>Analysis 2</name>
+		<userAnalysisKind>calc</userAnalysisKind>
+		<analysisdDate>2003-07-11</analysisdDate>
+		<applicationName>MS Fluids</applicationName>
+		<applicationVersion>1.0</applicationVersion>
+		<analysisCompany>Good Oil Co.</analysisCompany>
+		<personName>Able Baker</personName>
+	</fluidAnalysis>
+</fluidAnalysiss>

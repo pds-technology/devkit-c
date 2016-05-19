@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
+<report
+	xmlns="http://www.prodml.org/schemas/1series" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series 
+		../xsd_schemas/obj_report.xsd">
+	<kind>monthly production</kind>
+	<title>Rubin Monthly Production for March 2009</title>
+	<date>2009-03-12</date>
+	<comment>This is an example of a report context for a monthly production of a field.</comment>
+	<reportVersion>3-internal</reportVersion>
+	<reportStatus>draft</reportStatus>
+	<contextFacility namingSystem="MyCompany" kind="field">RUBIN</contextFacility>
+	<operator>
+		<name>Norsk Olje AS</name>
+	</operator>
+	<geographicContext>
+		<country>Norway</country>
+		<field>RUBIN</field>
+	</geographicContext>
+	<issueDate>2006-04-19</issueDate>
+	<issuedBy>
+		<name>Ole Mann</name>
+		<role>Driftsleder</role>
+		<role>Platformsjef</role>
+		<personName>
+			<first>Ole</first>
+			<last>Mann</last>
+		</personName>
+	</issuedBy>
+	<approvalDate>2006-04-19</approvalDate>
+	<approver>
+		<name>Ole Mann</name>
+		<role>Operasjonsleder Land</role>
+		<role>Platformsjef</role>
+		<role>Driftsleder</role>
+		<role>Read-only access to pictures</role>
+		<role>Regular user</role>
+		<personName>
+			<first>Ole</first>
+			<last>Mann</last>
+		</personName>
+	</approver>
+</report>

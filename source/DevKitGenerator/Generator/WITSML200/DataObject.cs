@@ -13379,10 +13379,10 @@ namespace Energistics.Generator.WITSML200 {
         private string uidField;
         
         /// <remarks/>
-        /// <summary>The index (depth or time) for the calibration point.   The uom value must be consistent with the indexType.</summary>
+        /// <summary>The index (depth or time) for the calibration point.    The uom value must be consistent with the indexType.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The index (depth or time) for the calibration point.   The uom value must be cons" +
-            "istent with the indexType.")]
+        [System.ComponentModel.DescriptionAttribute("The index (depth or time) for the calibration point.    The uom value must be con" +
+            "sistent with the indexType.")]
         public GenericMeasure Index {
             get {
                 return this.indexField;
@@ -13407,9 +13407,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>The horizontal position on the grid which the calibration  point represents.</summary>
+        /// <summary>The horizontal position on the grid which the calibration point represents.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The horizontal position on the grid which the calibration  point represents.")]
+        [System.ComponentModel.DescriptionAttribute("The horizontal position on the grid which the calibration point represents.")]
         public CalibrationPointRole Role {
             get {
                 return this.roleField;
@@ -13433,10 +13433,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>An intermediate Point from left edge to right edge  (required when role is "fraction", not allowed otherwise);  used to extrapolate the rectified position of a track boundary which has  wandered off the edge of the image.</summary>
-        [System.ComponentModel.DescriptionAttribute("An intermediate Point from left edge to right edge  (required when role is \"fract" +
-            "ion\", not allowed otherwise);  used to extrapolate the rectified position of a t" +
-            "rack boundary which has  wandered off the edge of the image.")]
+        /// <summary>An intermediate point from left edge to right edge (required when role is "fraction", not allowed otherwise); used to extrapolate the rectified position of a track boundary which has wandered off the edge of the image.</summary>
+        [System.ComponentModel.DescriptionAttribute("An intermediate point from left edge to right edge (required when role is \"fracti" +
+            "on\", not allowed otherwise); used to extrapolate the rectified position of a tra" +
+            "ck boundary which has wandered off the edge of the image.")]
         public DimensionlessMeasure Fraction {
             get {
                 return this.fractionField;
@@ -13642,11 +13642,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless then a unit of 'Euc' should be used.</summary>
+        /// <summary>The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless, then use a unit of 'Euc'.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The value assigned to the parameter.   The unit of measure should be consistent w" +
             "ith the property implied by \'mnemonic\' in \'dictionary\'. If the value is unitless" +
-            " then a unit of \'Euc\' should be used.")]
+            ", then use a unit of \'Euc\'.")]
         public GenericMeasure Value {
             get {
                 return this.valueField;
@@ -13846,11 +13846,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>Primary index type. For date-time indexes, any specified index values should be defined as a time offset (e.g., in seconds) from the  creationDate of the well log.</summary>
+        /// <summary>Primary index type. For date-time indexes, any specified index values should be defined as a time offset (e.g., in seconds) from the creationDate of the well log.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Primary index type. For date-time indexes, any specified index values should be d" +
-            "efined as a time offset (e.g., in seconds) from the  creationDate of the well lo" +
-            "g.")]
+            "efined as a time offset (e.g., in seconds) from the creationDate of the well log" +
+            ".")]
         public LogIndexType IndexType {
             get {
                 return this.indexTypeField;
@@ -13937,9 +13937,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>Vertical Log Scale Label (Ex. “1 IN/100 F”).</summary>
+        /// <summary>Vertical log scale label (Ex. “1 IN/100 F”).</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("Vertical Log Scale Label (Ex. “1 IN/100 F”).")]
+        [System.ComponentModel.DescriptionAttribute("Vertical log scale label (Ex. “1 IN/100 F”).")]
         public string VerticalLabel {
             get {
                 return this.verticalLabelField;
@@ -13950,9 +13950,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>Second Term of the Vertical Scale Ratio (Ex. “240” for a 5 inch per 100 Foot log section).</summary>
+        /// <summary>Second term of the vertical scale ratio (Ex. “240” for a 5 inch per 100 Foot log section).</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("Second Term of the Vertical Scale Ratio (Ex. “240” for a 5 inch per 100 Foot log " +
+        [System.ComponentModel.DescriptionAttribute("Second term of the vertical scale ratio (Ex. “240” for a 5 inch per 100 Foot log " +
             "section).")]
         public string VerticalRatio {
             get {
@@ -53459,9 +53459,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>A blank field that can be "populated" through batch processing of XML files</summary>
+        /// <summary>A blank field that can be "populated" through batch processing of XML files.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A blank field that can be \"populated\" through batch processing of XML files")]
+        [System.ComponentModel.DescriptionAttribute("A blank field that can be \"populated\" through batch processing of XML files.")]
         public string Alias {
             get {
                 return this.aliasField;

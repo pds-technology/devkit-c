@@ -165,7 +165,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -200,7 +201,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -402,6 +404,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ResultSpecified
+         {
+            get {
+             if(resultField!=null)
+                return resultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftTestResult> resultField; 
 
         /// <summary>
@@ -420,6 +431,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TestRefSpecified
+         {
+            get {
+             if(testRefField!=null)
+                return testRefField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RefNameString> testRefField; 
 
         /// <summary>
@@ -438,6 +458,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TestDataSpecified
+         {
+            get {
+             if(testDataField!=null)
+                return testDataField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftTestData> testDataField; 
 
         /// <summary>
@@ -456,6 +485,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -812,7 +850,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -923,7 +962,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -1245,7 +1285,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -3515,6 +3556,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TestDataSpecified
+         {
+            get {
+             if(testDataField!=null)
+                return testDataField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftTestData> testDataField; 
 
         /// <summary>
@@ -3533,6 +3583,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool InputParameterSpecified
+         {
+            get {
+             if(inputParameterField!=null)
+                return inputParameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftInOutParameter> inputParameterField; 
 
         /// <summary>
@@ -3551,6 +3610,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OutputParameterSpecified
+         {
+            get {
+             if(outputParameterField!=null)
+                return outputParameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftInOutParameter> outputParameterField; 
 
         /// <summary>
@@ -3569,6 +3637,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool InputResultRefSpecified
+         {
+            get {
+             if(inputResultRefField!=null)
+                return inputResultRefField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftResultRef> inputResultRefField; 
 
         /// <summary>
@@ -3587,6 +3664,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -3678,6 +3764,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CurveSectionSpecified
+         {
+            get {
+             if(curveSectionField!=null)
+                return curveSectionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftCurveSection> curveSectionField; 
 
         /// <summary>
@@ -3696,6 +3791,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+            get {
+             if(parameterField!=null)
+                return parameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftInOutParameter> parameterField; 
 
         /// <summary>
@@ -3714,6 +3818,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -3820,7 +3933,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -3855,7 +3969,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -3895,6 +4010,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -4129,7 +4253,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -4182,7 +4307,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 indexField = value;
-                this.IndexSpecified = true;
+             if(value!=null) 
+                 this.IndexSpecified = true;
                 NotifyPropertyChanged("Index");
             }
         }
@@ -4217,7 +4343,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -4458,7 +4585,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -4498,6 +4626,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -4731,7 +4868,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -4766,7 +4904,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -4806,6 +4945,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ResultSpecified
+         {
+            get {
+             if(resultField!=null)
+                return resultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftTestResult> resultField; 
 
         /// <summary>
@@ -4824,6 +4972,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -4970,6 +5127,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -5056,7 +5222,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -5091,7 +5258,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -5223,6 +5391,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool LogRefSpecified
+         {
+            get {
+             if(logRefField!=null)
+                return logRefField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RefObjectString> logRefField; 
 
         /// <summary>
@@ -5241,6 +5418,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool EventSpecified
+         {
+            get {
+             if(eventField!=null)
+                return eventField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftEvent> eventField; 
 
         /// <summary>
@@ -5259,6 +5445,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TestSpecified
+         {
+            get {
+             if(testField!=null)
+                return testField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftTest> testField; 
 
         /// <summary>
@@ -5277,6 +5472,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SampleAcquisitionSpecified
+         {
+            get {
+             if(sampleAcquisitionField!=null)
+                return sampleAcquisitionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftSampleAcquisition> sampleAcquisitionField; 
 
         /// <summary>
@@ -5295,6 +5499,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ResultSpecified
+         {
+            get {
+             if(resultField!=null)
+                return resultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftTestResult> resultField; 
 
         /// <summary>
@@ -5331,6 +5544,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -5382,7 +5604,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wftRun", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Wireline Formation Test (WFT) object.")]
     public partial class WftRun : Object, IWellboreObject, INotifyPropertyChanged
     {
@@ -5455,7 +5677,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 objectGrowingField = value;
-                this.ObjectGrowingSpecified = true;
+             if(value!=null) 
+                 this.ObjectGrowingSpecified = true;
                 NotifyPropertyChanged("ObjectGrowing");
             }
         }
@@ -5526,7 +5749,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -5561,7 +5785,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -5655,6 +5880,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool StationSpecified
+         {
+            get {
+             if(stationField!=null)
+                return stationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftStation> stationField; 
 
         /// <summary>
@@ -5673,6 +5907,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ResultSpecified
+         {
+            get {
+             if(resultField!=null)
+                return resultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftTestResult> resultField; 
 
         /// <summary>
@@ -5691,6 +5934,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
         /// <summary>
@@ -5847,7 +6099,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimCreationField = value;
-                this.DateTimeCreationSpecified = true;
+             if(value!=null) 
+                 this.DateTimeCreationSpecified = true;
                 NotifyPropertyChanged("DateTimeCreation");
             }
         }
@@ -5882,7 +6135,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimLastChangeField = value;
-                this.DateTimeLastChangeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeLastChangeSpecified = true;
                 NotifyPropertyChanged("DateTimeLastChange");
             }
         }
@@ -5917,7 +6171,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 itemStateField = value;
-                this.ItemStateSpecified = true;
+             if(value!=null) 
+                 this.ItemStateSpecified = true;
                 NotifyPropertyChanged("ItemState");
             }
         }
@@ -5993,6 +6248,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool AcquisitionTimeZoneSpecified
+         {
+            get {
+             if(acquisitionTimeZoneField!=null)
+                return acquisitionTimeZoneField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<TimestampedTimeZone> acquisitionTimeZoneField; 
 
         /// <summary>
@@ -6028,6 +6292,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 
@@ -6100,7 +6373,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -6193,6 +6467,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool AnySpecified
+         {
+            get {
+             if(AnyField!=null)
+                return AnyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<XmlElement> AnyField; 
 
 
@@ -6247,6 +6530,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool AnySpecified
+         {
+            get {
+             if(AnyField!=null)
+                return AnyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<XmlElement> AnyField; 
 
 
@@ -6680,7 +6972,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 InjectedFluidField = value;
-                this.InjectedFluidSpecified = true;
+             if(value!=null) 
+                 this.InjectedFluidSpecified = true;
                 NotifyPropertyChanged("InjectedFluid");
             }
         }
@@ -6944,6 +7237,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TestedFormationSpecified
+         {
+            get {
+             if(testedFormationField!=null)
+                return testedFormationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> testedFormationField; 
 
         /// <summary>
@@ -7406,7 +7708,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 allocatedSplitField = value;
-                this.AllocatedSplitSpecified = true;
+             if(value!=null) 
+                 this.AllocatedSplitSpecified = true;
                 NotifyPropertyChanged("AllocatedSplit");
             }
         }
@@ -7736,7 +8039,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 bottomholeField = value;
-                this.BottomholeSpecified = true;
+             if(value!=null) 
+                 this.BottomholeSpecified = true;
                 NotifyPropertyChanged("Bottomhole");
             }
         }
@@ -7771,7 +8075,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 staticField = value;
-                this.StaticSpecified = true;
+             if(value!=null) 
+                 this.StaticSpecified = true;
                 NotifyPropertyChanged("Static");
             }
         }
@@ -8282,6 +8587,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TestIntervalSpecified
+         {
+            get {
+             if(testIntervalField!=null)
+                return testIntervalField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WellTestInterval> testIntervalField; 
 
         /// <summary>
@@ -8350,6 +8664,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PointDataSpecified
+         {
+            get {
+             if(pointDataField!=null)
+                return pointDataField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WellTestPointData> pointDataField; 
 
         /// <summary>
@@ -8610,7 +8933,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dateField = value;
-                this.DateSpecified = true;
+             if(value!=null) 
+                 this.DateSpecified = true;
                 NotifyPropertyChanged("Date");
             }
         }
@@ -8786,9 +9110,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PlaneAngleMeasure latitudeField; 
         /// <summary>
-        /// Boolean to indicate if Latitude has been set. Used for serialization.
+        /// bool to indicate if Latitude has been set. Used for serialization.
         /// </summary>
-        private Boolean LatitudeSpecified = false; 
+        private bool latitudeSpecified = false; 
+         [XmlIgnore]
+         public bool LatitudeSpecified
+         {
+            get {
+                return latitudeSpecified;
+            } 
+            set {
+                latitudeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The longitude with east being positive. If you set this property, you must also set Latitude.
@@ -8815,9 +9149,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PlaneAngleMeasure longitudeField; 
         /// <summary>
-        /// Boolean to indicate if Longitude has been set. Used for serialization.
+        /// bool to indicate if Longitude has been set. Used for serialization.
         /// </summary>
-        private Boolean LongitudeSpecified = false; 
+        private bool longitudeSpecified = false; 
+         [XmlIgnore]
+         public bool LongitudeSpecified
+         {
+            get {
+                return longitudeSpecified;
+            } 
+            set {
+                longitudeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The projected coordinate with east being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Northing.
@@ -8844,9 +9188,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure eastingField; 
         /// <summary>
-        /// Boolean to indicate if Easting has been set. Used for serialization.
+        /// bool to indicate if Easting has been set. Used for serialization.
         /// </summary>
-        private Boolean EastingSpecified = false; 
+        private bool eastingSpecified = false; 
+         [XmlIgnore]
+         public bool EastingSpecified
+         {
+            get {
+                return eastingSpecified;
+            } 
+            set {
+                eastingSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The projected coordinate with north being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Easting.
@@ -8873,9 +9227,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure northingField; 
         /// <summary>
-        /// Boolean to indicate if Northing has been set. Used for serialization.
+        /// bool to indicate if Northing has been set. Used for serialization.
         /// </summary>
-        private Boolean NorthingSpecified = false; 
+        private bool northingSpecified = false; 
+         [XmlIgnore]
+         public bool NorthingSpecified
+         {
+            get {
+                return northingSpecified;
+            } 
+            set {
+                northingSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The projected coordinate with west being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Southing.
@@ -8902,9 +9266,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure westingField; 
         /// <summary>
-        /// Boolean to indicate if Westing has been set. Used for serialization.
+        /// bool to indicate if Westing has been set. Used for serialization.
         /// </summary>
-        private Boolean WestingSpecified = false; 
+        private bool westingSpecified = false; 
+         [XmlIgnore]
+         public bool WestingSpecified
+         {
+            get {
+                return westingSpecified;
+            } 
+            set {
+                westingSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The projected coordinate with south being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Westing.
@@ -8931,9 +9305,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure southingField; 
         /// <summary>
-        /// Boolean to indicate if Southing has been set. Used for serialization.
+        /// bool to indicate if Southing has been set. Used for serialization.
         /// </summary>
-        private Boolean SouthingSpecified = false; 
+        private bool southingSpecified = false; 
+         [XmlIgnore]
+         public bool SouthingSpecified
+         {
+            get {
+                return southingSpecified;
+            } 
+            set {
+                southingSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The projected X coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedY.
@@ -8960,9 +9344,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure projectedXField; 
         /// <summary>
-        /// Boolean to indicate if ProjectedX has been set. Used for serialization.
+        /// bool to indicate if ProjectedX has been set. Used for serialization.
         /// </summary>
-        private Boolean ProjectedXSpecified = false; 
+        private bool projectedXSpecified = false; 
+         [XmlIgnore]
+         public bool ProjectedXSpecified
+         {
+            get {
+                return projectedXSpecified;
+            } 
+            set {
+                projectedXSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The projected Y coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedX.
@@ -8989,9 +9383,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure projectedYField; 
         /// <summary>
-        /// Boolean to indicate if ProjectedY has been set. Used for serialization.
+        /// bool to indicate if ProjectedY has been set. Used for serialization.
         /// </summary>
-        private Boolean ProjectedYSpecified = false; 
+        private bool projectedYSpecified = false; 
+         [XmlIgnore]
+         public bool ProjectedYSpecified
+         {
+            get {
+                return projectedYSpecified;
+            } 
+            set {
+                projectedYSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The local (engineering) X coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalY.
@@ -9018,9 +9422,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure localXField; 
         /// <summary>
-        /// Boolean to indicate if LocalX has been set. Used for serialization.
+        /// bool to indicate if LocalX has been set. Used for serialization.
         /// </summary>
-        private Boolean LocalXSpecified = false; 
+        private bool localXSpecified = false; 
+         [XmlIgnore]
+         public bool LocalXSpecified
+         {
+            get {
+                return localXSpecified;
+            } 
+            set {
+                localXSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The local (engineering) Y coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalX.
@@ -9047,9 +9461,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure localYField; 
         /// <summary>
-        /// Boolean to indicate if LocalY has been set. Used for serialization.
+        /// bool to indicate if LocalY has been set. Used for serialization.
         /// </summary>
-        private Boolean LocalYSpecified = false; 
+        private bool localYSpecified = false; 
+         [XmlIgnore]
+         public bool LocalYSpecified
+         {
+            get {
+                return localYSpecified;
+            } 
+            set {
+                localYSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -9067,6 +9491,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType8> ItemsElementNameField; 
 
         /// <summary>
@@ -9080,7 +9513,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 originalField = value;
-                this.OriginalSpecified = true;
+             if(value!=null) 
+                 this.OriginalSpecified = true;
                 NotifyPropertyChanged("Original");
             }
         }
@@ -9138,6 +9572,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -9501,7 +9944,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 codeField = value;
-                this.CodeSpecified = true;
+             if(value!=null) 
+                 this.CodeSpecified = true;
                 NotifyPropertyChanged("Code");
             }
         }
@@ -9543,9 +9987,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private WellKnownNameStruct datumNameField; 
         /// <summary>
-        /// Boolean to indicate if DatumName has been set. Used for serialization.
+        /// bool to indicate if DatumName has been set. Used for serialization.
         /// </summary>
-        private Boolean DatumNameSpecified = false; 
+        private bool datumNameSpecified = false; 
+         [XmlIgnore]
+         public bool DatumNameSpecified
+         {
+            get {
+                return datumNameSpecified;
+            } 
+            set {
+                datumNameSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A reference to the coordinateReferenceSystem object representing the vertical reference datum (i.e., this wellDatum). This should only be specified if the above 'code' represents some variation of sea level. 
@@ -9565,9 +10019,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private RefNameString datumCRSField; 
         /// <summary>
-        /// Boolean to indicate if DatumCRS has been set. Used for serialization.
+        /// bool to indicate if DatumCRS has been set. Used for serialization.
         /// </summary>
-        private Boolean DatumCRSSpecified = false; 
+        private bool datumCRSSpecified = false; 
+         [XmlIgnore]
+         public bool DatumCRSSpecified
+         {
+            get {
+                return datumCRSSpecified;
+            } 
+            set {
+                datumCRSSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -9586,6 +10050,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool KindSpecified
+         {
+            get {
+             if(kindField!=null)
+                return kindField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> kindField; 
 
         /// <summary>
@@ -9712,6 +10185,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -9726,7 +10208,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 defaultMeasuredDepthField = value;
-                this.DefaultMeasuredDepthSpecified = true;
+             if(value!=null) 
+                 this.DefaultMeasuredDepthSpecified = true;
                 NotifyPropertyChanged("DefaultMeasuredDepth");
             }
         }
@@ -9762,7 +10245,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 defaultVerticalDepthField = value;
-                this.DefaultVerticalDepthSpecified = true;
+             if(value!=null) 
+                 this.DefaultVerticalDepthSpecified = true;
                 NotifyPropertyChanged("DefaultVerticalDepth");
             }
         }
@@ -9798,7 +10282,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 defaultElevationField = value;
-                this.DefaultElevationSpecified = true;
+             if(value!=null) 
+                 this.DefaultElevationSpecified = true;
                 NotifyPropertyChanged("DefaultElevation");
             }
         }
@@ -9911,6 +10396,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool WellAliasSpecified
+         {
+            get {
+             if(wellAliasField!=null)
+                return wellAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> wellAliasField; 
 
         /// <summary>
@@ -9929,6 +10423,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool WellDatumSpecified
+         {
+            get {
+             if(wellDatumField!=null)
+                return wellDatumField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WellDatum> wellDatumField; 
 
         /// <summary>
@@ -9942,7 +10445,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 fluidWellField = value;
-                this.FluidWellSpecified = true;
+             if(value!=null) 
+                 this.FluidWellSpecified = true;
                 NotifyPropertyChanged("FluidWell");
             }
         }
@@ -9977,7 +10481,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 directionWellField = value;
-                this.DirectionWellSpecified = true;
+             if(value!=null) 
+                 this.DirectionWellSpecified = true;
                 NotifyPropertyChanged("DirectionWell");
             }
         }
@@ -10125,7 +10630,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellTest", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Well Test object.")]
     public partial class WellTest : Object, IWellObject, INotifyPropertyChanged
     {
@@ -10215,7 +10720,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimCurrentField = value;
-                this.DateTimeCurrentSpecified = true;
+             if(value!=null) 
+                 this.DateTimeCurrentSpecified = true;
                 NotifyPropertyChanged("DateTimeCurrent");
             }
         }
@@ -10268,7 +10774,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testDateField = value;
-                this.TestDateSpecified = true;
+             if(value!=null) 
+                 this.TestDateSpecified = true;
                 NotifyPropertyChanged("TestDate");
             }
         }
@@ -10303,7 +10810,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 previousTestDateField = value;
-                this.PreviousTestDateSpecified = true;
+             if(value!=null) 
+                 this.PreviousTestDateSpecified = true;
                 NotifyPropertyChanged("PreviousTestDate");
             }
         }
@@ -10338,7 +10846,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 lastValidTestField = value;
-                this.LastValidTestSpecified = true;
+             if(value!=null) 
+                 this.LastValidTestSpecified = true;
                 NotifyPropertyChanged("LastValidTest");
             }
         }
@@ -10373,7 +10882,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testReasonField = value;
-                this.TestReasonSpecified = true;
+             if(value!=null) 
+                 this.TestReasonSpecified = true;
                 NotifyPropertyChanged("TestReason");
             }
         }
@@ -10498,7 +11008,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 standardTempPresField = value;
-                this.StandardTempPresSpecified = true;
+             if(value!=null) 
+                 this.StandardTempPresSpecified = true;
                 NotifyPropertyChanged("StandardTempPres");
             }
         }
@@ -10533,7 +11044,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 validationStateField = value;
-                this.ValidationStateSpecified = true;
+             if(value!=null) 
+                 this.ValidationStateSpecified = true;
                 NotifyPropertyChanged("ValidationState");
             }
         }
@@ -10573,6 +11085,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ValidationOperationSpecified
+         {
+            get {
+             if(validationOperationField!=null)
+                return validationOperationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WellTestValidationOperation> validationOperationField; 
 
         /// <summary>
@@ -10594,9 +11115,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private WellTestFluidLevelTest fluidLevelTestField; 
         /// <summary>
-        /// Boolean to indicate if FluidLevelTest has been set. Used for serialization.
+        /// bool to indicate if FluidLevelTest has been set. Used for serialization.
         /// </summary>
-        private Boolean FluidLevelTestSpecified = false; 
+        private bool fluidLevelTestSpecified = false; 
+         [XmlIgnore]
+         public bool FluidLevelTestSpecified
+         {
+            get {
+                return fluidLevelTestSpecified;
+            } 
+            set {
+                fluidLevelTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Data from a production test. Multiple tests generally indicate that there are multiple components of a single overall test. For example, for multi-zoned wells.
@@ -10617,9 +11148,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private WellTestProductionTestData[] productionTestField; 
         /// <summary>
-        /// Boolean to indicate if ProductionTest has been set. Used for serialization.
+        /// bool to indicate if ProductionTest has been set. Used for serialization.
         /// </summary>
-        private Boolean ProductionTestSpecified = false; 
+        private bool productionTestSpecified = false; 
+         [XmlIgnore]
+         public bool ProductionTestSpecified
+         {
+            get {
+                return productionTestSpecified;
+            } 
+            set {
+                productionTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Data from an injection test. Multiple tests generally indicate that there are multiple components of the overall test. For example, for multi-zoned wells.
@@ -10640,9 +11181,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private WellTestInjectionTestData[] injectionTestField; 
         /// <summary>
-        /// Boolean to indicate if InjectionTest has been set. Used for serialization.
+        /// bool to indicate if InjectionTest has been set. Used for serialization.
         /// </summary>
-        private Boolean InjectionTestSpecified = false; 
+        private bool injectionTestSpecified = false; 
+         [XmlIgnore]
+         public bool InjectionTestSpecified
+         {
+            get {
+                return injectionTestSpecified;
+            } 
+            set {
+                injectionTestSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -10801,7 +11352,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 endpointField = value;
-                this.EndpointSpecified = true;
+             if(value!=null) 
+                 this.EndpointSpecified = true;
                 NotifyPropertyChanged("Endpoint");
             }
         }
@@ -11183,7 +11735,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_timeSeriesStatistic", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of WITSML statistics about a range of time series data.")]
     public partial class TimeSeriesStatistic : Object, IDataObject, INotifyPropertyChanged
     {
@@ -11223,6 +11775,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool KeySpecified
+         {
+            get {
+             if(keyField!=null)
+                return keyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<KeywordValueStruct> keyField; 
 
         /// <summary>
@@ -11254,7 +11815,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -11345,7 +11907,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 minimumField = value;
-                this.MinimumSpecified = true;
+             if(value!=null) 
+                 this.MinimumSpecified = true;
                 NotifyPropertyChanged("Minimum");
             }
         }
@@ -11380,7 +11943,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 maximumField = value;
-                this.MaximumSpecified = true;
+             if(value!=null) 
+                 this.MaximumSpecified = true;
                 NotifyPropertyChanged("Maximum");
             }
         }
@@ -11415,7 +11979,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 sumField = value;
-                this.SumSpecified = true;
+             if(value!=null) 
+                 this.SumSpecified = true;
                 NotifyPropertyChanged("Sum");
             }
         }
@@ -11450,7 +12015,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 meanField = value;
-                this.MeanSpecified = true;
+             if(value!=null) 
+                 this.MeanSpecified = true;
                 NotifyPropertyChanged("Mean");
             }
         }
@@ -11485,7 +12051,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 medianField = value;
-                this.MedianSpecified = true;
+             if(value!=null) 
+                 this.MedianSpecified = true;
                 NotifyPropertyChanged("Median");
             }
         }
@@ -11520,7 +12087,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 standardDeviationField = value;
-                this.StandardDeviationSpecified = true;
+             if(value!=null) 
+                 this.StandardDeviationSpecified = true;
                 NotifyPropertyChanged("StandardDeviation");
             }
         }
@@ -11793,7 +12361,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -11845,7 +12414,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -11956,7 +12526,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -12008,7 +12579,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -12080,7 +12652,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_timeSeriesData", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a PRODML Time Series Data object.")]
     public partial class TimeSeriesData : Object, IDataObject, INotifyPropertyChanged
     {
@@ -12120,6 +12692,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool KeySpecified
+         {
+            get {
+             if(keyField!=null)
+                return keyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<KeywordValueStruct> keyField; 
 
         /// <summary>
@@ -12151,7 +12732,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -12211,9 +12793,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private TimeSeriesDoubleSample[] doubleValueField; 
         /// <summary>
-        /// Boolean to indicate if DoubleValue has been set. Used for serialization.
+        /// bool to indicate if DoubleValue has been set. Used for serialization.
         /// </summary>
-        private Boolean DoubleValueSpecified = false; 
+        private bool doubleValueSpecified = false; 
+         [XmlIgnore]
+         public bool DoubleValueSpecified
+         {
+            get {
+                return doubleValueSpecified;
+            } 
+            set {
+                doubleValueSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A single string value in the time series.
@@ -12233,9 +12825,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private TimeSeriesStringSample[] stringValueField; 
         /// <summary>
-        /// Boolean to indicate if StringValue has been set. Used for serialization.
+        /// bool to indicate if StringValue has been set. Used for serialization.
         /// </summary>
-        private Boolean StringValueSpecified = false; 
+        private bool stringValueSpecified = false; 
+         [XmlIgnore]
+         public bool StringValueSpecified
+         {
+            get {
+                return stringValueSpecified;
+            } 
+            set {
+                stringValueSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -12361,6 +12963,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -12507,6 +13118,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool EventSpecified
+         {
+            get {
+             if(eventField!=null)
+                return eventField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeBalanceEvent> eventField; 
 
         /// <summary>
@@ -12525,6 +13145,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VolumeValueSpecified
+         {
+            get {
+             if(volumeValueField!=null)
+                return volumeValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<VolumeValue> volumeValueField; 
 
         /// <summary>
@@ -12543,6 +13172,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SampleAnalysisResultSpecified
+         {
+            get {
+             if(sampleAnalysisResultField!=null)
+                return sampleAnalysisResultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RefNameString> sampleAnalysisResultField; 
 
         /// <summary>
@@ -12561,6 +13199,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ComponentContentSpecified
+         {
+            get {
+             if(componentContentField!=null)
+                return componentContentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeComponentContent> componentContentField; 
 
         /// <summary>
@@ -12579,6 +13226,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -12692,9 +13348,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardCondition standardTempPresField; 
         /// <summary>
-        /// Boolean to indicate if StandardTempPres has been set. Used for serialization.
+        /// bool to indicate if StandardTempPres has been set. Used for serialization.
         /// </summary>
-        private Boolean StandardTempPresSpecified = false; 
+        private bool standardTempPresSpecified = false; 
+         [XmlIgnore]
+         public bool StandardTempPresSpecified
+         {
+            get {
+                return standardTempPresSpecified;
+            } 
+            set {
+                standardTempPresSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The temperature to which the volume has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
@@ -12714,9 +13380,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private ThermodynamicTemperatureMeasure tempField; 
         /// <summary>
-        /// Boolean to indicate if Temp has been set. Used for serialization.
+        /// bool to indicate if Temp has been set. Used for serialization.
         /// </summary>
-        private Boolean TempSpecified = false; 
+        private bool tempSpecified = false; 
+         [XmlIgnore]
+         public bool TempSpecified
+         {
+            get {
+                return tempSpecified;
+            } 
+            set {
+                tempSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The pressure to which the volume has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
@@ -12736,9 +13412,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure presField; 
         /// <summary>
-        /// Boolean to indicate if Pres has been set. Used for serialization.
+        /// bool to indicate if Pres has been set. Used for serialization.
         /// </summary>
-        private Boolean PresSpecified = false; 
+        private bool presSpecified = false; 
+         [XmlIgnore]
+         public bool PresSpecified
+         {
+            get {
+                return presSpecified;
+            } 
+            set {
+                presSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -12757,6 +13443,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -12843,7 +13538,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 referenceKindField = value;
-                this.ReferenceKindSpecified = true;
+             if(value!=null) 
+                 this.ReferenceKindSpecified = true;
                 NotifyPropertyChanged("ReferenceKind");
             }
         }
@@ -12991,6 +13687,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VolumeValueSpecified
+         {
+            get {
+             if(volumeValueField!=null)
+                return volumeValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<VolumeValue> volumeValueField; 
 
         /// <summary>
@@ -13045,6 +13750,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FlowRateValueSpecified
+         {
+            get {
+             if(flowRateValueField!=null)
+                return flowRateValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FlowRateValue> flowRateValueField; 
 
         /// <summary>
@@ -13135,6 +13849,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PortDiffSpecified
+         {
+            get {
+             if(portDiffField!=null)
+                return portDiffField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumePortDifference> portDiffField; 
 
         /// <summary>
@@ -13279,6 +14002,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DensityValueSpecified
+         {
+            get {
+             if(densityValueField!=null)
+                return densityValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DensityValue> densityValueField; 
 
         /// <summary>
@@ -13364,7 +14096,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 molecularWeightField = value;
-                this.MolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.MolecularWeightSpecified = true;
                 NotifyPropertyChanged("MolecularWeight");
             }
         }
@@ -13602,6 +14335,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -13697,9 +14439,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardCondition standardTempPresField; 
         /// <summary>
-        /// Boolean to indicate if StandardTempPres has been set. Used for serialization.
+        /// bool to indicate if StandardTempPres has been set. Used for serialization.
         /// </summary>
-        private Boolean StandardTempPresSpecified = false; 
+        private bool standardTempPresSpecified = false; 
+         [XmlIgnore]
+         public bool StandardTempPresSpecified
+         {
+            get {
+                return standardTempPresSpecified;
+            } 
+            set {
+                standardTempPresSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The temperature to which the flowRate has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
@@ -13719,9 +14471,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private ThermodynamicTemperatureMeasure tempField; 
         /// <summary>
-        /// Boolean to indicate if Temp has been set. Used for serialization.
+        /// bool to indicate if Temp has been set. Used for serialization.
         /// </summary>
-        private Boolean TempSpecified = false; 
+        private bool tempSpecified = false; 
+         [XmlIgnore]
+         public bool TempSpecified
+         {
+            get {
+                return tempSpecified;
+            } 
+            set {
+                tempSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The pressure to which the flowRate has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
@@ -13741,9 +14503,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure presField; 
         /// <summary>
-        /// Boolean to indicate if Pres has been set. Used for serialization.
+        /// bool to indicate if Pres has been set. Used for serialization.
         /// </summary>
-        private Boolean PresSpecified = false; 
+        private bool presSpecified = false; 
+         [XmlIgnore]
+         public bool PresSpecified
+         {
+            get {
+                return presSpecified;
+            } 
+            set {
+                presSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -13762,6 +14534,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -13925,6 +14706,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -14020,9 +14810,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardCondition standardTempPresField; 
         /// <summary>
-        /// Boolean to indicate if StandardTempPres has been set. Used for serialization.
+        /// bool to indicate if StandardTempPres has been set. Used for serialization.
         /// </summary>
-        private Boolean StandardTempPresSpecified = false; 
+        private bool standardTempPresSpecified = false; 
+         [XmlIgnore]
+         public bool StandardTempPresSpecified
+         {
+            get {
+                return standardTempPresSpecified;
+            } 
+            set {
+                standardTempPresSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The temperature to which the density has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
@@ -14042,9 +14842,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private ThermodynamicTemperatureMeasure tempField; 
         /// <summary>
-        /// Boolean to indicate if Temp has been set. Used for serialization.
+        /// bool to indicate if Temp has been set. Used for serialization.
         /// </summary>
-        private Boolean TempSpecified = false; 
+        private bool tempSpecified = false; 
+         [XmlIgnore]
+         public bool TempSpecified
+         {
+            get {
+                return tempSpecified;
+            } 
+            set {
+                tempSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The pressure to which the density has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
@@ -14064,9 +14874,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure presField; 
         /// <summary>
-        /// Boolean to indicate if Pres has been set. Used for serialization.
+        /// bool to indicate if Pres has been set. Used for serialization.
         /// </summary>
-        private Boolean PresSpecified = false; 
+        private bool presSpecified = false; 
+         [XmlIgnore]
+         public bool PresSpecified
+         {
+            get {
+                return presSpecified;
+            } 
+            set {
+                presSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -14085,6 +14905,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -14171,7 +15000,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-                this.TypeSpecified = true;
+             if(value!=null) 
+                 this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
         }
@@ -14261,7 +15091,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-                this.KindSpecified = true;
+             if(value!=null) 
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
@@ -14314,7 +15145,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 cargoBatchNumberField = value;
-                this.CargoBatchNumberSpecified = true;
+             if(value!=null) 
+                 this.CargoBatchNumberSpecified = true;
                 NotifyPropertyChanged("CargoBatchNumber");
             }
         }
@@ -14390,6 +15222,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool BalanceDetailSpecified
+         {
+            get {
+             if(balanceDetailField!=null)
+                return balanceDetailField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeBalanceDetail> balanceDetailField; 
 
         /// <summary>
@@ -14408,6 +15249,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -14476,7 +15326,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-                this.KindSpecified = true;
+             if(value!=null) 
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
@@ -14522,14 +15373,24 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dTimField; 
         /// <summary>
-        /// Boolean to indicate if DateTime has been set. Used for serialization.
+        /// bool to indicate if DateTime has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeSpecified = false; 
+        private bool dateTimeSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeSpecified
+         {
+            get {
+                return dateTimeSpecified;
+            } 
+            set {
+                dateTimeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The day that the period represents.
         /// </summary>
-        [XmlElement("date")]
+        [XmlElement("date", DataType="date")]
         public DateTime? Date {
             get {
                 return dateField;
@@ -14548,9 +15409,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dateField; 
         /// <summary>
-        /// Boolean to indicate if Date has been set. Used for serialization.
+        /// bool to indicate if Date has been set. Used for serialization.
         /// </summary>
-        private Boolean DateSpecified = false; 
+        private bool dateSpecified = false; 
+         [XmlIgnore]
+         public bool DateSpecified
+         {
+            get {
+                return dateSpecified;
+            } 
+            set {
+                dateSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The beginning date and time that the period represents. If you set this property, you must also set DateTimeEnd.
@@ -14573,9 +15444,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dTimStartField; 
         /// <summary>
-        /// Boolean to indicate if DateTimeStart has been set. Used for serialization.
+        /// bool to indicate if DateTimeStart has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeStartSpecified = false; 
+        private bool dateTimeStartSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeStartSpecified
+         {
+            get {
+                return dateTimeStartSpecified;
+            } 
+            set {
+                dateTimeStartSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The ending date and time that the period represents. If you set this property, you must also set DateTimeStart.
@@ -14598,14 +15479,24 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dTimEndField; 
         /// <summary>
-        /// Boolean to indicate if DateTimeEnd has been set. Used for serialization.
+        /// bool to indicate if DateTimeEnd has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeEndSpecified = false; 
+        private bool dateTimeEndSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeEndSpecified
+         {
+            get {
+                return dateTimeEndSpecified;
+            } 
+            set {
+                dateTimeEndSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The beginning date that the period represents. If you set this property, you must also set DateEnd.
         /// </summary>
-        [XmlElement("dateStart")]
+        [XmlElement("dateStart", DataType="date")]
         public DateTime? DateStart {
             get {
                 return dateStartField;
@@ -14623,14 +15514,24 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dateStartField; 
         /// <summary>
-        /// Boolean to indicate if DateStart has been set. Used for serialization.
+        /// bool to indicate if DateStart has been set. Used for serialization.
         /// </summary>
-        private Boolean DateStartSpecified = false; 
+        private bool dateStartSpecified = false; 
+         [XmlIgnore]
+         public bool DateStartSpecified
+         {
+            get {
+                return dateStartSpecified;
+            } 
+            set {
+                dateStartSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The ending date that the period represents. If you set this property, you must also set DateStart.
         /// </summary>
-        [XmlElement("dateEnd")]
+        [XmlElement("dateEnd", DataType="date")]
         public DateTime? DateEnd {
             get {
                 return dateEndField;
@@ -14648,9 +15549,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dateEndField; 
         /// <summary>
-        /// Boolean to indicate if DateEnd has been set. Used for serialization.
+        /// bool to indicate if DateEnd has been set. Used for serialization.
         /// </summary>
-        private Boolean DateEndSpecified = false; 
+        private bool dateEndSpecified = false; 
+         [XmlIgnore]
+         public bool DateEndSpecified
+         {
+            get {
+                return dateEndSpecified;
+            } 
+            set {
+                dateEndSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -14668,6 +15579,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType7> ItemsElementNameField; 
 
         /// <summary>
@@ -14794,6 +15714,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VolumeValueSpecified
+         {
+            get {
+             if(volumeValueField!=null)
+                return volumeValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<VolumeValue> volumeValueField; 
 
         /// <summary>
@@ -14848,6 +15777,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FlowRateValueSpecified
+         {
+            get {
+             if(flowRateValueField!=null)
+                return flowRateValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FlowRateValue> flowRateValueField; 
 
         /// <summary>
@@ -14938,6 +15876,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PortDiffSpecified
+         {
+            get {
+             if(portDiffField!=null)
+                return portDiffField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumePortDifference> portDiffField; 
 
         /// <summary>
@@ -15082,6 +16029,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DensityValueSpecified
+         {
+            get {
+             if(densityValueField!=null)
+                return densityValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DensityValue> densityValueField; 
 
         /// <summary>
@@ -15167,7 +16123,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 molecularWeightField = value;
-                this.MolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.MolecularWeightSpecified = true;
                 NotifyPropertyChanged("MolecularWeight");
             }
         }
@@ -15405,6 +16362,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ComponentContentSpecified
+         {
+            get {
+             if(componentContentField!=null)
+                return componentContentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeComponentContent> componentContentField; 
 
         /// <summary>
@@ -15423,6 +16389,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool BalanceSetSpecified
+         {
+            get {
+             if(balanceSetField!=null)
+                return balanceSetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeBalanceSet> balanceSetField; 
 
         /// <summary>
@@ -15459,6 +16434,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> commentField; 
 
         /// <summary>
@@ -15477,6 +16461,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -15690,7 +16683,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -15725,7 +16719,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -15784,6 +16779,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -15964,7 +16968,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 splitFactorField = value;
-                this.SplitFactorSpecified = true;
+             if(value!=null) 
+                 this.SplitFactorSpecified = true;
                 NotifyPropertyChanged("SplitFactor");
             }
         }
@@ -16130,6 +17135,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VolumeValueSpecified
+         {
+            get {
+             if(volumeValueField!=null)
+                return volumeValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<VolumeValue> volumeValueField; 
 
         /// <summary>
@@ -16184,6 +17198,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FlowRateValueSpecified
+         {
+            get {
+             if(flowRateValueField!=null)
+                return flowRateValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FlowRateValue> flowRateValueField; 
 
         /// <summary>
@@ -16274,6 +17297,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PortDiffSpecified
+         {
+            get {
+             if(portDiffField!=null)
+                return portDiffField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumePortDifference> portDiffField; 
 
         /// <summary>
@@ -16418,6 +17450,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DensityValueSpecified
+         {
+            get {
+             if(densityValueField!=null)
+                return densityValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DensityValue> densityValueField; 
 
         /// <summary>
@@ -16503,7 +17544,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 molecularWeightField = value;
-                this.MolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.MolecularWeightSpecified = true;
                 NotifyPropertyChanged("MolecularWeight");
             }
         }
@@ -16741,6 +17783,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ComponentContentSpecified
+         {
+            get {
+             if(componentContentField!=null)
+                return componentContentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeComponentContent> componentContentField; 
 
         /// <summary>
@@ -16760,6 +17811,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PeriodSpecified
+         {
+            get {
+             if(periodField!=null)
+                return periodField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumePeriod> periodField; 
 
         /// <summary>
@@ -16778,6 +17838,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> commentField; 
 
         /// <summary>
@@ -16796,6 +17865,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -16919,7 +17997,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-                this.KindSpecified = true;
+             if(value!=null) 
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
@@ -17085,7 +18164,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-                this.KindSpecified = true;
+             if(value!=null) 
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
@@ -17282,7 +18362,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 directionField = value;
-                this.DirectionSpecified = true;
+             if(value!=null) 
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
@@ -17340,6 +18421,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityAliasSpecified
+         {
+            get {
+             if(facilityAliasField!=null)
+                return facilityAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> facilityAliasField; 
 
         /// <summary>
@@ -17353,7 +18443,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-                this.QualifierSpecified = true;
+             if(value!=null) 
+                 this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
         }
@@ -17388,7 +18479,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 subQualifierField = value;
-                this.SubQualifierSpecified = true;
+             if(value!=null) 
+                 this.SubQualifierSpecified = true;
                 NotifyPropertyChanged("SubQualifier");
             }
         }
@@ -17441,7 +18533,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 versionField = value;
-                this.VersionSpecified = true;
+             if(value!=null) 
+                 this.VersionSpecified = true;
                 NotifyPropertyChanged("Version");
             }
         }
@@ -17625,6 +18718,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VolumeValueSpecified
+         {
+            get {
+             if(volumeValueField!=null)
+                return volumeValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<VolumeValue> volumeValueField; 
 
         /// <summary>
@@ -17679,6 +18781,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FlowRateValueSpecified
+         {
+            get {
+             if(flowRateValueField!=null)
+                return flowRateValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FlowRateValue> flowRateValueField; 
 
         /// <summary>
@@ -17769,6 +18880,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PortDiffSpecified
+         {
+            get {
+             if(portDiffField!=null)
+                return portDiffField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumePortDifference> portDiffField; 
 
         /// <summary>
@@ -17913,6 +19033,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DensityValueSpecified
+         {
+            get {
+             if(densityValueField!=null)
+                return densityValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DensityValue> densityValueField; 
 
         /// <summary>
@@ -17998,7 +19127,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 molecularWeightField = value;
-                this.MolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.MolecularWeightSpecified = true;
                 NotifyPropertyChanged("MolecularWeight");
             }
         }
@@ -18236,6 +19366,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ProductSpecified
+         {
+            get {
+             if(productField!=null)
+                return productField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeProduct> productField; 
 
         /// <summary>
@@ -18254,6 +19393,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> commentField; 
 
         /// <summary>
@@ -18272,6 +19420,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -18378,7 +19535,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -18505,7 +19663,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-                this.StatusSpecified = true;
+             if(value!=null) 
+                 this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
         }
@@ -18598,6 +19757,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool IndexSpecified
+         {
+            get {
+             if(indexField!=null)
+                return indexField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Double> indexField; 
 
         /// <summary>
@@ -18615,6 +19783,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ValueSpecified
+         {
+            get {
+             if(valueField!=null)
+                return valueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Double> valueField; 
 
 		/// <summary>
@@ -18683,7 +19860,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -18718,7 +19896,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -18762,9 +19941,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private GeneralQualifiedMeasure[] measureValueField; 
         /// <summary>
-        /// Boolean to indicate if MeasureValue has been set. Used for serialization.
+        /// bool to indicate if MeasureValue has been set. Used for serialization.
         /// </summary>
-        private Boolean MeasureValueSpecified = false; 
+        private bool measureValueSpecified = false; 
+         [XmlIgnore]
+         public bool MeasureValueSpecified
+         {
+            get {
+                return measureValueSpecified;
+            } 
+            set {
+                measureValueSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The values in one row of a curve. The aggregate of the curve rows represent the curve.
@@ -18786,9 +19975,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private CurveData[] curveValueField; 
         /// <summary>
-        /// Boolean to indicate if CurveValue has been set. Used for serialization.
+        /// bool to indicate if CurveValue has been set. Used for serialization.
         /// </summary>
-        private Boolean CurveValueSpecified = false; 
+        private bool curveValueSpecified = false; 
+         [XmlIgnore]
+         public bool CurveValueSpecified
+         {
+            get {
+                return curveValueSpecified;
+            } 
+            set {
+                curveValueSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// A string value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
@@ -18810,9 +20009,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private KindQualifiedString stringValueField; 
         /// <summary>
-        /// Boolean to indicate if StringValue has been set. Used for serialization.
+        /// bool to indicate if StringValue has been set. Used for serialization.
         /// </summary>
-        private Boolean StringValueSpecified = false; 
+        private bool stringValueSpecified = false; 
+         [XmlIgnore]
+         public bool StringValueSpecified
+         {
+            get {
+                return stringValueSpecified;
+            } 
+            set {
+                stringValueSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// An integer value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
@@ -18834,9 +20043,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private IntegerQualifiedCount integerValueField; 
         /// <summary>
-        /// Boolean to indicate if IntegerValue has been set. Used for serialization.
+        /// bool to indicate if IntegerValue has been set. Used for serialization.
         /// </summary>
-        private Boolean IntegerValueSpecified = false; 
+        private bool integerValueSpecified = false; 
+         [XmlIgnore]
+         public bool IntegerValueSpecified
+         {
+            get {
+                return integerValueSpecified;
+            } 
+            set {
+                integerValueSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -18909,6 +20128,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -19014,7 +20242,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 isIndexField = value;
-                this.IsIndexSpecified = true;
+             if(value!=null) 
+                 this.IsIndexSpecified = true;
                 NotifyPropertyChanged("IsIndex");
             }
         }
@@ -19091,6 +20320,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -19212,7 +20450,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-                this.MeasureClassSpecified = true;
+             if(value!=null) 
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
@@ -19270,6 +20509,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CurveDefinitionSpecified
+         {
+            get {
+             if(curveDefinitionField!=null)
+                return curveDefinitionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CurveDefinition> curveDefinitionField; 
 
         /// <summary>
@@ -19283,7 +20531,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-                this.QualifierSpecified = true;
+             if(value!=null) 
+                 this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
         }
@@ -19318,7 +20567,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 subQualifierField = value;
-                this.SubQualifierSpecified = true;
+             if(value!=null) 
+                 this.SubQualifierSpecified = true;
                 NotifyPropertyChanged("SubQualifier");
             }
         }
@@ -19353,7 +20603,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 versionField = value;
-                this.VersionSpecified = true;
+             if(value!=null) 
+                 this.VersionSpecified = true;
                 NotifyPropertyChanged("Version");
             }
         }
@@ -19406,7 +20657,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 productField = value;
-                this.ProductSpecified = true;
+             if(value!=null) 
+                 this.ProductSpecified = true;
                 NotifyPropertyChanged("Product");
             }
         }
@@ -19441,7 +20693,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodKindField = value;
-                this.PeriodKindSpecified = true;
+             if(value!=null) 
+                 this.PeriodKindSpecified = true;
                 NotifyPropertyChanged("PeriodKind");
             }
         }
@@ -19482,6 +20735,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+            get {
+             if(parameterField!=null)
+                return parameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeParameterValue> parameterField; 
 
         /// <summary>
@@ -19518,6 +20780,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -19646,6 +20917,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityAliasSpecified
+         {
+            get {
+             if(facilityAliasField!=null)
+                return facilityAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> facilityAliasField; 
 
         /// <summary>
@@ -19701,6 +20981,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContextFacilitySpecified
+         {
+            get {
+             if(contextFacilityField!=null)
+                return contextFacilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FacilityIdentifierStruct> contextFacilityField; 
 
         /// <summary>
@@ -19714,7 +21003,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusWellField = value;
-                this.StatusWellSpecified = true;
+             if(value!=null) 
+                 this.StatusWellSpecified = true;
                 NotifyPropertyChanged("StatusWell");
             }
         }
@@ -19749,7 +21039,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 fluidWellField = value;
-                this.FluidWellSpecified = true;
+             if(value!=null) 
+                 this.FluidWellSpecified = true;
                 NotifyPropertyChanged("FluidWell");
             }
         }
@@ -19784,7 +21075,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 operatingMethodField = value;
-                this.OperatingMethodSpecified = true;
+             if(value!=null) 
+                 this.OperatingMethodSpecified = true;
                 NotifyPropertyChanged("OperatingMethod");
             }
         }
@@ -19819,7 +21111,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 wellProducingField = value;
-                this.WellProducingSpecified = true;
+             if(value!=null) 
+                 this.WellProducingSpecified = true;
                 NotifyPropertyChanged("WellProducing");
             }
         }
@@ -19854,7 +21147,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 wellInjectingField = value;
-                this.WellInjectingSpecified = true;
+             if(value!=null) 
+                 this.WellInjectingSpecified = true;
                 NotifyPropertyChanged("WellInjecting");
             }
         }
@@ -19930,6 +21224,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DowntimeReasonSpecified
+         {
+            get {
+             if(downtimeReasonField!=null)
+                return downtimeReasonField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> downtimeReasonField; 
 
         /// <summary>
@@ -19948,6 +21251,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ParameterSetSpecified
+         {
+            get {
+             if(parameterSetField!=null)
+                return parameterSetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeParameterSet> parameterSetField; 
 
         /// <summary>
@@ -19966,6 +21278,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FlowSpecified
+         {
+            get {
+             if(flowField!=null)
+                return flowField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeFlow> flowField; 
 
         /// <summary>
@@ -19984,6 +21305,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> commentField; 
 
         /// <summary>
@@ -20002,6 +21332,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -20053,7 +21392,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productVolume", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Product Volume object.")]
     public partial class ProductVolume : Object, IUniqueId, INotifyPropertyChanged
     {
@@ -20111,6 +21450,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContextFacilitySpecified
+         {
+            get {
+             if(contextFacilityField!=null)
+                return contextFacilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FacilityIdentifierStruct> contextFacilityField; 
 
         /// <summary>
@@ -20142,7 +21490,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodKindField = value;
-                this.PeriodKindSpecified = true;
+             if(value!=null) 
+                 this.PeriodKindSpecified = true;
                 NotifyPropertyChanged("PeriodKind");
             }
         }
@@ -20186,9 +21535,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dTimStartField; 
         /// <summary>
-        /// Boolean to indicate if DateTimeStart has been set. Used for serialization.
+        /// bool to indicate if DateTimeStart has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeStartSpecified = false; 
+        private bool dateTimeStartSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeStartSpecified
+         {
+            get {
+                return dateTimeStartSpecified;
+            } 
+            set {
+                dateTimeStartSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The ending date and time that the report represents. If you set this property, you must also set DateTimeStart.
@@ -20210,14 +21569,24 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dTimEndField; 
         /// <summary>
-        /// Boolean to indicate if DateTimeEnd has been set. Used for serialization.
+        /// bool to indicate if DateTimeEnd has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeEndSpecified = false; 
+        private bool dateTimeEndSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeEndSpecified
+         {
+            get {
+                return dateTimeEndSpecified;
+            } 
+            set {
+                dateTimeEndSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The beginning date that the report represents. If you set this property, you must also set DateEnd.
         /// </summary>
-        [XmlElement("dateStart")]
+        [XmlElement("dateStart", DataType="date")]
         public DateTime? DateStart {
             get {
                 return dateStartField;
@@ -20234,14 +21603,24 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dateStartField; 
         /// <summary>
-        /// Boolean to indicate if DateStart has been set. Used for serialization.
+        /// bool to indicate if DateStart has been set. Used for serialization.
         /// </summary>
-        private Boolean DateStartSpecified = false; 
+        private bool dateStartSpecified = false; 
+         [XmlIgnore]
+         public bool DateStartSpecified
+         {
+            get {
+                return dateStartSpecified;
+            } 
+            set {
+                dateStartSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The ending date that the report represents. If you set this property, you must also set DateStart.
         /// </summary>
-        [XmlElement("dateEnd")]
+        [XmlElement("dateEnd", DataType="date")]
         public DateTime? DateEnd {
             get {
                 return dateEndField;
@@ -20258,9 +21637,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dateEndField; 
         /// <summary>
-        /// Boolean to indicate if DateEnd has been set. Used for serialization.
+        /// bool to indicate if DateEnd has been set. Used for serialization.
         /// </summary>
-        private Boolean DateEndSpecified = false; 
+        private bool dateEndSpecified = false; 
+         [XmlIgnore]
+         public bool DateEndSpecified
+         {
+            get {
+                return dateEndSpecified;
+            } 
+            set {
+                dateEndSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The ending date that the report represents.
@@ -20283,9 +21672,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private String monthField; 
         /// <summary>
-        /// Boolean to indicate if Month has been set. Used for serialization.
+        /// bool to indicate if Month has been set. Used for serialization.
         /// </summary>
-        private Boolean MonthSpecified = false; 
+        private bool monthSpecified = false; 
+         [XmlIgnore]
+         public bool MonthSpecified
+         {
+            get {
+                return monthSpecified;
+            } 
+            set {
+                monthSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -20303,6 +21702,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType6> ItemsElementNameField; 
 
         /// <summary>
@@ -20352,7 +21760,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimCurrentField = value;
-                this.DateTimeCurrentSpecified = true;
+             if(value!=null) 
+                 this.DateTimeCurrentSpecified = true;
                 NotifyPropertyChanged("DateTimeCurrent");
             }
         }
@@ -20387,7 +21796,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 calculationMethodField = value;
-                this.CalculationMethodSpecified = true;
+             if(value!=null) 
+                 this.CalculationMethodSpecified = true;
                 NotifyPropertyChanged("CalculationMethod");
             }
         }
@@ -20476,7 +21886,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 issueDateField = value;
-                this.IssueDateSpecified = true;
+             if(value!=null) 
+                 this.IssueDateSpecified = true;
                 NotifyPropertyChanged("IssueDate");
             }
         }
@@ -20529,7 +21940,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 approvalDateField = value;
-                this.ApprovalDateSpecified = true;
+             if(value!=null) 
+                 this.ApprovalDateSpecified = true;
                 NotifyPropertyChanged("ApprovalDate");
             }
         }
@@ -20600,7 +22012,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 standardTempPresField = value;
-                this.StandardTempPresSpecified = true;
+             if(value!=null) 
+                 this.StandardTempPresSpecified = true;
                 NotifyPropertyChanged("StandardTempPres");
             }
         }
@@ -20640,6 +22053,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool BusinessUnitSpecified
+         {
+            get {
+             if(businessUnitField!=null)
+                return businessUnitField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeBusinessUnit> businessUnitField; 
 
         /// <summary>
@@ -20659,6 +22081,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilitySpecified
+         {
+            get {
+             if(facilityField!=null)
+                return facilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeFacility> facilityField; 
 
         /// <summary>
@@ -20785,6 +22216,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool RoleSpecified
+         {
+            get {
+             if(roleField!=null)
+                return roleField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> roleField; 
 
         /// <summary>
@@ -20821,6 +22261,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool AliasSpecified
+         {
+            get {
+             if(aliasField!=null)
+                return aliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> aliasField; 
 
         /// <summary>
@@ -20839,6 +22288,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool AddressSpecified
+         {
+            get {
+             if(addressField!=null)
+                return addressField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<GeneralAddress> addressField; 
 
         /// <summary>
@@ -20857,6 +22315,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PhoneNumberSpecified
+         {
+            get {
+             if(phoneNumberField!=null)
+                return phoneNumberField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<PhoneNumberStruct> phoneNumberField; 
 
         /// <summary>
@@ -20875,6 +22342,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool EmailSpecified
+         {
+            get {
+             if(emailField!=null)
+                return emailField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<EmailQualifierStruct> emailField; 
 
         /// <summary>
@@ -20893,6 +22369,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContactPreferenceSpecified
+         {
+            get {
+             if(contactPreferenceField!=null)
+                return contactPreferenceField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ContactPreference> contactPreferenceField; 
 
         /// <summary>
@@ -20929,6 +22414,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContactSpecified
+         {
+            get {
+             if(contactField!=null)
+                return contactField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<RefNameString> contactField; 
 
         /// <summary>
@@ -20942,7 +22436,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 personnelCountField = value;
-                this.PersonnelCountSpecified = true;
+             if(value!=null) 
+                 this.PersonnelCountSpecified = true;
                 NotifyPropertyChanged("PersonnelCount");
             }
         }
@@ -21111,6 +22606,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SuffixSpecified
+         {
+            get {
+             if(suffixField!=null)
+                return suffixField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> suffixField; 
 
 
@@ -21185,6 +22689,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool StreetSpecified
+         {
+            get {
+             if(streetField!=null)
+                return streetField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> streetField; 
 
         /// <summary>
@@ -21225,9 +22738,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private String stateField; 
         /// <summary>
-        /// Boolean to indicate if State has been set. Used for serialization.
+        /// bool to indicate if State has been set. Used for serialization.
         /// </summary>
-        private Boolean StateSpecified = false; 
+        private bool stateSpecified = false; 
+         [XmlIgnore]
+         public bool StateSpecified
+         {
+            get {
+                return stateSpecified;
+            } 
+            set {
+                stateSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// province property
@@ -21248,9 +22771,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private String provinceField; 
         /// <summary>
-        /// Boolean to indicate if Province has been set. Used for serialization.
+        /// bool to indicate if Province has been set. Used for serialization.
         /// </summary>
-        private Boolean ProvinceSpecified = false; 
+        private bool provinceSpecified = false; 
+         [XmlIgnore]
+         public bool ProvinceSpecified
+         {
+            get {
+                return provinceSpecified;
+            } 
+            set {
+                provinceSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// county property
@@ -21271,9 +22804,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private String countyField; 
         /// <summary>
-        /// Boolean to indicate if County has been set. Used for serialization.
+        /// bool to indicate if County has been set. Used for serialization.
         /// </summary>
-        private Boolean CountySpecified = false; 
+        private bool countySpecified = false; 
+         [XmlIgnore]
+         public bool CountySpecified
+         {
+            get {
+                return countySpecified;
+            } 
+            set {
+                countySpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -21345,6 +22888,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -21375,7 +22927,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-                this.KindSpecified = true;
+             if(value!=null) 
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
@@ -21537,7 +23090,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-                this.QualifierSpecified = true;
+             if(value!=null) 
+                 this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
         }
@@ -21682,7 +23236,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-                this.QualifierSpecified = true;
+             if(value!=null) 
+                 this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
         }
@@ -21922,6 +23477,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool BlockIDSpecified
+         {
+            get {
+             if(blockIDField!=null)
+                return blockIDField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> blockIDField; 
 
         /// <summary>
@@ -22160,6 +23724,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SubUnitSpecified
+         {
+            get {
+             if(subUnitField!=null)
+                return subUnitField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolumeBusinessSubUnit> subUnitField; 
 
         /// <summary>
@@ -22178,6 +23751,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -22272,9 +23854,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private ProductVolumeBusinessOwnershipShare[] ownershipShareField; 
         /// <summary>
-        /// Boolean to indicate if OwnershipShare has been set. Used for serialization.
+        /// bool to indicate if OwnershipShare has been set. Used for serialization.
         /// </summary>
-        private Boolean OwnershipShareSpecified = false; 
+        private bool ownershipShareSpecified = false; 
+         [XmlIgnore]
+         public bool OwnershipShareSpecified
+         {
+            get {
+                return ownershipShareSpecified;
+            } 
+            set {
+                ownershipShareSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Defines account information in the parent unit. This commonly applies at a parent terminus unit (e.g., a terminal),
@@ -22294,9 +23886,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private ProductVolumeBusinessAccountInfo[] accountInformationField; 
         /// <summary>
-        /// Boolean to indicate if AccountInformation has been set. Used for serialization.
+        /// bool to indicate if AccountInformation has been set. Used for serialization.
         /// </summary>
-        private Boolean AccountInformationSpecified = false; 
+        private bool accountInformationSpecified = false; 
+         [XmlIgnore]
+         public bool AccountInformationSpecified
+         {
+            get {
+                return accountInformationSpecified;
+            } 
+            set {
+                accountInformationSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -22315,6 +23917,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -22400,7 +24011,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 productField = value;
-                this.ProductSpecified = true;
+             if(value!=null) 
+                 this.ProductSpecified = true;
                 NotifyPropertyChanged("Product");
             }
         }
@@ -22439,6 +24051,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -22524,7 +24145,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 startDateField = value;
-                this.StartDateSpecified = true;
+             if(value!=null) 
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
@@ -22559,7 +24181,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -22598,6 +24221,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -22666,7 +24298,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-                this.TypeSpecified = true;
+             if(value!=null) 
+                 this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
         }
@@ -22701,7 +24334,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -22736,7 +24370,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -22776,6 +24411,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> commentField; 
 
         /// <summary>
@@ -22794,6 +24438,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -22880,7 +24533,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -22915,7 +24569,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -22986,7 +24641,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 cargoBatchNumberField = value;
-                this.CargoBatchNumberSpecified = true;
+             if(value!=null) 
+                 this.CargoBatchNumberSpecified = true;
                 NotifyPropertyChanged("CargoBatchNumber");
             }
         }
@@ -23206,6 +24862,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> commentField; 
 
         /// <summary>
@@ -23224,6 +24889,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -23292,7 +24966,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -23327,7 +25002,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -23421,6 +25097,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SupplyShipCommentSpecified
+         {
+            get {
+             if(supplyShipCommentField!=null)
+                return supplyShipCommentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> supplyShipCommentField; 
 
         /// <summary>
@@ -23439,6 +25124,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool StandbyVesselCommentSpecified
+         {
+            get {
+             if(standbyVesselCommentField!=null)
+                return standbyVesselCommentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> standbyVesselCommentField; 
 
         /// <summary>
@@ -23457,6 +25151,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool BasketMovementSpecified
+         {
+            get {
+             if(basketMovementField!=null)
+                return basketMovementField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> basketMovementField; 
 
         /// <summary>
@@ -23475,6 +25178,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ActivitySpecified
+         {
+            get {
+             if(activityField!=null)
+                return activityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> activityField; 
 
         /// <summary>
@@ -23493,6 +25205,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -23561,7 +25282,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimField = value;
-                this.DateTimeSpecified = true;
+             if(value!=null) 
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
@@ -23673,6 +25395,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -23777,7 +25508,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -23812,7 +25544,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -23906,6 +25639,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ActivitySpecified
+         {
+            get {
+             if(activityField!=null)
+                return activityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> activityField; 
 
         /// <summary>
@@ -23924,6 +25666,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -24118,7 +25869,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 phValueField = value;
-                this.PHValueSpecified = true;
+             if(value!=null) 
+                 this.PHValueSpecified = true;
                 NotifyPropertyChanged("PHValue");
             }
         }
@@ -24207,7 +25959,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 turbidityField = value;
-                this.TurbiditySpecified = true;
+             if(value!=null) 
+                 this.TurbiditySpecified = true;
                 NotifyPropertyChanged("Turbidity");
             }
         }
@@ -24265,6 +26018,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> commentField; 
 
         /// <summary>
@@ -24283,6 +26045,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -24410,6 +26181,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -24483,6 +26263,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VolumeAndReasonSpecified
+         {
+            get {
+             if(volumeAndReasonField!=null)
+                return volumeAndReasonField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<LostVolumeAndReason> volumeAndReasonField; 
 
         /// <summary>
@@ -24501,6 +26290,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ThirdPartyProcessingSpecified
+         {
+            get {
+             if(thirdPartyProcessingField!=null)
+                return thirdPartyProcessingField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationThirdPartyProcessing> thirdPartyProcessingField; 
 
 
@@ -24592,6 +26390,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool WaterCleaningQualitySpecified
+         {
+            get {
+             if(waterCleaningQualityField!=null)
+                return waterCleaningQualityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationWaterCleaningQuality> waterCleaningQualityField; 
 
         /// <summary>
@@ -24610,6 +26417,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ShutdownSpecified
+         {
+            get {
+             if(shutdownField!=null)
+                return shutdownField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationShutdown> shutdownField; 
 
         /// <summary>
@@ -24628,6 +26444,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool AlarmSpecified
+         {
+            get {
+             if(alarmField!=null)
+                return alarmField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationAlarm> alarmField; 
 
         /// <summary>
@@ -24646,6 +26471,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool MarineOperationSpecified
+         {
+            get {
+             if(marineOperationField!=null)
+                return marineOperationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationMarineOperation> marineOperationField; 
 
         /// <summary>
@@ -24664,6 +26498,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CargoShipOperationSpecified
+         {
+            get {
+             if(cargoShipOperationField!=null)
+                return cargoShipOperationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationCargoShipOperation> cargoShipOperationField; 
 
         /// <summary>
@@ -24682,6 +26525,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OperationalCommentSpecified
+         {
+            get {
+             if(operationalCommentField!=null)
+                return operationalCommentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationOperationalComment> operationalCommentField; 
 
 
@@ -24787,7 +26639,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 beaufortScaleNumberField = value;
-                this.BeaufortScaleNumberSpecified = true;
+             if(value!=null) 
+                 this.BeaufortScaleNumberSpecified = true;
                 NotifyPropertyChanged("BeaufortScaleNumber");
             }
         }
@@ -25187,6 +27040,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -25293,7 +27155,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-                this.TypeSpecified = true;
+             if(value!=null) 
+                 this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
         }
@@ -25345,7 +27208,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodField = value;
-                this.PeriodSpecified = true;
+             if(value!=null) 
+                 this.PeriodSpecified = true;
                 NotifyPropertyChanged("Period");
             }
         }
@@ -25457,6 +27321,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SafetyCountSpecified
+         {
+            get {
+             if(safetyCountField!=null)
+                return safetyCountField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<SafetyCount> safetyCountField; 
 
         /// <summary>
@@ -25475,6 +27348,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DatedComment> commentField; 
 
         /// <summary>
@@ -25493,6 +27375,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -25561,7 +27452,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 IncidentCountField = value;
-                this.IncidentCountSpecified = true;
+             if(value!=null) 
+                 this.IncidentCountSpecified = true;
                 NotifyPropertyChanged("IncidentCount");
             }
         }
@@ -25650,7 +27542,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 medicalTreatmentCountField = value;
-                this.MedicalTreatmentCountSpecified = true;
+             if(value!=null) 
+                 this.MedicalTreatmentCountSpecified = true;
                 NotifyPropertyChanged("MedicalTreatmentCount");
             }
         }
@@ -25685,7 +27578,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 alarmCountField = value;
-                this.AlarmCountSpecified = true;
+             if(value!=null) 
+                 this.AlarmCountSpecified = true;
                 NotifyPropertyChanged("AlarmCount");
             }
         }
@@ -25720,7 +27614,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 safetyIntroCountField = value;
-                this.SafetyIntroCountSpecified = true;
+             if(value!=null) 
+                 this.SafetyIntroCountSpecified = true;
                 NotifyPropertyChanged("SafetyIntroCount");
             }
         }
@@ -25778,6 +27673,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SafetySpecified
+         {
+            get {
+             if(safetyField!=null)
+                return safetyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationSafety> safetyField; 
 
         /// <summary>
@@ -25796,6 +27700,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool WeatherSpecified
+         {
+            get {
+             if(weatherField!=null)
+                return weatherField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationWeather> weatherField; 
 
         /// <summary>
@@ -25814,6 +27727,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -25920,7 +27842,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-                this.TypeSpecified = true;
+             if(value!=null) 
+                 this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
         }
@@ -26027,7 +27950,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 bedsAvailableField = value;
-                this.BedsAvailableSpecified = true;
+             if(value!=null) 
+                 this.BedsAvailableSpecified = true;
                 NotifyPropertyChanged("BedsAvailable");
             }
         }
@@ -26067,6 +27991,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CrewCountSpecified
+         {
+            get {
+             if(crewCountField!=null)
+                return crewCountField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CrewCount> crewCountField; 
 
         /// <summary>
@@ -26139,6 +28072,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OperationalHSESpecified
+         {
+            get {
+             if(operationalHSEField!=null)
+                return operationalHSEField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationHSE> operationalHSEField; 
 
         /// <summary>
@@ -26175,6 +28117,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -26226,7 +28177,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productionOperation", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Production Operation object.")]
     public partial class ProductionOperation : Object, IUniqueId, INotifyPropertyChanged
     {
@@ -26284,6 +28235,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContextFacilitySpecified
+         {
+            get {
+             if(contextFacilityField!=null)
+                return contextFacilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FacilityIdentifierStruct> contextFacilityField; 
 
         /// <summary>
@@ -26315,7 +28275,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodKindField = value;
-                this.PeriodKindSpecified = true;
+             if(value!=null) 
+                 this.PeriodKindSpecified = true;
                 NotifyPropertyChanged("PeriodKind");
             }
         }
@@ -26358,9 +28319,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dTimStartField; 
         /// <summary>
-        /// Boolean to indicate if DateTimeStart has been set. Used for serialization.
+        /// bool to indicate if DateTimeStart has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeStartSpecified = false; 
+        private bool dateTimeStartSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeStartSpecified
+         {
+            get {
+                return dateTimeStartSpecified;
+            } 
+            set {
+                dateTimeStartSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The ending date and time that the report represents. If you set this property, you must also set DateTimeStart.
@@ -26381,14 +28352,24 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dTimEndField; 
         /// <summary>
-        /// Boolean to indicate if DateTimeEnd has been set. Used for serialization.
+        /// bool to indicate if DateTimeEnd has been set. Used for serialization.
         /// </summary>
-        private Boolean DateTimeEndSpecified = false; 
+        private bool dateTimeEndSpecified = false; 
+         [XmlIgnore]
+         public bool DateTimeEndSpecified
+         {
+            get {
+                return dateTimeEndSpecified;
+            } 
+            set {
+                dateTimeEndSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The beginning date that the report represents. If you set this property, you must also set DateEnd.
         /// </summary>
-        [XmlElement("dateStart")]
+        [XmlElement("dateStart", DataType="date")]
         public DateTime? DateStart {
             get {
                 return dateStartField;
@@ -26404,14 +28385,24 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dateStartField; 
         /// <summary>
-        /// Boolean to indicate if DateStart has been set. Used for serialization.
+        /// bool to indicate if DateStart has been set. Used for serialization.
         /// </summary>
-        private Boolean DateStartSpecified = false; 
+        private bool dateStartSpecified = false; 
+         [XmlIgnore]
+         public bool DateStartSpecified
+         {
+            get {
+                return dateStartSpecified;
+            } 
+            set {
+                dateStartSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The ending date that the report represents. If you set this property, you must also set DateStart.
         /// </summary>
-        [XmlElement("dateEnd")]
+        [XmlElement("dateEnd", DataType="date")]
         public DateTime? DateEnd {
             get {
                 return dateEndField;
@@ -26427,9 +28418,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DateTime? dateEndField; 
         /// <summary>
-        /// Boolean to indicate if DateEnd has been set. Used for serialization.
+        /// bool to indicate if DateEnd has been set. Used for serialization.
         /// </summary>
-        private Boolean DateEndSpecified = false; 
+        private bool dateEndSpecified = false; 
+         [XmlIgnore]
+         public bool DateEndSpecified
+         {
+            get {
+                return dateEndSpecified;
+            } 
+            set {
+                dateEndSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -26447,6 +28448,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType5> ItemsElementNameField; 
 
         /// <summary>
@@ -26514,7 +28524,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 issueDateField = value;
-                this.IssueDateSpecified = true;
+             if(value!=null) 
+                 this.IssueDateSpecified = true;
                 NotifyPropertyChanged("IssueDate");
             }
         }
@@ -26567,7 +28578,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 approvalDateField = value;
-                this.ApprovalDateSpecified = true;
+             if(value!=null) 
+                 this.ApprovalDateSpecified = true;
                 NotifyPropertyChanged("ApprovalDate");
             }
         }
@@ -26625,6 +28637,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool InstallationReportSpecified
+         {
+            get {
+             if(installationReportField!=null)
+                return installationReportField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperationInstallationReport> installationReportField; 
 
         /// <summary>
@@ -26710,7 +28731,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productFlowModel", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail.")]
     public partial class ProductFlowModel : Object, IDataObject, INotifyPropertyChanged
     {
@@ -26768,6 +28789,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContextFacilitySpecified
+         {
+            get {
+             if(contextFacilityField!=null)
+                return contextFacilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FacilityIdentifierStruct> contextFacilityField; 
 
         /// <summary>
@@ -26781,7 +28811,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -26816,7 +28847,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -26910,6 +28942,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExternalConnectSpecified
+         {
+            get {
+             if(externalConnectField!=null)
+                return externalConnectField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowExternalReference> externalConnectField; 
 
         /// <summary>
@@ -26929,6 +28970,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool NetworkSpecified
+         {
+            get {
+             if(networkField!=null)
+                return networkField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowNetwork> networkField; 
 
         /// <summary>
@@ -27129,6 +29179,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -27294,6 +29353,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PortSpecified
+         {
+            get {
+             if(portField!=null)
+                return portField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowlExternalPort> portField; 
 
         /// <summary>
@@ -27313,6 +29381,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool UnitSpecified
+         {
+            get {
+             if(unitField!=null)
+                return unitField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowUnit> unitField; 
 
         /// <summary>
@@ -27331,6 +29408,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ChangeLogSpecified
+         {
+            get {
+             if(changeLogField!=null)
+                return changeLogField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowChangeLog> changeLogField; 
 
         /// <summary>
@@ -27349,6 +29435,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PlanSpecified
+         {
+            get {
+             if(planField!=null)
+                return planField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowNetworkPlan> planField; 
 
         /// <summary>
@@ -27367,6 +29462,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -27472,7 +29576,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 exposedField = value;
-                this.ExposedSpecified = true;
+             if(value!=null) 
+                 this.ExposedSpecified = true;
                 NotifyPropertyChanged("Exposed");
             }
         }
@@ -27549,6 +29654,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -27730,6 +29844,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityAliasSpecified
+         {
+            get {
+             if(facilityAliasField!=null)
+                return facilityAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> facilityAliasField; 
 
         /// <summary>
@@ -27748,6 +29871,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContextFacilitySpecified
+         {
+            get {
+             if(contextFacilityField!=null)
+                return contextFacilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FacilityIdentifierStruct> contextFacilityField; 
 
         /// <summary>
@@ -27766,6 +29898,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExpectedPropertySpecified
+         {
+            get {
+             if(expectedPropertyField!=null)
+                return expectedPropertyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowExpectedUnitProperty> expectedPropertyField; 
 
         /// <summary>
@@ -27802,6 +29943,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PortSpecified
+         {
+            get {
+             if(portField!=null)
+                return portField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowPort> portField; 
 
         /// <summary>
@@ -27838,6 +29988,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -27948,9 +30107,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private ProductFlowQualifierExpected[] expectedFlowProductField; 
         /// <summary>
-        /// Boolean to indicate if ExpectedFlowProduct has been set. Used for serialization.
+        /// bool to indicate if ExpectedFlowProduct has been set. Used for serialization.
         /// </summary>
-        private Boolean ExpectedFlowProductSpecified = false; 
+        private bool expectedFlowProductSpecified = false; 
+         [XmlIgnore]
+         public bool ExpectedFlowProductSpecified
+         {
+            get {
+                return expectedFlowProductSpecified;
+            } 
+            set {
+                expectedFlowProductSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The expected kind of qualifier of the property. This element should only be specified for properties that do not represent the fluid stream (e.g., a valve status)
@@ -27970,9 +30139,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FlowQualifier[] qualifierField; 
         /// <summary>
-        /// Boolean to indicate if Qualifier has been set. Used for serialization.
+        /// bool to indicate if Qualifier has been set. Used for serialization.
         /// </summary>
-        private Boolean QualifierSpecified = false; 
+        private bool qualifierSpecified = false; 
+         [XmlIgnore]
+         public bool QualifierSpecified
+         {
+            get {
+                return qualifierSpecified;
+            } 
+            set {
+                qualifierSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -27991,6 +30170,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TagAliasSpecified
+         {
+            get {
+             if(tagAliasField!=null)
+                return tagAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> tagAliasField; 
 
         /// <summary>
@@ -28063,6 +30251,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -28149,7 +30346,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 productField = value;
-                this.ProductSpecified = true;
+             if(value!=null) 
+                 this.ProductSpecified = true;
                 NotifyPropertyChanged("Product");
             }
         }
@@ -28189,6 +30387,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool QualifierSpecified
+         {
+            get {
+             if(qualifierField!=null)
+                return qualifierField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FlowQualifier> qualifierField; 
 
         /// <summary>
@@ -28207,6 +30414,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -28444,6 +30660,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityAliasSpecified
+         {
+            get {
+             if(facilityAliasField!=null)
+                return facilityAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> facilityAliasField; 
 
         /// <summary>
@@ -28457,7 +30682,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 exposedField = value;
-                this.ExposedSpecified = true;
+             if(value!=null) 
+                 this.ExposedSpecified = true;
                 NotifyPropertyChanged("Exposed");
             }
         }
@@ -28498,6 +30724,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ConnectedNodeSpecified
+         {
+            get {
+             if(connectedNodeField!=null)
+                return connectedNodeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ConnectedNode> connectedNodeField; 
 
         /// <summary>
@@ -28516,6 +30751,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExpectedFlowProductSpecified
+         {
+            get {
+             if(expectedFlowProductField!=null)
+                return expectedFlowProductField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowQualifierExpected> expectedFlowProductField; 
 
         /// <summary>
@@ -28534,6 +30778,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExpectedFlowPropertySpecified
+         {
+            get {
+             if(expectedFlowPropertyField!=null)
+                return expectedFlowPropertyField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowExpectedPortProperty> expectedFlowPropertyField; 
 
         /// <summary>
@@ -28570,6 +30823,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -28675,7 +30937,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -28710,7 +30973,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -28768,6 +31032,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -28854,7 +31127,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -28889,7 +31163,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -28929,6 +31204,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TagAliasSpecified
+         {
+            get {
+             if(tagAliasField!=null)
+                return tagAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> tagAliasField; 
 
         /// <summary>
@@ -28983,6 +31267,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExpectedFlowProductSpecified
+         {
+            get {
+             if(expectedFlowProductField!=null)
+                return expectedFlowProductField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowQualifierExpected> expectedFlowProductField; 
 
         /// <summary>
@@ -29019,6 +31312,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -29147,6 +31449,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -29275,6 +31586,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ChangeLogSpecified
+         {
+            get {
+             if(changeLogField!=null)
+                return changeLogField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowChangeLog> changeLogField; 
 
         /// <summary>
@@ -29293,6 +31613,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -29344,7 +31673,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidSample", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("This class represents the obj_fluidSample xsd type.")]
     public partial class FluidSample : Object, IDataObject, INotifyPropertyChanged
     {
@@ -29397,7 +31726,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 sampleTypeField = value;
-                this.SampleTypeSpecified = true;
+             if(value!=null) 
+                 this.SampleTypeSpecified = true;
                 NotifyPropertyChanged("SampleType");
             }
         }
@@ -29491,6 +31821,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityAliasSpecified
+         {
+            get {
+             if(facilityAliasField!=null)
+                return facilityAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> facilityAliasField; 
 
         /// <summary>
@@ -29504,7 +31843,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testKindField = value;
-                this.TestKindSpecified = true;
+             if(value!=null) 
+                 this.TestKindSpecified = true;
                 NotifyPropertyChanged("TestKind");
             }
         }
@@ -29611,7 +31951,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 reservoirFluidTypeField = value;
-                this.ReservoirFluidTypeSpecified = true;
+             if(value!=null) 
+                 this.ReservoirFluidTypeSpecified = true;
                 NotifyPropertyChanged("ReservoirFluidType");
             }
         }
@@ -29646,7 +31987,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 acquisitionDateField = value;
-                this.AcquisitionDateSpecified = true;
+             if(value!=null) 
+                 this.AcquisitionDateSpecified = true;
                 NotifyPropertyChanged("AcquisitionDate");
             }
         }
@@ -29771,7 +32113,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 representativeField = value;
-                this.RepresentativeSpecified = true;
+             if(value!=null) 
+                 this.RepresentativeSpecified = true;
                 NotifyPropertyChanged("Representative");
             }
         }
@@ -30040,7 +32383,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 stepNumberField = value;
-                this.StepNumberSpecified = true;
+             if(value!=null) 
+                 this.StepNumberSpecified = true;
                 NotifyPropertyChanged("StepNumber");
             }
         }
@@ -30116,9 +32460,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure bubblePointPressureField; 
         /// <summary>
-        /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
+        /// bool to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean BubblePointPressureSpecified = false; 
+        private bool bubblePointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool BubblePointPressureSpecified
+         {
+            get {
+                return bubblePointPressureSpecified;
+            } 
+            set {
+                bubblePointPressureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -30138,9 +32492,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure retrogradeDewPointPressureField; 
         /// <summary>
-        /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
+        /// bool to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean RetrogradeDewPointPressureSpecified = false; 
+        private bool retrogradeDewPointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool RetrogradeDewPointPressureSpecified
+         {
+            get {
+                return retrogradeDewPointPressureSpecified;
+            } 
+            set {
+                retrogradeDewPointPressureSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -30178,9 +32542,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DensityMeasure oilAPIGravityField; 
         /// <summary>
-        /// Boolean to indicate if OilAPIGravity has been set. Used for serialization.
+        /// bool to indicate if OilAPIGravity has been set. Used for serialization.
         /// </summary>
-        private Boolean OilAPIGravitySpecified = false; 
+        private bool oilAPIGravitySpecified = false; 
+         [XmlIgnore]
+         public bool OilAPIGravitySpecified
+         {
+            get {
+                return oilAPIGravitySpecified;
+            } 
+            set {
+                oilAPIGravitySpecified= value;
+            } 
+         }
 
         /// <summary>
         /// oilSpecificGravity property
@@ -30200,9 +32574,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Double? oilSpecificGravityField; 
         /// <summary>
-        /// Boolean to indicate if OilSpecificGravity has been set. Used for serialization.
+        /// bool to indicate if OilSpecificGravity has been set. Used for serialization.
         /// </summary>
-        private Boolean OilSpecificGravitySpecified = false; 
+        private bool oilSpecificGravitySpecified = false; 
+         [XmlIgnore]
+         public bool OilSpecificGravitySpecified
+         {
+            get {
+                return oilSpecificGravitySpecified;
+            } 
+            set {
+                oilSpecificGravitySpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -30275,9 +32659,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumeMeasure oilVolumeField; 
         /// <summary>
-        /// Boolean to indicate if OilVolume has been set. Used for serialization.
+        /// bool to indicate if OilVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean OilVolumeSpecified = false; 
+        private bool oilVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool OilVolumeSpecified
+         {
+            get {
+                return oilVolumeSpecified;
+            } 
+            set {
+                oilVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// gasVolume property
@@ -30298,9 +32692,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardVolumeMeasure gasVolumeField; 
         /// <summary>
-        /// Boolean to indicate if GasVolume has been set. Used for serialization.
+        /// bool to indicate if GasVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean GasVolumeSpecified = false; 
+        private bool gasVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool GasVolumeSpecified
+         {
+            get {
+                return gasVolumeSpecified;
+            } 
+            set {
+                gasVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// oilShrinkageFactor property
@@ -30321,9 +32725,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumePerVolumeMeasure oilShrinkageFactorField; 
         /// <summary>
-        /// Boolean to indicate if OilShrinkageFactor has been set. Used for serialization.
+        /// bool to indicate if OilShrinkageFactor has been set. Used for serialization.
         /// </summary>
-        private Boolean OilShrinkageFactorSpecified = false; 
+        private bool oilShrinkageFactorSpecified = false; 
+         [XmlIgnore]
+         public bool OilShrinkageFactorSpecified
+         {
+            get {
+                return oilShrinkageFactorSpecified;
+            } 
+            set {
+                oilShrinkageFactorSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// stageSeparatorGORStd property
@@ -30344,9 +32758,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardVolumePerVolumeMeasure stageSeparatorGORStdField; 
         /// <summary>
-        /// Boolean to indicate if StageSeparatorGORStd has been set. Used for serialization.
+        /// bool to indicate if StageSeparatorGORStd has been set. Used for serialization.
         /// </summary>
-        private Boolean StageSeparatorGORStdSpecified = false; 
+        private bool stageSeparatorGORStdSpecified = false; 
+         [XmlIgnore]
+         public bool StageSeparatorGORStdSpecified
+         {
+            get {
+                return stageSeparatorGORStdSpecified;
+            } 
+            set {
+                stageSeparatorGORStdSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -30411,7 +32835,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasMolecularWeightField = value;
-                this.GasMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.GasMolecularWeightSpecified = true;
                 NotifyPropertyChanged("GasMolecularWeight");
             }
         }
@@ -30446,7 +32871,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasGravityField = value;
-                this.GasGravitySpecified = true;
+             if(value!=null) 
+                 this.GasGravitySpecified = true;
                 NotifyPropertyChanged("GasGravity");
             }
         }
@@ -30498,7 +32924,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasZFactorField = value;
-                this.GasZFactorSpecified = true;
+             if(value!=null) 
+                 this.GasZFactorSpecified = true;
                 NotifyPropertyChanged("GasZFactor");
             }
         }
@@ -30590,9 +33017,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// bool to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private bool reservoirSpecified = false; 
+         [XmlIgnore]
+         public bool ReservoirSpecified
+         {
+            get {
+                return reservoirSpecified;
+            } 
+            set {
+                reservoirSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// saturated property
@@ -30611,9 +33048,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? saturatedField; 
         /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// bool to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        private Boolean SaturatedSpecified = false; 
+        private bool saturatedSpecified = false; 
+         [XmlIgnore]
+         public bool SaturatedSpecified
+         {
+            get {
+                return saturatedSpecified;
+            } 
+            set {
+                saturatedSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// stockTank property
@@ -30632,9 +33079,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// bool to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private bool stockTankSpecified = false; 
+         [XmlIgnore]
+         public bool StockTankSpecified
+         {
+            get {
+                return stockTankSpecified;
+            } 
+            set {
+                stockTankSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -30652,6 +33109,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool Items1ElementNameSpecified
+         {
+            get {
+             if(Items1ElementNameField!=null)
+                return Items1ElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Items1ChoiceType1> Items1ElementNameField; 
 
         /// <summary>
@@ -30669,6 +33135,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VaporCompositionSpecified
+         {
+            get {
+             if(vaporCompositionField!=null)
+                return vaporCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
 
         /// <summary>
@@ -30686,6 +33161,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool LiquidCompositionSpecified
+         {
+            get {
+             if(liquidCompositionField!=null)
+                return liquidCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
 
         /// <summary>
@@ -30703,6 +33187,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CompositeCompositionSpecified
+         {
+            get {
+             if(compositeCompositionField!=null)
+                return compositeCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
 
 		/// <summary>
@@ -30982,7 +33475,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kValueField = value;
-                this.KValueSpecified = true;
+             if(value!=null) 
+                 this.KValueSpecified = true;
                 NotifyPropertyChanged("KValue");
             }
         }
@@ -31072,7 +33566,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testNumberField = value;
-                this.TestNumberSpecified = true;
+             if(value!=null) 
+                 this.TestNumberSpecified = true;
                 NotifyPropertyChanged("TestNumber");
             }
         }
@@ -31128,6 +33623,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SeparatorTestStepSpecified
+         {
+            get {
+             if(separatorTestStepField!=null)
+                return separatorTestStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultSeparatorTestStep> separatorTestStepField; 
 
 		/// <summary>
@@ -31284,7 +33788,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 stepNumberField = value;
-                this.StepNumberSpecified = true;
+             if(value!=null) 
+                 this.StepNumberSpecified = true;
                 NotifyPropertyChanged("StepNumber");
             }
         }
@@ -31360,9 +33865,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure bubblePointPressureField; 
         /// <summary>
-        /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
+        /// bool to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean BubblePointPressureSpecified = false; 
+        private bool bubblePointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool BubblePointPressureSpecified
+         {
+            get {
+                return bubblePointPressureSpecified;
+            } 
+            set {
+                bubblePointPressureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -31382,9 +33897,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure retrogradeDewPointPressureField; 
         /// <summary>
-        /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
+        /// bool to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean RetrogradeDewPointPressureSpecified = false; 
+        private bool retrogradeDewPointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool RetrogradeDewPointPressureSpecified
+         {
+            get {
+                return retrogradeDewPointPressureSpecified;
+            } 
+            set {
+                retrogradeDewPointPressureSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -31466,7 +33991,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 oilMolecularWeightField = value;
-                this.OilMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.OilMolecularWeightSpecified = true;
                 NotifyPropertyChanged("OilMolecularWeight");
             }
         }
@@ -31508,9 +34034,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private DensityMeasure oilAPIGravityField; 
         /// <summary>
-        /// Boolean to indicate if OilAPIGravity has been set. Used for serialization.
+        /// bool to indicate if OilAPIGravity has been set. Used for serialization.
         /// </summary>
-        private Boolean OilAPIGravitySpecified = false; 
+        private bool oilAPIGravitySpecified = false; 
+         [XmlIgnore]
+         public bool OilAPIGravitySpecified
+         {
+            get {
+                return oilAPIGravitySpecified;
+            } 
+            set {
+                oilAPIGravitySpecified= value;
+            } 
+         }
 
         /// <summary>
         /// oilSpecificGravity property
@@ -31530,9 +34066,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Double? oilSpecificGravityField; 
         /// <summary>
-        /// Boolean to indicate if OilSpecificGravity has been set. Used for serialization.
+        /// bool to indicate if OilSpecificGravity has been set. Used for serialization.
         /// </summary>
-        private Boolean OilSpecificGravitySpecified = false; 
+        private bool oilSpecificGravitySpecified = false; 
+         [XmlIgnore]
+         public bool OilSpecificGravitySpecified
+         {
+            get {
+                return oilSpecificGravitySpecified;
+            } 
+            set {
+                oilSpecificGravitySpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -31614,7 +34160,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasMolecularWeightField = value;
-                this.GasMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.GasMolecularWeightSpecified = true;
                 NotifyPropertyChanged("GasMolecularWeight");
             }
         }
@@ -31649,7 +34196,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasGravityField = value;
-                this.GasGravitySpecified = true;
+             if(value!=null) 
+                 this.GasGravitySpecified = true;
                 NotifyPropertyChanged("GasGravity");
             }
         }
@@ -31701,7 +34249,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasZFactorField = value;
-                this.GasZFactorSpecified = true;
+             if(value!=null) 
+                 this.GasZFactorSpecified = true;
                 NotifyPropertyChanged("GasZFactor");
             }
         }
@@ -31827,9 +34376,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// bool to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private bool reservoirSpecified = false; 
+         [XmlIgnore]
+         public bool ReservoirSpecified
+         {
+            get {
+                return reservoirSpecified;
+            } 
+            set {
+                reservoirSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// saturated property
@@ -31848,9 +34407,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? saturatedField; 
         /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// bool to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        private Boolean SaturatedSpecified = false; 
+        private bool saturatedSpecified = false; 
+         [XmlIgnore]
+         public bool SaturatedSpecified
+         {
+            get {
+                return saturatedSpecified;
+            } 
+            set {
+                saturatedSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// stockTank property
@@ -31869,9 +34438,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// bool to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private bool stockTankSpecified = false; 
+         [XmlIgnore]
+         public bool StockTankSpecified
+         {
+            get {
+                return stockTankSpecified;
+            } 
+            set {
+                stockTankSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -31889,6 +34468,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType4> ItemsElementNameField; 
 
         /// <summary>
@@ -31906,6 +34494,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VaporCompositionSpecified
+         {
+            get {
+             if(vaporCompositionField!=null)
+                return vaporCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
 
         /// <summary>
@@ -31923,6 +34520,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool LiquidCompositionSpecified
+         {
+            get {
+             if(liquidCompositionField!=null)
+                return liquidCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
 
         /// <summary>
@@ -31940,6 +34546,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CompositeCompositionSpecified
+         {
+            get {
+             if(compositeCompositionField!=null)
+                return compositeCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
 
 		/// <summary>
@@ -32008,7 +34623,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testNumberField = value;
-                this.TestNumberSpecified = true;
+             if(value!=null) 
+                 this.TestNumberSpecified = true;
                 NotifyPropertyChanged("TestNumber");
             }
         }
@@ -32047,6 +34663,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TransportTestStepSpecified
+         {
+            get {
+             if(transportTestStepField!=null)
+                return transportTestStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultTransportTestStep> transportTestStepField; 
 
 		/// <summary>
@@ -32115,7 +34740,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 stepNumberField = value;
-                this.StepNumberSpecified = true;
+             if(value!=null) 
+                 this.StepNumberSpecified = true;
                 NotifyPropertyChanged("StepNumber");
             }
         }
@@ -32191,9 +34817,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumeMeasure liquidVolumeField; 
         /// <summary>
-        /// Boolean to indicate if LiquidVolume has been set. Used for serialization.
+        /// bool to indicate if LiquidVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean LiquidVolumeSpecified = false; 
+        private bool liquidVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool LiquidVolumeSpecified
+         {
+            get {
+                return liquidVolumeSpecified;
+            } 
+            set {
+                liquidVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// liquidDropoutPercent property
@@ -32213,9 +34849,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumePerVolumeMeasurePercent liquidDropoutPercentField; 
         /// <summary>
-        /// Boolean to indicate if LiquidDropoutPercent has been set. Used for serialization.
+        /// bool to indicate if LiquidDropoutPercent has been set. Used for serialization.
         /// </summary>
-        private Boolean LiquidDropoutPercentSpecified = false; 
+        private bool liquidDropoutPercentSpecified = false; 
+         [XmlIgnore]
+         public bool LiquidDropoutPercentSpecified
+         {
+            get {
+                return liquidDropoutPercentSpecified;
+            } 
+            set {
+                liquidDropoutPercentSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -32229,7 +34875,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasMolecularWeightField = value;
-                this.GasMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.GasMolecularWeightSpecified = true;
                 NotifyPropertyChanged("GasMolecularWeight");
             }
         }
@@ -32264,7 +34911,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasGravityField = value;
-                this.GasGravitySpecified = true;
+             if(value!=null) 
+                 this.GasGravitySpecified = true;
                 NotifyPropertyChanged("GasGravity");
             }
         }
@@ -32316,7 +34964,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasZFactorField = value;
-                this.GasZFactorSpecified = true;
+             if(value!=null) 
+                 this.GasZFactorSpecified = true;
                 NotifyPropertyChanged("GasZFactor");
             }
         }
@@ -32375,9 +35024,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardVolumeMeasure cumulativeGasProducedVolumeField; 
         /// <summary>
-        /// Boolean to indicate if CumulativeGasProducedVolume has been set. Used for serialization.
+        /// bool to indicate if CumulativeGasProducedVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean CumulativeGasProducedVolumeSpecified = false; 
+        private bool cumulativeGasProducedVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool CumulativeGasProducedVolumeSpecified
+         {
+            get {
+                return cumulativeGasProducedVolumeSpecified;
+            } 
+            set {
+                cumulativeGasProducedVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// cumulativeGasProducedRatioStd property
@@ -32397,9 +35056,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardVolumePerStandardVolumeMeasure cumulativeGasProducedRatioStdField; 
         /// <summary>
-        /// Boolean to indicate if CumulativeGasProducedRatioStd has been set. Used for serialization.
+        /// bool to indicate if CumulativeGasProducedRatioStd has been set. Used for serialization.
         /// </summary>
-        private Boolean CumulativeGasProducedRatioStdSpecified = false; 
+        private bool cumulativeGasProducedRatioStdSpecified = false; 
+         [XmlIgnore]
+         public bool CumulativeGasProducedRatioStdSpecified
+         {
+            get {
+                return cumulativeGasProducedRatioStdSpecified;
+            } 
+            set {
+                cumulativeGasProducedRatioStdSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -32470,9 +35139,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// bool to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private bool reservoirSpecified = false; 
+         [XmlIgnore]
+         public bool ReservoirSpecified
+         {
+            get {
+                return reservoirSpecified;
+            } 
+            set {
+                reservoirSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// saturated property
@@ -32491,9 +35170,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? saturatedField; 
         /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// bool to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        private Boolean SaturatedSpecified = false; 
+        private bool saturatedSpecified = false; 
+         [XmlIgnore]
+         public bool SaturatedSpecified
+         {
+            get {
+                return saturatedSpecified;
+            } 
+            set {
+                saturatedSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// stockTank property
@@ -32512,9 +35201,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// bool to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private bool stockTankSpecified = false; 
+         [XmlIgnore]
+         public bool StockTankSpecified
+         {
+            get {
+                return stockTankSpecified;
+            } 
+            set {
+                stockTankSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -32532,6 +35231,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType3> ItemsElementNameField; 
 
         /// <summary>
@@ -32549,6 +35257,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VaporCompositionSpecified
+         {
+            get {
+             if(vaporCompositionField!=null)
+                return vaporCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
 
         /// <summary>
@@ -32566,6 +35283,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool LiquidCompositionSpecified
+         {
+            get {
+             if(liquidCompositionField!=null)
+                return liquidCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
 
         /// <summary>
@@ -32583,6 +35309,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CompositeCompositionSpecified
+         {
+            get {
+             if(compositeCompositionField!=null)
+                return compositeCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
 
 		/// <summary>
@@ -32651,7 +35386,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testNumberField = value;
-                this.TestNumberSpecified = true;
+             if(value!=null) 
+                 this.TestNumberSpecified = true;
                 NotifyPropertyChanged("TestNumber");
             }
         }
@@ -32710,9 +35446,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure bubblePointPressureField; 
         /// <summary>
-        /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
+        /// bool to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean BubblePointPressureSpecified = false; 
+        private bool bubblePointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool BubblePointPressureSpecified
+         {
+            get {
+                return bubblePointPressureSpecified;
+            } 
+            set {
+                bubblePointPressureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -32732,9 +35478,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure retrogradeDewPointPressureField; 
         /// <summary>
-        /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
+        /// bool to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean RetrogradeDewPointPressureSpecified = false; 
+        private bool retrogradeDewPointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool RetrogradeDewPointPressureSpecified
+         {
+            get {
+                return retrogradeDewPointPressureSpecified;
+            } 
+            set {
+                retrogradeDewPointPressureSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -32871,6 +35627,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool JcrvTestStepSpecified
+         {
+            get {
+             if(jcrvTestStepField!=null)
+                return jcrvTestStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultJCurveTestStep> jcrvTestStepField; 
 
 		/// <summary>
@@ -32939,7 +35704,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 stepNumberField = value;
-                this.StepNumberSpecified = true;
+             if(value!=null) 
+                 this.StepNumberSpecified = true;
                 NotifyPropertyChanged("StepNumber");
             }
         }
@@ -33066,9 +35832,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumeMeasure oilVolumeField; 
         /// <summary>
-        /// Boolean to indicate if OilVolume has been set. Used for serialization.
+        /// bool to indicate if OilVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean OilVolumeSpecified = false; 
+        private bool oilVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool OilVolumeSpecified
+         {
+            get {
+                return oilVolumeSpecified;
+            } 
+            set {
+                oilVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// oilShrinkageFactor property
@@ -33088,9 +35864,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumePerVolumeMeasure oilShrinkageFactorField; 
         /// <summary>
-        /// Boolean to indicate if OilShrinkageFactor has been set. Used for serialization.
+        /// bool to indicate if OilShrinkageFactor has been set. Used for serialization.
         /// </summary>
-        private Boolean OilShrinkageFactorSpecified = false; 
+        private bool oilShrinkageFactorSpecified = false; 
+         [XmlIgnore]
+         public bool OilShrinkageFactorSpecified
+         {
+            get {
+                return oilShrinkageFactorSpecified;
+            } 
+            set {
+                oilShrinkageFactorSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -33104,7 +35890,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasMolecularWeightField = value;
-                this.GasMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.GasMolecularWeightSpecified = true;
                 NotifyPropertyChanged("GasMolecularWeight");
             }
         }
@@ -33139,7 +35926,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasGravityField = value;
-                this.GasGravitySpecified = true;
+             if(value!=null) 
+                 this.GasGravitySpecified = true;
                 NotifyPropertyChanged("GasGravity");
             }
         }
@@ -33208,7 +35996,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasZFactorField = value;
-                this.GasZFactorSpecified = true;
+             if(value!=null) 
+                 this.GasZFactorSpecified = true;
                 NotifyPropertyChanged("GasZFactor");
             }
         }
@@ -33368,9 +36157,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// bool to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private bool reservoirSpecified = false; 
+         [XmlIgnore]
+         public bool ReservoirSpecified
+         {
+            get {
+                return reservoirSpecified;
+            } 
+            set {
+                reservoirSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// saturated property
@@ -33389,9 +36188,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? saturatedField; 
         /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// bool to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        private Boolean SaturatedSpecified = false; 
+        private bool saturatedSpecified = false; 
+         [XmlIgnore]
+         public bool SaturatedSpecified
+         {
+            get {
+                return saturatedSpecified;
+            } 
+            set {
+                saturatedSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// stockTank property
@@ -33410,9 +36219,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// bool to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private bool stockTankSpecified = false; 
+         [XmlIgnore]
+         public bool StockTankSpecified
+         {
+            get {
+                return stockTankSpecified;
+            } 
+            set {
+                stockTankSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -33430,6 +36249,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType2> ItemsElementNameField; 
 
         /// <summary>
@@ -33447,6 +36275,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VaporCompositionSpecified
+         {
+            get {
+             if(vaporCompositionField!=null)
+                return vaporCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
 
         /// <summary>
@@ -33464,6 +36301,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool LiquidCompositionSpecified
+         {
+            get {
+             if(liquidCompositionField!=null)
+                return liquidCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
 
         /// <summary>
@@ -33481,6 +36327,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CompositeCompositionSpecified
+         {
+            get {
+             if(compositeCompositionField!=null)
+                return compositeCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
 
 		/// <summary>
@@ -33549,7 +36404,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testNumberField = value;
-                this.TestNumberSpecified = true;
+             if(value!=null) 
+                 this.TestNumberSpecified = true;
                 NotifyPropertyChanged("TestNumber");
             }
         }
@@ -33608,9 +36464,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure bubblePointPressureField; 
         /// <summary>
-        /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
+        /// bool to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean BubblePointPressureSpecified = false; 
+        private bool bubblePointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool BubblePointPressureSpecified
+         {
+            get {
+                return bubblePointPressureSpecified;
+            } 
+            set {
+                bubblePointPressureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -33630,9 +36496,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure retrogradeDewPointPressureField; 
         /// <summary>
-        /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
+        /// bool to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean RetrogradeDewPointPressureSpecified = false; 
+        private bool retrogradeDewPointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool RetrogradeDewPointPressureSpecified
+         {
+            get {
+                return retrogradeDewPointPressureSpecified;
+            } 
+            set {
+                retrogradeDewPointPressureSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -33684,6 +36560,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DLTestStepSpecified
+         {
+            get {
+             if(dlTestStepField!=null)
+                return dlTestStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultDifferentialLiberationTestStep> dlTestStepField; 
 
 		/// <summary>
@@ -33752,7 +36637,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 stepNumberField = value;
-                this.StepNumberSpecified = true;
+             if(value!=null) 
+                 this.StepNumberSpecified = true;
                 NotifyPropertyChanged("StepNumber");
             }
         }
@@ -33828,9 +36714,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumeMeasure liquidVolumeField; 
         /// <summary>
-        /// Boolean to indicate if LiquidVolume has been set. Used for serialization.
+        /// bool to indicate if LiquidVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean LiquidVolumeSpecified = false; 
+        private bool liquidVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool LiquidVolumeSpecified
+         {
+            get {
+                return liquidVolumeSpecified;
+            } 
+            set {
+                liquidVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// liquidDropoutPercent property
@@ -33850,9 +36746,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumePerVolumeMeasurePercent liquidDropoutPercentField; 
         /// <summary>
-        /// Boolean to indicate if LiquidDropoutPercent has been set. Used for serialization.
+        /// bool to indicate if LiquidDropoutPercent has been set. Used for serialization.
         /// </summary>
-        private Boolean LiquidDropoutPercentSpecified = false; 
+        private bool liquidDropoutPercentSpecified = false; 
+         [XmlIgnore]
+         public bool LiquidDropoutPercentSpecified
+         {
+            get {
+                return liquidDropoutPercentSpecified;
+            } 
+            set {
+                liquidDropoutPercentSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -33866,7 +36772,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasMolecularWeightField = value;
-                this.GasMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.GasMolecularWeightSpecified = true;
                 NotifyPropertyChanged("GasMolecularWeight");
             }
         }
@@ -33901,7 +36808,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasGravityField = value;
-                this.GasGravitySpecified = true;
+             if(value!=null) 
+                 this.GasGravitySpecified = true;
                 NotifyPropertyChanged("GasGravity");
             }
         }
@@ -33953,7 +36861,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasZFactorField = value;
-                this.GasZFactorSpecified = true;
+             if(value!=null) 
+                 this.GasZFactorSpecified = true;
                 NotifyPropertyChanged("GasZFactor");
             }
         }
@@ -34012,9 +36921,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardVolumeMeasure cumulativeGasProducedVolumeField; 
         /// <summary>
-        /// Boolean to indicate if CumulativeGasProducedVolume has been set. Used for serialization.
+        /// bool to indicate if CumulativeGasProducedVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean CumulativeGasProducedVolumeSpecified = false; 
+        private bool cumulativeGasProducedVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool CumulativeGasProducedVolumeSpecified
+         {
+            get {
+                return cumulativeGasProducedVolumeSpecified;
+            } 
+            set {
+                cumulativeGasProducedVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// cumulativeGasProducedRatioStd property
@@ -34034,9 +36953,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private StandardVolumePerStandardVolumeMeasure cumulativeGasProducedRatioStdField; 
         /// <summary>
-        /// Boolean to indicate if CumulativeGasProducedRatioStd has been set. Used for serialization.
+        /// bool to indicate if CumulativeGasProducedRatioStd has been set. Used for serialization.
         /// </summary>
-        private Boolean CumulativeGasProducedRatioStdSpecified = false; 
+        private bool cumulativeGasProducedRatioStdSpecified = false; 
+         [XmlIgnore]
+         public bool CumulativeGasProducedRatioStdSpecified
+         {
+            get {
+                return cumulativeGasProducedRatioStdSpecified;
+            } 
+            set {
+                cumulativeGasProducedRatioStdSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -34073,9 +37002,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// bool to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private bool reservoirSpecified = false; 
+         [XmlIgnore]
+         public bool ReservoirSpecified
+         {
+            get {
+                return reservoirSpecified;
+            } 
+            set {
+                reservoirSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// saturated property
@@ -34094,9 +37033,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? saturatedField; 
         /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// bool to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        private Boolean SaturatedSpecified = false; 
+        private bool saturatedSpecified = false; 
+         [XmlIgnore]
+         public bool SaturatedSpecified
+         {
+            get {
+                return saturatedSpecified;
+            } 
+            set {
+                saturatedSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// stockTank property
@@ -34115,9 +37064,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// bool to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private bool stockTankSpecified = false; 
+         [XmlIgnore]
+         public bool StockTankSpecified
+         {
+            get {
+                return stockTankSpecified;
+            } 
+            set {
+                stockTankSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -34135,6 +37094,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType1> ItemsElementNameField; 
 
         /// <summary>
@@ -34152,6 +37120,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VaporCompositionSpecified
+         {
+            get {
+             if(vaporCompositionField!=null)
+                return vaporCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
 
         /// <summary>
@@ -34169,6 +37146,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool LiquidCompositionSpecified
+         {
+            get {
+             if(liquidCompositionField!=null)
+                return liquidCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
 
         /// <summary>
@@ -34186,6 +37172,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CompositeCompositionSpecified
+         {
+            get {
+             if(compositeCompositionField!=null)
+                return compositeCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
 
 		/// <summary>
@@ -34254,7 +37249,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testNumberField = value;
-                this.TestNumberSpecified = true;
+             if(value!=null) 
+                 this.TestNumberSpecified = true;
                 NotifyPropertyChanged("TestNumber");
             }
         }
@@ -34313,9 +37309,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure bubblePointPressureField; 
         /// <summary>
-        /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
+        /// bool to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean BubblePointPressureSpecified = false; 
+        private bool bubblePointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool BubblePointPressureSpecified
+         {
+            get {
+                return bubblePointPressureSpecified;
+            } 
+            set {
+                bubblePointPressureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -34335,9 +37341,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure retrogradeDewPointPressureField; 
         /// <summary>
-        /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
+        /// bool to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean RetrogradeDewPointPressureSpecified = false; 
+        private bool retrogradeDewPointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool RetrogradeDewPointPressureSpecified
+         {
+            get {
+                return retrogradeDewPointPressureSpecified;
+            } 
+            set {
+                retrogradeDewPointPressureSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -34406,6 +37422,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CvdTestStepSpecified
+         {
+            get {
+             if(cvdTestStepField!=null)
+                return cvdTestStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCvdTestStep> cvdTestStepField; 
 
 		/// <summary>
@@ -34474,7 +37499,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 stepNumberField = value;
-                this.StepNumberSpecified = true;
+             if(value!=null) 
+                 this.StepNumberSpecified = true;
                 NotifyPropertyChanged("StepNumber");
             }
         }
@@ -34584,9 +37610,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumeMeasure totalVolumeField; 
         /// <summary>
-        /// Boolean to indicate if TotalVolume has been set. Used for serialization.
+        /// bool to indicate if TotalVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean TotalVolumeSpecified = false; 
+        private bool totalVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool TotalVolumeSpecified
+         {
+            get {
+                return totalVolumeSpecified;
+            } 
+            set {
+                totalVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// liquidVolume property
@@ -34606,9 +37642,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumeMeasure liquidVolumeField; 
         /// <summary>
-        /// Boolean to indicate if LiquidVolume has been set. Used for serialization.
+        /// bool to indicate if LiquidVolume has been set. Used for serialization.
         /// </summary>
-        private Boolean LiquidVolumeSpecified = false; 
+        private bool liquidVolumeSpecified = false; 
+         [XmlIgnore]
+         public bool LiquidVolumeSpecified
+         {
+            get {
+                return liquidVolumeSpecified;
+            } 
+            set {
+                liquidVolumeSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// liquidDropoutPercent property
@@ -34629,9 +37675,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private VolumePerVolumeMeasurePercent liquidDropoutPercentField; 
         /// <summary>
-        /// Boolean to indicate if LiquidDropoutPercent has been set. Used for serialization.
+        /// bool to indicate if LiquidDropoutPercent has been set. Used for serialization.
         /// </summary>
-        private Boolean LiquidDropoutPercentSpecified = false; 
+        private bool liquidDropoutPercentSpecified = false; 
+         [XmlIgnore]
+         public bool LiquidDropoutPercentSpecified
+         {
+            get {
+                return liquidDropoutPercentSpecified;
+            } 
+            set {
+                liquidDropoutPercentSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -34649,6 +37705,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ItemsElementNameSpecified
+         {
+            get {
+             if(ItemsElementNameField!=null)
+                return ItemsElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ItemsChoiceType> ItemsElementNameField; 
 
         /// <summary>
@@ -34696,7 +37761,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasZFactorField = value;
-                this.GasZFactorSpecified = true;
+             if(value!=null) 
+                 this.GasZFactorSpecified = true;
                 NotifyPropertyChanged("GasZFactor");
             }
         }
@@ -34765,7 +37831,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 yFactorField = value;
-                this.YFactorSpecified = true;
+             if(value!=null) 
+                 this.YFactorSpecified = true;
                 NotifyPropertyChanged("YFactor");
             }
         }
@@ -34823,9 +37890,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? reservoirField; 
         /// <summary>
-        /// Boolean to indicate if Reservoir has been set. Used for serialization.
+        /// bool to indicate if Reservoir has been set. Used for serialization.
         /// </summary>
-        private Boolean ReservoirSpecified = false; 
+        private bool reservoirSpecified = false; 
+         [XmlIgnore]
+         public bool ReservoirSpecified
+         {
+            get {
+                return reservoirSpecified;
+            } 
+            set {
+                reservoirSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// saturated property
@@ -34844,9 +37921,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private Boolean? saturatedField; 
         /// <summary>
-        /// Boolean to indicate if Saturated has been set. Used for serialization.
+        /// bool to indicate if Saturated has been set. Used for serialization.
         /// </summary>
-        private Boolean SaturatedSpecified = false; 
+        private bool saturatedSpecified = false; 
+         [XmlIgnore]
+         public bool SaturatedSpecified
+         {
+            get {
+                return saturatedSpecified;
+            } 
+            set {
+                saturatedSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// stockTank property
@@ -34865,9 +37952,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultStockTank stockTankField; 
         /// <summary>
-        /// Boolean to indicate if StockTank has been set. Used for serialization.
+        /// bool to indicate if StockTank has been set. Used for serialization.
         /// </summary>
-        private Boolean StockTankSpecified = false; 
+        private bool stockTankSpecified = false; 
+         [XmlIgnore]
+         public bool StockTankSpecified
+         {
+            get {
+                return stockTankSpecified;
+            } 
+            set {
+                stockTankSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -34885,6 +37982,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool Items1ElementNameSpecified
+         {
+            get {
+             if(Items1ElementNameField!=null)
+                return Items1ElementNameField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<Items1ChoiceType> Items1ElementNameField; 
 
         /// <summary>
@@ -34902,6 +38008,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool VaporCompositionSpecified
+         {
+            get {
+             if(vaporCompositionField!=null)
+                return vaporCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> vaporCompositionField; 
 
         /// <summary>
@@ -34919,6 +38034,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool LiquidCompositionSpecified
+         {
+            get {
+             if(liquidCompositionField!=null)
+                return liquidCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultPhaseComposition> liquidCompositionField; 
 
         /// <summary>
@@ -34936,6 +38060,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CompositeCompositionSpecified
+         {
+            get {
+             if(compositeCompositionField!=null)
+                return compositeCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCompositeComposition> compositeCompositionField; 
 
 		/// <summary>
@@ -35004,7 +38137,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testNumberField = value;
-                this.TestNumberSpecified = true;
+             if(value!=null) 
+                 this.TestNumberSpecified = true;
                 NotifyPropertyChanged("TestNumber");
             }
         }
@@ -35063,9 +38197,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure bubblePointPressureField; 
         /// <summary>
-        /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
+        /// bool to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean BubblePointPressureSpecified = false; 
+        private bool bubblePointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool BubblePointPressureSpecified
+         {
+            get {
+                return bubblePointPressureSpecified;
+            } 
+            set {
+                bubblePointPressureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -35085,9 +38229,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure retrogradeDewPointPressureField; 
         /// <summary>
-        /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
+        /// bool to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean RetrogradeDewPointPressureSpecified = false; 
+        private bool retrogradeDewPointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool RetrogradeDewPointPressureSpecified
+         {
+            get {
+                return retrogradeDewPointPressureSpecified;
+            } 
+            set {
+                retrogradeDewPointPressureSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -35156,6 +38310,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CceTestStepSpecified
+         {
+            get {
+             if(cceTestStepField!=null)
+                return cceTestStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultCceTestStep> cceTestStepField; 
 
 		/// <summary>
@@ -35224,7 +38387,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 stepNumberField = value;
-                this.StepNumberSpecified = true;
+             if(value!=null) 
+                 this.StepNumberSpecified = true;
                 NotifyPropertyChanged("StepNumber");
             }
         }
@@ -35283,9 +38447,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure bubblePointPressureField; 
         /// <summary>
-        /// Boolean to indicate if BubblePointPressure has been set. Used for serialization.
+        /// bool to indicate if BubblePointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean BubblePointPressureSpecified = false; 
+        private bool bubblePointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool BubblePointPressureSpecified
+         {
+            get {
+                return bubblePointPressureSpecified;
+            } 
+            set {
+                bubblePointPressureSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// retrogradeDewPointPressure property
@@ -35305,9 +38479,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PressureMeasure retrogradeDewPointPressureField; 
         /// <summary>
-        /// Boolean to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
+        /// bool to indicate if RetrogradeDewPointPressure has been set. Used for serialization.
         /// </summary>
-        private Boolean RetrogradeDewPointPressureSpecified = false; 
+        private bool retrogradeDewPointPressureSpecified = false; 
+         [XmlIgnore]
+         public bool RetrogradeDewPointPressureSpecified
+         {
+            get {
+                return retrogradeDewPointPressureSpecified;
+            } 
+            set {
+                retrogradeDewPointPressureSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -35427,7 +38611,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testNumberField = value;
-                this.TestNumberSpecified = true;
+             if(value!=null) 
+                 this.TestNumberSpecified = true;
                 NotifyPropertyChanged("TestNumber");
             }
         }
@@ -35466,6 +38651,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SaturationTestStepSpecified
+         {
+            get {
+             if(saturationTestStepField!=null)
+                return saturationTestStepField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultSaturationTestStep> saturationTestStepField; 
 
 		/// <summary>
@@ -35663,7 +38857,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 componentBaseKindField = value;
-                this.ComponentBaseKindSpecified = true;
+             if(value!=null) 
+                 this.ComponentBaseKindSpecified = true;
                 NotifyPropertyChanged("ComponentBaseKind");
             }
         }
@@ -35698,7 +38893,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 componentKindField = value;
-                this.ComponentKindSpecified = true;
+             if(value!=null) 
+                 this.ComponentKindSpecified = true;
                 NotifyPropertyChanged("ComponentKind");
             }
         }
@@ -35733,7 +38929,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 molecularWeightField = value;
-                this.MolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.MolecularWeightSpecified = true;
                 NotifyPropertyChanged("MolecularWeight");
             }
         }
@@ -35802,7 +38999,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 specificGravityField = value;
-                this.SpecificGravitySpecified = true;
+             if(value!=null) 
+                 this.SpecificGravitySpecified = true;
                 NotifyPropertyChanged("SpecificGravity");
             }
         }
@@ -35905,7 +39103,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 acentricFactorField = value;
-                this.AcentricFactorSpecified = true;
+             if(value!=null) 
+                 this.AcentricFactorSpecified = true;
                 NotifyPropertyChanged("AcentricFactor");
             }
         }
@@ -35957,7 +39156,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 alphaShapeFactorField = value;
-                this.AlphaShapeFactorSpecified = true;
+             if(value!=null) 
+                 this.AlphaShapeFactorSpecified = true;
                 NotifyPropertyChanged("AlphaShapeFactor");
             }
         }
@@ -35992,7 +39192,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 watsonKExponentField = value;
-                this.WatsonKExponentSpecified = true;
+             if(value!=null) 
+                 this.WatsonKExponentSpecified = true;
                 NotifyPropertyChanged("WatsonKExponent");
             }
         }
@@ -36027,7 +39228,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 splitCountField = value;
-                this.SplitCountSpecified = true;
+             if(value!=null) 
+                 this.SplitCountSpecified = true;
                 NotifyPropertyChanged("SplitCount");
             }
         }
@@ -36062,7 +39264,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 plusMinimumMolecularWeightField = value;
-                this.PlusMinimumMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.PlusMinimumMolecularWeightSpecified = true;
                 NotifyPropertyChanged("PlusMinimumMolecularWeight");
             }
         }
@@ -36097,7 +39300,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 plusMaximumMolecularWeightField = value;
-                this.PlusMaximumMolecularWeightSpecified = true;
+             if(value!=null) 
+                 this.PlusMaximumMolecularWeightSpecified = true;
                 NotifyPropertyChanged("PlusMaximumMolecularWeight");
             }
         }
@@ -36172,6 +39376,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool BinaryInteractionCoefficientSpecified
+         {
+            get {
+             if(binaryInteractionCoefficientField!=null)
+                return binaryInteractionCoefficientField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<BinaryInteractionCoefficient> binaryInteractionCoefficientField; 
 
         /// <summary>
@@ -36185,7 +39398,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 calculatedField = value;
-                this.CalculatedSpecified = true;
+             if(value!=null) 
+                 this.CalculatedSpecified = true;
                 NotifyPropertyChanged("Calculated");
             }
         }
@@ -36346,7 +39560,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidAnalysisResult", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("This class represents the obj_fluidAnalysisResult xsd type.")]
     public partial class FluidAnalysisResult : Object, IDataObject, INotifyPropertyChanged
     {
@@ -36561,7 +39775,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasGravityMeasuredField = value;
-                this.GasGravityMeasuredSpecified = true;
+             if(value!=null) 
+                 this.GasGravityMeasuredSpecified = true;
                 NotifyPropertyChanged("GasGravityMeasured");
             }
         }
@@ -36596,7 +39811,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 gasGravityCorrectedField = value;
-                this.GasGravityCorrectedSpecified = true;
+             if(value!=null) 
+                 this.GasGravityCorrectedSpecified = true;
                 NotifyPropertyChanged("GasGravityCorrected");
             }
         }
@@ -36631,7 +39847,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 h2oGravityMeasuredField = value;
-                this.H2oGravityMeasuredSpecified = true;
+             if(value!=null) 
+                 this.H2oGravityMeasuredSpecified = true;
                 NotifyPropertyChanged("H2oGravityMeasured");
             }
         }
@@ -36666,7 +39883,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 h2oGravityCorrectedField = value;
-                this.H2oGravityCorrectedSpecified = true;
+             if(value!=null) 
+                 this.H2oGravityCorrectedSpecified = true;
                 NotifyPropertyChanged("H2oGravityCorrected");
             }
         }
@@ -36827,7 +40045,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 eosMOdelField = value;
-                this.EosMOdelSpecified = true;
+             if(value!=null) 
+                 this.EosMOdelSpecified = true;
                 NotifyPropertyChanged("EosMOdel");
             }
         }
@@ -36921,6 +40140,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FluidSampleCompositionSpecified
+         {
+            get {
+             if(fluidSampleCompositionField!=null)
+                return fluidSampleCompositionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultComposition> fluidSampleCompositionField; 
 
         /// <summary>
@@ -36940,9 +40168,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultConstantCompositionExpansionTest constantCompositionExpansionTestField; 
         /// <summary>
-        /// Boolean to indicate if ConstantCompositionExpansionTest has been set. Used for serialization.
+        /// bool to indicate if ConstantCompositionExpansionTest has been set. Used for serialization.
         /// </summary>
-        private Boolean ConstantCompositionExpansionTestSpecified = false; 
+        private bool constantCompositionExpansionTestSpecified = false; 
+         [XmlIgnore]
+         public bool ConstantCompositionExpansionTestSpecified
+         {
+            get {
+                return constantCompositionExpansionTestSpecified;
+            } 
+            set {
+                constantCompositionExpansionTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -36961,9 +40199,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultConstantVolumeDepletionTest constantVolumeDepletionTestField; 
         /// <summary>
-        /// Boolean to indicate if ConstantVolumeDepletionTest has been set. Used for serialization.
+        /// bool to indicate if ConstantVolumeDepletionTest has been set. Used for serialization.
         /// </summary>
-        private Boolean ConstantVolumeDepletionTestSpecified = false; 
+        private bool constantVolumeDepletionTestSpecified = false; 
+         [XmlIgnore]
+         public bool ConstantVolumeDepletionTestSpecified
+         {
+            get {
+                return constantVolumeDepletionTestSpecified;
+            } 
+            set {
+                constantVolumeDepletionTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -36982,9 +40230,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultDifferentialLiberationTest differentialLiberationTestField; 
         /// <summary>
-        /// Boolean to indicate if DifferentialLiberationTest has been set. Used for serialization.
+        /// bool to indicate if DifferentialLiberationTest has been set. Used for serialization.
         /// </summary>
-        private Boolean DifferentialLiberationTestSpecified = false; 
+        private bool differentialLiberationTestSpecified = false; 
+         [XmlIgnore]
+         public bool DifferentialLiberationTestSpecified
+         {
+            get {
+                return differentialLiberationTestSpecified;
+            } 
+            set {
+                differentialLiberationTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -37003,9 +40261,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultJCurveTest jCurveTestField; 
         /// <summary>
-        /// Boolean to indicate if JCurveTest has been set. Used for serialization.
+        /// bool to indicate if JCurveTest has been set. Used for serialization.
         /// </summary>
-        private Boolean JCurveTestSpecified = false; 
+        private bool jCurveTestSpecified = false; 
+         [XmlIgnore]
+         public bool JCurveTestSpecified
+         {
+            get {
+                return jCurveTestSpecified;
+            } 
+            set {
+                jCurveTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -37024,9 +40292,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultSaturationTest saturationTestField; 
         /// <summary>
-        /// Boolean to indicate if SaturationTest has been set. Used for serialization.
+        /// bool to indicate if SaturationTest has been set. Used for serialization.
         /// </summary>
-        private Boolean SaturationTestSpecified = false; 
+        private bool saturationTestSpecified = false; 
+         [XmlIgnore]
+         public bool SaturationTestSpecified
+         {
+            get {
+                return saturationTestSpecified;
+            } 
+            set {
+                saturationTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -37045,9 +40323,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultSeparatorTest separatorTestField; 
         /// <summary>
-        /// Boolean to indicate if SeparatorTest has been set. Used for serialization.
+        /// bool to indicate if SeparatorTest has been set. Used for serialization.
         /// </summary>
-        private Boolean SeparatorTestSpecified = false; 
+        private bool separatorTestSpecified = false; 
+         [XmlIgnore]
+         public bool SeparatorTestSpecified
+         {
+            get {
+                return separatorTestSpecified;
+            } 
+            set {
+                separatorTestSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -37066,9 +40354,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidResultTransportPropertiesTest transportPropertiesTestField; 
         /// <summary>
-        /// Boolean to indicate if TransportPropertiesTest has been set. Used for serialization.
+        /// bool to indicate if TransportPropertiesTest has been set. Used for serialization.
         /// </summary>
-        private Boolean TransportPropertiesTestSpecified = false; 
+        private bool transportPropertiesTestSpecified = false; 
+         [XmlIgnore]
+         public bool TransportPropertiesTestSpecified
+         {
+            get {
+                return transportPropertiesTestSpecified;
+            } 
+            set {
+                transportPropertiesTestSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -37087,6 +40385,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FluidSampleContaminantSpecified
+         {
+            get {
+             if(fluidSampleContaminantField!=null)
+                return fluidSampleContaminantField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidResultContaminant> fluidSampleContaminantField; 
 
         /// <summary>
@@ -37208,7 +40515,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidAnalysis", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("This class represents the obj_fluidAnalysis xsd type.")]
     public partial class FluidAnalysis : Object, IDataObject, INotifyPropertyChanged
     {
@@ -37250,9 +40557,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FluidAnalysisKind userAnalysisKindField; 
         /// <summary>
-        /// Boolean to indicate if UserAnalysisKind has been set. Used for serialization.
+        /// bool to indicate if UserAnalysisKind has been set. Used for serialization.
         /// </summary>
-        private Boolean UserAnalysisKindSpecified = false; 
+        private bool userAnalysisKindSpecified = false; 
+         [XmlIgnore]
+         public bool UserAnalysisKindSpecified
+         {
+            get {
+                return userAnalysisKindSpecified;
+            } 
+            set {
+                userAnalysisKindSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -37272,9 +40589,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private String laboratorybAnalysisKindField; 
         /// <summary>
-        /// Boolean to indicate if LaboratorybAnalysisKind has been set. Used for serialization.
+        /// bool to indicate if LaboratorybAnalysisKind has been set. Used for serialization.
         /// </summary>
-        private Boolean LaboratorybAnalysisKindSpecified = false; 
+        private bool laboratorybAnalysisKindSpecified = false; 
+         [XmlIgnore]
+         public bool LaboratorybAnalysisKindSpecified
+         {
+            get {
+                return laboratorybAnalysisKindSpecified;
+            } 
+            set {
+                laboratorybAnalysisKindSpecified= value;
+            } 
+         }
 
 
         /// <summary>
@@ -37288,7 +40615,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 analysisdDateField = value;
-                this.AnalysisdDateSpecified = true;
+             if(value!=null) 
+                 this.AnalysisdDateSpecified = true;
                 NotifyPropertyChanged("AnalysisdDate");
             }
         }
@@ -37413,7 +40741,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 reportDateField = value;
-                this.ReportDateSpecified = true;
+             if(value!=null) 
+                 this.ReportDateSpecified = true;
                 NotifyPropertyChanged("ReportDate");
             }
         }
@@ -37574,7 +40903,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 reasonForRunField = value;
-                this.ReasonForRunSpecified = true;
+             if(value!=null) 
+                 this.ReasonForRunSpecified = true;
                 NotifyPropertyChanged("ReasonForRun");
             }
         }
@@ -37779,6 +41109,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -37945,7 +41284,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 manufacturingDateField = value;
-                this.ManufacturingDateSpecified = true;
+             if(value!=null) 
+                 this.ManufacturingDateSpecified = true;
                 NotifyPropertyChanged("ManufacturingDate");
             }
         }
@@ -38014,7 +41354,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 supplyDateField = value;
-                this.SupplyDateSpecified = true;
+             if(value!=null) 
+                 this.SupplyDateSpecified = true;
                 NotifyPropertyChanged("SupplyDate");
             }
         }
@@ -38271,6 +41612,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ConnectorTypeSpecified
+         {
+            get {
+             if(connectorTypeField!=null)
+                return connectorTypeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberConnectorTypeList> connectorTypeField; 
 
         /// <summary>
@@ -38289,6 +41639,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool EndTypeSpecified
+         {
+            get {
+             if(endTypeField!=null)
+                return endTypeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberEndType> endTypeField; 
 
 		/// <summary>
@@ -38356,7 +41715,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 pressureRatingField = value;
-                this.PressureRatingSpecified = true;
+             if(value!=null) 
+                 this.PressureRatingSpecified = true;
                 NotifyPropertyChanged("PressureRating");
             }
         }
@@ -38391,7 +41751,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 bendAngleField = value;
-                this.BendAngleSpecified = true;
+             if(value!=null) 
+                 this.BendAngleSpecified = true;
                 NotifyPropertyChanged("BendAngle");
             }
         }
@@ -38604,7 +41965,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 modeField = value;
-                this.ModeSpecified = true;
+             if(value!=null) 
+                 this.ModeSpecified = true;
                 NotifyPropertyChanged("Mode");
             }
         }
@@ -38698,6 +42060,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+            get {
+             if(parameterField!=null)
+                return parameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<IndexedObject> parameterField; 
 
         /// <summary>
@@ -38752,6 +42123,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool RefractiveIndexSpecified
+         {
+            get {
+             if(refractiveIndexField!=null)
+                return refractiveIndexField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberRefractiveIndex> refractiveIndexField; 
 
         /// <summary>
@@ -38770,6 +42150,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OneWayAttenuationSpecified
+         {
+            get {
+             if(oneWayAttenuationField!=null)
+                return oneWayAttenuationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberOneWayAttenuation> oneWayAttenuationField; 
 
         /// <summary>
@@ -38801,7 +42190,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 cableTypeField = value;
-                this.CableTypeSpecified = true;
+             if(value!=null) 
+                 this.CableTypeSpecified = true;
                 NotifyPropertyChanged("CableType");
             }
         }
@@ -39139,9 +42529,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FrequencyMeasure frequencyField; 
         /// <summary>
-        /// Boolean to indicate if Frequency has been set. Used for serialization.
+        /// bool to indicate if Frequency has been set. Used for serialization.
         /// </summary>
-        private Boolean FrequencySpecified = false; 
+        private bool frequencySpecified = false; 
+         [XmlIgnore]
+         public bool FrequencySpecified
+         {
+            get {
+                return frequencySpecified;
+            } 
+            set {
+                frequencySpecified= value;
+            } 
+         }
 
         /// <summary>
         /// The wavelength for which the one way loss is measured. 
@@ -39161,9 +42561,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private LengthMeasure wavelengthField; 
         /// <summary>
-        /// Boolean to indicate if Wavelength has been set. Used for serialization.
+        /// bool to indicate if Wavelength has been set. Used for serialization.
         /// </summary>
-        private Boolean WavelengthSpecified = false; 
+        private bool wavelengthSpecified = false; 
+         [XmlIgnore]
+         public bool WavelengthSpecified
+         {
+            get {
+                return wavelengthSpecified;
+            } 
+            set {
+                wavelengthSpecified= value;
+            } 
+         }
 
 
 		/// <summary>
@@ -39240,9 +42650,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private InterventionConveyance interventionField; 
         /// <summary>
-        /// Boolean to indicate if Intervention has been set. Used for serialization.
+        /// bool to indicate if Intervention has been set. Used for serialization.
         /// </summary>
-        private Boolean InterventionSpecified = false; 
+        private bool interventionSpecified = false; 
+         [XmlIgnore]
+         public bool InterventionSpecified
+         {
+            get {
+                return interventionSpecified;
+            } 
+            set {
+                interventionSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Information on type of permanent conveyance used by the optical path. 
@@ -39263,9 +42683,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private PermanentCable permanentField; 
         /// <summary>
-        /// Boolean to indicate if Permanent has been set. Used for serialization.
+        /// bool to indicate if Permanent has been set. Used for serialization.
         /// </summary>
-        private Boolean PermanentSpecified = false; 
+        private bool permanentSpecified = false; 
+         [XmlIgnore]
+         public bool PermanentSpecified
+         {
+            get {
+                return permanentSpecified;
+            } 
+            set {
+                permanentSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Information regarding the control line into which a fiber cable may be pumped in order to measure a facility. 
@@ -39286,9 +42716,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FiberControlLine fiberControlLineField; 
         /// <summary>
-        /// Boolean to indicate if FiberControlLine has been set. Used for serialization.
+        /// bool to indicate if FiberControlLine has been set. Used for serialization.
         /// </summary>
-        private Boolean FiberControlLineSpecified = false; 
+        private bool fiberControlLineSpecified = false; 
+         [XmlIgnore]
+         public bool FiberControlLineSpecified
+         {
+            get {
+                return fiberControlLineSpecified;
+            } 
+            set {
+                fiberControlLineSpecified= value;
+            } 
+         }
 
 
 
@@ -39428,6 +42868,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool PumpActivitySpecified
+         {
+            get {
+             if(pumpActivityField!=null)
+                return pumpActivityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberPumpActivity> pumpActivityField; 
 
 		/// <summary>
@@ -39530,7 +42979,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 pumpingDateField = value;
-                this.PumpingDateSpecified = true;
+             if(value!=null) 
+                 this.PumpingDateSpecified = true;
                 NotifyPropertyChanged("PumpingDate");
             }
         }
@@ -39701,7 +43151,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 cableMeterCalibrationDateField = value;
-                this.CableMeterCalibrationDateSpecified = true;
+             if(value!=null) 
+                 this.CableMeterCalibrationDateSpecified = true;
                 NotifyPropertyChanged("CableMeterCalibrationDate");
             }
         }
@@ -39757,6 +43208,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
         /// <summary>
@@ -40042,6 +43502,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+            get {
+             if(parameterField!=null)
+                return parameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<IndexedObject> parameterField; 
 
         /// <summary>
@@ -40096,6 +43565,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool InstrumentCalibrationSpecified
+         {
+            get {
+             if(instrumentCalibrationField!=null)
+                return instrumentCalibrationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DtsCalibration> instrumentCalibrationField; 
 
         /// <summary>
@@ -40114,6 +43592,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
         /// <summary>
@@ -40163,7 +43650,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimCalibrationField = value;
-                this.DateTimeCalibrationSpecified = true;
+             if(value!=null) 
+                 this.DateTimeCalibrationSpecified = true;
                 NotifyPropertyChanged("DateTimeCalibration");
             }
         }
@@ -40239,6 +43727,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+            get {
+             if(parameterField!=null)
+                return parameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<CalibrationParameter> parameterField; 
 
         /// <summary>
@@ -40275,6 +43772,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -40799,6 +44305,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OpticalPathDistanceStartSpecified
+         {
+            get {
+             if(opticalPathDistanceStartField!=null)
+                return opticalPathDistanceStartField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<LengthMeasure> opticalPathDistanceStartField; 
 
         /// <summary>
@@ -40818,6 +44333,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OpticalPathDistanceEndSpecified
+         {
+            get {
+             if(opticalPathDistanceEndField!=null)
+                return opticalPathDistanceEndField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<LengthMeasure> opticalPathDistanceEndField; 
 
         /// <summary>
@@ -40837,6 +44361,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityLengthStartSpecified
+         {
+            get {
+             if(facilityLengthStartField!=null)
+                return facilityLengthStartField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<LengthMeasure> facilityLengthStartField; 
 
         /// <summary>
@@ -40856,6 +44389,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityLengthEndSpecified
+         {
+            get {
+             if(facilityLengthEndField!=null)
+                return facilityLengthEndField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<LengthMeasure> facilityLengthEndField; 
 
         /// <summary>
@@ -40874,6 +44416,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> commentField; 
 
         /// <summary>
@@ -40894,9 +44445,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FiberFacilityWell wellField; 
         /// <summary>
-        /// Boolean to indicate if Well has been set. Used for serialization.
+        /// bool to indicate if Well has been set. Used for serialization.
         /// </summary>
-        private Boolean WellSpecified = false; 
+        private bool wellSpecified = false; 
+         [XmlIgnore]
+         public bool WellSpecified
+         {
+            get {
+                return wellSpecified;
+            } 
+            set {
+                wellSpecified= value;
+            } 
+         }
 
         /// <summary>
         /// Choice where the facility mapping is a pipeline.
@@ -40916,9 +44477,19 @@ namespace Energistics.DataAccess.PRODML131
 
         private FiberFacilityPipeline pipelineField; 
         /// <summary>
-        /// Boolean to indicate if Pipeline has been set. Used for serialization.
+        /// bool to indicate if Pipeline has been set. Used for serialization.
         /// </summary>
-        private Boolean PipelineSpecified = false; 
+        private bool pipelineSpecified = false; 
+         [XmlIgnore]
+         public bool PipelineSpecified
+         {
+            get {
+                return pipelineSpecified;
+            } 
+            set {
+                pipelineSpecified= value;
+            } 
+         }
 
 
 		/// <summary>
@@ -41005,7 +44576,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 timeEndField = value;
-                this.TimeEndSpecified = true;
+             if(value!=null) 
+                 this.TimeEndSpecified = true;
                 NotifyPropertyChanged("TimeEnd");
             }
         }
@@ -41046,6 +44618,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FiberFacilityMappingPartSpecified
+         {
+            get {
+             if(fiberFacilityMappingPartField!=null)
+                return fiberFacilityMappingPartField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberFacilityMappingPart> fiberFacilityMappingPartField; 
 
         /// <summary>
@@ -41138,6 +44719,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OpticalPathDistanceStartSpecified
+         {
+            get {
+             if(opticalPathDistanceStartField!=null)
+                return opticalPathDistanceStartField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<LengthMeasure> opticalPathDistanceStartField; 
 
         /// <summary>
@@ -41156,6 +44746,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OpticalPathDistanceEndSpecified
+         {
+            get {
+             if(opticalPathDistanceEndField!=null)
+                return opticalPathDistanceEndField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<LengthMeasure> opticalPathDistanceEndField; 
 
         /// <summary>
@@ -41175,6 +44774,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DefectTypeSpecified
+         {
+            get {
+             if(defectTypeField!=null)
+                return defectTypeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<PathDefectTypeList> defectTypeField; 
 
         /// <summary>
@@ -41193,6 +44801,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TimeStartSpecified
+         {
+            get {
+             if(timeStartField!=null)
+                return timeStartField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DateTime> timeStartField; 
 
         /// <summary>
@@ -41211,6 +44828,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TimeEndSpecified
+         {
+            get {
+             if(timeEndField!=null)
+                return timeEndField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DateTime> timeEndField; 
 
         /// <summary>
@@ -41229,6 +44855,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+            get {
+             if(commentField!=null)
+                return commentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> commentField; 
 
 		/// <summary>
@@ -41319,6 +44954,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContextFacilitySpecified
+         {
+            get {
+             if(contextFacilityField!=null)
+                return contextFacilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FacilityIdentifierStruct> contextFacilityField; 
 
         /// <summary>
@@ -41332,7 +44976,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimStartField = value;
-                this.DateTimeStartSpecified = true;
+             if(value!=null) 
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
@@ -41367,7 +45012,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dTimEndField = value;
-                this.DateTimeEndSpecified = true;
+             if(value!=null) 
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
@@ -41457,6 +45103,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExternalConnectSpecified
+         {
+            get {
+             if(externalConnectField!=null)
+                return externalConnectField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowExternalReference> externalConnectField; 
 
         /// <summary>
@@ -41474,6 +45129,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool NetworkSpecified
+         {
+            get {
+             if(networkField!=null)
+                return networkField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowNetwork> networkField; 
 
         /// <summary>
@@ -41565,6 +45229,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SegmentSpecified
+         {
+            get {
+             if(segmentField!=null)
+                return segmentField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberOpticalPathSegment> segmentField; 
 
         /// <summary>
@@ -41583,6 +45256,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TurnaroundSpecified
+         {
+            get {
+             if(turnaroundField!=null)
+                return turnaroundField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberTurnaround> turnaroundField; 
 
         /// <summary>
@@ -41601,6 +45283,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SpliceSpecified
+         {
+            get {
+             if(spliceField!=null)
+                return spliceField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberSplice> spliceField; 
 
         /// <summary>
@@ -41619,6 +45310,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ConnectionSpecified
+         {
+            get {
+             if(connectionField!=null)
+                return connectionField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberConnection> connectionField; 
 
         /// <summary>
@@ -41671,7 +45371,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fiberOpticalPath", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The group of elements corresponding to a fiber optical path.")]
     public partial class FiberOpticalPath : Object, IDataObject, INotifyPropertyChanged
     {
@@ -41731,6 +45431,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OpticalPathNetworkSpecified
+         {
+            get {
+             if(opticalPathNetworkField!=null)
+                return opticalPathNetworkField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberOpticalPathNetwork> opticalPathNetworkField; 
 
         /// <summary>
@@ -41749,6 +45458,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DefectSpecified
+         {
+            get {
+             if(defectField!=null)
+                return defectField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberPathDefect> defectField; 
 
         /// <summary>
@@ -41767,6 +45485,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FacilityMappingSpecified
+         {
+            get {
+             if(facilityMappingField!=null)
+                return facilityMappingField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberFacilityMapping> facilityMappingField; 
 
         /// <summary>
@@ -41803,6 +45530,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool OtdrSpecified
+         {
+            get {
+             if(otdrField!=null)
+                return otdrField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberOTDR> otdrField; 
 
         /// <summary>
@@ -42201,6 +45937,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DataSpecified
+         {
+            get {
+             if(dataField!=null)
+                return dataField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> dataField; 
 
 
@@ -42293,6 +46038,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool InterpretationDataSpecified
+         {
+            get {
+             if(interpretationDataField!=null)
+                return interpretationDataField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DtsInterpretationData> interpretationDataField; 
 
 		/// <summary>
@@ -42581,7 +46335,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsMeasurement", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The group of elements corresponding to a DTS measurement.")]
     public partial class DtsMeasurement : Object, IDataObject, INotifyPropertyChanged
     {
@@ -42669,7 +46423,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 timeEndField = value;
-                this.TimeEndSpecified = true;
+             if(value!=null) 
+                 this.TimeEndSpecified = true;
                 NotifyPropertyChanged("TimeEnd");
             }
         }
@@ -42727,6 +46482,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool MeasurementTagsSpecified
+         {
+            get {
+             if(measurementTagsField!=null)
+                return measurementTagsField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<String> measurementTagsField; 
 
         /// <summary>
@@ -42782,6 +46546,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DiagnosticParametersSpecified
+         {
+            get {
+             if(diagnosticParametersField!=null)
+                return diagnosticParametersField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> diagnosticParametersField; 
 
         /// <summary>
@@ -42800,6 +46573,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool MeasurementTraceSpecified
+         {
+            get {
+             if(measurementTraceField!=null)
+                return measurementTraceField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DtsMeasurementTrace> measurementTraceField; 
 
         /// <summary>
@@ -42903,7 +46685,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsInstrumentBox", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The instrument box used for distributed temperature surveys")]
     public partial class DtsInstrumentBox : Object, IUniqueId, INotifyPropertyChanged
     {
@@ -43009,7 +46791,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsInstalledSystem", Namespace="http://www.prodml.org/schemas/1series")]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The group of elements corresponding to a DTS installed system.")]
     public partial class DtsInstalledSystem : Object, IDataObject, INotifyPropertyChanged
     {
@@ -43061,7 +46843,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dateMaxField = value;
-                this.DateMaxSpecified = true;
+             if(value!=null) 
+                 this.DateMaxSpecified = true;
                 NotifyPropertyChanged("DateMax");
             }
         }
@@ -43114,7 +46897,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 opticalBudgetField = value;
-                this.OpticalBudgetSpecified = true;
+             if(value!=null) 
+                 this.OpticalBudgetSpecified = true;
                 NotifyPropertyChanged("OpticalBudget");
             }
         }
@@ -43210,6 +46994,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DtsCalibrationSpecified
+         {
+            get {
+             if(dtsCalibrationField!=null)
+                return dtsCalibrationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DtsCalibration> dtsCalibrationField; 
 
         /// <summary>
@@ -43621,6 +47414,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -43725,7 +47527,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 endDateField = value;
-                this.EndDateSpecified = true;
+             if(value!=null) 
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
@@ -43783,6 +47586,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(extensionNameValueField!=null)
+                return extensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ExtensionNameValue> extensionNameValueField; 
 
 		/// <summary>
@@ -43984,6 +47796,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DocumentAliasSpecified
+         {
+            get {
+             if(documentAliasField!=null)
+                return documentAliasField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> documentAliasField; 
 
         /// <summary>
@@ -43997,7 +47818,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 documentDateField = value;
-                this.DocumentDateSpecified = true;
+             if(value!=null) 
+                 this.DocumentDateSpecified = true;
                 NotifyPropertyChanged("DocumentDate");
             }
         }
@@ -44037,6 +47859,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DocumentClassSpecified
+         {
+            get {
+             if(documentClassField!=null)
+                return documentClassField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<NameStruct> documentClassField; 
 
         /// <summary>
@@ -44073,6 +47904,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool SecurityInformationSpecified
+         {
+            get {
+             if(securityInformationField!=null)
+                return securityInformationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DocumentSecurityInfo> securityInformationField; 
 
         /// <summary>
@@ -44110,6 +47950,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool AuditTrailSpecified
+         {
+            get {
+             if(auditTrailField!=null)
+                return auditTrailField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DocumentEvent> auditTrailField; 
 
         /// <summary>
@@ -44235,6 +48084,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool WftRunSpecified
+         {
+            get {
+             if(wftRunField!=null)
+                return wftRunField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WftRun> wftRunField; 
 
         /// <summary>
@@ -44264,7 +48122,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -44316,6 +48174,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool WellTestSpecified
+         {
+            get {
+             if(wellTestField!=null)
+                return wellTestField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<WellTest> wellTestField; 
 
         /// <summary>
@@ -44345,7 +48212,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -44397,6 +48264,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TimeSeriesStatisticSpecified
+         {
+            get {
+             if(timeSeriesStatisticField!=null)
+                return timeSeriesStatisticField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<TimeSeriesStatistic> timeSeriesStatisticField; 
 
         /// <summary>
@@ -44426,7 +48302,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -44460,6 +48336,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool TimeSeriesDataSpecified
+         {
+            get {
+             if(timeSeriesDataField!=null)
+                return timeSeriesDataField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<TimeSeriesData> timeSeriesDataField; 
 
         /// <summary>
@@ -44489,7 +48374,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -44503,7 +48388,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("report", Namespace="http://www.prodml.org/schemas/1series", IsNullable=false)]
-	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("This class represents the obj_report xsd type.")]
     public partial class Report : AbstractObject, INotifyPropertyChanged
     {
@@ -44555,7 +48440,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dateField = value;
-                this.DateSpecified = true;
+             if(value!=null) 
+                 this.DateSpecified = true;
                 NotifyPropertyChanged("Date");
             }
         }
@@ -44590,7 +48476,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dateEndField = value;
-                this.DateEndSpecified = true;
+             if(value!=null) 
+                 this.DateEndSpecified = true;
                 NotifyPropertyChanged("DateEnd");
             }
         }
@@ -44644,7 +48531,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 yearField = value;
-                this.YearSpecified = true;
+             if(value!=null) 
+                 this.YearSpecified = true;
                 NotifyPropertyChanged("Year");
             }
         }
@@ -44715,7 +48603,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 reportStatusField = value;
-                this.ReportStatusSpecified = true;
+             if(value!=null) 
+                 this.ReportStatusSpecified = true;
                 NotifyPropertyChanged("ReportStatus");
             }
         }
@@ -44773,6 +48662,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ContextFacilitySpecified
+         {
+            get {
+             if(contextFacilityField!=null)
+                return contextFacilityField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FacilityIdentifierStruct> contextFacilityField; 
 
         /// <summary>
@@ -44822,7 +48720,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 issueDateField = value;
-                this.IssueDateSpecified = true;
+             if(value!=null) 
+                 this.IssueDateSpecified = true;
                 NotifyPropertyChanged("IssueDate");
             }
         }
@@ -44875,7 +48774,8 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 approvalDateField = value;
-                this.ApprovalDateSpecified = true;
+             if(value!=null) 
+                 this.ApprovalDateSpecified = true;
                 NotifyPropertyChanged("ApprovalDate");
             }
         }
@@ -44984,6 +48884,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ProductVolumeSpecified
+         {
+            get {
+             if(productVolumeField!=null)
+                return productVolumeField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductVolume> productVolumeField; 
 
         /// <summary>
@@ -45013,7 +48922,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45066,6 +48975,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ProductionOperationSpecified
+         {
+            get {
+             if(productionOperationField!=null)
+                return productionOperationField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductionOperation> productionOperationField; 
 
         /// <summary>
@@ -45095,7 +49013,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45147,6 +49065,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool ProductFlowModelSpecified
+         {
+            get {
+             if(productFlowModelField!=null)
+                return productFlowModelField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<ProductFlowModel> productFlowModelField; 
 
         /// <summary>
@@ -45176,7 +49103,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45228,6 +49155,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FluidSampleSpecified
+         {
+            get {
+             if(fluidSampleField!=null)
+                return fluidSampleField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidSample> fluidSampleField; 
 
         /// <summary>
@@ -45257,7 +49193,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45309,6 +49245,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FluidAnalysisResultSpecified
+         {
+            get {
+             if(fluidAnalysisResultField!=null)
+                return fluidAnalysisResultField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidAnalysisResult> fluidAnalysisResultField; 
 
         /// <summary>
@@ -45338,7 +49283,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45390,6 +49335,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FluidAnalysisSpecified
+         {
+            get {
+             if(fluidAnalysisField!=null)
+                return fluidAnalysisField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FluidAnalysis> fluidAnalysisField; 
 
         /// <summary>
@@ -45419,7 +49373,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45488,6 +49442,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FiberOpticalPathSpecified
+         {
+            get {
+             if(fiberOpticalPathField!=null)
+                return fiberOpticalPathField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<FiberOpticalPath> fiberOpticalPathField; 
 
         /// <summary>
@@ -45517,7 +49480,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45586,6 +49549,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DtsMeasurementSpecified
+         {
+            get {
+             if(dtsMeasurementField!=null)
+                return dtsMeasurementField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DtsMeasurement> dtsMeasurementField; 
 
         /// <summary>
@@ -45615,7 +49587,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45684,6 +49656,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool FiberInstrumentBoxSpecified
+         {
+            get {
+             if(fiberInstrumentBoxField!=null)
+                return fiberInstrumentBoxField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DtsInstrumentBox> fiberInstrumentBoxField; 
 
         /// <summary>
@@ -45713,7 +49694,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -45782,6 +49763,15 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
+         [XmlIgnore]
+         public bool DtsinstalledSystemSpecified
+         {
+            get {
+             if(dtsinstalledSystemField!=null)
+                return dtsinstalledSystemField.Count>0?true:false;
+             else return false;
+            } 
+         }
         private List<DtsInstalledSystem> dtsinstalledSystemField; 
 
         /// <summary>
@@ -45811,7 +49801,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1(PRODML)"; 
+        private String versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here

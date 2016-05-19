@@ -1,1 +1,0 @@
-C:\projects\source\DevKitGenerator\EnumValuesExtensionGenerator\obj\x64\Debug\EnumValuesExtensionGenerator.csprojResolveAssemblyReference.cache

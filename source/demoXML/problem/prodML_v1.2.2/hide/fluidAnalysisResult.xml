@@ -1,0 +1,2691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./stylesheets/generic.xsl"?>
+<fluidAnalysisResults
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.prodml.org/schemas/1series"
+	xsi:schemaLocation="http://www.prodml.org/schemas/1series  
+			../xsd_schemas/obj_fluidAnalysisResult.xsd" 
+	version="1.2.0.0(PRODML)">
+	<fluidAnalysisResult uidFluidSample="Sample_2" uidFluidAnalysis="Analysis_2" uid="result_a">
+		<nameFluidSample>Sample 2</nameFluidSample>
+		<nameFluidAnalysis>Analysis 2</nameFluidAnalysis>
+		<name>A Result</name>
+		<reservoirPressure uom="psi">2500</reservoirPressure>
+		<reservoirTemperature uom="degF">250</reservoirTemperature>
+		<saturationPressure uom="psi">2037</saturationPressure>
+		<producingGORStd uom="ft3/bbl">787</producingGORStd>
+		<gasGravityMeasured>0.9732</gasGravityMeasured>
+		<standardPressure uom="psi">14.696</standardPressure>
+		<standardTemperature uom="degF">60</standardTemperature>
+		<analysisDescription>This is fictitious data</analysisDescription>
+		<analysisPurpose>demonstration of XML format</analysisPurpose>
+		<fluidDataQuality>
+			<quality>invalid</quality>
+			<source>AB</source>
+		</fluidDataQuality>
+		<fluidSampleComposition>
+			<isPrimary>true</isPrimary>
+			<componentName>C1</componentName>
+			<componentBaseKind>methane</componentBaseKind>
+			<componentKind>pure</componentKind>
+			<molecularWeight>16.0426</molecularWeight>
+			<weightPercent uom="%">35.2</weightPercent>
+			<specificGravity>0.3</specificGravity>
+			<boilingPoint uom="degF">-258.736</boilingPoint>
+			<criticalPressure uom="psi">673.077</criticalPressure>
+			<criticalTemperature uom="degF">-116.41</criticalTemperature>
+			<acentricFactor>0.013</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0697</volumeTranslationFactor>
+			<binaryInteractionCoefficient referenceComponent="C6F">0.0267</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C7F">0.03</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C8F">0.033</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C9F">0.067</binaryInteractionCoefficient>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>C2</componentName>
+			<componentBaseKind>ethane</componentBaseKind>
+			<componentKind>pure</componentKind>
+			<molecularWeight>30.0694</molecularWeight>
+			<weightPercent uom="%">6.7</weightPercent>
+			<specificGravity>0.3564</specificGravity>
+			<boilingPoint uom="degF">-127.48</boilingPoint>
+			<criticalPressure uom="psi">708.351</criticalPressure>
+			<criticalTemperature uom="degF">90.104</criticalTemperature>
+			<acentricFactor>0.0986</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0633</volumeTranslationFactor>
+			<binaryInteractionCoefficient referenceComponent="C6F">0.0091</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C7F">0.0107</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C8F">0.0122</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C9F">0.0141</binaryInteractionCoefficient>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>C3</componentName>
+			<componentBaseKind>propane</componentBaseKind>
+			<componentKind>pure</componentKind>
+			<molecularWeight>44.0962</molecularWeight>
+			<weightPercent uom="%">6.2</weightPercent>
+			<specificGravity>0.5077</specificGravity>
+			<boilingPoint uom="degF">-43.377</boilingPoint>
+			<criticalPressure uom="psi">617.383</criticalPressure>
+			<criticalTemperature uom="degF">206.15</criticalTemperature>
+			<acentricFactor>0.1524</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0742</volumeTranslationFactor>
+			<binaryInteractionCoefficient referenceComponent="C6F">0.0038</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C7F">0.0048</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C8F">0.0057</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C9F">0.0068</binaryInteractionCoefficient>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>IC4</componentName>
+			<componentBaseKind>2m propane</componentBaseKind>
+			<componentKind>pure</componentKind>
+			<molecularWeight>58.123</molecularWeight>
+			<weightPercent uom="%">2.5</weightPercent>
+			<specificGravity>0.5631</specificGravity>
+			<boilingPoint uom="degF">11.066</boilingPoint>
+			<criticalPressure uom="psi">529.055</criticalPressure>
+			<criticalTemperature uom="degF">274.91</criticalTemperature>
+			<acentricFactor>0.1848</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0934</volumeTranslationFactor>
+			<binaryInteractionCoefficient referenceComponent="C6F">0.0019</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C7F">0.0026</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C8F">0.0032</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C9F">0.0039</binaryInteractionCoefficient>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>NC4</componentName>
+			<componentBaseKind>butane</componentBaseKind>
+			<componentKind>pure</componentKind>
+			<molecularWeight>58.123</molecularWeight>
+			<weightPercent uom="%">2.5</weightPercent>
+			<specificGravity>0.5844</specificGravity>
+			<boilingPoint uom="degF">31.082</boilingPoint>
+			<criticalPressure uom="psi">550.665</criticalPressure>
+			<criticalTemperature uom="degF">305.69</criticalTemperature>
+			<acentricFactor>0.201</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0773</volumeTranslationFactor>
+			<binaryInteractionCoefficient referenceComponent="C6F">0.0016</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C7F">0.0022</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C8F">0.0028</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C9F">0.0036</binaryInteractionCoefficient>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>IC5</componentName>
+			<componentBaseKind>2m butane</componentBaseKind>
+			<componentKind>pure</componentKind>
+			<molecularWeight>72.1498</molecularWeight>
+			<weightPercent uom="%">2.6</weightPercent>
+			<specificGravity>0.6247</specificGravity>
+			<boilingPoint uom="degF">82.112</boilingPoint>
+			<criticalPressure uom="psi">483.498</criticalPressure>
+			<criticalTemperature uom="degF">369305</criticalTemperature>
+			<acentricFactor>0.2223</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.063</volumeTranslationFactor>
+			<binaryInteractionCoefficient referenceComponent="C6F">0.0006</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C7F">0.0009</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C8F">0.0012</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C9F">0.0016</binaryInteractionCoefficient>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>NC5</componentName>
+			<componentBaseKind>pentane</componentBaseKind>
+			<componentKind>pure</componentKind>
+			<molecularWeight>72.1498</molecularWeight>
+			<weightPercent uom="%">2.6</weightPercent>
+			<specificGravity>0.631</specificGravity>
+			<boilingPoint uom="degF">96.926</boilingPoint>
+			<criticalPressure uom="psi">489.532</criticalPressure>
+			<criticalTemperature uom="degF">385.97</criticalTemperature>
+			<acentricFactor>0.2539</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0576</volumeTranslationFactor>
+			<binaryInteractionCoefficient referenceComponent="C6F">0.0003</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C7F">0.0006</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C8F">0.0009</binaryInteractionCoefficient>
+			<binaryInteractionCoefficient referenceComponent="C9F">0.0013</binaryInteractionCoefficient>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>C6F</componentName>
+			<componentBaseKind>hexanes</componentBaseKind>
+			<componentKind>frac</componentKind>
+			<molecularWeight>84</molecularWeight>
+			<weightPercent uom="%">4.1</weightPercent>
+			<specificGravity>0.69</specificGravity>
+			<boilingPoint uom="degF">147.3305</boilingPoint>
+			<criticalPressure uom="psi">487.778</criticalPressure>
+			<criticalTemperature uom="degF">443.1963</criticalTemperature>
+			<acentricFactor>0.2796</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0791</volumeTranslationFactor>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>C7F</componentName>
+			<componentBaseKind>heptanes</componentBaseKind>
+			<componentKind>frac</componentKind>
+			<molecularWeight>96</molecularWeight>
+			<weightPercent uom="%">5.9</weightPercent>
+			<specificGravity>0.727</specificGravity>
+			<boilingPoint uom="degF">198.3305</boilingPoint>
+			<criticalPressure uom="psi">462.015</criticalPressure>
+			<criticalTemperature uom="degF">506.1439</criticalTemperature>
+			<acentricFactor>0.3126</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0544</volumeTranslationFactor>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>C8F</componentName>
+			<componentBaseKind>octanes</componentBaseKind>
+			<componentKind>frac</componentKind>
+			<molecularWeight>107</molecularWeight>
+			<weightPercent uom="%">8.2</weightPercent>
+			<specificGravity>0.749</specificGravity>
+			<boilingPoint uom="degF">242.3306</boilingPoint>
+			<criticalPressure uom="psi">435.371</criticalPressure>
+			<criticalTemperature uom="degF">557.7633</criticalTemperature>
+			<acentricFactor>0.3432</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">0.0236</volumeTranslationFactor>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>C9F</componentName>
+			<componentBaseKind>nonanes</componentBaseKind>
+			<componentKind>frac</componentKind>
+			<molecularWeight>121</molecularWeight>
+			<weightPercent uom="%">6.9</weightPercent>
+			<specificGravity>0.768</specificGravity>
+			<boilingPoint uom="degF">288.3306</boilingPoint>
+			<criticalPressure uom="psi">400.075</criticalPressure>
+			<criticalTemperature uom="degF">607.4674</criticalTemperature>
+			<acentricFactor>0.3801</acentricFactor>
+			<volumeTranslationFactor uom="ft3/mol(lbm)">-0.0234</volumeTranslationFactor>
+		</fluidSampleComposition>
+		<fluidSampleComposition>
+			<isPrimary>false</isPrimary>
+			<componentName>C10+</componentName>
+			<componentKind>plus</componentKind>
+			<molecularWeight>275</molecularWeight>
+			<weightPercent uom="%">16.6</weightPercent>
+			<specificGravity>0.866</specificGravity>
+			<alphaShapeFactor>1.3</alphaShapeFactor>
+			<watsonKExponent>0.3333</watsonKExponent>
+		</fluidSampleComposition>
+		<saturationTest>
+			<testNumber>1</testNumber>
+			<saturationTestStep>
+				<stepNumber>1</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+			</saturationTestStep>
+		</saturationTest>
+		<differentialLiberationTest>
+			<testNumber>2</testNumber>
+			<testTemperature uom="degF">250</testTemperature>
+			<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+			<shrinkageReference>
+				<kind>saturation-measured</kind>
+			</shrinkageReference>
+			<dlTestStep>
+				<stepNumber>1</stepNumber>
+				<stepPressure uom="psi">2036.233</stepPressure>
+				<oilMassDensity uom="lbm/ft3">37.3943</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">2.2706</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000431</oilCompressibility>
+				<oilViscosity uom="cP">0.2307</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">1</oilShrinkageFactor>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">2.2076</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">1475.322</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">0</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">0</cumulativeSaturatedGORStd>
+				<saturated>true</saturated>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>2</stepNumber>
+				<stepPressure uom="psi">1800</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.1945</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">2.1783</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000417</oilCompressibility>
+				<oilViscosity uom="cP">0.249</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.9594</oilShrinkageFactor>
+				<gasMolecularWeight>23.7947</gasMolecularWeight>
+				<gasGravity>0.8289</gasGravity>
+				<gasMassDensity uom="lbm/ft3">6.5067</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.0097</gasFormationVolumeFactorStd>
+				<gasZFactor>0.8643</gasZFactor>
+				<gasViscosity uom="cP">0.0144</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">2.4408</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">1323.151</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">152.1713</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">67.0182</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">53.0255</weightPercent>
+					<molePercent uom="%">78.6485</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">10.5855</weightPercent>
+					<molePercent uom="%">8.3766</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">9.1965</weightPercent>
+					<molePercent uom="%">4.9625</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">3.5371</weightPercent>
+					<molePercent uom="%">1.4481</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">3.1167</weightPercent>
+					<molePercent uom="%">1.2759</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">2.8506</weightPercent>
+					<molePercent uom="%">0.9401</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">2.5944</weightPercent>
+					<molePercent uom="%">0.8556</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.3673</weightPercent>
+					<molePercent uom="%">0.9539</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">3.7823</weightPercent>
+					<molePercent uom="%">0.9375</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">4.1377</weightPercent>
+					<molePercent uom="%">0.92024</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.6868</weightPercent>
+					<molePercent uom="%">0.5284</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">1.1194</weightPercent>
+					<molePercent uom="%">0.1528</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>2.4836</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>1.2762</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>0.7876</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.5601</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.4908</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.3437</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.3121</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.219</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.1487</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.1047</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0712</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>3</stepNumber>
+				<stepPressure uom="psi">1600</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.8699</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">2.1062</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000404</oilCompressibility>
+				<oilViscosity uom="cP">0.266</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.9276</oilShrinkageFactor>
+				<gasMolecularWeight>23.7872</gasMolecularWeight>
+				<gasGravity>0.8287</gasGravity>
+				<gasMassDensity uom="lbm/ft3">5.7488</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.011</gasFormationVolumeFactorStd>
+				<gasZFactor>0.8693</gasZFactor>
+				<gasViscosity uom="cP">0.014</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">2.635</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">1204.392</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">270.93</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">119.321</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">52.7438</weightPercent>
+					<molePercent uom="%">78.2059</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">10.9691</weightPercent>
+					<molePercent uom="%">8.6774</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">9.5467</weightPercent>
+					<molePercent uom="%">5.1499</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">3.6388</weightPercent>
+					<molePercent uom="%">1.4892</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">3.1981</weightPercent>
+					<molePercent uom="%">1.3088</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">2.8791</weightPercent>
+					<molePercent uom="%">0.9492</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">2.6113</weightPercent>
+					<molePercent uom="%">0.8609</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.3489</weightPercent>
+					<molePercent uom="%">0.9484</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">3.6838</weightPercent>
+					<molePercent uom="%">0.9128</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">3.9470</weightPercent>
+					<molePercent uom="%">0.8775</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.5000</weightPercent>
+					<molePercent uom="%">0.4915</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">0.9335</weightPercent>
+					<molePercent uom="%">0.1286</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>2.7426</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>1.3515</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>0.8074</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.5599</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.4871</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.3324</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.3001</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.2068</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.1369</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0941</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0623</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>4</stepNumber>
+				<stepPressure uom="psi">1400</stepPressure>
+				<oilMassDensity uom="lbm/ft3">39.5455</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">2.0386</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000391</oilCompressibility>
+				<oilViscosity uom="cP">0.2847</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.8978</oilShrinkageFactor>
+				<gasMolecularWeight>23.8897</gasMolecularWeight>
+				<gasGravity>0.8323</gasGravity>
+				<gasMassDensity uom="lbm/ft3">5.0163</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.0126</gasFormationVolumeFactorStd>
+				<gasZFactor>0.8755</gasZFactor>
+				<gasViscosity uom="cP">0.0138</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">2.8965</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">1093.439</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">381.8831</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">168.1862</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">52.0368</weightPercent>
+					<molePercent uom="%">77.4900</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">11.4099</weightPercent>
+					<molePercent uom="%">9.0650</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">9.9836</weightPercent>
+					<molePercent uom="%">5.4087</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">3.7746</weightPercent>
+					<molePercent uom="%">1.5514</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">3.3099</weightPercent>
+					<molePercent uom="%">1.3604</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">2.9330</weightPercent>
+					<molePercent uom="%">0.9712</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">2.6512</weightPercent>
+					<molePercent uom="%">0.8778</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.3600</weightPercent>
+					<molePercent uom="%">0.9556</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">3.6182</weightPercent>
+					<molePercent uom="%">0.9004</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">3.7949</weightPercent>
+					<molePercent uom="%">0.8473</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.3430</weightPercent>
+					<molePercent uom="%">0.4626</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">0.7849</weightPercent>
+					<molePercent uom="%">0.1096</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>3.0743</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>1.4523</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>0.8393</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.5673</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.49</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.3255</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.2922</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.1978</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.1276</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0856</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0551</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>5</stepNumber>
+				<stepPressure uom="psi">1200</stepPressure>
+				<oilMassDensity uom="lbm/ft3">40.2239</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.9747</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000378</oilCompressibility>
+				<oilViscosity uom="cP">0.3053</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.8697</oilShrinkageFactor>
+				<gasMolecularWeight>24.139</gasMolecularWeight>
+				<gasGravity>0.841</gasGravity>
+				<gasMassDensity uom="lbm/ft3">4.3087</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.0148</gasFormationVolumeFactorStd>
+				<gasZFactor>0.8827</gasZFactor>
+				<gasViscosity uom="cP">0.0135</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">3.2598</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">989.1224</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">486.1996</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">214.1284</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">50.7703</weightPercent>
+					<molePercent uom="%">76.3931</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">11.9250</weightPercent>
+					<molePercent uom="%">9.5731</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">10.5425</weightPercent>
+					<molePercent uom="%">5.7711</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">3.9595</weightPercent>
+					<molePercent uom="%">1.6444</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">3.4659</weightPercent>
+					<molePercent uom="%">1.4394</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">3.0239</weightPercent>
+					<molePercent uom="%">1.0117</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">2.7243</weightPercent>
+					<molePercent uom="%">0.9115</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.4126</weightPercent>
+					<molePercent uom="%">0.9807</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.5966</weightPercent>
+					<molePercent uom="%">0.9044</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">3.6913</weightPercent>
+					<molePercent uom="%">0.8328</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.2202</weightPercent>
+					<molePercent uom="%">0.4429</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">0.6678</weightPercent>
+					<molePercent uom="%">0.0950</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>3.5152</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>1.5913</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>0.8893</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.5855</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.5020</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.3246</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.2897</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.1925</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.1210</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0792</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0496</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>6</stepNumber>
+				<stepPressure uom="psi">1000</stepPressure>
+				<oilMassDensity uom="lbm/ft3">40.9085</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.9136</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000365</oilCompressibility>
+				<oilViscosity uom="cP">0.3283</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.8428</oilShrinkageFactor>
+				<gasMolecularWeight>24.6015</gasMolecularWeight>
+				<gasGravity>0.8573</gasGravity>
+				<gasMassDensity uom="lbm/ft3">3.625</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.018</gasFormationVolumeFactorStd>
+				<gasZFactor>0.8911</gasZFactor>
+				<gasViscosity uom="cP">0.0133</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">3.7871</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">890.2961</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">585.026</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">257.6528</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">48.7318</weightPercent>
+					<molePercent uom="%">74.7309</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">12.5345</weightPercent>
+					<molePercent uom="%">10.2552</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">11.2778</weightPercent>
+					<molePercent uom="%">6.2919</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">4.2178</weightPercent>
+					<molePercent uom="%">1.7852</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">3.6880</weightPercent>
+					<molePercent uom="%">1.5610</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">3.1702</weightPercent>
+					<molePercent uom="%">1.0810</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">2.8474</weightPercent>
+					<molePercent uom="%">0.9709</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.5269</weightPercent>
+					<molePercent uom="%">1.0329</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">3.6375</weightPercent>
+					<molePercent uom="%">0.9322</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">3.6518</weightPercent>
+					<molePercent uom="%">0.8396</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.1384</weightPercent>
+					<molePercent uom="%">0.4348</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">0.5780</weightPercent>
+					<molePercent uom="%">0.0844</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>4.1309</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>1.7915</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>0.9675</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.6201</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.5279</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.3319</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.2946</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.1923</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.1176</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0751</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0457</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>7</stepNumber>
+				<stepPressure uom="psi">750</stepPressure>
+				<oilMassDensity uom="lbm/ft3">40.9085</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.839</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000347</oilCompressibility>
+				<oilViscosity uom="cP">0.3617</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.8009</oilShrinkageFactor>
+				<gasMolecularWeight>25.68</gasMolecularWeight>
+				<gasGravity>0.8954</gasGravity>
+				<gasMassDensity uom="lbm/ft3">2.8004</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.0243</gasFormationVolumeFactorStd>
+				<gasZFactor>0.903</gasZFactor>
+				<gasViscosity uom="cP">0.013</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">4.8845</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">771.8711</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">703.4509</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">309.8087</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">44.5717</weightPercent>
+					<molePercent uom="%">71.3477</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">13.4289</weightPercent>
+					<molePercent uom="%">11.4686</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">12.5692</weightPercent>
+					<molePercent uom="%">7.3199</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">4.7073</weightPercent>
+					<molePercent uom="%">2.0798</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">4.1177</weightPercent>
+					<molePercent uom="%">1.8193</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">3.4843</weightPercent>
+					<molePercent uom="%">1.2404</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">3.1193</weightPercent>
+					<molePercent uom="%">1.1102</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.8144</weightPercent>
+					<molePercent uom="%">1.1661</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">3.8303</weightPercent>
+					<molePercent uom="%">1.0246</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">3.7400</weightPercent>
+					<molePercent uom="%">0.8976</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.1164</weightPercent>
+					<molePercent uom="%">0.4492</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">0.5006</weightPercent>
+					<molePercent uom="%">0.0769</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>5.3606</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>2.2018</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>1.1384</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.7048</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.5947</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.3607</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.3180</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.2028</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.1199</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0742</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0435</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>8</stepNumber>
+				<stepPressure uom="psi">500</stepPressure>
+				<oilMassDensity uom="lbm/ft3">42.7184</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.7628</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000328</oilCompressibility>
+				<oilViscosity uom="cP">0.4026</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.7764</oilShrinkageFactor>
+				<gasMolecularWeight>27.9674</gasMolecularWeight>
+				<gasGravity>0.9762</gasGravity>
+				<gasMassDensity uom="lbm/ft3">2.0035</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.037</gasFormationVolumeFactorStd>
+				<gasZFactor>0.9164</gasZFactor>
+				<gasViscosity uom="cP">0.0126</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">7.1728</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">655.3498</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">819.9722</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">361.1261</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">37.2358</weightPercent>
+					<molePercent uom="%">64.9140</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">14.4147</weightPercent>
+					<molePercent uom="%">13.4072</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">14.5784</weightPercent>
+					<molePercent uom="%">9.2462</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">5.5519</weightPercent>
+					<molePercent uom="%">2.6714</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">4.8773</weightPercent>
+					<molePercent uom="%">2.3468</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">4.0915</weightPercent>
+					<molePercent uom="%">1.5860</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">3.6558</weightPercent>
+					<molePercent uom="%">1.4717</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">4.4268</weightPercent>
+					<molePercent uom="%">1.4739</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">4.3346</weightPercent>
+					<molePercent uom="%">1.2628</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">4.1173</weightPercent>
+					<molePercent uom="%">1.0762</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.2502</weightPercent>
+					<molePercent uom="%">0.5201</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">0.4656</weightPercent>
+					<molePercent uom="%">0.0784</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>7.8173</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>3.0377</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>1.5018</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.8971</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.7502</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.4384</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.3838</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.2391</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.1365</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0817</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0461</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>9</stepNumber>
+				<stepPressure uom="psi">250</stepPressure>
+				<oilMassDensity uom="lbm/ft3">43.8339</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.6698</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000303</oilCompressibility>
+				<oilViscosity uom="cP">0.4601</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.7354</oilShrinkageFactor>
+				<gasMolecularWeight>34.268</gasMolecularWeight>
+				<gasGravity>1.2002</gasGravity>
+				<gasMassDensity uom="lbm/ft3">1.2076</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">0.0756</gasFormationVolumeFactorStd>
+				<gasZFactor>0.9315</gasZFactor>
+				<gasViscosity uom="cP">0.0118</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">14.4547</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">525.3525</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">949.9695</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">418.3786</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">23.2417</weightPercent>
+					<molePercent uom="%">49.6458</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">14.4154</weightPercent>
+					<molePercent uom="%">16.4282</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">17.6786</weightPercent>
+					<molePercent uom="%">13.7384</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">7.2233</weightPercent>
+					<molePercent uom="%">4.2587</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">6.4595</weightPercent>
+					<molePercent uom="%">3.8084</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">5.5271</weightPercent>
+					<molePercent uom="%">2.6251</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">4.9536</weightPercent>
+					<molePercent uom="%">2.3527</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">6.0126</weightPercent>
+					<molePercent uom="%">2.4528</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">5.7851</weightPercent>
+					<molePercent uom="%">2.0651</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">5.3612</weightPercent>
+					<molePercent uom="%">1.7170</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">2.8310</weightPercent>
+					<molePercent uom="%">0.8018</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">0.5108</weightPercent>
+					<molePercent uom="%">0.1061</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>15.1943</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>5.5692</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>2.6252</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>1.5092</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>1.2505</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.7022</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.6102</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.3707</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.2039</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.1178</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0639</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>10</stepNumber>
+				<stepPressure uom="psi">14.696</stepPressure>
+				<oilMassDensity uom="lbm/ft3">48.5734</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.0834</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.0000204</oilCompressibility>
+				<oilViscosity uom="cP">0.9459</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.4771</oilShrinkageFactor>
+				<gasMolecularWeight>79.0975</gasMolecularWeight>
+				<gasGravity>2.8914</gasGravity>
+				<gasMassDensity uom="lbm/ft3">0.156</gasMassDensity>
+				<gasFormationVolumeFactorStd uom="ft3/ft3">1.4094</gasFormationVolumeFactorStd>
+				<gasZFactor>0.9785</gasZFactor>
+				<gasViscosity uom="cP">0.009</gasViscosity>
+				<totalFormationVolumeFactorStd uom="bbl/bbl">371.4165</totalFormationVolumeFactorStd>
+				<solutionGORStd uom="ft3/bbl">0</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">1475.322</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">649.7505</cumulativeSaturatedGORStd>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">1.2850</weightPercent>
+					<molePercent uom="%">6.3357</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">2.1594</weightPercent>
+					<molePercent uom="%">5.6803</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">5.5443</weightPercent>
+					<molePercent uom="%">9.9452</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">3.8646</weightPercent>
+					<molePercent uom="%">5.2591</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">4.1330</weightPercent>
+					<molePercent uom="%">5.6244</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">6.0246</weightPercent>
+					<molePercent uom="%">6.6048</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">6.1235</weightPercent>
+					<molePercent uom="%">6.7132</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">11.3787</weightPercent>
+					<molePercent uom="%">10.7146</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">17.2782</weightPercent>
+					<molePercent uom="%">14.2361</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">22.6210</weightPercent>
+					<molePercent uom="%">16.7221</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">15.8660</weightPercent>
+					<molePercent uom="%">10.3715</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">3.7218</weightPercent>
+					<molePercent uom="%">1.7930</molePercent>
+				</vaporComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>260.3692</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>88.8396</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>39.3064</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>21.4105</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>17.5931</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>9.3130</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>8.0330</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>4.6874</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>2.4612</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>1.3600</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.6981</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</dlTestStep>
+			<dlTestStep>
+				<stepNumber>1</stepNumber>
+				<stepPressure uom="psi">14.696</stepPressure>
+				<oilMassDensity uom="lbm/ft3">52.6232</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.0</oilFormationVolumeFactorStd>
+				<oilCompressibility uom="1/psi">.00000757</oilCompressibility>
+				<oilViscosity uom="cP">7.5642</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.4404</oilShrinkageFactor>
+				<solutionGORStd uom="ft3/bbl">0</solutionGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">1475.322</cumulativeStockTankGORStd>
+				<cumulativeSaturatedGORStd uom="ft3/bbl">649.7505</cumulativeSaturatedGORStd>
+				<residualAPIGravity uom="dAPI">36.136</residualAPIGravity>
+				<stockTank>
+					<temperature uom="degF">60</temperature>
+				</stockTank>
+				<liquidComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">0.0018</weightPercent>
+					<molePercent uom="%">0.0243</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">0.0090</weightPercent>
+					<molePercent uom="%">0.0639</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">0.0522</weightPercent>
+					<molePercent uom="%">0.2530</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">0.0668</weightPercent>
+					<molePercent uom="%">0.2456</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">0.0869</weightPercent>
+					<molePercent uom="%">0.3197</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">0.2392</weightPercent>
+					<molePercent uom="%">0.7092</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">0.2819</weightPercent>
+					<molePercent uom="%">0.8357</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">0.8977</weightPercent>
+					<molePercent uom="%">2.2858</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">2.5961</weightPercent>
+					<molePercent uom="%">5.7841</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">6.1511</weightPercent>
+					<molePercent uom="%">12.2954</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">8.4054</weightPercent>
+					<molePercent uom="%">14.8576</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">81.2119</weightPercent>
+					<molePercent uom="%">62.3255</molePercent>
+				</liquidComposition>
+			</dlTestStep>
+		</differentialLiberationTest>
+		<constantCompositionExpansionTest>
+			<testNumber>3</testNumber>
+			<testTemperature uom="degF">250</testTemperature>
+			<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+			<relativeVolumeReference>
+				<kind>saturation-measured</kind>
+			</relativeVolumeReference>
+			<cceTestStep>
+				<stepNumber>1</stepNumber>
+				<stepPressure uom="psi">4000</stepPressure>
+				<oilMassDensity uom="lbm/ft3">39.8507</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000247</oilCompressibility>
+				<oilViscosity uom="cP">0.278</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9384</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>2</stepNumber>
+				<stepPressure uom="psi">3500</stepPressure>
+				<oilMassDensity uom="lbm/ft3">39.331</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000279</oilCompressibility>
+				<oilViscosity uom="cP">0.2662</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9508</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>3</stepNumber>
+				<stepPressure uom="psi">3000</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.7499</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000318</oilCompressibility>
+				<oilViscosity uom="cP">0.2542</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.965</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>4</stepNumber>
+				<stepPressure uom="psi">2800</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.4971</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000337</oilCompressibility>
+				<oilViscosity uom="cP">0.2494</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9714</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>5</stepNumber>
+				<stepPressure uom="psi">2600</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.2308</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000358</oilCompressibility>
+				<oilViscosity uom="cP">0.2445</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9781</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>6</stepNumber>
+				<stepPressure uom="psi">2500</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.0921</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000369</oilCompressibility>
+				<oilViscosity uom="cP">0.2421</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9817</relativeVolumeRatio>
+				<reservoir>true</reservoir>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>7</stepNumber>
+				<stepPressure uom="psi">2400</stepPressure>
+				<oilMassDensity uom="lbm/ft3">37.9496</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000381</oilCompressibility>
+				<oilViscosity uom="cP">0.2397</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9854</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>8</stepNumber>
+				<stepPressure uom="psi">2300</stepPressure>
+				<oilMassDensity uom="lbm/ft3">37.8029</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000394</oilCompressibility>
+				<oilViscosity uom="cP">0.2372</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9892</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>9</stepNumber>
+				<stepPressure uom="psi">2200</stepPressure>
+				<oilMassDensity uom="lbm/ft3">37.6519</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000407</oilCompressibility>
+				<oilViscosity uom="cP">0.2348</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9932</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>10</stepNumber>
+				<stepPressure uom="psi">2100</stepPressure>
+				<oilMassDensity uom="lbm/ft3">37.4962</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000422</oilCompressibility>
+				<oilViscosity uom="cP">0.2323</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">0.9973</relativeVolumeRatio>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>11</stepNumber>
+				<stepPressure uom="psi">2036.233</stepPressure>
+				<oilMassDensity uom="lbm/ft3">37.3943</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000431</oilCompressibility>
+				<oilViscosity uom="cP">0.2307</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.0</relativeVolumeRatio>
+				<saturated>true</saturated>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>12</stepNumber>
+				<stepPressure uom="psi">1900</stepPressure>
+				<oilMassDensity uom="lbm/ft3">37.8555</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000423</oilCompressibility>
+				<oilViscosity uom="cP">0.2411</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.0403</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">6.896</gasMassDensity>
+				<gasZFactor>0.8622</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0005</gasCompressibility>
+				<gasViscosity uom="cP">0.0146</gasViscosity>
+				<yFactor>1.7788</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>13</stepNumber>
+				<stepPressure uom="psi">1800</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.1945</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000417</oilCompressibility>
+				<oilViscosity uom="cP">0.249</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.075</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">6.5067</gasMassDensity>
+				<gasZFactor>0.8643</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0006</gasCompressibility>
+				<gasViscosity uom="cP">0.0144</gasViscosity>
+				<yFactor>1.7507</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>14</stepNumber>
+				<stepPressure uom="psi">1700</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.5345</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.000041</oilCompressibility>
+				<oilViscosity uom="cP">0.2574</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.1148</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">6.1232</gasMassDensity>
+				<gasZFactor>0.8667</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0006</gasCompressibility>
+				<gasViscosity uom="cP">0.0142</gasViscosity>
+				<yFactor>1.7226</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>15</stepNumber>
+				<stepPressure uom="psi">1600</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.8762</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000404</oilCompressibility>
+				<oilViscosity uom="cP">0.2662</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.1609</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">5.7453</gasMassDensity>
+				<gasZFactor>0.8695</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0007</gasCompressibility>
+				<gasViscosity uom="cP">0.014</gasViscosity>
+				<yFactor>1.6943</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>16</stepNumber>
+				<stepPressure uom="psi">1400</stepPressure>
+				<oilMassDensity uom="lbm/ft3">38.5672</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.000039</oilCompressibility>
+				<oilViscosity uom="cP">0.2852</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.2776</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">5.0059</gasMassDensity>
+				<gasZFactor>0.876</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0008</gasCompressibility>
+				<gasViscosity uom="cP">0.0138</gasViscosity>
+				<yFactor>1.6369</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>17</stepNumber>
+				<stepPressure uom="psi">1200</stepPressure>
+				<oilMassDensity uom="lbm/ft3">40.275</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000376</oilCompressibility>
+				<oilViscosity uom="cP">0.3067</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.4417</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">4.2874</gasMassDensity>
+				<gasZFactor>0.884</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0009</gasCompressibility>
+				<gasViscosity uom="cP">0.0135</gasViscosity>
+				<yFactor>1.5778</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>18</stepNumber>
+				<stepPressure uom="psi">1000</stepPressure>
+				<oilMassDensity uom="lbm/ft3">41.0103</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000361</oilCompressibility>
+				<oilViscosity uom="cP">0.3315</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">1.6837</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">3.5881</gasMassDensity>
+				<gasZFactor>0.8934</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0011</gasCompressibility>
+				<gasViscosity uom="cP">0.0133</gasViscosity>
+				<yFactor>1.5157</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>19</stepNumber>
+				<stepPressure uom="psi">800</stepPressure>
+				<oilMassDensity uom="lbm/ft3">41.7913</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000345</oilCompressibility>
+				<oilViscosity uom="cP">0.361</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">2.0668</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">2.9054</gasMassDensity>
+				<gasZFactor>0.9046</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0014</gasCompressibility>
+				<gasViscosity uom="cP">0.0131</gasViscosity>
+				<yFactor>1.4485</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>20</stepNumber>
+				<stepPressure uom="psi">600</stepPressure>
+				<oilMassDensity uom="lbm/ft3">42.6525</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000326</oilCompressibility>
+				<oilViscosity uom="cP">0.3981</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">2.7446</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">2.2348</gasMassDensity>
+				<gasZFactor>0.9177</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0018</gasCompressibility>
+				<gasViscosity uom="cP">0.0129</gasViscosity>
+				<yFactor>1.3721</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>21</stepNumber>
+				<stepPressure uom="psi">500</stepPressure>
+				<oilMassDensity uom="lbm/ft3">43.1344</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000315</oilCompressibility>
+				<oilViscosity uom="cP">0.4212</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">3.3135</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">1.9015</gasMassDensity>
+				<gasZFactor>0.9252</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0021</gasCompressibility>
+				<gasViscosity uom="cP">0.0127</gasViscosity>
+				<yFactor>1.3281</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>22</stepNumber>
+				<stepPressure uom="psi">400</stepPressure>
+				<oilMassDensity uom="lbm/ft3">43.674</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000303</oilCompressibility>
+				<oilViscosity uom="cP">0.4495</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">4.2018</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">1.5673</gasMassDensity>
+				<gasZFactor>0.9335</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0027</gasCompressibility>
+				<gasViscosity uom="cP">0.0126</gasViscosity>
+				<yFactor>1.2776</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>23</stepNumber>
+				<stepPressure uom="psi">300</stepPressure>
+				<oilMassDensity uom="lbm/ft3">44.3089</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000289</oilCompressibility>
+				<oilViscosity uom="cP">0.4866</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">5.756</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">1.2288</gasMassDensity>
+				<gasZFactor>0.9429</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0035</gasCompressibility>
+				<gasViscosity uom="cP">0.0124</gasViscosity>
+				<yFactor>1.2169</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>24</stepNumber>
+				<stepPressure uom="psi">200</stepPressure>
+				<oilMassDensity uom="lbm/ft3">45.1288</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.000027</oilCompressibility>
+				<oilViscosity uom="cP">0.5433</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">9.0716</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">0.8801</gasMassDensity>
+				<gasZFactor>0.9539</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0052</gasCompressibility>
+				<gasViscosity uom="cP">0.012</gasViscosity>
+				<yFactor>1.1375</yFactor>
+			</cceTestStep>
+			<cceTestStep>
+				<stepNumber>25</stepNumber>
+				<stepPressure uom="psi">100</stepPressure>
+				<oilMassDensity uom="lbm/ft3">46.4533</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000243</oilCompressibility>
+				<oilViscosity uom="cP">0.658</oilViscosity>
+				<relativeVolumeRatio uom="bbl/bbl">20.0962</relativeVolumeRatio>
+				<gasMassDensity uom="lbm/ft3">0.5048</gasMassDensity>
+				<gasZFactor>0.9682</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0103</gasCompressibility>
+				<gasViscosity uom="cP">0.0115</gasViscosity>
+				<yFactor>1.0139</yFactor>
+			</cceTestStep>
+		</constantCompositionExpansionTest>
+		<separatorTest>
+			<testNumber>4</testNumber>
+			<shrinkageReference>
+				<kind>initial reservoir</kind>
+			</shrinkageReference>
+			<separatorTestStep>
+				<stepNumber>1</stepNumber>
+				<stepTemperature uom="degF">60</stepTemperature>
+				<stepPressure uom="psi">14.696</stepPressure>
+				<bubblePointPressure uom="psi">1336.7835</bubblePointPressure>
+				<oilSpecificGravity>0.8057</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">50.2309</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.0</oilFormationVolumeFactorStd>
+				<oilViscosity uom="cP">2.6697</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.6286</oilShrinkageFactor>
+				<stageSeparatorGORStd uom="ft3/bbl">786.7916</stageSeparatorGORStd>
+				<correctedStageSeparatorGORStd uom="ft3/bbl">786.7916</correctedStageSeparatorGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">786.7916</cumulativeStockTankGORStd>
+				<solutionGORStd uom="ft3/bbl">0</solutionGORStd>
+				<gasMolecularWeight>27.8825</gasMolecularWeight>
+				<gasGravity>0.9732</gasGravity>
+				<gasMassDensity uom="lbm/ft3">0.074</gasMassDensity>
+				<gasZFactor>0.993</gasZFactor>
+				<gasViscosity uom="cP">0.0094</gasViscosity>
+				<residualAPIGravity uom="dAPI">44.1219</residualAPIGravity>
+				<stockTank/>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<molePercent uom="%">84.2106</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<molePercent uom="%">11.9414</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<molePercent uom="%">10.2271</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<molePercent uom="%">3.5193</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<molePercent uom="%">3.2054</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<molePercent uom="%">2.1698</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<molePercent uom="%">1.8171</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<molePercent uom="%">1.4976</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<molePercent uom="%">0.8356</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<molePercent uom="%">0.4482</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<molePercent uom="%">0.1247</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<molePercent uom="%">0.0033</molePercent>
+				</vaporComposition>
+				<liquidComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">0.0342</weightPercent>
+					<molePercent uom="%">0.3456</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">0.0746</weightPercent>
+					<molePercent uom="%">0.4028</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">0.3700</weightPercent>
+					<molePercent uom="%">1.3617</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">0.4568</weightPercent>
+					<molePercent uom="%">1.2753</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">0.5918</weightPercent>
+					<molePercent uom="%">1.6525</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">1.3857</weightPercent>
+					<molePercent uom="%">3.1169</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">1.5741</weightPercent>
+					<molePercent uom="%">3.5406</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.7405</weightPercent>
+					<molePercent uom="%">7.2266</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">7.0895</weightPercent>
+					<molePercent uom="%">11.9845</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">11.5472</weightPercent>
+					<molePercent uom="%">17.5134</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">11.214</weightPercent>
+					<molePercent uom="%">15.0414</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">61.9216</weightPercent>
+					<molePercent uom="%">36.5400</molePercent>
+				</liquidComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>185.7853</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>29.6493</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>7.5104</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>2.7595</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>1.9398</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.6961</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.5132</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.2072</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.0697</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0256</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0083</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</separatorTestStep>
+		</separatorTest>
+		<separatorTest>
+			<testNumber>5</testNumber>
+			<shrinkageReference>
+				<kind>initial reservoir</kind>
+			</shrinkageReference>
+			<separatorTestStep>
+				<stepNumber>1</stepNumber>
+				<stepTemperature uom="degF">100</stepTemperature>
+				<stepPressure uom="psi">1000</stepPressure>
+				<bubblePointPressure uom="psi">1533.6856</bubblePointPressure>
+				<oilSpecificGravity>0.7063</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">44.0334</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.304</oilFormationVolumeFactorStd>
+				<oilViscosity uom="cP">0.6004</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.8351</oilShrinkageFactor>
+				<stageSeparatorGORStd uom="ft3/bbl">117.9998</stageSeparatorGORStd>
+				<correctedStageSeparatorGORStd uom="ft3/bbl">232.1105</correctedStageSeparatorGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">232.1105</cumulativeStockTankGORStd>
+				<solutionGORStd uom="ft3/bbl">518.3647</solutionGORStd>
+				<gasMolecularWeight>18.8487</gasMolecularWeight>
+				<gasGravity>0.6554</gasGravity>
+				<gasMassDensity uom="lbm/ft3">3.6954</gasMassDensity>
+				<gasZFactor>0.8492</gasZFactor>
+				<gasViscosity uom="cP">0.0116</gasViscosity>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<molePercent uom="%">88.4112</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<molePercent uom="%">6.7935</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<molePercent uom="%">2.7987</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<molePercent uom="%">0.6131</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<molePercent uom="%">0.4810</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<molePercent uom="%">0.2619</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<molePercent uom="%">0.2133</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<molePercent uom="%">0.1773</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<molePercent uom="%">0.1233</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<molePercent uom="%">0.0881</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<molePercent uom="%">0.0355</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<molePercent uom="%">0.0031</molePercent>
+				</vaporComposition>
+				<liquidComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">3.8778</weightPercent>
+					<molePercent uom="%">24.8062</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">1.9578</weightPercent>
+					<molePercent uom="%">6.6817</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">2.9495</weightPercent>
+					<molePercent uom="%">6.8644</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">1.6247</weightPercent>
+					<molePercent uom="%">2.8686</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">1.6393</weightPercent>
+					<molePercent uom="%">2.8944</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">2.1490</weightPercent>
+					<molePercent uom="%">3.0567</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">2.1557</weightPercent>
+					<molePercent uom="%">3.0662</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.9831</weightPercent>
+					<molePercent uom="%">4.8662</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">6.5747</weightPercent>
+					<molePercent uom="%">7.0284</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">10.2017</weightPercent>
+					<molePercent uom="%">9.7845</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">9.7164</weightPercent>
+					<molePercent uom="%">8.2409</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">53.1704</weightPercent>
+					<molePercent uom="%">19.8419</molePercent>
+				</liquidComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>3.5641</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>1.0167</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>0.4077</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>0.2137</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>0.1662</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.0857</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.0696</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.0364</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.0175</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0090</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0043</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</separatorTestStep>
+			<separatorTestStep>
+				<stepNumber>2</stepNumber>
+				<stepTemperature uom="degF">60</stepTemperature>
+				<stepPressure uom="psi">14.696</stepPressure>
+				<bubblePointPressure uom="psi">863.9626</bubblePointPressure>
+				<oilSpecificGravity>0.8026</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">50.0272</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.0</oilFormationVolumeFactorStd>
+				<oilViscosity uom="cP">2.5128</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.6404</oilShrinkageFactor>
+				<stageSeparatorGORStd uom="ft3/bbl">518.3647</stageSeparatorGORStd>
+				<correctedStageSeparatorGORStd uom="ft3/bbl">518.3647</correctedStageSeparatorGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">232.1105</cumulativeStockTankGORStd>
+				<solutionGORStd uom="ft3/bbl">0</solutionGORStd>
+				<gasMolecularWeight>30.1346</gasMolecularWeight>
+				<gasGravity>1.0531</gasGravity>
+				<gasMassDensity uom="lbm/ft3">0.0801</gasMassDensity>
+				<gasZFactor>0.9918</gasZFactor>
+				<gasViscosity uom="cP">0.0092</gasViscosity>
+				<residualAPIGravity uom="dAPI">44.8368</residualAPIGravity>
+				<stockTank/>
+				<vaporComposition>
+					<componentName>C1</componentName>
+					<molePercent uom="%">56.1924</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C2</componentName>
+					<molePercent uom="%">14.6077</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C3</componentName>
+					<molePercent uom="%">13.3716</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC4</componentName>
+					<molePercent uom="%">4.4666</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC4</componentName>
+					<molePercent uom="%">3.9735</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>IC5</componentName>
+					<molePercent uom="%">2.4537</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>NC5</componentName>
+					<molePercent uom="%">1.9993</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C6F</componentName>
+					<molePercent uom="%">1.5458</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C7F</componentName>
+					<molePercent uom="%">0.8278</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C8F</componentName>
+					<molePercent uom="%">0.4373</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C9F</componentName>
+					<molePercent uom="%">0.1210</molePercent>
+				</vaporComposition>
+				<vaporComposition>
+					<componentName>C10+</componentName>
+					<molePercent uom="%">0.0032</molePercent>
+				</vaporComposition>
+				<liquidComposition>
+					<componentName>C1</componentName>
+					<weightPercent uom="%">0.0306</weightPercent>
+					<molePercent uom="%">0.3034</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C2</componentName>
+					<weightPercent uom="%">0.0933</weightPercent>
+					<molePercent uom="%">0.4941</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C3</componentName>
+					<weightPercent uom="%">0.4942</weightPercent>
+					<molePercent uom="%">1.7843</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC4</componentName>
+					<weightPercent uom="%">0.5918</weightPercent>
+					<molePercent uom="%">1.6210</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC4</componentName>
+					<weightPercent uom="%">0.7491</weightPercent>
+					<molePercent uom="%">2.0519</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>IC5</componentName>
+					<weightPercent uom="%">1.5987</weightPercent>
+					<molePercent uom="%">3.5274</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>NC5</componentName>
+					<weightPercent uom="%">1.7669</weightPercent>
+					<molePercent uom="%">3.8991</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C6F</componentName>
+					<weightPercent uom="%">3.9350</weightPercent>
+					<molePercent uom="%">7.4585</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C7F</componentName>
+					<weightPercent uom="%">7.1565</weightPercent>
+					<molePercent uom="%">11.8691</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C8F</componentName>
+					<weightPercent uom="%">11.4796</weightPercent>
+					<molePercent uom="%">17.0817</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C9F</componentName>
+					<weightPercent uom="%">11.0803</weightPercent>
+					<molePercent uom="%">14.5799</molePercent>
+				</liquidComposition>
+				<liquidComposition>
+					<componentName>C10+</componentName>
+					<weightPercent uom="%">61.0243</weightPercent>
+					<molePercent uom="%">35.3297</molePercent>
+				</liquidComposition>
+				<compositeComposition>
+					<componentName>C1</componentName>
+					<kValue>185.1983</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C2</componentName>
+					<kValue>29.5666</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C3</componentName>
+					<kValue>7.4941</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC4</componentName>
+					<kValue>2.7554</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC4</componentName>
+					<kValue>1.9365</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>IC5</componentName>
+					<kValue>0.6956</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>NC5</componentName>
+					<kValue>0.5128</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C6F</componentName>
+					<kValue>0.2073</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C7F</componentName>
+					<kValue>0.0697</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C8F</componentName>
+					<kValue>0.0256</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C9F</componentName>
+					<kValue>0.0083</kValue>
+				</compositeComposition>
+				<compositeComposition>
+					<componentName>C10+</componentName>
+					<kValue>0</kValue>
+				</compositeComposition>
+			</separatorTestStep>
+		</separatorTest>
+		<separatorTest>
+			<testNumber>6</testNumber>
+			<shrinkageReference>
+				<kind>initial reservoir</kind>
+			</shrinkageReference>
+			<separatorTestStep>
+				<stepNumber>1</stepNumber>
+				<stepTemperature uom="degF">100</stepTemperature>
+				<stepPressure uom="psi">1000</stepPressure>
+				<bubblePointPressure uom="psi">1533.6856</bubblePointPressure>
+				<oilSpecificGravity>0.7063</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">44.0334</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.2742</oilFormationVolumeFactorStd>
+				<oilViscosity uom="cP">0.6004</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.8351</oilShrinkageFactor>
+				<stageSeparatorGORStd uom="ft3/bbl">117.9998</stageSeparatorGORStd>
+				<correctedStageSeparatorGORStd uom="ft3/bbl">226.8037</correctedStageSeparatorGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">226.8037</cumulativeStockTankGORStd>
+				<solutionGORStd uom="ft3/bbl">478.5783</solutionGORStd>
+				<gasMolecularWeight>18.8487</gasMolecularWeight>
+				<gasGravity>0.6554</gasGravity>
+				<gasMassDensity uom="lbm/ft3">3.6954</gasMassDensity>
+				<gasZFactor>0.8492</gasZFactor>
+				<gasViscosity uom="cP">0.0116</gasViscosity>
+			</separatorTestStep>
+			<separatorTestStep>
+				<stepNumber>2</stepNumber>
+				<stepTemperature uom="degF">100</stepTemperature>
+				<stepPressure uom="psi">500</stepPressure>
+				<bubblePointPressure uom="psi">1000.0022</bubblePointPressure>
+				<oilSpecificGravity>0.7355</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">45.8556</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.1841</oilFormationVolumeFactorStd>
+				<oilViscosity uom="cP">0.8136</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.7761</oilShrinkageFactor>
+				<stageSeparatorGORStd uom="ft3/bbl">164.1802</stageSeparatorGORStd>
+				<correctedStageSeparatorGORStd uom="ft3/bbl">194.4113</correctedStageSeparatorGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">421.2151</cumulativeStockTankGORStd>
+				<solutionGORStd uom="ft3/bbl">284.167</solutionGORStd>
+				<gasMolecularWeight>19.736</gasMolecularWeight>
+				<gasGravity>0.6865</gasGravity>
+				<gasMassDensity uom="lbm/ft3">1.8089</gasMassDensity>
+				<gasZFactor>0.9083</gasZFactor>
+				<gasViscosity uom="cP">0.0112</gasViscosity>
+			</separatorTestStep>
+			<separatorTestStep>
+				<stepNumber>3</stepNumber>
+				<stepTemperature uom="degF">60</stepTemperature>
+				<stepPressure uom="psi">14.696</stepPressure>
+				<bubblePointPressure uom="psi">425.5635</bubblePointPressure>
+				<oilSpecificGravity>0.7981</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">49.7566</oilMassDensity>
+				<oilFormationVolumeFactorStd uom="bbl/bbl">1.0</oilFormationVolumeFactorStd>
+				<oilViscosity uom="cP">2.3281</oilViscosity>
+				<oilShrinkageFactor uom="bbl/bbl">0.6554</oilShrinkageFactor>
+				<stageSeparatorGORStd uom="ft3/bbl">284.167</stageSeparatorGORStd>
+				<correctedStageSeparatorGORStd uom="ft3/bbl">284.167</correctedStageSeparatorGORStd>
+				<cumulativeStockTankGORStd uom="ft3/bbl">705.382</cumulativeStockTankGORStd>
+				<solutionGORStd uom="ft3/bbl">0</solutionGORStd>
+				<gasMolecularWeight>33.7091</gasMolecularWeight>
+				<gasGravity>1.1805</gasGravity>
+				<gasMassDensity uom="lbm/ft3">0.0898</gasMassDensity>
+				<gasZFactor>0.9897</gasZFactor>
+				<gasViscosity uom="cP">0.0088</gasViscosity>
+				<residualAPIGravity uom="dAPI">45.7958</residualAPIGravity>
+				<stockTank/>
+			</separatorTestStep>
+		</separatorTest>
+		<transportPropertiesTest>
+			<testNumber>7</testNumber>
+			<transportTestStep>
+				<stepNumber>1</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">3000</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.6216</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">38.7499</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000318</oilCompressibility>
+				<oilViscosity uom="cP">0.2542</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0644</oilThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>2</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2800</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.6175</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">38.4971</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000337</oilCompressibility>
+				<oilViscosity uom="cP">0.2494</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0639</oilThermalConductivity>
+			</transportTestStep>
+			<transportTestStep >
+				<stepNumber>3</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2600</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.6132</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">38.2308</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000358</oilCompressibility>
+				<oilViscosity uom="cP">0.2445</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0635</oilThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>4</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2500</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.611</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">38.0921</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000369</oilCompressibility>
+				<oilViscosity uom="cP">0.2421</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0632</oilThermalConductivity>
+				<reservoir>true</reservoir>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>5</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2400</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.6087</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">37.9496</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000381</oilCompressibility>
+				<oilViscosity uom="cP">0.2397</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0629</oilThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>6</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2300</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.6064</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">37.8029</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000394</oilCompressibility>
+				<oilViscosity uom="cP">0.2372</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0626</oilThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>7</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2200</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.6039</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">37.6519</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000407</oilCompressibility>
+				<oilViscosity uom="cP">0.2348</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0623</oilThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>8</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2100</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.083</cloudPoint>
+				<pourPoint uom="degF">62.6661</pourPoint>
+				<oilMolecularWeight>88.9345</oilMolecularWeight>
+				<oilSpecificGravity>0.6014</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">37.4962</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000422</oilCompressibility>
+				<oilViscosity uom="cP">0.2323</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0621</oilThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>9</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">2000</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.0934</cloudPoint>
+				<pourPoint uom="degF">62.6877</pourPoint>
+				<oilMolecularWeight>89.723</oilMolecularWeight>
+				<oilSpecificGravity>0.6018</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">37.517</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000429</oilCompressibility>
+				<oilViscosity uom="cP">0.2334</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0619</oilThermalConductivity>
+				<gasMolecularWeight>23.8919</gasMolecularWeight>
+				<gasGravity>0.8323</gasGravity>
+				<gasMassDensity uom="lbm/ft3">7.2911</gasMassDensity>
+				<gasZFactor>0.8605</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0005</gasCompressibility>
+				<gasViscosity uom="cP">0.0148</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0356</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>10</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">1900</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.1197</cloudPoint>
+				<pourPoint uom="degF">62.7432</pourPoint>
+				<oilMolecularWeight>91.9427</oilMolecularWeight>
+				<oilSpecificGravity>0.6072</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">37.8555</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000423</oilCompressibility>
+				<oilViscosity uom="cP">0.2411</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0619</oilThermalConductivity>
+				<gasMolecularWeight>23.8339</gasMolecularWeight>
+				<gasGravity>0.8303</gasGravity>
+				<gasMassDensity uom="lbm/ft3">6.896</gasMassDensity>
+				<gasZFactor>0.8622</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0005</gasCompressibility>
+				<gasViscosity uom="cP">0.0146</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0349</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>11</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">1800</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.1431</cloudPoint>
+				<pourPoint uom="degF">62.7936</pourPoint>
+				<oilMolecularWeight>94.2303</oilMolecularWeight>
+				<oilSpecificGravity>0.6126</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">38.1945</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000414</oilCompressibility>
+				<oilViscosity uom="cP">0.249</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0619</oilThermalConductivity>
+				<gasMolecularWeight>23.7947</gasMolecularWeight>
+				<gasGravity>0.8289</gasGravity>
+				<gasMassDensity uom="lbm/ft3">6.5067</gasMassDensity>
+				<gasZFactor>0.8643</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0006</gasCompressibility>
+				<gasViscosity uom="cP">0.0144</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0343</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>12</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">1700</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.164</cloudPoint>
+				<pourPoint uom="degF">62.8396</pourPoint>
+				<oilMolecularWeight>96.5922</oilMolecularWeight>
+				<oilSpecificGravity>0.6181</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">38.5345</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.000041</oilCompressibility>
+				<oilViscosity uom="cP">0.2574</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.062</oilThermalConductivity>
+				<gasMolecularWeight>23.7753</gasMolecularWeight>
+				<gasGravity>0.8282</gasGravity>
+				<gasMassDensity uom="lbm/ft3">6.1232</gasMassDensity>
+				<gasZFactor>0.8667</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0006</gasCompressibility>
+				<gasViscosity uom="cP">0.0142</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0336</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>13</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">1500</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.2006</cloudPoint>
+				<pourPoint uom="degF">62.9225</pourPoint>
+				<oilMolecularWeight>101.5684</oilMolecularWeight>
+				<oilSpecificGravity>0.6291</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">39.2201</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000397</oilCompressibility>
+				<oilViscosity uom="cP">0.2754</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.062</oilThermalConductivity>
+				<gasMolecularWeight>23.803</gasMolecularWeight>
+				<gasGravity>0.8292</gasGravity>
+				<gasMassDensity uom="lbm/ft3">5.3729</gasMassDensity>
+				<gasZFactor>0.8725</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0007</gasCompressibility>
+				<gasViscosity uom="cP">0.0139</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0323</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>14</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">1250</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.241</cloudPoint>
+				<pourPoint uom="degF">63.0181</pourPoint>
+				<oilMolecularWeight>108.3637</oilMolecularWeight>
+				<oilSpecificGravity>0.6431</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">40.096</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.000038</oilCompressibility>
+				<oilViscosity uom="cP">0.301</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0622</oilThermalConductivity>
+				<gasMolecularWeight>23.9902</gasMolecularWeight>
+				<gasGravity>0.8358</gasGravity>
+				<gasMassDensity uom="lbm/ft3">4.4651</gasMassDensity>
+				<gasZFactor>0.8818</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0009</gasCompressibility>
+				<gasViscosity uom="cP">0.0136</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0306</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>15</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">1000</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.2833</cloudPoint>
+				<pourPoint uom="degF">63.1213</pourPoint>
+				<oilMolecularWeight>116.0156</oilMolecularWeight>
+				<oilSpecificGravity>0.6578</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">41.0103</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000361</oilCompressibility>
+				<oilViscosity uom="cP">0.3315</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0624</oilThermalConductivity>
+				<gasMolecularWeight>24.4147</gasMolecularWeight>
+				<gasGravity>0.8508</gasGravity>
+				<gasMassDensity uom="lbm/ft3">3.5881</gasMassDensity>
+				<gasZFactor>0.8934</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0011</gasCompressibility>
+				<gasViscosity uom="cP">0.0133</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.029</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>16</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">750</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.3407</cloudPoint>
+				<pourPoint uom="degF">63.262</pourPoint>
+				<oilMolecularWeight>124.9528</oilMolecularWeight>
+				<oilSpecificGravity>0.6736</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">41.9971</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.000034</oilCompressibility>
+				<oilViscosity uom="cP">0.3694</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0628</oilThermalConductivity>
+				<gasMolecularWeight>25.2554</gasMolecularWeight>
+				<gasGravity>0.8793</gasGravity>
+				<gasMassDensity uom="lbm/ft3">2.7368</gasMassDensity>
+				<gasZFactor>0.9077</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0014</gasCompressibility>
+				<gasViscosity uom="cP">0.013</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0272</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>17</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">500</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.448</cloudPoint>
+				<pourPoint uom="degF">63.5206</pourPoint>
+				<oilMolecularWeight>136.1795</oilMolecularWeight>
+				<oilSpecificGravity>0.6919</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">43.1344</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.0000315</oilCompressibility>
+				<oilViscosity uom="cP">0.4212</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0633</oilThermalConductivity>
+				<gasMolecularWeight>26.7973</gasMolecularWeight>
+				<gasGravity>0.9348</gasGravity>
+				<gasMassDensity uom="lbm/ft3">1.9015</gasMassDensity>
+				<gasZFactor>0.9252</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0021</gasCompressibility>
+				<gasViscosity uom="cP">0.0127</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0253</gasThermalConductivity>
+			</transportTestStep>
+			<transportTestStep>
+				<stepNumber>18</stepNumber>
+				<stepTemperature uom="degF">250</stepTemperature>
+				<stepPressure uom="psi">250</stepPressure>
+				<bubblePointPressure uom="psi">2036.2326</bubblePointPressure>
+				<cloudPoint uom="degF">75.7759</cloudPoint>
+				<pourPoint uom="degF">64.2827</pourPoint>
+				<oilMolecularWeight>153.3026</oilMolecularWeight>
+				<oilSpecificGravity>0.7168</oilSpecificGravity>
+				<oilMassDensity uom="lbm/ft3">44.6858</oilMassDensity>
+				<oilCompressibility uom="1/psi">0.000028</oilCompressibility>
+				<oilViscosity uom="cP">0.511</oilViscosity>
+				<oilThermalConductivity uom="Btu/hr.ft.degF">0.0641</oilThermalConductivity>
+				<gasMolecularWeight>30.5126</gasMolecularWeight>
+				<gasGravity>1.0663</gasGravity>
+				<gasMassDensity uom="lbm/ft3">1.0564</gasMassDensity>
+				<gasZFactor>0.9482</gasZFactor>
+				<gasCompressibility uom="1/psi">0.0042</gasCompressibility>
+				<gasViscosity uom="cP">0.0122</gasViscosity>
+				<gasThermalConductivity uom="Btu/hr.ft.degF">0.0228</gasThermalConductivity>
+			</transportTestStep>
+		</transportPropertiesTest>
+		<fluidSampleContaminant>
+			<contaminantKind>formation water</contaminantKind>
+			<volumePercent uom="%">4.5</volumePercent>
+			<description>brine entrained in the sample</description>
+		</fluidSampleContaminant>
+	</fluidAnalysisResult>
+</fluidAnalysisResults>
