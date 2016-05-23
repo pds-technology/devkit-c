@@ -4,7 +4,6 @@
     <id>Energistics.DataAccess</id>
     <version>$version$</version>
     <authors>ExxonMobil Upstream Research Company, Energistics</authors>
-    <description>Energistics Standards DevKit</description>
     <copyright>Copyright 2012 ExxonMobil Upstream Research Company</copyright>
     <projectUrl>http://www.energistics.org/standards-devkit</projectUrl>
     <licenseUrl>http://www.energistics.org/product-license-agreement</licenseUrl>
