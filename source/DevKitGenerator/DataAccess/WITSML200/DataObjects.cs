@@ -46111,8 +46111,8 @@ namespace Energistics.DataAccess.WITSML200
         /// Data property
         /// </summary>
 		[Description("The data blob in JSON form. This allows you to embed the bulk data in a single file with the xml, to avoid the issues that arise with splitting the data across multiple files.   BUSINESS RULE: Either this element or the FileUri element must be present")]
-		[XmlElement("Data")]
-        public String Data {
+		[XmlElement("Data", Type=typeof(XmlCDataSection))]
+        public XmlCDataSection Data {
             get {
                 return DataField;
             } 
@@ -46122,7 +46122,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DataField; 
+        private XmlCDataSection DataField; 
 
         /// <summary>
         /// FileUri property

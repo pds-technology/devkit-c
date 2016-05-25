@@ -149,7 +149,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 
 		        
 #>
-        public <#=generator.RenameClass(property.PropertyType)#><#=generator.MakePropertyNullable(property)#> <#=generator.RenameProperty(property)#> <#=generator.GetGetterSetter(null, type, property)#>
+        public <#=generator.GetPropertyType(property)#><#=generator.MakePropertyNullable(property)#> <#=generator.RenameProperty(property)#> <#=generator.GetGetterSetter(null, type, property)#>
 <#
                 if (generator.IsItemsList(type, property)) {
 #>

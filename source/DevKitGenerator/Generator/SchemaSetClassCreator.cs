@@ -467,6 +467,16 @@ namespace Energistics.Generator
             return string.Empty;
         }
 
+        public string GetPropertyType(PropertyInfo property)
+        {
+            if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
+            {
+                return typeof(XmlCDataSection).Name;
+            }
+
+            return RenameClass(property.PropertyType);
+        }
+
 
         private static Boolean OnceRename = false;
         public string RenameClass(Type t)
@@ -975,7 +985,7 @@ namespace Energistics.Generator
                     sb.AppendLine("            } ");
                     sb.AppendLine("         }");
                 }
-                sb.AppendLine("        private " + RenameClass(property.PropertyType) + MakePropertyNullable(property) + " " + privateFieldName + ((property.PropertyType == typeof(String) && privateFieldName == "versionField" && !string.IsNullOrEmpty(versionString)) ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
+                sb.AppendLine("        private " + GetPropertyType(property) + MakePropertyNullable(property) + " " + privateFieldName + ((property.PropertyType == typeof(String) && privateFieldName == "versionField" && !string.IsNullOrEmpty(versionString)) ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
 
                 
                 return sb.ToString();
@@ -1069,7 +1079,16 @@ namespace Energistics.Generator
                     }
                     else
                     {
-                        return String.Format("[XmlElement(\"{0}\")]", property.Name);
+                        var xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
+
+                        if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
+                        {
+                            xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
+                        }
+
+                        xmlElementAttrTag += ")]";
+
+                        return xmlElementAttrTag;
                     } 
             }
         }
@@ -1383,7 +1402,6 @@ namespace Energistics.Generator
                 xmlElementAttrTag += String.Format(", DataType=\"{0}\"", xmlElemAttr.DataType);
             }
 
-           
             xmlElementAttrTag += ")]";
 
             return xmlElementAttrTag;
