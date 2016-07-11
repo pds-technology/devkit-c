@@ -166,6 +166,7 @@ namespace Energistics.Generator.RESQML200 {
         /// <summary>The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string schemaVersion {
             get {
                 return this.schemaVersionField;
@@ -177,6 +178,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uuid {
             get {
                 return this.uuidField;
@@ -6903,6 +6905,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -7783,6 +7786,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PlaneAngleUom uom {
             get {
                 return this.uomField;
@@ -9292,6 +9296,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string codeList {
             get {
                 return this.codeListField;
@@ -9303,6 +9308,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string codeListValue {
             get {
                 return this.codeListValueField;

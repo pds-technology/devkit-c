@@ -878,7 +878,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
-		[Description("The unit of measure of the quantity value.")]
+		[Required]
+        [Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
 		
         public MeasuredDepthUom Uom {
@@ -1061,7 +1062,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The unit of measure of the distance value.
         /// </summary>
-		[Description("The unit of measure of the distance value.")]
+		[Required]
+        [Description("The unit of measure of the distance value.")]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -1079,7 +1081,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Specifies the reference line that is the origin of the distance.
         /// </summary>
-		[Description("Specifies the reference line that is the origin of the distance.")]
+		[Required]
+        [Description("Specifies the reference line that is the origin of the distance.")]
         [XmlAttribute("ref")]
 		
         public EastOrWest Ref {
@@ -1138,7 +1141,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The unit of measure of the distance value.
         /// </summary>
-		[Description("The unit of measure of the distance value.")]
+		[Required]
+        [Description("The unit of measure of the distance value.")]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -1156,7 +1160,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Specifies the reference line that is the origin of the distance.
         /// </summary>
-		[Description("Specifies the reference line that is the origin of the distance.")]
+		[Required]
+        [Description("Specifies the reference line that is the origin of the distance.")]
         [XmlAttribute("ref")]
 		
         public NorthOrSouth Ref {
@@ -1215,7 +1220,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.
         /// </summary>
-		[Description("The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.")]
+		[Required]
+        [Description("The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.")]
         [XmlAttribute("uom")]
 		
         public WellVerticalCoordinateUom Uom {
@@ -1292,7 +1298,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
-		[Description("The unit of measure of the quantity value.")]
+		[Required]
+        [Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
 		
         public WellVerticalCoordinateUom Uom {
@@ -1369,7 +1376,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		[Description("The unit of measure for the quantity. If for some reason a uom is not appropriate for the quantity, a unit of \"Euc\" should be used.")]
+		[Required]
+        [Description("The unit of measure for the quantity. If for some reason a uom is not appropriate for the quantity, a unit of \"Euc\" should be used.")]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -1502,7 +1510,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The unit of measure for the quantity.
         /// </summary>
-		[Description("The unit of measure for the quantity.")]
+		[Required]
+        [Description("The unit of measure for the quantity.")]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -1620,7 +1629,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PercentUom Uom {
@@ -1775,7 +1784,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumePerVolumeUom Uom {
@@ -1834,7 +1843,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumePerLengthUom Uom {
@@ -1893,7 +1902,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumeFlowRateUom Uom {
@@ -1952,7 +1961,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
@@ -2011,7 +2020,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VelocityUom Uom {
@@ -2070,7 +2079,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public TimeUom Uom {
@@ -2129,7 +2138,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ThermodynamicTemperatureUom Uom {
@@ -2188,7 +2197,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ThermalVolumetricExpansionUom Uom {
@@ -2247,7 +2256,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ThermalConductivityUom Uom {
@@ -2306,7 +2315,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public StandardVolumePerTimeUom Uom {
@@ -2365,7 +2374,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public StandardVolumeUom Uom {
@@ -2424,7 +2433,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public SpecificVolumeUom Uom {
@@ -2483,7 +2492,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public SpecificHeatCapacityUom Uom {
@@ -2542,7 +2551,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public RelativePowerUom Uom {
@@ -2601,7 +2610,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PressureUom Uom {
@@ -2660,7 +2669,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PowerUom Uom {
@@ -2719,7 +2728,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PlaneAngleUom Uom {
@@ -2778,7 +2787,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PermeabilityRockUom Uom {
@@ -2837,7 +2846,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PerLengthUom Uom {
@@ -2896,7 +2905,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MomentOfForceUom Uom {
@@ -2955,7 +2964,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MassPerLengthUom Uom {
@@ -3014,7 +3023,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MassUom Uom {
@@ -3073,7 +3082,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MassConcentrationUom Uom {
@@ -3132,7 +3141,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MagneticInductionUom Uom {
@@ -3191,7 +3200,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public LengthPerLengthUom Uom {
@@ -3250,7 +3259,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -3309,7 +3318,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public IlluminanceUom Uom {
@@ -3368,7 +3377,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ForcePerVolumeUom Uom {
@@ -3427,7 +3436,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ForcePerLengthUom Uom {
@@ -3486,7 +3495,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ForceUom Uom {
@@ -3545,7 +3554,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public EquivalentPerMassUom Uom {
@@ -3604,7 +3613,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ElectricPotentialUom Uom {
@@ -3663,7 +3672,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ElectricCurrentUom Uom {
@@ -3722,7 +3731,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public DynamicViscosityUom Uom {
@@ -3781,7 +3790,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public DimensionlessUom Uom {
@@ -3840,7 +3849,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public DensityUom Uom {
@@ -3899,7 +3908,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public CompressibilityUom Uom {
@@ -3958,7 +3967,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public AreaPerAreaUom Uom {
@@ -4017,7 +4026,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public AreaUom Uom {
@@ -4076,7 +4085,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public AnglePerTimeUom Uom {
@@ -4135,7 +4144,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public AnglePerLengthUom Uom {
@@ -4194,7 +4203,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public AccelerationLinearUom Uom {
@@ -7314,7 +7323,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The unique identifier of the node. All measured depth, vertical depth and elevation coordinates may point to this uid using attribute "datum". Alternatively, the commonData elements defaultMeasuredDatum, defaultVerticalDatum and defaultElevationDatum may point to this value. The best practice for the uid is to derive it from the name. For example, by changing spaces to underscores.
         /// </summary>
-		[Description("The unique identifier of the node. All measured depth, vertical depth and elevation coordinates may point to this uid using attribute \"datum\". Alternatively, the commonData elements defaultMeasuredDatum, defaultVerticalDatum and defaultElevationDatum may point to this value. The best practice for the uid is to derive it from the name. For example, by changing spaces to underscores.")]
+		[Required]
+        [Description("The unique identifier of the node. All measured depth, vertical depth and elevation coordinates may point to this uid using attribute \"datum\". Alternatively, the commonData elements defaultMeasuredDatum, defaultVerticalDatum and defaultElevationDatum may point to this value. The best practice for the uid is to derive it from the name. For example, by changing spaces to underscores.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -9176,7 +9186,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// index property
         /// </summary>
-		[Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
+		[Required]
+        [Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
         [XmlAttribute("index")]
 		
         public Int16 Index {
@@ -33874,7 +33885,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// The type of data-object being referenced (e.g., "well", "wellbore").
         /// </summary>
-		[Description("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
+		[Required]
+        [Description("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
         [XmlAttribute("object")]
 		
         public String Object {
@@ -61206,7 +61218,7 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// dTim property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("dTim")]
 		
         public DateTime DateTime {
@@ -65331,7 +65343,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Unique identifier for the changed object. This should match the value of the uid attribute in the changed object.
         /// </summary>
-		[Description("Unique identifier for the changed object. This should match the value of the uid attribute in the changed object.")]
+		[Required]
+        [Description("Unique identifier for the changed object. This should match the value of the uid attribute in the changed object.")]
         [XmlAttribute("uidObject")]
 		
         public String UidObject {
@@ -72582,7 +72595,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -72673,7 +72687,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -72764,7 +72779,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -72855,7 +72871,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -72946,7 +72963,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73037,7 +73055,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73128,7 +73147,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73219,7 +73239,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73310,7 +73331,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73401,7 +73423,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73492,7 +73515,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73583,7 +73607,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73674,7 +73699,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73765,7 +73791,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73856,7 +73883,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -73947,7 +73975,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74038,7 +74067,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74129,7 +74159,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74220,7 +74251,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74311,7 +74343,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74402,7 +74435,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74493,7 +74527,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74583,7 +74618,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74674,7 +74710,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74765,7 +74802,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -74856,7 +74894,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -75068,7 +75107,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// apiVers property
         /// </summary>
-		[Description("See the API specification for a description of the use of this data.")]
+		[Required]
+        [Description("See the API specification for a description of the use of this data.")]
         [XmlAttribute("apiVers")]
 		
         public String ApiVers {
@@ -75587,7 +75627,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// apiVers property
         /// </summary>
-		[Description("See the API specification for a description of the use of this data.")]
+		[Required]
+        [Description("See the API specification for a description of the use of this data.")]
         [XmlAttribute("apiVers")]
 		
         public String ApiVers {
@@ -75662,7 +75703,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// dataObject property
         /// </summary>
-		[Description("See the API specification for a description of the use of this data.")]
+		[Required]
+        [Description("See the API specification for a description of the use of this data.")]
         [XmlAttribute("dataObject")]
 		
         public String DataObject {
@@ -75761,7 +75803,8 @@ namespace Energistics.DataAccess.WITSML141
 		/// <summary>
         /// name property
         /// </summary>
-		[Description("See the API specification for a description of the use of this data.")]
+		[Required]
+        [Description("See the API specification for a description of the use of this data.")]
         [XmlAttribute("name")]
 		
         public String Name {

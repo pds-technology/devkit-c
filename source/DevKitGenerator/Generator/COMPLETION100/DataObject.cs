@@ -501,6 +501,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MeasuredDepthUom uom {
             get {
                 return this.uomField;
@@ -975,6 +976,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public WellVerticalCoordinateUom uom {
             get {
                 return this.uomField;
@@ -1087,6 +1089,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The unit of measure for the quantity.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uom {
             get {
                 return this.uomField;
@@ -2015,6 +2018,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TimeUom uom {
             get {
                 return this.uomField;
@@ -3381,6 +3385,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -5807,6 +5812,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>Indexes things with the same name.  That is the first one, the second one, etc.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is the first one, the second one, etc.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public short index {
             get {
                 return this.indexField;
@@ -5893,6 +5899,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The type of data-object being referenced (e.g., "well", "wellbore").</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string @object {
             get {
                 return this.objectField;
@@ -16732,6 +16739,7 @@ namespace Energistics.Generator.COMPLETION100 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -16789,6 +16797,7 @@ namespace Energistics.Generator.COMPLETION100 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -16844,6 +16853,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>Data object schema version.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -16899,6 +16909,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>Data object schema version.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;

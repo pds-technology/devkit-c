@@ -875,7 +875,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
@@ -987,7 +987,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumeFlowRateUom Uom {
@@ -1164,7 +1164,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
@@ -1182,7 +1182,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Defines why the volume was lost.
         /// </summary>
-		[Description("Defines why the volume was lost.")]
+		[Required]
+        [Description("Defines why the volume was lost.")]
         [XmlAttribute("reasonLost")]
 		        public string ReasonLostSurrogate
         {
@@ -1387,7 +1388,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.
         /// </summary>
-		[Description("The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.")]
+		[Required]
+        [Description("The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.")]
         [XmlAttribute("uom")]
 		
         public WellVerticalCoordinateUom Uom {
@@ -1464,7 +1466,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
-		[Description("The unit of measure of the quantity value.")]
+		[Required]
+        [Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
 		
         public MeasuredDepthUom Uom {
@@ -1541,7 +1544,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PercentUom Uom {
@@ -1600,7 +1603,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumePerVolumeUom Uom {
@@ -1718,7 +1721,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
@@ -1777,7 +1780,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VelocityUom Uom {
@@ -1836,7 +1839,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public TimeUom Uom {
@@ -1895,7 +1898,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ThermodynamicTemperatureUom Uom {
@@ -1954,7 +1957,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PressureUom Uom {
@@ -2013,7 +2016,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PlaneAngleUom Uom {
@@ -2072,7 +2075,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MassUom Uom {
@@ -2131,7 +2134,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MassConcentrationUom Uom {
@@ -2190,7 +2193,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public LengthPerLengthUom Uom {
@@ -2249,7 +2252,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -2426,7 +2429,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public DimensionlessUom Uom {
@@ -2485,7 +2488,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public DensityUom Uom {
@@ -2544,7 +2547,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public WorkUom Uom {
@@ -2721,7 +2724,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public VolumePerVolumeUom Uom {
@@ -2957,7 +2960,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MolarVolumeUom Uom {
@@ -3016,7 +3019,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PercentUom Uom {
@@ -3075,7 +3078,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public ModulusOfCompressionUom Uom {
@@ -3134,7 +3137,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MassFlowRateUom Uom {
@@ -3193,7 +3196,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PercentUom Uom {
@@ -3252,7 +3255,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public FrequencyUom Uom {
@@ -3370,7 +3373,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public AmountOfSubstanceUom Uom {
@@ -4038,7 +4041,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// The name of the singular object being referenced.
         /// </summary>
-		[Description("The name of the singular object being referenced.")]
+		[Required]
+        [Description("The name of the singular object being referenced.")]
         [XmlAttribute("object")]
 		
         public String Object {
@@ -11393,7 +11397,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Defines the semantics (inclusive or exclusive) of the endpoint within the context of the interval.
         /// </summary>
-		[Description("Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.")]
+		[Required]
+        [Description("Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.")]
         [XmlAttribute("endpoint")]
 		        public string EndpointSurrogate
         {
@@ -11594,7 +11599,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Defines the semantics (inclusive or exclusive) of the endpoint within the context of the interval.
         /// </summary>
-		[Description("Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.")]
+		[Required]
+        [Description("Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.")]
         [XmlAttribute("endpoint")]
 		        public string EndpointSurrogate
         {
@@ -12181,7 +12187,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// The keyword within which the value is unique. The concept of a keyword is very close to the concept of a classification system.
         /// </summary>
-		[Description("The keyword within which the value is unique. The concept of a keyword is very close to the concept of a classification system.")]
+		[Required]
+        [Description("The keyword within which the value is unique. The concept of a keyword is very close to the concept of a classification system.")]
         [XmlAttribute("keyword")]
 		        public string KeywordSurrogate
         {
@@ -23602,7 +23609,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// The kind of phone such as voice or fax.
         /// </summary>
-		[Description("The kind of phone such as voice or fax.")]
+		[Required]
+        [Description("The kind of phone such as voice or fax.")]
         [XmlAttribute("type")]
 		        public string TypeSurrogate
         {
@@ -38679,7 +38687,7 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// referenceComponent property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("referenceComponent")]
 		
         public String ReferenceComponent {
@@ -42954,7 +42962,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// The name of the parameter.
         /// </summary>
-		[Description("The name of the parameter.")]
+		[Required]
+        [Description("The name of the parameter.")]
         [XmlAttribute("name")]
 		
         public String Name {
@@ -43693,7 +43702,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// index property
         /// </summary>
-		[Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
+		[Required]
+        [Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
         [XmlAttribute("index")]
 		
         public Int16 Index {
@@ -46724,7 +46734,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -46814,7 +46825,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -46904,7 +46916,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version.
         /// </summary>
-		[Description("Data object schema version.")]
+		[Required]
+        [Description("Data object schema version.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -46976,7 +46989,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -47524,7 +47538,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -47615,7 +47630,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -47705,7 +47721,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -47795,7 +47812,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -47885,7 +47903,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -47975,7 +47994,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -48066,7 +48086,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -48157,7 +48178,8 @@ namespace Energistics.DataAccess.PRODML122
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {

@@ -391,6 +391,11 @@ namespace Energistics.SchemaGatherer
             if (memberProperty != null)
             {
                 AddDescriptionAttribute(memberProperty, GetAnnotation(attribute));
+
+                if (attribute.Use == XmlSchemaUse.Required)
+                {
+                    AddRequiredAttribute(memberProperty);
+                }
             }
         }
 

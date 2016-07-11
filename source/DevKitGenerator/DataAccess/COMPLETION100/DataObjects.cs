@@ -700,7 +700,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
-		[Description("The unit of measure of the quantity value.")]
+		[Required]
+        [Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
 		
         public MeasuredDepthUom Uom {
@@ -1114,7 +1115,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
-		[Description("The unit of measure of the quantity value.")]
+		[Required]
+        [Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
 		
         public WellVerticalCoordinateUom Uom {
@@ -1324,7 +1326,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// The unit of measure for the quantity.
         /// </summary>
-		[Description("The unit of measure for the quantity.")]
+		[Required]
+        [Description("The unit of measure for the quantity.")]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -1892,7 +1895,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public TimeUom Uom {
@@ -3072,7 +3075,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -5079,7 +5082,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// index property
         /// </summary>
-		[Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
+		[Required]
+        [Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
         [XmlAttribute("index")]
 		
         public Int16 Index {
@@ -5244,7 +5248,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// The type of data-object being referenced (e.g., "well", "wellbore").
         /// </summary>
-		[Description("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
+		[Required]
+        [Description("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
         [XmlAttribute("object")]
 		
         public String Object {
@@ -18902,7 +18907,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -18993,7 +18999,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -19084,7 +19091,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Data object schema version.
         /// </summary>
-		[Description("Data object schema version.")]
+		[Required]
+        [Description("Data object schema version.")]
         [XmlAttribute("version")]
 		
         public String Version {
@@ -19175,7 +19183,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Data object schema version.
         /// </summary>
-		[Description("Data object schema version.")]
+		[Required]
+        [Description("Data object schema version.")]
         [XmlAttribute("version")]
 		
         public String Version {

@@ -538,6 +538,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
                 return this.uomField;
@@ -757,6 +758,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeFlowRateUom uom {
             get {
                 return this.uomField;
@@ -964,6 +966,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
                 return this.uomField;
@@ -977,6 +980,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>Defines why the volume was lost.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines why the volume was lost.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ReasonLost reasonLost {
             get {
                 return this.reasonLostField;
@@ -1171,6 +1175,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value. If not given then the default unit of " +
             "measure of the explicitly or implicitly given datum must be assumed.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public WellVerticalCoordinateUom uom {
             get {
                 return this.uomField;
@@ -1231,6 +1236,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MeasuredDepthUom uom {
             get {
                 return this.uomField;
@@ -1284,6 +1290,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
                 return this.uomField;
@@ -1317,6 +1324,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -1558,6 +1566,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
                 return this.uomField;
@@ -1580,6 +1589,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VelocityUom uom {
             get {
                 return this.uomField;
@@ -1720,6 +1730,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TimeUom uom {
             get {
                 return this.uomField;
@@ -1800,6 +1811,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermodynamicTemperatureUom uom {
             get {
                 return this.uomField;
@@ -1841,6 +1853,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PressureUom uom {
             get {
                 return this.uomField;
@@ -2000,6 +2013,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PlaneAngleUom uom {
             get {
                 return this.uomField;
@@ -2077,6 +2091,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassUom uom {
             get {
                 return this.uomField;
@@ -2165,6 +2180,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassConcentrationUom uom {
             get {
                 return this.uomField;
@@ -2229,6 +2245,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthPerLengthUom uom {
             get {
                 return this.uomField;
@@ -2306,6 +2323,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -2631,6 +2649,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DimensionlessUom uom {
             get {
                 return this.uomField;
@@ -2679,6 +2698,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DensityUom uom {
             get {
                 return this.uomField;
@@ -2823,6 +2843,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AttenuationUom uom {
             get {
                 return this.uomField;
@@ -2856,6 +2877,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public WorkUom uom {
             get {
                 return this.uomField;
@@ -3023,6 +3045,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -3193,6 +3216,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MolarVolumeUom uom {
             get {
                 return this.uomField;
@@ -3246,6 +3270,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
                 return this.uomField;
@@ -3268,6 +3293,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ModulusOfCompressionUom uom {
             get {
                 return this.uomField;
@@ -3401,6 +3427,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassFlowRateUom uom {
             get {
                 return this.uomField;
@@ -3530,6 +3557,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
                 return this.uomField;
@@ -3552,6 +3580,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public FrequencyUom uom {
             get {
                 return this.uomField;
@@ -3684,6 +3713,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AmountOfSubstanceUom uom {
             get {
                 return this.uomField;
@@ -4151,6 +4181,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>The name of the singular object being referenced.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The name of the singular object being referenced.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string @object {
             get {
                 return this.objectField;
@@ -9646,6 +9677,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines the semantics (inclusive or exclusive) of the endpoint  within the contex" +
             "t of the interval.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public EndpointQualifierInterval endpoint {
             get {
                 return this.endpointField;
@@ -9753,6 +9785,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines the semantics (inclusive or exclusive) of the endpoint  within the contex" +
             "t of the interval.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public EndpointQualifierInterval endpoint {
             get {
                 return this.endpointField;
@@ -10151,6 +10184,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The keyword within which the value is unique. The concept of a keyword is very cl" +
             "ose to the concept of a classification system.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TimeSeriesKeyword keyword {
             get {
                 return this.keywordField;
@@ -19057,6 +19091,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>The kind of phone such as voice or fax.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of phone such as voice or fax.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PhoneType type {
             get {
                 return this.typeField;
@@ -29034,6 +29069,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string referenceComponent {
             get {
                 return this.referenceComponentField;
@@ -31877,6 +31913,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>Indexes things with the same name.  That is the first one, the second one, etc.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is the first one, the second one, etc.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public short index {
             get {
                 return this.indexField;
@@ -32898,6 +32935,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>The name of the parameter.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The name of the parameter.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string name {
             get {
                 return this.nameField;
@@ -33237,6 +33275,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>The uid of this facility mapping part.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The uid of this facility mapping part.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string mappingPartID {
             get {
                 return this.mappingPartIDField;
@@ -33337,6 +33376,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>The uid of this facility mapping collection.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The uid of this facility mapping collection.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string mappingID {
             get {
                 return this.mappingIDField;
@@ -34072,6 +34112,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>Reference to the  interpretation for this set of data.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Reference to the  interpretation for this set of data.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string interpretationID {
             get {
                 return this.interpretationIDField;
@@ -35637,6 +35678,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -35693,6 +35735,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -35747,6 +35790,7 @@ namespace Energistics.Generator.PRODML131 {
         /// <summary>Data object schema version.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -35789,6 +35833,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -36220,6 +36265,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -36277,6 +36323,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -36333,6 +36380,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "enti nstance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -36389,6 +36437,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "enti nstance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -36445,6 +36494,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "enti nstance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -36501,6 +36551,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "enti nstance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;

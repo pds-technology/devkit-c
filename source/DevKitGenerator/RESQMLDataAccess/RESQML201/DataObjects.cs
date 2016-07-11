@@ -199,7 +199,8 @@ namespace Energistics.DataAccess.RESQML201
 		/// <summary>
         /// schemaVersion property
         /// </summary>
-		[Description("The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.")]
+		[Required]
+        [Description("The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.")]
         [XmlAttribute("schemaVersion")]
 		
         public String SchemaVersion {
@@ -217,7 +218,7 @@ namespace Energistics.DataAccess.RESQML201
 		/// <summary>
         /// uuid property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uuid")]
 		
         public String Uuid {
@@ -10647,7 +10648,7 @@ namespace Energistics.DataAccess.RESQML201
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -11575,7 +11576,7 @@ namespace Energistics.DataAccess.RESQML201
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public PlaneAngleUom Uom {
@@ -14159,7 +14160,7 @@ namespace Energistics.DataAccess.RESQML201
 		/// <summary>
         /// codeList property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("codeList")]
 		
         public String CodeList {
@@ -14177,7 +14178,7 @@ namespace Energistics.DataAccess.RESQML201
 		/// <summary>
         /// codeListValue property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("codeListValue")]
 		
         public String CodeListValue {

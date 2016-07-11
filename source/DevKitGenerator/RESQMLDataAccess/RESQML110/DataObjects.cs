@@ -1016,7 +1016,8 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// A reference to the globally unique identifier (uid attribute) in the node referenced by the name value. This attribute is required within the context of a WITSML server.
         /// </summary>
-		[Description("A reference to the globally unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
+		[Required]
+        [Description("A reference to the globally unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
 		
         public String UidRef {
@@ -6605,7 +6606,8 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. The value must be globally unique.")]
+		[Required]
+        [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -7052,7 +7054,8 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// The unit of measure of the quantity value.
         /// </summary>
-		[Description("The unit of measure of the quantity value.")]
+		[Required]
+        [Description("The unit of measure of the quantity value.")]
         [XmlAttribute("uom")]
 		
         public MeasuredDepthUom Uom {
@@ -9992,7 +9995,8 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. The value must be globally unique.")]
+		[Required]
+        [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -10335,7 +10339,8 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. The value must be globally unique.")]
+		[Required]
+        [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -11404,7 +11409,8 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. The value must be globally unique.")]
+		[Required]
+        [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -15380,7 +15386,7 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// codeList property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("codeList")]
 		
         public String CodeList {
@@ -15398,7 +15404,7 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// codeListValue property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("codeListValue")]
 		
         public String CodeListValue {
@@ -21483,7 +21489,8 @@ namespace Energistics.DataAccess.RESQML110
 		/// <summary>
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
-		[Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+		[Required]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
         public String Version {

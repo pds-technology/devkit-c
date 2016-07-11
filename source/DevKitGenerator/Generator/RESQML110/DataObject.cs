@@ -425,6 +425,7 @@ namespace Energistics.Generator.RESQML110 {
         [System.ComponentModel.DescriptionAttribute("A reference to the globally unique identifier (uid attribute) in the node referen" +
             "ced by the name value.  This attribute is required within the context of a WITSM" +
             "L server.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uidRef {
             get {
                 return this.uidRefField;
@@ -4078,6 +4079,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uid {
             get {
                 return this.uidField;
@@ -4305,6 +4307,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MeasuredDepthUom uom {
             get {
                 return this.uomField;
@@ -5933,6 +5936,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uid {
             get {
                 return this.uidField;
@@ -6164,6 +6168,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uid {
             get {
                 return this.uidField;
@@ -8073,6 +8078,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uid {
             get {
                 return this.uidField;
@@ -10157,6 +10163,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string codeList {
             get {
                 return this.codeListField;
@@ -10168,6 +10175,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string codeListValue {
             get {
                 return this.codeListValueField;
@@ -13699,6 +13707,7 @@ namespace Energistics.Generator.RESQML110 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;

@@ -848,6 +848,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MeasuredDepthUom uom {
             get {
                 return this.uomField;
@@ -979,6 +980,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The unit of measure of the distance value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the distance value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -992,6 +994,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>Specifies the reference line that is the origin of the distance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Specifies the reference line that is the origin of the distance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public EastOrWest @ref {
             get {
                 return this.refField;
@@ -1220,6 +1223,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The unit of measure of the distance value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the distance value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -1233,6 +1237,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>Specifies the reference line that is the origin of the distance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Specifies the reference line that is the origin of the distance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public NorthOrSouth @ref {
             get {
                 return this.refField;
@@ -1276,6 +1281,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value. If not given then the default unit of " +
             "measure of the explicitly or implicitly given datum must be assumed.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public WellVerticalCoordinateUom uom {
             get {
                 return this.uomField;
@@ -1336,6 +1342,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public WellVerticalCoordinateUom uom {
             get {
                 return this.uomField;
@@ -1383,6 +1390,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity. If for some reason a uom is not appropriate" +
             " for the quantity, a unit of \"Euc\" should be used.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uom {
             get {
                 return this.uomField;
@@ -1451,6 +1459,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The unit of measure for the quantity.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uom {
             get {
                 return this.uomField;
@@ -1499,6 +1508,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
                 return this.uomField;
@@ -1657,6 +1667,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -1876,6 +1887,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerLengthUom uom {
             get {
                 return this.uomField;
@@ -1955,6 +1967,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeFlowRateUom uom {
             get {
                 return this.uomField;
@@ -2112,6 +2125,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
                 return this.uomField;
@@ -2243,6 +2257,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VelocityUom uom {
             get {
                 return this.uomField;
@@ -2383,6 +2398,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TimeUom uom {
             get {
                 return this.uomField;
@@ -2463,6 +2479,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermodynamicTemperatureUom uom {
             get {
                 return this.uomField;
@@ -2504,6 +2521,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermalVolumetricExpansionUom uom {
             get {
                 return this.uomField;
@@ -2557,6 +2575,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermalConductivityUom uom {
             get {
                 return this.uomField;
@@ -2606,6 +2625,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public StandardVolumePerTimeUom uom {
             get {
                 return this.uomField;
@@ -2679,6 +2699,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public StandardVolumeUom uom {
             get {
                 return this.uomField;
@@ -2750,6 +2771,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SpecificVolumeUom uom {
             get {
                 return this.uomField;
@@ -2867,6 +2889,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SpecificHeatCapacityUom uom {
             get {
                 return this.uomField;
@@ -2928,6 +2951,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public RelativePowerUom uom {
             get {
                 return this.uomField;
@@ -2973,6 +2997,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PressureUom uom {
             get {
                 return this.uomField;
@@ -3138,6 +3163,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PowerUom uom {
             get {
                 return this.uomField;
@@ -3218,6 +3244,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PlaneAngleUom uom {
             get {
                 return this.uomField;
@@ -3240,6 +3267,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PermeabilityRockUom uom {
             get {
                 return this.uomField;
@@ -3275,6 +3303,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PerLengthUom uom {
             get {
                 return this.uomField;
@@ -3340,6 +3369,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MomentOfForceUom uom {
             get {
                 return this.uomField;
@@ -3424,6 +3454,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassPerLengthUom uom {
             get {
                 return this.uomField;
@@ -3473,6 +3504,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassUom uom {
             get {
                 return this.uomField;
@@ -3561,6 +3593,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassConcentrationUom uom {
             get {
                 return this.uomField;
@@ -3625,6 +3658,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MagneticInductionUom uom {
             get {
                 return this.uomField;
@@ -3672,6 +3706,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthPerLengthUom uom {
             get {
                 return this.uomField;
@@ -3749,6 +3784,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -3771,6 +3807,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public IlluminanceUom uom {
             get {
                 return this.uomField;
@@ -3813,6 +3850,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ForcePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -3910,6 +3948,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ForcePerLengthUom uom {
             get {
                 return this.uomField;
@@ -3995,6 +4034,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ForceUom uom {
             get {
                 return this.uomField;
@@ -4075,6 +4115,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public EquivalentPerMassUom uom {
             get {
                 return this.uomField;
@@ -4116,6 +4157,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ElectricPotentialUom uom {
             get {
                 return this.uomField;
@@ -4160,6 +4202,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ElectricCurrentUom uom {
             get {
                 return this.uomField;
@@ -4210,6 +4253,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DynamicViscosityUom uom {
             get {
                 return this.uomField;
@@ -4277,6 +4321,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DimensionlessUom uom {
             get {
                 return this.uomField;
@@ -4325,6 +4370,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DensityUom uom {
             get {
                 return this.uomField;
@@ -4469,6 +4515,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CompressibilityUom uom {
             get {
                 return this.uomField;
@@ -4522,6 +4569,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AreaPerAreaUom uom {
             get {
                 return this.uomField;
@@ -4574,6 +4622,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AreaUom uom {
             get {
                 return this.uomField;
@@ -4642,6 +4691,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AnglePerTimeUom uom {
             get {
                 return this.uomField;
@@ -4698,6 +4748,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AnglePerLengthUom uom {
             get {
                 return this.uomField;
@@ -4755,6 +4806,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AccelerationLinearUom uom {
             get {
                 return this.uomField;
@@ -7664,6 +7716,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The unique identifier of the node. All measured depth, vertical depth and elevation coordinates may point to this uid using attribute "datum". Alternatively, the commonData elements defaultMeasuredDatum, defaultVerticalDatum and defaultElevationDatum may point to this value. The best practice for the uid is to derive it from the name. For example, by changing spaces to underscores.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of the node. All measured depth, vertical depth and elevation coordinates may point to this uid using attribute ""datum"". Alternatively, the commonData elements defaultMeasuredDatum, defaultVerticalDatum and defaultElevationDatum may point to this value. The best practice for the uid is to derive it from the name. For example, by changing spaces to underscores.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uid {
             get {
                 return this.uidField;
@@ -9237,6 +9290,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>Indexes things with the same name.  That is the first one, the second one, etc.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is the first one, the second one, etc.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public short index {
             get {
                 return this.indexField;
@@ -32095,6 +32149,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The type of data-object being referenced (e.g., "well", "wellbore").</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string @object {
             get {
                 return this.objectField;
@@ -54060,6 +54115,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public System.DateTime dTim {
             get {
                 return this.dTimField;
@@ -57108,6 +57164,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the changed object. This should match the value of the uid " +
             "attribute in the changed object.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uidObject {
             get {
                 return this.uidObjectField;
@@ -62415,6 +62472,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62472,6 +62530,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62529,6 +62588,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62587,6 +62647,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62644,6 +62705,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62701,6 +62763,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62758,6 +62821,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62815,6 +62879,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62872,6 +62937,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62929,6 +62995,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -62986,6 +63053,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63043,6 +63111,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63100,6 +63169,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63157,6 +63227,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63214,6 +63285,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63271,6 +63343,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63328,6 +63401,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63385,6 +63459,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63442,6 +63517,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63499,6 +63575,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63556,6 +63633,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63613,6 +63691,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63669,6 +63748,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63726,6 +63806,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63784,6 +63865,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -63841,6 +63923,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -64000,6 +64083,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>See the API specification for a description of the use of this data.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string apiVers {
             get {
                 return this.apiVersField;
@@ -64351,6 +64435,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>See the API specification for a description of the use of this data.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string apiVers {
             get {
                 return this.apiVersField;
@@ -64377,6 +64462,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>See the API specification for a description of the use of this data.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string dataObject {
             get {
                 return this.dataObjectField;
@@ -64427,6 +64513,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>See the API specification for a description of the use of this data.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("See the API specification for a description of the use of this data.")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string name {
             get {
                 return this.nameField;
