@@ -446,7 +446,6 @@ namespace Energistics.SchemaGatherer
         private static void AddValidationAttributes(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, IList<XmlSchemaFacet> facets)
         {
             var pattern = facets.OfType<XmlSchemaPatternFacet>().FirstOrDefault();
-
             var maxLength = facets.OfType<XmlSchemaMaxLengthFacet>().FirstOrDefault();
 
             var minInclusive = facets.OfType<XmlSchemaMinInclusiveFacet>().FirstOrDefault();
@@ -461,7 +460,7 @@ namespace Energistics.SchemaGatherer
                 }
                 else if (memberProperty.Type.BaseType == typeof(DateTime).FullName && pattern.Value != ".+")
                 {
-                    if (UseCustomTimestamp)
+                    if (UseCustomTimestamp && !IsXmlAttribute(memberProperty))
                     {
                         var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
                         memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
@@ -579,6 +578,15 @@ namespace Energistics.SchemaGatherer
             }
 
             return description;
+        }
+
+        private static bool IsXmlAttribute(CodeMemberProperty memberProperty)
+        {
+            var xmlAttributeName = typeof(XmlAttributeAttribute).FullName;
+
+            return memberProperty.CustomAttributes
+                .Cast<CodeAttributeDeclaration>()
+                .Any(x => x.Name == xmlAttributeName);
         }
     }
 }

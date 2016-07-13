@@ -6535,7 +6535,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class timestampedTimeZone {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -6546,7 +6546,7 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time when this local time zone became active. This value must be def" +
             "ined on the second and subsequent occurrences.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }

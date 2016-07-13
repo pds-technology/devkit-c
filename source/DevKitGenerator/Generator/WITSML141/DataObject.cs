@@ -5120,7 +5120,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class timestampedTimeZone {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -5131,7 +5131,7 @@ namespace Energistics.Generator.WITSML141 {
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time when this local time zone became active. This value must be def" +
             "ined on the second and subsequent occurrences.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -54403,14 +54403,14 @@ namespace Energistics.Generator.WITSML141 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class timestampedCommentString {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private string valueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }

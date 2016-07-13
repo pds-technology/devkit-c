@@ -6408,7 +6408,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("The date and time when this local time zone became active. This value must be defined on the second and subsequent occurrences.")]
         [XmlAttribute("dTim")]
 		
-        public Timestamp DateTime {
+        public DateTime DateTime {
             get {
                 return dTimField;
             } 
@@ -6420,7 +6420,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Timestamp dTimField; 
+        private DateTime dTimField; 
 
         /// <summary>
         /// dTimSpecified property
