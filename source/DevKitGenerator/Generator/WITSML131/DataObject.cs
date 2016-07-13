@@ -48,6 +48,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>API schema version.  It is optional. If the version is specified, its value must be set equal to the value specified by the  version's fixed attribute. Note that this is different from the data schema version.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("API schema version.  It is optional. If the version is specified, its value must " +
             "be set equal to the value specified by the  version\'s fixed attribute. Note that" +
             " this is different from the data schema version.")]
@@ -166,8 +167,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Version of the API specification to which this Publisher conforms.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         public string apiVers {
             get {
                 return this.apiVersField;
@@ -262,6 +264,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>API schema version.  It is optional. If the version is specified, its value must be set equal to the value specified by the  version's fixed attribute. Note that this is different from the data schema version.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("API schema version.  It is optional. If the version is specified, its value must " +
             "be set equal to the value specified by the  version\'s fixed attribute. Note that" +
             " this is different from the data schema version.")]
@@ -393,8 +396,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Version of the API specification to which this Publisher conforms.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         public string apiVers {
             get {
                 return this.apiVersField;
@@ -434,8 +438,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Name of function, (WMLS_GetFromStore, etc)</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Name of function, (WMLS_GetFromStore, etc)")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Name of function, (WMLS_GetFromStore, etc)")]
         public string name {
             get {
                 return this.nameField;
@@ -476,6 +481,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>API schema version.  It is optional. If the version is specified, its value must be set equal to the value specified by the  version's fixed attribute. Note that this is different from the data schema version.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("API schema version.  It is optional. If the version is specified, its value must " +
             "be set equal to the value specified by the  version\'s fixed attribute. Note that" +
             " this is different from the data schema version.")]
@@ -607,8 +613,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Version of the API specification to which this Publisher conforms.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         public string apiVers {
             get {
                 return this.apiVersField;
@@ -652,6 +659,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>API schema version.  It is optional. If the version is specified, its value must be set equal to the value specified by the  version's fixed attribute. Note that this is different from the data schema version.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("API schema version.  It is optional. If the version is specified, its value must " +
             "be set equal to the value specified by the  version\'s fixed attribute. Note that" +
             " this is different from the data schema version.")]
@@ -770,8 +778,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Version of the API specification to which this Publisher conforms.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Version of the API specification to which this Publisher conforms.")]
         public string apiVers {
             get {
                 return this.apiVersField;
@@ -815,6 +824,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  It is optional. If the version is specified, its value must be set equal to the value specified by the  version's fixed attribute.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  It is optional. If the version is specified, its val" +
             "ue must be set equal to the value specified by the  version\'s fixed attribute.")]
         public string version {
@@ -883,8 +893,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Host name of Subscriber to receive published data over HTTP/S POST.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Host name of Subscriber to receive published data over HTTP/S POST.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("Host name of Subscriber to receive published data over HTTP/S POST.")]
         public string host {
             get {
                 return this.hostField;
@@ -897,9 +908,10 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Process name on Subscriber that will process published data received over HTTP/S POST.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Process name on Subscriber that will process published data received over HTTP/S " +
             "POST.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string process {
             get {
                 return this.processField;
@@ -937,6 +949,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The TCP port on which the Subscriber wishes to receive the data over HTTP/S POST.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("The TCP port on which the Subscriber wishes to receive the data over HTTP/S POST." +
             "")]
         public string port {
@@ -976,6 +989,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The identifier of the Publisher, as clear, un-encoded text in the format: userid:password Assigned by the Subscriber and sent by the Publisher as BASIC authentication when POSTing data to the Subscriber.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The identifier of the Publisher, as clear, un-encoded text in the format: userid:" +
             "password Assigned by the Subscriber and sent by the Publisher as BASIC authentic" +
             "ation when POSTing data to the Subscriber.")]
@@ -991,6 +1005,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of the accepted subscription within the context of this Publisher. This identifier is used by the Subscriber when subsequently modifies or cancels the subscription.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The unique identifier of the accepted subscription within the context of this Pub" +
             "lisher. This identifier is used by the Subscriber when subsequently modifies or " +
             "cancels the subscription.")]
@@ -1031,9 +1046,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Specifies the action to be performed on the subscription request: add, modify, cancel or verify.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Specifies the action to be performed on the subscription request: add, modify, ca" +
             "ncel or verify.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SubscriptionAction action {
             get {
                 return this.actionField;
@@ -1157,10 +1172,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -1361,6 +1378,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The naming system within the name is (hopefully) unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The naming system within the name is (hopefully) unique.")]
         public string namingSystem {
             get {
@@ -1958,6 +1976,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -1972,6 +1992,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore.  This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore.  This uniquely represents  the wellbore refer" +
             "enced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -1986,6 +2008,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -2012,6 +2036,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to the unique identifier (uid attribute) in the node referenced by th" +
             "e name value.  This attribute is required within the context of a WITSML server." +
             "")]
@@ -2178,9 +2204,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value. If not given then the default unit of " +
             "measure of the explicitly or implicitly given datum must be assumed.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public WellVerticalCoordinateUom uom {
             get {
                 return this.uomField;
@@ -2193,6 +2219,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A pointer to the reference datum for this coordinate  value as defined in WellDat" +
             "um.  If not given then the default WellDatum must be assumed.")]
         public string datum {
@@ -2240,8 +2268,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
         public WellVerticalCoordinateUom uom {
             get {
                 return this.uomField;
@@ -2254,6 +2282,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A pointer to the reference datum for this coordinate  value as defined in WellDat" +
             "um.  If not given then the default WellDatum must be assumed.")]
         public string datum {
@@ -2281,8 +2311,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unit of measure of the quantity value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
         public MeasuredDepthUom uom {
             get {
                 return this.uomField;
@@ -2295,6 +2325,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A pointer to the reference datum for this coordinate  value as defined in WellDat" +
             "um. This value is assumed to match the uid value in a WellDatum. If not given th" +
             "en the default WellDatum must be assumed.")]
@@ -2345,9 +2377,10 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unit of measure for the quantity. If for some reason a uom is not appropriate for the quantity, a unit of "Euc" should be used.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity. If for some reason a uom is not appropriate" +
             " for the quantity, a unit of \"Euc\" should be used.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uom {
             get {
                 return this.uomField;
@@ -2415,6 +2448,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unit of measure for the quantity. The uom is mandatory unless the value represents a unitless quantity.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity. The uom is mandatory unless the value repre" +
             "sents a unitless quantity.")]
         public string uom {
@@ -2598,6 +2632,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
                 return this.uomField;
@@ -2620,6 +2655,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
                 return this.uomField;
@@ -6460,6 +6496,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -6679,10 +6717,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -7611,6 +7651,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -7625,6 +7667,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -7639,6 +7683,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -7971,6 +8017,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -9328,6 +9376,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -10537,6 +10587,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -11147,10 +11199,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -11669,6 +11723,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -11683,6 +11739,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -11697,6 +11755,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -12295,6 +12355,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -12621,6 +12683,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -12956,6 +13020,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -14601,10 +14667,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -14901,6 +14969,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -14915,6 +14985,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -14929,6 +15001,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -15314,6 +15388,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -15359,6 +15435,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>This identifies the classification system to  which the class belongs.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("This identifies the classification system to  which the class belongs.")]
         public string classType {
             get {
@@ -15439,6 +15516,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -15509,6 +15588,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -15541,8 +15622,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Indexes things with the same name.  That is the first one, the second one, etc.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is the first one, the second one, etc.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is the first one, the second one, etc.")]
         public short index {
             get {
                 return this.indexField;
@@ -15554,6 +15635,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         public string name {
             get {
                 return this.nameField;
@@ -15565,6 +15647,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
                 return this.uomField;
@@ -15576,6 +15659,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         public string description {
             get {
                 return this.descriptionField;
@@ -15701,6 +15785,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -15729,6 +15815,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unit of measure of the parameter value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the parameter value.")]
         public string uom {
             get {
@@ -15742,8 +15829,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The name of the parameter.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The name of the parameter.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the parameter.")]
         public string name {
             get {
                 return this.nameField;
@@ -15837,6 +15925,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -16073,6 +16163,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -16255,6 +16347,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -16492,6 +16586,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -16548,6 +16644,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -16629,6 +16727,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -16963,6 +17063,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -17179,6 +17281,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -17261,10 +17365,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -17473,6 +17579,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -17487,6 +17595,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -17501,6 +17611,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -17570,6 +17682,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -17625,10 +17739,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -17819,6 +17935,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -17833,6 +17951,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -17847,6 +17967,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -18678,6 +18800,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -18892,6 +19016,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -18947,10 +19073,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -19255,6 +19383,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -19269,6 +19399,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -19283,6 +19415,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -19338,10 +19472,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -19833,6 +19969,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -19847,6 +19985,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -19861,6 +20001,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -19935,8 +20077,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The column index of the curve.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The column index of the curve.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The column index of the curve.")]
         public short columnIndex {
             get {
                 return this.columnIndexField;
@@ -20363,6 +20505,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -21577,6 +21721,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -21632,10 +21778,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -21954,6 +22102,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -21968,6 +22118,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -21982,6 +22134,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -22010,8 +22164,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The name of the singular object being referenced.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The name of the singular object being referenced.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the singular object being referenced.")]
         public string @object {
             get {
                 return this.objectField;
@@ -22024,6 +22179,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A reference to the unique identifier (uid attribute) in the object referenced by the name value.  This attribute is required within the context of a WITSML server.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to the unique identifier (uid attribute) in the object referenced by " +
             "the name value.  This attribute is required within the context of a WITSML serve" +
             "r.")]
@@ -22944,10 +23101,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -23211,6 +23370,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -23225,6 +23386,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -23239,6 +23402,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -23372,6 +23537,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -23593,10 +23760,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -24718,6 +24887,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -24732,6 +24903,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -24746,6 +24919,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -25147,6 +25322,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -25584,6 +25761,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -25609,6 +25788,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         public string currency {
             get {
                 return this.currencyField;
@@ -26313,6 +26493,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -27146,6 +27328,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -27355,6 +27539,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -27381,6 +27567,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A reference to the unique identifier (uid attribute) in the node referenced by the index value.  This attribute is required within the context of a WITSML server.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to the unique identifier (uid attribute) in the node referenced by th" +
             "e index value.  This attribute is required within the context of a WITSML server" +
             ".")]
@@ -27540,6 +27728,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -28139,6 +28329,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -28695,6 +28887,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -28840,6 +29034,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -29869,6 +30065,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -29964,6 +30162,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -30100,6 +30300,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -30504,6 +30706,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -30559,10 +30763,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -30783,6 +30989,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -30797,6 +31005,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -30811,6 +31021,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the Subscription. This matches the  value of the idSub attribute that is returned in the Subscription Request. The value is only optional so that the a realtime can be retrieved  using the Store interface (possibly after the subscription has retired).  Otherwise, the value must be included when the realtime is returned as a result of a subscription.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Unique identifier for the Subscription. This matches the  value of the idSub attribute that is returned in the Subscription Request. The value is only optional so that the a realtime can be retrieved  using the Store interface (possibly after the subscription has retired).  Otherwise, the value must be included when the realtime is returned as a result of a subscription.")]
         public string idSub {
             get {
@@ -31594,6 +31806,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
                 return this.uomField;
@@ -31758,10 +31971,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -33210,6 +33425,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -33224,6 +33441,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -33238,6 +33457,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -33989,6 +34210,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -34221,6 +34444,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -34658,6 +34883,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -34973,6 +35200,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -35142,6 +35371,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -35312,6 +35543,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -35650,6 +35883,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -36459,10 +36694,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -36951,6 +37188,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -36965,6 +37204,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -36979,6 +37220,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -37651,10 +37894,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -38122,6 +38367,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -38136,6 +38383,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -38150,6 +38399,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -38247,6 +38498,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -38302,10 +38555,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -38497,6 +38752,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -38511,6 +38768,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -38525,6 +38784,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -38756,6 +39017,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -38811,10 +39074,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -39247,6 +39512,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -39261,6 +39528,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -39275,6 +39544,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -39460,6 +39731,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -39531,10 +39804,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -39982,6 +40257,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -39996,6 +40273,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -40010,6 +40289,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -40104,10 +40385,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -40870,6 +41153,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -40884,6 +41169,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -40898,6 +41185,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the trajectory. This uniquely represents  the trajectory referenced by the (possibly non-unique) nameTraj.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the trajectory. This uniquely represents  the trajectory re" +
             "ferenced by the (possibly non-unique) nameTraj.")]
         public string uidTrajectory {
@@ -40912,6 +41201,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -40968,10 +41259,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -41174,6 +41467,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -41188,6 +41483,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -41202,6 +41499,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -41971,6 +42270,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -43478,6 +43779,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -43700,6 +44003,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -44110,6 +44415,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -45795,6 +46102,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -45909,6 +46218,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -46420,10 +46731,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -46600,6 +46913,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -46614,6 +46929,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -46628,6 +46945,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -46683,10 +47002,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -47274,6 +47595,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -47779,6 +48102,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -47865,8 +48190,9 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The naming system within the name is unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The naming system within the name is unique.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The naming system within the name is unique.")]
         public string namingSystem {
             get {
                 return this.namingSystemField;
@@ -47879,6 +48205,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A unique (short) code associated with the name.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.ComponentModel.DescriptionAttribute("A unique (short) code associated with the name.")]
         public string code {
             get {
@@ -48099,6 +48426,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -48170,6 +48499,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -49441,10 +49772,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -49883,6 +50216,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -49897,6 +50232,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -50011,10 +50348,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.3\\.1\\.([1-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
             "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
             "ent instance.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string version {
             get {
                 return this.versionField;
@@ -50422,6 +50761,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
             "the (possibly non-unique) nameWell.")]
         public string uidWell {
@@ -50436,6 +50777,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
             "nced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
@@ -50450,6 +50793,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
@@ -50754,9 +51099,11 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the curve. This value must be unique within the context of the wellLog. This value will be referenced by block curve descriptors.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the curve. This value must be unique within the context of " +
             "the wellLog. This value will be referenced by block curve descriptors.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uid {
             get {
                 return this.uidField;
@@ -51079,10 +51426,12 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Unique identifier for the block. This value must be unique within the context of the wellLog. This value will be pointed to by data levels that are associated with this block.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the block. This value must be unique within the context of " +
             "the wellLog. This value will be pointed to by data levels that are associated wi" +
             "th this block.")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string uid {
             get {
                 return this.uidField;
@@ -51225,6 +51574,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {

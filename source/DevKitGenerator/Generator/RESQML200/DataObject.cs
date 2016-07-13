@@ -165,8 +165,8 @@ namespace Energistics.Generator.RESQML200 {
         /// <remarks/>
         /// <summary>The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute(@"The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.")]
         public string schemaVersion {
             get {
                 return this.schemaVersionField;
@@ -179,6 +179,7 @@ namespace Energistics.Generator.RESQML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         public string uuid {
             get {
                 return this.uuidField;
@@ -190,6 +191,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string objectVersion {
             get {
                 return this.objectVersionField;
@@ -11950,6 +11952,7 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string authority {
             get {
                 return this.authorityField;

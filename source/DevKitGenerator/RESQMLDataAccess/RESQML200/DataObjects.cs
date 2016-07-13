@@ -211,6 +211,7 @@ namespace Energistics.DataAccess.RESQML200
         /// uuid property
         /// </summary>
 		[Required]
+        [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [XmlAttribute("uuid")]
 		
         public String Uuid {
@@ -228,7 +229,7 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// objectVersion property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("objectVersion")]
 		
         public String ObjectVersion {
@@ -18059,7 +18060,7 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// authority property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("authority")]
 		
         public String Authority {

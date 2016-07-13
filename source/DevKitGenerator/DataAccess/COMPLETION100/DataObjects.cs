@@ -388,7 +388,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell. 
         /// </summary>
-		[Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
 		
         public String UidWell {
@@ -406,7 +408,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -622,7 +626,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -719,7 +725,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// A pointer to the reference datum for this coordinate value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.
         /// </summary>
-		[Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.")]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -1134,7 +1142,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// A pointer to the reference datum for this coordinate value as defined in WellDatum. If not given then the default WellDatum must be assumed.
         /// </summary>
-		[Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.")]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -1327,6 +1337,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The unit of measure for the quantity.
         /// </summary>
 		[Required]
+        [StringLength(24)]
         [Description("The unit of measure for the quantity.")]
         [XmlAttribute("uom")]
 		
@@ -4403,7 +4414,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		[Description("The date and time when this local time zone became active. This value must be defined on the second and subsequent occurrences.")]
         [XmlAttribute("dTim")]
 		
-        public DateTime DateTime {
+        public Timestamp DateTime {
             get {
                 return dTimField;
             } 
@@ -4415,7 +4426,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private DateTime dTimField; 
+        private Timestamp dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -4512,7 +4523,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// A reference to the unique identifier (uid attribute) in the node referenced by the name value. This attribute is required within the context of a WITSML server.
         /// </summary>
-		[Description("A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
 		
         public String UidRef {
@@ -4846,7 +4859,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -4924,7 +4939,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// The unit of measure for the value. This value must conform to the values allowed by a measure class.
         /// </summary>
-		[Description("The unit of measure for the value. This value must conform to the values allowed by a measure class.")]
+		[StringLength(24)]
+        [Description("The unit of measure for the value. This value must conform to the values allowed by a measure class.")]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -5101,7 +5117,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// name property
         /// </summary>
-		
+		[StringLength(40)]
         [XmlAttribute("name")]
 		
         public String Name {
@@ -5119,7 +5135,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[StringLength(24)]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -5137,7 +5153,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// description property
         /// </summary>
-		
+		[StringLength(256)]
         [XmlAttribute("description")]
 		
         public String Description {
@@ -5155,7 +5171,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -5249,6 +5267,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// The type of data-object being referenced (e.g., "well", "wellbore").
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [Description("The type of data-object being referenced (e.g., \"well\", \"wellbore\").")]
         [XmlAttribute("object")]
 		
@@ -5267,7 +5286,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// A reference to the unique identifier (uid attribute) in the object referenced by the name value. This attribute is required within the context of a WITSML server.
         /// </summary>
-		[Description("A reference to the unique identifier (uid attribute) in the object referenced by the name value.  This attribute is required within the context of a WITSML server.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("A reference to the unique identifier (uid attribute) in the object referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
 		
         public String UidRef {
@@ -5680,7 +5701,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -5756,7 +5779,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// A description related to the sequence number.
         /// </summary>
-		[Description("A description related to the sequence number.")]
+		[StringLength(256)]
+        [Description("A description related to the sequence number.")]
         [XmlAttribute("description")]
 		
         public String Description {
@@ -6145,7 +6169,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -6221,7 +6247,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// currency property
         /// </summary>
-		
+		[StringLength(40)]
         [XmlAttribute("currency")]
 		
         public String Currency {
@@ -6818,7 +6844,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -9687,7 +9715,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// downholeStringRefID property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
         [XmlAttribute("downholeStringRefID")]
 		
         public String DownholeStringRefID {
@@ -9768,7 +9797,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// boreholeStringRefID property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
         [XmlAttribute("boreholeStringRefID")]
 		
         public String BoreholeStringRefID {
@@ -10849,7 +10879,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell. 
         /// </summary>
-		[Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
 		
         public String UidWell {
@@ -10867,7 +10899,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore. 
         /// </summary>
-		[Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
         [XmlAttribute("uidWellbore")]
 		
         public String UidWellbore {
@@ -10885,7 +10919,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -11127,7 +11163,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -11381,7 +11419,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -11827,7 +11867,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -12070,7 +12112,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -12313,7 +12357,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -12556,7 +12602,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -13169,7 +13217,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell. 
         /// </summary>
-		[Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
 		
         public String UidWell {
@@ -13187,7 +13237,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Unique identifier for the wellbore.. 
         /// </summary>
-		[Description("Unique identifier for the wellbore..")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the wellbore..")]
         [XmlAttribute("uidWellbore")]
 		
         public String UidWellbore {
@@ -13205,7 +13257,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Unique identifier for the well completion. 
         /// </summary>
-		[Description("Unique identifier for the well completion.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the well completion.")]
         [XmlAttribute("uidWellCompletion")]
 		
         public String UidWellCompletion {
@@ -13223,7 +13277,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17618,7 +17674,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17636,7 +17694,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uidParentString property
         /// </summary>
-		[Description("The uidParentString points to the parent string. Even if the string is not physically connected together, this string is             still considered as a continuation of the parent string.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The uidParentString points to the parent string. Even if the string is not physically connected together, this string is             still considered as a continuation of the parent string.")]
         [XmlAttribute("uidParentString")]
 		
         public String UidParentString {
@@ -17654,7 +17714,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uidWellbore property
         /// </summary>
-		[Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
         [XmlAttribute("uidWellbore")]
 		
         public String UidWellbore {
@@ -17983,7 +18045,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.
         /// </summary>
-		[Description("Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
 		
         public String UidWell {
@@ -18001,7 +18065,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -18321,7 +18387,9 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -18506,7 +18574,8 @@ namespace Energistics.DataAccess.COMPLETION100
 		/// <summary>
         /// The naming system within the name is (hopefully) unique.
         /// </summary>
-		[Description("The naming system within the name is (hopefully) unique.")]
+		[StringLength(64)]
+        [Description("The naming system within the name is (hopefully) unique.")]
         [XmlAttribute("namingSystem")]
 		
         public String NamingSystem {
@@ -18908,6 +18977,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
 		[Required]
+        [RegularExpression("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
@@ -19000,6 +19071,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
         /// </summary>
 		[Required]
+        [RegularExpression("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
@@ -19092,6 +19165,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Data object schema version.
         /// </summary>
 		[Required]
+        [RegularExpression("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [StringLength(16)]
         [Description("Data object schema version.")]
         [XmlAttribute("version")]
 		
@@ -19184,6 +19259,8 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Data object schema version.
         /// </summary>
 		[Required]
+        [RegularExpression("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [StringLength(16)]
         [Description("Data object schema version.")]
         [XmlAttribute("version")]
 		

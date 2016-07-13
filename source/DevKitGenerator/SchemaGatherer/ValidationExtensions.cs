@@ -360,7 +360,7 @@ namespace Energistics.SchemaGatherer
 
             foreach (var attribute in schemaType.AttributeUses.Values.OfType<XmlSchemaAttribute>())
             {
-                AddAttributeValidation(typeDeclaration, attribute);
+                AddAttributeValidation(codeNamespace, typeDeclaration, attribute);
             }
 
             var schemaSequence = schemaType.ContentTypeParticle as XmlSchemaSequence;
@@ -384,19 +384,20 @@ namespace Energistics.SchemaGatherer
                 new CodeAttributeArgument(new CodePrimitiveExpression(standardFamily)), new CodeAttributeArgument(new CodePrimitiveExpression(dataSchemaVersion))));
         }
 
-        private static void AddAttributeValidation(CodeTypeDeclaration typeDeclaration, XmlSchemaAttribute attribute)
+        private static void AddAttributeValidation(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, XmlSchemaAttribute attribute)
         {
             var memberProperty = GetMemberProperty(typeDeclaration, attribute.Name);
+            var restrictions = GetAttributeRestrictions(attribute).ToList();
 
-            if (memberProperty != null)
+            if (memberProperty == null) return;
+
+            if (attribute.Use == XmlSchemaUse.Required)
             {
-                AddDescriptionAttribute(memberProperty, GetAnnotation(attribute));
-
-                if (attribute.Use == XmlSchemaUse.Required)
-                {
-                    AddRequiredAttribute(memberProperty);
-                }
+                AddRequiredAttribute(memberProperty);
             }
+
+            AddRestrictionAttributes(codeNamespace, typeDeclaration, memberProperty, restrictions);
+            AddDescriptionAttribute(memberProperty, GetAnnotation(attribute));
         }
 
         private static void AddElementValidation(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, XmlSchemaElement element)
@@ -411,27 +412,30 @@ namespace Energistics.SchemaGatherer
                 AddRequiredAttribute(memberProperty);
             }
 
-            if (restrictions.Any())
+            AddRestrictionAttributes(codeNamespace, typeDeclaration, memberProperty, restrictions);
+            AddDescriptionAttribute(memberProperty, GetAnnotation(element));
+        }
+
+        private static void AddRestrictionAttributes(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, IList<XmlSchemaFacet> restrictions)
+        {
+            if (!restrictions.Any()) return;
+
+            if (memberProperty.Type.ArrayElementType == null)
             {
-                if (memberProperty.Type.ArrayElementType == null)
-                {
-                    AddValidationAttributes(typeDeclaration, memberProperty, restrictions);
-                }
-                else
-                {
-                    var baseTypeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
-                        .FirstOrDefault(x => x.Name == memberProperty.Type.BaseType);
+                AddValidationAttributes(typeDeclaration, memberProperty, restrictions);
+            }
+            else
+            {
+                var baseTypeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
+                    .FirstOrDefault(x => x.Name == memberProperty.Type.BaseType);
 
-                    var xmlTextProperty = baseTypeDeclaration?.Members.OfType<CodeMemberProperty>().FirstOrDefault(Has<XmlTextAttribute>);
+                var xmlTextProperty = baseTypeDeclaration?.Members.OfType<CodeMemberProperty>().FirstOrDefault(Has<XmlTextAttribute>);
 
-                    if (xmlTextProperty != null)
-                    {
-                        AddValidationAttributes(baseTypeDeclaration, xmlTextProperty, restrictions);
-                    }
+                if (xmlTextProperty != null)
+                {
+                    AddValidationAttributes(baseTypeDeclaration, xmlTextProperty, restrictions);
                 }
             }
-
-            AddDescriptionAttribute(memberProperty, GetAnnotation(element));
         }
 
         private static void AddRequiredAttribute(CodeTypeMember memberProperty)
@@ -513,18 +517,33 @@ namespace Energistics.SchemaGatherer
         {
             var facets = new List<XmlSchemaFacet>();
 
-            GetElementTypeRestrictions(facets, schemaElement.ElementSchemaType as XmlSchemaSimpleType);
+            GetSchemaTypeRestrictions(facets, schemaElement.ElementSchemaType as XmlSchemaSimpleType);
 
             var complexType = schemaElement.ElementSchemaType as XmlSchemaComplexType;
             if (complexType != null)
             {
-                GetElementTypeRestrictions(facets, complexType.BaseXmlSchemaType as XmlSchemaSimpleType);
+                GetSchemaTypeRestrictions(facets, complexType.BaseXmlSchemaType as XmlSchemaSimpleType);
             }
 
             return facets;
         }
 
-        private static void GetElementTypeRestrictions(ICollection<XmlSchemaFacet> facets, XmlSchemaSimpleType elementType)
+        private static IEnumerable<XmlSchemaFacet> GetAttributeRestrictions(XmlSchemaAttribute schemaAttribute)
+        {
+            var facets = new List<XmlSchemaFacet>();
+
+            GetSchemaTypeRestrictions(facets, schemaAttribute.AttributeSchemaType);
+
+            //var complexType = schemaAttribute.AttributeSchemaType as XmlSchemaComplexType;
+            //if (complexType != null)
+            //{
+            //    GetSchemaTypeRestrictions(facets, complexType.BaseXmlSchemaType as XmlSchemaSimpleType);
+            //}
+
+            return facets;
+        }
+
+        private static void GetSchemaTypeRestrictions(ICollection<XmlSchemaFacet> facets, XmlSchemaSimpleType elementType)
         {
             while (elementType != null)
             {

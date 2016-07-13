@@ -125,6 +125,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string objectVersion {
             get {
                 return this.objectVersionField;
@@ -137,6 +138,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string schemaVersion {
             get {
                 return this.schemaVersionField;
@@ -149,6 +151,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         public string uuid {
             get {
                 return this.uuidField;
@@ -223,6 +226,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string authority {
             get {
                 return this.authorityField;
@@ -342,6 +346,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -390,6 +395,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string datum {
             get {
                 return this.datumField;
@@ -791,6 +797,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string datum {
             get {
                 return this.datumField;
@@ -1119,6 +1126,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -1258,6 +1266,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -1377,6 +1386,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -1496,6 +1506,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -1615,6 +1626,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -1773,6 +1785,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -1841,6 +1854,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -2020,6 +2034,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -2179,6 +2194,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -2249,6 +2265,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -4201,6 +4218,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string datum {
             get {
                 return this.datumField;
@@ -9496,6 +9514,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string datum {
             get {
                 return this.datumField;
@@ -10520,6 +10539,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -10767,6 +10787,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -10927,6 +10948,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -11086,6 +11108,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -11468,6 +11491,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -11800,6 +11824,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -12023,6 +12048,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -12870,6 +12896,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -13059,6 +13086,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the curve.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the curve.")]
         public string uid {
             get {
@@ -13200,6 +13228,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the rectangular area.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the rectangular area.")]
         public string uid {
             get {
@@ -13364,6 +13393,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the track.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the track.")]
         public string uid {
             get {
@@ -13544,6 +13574,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the calibration point.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the calibration point.")]
         public string uid {
             get {
@@ -13569,6 +13600,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         public string uom {
             get {
                 return this.uomField;
@@ -13733,6 +13765,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the parameter.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the parameter.")]
         public string uid {
             get {
@@ -14116,6 +14149,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the log section.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the log section.")]
         public string uid {
             get {
@@ -14412,6 +14446,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the for a log section.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the for a log section.")]
         public string uid {
             get {
@@ -14723,6 +14758,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -14745,6 +14781,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         public string description {
             get {
                 return this.descriptionField;
@@ -14801,6 +14838,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string name {
             get {
                 return this.nameField;
@@ -14812,6 +14850,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         public string uom {
             get {
                 return this.uomField;
@@ -14823,6 +14862,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         public string description {
             get {
                 return this.descriptionField;
@@ -14835,6 +14875,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -14919,6 +14960,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string downholeStringRefID {
             get {
                 return this.downholeStringRefIDField;
@@ -14954,6 +14996,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string boreholeStringRefID {
             get {
                 return this.boreholeStringRefIDField;
@@ -16568,6 +16611,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         public string @class {
             get {
                 return this.classField;
@@ -16774,6 +16818,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -16923,6 +16968,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -17051,6 +17097,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -17504,6 +17551,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -17526,6 +17574,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string currency {
             get {
                 return this.currencyField;
@@ -17635,6 +17684,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -18246,6 +18296,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -18629,6 +18680,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -18981,6 +19033,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -19294,6 +19347,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -20022,6 +20076,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -22161,6 +22216,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -22540,6 +22596,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -26734,6 +26791,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         public string uom {
             get {
                 return this.uomField;
@@ -26871,6 +26929,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -27147,6 +27206,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -27243,6 +27303,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -28459,6 +28520,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -29863,6 +29925,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -29874,6 +29937,8 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uidParentString {
             get {
                 return this.uidParentStringField;
@@ -30320,6 +30385,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -30870,6 +30936,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -30955,6 +31022,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -31230,6 +31298,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -31501,6 +31570,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -31529,6 +31599,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string authority {
             get {
                 return this.authorityField;
@@ -31670,6 +31741,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -32483,6 +32555,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -33679,6 +33752,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -35763,8 +35837,9 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier of this WbGeometrySection within the WbGeometry object.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Unique identifier of this WbGeometrySection within the WbGeometry object.")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier of this WbGeometrySection within the WbGeometry object.")]
         public string uid {
             get {
                 return this.uidField;
@@ -36655,6 +36730,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -36828,6 +36904,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -36852,6 +36929,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
         public string dTim {
             get {
                 return this.dTimField;
@@ -36974,6 +37052,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -37956,6 +38035,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -38919,6 +38999,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -39015,6 +39096,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string datum {
             get {
                 return this.datumField;
@@ -39360,6 +39442,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -39501,6 +39584,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -39597,6 +39681,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -40005,6 +40090,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -40205,6 +40291,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -40317,6 +40404,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -40514,6 +40602,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -40917,6 +41006,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -41115,6 +41205,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -41345,6 +41436,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -41751,6 +41843,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -41979,6 +42072,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -42511,6 +42605,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -43843,6 +43938,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -44045,6 +44141,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -45036,6 +45133,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -46503,6 +46601,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -47456,6 +47555,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -47700,6 +47800,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uid {
             get {
                 return this.uidField;
@@ -48755,6 +48856,7 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         public string uidWellCompletion {
             get {
                 return this.uidWellCompletionField;
@@ -53641,6 +53743,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Unique identifier for the registration image.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the registration image.")]
         public string uid {
             get {

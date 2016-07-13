@@ -161,7 +161,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// objectVersion property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("objectVersion")]
 		
         public String ObjectVersion {
@@ -180,6 +180,7 @@ namespace Energistics.DataAccess.WITSML200
         /// schemaVersion property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("schemaVersion")]
 		
         public String SchemaVersion {
@@ -198,6 +199,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uuid property
         /// </summary>
 		[Required]
+        [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [XmlAttribute("uuid")]
 		
         public String Uuid {
@@ -324,7 +326,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// authority property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("authority")]
 		
         public String Authority {
@@ -530,6 +532,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -620,7 +623,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// datum property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -807,7 +810,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// datum property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -1345,6 +1348,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -1544,6 +1548,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -1749,6 +1754,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -1954,6 +1960,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -2159,6 +2166,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -2445,6 +2453,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -2669,6 +2678,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -2915,6 +2925,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -3093,6 +3104,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -3213,6 +3225,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -5777,7 +5790,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// datum property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -12145,7 +12158,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// datum property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -13497,6 +13510,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -13820,6 +13834,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -14055,6 +14070,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -14290,6 +14306,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -14815,6 +14832,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -15277,6 +15295,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -15539,6 +15558,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -16641,6 +16661,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -16904,7 +16925,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the curve.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the curve.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17054,7 +17076,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the rectangular area.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the rectangular area.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17333,7 +17356,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the track.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the track.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17578,7 +17602,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the calibration point.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the calibration point.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17656,7 +17681,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[StringLength(32)]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -17886,7 +17911,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the parameter.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the parameter.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -18459,7 +18485,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the log section.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the log section.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -18741,7 +18768,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the for a log section.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the for a log section.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -19178,6 +19206,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -19232,7 +19261,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// description property
         /// </summary>
-		
+		[StringLength(2000)]
         [XmlAttribute("description")]
 		
         public String Description {
@@ -19347,7 +19376,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// name property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("name")]
 		
         public String Name {
@@ -19365,7 +19394,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[StringLength(32)]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -19383,7 +19412,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// description property
         /// </summary>
-		
+		[StringLength(2000)]
         [XmlAttribute("description")]
 		
         public String Description {
@@ -19402,6 +19431,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -19589,7 +19619,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// downholeStringRefID property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("downholeStringRefID")]
 		
         public String DownholeStringRefID {
@@ -19670,7 +19700,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// boreholeStringRefID property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("boreholeStringRefID")]
 		
         public String BoreholeStringRefID {
@@ -22758,7 +22788,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// class property
         /// </summary>
-		
+		[StringLength(40)]
         [XmlAttribute("class")]
 		
         public String Class {
@@ -23058,6 +23088,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -23249,6 +23280,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -23442,6 +23474,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -24021,6 +24054,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -24075,7 +24109,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// currency property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("currency")]
 		
         public String Currency {
@@ -24248,6 +24282,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -25169,6 +25204,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -25684,6 +25720,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -26046,6 +26083,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -26435,6 +26473,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -27445,6 +27484,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -30266,6 +30306,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -30499,6 +30540,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -38298,7 +38340,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[StringLength(32)]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -38528,6 +38570,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -38883,6 +38926,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -39058,6 +39102,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -40998,6 +41043,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -43147,6 +43193,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -43164,7 +43211,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uidParentString property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
         [XmlAttribute("uidParentString")]
 		
         public String UidParentString {
@@ -43758,7 +43806,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -44373,7 +44421,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -44502,6 +44550,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -44911,7 +44960,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -45262,7 +45311,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -45338,7 +45387,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// authority property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("authority")]
 		
         public String Authority {
@@ -45553,7 +45602,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -46763,6 +46812,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -48295,6 +48345,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -51303,6 +51354,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [Description("Unique identifier of this WbGeometrySection within the WbGeometry object.")]
         [XmlAttribute("uid")]
 		
@@ -52432,6 +52484,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -52668,6 +52721,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -52743,7 +52797,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// dTim property
         /// </summary>
-		
+		[RegularExpression(".+T.+[Z+\\-].*")]
         [XmlAttribute("dTim")]
 		
         public String DateTime {
@@ -52934,6 +52988,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -54199,6 +54254,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -55474,6 +55530,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -55588,7 +55645,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// datum property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -56093,6 +56150,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -56247,6 +56305,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -56401,6 +56460,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -56960,6 +57020,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -57168,6 +57229,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -57340,6 +57402,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -57620,6 +57683,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -58170,6 +58234,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -58432,6 +58497,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -58767,6 +58833,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -59325,6 +59392,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -59550,6 +59618,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -60305,6 +60374,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -60602,6 +60672,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -60899,6 +60970,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -62150,6 +62222,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -63708,6 +63781,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -64160,6 +64234,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -64576,6 +64651,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[Required]
+        [StringLength(64)]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -65919,7 +65995,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uidWellCompletion property
         /// </summary>
-		
+		[StringLength(64)]
         [XmlAttribute("uidWellCompletion")]
 		
         public String UidWellCompletion {
@@ -71421,7 +71497,8 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uid property
         /// </summary>
-		[Description("Unique identifier for the registration image.")]
+		[StringLength(64)]
+        [Description("Unique identifier for the registration image.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
