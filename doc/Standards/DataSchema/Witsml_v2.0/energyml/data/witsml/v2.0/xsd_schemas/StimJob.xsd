@@ -31,7 +31,7 @@
 		<xs:complexContent>
 			<xs:extension base="witsml:StimMaterial">
 				<xs:sequence>
-					<xs:element name="FrictionCoefficientLaminar" type="xs:double" minOccurs="0" maxOccurs="1">
+					<xs:element name="FrictionCoefficientLaminar" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Laminar Flow Friction Coefficient.</xs:documentation>
 						</xs:annotation>
@@ -41,7 +41,7 @@
 							<xs:documentation>Characterizes how easily radiation passes through a material. This can be used to compute the concentration of proppant in a slurry using a densitometer.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="FrictionCoefficientTurbulent" type="xs:double" minOccurs="0" maxOccurs="1">
+					<xs:element name="FrictionCoefficientTurbulent" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Turbulent Flow Friction Coefficient.</xs:documentation>
 						</xs:annotation>
@@ -56,7 +56,7 @@
 							<xs:documentation>Low value of Sieve mesh size - for 40/70 Sand, this value would be 40.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="UnconfinedCompressiveStrength" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:element name="UnconfinedCompressiveStrength" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The unconfined compressive strength of the proppant.</xs:documentation>
 						</xs:annotation>
@@ -81,11 +81,15 @@
 				<xs:sequence>
 					<xs:element name="AdditiveKind" type="witsml:StimAdditiveKind" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Additive type or function.</xs:documentation>
+							<xs:documentation>Additive type or function from the enumeration 'StimAdditiveKind'.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Type" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="SupplierCode" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="SupplierCode" type="eml:String2000" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>A code used to identify the supplier of the additive.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -105,7 +109,7 @@
 					<xs:documentation>Percentage of undesirable agglomerated discrete proppant particles which typically occurs more with inefficiently processed natural sand proppants as opposed to manufactured ceramic proppants. ISO 13503-2 and API RP19C limit the mass of clusters to less than 1%.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="KValue" type="xs:double" minOccurs="0" maxOccurs="1">
+			<xs:element name="KValue" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Crush test classification indicating the highest stress level at which a proppant generated no more than 10% crushed material rounded down to the nearest 1,000 psi during a crush test. For example, a value of 14 means ‘14K’ which is 14000 psi.</xs:documentation>
 				</xs:annotation>
@@ -120,7 +124,12 @@
 					<xs:documentation>The median diameter of particles in a sample of proppant.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Roundness" type="xs:double" minOccurs="0" maxOccurs="1">
+			<xs:element name="SpecificGravity" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Not formally part of ISO 13503 .2 properties, the specific gravity is the Apparent Density of the Proppant divided by the Density of Water.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Roundness" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Krumbein Roundness Shape Factor that is a measure of the relative sharpness of grain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.</xs:documentation>
 				</xs:annotation>
@@ -132,7 +141,7 @@
 			</xs:element>
 			<xs:element name="ApparentDensity" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Apparent density (also known as ‘Specific Gravity’) excludes extra-granular porosity by placing a known mass in a volume of fluid and determining how much of the fluid is displaced (Archimedes).</xs:documentation>
+					<xs:documentation>Apparent Density excludes extra-granular porosity by placing a known mass in a volume of fluid and determining how much of the fluid is displaced (Archimedes).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BulkDensity" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -145,12 +154,12 @@
 					<xs:documentation>A mass loss (gravimetric) test method applied to coated proppants only, which determines the mass of resin coating applied to a natural sand or manufactured proppant by means of thorough combustion of the flammable resin from the nonflammable proppant. Reported as a % of original mass.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Sphericity" type="xs:double" minOccurs="0" maxOccurs="1">
+			<xs:element name="Sphericity" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Krumbein Sphericity Shape Factor that is a measure of how closely a proppant particle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Turbidity" type="xs:double" minOccurs="0" maxOccurs="1">
+			<xs:element name="Turbidity" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Turbidity is a measure of water clarity how much the material suspended in water decreases the passage of light through the water.
 
@@ -160,6 +169,7 @@ Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based up
 			<xs:element name="CrushTestData" type="witsml:ISO13503_2CrushTestData" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="SieveAnalysisData" type="witsml:ISO13503_2SieveAnalysisData" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="ISO13503_2CrushTestData">
 		<xs:annotation>
@@ -168,15 +178,16 @@ Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based up
 		<xs:sequence>
 			<xs:element name="Fines" type="eml:MassPerMassMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Mass percentage of fines after being exposed to stress</xs:documentation>
+					<xs:documentation>Mass percentage of fines after being exposed to stress.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Stress" type="xs:string" minOccurs="1" maxOccurs="1">
+			<xs:element name="Stress" type="eml:PressureMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Stress measured at a point during a crush test.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:simpleType name="ProppantAgentKind">
 		<xs:restriction base="eml:TypeEnum">
@@ -223,7 +234,7 @@ Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based up
 	</xs:simpleType>
 	<xs:complexType name="StimPerforationClusterSet">
 		<xs:sequence>
-			<xs:element name="StimPerforationCluster" type="witsml:obj_StimPerforationCluster" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="StimPerforationCluster" type="witsml:StimPerforationCluster" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="StimMaterialKind">
@@ -240,15 +251,24 @@ Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based up
 	</xs:simpleType>
 	<xs:complexType name="StimISO13503_5Point">
 		<xs:annotation>
-			<xs:documentation>A Stress, Conductivity, Permeability data point.</xs:documentation>
+			<xs:documentation>A Stress, Conductivity, Permeability, and Temperature data point.
+
+TODO: Fix unit on Conductivity</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Conductiviy" type="eml:ElectricConductivityMeasure" minOccurs="1" maxOccurs="1">
+			<xs:element name="Conductivity" type="eml:ElectricConductivityMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The Conductivity under Stress.</xs:documentation>
+					<xs:documentation>The Conductivity under Stress.
+
+TODO: Fix Unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Permeability" type="eml:PermeabilityLengthMeasure" minOccurs="1" maxOccurs="1">
+			<xs:element name="Temperature" type="eml:ThermodynamicTemperatureMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The temperature at the time measurements were taken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Permeability" type="eml:PermeabilityRockMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The permeability under Stress.</xs:documentation>
 				</xs:annotation>
@@ -259,8 +279,10 @@ Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based up
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
-	<xs:complexType name="obj_StimJob">
+	<xs:element name="StimJob" type="witsml:StimJob" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="StimJob">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -399,12 +421,13 @@ Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based up
 					<xs:element name="MaterialUsed" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="MaterialCatalog" type="witsml:StimMaterialCatalog" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="LogCatalog" type="witsml:StimJobLogCatalog" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="LogCatalog" type="witsml:StimJobLogCatalog" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="obj_StimPerforationCluster">
+	<xs:element name="StimPerforationCluster" type="witsml:StimPerforationCluster" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="StimPerforationCluster">
 		<xs:annotation>
 			<xs:documentation>Information about a set of perforations.  The assumption is that all perforations within a given set are created with the same device or method.
 			</xs:documentation>
@@ -493,6 +516,7 @@ This is a reference to the uuid of the stim material in the material catalog</xs
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimMaterial">
 		<xs:sequence>
@@ -590,6 +614,11 @@ The unit of measure for the additive is found via StimMaterialQuantity in the Ma
 The total amount of the additive used is in the StimJobStep element MaterialUsed. That amount is the one appropriate for the total volume of fluid pumped.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="ConcentrationVolume" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The volume used to compute the concentration of added fluids with. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Name" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The name of the fluid.</xs:documentation>
@@ -610,7 +639,7 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Volume of fluid.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Density" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="Density" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The density of the fluid.</xs:documentation>
 				</xs:annotation>
@@ -650,7 +679,7 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>The description of the fluid.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PH" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="PH" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The pH of the fluid.</xs:documentation>
 				</xs:annotation>
@@ -681,26 +710,6 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 			<xs:documentation>A step in the treatment of a stage for a stimulation job.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Number" type="eml:PositiveLong" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Step number.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Name" type="eml:String2000" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>A human readable name for the step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Kind" type="eml:String2000" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The type of step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>A short description of the step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="AvgBaseFluidQuality" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Base quality percentage of foam.</xs:documentation>
@@ -728,7 +737,7 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 			</xs:element>
 			<xs:element name="AvgMaterialUsePerMinuteBottomhole" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Average material amount used (pumpted) per minute at bottomhole.</xs:documentation>
+					<xs:documentation>Average material amount used (pumped) per minute at bottomhole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AvgN2BaseFluidQuality" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -736,24 +745,22 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Base quality nitrogen percentage of foam.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AvgPresSurface" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Average surface pressure.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="AvgPresBottomhole" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Average bottomhole pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AvgPropConc" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="AvgPresSurface" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Average proppant concentration at the wellhead.</xs:documentation>
+					<xs:documentation>Average surface pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AvgProppantConcSurface" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="AvgPropConc" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The average proppant concentration at the surface.</xs:documentation>
+					<xs:documentation>Average proppant concentration at the wellhead.
+
+PPA (pounds proppant added per volume measure)
+kgpa (kilograms proppant added per volume measure)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AvgProppantConcBottomhole" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -761,12 +768,17 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>The average proppant concentration bottomhole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AvgProppantConcSurface" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The average proppant concentration at the surface.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="AvgSlurryPropConc" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Average proppant concentration exiting equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AvgSlurryRate" type="eml:VolumePerTimeMeasure" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="AvgSlurryRate" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="AvgTemperature" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Average fluid temperature.</xs:documentation>
@@ -777,14 +789,14 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Average volume per minute at the wellhead.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BallsUsed" type="eml:NonNegativeLong" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Balls used during execution of the step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="BallsRecovered" type="eml:NonNegativeLong" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Balls recovered during execution of the step.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BallsUsed" type="eml:NonNegativeLong" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Balls used during execution of the step.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BaseFluidBypassVol" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -797,14 +809,19 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Base fluid volume entering equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DTimStart" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Date time of start of the step.</xs:documentation>
+					<xs:documentation>A short description of the step.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DTimEnd" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Date time of end of the step.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTimStart" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date time of start of the step.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDirtyMaterialPerMinute" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -814,7 +831,7 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 			</xs:element>
 			<xs:element name="EndMaterialUsedPerMinute" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Ending quantity of material used per minute entering the flowstream.</xs:documentation>
+					<xs:documentation>Ending quantity of material used per minute entering the flow stream.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndMaterialUsedPerMinuteBottomhole" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded">
@@ -822,19 +839,14 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Ending quantity of material used per minute at bottomhole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EndPresSurface" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Final surface pressure.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="EndPresBottomhole" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Final bottomhole pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EndProppantConcSurface" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="EndPresSurface" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The final proppant concentration at the surface.</xs:documentation>
+					<xs:documentation>Final surface pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndProppantConcBottomhole" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -842,9 +854,29 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>The final proppant concentration bottomhole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="EndProppantConcSurface" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The final proppant concentration at the surface.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndRateSurfaceCO2" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Final CO2 pump rate in volume per time at the surface.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="EndStdRateSurfaceN2" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Final nitrogen pump rate in volume per time at the surface.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FluidVolBase" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The step volume of the base step.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FluidVolCirculated" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -862,6 +894,11 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Fluid volume returned.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="FluidVolSlurry" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The volume of the slurry (dirty) step.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="FluidVolSqueezed" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Fluid volume squeezed.</xs:documentation>
@@ -872,24 +909,9 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Fluid volume washed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FluidVolBase" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The step volume of the base step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FluidVolSlurry" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The volume of the slurry (dirty) step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="FractureGradientFinal" type="eml:ForcePerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The fracture gradient at the end time of the step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FrictionFactor" type="xs:string" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Numeric value used to scale a calculated rheological friction.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FractureGradientInitial" type="eml:ForcePerVolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -897,18 +919,28 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>The fracture gradient prior at the start time of the step.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MaxHydraulicPower" type="eml:PowerMeasure" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="FrictionFactor" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Numeric value used to scale a calculated rheological friction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Kind" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The type of step.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaxHydraulicPower" type="eml:PowerMeasure" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="MaxPresSurface" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Maximum pumping pressure on surface.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="MaxProppantConcBottomhole" type="eml:MassPerVolumeMeasure" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="MaxProppantConcSurface" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Maximum proppant concentration at the wellhead.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MaxProppantConcBottomhole" type="eml:MassPerVolumeMeasure" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="MaxSlurryPropConc" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Maximum proppant concentration exiting equipment.</xs:documentation>
@@ -917,6 +949,16 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 			<xs:element name="MaxVolumePerMinuteWellhead" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Maximum volume per minute at the wellhead.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A human readable name for the step.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Number" type="eml:PositiveLong" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Step number.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PipeFrictionPressure" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
@@ -929,9 +971,19 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Total pumping time for the step.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="StartMaterialUsedPerMinute" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="StartDirtyMaterialPerMinute" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Starting quantity of material used per minute entering the flowstream.</xs:documentation>
+					<xs:documentation>Starting dirty fluid volume per minute.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartMaterialUsedPerMinute" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Starting quantity of material used per minute entering the flow stream.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartMaterialUsedPerMinuteBottomHole" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Starting quantity of material used per minute at bottomhole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartPresBottomhole" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
@@ -949,16 +1001,6 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>The beginning proppant concentration bottomhole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="StartDirtyMaterialPerMinute" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Starting dirty fluid volume per minute.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="StartMaterialUsedPerMinuteBottomHole" type="xs:string" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Starting quantity of material used per minute at bottomhole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="StartProppantConcSurface" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The beginning proppant concentration at the surface.</xs:documentation>
@@ -969,11 +1011,6 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 					<xs:documentation>Slurry volume entering the well.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="MaterialUsed" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Material used during the step</xs:documentation>
@@ -982,6 +1019,7 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 			<xs:element name="MaxMaterialUsedPerMinute" type="witsml:StimMaterialQuantity" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Fluid" type="witsml:StimFluid" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="ISO13503_2SieveAnalysisData">
 		<xs:sequence>
@@ -996,6 +1034,7 @@ The total amount of the additive used is in the StimJobStep element MaterialUsed
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:simpleType name="StimAdditiveKind">
 		<xs:restriction base="eml:TypeEnum">

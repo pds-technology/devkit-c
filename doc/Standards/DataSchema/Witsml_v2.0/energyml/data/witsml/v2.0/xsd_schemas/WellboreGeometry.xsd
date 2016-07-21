@@ -23,7 +23,8 @@
 			<xs:documentation>Wrapper for sending individual sections over ETP.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:complexType name="obj_WellboreGeometry">
+	<xs:element name="WellboreGeometry" type="witsml:WellboreGeometry" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="WellboreGeometry">
 		<xs:annotation>
 			<xs:documentation>The wbGeometry object is used to capture information about the configuration of the permanently installed components in a wellbore. It does not define the transient drilling strings (see the tubular object) or the hanging production components. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>

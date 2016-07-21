@@ -18,8 +18,6 @@ using Energistics.DataAccess.Validation;
 namespace Energistics.DataAccess.RESQML201
 {
     #region Classes
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractObject xsd type.
     /// </summary>
@@ -273,7 +271,6 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -11836,8 +11833,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the VerticalCRSType xsd type.
     /// </summary>
@@ -11887,10 +11882,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the VerticalCSPropertyType xsd type.
     /// </summary>
@@ -11960,10 +11952,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the VerticalCSType xsd type.
     /// </summary>
@@ -11979,10 +11968,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractCoordinateSystemType xsd type.
     /// </summary>
@@ -12065,10 +12051,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CoordinateSystemAxisPropertyType xsd type.
     /// </summary>
@@ -12138,10 +12121,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CoordinateSystemAxisType xsd type.
     /// </summary>
@@ -12280,10 +12260,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CodeType xsd type.
     /// </summary>
@@ -12375,10 +12352,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CodeWithAuthorityType xsd type.
     /// </summary>
@@ -12415,7 +12389,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -12453,8 +12426,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the DefinitionType xsd type.
     /// </summary>
@@ -12506,7 +12477,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -12546,8 +12516,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractGMLType xsd type.
     /// </summary>
@@ -12700,10 +12668,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the StringOrRefType xsd type.
     /// </summary>
@@ -12794,10 +12759,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the ReferenceType xsd type.
     /// </summary>
@@ -12868,10 +12830,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractTimeObjectType xsd type.
     /// </summary>
@@ -12888,10 +12847,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractTimePrimitiveType xsd type.
     /// </summary>
@@ -12933,7 +12889,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -13081,8 +13036,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractCoordinateOperationType xsd type.
     /// </summary>
@@ -13219,10 +13172,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the domainOfValidity xsd type.
     /// </summary>
@@ -13292,10 +13242,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the EX_Extent_Type xsd type.
     /// </summary>
@@ -13406,7 +13353,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -13570,8 +13516,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractEX_GeographicExtent_Type xsd type.
     /// </summary>
@@ -13604,7 +13548,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -13767,8 +13710,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractDQ_Result_Type xsd type.
     /// </summary>
@@ -13784,10 +13725,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_Series_Type xsd type.
     /// </summary>
@@ -13854,10 +13792,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_OnlineResource_Type xsd type.
     /// </summary>
@@ -13976,7 +13911,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -14122,8 +14056,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CodeListValue_Type xsd type.
     /// </summary>
@@ -14250,10 +14182,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_Address_Type xsd type.
     /// </summary>
@@ -14389,10 +14318,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_Telephone_Type xsd type.
     /// </summary>
@@ -14460,10 +14386,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_Contact_Type xsd type.
     /// </summary>
@@ -14564,7 +14487,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -14836,8 +14758,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_ResponsibleParty_Type xsd type.
     /// </summary>
@@ -14939,7 +14859,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -15103,8 +15022,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_Date_Type xsd type.
     /// </summary>
@@ -15156,7 +15073,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -15348,8 +15264,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CI_Citation_Type xsd type.
     /// </summary>
@@ -15633,7 +15547,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -15815,8 +15728,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the MD_Identifier_Type xsd type.
     /// </summary>
@@ -15867,7 +15778,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -16211,8 +16121,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractDQ_Element_Type xsd type.
     /// </summary>
@@ -16393,7 +16301,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -16629,8 +16536,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractDQ_PositionalAccuracy_Type xsd type.
     /// </summary>
@@ -16646,10 +16551,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the EX_VerticalExtent_Type xsd type.
     /// </summary>
@@ -16719,7 +16621,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -16883,8 +16784,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractCRSType xsd type.
     /// </summary>
@@ -16956,10 +16855,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractGeneralDerivedCRSType xsd type.
     /// </summary>
@@ -16993,10 +16889,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the GeneralConversionPropertyType xsd type.
     /// </summary>
@@ -17066,10 +16959,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractGeneralConversionType xsd type.
     /// </summary>
@@ -17085,10 +16975,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the ProjectedCRSType xsd type.
     /// </summary>
@@ -17138,10 +17025,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the GeodeticCRSPropertyType xsd type.
     /// </summary>
@@ -17211,10 +17095,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the GeodeticCRSType xsd type.
     /// </summary>
@@ -17341,10 +17222,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CartesianCSPropertyType xsd type.
     /// </summary>
@@ -17414,10 +17292,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CartesianCSType xsd type.
     /// </summary>
@@ -17433,10 +17308,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the EllipsoidalCSPropertyType xsd type.
     /// </summary>
@@ -17506,10 +17378,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the EllipsoidalCSType xsd type.
     /// </summary>
@@ -17525,10 +17394,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the SphericalCSPropertyType xsd type.
     /// </summary>
@@ -17598,10 +17464,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the SphericalCSType xsd type.
     /// </summary>
@@ -17617,10 +17480,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the GeodeticDatumPropertyType xsd type.
     /// </summary>
@@ -17690,10 +17550,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the GeodeticDatumType xsd type.
     /// </summary>
@@ -17743,10 +17600,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the PrimeMeridianPropertyType xsd type.
     /// </summary>
@@ -17816,10 +17670,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the PrimeMeridianType xsd type.
     /// </summary>
@@ -17852,10 +17703,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AngleType xsd type.
     /// </summary>
@@ -17892,10 +17740,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the MeasureType xsd type.
     /// </summary>
@@ -17970,7 +17815,6 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -18011,8 +17855,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the EllipsoidPropertyType xsd type.
     /// </summary>
@@ -18082,10 +17924,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the EllipsoidType xsd type.
     /// </summary>
@@ -18135,10 +17974,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the secondDefiningParameter xsd type.
     /// </summary>
@@ -18190,10 +18026,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the SecondDefiningParameter xsd type.
     /// </summary>
@@ -18322,10 +18155,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the AbstractDatumType xsd type.
     /// </summary>
@@ -18439,10 +18269,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the VerticalDatumType xsd type.
     /// </summary>
@@ -18458,10 +18285,7 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the EX_TemporalExtent_Type xsd type.
     /// </summary>
@@ -18495,7 +18319,6 @@ namespace Energistics.DataAccess.RESQML201
 
 
     } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -18767,8 +18590,6 @@ namespace Energistics.DataAccess.RESQML201
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the coordinateOperationAccuracy xsd type.
     /// </summary>
@@ -18838,10 +18659,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the CRSPropertyType xsd type.
     /// </summary>
@@ -18911,10 +18729,7 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
-    namespace ComponentSchemas 
-    {
     /// <summary>
     /// This class represents the VerticalDatumPropertyType xsd type.
     /// </summary>
@@ -18984,7 +18799,6 @@ namespace Energistics.DataAccess.RESQML201
         }
         #endregion INotifyPropertyChanged Members
     } //here
-    }
 
     namespace ComponentSchemas 
     {

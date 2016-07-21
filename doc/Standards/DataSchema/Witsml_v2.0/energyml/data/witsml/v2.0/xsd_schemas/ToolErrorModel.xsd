@@ -95,28 +95,13 @@ the entire valid range of the tool.</xs:documentation>
 			<xs:documentation>The codes for the iscwsa survey tool operating modes.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="continuous xy"/>
+			<xs:enumeration value="continuous xyz"/>
+			<xs:enumeration value="continuous z"/>
 			<xs:enumeration value="unknown"/>
 			<xs:enumeration value="stationary">
 				<xs:annotation>
 					<xs:documentation>Tool is operating in a stationary mode</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="continuous XY">
-				<xs:annotation>
-					<xs:documentation>Tool is operating continuously using X- and
-Y-axis gyro-sensors</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="continuous Z">
-				<xs:annotation>
-					<xs:documentation>Tool is operating continuously using Z-axis
-gyro-sensor</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="continuous XYZ">
-				<xs:annotation>
-					<xs:documentation>Tool is operating continuously using X-, Y-
-and Z-axis gyro-sensors</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -262,7 +247,8 @@ captured elsewhere. For example, via a measure class.</xs:documentation>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="obj_ToolErrorModel">
+	<xs:element name="ToolErrorModel" type="witsml:ToolErrorModel" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="ToolErrorModel">
 		<xs:annotation>
 			<xs:documentation>The toolErrorModel object is used to define a surveying tool error model. This object is globally unique.</xs:documentation>
 		</xs:annotation>

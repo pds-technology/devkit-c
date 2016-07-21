@@ -329,22 +329,15 @@ to titrate the reagent mixture to the phenolphthalein endpoint).</xs:documentati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:simpleType name="MudClass">
 		<xs:annotation>
 			<xs:documentation>Defines the class of a drilling fluid.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="water based">
-				<xs:annotation>
-					<xs:documentation>A drilling fluid in which water is the continuous phase.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="oil based">
-				<xs:annotation>
-					<xs:documentation>A drilling fluid in which oil is the continuous phase.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
+			<xs:enumeration value="oil-based"/>
+			<xs:enumeration value="water-based"/>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>A drilling fluid in which neither water nor oil is the continous phase.</xs:documentation>
@@ -357,7 +350,8 @@ to titrate the reagent mixture to the phenolphthalein endpoint).</xs:documentati
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="obj_FluidsReport">
+	<xs:element name="FluidsReport" type="witsml:FluidsReport" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="FluidsReport">
 		<xs:annotation>
 			<xs:documentation>The fluidsReport object is used to capture an analysis of the drilling mud. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>
@@ -385,7 +379,7 @@ to titrate the reagent mixture to the phenolphthalein endpoint).</xs:documentati
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Fluid" type="witsml:Fluid" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

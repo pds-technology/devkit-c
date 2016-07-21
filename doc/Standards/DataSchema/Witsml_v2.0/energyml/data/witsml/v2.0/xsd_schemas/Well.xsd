@@ -364,7 +364,8 @@ and a vertical well datum are at the same point.</xs:documentation>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="obj_Well">
+	<xs:element name="Well" type="witsml:Well" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="Well">
 		<xs:annotation>
 			<xs:documentation>The well object is used to capture the general information about a well. This might sometimes be called a well header. All information which is the same for all wellbores (sidetracks) is contained in the well object.</xs:documentation>
 		</xs:annotation>

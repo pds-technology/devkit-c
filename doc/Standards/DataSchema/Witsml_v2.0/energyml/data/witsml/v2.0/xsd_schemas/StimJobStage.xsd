@@ -27,6 +27,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimJobDiagnosticSession">
 		<xs:annotation>
@@ -180,16 +181,14 @@
 					<xs:documentation>The volume change of a reservoir material when pressure is applied.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FluidNprimeFactor" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="FluidNprimeFactor" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Power law component. As n decreases from 1, the fluid becomes more shear thinning. 
-					Reducing n produces more non-Newtonian behavior.</xs:documentation>
+					<xs:documentation>Power law component. As 'n' decreases from 1, the fluid becomes more shear thinning. Reducing 'n' produces more non-Newtonian behavior.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FluidKprimeFactor" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="FluidKprimeFactor" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The consistency index K is the shear stress or viscosity of the fluid at one sec-1 shear rate.
-					An increasing K raises the effective viscosity.</xs:documentation>
+					<xs:documentation>The consistency index K is the shear stress or viscosity of the fluid at one sec-1 shear rate. An increasing K raises the effective viscosity.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FluidSpecificHeat" type="eml:SpecificHeatCapacityMeasure" minOccurs="0" maxOccurs="1">
@@ -217,8 +216,7 @@
 			</xs:element>
 			<xs:element name="FluidEfficiency" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>A measurement, derived from a data frac, of the efficiency
-					of a particular fluid in creating fracture area on a particular formation at a set of conditions.</xs:documentation>
+					<xs:documentation>A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FoamQuality" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -273,6 +271,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimStepDownTest">
 		<xs:annotation>
@@ -284,10 +283,9 @@ An injection test involving multiple steps of injection rate and pressure, where
 					<xs:documentation>The initial shutin pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BottomholeFluidDensity" type="eml:PermeabilityRockMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="BottomholeFluidDensity" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The density of the fluid at the bottom of the hole adjusting for bottomhole 
-					temperature and pressure during the step test.</xs:documentation>
+					<xs:documentation>The density of the fluid at the bottom of the hole adjusting for bottomhole temperature and pressure during the step test.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DiameterEntryHole" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -300,19 +298,17 @@ An injection test involving multiple steps of injection rate and pressure, where
 					<xs:documentation>The number of perforations in the interval being tested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DischargeCoefficient" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="DischargeCoefficient" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>A coefficient used in the equation for calculation of pressure 
-					drop across a perforation set.</xs:documentation>
+					<xs:documentation>A coefficient used in the equation for calculation of pressure drop across a perforation set.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EffectivePerfs" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="EffectivePerfs" type="eml:NonNegativeLong" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The number of perforations in the interval being tested calculated 
-					to be open to injection determined during the step down test.</xs:documentation>
+					<xs:documentation>The number of perforations in the interval being tested calculated to be open to injection determined during the step down test.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Step" type="witsml:StimTestStep" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Step" type="witsml:StimPumpFlowBackTestStep" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The data related to a particular step in the step down test.</xs:documentation>
 				</xs:annotation>
@@ -323,6 +319,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimPressureFlowRate">
 		<xs:annotation>
@@ -345,6 +342,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimEvent">
 		<xs:annotation>
@@ -377,6 +375,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimTubular">
 		<xs:annotation>
@@ -424,6 +423,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimPumpFlowBackTest">
 		<xs:annotation>
@@ -470,8 +470,9 @@ An injection test involving multiple steps of injection rate and pressure, where
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Step" type="witsml:StimTestStep" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Step" type="witsml:StimPumpFlowBackTestStep" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimFlowPath">
 		<xs:annotation>
@@ -486,7 +487,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 					of all the pmax pressures calculated for this flow path.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FrictionFactorOpenHole" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="FrictionFactorOpenHole" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The friction factor used to compute open hole pressure loss.</xs:documentation>
 				</xs:annotation>
@@ -512,7 +513,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 					<xs:documentation>The formation fracture gradient for this treatment interval.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Kind" type="eml:PressureMeasure" minOccurs="1" maxOccurs="1">
+			<xs:element name="Kind" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The type of flow path.</xs:documentation>
 				</xs:annotation>
@@ -533,7 +534,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 					<xs:documentation>The measured depth of a packer.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FrictionFactorPipe" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="FrictionFactorPipe" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The friction factor for the pipe, tubing, and/or casing.</xs:documentation>
 				</xs:annotation>
@@ -546,10 +547,9 @@ An injection test involving multiple steps of injection rate and pressure, where
 			<xs:element name="Tubular" type="witsml:StimTubular" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="StimTestStep">
+	<xs:complexType name="StimPumpFlowBackTestStep">
 		<xs:annotation>
-			<xs:documentation>In a step down pump diagnostics test, this item contains all 
-			the data for a particular step in that test.</xs:documentation>
+			<xs:documentation>In a step down pump diagnostics test, this item contains all the data for a particular step in that test.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
@@ -614,6 +614,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:simpleType name="StimJobDiversionMethod">
 		<xs:restriction base="eml:TypeEnum">
@@ -643,7 +644,8 @@ An injection test involving multiple steps of injection rate and pressure, where
 			<xs:element name="ElementSpacing" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="obj_StimJobStage">
+	<xs:element name="StimJobStage" type="witsml:StimJobStage" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="StimJobStage">
 		<xs:annotation>
 			<xs:documentation>Stage treated during a stimulation job.</xs:documentation>
 		</xs:annotation>
@@ -697,7 +699,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 							<xs:documentation>Average fracture width created during the treatment of the stage..</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="AvgHydraulicPower" type="eml:PowerMeasure" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="AvgHydraulicPower" type="eml:PowerMeasure" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="AvgPresAnnulus" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The average annulus pressure for any step for the stage treatment.</xs:documentation>
@@ -844,7 +846,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 							<xs:documentation>The highest casing pressure of any step while treating the stage.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="MaxPresSurface" type="eml:PressureMeasure" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="MaxPresSurface" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="MaxPresTubing" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The highest tubing pressure of any step while treating the stage.</xs:documentation>
@@ -930,7 +932,11 @@ An injection test involving multiple steps of injection rate and pressure, where
 							<xs:documentation>The screen out pressure.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="TechnologyType" type="eml:String64" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="TechnologyType" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Text describing the technology used while pumping stage.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="TotalProppantInFormation" type="eml:MassMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The total amount of proppant in formation relative to the current stage.</xs:documentation>
@@ -1002,6 +1008,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 					<xs:element name="ReservoirInterval" type="witsml:StimReservoirInterval" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Diversion" type="witsml:StimJobDiversion" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
+				<xs:attribute name="uid" use="optional" type="eml:String64"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -1030,14 +1037,9 @@ An injection test involving multiple steps of injection rate and pressure, where
 			<xs:documentation>Reservoir Interval Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="MdLithTop" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+			<xs:element name="LithMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Measured depth at top of interval.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MdLithBottom" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Measured depth at base of interval.</xs:documentation>
+					<xs:documentation>Lithology measured depth interval.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LithFormationPermeability" type="eml:PermeabilityRockMeasure" minOccurs="0" maxOccurs="1">
@@ -1071,12 +1073,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 					<xs:documentation>A name for the formation lithology.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MdGrossPayTop" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Measured depth of the top of the formation.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MdGrossPayBottom" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+			<xs:element name="GrossPayMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Measured depth of the bottom of the formation.</xs:documentation>
 				</xs:annotation>
@@ -1151,6 +1148,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimStepTest">
 		<xs:annotation>
@@ -1175,6 +1173,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="StimFetTest">
 		<xs:annotation>
@@ -1247,7 +1246,7 @@ An injection test involving multiple steps of injection rate and pressure, where
 					exists in the fracture.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PdlCoef" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="PdlCoef" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The pressure dependent leakoff coefficient.</xs:documentation>
 				</xs:annotation>
@@ -1278,7 +1277,50 @@ An injection test involving multiple steps of injection rate and pressure, where
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
+	<xs:simpleType name="StimFlowPathType">
+		<xs:annotation>
+			<xs:documentation>The types of flow paths used in a stimulation job.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="annulus">
+				<xs:annotation>
+					<xs:documentation>Fluid is conducted through the annulus.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="casing">
+				<xs:annotation>
+					<xs:documentation>Fluid is conducted through the casing (no tubing present).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="drill pipe">
+				<xs:annotation>
+					<xs:documentation>Fluid is conducted through the drill pipe.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="open hole">
+				<xs:annotation>
+					<xs:documentation>Fluid is conducted through the open hole.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tubing">
+				<xs:annotation>
+					<xs:documentation>Fluid is conducted through tubing.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tubing and annulus">
+				<xs:annotation>
+					<xs:documentation>Fluid is conducted through tubing and the annulus.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known.  This value should not be used in normal situations. Use of this value may result in reject in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<!--														-->
 	<!-- Energistics License Agreement
 			This file is distributed under the Energistics Product License Agreement at

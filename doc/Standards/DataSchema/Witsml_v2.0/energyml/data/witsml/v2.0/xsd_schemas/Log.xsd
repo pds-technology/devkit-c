@@ -81,12 +81,13 @@ In a case where there are more than one diameter hole being drilled at the same 
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="obj_ChannelSet">
+	<xs:element name="ChannelSet" type="witsml:ChannelSet" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="ChannelSet">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
 					<xs:element name="Index" type="witsml:ChannelIndex" minOccurs="1" maxOccurs="unbounded"/>
-					<xs:element name="Channel" type="witsml:obj_Channel" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="Channel" type="witsml:Channel" minOccurs="1" maxOccurs="unbounded"/>
 					<xs:element name="Data" type="witsml:ChannelData" minOccurs="0" maxOccurs="1"/>
 					<xs:group ref="witsml:LogChannelMetadata" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="DataContext" type="witsml:AbstractLogDataContext" minOccurs="0" maxOccurs="1"/>
@@ -219,13 +220,14 @@ If a instance of PointMetadata is present for a Channel then the value for that 
 			<xs:enumeration value="real time"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="obj_Log">
+	<xs:element name="Log" type="witsml:Log" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="Log">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
 					<xs:group ref="witsml:LogChannelMetadata" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="ChannelSet" type="witsml:obj_ChannelSet" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="ChannelSet" type="witsml:ChannelSet" minOccurs="1" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -264,7 +266,8 @@ If a instance of PointMetadata is present for a Channel then the value for that 
 			<xs:enumeration value="vector"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="obj_Channel">
+	<xs:element name="Channel" type="witsml:Channel" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="Channel">
 		<xs:annotation>
 			<xs:documentation>A channel object. Corresponds roughly to the LogCurveInfo structure in WITSML1411, and directly corresponds to the ChannelMetadataRecord structure in ETP. In historian terminology, a Channel corresponds directly to a tag.
 
@@ -279,7 +282,7 @@ Channels are the fundamental unit of organization for WITSML logs.</xs:documenta
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DataType" type="witsml:EtpDataType" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="UoM" type="eml:String64" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Uom" type="eml:String64" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="Status" type="witsml:ChannelStatus" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The status of a Channel with respect to creating new measurements. An active Channel is considered to by actively producing data points. An inactive Channel is known to be offline or not currently producing, but may begin producing again at some future point. A closed Channel will never produce points again. The rules for when a Channel is to be closed will vary some for different kinds of Channels. For instance, time-based surface Channels may remain open for the entire life of the drilling operation, whereas depth-based wireline Channels would be Closed at the end of the wireline job.</xs:documentation>
@@ -373,6 +376,7 @@ Channels are the fundamental unit of organization for WITSML logs.</xs:documenta
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:simpleType name="ChannelStatus">
 		<xs:restriction base="eml:TypeEnum">

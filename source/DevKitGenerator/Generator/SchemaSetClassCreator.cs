@@ -477,6 +477,12 @@ namespace Energistics.Generator
             return RenameClass(property.PropertyType);
         }
 
+        public bool IsComponentSchemaType(Type type)
+        {
+            return !type.Name.StartsWith("obj_") &&
+                   !type.Name.Equals("abstractObject", StringComparison.InvariantCultureIgnoreCase) &&
+                   !type.IsDefined(typeof(XmlRootAttribute), false);
+        }
 
         private static Boolean OnceRename = false;
         public string RenameClass(Type t)

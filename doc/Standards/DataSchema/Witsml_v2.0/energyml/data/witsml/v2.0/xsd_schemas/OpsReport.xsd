@@ -281,6 +281,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 					<xs:documentation>Number of hours lost due to incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="CostLossGross" type="witsml:Cost" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Gross estimate of cost incurred due to incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ResponsibleCompany" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Name of company that caused incident.</xs:documentation>
@@ -289,11 +294,6 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CostLossGross" type="witsml:Cost" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Gross estimate of cost incurred due to incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -522,7 +522,8 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 			<xs:enumeration value="tug boat"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="obj_OpsReport">
+	<xs:element name="OpsReport" type="witsml:OpsReport" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="OpsReport">
 		<xs:annotation>
 			<xs:documentation>The opsReport object is used to capture a daily drilling report focused on reporting from the service company to the operator. See the drillReport for a similar object whose focus is operator to partner or to governmental agency. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>
@@ -781,7 +782,7 @@ This represents a foreign key to tubular.</xs:documentation>
 					<xs:element name="SupportCraft" type="witsml:SupportCraft" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Weather" type="witsml:Weather" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="MudInventory" type="witsml:Inventory" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="MudVolume" type="witsml:MudVolume" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="Personnel" type="witsml:Personnel" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Activity" type="witsml:DrillActivity" minOccurs="0" maxOccurs="unbounded"/>

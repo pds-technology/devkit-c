@@ -40,7 +40,8 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="obj_DrillReport">
+	<xs:element name="DrillReport" type="witsml:DrillReport" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="DrillReport">
 		<xs:annotation>
 			<xs:documentation>The drillReport object is used to capture a daily drilling report focused on reporting from the operator to partners or to a governmental agency. See the opsReport object for a similar report whose focus is service company to operator.</xs:documentation>
 		</xs:annotation>
@@ -96,7 +97,7 @@ and is generally a copy of the same information from the well object.</xs:docume
 					<xs:element name="StratInfo" type="witsml:DrillReportStratInfo" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="PerfInfo" type="witsml:DrillReportPerfInfo" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="GasReadingInfo" type="witsml:DrillReportGasReadingInfo" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="WellAlias" type="eml:ObjectAlias" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="WellboreAlias" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="WellboreInfo" type="witsml:DrillReportWellboreInfo" minOccurs="0" maxOccurs="1"/>
@@ -1646,7 +1647,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="AbstractBottomHoleTemperature" abstract="true">
-		<xs:sequence minOccurs="0" maxOccurs="1"/>
+		<xs:sequence minOccurs="0" maxOccurs="1">
+			<xs:element name="BottomHoleTemperature" type="eml:ThermodynamicTemperatureMeasure" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BottomHoleCirculatingTemperature">
 		<xs:complexContent>

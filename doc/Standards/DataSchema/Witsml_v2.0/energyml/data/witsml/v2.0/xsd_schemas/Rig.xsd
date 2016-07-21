@@ -16,7 +16,8 @@
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
-	<xs:complexType name="obj_Rig">
+	<xs:element name="Rig" type="witsml:Rig" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="Rig">
 		<xs:annotation>
 			<xs:documentation>The rig object is used to capture information about a drilling rig used to drill a wellbore. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>

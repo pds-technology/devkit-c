@@ -19,7 +19,8 @@
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
 	<xs:include schemaLocation="Tubular.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
-	<xs:complexType name="obj_BhaRun">
+	<xs:element name="BhaRun" type="witsml:BhaRun" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="BhaRun">
 		<xs:annotation>
 			<xs:documentation>The bhaRun object is used to capture information about one run of the drill string in to and out of the hole. The drill string configuration is described in the tubular object. That is, one configuration may be used for many runs.</xs:documentation>
 		</xs:annotation>
@@ -396,7 +397,11 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for the parameters</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="MudSubClass">
 		<xs:annotation>

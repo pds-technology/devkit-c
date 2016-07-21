@@ -2,9 +2,9 @@
 <xs:schema targetNamespace="http://www.energistics.org/energyml/data/commonv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.1">
 	<!--														-->
 	<!-- Energistics License Agreement
-			This file is distributed under the Energistics License Agreement at
-			http://www.energistics.org
-			Use of this file constitutes agreement with the Energistics License Agreement.
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
 			Copyright (c) 2016 Energistics. All rights reserved.
 			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
 			-->
@@ -13,8 +13,25 @@
 		<xs:documentation>The Abstract package contains the base XSD types from which all EnergyML Data Objects are derived.</xs:documentation>
 	</xs:annotation>
 	<!--														-->
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../../common/v2.1/xsd_schemas/gml/3.2.1/gml.xsd"/>
+	<!--														-->
 	<xs:include schemaLocation="CommonEnumerations.xsd"/>
 	<xs:include schemaLocation="BaseTypes.xsd"/>
+	<xs:complexType name="CustomData">
+		<xs:annotation>
+			<xs:documentation>WITSML - Custom or User Defined Element and Attributes Component Schema.
+                                                Specify custom element, attributes, and types in the custom data area.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Any element or attribute in any namespace.  
+					It is strongly recommended that all custom data definitions be added to a unique namespace.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:any>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="Citation">
 		<xs:annotation>
 			<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to all specializations of AbstractObject to ensure the traceability of each individual independent (top level) element...</xs:documentation>
@@ -123,6 +140,30 @@ Legacy DCGroup - subject</xs:documentation>
 			<xs:documentation>Substitution group for normative data objects.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="AbstractContextualObject" type="eml:AbstractObject">
+		<xs:annotation>
+			<xs:documentation>Substitution group for all contextual objects.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="AbstractObject" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The Mother Class for all Top Level Elements across the MLs. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Aliases" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CustomData" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="objectVersion" use="optional" type="eml:String64"/>
+		<xs:attribute name="schemaVersion" use="required" type="eml:String64"/>
+		<xs:attribute name="uuid" use="required" type="eml:UuidString"/>
+		<xs:attribute name="existenceKind" use="optional" type="eml:ExistenceKind">
+			<xs:annotation>
+				<xs:documentation>A list of lifecycle states like actual, required, planned, predicted, etc. These are used to qualify any top-level element (from Epicentre 2.1).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
 	<xs:complexType name="ExtensionNameValue">
 		<xs:annotation>
 			<xs:documentation>WITSML - Extension values Schema. The intent is to allow standard WITSML "named" 
@@ -172,44 +213,5 @@ That is, 1 indicates the first one, 2 incidates the second one, etc.</xs:documen
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="AbstractContextualObject" type="eml:AbstractObject">
-		<xs:annotation>
-			<xs:documentation>Substitution group for all contextual objects.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="CustomData">
-		<xs:annotation>
-			<xs:documentation>WITSML - Custom or User Defined Element and Attributes Component Schema.
-                                                Specify custom element, attributes, and types in the custom data area.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Any element or attribute in any namespace.  
-					It is strongly recommended that all custom data definitions be added to a unique namespace.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:any>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="AbstractObject" abstract="true">
-		<xs:annotation>
-			<xs:documentation>The Mother Class for all Top Level Elements across the MLs. </xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Aliases" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Citation" type="eml:Citation" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="CustomData" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="objectVersion" use="optional" type="eml:String64"/>
-		<xs:attribute name="schemaVersion" use="required" type="eml:String64"/>
-		<xs:attribute name="uuid" use="required" type="eml:UuidString"/>
-		<xs:attribute name="existenceKind" use="optional" type="eml:ExistenceKind">
-			<xs:annotation>
-				<xs:documentation>A list of lifecycle states like actual, required, planned, predicted, etc. These are used to qualify any top-level element (from Epicentre 2.1).</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
 	</xs:complexType>
 </xs:schema>

@@ -17,7 +17,8 @@
 	<!--														-->
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
-	<xs:complexType name="obj_Risk">
+	<xs:element name="Risk" type="witsml:Risk" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="Risk">
 		<xs:annotation>
 			<xs:documentation>The risk object is used to provide a central location for capturing risk information about other well related objects.</xs:documentation>
 		</xs:annotation>
@@ -132,7 +133,7 @@ Values of 1 through 5 with 1 being the lowest.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ObjectReference" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -390,10 +391,12 @@ Values of 1 through 5 with 1 being the lowest.</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="LevelIntegerCode">
 		<xs:annotation>
-			<xs:documentation>Integer level code from 1 through 5.</xs:documentation>
+			<xs:documentation>Integer level code from 1 through 8.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:short">
 			<xs:pattern value=".+"/>
+			<xs:maxInclusive value="8"/>
+			<xs:minInclusive value="0"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

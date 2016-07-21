@@ -19,7 +19,15 @@
 	<xs:include schemaLocation="DrillReport.xsd"/>
 	<xs:include schemaLocation="WellboreGeometry.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
-	<xs:complexType name="obj_CementJobEvaluation">
+	<xs:complexType name="CementStageDesign">
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractCementStage">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CementJobEvaluation" type="witsml:CementJobEvaluation" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="CementJobEvaluation">
 		<xs:annotation>
 			<xs:documentation>CementJobEvaluation is a top-level object that is used to record the testing and evaluation of a previously performed cement job.</xs:documentation>
 		</xs:annotation>
@@ -186,7 +194,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			<xs:documentation>The as-built report of the job after it has been done.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="witsml:CementJobInfo">
+			<xs:extension base="witsml:AbstractCementJob">
 				<xs:sequence>
 					<xs:element name="DTimJobEnd" type="xs:string" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
@@ -243,11 +251,19 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 							<xs:documentation>Method by which density is measured.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="CementReportStage" type="witsml:CementReportStage" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="CementReportStage" type="witsml:CementStageReport" minOccurs="1" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:simpleType name="WellboreFluidLocation">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="annulus"/>
+			<xs:enumeration value="deadend"/>
+			<xs:enumeration value="in pipe"/>
+			<xs:enumeration value="rat hole"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="CementDesignStage">
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractCementStage">
@@ -268,32 +284,24 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	</xs:complexType>
 	<xs:complexType name="CementJobDesign">
 		<xs:complexContent>
-			<xs:extension base="witsml:CementJobInfo">
+			<xs:extension base="witsml:AbstractCementJob">
 				<xs:sequence>
-					<xs:element name="CementDesignStage" type="witsml:CementDesignStage" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="CementDesignStage" type="witsml:CementStageDesign" minOccurs="1" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:simpleType name="WellboreFluidLocationEnum">
+	<xs:complexType name="AbstractCementJob" abstract="true">
 		<xs:annotation>
-			<xs:documentation>(Need to collect all boolean annotations here, and remove the booleans.)</xs:documentation>
+			<xs:documentation>Define common elements for both Cement Job Designs and Reports.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="Annulus"/>
-			<xs:enumeration value="DeadEnd"/>
-			<xs:enumeration value="InPipe"/>
-			<xs:enumeration value="RatHole"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:complexType name="CementJobInfo">
 		<xs:sequence>
 			<xs:element name="CementEngr" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Cementing engineer.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Woc" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="ETimWaitingOnCement" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Duration for waiting on cement to set.</xs:documentation>
 				</xs:annotation>
@@ -356,7 +364,8 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			<xs:element name="Reciprocating" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="obj_CementJob">
+	<xs:element name="CementJob" type="witsml:CementJob" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="CementJob">
 		<xs:annotation>
 			<xs:documentation>The cementJob object is used to capture information about cementing operations which are undertaken to seal the annulus after a casing string has been run, to seal a lost circulation zone or to set a plug to support directional drilling operations or seal a well so that it may be abandoned. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>
@@ -460,7 +469,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="JobReport" type="witsml:CementJobReport" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="HoleConfig" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="Design" type="witsml:CementJobDesign" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="CementingFluid" type="witsml:CementingFluid" minOccurs="0" maxOccurs="unbounded"/>
@@ -484,202 +493,17 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:complexType name="AbstractCementStage" abstract="true">
 		<xs:annotation>
-			<xs:documentation>Defines the information that is common to both the design and actual cement job stages. </xs:documentation>
+			<xs:documentation>Defines the information that is common to cement job stage design and reports.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="NumStage" type="xs:int" minOccurs="1" maxOccurs="1">
+			<xs:element name="AnnularFlowAfter" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Stage number.</xs:documentation>
+					<xs:documentation>Annular flow present after stage was completed.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TypeStage" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="ReciprocationSlackoff" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Stage type.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="StageMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Measured depth interval for the cement stage</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VolExcess" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Excess volume.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresDisplace" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Final displacement pressure.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VolReturns" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Volume of returns.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FlowrateMudCirc" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Rate mud circulated during stage.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresMudCirc" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Mud circulation pressure.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MdString" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Measured depth of string (multi-stage cement job).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MdTool" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Measured depth of tool (multi-stage cement job.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MdCoilTbg" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Measured depth of CoilTubing (multi-stage cement job.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VolCsgIn" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Total volume inside casing.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VolCsgOut" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Total volume outside casing for this stage placement.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TailPipeUsed" type="xs:boolean" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Tail pipe used?  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DiaTailPipe" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Tail pipe size (diameter).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TailPipePerf" type="xs:boolean" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Tail pipe perforated?  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresTbgStart" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Tubing pressure at start of job (not coiled tubing).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresTbgEnd" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Tubing pressure at end of job.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresCsgStart" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Casing pressure at start of job.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresCsgEnd" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Casing pressure at end of job.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresBackPressure" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Constant back pressure applied while pumping the job (can be supersede by a back pressure per pumping stage)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresCoilTbgStart" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Pressure CTU start.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PresCoilTbgEnd" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Pressure CTU end</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ETimPresHeld" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Time pressure held.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PillBelowPlug" type="xs:boolean" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Pill below plug.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MdCircOut" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Circulate out measured depth.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VolCircPrior" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Circulate prior to start of job.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TypeOriginalMud" type="eml:String64" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Type of mud in hole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="WtMud" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Mud density.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PvMud" type="eml:DynamicViscosityMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Plastic viscosity (in hole at start of job).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="YpMud" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Yield point (in hole at start of job).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Gel10Sec" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Gels-10Sec (in hole at start of job).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Gel10Min" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Gels-10Min (in hole at start of job).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TempBHCT" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Bottom hole circulating temperature.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TempBHST" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Bottom hole temperature static.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VolExcessMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Method to estimate excess volume.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MixMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Mix method.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AnnFlowAfter" type="xs:boolean" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Fluid returns.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TopPlug" type="xs:boolean" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Top plug used?  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+					<xs:documentation>Slackoff for Reciprocation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BotPlug" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -692,9 +516,119 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Amount of bottom plug used.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="DiaTailPipe" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Tail pipe size (diameter).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DisplacementFluidRefId" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to Displacement Fluid properties.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETimPresHeld" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time pressure held.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FlowrateMudCirc" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Rate mud circulated during stage.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gel10Min" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Gels-10Min (in hole at start of job).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gel10Sec" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Gels-10Sec (in hole at start of job).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdCircOut" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Circulate out measured depth.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdCoilTbg" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of CoilTubing (multi-stage cement job.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdString" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of string (multi-stage cement job).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MdTool" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of tool (multi-stage cement job.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MixMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Mix method.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NumStage" type="xs:int" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Stage number.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReciprocationOverpull" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Overpull amount for reciprocation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PillBelowPlug" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Pill below plug.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlugCatcher" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Plug catcher.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresBackPressure" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Constant back pressure applied while pumping the job (can be supersede by a back pressure per pumping stage)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="PresBump" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Pressure plug bumped.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresCoilTbgEnd" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Pressure CTU end</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresCoilTbgStart" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Pressure CTU start.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresCsgEnd" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Casing pressure at end of job.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresCsgStart" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Casing pressure at start of job.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PresDisplace" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Final displacement pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PresHeld" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
@@ -702,19 +636,84 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Pressure held to.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VolMudLost" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="PresMudCirc" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Total mud lost.</xs:documentation>
+					<xs:documentation>Mud circulation pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FluidDisplace" type="eml:String64" minOccurs="0" maxOccurs="1">
+			<xs:element name="PresTbgEnd" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Displacement fluid name.</xs:documentation>
+					<xs:documentation>Tubing pressure at end of job.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DensDisplaceFluid" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="PresTbgStart" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Density of displacement fluid.</xs:documentation>
+					<xs:documentation>Tubing pressure at start of job (not coiled tubing).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PvMud" type="eml:DynamicViscosityMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Plastic viscosity (in hole at start of job).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SqueezeObjective" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Squeeze objective.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StageMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth interval for the cement stage</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TailPipePerf" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Tail pipe perforated?  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TailPipeUsed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Tail pipe used?  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TempBHCT" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Bottom hole circulating temperature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TempBHST" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Bottom hole temperature static.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TopPlug" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Top plug used?  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeOriginalMud" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of mud in hole.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeStage" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Stage type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolCircPrior" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Circulate prior to start of job.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolCsgIn" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Total volume inside casing.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolCsgOut" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Total volume outside casing for this stage placement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VolDisplaceFluid" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -722,9 +721,34 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Volume of displacement fluid.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="VolExcess" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
+					<xs:documentation>Excess volume.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolExcessMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Method to estimate excess volume.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolMudLost" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Total mud lost.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VolReturns" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Volume of returns.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WtMud" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Mud density.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="YpMud" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Yield point (in hole at start of job).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OriginalFluidLocation" type="witsml:FluidLocation" minOccurs="0" maxOccurs="unbounded"/>
@@ -1066,25 +1090,26 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:element name="CementAdditive" type="witsml:CementAdditive" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Rheometer" type="witsml:Rheometer" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="CementPumpScheduleStep">
 		<xs:annotation>
 			<xs:documentation>WITSML - Cement Pump Schedule Component Schema</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FluidExcessPercent" type="xs:string" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Percent of excess fluid pumped. (pending verification from SME).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="FluidRefId" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>UUID Reference to Fluid used in CementJob.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="RatioFluidExcess" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The ratio of excess fluid to total fluid pumped during step.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ETimPump" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>(Elapsed time period during the fluid is pumped.</xs:documentation>
+					<xs:documentation>The duration of the fluid pumping.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RatePump" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
@@ -1109,7 +1134,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="ETimShutdown" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>If shutdown event, the elapsed time duration.</xs:documentation>
+					<xs:documentation>The duration of the shutdown event.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Comments" type="eml:String2000" minOccurs="0" maxOccurs="1">
@@ -1118,6 +1143,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="CementAdditive">
 		<xs:annotation>
@@ -1155,7 +1181,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for the additive. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="FluidLocation">
 		<xs:annotation>
@@ -1164,14 +1194,31 @@ the appropriate value. Use of this value may result in rejection in some situati
 NOTE: Change the fluid locations (the booleans) into an enumeration.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FluidRefId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="MDFluidBase" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="MDFluidTop" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="Volume" type="eml:VolumeMeasure" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="WellboreFluidLocationEnum" type="witsml:WellboreFluidLocationEnum" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="FluidRefId" type="eml:UuidString" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to Fluid used in CementJob</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MDFluidBase" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth of base of cement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MDFluidTop" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Measured depth at top of interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Volume" type="eml:VolumeMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Volume of fluid at this location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LocationType" type="witsml:WellboreFluidLocation" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
-	<xs:complexType name="CementReportStage">
+	<xs:complexType name="CementStageReport">
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractCementStage">
 				<xs:sequence>
@@ -1291,6 +1338,7 @@ NOTE: Change the fluid locations (the booleans) into an enumeration.</xs:documen
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
+				<xs:attribute name="uid" use="optional" type="eml:String64"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

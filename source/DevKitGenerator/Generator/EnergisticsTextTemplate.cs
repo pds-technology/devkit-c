@@ -87,7 +87,7 @@ using Energistics.DataAccess.");
 
     foreach (Type type in generator.Classes)
     {
-        if(!type.Name.StartsWith("obj_") && !type.Name.Equals("abstractObject"))
+        if(generator.IsComponentSchemaType(type))
         {
 
             
@@ -569,7 +569,7 @@ using Energistics.DataAccess.");
             
             #line 196 "C:\Projects\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
 
-        if(!type.Name.StartsWith("obj_") && !type.Name.Equals("abstractObject"))
+        if(generator.IsComponentSchemaType(type))
         {
 
             

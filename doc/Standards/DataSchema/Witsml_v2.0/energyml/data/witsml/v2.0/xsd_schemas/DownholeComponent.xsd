@@ -18,7 +18,8 @@
 	<xs:include schemaLocation="Tubular.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:include schemaLocation="Well.xsd"/>
-	<xs:complexType name="obj_DownholeComponent">
+	<xs:element name="DownholeComponent" type="witsml:DownholeComponent" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="DownholeComponent">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -35,7 +36,7 @@
 					<xs:element name="DownholeStringSet" type="witsml:DownholeStringSet" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="PerforationSets" type="witsml:PerforationSets" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="EquipmentSet" type="witsml:EquipmentSet" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="ReferenceWell" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Well" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="WellHead" type="witsml:DownholeString" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="BoreholeStringSet" type="witsml:BoreholeStringSet" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
@@ -44,13 +45,13 @@
 	</xs:complexType>
 	<xs:complexType name="DownholeString">
 		<xs:sequence>
-			<xs:element name="StringType" type="witsml:DownholeStringType" minOccurs="1" maxOccurs="1">
+			<xs:element name="StringType" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>An enumeration type defined in equipmentCatelog, the "DownholeStringEnum"
                     contains valid option of "case","rod","tubing", "otherString".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SubStringType" type="witsml:SubStringType" minOccurs="0" maxOccurs="1">
+			<xs:element name="SubStringType" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>An enumeration type define for express further string type etc. "SurfaceCasing", "IntermediaCasing", "productionCasing".</xs:documentation>
 				</xs:annotation>
@@ -89,16 +90,10 @@
 			<xs:element name="StringEquipmentSet" type="witsml:StringEquipmentSet" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ParentString" type="witsml:DownholeString" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
-		<xs:attribute name="uidParentString" use="optional" type="witsml:UidParentString"/>
 	</xs:complexType>
-	<xs:simpleType name="DownholeStringType">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
-	<xs:simpleType name="SubStringType">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:complexType name="StringEquipmentSet">
 		<xs:annotation>
 			<xs:documentation>Information on collection of equipment attached to the string</xs:documentation>
@@ -215,7 +210,7 @@
 					<xs:documentation>Flag indicating scratchers have been added to the equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PerforationSetRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="PerforationSetRefId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>reference the perforated hole in equipment after perforation event.</xs:documentation>
 				</xs:annotation>
@@ -237,16 +232,13 @@
 			</xs:element>
 			<xs:element name="Assembly" type="witsml:Assembly" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="OrderOfObject" type="witsml:ObjectSequence" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="InsideComponent" type="witsml:RefContainer" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="OutsideComponent" type="witsml:RefContainer" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="InsideComponent" type="witsml:ReferenceContainer" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="OutsideComponent" type="witsml:ReferenceContainer" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ConnectionNext" type="witsml:EquipmentConnection" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
-		<xs:attribute name="equipmentRefUID" use="optional" type="eml:String64"/>
+		<xs:attribute name="equipmentReferenceUid" use="optional" type="eml:String64"/>
 	</xs:complexType>
-	<xs:simpleType name="EquipmentType">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:complexType name="EventInfo">
 		<xs:annotation>
 			<xs:documentation>Event information type</xs:documentation>
@@ -266,7 +258,7 @@
 			<xs:documentation>Event reference collection</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="EventRefID" type="eml:String64" minOccurs="0" maxOccurs="1">
+			<xs:element name="EventReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The referencing eventledger ID</xs:documentation>
 				</xs:annotation>
@@ -285,22 +277,22 @@
 		<xs:sequence/>
 		<xs:attribute name="description" use="optional" type="eml:String2000"/>
 	</xs:complexType>
-	<xs:complexType name="RefContainer">
+	<xs:complexType name="ReferenceContainer">
 		<xs:annotation>
 			<xs:documentation>Information on containing or contained component</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="StringRefID" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="StringReferenceId" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>DownholeString reference id</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EquipmentRefID" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="EquipmentReferenceId" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Equipment reference id</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AccesoryEquipmentRefID" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="AccesoryEquipmentReferenceId" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Reference to the equipment for this accessory</xs:documentation>
 				</xs:annotation>
@@ -311,6 +303,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="EquipmentConnection">
 		<xs:annotation>
@@ -324,7 +317,7 @@
 							<xs:documentation>measurement of radial offset</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ConnectionForm" type="witsml:ConnectionFormType" minOccurs="0" maxOccurs="1">
+					<xs:element name="ConnectionForm" type="xs:string" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The form of connection: Box or Pin</xs:documentation>
 						</xs:annotation>
@@ -334,31 +327,19 @@
 							<xs:documentation>Connection upset</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="ConnectionType" type="witsml:AbstractConnectionType" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="stringEquipmentRefUID" use="optional" type="eml:String64"/>
+				<xs:attribute name="stringEquipmentReferenceUid" use="optional" type="eml:String64"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:simpleType name="CasingConnectionType">
-		<xs:restriction base="eml:String64"/>
-	</xs:simpleType>
-	<xs:simpleType name="TubingConnectionType">
-		<xs:restriction base="eml:String64"/>
-	</xs:simpleType>
-	<xs:simpleType name="RodConnectionType">
-		<xs:restriction base="eml:String64"/>
-	</xs:simpleType>
-	<xs:simpleType name="OtherConnectionType">
-		<xs:restriction base="eml:String64"/>
-	</xs:simpleType>
-	<xs:simpleType name="ConnectionFormType">
-		<xs:restriction base="eml:String64"/>
-	</xs:simpleType>
 	<xs:complexType name="Assembly">
 		<xs:annotation>
 			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence/>
+		<xs:sequence>
+			<xs:element name="Part" type="witsml:StringEquipment" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="StringAccessory">
 		<xs:annotation>
@@ -368,18 +349,6 @@
 			<xs:element name="Accessory" type="witsml:StringEquipment" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="UidParentString">
-		<xs:annotation>
-			<xs:documentation>A unique identifier of an object parent. 
-This should only be used for the uid of a parent object (i.e., a foreign key to another object). 
-It should not be used for child nodes of an object.
-The value is not intended to convey any semantic content (e.g., it may be computer generated).
-The purpose of this type is to facilitate modifying the optionality of parentage uids in derived schemas.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="witsml:AbstractUidString">
-			<xs:pattern value="[^ ]*"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="AbstractUidString">
 		<xs:restriction base="eml:String64">
 			<xs:pattern value="[^ ]*"/>
@@ -417,14 +386,9 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 					<xs:documentation>The name of borehole</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TypeBorehole" type="witsml:BoreholeType" minOccurs="0" maxOccurs="1">
+			<xs:element name="TypeBorehole" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="EquipmentEventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Event reference pointing to the eventledger.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
@@ -452,12 +416,10 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="EquipmentEventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:simpleType name="BoreholeType">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:complexType name="GeologyFeature">
 		<xs:annotation>
 			<xs:documentation>Geology features found in the location of the borehole string.</xs:documentation>
@@ -468,7 +430,7 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 					<xs:documentation>Name of the feature</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyType" type="witsml:GeologyType" minOccurs="0" maxOccurs="1">
+			<xs:element name="GeologyType" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Aquifer or reservoir</xs:documentation>
 				</xs:annotation>
@@ -491,9 +453,6 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:simpleType name="GeologyType">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:complexType name="DownholeStringSet">
 		<xs:annotation>
 			<xs:documentation>Information on a collection of downhole strings</xs:documentation>
@@ -532,7 +491,7 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 					<xs:documentation>The model of the equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CatalogID" type="eml:String64" minOccurs="0" maxOccurs="1">
+			<xs:element name="CatalogId" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Catalog where equipment can be found.</xs:documentation>
 				</xs:annotation>
@@ -582,7 +541,7 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 					<xs:documentation>Material that equipment is made from</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Grade" type="witsml:GradeType" minOccurs="0" maxOccurs="1">
+			<xs:element name="Grade" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Grade level of this material.</xs:documentation>
 				</xs:annotation>
@@ -592,17 +551,17 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 					<xs:documentation>The weight per length of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoatingLinerapplied" type="xs:boolean" minOccurs="0" maxOccurs="1">
+			<xs:element name="CoatingLinerApplied" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Flag indicating whether equipment has coating</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OutsideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
+			<xs:element name="OutsideCoating" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Equipment's outside coating based on enumeration value</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InsideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
+			<xs:element name="InsideCoating" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Equipment's inner coating based on enumeration value</xs:documentation>
 				</xs:annotation>
@@ -612,52 +571,52 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 					<xs:documentation>The length of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MajorOD" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MajorOd" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The major outside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MinorOD" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MinorOd" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The minor outside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OD" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="Od" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The outside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MaxOD" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MaxOd" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The maximum outside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MinOD" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MinOd" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The minimum outside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MajorID" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MajorId" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The major inside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MinorID" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MinorId" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The minor inside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ID" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="Id" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The inside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MaxID" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MaxId" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The maximum inside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MinID" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="MinId" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The minimum inside diameter of this equipment.</xs:documentation>
 				</xs:annotation>
@@ -704,12 +663,6 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:simpleType name="GradeType">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
-	<xs:simpleType name="Coating">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:complexType name="ExtPropNameValue">
 		<xs:annotation>
 			<xs:documentation>Name-value extensions for the equipment property</xs:documentation>
@@ -726,6 +679,7 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="PerfSlot">
 		<xs:annotation>
@@ -763,6 +717,7 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="PerfHole">
 		<xs:annotation>
@@ -807,6 +762,7 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="PerforationSets">
 		<xs:annotation>
@@ -818,19 +774,14 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 	</xs:complexType>
 	<xs:complexType name="PerforationSet">
 		<xs:sequence>
-			<xs:element name="BoreholeStringRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="BoreholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>perforation on borehole String</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DownholeStringRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DownholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>perforation on downholeStringRefID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1"/>
@@ -876,7 +827,7 @@ The purpose of this type is to facilitate modifying the optionality of parentage
 across a perforation set.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PerforationTool" type="witsml:PerforationToolType" minOccurs="0" maxOccurs="1">
+			<xs:element name="PerforationTool" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The type of perforation tool.</xs:documentation>
 				</xs:annotation>
@@ -906,13 +857,530 @@ across a perforation set.</xs:documentation>
 					<xs:documentation>Remarks regarding this perforationSet</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:simpleType name="PerforationToolType">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:simpleType name="EquipmentTypeExt">
 		<xs:union memberTypes="witsml:EquipmentType eml:EnumExtensionPattern"/>
+	</xs:simpleType>
+	<xs:simpleType name="CasingConnectionTypes">
+		<xs:annotation>
+			<xs:documentation>The connection type of casing.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="landed"/>
+			<xs:enumeration value="self-sealing-threaded"/>
+			<xs:enumeration value="welded"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TubingConnectionTypes">
+		<xs:annotation>
+			<xs:documentation>The connection type of tubing.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="dogscompressionfit-notsealed"/>
+			<xs:enumeration value="landed"/>
+			<xs:enumeration value="latched"/>
+			<xs:enumeration value="radial"/>
+			<xs:enumeration value="selfsealing-threaded"/>
+			<xs:enumeration value="slipfit-sealed"/>
+			<xs:enumeration value="threaded"/>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RodConnectionTypes">
+		<xs:annotation>
+			<xs:documentation>The connection type of rod.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="eating nipple-cup"/>
+			<xs:enumeration value="latched"/>
+			<xs:enumeration value="seating nipple-mechanical"/>
+			<xs:enumeration value="slipfit sealed"/>
+			<xs:enumeration value="threaded"/>
+			<xs:enumeration value="welded"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OtherConnectionTypes">
+		<xs:annotation>
+			<xs:documentation>The other connection type which is used for other tools.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="cemented-in-place"/>
+			<xs:enumeration value="dogscompressionfit-sealed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ConnectionFormType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="box"/>
+			<xs:enumeration value="flange"/>
+			<xs:enumeration value="mandrel"/>
+			<xs:enumeration value="pin"/>
+			<xs:enumeration value="welded"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="AbstractConnectionType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>the choice of connection type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="1" maxOccurs="1"/>
+	</xs:complexType>
+	<xs:complexType name="CasingConnectionType">
+		<xs:annotation>
+			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractConnectionType">
+				<xs:sequence>
+					<xs:element name="CasingConnectionType" type="witsml:CasingConnectionTypes" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TubingConnectionType">
+		<xs:annotation>
+			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractConnectionType">
+				<xs:sequence>
+					<xs:element name="TubingConnectionType" type="witsml:TubingConnectionTypes" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RodConnectionType">
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractConnectionType">
+				<xs:sequence>
+					<xs:element name="RodConnectionType" type="witsml:RodConnectionTypes" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="OtherConnectionType">
+		<xs:annotation>
+			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractConnectionType">
+				<xs:sequence>
+					<xs:element name="OtherConnectionType" type="witsml:OtherConnectionTypes" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="EquipmentType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="bridge plug"/>
+			<xs:enumeration value="bull plug"/>
+			<xs:enumeration value="capillary tubing"/>
+			<xs:enumeration value="casing crossover"/>
+			<xs:enumeration value="casing hanger"/>
+			<xs:enumeration value="casing head"/>
+			<xs:enumeration value="casing liner-expandable"/>
+			<xs:enumeration value="casing shoe"/>
+			<xs:enumeration value="casing spool"/>
+			<xs:enumeration value="casing/casing liner"/>
+			<xs:enumeration value="cement (behind casing)"/>
+			<xs:enumeration value="cement basket"/>
+			<xs:enumeration value="cement retainer"/>
+			<xs:enumeration value="cement squeeze"/>
+			<xs:enumeration value="cement stage tool"/>
+			<xs:enumeration value="chemical injection mandrel"/>
+			<xs:enumeration value="chemical injection valve"/>
+			<xs:enumeration value="corrosion coupon carrier"/>
+			<xs:enumeration value="dip tube"/>
+			<xs:enumeration value="downhole choke"/>
+			<xs:enumeration value="downhole sensor"/>
+			<xs:enumeration value="ESP assembly"/>
+			<xs:enumeration value="ESP bolt on discharge"/>
+			<xs:enumeration value="ESP bolt on intake"/>
+			<xs:enumeration value="ESP bolt on motor base"/>
+			<xs:enumeration value="ESP bolt on motor head"/>
+			<xs:enumeration value="ESP cable"/>
+			<xs:enumeration value="ESP gas handler"/>
+			<xs:enumeration value="ESP gas separator"/>
+			<xs:enumeration value="ESP lower pigtail"/>
+			<xs:enumeration value="ESP motor"/>
+			<xs:enumeration value="ESP motor base centralizer"/>
+			<xs:enumeration value="ESP motor flat cable"/>
+			<xs:enumeration value="ESP motor shroud"/>
+			<xs:enumeration value="ESP promotor"/>
+			<xs:enumeration value="ESP pump"/>
+			<xs:enumeration value="ESP pump discharge sensor sub"/>
+			<xs:enumeration value="ESP seal"/>
+			<xs:enumeration value="expansion joint"/>
+			<xs:enumeration value="external cementing port"/>
+			<xs:enumeration value="fill"/>
+			<xs:enumeration value="fish"/>
+			<xs:enumeration value="float collar"/>
+			<xs:enumeration value="float shoe/guide shoe"/>
+			<xs:enumeration value="gas anchor"/>
+			<xs:enumeration value="gas lift mandrel"/>
+			<xs:enumeration value="gas lift valve"/>
+			<xs:enumeration value="gravel pack screen"/>
+			<xs:enumeration value="hydraulic pump"/>
+			<xs:enumeration value="injection mandrel"/>
+			<xs:enumeration value="injection valve"/>
+			<xs:enumeration value="junk in wellbore"/>
+			<xs:enumeration value="landing collar"/>
+			<xs:enumeration value="liner entry guide"/>
+			<xs:enumeration value="liner hanger"/>
+			<xs:enumeration value="mule shoe"/>
+			<xs:enumeration value="notched collar"/>
+			<xs:enumeration value="on-off tool"/>
+			<xs:enumeration value="overshot"/>
+			<xs:enumeration value="packer"/>
+			<xs:enumeration value="packer plug"/>
+			<xs:enumeration value="packer-multiple strings"/>
+			<xs:enumeration value="packoff (tubing)"/>
+			<xs:enumeration value="pcp-flex shaft intake"/>
+			<xs:enumeration value="pcp-gear reducer (subsurface)"/>
+			<xs:enumeration value="pcp-no turn tool/torque anchor"/>
+			<xs:enumeration value="pcp-rotor"/>
+			<xs:enumeration value="pcp-stator"/>
+			<xs:enumeration value="pcp-tag bar"/>
+			<xs:enumeration value="plug - cement"/>
+			<xs:enumeration value="plug - mud"/>
+			<xs:enumeration value="plunger lift ball"/>
+			<xs:enumeration value="plunger lift bottom hole bumper assembly"/>
+			<xs:enumeration value="plunger lift bumper spring"/>
+			<xs:enumeration value="plunger lift collar stop"/>
+			<xs:enumeration value="plunger lift plunger"/>
+			<xs:enumeration value="polished rod"/>
+			<xs:enumeration value="polished rod liner"/>
+			<xs:enumeration value="ported collar"/>
+			<xs:enumeration value="profile nipple"/>
+			<xs:enumeration value="profile nipple plug"/>
+			<xs:enumeration value="pump-out plug"/>
+			<xs:enumeration value="sand screen-tubing"/>
+			<xs:enumeration value="sand separator"/>
+			<xs:enumeration value="screen liner/insert"/>
+			<xs:enumeration value="seal assembly"/>
+			<xs:enumeration value="seal bore extension"/>
+			<xs:enumeration value="seat nipple/shoe"/>
+			<xs:enumeration value="shear tool"/>
+			<xs:enumeration value="sliding sleeve"/>
+			<xs:enumeration value="steam cup mandrel"/>
+			<xs:enumeration value="steam deflectors"/>
+			<xs:enumeration value="strainer nipple"/>
+			<xs:enumeration value="subsurface safety valve"/>
+			<xs:enumeration value="sucker rod"/>
+			<xs:enumeration value="sucker rod backoff coupling"/>
+			<xs:enumeration value="sucker rod pump-insert"/>
+			<xs:enumeration value="sucker rod pump-jacket"/>
+			<xs:enumeration value="sucker rod pump-tubing pump barrel"/>
+			<xs:enumeration value="sucker rod pump-tubing pump plunger"/>
+			<xs:enumeration value="sucker rod sub"/>
+			<xs:enumeration value="sucker rod-continuous"/>
+			<xs:enumeration value="sucker rod-ribbon"/>
+			<xs:enumeration value="sucker rod-sinker bar"/>
+			<xs:enumeration value="tcp gun"/>
+			<xs:enumeration value="tubing"/>
+			<xs:enumeration value="tubing (coiled)"/>
+			<xs:enumeration value="tubing anchor/catcher"/>
+			<xs:enumeration value="tubing crossover"/>
+			<xs:enumeration value="tubing drain"/>
+			<xs:enumeration value="tubing hanger"/>
+			<xs:enumeration value="tubing head (spool)"/>
+			<xs:enumeration value="tubing purge check valve"/>
+			<xs:enumeration value="tubing sub"/>
+			<xs:enumeration value="wellbore notes"/>
+			<xs:enumeration value="whipstock"/>
+			<xs:enumeration value="wireline re-entry guide (bell collar)"/>
+			<xs:enumeration value="y-tool"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GradeType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="13CR"/>
+			<xs:enumeration value="13CR- 80"/>
+			<xs:enumeration value="13CR- 85"/>
+			<xs:enumeration value="13CR- 95"/>
+			<xs:enumeration value="13CR-110"/>
+			<xs:enumeration value="35"/>
+			<xs:enumeration value="45"/>
+			<xs:enumeration value="46"/>
+			<xs:enumeration value="50"/>
+			<xs:enumeration value="620C"/>
+			<xs:enumeration value="75"/>
+			<xs:enumeration value="750N"/>
+			<xs:enumeration value="75A"/>
+			<xs:enumeration value="780M"/>
+			<xs:enumeration value="95"/>
+			<xs:enumeration value="960M"/>
+			<xs:enumeration value="970N"/>
+			<xs:enumeration value="A53"/>
+			<xs:enumeration value="A53A"/>
+			<xs:enumeration value="A53B"/>
+			<xs:enumeration value="Armco-95"/>
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="C-110"/>
+			<xs:enumeration value="C-75"/>
+			<xs:enumeration value="C-90"/>
+			<xs:enumeration value="C-95"/>
+			<xs:enumeration value="D"/>
+			<xs:enumeration value="DE"/>
+			<xs:enumeration value="DER"/>
+			<xs:enumeration value="DR"/>
+			<xs:enumeration value="DWR"/>
+			<xs:enumeration value="E"/>
+			<xs:enumeration value="E-75"/>
+			<xs:enumeration value="EL"/>
+			<xs:enumeration value="F-25"/>
+			<xs:enumeration value="FG"/>
+			<xs:enumeration value="FS-80"/>
+			<xs:enumeration value="FSS-95"/>
+			<xs:enumeration value="G"/>
+			<xs:enumeration value="G-105"/>
+			<xs:enumeration value="GT-80S"/>
+			<xs:enumeration value="H2S-90"/>
+			<xs:enumeration value="H2S-95"/>
+			<xs:enumeration value="H-40"/>
+			<xs:enumeration value="HC-95"/>
+			<xs:enumeration value="HCK-55"/>
+			<xs:enumeration value="HCL-80"/>
+			<xs:enumeration value="HCN-80"/>
+			<xs:enumeration value="HCP-110"/>
+			<xs:enumeration value="HCQ-125"/>
+			<xs:enumeration value="HO-70"/>
+			<xs:enumeration value="HS"/>
+			<xs:enumeration value="J-20"/>
+			<xs:enumeration value="J-55"/>
+			<xs:enumeration value="K"/>
+			<xs:enumeration value="K-40"/>
+			<xs:enumeration value="K-55"/>
+			<xs:enumeration value="KD"/>
+			<xs:enumeration value="KD-63"/>
+			<xs:enumeration value="L-80"/>
+			<xs:enumeration value="LS-140"/>
+			<xs:enumeration value="LS-50"/>
+			<xs:enumeration value="LS-65"/>
+			<xs:enumeration value="M-65"/>
+			<xs:enumeration value="M-90"/>
+			<xs:enumeration value="M-95"/>
+			<xs:enumeration value="MAV-50"/>
+			<xs:enumeration value="MD-56"/>
+			<xs:enumeration value="MMS"/>
+			<xs:enumeration value="N-105"/>
+			<xs:enumeration value="N-23"/>
+			<xs:enumeration value="N-30"/>
+			<xs:enumeration value="N-40"/>
+			<xs:enumeration value="N-54"/>
+			<xs:enumeration value="N-75"/>
+			<xs:enumeration value="N-78"/>
+			<xs:enumeration value="N-80"/>
+			<xs:enumeration value="N-90"/>
+			<xs:enumeration value="N-96"/>
+			<xs:enumeration value="N-97"/>
+			<xs:enumeration value="P-105"/>
+			<xs:enumeration value="P-110"/>
+			<xs:enumeration value="PCP  900"/>
+			<xs:enumeration value="PCP 1000"/>
+			<xs:enumeration value="PCP 1500"/>
+			<xs:enumeration value="PCP 2500"/>
+			<xs:enumeration value="PH-6"/>
+			<xs:enumeration value="Plus"/>
+			<xs:enumeration value="Q-125"/>
+			<xs:enumeration value="QT-1000"/>
+			<xs:enumeration value="QT-1200"/>
+			<xs:enumeration value="QT-700"/>
+			<xs:enumeration value="QT-800"/>
+			<xs:enumeration value="QT-900"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="S-135"/>
+			<xs:enumeration value="S-59"/>
+			<xs:enumeration value="S-60"/>
+			<xs:enumeration value="S-67"/>
+			<xs:enumeration value="S-80"/>
+			<xs:enumeration value="S-87"/>
+			<xs:enumeration value="S-88"/>
+			<xs:enumeration value="S-95"/>
+			<xs:enumeration value="SC-90"/>
+			<xs:enumeration value="SE"/>
+			<xs:enumeration value="SER"/>
+			<xs:enumeration value="SM"/>
+			<xs:enumeration value="SOO-95"/>
+			<xs:enumeration value="Stainless"/>
+			<xs:enumeration value="SWR"/>
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="T-66"/>
+			<xs:enumeration value="T-95"/>
+			<xs:enumeration value="T-D61"/>
+			<xs:enumeration value="T-D63"/>
+			<xs:enumeration value="T-K65"/>
+			<xs:enumeration value="UHS"/>
+			<xs:enumeration value="Unknown"/>
+			<xs:enumeration value="USS-125"/>
+			<xs:enumeration value="USS-140"/>
+			<xs:enumeration value="USS-50"/>
+			<xs:enumeration value="USS-95"/>
+			<xs:enumeration value="V-150"/>
+			<xs:enumeration value="WC-50"/>
+			<xs:enumeration value="X"/>
+			<xs:enumeration value="X-140"/>
+			<xs:enumeration value="X-42"/>
+			<xs:enumeration value="X-46"/>
+			<xs:enumeration value="X-52"/>
+			<xs:enumeration value="X-56"/>
+			<xs:enumeration value="X-60"/>
+			<xs:enumeration value="X-70"/>
+			<xs:enumeration value="X-95"/>
+			<xs:enumeration value="XD"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BoreholeType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="cavern"/>
+			<xs:enumeration value="cavity"/>
+			<xs:enumeration value="normalborehole"/>
+			<xs:enumeration value="underream"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Coating">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="bare"/>
+			<xs:enumeration value="carbonnitrided"/>
+			<xs:enumeration value="carburized"/>
+			<xs:enumeration value="carburized-hardened"/>
+			<xs:enumeration value="cementlined"/>
+			<xs:enumeration value="chrome"/>
+			<xs:enumeration value="chrome-plated"/>
+			<xs:enumeration value="chromeplated-grooved"/>
+			<xs:enumeration value="chromeplated-heavy"/>
+			<xs:enumeration value="corrosion coating"/>
+			<xs:enumeration value="dblgalv"/>
+			<xs:enumeration value="duolin20wr"/>
+			<xs:enumeration value="duoline"/>
+			<xs:enumeration value="duoline10"/>
+			<xs:enumeration value="duoline20"/>
+			<xs:enumeration value="epdm"/>
+			<xs:enumeration value="fiberglass-lined"/>
+			<xs:enumeration value="galvanized"/>
+			<xs:enumeration value="hardened"/>
+			<xs:enumeration value="hard-lined"/>
+			<xs:enumeration value="ins"/>
+			<xs:enumeration value="ipc"/>
+			<xs:enumeration value="ipc-epoxy"/>
+			<xs:enumeration value="ipc-epxthk"/>
+			<xs:enumeration value="ipc-epxthn"/>
+			<xs:enumeration value="ipc-nylon"/>
+			<xs:enumeration value="ipc-rwrap"/>
+			<xs:enumeration value="ipc-s505"/>
+			<xs:enumeration value="ipc-s650"/>
+			<xs:enumeration value="ipc-tk70"/>
+			<xs:enumeration value="ipc-tk75"/>
+			<xs:enumeration value="lp"/>
+			<xs:enumeration value="moly"/>
+			<xs:enumeration value="mtr"/>
+			<xs:enumeration value="n/a"/>
+			<xs:enumeration value="nickel-carbide"/>
+			<xs:enumeration value="nickel-plated"/>
+			<xs:enumeration value="nitrided"/>
+			<xs:enumeration value="nitrile"/>
+			<xs:enumeration value="pap"/>
+			<xs:enumeration value="pelined"/>
+			<xs:enumeration value="phosphate"/>
+			<xs:enumeration value="phosphorus"/>
+			<xs:enumeration value="plastic"/>
+			<xs:enumeration value="plunger-lubricant"/>
+			<xs:enumeration value="polished-rodliner"/>
+			<xs:enumeration value="polypropylene"/>
+			<xs:enumeration value="ppw/nitrl"/>
+			<xs:enumeration value="pvclined"/>
+			<xs:enumeration value="rodguide-1"/>
+			<xs:enumeration value="rodguide-2"/>
+			<xs:enumeration value="rodguide-2."/>
+			<xs:enumeration value="rodguide-3"/>
+			<xs:enumeration value="rodguide-4"/>
+			<xs:enumeration value="rodguide-5"/>
+			<xs:enumeration value="rodguide-6"/>
+			<xs:enumeration value="rodguide-7"/>
+			<xs:enumeration value="rodguide-fx"/>
+			<xs:enumeration value="rodguide-so"/>
+			<xs:enumeration value="rodguide-so1"/>
+			<xs:enumeration value="rodguide-so2"/>
+			<xs:enumeration value="rodguide-so3"/>
+			<xs:enumeration value="rodguide-so4"/>
+			<xs:enumeration value="rodguide-so5"/>
+			<xs:enumeration value="rodguide-so6"/>
+			<xs:enumeration value="rodguide-so8"/>
+			<xs:enumeration value="rodguide-sp"/>
+			<xs:enumeration value="spray-metal"/>
+			<xs:enumeration value="spray-metal-monel"/>
+			<xs:enumeration value="spraymetal-monel"/>
+			<xs:enumeration value="spraymetal-nickel"/>
+			<xs:enumeration value="spraymetal-od/nickelplated-id"/>
+			<xs:enumeration value="spraymetal-steel"/>
+			<xs:enumeration value="spraymetal-thick"/>
+			<xs:enumeration value="sslined"/>
+			<xs:enumeration value="teflon"/>
+			<xs:enumeration value="teflon-red"/>
+			<xs:enumeration value="teflon-tan"/>
+			<xs:enumeration value="teflon-yellow"/>
+			<xs:enumeration value="thermo"/>
+			<xs:enumeration value="tk-4"/>
+			<xs:enumeration value="tk-99"/>
+			<xs:enumeration value="tuffr"/>
+			<xs:enumeration value="tungsten plated"/>
+			<xs:enumeration value="zincplated"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DownholeStringType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="casing"/>
+			<xs:enumeration value="others"/>
+			<xs:enumeration value="rod"/>
+			<xs:enumeration value="tubing"/>
+			<xs:enumeration value="wellhead"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SubStringType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="abandoned junk/fish"/>
+			<xs:enumeration value="capillary string (inside tubing)"/>
+			<xs:enumeration value="capillary string (tubing/casing annulus)"/>
+			<xs:enumeration value="conductor casing"/>
+			<xs:enumeration value="drill string"/>
+			<xs:enumeration value="flowline"/>
+			<xs:enumeration value="geological objects"/>
+			<xs:enumeration value="inner liner"/>
+			<xs:enumeration value="intermediate casing"/>
+			<xs:enumeration value="production casing"/>
+			<xs:enumeration value="production liner"/>
+			<xs:enumeration value="protective casing"/>
+			<xs:enumeration value="surface casing"/>
+			<xs:enumeration value="wellbore notes"/>
+			<xs:enumeration value="y-tool string"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GeologyType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="aquifer"/>
+			<xs:enumeration value="reservoir"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PerforationToolType">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="casing gun"/>
+			<xs:enumeration value="coiled tubing jet tool"/>
+			<xs:enumeration value="drilled"/>
+			<xs:enumeration value="mandrel"/>
+			<xs:enumeration value="n/a"/>
+			<xs:enumeration value="slots-machine cut"/>
+			<xs:enumeration value="slots-undercut"/>
+			<xs:enumeration value="strip gun"/>
+			<xs:enumeration value="tcp gun"/>
+			<xs:enumeration value="through tubing gun"/>
+		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

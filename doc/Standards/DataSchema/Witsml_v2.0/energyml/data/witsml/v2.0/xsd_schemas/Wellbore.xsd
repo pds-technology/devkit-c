@@ -17,7 +17,8 @@
 	<!--														-->
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
 	<xs:include schemaLocation="Well.xsd"/>
-	<xs:complexType name="obj_Wellbore">
+	<xs:element name="Wellbore" type="witsml:Wellbore" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="Wellbore">
 		<xs:annotation>
 			<xs:documentation>The wellbore object is used to capture the general information about a wellbore. This might sometimes be called a wellbore header. A wellbore represents the path from surface to a unique bottom-hole location. The wellbore object is uniquely identified within the context of one well object.</xs:documentation>
 		</xs:annotation>
@@ -145,7 +146,7 @@ raw data provider at a site.</xs:documentation>
 							<xs:documentation>Target days for drilling wellbore.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ReferenceWell" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Well" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="ParentWellbore" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>

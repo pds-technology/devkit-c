@@ -18,7 +18,8 @@
 	<xs:include schemaLocation="DownholeComponent.xsd"/>
 	<xs:include schemaLocation="WellCompletion.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
-	<xs:complexType name="obj_WellboreCompletion">
+	<xs:element name="WellboreCompletion" type="witsml:WellboreCompletion" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="WellboreCompletion">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -58,13 +59,13 @@
 							<xs:documentation>Overall true vertical depth interval for this wellbore completion.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="CurrentStatus" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="CurrentStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="StatusDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="StatusHistory" type="witsml:CompletionStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="ContactIntervalSet" type="witsml:ContactIntervalSet" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="WellCompletion" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="uidWellCompletion" use="optional" type="eml:String64"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -81,7 +82,7 @@
 	</xs:complexType>
 	<xs:complexType name="GravelPackInterval">
 		<xs:sequence>
-			<xs:element name="DownholeStringRefID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="DownholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="GravelPackMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Gravel packed measured depth interval for this completion.</xs:documentation>
@@ -97,7 +98,7 @@
 					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -112,7 +113,7 @@
 			<xs:documentation>Information on the status history in the interval</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PhysicalStatus" type="witsml:PhysicalStatus" minOccurs="0" maxOccurs="1">
+			<xs:element name="PhysicalStatus" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The physical status of an interval (e.g., open, closed, proposed)</xs:documentation>
 				</xs:annotation>
@@ -146,12 +147,6 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:simpleType name="PhysicalStatus">
-		<xs:annotation>
-			<xs:documentation>These values represent the physical status of an interval.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:simpleType name="NonNegativeFraction">
 		<xs:annotation>
 			<xs:documentation>A floating point value between zero (inclusive) and one (inclusive)</xs:documentation>
@@ -162,7 +157,7 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 	</xs:simpleType>
 	<xs:complexType name="OpenHoleInterval">
 		<xs:sequence>
-			<xs:element name="BoreholeStringRefID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="BoreholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="OpenHoleMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Open hole measured depth interval for this completion.</xs:documentation>
@@ -178,7 +173,7 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -190,7 +185,7 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 	</xs:complexType>
 	<xs:complexType name="PerforationSetInterval">
 		<xs:sequence>
-			<xs:element name="PerforationSetRefID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PerforationSetReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="PerforationSetMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Overall measured depth interval for this perforation set.</xs:documentation>
@@ -206,7 +201,7 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -221,7 +216,7 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 			<xs:documentation>Information on collection of perforation status history</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PerforationStatus" type="witsml:PerforationStatus" minOccurs="0" maxOccurs="1">
+			<xs:element name="PerforationStatus" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>perforation status</xs:documentation>
 				</xs:annotation>
@@ -260,15 +255,9 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:simpleType name="PerforationStatus">
-		<xs:annotation>
-			<xs:documentation>These values represent the status of a perforation.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:complexType name="SlotsInterval">
 		<xs:sequence>
-			<xs:element name="StringEquipmentRefUID" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="SlottedMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Slotted measured depth interval for this completion.</xs:documentation>
@@ -294,4 +283,24 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
+	<xs:simpleType name="PhysicalStatus">
+		<xs:annotation>
+			<xs:documentation>These values represent the physical status of an interval.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="closed"/>
+			<xs:enumeration value="open"/>
+			<xs:enumeration value="proposed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PerforationStatus">
+		<xs:annotation>
+			<xs:documentation>These values represent the status of a perforation.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="open"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="squuezed"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

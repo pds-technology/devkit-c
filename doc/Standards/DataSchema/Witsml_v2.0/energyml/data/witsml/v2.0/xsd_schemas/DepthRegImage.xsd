@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.0">
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" elementFormDefault="qualified" version="2.0">
 	<!--														-->
 	<xs:include schemaLocation="Log.xsd"/>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<xs:include schemaLocation="Well.xsd"/>
 	<xs:include schemaLocation="WellCMLedger.xsd"/>
+	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:simpleType name="BackupScaleType">
 		<xs:annotation>
 			<xs:documentation>Backup scale types.</xs:documentation>
@@ -75,7 +76,11 @@
 					<xs:documentation>The position of the right edge of the track.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TrackCurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TrackCurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Coordinates of rectangle representing the track.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="TxtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -222,7 +227,11 @@
 					<xs:documentation>Scale of the backup curve</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="CurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Coordinates of rectangle representing the area describing the scale.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Details of the line</xs:documentation>
@@ -235,28 +244,14 @@
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
-	<xs:complexType name="obj_DepthRegImage">
+	<xs:element name="DepthRegImage" type="witsml:DepthRegImage" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="DepthRegImage">
 		<xs:annotation>
 			<xs:documentation>Information about the composition, layout, and depth registration of a digital image of a well log, typically a scanned image of a paper well log document.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:element name="NameWell" type="eml:String64" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Human recognizable context for the well that contains the wellbore. </xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="NameWellbore" type="eml:String64" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Human recognizable context for the wellbore that contains the image.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Human recognizable context for the image.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="FileName" type="eml:String64" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Reference to file containing image content.</xs:documentation>
@@ -297,16 +292,7 @@
 							<xs:documentation>File version.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Alias" type="eml:String64" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>A blank field that can be "populated" through batch processing of XML files.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="CustomData" type="eml:CustomData" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>A container element that can contain custom or user defined data elements.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="ImageBoundary" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="HeaderSection" type="witsml:DepthRegLogRect" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="LogSection" type="witsml:DepthRegLogSection" minOccurs="0" maxOccurs="unbounded"/>

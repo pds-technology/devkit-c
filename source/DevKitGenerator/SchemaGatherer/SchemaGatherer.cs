@@ -328,6 +328,14 @@ namespace Energistics.SchemaGatherer
                 {
                     supportingSchemas.Add(f);
                 }
+
+                foreach (string f in Directory.GetFiles(sourceFolder, "*.xsd", SearchOption.TopDirectoryOnly))
+                {
+                    dataObjectSchemas.Add(f);
+                }
+
+                // stop processing now since there are no obj*.xsd in WITSML v2+
+                return;
             }
 
             if (!string.IsNullOrEmpty(wsdlPath))

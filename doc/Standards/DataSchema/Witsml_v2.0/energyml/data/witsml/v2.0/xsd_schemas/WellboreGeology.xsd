@@ -129,7 +129,8 @@
 		</xs:sequence>
 		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
-	<xs:complexType name="obj_WellboreGeology">
+	<xs:element name="WellboreGeology" type="witsml:WellboreGeology" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="WellboreGeology">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -138,15 +139,16 @@
 							<xs:documentation>[maintained by the server] The interval which contains the minimum and maximum measured depths for all wellbore geology types under this wellbore geology entry.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ShowIntervalSet" type="witsml:obj_ShowEvaluation" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="InterpretedGeologyIntervalSet" type="witsml:obj_InterpretedGeology" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="ShowIntervalSet" type="witsml:ShowEvaluation" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="InterpretedGeologyIntervalSet" type="witsml:InterpretedGeology" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="CuttingsIntervalSet" type="witsml:obj_CuttingsGeology" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="CuttingsIntervalSet" type="witsml:CuttingsGeology" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="obj_ShowEvaluation">
+	<xs:element name="ShowEvaluation" type="witsml:ShowEvaluation" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="ShowEvaluation">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -164,7 +166,8 @@
 	<xs:simpleType name="LithologyKind">
 		<xs:restriction base="eml:TypeEnum"/>
 	</xs:simpleType>
-	<xs:complexType name="obj_InterpretedGeology">
+	<xs:element name="InterpretedGeology" type="witsml:InterpretedGeology" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="InterpretedGeology">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -424,6 +427,7 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:simpleType name="GeochronologicalRank">
 		<xs:restriction base="eml:TypeEnum">
@@ -639,7 +643,8 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 		<xs:attribute name="uid" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:element name="part_EvaluatedIntervalShow" type="witsml:ShowEvaluationInterval"/>
-	<xs:complexType name="obj_CuttingsGeology">
+	<xs:element name="CuttingsGeology" type="witsml:CuttingsGeology" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="CuttingsGeology">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>

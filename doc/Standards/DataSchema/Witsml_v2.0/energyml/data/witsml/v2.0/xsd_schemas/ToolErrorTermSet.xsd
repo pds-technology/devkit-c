@@ -16,6 +16,49 @@
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="ToolErrorModel.xsd"/>
+	<xs:complexType name="AbstractIscwsaErrorCoefficient" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Describes what survey measurement or value the error term applies to.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="Azi">
+		<xs:annotation>
+			<xs:documentation>Describes what survey measurement or value the error term applies to.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
+				<xs:sequence>
+					<xs:element name="Azi" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Inc">
+		<xs:annotation>
+			<xs:documentation>Describes what survey measurement or value the error term applies to.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
+				<xs:sequence>
+					<xs:element name="Inc" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Depth">
+		<xs:annotation>
+			<xs:documentation>Describes what survey measurement or value the error term applies to.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
+				<xs:sequence>
+					<xs:element name="Depth" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="IscwsaNomenclatureConstant">
 		<xs:annotation>
 			<xs:documentation>A nomenclature constant.</xs:documentation>
@@ -158,35 +201,12 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:choice minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Choice Placeholder in IscwsaErrorCoefficient</xs:documentation>
-				</xs:annotation>
-				<xs:element name="Azi" type="eml:String2000" minOccurs="1" maxOccurs="1">
-					<xs:annotation>
-						<xs:documentation>Measured horizontal azimuth.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="Inc" type="eml:String2000" minOccurs="1" maxOccurs="1">
-					<xs:annotation>
-						<xs:documentation>Measured deviation from vertical.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="Depth" type="eml:String2000" minOccurs="1" maxOccurs="1">
-					<xs:annotation>
-						<xs:documentation>Measured depth along the wellbore.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="Tvd" type="eml:String2000" minOccurs="1" maxOccurs="1">
-					<xs:annotation>
-						<xs:documentation>True Vertical Depth.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
+			<xs:element name="AbstractIscwsaErrorCoefficient" type="witsml:AbstractIscwsaErrorCoefficient" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:complexType name="obj_ToolErrorTermSet">
+	<xs:element name="ToolErrorTermSet" type="witsml:ToolErrorTermSet" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="ToolErrorTermSet">
 		<xs:annotation>
 			<xs:documentation>The toolErrorTermSet object is used to define a set of surveying tool error terms which may be utilized in a toolErrorModel. This object is globally unique.</xs:documentation>
 		</xs:annotation>
@@ -233,5 +253,17 @@ The semantics of the something is defined by the parent element.</xs:documentati
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64"/>
+	</xs:complexType>
+	<xs:complexType name="Tvd">
+		<xs:annotation>
+			<xs:documentation>Describes what survey measurement or value the error term applies to.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
+				<xs:sequence>
+					<xs:element name="Tvd" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>

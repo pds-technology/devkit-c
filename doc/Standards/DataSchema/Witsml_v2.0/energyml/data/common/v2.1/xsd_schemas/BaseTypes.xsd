@@ -2,9 +2,9 @@
 <xs:schema targetNamespace="http://www.energistics.org/energyml/data/commonv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.1">
 	<!--														-->
 	<!-- Energistics License Agreement
-			This file is distributed under the Energistics License Agreement at
-			http://www.energistics.org
-			Use of this file constitutes agreement with the Energistics License Agreement.
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
 			Copyright (c) 2016 Energistics. All rights reserved.
 			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
 			-->
@@ -12,6 +12,8 @@
 	<xs:annotation>
 		<xs:documentation>This Package contains the common re-usable structures and types commonly used by EnergyML Schemas.</xs:documentation>
 	</xs:annotation>
+	<!--														-->
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../../common/v2.1/xsd_schemas/gml/3.2.1/gml.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="MeasureType.xsd"/>
 	<xs:include schemaLocation="ObjectReference.xsd"/>
@@ -137,6 +139,17 @@ i.e., iStart + jStart*ni + kStart*ni*nj</xs:documentation>
 	<xs:simpleType name="StringMeasure">
 		<xs:restriction base="eml:AbstractString"/>
 	</xs:simpleType>
+	<xs:complexType name="TvdInterval">
+		<xs:sequence>
+			<xs:element name="TvdTop" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="TvdBase" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True vertical depth at the base of the interval</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="datum" use="optional" type="eml:String64"/>
+	</xs:complexType>
 	<xs:complexType name="BooleanConstantArray">
 		<xs:annotation>
 			<xs:documentation>Represents an array of Boolean values where all values are identical. This an optimization for which an array of explicit Boolean values is not required. </xs:documentation>
@@ -230,6 +243,13 @@ i.e., iStart + jStart*ni + kStart*ni*nj</xs:documentation>
 				<xs:sequence/>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MdInterval">
+		<xs:sequence>
+			<xs:element name="MdTop" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="MdBase" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="datum" use="optional" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="GenericMeasure">
 		<xs:annotation>
@@ -427,22 +447,4 @@ End value is start+count-1.</xs:documentation>
 			<xs:maxLength value="32"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="MdInterval">
-		<xs:sequence>
-			<xs:element name="MdTop" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="MdBase" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
-		</xs:sequence>
-		<xs:attribute name="datum" use="optional" type="eml:String64"/>
-	</xs:complexType>
-	<xs:complexType name="TvdInterval">
-		<xs:sequence>
-			<xs:element name="TvdTop" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="TvdBase" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>True vertical depth at the base of the interval</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute name="datum" use="optional" type="eml:String64"/>
-	</xs:complexType>
 </xs:schema>

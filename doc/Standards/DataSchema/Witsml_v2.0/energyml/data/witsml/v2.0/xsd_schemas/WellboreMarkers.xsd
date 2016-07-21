@@ -19,7 +19,8 @@
 	<xs:include schemaLocation="WellboreGeology.xsd"/>
 	<xs:include schemaLocation="Trajectory.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
-	<xs:complexType name="obj_WellboreMarker">
+	<xs:element name="WellboreMarker" type="witsml:WellboreMarker" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="WellboreMarker">
 		<xs:annotation>
 			<xs:documentation>The FormationMarker object is used to capture information about a geologic formation that was encountered in a wellbore. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>
@@ -54,7 +55,8 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="obj_WellboreMarkerSet">
+	<xs:element name="WellboreMarkerSet" type="witsml:WellboreMarkerSet" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="WellboreMarkerSet">
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -64,7 +66,7 @@
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="FormationMarker" type="witsml:obj_WellboreMarker" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="FormationMarker" type="witsml:WellboreMarker" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
