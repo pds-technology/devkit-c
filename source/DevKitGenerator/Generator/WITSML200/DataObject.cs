@@ -34720,10 +34720,6 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool pillBelowPlugFieldSpecified;
         
-        private bool plugCatcherField;
-        
-        private bool plugCatcherFieldSpecified;
-        
         private PressureMeasure presBackPressureField;
         
         private PressureMeasure presBumpField;
@@ -34799,7 +34795,6 @@ namespace Energistics.Generator.WITSML200 {
         private CementPumpScheduleStep[] stepField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool AnnularFlowAfter {
             get {
                 return this.annularFlowAfterField;
@@ -34821,7 +34816,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string ReciprocationSlackoff {
             get {
                 return this.reciprocationSlackoffField;
@@ -34832,7 +34826,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public bool BotPlug {
             get {
                 return this.botPlugField;
@@ -34854,7 +34847,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public int BotPlugNumber {
             get {
                 return this.botPlugNumberField;
@@ -34876,7 +34868,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public LengthMeasure DiaTailPipe {
             get {
                 return this.diaTailPipeField;
@@ -34887,7 +34878,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string DisplacementFluidRefId {
             get {
                 return this.displacementFluidRefIdField;
@@ -34898,7 +34888,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public TimeMeasure ETimPresHeld {
             get {
                 return this.eTimPresHeldField;
@@ -34909,7 +34898,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
         public ExtensionNameValue[] ExtensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -34920,7 +34909,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public VolumePerTimeMeasure FlowrateMudCirc {
             get {
                 return this.flowrateMudCircField;
@@ -34931,7 +34919,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public PressureMeasure Gel10Min {
             get {
                 return this.gel10MinField;
@@ -34942,7 +34929,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         public PressureMeasure Gel10Sec {
             get {
                 return this.gel10SecField;
@@ -34953,7 +34939,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public MeasuredDepthCoord MdCircOut {
             get {
                 return this.mdCircOutField;
@@ -34964,7 +34949,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         public MeasuredDepthCoord MdCoilTbg {
             get {
                 return this.mdCoilTbgField;
@@ -34975,7 +34959,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public MeasuredDepthCoord MdString {
             get {
                 return this.mdStringField;
@@ -34986,7 +34969,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         public MeasuredDepthCoord MdTool {
             get {
                 return this.mdToolField;
@@ -34997,7 +34979,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public string MixMethod {
             get {
                 return this.mixMethodField;
@@ -35008,7 +34989,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         public int NumStage {
             get {
                 return this.numStageField;
@@ -35019,7 +34999,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         public string ReciprocationOverpull {
             get {
                 return this.reciprocationOverpullField;
@@ -35030,7 +35009,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
         public bool PillBelowPlug {
             get {
                 return this.pillBelowPlugField;
@@ -35052,29 +35030,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
-        public bool PlugCatcher {
-            get {
-                return this.plugCatcherField;
-            }
-            set {
-                this.plugCatcherField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PlugCatcherSpecified {
-            get {
-                return this.plugCatcherFieldSpecified;
-            }
-            set {
-                this.plugCatcherFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
         public PressureMeasure PresBackPressure {
             get {
                 return this.presBackPressureField;
@@ -35085,7 +35040,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
         public PressureMeasure PresBump {
             get {
                 return this.presBumpField;
@@ -35096,7 +35050,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
         public PressureMeasure PresCoilTbgEnd {
             get {
                 return this.presCoilTbgEndField;
@@ -35107,7 +35060,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
         public PressureMeasure PresCoilTbgStart {
             get {
                 return this.presCoilTbgStartField;
@@ -35118,7 +35070,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
         public PressureMeasure PresCsgEnd {
             get {
                 return this.presCsgEndField;
@@ -35129,7 +35080,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
         public PressureMeasure PresCsgStart {
             get {
                 return this.presCsgStartField;
@@ -35140,7 +35090,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
         public PressureMeasure PresDisplace {
             get {
                 return this.presDisplaceField;
@@ -35151,7 +35100,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
         public PressureMeasure PresHeld {
             get {
                 return this.presHeldField;
@@ -35162,7 +35110,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
         public PressureMeasure PresMudCirc {
             get {
                 return this.presMudCircField;
@@ -35173,7 +35120,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
         public PressureMeasure PresTbgEnd {
             get {
                 return this.presTbgEndField;
@@ -35184,7 +35130,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
         public PressureMeasure PresTbgStart {
             get {
                 return this.presTbgStartField;
@@ -35195,7 +35140,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
         public DynamicViscosityMeasure PvMud {
             get {
                 return this.pvMudField;
@@ -35206,7 +35150,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
         public string SqueezeObjective {
             get {
                 return this.squeezeObjectiveField;
@@ -35217,7 +35160,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
         public MdInterval StageMdInterval {
             get {
                 return this.stageMdIntervalField;
@@ -35228,7 +35170,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
         public bool TailPipePerf {
             get {
                 return this.tailPipePerfField;
@@ -35250,7 +35191,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
         public bool TailPipeUsed {
             get {
                 return this.tailPipeUsedField;
@@ -35272,7 +35212,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
         public ThermodynamicTemperatureMeasure TempBHCT {
             get {
                 return this.tempBHCTField;
@@ -35283,7 +35222,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
         public ThermodynamicTemperatureMeasure TempBHST {
             get {
                 return this.tempBHSTField;
@@ -35294,7 +35232,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
         public bool TopPlug {
             get {
                 return this.topPlugField;
@@ -35316,7 +35253,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
         public string TypeOriginalMud {
             get {
                 return this.typeOriginalMudField;
@@ -35327,7 +35263,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
         public string TypeStage {
             get {
                 return this.typeStageField;
@@ -35338,7 +35273,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
         public VolumeMeasure VolCircPrior {
             get {
                 return this.volCircPriorField;
@@ -35349,7 +35283,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
         public VolumeMeasure VolCsgIn {
             get {
                 return this.volCsgInField;
@@ -35360,7 +35293,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=43)]
         public VolumeMeasure VolCsgOut {
             get {
                 return this.volCsgOutField;
@@ -35371,7 +35303,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=44)]
         public VolumeMeasure VolDisplaceFluid {
             get {
                 return this.volDisplaceFluidField;
@@ -35382,7 +35313,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=45)]
         public VolumeMeasure VolExcess {
             get {
                 return this.volExcessField;
@@ -35393,7 +35323,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=46)]
         public string VolExcessMethod {
             get {
                 return this.volExcessMethodField;
@@ -35404,7 +35333,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=47)]
         public VolumeMeasure VolMudLost {
             get {
                 return this.volMudLostField;
@@ -35415,7 +35343,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
         public VolumeMeasure VolReturns {
             get {
                 return this.volReturnsField;
@@ -35426,7 +35353,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
         public MassPerVolumeMeasure WtMud {
             get {
                 return this.wtMudField;
@@ -35437,7 +35363,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
         public PressureMeasure YpMud {
             get {
                 return this.ypMudField;
@@ -35448,7 +35373,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("OriginalFluidLocation", Order=51)]
+        [System.Xml.Serialization.XmlElementAttribute("OriginalFluidLocation")]
         public FluidLocation[] OriginalFluidLocation {
             get {
                 return this.originalFluidLocationField;
@@ -35459,7 +35384,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EndingFluidLocation", Order=52)]
+        [System.Xml.Serialization.XmlElementAttribute("EndingFluidLocation")]
         public FluidLocation[] EndingFluidLocation {
             get {
                 return this.endingFluidLocationField;
@@ -35470,7 +35395,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Step", Order=53)]
+        [System.Xml.Serialization.XmlElementAttribute("Step")]
         public CementPumpScheduleStep[] Step {
             get {
                 return this.stepField;
@@ -35547,7 +35472,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Date and time when mixing started.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
         [System.ComponentModel.DescriptionAttribute("Date and time when mixing started.")]
         public string DTimMixStart {
@@ -35561,7 +35485,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Datetime at start of pumping cement.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
         [System.ComponentModel.DescriptionAttribute("Datetime at start of pumping cement.")]
         public string DTimPumpStart {
@@ -35575,7 +35498,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Datetime at end of pumping cement.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
         [System.ComponentModel.DescriptionAttribute("Datetime at end of pumping cement.")]
         public string DTimPumpEnd {
@@ -35589,7 +35511,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Date and time when displacing cement started.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
         [System.ComponentModel.DescriptionAttribute("Date and time when displacing cement started.")]
         public string DTimDisplaceStart {
@@ -35603,7 +35524,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Average displacement rate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute("Average displacement rate.")]
         public VolumePerTimeMeasure FlowrateDisplaceAv {
             get {
@@ -35616,7 +35536,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Maximum displacement rate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("Maximum displacement rate.")]
         public VolumePerTimeMeasure FlowrateDisplaceMx {
             get {
@@ -35629,7 +35548,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Mud circulation elapsed time before the job.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute("Mud circulation elapsed time before the job.")]
         public TimeMeasure ETimMudCirculation {
             get {
@@ -35642,7 +35560,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Final displacement pump rate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("Final displacement pump rate.")]
         public VolumePerTimeMeasure FlowrateEnd {
             get {
@@ -35655,7 +35572,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Squeeze obtained.  Values are "true" (or "1") and "false" (or "0").</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute("Squeeze obtained.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
         public bool SqueezeObtained {
             get {
@@ -35679,7 +35595,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Breakdown pressure.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DescriptionAttribute("Breakdown pressure.")]
         public PressureMeasure PresBreakDown {
             get {
@@ -35692,7 +35607,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Breakdown rate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DescriptionAttribute("Breakdown rate.")]
         public VolumePerTimeMeasure FlowrateBreakDown {
             get {
@@ -35705,7 +35619,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Squeeze pressure average.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [System.ComponentModel.DescriptionAttribute("Squeeze pressure average.")]
         public PressureMeasure PresSqueezeAv {
             get {
@@ -35718,7 +35631,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Squeeze pressure final.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [System.ComponentModel.DescriptionAttribute("Squeeze pressure final.")]
         public PressureMeasure PresSqueezeEnd {
             get {
@@ -35731,7 +35643,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Squeeze pressure held.  Values are "true" (or "1") and "false" (or "0").</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         [System.ComponentModel.DescriptionAttribute("Squeeze pressure held.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
         public bool PresSqueezeHeld {
             get {
@@ -35755,7 +35666,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Squeeze pressure left on pipe.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         [System.ComponentModel.DescriptionAttribute("Squeeze pressure left on pipe.")]
         public PressureMeasure PresSqueeze {
             get {
@@ -35768,7 +35678,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Squeeze job average rate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         [System.ComponentModel.DescriptionAttribute("Squeeze job average rate.")]
         public VolumePerTimeMeasure FlowrateSqueezeAv {
             get {
@@ -35781,7 +35690,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Squeeze job maximum rate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         [System.ComponentModel.DescriptionAttribute("Squeeze job maximum rate.")]
         public VolumePerTimeMeasure FlowrateSqueezeMx {
             get {
@@ -35794,7 +35702,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Pump rate at start of job.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         [System.ComponentModel.DescriptionAttribute("Pump rate at start of job.")]
         public VolumePerTimeMeasure FlowratePumpStart {
             get {
@@ -35807,7 +35714,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Pump rate at end of job.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
         [System.ComponentModel.DescriptionAttribute("Pump rate at end of job.")]
         public VolumePerTimeMeasure FlowratePumpEnd {
             get {
@@ -35820,7 +35726,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Funnel viscosity in seconds (in hole at start of job).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         [System.ComponentModel.DescriptionAttribute("Funnel viscosity in seconds (in hole at start of job).")]
         public TimeMeasure VisFunnelMud {
             get {
@@ -35833,7 +35738,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Plug bumped? Values are "true" (or "1") and "false" (or "0").</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
         [System.ComponentModel.DescriptionAttribute("Plug bumped? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
         public bool PlugBumped {
             get {
@@ -35857,7 +35761,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Pressure prior to bumping plug / pressure at end of displacement</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
         [System.ComponentModel.DescriptionAttribute("Pressure prior to bumping plug / pressure at end of displacement")]
         public PressureMeasure PresPriorBump {
             get {
@@ -35870,7 +35773,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Float held?  Values are "true" (or "1") and "false" (or "0").</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
         [System.ComponentModel.DescriptionAttribute("Float held?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
         public bool FloatHeld {
             get {
@@ -35915,12 +35817,11 @@ namespace Energistics.Generator.WITSML200 {
         
         private string squeezeObjField;
         
-        private bool plugCatcher1Field;
+        private bool plugCatcherField;
         
-        private bool plugCatcher1FieldSpecified;
+        private bool plugCatcherFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string SqueezeObj {
             get {
                 return this.squeezeObjField;
@@ -35931,24 +35832,23 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("PlugCatcher", Order=1)]
-        public bool PlugCatcher1 {
+        public bool PlugCatcher {
             get {
-                return this.plugCatcher1Field;
+                return this.plugCatcherField;
             }
             set {
-                this.plugCatcher1Field = value;
+                this.plugCatcherField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PlugCatcher1Specified {
+        public bool PlugCatcherSpecified {
             get {
-                return this.plugCatcher1FieldSpecified;
+                return this.plugCatcherFieldSpecified;
             }
             set {
-                this.plugCatcher1FieldSpecified = value;
+                this.plugCatcherFieldSpecified = value;
             }
         }
     }

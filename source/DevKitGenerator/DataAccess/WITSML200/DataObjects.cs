@@ -49103,42 +49103,6 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PillBelowPlugSpecifiedField; 
 
         /// <summary>
-        /// PlugCatcher property
-        /// </summary>
-		
-		[XmlElement("PlugCatcher")]
-        public Boolean? PlugCatcher {
-            get {
-                return PlugCatcherField;
-            } 
-            set {
-                PlugCatcherField = value;
-             if(value!=null) 
-                 this.PlugCatcherSpecified = true;
-                NotifyPropertyChanged("PlugCatcher");
-            }
-        }
-
-        private Boolean? PlugCatcherField; 
-
-        /// <summary>
-        /// PlugCatcherSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean PlugCatcherSpecified {
-            get {
-                return PlugCatcherSpecifiedField;
-            } 
-            set {
-                PlugCatcherSpecifiedField = value;
-                NotifyPropertyChanged("PlugCatcherSpecified");
-            }
-        }
-
-        private Boolean PlugCatcherSpecifiedField; 
-
-        /// <summary>
         /// PresBackPressure property
         /// </summary>
 		[ComponentElement]
@@ -50377,40 +50341,40 @@ namespace Energistics.DataAccess.WITSML200
         private String SqueezeObjField; 
 
         /// <summary>
-        /// PlugCatcher1 property
+        /// PlugCatcher property
         /// </summary>
 		
 		[XmlElement("PlugCatcher")]
-        public Boolean? PlugCatcher1 {
+        public Boolean? PlugCatcher {
             get {
-                return PlugCatcher1Field;
+                return PlugCatcherField;
             } 
             set {
-                PlugCatcher1Field = value;
+                PlugCatcherField = value;
              if(value!=null) 
-                 this.PlugCatcher1Specified = true;
-                NotifyPropertyChanged("PlugCatcher1");
+                 this.PlugCatcherSpecified = true;
+                NotifyPropertyChanged("PlugCatcher");
             }
         }
 
-        private Boolean? PlugCatcher1Field; 
+        private Boolean? PlugCatcherField; 
 
         /// <summary>
-        /// PlugCatcher1Specified property
+        /// PlugCatcherSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PlugCatcher1Specified {
+        public Boolean PlugCatcherSpecified {
             get {
-                return PlugCatcher1SpecifiedField;
+                return PlugCatcherSpecifiedField;
             } 
             set {
-                PlugCatcher1SpecifiedField = value;
-                NotifyPropertyChanged("PlugCatcher1Specified");
+                PlugCatcherSpecifiedField = value;
+                NotifyPropertyChanged("PlugCatcherSpecified");
             }
         }
 
-        private Boolean PlugCatcher1SpecifiedField; 
+        private Boolean PlugCatcherSpecifiedField; 
 
 
     } //here

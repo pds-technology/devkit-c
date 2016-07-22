@@ -591,11 +591,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Pill below plug.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PlugCatcher" type="xs:boolean" minOccurs="0" maxOccurs="1">
+			<!-- <xs:element name="PlugCatcher" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Plug catcher.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
-			</xs:element>
+			</xs:element> -->
 			<xs:element name="PresBackPressure" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Constant back pressure applied while pumping the job (can be supersede by a back pressure per pumping stage)</xs:documentation>
